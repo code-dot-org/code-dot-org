@@ -316,6 +316,12 @@
           },
           "triangle": {
             "name": "трикутник"
+          },
+          "sun": {
+            "name": "сонце"
+          },
+          "square": {
+            "name": "квадрат"
           }
         },
         "Geometric Sun_2018": {
@@ -333,6 +339,12 @@
           },
           "triangle": {
             "name": "трикутник"
+          },
+          "sun": {
+            "name": "сонце"
+          },
+          "square": {
+            "name": "квадрат"
           }
         },
         "InspirationalArtwork": {

@@ -18,7 +18,8 @@ const USER_EDITABLE_SECTION_PROPS = [
   'scriptId',
   'grade',
   'hidden',
-  'restrictSection'
+  'restrictSection',
+  'codeReviewEnabled'
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -569,7 +570,8 @@ function newSectionData(id, courseId, scriptId, loginType) {
     scriptId: scriptId || null,
     hidden: false,
     isAssigned: undefined,
-    restrictSection: false
+    restrictSection: false,
+    codeReviewEnabled: true
   };
 }
 
@@ -1171,7 +1173,8 @@ export const sectionFromServerSection = serverSection => ({
     : serverSection.script_id || null,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
-  restrictSection: serverSection.restrict_section
+  restrictSection: serverSection.restrict_section,
+  codeReviewEnabled: serverSection.code_review_enabled
 });
 
 /**
@@ -1202,7 +1205,8 @@ export function serverSectionFromSection(section) {
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
     script: section.scriptId ? {id: section.scriptId} : undefined,
-    restrict_section: section.restrictSection
+    restrict_section: section.restrictSection,
+    code_review_enabled: section.codeReviewEnabled
   };
 }
 

@@ -1093,8 +1093,19 @@ nl:
         text: locatie van {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regen
       gamelab_makeNewSpriteAnon:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': rechts
+            '90': omlaag
+            '180': links
+            '270': omhoog
       gamelab_mirrorSprite:
         text: "{SPRITE} gezicht {DIRECTION}"
         options:
@@ -1115,6 +1126,12 @@ nl:
         text: geklikt {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": kraak
+            "'sound://category_digital/jump_7.mp3'": spring
       gamelab_pointInDirection:
         text: punt {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1547,18 +1564,46 @@ nl:
         text: x coördinaat van {SPRITE}
       Mikelab_yLocationOf:
         text: y coordinaat van {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: stel {BG_EFFECT} [PALETTE][1] in als achtergrondeffect
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': vast
-            '"rainbow"': regenboog
-      PoemBot_setForegroundEffect:
-        text: stel {FG_EFFECT} in als voorgrondeffect
-        options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': regen
-            '"bubbles"': bubbels
+      Poetry_playSound:
+        text: PlaySound {SOUND}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Kleuren
+            '"squiggles"': Kronkels
+            '"space"': Ruimte
+            '"stars"': Sterren
+            '"ripples"': Rimpelingen
+          PALETTE:
+            '"rainbow"': Regenboog
+      Poetry_setBackgroundImageAs:
+        text: set achtergrond naar {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Regen
+            '"bubbles"': Bubbels
+            '"hearts"': Kleurrijke Harten
+            '"confetti"': Confetti
+            '"starburst"': Sterrenvorming
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: beweeg vooruit
       RyanLab_turnLeft:

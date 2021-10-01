@@ -29,6 +29,8 @@ module LevelsHelper
       end
     elsif params[:sublevel_position]
       sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+    # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
+    # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
       script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
@@ -85,19 +87,20 @@ module LevelsHelper
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
-  def get_channel_for(level, user = nil)
+  def get_channel_for(level, script_id = nil, user = nil)
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
       user_storage_id = storage_id_for_user_id(user.id)
-      channel_token = ChannelToken.find_channel_token(level, user_storage_id)
+      channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
     else
       user_storage_id = get_storage_id
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
         request.ip,
         user_storage_id,
+        script_id,
         {
           hidden: true,
         }
@@ -116,7 +119,7 @@ module LevelsHelper
     return false unless user.present?
 
     if level.channel_backed?
-      return get_channel_for(level, user).present?
+      return get_channel_for(level, script.id, user).present?
     else
       user.last_attempt(level, script).present?
     end
@@ -178,7 +181,7 @@ module LevelsHelper
 
     if (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
       view_options(
-        channel: get_channel_for(@level, @user),
+        channel: get_channel_for(@level, @script&.id, @user),
         server_project_level_id: @level.project_template_level.try(:id),
       )
       # readonly if viewing another user's channel
@@ -247,14 +250,20 @@ module LevelsHelper
     end
 
     if pairing_check_user
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
-      if recent_driver && !recent_user.is_a?(DeletedUser)
-        level_view_options(@level.id, pairing_driver: recent_driver)
-        if recent_attempt
-          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+      user_level = UserLevel.find_by(user: pairing_check_user, script: @script, level: @level)
+      is_navigator = !user_level.nil? && user_level.navigator?
+      if is_navigator
+        driver = user_level.driver
+        driver_level_source_id = user_level.driver_level_source_id
+      end
+
+      level_view_options(@level.id, is_navigator: is_navigator)
+      if driver
+        level_view_options(@level.id, pairing_driver: driver.name)
+        if driver_level_source_id
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(driver_level_source_id))
         elsif @level.channel_backed?
-          recent_channel = get_channel_for(@level, recent_user) if recent_user
-          level_view_options(@level.id, pairing_channel_id: recent_channel) if recent_channel
+          level_view_options(@level.id, pairing_channel_id: get_channel_for(@level, @script&.id, driver))
         end
       end
     end
@@ -803,7 +812,7 @@ module LevelsHelper
   def firebase_shared_auth_token
     return nil unless CDO.firebase_shared_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,
@@ -829,7 +838,7 @@ module LevelsHelper
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,

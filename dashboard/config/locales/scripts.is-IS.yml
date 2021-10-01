@@ -7916,6 +7916,12 @@ is:
           lessons:
             lesson-2:
               name: Kennslustund 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Áfangi 1
+            lessonGroup-3:
+              display_name: Áfangi 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -7953,5 +7959,26 @@ is:
               display_name: Innihald
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Verkefni
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Græjur
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verkefni
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Innihald
+            content:
+              display_name: Innihald
+            lesson_group:
+              display_name: Innihald
             lessonGroup-2:
               display_name: Innihald

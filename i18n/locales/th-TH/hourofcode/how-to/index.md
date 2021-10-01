@@ -99,7 +99,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 - วิดีโอเปิดตัวเดิมของ Code.org มี Bill Gates, Mark Zuckerberg เเละ NBA star Chris Bosh (มีแบบ [1 นาที](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 นาที](https://www.youtube.com/watch?v=nKIu9yen5nc) เเละ [ 9 นาที](https://www.youtube.com/watch?v=dU1xS07N-FA) ให้เลือก)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+มันโอเคถ้าทั้งคุณและนักเรียนของคุณเป็นมือใหม่ในวิชาวิทยาการคอมพิวเตอร์ นี่เป็นแนวคิดสำหรับแนะนำกิจกรรม Hour of Code ของคุณ
 
 - อธิบายวิธีที่เทคโนโลยีส่งผลต่อชีวิตของเรา ด้วยตัวอย่างที่ทั้งเด็กผู้ชายและเด็กผู้หญิงจะสนใจ (พูดถึงการช่วยชีวิต, การช่วยเหลือคน, การเชื่อมต่อผู้คน เเละอื่นๆ)
 - ในชั้นเรียน เขียนรายชื่อสิ่งที่ใช้โปรแกรมในชีวิตประจำวัน
@@ -111,17 +111,17 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ## 6. Get coding!
 
-Direct students to the activity
+ให้นักเรียนไปสู่กิจกรรม
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-When your students come across difficulties it's okay to respond:
+เมื่อนักเรียนของคุณพบปัญหา มันโอเคที่จะตอบว่า:
 
 - "ไม่รู้สิ เรามาลองแก้มันไปด้วยกันนะ"
 - "เทคโนโลยีไม่ได้ทำงานออกมาอย่างที่เราต้องการเสมอไป"
 - "การเรียนเขียนโปรแกรมก็เหมือนกับการเรียนภาษา เธอจะไม่คล่องในตอนแรกทันที"
 
-What if a student finishes early?
+จะทำอย่างไรถ้ามีนักเรียนทำเสร็จเร็ว?
 
 - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - หรือขอให้นักเรียนที่ทำเสร็จเร็วช่วยเพื่อนในชั้นเรียนที่มีปัญหากับกิจกรรม

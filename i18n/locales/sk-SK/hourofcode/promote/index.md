@@ -8,7 +8,7 @@ title: Informujte ostatných
 
 ## 1. Informujte ostatných
 
-Tell your friends about the **#HourOfCode**!
+Povedzte svojim priateľom o **#HourOfCode**!
 
 {{ promote/share_buttons }}
 

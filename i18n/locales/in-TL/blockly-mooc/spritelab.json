@@ -190,5 +190,10 @@
   "thirdClickButNoSpeech": "crwdns2688832:0crwdne2688832:0",
   "changeOrSetSize": "crwdns2689335:0crwdne2689335:0",
   "changeOrSetCostume": "crwdns2689337:0crwdne2689337:0",
-  "changeBackground": "crwdns2689339:0crwdne2689339:0"
+  "changeBackground": "crwdns2689339:0crwdne2689339:0",
+  "allSayBlocks": "crwdns2693595:0crwdne2693595:0",
+  "clickAnySprite": "crwdns2693597:0crwdne2693597:0",
+  "changeOrSetCostumeEvent": "crwdns2693603:0crwdne2693603:0",
+  "noSound": "crwdns2693605:0crwdne2693605:0",
+  "chooseSound": "crwdns2693607:0crwdne2693607:0"
 }

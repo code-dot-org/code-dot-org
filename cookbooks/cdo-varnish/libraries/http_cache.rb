@@ -189,6 +189,13 @@ class HttpCache
             cookies: allowlisted_cookies
           },
           {
+            # Pass through cookies when requesting or deleting starter assets, as user authentication
+            # is required when deleting assets.
+            path: '/level_starter_assets/*',
+            headers: ALLOWLISTED_HEADERS,
+            cookies: allowlisted_cookies
+          },
+          {
             # Pass through the user agent to the /api/user_progress and
             # /milestone actions so the activity monitor can track script
             # completion by user agent. These responses are never cached so this
@@ -231,7 +238,7 @@ class HttpCache
           },
           {
             # For static-asset paths, don't forward any cookies or additional headers.
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/*),
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/* /media),
             headers: [],
             cookies: 'none'
           },

@@ -506,7 +506,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, user_level.submitted?
 
     # Now, unlock the assessment again to simulate a retake scenario
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     updates = [
       {
@@ -547,7 +547,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.send(:unlocked_at)
 
     # view_anwers for a user_level that does not yet exist
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     updates = [
       {
@@ -564,7 +564,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_not_nil user_level.send(:unlocked_at)
 
     # multiple updates at once
-    user_level.delete
+    user_level.really_destroy!
     assert_nil UserLevel.find_by(user_level_data)
     assert_nil UserLevel.find_by(user_level_data2)
     updates = [
@@ -1240,7 +1240,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_out :user
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = Script.find_by_name('algebra')
+    script = create(:script, :with_levels, levels_count: 5)
 
     get :script_structure, params: {script: script.id}
     assert_response :success

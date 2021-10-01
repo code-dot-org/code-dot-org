@@ -213,6 +213,10 @@ pt:
     email_preference_yes: Sim
     email_preference_no: Não
     email_preference_required: Deves especificar uma preferência de email.
+    share_teacher_email_reg_partner_preference_yes: Sim
+    share_teacher_email_reg_partner_preference_no: Não
+    share_teacher_email_reg_partner_preference_required: Deves especificar uma preferência
+      de email.
     parent_account_email_label: Email dos pais ou do encarregado de educação
   school_info:
     title: Informação da escola (opcional)

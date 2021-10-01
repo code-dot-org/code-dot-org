@@ -15,10 +15,10 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
 - [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
+- [رضاکارانہ کیوں?](#why-volunteer)
 - [How do volunteers get selected?](#selection)
 - [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
+- [کس طرح تیار کرنا](#how-to-prepare)
 - [When you're hosting an event](#hosting-an-event)
 - [Spread the word about the Hour of Code](#promote-hour-of-code)
 - [More ways to support the Hour of Code](#support-hour-of-code)
@@ -40,7 +40,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. [
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## رضاکارانہ کیوں?
 
 Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
 
@@ -48,8 +48,8 @@ Computer science is the defining field of the 21st century, yet most schools sti
 
 Check out some testimonials from past volunteers:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.” 
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.” 
+- "میرے تجربے کا بہترین حصہ یہ تھا کہ پوری طبقے خواتین اور رنگ کے لوگ تھے. یہ ہماری صنعت کے مستقبل کے لئے اچھی طرح سے بولتا ہے کہ ان بچوں کو پہنچنے اور حوصلہ افزائی کرنے کا موقع ملے. " 
+- "خاص طور پر ٹیکنالوجی میں نوجوان لڑکیوں کی حوصلہ افزائی کرنے کے لئے حاصل کرنے کا لطف اٹھایا. جیسے ہی میں اپنے مقامی علاقے میں اگلی نسل کی مدد کر رہا تھا اس طرح محسوس کیا. " 
 - "میں نے دیکھا کہ بچوں کو کتنی حوصلہ افزائی ملی تھی. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.” 
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})
@@ -82,7 +82,7 @@ To get started: - If you’re a parent or guardian, send [this email](https://ho
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## کس طرح تیار کرنا
 
 Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
 
@@ -158,7 +158,7 @@ If your event is going to be virtual, you’ll want to decide on your conference
 
 We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. ** کوڈ کے تمام گھنٹوں کی سرگرمیوں </ strong> کی ضرورت ہوتی ہے کم از کم پری وقت، اور خود کو ہدایت دی جاسکتی ہے کہ شرکاء کو اپنی رفتار اور مہارت کی سطح پر کام کرنے کی اجازت ملے.</p> 
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
@@ -227,7 +227,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 - Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
 - Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
+- اپنے سی۔ای۔او سے کہیں کہ وہ تمام کمپنی کو بحیثیت مجموعی مخاطب کرتے ہوئے ایک جامع و وسیع ای-میل بھیجے جو کمپیوٹر سائنس کی اہمیت کو اجاگر کرتے اور ملازمین کو اس کی معلومات بھیلانے کی حوصلہ افزائی کرے۔.
 - Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
 - [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
 - [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 
@@ -240,24 +240,24 @@ For more suggestions on how to support Code.org and the Hour of Code, visit [Cod
 
 ## Volunteering FAQ
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### میں نے ابھی تک کسی استاد سے رابطہ نہیں کیا ہے. میں اب بھی رضاکارانہ کیسے کر سکتا ہوں؟
 
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
+مقامی اسکولوں کی تلاش کرنے کی کوشش کریں اور پرنسپل / استاد / سامنے والے دفتر کو فون کریں اور پوچھیں کہ آپ کیسے مدد کر سکتے ہیں.  
 
 
-### How long do classroom visits last for?
+### کتنی دیر کے لئے کلاس روم کا دورہ کرتا ہے؟
 
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
 
 
-### What age group is the Hour of Code activity appropriate for?
+### کس عمر کے گروپ کا کوڈ آف لائن سرگرمی مناسب ہے؟
 
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
 
 
 ### How do I get selected as a technical volunteer or guest speaker?
 
-Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
+ہمارا [ رضاکارانہ نقشہ ](https://code.org/volunteer/local) پر اساتذہ رضاکاروں کے لئے تلاش کریں گے. استاد آپ کو منتخب کرے گا اس موقع کو بڑھانے کے لئے اپنی پروفائل کو ممکن حد تک مکمل کرنے کی کوشش کریں. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
 
 
 When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   

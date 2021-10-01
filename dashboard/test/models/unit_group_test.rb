@@ -109,6 +109,22 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 3, seeded_unit_group.default_units.length
   end
 
+  test "can seed course version for unit group from hash" do
+    unit_group = create(:unit_group, name: 'my-unit-group', family_name: 'family', version_year: '2021', published_state: SharedConstants::PUBLISHED_STATE.stable)
+
+    serialization = unit_group.serialize
+    unit_group.destroy
+
+    seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
+    assert_equal 'my-unit-group', seeded_unit_group.name
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, seeded_unit_group.published_state
+    course_version = seeded_unit_group.course_version
+    assert_not_nil course_version
+    assert_equal '2021', course_version.key
+    assert_equal 'family', course_version.course_offering&.key
+    assert_equal SharedConstants::PUBLISHED_STATE.stable, course_version.published_state
+  end
+
   test "can seed unit group and create resources from hash" do
     unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedConstants::PUBLISHED_STATE.stable, family_name: 'test', version_year: '2000')
     CourseOffering.add_course_offering(unit_group)
@@ -864,6 +880,31 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal UnitGroup.valid_courses(user: pilot_teacher), [csp_2019, csp_2020]
     assert_equal UnitGroup.valid_courses, [csp_2019]
     assert_equal UnitGroup.valid_courses(user: teacher), [csp_2019]
+  end
+
+  test "assignable_for_user?: normal courses" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    course = create :unit_group, published_state: SharedConstants::PUBLISHED_STATE.stable
+
+    refute course.assignable_for_user?(student)
+    assert course.assignable_for_user?(teacher)
+    assert course.assignable_for_user?(levelbuilder)
+  end
+
+  test "assignable_for_user?: works for pilot courses" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
+    assert UnitGroup.any?(&:pilot?)
+
+    refute pilot_course.assignable_for_user?(student)
+    refute pilot_course.assignable_for_user?(teacher)
+    assert pilot_course.assignable_for_user?(pilot_teacher)
+    assert pilot_course.assignable_for_user?(levelbuilder)
   end
 
   test "update_teacher_resources" do

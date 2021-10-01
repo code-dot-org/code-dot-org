@@ -2,7 +2,7 @@
 title: みんなに広めよう
 ---
 
-{{ signup_button }}
+サインアップ
 
 # 身の回りの人たちにHour of Codeを広めよう
 
@@ -28,4 +28,4 @@ title: みんなに広めよう
 
 [Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
 
-{{ signup_button }}
+サインアップ

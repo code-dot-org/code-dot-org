@@ -31,6 +31,16 @@ export default class JavabuilderConnection {
   // Get the access token to connect to javabuilder and then open the websocket connection.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilder() {
+    // Don't attempt to connect to Javabuilder if we do not have a project identifier.
+    // This typically occurs if a teacher is trying to view a student's project
+    // that has not been modified from the starter code.
+    // This case does not apply to students, who are able to execute unmodified starter code.
+    // See this comment for more detail: https://github.com/code-dot-org/code-dot-org/pull/42313#discussion_r701417221
+    if (project.getCurrentId() === undefined) {
+      this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
+      return;
+    }
+
     $.ajax({
       url: '/javabuilder/access_token',
       type: 'get',
@@ -44,10 +54,16 @@ export default class JavabuilderConnection {
     })
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
-        this.onOutputMessage(
-          'We hit an error connecting to our server. Try again.'
-        );
-        console.error(error.responseText);
+        if (error.status === 403) {
+          this.onOutputMessage(
+            javalabMsg.errorJavabuilderConnectionNotAuthorized()
+          );
+          this.onNewlineMessage();
+        } else {
+          this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
+          this.onNewlineMessage();
+          console.error(error.responseText);
+        }
       });
   }
 
@@ -66,22 +82,26 @@ export default class JavabuilderConnection {
 
   onStatusMessage(messageKey) {
     let message;
-    let includeLineBreak = false;
+    let lineBreakCount = 0;
     switch (messageKey) {
       case StatusMessageType.COMPILING:
         message = javalabMsg.compiling();
+        lineBreakCount = 1;
         break;
       case StatusMessageType.COMPILATION_SUCCESSFUL:
         message = javalabMsg.compilationSuccess();
+        lineBreakCount = 1;
         break;
       case StatusMessageType.RUNNING:
         message = javalabMsg.running();
-        includeLineBreak = true;
+        lineBreakCount = 2;
         break;
       case StatusMessageType.GENERATING_RESULTS:
         message = javalabMsg.generatingResults();
+        lineBreakCount = 1;
         break;
       case StatusMessageType.EXITED:
+        this.onNewlineMessage();
         this.onExit();
         break;
       default:
@@ -90,7 +110,7 @@ export default class JavabuilderConnection {
     if (message) {
       this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
     }
-    if (includeLineBreak) {
+    for (let lineBreak = 0; lineBreak < lineBreakCount; lineBreak++) {
       this.onNewlineMessage();
     }
   }
@@ -111,6 +131,7 @@ export default class JavabuilderConnection {
         break;
       case WebSocketMessageType.EXCEPTION:
         handleException(data, this.onOutputMessage);
+        this.onNewlineMessage();
         this.onExit();
         break;
       case WebSocketMessageType.DEBUG:
@@ -157,6 +178,7 @@ export default class JavabuilderConnection {
     this.onOutputMessage(
       'We hit an error connecting to our server. Try again.'
     );
+    this.onNewlineMessage();
     // Set isRunning to false
     this.setIsRunning(false);
     console.error(`[error] ${error.message}`);

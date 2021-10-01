@@ -4,11 +4,11 @@ title: इस का प्रचार करें
 
 {{ signup_button }}
 
-# Get your community involved in the Hour of Code
+# अपने समुदाय को Hour of Code में शामिल कीजिये. 
 
 ## 1. Spread the word
 
-Tell your friends about the **#HourOfCode**!
+आप के मित्र परिवार को इसके बारे में जरूर बताईयेगा **#HourOfCode**!
 
 {{ promote/share_buttons }}
 

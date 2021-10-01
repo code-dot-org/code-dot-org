@@ -246,10 +246,82 @@
           "name": "Fórum učiteľov"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "Programovanie v páre"
+          "name": "Párové programovanie"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "Ako na Code.org vytvoriť triednu sekciu"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "Smajlíkovia"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "Pravidlo 20/20/20"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "name": "Keď sú žiaci neposední – Go Noodle"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "Mysli celým telom, keď si online"
+        },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "Mapovanie štandardov CSTA",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "Slovná zásoba z kurzu\t",
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "Fórum učiteľov"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "Sprievodca ladením"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "Sleduj algoritmus",
+          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
+        },
+        "swimming-fish-teacher-sandbox/coursee/2021": {
+          "name": "Plávajúca ryba - priestor učiteľa"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Dokumentácia pre Sprite Lab"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "Buď super digitálny občan: snímky pre lekciu",
+          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "Buď super digitálny občan: Super digitálny občan",
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "Súkromné a osobné informácie: prezentácia k lekcii",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "Súkromné a osobné informácie: Súkromné a osobné informácie",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "Súkromné a osobné informácie: výstupný test",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "Súkromné a osobné informácie: kvíz pre lekciu",
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
+        },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "Súkromné a osobné informácie: kvíz pre lekciu",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "Pause and Think Online",
+          "url": "https://youtu.be/X_duZ-1LApg"
+        },
+        "about_me_planning_guide/coursee/2021": {
+          "name": "O mne: sprievodca plánovaním",
+          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
         },
         "implementation_guide/coursee/2021": {
           "name": "Implementačná Príručka"

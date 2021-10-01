@@ -35,7 +35,7 @@ class UsersHelperTest < ActionView::TestCase
           ul1.level_id => {status: LEVEL_STATUS.perfect, result: ActivityConstants::BEST_PASS_RESULT},
           ul3.level_id => {status: LEVEL_STATUS.passed, result: 20}
         },
-        current_lesson: script.lessons.first.id,
+        current_lesson: ul3.level.script_levels.first.lesson.id,
         completed: false,
       },
       summarize_user_progress(script, user)
@@ -187,7 +187,7 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal({level.id => {status: "not_tried"}}, summarize_user_progress(script, user)[:progress], 'not_tried status since we dont have a result')
 
     # put in in "view answers" mode
-    user_level.delete
+    user_level.really_destroy!
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: true, submitted: true
     assert_equal(
       {
@@ -197,7 +197,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # now submit it
-    user_level.delete
+    user_level.really_destroy!
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: true
     assert_equal(
       {
@@ -213,7 +213,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # unlock it again
-    user_level.delete
+    user_level.really_destroy!
     level_source = create :level_source, data: "{}"
     user_level = create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: false, readonly_answers: false, submitted: false, level_source: level_source
     assert_equal(
@@ -225,7 +225,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # now lock it
-    user_level.delete
+    user_level.really_destroy!
     user_level = create :user_level, user: user, best_result: ActivityConstants::UNSUBMITTED_RESULT, level: level, script: script, locked: true, readonly_answers: false, submitted: false
     assert_equal(
       {
@@ -236,7 +236,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # appears submitted while viewing answers
-    user_level.delete
+    user_level.really_destroy!
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, readonly_answers: true, submitted: true
     assert_equal(
       {
@@ -283,7 +283,7 @@ class UsersHelperTest < ActionView::TestCase
     )
 
     # now create a submitted user level
-    user_level.delete
+    user_level.really_destroy!
     create :user_level, user: user, best_result: ActivityConstants::BEST_PASS_RESULT, level: level, script: script, locked: true, readonly_answers: nil, submitted: true
     assert_equal(
       {

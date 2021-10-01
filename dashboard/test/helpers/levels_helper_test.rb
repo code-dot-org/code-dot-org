@@ -206,13 +206,17 @@ class LevelsHelperTest < ActionView::TestCase
     user = create :user
     sign_in user
 
-    channel = get_channel_for(@level)
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [@level, level])
+
+    channel = get_channel_for(@level, script.id)
     # Request it again, should get the same channel
-    assert_equal channel, get_channel_for(@level)
+    assert_equal channel, get_channel_for(@level, script.id)
 
     # Request it for a different level, should get a different channel
     level = create(:level, :blockly)
-    assert_not_equal channel, get_channel_for(level)
+    assert_not_equal channel, get_channel_for(level, script.id)
   end
 
   test 'applab levels should have channels' do
@@ -228,10 +232,12 @@ class LevelsHelperTest < ActionView::TestCase
     @user = create :user
     sign_in create(:user)
 
+    script = create(:script)
     @level = create :applab
+    create(:script_level, script: script, levels: [@level])
 
     # channel does not exist
-    assert_nil get_channel_for(@level, @user)
+    assert_nil get_channel_for(@level, script.id, @user)
   end
 
   test 'applab levels should load channel when viewing student solution of a student with a channel' do
@@ -239,11 +245,13 @@ class LevelsHelperTest < ActionView::TestCase
     @user = create :user
     sign_in create(:user)
 
+    script = create(:script)
     @level = create :applab
+    create(:script_level, script: script, levels: [@level])
 
     # channel exists
     create :channel_token, level: @level, storage_id: storage_id_for_user_id(@user.id)
-    assert_not_nil get_channel_for(@level, @user)
+    assert_not_nil get_channel_for(@level, script.id, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
     # different user
@@ -303,6 +311,17 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal false, app_options[:level][:isStarted]
   end
 
+  test 'applab levels should include isNavigator=false when viewed by driver' do
+    @level = create :applab
+    @driver = create :student
+    @navigator = create :student
+    create_applab_progress_for_pair @level, @driver, @navigator
+
+    # "Load the level" as the driver
+    sign_in @driver
+    assert_equal false, app_options[:level]['isNavigator']
+  end
+
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create :applab
     @driver = create :student
@@ -311,6 +330,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # "Load the level" as the navigator
     sign_in @navigator
+    assert_equal true, app_options[:level]['isNavigator']
     assert_not_nil app_options[:level]['pairingDriver']
     assert_not_nil app_options[:level]['pairingChannelId']
 
@@ -340,6 +360,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # "Load the level" as the navigator
     sign_in @navigator
+    assert_equal true, app_options[:level]['isNavigator']
     assert_nil app_options[:level]['pairingDriver']
     assert_nil app_options[:level]['pairingChannelId']
   end
@@ -347,7 +368,8 @@ class LevelsHelperTest < ActionView::TestCase
   def create_applab_progress_for_pair(level, driver, navigator)
     driver_user_level = create :user_level, user: driver, level: level
     navigator_user_level = create :user_level, user: navigator, level: level
-    driver_user_level.navigator_user_levels << navigator_user_level
+    create :paired_user_level,
+      driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
     create :channel_token, level: level, storage_id: storage_id_for_user_id(driver.id)
   end
 

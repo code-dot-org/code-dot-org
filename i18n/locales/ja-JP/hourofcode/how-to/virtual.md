@@ -2,7 +2,7 @@
 title: Hour of Code How-To Guide for Virtual Events
 ---
 
-{{ signup_button }}
+サインアップ
 
 # Tips for a virtual Hour of Code event
 
@@ -68,4 +68,4 @@ Similar to how you started the event, come together afterwards to celebrate! Her
 
 Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
 
-{{ signup_button }}
+サインアップ

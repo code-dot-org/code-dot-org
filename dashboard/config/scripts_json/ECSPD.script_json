@@ -5,11 +5,12 @@
     "login_required": true,
     "properties": {
       "pd": true,
-      "professional_learning_course": "ECS Support Legacy"
+      "professional_learning_course": "ECS Support Legacy",
+      "deprecated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:46 UTC",
+    "serialized_at": "2021-09-09 20:39:12 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ECSPD"

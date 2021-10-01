@@ -12,6 +12,7 @@ import {
   fakeTeacherAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
+import {PublishedState} from '@cdo/apps/util/sharedConstants';
 
 describe('LessonOverview', () => {
   let defaultProps;
@@ -21,6 +22,7 @@ describe('LessonOverview', () => {
         unit: {
           displayName: 'Unit 1',
           link: '/s/unit-1',
+          publishedState: 'beta',
           lessonGroups: [
             {
               key: 'lg-1',
@@ -290,7 +292,7 @@ describe('LessonOverview', () => {
     ).to.be.true;
   });
 
-  it('renders dropdown button with links to printing options', () => {
+  it('renders dropdown button with links to printing options if not pilot or in development', () => {
     const lesson = {
       ...defaultProps.lesson,
       lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
@@ -310,6 +312,60 @@ describe('LessonOverview', () => {
     ]);
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plan',
+      'Print Handouts'
+    ]);
+  });
+
+  it('does not render overview printing option in dropdown for pilot course', () => {
+    const unit = {
+      ...defaultProps.lesson.unit,
+      publishedState: PublishedState.pilot
+    };
+    const lesson = {
+      ...defaultProps.lesson,
+      unit: unit,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/script_resources.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Handouts'
+    ]);
+  });
+
+  it('does not render overview printing option in dropdown for in development course', () => {
+    const unit = {
+      ...defaultProps.lesson.unit,
+      publishedState: PublishedState.in_development
+    };
+    const lesson = {
+      ...defaultProps.lesson,
+      unit: unit,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: '/link/to/script_resources.pdf'
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/script_resources.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Handouts'
     ]);
   });

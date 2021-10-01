@@ -110,6 +110,8 @@ bn:
     accept_terms: "আপনার একাউন্ট তৈরি করতে সম্মত হতে হবে।"
     email_preference_yes: "\"হ্যাঁ\""
     email_preference_no: "না"
+    share_teacher_email_reg_partner_preference_yes: "\"হ্যাঁ\""
+    share_teacher_email_reg_partner_preference_no: "না"
   school_info:
     title: 'স্কুলের তথ্য (ঐচ্ছিক)'
     school_country: 'স্কুলের দেশ'

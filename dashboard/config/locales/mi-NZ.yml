@@ -130,6 +130,8 @@ mi:
     accept_terms: Me mātua whakaae koe ki te waihanga pūkete
     email_preference_yes: Āe
     email_preference_no: Kāore
+    share_teacher_email_reg_partner_preference_yes: Āe
+    share_teacher_email_reg_partner_preference_no: Kāore
   signin_form:
     title: He pūkete kē tāu? Takiuru
     login: Īmēra

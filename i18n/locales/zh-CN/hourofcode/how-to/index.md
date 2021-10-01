@@ -99,7 +99,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 - 正版的 Code.org 推出包括比尔盖茨、马克·扎克伯格和 NBA 球星克里斯. 波什的视频。 （有[1 分钟的](https://www.youtube.com/watch?v=qYZF6oIZtfc)，[5 分钟的](https://www.youtube.com/watch?v=nKIu9yen5nc)和[9 分钟的](https://www.youtube.com/watch?v=dU1xS07N-FA)）
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+如果你和你的学生都是第一次接触计算机科学也没关系。这里有一些主意来帮助你介绍你的编程一小时活动：
 
 - 通过男孩和女孩们都关心的例子，介绍科技如何影响我们的生活（比如拯救生命，帮助人们，连接人们等）
 - 让全班一起来列出每天生活中用到编程的地方。
@@ -111,17 +111,17 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ## 6. Get coding!
 
-Direct students to the activity
+指导学生参与活动
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-When your students come across difficulties it's okay to respond:
+当你的学生遇到困难时，你完全可以用这样的方式回答：
 
 - "我也不知道。让我们一起来找到问题的答案吧"。
 - “科学技术并不总是同我们期望的方式一样工作。”
 - “学习编程就像是学习一门新的语言（事实上就是-我们一直都将学习编程称作学习编程语言，你现在学的这种叫Blocky?）；你不会马上就说得很流利。”
 
-What if a student finishes early?
+如果一个学生提前完成了怎么办？
 
 - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - 或者可以让提早完成的学生去帮助那些在活动中遇到困难的同学。

@@ -46,7 +46,7 @@ Code.org est une organisation à but non lucratif dont le but est d'accroître l
 
 <a id="infographics"></a>
 
-## Infographics
+## Infographies
 
 {{ stats_carousel }}
 

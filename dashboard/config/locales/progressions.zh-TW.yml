@@ -40,7 +40,6 @@ zh-TW:
       Challenge Levels: 挑戰等級
       'Challenge: Draw an Image': 挑戰：繪製圖像
       Challenges: 挑戰
-      Chance: 機會
       Change: 改變
       Changing Sensor Scale: 感測器測量值的修改
       Checking for a Winner: 確認誰是贏家
@@ -68,7 +67,6 @@ zh-TW:
       Create Your Own Animation: 建立你自己的動畫
       Create a Story: 新增故事
       Create your project: 創建你的專案
-      Creating a Simulation: 設計模擬
       Dance Crews: 舞蹈團隊
       Data Visualization: 資料視覺化
       De-bugging with the Step Button: 透過步驟按鈕進行除錯
@@ -166,6 +164,7 @@ zh-TW:
       'Mini-Project: About Me': 關於我
       'Mini-Project: Alien Dance Moves': '小專案: 外星人的舞步'
       'Mini-Project: Alien Dance Party': '小專案: 外星人跳舞派對'
+      'Mini-Project: Outbreak Simulator': 小項目：疫情爆發模擬器
       'Mini-Project: Royal Battle': '小專案: 皇家對戰'
       'Mini-Project: Snowflake #1': '小專案: 雪花一號'
       'Mini-Project: Snowflake #2': '小專案: 雪花二號'
@@ -183,7 +182,6 @@ zh-TW:
       Modifying Arrays: 修改陣列
       More Buttons: 更多按鈕
       More Input: 更多輸入
-      More Monsters: 更多怪物
       More Parameters: 更多參數
       Motorcycle: 摩托車
       Movement with the Counter Pattern: 使用計數器來移動
@@ -210,7 +208,6 @@ zh-TW:
       Practice: 練習
       Prediction: 預測
       Problem Solving: 問題解決
-      Programming with Events: 用事件編程
       Programming with Rey and BB-8: 和 BB-8 與 Rey 一起寫程式
       Programs that Repeat: 重複執行的程式
       Project: 專案
@@ -223,7 +220,6 @@ zh-TW:
       RGB Exploration: 三原色的探索
       Random Numbers: 隨機取數
       Reading Sensors: 讀取感測器
-      Recovery: 恢復
       Reflection: 反思
       Repeat Blocks: 重複區塊
       Repeat Blocks with BB-8: BB-8機器人的重複區塊
@@ -252,7 +248,6 @@ zh-TW:
       Setting Properties: 設定屬性
       Shapes and the Draw Loop: 形狀跟畫迴圈
       Share Your App: 分享您的手機應用程式
-      Share Your Message: 分享你的訊息
       Side Scroller: 側邊捲軸
       Simple Circuits: 簡易電路
       Skill Building: 技能發展
@@ -267,7 +262,6 @@ zh-TW:
       Sprite Velocity: 角色速度
       Sprites and the Draw Loop: 小怪跟畫迴圈
       Star Chaser: 星星追尋者
-      Stopping the Outbreak with Masks: 用口罩阻止疫情爆發
       Styling Text: 文字樣式化
       Styling with Classes: 利用類別進行樣式化
       Styling your Website: 樣式化你的網站
@@ -290,7 +284,6 @@ zh-TW:
       Using the LED: 使用彩色顯示器
       Using the Repeat Block: 使用「重複」積木
       Using the Switch: 使用開關
-      Vaccines: 疫苗
       Variables: 變數
       Velocity: 速度
       Video: 影片

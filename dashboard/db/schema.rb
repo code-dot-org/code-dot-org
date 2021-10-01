@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_16_222729) do
+ActiveRecord::Schema.define(version: 2021_09_16_222743) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -400,6 +400,7 @@ ActiveRecord::Schema.define(version: 2021_08_16_222729) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "course_offering_id"
+    t.string "published_state", default: "in_development"
     t.index ["content_root_type", "content_root_id"], name: "index_course_versions_on_content_root_type_and_content_root_id"
     t.index ["course_offering_id", "key"], name: "index_course_versions_on_course_offering_id_and_key", unique: true
     t.index ["course_offering_id"], name: "index_course_versions_on_course_offering_id"
@@ -1625,7 +1626,7 @@ ActiveRecord::Schema.define(version: 2021_08_16_222729) do
     t.boolean "hidden", default: false, null: false
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
-    t.boolean "code_review_enabled"
+    t.boolean "code_review_enabled", default: true
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"

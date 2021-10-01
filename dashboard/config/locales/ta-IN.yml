@@ -63,12 +63,26 @@ ta:
     forgot_password: உங்கள் கடவுச்சொல் மறந்துவிட்டதா?
   signup_form:
     age: வயது
+    user_type: நீங்கள் ஒரு மாணவரா அல்லது ஆசிரியரா?
+    user_type_button: கணக்கு வகையைப் புதுப்பிக்கவும்
+    user_type_label: கணக்கு வகை
     user_type_student: மாணவர்
+    user_type_student_desc: 'எங்கள் அனைத்து படிப்புகள் மற்றும் செயல்பாடுகளை ஆராயுங்கள்,
+      மேலும்:'
+    user_type_student_ability_1: உங்கள் முன்னேற்றம் மற்றும் திட்டங்களை சேமிக்கவும்
+    user_type_student_ability_2: உங்கள் ஆசிரியரின் வகுப்பறை பிரிவில் சேருங்கள்
     user_type_teacher: ஆசிரியர்
+    user_type_teacher_desc: 'மாணவர்கள் அணுகக்கூடிய அனைத்தும், கூடுதலாக:'
+    user_type_teacher_ability_1: வகுப்பறை பிரிவுகளை உருவாக்கவும்
+    user_type_teacher_ability_2: மாணவர் வேலையை ஒதுக்கி கண்காணிக்கவும்
+    user_type_teacher_ability_3: தொழில்முறை கற்றலில் சேருங்கள்
+    user_type_teacher_ability_4: எங்கள் ஆசிரியர் மன்றத்தில் தொடர்பு கொள்ளுங்கள்
     field_is_required: தேவைப்படுகிறது
     email_preference_privacy: "(எங்கள் தனியுரிமைக் கொள்கையைப் பார்க்கவும்)"
     email_preference_yes: ஆம்
     email_preference_no: இல்லை
+    share_teacher_email_reg_partner_preference_yes: ஆம்
+    share_teacher_email_reg_partner_preference_no: இல்லை
     parent_account_checkbox: நான் எனது குழந்தையின் சார்பாக பதிவு செய்யும் பெற்றோர்
       / பாதுகாவலர்
     parent_account_email_progress_permission: உங்கள் குழந்தையின் முன்னேற்றம் மற்றும்
@@ -105,12 +119,20 @@ ta:
         தேர்ந்தெடுக்கவும்"
       restricted_section: "%{section_code}  பிரிவில் உங்களைச் சேர்க்க முடியவில்லை,
         ஏனெனில் அது பூட்டப்பட்டுள்ளது. உதவிக்கு உங்கள் ஆசிரியரைத் தொடர்பு கொள்ளவும்."
+      full_section: ஏற்கனவே %{section_capacity} மாணவர்கள் உள்ளதால், உங்களை நாங்கள்
+        பிரிவு %{section_code} இல் சேர்க்க முடியவில்லை. உதவிக்கு உங்கள் ஆசிரியரைத்
+        தொடர்பு கொள்ளவும்.
   crud:
     show: காண்பி
     edit: திருத்து
     update: புதுப்பிக்கவும்
     submit: சமர்ப்பிக்க
     destroy: அழிக்கவும்
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: நீங்கள் அளித்த மின்னஞ்சல் முகவரி இந்தக் கணக்கிற்கான
+          மின்னஞ்சல் முகவரியுடன் பொருந்தவில்லை
   nav:
     header:
       finished_hoc: நான் முடித்துவிட்டேன்!
@@ -270,6 +292,8 @@ ta:
       other: வேறு
     submit: சமர்ப்பிக்க
     decline: மூடவும்
+  progress:
+    assessment: மதிப்பீடு
   project:
     projects: திட்டப்பணிகள்
     project_gallery: திட்டப்பணிகள்

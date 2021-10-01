@@ -551,7 +551,11 @@
         "courseF_sprites_freeplay_aquatic": "Tengeri",
         "courseF_sprites_properties": "Sprite tulajdonságok",
         "ramp_artist_loops4_2021": "Csillag",
-        "scrat_loops_C-F_video_2021": "Ciklusok a Jégkorszakban Videó"
+        "scrat_loops_C-F_video_2021": "Ciklusok a Jégkorszakban Videó",
+        "helloworld_animals_costumes": "Jelmezek",
+        "helloworld_emoji_costumes": "Jelmezek",
+        "helloworld_food_costumes": "Jelmezek",
+        "helloworld_retro_costumes": "Jelmezek"
       }
     }
   }

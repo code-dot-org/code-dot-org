@@ -239,6 +239,10 @@ es:
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: Debes especificar una preferencia de correo electrónico.
+    share_teacher_email_reg_partner_preference_yes: Sí
+    share_teacher_email_reg_partner_preference_no: 'No'
+    share_teacher_email_reg_partner_preference_required: Debes especificar una preferencia
+      de correo electrónico.
     parent_account_checkbox: Som rodič/zákonný zástupca, ktorý sa prihlasuje v mene
       svojho dieťaťa
     parent_account_email_progress_permission: Môžeme vám poslať e-mail s príležitostnými

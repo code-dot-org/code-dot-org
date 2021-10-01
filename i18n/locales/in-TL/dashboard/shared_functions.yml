@@ -8,7 +8,9 @@ in:
       moving east: crwdns2477446:0crwdne2477446:0
       moving east and looping: crwdns2477448:0crwdne2477448:0
       moving north: crwdns2477450:0crwdne2477450:0
+      moving north and looping: crwdns2692649:0crwdne2692649:0
       moving south: crwdns2477452:0crwdne2477452:0
+      moving south and looping: crwdns2692651:0crwdne2692651:0
       moving west: crwdns2477454:0crwdne2477454:0
       moving west and looping: crwdns2477456:0crwdne2477456:0
       moving with arrow keys: crwdns2477458:0crwdne2477458:0

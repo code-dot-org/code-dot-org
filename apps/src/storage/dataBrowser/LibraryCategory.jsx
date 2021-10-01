@@ -18,7 +18,7 @@ class LibraryCategory extends React.Component {
     collapsed: true
   };
 
-  componentWillReceiveProps(newProps) {
+  UNSAFE_componentWillReceiveProps(newProps) {
     if (
       (newProps.forceExpanded && this.state.collapsed) ||
       (!newProps.forceExpanded && !this.state.collapsed)

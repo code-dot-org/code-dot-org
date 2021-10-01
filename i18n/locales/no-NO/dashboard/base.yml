@@ -153,6 +153,9 @@
     email_preference_yes: "Ja"
     email_preference_no: "Nei"
     email_preference_required: "Du må angi en e-postpreferanse."
+    share_teacher_email_reg_partner_preference_yes: "Ja"
+    share_teacher_email_reg_partner_preference_no: "Nei"
+    share_teacher_email_reg_partner_preference_required: "Du må angi en e-postpreferanse."
   school_info:
     title: 'Informasjon til skolen (valgfritt)'
     school_country: 'Landet til skolen'

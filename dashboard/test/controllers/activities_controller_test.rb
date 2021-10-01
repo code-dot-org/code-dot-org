@@ -579,16 +579,13 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
-
-    user_level_finder = mock('user_level_finder')
-    user_level_finder.stubs(:first).returns(nil)
+    # (assumes that the only call to first_or_initialize when handling
+    # a milestone post is the call in User#track_level_progress)
     existing_user_level = UserLevel.create(user: @user, level: @script_level.level, script: @script_level.script)
-    user_level_finder.stubs(:first_or_initialize).
+    ActiveRecord::Relation.stubs(:first_or_initialize).
       raises(ActiveRecord::RecordNotUnique.new(Mysql2::Error.new("Duplicate entry '1208682-37' for key 'index_user_levels_on_user_id_and_level_id'"))).
       then.
       returns(existing_user_level)
-
-    UserLevel.stubs(:where).returns(user_level_finder)
 
     assert_creates(LevelSource, Activity) do
       assert_does_not_create(UserLevel) do
@@ -1023,7 +1020,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_navigator_user_level.best_result
     assert_equal 20, existing_navigator_user_level.time_spent
 
-    assert_equal [@user], existing_navigator_user_level.driver_user_levels.map(&:user)
+    assert_equal @user, existing_navigator_user_level.driver
   end
 
   test "milestone with pairings updates navigator's existing user level" do
@@ -1045,7 +1042,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_driver_user_level.best_result
     assert_equal 20, existing_driver_user_level.time_spent
 
-    assert_equal [pairing], existing_driver_user_level.navigator_user_levels.map(&:user)
+    assert_equal [pairing.name], existing_driver_user_level.navigators_names
   end
 
   test "milestone with pairings stops updating levels when pairing is disabled" do
@@ -1067,7 +1064,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     existing_driver_user_level.reload
     assert_equal 100, existing_driver_user_level.best_result
 
-    assert_equal [], existing_driver_user_level.navigator_user_levels.map(&:user)
+    assert_nil existing_driver_user_level.navigators_names
   end
 
   test "milestone fails to update locked/readonly level" do
@@ -1122,7 +1119,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     post :milestone, params: milestone_params
     assert_response 403
 
-    user_level.delete
+    user_level.really_destroy!
     # explicity create a user_level that is readonly_answers
     create :user_level, user: student_1, script: script, level: level, submitted: true, locked: true, readonly_answers: true
     post :milestone, params: milestone_params

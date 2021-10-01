@@ -18,10 +18,13 @@ pt:
         csp_2021_category_name: Princípios da CC (2021-2022)
         cspexams_category_name: Teste prático dos princípios da CC
         csp17_category_name: Princípios da CC (2017-2018)
+        aiml_2021_category_name: IA / AM
         full_course_category_name: Cursos Completos
         hoc_category_name: Hora do Código
         math_category_name: Matemática
         research_studies_category_name: Trabalhos de Investigação
+        twenty_hour_category_name: 10-Horas
+        tts_category_name: Texto-para-Voz
         other_category_name: Outros
       name:
         course1:
@@ -207,6 +210,11 @@ pt:
           lessons:
             Artist:
               name: Artista
+              description_student: Crie belas imagens programando o Artista.
+              description_teacher: Nesta lição, os alunos assumirão o controle do
+                Artista para concluir os desenhos na tela. Esta etapa do Artista permitirá
+                que os alunos criem imagens de complexidade crescente usando novos
+                blocos como "avançar em 100 pixels" e "virar à direita em 90 graus".
           student_description: Faça desenhos e figuras legais com o Artista!
         hourofcode:
           title: Labirinto clássico
@@ -1924,6 +1932,14 @@ pt:
           lessons:
             Oceans:
               name: Oceanos
+              description_student: 'Resumo do Tutorial: primeiro os estudantes classificam
+                objetos como "peixe" ou "não peixe" para tentar remover o lixo do
+                oceano. Em seguida, eles precisarão expandir seu conjunto de dados
+                para incluir outras criaturas marinhas que pertencem à água. Na segunda
+                parte da atividade, irão escolher suas próprias marcações para aplicar
+                às imagens de peixes gerados aleatoriamente. Esses dados de treinamento
+                são usados para um modelo de aprendizado de máquina que depois deve
+                ser capaz de marcar novas imagens sozinho.'
           student_description: Aprenda como a Inteligência Artificial e aprendizado
             de máquina pode ser usado para resolver problemas mundiais.
         CSPPD3-Unit3-pt2:
@@ -4112,6 +4128,14 @@ pt:
           lessons:
             Bounce:
               name: Pingue-pongue
+              description_student: Você já desejou poder jogar videogame na escola?
+                Nesta lição, você poderá fazer o seu próprio!
+              description_teacher: Nesta atividade online, os alunos aprenderão o
+                que são eventos e como os computadores os usam em programas como videogames.
+                Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir
+                a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça,
+                os alunos terão a oportunidade de personalizar seu jogo com diferentes
+                velocidades e sons.
           student_description: Escolha seu time e faça um jogo de basquete
         sample-csp5:
           lessons:
@@ -5122,6 +5146,14 @@ pt:
           lessons:
             Sports:
               name: Esportes
+              description_student: Você já desejou poder jogar videogame na escola?
+                Nesta lição, você poderá fazer o seu próprio!
+              description_teacher: Nesta atividade online, os alunos aprenderão o
+                que são eventos e como os computadores os usam em programas como videogames.
+                Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir
+                a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça,
+                os alunos terão a oportunidade de personalizar seu jogo com diferentes
+                velocidades e sons.
           student_description: Esportes
         2016_sciencePD-phase2b:
           lessons:
@@ -17728,7 +17760,7 @@ pt:
               display_name: Questionário
           lessons:
             CSD post-course survey:
-              name: CSD pesquisa pós-curso
+              name: CSD pesquisa pós-curso de estudantes ('18'19)
           student_description: |-
             A pesquisa pós-curso do CS Discoveries é uma ferramenta importante que usamos para obter feedback de você e fazer melhorias no curso.
              A pesquisa é privada e anônima - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
@@ -17747,7 +17779,7 @@ pt:
               display_name: Questionário
           lessons:
             CSP post-course survey:
-              name: Pesquisa Pós-Curso PCC
+              name: Inquérito pós-curso do aluno CSP ('18 -'19)
           student_description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da
             CC do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída.
             Suas respostas são privadas e anônimas - seu professor pode ver resultados
@@ -25988,8 +26020,10 @@ pt:
               name: Módulo 2
             Module 3:
               key: Módulo 3
+              name: Módulo 3
             Module 4:
               key: Módulo 4
+              name: Módulo 4
             Module 5:
               key: Módulo 5
             Module 6:
@@ -26070,6 +26104,12 @@ pt:
           lessons:
             lesson-2:
               name: Lição 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fase 1
+            lessonGroup-3:
+              display_name: Fase 2
         dlp21-csp-mod1:
           title: Princípios do CS Módulo de Aprendizagem Mais Profunda 1
         dlp21-csd:
@@ -26095,6 +26135,8 @@ pt:
           lessons:
             lesson-12:
               name: Ferramentas
+            lesson-13:
+              name: Exemplos
             lesson-17:
               name: Console
             lesson-18:
@@ -26149,3 +26191,43 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Inovações em Computação
+            lesson-9:
+              name: LEDs Coloridos
+            lesson-13:
+              name: Acelerômetro
+            lesson-19:
+              name: Projeto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Ferramentas
+            lesson-4:
+              name: Exemplos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lições
+            lessonGroup-3:
+              display_name: Projeto
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: Dia de Avaliação
+          lesson_groups:
+            lesson group:
+              display_name: Conteúdo
+            content:
+              display_name: Conteúdo
+            lesson_group:
+              display_name: Conteúdo
+            lessonGroup-2:
+              display_name: Conteúdo
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Festa: Desconectada'

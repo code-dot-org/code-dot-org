@@ -14,7 +14,7 @@ title: Blurbs and useful stats
 
 ## Gamitin itong maiksing blurb sa newsletter
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### Dalhin ng computer science sa iyong paaralan. Magsimula sa Hour of Code!
 
 With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Ngunit mas kaunti ng kalahati sa lahat ng mga paaralan ang nagtuturi ng computer science! Ang mabuting balita ay, tayo patungo sa daan upang baguhin ito. Kung narinig mo na ng tungkol sa Hou of Code sa nakaraang taon, maaaring alam mo ng gumawa ito ng kasaysayan. 100 milyong mga estudyante ngayon ang nakatuklas kung gaano kadaling gamitin at kasaya ang computer science sa pamamagitan ng paggawa ng isang Hour of Code.
 

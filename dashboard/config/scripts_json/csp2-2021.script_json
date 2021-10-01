@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:23 UTC",
+    "serialized_at": "2021-08-26 16:43:24 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2021"
@@ -1660,7 +1660,7 @@
       "key": "9788ec6c-7468-4e17-8c12-40f96c175649",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** As students enter class hand each of them a single IP address (precut by teacher from [r ip-address-labels/csp/2021])",
+        "description": "**Distribute:** As students enter class hand each of them a single IP address (precut by teacher from [IP Address Labels](https://docs.google.com/document/d/1IcnID2dhXrhagkJCUULO8g240NflvofUs3q23yEnUu4/edit?usp=sharing))",
         "name": "DNS - Unplugged - 5 mins\r",
         "tips": [
           {
@@ -2828,6 +2828,18 @@
       }
     },
     {
+      "name": "IP Address Labels",
+      "url": "https://docs.google.com/document/d/1IcnID2dhXrhagkJCUULO8g240NflvofUs3q23yEnUu4/edit?usp=sharing",
+      "key": "ip_address_labels",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "ip_address_labels"
+      }
+    },
+    {
       "name": "Layers of the Internet",
       "url": "https://docs.google.com/document/d/1EB_y099r7Qwb3SxFhHK9wSaikoHixL85O4_YdsUBJSY/edit",
       "key": "layers-of-the-internet-activity-guide",
@@ -3003,6 +3015,12 @@
       "seeding_key": {
         "lesson.key": "DNS and HTTP",
         "resource.key": "csp-unit-2-the-internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "resource.key": "ip_address_labels"
       }
     },
     {

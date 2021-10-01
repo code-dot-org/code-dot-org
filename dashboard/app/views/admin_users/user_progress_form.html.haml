@@ -1,6 +1,6 @@
 %h1 User Progress
 
-%p This page allows an admin to view recent progress for a user and reset progress for all levels in a script. All times in UTC.
+%p This page allows an admin to view recent progress for a user and delete progress for all levels in a script. All times in UTC.
 
 :ruby
   def format_time(datetime)
@@ -31,7 +31,7 @@
         %td= format_time(@target_user.current_sign_in_at)
         %td= format_time(@target_user.created_at)
 
-  %h2 Scripts with most recent progress (sorted by updated_at, up to 5 shown)
+  %h2 Scripts with most recent progress (sorted by updated_at, up to 100 shown)
   %p Data represents rows from the user_scripts table
   %table.table.table-hover.table-condensed
     %thead
@@ -42,6 +42,7 @@
       %th Completed at
       %th Assigned at
       %th Last progress at
+      %th
     %tbody
       - @user_scripts.each do |user_script|
         %tr
@@ -52,26 +53,4 @@
           %td= format_time(user_script.completed_at)
           %td= format_time(user_script.assigned_at)
           %td= format_time(user_script.last_progress_at)
-
-  %h2 All levels with progress in the above scripts (sorted by updated_at)
-  %p Data represents rows from user_levels table
-  %table.table.table-hover.table-condensed
-    %thead
-      %th Id
-      %th Level path
-      %th Result
-      %th Att.
-      %th Time(s)
-      %th Created at
-      %th Updated at
-    %tbody
-      - @user_levels.each do |user_level|
-        %tr
-          %td= user_level.id
-          - script_level_path = build_script_level_path(user_level.script_level)
-          %td= link_to script_level_path, script_level_path
-          %td= user_level.best_result
-          %td= user_level.attempts
-          %td= user_level.time_spent
-          %td= format_time(user_level.created_at)
-          %td= format_time(user_level.updated_at)
+          %td= link_to 'Delete...', delete_progress_form_path(user_id: @target_user.id, script_id: user_script.script_id)

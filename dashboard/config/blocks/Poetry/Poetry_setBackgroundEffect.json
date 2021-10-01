@@ -1,0 +1,104 @@
+{
+  "category": "",
+  "config": {
+    "func": "setBackgroundEffect",
+    "blockText": "set background effect {EFFECT} {PALETTE}",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "Shifting",
+            "\"colors\""
+          ],
+          [
+            "Wavy",
+            "\"squiggles\""
+          ],
+          [
+            "Hyper Speed",
+            "\"space\""
+          ],
+          [
+            "Starry",
+            "\"stars\""
+          ],
+          [
+            "Fading",
+            "\"darkCircles\""
+          ],
+          [
+            "Frosted",
+            "\"fadeColors\""
+          ],
+          [
+            "Blooming",
+            "\"blooming\""
+          ],
+          [
+            "Rippling",
+            "\"ripples\""
+          ],
+          [
+            "Cloudy",
+            "\"clouds\""
+          ]
+        ]
+      },
+      {
+        "name": "PALETTE",
+        "options": [
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Grays",
+            "\"grayscale\""
+          ],
+          [
+            "Sky",
+            "\"sky\""
+          ],
+          [
+            "Ocean",
+            "\"ocean\""
+          ],
+          [
+            "Sunrise",
+            "\"sunrise\""
+          ],
+          [
+            "Sunset",
+            "\"sunset\""
+          ],
+          [
+            "Spring",
+            "\"spring\""
+          ],
+          [
+            "Summer",
+            "\"summer\""
+          ],
+          [
+            "Autumn",
+            "\"autumn\""
+          ],
+          [
+            "Winter",
+            "\"winter\""
+          ],
+          [
+            "Roses",
+            "\"roses\""
+          ]
+        ]
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}

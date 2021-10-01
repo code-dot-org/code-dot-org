@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
 import {
   addAnimation,
@@ -108,7 +108,7 @@ describe('SpriteLab', () => {
       });
 
       it('includes backgrounds if there are none', () => {
-        instance.isSpritelab = true;
+        instance.isBlockly = true;
         const initialAnimationList = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
@@ -126,7 +126,7 @@ describe('SpriteLab', () => {
       });
 
       it('does not modify the list if there is an animation in the backgrounds category', () => {
-        instance.isSpritelab = true;
+        instance.isBlockly = true;
         const initialAnimationList = {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
@@ -144,7 +144,7 @@ describe('SpriteLab', () => {
       });
 
       it('does not modify the list if there is an animation that matches a background', () => {
-        instance.isSpritelab = true;
+        instance.isBlockly = true;
         const initialAnimationList = {
           orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
           propsByKey: {

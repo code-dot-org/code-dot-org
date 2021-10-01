@@ -8,7 +8,7 @@ title: 传播信息
 
 ## 1. 帮助宣传这个活动
 
-Tell your friends about the **#HourOfCode**!
+告诉你的朋友 ** #编程一小时 **!
 
 {{ promote/share_buttons }}
 

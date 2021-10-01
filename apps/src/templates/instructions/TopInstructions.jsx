@@ -254,7 +254,7 @@ class TopInstructions extends Component {
    * Height can get below min height iff we resize the window to be super small.
    * If we then resize it to be larger again, we want to increase height.
    */
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (
       !nextProps.isCollapsed &&
       nextProps.height < MIN_HEIGHT &&
@@ -405,7 +405,11 @@ class TopInstructions extends Component {
    * Handle a click on the Documentation PaneButton.
    */
   handleDocumentationClick = () => {
-    const win = window.open(this.props.documentationUrl, '_blank');
+    const win = window.open(
+      this.props.documentationUrl,
+      '_blank',
+      'noopener,noreferrer'
+    );
     win.focus();
   };
 
@@ -616,8 +620,8 @@ class TopInstructions extends Component {
 
     const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
-    // If we're displaying the review tab the teacher can leave feedback in that tab
-    // so we hide the teacher feedback tab if there's no rubric to avoid confusion about
+    // If we're displaying the review tab (for CSA peer review) the teacher can leave feedback in that tab,
+    // in that case we hide the feedback tab (unless there's a rubric) to avoid confusion about
     // where the teacher should leave feedback
     const displayFeedback =
       !!rubric ||

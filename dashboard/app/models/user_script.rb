@@ -23,6 +23,8 @@
 class UserScript < ApplicationRecord
   include SerializedProperties
 
+  acts_as_paranoid # Use deleted_at column instead of deleting rows.
+
   belongs_to :user
   belongs_to :script
 

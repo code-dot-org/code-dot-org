@@ -1033,6 +1033,8 @@ se:
         text: patruljere bajás ja vulos
       gamelab_playSound:
         text: čuojatJiena {SOUND}
+      gamelab_playSoundOptions:
+        text: čuojatJiena {SOUND}
       gamelab_pointInDirection:
         text: čujut {SPRITE} {DIRECTION}
         options:
@@ -1358,11 +1360,44 @@ se:
         text: x koordináhta {SPRITE}
       Mikelab_yLocationOf:
         text: y koordináhta {SPRITE}
-      PoemBot_setForegroundEffect:
-        text: bija ovddabeal-effeavtta {FG_EFFECT}
+      Poetry_makeNumSprites:
+        text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
+      Poetry_playSound:
+        text: čuojatJiena {SOUND}
+      Poetry_setBackgroundEffect:
         options:
-          FG_EFFECT:
-            '"bubbles"': bulljarasat
+          EFFECT:
+            '"colors"': Ivnnit
+            '"squiggles"': Squiggles
+            '"space"': Gomuvuohta
+            '"stars"': Násttit
+            '"ripples"': Bárožat
+          PALETTE:
+            '"rainbow"': Arvedávgi
+      Poetry_setBackgroundImageAs:
+        text: bija duogábeali dása {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Arvi
+            '"bubbles"': Bulljarasat
+            '"hearts"': Ivdnás Váimmut
+            '"confetti"': Konfetti
+            '"starburst"': Starburst
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       SpriteLab2Beta_spriteSay:
         text: sprite {SPRITE} dadjá {TEXT} {SECONDS} sekunddaid
       Vector_createSpriteWith:

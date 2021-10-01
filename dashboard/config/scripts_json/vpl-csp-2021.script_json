@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:05 UTC",
+    "serialized_at": "2021-09-02 22:47:05 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "vpl-csp-2021"
@@ -71,6 +71,36 @@
       },
       "seeding_key": {
         "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "key": "Module 3",
+      "name": "Module 3",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "key": "Module 4",
+      "name": "Module 4",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "vpl-csp-2021"
       }
@@ -706,6 +736,462 @@
       "level_keys": [
         "CSP - Module 2 Wrap Up"
       ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP-PL AYWS3 Workshop Overview"
+        ],
+        "progression": "Module 3 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL AYWS3 Workshop Overview"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP-PL AYWS3 Workshop Overview"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview"
+        ],
+        "progression": "Understanding the Context for Lists (~55 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Understanding the context for the Model Lesson overview"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 1"
+        ],
+        "progression": "Understanding the Context for Lists (~55 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Synch3 - Reflection 1"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Synch3 - Reflection 1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 2"
+        ],
+        "progression": "Understanding the Context for Lists (~55 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Synch3 - Reflection 2"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Synch3 - Reflection 2"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Intro to CI"
+        ],
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Intro to CI"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Asynch3 - Intro to CI"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Broadening the def"
+        ],
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Broadening the def"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Asynch3 - Broadening the def"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Feedback in CI"
+        ],
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Feedback in CI"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Asynch3 - Feedback in CI"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Practice feedback"
+        ],
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~20 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Practice feedback"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Asynch3 - Practice feedback"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Module 3 Wrap Up"
+        ],
+        "progression": "Module 3 Asynchronous Wrap Up (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 3 Wrap Up"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Module 3 Wrap Up"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP-PL AYWA4 Workshop Overview"
+        ],
+        "progression": "Module 4 Overview (~5 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP-PL AYWA4 Workshop Overview"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP-PL AYWA4 Workshop Overview"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Understanding the content of the Lists EIPM sequence"
+        ],
+        "progression": "Content of the Lists EIPM sequence (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Understanding the content of the Lists EIPM sequence"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Understanding the content of the Lists EIPM sequence"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Lists EIPM reflection"
+        ],
+        "progression": "Content of the Lists EIPM sequence (~25 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Lists EIPM reflection"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Lists EIPM reflection"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5"
+        ],
+        "progression": "Mental models in Unit 5 (~35 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP AYW4 - Mental Models in Unit 5"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - Intro to Traversals"
+        ],
+        "progression": "Traversals and datasets (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch4 - Intro to Traversals"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Asynch4 - Intro to Traversals"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 6,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
+        ],
+        "progression": "Traversals and datasets (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 7,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - U5L10 Traversals Investigate"
+        ],
+        "progression": "Traversals and datasets (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch4 - U5L10 Traversals Investigate"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Asynch4 - U5L10 Traversals Investigate"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 8,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
+        ],
+        "progression": "Traversals and datasets (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 9,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP AYW4 - Reflection on datasets"
+        ],
+        "progression": "Traversals and datasets (~15 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP AYW4 - Reflection on datasets"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP AYW4 - Reflection on datasets"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 10,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP - Module 4 Wrap Up"
+        ],
+        "progression": "Module 4 Asynchronous Wrap-Up (~10 minutes)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP - Module 4 Wrap Up"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      },
+      "level_keys": [
+        "CSP - Module 4 Wrap Up"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -991,6 +1477,215 @@
           "CSP - Module 2 Wrap Up"
         ],
         "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL AYWS3 Workshop Overview",
+        "script_level.level_keys": [
+          "CSP-PL AYWS3 Workshop Overview"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Understanding the context for the Model Lesson overview",
+        "script_level.level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Synch3 - Reflection 1",
+        "script_level.level_keys": [
+          "CSP - Synch3 - Reflection 1"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Synch3 - Reflection 2",
+        "script_level.level_keys": [
+          "CSP - Synch3 - Reflection 2"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch3 - Intro to CI",
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Intro to CI"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch3 - Broadening the def",
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Broadening the def"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch3 - Feedback in CI",
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Feedback in CI"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch3 - Practice feedback",
+        "script_level.level_keys": [
+          "CSP - Asynch3 - Practice feedback"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 3 Wrap Up",
+        "script_level.level_keys": [
+          "CSP - Module 3 Wrap Up"
+        ],
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP-PL AYWA4 Workshop Overview",
+        "script_level.level_keys": [
+          "CSP-PL AYWA4 Workshop Overview"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Understanding the content of the Lists EIPM sequence",
+        "script_level.level_keys": [
+          "CSP - Understanding the content of the Lists EIPM sequence"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Lists EIPM reflection",
+        "script_level.level_keys": [
+          "CSP - Lists EIPM reflection"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP AYW4 - Mental Models in Unit 5",
+        "script_level.level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch4 - Intro to Traversals",
+        "script_level.level_keys": [
+          "CSP - Asynch4 - Intro to Traversals"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify",
+        "script_level.level_keys": [
+          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch4 - U5L10 Traversals Investigate",
+        "script_level.level_keys": [
+          "CSP - Asynch4 - U5L10 Traversals Investigate"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify",
+        "script_level.level_keys": [
+          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP AYW4 - Reflection on datasets",
+        "script_level.level_keys": [
+          "CSP AYW4 - Reflection on datasets"
+        ],
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csp-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP - Module 4 Wrap Up",
+        "script_level.level_keys": [
+          "CSP - Module 4 Wrap Up"
+        ],
+        "lesson.key": "Module 4",
         "lesson_group.key": "",
         "script.name": "vpl-csp-2021"
       }

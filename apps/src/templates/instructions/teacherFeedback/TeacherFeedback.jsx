@@ -16,7 +16,6 @@ import {
   rubricShape
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import experiments from '@cdo/apps/util/experiments';
 import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedback/ReadOnlyReviewState';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
@@ -108,7 +107,8 @@ export class TeacherFeedback extends Component {
           script_id: this.props.serverScriptId,
           level_id: this.props.serverLevelId,
           old_state: this.getLatestReviewState(),
-          new_state: this.state.reviewState
+          new_state: this.state.reviewState,
+          section_id: this.props.selectedSectionId
         })
       },
       {includeUserId: true}
@@ -203,15 +203,10 @@ export class TeacherFeedback extends Component {
   }
 
   renderCommentAreaHeaderForTeacher() {
-    const keepWorkingEnabled = experiments.isEnabled(experiments.KEEP_WORKING);
-
-    const hasEditableReviewState =
-      keepWorkingEnabled && this.props.canHaveFeedbackReviewState;
-
     return (
       <div style={styles.header}>
         <h1 style={styles.h1}> {i18n.feedbackCommentAreaHeader()} </h1>
-        {hasEditableReviewState && (
+        {this.props.canHaveFeedbackReviewState && (
           <EditableReviewState
             latestReviewState={this.getLatestReviewState()}
             onReviewStateChange={this.onReviewStateChange}
@@ -362,7 +357,8 @@ export default connect(
     verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
-    canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
+    canHaveFeedbackReviewState:
+      state.pageConstants && state.pageConstants.canHaveFeedbackReviewState
   }),
   dispatch => ({
     updateUserProgress(userId) {

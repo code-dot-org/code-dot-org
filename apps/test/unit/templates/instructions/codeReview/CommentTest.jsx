@@ -47,12 +47,12 @@ describe('Code Review Comment', () => {
   };
 
   it('body has a gray background when not from project owner', () => {
-    renderAndCheckBackgroundColor(color.lighter_gray);
+    renderAndCheckBackgroundColor(color.lightest_gray);
   });
 
-  it('body has a blue background when from current user', () => {
+  it('body has a blue background when from teacher', () => {
     renderAndCheckBackgroundColor(color.lightest_cyan, {
-      isFromCurrentUser: true
+      isFromTeacher: true
     });
   });
 

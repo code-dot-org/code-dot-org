@@ -65,7 +65,7 @@ module Services
 
       # This is currently:
       #   3 misc queries - starting and stopping transaction, getting max_allowed_packet
-      #   7 queries to set up course offering and course version
+      #   4 queries to set up course offering and course version
       #   34 queries - two for each model, + one extra query each for Lessons,
       #     LessonActivities, ActivitySections, ScriptLevels, LevelsScriptLevels,
       #     Resources, and Vocabulary.
@@ -88,13 +88,25 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(88) do
+      assert_queries(85) do
         ScriptSeed.seed_from_json(json)
       end
 
       assert_equal counts_before, get_counts
       script_after_seed = Script.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
+    end
+
+    test 'seed modifies script updated_at' do
+      Timecop.freeze do
+        script = create_script_tree
+        updated_at = script.updated_at
+        Timecop.travel 1.minute
+        json = ScriptSeed.serialize_seeding_json(script)
+        ScriptSeed.seed_from_json(json)
+        script.reload
+        refute_equal updated_at, script.updated_at
+      end
     end
 
     test 'seed script in unit group' do
@@ -898,6 +910,18 @@ module Services
       assert_raises do
         ScriptSeed.seed_from_json(json)
       end
+    end
+
+    test 'seed sets published_state on course_version' do
+      script = create_script_tree(num_lessons_per_group: 1)
+      script.published_state = 'preview'
+      script.save!
+
+      json = ScriptSeed.serialize_seeding_json(script)
+      ScriptSeed.seed_from_json(json)
+
+      script = Script.with_seed_models.find(script.id)
+      assert_equal 'preview', script.course_version.published_state
     end
 
     test 'import_script sets seeded_from from serialized_at' do

@@ -170,6 +170,9 @@ mn:
     email_preference_yes: "Тийм"
     email_preference_no: "Үгүй"
     email_preference_required: "Та цахим шуудангийн тохиргоогоо тодорхойлох ёстой."
+    share_teacher_email_reg_partner_preference_yes: "Тийм"
+    share_teacher_email_reg_partner_preference_no: "Үгүй"
+    share_teacher_email_reg_partner_preference_required: "Та цахим шуудангийн тохиргоогоо тодорхойлох ёстой."
   school_info:
     title: 'Сургуулийн мэдээлэл (сонголтот)'
     school_country: 'Сургууль байрлах улс'

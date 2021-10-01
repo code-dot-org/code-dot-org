@@ -3,27 +3,51 @@ de:
   data:
     variable_names:
       "???": "???"
+      Actor_1_Counter: Actor_1_Counter
+      Actor_2_Counter: Actor_2_Counter
       Blue: Blau
       Green: Grün
       Red: Rot
       actor: Figur
       age: Alter
+      animal1score: animal1score
+      animal1speed: animal1speed
+      animal2score: animal2score
+      animal2speed: animal2speed
       answer: Antwort
       armlength: Armlänge
-      binary: binärdatei
+      binary: binär
       birds: Vögel
       bit: Bit
       blue1: blau1
       blue2: blau2
       bodylength: Körperlänge
+      buttonHeight: buttonHeight
+      buttonMargin: buttonMargin
+      buttonWidth: buttonWidth
+      cat_score: cat_score
+      cat_speed: cat_speed
       cats: alle Katzen
+      centerToPadLeft: centerToPadLeft
       choice: Auswahl
       circ: Kreis
+      codeName: codeName
       color: Farbe
+      controllerHeight: controllerHeight
+      controllerWidth: controllerWidth
       counter: Zähler
+      counter2: counter2
+      currentActor: currentActor
+      direction: Richtung
+      dog_score: dog_score
+      dog_speed: dog_speed
       dogs: alle Hunde
       dragons: Drachen
+      enemy_speed: enemy_speed
       energy: Energie
+      firstName: firstName
+      footlength: footlength
+      gather: gather
       green1: grün1
       green2: grüm2
       guess: rate
@@ -31,18 +55,35 @@ de:
       honey: Honig
       i: i
       left: links
+      legangle: legangle
+      leglength: leglength
       length: Länge
       level: Level
+      marginX: marginX
+      marginY: marginY
+      meal: Mahlzeit
       myName: meinName
       name: Name
       nectar: Nektar
+      nectars: Nektar
+      padYOffset: padYOffset
+      player_score: player_score
       points: Punkte
+      punchLine: punchLine
       random: zufällig
       red1: rot1
       red2: rot2
       repeat: wiederhole
+      repetitions: Wiederholungen
       right: rechts
       score: Punktestand
+      score1: score1
+      score2: score2
+      screenHeight: screenHeight
+      screenWidth: screenWidth
+      set sides: Festgelegte Seiten
+      setupSimScore1: setupSimScore1
+      setupSimScore2: setupSimScore2
       sides: Kanten
       size: Größe
       speed: Geschwindigkeit
@@ -52,3 +93,5 @@ de:
       width: Breite
       wizard: Zauberer
       x: x
+      your var 1: your var 1
+      your var 2: your var 2

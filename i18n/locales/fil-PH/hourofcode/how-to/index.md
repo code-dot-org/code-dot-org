@@ -99,7 +99,7 @@ Magpakita ng nakakapukaw na video:
 - Ang orihinal na Code.org na inilunsad na video, nabilang sina Bill Gates, Mark Zuckerberg, at NBA star na si Chris Bosh. (Mayroong [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuto](https://www.youtube.com/watch?v=nKIu9yen5nc), at[9 minuto](https://www.youtube.com/watch?v=dU1xS07N-FA) na mga version available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Ayos lang kahit ikaw at ang mga estudyante mo ay baguhan lamang sa computer science. Narito ang ilan sa mga ideya kung paano ipakikilala ang iyong Hour of Code na aktibidad:
 
 - Ipaliwanag ang mga paraan kung paano naapektuhan ng teknolohiya ang ating mga buhay, sa mga halimbawa ang parehong lalaki at babae ay aasikasuhin (makipag-usap tungkol sa pag-save ng mga buhay, pagtulong sa mga tao, pagkonekta sa mga tao, atbp.).
 - Bilang isang klase, mag lista ng mga bagay na ginagamitan ng code sa araw araw na buhay.
@@ -111,17 +111,17 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ## 6. Get coding!
 
-Direct students to the activity
+Patnubayan ang mga estudyante sa aktibidad
 
 - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-When your students come across difficulties it's okay to respond:
+Kung ang iyong mga estudyante ay nahihirapan ay ayos lang na tumugon:
 
 - "Hindi ko alam. Subukan nating alaman ito ng magkasama"
 - "Ang teknolohiya ay hindi palaging nakaayon sa ating kagustuhan."
 - "Ang pag-aaral kung paano mag-program ay katulad ng pag-aaral ng isang bagong wika; hindi ka kaagad maging mahusay."
 
-What if a student finishes early?
+Paano kung ang estudyante ay natapos ng maaga?
 
 - Students can see all tutorials and [try another Hour of Code activity]({{ urls/learn }}).
 - O, tanungin ang mga estudyanteng maagang natapos kung pwedeng makatulong sila sa mga nahihirapan sa aktibidad.

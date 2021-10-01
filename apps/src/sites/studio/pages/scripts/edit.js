@@ -29,7 +29,7 @@ export default function initPage(unitEditorData) {
     isRtl
   });
   const store = getStore();
-  store.dispatch(init(lessonGroups, unitEditorData.levelKeyList));
+  store.dispatch(init(lessonGroups));
   const teacherResources = (scriptData.teacher_resources || []).map(
     ([type, link]) => ({
       type,
@@ -70,6 +70,7 @@ export default function initPage(unitEditorData) {
         initialProjectWidgetVisible={scriptData.project_widget_visible}
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
         initialTeacherResources={teacherResources}
+        initialLastUpdatedAt={scriptData.updated_at}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
         initialLessonLevelData={lessonLevelData}
         initialHasVerifiedResources={scriptData.has_verified_resources}
@@ -103,6 +104,7 @@ export default function initPage(unitEditorData) {
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
         }
+        initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
       />
     </Provider>,

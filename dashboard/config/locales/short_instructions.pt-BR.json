@@ -3128,9 +3128,9 @@
         "CourseF_outbreak2": "Mude monstros saudáveis para monstros doentes quando se tocarem.",
         "CourseF_outbreak3": "Transforme monstros em monstros com máscara facial quando clicar neles.",
         "CourseF_outbreak4": "Mude o número e o tamanho dos espectros de monstros na sua simulação.",
-        "CourseF_outbreak6": "Adicione uma chance percentual de o monstro adoecer sempre que um monstro saudável tocar em um monstro doente. Faça isto para todas as combinações de monstros, com e sem máscara.",
-        "CourseF_outbreak7": "Crie um novo traje para monstros com imunidade ao vírus e use-o na sua simulação.",
-        "CourseF_outbreak8": "Compartilhe uma mensagem com a sua simulação.",
+        "CourseF_outbreak6": "Faça com que todos os monstros comecem a se recuperar quando um monstro saudável toca em um monstro doente.",
+        "CourseF_outbreak7": "Adicione uma chance percentual de o monstro adoecer sempre que um monstro saudável tocar em um monstro doente. Faça isto para todas as combinações de monstros, com e sem máscara.",
+        "CourseF_outbreak8": "Crie um novo traje para monstros com imunidade ao vírus e use-o na sua simulação.",
         "Dance Party 2_2021": "Mude o comportamento dentro do bloco `comece sprite` para fazer o alienígena iniciar girando.",
         "Dance Party 4_2021": "Crie um terceiro sprite que se pareça com um alien amarelo e faça com que todos os seus alienígenas formem uma fila. ",
         "Dance Party Freeplay_2021": "Agora crie o seu próprio disco alienígena!",
@@ -3656,7 +3656,9 @@
         "ramp_artist_loops6_2021": "Altere seu laço para desenhar essa escadaria.",
         "ramp_artist_loops7_2021": "Procure por um padrão e deixe esse código menor utilizando laços!",
         "ramp_artist_loops8_2021": "Procure por um padrão e deixe esse código menos utilizando laços.",
-        "ramp_artist_loops9_2021": "Resolva este enigma desenhando um quadrado."
+        "ramp_artist_loops9_2021": "Resolva este enigma desenhando um quadrado.",
+        "CourseF_outbreak5": "Mude o número e o tamanho dos espectros de monstros na sua simulação.",
+        "international_outbreak_freeplay": "Compartilhe uma mensagem com a sua simulação."
       }
     }
   }

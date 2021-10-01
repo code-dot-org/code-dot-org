@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-08-04 21:42:55 UTC",
+    "serialized_at": "2021-09-13 21:49:10 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursea-2021"
@@ -7060,8 +7060,8 @@
       }
     },
     {
-      "name": "How to Make a Class Section on Code.org",
-      "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+      "name": "Getting Started - Creating a Class Section",
+      "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
       "key": "how_to_make_a_class_section_on_code_org",
       "properties": {
         "type": "Video",
@@ -7220,6 +7220,18 @@
       },
       "seeding_key": {
         "resource.key": "unplugged-video-happy-maps"
+      }
+    },
+    {
+      "name": "Virtual Lesson Modifications",
+      "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit",
+      "key": "virtual_lesson_modifications",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications"
       }
     },
     {
@@ -7619,6 +7631,12 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum_1",
+        "script.name": "coursea-2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "virtual_lesson_modifications",
         "script.name": "coursea-2021"
       }
     }

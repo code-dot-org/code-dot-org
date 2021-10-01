@@ -1131,10 +1131,21 @@ uz:
         text: "{SPRITE} lokatsiyasi"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': yomg‘ir
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': o‘ng
+            '90': pastga
+            '180': chap
+            '270': yuqoriga
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ga yuzlangan"
         options:
@@ -1165,6 +1176,12 @@ uz:
         text: yuqoriga va pastga qarab patrul qilish
       gamelab_playSound:
         text: " {SOUND} ijro etish"
+      gamelab_playSoundOptions:
+        text: " {SOUND} ijro etish"
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": siqilish
+            "'sound://category_digital/jump_7.mp3'": sakramoq
       gamelab_pointInDirection:
         text: " {SPRITE} ga {DIRECTION} berish"
         options:
@@ -1614,16 +1631,70 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
-      PoemBot_setBackgroundEffect:
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"rainbow"': kamalak
-      PoemBot_setForegroundEffect:
-        text: old plan effektini {FG_EFFECT} o'rnatish
-        options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': yomg‘ir
-            '"bubbles"': pufakchalar
+      Poetry_makeNumSprites:
+        text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
+      Poetry_playSound:
+        text: " {SOUND} ijro etish"
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Ranglar
+            '"squiggles"': Siqilish (burmalar)
+            '"space"': Qoinot
+            '"stars"': Yulduzlar
+            '"ripples"': To‘lqinlar
+          PALETTE:
+            '"rainbow"': Kamalak
+      Poetry_setBackgroundImageAs:
+        text: orqa fonni {IMG} ga o'zgartirish
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Yomg'ir
+            '"bubbles"': Pufakchalar
+            '"hearts"': Rangli yuraklar
+            '"confetti"': Konfetti
+            '"starburst"': Yulduzlar to'plami
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            growing: o'sish
+            jittering: titrash
+            shrinking: kichrayish
+            spinning_left: chap tarafga aylanish
+            spinning_right: o'ng tarafga aylanish
+            swimming_left_and_right: suzmoqda
+            wandering: daydish
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            growing: o'sish
+            jittering: titrash
+            shrinking: kichrayish
+            spinning_left: chap tarafga aylanish
+            spinning_right: o'ng tarafga aylanish
+            swimming_left_and_right: suzmoqda
+            wandering: daydish
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: "{VAR} javob berilganda"
       RyanLab_moveForward:
         text: oldinga siljish
       RyanLab_turnLeft:

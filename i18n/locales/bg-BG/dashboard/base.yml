@@ -142,6 +142,8 @@ bg:
     email_preference_privacy: "(Вижте нашата политика за поверителност)"
     email_preference_yes: "Да"
     email_preference_no: "Не"
+    share_teacher_email_reg_partner_preference_yes: "Да"
+    share_teacher_email_reg_partner_preference_no: "Не"
   school_info:
     title: 'Информацшя за училището (по избор)'
     school_country: 'Училищен район'

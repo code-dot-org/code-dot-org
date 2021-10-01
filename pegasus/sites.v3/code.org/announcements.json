@@ -1,10 +1,26 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "back-to-school-2021"
+    "/home": "nasa-myjourney"
   },
 
   "banners": {
+    "nasa-myjourney": {
+      "image": "/images/csjourneys/nasa-banner.png",
+      "title": "Building models of the universe with NASA",
+      "body": "Hear from two NASA scientists about their career journeys and how they use data science to build 3D models of the universe. Recommended for grades K-5. Recording will be available the day after the live session.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129",
+      "buttonId": "myjourney-nasa-details"
+    },  
+    "csjourneys": {
+      "image": "/images/csjourneys/teacher-banner.png",
+      "title": "Explore the wide world of computer science",
+      "body": "Bring CS to life with Code.org’s new career inspiration and exploration program! Sign up for live, engaging classroom experiences like virtual field trips and class chats, or let students explore with short videos and other resources.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys",
+      "buttonId": "csjourneys-dashboard"
+    },
     "class-schedule-survey": {
       "image": "/images/class-schedule-survey.png",
       "title": "Fall 2021 Class Schedule Survey",

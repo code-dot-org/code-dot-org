@@ -16,21 +16,22 @@ Covered in Unit 1 Lesson 3.
 MARKDOWN
 
 markdown <<MARKDOWN
-Which of the following will cause an error?
+Which of the following will cause a syntax error?
 
-I. Painter jes = new Painter(2, 5, “South”, 5);
-	if (jes.canMove()) {
- 	 jes.move();
-	}
+```
+I.   Painter jes = new Painter(2, 5, “South”, 5);
+	 if (jes.canMove()) {
+ 	   jes.move();
+	 }
 
-II.	Painter art = new Painter()
-	while( !jes.canMove()){
- 	 jes.move();
-	}
+II.	 Painter art = new Painter()
+	 while( !jes.canMove()){
+ 	   jes.move();
+	 }
 
 III. Painter picasso = new Painter(3, 6, “North”, 3);
-	if (karel.isOnPaint(){
- 	 karel.move()
-	}
-
+	 if (karel.isOnPaint(){
+ 	   karel.move()
+	 }
+```
 MARKDOWN

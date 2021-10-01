@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import {spy, stub} from 'sinon';
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';

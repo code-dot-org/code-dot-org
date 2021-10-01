@@ -2494,6 +2494,12 @@ gl:
               display_name: Unidade 4
             lessonGroup-7:
               display_name: Unidade 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.ª ETAPA
+            lessonGroup-3:
+              display_name: 2.ª ETAPA
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

@@ -1086,8 +1086,19 @@ hi:
         text: "{SPRITE} का स्थान"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': बारिश
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': सही
+            '90': नीचे
+            '180': बाएं
+            '270': ऊपर
       gamelab_mirrorSprite:
         text: "{SPRITE} सामने की ओर {DIRECTION} "
         options:
@@ -1114,6 +1125,12 @@ hi:
         text: "{SPRITE} पर क्लिक किया"
       gamelab_playSound:
         text: प्लेसाउंड {SOUND}
+      gamelab_playSoundOptions:
+        text: प्लेसाउंड {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": चरमराना
+            "'sound://category_digital/jump_7.mp3'": कूदें
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION} की ओर संकेत दें"
         options:
@@ -1554,18 +1571,46 @@ hi:
         text: "{SPRITE} का x निर्देशांक"
       Mikelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
-      PoemBot_setBackgroundEffect:
-        text: पृष्ठभूमि प्रभाव सेट करें {BG_EFFECT} [PALETTE][1]
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': ठोस
+          EFFECT:
+            '"rain"': बारिश
+      Poetry_playSound:
+        text: प्लेसाउंड {SOUND}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': रंग
+            '"squiggles"': टेढ़ी-मेढ़ी रेखाएं
+            '"space"': खाली स्थान
+            '"stars"': स्टार
+            '"ripples"': लहरें
+          PALETTE:
             '"rainbow"': इंद्रधनुष
-      PoemBot_setForegroundEffect:
-        text: आगे के भाग का प्रभाव {FG_EFFECT} सेट करें
+      Poetry_setBackgroundImageAs:
+        text: पृष्ठभूमि के तौर पर {IMG} सेट करें
+      Poetry_setForegroundEffect:
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': बारिश
             '"bubbles"': बुलबुले
+            '"hearts"': रंगीन दिल
+            '"confetti"': कॉन्फेटी
+            '"starburst"': स्टारबर्स्ट
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': १
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: आगे जाएं
       RyanLab_turnLeft:

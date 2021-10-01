@@ -2,6 +2,9 @@
   "sk-SK": {
     "data": {
       "lesson_activities": {
+        "06dfaf3b-e495-4577-baa6-883a782e198f": {
+          "name": "Úrovne"
+        },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Úvodná aktivita"
         },
@@ -196,6 +199,9 @@
         },
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Zhrnutie"
+        },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Video: Moja internetová štvrť"
         },
         "07c33815-2515-4a63-91f1-51db34b0a00e": {
           "name": "Úvodná aktivita"
@@ -632,20 +638,47 @@
         "f544f06e-e5d9-4ca1-9baf-288bba9ff616": {
           "name": "Úvodná aktivita"
         },
+        "c1ef15c8-3724-45e8-b3a3-238ecb91993b": {
+          "name": "Hlavná aktivita"
+        },
         "72bef51e-2edb-4bfe-8995-1c1c0c126e11": {
           "name": "Zhrnutie"
+        },
+        "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
+          "name": "Ďalšie študijné materiály"
         },
         "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
           "name": "Úvodná aktivita"
         },
+        "472354f3-e631-40c3-8001-dc5d7f1206db": {
+          "name": "Spoločné predstavenie on‑line úloh"
+        },
+        "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
+          "name": "Hlavná aktivita"
+        },
         "514be718-37b6-4bca-9bea-138eac8ae77c": {
           "name": "Zhrnutie"
+        },
+        "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
+          "name": "Ďalšie študijné materiály"
+        },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Úvodná aktivita: Ukážka programovania v bludisku"
+        },
+        "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
+          "name": "Hlavná aktivita"
         },
         "0396f06e-4a9e-443d-859c-dc77fa229769": {
           "name": "Zhrnutie"
         },
+        "3aaee60c-904c-4592-8092-b7abf66d9fac": {
+          "name": "Ďalšie študijné materiály"
+        },
         "f1cadd9a-0974-4abd-b152-5c923d0195e2": {
           "name": "Úvodná aktivita"
+        },
+        "b9c2620d-f076-4551-a849-08ba4ad04850": {
+          "name": "Hlavná aktivita"
         },
         "0e6c0fdb-f006-457d-9ded-d3719ac7180e": {
           "name": "Zhrnutie"
@@ -653,17 +686,41 @@
         "a653b35f-9c27-4961-a91a-578072f1ae35": {
           "name": "Úvodná aktivita"
         },
+        "077ed20b-2456-412f-b744-33221b7412ac": {
+          "name": "Hlavná aktivita"
+        },
         "3ca1441d-2369-43e8-b182-8fde56916045": {
           "name": "Zhrnutie"
         },
         "65eecebd-7353-4fca-9e51-e34aa5e14a8e": {
           "name": "Úvodná aktivita"
         },
+        "0a77a438-3684-4874-b963-e5a75723888a": {
+          "name": "Hlavná aktivita"
+        },
+        "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
+          "name": " Zhrnutie"
+        },
+        "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
+          "name": "Ďalšie študijné materiály"
+        },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Úvodná aktivita"
         },
+        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
+          "name": "On‑line základ: Úvod do cyklov v Zberateľke"
+        },
+        "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
+          "name": "Hlavná aktivita"
+        },
+        "e6a1f5df-d8d4-41a1-8649-d518965997af": {
+          "name": " Zhrnutie"
+        },
         "f2ded4ce-7dc9-49ec-b96c-1f4e00db122e": {
           "name": "Úvodná aktivita"
+        },
+        "089afb18-d132-46ab-88ca-2af47333e237": {
+          "name": "Hlavná aktivita"
         },
         "98e73710-a395-4b96-90ac-de9c5a8060e8": {
           "name": "Zhrnutie"
@@ -671,23 +728,41 @@
         "ead863af-cc82-48f6-855f-0e2a4563ed9b": {
           "name": "Úvodná aktivita"
         },
+        "e651df8b-1577-4888-8321-37a135e4df24": {
+          "name": "Hlavná aktivita"
+        },
         "bcb796e6-f8d8-456a-8e44-e22eb94ed098": {
           "name": "Zhrnutie"
         },
         "3ad79f2e-3afc-4238-a58d-7f88ea78de65": {
           "name": "Úvodná aktivita"
         },
+        "602649f9-a35f-49ab-bddf-09ebdf771f17": {
+          "name": "Hlavná aktivita"
+        },
         "ad29aebb-c28d-4b6a-9769-4b6b7d62e6d8": {
           "name": "Zhrnutie"
+        },
+        "9209915b-655f-4e9e-b106-3843617f4034": {
+          "name": "Ďalšie študijné materiály"
         },
         "3eb2dbe1-88c5-4306-83e5-0f057590e7d5": {
           "name": "Úvodná aktivita"
         },
+        "def2e87e-02de-40be-b652-89117499f7a0": {
+          "name": "Hlavná aktivita"
+        },
         "291b174a-b478-463d-aff6-af66feda095a": {
           "name": "Zhrnutie"
         },
+        "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
+          "name": "Ďalšie študijné materiály"
+        },
         "5b27bb73-d7a0-4ff5-b8b4-3cc29aa2cc9e": {
           "name": "Úvodná aktivita"
+        },
+        "f0a9525c-5225-44d5-9a87-99a70c73b197": {
+          "name": "Hlavná aktivita"
         },
         "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780": {
           "name": "Zhrnutie"
@@ -695,14 +770,53 @@
         "d7c5d028-ebdb-4366-9856-f36f780cd472": {
           "name": "Úvodná aktivita"
         },
+        "23175482-f558-4d04-aec7-69a02820317e": {
+          "name": "Aktivita na premostenie"
+        },
+        "7007138d-bc16-4bc0-8d30-252440672814": {
+          "name": "Hlavná aktivita"
+        },
         "6db6a634-e996-4369-9bc6-b32a570beaff": {
           "name": "Zhrnutie"
         },
         "8f8f7be8-e984-40ce-9b30-b423814535f8": {
           "name": "Úvodná aktivita"
         },
+        "7ae8b822-0da7-4701-9c2d-068197f8fe14": {
+          "name": "Hlavná aktivita"
+        },
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Zhrnutie"
+        },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Úvodná aktivita: Tajný superhrdina"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Učenie: Ako sa stať ochrancom"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Tvorba: Tvoj digitálny občan – superhrdina"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Zhrnutie: Komix Zachráň deň!"
+        },
+        "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
+          "name": "Ďalšie študijné materiály"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Úvodná aktivita: Postav sa, sadni si"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analýza: Prečo ľudia zdieľajú svoje informácie?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Analýza: Súkromné alebo osobné?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "Zhrnutie: Výstupný test"
+        },
+        "02429a22-ab18-4df6-9062-d88960fe9ae8": {
+          "name": "Ďalšie študijné materiály"
         },
         "b0422816-99eb-45d4-ad51-c872770be86c": {
           "name": "Úrovne"
@@ -710,8 +824,20 @@
         "b93a77e0-76ff-4b91-9ec1-c19b04e0cca1": {
           "name": "Úvodná aktivita"
         },
+        "0177419f-4d26-4ccc-bcf3-ac4275a5fd17": {
+          "name": "Hlavná aktivita"
+        },
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Zhrnutie"
+        },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Príležitosť na prepojenie predmetov"
+        },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Zahrievacia aktivita (nepovinná)"
+        },
+        "7ccdedb5-15bf-4d75-9efb-e65349644266": {
+          "name": "Hlavná aktivita"
         },
         "d41159ef-433a-4547-a067-2695e41120ae": {
           "name": "Zhrnutie"

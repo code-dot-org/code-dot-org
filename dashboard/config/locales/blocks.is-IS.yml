@@ -1128,10 +1128,21 @@ is:
         text: staður {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': hægri
+            '90': niður
+            '180': vinstri
+            '270': upp
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
@@ -1162,6 +1173,12 @@ is:
         text: rásar upp og niður
       gamelab_playSound:
         text: spilaHljóð {SOUND}
+      gamelab_playSoundOptions:
+        text: spilaHljóð {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": kremja
+            "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_pointInDirection:
         text: beina {SPRITE} {DIRECTION}
         options:
@@ -1638,18 +1655,52 @@ is:
         text: x hnit {SPRITE}
       Mikelab_yLocationOf:
         text: y hnit {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: stilla bakgrunnshrifin {BG_EFFECT} [PALETTE][1]
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': gegnheill
-            '"rainbow"': regnbogi
-      PoemBot_setForegroundEffect:
-        text: stilla á forgrunnshrifin {FG_EFFECT}
-        options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': regn
-            '"bubbles"': sápukúlur
+      Poetry_makeNumSprites:
+        text: búa til {NUM} nýja {ANIMATION_NAME} kvika
+      Poetry_playSound:
+        text: spilaHljóð {SOUND}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Litir
+            '"squiggles"': Hrafnaspark
+            '"space"': Geimur
+            '"stars"': Stjörnur
+            '"ripples"': Gárur
+          PALETTE:
+            '"rainbow"': Regnbogi
+      Poetry_setBackgroundImageAs:
+        text: stilla bakgrunn á {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Rigning
+            '"bubbles"': Sápukúlur
+            '"hearts"': Litrík hjörtu
+            '"confetti"': Skraut
+            '"starburst"': Stjörnublossi
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: þegar {VAR} er svarað
       RyanLab_moveForward:
         text: færa áfram
       RyanLab_turnLeft:

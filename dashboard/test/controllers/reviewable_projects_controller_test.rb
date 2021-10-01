@@ -12,7 +12,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     @project_storage_app_id = 78
 
     @teacher = create :teacher
-    @section = create :section, user: @teacher
+    @section = create :section, user: @teacher, code_review_enabled: true
     @another_student = create :student
 
     create :follower, student_user: @project_owner, section: @section
@@ -191,7 +191,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     sign_in @another_student
     get :for_level, params: {level_id: @project_level_id, script_id: @project_script_id}
 
-    assert_equal [[@project_owner.id, @project_owner.name]], JSON.parse(response.body)
+    assert_equal [{'id' => @project_owner.id, 'name' => @project_owner.name}], JSON.parse(response.body)
   end
 
   test 'student does not get projects available for review if project available but not in same section' do

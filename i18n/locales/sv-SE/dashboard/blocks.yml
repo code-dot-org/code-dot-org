@@ -1088,8 +1088,19 @@ sv:
         text: plats av {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
       gamelab_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': höger
+            '90': ner
+            '180': vänster
+            '270': upp
       gamelab_mirrorSprite:
         text: "{SPRITE} Ansikte {DIRECTION}"
         options:
@@ -1110,6 +1121,12 @@ sv:
         text: klickade {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": krasch
+            "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_pointInDirection:
         text: Punkt {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1535,18 +1552,46 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: täll in bakgrundseffekt {BG_EFFECT} [PALETTE][1]
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': regnbåge
-      PoemBot_setForegroundEffect:
-        text: ställ in förgrundseffekt {FG_EFFECT}
-        options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': regn
-            '"bubbles"': bubblor
+      Poetry_playSound:
+        text: PlaySound {SOUND}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Färger
+            '"squiggles"': Krumelurer
+            '"space"': Mellanslag
+            '"stars"': Stjärnor
+            '"ripples"': Krusningar
+          PALETTE:
+            '"rainbow"': Regnbåge
+      Poetry_setBackgroundImageAs:
+        text: ställa in bakgrunden till {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Regn
+            '"bubbles"': Bubblor
+            '"hearts"': Färgglada hjärtan
+            '"confetti"': Konfetti
+            '"starburst"': Stjärnfall
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: gå framåt
       RyanLab_turnLeft:

@@ -2587,3 +2587,13 @@ ne:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Content
+            content:
+              display_name: Content
+            lesson_group:
+              display_name: Content
+            lessonGroup-2:
+              display_name: Content

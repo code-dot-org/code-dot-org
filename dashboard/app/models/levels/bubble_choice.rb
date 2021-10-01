@@ -34,6 +34,8 @@ class BubbleChoice < DSLDefined
     description
   )
 
+  ALPHABET = ('a'..'z').to_a
+
   def dsl_default
     <<~ruby
       name '#{DEFAULT_LEVEL_NAME}'
@@ -122,15 +124,13 @@ class BubbleChoice < DSLDefined
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
 
-      alphabet = ('a'..'z').to_a
-
       level_info.merge!(
         {
           id: level.id.to_s,
           description: level.try(:bubble_choice_description),
           thumbnail_url: level.try(:thumbnail_url),
           position: index + 1,
-          letter: alphabet[index],
+          letter: ALPHABET[index],
           icon: level.try(:icon)
         }
       )

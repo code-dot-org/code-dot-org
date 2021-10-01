@@ -18,12 +18,14 @@ export const fakeLesson = (
   name,
   id,
   lockable = false,
-  lessonNumber = undefined
+  lessonNumber = undefined,
+  lessonStartUrl = 'code.org'
 ) => ({
   name,
   id,
   lockable,
   lessonNumber,
+  lessonStartUrl,
   isFocusArea: false
 });
 
@@ -82,7 +84,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       lessonsBySectionId: {
         '11': {}
       },
-      lockableAuthorized: false
+      lockableAuthorized: false,
+      lockableAuthorizedLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {
@@ -116,7 +119,8 @@ export const createStoreWithLockedLesson = (
       lessonsBySectionId: {
         '11': {}
       },
-      lockableAuthorized: lockableAuthorized
+      lockableAuthorized: lockableAuthorized,
+      lockableAuthorizedLoaded: true
     },
     viewAs: viewAs,
     teacherSections: {

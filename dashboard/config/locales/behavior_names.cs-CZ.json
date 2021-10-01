@@ -216,6 +216,43 @@
         },
         "courseF_text_review": {
           "moving forward": "posuv vpřed"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "zotavuje se",
+          "wandering": "potulování se",
+          "moving east": "posuv na východ",
+          "spinning left": "otáčení doleva",
+          "spinning right": "otáčení doprava",
+          "shrinking": "smršťování",
+          "growing": "růst",
+          "moving south": "posuv na jih",
+          "moving left and right": "posun doleva a doprava",
+          "moving north": "posuv na sever",
+          "jittering": "komíhání",
+          "moving west": "posuv na západ",
+          "patrolling": "patrolování",
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_animals_events": {
+          "moving forward": "posuv vpřed"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_emoji_events": {
+          "moving forward": "posuv vpřed"
+        },
+        "helloworld_food_events": {
+          "moving forward": "posuv vpřed"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_retro_events": {
+          "moving forward": "posuv vpřed"
         }
       }
     }

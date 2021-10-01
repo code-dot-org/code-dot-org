@@ -25,19 +25,19 @@ social:
 <div style="clear: both; margin-bottom:25px"></div>
 
 <div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
-  <a class="linktag" id="videos-nav" href="#videos" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Watch videos about different careers with CS</p></a>
+  <a class="linktag" id="videos-nav" href="#videos" style="text-decoration:none"><p style="color:#ffffff; margin:0; text-decoration:none">Watch videos about different careers with CS</p></a>
 </div>
 
 <div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#7665a0">
-  <a class="linktag" id="explore-nav" href="#explore" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Find a career that matches your interests</p>
+  <a class="linktag" id="explore-nav" href="#explore" style="text-decoration:none"><p style="color:#ffffff; margin:0; text-decoration:none">Find a career that matches your interests</p>
 </div>
 
 <div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#0094ca">
-  <a class="linktag" id="apply-nav" href="#apply" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Apply your CS skills outside the classroom</p>
+  <a class="linktag" id="apply-nav" href="#apply" style="text-decoration:none"><p style="color:#ffffff; margin:0; text-decoration:none">Apply your CS skills outside the classroom</p>
 </div>
 
 <div class="col-25" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#b9bf15">
-  <a class="linktag" id="connect-nav" href="#connect" style="text-decoration:none"><p style="color:#ffffff; font-family:Gotham; margin:0; text-decoration:none">Connect with college students and professionals</p>
+  <a class="linktag" id="connect-nav" href="#connect" style="text-decoration:none"><p style="color:#ffffff; margin:0; text-decoration:none">Connect with college students and professionals</p>
 </div>
 
 <div style="clear: both; margin-bottom:35px"></div>
@@ -122,8 +122,10 @@ social:
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="fb-techprep" href="https://techprep.org/why/" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Tech/prep by Facebook</strong></h3></a>
-    <p style="color:#ffffff">Profiles of Facebook employees in different careers, featuring job descriptions and visual timelines of career paths. <i>Facebook provides financial support to Code.org.</i></p>
+    <a class="linktag" id="fb-techprep" href="https://techprep.org/why/" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>TechPrep by Facebook</strong></h3></a>
+    <p style="color:#ffffff">Profiles of Facebook employees in different careers, featuring job descriptions and visual timelines of career paths.</p>
+    <br>
+    <br>
     <br>
     <a class="linktag" id="fb-techprep" href="https://techprep.org/why/" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">View resource</button></a>
   </div>

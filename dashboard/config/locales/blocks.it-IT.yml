@@ -1139,10 +1139,22 @@ it:
         text: posizione di {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': scoppio
+            '"rain"': pioggia
       gamelab_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       gamelab_makeNumSprites:
         text: crea {NUM} nuovi sprite {ANIMATION_NAME}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': a destra
+            '90': in basso
+            '180': a sinistra
+            '270': in alto
       gamelab_mirrorSprite:
         text: Orienta {SPRITE} verso {DIRECTION}
         options:
@@ -1173,6 +1185,14 @@ it:
         text: pattugliando su e giù
       gamelab_playSound:
         text: riproduci il suono {SOUND}
+      gamelab_playSoundOptions:
+        text: riproduci il suono {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": pulsante
+            "'sound://category_collect/clicky_crunch.mp3'": sgranocchiamento
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arpa
+            "'sound://category_digital/jump_7.mp3'": salta
       gamelab_pointInDirection:
         text: orienta {SPRITE} in direzione {DIRECTION}
         options:
@@ -1214,7 +1234,10 @@ it:
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': prato
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arcobaleno
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': fase
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stelle
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metropolitana
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': sotterraneo
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sottomarino
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
             undefined: nessuno
@@ -1338,13 +1361,16 @@ it:
           se {NUM}% probabilità
           {STATEMENT}
       gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} probabilità
+           {STATEMENT}
         options:
           NUM:
-            '10': very low
-            '25': basso
+            '10': molto bassa
+            '25': bassa
             '50': 50/50
-            '75': alto
-            '90': very high
+            '75': alta
+            '90': molto alta
       gamelab_xLocationOf:
         text: coordinata x di {SPRITE}
       gamelab_yLocationOf:
@@ -1573,6 +1599,9 @@ it:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': città
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': prato
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': fase
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metropolitana
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': sotterraneo
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1655,18 +1684,73 @@ it:
         text: coordinata x di {SPRITE}
       Mikelab_yLocationOf:
         text: coordinata y di {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: imposta sfondo con effetto {BG_EFFECT}
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': solido
-            '"rainbow"': arcobaleno
-      PoemBot_setForegroundEffect:
-        text: imposta effetto di primo piano {FG_EFFECT}
-        options:
-          FG_EFFECT:
+          EFFECT:
+            '"burst"': scoppio
             '"rain"': pioggia
-            '"bubbles"': bolle
+      Poetry_makeNumSprites:
+        text: crea {NUM} nuovi sprite {ANIMATION_NAME}
+      Poetry_playSound:
+        text: riproduci il suono {SOUND}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Colori
+            '"squiggles"': Onde
+            '"space"': Spazio
+            '"stars"': Stelle
+            '"ripples"': Increspature
+          PALETTE:
+            '"rainbow"': Arcobaleno
+      Poetry_setBackgroundImageAs:
+        text: imposta lo sfondo {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Pioggia
+            '"bubbles"': Bolle
+            '"hearts"': Cuori colorati
+            '"confetti"': Coriandoli
+            '"starburst"': Esplosione di stelle
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: ondeggiamento
+            growing: crescita
+            jittering: pulsazione
+            shrinking: contrazione
+            spinning_left: rotazione anti-oraria
+            spinning_right: rotazione oraria
+            swimming_left_and_right: nuoto
+            wandering: movimento casuale
+            wobbling: barcollamento
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: ondeggiamento
+            growing: crescita
+            jittering: pulsazione
+            shrinking: contrazione
+            spinning_left: rotazione anti-oraria
+            spinning_right: rotazione oraria
+            swimming_left_and_right: nuoto
+            wandering: movimento casuale
+            wobbling: barcollamento
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: vai avanti
       RyanLab_turnLeft:

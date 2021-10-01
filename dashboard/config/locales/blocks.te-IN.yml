@@ -916,6 +916,13 @@ te:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': కుడి
+            '90': డౌన్
+            '180': ఎడమ
+            '270': అప్
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -1092,11 +1099,34 @@ te:
           KEY:
             '"yes"': అవును
             '"no"': లేదు
-      PoemBot_setForegroundEffect:
-        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {FG_EFFECT}
+      Poetry_setBackgroundEffect:
         options:
-          FG_EFFECT:
+          EFFECT:
+            '"colors"': రంగులు
+            '"space"': స్పేస్
+            '"stars"': స్టార్స్
+          PALETTE:
+            '"rainbow"': రెయిన్‌బో
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': రెయిన్
             '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       aalab_layoutSprites:
         options:
           FORMAT:

@@ -1150,10 +1150,22 @@ de:
         text: Position von {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': platzen
+            '"rain"': Regen
       gamelab_makeNewSpriteAnon:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_makeNumSprites:
         text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': rechts
+            '90': runter
+            '180': links
+            '270': hoch
       gamelab_mirrorSprite:
         text: "{SPRITE} zeigt nach {DIRECTION}"
         options:
@@ -1184,6 +1196,13 @@ de:
         text: patrouilliert auf und ab
       gamelab_playSound:
         text: spieleTon {SOUND}
+      gamelab_playSoundOptions:
+        text: spieleTon {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": Taste
+            "'sound://category_collect/clicky_crunch.mp3'": knirschen
+            "'sound://category_digital/jump_7.mp3'": springen
       gamelab_pointInDirection:
         text: richte {SPRITE} nach {DIRECTION} aus
         options:
@@ -1291,6 +1310,11 @@ de:
           CONDITION:
             '"when"': wenn
             '"while"': solange
+      gamelab_spriteSayChoices:
+        options:
+          SPEECH:
+            '"I am Batman!"': Ich bin Batman!
+            '"I am Catwoman!"': Ich bin Catwoman!
       gamelab_subjectSpritePointer:
         text: "{SPRITE} geklicked"
       gamelab_textVariableJoin:
@@ -1589,6 +1613,8 @@ de:
             '"x"': x-Position
             '"y"': y-Position
             '"direction"': Bewegungsrichtung
+      Mikelab_setupOutbreak:
+        text: "Einrichtung des Ausbruchs \nBevölkerung:{SPRITE2N}\n{TOGGLE}Virus"
       Mikelab_setupSim:
         text: |-
           Starte Simulation mit
@@ -1663,18 +1689,93 @@ de:
         text: x Koordinate von {SPRITE}
       Mikelab_yLocationOf:
         text: y Koordinate von {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: Hintergrundeffekt einstellen {BG_EFFECT} [PALETTE][1]
+      Outbreak_beginCongregating:
+        text: Monster versammeln sich
+      Outbreak_beginQuarantining:
+        text: kranke Monster gehen in Quarantäne
+      Outbreak_beginSocialDistancing:
+        text: Monster beginnen soziale Distanzierung
+      Outbreak_beginWandering:
+        text: Monster beginnen herumzulaufen
+      Outbreak_beginWearingMasks:
+        text: Monster tragen Masken
+      Outbreak_layoutBorder:
+        text: Monster in einem Rand anordnen
+      Outbreak_layoutClusters:
+        text: Monster in einem Cluster von {NUM} anordnen
+      Outbreak_layoutGrid:
+        text: Monster als ein Raster anordnen
+      Outbreak_layoutRandom:
+        text: Monster zufällig anordnen
+      Outbreak_stopMoving:
+        text: Monster bewegen sich nicht mehr
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': fest
-            '"rainbow"': Regenbogen
-      PoemBot_setForegroundEffect:
-        text: Vordergrundeffekt einstellen {FG_EFFECT}
-        options:
-          FG_EFFECT:
+          EFFECT:
+            '"burst"': platzen
             '"rain"': Regen
-            '"bubbles"': blasen
+      Poetry_makeNumSprites:
+        text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
+      Poetry_playSound:
+        text: spieleTon {SOUND}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Farben
+            '"squiggles"': Schnörkel
+            '"space"': Leerzeichen
+            '"stars"': Sterne
+            '"ripples"': Welligkeit
+          PALETTE:
+            '"rainbow"': Regenbogen
+      Poetry_setBackgroundImageAs:
+        text: setze Hintergund auf {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Regen
+            '"bubbles"': Blasen
+            '"hearts"': Farbenfrohe Herzen
+            '"confetti"': Konfetti
+            '"starburst"': Starburst
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: flattern
+            growing: wachsen
+            jittering: zittern
+            shrinking: schrumpfen
+            spinning_left: nach links drehen
+            spinning_right: nach rechts drehen
+            wandering: wandern
+            wobbling: wackelnd
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: flattern
+            growing: wachsen
+            jittering: zittern
+            shrinking: schrumpfen
+            spinning_left: nach links drehen
+            spinning_right: nach rechts drehen
+            wandering: wandern
+            wobbling: wackelnd
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: vorwärts bewegen
       RyanLab_turnLeft:
@@ -1782,7 +1883,7 @@ de:
             '"d"': d
       craft_ifPath:
         text: |-
-          wenn Weg {DIR}
+          wenn Pfad {DIR}
           {STATEMENT}
         options:
           DIR:
@@ -1815,7 +1916,7 @@ de:
       craft_moveForward:
         text: vorwärts bewegen
       craft_placeBlock:
-        text: plaziere {blockType}
+        text: platziere {blockType}
         options:
           blockType:
             '"strippedOak"': Eichenholz
@@ -1844,12 +1945,12 @@ de:
             '"kelp"': Seetang
             '"polishedGranite"': polierter Granit
       craft_placePrismarine:
-        text: plaziere Prismarin
+        text: platziere Prismarin
       craft_placeTorch:
         text: Fackel platzieren
       craft_repeatUntilConduit:
         text: |-
-          wiederholen, bis die Reihe geschlossen ist
+          wiederholen, bis der Aquisator fertig ist
           {STATEMENT}
       craft_repeatUntilGoal:
         text: |-

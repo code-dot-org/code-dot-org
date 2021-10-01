@@ -36,6 +36,8 @@ en-GB:
     age: 'Age'
     email_preference_yes: "Yes"
     email_preference_no: "No"
+    share_teacher_email_reg_partner_preference_yes: "Yes"
+    share_teacher_email_reg_partner_preference_no: "No"
   signin_form:
     login: 'Email'
     password: 'Password'

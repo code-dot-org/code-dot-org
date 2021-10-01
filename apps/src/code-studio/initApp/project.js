@@ -1164,7 +1164,7 @@ var projects = (module.exports = {
             firstSaveTimestamp = response.timestamp;
           }
           currentSourceVersionId = response.versionId;
-          replaceCurrentSourceVersion = true;
+          replaceCurrentSourceVersion = !forceNewVersion;
           current.migratedToS3 = true;
 
           this.updateChannels_(callback);

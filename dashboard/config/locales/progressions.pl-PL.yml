@@ -44,7 +44,6 @@ pl:
       Challenge: Wyzwanie
       Challenge Levels: Poziomy Wyzwań
       Challenges: Wyzwania
-      Chance: 'Szansa:'
       Change: Zmień
       Checking for a Winner: Szukanie Zwycięzcy
       Choose Your Own Adventure: Wybierz własną przygodę
@@ -76,7 +75,6 @@ pl:
       Create Your Own Animation: Utwórz własną animację
       Create a Story: Utwórz Opowieść
       Create your project: Utwórz swój projekt
-      Creating a Simulation: Tworzenie symulacji
       Customize: Dostosuj
       Dance Crews: Zespoły taneczne
       Data Visualization: Wizualizacja Danych
@@ -194,7 +192,6 @@ pl:
       Modify simulation variables: Zmień zmienne symulacji
       More Buttons: Więcej przycisków
       More Input: Więcej danych
-      More Monsters: Więcej potworów
       More Parameters: Więcej Parametrów
       Motorcycle: Motocykl
       Movement with the Counter Pattern: Poruszanie się ze Wzorcem Licznika
@@ -227,7 +224,6 @@ pl:
       Prepare for your presentation: Przygotuj się do prezentacji
       Prepare for your presentation_2018: Przygotuj się do prezentacji_2018
       Problem Solving Process for Programming: Proces rozwiązywania problemów w programowaniu
-      Programming with Events: Programowanie ze zdarzeniami
       Programming with Rey and BB-8: Programowanie z Reyem i BB-8
       Programs that Repeat: Programy, które Powtarzają
       Project: Projekt
@@ -241,7 +237,6 @@ pl:
       RGB Exploration: Eksploracja RGB
       Random Numbers: Losowe liczby
       Reading Sensors: Czytanie Czujników
-      Recovery: Odzyskiwanie
       Reflection: Refleksja
       Repeat Blocks: Bloki Powtarzania
       Repeat Blocks with BB-8: Bloki Powtarzania z BB-8
@@ -261,7 +256,6 @@ pl:
       Setting Properties: Ustawianie Właściwości
       Shapes and the Draw Loop: Kształty i pętla rysowania
       Share Your App: Podziel się swoją aplikacją
-      Share Your Message: Udostępnij swoją wiadomość
       Side Scroller: Suwak boczny
       Simple Circuits: Proste układy
       Skill Building: Budowanie umiejętności
@@ -275,7 +269,6 @@ pl:
       Sprite Properties: Właściwości duszka
       Sprites and the Draw Loop: Duszki i pętla rysowania
       Star Chaser: Łowca Gwiazd
-      Stopping the Outbreak with Masks: Powstrzymanie epidemii za pomocą masek
       Styling Text: Stylowanie Tekstu
       Styling with Classes: Stylizacja z klasami
       Styling your Website: Stylizacja Twojej strony internetowej
@@ -304,7 +297,6 @@ pl:
       Using the LED: Stosując LED
       Using the Repeat Block: Korzystanie z bloku powtarzania
       Using the Switch: Stosując Przełącznik
-      Vaccines: Szczepionki
       Variables: Zmienne
       Velocity: Prędkość
       Video: Wideo

@@ -1,11 +1,7 @@
 <Pixelation>
   <config><![CDATA[{
-  "game_id": 44,
-  "created_at": "2020-09-10T19:44:50.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
-    "long_instructions": "# Do This\r\n\r\nUse the pixelation widget to draw a smiley face\r\n\r\n**Note: This level is the same as Unit 5, Lesson 4 - Level 3 in Code Studio.**\r\n\r\n![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png)",
+    "long_instructions": "# Do This\r\n\r\nUse the pixelation widget to draw a smiley face\r\n\r\n![](https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png)",
     "instructions_important": "false",
     "display_name": "Black and White Pixelation Widget",
     "version": "1",
@@ -19,8 +15,12 @@
     "name_suffix": "_2020",
     "encrypted": "false"
   },
+  "game_id": 44,
   "published": true,
+  "created_at": "2020-09-10T19:44:50.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-09-10 19:44:57 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-10-02 18:44:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2020-09-10 19:44:57 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2020-10-02 18:44:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-09-30 13:45:57 +0000\",\"changed\":[],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"},{\"changed_at\":\"2021-09-30 13:46:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1157,\"changed_by_email\":\"sariah.bujanda@code.org\"}]"
 }]]></config>
 </Pixelation>

@@ -1,11 +1,9 @@
 import React from 'react';
 import {assert} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import {UnconnectedUnitOverview as UnitOverview} from '@cdo/apps/code-studio/components/progress/UnitOverview';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import experiments from '@cdo/apps/util/experiments';
 
 const defaultProps = {
   onOverviewPage: true,
@@ -27,6 +25,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   unitHasLockableLessons: false,
   unitAllowsHiddenLessons: false,
+  publishedState: 'beta',
   versions: []
 };
 
@@ -37,11 +36,9 @@ describe('UnitOverview', () => {
     assert.equal(wrapper.find(ProgressLegend).length, 1);
   });
 
-  it('passes `includeReviewStates` to ProgressLegend when enabled', () => {
-    sinon.stub(experiments, 'isEnabled').returns(true);
+  it('passes `includeReviewStates` to ProgressLegend when unit is CSP', () => {
     const wrapper = shallow(<UnitOverview {...defaultProps} />);
     assert(wrapper.find(ProgressLegend).props().includeReviewStates);
-    sinon.restore();
   });
 
   it('includes no UnitOverviewTopRow/ProgressLegend if not on overview page', () => {

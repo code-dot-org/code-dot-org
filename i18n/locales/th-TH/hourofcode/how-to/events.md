@@ -37,19 +37,19 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 ## จัดงานคืนครอบครัวเขียนโปรแกรมด้วยกิจกรรมชั่วโมงเขียนโค้ดและเชิญผู้ปกครองให้เข้าร่วม
 
-พิจารณาจัดกิจกรรมสำหรับนักเรียนชั้น K-5 และเชิญผู้ปกครองมาร่วมกับนักเรียนตลอดหนึ่งชั่วโมงของวิชาวิทยาการคอมพิวเตอร์ This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+พิจารณาจัดกิจกรรมสำหรับนักเรียนชั้น K-5 และเชิญผู้ปกครองมาร่วมกับนักเรียนตลอดหนึ่งชั่วโมงของวิชาวิทยาการคอมพิวเตอร์ นี่เป็นวิธีที่ดีในการให้ชุมชมที่ใหญ่ขึ้นมีส่วนร่วม และส่งเสริมผู้ปกครองให้สนับสนุนวิชาวิทยาการคอมพิวเตอร์ที่โรงเรียนของคุณ Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [คลิกที่นี่เพื่อดาวน์โหลดชุดจัดกิจกรรม](http://www.familycodenight.org/DownloadCodeDotOrg.html)
 
 * * *
 
 ## Example plan for a school assembly or event
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**กิจกรรม:** การรวมกลุ่มเพื่อเริ่มสัปดาห์การศึกษาวิชาวิทยาการคอมพิวเตอร์ทั้งโรงเรียน
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**เวลา:** ระหว่างวันเรียน แนะนำกิจกรรมช่วงสาย ประมาณ 1 ชั่วโมง
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**สถานที่:** โถงเข้าแถวโรงเรียน (เช่น หอประชุม, โรงยิม, โรงอาหาร)
 
 ## ลำดับงาน
 

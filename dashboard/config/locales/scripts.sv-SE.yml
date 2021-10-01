@@ -3610,6 +3610,12 @@ sv:
           lessons:
             lesson-2:
               name: Lektion 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Steg 1
+            lessonGroup-3:
+              display_name: Steg 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -3644,5 +3650,23 @@ sv:
               display_name: Innehåll
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Projekt
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Projekt
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Innehåll
+            content:
+              display_name: Innehåll
+            lesson_group:
+              display_name: Innehåll
             lessonGroup-2:
               display_name: Innehåll

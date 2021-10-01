@@ -37,19 +37,19 @@ Share pictures of your event on Facebook and Twitter and use the hashtag **#Hour
 
 ## 借助编程一小时开展家庭编程之夜，邀请父母们也参与进来。
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Click here to download the Event Kit](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. 这是让更多的社区民众参加进来的好方法，它也鼓励家长们支持你学校学习计算机科学。 Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. 点击这里[](http://www.familycodenight.org/DownloadCodeDotOrg.html)来下载活动工具册。
 
 * * *
 
 ## Example plan for a school assembly or event
 
-**Event:** School-wide Computer Science Education Week kick-off assembly
+**活动：**学校范围内的计算机科学教育周启动集会
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**Time:** During the school day. Mid-morning event preferred. Approximately 1 hour.
+**时间：**上学日期间。推荐早中午活动。大约 1 小时。
 
-**Location:** School assembly hall (e.g. theater, gym, cafeteria)
+**地点：**学校礼堂（如剧院，体育馆，食堂）
 
 ## 流程演示
 

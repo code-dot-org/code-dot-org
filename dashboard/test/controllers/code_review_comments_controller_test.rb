@@ -16,8 +16,14 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     }
 
     @teacher = create :teacher
-    @section = create :section, user: @teacher
+    @section = create :section, user: @teacher, code_review_enabled: true
     @another_student = create :student
+
+    create :reviewable_project,
+      user_id: @project_owner.id,
+      storage_app_id: @project_storage_app_id,
+      level_id: 2,
+      script_id: 1
   end
 
   test 'signed out cannot create CodeReviewComment' do
@@ -34,6 +40,8 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     parsed_response_body = JSON.parse(response.body)
     refute parsed_response_body['isFromTeacher']
+    assert parsed_response_body['isFromCurrentUser']
+    assert parsed_response_body['isFromProjectOwner']
 
     comment = CodeReviewComment.find(parsed_response_body['id'])
     assert_not_nil comment.script_id
@@ -75,6 +83,8 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     assert_response :success
     assert JSON.parse(response.body)['isFromTeacher']
+    assert JSON.parse(response.body)['isFromCurrentUser']
+    refute JSON.parse(response.body)['isFromProjectOwner']
   end
 
   test 'teacher cannot create CodeReviewComment for student not in their section' do

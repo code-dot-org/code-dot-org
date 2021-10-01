@@ -38,14 +38,18 @@ module.exports = function(grunt) {
 // Auto-generated from Gruntfile.js
 import '@babel/polyfill';
 import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-15.4';
+import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
-import { throwOnConsoleErrorsEverywhere, throwOnConsoleWarningsEverywhere } from './util/throwOnConsole';
+import { throwOnConsoleErrorsEverywhere } from './util/throwOnConsole';
 ${loadContext}
 describe('entry tests', () => {
   throwOnConsoleErrorsEverywhere();
-  throwOnConsoleWarningsEverywhere();
+
+  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
+  // https://codedotorg.atlassian.net/browse/XTEAM-377
+  // throwOnConsoleWarningsEverywhere();
+
   ${runTests}
 });
 `;
@@ -83,6 +87,7 @@ describe('entry tests', () => {
     'jigsaw',
     'maze',
     'netsim',
+    'poetry',
     'studio',
     'turtle',
     'weblab'
@@ -628,6 +633,8 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_expressions/new':
+      './src/sites/studio/pages/programming_expressions/new.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',

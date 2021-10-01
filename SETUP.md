@@ -101,7 +101,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
     </details>
 1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 1. Install Redis: `brew install redis`
-1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel`
+1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql@5.7 nvm imagemagick rbenv ruby-build coreutils sqlite parallel tidy-html5`
     <details>
       <summary>Troubleshoot: pdftk errors</summary>
 

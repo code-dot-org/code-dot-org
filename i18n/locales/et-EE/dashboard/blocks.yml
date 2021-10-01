@@ -853,6 +853,17 @@ et:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': vihm
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': paremale
+            '90': alla
+            '180': vasakule
+            '270': üles
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -862,6 +873,11 @@ et:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": purustama
+            "'sound://category_digital/jump_7.mp3'": hüppa
       gamelab_randColor:
         text: juhuslik värv
       gamelab_randomColor:
@@ -1131,20 +1147,21 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
-      PoemBot_setBackgroundEffect:
-        text: |-
-          määra taustaefekt
-          {BG_EFFECT} [PALETTE][1]
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': ühtlane
-            '"rainbow"': vikerkaar
-      PoemBot_setForegroundEffect:
-        text: määra esiplaani efekt {FG_EFFECT}
-        options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': vihm
-            '"bubbles"': mullid
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Värvid
+          PALETTE:
+            '"rainbow"': Vikerkaar
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Vihm
+            '"bubbles"': Mullid
       RyanLab_moveForward:
         text: liigu edasi
       RyanLab_turnLeft:

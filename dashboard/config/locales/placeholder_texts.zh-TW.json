@@ -42,7 +42,10 @@
         },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
-          "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
+          "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題",
+          "66ca156974a9909af6aea88ad5cb915b": "請讓殭屍遠離外星人，他們讓他覺得很傷心！",
+          "66363f1551b4fdb85c85222c629013b2": "保護外星人！",
+          "3b3d1f8225a16aac3f372c3062d8b194": "如果他變傷心，請再去讓他開心以獲得更多分數！"
         },
         "Choose Your Own Adventure": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
@@ -59,7 +62,14 @@
         "Find the Wizard": {
           "0b895ef4c917e50663bc2a7327cbee3d": "你找到我了！",
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
-          "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
+          "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題",
+          "22b45b2cf2d4a2a3d7b3faa522013b26": "數到三秒後我就會消失！ 從 1 到 400 之間猜一個數字來找我！",
+          "74e3efe12b17fe00c01147733fad486d": "猜一個數字來找到我！",
+          "3c5a6a6bfff469fd4c779912331f1049": "呸！\n",
+          "0464d226582401370945003bc8850990": "花哈哈哈！",
+          "765366ef0f68387ed2a6ca3a8d24182d": "太高啦！",
+          "cd4c7f8fdf063e832de1604e34dd4531": "嘻嘻",
+          "0ceb38a3de45bf070e96e6657474f47d": "太低啦！"
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
@@ -163,7 +173,8 @@
         },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
-          "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題"
+          "30fcc1693fa8402931d13ac3a5f396fd": "在這裡輸入標題",
+          "97a97de7add5e8dcd9f70a407d56968e": "中了！"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "在這裡輸入說明",
@@ -422,6 +433,10 @@
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "你叫什麼名字？"
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "請再試一次。",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "遊戲結束！"
         }
       }
     }

@@ -145,6 +145,8 @@ et:
     accept_terms: Pead konto loomiseks nõustuma
     email_preference_yes: Jah
     email_preference_no: Ei
+    share_teacher_email_reg_partner_preference_yes: Jah
+    share_teacher_email_reg_partner_preference_no: Ei
   school_info:
     private: Privaatne
     public: Avalik

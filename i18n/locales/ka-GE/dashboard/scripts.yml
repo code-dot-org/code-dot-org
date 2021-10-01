@@ -170,6 +170,7 @@ ka:
           lessons:
             Artist:
               name: მხატვარი
+              description_teacher: ამ გაკვეთილზე, მოსწავლეები მხატვრის საშუალებით დაასრულებენ მოცემულ გამოსახულებებს. მხატვარში მუშაობის პროცესში მოსწავლეები ახალი ბლოკების გამოყენებით, როგორებიცაა `100 პიქსელით მოახლოვება` და `90 გრადუსით გარჯვნივ მოტრიალება`, შექმნიან უფრო რთულ გამოსახულებებს.
           student_description: დახატეთ მაგარი სურათები და შექმენით დიზაინები მხატვართან ერთად!
         hourofcode:
           title: ლაბირინთი
@@ -2304,6 +2305,7 @@ ka:
           lessons:
             Bounce:
               name: Bounce
+              description_teacher: 'ამ ონლაინ აქტივობისას, მოსწავლეები ისწავლიან რას წარმოადგენენ მოვლენები და როგორ იყენებს მათ კომპიუტერი ვიდეო თამაშების მსგავს პროგრამებში. მოსწავლეები თავსატეხებზე მუშაობისას პროგრამებს მოვლენებზე რეაგირებას ასწავლიან (მაგ: ისრის ღილაკებზე დაჭერა). თავსატეხის ბოლოს, კი მოსწავლეებს საშუალება ექნებათ გაამრავალფეროვნონ საკუთარი თამაშები სხვადასხვა ხმებითა თუ სიჩქარეებით.'
           student_description: აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში
         sample-csp5:
           lessons:
@@ -2692,6 +2694,7 @@ ka:
           lessons:
             Sports:
               name: სპორტი
+              description_teacher: 'ამ ონლაინ აქტივობისას, მოსწავლეები ისწავლიან რას წარმოადგენენ მოვლენები და როგორ იყენებს მათ კომპიუტერი ვიდეო თამაშების მსგავს პროგრამებში. მოსწავლეები თავსატეხებზე მუშაობისას პროგრამებს მოვლენებზე რეაგირებას ასწავლიან (მაგ: ისრის ღილაკებზე დაჭერა). თავსატეხის ბოლოს, კი მოსწავლეებს საშუალება ექნებათ გაამრავალფეროვნონ საკუთარი თამაშები სხვადასხვა ხმებითა თუ სიჩქარეებით.'
           student_description: შეაერთეთ სხვადასხვა სპორტული თამაშები
         2016_sciencePD-phase2b:
           lessons:
@@ -8702,6 +8705,14 @@ ka:
               display_name: შესავალი
             Introduction:
               display_name: შესავალი
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: გაკვეთილი 3
+            Lesson 4:
+              display_name: გაკვეთილი 4
+            Lesson 5:
+              display_name: გაკვეთილი 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -8778,6 +8789,12 @@ ka:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ეტაპი 1
+            lessonGroup-3:
+              display_name: ეტაპი 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -8812,5 +8829,19 @@ ka:
               display_name: შიგთავსი
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: ვიჯეტები
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: შიგთავსი
+            content:
+              display_name: შიგთავსი
+            lesson_group:
+              display_name: შიგთავსი
             lessonGroup-2:
               display_name: შიგთავსი

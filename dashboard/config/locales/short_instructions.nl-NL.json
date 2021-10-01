@@ -1800,9 +1800,9 @@
         "CourseF_outbreak2": "Wijzig de gezonde monsters in zieke monsters als ze elkaar aanraken.",
         "CourseF_outbreak3": "Wijzig monsters in monsters met mondkapjes als u op ze klikt.",
         "CourseF_outbreak4": "Wijzig voor uw simulatie het aantal en de grootte van de monstersprites.",
-        "CourseF_outbreak6": "Voeg een percentagekanst toe voor monster om ziek te wordne als gezonde monsters zieke monsters aanraken. Doe dit bij alle combinaties van monsters met en zonder mondkapjes.",
-        "CourseF_outbreak7": "Creëer een nieuw kostuum voor monster die immuun voor het virus zijn, en gebruik deze in uw simulatie.",
-        "CourseF_outbreak8": "Deel een bericht met uw simulatie.",
+        "CourseF_outbreak6": "Laat alle zieke monsters beginnen met genezen als een gezond monster een ziek monster aanraakt.",
+        "CourseF_outbreak7": "Voeg een percentagekanst toe voor monster om ziek te wordne als gezonde monsters zieke monsters aanraken. Doe dit bij alle combinaties van monsters met en zonder mondkapjes.",
+        "CourseF_outbreak8": "Creëer een nieuw kostuum voor monster die immuun voor het virus zijn, en gebruik deze in uw simulatie.",
         "courseA_artist_loops10_2021": "Help me stenen neer te zetten zodat ik niet val!",
         "courseA_artist_loops11_2021": "Help me een trapje te bouwen om het schip te zien weg zeilen.",
         "courseA_artist_loops12_2021": "De artiest zag iets grappigs in de verte. Teken wat je denkt dat hij zag.",
@@ -2068,7 +2068,9 @@
         "courseE_farmer_ramp11a_2021": "Zolang er nog een hoop ligt, moet je zand verwijderen.",
         "courseE_farmer_ramp11b_2021": "Zolang er nog een hoop ligt, moet je zand verwijderen.",
         "courseE_farmer_ramp12f_2021": "Beweeg vooruit tot je de sla bereikt, draai dan linksom **als** er een pad naar links is, en anders rechsom.",
-        "courseE_farmer_while1_2021": "Beweeg vooruit tot je de sla bereikt, draai dan linksom **als** er een pad naar links is, en anders rechsom."
+        "courseE_farmer_while1_2021": "Beweeg vooruit tot je de sla bereikt, draai dan linksom **als** er een pad naar links is, en anders rechsom.",
+        "CourseF_outbreak5": "Wijzig voor uw simulatie het aantal en de grootte van de monstersprites.",
+        "international_outbreak_freeplay": "Deel een bericht met uw simulatie."
       }
     }
   }

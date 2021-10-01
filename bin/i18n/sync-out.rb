@@ -126,9 +126,9 @@ def restore_redacted_files
     ERR
   end
 
-  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+  puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
-  Parallel.each(locales) do |prop|
+  Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
@@ -317,9 +317,9 @@ end
 # back to blockly, apps, pegasus, and dashboard.
 def distribute_translations(upload_manifests)
   locales = Languages.get_locale
-  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count} processes"
+  puts "Distributing translations in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
-  Parallel.each(locales) do |prop|
+  Parallel.each(locales, in_processes: (Parallel.processor_count / 2)) do |prop|
     locale = prop[:locale_s]
     locale_dir = File.join("i18n/locales", locale)
     next if locale == 'en-US'
@@ -358,7 +358,7 @@ def distribute_translations(upload_manifests)
     ### Animation library
     spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
     if file_changed?(locale, spritelab_animation_translation_path)
-      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true})
+      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
       spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
       translations = JSON.load(File.open(spritelab_animation_translation_file))
       # Use js_locale here as the animation library is used by apps
@@ -389,13 +389,14 @@ def distribute_translations(upload_manifests)
 
     ### Pegasus markdown
     Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
-      relative_path = loc_file.delete_prefix(locale_dir)
+      relative_path = loc_file.delete_prefix("#{locale_dir}/codeorg-markdown")
       next unless file_changed?(locale, relative_path)
 
       destination_dir = "pegasus/sites.v3/code.org/i18n/public"
-      relative_dir = File.dirname(loc_file.delete_prefix("#{locale_dir}/codeorg-markdown"))
+      relative_dir = File.dirname(relative_path)
       name = File.basename(loc_file, ".*")
       destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
+      FileUtils.mkdir_p(File.dirname(destination))
       FileUtils.mv(loc_file, destination)
     end
 
