@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
@@ -19,7 +20,7 @@ export default class PoetryLibrary extends CoreLibrary {
       endTime: POEM_DURATION
     };
     this.poemState = {
-      ...getStore().getState().poetry.selectedPoem,
+      ..._.cloneDeep(getStore().getState().poetry.selectedPoem),
       font: {
         fill: 'black',
         stroke: 'rgba(0,0,0,0)',
