@@ -7,6 +7,8 @@ import i18n from '@cdo/locale';
 
 class UnassignSectionDialog extends Component {
   static propTypes = {
+    sectionName: PropTypes.string.isRequired,
+    courseName: PropTypes.string.isRequired,
     isOpen: PropTypes.bool.isRequired,
     sectionId: PropTypes.string,
     onClose: PropTypes.func.isRequired,
@@ -19,15 +21,25 @@ class UnassignSectionDialog extends Component {
   unassign = () => this.props.unassignSection(this.props.sectionId);
 
   render() {
+    const {isOpen, courseName, sectionName} = this.props;
     return (
       <BaseDialog
-        isOpen={this.props.isOpen}
+        isOpen={isOpen}
         handleClose={this.close}
         useUpdatedStyles
         style={styles.dialog}
       >
-        <h2 className="unassign-dialog-title">{i18n.unassignSection()}</h2>
-        <div style={{marginBottom: 10}}>{i18n.unassignSectionConfirm()}</div>
+        <h2 className="unassign-dialog-title">
+          {i18n.unassignSection({
+            courseName: courseName
+          })}
+        </h2>
+        <div style={{marginBottom: 10}}>
+          {i18n.unassignSectionConfirm({
+            sectionName: sectionName,
+            courseName: courseName
+          })}
+        </div>
         <DialogFooter>
           <Button
             __useDeprecatedTag
