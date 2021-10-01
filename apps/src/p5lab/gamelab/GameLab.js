@@ -6,6 +6,10 @@ import {showLevelBuilderSaveButton} from '../../code-studio/header';
 import color from '@cdo/apps/util/color';
 
 export default class GameLab extends P5Lab {
+  getAvatarUrl(levelInstructor) {
+    return null;
+  }
+
   getMsg() {
     return msg;
   }
