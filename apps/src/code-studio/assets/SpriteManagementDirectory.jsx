@@ -2,17 +2,23 @@ import React, {useState} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import {moveDefaultSpriteMetadataToProduction} from '@cdo/apps/assetManagement/animationLibraryApi';
+import StatusCheckmarkIcon, {
+  iconStatus
+} from '@cdo/apps/code-studio/components/StatusCheckmarkIcon';
 
 export default function SpriteManagementDirectory() {
-  const [updated, setUpdated] = useState(false);
+  const [moveChangesStatus, setMoveChangesStatus] = useState(
+    iconStatus.noAction
+  );
 
   const moveChangesToProduction = () => {
     //Files to move to production folder: defaultSprites.json
     moveDefaultSpriteMetadataToProduction()
       .then(() => {
-        setUpdated(true);
+        setMoveChangesStatus(iconStatus.success);
       })
       .catch(err => {
+        setMoveChangesStatus(iconStatus.failure);
         console.log(err);
       });
   };
@@ -43,14 +49,7 @@ export default function SpriteManagementDirectory() {
           onClick={confirmReleaseChangesToLevelbuilder}
           style={styles.button}
         />
-        <i
-          style={{
-            ...styles.checkmark,
-            visibility: updated ? 'visible' : 'hidden'
-          }}
-          className="fa fa-check"
-          aria-hidden="true"
-        />
+        <StatusCheckmarkIcon displayStatus={moveChangesStatus} />
       </div>
     </div>
   );
@@ -65,13 +64,5 @@ const styles = {
   button: {
     margin: 20,
     fontSize: 20
-  },
-  checkmark: {
-    color: color.light_green,
-    fontSize: 18,
-    left: 5,
-    lineHeight: 25,
-    position: 'relative',
-    top: 7
   }
 };

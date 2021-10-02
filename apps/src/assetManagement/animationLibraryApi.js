@@ -10,9 +10,11 @@ export const UploadType = {
  * @param locale {String} language locale, defaults to 'en_us'
  */
 export function getManifest(appType, locale = 'en_us') {
-  return fetch(`/api/v1/animation-library/manifest/${appType}/${locale}`).then(
-    response => response.json()
-  );
+  return fetch(`/api/v1/animation-library/manifest/${appType}/${locale}`)
+    .then(response => response.json())
+    .catch(err => {
+      return Promise.reject(err);
+    });
 }
 
 // Returns the list of default sprites in SpriteLab in English
@@ -76,57 +78,71 @@ function uploadDefaultListMetadata(metadata, environment) {
 
 // Returns the metadata of the list of default sprites in SpriteLab in English
 export function getDefaultListMetadata() {
-  return fetch('/api/v1/animation-library/default-spritelab-metadata').then(
-    response => response.json()
-  );
+  return fetch('/api/v1/animation-library/default-spritelab-metadata')
+    .then(response => response.json())
+    .catch(err => {
+      return Promise.reject(err);
+    });
 }
 
 export function moveDefaultSpriteMetadataToProduction() {
   // Get metadata from levelbuilder
-  return getDefaultListMetadata().then(metadata => {
-    // Put metadata on production
-    return uploadDefaultListMetadata(metadata, 'production');
-  });
+  return getDefaultListMetadata()
+    .then(metadata => {
+      // Put metadata on production
+      return uploadDefaultListMetadata(metadata, 'production');
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
 }
 
 export function createDefaultSpriteMetadata(listData) {
   let orderedKeys = [];
   let propsByKey = {};
-  return getManifest('spritelab').then(manifest => {
-    const animations = JSON.parse(manifest)['metadata'];
-    for (let sprite of listData.default_sprites) {
-      const {
-        sourceUrl,
-        frameSize,
-        frameCount,
-        looping,
-        frameDelay,
-        version,
-        categories
-      } = animations[sprite.key];
-      const props = {
-        name: sprite.name,
-        sourceUrl: `https://studio.code.org${sourceUrl}`,
-        frameSize,
-        frameCount,
-        looping,
-        frameDelay,
-        version,
-        categories
-      };
-      const key = createUuid();
-      orderedKeys.push(key);
-      propsByKey[key] = props;
-    }
-    return {orderedKeys, propsByKey};
-  });
+  return getManifest('spritelab')
+    .then(manifest => {
+      const animations = JSON.parse(manifest)['metadata'];
+      for (let sprite of listData.default_sprites) {
+        const {
+          sourceUrl,
+          frameSize,
+          frameCount,
+          looping,
+          frameDelay,
+          version,
+          categories
+        } = animations[sprite.key];
+        const props = {
+          name: sprite.name,
+          sourceUrl: `https://studio.code.org${sourceUrl}`,
+          frameSize,
+          frameCount,
+          looping,
+          frameDelay,
+          version,
+          categories
+        };
+        const key = createUuid();
+        orderedKeys.push(key);
+        propsByKey[key] = props;
+      }
+      return {orderedKeys, propsByKey};
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
 }
 
 // Regenerates the metadata for the default list of sprites in SpriteLab and uploads it to S3
 export function regenerateDefaultSpriteMetadata(listData) {
-  return createDefaultSpriteMetadata(listData).then(defaultMetadata => {
-    return uploadDefaultListMetadata(defaultMetadata, 'levelbuilder');
-  });
+  return createDefaultSpriteMetadata(listData)
+    .then(defaultMetadata => {
+      return uploadDefaultListMetadata(defaultMetadata, 'levelbuilder');
+    })
+    .catch(err => {
+      return Promise.reject(err);
+    });
 }
 
 /* Uploads the given sprite to the animation library at the specified path. On success
