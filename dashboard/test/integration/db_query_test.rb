@@ -117,7 +117,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     # Simulate all the ajax requests which the unit overview page sends to the
     # server on page load.
 
-    assert_cached_queries(10) do
+    assert_cached_queries(9) do
       get "/api/user_progress/#{script.name}"
       assert_response :success
     end
