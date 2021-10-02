@@ -729,6 +729,8 @@ class ScriptLevel < ApplicationRecord
   def get_example_solutions(current_user, section=nil)
     level_example_links = []
 
+    return [] unless current_user.teacher?
+
     level = levels.first
 
     if level.try(:examples).present? && (current_user.authorized_teacher? || script.csf?) # 'solutions' for applab-type levels
