@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
+import StatusCheckmarkIcon, {
+  iconStatus
+} from '@cdo/apps/code-studio/components/StatusCheckmarkIcon';
 
 export default class AddDefaultSprite extends React.Component {
   static propTypes = {
@@ -11,15 +14,21 @@ export default class AddDefaultSprite extends React.Component {
   state = {
     spriteName: '',
     spriteCategory: '',
-    displaySuccess: false
+    displaySuccess: iconStatus.noAction
   };
 
   handleNameChange = event => {
-    this.setState({spriteName: event.target.value, displaySuccess: false});
+    this.setState({
+      spriteName: event.target.value,
+      displaySuccess: iconStatus.noAction
+    });
   };
 
   handleCategoryChange = event => {
-    this.setState({spriteCategory: event.target.value, displaySuccess: false});
+    this.setState({
+      spriteCategory: event.target.value,
+      displaySuccess: iconStatus.noAction
+    });
   };
 
   handleSpriteAdd = addToBeginning => {
@@ -28,7 +37,11 @@ export default class AddDefaultSprite extends React.Component {
       this.state.spriteName,
       this.state.spriteCategory
     );
-    this.setState({spriteName: '', spriteCategory: '', displaySuccess: true});
+    this.setState({
+      spriteName: '',
+      spriteCategory: '',
+      displaySuccess: iconStatus.success
+    });
   };
 
   render() {
@@ -68,14 +81,7 @@ export default class AddDefaultSprite extends React.Component {
           onClick={() => this.handleSpriteAdd(false)}
           size={Button.ButtonSize.narrow}
         />
-        <i
-          style={{
-            ...styles.checkmark,
-            visibility: displaySuccess ? 'visible' : 'hidden'
-          }}
-          className="fa fa-check"
-          aria-hidden="true"
-        />
+        <StatusCheckmarkIcon displayStatus={displaySuccess} />
       </div>
     );
   }
@@ -91,13 +97,5 @@ const styles = {
   },
   addSpriteLabel: {
     padding: 10
-  },
-  checkmark: {
-    color: color.light_green,
-    fontSize: 18,
-    left: 5,
-    lineHeight: '25px',
-    position: 'relative',
-    top: 7
   }
 };
