@@ -729,7 +729,7 @@ class ScriptLevel < ApplicationRecord
   def get_example_solutions(current_user, section=nil)
     level_example_links = []
 
-    return [] unless current_user && current_user.teacher?
+    return [] unless current_user&.teacher?
 
     level = levels.first
 
