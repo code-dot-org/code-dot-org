@@ -122,7 +122,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    assert_cached_queries(4) do
+    assert_cached_queries(3) do
       get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
       assert_response :success
     end
