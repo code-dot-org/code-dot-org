@@ -1668,7 +1668,7 @@ class User < ApplicationRecord
   end
 
   def all_sections
-    sections_as_teacher = student? ? [] : sections
+    sections_as_teacher = student? ? [] : sections.to_a
     sections_as_teacher.concat(sections_as_student).uniq
   end
 
