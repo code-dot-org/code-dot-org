@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
@@ -19,7 +20,8 @@ function useProgrammingExpression(initialProgrammingExpression) {
 }
 
 export default function ProgrammingExpressionEditor({
-  initialProgrammingExpression
+  initialProgrammingExpression,
+  environmentCategories
 }) {
   // We don't want to update id or key
   const {
@@ -62,6 +64,10 @@ export default function ProgrammingExpressionEditor({
       });
   };
 
+  const markdownEditorFeatures = {
+    imageUpload: true
+  };
+
   return (
     <div>
       <h1>{`Editing ${key}`}</h1>
@@ -87,10 +93,50 @@ export default function ProgrammingExpressionEditor({
         handleMarkdownChange={e =>
           updateProgrammingExpression('shortDescription', e.target.value)
         }
-        features={{
-          imageUpload: true
-        }}
+        features={markdownEditorFeatures}
       />
+      <CollapsibleEditorSection title="Documentation" collapsed>
+        <label>
+          External Documentation
+          <input
+            value={programmingExpression.externalDocumentation || ''}
+            onChange={e =>
+              updateProgrammingExpression(
+                'externalDocumentation',
+                e.target.value
+              )
+            }
+            style={styles.textInput}
+          />
+        </label>
+        <label>
+          Category
+          <select
+            value={programmingExpression.category}
+            onChange={e =>
+              updateProgrammingExpression('category', e.target.value)
+            }
+            style={styles.selectInput}
+          >
+            <option key="none" value={''}>
+              (None)
+            </option>
+            {environmentCategories.map(category => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </label>
+        <TextareaWithMarkdownPreview
+          markdown={programmingExpression.content || ''}
+          label={'Content'}
+          handleMarkdownChange={e =>
+            updateProgrammingExpression('content', e.target.value)
+          }
+          features={markdownEditorFeatures}
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -106,11 +152,14 @@ const programmingExpressionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  shortDescription: PropTypes.string
+  shortDescription: PropTypes.string,
+  externalDocumentation: PropTypes.string,
+  content: PropTypes.string
 });
 
 ProgrammingExpressionEditor.propTypes = {
-  initialProgrammingExpression: programmingExpressionShape.isRequired
+  initialProgrammingExpression: programmingExpressionShape.isRequired,
+  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 const styles = {
