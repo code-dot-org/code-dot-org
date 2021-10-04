@@ -304,7 +304,9 @@ class InternationalOptInComponent extends FormComponent {
     const selectedDepartment =
       this.props.data && this.props.data.schoolDepartment;
     const selectedDistrict =
-      selectedDepartment && this.props.data && this.props.data.schoolDistrict;
+      selectedDepartment &&
+      this.props.data &&
+      this.props.data.schoolMunicipality;
 
     const departments = this.props.options.uzbekistanSchoolData || {};
     const selectDepartment = this.buildSelectFieldGroup({
@@ -317,7 +319,7 @@ class InternationalOptInComponent extends FormComponent {
 
     const districts = departments[selectedDepartment] || {};
     const selectDistrict = this.buildSelectFieldGroup({
-      name: 'schoolDistrict',
+      name: 'schoolMunicipality',
       label: this.props.labels.uzbekistanSchoolDistrict,
       options: Object.keys(districts),
       disabled: !selectedDepartment,
@@ -329,7 +331,7 @@ class InternationalOptInComponent extends FormComponent {
 
     const schools = districts[selectedDistrict] || [];
     const selectSchool = this.buildSelectFieldGroup({
-      name: 'school',
+      name: 'schoolName',
       label: this.props.labels.school,
       options: schools,
       disabled: !selectedDistrict,
