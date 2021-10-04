@@ -103,8 +103,6 @@ export default class TutorialExplorer extends React.Component {
       filteredTutorials,
       filteredTutorialsCount: filteredTutorials.length
     });
-
-    this.scrollToTop();
   };
 
   /**

@@ -70,7 +70,8 @@ const styles = {
     top: 6,
     right: 5,
     fontSize: 16,
-    color: color.light_gray
+    color: color.light_gray,
+    cursor: 'pointer'
   },
   searchArea: {
     position: 'relative',
