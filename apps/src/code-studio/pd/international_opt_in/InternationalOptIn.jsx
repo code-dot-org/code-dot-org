@@ -109,7 +109,11 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {Object} - modified state
    */
   handleSchoolDataChange(newState) {
-    if (!this.isColombiaSelected() && !this.isChileSelected()) {
+    if (
+      !this.isColombiaSelected() &&
+      !this.isChileSelected() &&
+      !this.isUzbekistanSelected()
+    ) {
       return newState;
     }
 
@@ -125,8 +129,9 @@ class InternationalOptInComponent extends FormComponent {
       newState.schoolCommune = undefined;
     }
     if ('schoolMunicipality' in newState) {
-      // school municipality changed, clearing city
+      // school municipality changed, clearing city and school name
       newState.schoolCity = undefined;
+      newState.schoolName = undefined;
     }
     if ('schoolCity' in newState || 'schoolCommune' in newState) {
       // school city/commune changed, clearing name
@@ -320,7 +325,7 @@ class InternationalOptInComponent extends FormComponent {
     const districts = departments[selectedDepartment] || {};
     const selectDistrict = this.buildSelectFieldGroup({
       name: 'schoolMunicipality',
-      label: this.props.labels.uzbekistanSchoolDistrict,
+      label: this.props.labels.schoolCityDistrict,
       options: Object.keys(districts),
       disabled: !selectedDepartment,
       placeholder: selectedDepartment

@@ -45,8 +45,6 @@ class Pd::InternationalOptIn < ApplicationRecord
       :first_name,
       :last_name,
       :gender,
-      :school_name,
-      :school_city,
       :school_country,
       :ages,
       :subjects,
@@ -123,6 +121,31 @@ class Pd::InternationalOptIn < ApplicationRecord
     super.merge(entries)
   end
 
+  # @override
+  def dynamic_required_fields(hash)
+    [].tap do |required|
+      if hash[:school_country] == "Colombia"
+        required << :school_department
+        required << :school_municipality
+        required << :school_city
+        required << :school_name
+      end
+
+      if hash[:school_country] == "Chile"
+        required << :school_department
+        required << :school_commune
+        required << :school_name
+        required << :school_id
+      end
+
+      if hash[:school_country] == "Uzbekistan"
+        required << :school_department
+        required << :school_municipality
+        required << :school_name
+      end
+    end
+  end
+
   def self.labels
     keys = %w(
       firstName
@@ -133,6 +156,7 @@ class Pd::InternationalOptIn < ApplicationRecord
       gender
       school
       schoolCity
+      schoolCityDistrict
       schoolCountry
       schoolDepartmentRegion
       schoolName
@@ -156,7 +180,6 @@ class Pd::InternationalOptIn < ApplicationRecord
       colombianChileanSchoolName
       chileanSchoolCommune
       chileanSchoolId
-      uzbekistanSchoolDistrict
     )
 
     Hash[keys.collect {|v| [v, I18n.t("pd.form_labels.#{v.underscore}")]}]
