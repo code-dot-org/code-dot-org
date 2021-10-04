@@ -50,7 +50,6 @@ function PoemEditor(props) {
       onClick={() =>
         props.handleClose({title, author, lines: poem.split('\n')})
       }
-      key="confirm"
       type="confirm"
     />
   );

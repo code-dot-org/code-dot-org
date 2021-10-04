@@ -1,4 +1,35 @@
+var PLAYSPACE_SIZE = 400;	//replace var with const in GitHub
+var EARLY_FAIL_TIME = 10;
+var WAIT_TIME = 150;
+var FAIL_COLOR = rgb(118,102,160);
+var PASS_COLOR = rgb(0,173,188);
+var CHALLENGE_PASS_COLOR = rgb(0,0,0);
+
 //Helper Functions
+
+/**
+ * Sets successCriteria dictionary to input dictionary.
+ */
+function setSuccessCriteria(criteria){
+  validationProps.successCriteria = criteria;
+}
+
+/**
+ * Sets successTime if all success criteria
+ * have been met.
+ */
+function setSuccessTime(){
+  if (!validationProps.successTime) {
+    var success = true;
+    for (var criterion in validationProps.successCriteria) {
+      if (!criterion) { success = false; break; }
+    }
+    if (success) {
+      validationProps.successTime = World.frameCount;
+    }
+  }
+}
+
 function drawProgress(state,currentTime,endTime){
   if(state=="fail"){
     fill(rgb(118,102,160));
@@ -9,6 +40,7 @@ function drawProgress(state,currentTime,endTime){
   }
   rect(0,390,currentTime*400/endTime);
 }
+
 function drawRings(x,y){
   push();
   stroke("rgba(0,0,0,0.5)");
@@ -21,7 +53,8 @@ function drawRings(x,y){
   ellipse(x,y,Math.sin(World.frameCount/10)*30,Math.sin(World.frameCount/10)*30);
   pop();
 }
-function drawHand(x, y) {
+
+function drawHand(x, y){
   y+=5;
   push();
   var gray1=Math.cos(World.frameCount/10)*30;
@@ -72,5 +105,279 @@ function drawHand(x, y) {
   line(x-5.5,y+37,x-20.5,y+22);
   line(x-13.5,y+15,x-5.5,y+25);
   arc(x-17,y+18.5,10,10,135,315);
+  pop();
+}
+
+/**
+ * Checks the locations of all sprites. 
+ *
+ * @return {boolean} Returns true if all sprites have 
+ *         different locations and false otherwise.
+ */
+function checkSpriteLocations(spriteIds){
+  var uniqueStartingSpriteLocations = [];
+  for (var i=0; i<spriteIds.length; i++) {
+    var coords = [getProp({id: spriteIds[i]}, "x"), getProp({id: spriteIds[i]}, "y")];
+    var noDuplicateCoords = true;
+    for (var j=0; j<uniqueStartingSpriteLocations.length; j++) {
+      if ((coords[0] == uniqueStartingSpriteLocations[j][0]) &&
+          (coords[1] == uniqueStartingSpriteLocations[j][1])){
+        noDuplicateCoords = false;
+        break;
+      }
+    }
+    if (!noDuplicateCoords) {
+      break;
+    } else {
+      uniqueStartingSpriteLocations.push(coords);
+    }
+  }
+
+  if (spriteIds.length == uniqueStartingSpriteLocations.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/**
+ * Checks the costumes of all sprites.
+ *
+ * @return {boolean} Returns true if all sprites have 
+ *         different costumes and false otherwise.
+ */
+function checkSpriteCostumes(spriteIds){
+  var uniqueStartingSpriteCostumes = [];
+  for (var i=0; i<spriteIds.length; i++) {
+    var costume = getProp({id: spriteIds[i]}, "costume");
+    var noDuplicateCostumes = true;
+    for (var j=0; j<uniqueStartingSpriteCostumes.length; j++) {
+      if (costume == uniqueStartingSpriteCostumes[j]) {
+        noDuplicateCostumes = false;
+        break;
+      }
+    }
+    if (!noDuplicateCostumes) {
+      break;
+    } else {
+      uniqueStartingSpriteCostumes.push(costume);
+    }
+  }
+
+  if (spriteIds.length == uniqueStartingSpriteCostumes.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/**
+ * Checks if sprites are touching.
+ *
+ * @return {boolean} Returns true if no sprites are
+ *         touching and false otherwise.
+ */
+function checkSpritesTouching(spriteIds){
+  for (var i=0; i<spriteIds.length; i++) {
+    for (var j=i+1; j<spriteIds.length; j++) {
+      if (isTouchingSprite({id: spriteIds[i]}, {id: spriteIds[j]})) {
+        setProp({id: spriteIds[i]}, "debug", true);
+        setProp({id: spriteIds[j]}, "debug", true);
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
+/**
+ * Checks if any sprite has active speech.
+ *
+ * @return {boolean} Returns true if any sprite has
+ *         active speech and false otherwise.
+ */
+function checkActiveSpeech(spriteIds){
+  for (var spriteId in spriteIds) {
+    if(getProp({ id: spriteId }, "speech")){
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Checks if all sprites say something.
+ *
+ * @return {boolean} Returns true if all sprites
+ *         say something and false otherwise.
+ */
+/* NOT USED
+function checkAllSpritesSay(spriteIds){
+  var numSpritesWithSayBlocks = 0;
+  for (var spriteId in spriteIds) {
+    if(getProp({ id: spriteId }, "speech")){
+      numSpritesWithSayBlocks = numSpritesWithSayBlocks + 1;
+    }
+  }
+  if (numSpritesWithSayBlocks == spriteIds.length) {
+    return true;
+  } else {
+    return false;
+  }
+} */ 
+
+/**
+ * Checks if new event occurred in playspace.
+ *
+ * @return {boolean} Returns true if new event
+ *         occurred and false otherwise.
+ */
+function checkForNewEvent(){
+  if (eventLog.length > validationProps.previous.eventLogLength) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+/**
+ * Checks if new click event occurred in playspace.
+ *
+ * @return {boolean} Returns true if new click
+ *         event occurred and false otherwise.
+ */
+function checkForNewClickEvent(){
+  if (eventLog.length > validationProps.previous.eventLogLength) {
+    var currentEvent = eventLog[eventLog.length - 1];
+    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Checks if a sprite was clicked in current frame.
+ *
+ * @return {boolean} Returns true if a sprite was
+ *         clicked and false otherwise.
+ */
+function checkSpriteClicked(){
+  if (eventLog.length > validationProps.previous.eventLogLength) {
+    var currentEvent = eventLog[eventLog.length - 1];
+    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
+    if ((currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) &&
+        clickedSpriteId) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Checks if a clicked sprite causes some sprite to speak in the frame.
+ *
+ * @return {boolean} Returns true if a clicked sprite
+ *         caused speech and false otherwise.
+ */
+function checkSpriteSay(){
+  // don't know if first if statement this should be in every event check method......
+  if (eventLog.length > validationProps.previous.eventLogLength) {
+    var currentEvent = eventLog[eventLog.length - 1];
+    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
+      for (var spriteId in spriteIds) {
+        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+          // clicked sprite caused speech in some sprite
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+}
+
+/**
+ * Checks if there is at least one sprite.
+ *
+ * @return {boolean} Returns true if there is at least
+ *         one sprite and false otherwise.
+ */
+function checkOneSprite(spriteIds){
+  return spriteIds.length>=1;
+}
+
+/**
+ * Checks if there are at least two sprites.
+ *
+ * @return {boolean} Returns true if there are at least
+ *         two sprites and false otherwise.
+ */
+function checkTwoSprites(spriteIds){
+  return spriteIds.length>=2;
+}
+
+/**
+ * Checks if the background was changed.
+ *
+ * @return {boolean} Returns true if the background
+ *         was changed and false otherwise.
+ */
+function checkBackgroundChanged(){
+  var background = getBackground();
+  return background !== undefined && background !== "#ffffff";
+}
+
+
+
+
+/*
+
+new method - check if clicked sprite starts speaking
+
+*/
+
+
+/*
+new method
+
+for (var spriteId in spriteIds) {
+        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+          // clicked sprite caused speech in some sprite
+          return true;
+        }
+      }
+
+*/
+
+
+
+
+/**
+ * Draws progress bar in playspace based on status. 
+ * 
+ * @param {string} status Keyword representing the current state
+ *                 of the level (i.e. pass, fail, challenge, etc.).
+ */
+function drawProgressBar(status){
+  push();
+  stroke("white");
+
+  switch (status) {
+    case "earlyFail":
+      fill(FAIL_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,(World.frameCount*PLAYSPACE_SIZE/EARLY_FAIL_TIME),10);
+      break;
+    case "fail":
+      fill(FAIL_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,(World.frameCount*PLAYSPACE_SIZE/WAIT_TIME),10);
+      break;
+    case "pass":
+      fill(PASS_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,(World.frameCount*PLAYSPACE_SIZE/WAIT_TIME),10);
+      break;
+    case "challengePass":
+    //Do something for challengePass
+  }
+
   pop();
 }

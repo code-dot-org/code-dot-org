@@ -41,6 +41,7 @@ social:
 
 <a id="chats"></a>
 
+<a id="chat1"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Developing responsible artificial intelligence</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <a href="https://code.zoom.us/rec/share/S0iGc__as1P7ojySOWcUbyzzjWE_t95g6kcRLvwNVyvrgJ6BxBPGb1Pxy1HGtuyU.WneOY6X_RCiEeue-" target="_blank"><img src="/images/csjourneys/myjourney-google.png" style="max-width:100%; border-radius:15px" alt="Taylor Roper"></a>
@@ -61,6 +62,7 @@ As a program manager on <a href="https://about.google/" target="_blank">Google</
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat2"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Artificial intelligence and sports</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
 <a href="https://code.zoom.us/rec/play/09veMf1354wOxNcJxSMPqmGgf6qh3vTdvIaSGHTpeyik4_59etRQXEIuPbAQwSzKiYAIMkXpqSRGHO_L.ym6IZsLcInwcxQAG" target="_blank"><img src="/images/csjourneys/myjourney-patrick2.png" style="max-width:100%; border-radius:15px" alt="Patrick Lucey"></a>
@@ -81,9 +83,10 @@ As a program manager on <a href="https://about.google/" target="_blank">Google</
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat3"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Building models of the universe</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129" target="_blank"><img src="/images/csjourneys/myjourney-nasa2.png" style="max-width:100%; border-radius:15px" alt="NASA"></a>
+<img src="/images/csjourneys/myjourney-nasa2.png" style="max-width:100%; border-radius:15px" alt="NASA">
 <center><img src="/images/csjourneys/nasa-logo.svg" style="max-width:50%; margin-top:15px" alt="NASA logo"></center>
 </div>
 
@@ -98,14 +101,18 @@ As a program manager on <a href="https://about.google/" target="_blank">Google</
 <br>
 <strong>Rutuparna Das</strong> is an astrophysicist and science communicator at the <a href="https://www.cfa.harvard.edu/" target="_blank">Center for Astrophysics | Harvard & Smithsonian</a>. Through research, she weighs clusters of galaxies to figure out what the cosmos is made of. Through NASA's Universe of Learning, she spreads the joys of space in a variety of ways, including telling stories about the people behind the science.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129" target="_blank"><button>Register my class</button></a>
-
+<a href="https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129" target="_blank"><button>Register on Eventbrite</button></a>
+<br>
+<br>
+<p><i>By clicking above, you will be<br>
+taken to www.eventbrite.com.</i></p>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat4"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Computer science for good</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-computer-science-for-good-registration-166870053823" target="_blank"><img src="/images/csjourneys/myjourney-codeorg.png" style="max-width:100%; border-radius:15px" alt="Code.org"></a>
+<img src="/images/csjourneys/myjourney-codeorg.png" style="max-width:100%; border-radius:15px" alt="Code.org">
 <center><img src="/images/logo.svg" style="max-width:50%; margin-top:15px" alt="Code.org logo"></center>
 </div>
 
@@ -120,14 +127,19 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <br>
 <strong>Maureen Sturgeon</strong> is a Software Engineer at Code.org. She didn’t discover computer science until college and is passionate about expanding access to computer science for K-12 students. Maureen graduated from Western Washington University with a B.S. in Mathematics. In her spare time, she enjoys hiking, traveling and watching stand-up comedy.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-computer-science-for-good-registration-166870053823" target="_blank"><button>Register my class</button></a>
+<a href="https://www.eventbrite.com/e/my-journey-computer-science-for-good-registration-166870053823" target="_blank"><button>Register on Eventbrite</button></a>
+<br>
+<br>
+<p><i>By clicking above, you will be<br>
+taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat5"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Building robots</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-building-robots-registration-168115226167" target="_blank"><img src="/images/csjourneys/myjourney-irobot.png" style="max-width:100%; border-radius:15px" alt="iRobot"></a>
+<img src="/images/csjourneys/myjourney-irobot.png" style="max-width:100%; border-radius:15px" alt="iRobot">
 <center><img src="/images/avatars/irobot.png" style="max-width:50%; margin-top:15px" alt="iRobot logo"></center>
 </div>
 
@@ -142,14 +154,19 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <br>
 As Director of Software Engineering at <a href="https://www.irobot.com/" target="_blank">iRobot</a>, <strong>Eva Moscat</strong> is responsible for the Robot Operating System department, including connectivity, embedded Linux, manufacturing, and engineering tools. Eva is an immigrant from the Dominican Republic; through her culture and socioeconomic upbringing, she mentors children with a similar background in STEM. Eva is inspired daily by her husband and her newborn son. In her free time, she enjoys watching anime, playing basketball, and building her sneaker collection.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-robots-registration-168115226167" target="_blank"><button>Register my class</button></a>
+<a href="https://www.eventbrite.com/e/my-journey-building-robots-registration-168115226167" target="_blank"><button>Register on Eventbrite</button></a>
+<br>
+<br>
+<p><i>By clicking above, you will be<br>
+taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat6"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Building the Internet of Things</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" target="_blank"><img src="/images/csjourneys/myjourney-amazon.png" style="max-width:100%; border-radius:15px" alt="Amazon"></a>
+<img src="/images/csjourneys/myjourney-amazon.png" style="max-width:100%; border-radius:15px" alt="Amazon">
 <center><img src="/images/avatars/amazon.jpg" style="max-width:50%; margin-top:15px" alt="Amazon logo"></center>
 </div>
 
@@ -161,14 +178,19 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <strong>Olawale Oladehin</strong> is the Head of Worldwide Solutions Architects – IoT (Internet of Things) at <a href="https://www.amazon.com/" target="_blank">Amazon</a>. He has 15 years of experience working across ecommerce, video, and embedded systems. He has a passion for helping customers innovate through technology to achieve their business outcomes. He holds a Bachelor’s degree in Computer Science from Princeton University.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" target="_blank"><button>Register my class</button></a>
+<a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" target="_blank"><button>Register on Eventbrite</button></a>
+<br>
+<br>
+<p><i>By clicking above, you will be<br>
+taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat7"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Making <i>Star Wars </i></h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" target="_blank"><img src="/images/csjourneys/myjourney-ilm.png" style="max-width:100%; border-radius:15px" alt="Industrial Light & Magic"></a>
+<img src="/images/csjourneys/myjourney-ilm.png" style="max-width:100%; border-radius:15px" alt="Industrial Light & Magic">
 <center><img src="/images/csjourneys/ilm.svg" style="max-width:50%; margin-top:15px" alt="Industrial Light & Magic logo"></center>
 </div>
 
@@ -183,14 +205,19 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <strong>Ini Oladosu</strong> joined <a href="https://www.ilm.com/" target="_blank">Industrial Light & Magic</a> in 2020 as a Production Assistant. He was born in Port Harcourt, Nigeria before immigrating to Calgary, Canada with his family in 2000. Between 2019 and 2021, Ini co-wrote and co-produced his debut short film, <i>Framed</i>. The film has been selected into various film festivals and most recently won the award for Best Edit at the 2021 London International Monthly Film Festival.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" target="_blank"><button>Register my class</button></a>
+<a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" target="_blank"><button>Register on Eventbrite</button></a>
+<br>
+<br>
+<p><i>By clicking above, you will be<br>
+taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat8"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Using Roblox to empower students</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" target="_blank"><img src="/images/csjourneys/myjourney-roblox.png" style="max-width:100%; border-radius:15px" alt="Roblox"></a>
+<img src="/images/csjourneys/myjourney-roblox.png" style="max-width:100%; border-radius:15px" alt="Roblox">
 <center><img src="/images/avatars/roblox.png" style="max-width:50%; margin-top:15px" alt="Roblox logo"></center>
 </div>
 
@@ -203,14 +230,19 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 As the senior instruction designer for <a href="https://www.roblox.com/" target="_blank">Roblox</a>, <strong>Genevieve Johnson</strong> oversees the creation of educational content and empowers students to pursue careers as entrepreneurs, engineers, and designers. She has been an author on two books, <i>Roblox Game Development in 24 Hours: The Official Roblox Guide</i>, and <i>Coding with Roblox Lua in 24 Hours: The Official Roblox Guide</i>.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" target="_blank"><button>Register my class</button></a>
+<a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" target="_blank"><button>Register on Eventbrite</button></a>
+<br>
+<br>
+<p><i>By clicking above, you will be<br>
+taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat9"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Art + Tech</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-art-tech-registration-167881553245" target="_blank"><img src="/images/csjourneys/myjourney-lacma.png" style="max-width:100%; border-radius:15px" alt="LA County Museum of Art"></a>
+<img src="/images/csjourneys/myjourney-lacma.png" style="max-width:100%; border-radius:15px" alt="LA County Museum of Art">
 <center><img src="/images/csjourneys/lacma.png" style="max-width:50%; margin-top:15px" alt="LACMA logo"></center>
 </div>
 
@@ -226,14 +258,19 @@ Since <strong>Joel Ferree</strong> became program director of <a href="https://w
 <strong>Tomas Garcia</strong> is <a href="https://www.lacma.org/" target="_blank">LACMA</a>’s Assistant Vice President of Technology and Digital Media, guiding the digital vision of one of the nation’s pioneering arts institutions. In this capacity he leads the digital operations of a diverse, multi-generational workforce while materializing the groundwork for the future of technology in museums. Tomas is responsible for the design and management of digital touchpoints all across the institution.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-art-tech-registration-167881553245" target="_blank"><button>Register my class</button></a>
+<a href="https://www.eventbrite.com/e/my-journey-art-tech-registration-167881553245" target="_blank"><button>Register on Eventbrite</button></a>
+<br>
+<br>
+<p><i>By clicking above, you will be<br>
+taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
+<a id="chat10"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Visual storytelling with data</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" target="_blank"><img src="/images/csjourneys/myjourney-sasha.png" style="max-width:100%; border-radius:15px" alt="Sasha Samochina"></a>
+<img src="/images/csjourneys/myjourney-sasha.png" style="max-width:100%; border-radius:15px" alt="Sasha Samochina">
 <center><img src="/images/csjourneys/movingbrands.png" style="max-width:50%; margin-top:15px" alt="Moving Brands logo"></center>
 </div>
 
@@ -246,7 +283,11 @@ Since <strong>Joel Ferree</strong> became program director of <a href="https://w
 <strong>Sasha Samochina</strong> (sam-ocean-uh) is the Director of Labs at <a href="https://www.movingbrands.com/" target="_blank">Moving Brands</a>, a creative and innovation company that explores emerging technologies. She formerly led the Data Visualization and Infusion team at NASA Jet Propulsion Laboratory. With a background in art, Sasha creates software that incorporates innovative forms of visualization that aid scientists, engineers, and astronauts. For more background, please check out Sasha's <a href="https://www.cloudsasha.com/" target="_blank">personal page</a>.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" target="_blank"><button>Register my class</button></a>
+<a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" target="_blank"><button>Register on Eventbrite</button></a>
+<br>
+<br>
+<p><i>By clicking above, you will be<br>
+taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
