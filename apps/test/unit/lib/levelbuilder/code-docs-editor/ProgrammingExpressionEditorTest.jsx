@@ -15,8 +15,11 @@ describe('ProgrammingExpressionEditor', () => {
         id: 1,
         name: 'Block',
         key: 'block',
-        shortDescription: 'This is a short description.'
-      }
+        shortDescription: 'This is a short description.',
+        externalDocumentation: 'developer.mozilla.org',
+        content: 'This is a longer description of the code.'
+      },
+      environmentCategories: ['Circuit', 'Variables', 'Canvas']
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -52,10 +55,32 @@ describe('ProgrammingExpressionEditor', () => {
     ).to.be.true;
 
     // short description
-    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(1);
     expect(
-      wrapper.find('TextareaWithMarkdownPreview').props().markdown
+      wrapper
+        .find('TextareaWithMarkdownPreview')
+        .at(0)
+        .props().markdown
     ).to.equal('This is a short description.');
+
+    const documentationSection = wrapper.find('CollapsibleEditorSection').at(0);
+    expect(
+      documentationSection
+        .find('input')
+        .at(0)
+        .props().value
+    ).to.equal('developer.mozilla.org');
+    expect(
+      documentationSection
+        .find('select')
+        .at(0)
+        .find('option').length
+    ).to.equal(4);
+    expect(
+      documentationSection
+        .find('TextareaWithMarkdownPreview')
+        .at(0)
+        .props().markdown
+    ).to.equal('This is a longer description of the code.');
   });
 
   it('attempts to save when save is pressed', () => {
