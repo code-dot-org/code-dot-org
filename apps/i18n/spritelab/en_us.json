@@ -193,6 +193,7 @@
   "changeBackground": "The background was not changed.",
   "allSayBlocks": "Make sure each sprite uses a `say` block. \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "clickAnySprite": "Make sure to click on any sprite after pressing *\"Run\"*.",
+  "clickAllSprites": "Make sure to click on each sprite after pressing *\"Run\"*.",
   "changeOrSetCostumeEvent": "Make sure to use an event to change a sprite's costume.",
   "noSound": "You need to play a sound.",
   "chooseSound": "You need to choose a sound from the drop-down menu. \n<xml><block type=\"gamelab_playSound\"><title name=\"SOUND\">Choose</title></block></xml>"
