@@ -25,6 +25,11 @@
 #
 
 class Poetry < GamelabJr
+  serialized_attrs %w(
+    show_poem_dropdown
+    default_poem
+  )
+
   def self.skins
     ['gamelab']
   end
@@ -53,5 +58,27 @@ class Poetry < GamelabJr
   end
 
   def common_blocks(type)
+  end
+
+  # Used by levelbuilders to set a default poem on a Poetry level.
+  def self.hoc_poems
+    [
+      ['', ''],
+      ['My Brilliant Image', 'hafez'],
+      ['Twinkle, Twinkle Little Star', 'carroll_1'],
+      ['Crocodile', 'carroll_2'],
+      ['Jabberwocky', 'carroll_3'],
+      ['Sing', 'rumi_1'],
+      ['Ocean', 'rumi_2'],
+      ['Wynken, Blynken, and Nod', 'field'],
+      ['Warm Summer Sun', 'twain'],
+      ['I Wandered Lonely as a Cloud', 'wordsworth'],
+      ['Harlem', 'hughes'],
+      ['Don\'t Go Into the Library', 'rios'],
+      ['Dream Variations', 'hughes_1'],
+      ['In the Garden', 'hopler'],
+      ['Return', 'lomeli'],
+      ['Toasting Marshmallows', 'singer']
+    ]
   end
 end

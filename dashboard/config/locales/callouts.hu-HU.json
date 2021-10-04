@@ -940,6 +940,45 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Húzd a blokkokat az eszköztárból a munkaterületre."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Új blokk!",
+          "hello_world_new_block": "Új blokk!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Új blokk!",
+          "hello_world_new_block": "Új blokk!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Új blokk!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Új blokk!",
+          "hello_world_new_block": "Új blokk!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Új blokk!"
         }
       }
     }

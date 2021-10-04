@@ -190,6 +190,5 @@
   "thirdClickButNoSpeech": "Hiciste clic en más de dos sprites pero ninguno de los clics hizo que un sprite dijera nada. Agrega un bloque `decir` debajo de cada evento `cuando se hace clic`. <xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">¡Hola a todos!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "changeOrSetSize": "Ninguno de tus sprites cambió de tamaño.",
   "changeOrSetCostume": "Ninguno de tus sprites cambió de disfraz.",
-  "changeBackground": "El fondo no cambió.",
-  "poemBotMakeBackground": "Tienes que añadir un efecto de fondo."
+  "changeBackground": "El fondo no cambió."
 }

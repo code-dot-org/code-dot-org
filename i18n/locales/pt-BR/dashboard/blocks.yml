@@ -1697,90 +1697,34 @@ pt:
         text: coordenada x do {SPRITE}
       Mikelab_yLocationOf:
         text: coordenada y do {SPRITE}
-      PoemBot_playSound:
-        text: reproduzir som {SOUND}
+      Poetry_makeBurst:
         options:
-          SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': Sino
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Brilhante
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Floresta
-            '"sound://category_nature/summer_night_loop.mp3"': Noite
-            '"sound://category_background/ocean_waves.mp3"': Oceano
-            '"sound://category_background/rain_thunderstorm_calm.mp3"': Chuvoso
-            '"sound://category_background/rainforest_ambient_sound.mp3"': Floresta
-            '"sound://category_background/wavering_wind.mp3"': Sonolento
-            '"sound://category_background/typewriter.mp3"': Máquina de Escrever
-            '"sound://category_background/waterfall.mp3"': Cachoeira
-      PoemBot_randomWord:
-        text: mundo aleatório
-      PoemBot_setBackgroundEffect:
-        text: definir o efeito do plano de fundo {EFFECT} {PALETTE}
+          EFFECT:
+            '"burst"': explosão
+            '"rain"': chuva
+      Poetry_playSound:
+        text: reproduzir som {SOUND}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Cores
             '"squiggles"': Rabiscos
             '"space"': Espaço
             '"stars"': Estrelas
-            '"darkCircles"': Circulos Escuros
             '"ripples"': Ondulação
-            '"clouds"': Nuvens
           PALETTE:
-            '"sky"': Céu
-            '"ocean"': Oceano
-            '"sunrise"': Nascer do Sol
-            '"sunset"': Pôr do sol
-            '"spring"': Primavera
-            '"summer"': Verão
-            '"autumn"': Outono
-            '"winter"': Inverno
-            '"grayscale"': Preto e Branco
             '"rainbow"': Arco-íris
-            '"roses"': Rosas
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: definir plano de fundo para {IMG}
-      PoemBot_setFont:
-        text: definir fonte {FONT}
-        options:
-          FONT:
-            '"Arial"': Arial
-            '"Georgia"': Georgia
-            '"Palatino"': Palatino
-            '"Times"': Times
-            '"Courier"': Courier
-            '"Arial Black"': Arial Black
-            '"Impact"': Impact
-            '"Tahoma"': Tahoma
-            '"Verdana"': Verdana
-      PoemBot_setForegroundEffect:
-        text: definir o efeito do primeiro plano {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Chuva
             '"bubbles"': Bolhas
             '"hearts"': Corações coloridos
-            '"emojis"': Emojis Felizes
             '"confetti"': Confete
             '"starburst"': Starburst
-            '"glass"': Vidro Quebrando
-      PoemBot_setPoem:
-        options:
-          POEM:
-            '"rumi_1"': Cantar
-            '"carroll_2"': Crocodilo
-            '"rumi_2"': Oceano
-      PoemBot_setTextEffect:
-        options:
-          EFFECT:
-            '"typewriter"': máquina de escrever
-            '"flyLeft"': voar da esquerda
-            '"flyRight"': voar da direita
-            '"flyTop"': voar de cima
-            '"flyBottom"': voar de baixo
-      PoemBot_setTitle:
-        text: definir título do poema {TITLE}
-      PoemBot_showPoem:
-        text: mostrar poema
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: crescendo
@@ -1789,7 +1733,7 @@ pt:
             spinning_left: girando para a esquerda
             spinning_right: girando para a direita
             wandering: vagando
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: crescendo
@@ -1798,12 +1742,23 @@ pt:
             spinning_left: girando para a esquerda
             spinning_right: girando para a direita
             wandering: vagando
-            '"all"': "--todos comportamentos--"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR} {TEXT2}"
-      PoemBot_whenLineShows:
-        text: quando linha {N} mostrada
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: quando {VAR} respondida
       RyanLab_moveForward:
         text: avance

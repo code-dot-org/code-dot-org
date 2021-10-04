@@ -1592,9 +1592,13 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': hujan
+      Poetry_playSound:
         text: Playsound {SOUND}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Warna
@@ -1604,10 +1608,9 @@ id:
             '"ripples"': Riak
           PALETTE:
             '"rainbow"': Pelangi
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: atur latar belakang ke {IMG}
-      PoemBot_setForegroundEffect:
-        text: tetapkan efek latar depan {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Hujan
@@ -1615,7 +1618,7 @@ id:
             '"hearts"': Hati Penuh Warna
             '"confetti"': Konfeti
             '"starburst"': Semburan bintang
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: pertumbuhan
@@ -1624,7 +1627,7 @@ id:
             spinning_left: berputar ke kiri
             spinning_right: berputar ke kanan
             wandering: pengembaraan
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: pertumbuhan
@@ -1633,6 +1636,20 @@ id:
             spinning_left: berputar ke kiri
             spinning_right: berputar ke kanan
             wandering: pengembaraan
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: Gerak maju
       RyanLab_turnLeft:

@@ -1,0 +1,86 @@
+<Poetry>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "block_pools": [
+      "Poetry"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_background\",\r\n  \"callout_text\": \"Find code blocks here. \",\r\n  \"element_id\": \"[id=':1.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Find this block:\\n<xml><block type=\\\"Poetry_setBackgroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"colors\\\"</title><title name=\\\"PALETTE\\\">\\\"sunrise\\\"</title></block></xml>\\n\\nConnect this block under `when run` in your Workspace.\",\"hint_id\":\"add_background_effect\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ec7ff2f3d05fc1417c4d2e8fe9c946be/poetry_hoc_backgroundEffects.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Bring in more colors or effects to help create the mood of this poem. \\n\\n<xml><block type=\\\"when_run\\\" movable=\\\"false\\\"><next><block type=\\\"Poetry_setBackgroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"squiggles\\\"</title><title name=\\\"PALETTE\\\">\\\"sky\\\"</title><next><block type=\\\"Poetry_setFontColor\\\"><value name=\\\"FILL\\\"><block type=\\\"colour_picker\\\"><title name=\\\"COLOUR\\\">#ff6666</title></block></value><next><block type=\\\"Poetry_setFont\\\"><title name=\\\"FONT\\\">\\\"Courier\\\"</title><next><block type=\\\"Poetry_setTextEffect\\\"><title name=\\\"EFFECT\\\">\\\"typewriter\\\"</title></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"add_more_effects\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0ece87a889e956ce05a7eb5b01a06409/poetry_hoc_backgroundEffects.mp3\"}]",
+    "instructions_important": "false",
+    "short_instructions": "When you read this poem, what color comes to mind? Find a background effect that matches the feeling of this poem.",
+    "long_instructions": "*When you read this poem, what color comes to mind?*\r\n\r\n* Connect blocks from the toolbox under `when run` to build your program. \r\n* Find an effect and color that match the feeling of this poem. \r\n* Click \"Run\" to animate the poem.",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "true",
+    "free_play": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "validation_code": "var validationInfo = getValidationInfo();\r\nvar isFontSet = validationInfo.font.font != 'Arial';\r\nvar isColorSet = validationInfo.font.fill != 'black' || validationInfo.font.stroke != 'rgba(0,0,0,0)';\r\nvar hasTextEffect = validationInfo.textEffects.length > 0;\r\nvar hasBackgroundEffect = validationInfo.backgroundEffect;\r\n\r\n// Pass the level if they have at least two of the three effects.\r\nif (isFontSet || isColorSet || hasTextEffect || hasBackgroundEffect) {\r\n  setSuccessFrame();\r\n}\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'poemBotSuccessLevel1');\r\n  } else {\r\n    levelFailure(3, 'poemBotBackgroundOrTextEffect');\r\n  }\r\n}",
+    "hide_pause_button": "true",
+    "instructions_icon": "octiHappy",
+    "preload_asset_list": null,
+    "show_poem_dropdown": "false"
+  },
+  "game_id": 69,
+  "published": true,
+  "created_at": "2021-09-28T15:32:23.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2021-09-28 15:38:45 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 16:51:14 +0000\",\"changed\":[\"preload_asset_list\",\"authored_hints\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:52:39 +0000\",\"changed\":[\"preload_asset_list\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-29 12:05:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 12:07:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 12:12:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 12:13:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 12:15:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-29 12:25:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-01 18:15:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" movable="false">
+  </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="Poetry_setFont">
+          <title name="FONT">"Tahoma"</title>
+        </block>
+        <block type="Poetry_setFontColor">
+          <value name="FILL">
+            <block type="colour_picker">
+              <title name="COLOUR">#009900</title>
+            </block>
+          </value>
+        </block>
+        <block type="Poetry_setTextEffect">
+          <title name="EFFECT">"fade"</title>
+        </block>
+        <block type="Poetry_setBackground">
+          <value name="COLOR">
+            <block type="colour_picker" can_disconnect_from_parent="false">
+              <title name="COLOUR">#cccccc</title>
+            </block>
+          </value>
+        </block>
+        <block type="Poetry_setBackgroundEffect">
+          <title name="EFFECT">"colors"</title>
+          <title name="PALETTE">"sunrise"</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Poetry>

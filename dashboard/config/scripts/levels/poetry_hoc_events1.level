@@ -1,0 +1,107 @@
+<Poetry>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "block_pools": [
+      "Poetry"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_event\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"poetry_foreground\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This new `do foreground effect` block will add a new effect once. \\n<xml><block type=\\\"Poetry_whenLineShows\\\"><title name=\\\"N\\\">1</title><next><block type=\\\"Poetry_setForegroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"twinkling\\\"</title></block></next></block></xml>\",\"hint_id\":\"foreground_effect_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb00fbb4b4390a028cecfe71403fa91a/poetry_hoc_events1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can also add a new background effect when a certain line shows in the poem with code that looks like this:\\n<xml><block type=\\\"Poetry_whenLineShows\\\"><title name=\\\"N\\\">4</title><next><block type=\\\"Poetry_setBackgroundEffect\\\">\\n    <title name=\\\"EFFECT\\\">\\\"ripples\\\"</title>\\n    <title name=\\\"PALETTE\\\">\\\"sky\\\"</title>\\n  </block></next></block></xml>\",\"hint_id\":\"background_effect_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9df33b1a11ac335ba034597823e12c01/poetry_hoc_events1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"You can use more than one event in your program. Try using two events with different effects to match the mood shifts. \\n\\n<xml><block type=\\\"Poetry_whenLineShows\\\"><title name=\\\"N\\\">2</title><next><block type=\\\"Poetry_setForegroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"starburst\\\"</title></block></next></block></xml>\\n\\n<xml><block type=\\\"Poetry_whenLineShows\\\"><title name=\\\"N\\\">4</title><next><block type=\\\"Poetry_setForegroundEffect\\\"><title name=\\\"EFFECT\\\">\\\"bubbles\\\"</title></block></next></block></xml>\",\"hint_id\":\"more_events_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/02cb1562223c95bd7c1bad102a4bdcd7/poetry_hoc_events1.mp3\"}]",
+    "instructions_important": "false",
+    "short_instructions": "Let's use events to change the animation when the poem mentions something new. ",
+    "long_instructions": "Let's use events to change the animation when the poem mentions something new. \r\n\r\n* Find a line in the poem where the mood shifts or something new is introduced. \r\n* Add more effects to match more lines in the poem. \r\n* Make sure the effect changes with the line you want. \r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "true",
+    "free_play": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "validation_code": "var spriteIds = getSpriteIdsInUse();\r\nvar validationInfo = getValidationInfo();\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {};\r\n}\r\n\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\nvar newForegroundEffect =\r\n    validationProps.previous.numForegroundEffects <\r\n    validationInfo.foregroundEffects.length;\r\n\r\nif (hasLineEvent && newForegroundEffect) {\r\n  setSuccessFrame();\r\n  validationProps.previous.newForegroundEffect =\r\n    validationProps.previous.newForegroundEffect || newForegroundEffect;\r\n}\r\nvalidationProps.previous.numForegroundEffects = validationInfo.foregroundEffects.length;\r\n\r\ndrawProgressBar();\r\n\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'poemBotSuccessLevel4');\r\n  } else {\r\n    levelFailure(3, 'poemBotForegroundEffectWithEvent');\r\n  }\r\n}",
+    "hide_pause_button": "true",
+    "instructions_icon": "octiSomber",
+    "preload_asset_list": null,
+    "show_poem_dropdown": "false"
+  },
+  "game_id": 69,
+  "published": true,
+  "created_at": "2021-09-28T15:48:54.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2021-09-28 16:01:21 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 16:59:00 +0000\",\"changed\":[\"preload_asset_list\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:54:58 +0000\",\"changed\":[\"preload_asset_list\",\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-01 18:58:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="Poetry_setBackground">
+              <value name="COLOR">
+                <block type="colour_picker">
+                  <title name="COLOUR">#cccccc</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+        <block type="Poetry_whenLineShows">
+          <title name="N">0</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="Poetry_whenLineShows">
+          <title name="N">0</title>
+        </block>
+        <block type="Poetry_setForegroundEffect">
+          <title name="EFFECT">"rain"</title>
+        </block>
+        <block type="Poetry_playSound">
+          <title name="SOUND">"sound://category_bell/bells_win_low.mp3"</title>
+        </block>
+        <block type="Poetry_setFont">
+          <title name="FONT">"Arial"</title>
+        </block>
+        <block type="Poetry_setFontColor">
+          <value name="FILL">
+            <block type="colour_picker">
+              <title name="COLOUR">#000000</title>
+            </block>
+          </value>
+        </block>
+        <block type="Poetry_setTextEffect">
+          <title name="EFFECT">"fade"</title>
+        </block>
+        <block type="Poetry_setBackground">
+          <value name="COLOR">
+            <block type="colour_picker">
+              <title name="COLOUR">#ffcc00</title>
+            </block>
+          </value>
+        </block>
+        <block type="Poetry_setBackgroundEffect">
+          <title name="EFFECT">"ripples"</title>
+          <title name="PALETTE">"sky"</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Poetry>

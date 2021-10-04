@@ -3254,8 +3254,6 @@ he:
         dance-extras-2019:
           title: המשיכו לרקוד (2019)
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
-          lessons:
-            Dance Party - Go Further: {}
           student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         csp10-pilot: {}
         csp4-preview:
@@ -4275,13 +4273,27 @@ he:
         csa1-pilot:
           lessons:
             lesson-21: {}
+            lesson-24: {}
+            lesson-22: {}
+            lesson-23: {}
         csa2-pilot:
           lessons:
             lesson-1: {}
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
         csa3-pilot:
           lessons:
             lesson-16: {}
-        csa4-pilot: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
+        csa4-pilot:
+          lessons:
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
         csa5-pilot: {}
         csa6-pilot: {}
         csa7-pilot: {}
@@ -4611,21 +4623,33 @@ he:
         csa1-pilot-facilitator:
           lessons:
             Unit 1 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-21: {}
         csa2-pilot-facilitator:
           lessons:
             Unit 2 Pilot Survey: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-1: {}
         csa3-pilot-facilitator:
           lessons:
             Unit 3 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-16: {}
         csa4-pilot-facilitator:
           lessons:
+            lesson-1: {}
+            lesson-3: {}
+            lesson-4: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
             lesson-10: {}
+            lesson-2: {}
         csa5-pilot-facilitator:
           lessons:
             Reversing Elements: {}
@@ -4728,6 +4752,13 @@ he:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            lesson-16: {}
         csc-things:
+          lessons:
+            lesson-1: {}
+        poetry-hoc2:
+          lessons:
+            lesson-1: {}
+        poetry-hoc3:
           lessons:
             lesson-1: {}

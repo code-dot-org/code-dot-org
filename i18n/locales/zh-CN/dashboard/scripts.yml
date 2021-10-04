@@ -181,6 +181,8 @@ zh-CN:
           lessons:
             Artist:
               name: 小艺术家
+              description_student: 通过小艺术家编程创造美丽的图画。
+              description_teacher: 这节课中，学生们会控制小艺术家来完成画画。小艺术家阶段让学生们用 `向前移动 100 像素` 和 `向右转 90 度` 这样的新模块来创造不断增加难度的图画。
           student_description: 和小艺术家一起设计出很酷的图形！
         hourofcode:
           title: 经典迷宫
@@ -1693,6 +1695,7 @@ zh-CN:
           lessons:
             Oceans:
               name: 海洋
+              description_student: 教程摘要：第一批学生将物体分类为“鱼”或“非鱼”，试图清除海洋中的垃圾。然后，学生们将需要扩展他们的训练数据集，以覆盖水中的其它海洋生物。在活动的第二部分，学生们将选择他们自己的标签应用于随机生成的鱼的图像。该训练数据用于能够自行标记新图像的机器学习模型。
           student_description: 学习人工智能和机器学习如何用来解决世界性的问题。
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3416,6 +3419,8 @@ zh-CN:
           lessons:
             Bounce:
               name: 跳
+              description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
+              description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 进行一场篮球赛
         sample-csp5:
           lessons:
@@ -3983,6 +3988,8 @@ zh-CN:
           lessons:
             Sports:
               name: 运动
+              description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
+              description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 为你自己的运动编写代码
         2016_sciencePD-phase2b:
           lessons:
@@ -11820,7 +11827,7 @@ zh-CN:
               display_name: 调查
           lessons:
             CSD post-course survey:
-              name: 计算机科学发现课后问卷
+              name: 计算机科学发现学生课程后调查
           student_description: |-
             计算机科学发现课后问卷是我们获取反馈，提高课程的重要工具。
              问卷是保密、匿名的 - 你的老师可以看见整个课堂的匿名汇总结果。结果对你的老师和 Code.org 改善课程非常重要。谢谢你的时间和思考。
@@ -11833,7 +11840,7 @@ zh-CN:
               display_name: 调查
           lessons:
             CSP post-course survey:
-              name: 计算机科学原理课后问卷
+              name: 计算机科学原理学生课程后调查 ('18-'19)
         csp5-pilot:
           title: '单元 5: 列表、循环和遍历'
           lesson_groups:
@@ -17116,6 +17123,8 @@ zh-CN:
           lessons:
             lesson-20:
               name: 评估日
+            lesson-24:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17123,6 +17132,8 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            lesson-16:
+              name: Java实验室
           lesson_groups:
             lesson group:
               display_name: 内容
@@ -17130,6 +17141,8 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            lesson-17:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17137,6 +17150,8 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            lesson-16:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17471,6 +17486,8 @@ zh-CN:
           lessons:
             Assessment Day:
               name: 评估日
+            lesson-1:
+              name: Java实验室
             lesson-20:
               name: 评估日
           lesson_groups:
@@ -17484,6 +17501,8 @@ zh-CN:
               key: 新课程
             lesson-15:
               name: 评估日
+            lesson-1:
+              name: Java实验室
           lesson_groups:
             lesson group:
               display_name: 内容
@@ -17491,6 +17510,8 @@ zh-CN:
           lessons:
             Assessment Day:
               name: 评估日
+            lesson-1:
+              name: Java实验室
             lesson-15:
               name: 评估日
           lesson_groups:
@@ -17500,6 +17521,8 @@ zh-CN:
           lessons:
             Assessment Day:
               name: 评估日
+            lesson-1:
+              name: Java实验室
             lesson-15:
               name: 评估日
           lesson_groups:
@@ -17546,3 +17569,7 @@ zh-CN:
               display_name: 内容
             lessonGroup-2:
               display_name: 内容
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 舞会：离线

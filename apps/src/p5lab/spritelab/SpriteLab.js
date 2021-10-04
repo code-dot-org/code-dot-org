@@ -1,5 +1,7 @@
 import * as utils from '@cdo/apps/utils';
+import msg from '@cdo/spritelab/locale';
 import P5Lab from '../P5Lab';
+import {P5LabType} from '../constants';
 import Sounds from '@cdo/apps/Sounds';
 import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../redux/textConsole';
@@ -7,6 +9,19 @@ import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
 
 export default class SpriteLab extends P5Lab {
+  getAvatarUrl(levelInstructor) {
+    const defaultAvatar = 'avatar';
+    return `/blockly/media/spritelab/${levelInstructor || defaultAvatar}.png`;
+  }
+
+  getMsg() {
+    return msg;
+  }
+
+  getLabType() {
+    return P5LabType.SPRITELAB;
+  }
+
   createLibrary(args) {
     if (!args.p5) {
       console.warn('cannot create SpriteLab library without p5 instance');

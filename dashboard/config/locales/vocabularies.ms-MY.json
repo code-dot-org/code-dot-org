@@ -2,29 +2,150 @@
   "ms-MY": {
     "data": {
       "vocabularies": {
+        "sprite/coursef/2021": {
+          "word": "Peperi",
+          "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
+        },
+        "user/coursef/2021": {
+          "word": "Pengguna",
+          "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
+        },
+        "behavior/coursef/2021": {
+          "word": "Tingkah laku"
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algoritma"
+        },
+        "event/coursef/2021": {
+          "word": "Acara"
+        },
         "variable/coursef/2021": {
           "word": "Pemboleh ubah"
+        },
+        "prompt/coursef/2021": {
+          "word": "Prom"
         },
         "input/coursef/2021": {
           "word": "Input"
         },
+        "loop/coursef/2021": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/coursef/2021": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Gelung Untuk",
+          "definition": "Gelung yang mempunyai permulaan, akhir dan kenaikan yang telah ditentukan terlebih dahulu (selang langkah)."
+        },
+        "machine_learning/coursef/2021": {
+          "word": "Pembelajaran Mesin",
+          "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
+        },
+        "ip_address/coursef/2021": {
+          "word": "Alamat IP",
+          "definition": "Nombor yang diberikan kepada mana-mana item yang disambungkan kepada Internet."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Kaedah wayarles untuk menghantar maklumat dengan menggunakan gelombang radio."
         },
         "define/coursef/2021": {
           "word": "Takrifkan"
         },
+        "try/coursef/2021": {
+          "word": "Cuba"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/courseb/2021": {
+          "word": "Pepijat"
+        },
         "debugging/courseb/2021": {
           "word": "Penyahpepijatan"
+        },
+        "click/courseb/2021": {
+          "word": "Klik",
+          "definition": "Tekan butang tetikus"
+        },
+        "drag/courseb/2021": {
+          "word": "Seret"
         },
         "drop/courseb/2021": {
           "word": "Gerakan Jatuh"
         },
+        "program/courseb/2021": {
+          "word": "Atur Cara"
+        },
+        "programming/courseb/2021": {
+          "word": "Pengaturcaraan"
+        },
+        "loop/courseb/2021": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/courseb/2021": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/courseb/2021": {
+          "word": "Acara"
+        },
+        "algorithm/coursea/2021": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
         "debugging/coursea/2021": {
           "word": "Penyahpepijatan"
         },
+        "program/coursea/2021": {
+          "word": "Atur Cara"
+        },
+        "click/coursea/2021": {
+          "word": "Klik",
+          "definition": "Tekan butang tetikus"
+        },
+        "drag/coursea/2021": {
+          "word": "Seret"
+        },
         "drop/coursea/2021": {
           "word": "Gerakan Jatuh"
+        },
+        "double_click/coursea/2021": {
+          "word": "Klik Dua Kali",
+          "definition": "Tekan butang tetikus dengan begitu pantas"
+        },
+        "bug/coursea/2021": {
+          "word": "Pepijat"
+        },
+        "programming/coursea/2021": {
+          "word": "Pengaturcaraan",
+          "definition": "Seni mencipta atur cara."
+        },
+        "loop/coursea/2021": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/coursea/2021": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/coursea/2021": {
+          "word": "Acara"
+        },
+        "algorithm/coursec/2021": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/coursec/2021": {
+          "word": "Pepijat"
         },
         "debugging/coursec/2021": {
           "word": "Penyahpepijatan"
@@ -32,17 +153,80 @@
         "sequencing/coursec/2021": {
           "word": "Penjujukan"
         },
+        "programming/coursec/2021": {
+          "word": "Pengaturcaraan"
+        },
+        "loop/coursec/2021": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/coursec/2021": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/coursec/2021": {
+          "word": "Acara"
+        },
+        "algorithm/coursed/2021": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/coursed/2021": {
+          "word": "Pepijat"
+        },
         "debugging/coursed/2021": {
           "word": "Penyahpepijatan"
         },
+        "loop/coursed/2021": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "programming/coursed/2021": {
+          "word": "Pengaturcaraan"
+        },
+        "event/coursed/2021": {
+          "word": "Acara"
+        },
+        "repeat/coursed/2021": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
         "conditionals/coursed/2021": {
           "word": "Bersyarat"
+        },
+        "algorithm/express/2021": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/express/2021": {
+          "word": "Pepijat"
         },
         "debugging/express/2021": {
           "word": "Penyahpepijatan"
         },
         "sequencing/express/2021": {
           "word": "Penjujukan"
+        },
+        "programming/express/2021": {
+          "word": "Pengaturcaraan"
+        },
+        "behavior/express/2021": {
+          "word": "Tingkah laku"
+        },
+        "sprite/express/2021": {
+          "word": "Peperi",
+          "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
+        },
+        "event/express/2021": {
+          "word": "Acara"
+        },
+        "loop/express/2021": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/express/2021": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
         },
         "conditionals/express/2021": {
           "word": "Bersyarat"
@@ -53,17 +237,73 @@
         "variable/express/2021": {
           "word": "Pemboleh ubah"
         },
+        "for_loop/express/2021": {
+          "word": "Gelung Untuk",
+          "definition": "Gelung yang mempunyai permulaan, akhir dan kenaikan yang telah ditentukan terlebih dahulu (selang langkah)."
+        },
         "define/express/2021": {
           "word": "Takrifkan"
+        },
+        "try/express/2021": {
+          "word": "Cuba"
+        },
+        "click/pre-express/2021": {
+          "word": "Klik",
+          "definition": "Tekan butang tetikus"
+        },
+        "drag/pre-express/2021": {
+          "word": "Seret"
         },
         "drop/pre-express/2021": {
           "word": "Gerakan Jatuh"
         },
+        "algorithm/pre-express/2021": {
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "bug/pre-express/2021": {
+          "word": "Pepijat"
+        },
         "debugging/pre-express/2021": {
           "word": "Penyahpepijatan"
         },
+        "programming/pre-express/2021": {
+          "word": "Pengaturcaraan"
+        },
+        "loop/pre-express/2021": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/pre-express/2021": {
+          "word": "Ulang",
+          "definition": "Untuk melakukan sesuatu lagi."
+        },
+        "event/pre-express/2021": {
+          "word": "Acara"
+        },
+        "behavior/coursee/2021": {
+          "word": "Tingkah laku"
+        },
+        "algorithm/coursee/2021": {
+          "definition": "Senarai langkah untuk menyelesaikan tugas"
+        },
+        "sprite/coursee/2021": {
+          "word": "Peperi",
+          "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
+        },
+        "event/coursee/2021": {
+          "word": "Acara"
+        },
         "copyright/coursee/2021": {
           "word": "Hak Cipta"
+        },
+        "loop/coursee/2021": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "repeat/coursee/2021": {
+          "word": "Ulang",
+          "definition": "To do something again."
         },
         "function/coursee/2021": {
           "word": "Fungsi"
@@ -73,6 +313,9 @@
         },
         "define/coursee/2021": {
           "word": "Takrifkan"
+        },
+        "try/coursee/2021": {
+          "word": "Cuba"
         }
       }
     }

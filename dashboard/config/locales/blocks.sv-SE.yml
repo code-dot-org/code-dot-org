@@ -1553,10 +1553,13 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
+      Poetry_playSound:
         text: PlaySound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: täll in bakgrundseffekt {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Färger
@@ -1566,10 +1569,9 @@ sv:
             '"ripples"': Krusningar
           PALETTE:
             '"rainbow"': Regnbåge
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: ställa in bakgrunden till {IMG}
-      PoemBot_setForegroundEffect:
-        text: ställ in förgrundseffekt {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Regn
@@ -1577,6 +1579,20 @@ sv:
             '"hearts"': Färgglada hjärtan
             '"confetti"': Konfetti
             '"starburst"': Stjärnfall
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: gå framåt
       RyanLab_turnLeft:

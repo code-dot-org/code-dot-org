@@ -1699,21 +1699,17 @@ uk:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
-      PoemBot_makeNumSprites:
-        text: створити {NUM} нових {ANIMATION_NAME} спрайтів
-      PoemBot_playSound:
-        text: грати звук {SOUND}
+      Poetry_makeBurst:
         options:
-          SOUND:
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Ліс
-            '"sound://category_background/ocean_waves.mp3"': Океан
-            '"sound://category_background/rainforest_ambient_sound.mp3"': Тропічний
-              ліс
-            '"sound://category_background/waterfall.mp3"': Водоспад
-      PoemBot_setBackgroundEffect:
-        text: |-
-          встановити ефект тла
-          {EFFECT} {PALETTE}
+          EFFECT:
+            '"burst"': вибух
+            '"rain"': дощ
+            '"zigzag"': зигзаг
+      Poetry_makeNumSprites:
+        text: створити {NUM} нових {ANIMATION_NAME} спрайтів
+      Poetry_playSound:
+        text: грати звук {SOUND}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Кольори
@@ -1722,19 +1718,10 @@ uk:
             '"stars"': Зірки
             '"ripples"': Брижі
           PALETTE:
-            '"sky"': Небо
-            '"ocean"': Океан
-            '"sunrise"': Схід сонця
-            '"sunset"': Захід сонця
-            '"spring"': Весна
-            '"summer"': Літо
-            '"autumn"': Осінь
-            '"winter"': Зима
             '"rainbow"': Веселка
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: встановити фон {IMG}
-      PoemBot_setForegroundEffect:
-        text: встановити ефект переднього плану {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Дощ
@@ -1742,11 +1729,7 @@ uk:
             '"hearts"': Різнокольорові серця
             '"confetti"': Конфеті
             '"starburst"': Вибухаюча зірка
-      PoemBot_setPoem:
-        options:
-          POEM:
-            '"rumi_2"': Океан
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: пурхання
@@ -1755,7 +1738,7 @@ uk:
             swimming_left_and_right: плавання
             wandering: бродіння
             wobbling: хитання
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: пурхання
@@ -1764,13 +1747,23 @@ uk:
             swimming_left_and_right: плавання
             wandering: бродіння
             wobbling: хитання
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: коли відповідь {VAR}
       RyanLab_moveForward:
         text: рухатись вперед

@@ -21,21 +21,23 @@
   %strong Urban:
   = @regional_partner.urban? ? 'Yes' : 'No'
 %p
-  %strong Apps open date for teachers
+  %strong Apps open date for teachers:
   = @regional_partner.apps_open_date_teacher
 %p
-  %strong Apps close date for teachers
+  %strong Apps close date for teachers:
   = @regional_partner.apps_close_date_teacher
 %p
-  %strong
-    ="Program information"
+  %strong Program information:
   = @regional_partner.cost_scholarship_information
 %p
-  %strong Additional Partner information
+  %strong Additional Partner information:
   = @regional_partner.additional_program_information
 %p
-  %strong Link to Partner's Application
+  %strong Link to Partner's Application:
   = @regional_partner.link_to_partner_application
+%p
+  %strong PL Programs Offered:
+  = @regional_partner.pl_programs_offered
 %p
   %strong Contact Email:
   = @regional_partner.contact_email

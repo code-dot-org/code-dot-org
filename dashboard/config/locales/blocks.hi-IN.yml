@@ -1578,10 +1578,13 @@ hi:
         text: "{SPRITE} का x निर्देशांक"
       Mikelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': बारिश
+      Poetry_playSound:
         text: प्लेसाउंड {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': रंग
@@ -1591,10 +1594,9 @@ hi:
             '"ripples"': लहरें
           PALETTE:
             '"rainbow"': इंद्रधनुष
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: पृष्ठभूमि के तौर पर {IMG} सेट करें
-      PoemBot_setForegroundEffect:
-        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': बारिश
@@ -1602,6 +1604,20 @@ hi:
             '"hearts"': रंगीन दिल
             '"confetti"': कॉन्फेटी
             '"starburst"': स्टारबर्स्ट
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': १
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: आगे जाएं
       RyanLab_turnLeft:

@@ -934,7 +934,15 @@
         "ramp_artist_loops6v1_2021": "Escalera",
         "ramp_artist_loops8_2021": "Octógono",
         "scrat_loops_C-F_video_2021": "Video de bucles en la Era de Hielo",
-        "international_outbreak_freeplay": "Comparte un mensaje"
+        "international_outbreak_freeplay": "Comparte un mensaje",
+        "helloworld_animals_costumes": "Disfraces",
+        "helloworld_animals_location": "Eventos de tiempo",
+        "helloworld_emoji_costumes": "Disfraces",
+        "helloworld_emoji_location": "Eventos de tiempo",
+        "helloworld_food_costumes": "Disfraces",
+        "helloworld_food_location": "Eventos de tiempo",
+        "helloworld_retro_costumes": "Disfraces",
+        "helloworld_retro_location": "Eventos de tiempo"
       }
     }
   }

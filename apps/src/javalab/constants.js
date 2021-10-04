@@ -101,7 +101,8 @@ export const TheaterExceptionType = makeEnum(
 
 export const PlaygroundExceptionType = {
   PLAYGROUND_RUNNING: 'PLAYGROUND_RUNNING',
-  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING'
+  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING',
+  INVALID_MESSAGE_PLAYGROUND_ENDED: 'INVALID_MESSAGE_PLAYGROUND_ENDED'
 };
 
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
@@ -128,6 +129,19 @@ export const PlaygroundSignalType = {
   // Set the background image of the Playground
   SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
 };
+
+export const PlaygroundFontTypeFontFamilies = {
+  SANS: 'Arial, Helvetica, sans-serif',
+  SERIF: '"Times New Roman", Times, serif',
+  MONO: '"Courier New", Courier, monospace'
+};
+
+export const PlaygroundFontStyleType = makeEnum(
+  'NORMAL',
+  'BOLD',
+  'ITALIC',
+  'BOLD_ITALIC'
+);
 
 export const PlaygroundItemType = {
   IMAGE: 'image',

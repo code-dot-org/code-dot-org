@@ -18,8 +18,6 @@ import {
 } from '@cdo/apps/lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-var gamelabMsg = require('@cdo/gamelab/locale');
-var spritelabMsg = require('@cdo/spritelab/locale');
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
@@ -60,7 +58,6 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -81,6 +78,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -188,6 +186,32 @@ export default class P5Lab {
     }
   }
 
+  loadAndSetInitialAnimationList(config, defaultSprites) {
+    // Push project-sourced animation metadata into store. Always use the
+    // animations specified by the level definition for embed and contained
+    // levels.
+    const useConfig =
+      config.initialAnimationList &&
+      !config.embed &&
+      !config.hasContainedLevels;
+    let initialAnimationList = useConfig
+      ? config.initialAnimationList
+      : this.startAnimations;
+    initialAnimationList = this.loadAnyMissingDefaultAnimations(
+      initialAnimationList,
+      defaultSprites
+    );
+
+    getStore().dispatch(
+      setInitialAnimationList(
+        initialAnimationList,
+        this.isBlockly /* shouldRunV3Migration */,
+        this.isBlockly,
+        defaultSprites
+      )
+    );
+  }
+
   /**
    * Inject the studioApp singleton.
    */
@@ -209,17 +233,16 @@ export default class P5Lab {
       throw new Error('P5Lab requires a StudioApp');
     }
 
-    this.isSpritelab = this.studioApp_.isUsingBlockly();
+    this.isBlockly = this.studioApp_.isUsingBlockly();
 
     this.skin = config.skin;
-    if (this.isSpritelab) {
-      const mediaUrl = `/blockly/media/spritelab/${config.level
-        .instructionsIcon || 'avatar'}.png`;
-      this.skin.smallStaticAvatar = mediaUrl;
-      this.skin.staticAvatar = mediaUrl;
-      this.skin.winAvatar = mediaUrl;
-      this.skin.failureAvatar = mediaUrl;
+    const avatarUrl = this.getAvatarUrl(config.level.instructionsIcon);
+    this.skin.smallStaticAvatar = avatarUrl;
+    this.skin.staticAvatar = avatarUrl;
+    this.skin.winAvatar = avatarUrl;
+    this.skin.failureAvatar = avatarUrl;
 
+    if (this.isBlockly) {
       // SpriteLab projects don't allow users to include dpad controls
       defaultMobileControlsConfig.dpadVisible = false;
 
@@ -227,11 +250,6 @@ export default class P5Lab {
         new BlocklyModeErrorHandler(() => this.JSInterpreter, null)
       );
     } else {
-      this.skin.smallStaticAvatar = null;
-      this.skin.staticAvatar = null;
-      this.skin.winAvatar = null;
-      this.skin.failureAvatar = null;
-
       injectErrorHandler(
         new JavaScriptModeErrorHandler(() => this.JSInterpreter, this)
       );
@@ -241,18 +259,24 @@ export default class P5Lab {
     this.level.helperLibraries = this.level.helperLibraries || [];
 
     this.level.softButtons = this.level.softButtons || [];
-    if (this.level.useDefaultSprites) {
-      this.startAnimations = defaultSprites;
-    } else if (
-      this.level.startAnimations &&
-      this.level.startAnimations.length > 0
-    ) {
-      try {
-        this.startAnimations = JSON.parse(this.level.startAnimations);
-      } catch (err) {
-        console.error('Unable to parse default animation list', err);
+
+    this.startAnimations = null;
+
+    getDefaultListMetadata().then(defaultSprites => {
+      if (this.level.useDefaultSprites) {
+        this.startAnimations = defaultSprites;
+      } else if (
+        this.level.startAnimations &&
+        this.level.startAnimations.length > 0
+      ) {
+        try {
+          this.startAnimations = JSON.parse(this.level.startAnimations);
+        } catch (err) {
+          console.error('Unable to parse default animation list', err);
+        }
       }
-    }
+      this.loadAndSetInitialAnimationList(config, defaultSprites);
+    });
 
     config.usesAssets = true;
 
@@ -271,7 +295,7 @@ export default class P5Lab {
       onPreload: this.onP5Preload.bind(this),
       onSetup: this.onP5Setup.bind(this),
       onDraw: this.onP5Draw.bind(this),
-      spritelab: this.isSpritelab
+      spritelab: this.isBlockly
     });
 
     config.afterClearPuzzle = function() {
@@ -284,14 +308,14 @@ export default class P5Lab {
         setInitialAnimationList(
           this.startAnimations,
           false /* shouldRunV3Migration */,
-          this.isSpritelab
+          this.isBlockly
         )
       );
       this.studioApp_.resetButtonClick();
     }.bind(this);
 
     config.dropletConfig = dropletConfig;
-    config.appMsg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+    config.appMsg = this.getMsg();
     this.studioApp_.loadLibraryBlocks(config);
 
     // hide makeYourOwn on the share page
@@ -317,8 +341,8 @@ export default class P5Lab {
     // instructions to display). Otherwise provide a way for us to have top pane
     // instructions disabled by default, but able to turn them on.
     config.noInstructionsWhenCollapsed =
-      !this.isSpritelab ||
-      (this.isSpritelab &&
+      !this.isBlockly ||
+      (this.isBlockly &&
         !hasInstructions(
           this.level.shortInstructions,
           this.level.longInstructions,
@@ -397,7 +421,7 @@ export default class P5Lab {
 
       this.setCrosshairCursorForPlaySpace();
 
-      if (this.isSpritelab) {
+      if (this.isBlockly) {
         this.currentCode = Blockly.getWorkspaceCode();
         this.studioApp_.addChangeHandler(() => {
           const newCode = Blockly.getWorkspaceCode();
@@ -421,7 +445,7 @@ export default class P5Lab {
       (!config.hideSource &&
         !config.level.debuggerDisabled &&
         !config.level.iframeEmbedAppAndCode);
-    var showPauseButton = this.isSpritelab && !config.level.hidePauseButton;
+    var showPauseButton = this.isBlockly && !config.level.hidePauseButton;
     var showDebugConsole = config.level.editCode && !config.hideSource;
     this.debuggerEnabled =
       showDebugButtons || showPauseButton || showDebugConsole;
@@ -467,7 +491,7 @@ export default class P5Lab {
       showAnimationMode: !config.level.hideAnimationMode,
       startInAnimationTab: config.level.startInAnimationTab,
       allAnimationsSingleFrame:
-        config.level.allAnimationsSingleFrame || this.isSpritelab,
+        config.level.allAnimationsSingleFrame || this.isBlockly,
       isIframeEmbed: !!config.level.iframeEmbed,
       isProjectLevel: !!config.level.isProjectLevel,
       isSubmittable: !!config.level.submittable,
@@ -475,28 +499,6 @@ export default class P5Lab {
       librariesEnabled: !!config.level.librariesEnabled,
       validationEnabled: !!config.level.validationEnabled
     });
-
-    // Push project-sourced animation metadata into store. Always use the
-    // animations specified by the level definition for embed and contained
-    // levels.
-    const useConfig =
-      config.initialAnimationList &&
-      !config.embed &&
-      !config.hasContainedLevels;
-    let initialAnimationList = useConfig
-      ? config.initialAnimationList
-      : this.startAnimations;
-    initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList
-    );
-
-    getStore().dispatch(
-      setInitialAnimationList(
-        initialAnimationList,
-        this.isSpritelab /* shouldRunV3Migration */,
-        this.isSpritelab
-      )
-    );
 
     this.generatedProperties = {
       ...config.initialGeneratedProperties
@@ -525,6 +527,7 @@ export default class P5Lab {
               pauseHandler={this.onPause?.bind(this)}
               hidePauseButton={!!this.level.hidePauseButton}
               onPromptAnswer={this.onPromptAnswer?.bind(this)}
+              labType={this.getLabType()}
             />
           </Provider>,
           document.getElementById(config.containerId)
@@ -542,9 +545,13 @@ export default class P5Lab {
    * the "set background to" block, which needs to have backgrounds in the
    * animation list at the start in order to look not broken.
    * @param {Object} initialAnimationList
+   * @param {Object} defaultSprites
    */
-  loadAnyMissingDefaultAnimations(initialAnimationList) {
-    if (!this.isSpritelab) {
+  loadAnyMissingDefaultAnimations(
+    initialAnimationList,
+    defaultSprites = {orderedKeys: [], propsByKey: {}}
+  ) {
+    if (!this.isBlockly) {
       return initialAnimationList;
     }
     let configDictionary = {};
@@ -552,7 +559,7 @@ export default class P5Lab {
       const name = initialAnimationList.propsByKey[key].name;
       configDictionary[name] = key;
     });
-    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
+    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.
     // This is primarily to handle pre existing levels that don't have animations in their list yet
     const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
       const {categories} = initialAnimationList.propsByKey[key];
@@ -745,7 +752,7 @@ export default class P5Lab {
       getStore().getState().pageConstants.isShareView
     );
 
-    if (this.isSpritelab) {
+    if (this.isBlockly) {
       // Add to reserved word list: API, local variables in execution evironment
       // (execute) and the infinite loop detection function.
       Blockly.JavaScript.addReservedWords(
@@ -890,7 +897,7 @@ export default class P5Lab {
   }
 
   onPuzzleComplete(submit, testResult, message) {
-    let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+    let msg = this.getMsg();
     if (message && msg[message]) {
       this.message = msg[message]();
     }
@@ -1048,7 +1055,7 @@ export default class P5Lab {
     this.studioApp_.clearAndAttachRuntimeAnnotations();
 
     if (
-      this.isSpritelab &&
+      this.isBlockly &&
       (this.studioApp_.hasUnwantedExtraTopBlocks() ||
         this.studioApp_.hasDuplicateVariablesInForLoops())
     ) {
@@ -1088,14 +1095,14 @@ export default class P5Lab {
         );
       }
 
-      if (this.isSpritelab) {
-        this.spritelabLibrary = this.createLibrary({p5: this.p5Wrapper.p5});
+      if (this.isBlockly) {
+        this.library = this.createLibrary({p5: this.p5Wrapper.p5});
 
-        const spritelabCommands = this.spritelabLibrary.commands;
-        for (const command in spritelabCommands) {
+        const libraryCommands = this.library.commands;
+        for (const command in libraryCommands) {
           this.JSInterpreter.createGlobalProperty(
             command,
-            spritelabCommands[command].bind(this.spritelabLibrary),
+            libraryCommands[command].bind(this.library),
             null
           );
         }
@@ -1237,7 +1244,7 @@ export default class P5Lab {
    */
   onP5Preload() {
     Promise.all([
-      this.isSpritelab
+      this.isBlockly
         ? this.preloadSpriteImages_()
         : this.preloadAnimations_(this.level.pauseAnimationsByDefault),
       this.maybePreloadBackgrounds_(),
@@ -1259,7 +1266,7 @@ export default class P5Lab {
 
   // Preloads background images if this is Sprite Lab
   maybePreloadBackgrounds_() {
-    if (!this.isSpritelab) {
+    if (!this.isBlockly) {
       return Promise.resolve();
     }
     return this.p5Wrapper.preloadBackgrounds();
@@ -1509,7 +1516,7 @@ export default class P5Lab {
           this.eventHandlers.draw.apply(null);
           this.runValidationCode();
         });
-      } else if (this.isSpritelab) {
+      } else if (this.isBlockly) {
         this.eventHandlers.draw.apply(null);
       }
     }
@@ -1590,7 +1597,7 @@ export default class P5Lab {
    */
   displayFeedback_() {
     var level = this.level;
-    let msg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+    let msg = this.getMsg();
 
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,

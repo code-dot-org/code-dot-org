@@ -63,7 +63,7 @@ class ApplicationController < ActionController::Base
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
-    elsif rack_env? :development
+    elsif rack_env?(:development, :adhoc)
       raise
     else
       # we know who you are, you shouldn't be here

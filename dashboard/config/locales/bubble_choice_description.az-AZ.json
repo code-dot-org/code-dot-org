@@ -36,7 +36,11 @@
         "courseF_text_choice_title": "\"Header ekranlar\" mətn əlavə etmək üçün başqa bir yoldur. Burada onlara cəhd edin!",
         "courseF_text_print": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
         "courseF_text_review": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
-        "ramp_artist_loops4_2021": "Bu mükəmməl model, loop ardıcıllıqla yaradın"
+        "ramp_artist_loops4_2021": "Bu mükəmməl model, loop ardıcıllıqla yaradın",
+        "helloworld_animals_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "helloworld_emoji_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "helloworld_food_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
+        "helloworld_retro_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin."
       }
     }
   }

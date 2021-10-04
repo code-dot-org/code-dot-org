@@ -155,6 +155,15 @@
           "recovering": "recuperare",
           "moving left and right": "mișcare de la stânga la dreapta",
           "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
         }
       }
     }

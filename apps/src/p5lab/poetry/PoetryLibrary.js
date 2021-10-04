@@ -1,3 +1,5 @@
+import _ from 'lodash';
+import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
 import * as utils from './commands/utils';
@@ -18,16 +20,19 @@ export default class PoetryLibrary extends CoreLibrary {
       endTime: POEM_DURATION
     };
     this.poemState = {
-      title: '',
-      author: '',
-      lines: [],
+      ..._.cloneDeep(getStore().getState().poetry.selectedPoem),
       font: {
         fill: 'black',
         stroke: 'rgba(0,0,0,0)',
         font: 'Arial'
       },
       isVisible: true,
-      textEffects: []
+      textEffects: [],
+      // By default, start the poem animation when the program starts (frame 1)
+      // The animation can be restarted with the animatePoem() block, which
+      // updates this value.
+      // This value is used as an offset when calculating which lines to show.
+      animationStartFrame: 1
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -50,24 +55,22 @@ export default class PoetryLibrary extends CoreLibrary {
           this.p5.World.frameCount
         );
         // Don't fire line events in preview
-        if (this.p5.frameCount > 1) {
+        if (!this.isPreviewFrame()) {
           for (let i = 0; i < renderInfo.lines.length; i++) {
             const lineNum = i + 1; // students will 1-index the lines
-            if (this.lineEvents[lineNum]) {
+            if (this.lineEvents[lineNum] && !this.lineEvents[lineNum].fired) {
               // Fire line events
               this.lineEvents[lineNum].forEach(callback => callback());
 
-              // Clear out line events so they don't fire again. This way, we'll fire
-              // the event only on the first frame where renderInfo.lines has
-              // that many items
-              this.lineEvents[lineNum] = null;
+              // Set fired to true so that we don't re-fire this event again.
+              this.lineEvents[lineNum].fired = true;
             }
           }
         }
         this.drawFromRenderInfo(renderInfo);
 
         // Don't show foreground effect in preview
-        if (this.p5.frameCount > 1) {
+        if (!this.isPreviewFrame()) {
           this.foregroundEffects.forEach(effect => effect.func());
         }
       },
@@ -113,6 +116,12 @@ export default class PoetryLibrary extends CoreLibrary {
         if (author) {
           this.poemState.author = author;
         }
+      },
+
+      animatePoem() {
+        this.poemState.animationStartFrame = this.p5.World.frameCount;
+        // Reset line events since we're starting the poem animation over.
+        Object.values(this.lineEvents).forEach(e => (e.fired = false));
       },
 
       showPoem() {
@@ -190,6 +199,10 @@ export default class PoetryLibrary extends CoreLibrary {
       ...backgroundEffects,
       ...foregroundEffects
     };
+  }
+
+  isPreviewFrame() {
+    return this.p5.World.frameCount === 1;
   }
 
   getScaledFontSize(text, font, desiredSize) {
@@ -270,9 +283,11 @@ export default class PoetryLibrary extends CoreLibrary {
     for (let i = 0; i < renderInfo.lines.length; i++) {
       const lineNum = i + 1; // account for time before the first line shows
       const newLine = {...renderInfo.lines[i]};
-      newLine.start = lineNum * framesPerLine;
-      newLine.end = (lineNum + 1) * framesPerLine;
-      if (this.p5.World.frameCount >= newLine.start) {
+      newLine.start =
+        this.poemState.animationStartFrame + lineNum * framesPerLine;
+      newLine.end =
+        this.poemState.animationStartFrame + (lineNum + 1) * framesPerLine;
+      if (frameCount >= newLine.start) {
         newLines.push(newLine);
       }
     }
@@ -339,8 +354,8 @@ export default class PoetryLibrary extends CoreLibrary {
       yCursor += lineHeight;
     });
 
-    if (this.p5.frameCount === 1) {
-      // Don't apply text effects / line animation for preview
+    // Don't apply text effects / line animation for preview
+    if (this.isPreviewFrame()) {
       return renderInfo;
     }
 
