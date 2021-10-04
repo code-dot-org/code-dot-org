@@ -87,7 +87,7 @@ function level3(){
       twoSprites: checkTwoSprites(spriteIds),
       differentLocations: checkSpriteLocations(spriteIds),
       differentCostumes: checkSpriteCostumes(spriteIds),
-      allSpritesSpeaking: checkAllSpritesSay(spriteIds)
+      allSpritesSpeaking: false
     });
   }
 
@@ -140,19 +140,18 @@ function level3(){
 
 function level4(){
   //This level requires zValidationHelperFunctions
+  var spriteIds = getSpriteIdsInUse();
+  var eventLog = getEventLog();
 
   if (!validationProps.successCriteria) {
-    validationProps.successCriteria = {
-      clickedSprite: false
-    };
+    setSuccessCriteria({
+      clickedAllSprites: false
+    });
   }
+
   if(!validationProps.clickedSprites){
     validationProps.clickedSprites=[];
   }
-
-  // Helper variables
-  var spriteIds = getSpriteIdsInUse();
-  var eventLog = getEventLog();
 
   //check for unclicked sprites, and show hand with rings
   if(World.seconds >1){
