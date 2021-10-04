@@ -15,25 +15,27 @@ describe('Review Navigator', () => {
     expect(wrapper.find('Button').length).to.equal(1);
   });
 
-  it('renders an error when passed a load error', () => {
-    let wrapper = shallow(<ReviewNavigator viewPeerList loadError />);
-
+  it('renders an error if there is a load error', () => {
+    let wrapper = shallow(<ReviewNavigator viewPeerList />);
+    wrapper.instance().setState({loadError: true});
     let link = wrapper.find('a');
     expect(link.length).to.equal(1);
     expect(link.key()).to.equal('error');
   });
 
   it('renders an error when peers is undefined', () => {
-    let wrapper = shallow(<ReviewNavigator viewPeerList peers={undefined} />);
+    let wrapper = shallow(<ReviewNavigator viewPeerList />);
 
+    wrapper.instance().setState({peers: undefined});
     let link = wrapper.find('a');
     expect(link.length).to.equal(1);
     expect(link.key()).to.equal('error');
   });
 
   it('renders a default message when peers is empty', () => {
-    let wrapper = shallow(<ReviewNavigator viewPeerList peers={[]} />);
+    let wrapper = shallow(<ReviewNavigator viewPeerList />);
 
+    wrapper.instance().setState({peers: []});
     let link = wrapper.find('a');
     expect(link.length).to.equal(1);
     expect(link.key()).to.equal('no-reviews');
@@ -52,7 +54,8 @@ describe('Review Navigator', () => {
         id: 2
       }
     ];
-    let wrapper = shallow(<ReviewNavigator viewPeerList peers={peerList} />);
+    let wrapper = shallow(<ReviewNavigator viewPeerList />);
+    wrapper.instance().setState({peers: peerList});
 
     let link = wrapper.find('a');
     expect(link.length).to.equal(2);
@@ -60,5 +63,14 @@ describe('Review Navigator', () => {
     expect(link.first().text()).to.equal(firstStudent);
     expect(link.last().key()).to.equal('2');
     expect(link.last().text()).to.equal(secondStudent);
+  });
+
+  it('renders a spinner when loading peers', () => {
+    let wrapper = shallow(<ReviewNavigator viewPeerList />);
+
+    wrapper.instance().setState({loadInProgress: true});
+    let link = wrapper.find('a');
+    expect(link.length).to.equal(1);
+    expect(link.key()).to.equal('loading');
   });
 });
