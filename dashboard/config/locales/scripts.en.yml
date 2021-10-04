@@ -22833,14 +22833,24 @@ en:
               description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             lesson-11:
               name: A Sustainable Neighborhood Project - Day 1
+              description_student: For this project, you develop a concert in The Theater about your chosen sustainable goal. You begin by choosing a new image filter or effect and writing pseudocode for its algorithm. You then begin the first iteration of your project.
+              description_teacher: For this project, students develop a concert in The Theater about their chosen sustainable goal. Students begin by choosing a new image filter or effect and writing pseudocode for its algorithm. Students then begin the first iteration of their project.
             lesson-12:
               name: A Sustainable Neighborhood Project - Day 2
+              description_student: In the previous lesson, you completed the first iteration of your concert. Today, you complete the second iteration of your project and reflect with a group as you prepare for the final development of your Sustainable Neighborhood Concert. You self-assess your work against the project rubric and create a final priority list for your last iteration.
+              description_teacher: In the previous lesson, students completed the first iteration of their concert. Students complete the second iteration of their project and reflect with a group as they prepare for the final development of their Sustainable Neighborhood Concert. Students self-assess their work against the project rubric and create a final priority list for their last iteration.
             lesson-13:
               name: A Sustainable Neighborhood Project - Day 3
+              description_student: You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer.
+              description_teacher: Students complete their last iteration and present their concert to their peers. Students finish the project with a final reflection and celebrate their identity as software engineers.
             lesson-14:
               name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
             lesson-15:
               name: Assessment Day
+              description_student: In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
