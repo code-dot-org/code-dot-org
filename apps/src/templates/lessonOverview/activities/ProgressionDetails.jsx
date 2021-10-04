@@ -56,8 +56,7 @@ export default class ProgressionDetails extends Component {
       levelNumber: scriptLevel.levelNumber,
       bonus: scriptLevel.bonus,
       level: activeLevel,
-      sublevels: subLevelsForProgression,
-      exampleSolutions: scriptLevel.exampleSolutions
+      sublevels: subLevelsForProgression
     };
   };
 
