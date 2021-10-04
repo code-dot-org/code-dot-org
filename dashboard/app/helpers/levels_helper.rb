@@ -179,14 +179,20 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    should_load_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    level_not_cached = current_user.present?
+    if should_load_channel && level_not_cached
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
-        server_project_level_id: @level.project_template_level.try(:id),
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
     end
+
+    view_options(
+      should_load_channel: should_load_channel,
+      server_project_level_id: @level.project_template_level.try(:id)
+    )
 
     # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
     if @level.is_a?(Javalab) && (@user || current_user)

@@ -469,6 +469,10 @@ class ApiController < ApplicationController
       )
     end
 
+    if params[:load_channel] == "true"
+      response[:channel] = get_channel_for(level, script.id, current_user)
+    end
+
     render json: response
   end
 
