@@ -285,9 +285,12 @@ function loadAppAsync(appOptions) {
     return Promise.resolve(appOptions);
   }
 
+  // maureen come back and figure out what to do about isViewingStudentAnswer here..
   if (appOptions.channel || isViewingStudentAnswer) {
     return loadProjectAndCheckAbuse(appOptions);
   }
+
+  const shouldLoadChannel = appOptions.shouldLoadChannel && !appOptions.channel;
 
   return new Promise((resolve, reject) => {
     if (appOptions.publicCaching) {
@@ -302,7 +305,8 @@ function loadAppAsync(appOptions) {
         `/${appOptions.scriptName}` +
         `/${appOptions.lessonPosition}` +
         `/${appOptions.levelPosition}` +
-        `/${appOptions.serverLevelId}`
+        `/${appOptions.serverLevelId}` +
+        `?load_channel=${shouldLoadChannel}`
     )
       .done(data => {
         appOptions.disableSocialShare = data.disableSocialShare;
@@ -327,8 +331,16 @@ function loadAppAsync(appOptions) {
           appOptions.level.pairingAttempt = data.pairingAttempt;
           appOptions.level.pairingChannelId = data.pairingChannelId;
         }
+        console.log(data);
 
-        resolve(appOptions);
+        if (data.channel) {
+          appOptions.channel = data.channel;
+          loadProjectAndCheckAbuse(appOptions).then(appOptions => {
+            resolve(appOptions);
+          });
+        } else {
+          resolve(appOptions);
+        }
       })
       .fail(() => {
         // TODO: Show an error to the user here? (LP-1815)
@@ -477,6 +489,8 @@ export default function loadAppOptions() {
     } else {
       getStore().dispatch(setAppLoadStarted());
       loadAppAsync(appOptions).then(appOptions => {
+        console.log('maureen loaded');
+        console.log(appOptions);
         project.init(sourceHandler);
         getStore().dispatch(setAppLoaded());
         resolve(appOptions);
