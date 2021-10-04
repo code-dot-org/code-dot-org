@@ -15,7 +15,7 @@
     {
       "name": "learning_objectives_page_w1",
       "title": "Workshop Learning Objectives",
-      "visibleIf": "{workshop_agenda}='module2' or {workshop_agenda}='module1_2' or ({workshop_agenda}='in_person' and ({workshop_subject}='Academic Year Workshop 1' or {workshop_subject}='Academic Year Workshop 1 + 2'))",
+      "visibleIf": "{workshop_agenda}='module2' or {workshop_agenda}='module1_2' or ({workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 1' )",
       "elements": [
         {
           "type": "library_item",
@@ -27,9 +27,9 @@
       ]
     },
     {
-      "name": "learning_objectives_page_w1",
+      "name": "learning_objectives_page_w2",
       "title": "Workshop Learning Objectives",
-      "visibleIf": "{workshop_agenda}='module4' or {workshop_agenda}='module3_4' or ({workshop_agenda}='in_person' and ({workshop_subject}='Academic Year Workshop 2' or {workshop_subject}='Academic Year Workshop 1 + 2'))",
+      "visibleIf": "{workshop_agenda}='module4' or {workshop_agenda}='module3_4' or ({workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 2')",
       "elements": [
         {
           "type": "library_item",
@@ -37,6 +37,20 @@
           "library_version": 1,
           "name": "module_4_panel",
           "baker_comment": "BAKER NOTE: module_4_panel and ayw2-inperson panel are the same for SY21-22.  We chose to use module_4_panel arbitrarily, and we changed the name and heading on this page. ALSO AYW 1+2 is problematic. People will get duplicate questions.  Should we turn on just the AYW2 survey for 1+2 folks?"
+        }
+      ]
+    },
+    {
+      "name": "learning_objectives_page_w1_w2",
+      "title": "Workshop Learning Objectives",
+      "visibleIf": "{workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 1 + 2'",
+      "elements": [
+        {
+          "type": "library_item",
+          "library_name": "surveys/pd/ayw_workshop",
+          "library_version": 0,
+          "name": "ayw_workshop_1_2_panel",
+          "baker_comment": "BAKER NOTE: ayw_workshop_1_2_panel contains unduplicated quetsions for learning objectives from module_4_panel and ayw2-inperson"
         }
       ]
     },
