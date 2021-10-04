@@ -7,8 +7,8 @@ import i18n from '@cdo/locale';
 
 class UnassignSectionDialog extends Component {
   static propTypes = {
-    sectionName: PropTypes.string.isRequired,
-    courseName: PropTypes.string.isRequired,
+    sectionName: PropTypes.string,
+    courseName: PropTypes.string,
     isOpen: PropTypes.bool.isRequired,
     sectionId: PropTypes.string,
     onClose: PropTypes.func.isRequired,
