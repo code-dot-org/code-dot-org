@@ -1,0 +1,81 @@
+{
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/1": {
+    "short_instructions": "When you read this poem, what color comes to mind? Find a background effect that matches the feeling of this poem.",
+    "long_instructions": "_When you read this poem, what color comes to mind?_\n\n-   Connect blocks from the toolbox under `when run` to build your program. \n-   Find an effect and color that match the feeling of this poem. \n-   Click \"Run\" to animate the poem.",
+    "authored_hints": {
+      "add_background_effect": "Find this block:\n[blockly block][0]\n\nConnect this block under `when run` in your Workspace.",
+      "add_more_effects": "Bring in more colors or effects to help create the mood of this poem. \n\n[blockly block][0]"
+    },
+    "callouts": {
+      "poetry_background": "Find code blocks here. "
+    }
+  },
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/2": {
+    "short_instructions": "Make a prediction!",
+    "long_instructions": "Read this poem.\n\nThen, press \"Run.\"\n\nDid the effects and sounds match the mood of the poem?"
+  },
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/3": {
+    "short_instructions": "Add background music to your program to change how the poem feels while you're reading it. ",
+    "long_instructions": "Adding background music to your program can change how the poem feels while you're reading it. \n\n-   Add a `play sound` block to your workspace.\n-   Find a sound that matches the mood of the poem. ",
+    "authored_hints": {
+      "poetry_sound_hint": "Find this block:\n[blockly block][0]\n\nConnect this block under `when run` in your Workspace.",
+      "more_code": "Add in more effects and colors to go with the sound you chose. \n[blockly block][0]"
+    },
+    "callouts": {
+      "poetry_sound": "New block!"
+    }
+  },
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/4": {
+    "short_instructions": "Let's use events to change the animation when the poem mentions something new. ",
+    "long_instructions": "Let's use events to change the animation when the poem mentions something new. \n\n-   Find a line in the poem where the mood shifts or something new is introduced. \n-   Add more effects to match more lines in the poem. \n-   Make sure the effect changes with the line you want. ",
+    "authored_hints": {
+      "foreground_effect_hint": "This new `do foreground effect` block will add a new effect once. \n[blockly block][0]",
+      "background_effect_hint": "You can also add a new background effect when a certain line shows in the poem with code that looks like this:\n[blockly block][0]",
+      "more_events_hint": "You can use more than one event in your program. Try using two events with different effects to match the mood shifts. \n\n[blockly block][0]\n\n[blockly block][1]"
+    },
+    "callouts": {
+      "poetry_event": "New block!",
+      "poetry_foreground": "New block!"
+    }
+  },
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/5": {
+    "short_instructions": "Make a prediction!",
+    "long_instructions": "Read this poem.\n\nThen, press \"Run.\"\n\nDid the images match the mood of each line of the poem?"
+  },
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/6": {
+    "short_instructions": "Authors use literal language to paint a picture in the reader's mind. You can add sprites to illustrate the poem. ",
+    "long_instructions": "Authors use imagery to paint a picture in the reader's mind. You can add sprites to illustrate the poem. \n\n-   Connect a `make new sprite` block under the `when run` block.\n-   Choose a costume for your sprite.\n-   Press \"Run.\"\n\n_Extra Challenge:_ Use an **event** to make a new sprite appear when a new character is introduced!",
+    "authored_hints": {
+      "location_hint": "Each sprite has a **location**. You can set the location by clicking the pin on this block: \n\n[blockly block][0]\n\n-   Click the pin [][1] on the location block then choose a new position for your sprite on the screen.\n-   Press the \"Run\" button when your code is finished."
+    },
+    "callouts": {
+      "poetry_sprite": "New block!"
+    }
+  },
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/7": {
+    "short_instructions": "Sprites can have their own behaviors, which are actions they will do over and over while the program runs.",
+    "long_instructions": "Sprites can have their own behaviors, which are actions they will do over and over while the program runs.\n\n-   Drag out a behavior block, the `sprite begins` block.\n-   Explore different behaviors.\n\n_Extra Challenge:_ Use an **event** to make a sprite begin a behavior when the mood shifts!",
+    "callouts": {
+      "poetry_sprite_begins": "New block!",
+      "poetry_sprite_stops": "New block!"
+    }
+  },
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/8": {
+    "short_instructions": "You can change the size of a sprite you already made. ",
+    "long_instructions": "You can change the **size** of a sprite you already made.\n\n-   Change the size of your sprite by using the new `set size` block. \n-   Replace `50` with another size, like `150`.\n\n_Extra Challenge:_ Use an **event** and the new blocks to change the size of a sprite _or_ remove it completely when the **mood** of the poem shifts!",
+    "authored_hints": {
+      "size hint": "Find this block and click the `50`.\n[blockly block][0]\n\nTry changing the number to `150`. \n\n[blockly block][1]\n\nWhat happens when the number is `25`? \n[blockly block][2]"
+    },
+    "callouts": {
+      "poetry_set_sprite": "New block!",
+      "poetry_remove_sprite": "New block!"
+    }
+  },
+  "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/9": {
+    "long_instructions": "Let's get moody! Illustrate a poem however you'd like and share it with your friends!",
+    "callouts": {
+      "poetry_burst": "New block!",
+      "poetry_multiple_sprites": "New block!"
+    }
+  }
+}
