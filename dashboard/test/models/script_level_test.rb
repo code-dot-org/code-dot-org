@@ -58,9 +58,9 @@ class ScriptLevelTest < ActiveSupport::TestCase
       @authorized_teacher = create :authorized_teacher
       @not_authorized_teacher = create :teacher
       @student = create :student
-    end
 
-    teardown do
+      STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+      CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
     end
 
     test 'get_example_solutions for dance level' do
