@@ -198,7 +198,7 @@ class AnimationListItem extends React.Component {
     const arrowStyle = [this.props.isSelected && styles.rightArrow];
 
     return (
-      <div style={tileStyle} onClick={this.onSelect}>
+      <button style={tileStyle} onClick={this.onSelect} type="button">
         <div style={arrowStyle} />
         <ListItemThumbnail
           ref="thumbnail"
@@ -220,7 +220,7 @@ class AnimationListItem extends React.Component {
             singleFrameAnimation={this.props.allAnimationsSingleFrame}
           />
         )}
-      </div>
+      </button>
     );
   }
 }
@@ -234,9 +234,7 @@ const styles = {
 
     // Provide vertical padding because we flow vertically, but require
     // children to use margins horizontally.
-    paddingTop: 4,
-    paddingBottom: 4,
-    marginBottom: 4,
+    padding: '4px 0px',
 
     // Allows looping button to display relative to whole card
     position: 'relative',
@@ -244,7 +242,10 @@ const styles = {
     ':hover': {
       cursor: 'pointer',
       backgroundColor: color.lighter_purple
-    }
+    },
+    border: 0,
+    margin: 0,
+    marginTop: 5
   },
   selectedTile: {
     backgroundColor: color.purple,
@@ -260,7 +261,8 @@ const styles = {
     marginTop: 4,
     textAlign: 'center',
     userSelect: 'none',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    fontSize: '13px'
   },
   nameInputWrapper: {
     marginLeft: 5,
