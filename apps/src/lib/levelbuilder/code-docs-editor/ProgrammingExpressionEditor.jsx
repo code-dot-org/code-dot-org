@@ -73,12 +73,7 @@ export default function ProgrammingExpressionEditor({
         Display Name
         <input
           value={programmingExpression.name}
-          onChange={e =>
-            updateProgrammingExpression({
-              ...programmingExpression,
-              name: e.target.value
-            })
-          }
+          onChange={e => updateProgrammingExpression('name', e.target.value)}
           style={styles.textInput}
         />
       </label>
@@ -90,10 +85,7 @@ export default function ProgrammingExpressionEditor({
         markdown={programmingExpression.shortDescription}
         label={'Short Description'}
         handleMarkdownChange={e =>
-          updateProgrammingExpression({
-            ...programmingExpression,
-            shortDescription: e.target.value
-          })
+          updateProgrammingExpression('shortDescription', e.target.value)
         }
         features={{
           imageUpload: true
