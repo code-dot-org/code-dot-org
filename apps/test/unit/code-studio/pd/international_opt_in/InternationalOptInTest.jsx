@@ -36,6 +36,7 @@ describe('InternationalOptInTest', () => {
       gender: 'Gender Identity',
       school: 'School',
       schoolCity: 'School City',
+      schoolCityDistrict: 'School City/District',
       schoolCountry: 'School Country',
       schoolDepartmentRegion: 'School Department/Region',
       schoolName: 'School Name',
@@ -55,8 +56,7 @@ describe('InternationalOptInTest', () => {
       colombianSchoolMunicipality: 'School Municipality',
       colombianChileanSchoolName: 'School Name',
       chileanSchoolCommune: 'School Commune',
-      chileanSchoolId: 'School ID',
-      uzbekistanSchoolDistrict: 'School City/District'
+      chileanSchoolId: 'School ID'
     }
   };
 
