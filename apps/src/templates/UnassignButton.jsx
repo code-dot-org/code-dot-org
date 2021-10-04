@@ -3,27 +3,26 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
-import {
-  unassignSection,
-  sectionName
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
+import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 
 class UnassignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     showUnassignDialog: PropTypes.bool,
+    courseName: PropTypes.string,
+    sectionName: PropTypes.string,
     // Redux
-    sectionName: PropTypes.string.isRequired,
-    courseName: PropTypes.string.isRequired,
     unassignSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
 
   constructor() {
     super();
-    this.state = {text: i18n.assigned(), icon: 'check'};
+    this.state = {
+      text: i18n.assigned(),
+      icon: 'check'
+    };
   }
 
   onMouseOver = event => {
@@ -39,18 +38,17 @@ class UnassignButton extends React.Component {
   };
 
   confirmUnassign = () => {
-    const {sectionId, unassignSection} = this.props;
-    unassignSection(sectionId);
+    unassignSection(this.props.sectionId);
   };
 
   render() {
     const {text, icon} = this.state;
     const {
       isRtl,
-      courseName,
-      sectionName,
       showUnassignDialog,
-      sectionId
+      sectionId,
+      courseName,
+      sectionName
     } = this.props;
 
     // Adjust styles if locale is RTL
@@ -105,9 +103,7 @@ export const UnconnectedUnassignButton = UnassignButton;
 
 export default connect(
   state => ({
-    isRtl: state.isRtl,
-    sectionName: sectionName(state, this.props.sectionId),
-    courseName: getSelectedScriptFriendlyName(state)
+    isRtl: state.isRtl
   }),
   unassignSection
 )(UnassignButton);
