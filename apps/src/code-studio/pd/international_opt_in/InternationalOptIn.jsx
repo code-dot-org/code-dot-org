@@ -87,7 +87,7 @@ class InternationalOptInComponent extends FormComponent {
   }
 
   /**
-   * We also have some special logic in place for Chile, so define a
+   * We also have some special logic in place for Uzbekistan, so define a
    * helper here to let us easily detect if we're in a state where that logic
    * should be applied.
    *
@@ -358,7 +358,6 @@ class InternationalOptInComponent extends FormComponent {
     ) {
       schoolDataFieldGroup = this.renderChileanSchoolDataFieldGroup();
     } else if (this.isUzbekistanSelected()) {
-      console.log(this.props.options);
       schoolDataFieldGroup = this.renderUzebekistanSchoolDataFieldGroup();
     } else {
       // If no country has been selected, display the inputs disabled with a
