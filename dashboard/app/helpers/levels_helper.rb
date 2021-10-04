@@ -291,10 +291,6 @@ module LevelsHelper
       @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
     end
 
-    if @level && @script_level
-      @app_options[:exampleSolutions] = @script_level.get_example_solutions(current_user, @section)
-    end
-
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if can_view_teacher_markdown?
 

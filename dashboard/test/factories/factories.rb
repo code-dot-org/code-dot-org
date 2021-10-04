@@ -516,13 +516,6 @@ FactoryGirl.define do
       end
     end
 
-    trait :with_example_solutions do
-      after(:create) do |level|
-        level.examples = ['example-1', 'example-2']
-        level.save!
-      end
-    end
-
     trait :spelling_bee do
       game {create(:game, app: "maze", name: "Maze")}
       skin 'letters'
@@ -657,21 +650,6 @@ FactoryGirl.define do
 
   factory :javalab, parent: :level, class: Javalab do
     game {Game.javalab}
-
-    trait :with_example_solutions do
-      after(:create) do |level|
-        level.examples = ['https://studio.code.org/s/csa-examples/lessons/1/levels/1/']
-        level.save!
-      end
-    end
-  end
-
-  factory :spritelab, parent: :level, class: GamelabJr do
-    game {Game.spritelab}
-  end
-
-  factory :dance, parent: :level, class: Dancelab do
-    game {Game.dance}
   end
 
   factory :block do
