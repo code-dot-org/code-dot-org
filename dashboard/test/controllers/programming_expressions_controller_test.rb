@@ -34,13 +34,25 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       id: programming_expression.id,
       key: programming_expression.key,
       name: 'new name',
-      shortDescription: 'short description of code'
+      category: 'world',
+      shortDescription: 'short description of code',
+      externalDocumentation: 'google.com',
+      content: 'a longer description of the code',
+      syntax: 'block()',
+      returnValue: 'none',
+      tips: 'some tips on how to use this block'
     }
     assert_response :ok
     programming_expression.reload
 
     assert_equal 'new name', programming_expression.name
+    assert_equal 'world', programming_expression.category
     assert_equal 'short description of code', programming_expression.short_description
+    assert_equal 'google.com', programming_expression.external_documentation
+    assert_equal 'a longer description of the code', programming_expression.content
+    assert_equal 'block()', programming_expression.syntax
+    assert_equal 'none', programming_expression.return_value
+    assert_equal 'some tips on how to use this block', programming_expression.tips
   end
 
   test 'data is passed down to edit page' do

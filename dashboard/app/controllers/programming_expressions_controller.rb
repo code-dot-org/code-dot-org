@@ -60,10 +60,13 @@ class ProgrammingExpressionsController < ApplicationController
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :name,
+      :category,
       :short_description,
       :external_documentation,
       :content,
-      :category
+      :syntax,
+      :return_value,
+      :tips
     )
     transformed_params
   end
