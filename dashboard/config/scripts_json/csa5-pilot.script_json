@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-04 21:04:50 UTC",
+    "serialized_at": "2021-10-05 13:53:21 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa5-pilot"
@@ -42,6 +42,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandbox"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-pilot"
       }
     }
@@ -306,6 +318,7 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "assessment": true,
         "overview": "In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.",
         "preparation": "* Preview the assessment questions\n* Unlock the assessment questions",
         "student_overview": "In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment."
@@ -313,6 +326,66 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "Java Lab",
+      "name": "Java Lab",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "The Neighborhood",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "The Theater",
+      "name": "The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "The Playground",
+      "name": "The Playground",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-pilot"
       }
     }
@@ -927,6 +1000,54 @@
         "lesson_activity.key": "e9098ecb-2645-4ada-9af1-b9c2816a8154",
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "326f4bdb-6f0d-43a7-8c78-e45b18a19d4c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "326f4bdb-6f0d-43a7-8c78-e45b18a19d4c",
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "f36741e9-34ee-4186-b377-ea12ad6eac5a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f36741e9-34ee-4186-b377-ea12ad6eac5a",
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "80108590-615a-42e3-970b-92878fe55e37",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80108590-615a-42e3-970b-92878fe55e37",
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "f3599b69-65ab-43be-b765-641e182a0a24",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3599b69-65ab-43be-b765-641e182a0a24",
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-pilot"
       }
     }
@@ -3484,6 +3605,7 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
         "name": "Assessment Review",
+        "progression_name": "Unit 5 Assessment",
         "tips": [
           {
             "type": "teachingTip",
@@ -3495,6 +3617,50 @@
         "activity_section.key": "2cad15b1-5767-4012-83c0-0096724598cb",
         "lesson_activity.key": "e9098ecb-2645-4ada-9af1-b9c2816a8154"
       }
+    },
+    {
+      "key": "32fdf9e5-69ce-4c66-b6ef-64b9dd7cc026",
+      "position": 1,
+      "properties": {
+        "progression_name": "Java Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "32fdf9e5-69ce-4c66-b6ef-64b9dd7cc026",
+        "lesson_activity.key": "326f4bdb-6f0d-43a7-8c78-e45b18a19d4c"
+      }
+    },
+    {
+      "key": "359eec69-6e47-4473-bbdb-5d1b15c65e52",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "359eec69-6e47-4473-bbdb-5d1b15c65e52",
+        "lesson_activity.key": "f36741e9-34ee-4186-b377-ea12ad6eac5a"
+      }
+    },
+    {
+      "key": "fda2042d-275e-4ec4-9034-71d4cd3d5adb",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Theater"
+      },
+      "seeding_key": {
+        "activity_section.key": "fda2042d-275e-4ec4-9034-71d4cd3d5adb",
+        "lesson_activity.key": "80108590-615a-42e3-970b-92878fe55e37"
+      }
+    },
+    {
+      "key": "da4d8ebe-6e4e-45f9-985a-6bbc8db29cc7",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "da4d8ebe-6e4e-45f9-985a-6bbc8db29cc7",
+        "lesson_activity.key": "f3599b69-65ab-43be-b765-641e182a0a24"
+      }
     }
   ],
   "script_levels": [
@@ -3504,6 +3670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L1"
+        ],
         "progression": "Creating 2D Arrays"
       },
       "bonus": false,
@@ -3526,6 +3695,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L2"
+        ],
         "progression": "Creating 2D Arrays"
       },
       "bonus": false,
@@ -3548,6 +3720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L3"
+        ],
         "progression": "Accessing Rows in 2D Arrays"
       },
       "bonus": false,
@@ -3570,6 +3745,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L4"
+        ],
         "progression": "Accessing Rows in 2D Arrays"
       },
       "bonus": false,
@@ -3592,6 +3770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L5"
+        ],
         "progression": "Updating Values in 2D Arrays"
       },
       "bonus": false,
@@ -3614,6 +3795,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3636,6 +3820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L1"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -3658,6 +3845,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L2"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -3680,6 +3870,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L3"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -3702,6 +3895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L4"
+        ],
         "progression": "Concert Images"
       },
       "bonus": false,
@@ -3724,6 +3920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L5"
+        ],
         "progression": "Getting Pixels from an Image"
       },
       "bonus": false,
@@ -3746,6 +3945,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3768,6 +3970,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L1"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -3790,6 +3995,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L2"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -3812,6 +4020,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L3"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -3834,6 +4045,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L4"
+        ],
         "progression": "Mirror an Image Vertically"
       },
       "bonus": false,
@@ -3856,6 +4070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L5"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -3878,6 +4095,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L6"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -3900,6 +4120,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L7"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -3922,6 +4145,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3944,6 +4170,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L1"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -3966,6 +4195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L2"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -3988,6 +4220,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L3"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -4010,6 +4245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4"
+        ],
         "progression": "Keeping a Color in a Pixel"
       },
       "bonus": false,
@@ -4032,6 +4270,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L5"
+        ],
         "progression": "Keeping a Color in a Pixel"
       },
       "bonus": false,
@@ -4054,6 +4295,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4076,6 +4320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L1"
+        ],
         "progression": "Returning Inside a Loop"
       },
       "bonus": false,
@@ -4098,6 +4345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L2"
+        ],
         "progression": "Food Truck Special"
       },
       "bonus": false,
@@ -4120,6 +4370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L3"
+        ],
         "progression": "Checking for Empty Inventory"
       },
       "bonus": false,
@@ -4142,6 +4395,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L4"
+        ],
         "progression": "Checking for Empty Inventory"
       },
       "bonus": false,
@@ -4164,6 +4420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L5"
+        ],
         "progression": "Checking Dessert Quantities"
       },
       "bonus": false,
@@ -4186,6 +4445,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4208,6 +4470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L1"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -4230,6 +4495,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L2"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -4252,6 +4520,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L3"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -4274,6 +4545,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L4"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -4296,6 +4570,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L5"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -4318,6 +4595,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L6"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -4340,6 +4620,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4362,6 +4645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L1"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -4384,6 +4670,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L2"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -4406,6 +4695,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L3"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -4428,6 +4720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L4"
+        ],
         "progression": "Animated Image Reversal"
       },
       "bonus": false,
@@ -4450,6 +4745,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L5"
+        ],
         "progression": "Animated Image Reversal"
       },
       "bonus": false,
@@ -4472,6 +4770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L6"
+        ],
         "progression": "Sustainable Goals Benefits"
       },
       "bonus": false,
@@ -4494,6 +4795,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4516,6 +4820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L1"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -4538,6 +4845,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -4560,6 +4870,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -4582,6 +4895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4"
+        ],
         "progression": "Animated Image Shift"
       },
       "bonus": false,
@@ -4604,6 +4920,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5"
+        ],
         "progression": "Animated Image Shift"
       },
       "bonus": false,
@@ -4626,6 +4945,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4648,6 +4970,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -4670,6 +4995,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -4692,6 +5020,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -4714,6 +5045,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4"
+        ],
         "progression": "Combining Duplicate Desserts"
       },
       "bonus": false,
@@ -4736,6 +5070,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L5"
+        ],
         "progression": "Combining Duplicate Desserts"
       },
       "bonus": false,
@@ -4758,6 +5095,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4780,6 +5120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L1"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4802,6 +5145,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L2"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4824,6 +5170,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L3"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4846,6 +5195,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L4"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4868,6 +5220,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4890,6 +5245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L11-L1"
+        ],
         "progression": "A Sustainable Neighborhood Project"
       },
       "bonus": false,
@@ -4912,6 +5270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L12-L1"
+        ],
         "progression": "A Sustainable Neighborhood Project"
       },
       "bonus": false,
@@ -4932,8 +5293,11 @@
       "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L13-L1"
+        ],
         "progression": "A Sustainable Neighborhood Project"
       },
       "bonus": false,
@@ -4948,6 +5312,116 @@
       },
       "level_keys": [
         "CSA U5L13-L1"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 5 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 5 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "2cad15b1-5767-4012-83c0-0096724598cb"
+      },
+      "level_keys": [
+        "CSA Unit 5 Pilot Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "32fdf9e5-69ce-4c66-b6ef-64b9dd7cc026"
+      },
+      "level_keys": [
+        "CSA Java Lab Sandbox"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "359eec69-6e47-4473-bbdb-5d1b15c65e52"
+      },
+      "level_keys": [
+        "CSA Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Theater"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "fda2042d-275e-4ec4-9034-71d4cd3d5adb"
+      },
+      "level_keys": [
+        "CSA Theater Sandbox"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "da4d8ebe-6e4e-45f9-985a-6bbc8db29cc7"
+      },
+      "level_keys": [
+        "CSA Playground Sandbox"
       ]
     }
   ],
@@ -5742,6 +6216,66 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa5-pilot",
         "activity_section.key": "7e69222f-150a-40b2-9f08-908c9abd58aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 5 Pilot Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 5 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "2cad15b1-5767-4012-83c0-0096724598cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Java Lab Sandbox",
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "32fdf9e5-69ce-4c66-b6ef-64b9dd7cc026"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "359eec69-6e47-4473-bbdb-5d1b15c65e52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "fda2042d-275e-4ec4-9034-71d4cd3d5adb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Playground Sandbox",
+        "script_level.level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "da4d8ebe-6e4e-45f9-985a-6bbc8db29cc7"
       }
     }
   ],
