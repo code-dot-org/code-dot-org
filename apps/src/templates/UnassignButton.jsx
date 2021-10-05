@@ -9,9 +9,7 @@ import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 class UnassignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    showUnassignDialog: PropTypes.bool,
-    courseName: PropTypes.string,
-    sectionName: PropTypes.string,
+    courseName: PropTypes.string.isRequired,
     // Redux
     unassignSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
@@ -21,6 +19,7 @@ class UnassignButton extends React.Component {
     super();
     this.state = {
       text: i18n.assigned(),
+      showUnassignDialog: false,
       icon: 'check'
     };
   }
@@ -34,22 +33,18 @@ class UnassignButton extends React.Component {
   };
 
   toggleUnassignDialog = () => {
-    this.props.showUnassignDialog = !this.props.showUnassignDialog;
+    this.setState({
+      showUnassignDialog: !this.state.showUnassignDialog
+    });
   };
 
   confirmUnassign = () => {
-    unassignSection(this.props.sectionId);
+    this.props.unassignSection(this.props.sectionId);
   };
 
   render() {
-    const {text, icon} = this.state;
-    const {
-      isRtl,
-      showUnassignDialog,
-      sectionId,
-      courseName,
-      sectionName
-    } = this.props;
+    const {text, icon, showUnassignDialog} = this.state;
+    const {isRtl, sectionId, courseName} = this.props;
 
     // Adjust styles if locale is RTL
     const buttonMarginStyle = isRtl
@@ -72,12 +67,10 @@ class UnassignButton extends React.Component {
         />
         {showUnassignDialog && (
           <UnassignSectionDialog
-            courseName={courseName}
-            sectionName={sectionName}
             isOpen={true}
             sectionId={sectionId}
+            courseName={courseName}
             onClose={this.toggleUnassignDialog}
-            isUnassignPending={false}
             unassignSection={this.confirmUnassign}
           />
         )}
@@ -105,5 +98,5 @@ export default connect(
   state => ({
     isRtl: state.isRtl
   }),
-  unassignSection
+  {unassignSection}
 )(UnassignButton);

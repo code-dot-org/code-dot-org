@@ -18,7 +18,7 @@ class SectionAssigner extends Component {
     // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
-    assignmentName: PropTypes.string
+    assignmentName: PropTypes.string.isRequired
   };
 
   onChangeSection = sectionId => {
@@ -53,7 +53,7 @@ class SectionAssigner extends Component {
           />
           {selectedSection && selectedSection.isAssigned && (
             <UnassignButton
-              showUnassignDialog={false}
+              courseName={assignmentName}
               sectionId={selectedSection.id}
             />
           )}

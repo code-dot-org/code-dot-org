@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
+import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class UnassignSectionDialog extends Component {
   static propTypes = {
-    sectionName: PropTypes.string,
-    courseName: PropTypes.string,
     isOpen: PropTypes.bool.isRequired,
-    sectionId: PropTypes.string,
+    sectionId: PropTypes.number.isRequired,
     onClose: PropTypes.func.isRequired,
-    isUnassignPending: PropTypes.bool.isRequired,
-    unassignSection: PropTypes.func.isRequired
+    unassignSection: PropTypes.func.isRequired,
+    courseName: PropTypes.string.isRequired,
+    // Redux
+    sectionName: PropTypes.string
   };
 
   close = () => this.props.onClose();
@@ -54,7 +56,6 @@ class UnassignSectionDialog extends Component {
             onClick={this.unassign}
             color={Button.ButtonColor.orange}
             className="no-mc ui-confirm-unassign-section-button"
-            isPending={this.props.isUnassignPending}
             pendingText={i18n.unassigning()}
           />
         </DialogFooter>
@@ -71,4 +72,8 @@ const styles = {
   }
 };
 
-export default UnassignSectionDialog;
+export const UnconnectedUnassignSectionDialog = UnassignSectionDialog;
+
+export default connect((state, props) => ({
+  sectionName: sectionName(state, props.sectionId)
+}))(UnassignSectionDialog);
