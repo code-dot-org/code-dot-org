@@ -7,7 +7,7 @@ describe('InternationalOptInTest', () => {
   const defaultProps = {
     options: {
       gender: ['gender'],
-      schoolCountry: ['schoolCountry', 'colombia'],
+      schoolCountry: ['schoolCountry', 'Colombia'],
       ages: ['age'],
       subjects: ['subject'],
       resources: ['resource'],
@@ -87,7 +87,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
 
       wrapper.setState({
-        data: {schoolCountry: 'someplace other than colombia'}
+        data: {schoolCountry: 'someplace other than Colombia'}
       });
 
       expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
@@ -95,7 +95,7 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolCity')).to.have.lengthOf(0);
       expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
 
-      wrapper.setState({data: {schoolCountry: 'colombia'}});
+      wrapper.setState({data: {schoolCountry: 'Colombia'}});
 
       expect(wrapper.find('input#schoolCity')).to.have.lengthOf(0);
       expect(wrapper.find('input#schoolName')).to.have.lengthOf(0);
@@ -110,13 +110,13 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(0);
 
       wrapper.setState({
-        data: {schoolCountry: 'someplace other than colombia'}
+        data: {schoolCountry: 'someplace other than Colombia'}
       });
 
       expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
       expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(0);
 
-      wrapper.setState({data: {schoolCountry: 'colombia'}});
+      wrapper.setState({data: {schoolCountry: 'Colombia'}});
 
       expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(1);
       expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(1);
@@ -124,7 +124,7 @@ describe('InternationalOptInTest', () => {
 
     it('requires each Colombian school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
-      wrapper.setState({data: {schoolCountry: 'colombia'}});
+      wrapper.setState({data: {schoolCountry: 'Colombia'}});
 
       expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
         .true;
@@ -190,7 +190,7 @@ describe('InternationalOptInTest', () => {
         }
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      wrapper.setState({data: {schoolCountry: 'colombia'}});
+      wrapper.setState({data: {schoolCountry: 'Colombia'}});
 
       // initially, only departments are available; everything else is empty
       const departments = wrapper
@@ -257,14 +257,14 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
 
       wrapper.setState({
-        data: {schoolCountry: 'someplace other than chile'}
+        data: {schoolCountry: 'someplace other than Chile'}
       });
 
       expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
       expect(wrapper.find('input#schoolName')).to.have.lengthOf(1);
       expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
 
-      wrapper.setState({data: {schoolCountry: 'chile'}});
+      wrapper.setState({data: {schoolCountry: 'Chile'}});
 
       expect(wrapper.find('input#schoolCity')).to.have.lengthOf(0);
       expect(wrapper.find('input#schoolName')).to.have.lengthOf(0);
@@ -279,14 +279,14 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolId')).to.have.lengthOf(0);
 
       wrapper.setState({
-        data: {schoolCountry: 'someplace other than chile'}
+        data: {schoolCountry: 'someplace other than Chile'}
       });
 
       expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
       expect(wrapper.find('select#schoolCommune')).to.have.lengthOf(0);
       expect(wrapper.find('select#schoolId')).to.have.lengthOf(0);
 
-      wrapper.setState({data: {schoolCountry: 'chile'}});
+      wrapper.setState({data: {schoolCountry: 'Chile'}});
 
       expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(1);
       expect(wrapper.find('select#schoolCommune')).to.have.lengthOf(1);
@@ -295,7 +295,7 @@ describe('InternationalOptInTest', () => {
 
     it('requires each Chilean school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
-      wrapper.setState({data: {schoolCountry: 'chile'}});
+      wrapper.setState({data: {schoolCountry: 'Chile'}});
 
       expect(wrapper.find('select#schoolCommune').prop('disabled')).to.be.true;
       expect(wrapper.find('select#schoolName').prop('disabled')).to.be.true;
@@ -357,7 +357,7 @@ describe('InternationalOptInTest', () => {
         }
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      wrapper.setState({data: {schoolCountry: 'chile'}});
+      wrapper.setState({data: {schoolCountry: 'Chile'}});
 
       // initially, only departments are available; everything else is empty
       const departments = wrapper
@@ -416,14 +416,14 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
 
       wrapper.setState({
-        data: {schoolCountry: 'someplace other than uzbekistan'}
+        data: {schoolCountry: 'someplace other than Uzbekistan'}
       });
 
       expect(wrapper.find('input#schoolCity')).to.have.lengthOf(1);
       expect(wrapper.find('input#schoolName')).to.have.lengthOf(1);
       expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
 
-      wrapper.setState({data: {schoolCountry: 'uzbekistan'}});
+      wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
 
       expect(wrapper.find('input#schoolCity')).to.have.lengthOf(0);
       expect(wrapper.find('input#schoolName')).to.have.lengthOf(0);
@@ -438,14 +438,14 @@ describe('InternationalOptInTest', () => {
       expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
 
       wrapper.setState({
-        data: {schoolCountry: 'someplace other than uzbekistan'}
+        data: {schoolCountry: 'someplace other than Uzbekistan'}
       });
 
       expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(0);
       expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(0);
       expect(wrapper.find('select#schoolName')).to.have.lengthOf(0);
 
-      wrapper.setState({data: {schoolCountry: 'uzbekistan'}});
+      wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
 
       expect(wrapper.find('select#schoolDepartment')).to.have.lengthOf(1);
       expect(wrapper.find('select#schoolMunicipality')).to.have.lengthOf(1);
@@ -454,7 +454,7 @@ describe('InternationalOptInTest', () => {
 
     it('requires each Uzbekistan school data field be selected in order', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
-      wrapper.setState({data: {schoolCountry: 'uzbekistan'}});
+      wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
 
       expect(wrapper.find('select#schoolMunicipality').prop('disabled')).to.be
         .true;
@@ -496,7 +496,7 @@ describe('InternationalOptInTest', () => {
         }
       };
       const wrapper = mount(<InternationalOptIn {...props} />);
-      wrapper.setState({data: {schoolCountry: 'uzbekistan'}});
+      wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
 
       // initially, only departments are available; everything else is empty
       const departments = wrapper

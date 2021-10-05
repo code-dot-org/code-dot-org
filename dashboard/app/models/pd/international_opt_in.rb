@@ -129,19 +129,18 @@ class Pd::InternationalOptIn < ApplicationRecord
         required << :school_municipality
         required << :school_city
         required << :school_name
-      end
-
-      if hash[:school_country] == "Chile"
+      elsif hash[:school_country] == "Chile"
         required << :school_department
         required << :school_commune
         required << :school_name
         required << :school_id
-      end
-
-      if hash[:school_country] == "Uzbekistan"
+      elsif hash[:school_country] == "Uzbekistan"
         required << :school_department
         required << :school_municipality
         required << :school_name
+      else
+        required << :school_name
+        required << :school_city
       end
     end
   end
