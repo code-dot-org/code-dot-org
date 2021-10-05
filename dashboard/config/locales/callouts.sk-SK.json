@@ -1844,6 +1844,28 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nový blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nový blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nový blok!",
+          "poetry_foreground": "Nový blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nový blok!",
+          "poetry_multiple_sprites": "Nový blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nový blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nový blok!",
+          "poetry_sprite_stops": "Nový blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nový blok!",
+          "poetry_remove_sprite": "Nový blok!"
         }
       }
     }
