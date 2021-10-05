@@ -328,6 +328,7 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingExpression,
         UnitGroup,
         Script,
         ScriptLevel,
