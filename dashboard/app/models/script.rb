@@ -82,11 +82,13 @@ class Script < ApplicationRecord
           ]
         },
         {
-          unit_group_units: {
-            unit_group: :course_version
-          }
+          unit_group_units: :unit_group
         },
-        :course_version
+        {
+          course_version: {
+            course_offering: :course_versions
+          }
+        }
       ]
     )
   end
@@ -628,6 +630,7 @@ class Script < ApplicationRecord
     return nil unless family_name
     # Only redirect students.
     return nil unless user && user.student?
+    return nil unless has_other_versions?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
@@ -980,6 +983,8 @@ class Script < ApplicationRecord
   # @return [Boolean] Whether the user has progress on another version of this unit.
   def has_older_version_progress?(user)
     return nil unless user && family_name && version_year
+    return nil unless has_other_versions?
+
     user_unit_ids = user.user_scripts.pluck(:script_id)
 
     Script.
@@ -992,6 +997,12 @@ class Script < ApplicationRecord
       # select only units which the user has progress in.
       where(id: user_unit_ids).
       count > 0
+  end
+
+  # When given an object from the unit cache, returns whether it has other
+  # versions, without touching the database.
+  def has_other_versions?
+    get_course_version&.course_offering&.course_versions&.many?
   end
 
   # Create or update any units, script levels and lessons specified in the
@@ -1713,6 +1724,7 @@ class Script < ApplicationRecord
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil)
     return [] unless family_name
+    return [] unless has_other_versions?
     return [] unless unit_groups.empty?
     with_hidden = user&.hidden_script_access?
     units = Script.
