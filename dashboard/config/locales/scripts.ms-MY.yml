@@ -7564,6 +7564,9 @@ ms:
                 untuk mencipta tingkah laku mereka sendiri yang tersuai.
             Virtual Pet:
               key: Haiwan Peliharaan Maya
+              description_student: Cipta Haiwan Peliharaan Maya berinteraktif yang
+                mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan
+                haiwan peliharaan anda kehidupannya sendiri!
               description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta
                 Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan
                 seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum"
@@ -7775,6 +7778,9 @@ ms:
             Virtual Pet with Sprite Lab:
               key: Haiwan Peliharaan Maya dengan Makmal Peperi
               name: Haiwan Peliharaan Maya dengan Makmal Peperi
+              description_student: Cipta Haiwan Peliharaan Maya berinteraktif yang
+                mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan
+                haiwan peliharaan anda kehidupannya sendiri!
               description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta
                 Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan
                 seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum"
