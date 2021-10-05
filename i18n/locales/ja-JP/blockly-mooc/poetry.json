@@ -1,3 +1,6 @@
 {
-  "makeBackground": "背景エフェクトを追加しましょう。"
+  "makeBackground": "背景エフェクトを追加しましょう。",
+  "reinfFeedbackMsg": "やった！「進め」をクリックして次のレベルへ行きましょう。",
+  "save": "保存",
+  "shareGame": "あなたのゲームを共有："
 }

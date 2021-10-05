@@ -1,4 +1,7 @@
 {
   "makeBackground": "你需要新增背景效果。",
-  "makeForeground": "你需要新增背景效果。"
+  "makeForeground": "你需要新增背景效果。",
+  "reinfFeedbackMsg": "大功告成！ 點擊“繼續”進入下一個關卡。",
+  "save": "儲存",
+  "shareGame": "分享你的遊戲："
 }
