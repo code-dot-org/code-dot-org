@@ -328,6 +328,32 @@ function checkBackgroundChanged(){
 }
 
 
+//check for unclicked sprites, and show hand with rings
+/**
+ * Checks if the background was changed.
+ *
+ * @return {boolean} Returns true if the background
+ *         was changed and false otherwise.
+ */
+function checkForUnclickedSprites(spriteIds, eventLog){
+  for(var i=0;i<spriteIds.length;i++){
+    var foundClick=false;
+    for(var j=0;j<eventLog.length;j++){
+      if(eventLog[j].includes(i)){
+        foundClick=true;
+        if(validationProps.clickedSprites.indexOf(i)==-1){
+          validationProps.clickedSprites.push(i);
+        }
+      }
+    }
+    if(!foundClick){
+      drawRings(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
+      drawHand(getProp({id: i}, "x"),400-getProp({id: i}, "y"));
+    }
+  }
+}
+
+
 
 
 /*
