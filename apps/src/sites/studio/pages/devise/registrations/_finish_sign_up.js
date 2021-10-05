@@ -48,10 +48,13 @@ let userInOptimizelyVariant = experiments.isEnabled(
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
+
+  // Keep track of user type
+  let userType = $('#user_user_type')[0].value;
   init();
 
   function init() {
-    setUserType(getUserType());
+    setUserType(userType);
     renderSchoolInfo();
     renderParentSignUpSection();
   }
@@ -67,7 +70,7 @@ $(document).ready(() => {
     }
 
     // Trigger Optimizely counter for user type selection
-    optimizelyCountUserTypeSelection(getUserType());
+    optimizelyCountUserTypeSelection(userType);
 
     // Optimizely-related code for teacher opting to share email with regional partner (start)
     optimizelyCountSuccessSignupWithRegPartnerOpt();
@@ -75,7 +78,7 @@ $(document).ready(() => {
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
-    if (getUserType() === 'teacher') {
+    if (userType === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
@@ -101,7 +104,7 @@ $(document).ready(() => {
   $('#user_parent_email_preference_opt_in_required').change(function() {
     // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
     // allows the parent sign up section of the form.
-    if (getUserType() === '') {
+    if (userType === '') {
       $('#user_user_type')
         .val('student')
         .change();
@@ -152,22 +155,19 @@ $(document).ready(() => {
     window['optimizely'].push({type: 'event', eventName: 'successSignUp'});
   }
 
-  function getUserType() {
-    return $('#user_user_type')[0].value;
-  }
-
-  function setUserType(userType) {
-    if (userType) {
-      trackUserType(userType);
+  function setUserType(newUserType) {
+    if (newUserType) {
+      trackUserType(newUserType);
     }
 
-    if (userType === 'teacher') {
+    if (newUserType === 'teacher') {
       switchToTeacher();
     } else {
       // Show student fields by default.
       switchToStudent();
     }
-    styleSelectedUserTypeButton(userType);
+    styleSelectedUserTypeButton(newUserType);
+    userType = newUserType;
   }
 
   function switchToTeacher() {
