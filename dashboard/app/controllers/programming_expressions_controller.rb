@@ -43,11 +43,9 @@ class ProgrammingExpressionsController < ApplicationController
       render :not_found
       return
     end
-    programming_expression.name = programming_expression_params[:name]
-    programming_expression.short_description = programming_expression_params[:short_description]
-    programming_expression.external_documentation = programming_expression_params[:external_documentation]
-    programming_expression.content = programming_expression_params[:content]
-    programming_expression.category = programming_expression_params[:category]
+    programming_expression_params.each do |key, val|
+      programming_expression.send("#{key}=", val)
+    end
     begin
       programming_expression.save! if programming_expression.changed?
       render json: programming_expression.summarize_for_edit.to_json
