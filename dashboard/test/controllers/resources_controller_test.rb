@@ -65,6 +65,7 @@ class ResourcesControllerTest < ActionController::TestCase
       @resource = create :resource, course_version: course_version
       @new_params = {name: 'name', url: 'code.org', course_version_id: course_version.id}
       @update_params = {id: @resource.id, name: @resource.name, url: 'new.url', course_version_id: course_version.id}
+      Resource.any_instance.stubs(:serialize_scripts)
     end
 
     test_user_gets_response_for :create, params: -> {@new_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
