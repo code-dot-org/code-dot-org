@@ -139,6 +139,26 @@ export default function ProgrammingExpressionEditor({
           features={markdownEditorFeatures}
         />
       </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Details" collapsed>
+        <TextareaWithMarkdownPreview
+          markdown={programmingExpression.syntax || ''}
+          label={'Syntax'}
+          handleMarkdownChange={e =>
+            updateProgrammingExpression('syntax', e.target.value)
+          }
+          features={markdownEditorFeatures}
+        />
+        <label>
+          Return value
+          <textarea
+            value={programmingExpression.returnValue}
+            onChange={e =>
+              updateProgrammingExpression('returnValue', e.target.value)
+            }
+            style={styles.textInput}
+          />
+        </label>
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}

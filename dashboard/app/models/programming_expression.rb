@@ -33,6 +33,7 @@ class ProgrammingExpression < ApplicationRecord
     short_description
     external_documentation
     content
+    return_value
   )
 
   def key_format
@@ -186,7 +187,9 @@ class ProgrammingExpression < ApplicationRecord
       programmingEnvironmentName: programming_environment.name,
       shortDescription: short_description || '',
       externalDocumentation: external_documentation,
-      content: content
+      content: content,
+      syntax: syntax,
+      returnValue: return_value
     }
   end
 
