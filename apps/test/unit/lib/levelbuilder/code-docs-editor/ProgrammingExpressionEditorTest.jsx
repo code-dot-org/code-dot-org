@@ -17,7 +17,9 @@ describe('ProgrammingExpressionEditor', () => {
         key: 'block',
         shortDescription: 'This is a short description.',
         externalDocumentation: 'developer.mozilla.org',
-        content: 'This is a longer description of the code.'
+        content: 'This is a longer description of the code.',
+        syntax: 'block()',
+        returnValue: 'none'
       },
       environmentCategories: ['Circuit', 'Variables', 'Canvas']
     };
@@ -62,6 +64,7 @@ describe('ProgrammingExpressionEditor', () => {
         .props().value
     ).to.equal('This is a short description.');
 
+    // Documentation section
     const documentationSection = wrapper.find('CollapsibleEditorSection').at(0);
     expect(
       documentationSection
@@ -81,6 +84,20 @@ describe('ProgrammingExpressionEditor', () => {
         .at(0)
         .props().markdown
     ).to.equal('This is a longer description of the code.');
+
+    const detailsSection = wrapper.find('CollapsibleEditorSection').at(1);
+    expect(
+      detailsSection
+        .find('TextareaWithMarkdownPreview')
+        .at(0)
+        .props().markdown
+    ).to.equal('block()');
+    expect(
+      detailsSection
+        .find('textarea')
+        .at(0)
+        .props().value
+    ).to.equal('none');
   });
 
   it('attempts to save when save is pressed', () => {
@@ -106,7 +123,9 @@ describe('ProgrammingExpressionEditor', () => {
       name: 'Block',
       shortDescription: 'This is a short description.',
       content: 'This is a longer description of the code.',
-      externalDocumentation: 'developer.mozilla.org'
+      externalDocumentation: 'developer.mozilla.org',
+      returnValue: 'none',
+      syntax: 'block()'
     });
   });
 });
