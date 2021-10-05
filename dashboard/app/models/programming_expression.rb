@@ -34,6 +34,7 @@ class ProgrammingExpression < ApplicationRecord
     external_documentation
     content
     return_value
+    tips
   )
 
   def key_format
@@ -189,7 +190,8 @@ class ProgrammingExpression < ApplicationRecord
       externalDocumentation: external_documentation,
       content: content,
       syntax: syntax,
-      returnValue: return_value
+      returnValue: return_value,
+      tips: tips
     }
   end
 

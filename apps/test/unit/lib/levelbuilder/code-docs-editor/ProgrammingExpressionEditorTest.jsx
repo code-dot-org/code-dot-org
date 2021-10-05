@@ -19,7 +19,8 @@ describe('ProgrammingExpressionEditor', () => {
         externalDocumentation: 'developer.mozilla.org',
         content: 'This is a longer description of the code.',
         syntax: 'block()',
-        returnValue: 'none'
+        returnValue: 'none',
+        tips: 'some tips on how to use this block'
       },
       environmentCategories: ['Circuit', 'Variables', 'Canvas']
     };
@@ -98,6 +99,15 @@ describe('ProgrammingExpressionEditor', () => {
         .at(0)
         .props().value
     ).to.equal('none');
+
+    // Tips section
+    const tipsSection = wrapper.find('CollapsibleEditorSection').at(2);
+    expect(
+      tipsSection
+        .find('TextareaWithMarkdownPreview')
+        .at(0)
+        .props().markdown
+    ).to.equal('some tips on how to use this block');
   });
 
   it('attempts to save when save is pressed', () => {
@@ -125,7 +135,8 @@ describe('ProgrammingExpressionEditor', () => {
       content: 'This is a longer description of the code.',
       externalDocumentation: 'developer.mozilla.org',
       returnValue: 'none',
-      syntax: 'block()'
+      syntax: 'block()',
+      tips: 'some tips on how to use this block'
     });
   });
 });
