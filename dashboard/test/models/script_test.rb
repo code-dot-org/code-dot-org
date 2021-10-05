@@ -24,6 +24,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csd_unit = create :csd_script, name: 'csd1'
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
+    @csc_unit = create :csc_script, name: 'csc1'
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -2418,6 +2419,10 @@ class ScriptTest < ActiveSupport::TestCase
       [@csa_unit.name],
       Script.unit_names_by_curriculum_umbrella('CSA')
     )
+    assert_equal(
+      [@csc_unit.name],
+      Script.unit_names_by_curriculum_umbrella('CSC')
+    )
   end
 
   test "under_curriculum_umbrella and helpers" do
@@ -2429,6 +2434,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csp_unit.csp?
     assert @csa_unit.under_curriculum_umbrella?('CSA')
     assert @csa_unit.csa?
+    assert @csc_unit.under_curriculum_umbrella?('CSC')
+    assert @csc_unit.csc?
   end
 
   test "units_with_standards" do
