@@ -10,7 +10,7 @@ module Pd
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
     SECTION_HEADERS = {
-      about_you: 'About You',
+      about_you: 'About You and Your School',
       teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
@@ -24,10 +24,11 @@ module Pd
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
-        alternate_email: 'If you use another email (especially during summer months), enter it here:',
+        alternate_email: 'If you used your school email and can be reached at a better email address in the summer months, please enter it here:',
         phone: 'Home or cell phone',
-        gender_identity: 'Gender identity',
-        race: 'Race or ethnicity',
+        street_address: 'Home street address',
+        city: 'Home city',
+        state: 'Home state',
         zip_code: 'Home zip code',
         school: 'School',
         school_name: 'School name',
@@ -49,6 +50,7 @@ module Pd
         how_heard: 'How did you hear about this program?'
       },
       teaching_background: {
+        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
