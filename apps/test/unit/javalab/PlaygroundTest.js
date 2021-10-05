@@ -34,11 +34,13 @@ describe('Playground', () => {
     starterAssetsApi,
     assetsApi,
     playground,
-    setIsProgramRunning;
+    setIsProgramRunning,
+    clock;
 
   beforeEach(() => {
     stubRedux();
     registerReducers({playground: playgroundRedux});
+    clock = sinon.useFakeTimers();
     onOutputMessage = sinon.stub();
     onNewlineMessage = sinon.stub();
     onJavabuilderMessage = sinon.stub();
@@ -85,6 +87,7 @@ describe('Playground', () => {
   afterEach(() => {
     sinon.restore();
     restoreRedux();
+    clock.restore();
   });
 
   it('sets background image when receiving a SET_BACKGROUND_IMAGE message for a starter asset', () => {
@@ -465,7 +468,7 @@ describe('Playground', () => {
     expect(onJavabuilderMessage).to.have.been.calledOnce;
   });
 
-  it('re-enables click events after timeout', done => {
+  it('re-enables click events after timeout', () => {
     playground.handleSignal({value: PlaygroundSignalType.RUN});
 
     const imageId = 'id';
@@ -477,12 +480,11 @@ describe('Playground', () => {
     // Should not be called again
     expect(onJavabuilderMessage).to.have.not.been.called;
 
-    setTimeout(() => {
-      playground.handleImageClick(imageId);
-      // Should be able to send message after timeout
-      expect(onJavabuilderMessage).to.have.been.calledOnce;
-      done();
-    }, REENABLE_CLICK_EVENTS_TIMEOUT_MS + 1);
+    clock.tick(REENABLE_CLICK_EVENTS_TIMEOUT_MS + 1);
+
+    // Should be able to send message after timeout
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
   });
 
   function verifyOnFileLoadError(filename) {
