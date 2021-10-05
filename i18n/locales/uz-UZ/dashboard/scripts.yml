@@ -23,6 +23,7 @@ uz:
         csp_2021_category_name: Kompyuter fanlari tamoyillari ('21-'22)
         cspexams_category_name: Kompyuter fanlari tamoyillari Amaliy test
         csp17_category_name: Kompyuter fanlari tamoyillari ('17-'18)
+        aiml_2021_category_name: AI / ML
         full_course_category_name: To'liq kurslar
         hoc_category_name: Dasturlash soati
         math_category_name: Matematik
@@ -55,6 +56,8 @@ uz:
               name: Joylarga xavfsiz borish
             Happy Maps:
               name: Xursand Xaritalar
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: Sudrab qo‘yishni o‘rgan'
             'Maze: Debugging':
               name: 'Labirint: Debugging'
             'Maze: Loops':
@@ -193,7 +196,7 @@ uz:
           description_short: Anna va Elza muzning sehri va go‘zalligini o‘rganayapti, ularga koddan foydalanib qo‘shilaylik.
           lessons:
             Artist:
-              name: Rassom
+              name: Anna va Elza bilan kod yozing
           student_description: Anna va Elza muzning sehrlari va go‘zalligini o‘rganayotganda ularga qo‘shilish uchun koddan foydalanamiz. Siz muzda uchish paytida qor parchalari va naqshlarini yaratasiz va qishning ajoyib joyini yaratasiz, so‘ngra do‘stlaringiz bilan baham ko‘rishingiz mumkin!
         course4:
           title: Kurs 4
@@ -328,7 +331,7 @@ uz:
           description_short: Disney Infinity qahramonlari ishtirokidagi hikoya yoki o‘yin yaratish uchun Play Lab-dan foydalaning.
           lessons:
             Infinity:
-              name: Cheksizlik
+              name: Disney Cheksiz O‘yin laboratoriyasi
           student_description: Disney Infinity qahramonlari ishtirokidagi hikoya yoki o‘yin yaratish uchun Play Lab-dan foydalaning.
         algebrademo:
           lessons:
@@ -1574,7 +1577,7 @@ uz:
           description_short: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada o‘z Star Wars o‘yiningizni yarating.
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Star Wars: Building a Galaxy With Code (Blockly)'
           student_description: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada o‘z Star Wars o‘yiningizni yarating.
         mc:
           title: Maynkraft Dasturlash soati
@@ -2561,6 +2564,8 @@ uz:
               name: Events Unplugged
             Fuzz Fiesta:
               name: Fuzz Fiesta
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: Sudrab qo‘yishni o‘rgan'
             Loops:
               name: Sikllar
             Loops Intro:
@@ -2621,6 +2626,8 @@ uz:
               name: Hodisalar
             Events Unplugged:
               name: Events Unplugged
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: Sudrab qo‘yishni o‘rgan'
             Loops:
               name: Sikllar
             Loops Intro:
@@ -3265,7 +3272,6 @@ uz:
           description: Choose your team and make a basketball game
           lessons:
             Bounce:
-              name: Sakrash
               description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
               description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
           student_description: Choose your team and make a basketball game
@@ -3829,7 +3835,6 @@ uz:
           description: Mix and match across sports
           lessons:
             Sports:
-              name: Sport
               description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
               description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
           student_description: Mix and match across sports
@@ -6535,7 +6540,7 @@ uz:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
-              name: Maynkraft Dasturlash soati
+              name: 'Minecraft: Hero''s Journey'
           student_description: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan qaytdi! Minecraft bo‘yicha kod bilan sayohat.
         applab-intro-staging:
           title: Intro to App Lab Staging
@@ -8913,7 +8918,7 @@ uz:
           description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
           lessons:
             Aquatic:
-              name: Aquatic
+              name: 'Minecraft: Suvga sayohat'
           student_description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
         sconyers:
           title: Tracey's Playground
@@ -16893,6 +16898,10 @@ uz:
               description_teacher: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
             lesson-22:
               name: Designing Data Collection
+              description_teacher: |-
+                Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.
+
+                \*\* Kun savoli: \*\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?
           lesson_groups:
             lessonGroup-4:
               display_name: Survey
@@ -16905,6 +16914,10 @@ uz:
               description_teacher: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz" (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
             Survey Planning:
               name: Designing Data Collection
+              description_teacher: |-
+                Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.
+
+                \*\* Kun savoli: \*\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?
           lesson_groups:
             lessonGroup-4:
               display_name: Survey
