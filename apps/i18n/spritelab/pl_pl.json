@@ -49,6 +49,7 @@
   "chatbotPrintWhenAnswered": "W tej chwili drukujesz tekst tylko raz. Upewnij się, że blok „drukuj” znajduje się pod blokiem „kiedy odpowiedziano”. To będzie wyglądało, jakby chatbot czekał na Twoją odpowiedź, przed reakcją.  \n <xml><block type=\"gamelab_whenPromptAnswered\"><value name=\"VAR\"><block type=\"variables_get\" can_disconnect_from_parent=\"false\"><title name=\"VAR\">nazwa</title></block></value></block></xml>",
   "chatbotTitleVariable": "Wygląda na to, że dodałeś ekran tytułowy do swojego programu, ale nie zawierał on tekstu z monitu.",
   "chooseSound": "Musisz wybrać dźwięk z menu rozwijanego.\n<xml><block type=\"gamelab_playSound\"><title name=\"SOUND\">Wybierz</title></block></xml>",
+  "clickAllSprites": "Upewnij się, że kliknąłeś każdego duszka po naciśnięciu przycisku Uruchom.",
   "clickAnySprite": "Upewnij się, że kliknąłeś w Twojego duszka po naciśnięciu klawisza 'Uruchom'.",
   "clickButNoPrint": "Kliknąłeś w duszka, ale żaden tekst nie został wydrukowany. Dodaj blok „drukuj” do zdarzenia „po kliknięciu”.",
   "clickButNoSay": "Kliknąłeś duszka, ale duszek nic nie powiedział. Dodaj blok „powiedz” do zdarzenia „po kliknięciu”. \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Witaj świecie!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMACJA\" >\"domyślnie\"</title></block></value></block></xml>",
