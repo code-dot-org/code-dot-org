@@ -1907,6 +1907,55 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nowy blok!"
+        },
+        "helloworld_animals_location": {
+          "pin": "przypnij"
+        },
+        "helloworld_animals_multi": {
+          "pin": "przypnij"
+        },
+        "helloworld_emoji_location": {
+          "pin": "przypnij"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "przypnij"
+        },
+        "helloworld_food_location": {
+          "pin": "przypnij"
+        },
+        "helloworld_food_multi": {
+          "pin": "przypnij"
+        },
+        "helloworld_retro_location": {
+          "pin": "przypnij"
+        },
+        "helloworld_retro_multi": {
+          "pin": "przypnij"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nowy blok!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Znajdź tutaj bloki kodu."
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nowy blok!",
+          "poetry_foreground": "Nowy blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nowy blok!",
+          "poetry_multiple_sprites": "Nowy blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nowy blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nowy blok!",
+          "poetry_sprite_stops": "Nowy blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nowy blok!",
+          "poetry_remove_sprite": "Nowy blok!"
         }
       }
     }

@@ -176,6 +176,8 @@ pl:
           lessons:
             Play Lab:
               name: Lab Gier
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Utwórz historyjkę lub grę z Play Lab!
         artist:
           title: Artysta
@@ -194,6 +196,8 @@ pl:
           lessons:
             Maze:
               name: Labirynt
+              description_student: Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla młodych uczniów w wieku 4-10 lat, ale można ją dostosować dla starszych uczniów, korzystając z przedstawionych sugestii różnicowania.
+              description_teacher: Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla młodych uczniów w wieku 4-10 lat, ale można ją dostosować dla starszych uczniów, korzystając z przedstawionych sugestii różnicowania.
           student_description: Poznaj podstawy informatyki z postaciami z Angry Birds, Plants vs Zombies i Wiewióra z Epoki lodowcotej!
         frozen:
           title: Koduj z Anną i Elsą
@@ -201,7 +205,9 @@ pl:
           description_short: Użyjmy kodu, by przyłączyć się do Anny i Elsy zachwycających się magią i pięknem lodu.
           lessons:
             Artist:
-              name: Artysta
+              name: Koduj z Anną i Elsą
+              description_student: Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów ze średnich klas, w wieku 10-13 lat, ale można ją dostosować dla młodszych lub starszych uczniów, korzystając z przedstawionych sugestii różnicowania. Uczniowie powinni mieć podstawową wiedzę na temat prostej geometrii i rysowania kątów.
+              description_teacher: Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów ze średnich klas, w wieku 10-13 lat, ale można ją dostosować dla młodszych lub starszych uczniów, korzystając z przedstawionych sugestii różnicowania. Uczniowie powinni mieć podstawową wiedzę na temat prostej geometrii i rysowania kątów.
           student_description: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas jazdy na łyżwach i przepiękną zimową krainę, którą później możesz udostępnić znajomym!
         course4:
           title: Kurs 4
@@ -342,7 +348,9 @@ pl:
           description_short: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           lessons:
             Infinity:
-              name: Nieskończoność
+              name: Disney Infinity Play Lab
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
         algebrademo:
           lessons:
@@ -506,6 +514,8 @@ pl:
           lessons:
             Flappy Code:
               name: Kod Flappiego
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz samouczek dla kodowania Flappiego!
         jigsaw:
           title: Układanka
@@ -618,6 +628,8 @@ pl:
           lessons:
             Text Compression:
               name: Kompresja tekstu
+              description_student: W pewnym momencie osiągamy fizyczną granicę szybkości przesyłania bitów i jeśli chcemy szybciej przesłać dużą ilość informacji, musimy znaleźć sposób na przedstawienie tej samej informacji za pomocą mniejszej liczby bitów – musimy skompresować dane.
+              description_teacher: W pewnym momencie osiągamy fizyczną granicę szybkości przesyłania bitów i jeśli chcemy szybciej przesłać dużą ilość informacji, musimy znaleźć sposób na przedstawienie tej samej informacji za pomocą mniejszej liczby bitów - musimy **skompresować** dane. Podczas tej lekcji uczniowie będą używać widżetu do kompresji tekstu, aby kompresować fragmenty tekstu w języku angielskim, szukając wzorców i zastępując symbolami większe wzorce tekstu.\\r
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -1607,6 +1619,8 @@ pl:
           lessons:
             Ice Age Play Lab:
               name: Epoka Lodowcowa w Play Lab
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej w Play Lab!
         CSPPD3-Unit3:
           title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
@@ -1675,6 +1689,8 @@ pl:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Utwórz historyjkę lub grę z pomoc Gumball Play Lab!
         starwars:
           title: 'Star Wars: Tworzenie Galaktyki za pomocą kodu (Javascript)'
@@ -1683,6 +1699,7 @@ pl:
           lessons:
             Hour of Code 2015:
               name: Godzina Kodowania 2015
+              description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje.
           student_description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
         starwarsblocks:
           title: 'Star Wars: Tworzenie Galaktyki za pomocą kodu (Blockly)'
@@ -1690,7 +1707,8 @@ pl:
           description_short: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
           lessons:
             Hour of Code 2015:
-              name: Godzina Kodowania 2015
+              name: 'Star Wars: Tworzenie Galaktyki za pomocą kodu (Blockly)'
+              description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje.
           student_description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
         mc:
           title: Godzina Kodowania z Minecraft
@@ -1708,6 +1726,7 @@ pl:
             Oceans:
               name: Oceany
               description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.'
+              description_teacher: Po pierwsze, uczniowie klasyfikują przedmioty jako „ryby” lub „nie ryby”, aby spróbować usunąć śmieci z oceanu. Następnie rozszerzają zestaw danych treningowych o inne stworzenia morskie. W drugiej części ćwiczenia uczniowie wybiorą własne etykiety do nałożenia na obrazy losowo generowanych ryb. Te dane treningowe są używane w modelu uczenia maszynowego, który następnie powinien być w stanie samodzielnie oznaczać nowe obrazy.
           student_description: Poznaj sposób, w jaki sztuczna inteligencja i uczenie maszynowe mogą być wykorzystywana do zajmowania się problemami całego świata.
         CSPPD3-Unit3-pt2:
           title: 'Podstawy informatyki: Jednostka 3 Wyzwania zawodowego rozwoju'
@@ -2587,6 +2606,7 @@ pl:
             App Presentation:
               name: Prezentacja aplikacji
         CSDU1-Draft:
+          description_short: Rozwiązywanie problemów
           lessons:
             Exploring Apps:
               name: Badanie aplikacji
@@ -3437,7 +3457,6 @@ pl:
           description: Wybierz swoją drużynę i zrób grę w koszykówkę
           lessons:
             Bounce:
-              name: Odbicie
               description_student: Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!
               description_teacher: Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.
           student_description: Wybierz swoją drużynę i zrób grę w koszykówkę
@@ -3449,6 +3468,8 @@ pl:
           lessons:
             Simple Encryption:
               name: Proste szyfrowanie
+              description_student: Na tej lekcji uczniowie zapoznają się z potrzebą szyfrowania i prostymi technikami łamania tajnych wiadomości. Próbują samodzielnie złamać wiadomość zakodowaną klasycznym szyfrem Cezara, a także losowym szyfrem podstawieniowym. Powinni dobrze poznać ideę, że w dobie potężnych narzędzi obliczeniowych techniki szyfrowania muszą być bardziej wyrafinowane. Najważniejszym aspektem tej lekcji jest zrozumienie, w jaki sposób i dlaczego szyfrowanie odgrywa taką rolę w naszym codziennym życiu w Internecie oraz że stworzenie dobrego szyfrowania nie jest trywialne. Uczniowie będą stawiać pierwsze kroki i napocą się, by zrozumieć czynniki, które należy wziąć pod uwagę przy tworzeniu silnego szyfrowania w obliczu potężnych narzędzi obliczeniowych, które można wykorzystać do jego złamania. Konieczność zachowania tajemnicy podczas przesyłania bitów przez Internet jest ważna dla każdego, kto korzysta z Internetu.
+              description_teacher: Na tej lekcji uczniowie zapoznają się z potrzebą szyfrowania i prostymi technikami łamania tajnych wiadomości. Próbują samodzielnie złamać wiadomość zakodowaną klasycznym szyfrem Cezara, a także losowym szyfrem podstawieniowym. Powinni dobrze poznać ideę, że w dobie potężnych narzędzi obliczeniowych techniki szyfrowania muszą być bardziej wyrafinowane. Najważniejszym aspektem tej lekcji jest zrozumienie, w jaki sposób i dlaczego szyfrowanie odgrywa taką rolę w naszym codziennym życiu w Internecie oraz że stworzenie dobrego szyfrowania nie jest trywialne. Uczniowie będą stawiać pierwsze kroki i napocą się, by zrozumieć czynniki, które należy wziąć pod uwagę przy tworzeniu silnego szyfrowania w obliczu potężnych narzędzi obliczeniowych, które można wykorzystać do jego złamania. Konieczność zachowania tajemnicy podczas przesyłania bitów przez Internet jest ważna dla każdego, kto korzysta z Internetu.
         csd2-2017:
           title: CSD Jednostka 2 - Rozwój sieci ('17- '18)
           description_short: "  Naucz się budować swoją własną stronę internetową w Web Lab."
@@ -4010,7 +4031,6 @@ pl:
           description: Mieszaj i łącz różne dyscypliny sportowe
           lessons:
             Sports:
-              name: Zawody
               description_student: Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!
               description_teacher: Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.
           student_description: Mieszaj i łącz różne dyscypliny sportowe
@@ -6769,7 +6789,7 @@ pl:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Podróż Bohatera. Godzina Kodowania'
             Minecraft Hour of Code:
-              name: Godzina Kodowania z Minecraft
+              name: 'Minecraft: Podróż Bohatera'
           student_description: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu.
         applab-intro-staging:
           title: Wprowadzenie do inscenizacji App Lab
@@ -7400,7 +7420,7 @@ pl:
             'Conditionals: Conditionals with Cards':
               name: 'Wyrażenia warunkowe: Wyrażenia warunkowe z kartami'
             While Loops in Farmer:
-              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" z Farmerem
             Conditional Loops in Maze:
               name: Pętle warunkowe w labiryncie
             Conditionals in Minecraft:
@@ -9149,6 +9169,8 @@ pl:
               name: nowy etap
             Dance Party:
               name: Potańcówka
+              description_student: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
         frozen-2018-test-b:
           title: Nowy skrypt zamrożony
@@ -9161,7 +9183,7 @@ pl:
           description: Minecraft powraca z zupełnie nowymi zajęciami! Wykorzystaj swoją kreatywność i umiejętność rozwiązywania problemów, aby odkrywać i budować podwodne światy za pomocą kodu.
           lessons:
             Aquatic:
-              name: Wodny
+              name: 'Minecraft: Wodna podróż'
           student_description: Minecraft powraca z zupełnie nowymi zajęciami! Wykorzystaj swoją kreatywność i umiejętność rozwiązywania problemów, aby odkrywać i budować podwodne światy za pomocą kodu.
         sconyers:
           title: Plac zabaw Tracey
@@ -9252,6 +9274,8 @@ pl:
           lessons:
             Dance Party - Go Further:
               name: Potańcówka - Przejdź dalej
+              description_student: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
           student_description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursef-2019:
           title: Kurs F (2019)
@@ -9757,7 +9781,7 @@ pl:
             Nested Loops in Frozen:
               name: Płatki śniegu z Anną i Elzą
             While Loops in Farmer:
-              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" z Farmerem
             Until Loops in Maze:
               name: Pętle "dopóki" w labiryncie
             Conditionals with Cards:
@@ -12855,6 +12879,8 @@ pl:
           lessons:
             Dance Party:
               name: Potańcówka
+              description_student: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
         k5-onlinepd-2019:
           description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
@@ -15091,7 +15117,7 @@ pl:
             If/Else with Bee:
               name: '"jeśli/w przeciwnym razie" z Pszczółką'
             While Loops with the Farmer:
-              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" z Farmerem
             Harvesting with Conditionals:
               name: Żniwa z wyrażeniami warunkowymi
             Functions with Harvester:
@@ -16463,7 +16489,7 @@ pl:
             lesson-2:
               name: Przechowywanie i przetwarzanie tekstu
             lesson-3:
-              name: Utwórz Chat-Bot
+              name: 'Mini-projekt: Programy z danymi użytkownika'
             lesson-5:
               name: Grupy duszków
             lesson-6:
@@ -18100,7 +18126,7 @@ pl:
               name: Moc słów
               description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy, które mówi się w Internecie.
             lesson-11:
-              name: Utwórz Chat-Bot
+              name: 'Mini-projekt: Programy z danymi użytkownika'
               description_student: Zastosuj swoje nowe umiejętności ze zmiennymi do jednego z trzech otwartych projektów.
               description_teacher: Uczniowie zastosują swoje nowe umiejętności ze zmiennymi w jednym z trzech otwartych **mini-projektów**. Zapoznają się z przykładowymi programami, utworzą plan własnego projektu i zaprogramują go od podstaw.
           lesson_groups:
@@ -18180,7 +18206,7 @@ pl:
               description_student: Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować pszczółkę tak, aby użyć jej przy zbieraniu miodu i nektaru.
               description_teacher: Do tego momentu uczniowie pisali kod, który realizuje się dokładnie tak samo po każdym uruchomieniu - wiarygodny, ale niezbyt elastyczny. Na tej lekcji Twoja klasa rozpocznie kodować przy pomocy wyrażeń warunkowych, pozwalając im na pisanie kodu, który funkcjonuje inaczej, w zależności od konkretnych warunków, na które napotyka program.
             While Loops with the Farmer:
-              key: Pętle "dopóki" przy pomocy interfejsu Farmer
+              key: Pętle "dopóki" z Farmerem
               name: Pętle "dopóki" z Rolnikiem
               description_student: 'Pętle są przydatne do kodowania. Na tej lekcji nauczysz się o nowym rodzaju pętli: pętle "dopóki"!'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -18398,7 +18424,7 @@ pl:
             blank-space-stories:
               name: Historie pustej przestrzeni
             user-input-programs:
-              name: Utwórz Chat-Bot
+              name: 'Mini-projekt: Programy z danymi użytkownika'
           lesson_groups:
             ramp_up:
               display_name: Wstęp
@@ -20665,6 +20691,7 @@ pl:
           lessons:
             lesson-1:
               name: Godzina kodowania - Etyka AI
+              description_student: Wspólnie badaj etykę AI i stwórz kodeks postępowania, który można udostępnić.
               description_teacher: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI). Następnie każda grupa opracowuje co najmniej jedną zasadę zorientowaną na rozwiązanie, która odnosi się do wybranego obszaru. Zasady te są następnie łączone w ogólnoklasowy zasób „Nasz kodeks etyki sztucznej inteligencji” (np. prezentacja slajdów, dokument lub strona internetowa) dla twórców sztucznej inteligencji i ustawodawców na całym świecie.
           name: ai-ethics
           title: Godzina kodowania - Etyka AI
@@ -20698,5 +20725,16 @@ pl:
           name: poetry-hoc2
           title: Poezja Godziny Kodowania v2
         poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Badanie nastroju
           name: poetry-hoc3
           title: Poezja Godziny Kodowania v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Wyzwanie efektu duszka
+          name: spritelab-effects-challenge
+          title: Wyzwanie efektu duszka
+          description_audience: Średnio zaawansowani/zaawansowani użytkownicy Sprite Lab
+          description_short: Podejmij wyzwanie stworzenia własnego efektu duszka za pomocą Sprite Lab!
