@@ -36,10 +36,6 @@ class CourseScript extends Component {
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
-  state = {
-    selectedSectionName: sectionsForDropdown[this.props.selectedSectionId].name
-  };
-
   onClickHiddenToggle = value => {
     const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
@@ -73,8 +69,6 @@ class CourseScript extends Component {
       sectionsForDropdown,
       showAssignButton
     } = this.props;
-
-    const {selectedSectionName} = this.state;
 
     const isHidden = isScriptHiddenForSection(
       hiddenLessonState,
@@ -121,10 +115,8 @@ class CourseScript extends Component {
             {isAssigned && viewAs === ViewType.Student && <Assigned />}
             {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
               <UnassignButton
-                showUnassignDialog={false}
+                courseName={title}
                 sectionId={selectedSectionId}
-                courseName={name}
-                sectionName={selectedSectionName}
               />
             )}
             {!isAssigned &&
