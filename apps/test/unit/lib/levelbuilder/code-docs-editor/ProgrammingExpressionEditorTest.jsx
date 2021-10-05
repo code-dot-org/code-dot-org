@@ -104,7 +104,9 @@ describe('ProgrammingExpressionEditor', () => {
     console.log(fetchCall.args[1]);
     expect(JSON.parse(fetchCall.args[1].body)).to.eql({
       name: 'Block',
-      shortDescription: 'This is a short description.'
+      shortDescription: 'This is a short description.',
+      content: 'This is a longer description of the code.',
+      externalDocumentation: 'developer.mozilla.org'
     });
   });
 });
