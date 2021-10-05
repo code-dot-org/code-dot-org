@@ -5,6 +5,12 @@
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Rozgrzewka"
         },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Główna aktywność (stara)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Główna aktywność (nowa)"
+        },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zakończenie"
         },
@@ -24,6 +30,9 @@
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "name": "Ogólne wsparcie"
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](<>)."
         },
         "f86ae28c-7f78-4f08-a649-8abf70a55601": {
           "progression_name": "Witamy w mieście potworów"

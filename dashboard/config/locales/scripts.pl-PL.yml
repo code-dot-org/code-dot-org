@@ -30119,12 +30119,54 @@ pl:
                 nowych metod i postępów.
             lesson-7:
               name: Odwracanie elementów
+              description_student: Aby utworzyć efekt obrazu w Teatrze, stosuje się
+                standardowe algorytmy, pisząc klasę `ReversedImage`, która tworzy
+                odwróconą wersję obrazu. Włączasz poprzednie pomysły, których się
+                nauczyłeś i funkcje Teatru, aby animować swój efekt i uwzględniać
+                interakcję z użytkownikiem.
+              description_teacher: Uczniowie nadal stosują standardowe algorytmy do
+                tworzenia efektów obrazu w Teatrze, pisząc klasę `ReversedImage`,
+                która tworzy odwróconą wersję obrazu. Wykorzystują poprzednie pomysły
+                i funkcje Teatru, aby animować ich efekt i uwzględniać interakcję
+                z użytkownikiem.
             lesson-8:
               name: Przesuwanie elementów
+              description_student: Aby utworzyć efekt obrazu w Teatrze, stosuje się
+                standardowe algorytmy, pisząc klasę `ShiftedImage`, która tworzy odwróconą
+                wersję obrazu. Włączasz poprzednie pomysły, których się nauczyłeś
+                i funkcje Teatru, aby animować swój efekt i uwzględniać interakcję
+                z użytkownikiem.
+              description_teacher: Uczniowie nadal stosują standardowe algorytmy do
+                tworzenia efektów obrazu w Teatrze, pisząc klasę `ReversedImage`,
+                która tworzy odwróconą wersję obrazu. Wykorzystują poprzednie pomysły
+                i funkcje Teatru, aby animować ich efekt i uwzględniać interakcję
+                z użytkownikiem.
             lesson-9:
               name: Znajdowanie duplikatów
+              description_student: Wcześniej opracowałeś standardowy algorytm do znajdowania
+                i zastępowania zduplikowanych wartości w tablicy 1D. W tej lekcji
+                zastosujesz ten standardowy algorytm, aby znaleźć zduplikowane obiekty
+                `Deser` w tablicy 2D. Przed napisaniem metody `removeDuplicates()`
+                dokonujesz refaktoryzacji danych food trucka, aby utworzyć tablicę
+                2D obiektów `Deser`, do poprawiy organizacji inwentarza food trucka.
+              description_teacher: Uczniowie wcześniej opracowali standardowy algorytm
+                do znajdowania i zastępowania zduplikowanych wartości w tablicy 1D.
+                W tej lekcji zastosują ten standardowy algorytm, aby znaleźć zduplikowane
+                obiekty `Deser` w tablicy 2D. Przed napisaniem metody `removeDuplicates()`
+                dokonują refaktoryzacji danych food trucka, aby utworzyć tablicę 2D
+                obiektów `Deser`, do poprawy organizacji inwentarza food trucka.
             lesson-10:
               name: Poszukiwanie elementów
+              description_student: Aby utworzyć efekt obrazu w Teatrze, stosuje się
+                standardowe algorytmy, pisząc klasę `SepiaImage`, która stosuje efekt
+                sepii na obrazie. Włączasz poprzednie pomysły, których się nauczyłeś
+                i funkcje Teatru, aby animować swój efekt i uwzględniać interakcję
+                z użytkownikiem.
+              description_teacher: Uczniowie nadal stosują standardowe algorytmy do
+                tworzenia efektów obrazu w teatrze, pisząc klasę „SepiaImage”, która
+                stosuje efekt sepii na obrazie. Uczniowie wykorzystują poprzednie
+                pomysły i funkcje Teatru, aby animować ich efekt i uwzględniać interakcję
+                z użytkownikiem.
             lesson-11:
               name: Projekt Zrównoważonego Sąsiedztwa - Dzień 1
             lesson-12:

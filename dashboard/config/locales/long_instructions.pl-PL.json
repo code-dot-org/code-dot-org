@@ -3094,7 +3094,10 @@
         "helloworld_retro_say": "_Witaj świecie! Jestem duszkiem. Użyj bloku „powiedz”, abym powiedział, co chcesz!_\n\n-   Przeciągnij blok `utwórz nowego duszka` do obszaru roboczego i dołącz go pod `po uruchomieniu`.\n-   Połącz blok `powiedz` _pod_ blokiem `utwórz nowego duszka`.\n-   Upewnij się, że wybierasz ten sam _kostium_ w każdym bloku kodu.\n-   Po zakończeniu naciśnij _\"Uruchom\"_.",
         "helloworld_retro_sizes": "_Nauczmy się zmieniać rozmiar duszków._\n\n-   Użyj nowych bloków z przybornika, aby zmienić rozmiar duszka.\n-   Upewnij się, że wybrałeś rozmiar inny niż 100.\n\n_Wyzwanie:_ Użyj **zdarzeń**, aby zmienić rozmiar duszków, kiedy są klikane.",
         "poetry_hoc_exemplar1": "Przeczytaj ten wiersz.\n\nNastępnie naciśnij Uruchom.\n\nCzy efekty i dźwięki pasowały do nastroju wiersza?",
-        "poetry_hoc_sounds": "Dodanie podkładu muzycznego do programu może zmienić nastrój wiersza podczas jego czytania.\n\n-   Dodaj blok „odtwórz dźwięk” do obszaru roboczego.\n-   Znajdź dźwięk pasujący do nastroju wiersza."
+        "poetry_hoc_sounds": "Dodanie podkładu muzycznego do programu może zmienić nastrój wiersza podczas jego czytania.\n\n-   Dodaj blok „odtwórz dźwięk” do obszaru roboczego.\n-   Znajdź dźwięk pasujący do nastroju wiersza.",
+        "poetry_hoc_exemplar2": "Przeczytaj ten wiersz.\n\nNastępnie naciśnij Uruchom.\n\n_Czy obrazy pasowały do nastroju każdej linijki wiersza?_",
+        "poetry_hoc_freeplay": "Zabawmy się. Zilustruj wiersz, jak chcesz i podziel się tym ze znajomymi!",
+        "poetry_hoc_spriteSizes": "Możesz zmienić **rozmiar** już utworzonego duszka.\n\n-   Zmień rozmiar swojego duszka, używając nowego bloku `ustaw rozmiar`.\n-   Zamień '50' na inny rozmiar, np. '150'."
       }
     }
   }
