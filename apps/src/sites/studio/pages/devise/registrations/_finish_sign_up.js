@@ -49,7 +49,8 @@ let userInOptimizelyVariant = experiments.isEnabled(
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
 
-  // Keep track of user type
+  // Keep track of user type. Uses '$('#user_user_type')[0].value' here in case page is refreshed
+  // (e.g. if the user does not input all required fields and tries to submit the sign-up form).
   let userType = $('#user_user_type')[0].value;
   init();
 
