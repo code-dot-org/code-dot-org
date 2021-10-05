@@ -167,6 +167,12 @@ class ProgrammingExpression < ApplicationRecord
     record.name
   end
 
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    file_path = Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key}.json")
+    File.write(file_path, JSON.pretty_generate(attributes))
+  end
+
   def documentation_path
     "/docs/#{programming_environment.name}/#{key}/"
   end
