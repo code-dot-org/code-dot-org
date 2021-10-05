@@ -109,7 +109,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     student.assign_script(script)
     sign_in student
 
-    assert_cached_queries(10) do
+    assert_cached_queries(6) do
       get "/s/#{script.name}"
       assert_response :success
     end
@@ -117,12 +117,12 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     # Simulate all the ajax requests which the unit overview page sends to the
     # server on page load.
 
-    assert_cached_queries(10) do
+    assert_cached_queries(9) do
       get "/api/user_progress/#{script.name}"
       assert_response :success
     end
 
-    assert_cached_queries(4) do
+    assert_cached_queries(3) do
       get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
       assert_response :success
     end
