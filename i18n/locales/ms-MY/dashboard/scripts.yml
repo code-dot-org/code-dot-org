@@ -94,7 +94,7 @@ ms:
           description_short: Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa mereka meneroka keajaiban dan kecantikan ais.
           lessons:
             Artist:
-              name: Artis
+              name: Kod dengan Anna dan Elsa
           student_description: Mari kita gunakan kod untuk menyertai Anna dan Elsa semasa mereka meneroka keajaiban dan kecantikan ais. Anda akan mencipta emping salji dan corak apabila anda meluncur ais dan membuat alam ajaib musim sejuk yang anda boleh kongsikan dengan rakan anda nanti!
         course4:
           title: Kursus 4
@@ -133,9 +133,6 @@ ms:
         infinity:
           description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
           description_short: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
-          lessons:
-            Infinity:
-              name: Infiniti
           student_description: Gunakan Makmal Mainan untuk mencipta cerita atau permainan yang dibintangi oleh watak Disney Infinity.
         K5PD:
           lessons:
@@ -299,6 +296,9 @@ ms:
         starwars:
           description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
           description_short: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
+          lessons:
+            Hour of Code 2015:
+              name: 'Star Wars: Membina Galaksi Dengan Menggunakan Kod (JavaScript)'
           student_description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
         starwarsblocks:
           description: Pelajari mengatur cara droid dan cipta permainan Star Wars anda sendiri di galaksi yang amat jauh.
@@ -478,7 +478,6 @@ ms:
         basketball:
           lessons:
             Bounce:
-              name: Lantunan
               description_student: Adakah anda pernah berharap agar dapat bermain permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta permainan itu sendiri!
               description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempelajari maksud peristiwa dan cara komputer menggunakannya dalam pengaturcaraan seperti permainan video. Pelajar akan melakukannya melalui teka-teki dengan membuatkan pengaturcaraan memberikan reaksi terhadap peristiwa (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan dan suara yang berbeza.
         hoc-encryption:
@@ -693,7 +692,6 @@ ms:
         sports:
           lessons:
             Sports:
-              name: Sukan
               description_student: Adakah anda pernah berharap agar dapat bermain permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta permainan itu sendiri!
               description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempelajari maksud peristiwa dan cara komputer menggunakannya dalam pengaturcaraan seperti permainan video. Pelajar akan melakukannya melalui teka-teki dengan membuatkan pengaturcaraan memberikan reaksi terhadap peristiwa (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan dan suara yang berbeza.
         2016_sciencePD-phase2b:
@@ -1717,9 +1715,6 @@ ms:
               name: Pengenalan kepada Makmal Aplikasi (13+)
         hero:
           description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod.
-          lessons:
-            Minecraft Hour of Code:
-              name: Jam Kod Minecraft
           student_description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod.
         applab-intro-staging:
           lessons:
@@ -4496,6 +4491,8 @@ ms:
               name: Teks dan Prom
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
+            blank space stories:
+              name: Cerita Ruang Kosong
             End of Course Project:
               name: Akhir Projek Kursus
           lesson_groups:
@@ -4574,6 +4571,7 @@ ms:
               key: 'Pengaturcaraan: Peta Bahagia'
               name: Peta-peta Gembira
               description_student: Tulis arahan untuk membawa Flurb kepada buah.
+              description_teacher: 'Pelajaran **tetapan konteks** ini menyatupadukan pasukan dengan tugas mudah: bawa "flurb" kepada buah. Pelajar akan berlatih menulis arahan yang tepat semasa mereka berusaha menterjemahkan arahan kepada simbol yang disediakan.'
             Sequencing with Scrat:
               key: Penjujukan dengan Scrat
               name: Penjujukan dengan Scrat
@@ -4606,7 +4604,7 @@ ms:
               key: 'Peristiwa: Peristiwa Besar'
               name: Jr. Peristiwa Besar
               description_student: Bergerak dan berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
-              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep acara melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
             Events in Play Lab:
               key: Peristiwa di dalam Makmal Mainan
               description_student: Cipta permainan dan cerita anda sendiri.
@@ -4671,7 +4669,7 @@ ms:
               key: 'Peristiwa: Peristiwa Besar'
               name: Jr. Peristiwa Besar
               description_student: Bergerak atau berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
-              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep acara melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
             Events in Play Lab:
               key: Peristiwa di dalam Makmal Mainan
               description_student: Gunakan peristiwa untuk mencipta cerita atau membuat permainan berinteraktif.
@@ -5062,6 +5060,7 @@ ms:
               description_teacher: Di sini, pelajar akan menggunakan Makmal Peperi untuk mencipta tingkah laku mereka sendiri yang tersuai.
             Virtual Pet:
               key: Haiwan Peliharaan Maya
+              description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.
             End of Course Project:
               key: Akhir Projek Kursus
               name: Akhir Projek Kursus
@@ -5075,11 +5074,15 @@ ms:
             lesson-7:
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             lesson-8:
-              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap acara yang ditetapkan masanya dan input pengguna. '
+              description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
             lesson-9:
+              name: Cerita Ruang Kosong
+              description_student: 'Dalam aktiviti ini, anda akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) untuk bersiap sedia memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan. '
               description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) sebagai konteks untuk memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan.
             lesson-10:
               name: Teks dan Prom
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
             lesson-2:
               name: Kuasa Perkataan
               description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian.
@@ -5188,6 +5191,7 @@ ms:
             Virtual Pet with Sprite Lab:
               key: Haiwan Peliharaan Maya dengan Makmal Peperi
               name: Haiwan Peliharaan Maya dengan Makmal Peperi
+              description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.
             End of Course Project:
               key: Akhir Projek Kursus
               name: Akhir Projek Kursus
@@ -5200,9 +5204,11 @@ ms:
               description_student: Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku.
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
             lesson-3:
-              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap acara yang ditetapkan masanya dan input pengguna. '
+              description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
             lesson-4:
               name: Teks dan Prom
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -5283,8 +5289,12 @@ ms:
               name: Ikan Berenang dengan Makmal Peperi
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
+            blank space stories:
+              name: Cerita Ruang Kosong
             texts-and-prompts:
               name: Teks dan Prom
+            blank-space-stories:
+              name: Cerita Ruang Kosong
           lesson_groups:
             outbreak:
               display_name: Simulasi Wabak
