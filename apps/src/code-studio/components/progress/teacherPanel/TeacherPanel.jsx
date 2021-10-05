@@ -121,9 +121,7 @@ class TeacherPanel extends React.Component {
       viewAs === ViewType.Teacher && currentStudent;
 
     const displayLevelExamples =
-      viewAs === ViewType.Teacher &&
-      sectionData &&
-      sectionData.level_examples?.length > 0;
+      viewAs === ViewType.Teacher && sectionData?.level_examples?.length > 0;
 
     const displayLockInfo =
       hasSections && unitHasLockableLessons && viewAs === ViewType.Teacher;
