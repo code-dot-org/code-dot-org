@@ -1667,12 +1667,15 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
+  def all_sections
+    sections_as_teacher = student? ? [] : sections.to_a
+    sections_as_teacher.concat(sections_as_student).uniq
+  end
+
   # Figures out the unique set of courses assigned to sections that this user
   # is a part of.
   # @return [Array<Course>]
   def section_courses
-    all_sections = sections.to_a.concat(sections_as_student).uniq
-
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
     all_sections.map(&:unit_group).compact.uniq
@@ -1686,7 +1689,6 @@ class User < ApplicationRecord
   # is a part of. Includes default scripts for any assigned courses as well.
   # @return [Array<Script>]
   def section_scripts
-    all_sections = sections.to_a.concat(sections_as_student).uniq
     all_scripts = []
     all_sections.each do |section|
       if section.script.present?

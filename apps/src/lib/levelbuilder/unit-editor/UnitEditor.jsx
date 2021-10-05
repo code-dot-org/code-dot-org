@@ -29,7 +29,7 @@ import Button from '@cdo/apps/templates/Button';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', 'CSC', ''];
 
 /**
  * Component for editing units in unit_groups or stand alone courses
