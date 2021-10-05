@@ -9,8 +9,8 @@ import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils'
 import animationList, {
   setInitialAnimationList
 } from '@cdo/apps/p5lab/redux/animationList';
+import defaultSprites from '@cdo/apps/p5lab/spritelab/defaultSprites.json';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 function renderBlock(element) {
   const name = element.id;
@@ -44,17 +44,14 @@ function renderBlock(element) {
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
+  getStore().dispatch(setInitialAnimationList(defaultSprites));
+  Blockly.assetUrl = assetUrl;
+  Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
+  Blockly.typeHints = true;
+  Blockly.Css.inject(document);
 
-  getDefaultListMetadata().then(defaultSprites => {
-    getStore().dispatch(setInitialAnimationList(defaultSprites));
-    Blockly.assetUrl = assetUrl;
-    Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
-    Blockly.typeHints = true;
-    Blockly.Css.inject(document);
-
-    const divs = document.getElementsByClassName('blockly-container');
-    for (let i = 0; i < divs.length; i++) {
-      renderBlock(divs[i]);
-    }
-  });
+  const divs = document.getElementsByClassName('blockly-container');
+  for (let i = 0; i < divs.length; i++) {
+    renderBlock(divs[i]);
+  }
 });
