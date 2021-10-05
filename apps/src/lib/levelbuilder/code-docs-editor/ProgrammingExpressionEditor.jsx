@@ -83,7 +83,7 @@ export default function ProgrammingExpressionEditor({
       </label>
       <TextareaWithMarkdownPreview
         markdown={programmingExpression.shortDescription}
-        label={'Short Description'}
+        label="Short Description"
         handleMarkdownChange={e =>
           updateProgrammingExpression('shortDescription', e.target.value)
         }

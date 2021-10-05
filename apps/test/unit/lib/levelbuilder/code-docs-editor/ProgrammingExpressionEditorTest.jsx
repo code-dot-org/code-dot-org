@@ -25,7 +25,7 @@ describe('ProgrammingExpressionEditor', () => {
     fetchSpy.restore();
   });
 
-  it('renders default props', () => {
+  it('displays initial values in input fields', () => {
     const wrapper = shallow(<ProgrammingExpressionEditor {...defaultProps} />);
     expect(wrapper.contains('Editing block')).to.be.true;
 
@@ -76,5 +76,10 @@ describe('ProgrammingExpressionEditor', () => {
     expect(fetchSpy).to.be.called.once;
     const fetchCall = fetchSpy.getCall(0);
     expect(fetchCall.args[0]).to.equal('/programming_expressions/1');
+    console.log(fetchCall.args[1]);
+    expect(JSON.parse(fetchCall.args[1].body)).to.eql({
+      name: 'Block',
+      shortDescription: 'This is a short description.'
+    });
   });
 });
