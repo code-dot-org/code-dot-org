@@ -24,10 +24,6 @@ en-GB:
           lessons:
             Variables:
               name: Variables
-        infinity:
-          lessons:
-            Infinity:
-              name: Infinity
         20-hour:
           description_audience: Ages 10-18
           lessons:
