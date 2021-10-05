@@ -57,9 +57,9 @@ describe('ProgrammingExpressionEditor', () => {
     // short description
     expect(
       wrapper
-        .find('TextareaWithMarkdownPreview')
+        .find('textarea')
         .at(0)
-        .props().markdown
+        .props().value
     ).to.equal('This is a short description.');
 
     const documentationSection = wrapper.find('CollapsibleEditorSection').at(0);

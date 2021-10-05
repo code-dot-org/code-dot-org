@@ -87,14 +87,16 @@ export default function ProgrammingExpressionEditor({
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
       </label>
-      <TextareaWithMarkdownPreview
-        markdown={programmingExpression.shortDescription}
-        label="Short Description"
-        handleMarkdownChange={e =>
-          updateProgrammingExpression('shortDescription', e.target.value)
-        }
-        features={markdownEditorFeatures}
-      />
+      <label>
+        Short Description
+        <textarea
+          value={programmingExpression.shortDescription}
+          onChange={e =>
+            updateProgrammingExpression('shortDescription', e.target.value)
+          }
+          style={styles.textInput}
+        />
+      </label>
       <CollapsibleEditorSection title="Documentation" collapsed>
         <label>
           External Documentation
