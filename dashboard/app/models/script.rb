@@ -834,6 +834,10 @@ class Script < ApplicationRecord
     under_curriculum_umbrella?('CSA')
   end
 
+  def csc?
+    under_curriculum_umbrella?('CSC')
+  end
+
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
   end
