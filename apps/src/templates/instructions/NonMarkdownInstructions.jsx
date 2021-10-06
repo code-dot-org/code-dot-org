@@ -18,7 +18,6 @@ var styles = {
 var NonMarkdownInstructions = function(props) {
   return (
     <div style={styles.main}>
-      <p className="dialog-title">{props.puzzleTitle}</p>
       {props.shortInstructions && (
         <div className="instructions">
           <SafeMarkdown markdown={props.shortInstructions} />
@@ -34,7 +33,6 @@ var NonMarkdownInstructions = function(props) {
 };
 
 NonMarkdownInstructions.propTypes = {
-  puzzleTitle: PropTypes.string.isRequired,
   shortInstructions: PropTypes.string,
   instructions2: PropTypes.string
 };
