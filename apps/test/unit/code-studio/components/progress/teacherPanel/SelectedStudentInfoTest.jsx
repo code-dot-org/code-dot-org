@@ -9,7 +9,7 @@ const LEVEL_WITH_PROGRESS = {
   assessment: null,
   contained: false,
   paired: null,
-  partners: null,
+  partnerNames: null,
   partnerCount: null,
   isConceptLevel: false,
   levelNumber: 4,
@@ -73,7 +73,7 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      partners: ['Student 1'],
+      partnerNames: ['Student 1'],
       partnerCount: 1
     };
     const wrapper = setUp({levelWithProgress});
@@ -92,7 +92,7 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      partners: ['Student 1'],
+      partnerNames: ['Student 1'],
       partnerCount: 1
     };
     const wrapper = setUp({levelWithProgress});
@@ -108,7 +108,7 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      partners: ['Student 1', 'Student 2'],
+      partnerNames: ['Student 1', 'Student 2'],
       partnerCount: 2
     };
     const wrapper = setUp({levelWithProgress});
@@ -120,12 +120,12 @@ describe('SelectedStudentInfo', () => {
     expect(tooltip.prop('text')).to.equal('Student 1, Student 2');
   });
 
-  it('displays partner info if paired with 1 anonymous partner', () => {
+  it('displays partner info if paired with 1 unknown partner', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      partners: [],
+      partnerNames: [],
       partnerCount: 1
     };
     const wrapper = setUp({levelWithProgress});
@@ -136,12 +136,12 @@ describe('SelectedStudentInfo', () => {
     expect(tooltip).to.have.lengthOf(0);
   });
 
-  it('displays partner info if paired with 1 known partner and 1 anonymous partner', () => {
+  it('displays partner info if paired with 1 known partner and 1 unknown partner', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      partners: ['Student 1'],
+      partnerNames: ['Student 1'],
       partnerCount: 2
     };
     const wrapper = setUp({levelWithProgress});
@@ -153,12 +153,12 @@ describe('SelectedStudentInfo', () => {
     expect(tooltip.prop('text')).to.equal('Student 1 + 1 other student(s)');
   });
 
-  it('displays partner info if paired with 2 known partners and 2 anonymous partners', () => {
+  it('displays partner info if paired with 2 known partners and 2 unknown partners', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       status: LevelStatus.perfect,
       paired: true,
-      partners: ['Student 1', 'Student 2'],
+      partnerNames: ['Student 1', 'Student 2'],
       partnerCount: 4
     };
     const wrapper = setUp({levelWithProgress});

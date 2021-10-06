@@ -102,9 +102,9 @@ class UserLevelTest < ActiveSupport::TestCase
   end
 
   test "partners for paired and unpaired progress" do
-    assert_nil @unpaired_user_level.partners
-    assert_equal [@navigator.name], @driver_user_level.partners
-    assert_equal [@driver.name], @navigator_user_level.partners
+    assert_nil @unpaired_user_level.partner_names
+    assert_equal [@navigator.name], @driver_user_level.partner_names
+    assert_equal [@driver.name], @navigator_user_level.partner_names
   end
 
   test "partners for pairing group with 3 students" do
@@ -113,9 +113,9 @@ class UserLevelTest < ActiveSupport::TestCase
     create :paired_user_level,
       driver_user_level: @driver_user_level, navigator_user_level: navigator2_user_level
 
-    assert_equal [navigator2.name, @navigator.name], @driver_user_level.partners
-    assert_equal [@driver.name, navigator2.name], @navigator_user_level.partners
-    assert_equal [@driver.name, @navigator.name], navigator2_user_level.partners
+    assert_equal [navigator2.name, @navigator.name], @driver_user_level.partner_names
+    assert_equal [@driver.name, navigator2.name], @navigator_user_level.partner_names
+    assert_equal [@driver.name, @navigator.name], navigator2_user_level.partner_names
   end
 
   test "partner_count for paired and unpaired progress" do
@@ -128,7 +128,7 @@ class UserLevelTest < ActiveSupport::TestCase
     driver_user_level, navigator_user_level = setup_pairing_group(2)
     driver_user_level.destroy
 
-    assert_equal [], navigator_user_level.partners
+    assert_equal [], navigator_user_level.partner_names
     assert_equal 1, navigator_user_level.partner_count
   end
 
@@ -136,7 +136,7 @@ class UserLevelTest < ActiveSupport::TestCase
     driver_user_level, navigator_user_level = setup_pairing_group(2)
     navigator_user_level.destroy
 
-    assert_equal [], driver_user_level.partners
+    assert_equal [], driver_user_level.partner_names
     assert_equal 1, driver_user_level.partner_count
   end
 
@@ -144,9 +144,9 @@ class UserLevelTest < ActiveSupport::TestCase
     driver_user_level, navigator_user_level, navigator2_user_level = setup_pairing_group(3)
     driver_user_level.destroy
 
-    assert_equal [@navigator2.name], navigator_user_level.partners
+    assert_equal [@navigator2.name], navigator_user_level.partner_names
     assert_equal 2, navigator_user_level.partner_count
-    assert_equal [@navigator.name], navigator2_user_level.partners
+    assert_equal [@navigator.name], navigator2_user_level.partner_names
     assert_equal 2, navigator2_user_level.partner_count
   end
 
@@ -154,9 +154,9 @@ class UserLevelTest < ActiveSupport::TestCase
     driver_user_level, navigator_user_level, navigator2_user_level = setup_pairing_group(3)
     navigator_user_level.destroy
 
-    assert_equal [@navigator2.name], driver_user_level.partners
+    assert_equal [@navigator2.name], driver_user_level.partner_names
     assert_equal 2, driver_user_level.partner_count
-    assert_equal [@driver.name], navigator2_user_level.partners
+    assert_equal [@driver.name], navigator2_user_level.partner_names
     assert_equal 2, navigator2_user_level.partner_count
   end
 

@@ -28,7 +28,7 @@ export const levelWithProgress = PropTypes.shape({
   contained: PropTypes.bool,
   submitLevel: PropTypes.bool,
   paired: PropTypes.bool,
-  partners: PropTypes.arrayOf(PropTypes.string),
+  partnerNames: PropTypes.arrayOf(PropTypes.string),
   partnerCount: PropTypes.number,
   isConceptLevel: PropTypes.bool,
   userId: PropTypes.number.isRequired,

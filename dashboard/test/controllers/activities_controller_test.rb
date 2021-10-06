@@ -1042,7 +1042,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 100, existing_driver_user_level.best_result
     assert_equal 20, existing_driver_user_level.time_spent
 
-    assert_equal [pairing.name], existing_driver_user_level.partners
+    assert_equal [pairing.name], existing_driver_user_level.partner_names
   end
 
   test "milestone with pairings stops updating levels when pairing is disabled" do
@@ -1064,7 +1064,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     existing_driver_user_level.reload
     assert_equal 100, existing_driver_user_level.best_result
 
-    assert_nil existing_driver_user_level.partners
+    assert_nil existing_driver_user_level.partner_names
   end
 
   test "milestone fails to update locked/readonly level" do

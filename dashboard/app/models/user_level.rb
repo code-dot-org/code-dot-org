@@ -126,7 +126,7 @@ class UserLevel < ApplicationRecord
   # if this UserLevel represents progress completed when in a pairing group.
   # Partners whose user account or progress was deleted are omitted from the
   # returned list.
-  def partners
+  def partner_names
     return nil unless latest_paired_user_level
 
     if navigator?
