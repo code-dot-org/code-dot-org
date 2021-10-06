@@ -57,13 +57,13 @@
     "video_key": "hello_world_congrats",
     "preload_asset_list": null
   },
+  "user_id": 833,
   "game_id": 64,
-  "published": true,
   "created_at": "2021-09-13T20:57:43.000Z",
   "level_num": "custom",
-  "user_id": 833,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-13T20:57:43.018+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_freeplay\\\"\"],\"cloned_from\":\"helloworld_emoji_freeplay\"},{\"changed_at\":\"2021-09-13 20:57:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:47:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 21:05:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-30 13:48:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-30 15:02:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-30 15:30:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-04 13:16:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:17:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:17:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:18:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:25:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:25:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_modal_function_editor\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:29:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:31:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:38:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-13T20:57:43.018+00:00\",\"changed\":[\"cloned from \\\"helloworld_emoji_freeplay\\\"\"],\"cloned_from\":\"helloworld_emoji_freeplay\"},{\"changed_at\":\"2021-09-13 20:57:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:47:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 21:05:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-30 13:48:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-30 15:02:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-30 15:30:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-04 13:16:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:17:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:17:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:18:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:25:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:25:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_modal_function_editor\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:29:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:31:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-04 13:38:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-06 13:55:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-06 16:21:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -145,14 +145,14 @@
           <block type="gamelab_spriteSay">
             <title name="SPEECH">Hello, world!</title>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_spriteSayTime">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -167,7 +167,7 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_setProp">
+          <block type="gamelab_setProp" can_disconnect_from_parent="false">
             <title name="PROPERTY">"scale"</title>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
@@ -183,7 +183,7 @@
           <block type="gamelab_changePropBy">
             <title name="PROPERTY">"scale"</title>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -194,16 +194,16 @@
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <title name="ANIMATION">"retrocreature_18"</title>
+            <title name="ANIMATION">"retrocreature_03"</title>
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_jumpTo">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -213,7 +213,7 @@
           </block>
           <block type="gamelab_setTint">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -225,7 +225,7 @@
           </block>
           <block type="gamelab_setTint">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -235,7 +235,7 @@
           </block>
           <block type="gamelab_removeTint">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -243,14 +243,14 @@
           <block type="gamelab_mirrorSprite">
             <title name="DIRECTION">"right"</title>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_destroy">
             <value name="THIS">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -258,7 +258,7 @@
           <block type="gamelab_moveInDirection">
             <title name="DIRECTION">"North"</title>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -271,7 +271,7 @@
           <block type="gamelab_turn">
             <title name="DIRECTION">"right"</title>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -283,7 +283,7 @@
           </block>
           <block type="gamelab_moveForward">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -316,7 +316,7 @@
           <block type="gamelab_spriteClicked">
             <title name="CONDITION">"when"</title>
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
@@ -324,13 +324,13 @@
           <block type="gamelab_checkTouching">
             <title name="CONDITION">"when"</title>
             <value name="SPRITE1">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
             <value name="SPRITE2">
-              <block type="gamelab_allSpritesWithAnimation">
-                <title name="ANIMATION">"retrocreature_18"</title>
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <title name="ANIMATION">"retrocreature_03"</title>
               </block>
             </value>
           </block>
@@ -342,28 +342,29 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_whenKey">
+          <block type="gamelab_keyPressed">
+            <title name="CONDITION">"when"</title>
             <title name="KEY">"up"</title>
           </block>
         </category>
         <category name="Behaviors">
           <block type="gamelab_addBehaviorSimple">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_removeBehaviorSimple">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_removeAllBehaviors">
             <value name="SPRITE">
-              <block type="gamelab_allSpritesWithAnimation">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
                 <title name="ANIMATION">"retrocreature_18"</title>
               </block>
             </value>
