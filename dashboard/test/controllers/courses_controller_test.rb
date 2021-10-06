@@ -39,15 +39,15 @@ class CoursesControllerTest < ActionController::TestCase
       @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedConstants::PUBLISHED_STATE.beta
     end
 
-    test_user_gets_response_for :index, response: :success, user: :teacher, queries: 8
+    test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
 
-    test_user_gets_response_for :index, response: :success, user: :admin, queries: 8
+    test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
 
     test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 13
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
 
-    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 7
+    test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
 
   class CachedQueryCounts < ActionController::TestCase

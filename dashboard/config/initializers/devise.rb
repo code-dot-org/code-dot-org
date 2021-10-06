@@ -359,12 +359,6 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: user.get_active_experiment_names.to_json, domain: :all}
-
-    # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
-    # specific banner content.
-    user.marketing_segment_data&.compact&.each do |segment_name, value|
-      auth.cookies[environment_specific_cookie_name("_teacher_#{segment_name}")] = {value: value, domain: :all}
-    end
   end
 
   Warden::Manager.before_logout do |_, auth|
@@ -374,6 +368,9 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
 
+    # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
+    # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user
+    # to minimize the number of times we perfom the queries for the cookie values.
     User.marketing_segment_data_keys.each do |key|
       auth.cookies[environment_specific_cookie_name("_teacher_#{key}")] = {value: "", expires: Time.at(0), domain: :all}
     end
