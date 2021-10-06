@@ -142,7 +142,7 @@ class ProjectsController < ApplicationController
     },
     javalab: {
       name: 'New Java Lab Project',
-      levelbuilder_required: true
+      login_required: true
     }
   }.with_indifferent_access.freeze
 

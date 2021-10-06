@@ -30,6 +30,11 @@ class Poetry < GamelabJr
     default_poem
   )
 
+  # Poetry levels use the same shared_functions as GamelabJr
+  def shared_function_type
+    GamelabJr
+  end
+
   def self.skins
     ['gamelab']
   end

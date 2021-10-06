@@ -9,10 +9,11 @@ require 'json'
 require 'ostruct'
 require 'date'
 require_relative '../../../shared/middleware/helpers/firebase_helper'
+require 'honeybadger/ruby'
 
 WeatherForecastOffice = Struct.new(:city, :state, :zip)
 
-API_KEY = '6e86f0c363cd54b5645603030b2f0f76'
+API_KEY = CDO.open_weather_api_key
 NUM_DAYS = 5
 
 def cardinal_dir_from_degrees(degrees)
@@ -157,7 +158,13 @@ def get_weather_data
 
     url = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=#{office.zip},us&cnt=#{NUM_DAYS}&units=imperial&appid=#{API_KEY}"
     response = Net::HTTP.get_response(URI(url))
-    next unless response.code == '200'
+    if response.code != '200'
+      Honeybadger.notify(
+        error: response.message,
+        error_message: "Failed to retrieve data from Open Weather API for use with App Labs datasets.",
+      )
+      next
+    end
 
     parsed_response = JSON.parse(response.body)
     measurements = parsed_response['list']
@@ -202,6 +209,12 @@ end
 def main
   fb = FirebaseHelper.new('shared')
   records, columns = get_weather_data
+  if records.empty?
+    Honeybadger.notify(
+      error_message: "No data returned from OpenWeather API. No records will be written to firebase."
+      )
+    return
+  end
   fb.upload_live_table('Daily Weather', records, columns)
 end
 
