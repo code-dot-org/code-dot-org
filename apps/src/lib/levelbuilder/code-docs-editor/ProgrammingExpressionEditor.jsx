@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
@@ -100,8 +101,9 @@ export default function ProgrammingExpressionEditor({
       <CollapsibleEditorSection title="Documentation" collapsed>
         <label>
           External Documentation
+          <HelpTip>Link to external documentation</HelpTip>
           <input
-            value={programmingExpression.externalDocumentation || ''}
+            value={programmingExpression.externalDocumentation}
             onChange={e =>
               updateProgrammingExpression(
                 'externalDocumentation',
@@ -129,9 +131,12 @@ export default function ProgrammingExpressionEditor({
               </option>
             ))}
           </select>
+          <HelpTip>
+            Chose a category for the code documentation to fall beneath
+          </HelpTip>
         </label>
         <TextareaWithMarkdownPreview
-          markdown={programmingExpression.content || ''}
+          markdown={programmingExpression.content}
           label={'Content'}
           handleMarkdownChange={e =>
             updateProgrammingExpression('content', e.target.value)
@@ -141,7 +146,7 @@ export default function ProgrammingExpressionEditor({
       </CollapsibleEditorSection>
       <CollapsibleEditorSection title="Details" collapsed>
         <TextareaWithMarkdownPreview
-          markdown={programmingExpression.syntax || ''}
+          markdown={programmingExpression.syntax}
           label={'Syntax'}
           handleMarkdownChange={e =>
             updateProgrammingExpression('syntax', e.target.value)
@@ -150,6 +155,9 @@ export default function ProgrammingExpressionEditor({
         />
         <label>
           Return value
+          <HelpTip>
+            Description of return value or alternate functionality
+          </HelpTip>
           <textarea
             value={programmingExpression.returnValue}
             onChange={e =>
@@ -161,12 +169,13 @@ export default function ProgrammingExpressionEditor({
       </CollapsibleEditorSection>
       <CollapsibleEditorSection title="Tips" collapsed>
         <TextareaWithMarkdownPreview
-          markdown={programmingExpression.tips || ''}
+          markdown={programmingExpression.tips}
           label={'Tips'}
           handleMarkdownChange={e =>
             updateProgrammingExpression('tips', e.target.value)
           }
           features={markdownEditorFeatures}
+          helpTip="List of tips for using this code documentation"
         />
       </CollapsibleEditorSection>
       <SaveBar
