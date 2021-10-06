@@ -1242,21 +1242,32 @@ en:
             "'sound://category_swish/quick_swing.mp3'": swing
             "'sound://category_nature/summer_night_loop.mp3'": summer night
             "'sound://category_background/ocean_waves.mp3'": ocean waves
-            "'sound://category_animals/dolphin.mp3'": dolphin clicks
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": beach ripple
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bubble
+            "'sound://category_animals/bear.mp3'": bear
+            "'sound://category_animals/cat.mp3'": cat
+            "'sound://category_animals/cow.mp3'": cow
+            "'sound://category_animals/pig.mp3'": pig
+            "'sound://category_animals/sheep.mp3'": sheep
+            "'sound://category_animals/goat.mp3'": goat
+            "'sound://category_animals/chicken.mp3'": chicken
+            "'sound://category_animals/rooster.mp3'": rooster
+            "'sound://category_animals/elephant.mp3'": elephant
+            "'sound://category_animals/dolphin.mp3'": dolphin
             "'sound://category_nature/thunderstorm_1.mp3'": thunderstorm
-            "'sound://category_animals/chick.mp3'": bird tweet
-            "'sound://category_animals/dog.mp3'": dog bark
-            "'sound://category_animals/tiger.mp3'": tiger roar
+            "'sound://category_animals/chick.mp3'": chick
+            "'sound://category_animals/dog.mp3'": dog
+            "'sound://category_animals/tiger.mp3'": tiger
             "'sound://category_collect/trill_stings.mp3'": trill
             "'sound://category_instrumental/harpe_pluck_1.mp3'": harp
-            "'sound://category_tap/vibrant_positive_tap_1.mp3'": bright
-            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": mystical
-            "'sound://category_transition/trippy_robotic_transition.mp3'": robot voice
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tap
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonal hit
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robotic transition
             "'sound://category_transition/star_dust_particle_10.mp3'": star dust
-            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": space ship
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": alien ship
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magic spell
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
-            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": sci fi
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": select
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": quirky bass
             "'sound://category_digital/jump_7.mp3'": jump
       gamelab_playSpeech:
         text: play speech [SOUND][0]
@@ -1911,6 +1922,8 @@ en:
         text: monsters stop moving
       Poetry_addLine:
         text: add line [LINE][0]
+      Poetry_animatePoem:
+        text: animate poem
       Poetry_destroy:
         text: remove [ANIMATION_NAME][0]
       Poetry_hidePoem:
@@ -1923,6 +1936,8 @@ en:
             '"pop"': pop
             '"rain"': rain
             '"zigzag"': zig-zag
+      Poetry_makeNewSpriteAnon:
+        text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       Poetry_makeNumSprites:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites
       Poetry_playSound:
@@ -1945,20 +1960,24 @@ en:
         text: random word
       Poetry_setAuthor:
         text: set poem author [AUTHOR][0]
+      Poetry_setBackground:
+        text: set background color [COLOR][0]
       Poetry_setBackgroundEffect:
         text: set background effect [EFFECT][0] [PALETTE][1]
         options:
           EFFECT:
-            '"colors"': Colors
-            '"squiggles"': Squiggles
-            '"space"': Space
-            '"stars"': Stars
-            '"darkCircles"': Dark Circles
-            '"fadeColors"': Color Fade
+            '"colors"': Shifting
+            '"squiggles"': Wavy
+            '"space"': Hyper Speed
+            '"stars"': Starry
+            '"darkCircles"': Fading
+            '"fadeColors"': Frosted
             '"blooming"': Blooming
-            '"ripples"': Ripples
-            '"clouds"': Clouds
+            '"ripples"': Rippling
+            '"clouds"': Cloudy
           PALETTE:
+            '"rainbow"': Rainbow
+            '"grayscale"': Grays
             '"sky"': Sky
             '"ocean"': Ocean
             '"sunrise"': Sunrise
@@ -1967,8 +1986,6 @@ en:
             '"summer"': Summer
             '"autumn"': Autumn
             '"winter"': Winter
-            '"grayscale"': Black & White
-            '"rainbow"': Rainbow
             '"roses"': Roses
       Poetry_setBackgroundImageAs:
         text: set background to [IMG][0]

@@ -2886,7 +2886,14 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "točenie vpravo"
+          "spinning right": "točenie vpravo",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -2963,7 +2970,14 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "točenie vpravo"
+          "spinning right": "točenie vpravo",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -3020,7 +3034,14 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "točenie vpravo"
+          "spinning right": "točenie vpravo",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -3097,7 +3118,14 @@
           "moving north": "posúvať sa na sever",
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
-          "spinning right": "točenie vpravo"
+          "spinning right": "točenie vpravo",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
         }
       }
     }

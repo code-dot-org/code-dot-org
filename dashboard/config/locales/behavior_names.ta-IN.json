@@ -164,6 +164,18 @@
         },
         "helloworld_retro_behaviors": {
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
         }
       }
     }

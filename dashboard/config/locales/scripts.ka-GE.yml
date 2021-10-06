@@ -223,7 +223,19 @@ ka:
             აღმოჩენაში.
           lessons:
             Artist:
-              name: მხატვარი
+              name: წერეთ კოდი ანასა და ელზასთან ერთად
+              description_student: ამ გაკვეთილში, მოსწავლეები გაიცნობენ პროგრამირებასა
+                და კომპიუტერულ მეცნიერებას უსაფრთხო და მეგობრულ გარემოში. ეს გაკვეთილი
+                შექმნილია 10-13 წლის ასაკის მოსწავლეებისთვის, თუმცა უფრო დაბალი, ან
+                მაღალი ასაკის მოსწავლეებსაც შეუძლიათ გამოიყენონ დიფერენციაციას რჩევების
+                გათვალისწინებით. მოსწავლეებს უნდა ჰქონდეთ ბაზისური წარმოდგენა მარტივი
+                გეომეტრიული ფიგურებისა და კუთხეების ხატვის შესახებ.
+              description_teacher: ამ გაკვეთილში, მოსწავლეები გაიცნობენ პროგრამირებასა
+                და კომპიუტერულ მეცნიერებას უსაფრთხო და მეგობრულ გარემოში. ეს გაკვეთილი
+                შექმნილია 10-13 წლის ასაკის მოსწავლეებისთვის, თუმცა უფრო დაბალი, ან
+                მაღალი ასაკის მოსწავლეებსაც შეუძლიათ გამოიყენონ დიფერენციაციას რჩევების
+                გათვალისწინებით. მოსწავლეებს უნდა ჰქონდეთ ბაზისური წარმოდგენა მარტივი
+                გეომეტრიული ფიგურებისა და კუთხეების ხატვის შესახებ.
           student_description: გამოვიყენოთ კოდი, რათა შევუერთდეთ ანასა და ელზას, რომლებიც
             მაგიისა და ყინულის მშვენიერებას იკვლევენ. თქვენ შექმნით ფიფქებსა და ფიგურებს,
             ისრიალებთ ციგურებზე და შექმნით ზამთრის საოცნებო სამყაროს, რომლის მეგობრებთან
@@ -379,7 +391,7 @@ ka:
             დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
           lessons:
             Infinity:
-              name: უსასრულობა
+              name: დისნეის თამაშების ლაბორატორია Infinity
           student_description: გამოიყენეთ თამაშების ლაბორატორია ისტორიის შესაქმნელად
             დისნეის Infinity-ს პერსონაჟების მონაწილეობით.
         algebrademo:
@@ -1309,9 +1321,6 @@ ka:
             ომების თამაში.
           description_short: ისწავლეთ დროიდების დაპროგრამება და შექმენით საკუთარი
             ვარსკვლავური ომების თამაში.
-          lessons:
-            Hour of Code 2015:
-              name: კოდის ერთი საათი 2015
           student_description: ისწავლეთ დროიდების დაპროგრამება და შექმენით საკუთარი
             ვარსკვლავური ომების თამაში.
         mc:
@@ -2414,7 +2423,6 @@ ka:
           description: აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში
           lessons:
             Bounce:
-              name: Bounce
               description_teacher: 'ამ ონლაინ აქტივობისას, მოსწავლეები ისწავლიან რას
                 წარმოადგენენ მოვლენები და როგორ იყენებს მათ კომპიუტერი ვიდეო თამაშების
                 მსგავს პროგრამებში. მოსწავლეები თავსატეხებზე მუშაობისას პროგრამებს
@@ -2845,7 +2853,6 @@ ka:
           description: შეაერთეთ სხვადასხვა სპორტული თამაშები
           lessons:
             Sports:
-              name: სპორტი
               description_teacher: 'ამ ონლაინ აქტივობისას, მოსწავლეები ისწავლიან რას
                 წარმოადგენენ მოვლენები და როგორ იყენებს მათ კომპიუტერი ვიდეო თამაშების
                 მსგავს პროგრამებში. მოსწავლეები თავსატეხებზე მუშაობისას პროგრამებს
@@ -3479,6 +3486,8 @@ ka:
               name: B8 BB8
             C9 Artist Loops:
               name: C9 მხატვრის ციკლები
+            D6 Frozen Artist:
+              name: D6 გაყინული მხატვარი
             F5 Minecraft:
               name: F5 Minecraft
             Programming with BB-8:
@@ -3858,6 +3867,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             Nested Loops:
               name: ჩასმული ციკლები
             Functions in Harvester:
@@ -3949,6 +3960,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
         csdnovice:
           lessons:
             Tuesday:
@@ -4319,6 +4332,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops:
               name: ჩასმული ციკლები
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             'Algorithms: Dice Race':
               name: 'ალგორითმები: კამათლის შეჯიბრი'
             Conditionals:
@@ -4415,6 +4430,8 @@ ka:
               name: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
             Loops in Artist:
               name: ციკლები მხატვარში
+            Nested Loops Project in Frozen:
+              name: ჩადგმული ციკლების პროექტი გაყინულში
             'How it Works: The Internet':
               name: 'როგორ მუშაობს ეს: ინტერნეტი'
             'Common Sense Education: Screen Out the Mean':
@@ -4503,6 +4520,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             'Algorithms: Dice Race':
               name: 'ალგორითმები: კამათლის შეჯიბრი'
             Conditionals:
@@ -4556,6 +4575,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             'Algorithms: Tangrams':
               name: 'ალგორითმები: ტანგრამები'
             The Power of Words:
@@ -4682,10 +4703,6 @@ ka:
               name: მარტივი შიფრირება
             Intro to App Lab:
               name: შესავალი აპლიკაციების ლაბორატორიაში
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft-ის კოდის ერთი საათი
         applab-intro-staging:
           lessons:
             Intro to AppLab - Choose Your Own Adventure:
@@ -4749,6 +4766,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops:
               name: ჩასმული ციკლები
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             'Algorithms: Dice Race':
               name: 'ალგორითმები: კამათლის შეჯიბრი'
             Introduction:
@@ -4806,6 +4825,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             'Algorithms: Tangrams':
               name: 'ალგორითმები: ტანგრამები'
             Introduction:
@@ -5132,6 +5153,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops:
               name: ჩასმული ციკლები
+            Nested Loops Project in Frozen:
+              name: ჩადგმული ციკლების პროექტი გაყინულში
             'How it Works: The Internet':
               name: 'როგორ მუშაობს ეს: ინტერნეტი'
             'Common Sense Education: Screen Out the Mean':
@@ -5198,6 +5221,8 @@ ka:
               name: საავტორო უფლებები და შემოქმედებითობა
             Nested Loops in Bee:
               name: ჩადგმული ციკლები ფუტკარში
+            Nested Loops in Frozen:
+              name: ჩასმული ციკლები ანასა და ელზასთან ერთად
             Conditionals with Cards:
               name: პირობები ბარათებით
             Conditionals & Loops in Harvester:
@@ -5396,6 +5421,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops:
               name: ჩადგმული ციკლები ლაბირინთში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             'Algorithms: Dice Race':
               name: 'ალგორითმები: კამათლის შეჯიბრი'
             Introduction:
@@ -5480,6 +5507,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ლაბირინთში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             'Algorithms: Tangrams':
               name: 'ალგორითმები: ტანგრამები'
               description_student: აქ თქვენ შეისწავლით ალგორითმებს თავსატეხების საშუალებით.
@@ -5993,10 +6022,12 @@ ka:
             content:
               display_name: შიგთავსი
         frozen-2018:
+          title: გაყინულის განახლებული სკრიპტი
           lessons:
             Artist:
               name: მხატვარი
         frozen-2018-test:
+          title: გაყინულის განახლებული სკრიპტი
           lessons:
             Artist:
               name: მხატვარი
@@ -6007,6 +6038,7 @@ ka:
             Dance Party:
               name: ცეკვა
         frozen-2018-test-b:
+          title: გაყინულის განახლებული სკრიპტი
           lessons:
             Artist:
               name: მხატვარი
@@ -6062,6 +6094,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             Conditionals with Cards:
               name: პირობები ბარათებით
             Conditionals in Farmer:
@@ -6273,6 +6307,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops:
               name: ჩასმული ციკლები
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             Conditionals with Cards:
               name: პირობები ბარათებით
             Private and Personal Information:
@@ -6340,6 +6376,7 @@ ka:
                 თავსატეხთა ეს ნაკრები მოსწავლეებს შემოქმედებითობის გაცილებით მეტ პოტენციალსა
                 და საშუალებას აძლევს, რომ ეტაპის ბოლოს საკუთარი დიზაინები შექმნან.
             Nested Loops in Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
               description_student: 'ანა და ელზა ყინულზე საუკეთესოდ სრიალებენ, მაგრამ
                 ყინულზე ნახატების შესაქმნელად თქვენი დახმარება სჭირდებათ. გამოიყენეთ
                 ჩადგმული ციკლები ყველაზე მაგარი ნიმუშის შესაქმნელად. '
@@ -7196,6 +7233,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops in Bee/Zombie:
               name: ჩადგმული ციკლები ფუტკარში/ზომბიში
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             Build a Flappy Game:
               name: ააწყვეთ მოფარფატე ჩიტის თამაში
             Build a Star Wars Game:
@@ -7634,6 +7673,8 @@ ka:
               name: ციკლები მხატვარში
             Nested Loops:
               name: ჩასმული ციკლები
+            Nested Loops Project in Frozen:
+              name: ჩადგმული ციკლების პროექტი გაყინულში
             Events in Star Wars:
               name: მოვლენები ვარსკვლავურ ომებში
             Nested Loops in Frozen:
@@ -7739,6 +7780,8 @@ ka:
               name: ჩადგმული ციკლები ლაბირინთში
             Fancy Shapes using Nested Loops:
               name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
+            Nested Loops with Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
             Functions with Artist:
               name: ფუნქციები მხატვარში
         time4cs-control-unit-1:
@@ -8328,6 +8371,7 @@ ka:
                 თავსატეხთა ეს ნაკრები მოსწავლეებს შემოქმედებითობის გაცილებით მეტ პოტენციალსა
                 და საშუალებას აძლევს, რომ ეტაპის ბოლოს საკუთარი დიზაინები შექმნან.
             Nested Loops in Frozen:
+              name: ჩასმული ციკლები „გაყინულთან“ ერთად
               description_student: 'ანა და ელზა ყინულზე საუკეთესოდ სრიალებენ, მაგრამ
                 ყინულზე ნახატების შესაქმნელად თქვენი დახმარება სჭირდებათ. გამოიყენეთ
                 ჩადგმული ციკლები ყველაზე მაგარი ნიმუშის შესაქმნელად. '
@@ -9401,6 +9445,10 @@ ka:
               name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
             Nested Loops in Frozen:
               key: ჩასმული ციკლები გაყინულში
+              name: 'მინი-პროექტი: თოვლის ფიფქის დიზაინი'
+              description_teacher: ამ **მინი-პროექტის** გაკვეთილზე მოსწავლეები შეასრულებენ
+                სავარჯიშოებს და შექმნიან თოვლის ფიფქს ფილმი _გაყინულის_ პერსონაჟებთან
+                ერთად.
             'Functions: Songwriting':
               key: 'ფუნქციები: სიმღერების დაწერა'
               name: სიმღერის დაწერა
@@ -9504,6 +9552,10 @@ ka:
             Nested Loops in Maze:
               key: ჩადგმული ციკლები ლაბირინთში
               name: ჩადგმული ციკლები ლაბირინთში
+            Snowflakes with Anna and Elsa:
+              description_teacher: ამ **მინი-პროექტის** გაკვეთილზე მოსწავლეები შეასრულებენ
+                სავარჯიშოებს და შექმნიან თოვლის ფიფქს ფილმი _გაყინულის_ პერსონაჟებთან
+                ერთად.
             If/Else with Bee:
               key: პირობითი ბრძანებები ფუტკარში
               name: პირობითი ბრძანებები ფუტკარში
