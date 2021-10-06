@@ -1680,6 +1680,28 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "새 블록!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "새 블록!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "새 블록!",
+          "poetry_foreground": "새 블록!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "새 블록!",
+          "poetry_multiple_sprites": "새 블록!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "새 블록!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "새 블록!",
+          "poetry_sprite_stops": "새 블록!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "새 블록!",
+          "poetry_remove_sprite": "새 블록!"
         }
       }
     }

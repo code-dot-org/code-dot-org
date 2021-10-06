@@ -2,11 +2,15 @@ pl:
   data:
     progressions:
       '"If/Else" with the Bee': '"jeśli/w przeciwnym razie" z Pszczółką'
+      AI Machine Learning - Video: AI Uczenie maszynowe — Film
+      'AI: Impact on Society - Video': 'AI: wpływ na społeczeństwo — Film'
+      'AI: Training Data & Bias - Video': 'AI: dane treningowe i stronniczość — Film'
       Accelerometer Events: Akcelerometr Zdarzeń
       Adding Images: Dodawanie obrazów
       Adding Screens: Dodawanie Ekranów
       Alien Defender: Obrońca ufoludków
       Animate Your Scene: Animuj swoją scenę
+      App Lab Intro - Video: App Lab wprowadzenie - Film
       'App Project: Screen Design': 'Projekt aplikacji: Projekt ekranu '
       Arrays: Tablice
       Artist Intro with JR Hildebrand: Wprowadzenie artysty z JR Hildebrandem
@@ -168,15 +172,18 @@ pl:
       Making an Interactive Card: Tworzenie interaktywnej karty
       'Maze Intro: Programming with Blocks': 'Labirynt, wprowadzenie: Programowanie z blokami'
       Measures: Takty
+      'Minecraft: Hero''s Journey': 'Minecraft: Podróż Bohatera'
       'Mini-Project: About Me': 'O mnie ze Sprite Lab'
       'Mini-Project: Alien Dance Moves': 'Mini-projekt: Taneczne ruchy kosmitów'
       'Mini-Project: Alien Dance Party': 'Mini-projekt: Potańcówka Kosmitów'
+      'Mini-Project: Create a Virtual Pet': 'Mini-projekt: Stwórz wirtualnego zwierzaka'
+      'Mini-Project: Outbreak Simulator': 'Mini-projekt: Symulator pandemii '
       'Mini-Project: Royal Battle': 'Mini-projekt: Królewski pojedynek'
       "Mini-Project: Snowflake #1": "Mini-projekt: Płatek śniegu #1"
       "Mini-Project: Snowflake #2": "Mini-projekt: Płatek śniegu #2"
       'Mini-Project: Swimming Fish': 'Mini-projekt: Pływająca ryba'
       'Mini-Project: Swimming Fish (continued)': 'Mini-projekt: Pływająca ryba (ciąg dalszy)'
-      'Mini-Project: User Input Programs': 'Utwórz Chat-Bot'
+      'Mini-Project: User Input Programs': 'Mini-projekt: Programy z danymi użytkownika'
       'Mini-Project: Virtual Pet': 'Mini-projekt: Wirtualny zwierzak'
       'Mini-project: Chase Game': 'Mini-projekt: Wyścig'
       'Mini-project: Flappy Game': 'Mini-projekt: Gra z Flappym'
@@ -217,6 +224,7 @@ pl:
       Prediction: Przewidywanie
       Prepare for your presentation: Przygotuj się do prezentacji
       Prepare for your presentation_2018: Przygotuj się do prezentacji_2018
+      Problem Solving: Rozwiązywanie problemów
       Problem Solving Process for Programming: Proces rozwiązywania problemów w programowaniu
       Programming with Rey and BB-8: Programowanie z Reyem i BB-8
       Programs that Repeat: Programy, które Powtarzają
@@ -267,6 +275,7 @@ pl:
       Styling with Classes: Stylizacja z klasami 
       Styling your Website: Stylizacja Twojej strony internetowej
       Teach A.I. a new word: Ucz A.I. nowego słowa
+      Teach AI a New Word: Naucz AI nowego słowa
       'Technique: Frequency Analysis': 'Technika: Analiza częstości'
       Terminology Recap: Podsumowanie terminologii
       Text Compression: Kompresja tekstu
@@ -346,7 +355,7 @@ pl:
       Website Project: Projekt Strony internetowej
       Welcome to Monster Town: Witamy w mieście potworów
       Where'd They Go?: Gdzie oni poszli?
-      While Loops with the Farmer: Pętle "dopóki" przy pomocy interfejsu Farmer
+      While Loops with the Farmer: Pętle "dopóki" z Farmerem
       'Widget: Text Compression': 'Widget: Kompresja tekstu'
       Wrap-up: Podsumowanie
       Your Personal Website: Twoja Osobista Strona Internetowa

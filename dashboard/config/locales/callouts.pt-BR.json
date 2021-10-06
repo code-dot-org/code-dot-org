@@ -2097,6 +2097,28 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Novo bloco!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Novo bloco!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Novo bloco!",
+          "poetry_foreground": "Novo bloco!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Novo bloco!",
+          "poetry_multiple_sprites": "Novo bloco!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Novo bloco!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Novo bloco!",
+          "poetry_sprite_stops": "Novo bloco!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Novo bloco!",
+          "poetry_remove_sprite": "Novo bloco!"
         }
       }
     }

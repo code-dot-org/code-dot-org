@@ -9,10 +9,6 @@ my:
           lessons:
             Variables:
               name: Variables
-        infinity:
-          lessons:
-            Infinity:
-              name: Infinity
         K5PD:
           lessons:
             Teacher Dashboard:
@@ -117,7 +113,7 @@ my:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ် Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်'
           student_description: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code မှတစ်ဆင့်ခရီးစဉ်
         csd6-old:
           lessons:
