@@ -2,6 +2,16 @@
   "ne-NP": {
     "data": {
       "activity_sections": {
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Introduction"
         },
@@ -627,7 +637,7 @@
           ]
         },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
-          "progression_name": "कार्य "
+          "progression_name": "घटनाहरु"
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
@@ -739,7 +749,7 @@
           ]
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
-          "progression_name": "कार्य "
+          "progression_name": "घटनाहरु"
         },
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "tips": [

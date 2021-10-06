@@ -15,43 +15,71 @@
           "student_overview": "Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku."
         },
         "coursef-2021/lesson-8": {
-          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap acara yang ditetapkan masanya dan input pengguna. "
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. ",
+          "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran.",
+          "purpose": "Pelajaran ini direka bentuk untuk mengukuhkan kemahiran daripada pelajaran sebelum ini dan memperkenalkan pelajar kepada pengaturcaraan dengan peristiwa. Sepanjang kursus ini, peristiwa akan menjadi kaedah utama pelajar mengubah cara atur cara mereka berjalan dari masa ke masa atau sebagai respons kepada pengguna.",
+          "student_overview": "Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka."
+        },
+        "coursef-2021/Virtual Pet": {
+          "overview": "Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat \"Kostum\" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
+          "purpose": "Pelajaran ini me membolehkan pelajar menggunakan konsep pengaturcaraan daripada pelajaran sebelumnya dalam konteks kreatif yang lain. ",
+          "student_overview": "Cipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan haiwan peliharaan anda kehidupannya sendiri!"
         },
         "coursef-2021/lesson-2": {
           "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nPelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Learn more.][2]\n\nOleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.",
+          "preparation": "-   Semak bahan pengajaran.\n-   Cetak kertas sebaran untuk setiap pelajar.\n-   Sediakan untaian panjang (atau tali) dan kertas untuk kelas.",
           "purpose": "Pendidikan yang Munasabah mencipta pelajaran ini untuk mengajar pelajar perkara yang perlu mereka lakukan apabila seseorang menggunakan bahasa yang zalim atau menyakitkan dalam internet.",
           "student_overview": "Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian."
         },
         "coursef-2021/lesson-9": {
-          "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) sebagai konteks untuk memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan."
+          "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) sebagai konteks untuk memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan.",
+          "student_overview": "Dalam aktiviti ini, anda akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) untuk bersiap sedia memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan. "
+        },
+        "coursef-2021/lesson-10": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. ",
+          "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran."
         },
         "coursef-2021/Loops with the Artist": {
-          "overview": "Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini."
+          "overview": "Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan."
         },
         "coursef-2021/Nested Loops in the Maze": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan digalakkan berfikir sejauh mana perubahan kecil di dalam gelung akan memberikan kesan kepada atur cara mereka.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung yang lain."
         },
         "coursef-2021/Variables that Change in Bee": {
           "overview": "Pelajaran **membina kemahiran** ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Lebah ini menyukai pemboleh ubah!"
         },
         "coursef-2021/For Loop Fun": {
+          "preparation": "-   Tonton **\\*video**.\n-   Cetak satu **\\*lembaran kerja** setiap kumpulan.\n-   Cetak satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!"
+        },
+        "coursef-2021/For Loops in Bee": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
         },
         "coursef-2021/For Loops in Artist": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki untuk mencipta reka bentuk kompleks dan seni unik.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa."
         },
         "coursef-2021/Simulating Experiments": {
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan menjalankan dan mengumpulkan data daripada simulasi ringkas di Makmal Peperi. Selepas menjalankan simulasi beberapa kali, pelajar akan mempunyai peluang membuat ramalan tentang sejauh mana dengan menukar pemboleh ubah dalam simulasi mungkin memberikan kesan kepada hasilnya dan kemudian uji hipotesis tersebut.",
           "student_overview": "Jalankan simulasi pada komputer dan eksperimen dengan menukar pemboleh ubah."
         },
+        "coursef-2021/lesson-5": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
+        },
         "coursef-2021/Internet": {
+          "preparation": "-   Tonton **\\*Internet** - Video Guru.\n-   Cetak **\\*Kad Alamat IP dan Kad Jenis Penghantaran** secukupnya - Manipulatif untuk setiap kumpulan.\n-   Cetak satu Penilaian **\\*Internet** - untuk setiap pelajar.\n-   Akses kepada internet (seperti **\\*get-site-ip.com**.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Adakah anda pernah terfikir cara maklumat bergerak merentasi Internet? Ini bukan silap mata! Pelajaran ini akan mengajar anda asas-asas cara internet berfungsi."
         },
         "coursef-2021/End of Course Project": {
@@ -75,6 +103,7 @@
         },
         "courseb-2021/Loops: Getting Loopy": {
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar menggunakan gelung untuk menyampaikan arahan dengan lebih mudah dengan melihat pada corak pergerakan berulang dalam tarian.",
+          "preparation": "-   Sedia memaparkan **\\*Lembaran Kerja** kepada pelajar.\n-   Cetak satu **\\*Penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Dalam pelajaran ini, kami akan mengadakan majlis tari-menari dengan menggunakan gelung berulang!"
         },
         "courseb-2021/Loops in Harvester": {
@@ -90,7 +119,8 @@
           "student_overview": "Lakarkan aplikasi telefon pintar anda sendiri."
         },
         "courseb-2021/Events: The Big Event": {
-          "overview": "Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep acara melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.",
+          "overview": "Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.",
+          "preparation": "-   Sedia mengunjurkan **\\*Imej Pengawal**.\n-   Cetak satu **\\*Penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Bergerak atau berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi."
         },
         "courseb-2021/Events in Play Lab": {
@@ -109,6 +139,7 @@
           "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
         },
         "coursea-2021/Programming: Happy Maps": {
+          "overview": "Pelajaran **tetapan konteks** ini menyatupadukan pasukan dengan tugas mudah: bawa \"flurb\" kepada buah. Pelajar akan berlatih menulis arahan yang tepat semasa mereka berusaha menterjemahkan arahan kepada simbol yang disediakan.",
           "purpose": "Jambatan yang menyambungkan algoritma dengan pengaturcaraan boleh menjadi pendek jika pelajar memahami perbezaan antara merancang jujukan dengan teliti dan mengekod jujukan tersebut ke dalam bahasa yang sesuai. Aktiviti ini akan membantu pelajar memperoleh pengalaman membaca dan menulis dalam trengkas.",
           "student_overview": "Tulis arahan untuk membawa Flurb kepada buah."
         },
@@ -136,6 +167,7 @@
         },
         "coursea-2021/Events: The Big Event": {
           "overview": "Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.",
+          "preparation": "-   Sedia mengunjurkan **\\*Imej Pengawal**.\n-   Cetak satu **\\*Penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Bergerak dan berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi."
         },
         "coursea-2021/Events in Play Lab": {
@@ -165,6 +197,7 @@
         },
         "coursec-2021/Loops in Harvester": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar menggelungkan tindakan baharu untuk membantu penuai mengumpulkan pelbagai sayuran yang tumbuh dalam rumpun yang besar.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Mari kita gunakan gelung untuk membantu penuai mengumpulkan sebahagian daripada sayuran!"
         },
         "coursec-2021/Sticker Art with Loops": {
@@ -172,15 +205,19 @@
         },
         "coursec-2021/Events: The Big Event": {
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar bahawa peristiwa ialah cara terbaik menambahkan fleksibiliti kepada algoritma prabertulis.",
+          "preparation": "-   Cetak atau paparkan **\\*Pengawal Peristiwa**.\n-   Cetak satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa."
         },
         "coursec-2021/Build a Flappy Game": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Bina permainan Kibasan Burung anda sendiri mengikut kesukaan anda, kemudian kongsikan dengan rakan anda!"
         },
         "coursec-2021/Events in Play Lab": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Sudah tiba masanya menjadi kreatif dan mencipta permainan di Makmal Mainan!"
         },
         "coursec-2021/Binary Bracelets": {
+          "preparation": "-   (Pilihan) Tonton video **\\*Pelajaran sedang Berjalan**.\n-   Kumpulkan penanda untuk gelang. Hiasan lain seperti manik dan pencuci paip adalah pilihan.\n-   Cetak satu **\\*lembaran kerja** dan satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.\n-   (Pilihan) Tulis pesanan ringkas pada papan tulis dalam binari.",
           "student_overview": "Cipta gelang binari anda sendiri dan ketahui cara komputer mengingati maklumat!"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
@@ -193,10 +230,12 @@
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar menggunakan simbol memberikan arahan kepada satu sama lain untuk mewarnakan segi empat sama pada kertas graf. Dengan \"mengatur cara\" antara satu sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman sebahagian daripada konsep teras pengaturcaraan melalui cara yang menyeronokkan dan mudah diakses. ",
+          "preparation": "-   (Pilihan) Tonton video **\\*Pelajaran sedang Berjalan**.\n-   Cetak satu **\\*lembaran kerja** dan satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda untuk melukis gambar!"
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih kemahiran _penjujukan_ dan penyahpepijatan mereka dalam teka-teki pagar sesat.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Pelajaran ini akan memberikan anda latihan dalam kemahiran yang anda perlukan untuk kursus ini."
         },
         "coursed-2021/Relay Programming": {
@@ -204,6 +243,7 @@
         },
         "coursed-2021/Debugging in Collector": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih melakukan penyahpepijatan dalam persekitaran \"pengumpul\". Pelajar perlu berlatih membaca dan mengedit kod untuk membetulkan teka-teki dengan algoritma, gelung dan gelung bersarang yang mudah.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Adakah anda pernah menghadapi masalah semasa pengekodan? Dalam pelajaran ini, anda akan mempelajari rahsia penyahpepijatan. Penyahpepijatan ialah proses mencari dan membetulkan masalah dalam kod anda."
         },
         "coursed-2021/Events in Bounce": {
@@ -220,22 +260,30 @@
         },
         "coursed-2021/Loops in Artist": {
           "overview": "Pelajaran **membina kemahiran** ini dibina berasaskan pemahaman tentang gelung daripada pelajaran sebelumnya dan berfungsi sebagai pelaksanaan penyahpepijatan untuk latihan penyelesaian masalah tambahan.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Dalam pelajaran ini, gelung memudahkan imej menarik dibuat dengan Artis!"
         },
+        "coursed-2021/Nested Loops in Bee": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
+        },
         "coursed-2021/Conditionals with Cards": {
+          "preparation": "-   Kumpulkan dek kad atau sesuatu yang serupa.\n-   Cetak atau paparkan **\\*atur cara sampel**.\n-   Cetak satu **\\*penilaian** untuk setiap pelajar.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Sudah tiba masanya untuk bermain permainan yang anda memperoleh mata hanya di bawah syarat tertentu!"
         },
         "coursed-2021/lesson-6": {
           "overview": "Pelajaran **membina kemahiran** ini akan memberikan pelajar peluang berlatih konsep yang telah mereka pelajari sehingga tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!"
         },
         "coursed-2021/Conditionals in Bee": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar."
         },
         "coursed-2021/While Loops in Farmer": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang, tetapi mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran. Untuk menyelesaikan teka-teki ini, pelajar akan menggunakan jenis gelung yang baharu.",
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!"
         },
         "coursed-2021/Until Loops in Maze": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Anda boleh melakukan beberapa perkara yang menakjubkan apabila anda menggunakan gelung `sehingga`!"
         },
         "coursed-2021/End of Course Project": {
@@ -260,7 +308,14 @@
           "student_overview": "Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku."
         },
         "express-2021/lesson-3": {
-          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap acara yang ditetapkan masanya dan input pengguna. "
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. ",
+          "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran.",
+          "student_overview": "Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka."
+        },
+        "express-2021/Virtual Pet with Sprite Lab": {
+          "overview": "Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat \"Kostum\" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.",
+          "purpose": "Pelajaran ini me membolehkan pelajar menggunakan konsep pengaturcaraan daripada pelajaran sebelumnya dalam konteks kreatif yang lain. ",
+          "student_overview": "Cipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan haiwan peliharaan anda kehidupannya sendiri!"
         },
         "express-2021/lesson-1": {
           "student_overview": "Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri."
@@ -296,6 +351,10 @@
         },
         "express-2021/Functions with Harvester": {
           "student_overview": "Fungsi akan mengurangkan banyak kerja kerana anda membantu peladang dengan proses penuaiannya!"
+        },
+        "express-2021/lesson-4": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. ",
+          "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran."
         },
         "express-2021/Variables with Artist": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.",
@@ -348,12 +407,15 @@
           "student_overview": "Gunakan peristiwa untuk mencipta cerita atau membuat permainan berinteraktif."
         },
         "coursee-2021/Simon Says": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Main permainan dan fikirkan tentang perintah yang diperlukan untuk mendapatkan hasil yang betul."
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Pelajari cara mencipta dan mengedit peperi."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas."
         },
         "coursee-2021/lesson-4": {
@@ -369,20 +431,30 @@
         "coursee-2021/Digital Sharing": {
           "student_overview": "Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta."
         },
+        "coursee-2021/Programming and Loops with the Artist": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
+        },
         "coursee-2021/Nested Loops in Artist": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, mencipta reka bentuk yang rumit dengan menggunakan Artis. Pelajaran ini berakhir dengan peluang untuk pelajar mencipta reka bentuk mereka sendiri.",
           "student_overview": "Lebih banyak gelung bersarang! Kali ini, anda boleh membuat lukisan yang MENAKJUBKAN dengan gelung bersarang."
         },
         "coursee-2021/Functions: Songwriting": {
+          "preparation": "-   (Pilihan) Tonton video **\\*Pelajaran sedang Berjalan**.\n-   Cetak beberapa **\\*lembaran kerja** untuk setiap kumpulan.\n-   Cetak satu **\\*penilaian** untuk setiap pelajar.\n-   Akses selamat kepada lagu dan lirik untuk melakukan aktiviti.\n-   Pastikan setiap pelajar mempunyai jurnal.",
           "student_overview": "Malah bintang lagu rock juga memerlukan kemahiran pengaturcaraan. Pelajaran ini akan mengajar anda tentang fungsi menggunakan lirik daripada lagu."
         },
         "coursee-2021/Functions in Minecraft": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Bolehkah anda memikirkan cara menggunakan fungsi untuk kod yang paling cekap?"
         },
         "coursee-2021/Functions in Artist": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Membuatkan lukisan yang kompleks menjadi lebih mudah dengan fungsi!"
         },
+        "coursee-2021/Conditionals": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
+        },
         "coursee-2021/Functions in Harvester": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "student_overview": "Fungsi akan mengurangkan banyak kerja kerana anda membantu peladang dengan proses penuaiannya!"
         },
         "coursee-2021/End of Course Project": {

@@ -243,7 +243,7 @@ it:
             esplorano la magia e la bellezza del ghiaccio.
           lessons:
             Artist:
-              name: Artista
+              name: Programma con Anna ed Elsa
           student_description: Usa la programmazione per unirti ad Anna ed Elsa mentre
             esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve,
             pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio invernale
@@ -408,7 +408,7 @@ it:
             un gioco con i personaggi di Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Disney Infinity
           student_description: Usa il Laboratorio per creare una storia o inventare
             un gioco con i personaggi di Disney Infinity.
         algebrademo:
@@ -1540,9 +1540,6 @@ it:
             Stellari, in una galassia lontana lontana...
           description_short: Impara a programmare i droidi e crea la tua versione
             di Guerre Stellari, in una galassia lontana lontana...
-          lessons:
-            Hour of Code 2015:
-              name: L'Ora del Codice 2015
           student_description: Impara a programmare i droidi e crea la tua versione
             di Guerre Stellari, in una galassia lontana lontana...
         mc:
@@ -2360,7 +2357,6 @@ it:
             Scegli la tua squadra e fai una partita di basket
           lessons:
             Bounce:
-              name: Ping-Pong
               description_student: Ti piacerebbe poter giocare con dei videogiochi
                 a scuola? In questa lezione potrai crearne uno tutto tuo!
               description_teacher: In questa attività online, gli studenti impareranno
@@ -2670,7 +2666,6 @@ it:
           description: Combina diversi sport
           lessons:
             Sports:
-              name: Sport
               description_student: Ti piacerebbe poter giocare con dei videogiochi
                 a scuola? In questa lezione potrai crearne uno tutto tuo!
               description_teacher: In questa attività online, gli studenti impareranno
@@ -4516,7 +4511,7 @@ it:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Ora del Codice - Il viaggio dell''eroe'
             Minecraft Hour of Code:
-              name: L'Ora del Codice con Minecraft
+              name: 'Minecraft: Il viaggio dell''eroe'
           student_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
             attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
@@ -6129,6 +6124,9 @@ it:
           description: Anche quest'anno Minecraft propone un'attività nuova di zecca!
             Usa la tua creatività e le competenze di problem solving per esplorare
             e creare mondi sottomarini grazie alla potenza della programmazione.
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Viaggio Acquatico'
           student_description: Anche quest'anno Minecraft propone un'attività nuova
             di zecca! Usa la tua creatività e le competenze di problem solving per
             esplorare e creare mondi sottomarini grazie alla potenza della programmazione.

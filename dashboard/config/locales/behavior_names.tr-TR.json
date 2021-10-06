@@ -2863,7 +2863,14 @@
           "moving north": "kuzeye ilerleme",
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
-          "spinning right": "sağa dönme"
+          "spinning right": "sağa dönme",
+          "spinning left": "sola dönme",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "sola ve sağa yüzme",
@@ -2940,7 +2947,14 @@
           "moving north": "kuzeye ilerleme",
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
-          "spinning right": "sağa dönme"
+          "spinning right": "sağa dönme",
+          "spinning left": "sola dönme",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "sola ve sağa yüzme",
@@ -2997,7 +3011,14 @@
           "moving north": "kuzeye ilerleme",
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
-          "spinning right": "sağa dönme"
+          "spinning right": "sağa dönme",
+          "spinning left": "sola dönme",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "sola ve sağa yüzme",
@@ -3074,7 +3095,14 @@
           "moving north": "kuzeye ilerleme",
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
-          "spinning right": "sağa dönme"
+          "spinning right": "sağa dönme",
+          "spinning left": "sola dönme",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
         }
       }
     }
