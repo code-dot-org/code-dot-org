@@ -143,6 +143,12 @@ class ProjectsController < ApplicationController
     javalab: {
       name: 'New Java Lab Project',
       levelbuilder_required: true
+    },
+    poetry: {
+      name: 'New Poetry Project'
+    },
+    poetry_hoc: {
+      name: 'New Poetry HOC Project'
     }
   }.with_indifferent_access.freeze
 
