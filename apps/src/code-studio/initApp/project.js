@@ -906,6 +906,15 @@ var projects = (module.exports = {
           return 'basketball';
         }
         return 'bounce';
+      case 'poetry':
+        // The poem dropdown is only used for the 2021 HOC tutorial and gives students access
+        // to licenesed poems. For these levels, we need to restrict the toolbox so that
+        // students cannot modify the poems, so we have a separate freeplay level.
+        if (appOptions.level.showPoemDropdown) {
+          return 'poetry_hoc';
+        } else {
+          return 'poetry';
+        }
       default:
         return null;
     }
