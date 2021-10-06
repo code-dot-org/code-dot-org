@@ -103,6 +103,9 @@ export default class Playground {
       case PlaygroundSignalType.SET_BACKGROUND_IMAGE:
         this.setBackgroundImage(data.detail);
         break;
+      case PlaygroundSignalType.UPDATE:
+        this.handleBatchUpdate(data.detail);
+        break;
     }
   }
 
@@ -112,6 +115,12 @@ export default class Playground {
     );
     this.onNewlineMessage();
     this.setIsProgramRunning(false);
+  }
+
+  handleBatchUpdate(details) {
+    details.updates.forEach(data => {
+      this.handleSignal(data);
+    });
   }
 
   addClickableItem(itemData) {
