@@ -127,7 +127,9 @@ export const PlaygroundSignalType = {
   // Play a sound
   PLAY_SOUND: 'PLAY_SOUND',
   // Set the background image of the Playground
-  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
+  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE',
+  // Set of updates to the playground
+  UPDATE: 'UPDATE'
 };
 
 export const PlaygroundFontTypeFontFamilies = {
