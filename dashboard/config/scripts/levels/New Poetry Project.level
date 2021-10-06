@@ -50,27 +50,66 @@
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="Poetry_setBackgroundEffect">
-          <title name="EFFECT">"colors"</title>
-          <title name="PALETTE">"sky"</title>
-        </block>
-        <block type="Poetry_setForegroundEffect">
-          <title name="EFFECT">"rain"</title>
-        </block>
-        <block type="Poetry_setFont">
-          <title name="FONT">"Arial"</title>
-        </block>
-        <block type="Poetry_setFontColor">
-          <value name="FILL">
-            <block type="colour_picker" can_disconnect_from_parent="false">
-              <title name="COLOUR">#ffcc99</title>
-            </block>
-          </value>
-        </block>
-        <block type="Poetry_setTextEffect">
-          <title name="EFFECT">"fade"</title>
-        </block>
+    <xml>
+        <category name="Effects">
+          <block type="Poetry_setBackgroundEffect">
+            <title name="EFFECT">"colors"</title>
+            <title name="PALETTE">"sky"</title>
+          </block>
+          <block type="Poetry_setForegroundEffect">
+            <title name="EFFECT">"rain"</title>
+          </block>
+          <block type="Poetry_setFont">
+            <title name="FONT">"Arial"</title>
+          </block>
+          <block type="Poetry_setFontColor">
+            <value name="FILL">
+              <block type="colour_picker" can_disconnect_from_parent="false">
+                <title name="COLOUR">#ffcc99</title>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setTextEffect">
+            <title name="EFFECT">"fade"</title>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="gamelab_whenPromptAnswered">
+            <value name="VAR">
+              <block type="variables_get" can_disconnect_from_parent="false">
+                <title name="VAR">i</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_whenAllPromptsAnswered"/>
+          <block type="Poetry_whenLineShows">
+            <title name="N">0</title>
+          </block>
+        </category>
+        <category name="Poem">
+          <block type="Poetry_addLine">
+            <value name="LINE">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setAuthor">
+            <value name="AUTHOR">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setTitle">
+            <value name="TITLE">
+              <block type="text">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_animatePoem"/>
+        </category>
       </xml>
     </toolbox_blocks>
   </blocks>
