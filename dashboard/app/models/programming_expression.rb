@@ -187,11 +187,11 @@ class ProgrammingExpression < ApplicationRecord
       category: category,
       programmingEnvironmentName: programming_environment.name,
       shortDescription: short_description || '',
-      externalDocumentation: external_documentation,
-      content: content,
-      syntax: syntax,
-      returnValue: return_value,
-      tips: tips
+      externalDocumentation: external_documentation || '',
+      content: content || '',
+      syntax: syntax || '',
+      returnValue: return_value || '',
+      tips: tips || ''
     }
   end
 
