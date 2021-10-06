@@ -1,9 +1,21 @@
 import msg from '@cdo/poetry/locale';
+import {getStore} from '@cdo/apps/redux';
+import {setPoem} from '../redux/poetry';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
+import {POEMS} from './constants';
 
 export default class Poetry extends SpriteLab {
+  init(config) {
+    super.init(config);
+    if (config.level.selectedPoem) {
+      getStore().dispatch(setPoem(config.level.selectedPoem));
+    } else if (this.level.defaultPoem) {
+      getStore().dispatch(setPoem(POEMS[this.level.defaultPoem]));
+    }
+  }
+
   getAvatarUrl(levelInstructor) {
     const defaultAvatar = 'octi';
     return `/blockly/media/poetry/${levelInstructor || defaultAvatar}.png`;
