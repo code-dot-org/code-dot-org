@@ -2541,7 +2541,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "chapga va o'ngga suzish",
@@ -2606,7 +2608,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "chapga va o'ngga suzish",
@@ -2656,7 +2660,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "chapga va o'ngga suzish",
@@ -2721,7 +2727,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         }
       }
     }

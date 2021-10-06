@@ -224,7 +224,7 @@ cs:
             kouzlo a krásu ledu.
           lessons:
             Artist:
-              name: Umělec
+              name: Kóduj s Annou a Elsou
           student_description: Pojďme spojit Anna a Elsu, jak ony prozkoumávají pomocí
             kódu kouzlo a krásu ledu. Sněhové vločky a vzory se vytváří při bruslení
             a udělají zimní říši divů, kterou pak můžete sdílet se svými přáteli!
@@ -349,7 +349,7 @@ cs:
             Infinity postavami.
           lessons:
             Infinity:
-              name: Nekonečno
+              name: Disney Infinity Play Lab
           student_description: Použij Play Lab k vytvoření příběhu nebo hry s Disney
             Infinity postavami.
         algebrademo:
@@ -859,9 +859,6 @@ cs:
             ve vzdálené galaxii.
           description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star
             Wars ve vzdálené galaxii.
-          lessons:
-            Hour of Code 2015:
-              name: Hodina kódu 2013
           student_description: Nauč se programovat droidy a vytvoř si vlastní hru
             Star Wars ve vzdálené galaxii.
         mc:
@@ -1299,7 +1296,6 @@ cs:
           description: Vyberte si svůj tým a vytvořte basketbalovou hru
           lessons:
             Bounce:
-              name: Bounce
               description_student: Přáli jste si někdy hrát ve škole videohry? V této
                 lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
               description_teacher: V této online aktivitě se studenti naučí, co jsou
@@ -1606,7 +1602,6 @@ cs:
           title: Naprogramuj svoji vlastní sportovní hru
           lessons:
             Sports:
-              name: Sporty
               description_student: Přáli jste si někdy hrát ve škole videohry? V této
                 lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
               description_teacher: V této online aktivitě se studenti naučí, co jsou
@@ -3250,9 +3245,6 @@ cs:
             kódu!
           description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj
             Minecraft s kódem.
-          lessons:
-            Minecraft Hour of Code:
-              name: Hodina kódu s Minecraftem
           student_description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou!
             Procestuj Minecraft s kódem.
         applab-intro-staging:
@@ -4534,9 +4526,6 @@ cs:
               name: Umělec
         aquatic:
           description_short: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
-          lessons:
-            Aquatic:
-              name: Vodní
         dance--draft:
           lessons:
             Dance Party:

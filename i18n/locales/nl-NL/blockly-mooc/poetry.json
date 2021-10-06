@@ -1,3 +1,6 @@
 {
-  "makeBackground": "Je moet een een achtergrondeffect toevoegen."
+  "makeBackground": "Je moet een een achtergrondeffect toevoegen.",
+  "reinfFeedbackMsg": "Je bent klaar! Klik op \"Doorgaan\" om verder te gaan naar het volgende level.",
+  "save": "Opslaan",
+  "shareGame": "Deel je spel met anderen:"
 }

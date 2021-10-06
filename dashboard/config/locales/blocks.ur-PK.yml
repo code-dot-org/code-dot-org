@@ -1104,6 +1104,12 @@ ur:
         text: پلے آواز {SOUND}
         options:
           SOUND:
+            "'sound://category_animals/bear.mp3'": ریچھ
+            "'sound://category_animals/cat.mp3'": بلی
+            "'sound://category_animals/cow.mp3'": گائے
+            "'sound://category_animals/sheep.mp3'": بھیڑ
+            "'sound://category_animals/chicken.mp3'": چکن
+            "'sound://category_animals/dolphin.mp3'": ڈالفن
             "'sound://category_digital/jump_7.mp3'": چھلانگ لگایں
       gamelab_pointInDirection:
         text: نقطہ {SPRITE} {DIRECTION}
@@ -1469,8 +1475,12 @@ ur:
         options:
           EFFECT:
             '"rain"': بارش
+      Poetry_makeNewSpriteAnon:
+        text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       Poetry_playSound:
         text: پلے آواز {SOUND}
+      Poetry_setBackground:
+        text: پس منظر رنگ {COLOR} سیٹ کریں
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1627,6 +1637,10 @@ ur:
         text: جگہ بنیادی
       craft_placeTorch:
         text: مشعل یہاں رکہیں
+      craft_repeatUntilConduit:
+        text: |-
+          کنڈیوٹ/آبی گزرگاہ مکمل ہونے تک دہرائیں
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           مقصد

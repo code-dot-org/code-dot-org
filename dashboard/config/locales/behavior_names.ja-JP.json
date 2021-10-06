@@ -3,20 +3,25 @@
     "data": {
       "behavior_names": {
         "behaviors 1": {
-          "mystery behavior": "ふしぎな動き"
+          "mystery behavior": "ふしぎな動き",
+          "swimming left and right": "左右に泳がせる"
         },
         "behaviors 1_2020": {
-          "mystery behavior": "ふしぎな動き"
+          "mystery behavior": "ふしぎな動き",
+          "swimming left and right": "左右に泳がせる"
         },
         "behaviors 2": {
-          "flying": "飛行"
+          "flying": "飛行",
+          "swimming left and right": "左右に泳がせる"
         },
         "behaviors 2_2020": {
-          "flying": "飛行"
+          "flying": "飛行",
+          "swimming left and right": "左右に泳がせる"
         },
         "courseE_Dogger_2": {
           "drive left": "左に 動かす",
-          "drive right": "右に 動かす"
+          "drive right": "右に 動かす",
+          "swimming left and right": "左右に泳がせる"
         },
         "courseF_events_predict": {
           "mystery behavior": "ふしぎな動き",
@@ -1632,6 +1637,240 @@
         },
         "helloworld_retro_events": {
           "moving forward": "前に進める"
+        },
+        "CourseE_Project_SpriteLab": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "CourseE_Project_SpriteLab_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "CourseE_Project_SpriteLab_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "CourseE_hoops": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "CourseF_Project_SpriteLab": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "CourseF_Project_SpriteLab_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "CourseF_Project_SpriteLab_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 2": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 2_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 2_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 3_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 3_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 4_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 4_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 5_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 5_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 6": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 6_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 6_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 7_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party 7_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Dance Party Freeplay": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 2-validated_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 2-validated_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 3-validated_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 3-validated_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 4-validated_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 4-validated_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 5-validated_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 5-validated_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 6-validated_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Fish Tank 6-validated_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "OPD-K5-spritelab-2": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "OPD-K5-spritelab-3": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "OPD-K5-spritelab-4": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "OPD-K5-spritelab-6": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "OPD-K5-spritelab-7": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 1_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 1_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 2": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 2_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 2_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 3_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 3_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 4_2019": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "Virtual Pet 4_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 3": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 3_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 3a": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 3a_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 4": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 4_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 6": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 6_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 7": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "behaviors 7_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_1": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_1_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_2": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_2_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_3": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_3_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_4": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_4_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_5": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseE_aboutme_5_2020": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "courseF_project_1": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_animals_backgrounds": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_animals_behaviors": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_animals_sounds": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_emoji_backgrounds": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_emoji_behaviors": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_emoji_sounds": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_food_backgrounds": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_food_sounds": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_retro_backgrounds": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_retro_behaviors": {
+          "swimming left and right": "左右に泳がせる"
+        },
+        "helloworld_retro_sounds": {
+          "swimming left and right": "左右に泳がせる"
         }
       }
     }

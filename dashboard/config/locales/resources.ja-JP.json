@@ -1131,19 +1131,31 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "スーパーデジタルシティズンになる：レッスンスライド",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "name": " スーパー デジタル市民",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスライド",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "プライベート情報および個人情報：プライベート情報および個人情報",
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "プライベート情報および個人情報：退室チケット",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスクイズ",
           "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスクイズ",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
         },
         "common-sense-media-pause-think/coursee/2021": {
@@ -1151,9 +1163,15 @@
           "url": "https://youtu.be/X_duZ-1LApg"
         },
         "about_me_planning_guide/coursee/2021": {
+          "name": "「私について」計画ガイド",
           "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
         },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "「デジタルシェアリング」レッスンプラン",
+          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing"
+        },
         "digital-sharing-video/coursee/2021": {
+          "name": "デジタルシェアリングの倫理（ビデオ）",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
         },
         "csf-turns-angles-doc/coursee/2021": {
@@ -1209,8 +1227,8 @@
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "生徒が知っていることを示すための72の創造的な方法",
-          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/><http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
+          "name": "生徒の知識を確認する72の創造的な方法",
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "CSTA標準マッピング",
