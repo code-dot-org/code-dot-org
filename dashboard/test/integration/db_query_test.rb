@@ -158,7 +158,6 @@ class DBQueryTest < ActionDispatch::IntegrationTest
 
     assert_cached_queries(10) do
       get "/api/user_progress/#{script.name}/1/1/#{level.id}"
-      puts @response.body
       assert_response :success
     end
 
