@@ -819,7 +819,22 @@ az:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": düymə
             "'sound://category_collect/clicky_crunch.mp3'": çatlamış
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": köpük
+            "'sound://category_animals/bear.mp3'": ayı
+            "'sound://category_animals/cat.mp3'": pişik
+            "'sound://category_animals/cow.mp3'": inək
+            "'sound://category_animals/pig.mp3'": donuz
+            "'sound://category_animals/sheep.mp3'": qoyun
+            "'sound://category_animals/goat.mp3'": keçi
+            "'sound://category_animals/chicken.mp3'": cücə
+            "'sound://category_animals/rooster.mp3'": xoruz
+            "'sound://category_animals/elephant.mp3'": fil
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/chick.mp3'": Cücə
+            "'sound://category_animals/dog.mp3'": it
+            "'sound://category_animals/tiger.mp3'": pələng
             "'sound://category_instrumental/harpe_pluck_1.mp3'": arfa
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": seç
             "'sound://category_digital/jump_7.mp3'": atıl
       gamelab_randColor:
         text: ixtiyari rəng

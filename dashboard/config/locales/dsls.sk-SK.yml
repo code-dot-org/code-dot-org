@@ -5666,13 +5666,19 @@ sk-SK:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+            nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
             jedného.
           correct: true
           feedback: Správne!
         - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+            nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         - text: 'Včela sa posunie dopredu a pozbiera jeden nektár z kvetov číslo 1 až
             4. '
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+            nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         markdown: Aha! S použitím `for` cyklu je táto úloha omnoho jednoduchšia!
         questions:
         - text: Pozri si kód nižšie. Čo sa stane, keď stlačíš "Spustiť"?
@@ -5818,3 +5824,5 @@ sk-SK:
         display_name: Ukážky projektov
       express_EOC_examples_2021:
         display_name: Ukážky projektov
+        description: O chvíľu začneš pracovať na záverečnom projekte. Skôr, než začneš,
+          venuj chvíľu pozornosti ukážkovým projektom.

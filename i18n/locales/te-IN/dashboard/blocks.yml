@@ -932,6 +932,11 @@ te:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": బబ్బుల్స్
+            "'sound://category_animals/bear.mp3'": బేర్
       gamelab_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       gamelab_setBackgroundImage:
@@ -1099,6 +1104,8 @@ te:
           KEY:
             '"yes"': అవును
             '"no"': లేదు
+      Poetry_setBackground:
+        text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

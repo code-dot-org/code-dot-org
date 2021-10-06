@@ -2,6 +2,63 @@
   "sk-SK": {
     "data": {
       "objectives": {
+        "8c021568-46ed-4243-a4d1-f2037138c01a": {
+          "description": "Vyjadriť pohyb pomocou sledu príkazov."
+        },
+        "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
+          "description": "Identifikovať v programe chyby a zistiť, kde sa nachádzajú."
+        },
+        "f0852e8e-a4ab-49a6-8fc4-0c805f14999a": {
+          "description": "Predpovedať, kde program zlyhá."
+        },
+        "857073db-dcda-4868-8be6-e0fba5f981d7": {
+          "description": "Upraviť existujúci program, a riešiť tak problémy."
+        },
+        "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
+          "description": "Zreflektovať proces ladenia spôsobom, ktorý je primeraný ich veku."
+        },
+        "4d4f7faa-e380-483d-b873-b04e114e077e": {
+          "description": "Usporiadať príkazy na pohyb ako postupnosť krokov v programe."
+        },
+        "6a4a4515-9250-4ad0-b943-afef3d26df68": {
+          "description": "Vyjadriť algoritmus pomocou počítačového programu."
+        },
+        "48b6e566-4a4b-424e-b104-33ce83bd2184": {
+          "description": "Rozvíjať si schopnosť riešenia problémov a kritické myslenie pomocou zručností, ktoré si cvičia pri ladení."
+        },
+        "500825a3-b44f-4b99-ab77-2271fdcbb867": {
+          "description": "Vytvoriť program na dokončenie obrázka pomocou postupnosti krokov."
+        },
+        "36081e5f-1a5d-4102-a1de-27865168ee09": {
+          "description": "Rozložiť komplexné tvary na jednoduché časti."
+        },
+        "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
+          "description": "Definovať „sprajt“ ako postavičku alebo objekt na obrazovke, ktorým možno pohybovať a ktorý možno zmeniť."
+        },
+        "09281dd0-4b33-4537-9543-a2377bc2f923": {
+          "description": "Vytvárať nové postavy a priraďovať k nim kostýmy a správania."
+        },
+        "30a80046-d715-46b1-8b89-65c410d04690": {
+          "description": "Vytvárať nové postavy a priraďovať k nim kostýmy a správania."
+        },
+        "e0d4a883-51dc-4647-8c9f-59652f699aec": {
+          "description": "Vytvoriť animáciu pomocou postáv a správaní."
+        },
+        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
+          "description": "Vytvoriť interaktívnu animáciu pomocou udalostí."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Vytvárať programy, ktoré reagujú na udalosti podmienené časom."
+        },
+        "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
+          "description": "Vytvárať programy, ktoré reagujú na vstupy používateľa."
+        },
+        "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
+          "description": "Vytvoriť si interaktívne virtuálne zvieratko pomocou udalostí, správania, premenných a vlastných grafík."
+        },
+        "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
+          "description": "Programovať riešenia problémov, ktoré sa vyskytnú pri vytváraní virtuálneho zvieratka, napríklad kŕmenie či kontrola jeho spokojnosti."
+        },
         "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
           "description": "Rozpoznať, čo sa od nich očakáva, keď prichádzajú do počítačovej učebne."
         },

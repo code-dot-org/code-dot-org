@@ -1,12 +1,29 @@
 function makeBurst(num,costume,effect) {
   for (var count = 0; count < num; count++) {
     createNewSprite({name: 'temporarySprite'}, costume, ({"x":200,"y":200}));
-    if(effect=="pop"){
+    if(effect=="burst"){
+      setProp({name: 'temporarySprite'}, "speed", math_random_int(10, 20));
+      setProp({name: 'temporarySprite'}, "delay", math_random_int(1, 20));
+      setProp({name: 'temporarySprite'}, "scale", 0);
+      setProp({name: 'temporarySprite'}, "direction", math_random_int(0, 359));
+      setProp({name: 'temporarySprite'}, "rotation", math_random_int(0, 359));
+      addBehaviorSimple({name: 'temporarySprite'}, new Behavior(burstEffectBehavior, []));
+    }else if(effect=="pop"){
       setProp({name: 'temporarySprite'}, "speed", math_random_int(10, 25));
       setProp({name: 'temporarySprite'}, "scale", 50);
       jumpTo({name: 'temporarySprite'}, locationAt(math_random_int(0, 400), math_random_int(-100, -50)));
       setProp({name: 'temporarySprite'}, "direction", math_random_int(225, 315));
       addBehaviorSimple({name: 'temporarySprite'}, new Behavior(popEffectBehavior, []));
+    }
+    else if(effect=="spiral"){
+      setProp({name: 'temporarySprite'}, "scale", 0);
+      setProp({name: 'temporarySprite'}, "initialAngle", count*360/num);
+      if (count%2 == 0) {
+        setProp({name: 'temporarySprite'}, "initialAngle", getProp({name: 'temporarySprite'}, "initialAngle")-180);
+      }
+      setProp({name: 'temporarySprite'}, "delay", count*60/(num));
+      setProp({name: 'temporarySprite'}, "start", getProp({name: 'temporarySprite'}, "delay"));
+      addBehaviorSimple({name: 'temporarySprite'}, new Behavior(spiralEffectBehavior, []));
     }
     else if(effect=="rain"){
       setProp({name: 'temporarySprite'}, "speed", 0);
@@ -14,14 +31,6 @@ function makeBurst(num,costume,effect) {
       jumpTo({name: 'temporarySprite'}, locationAt(math_random_int(0, 400), math_random_int(450, 550)));
       setProp({name: 'temporarySprite'}, "rotation", math_random_int(-10, 10));
       addBehaviorSimple({name: 'temporarySprite'}, new Behavior(rainEffectBehavior, []));
-    }
-    else if(effect=="burst"){
-      setProp({name: 'temporarySprite'}, "speed", math_random_int(10, 20));
-      setProp({name: 'temporarySprite'}, "delay", math_random_int(1, 20));
-      setProp({name: 'temporarySprite'}, "scale", 0);
-      setProp({name: 'temporarySprite'}, "direction", math_random_int(0, 359));
-      setProp({name: 'temporarySprite'}, "rotation", math_random_int(0, 359));
-      addBehaviorSimple({name: 'temporarySprite'}, new Behavior(burstEffectBehavior, []));
     }
     else if(effect=="zigzag"){
       setProp({name: 'temporarySprite'}, "speed", math_random_int(10, 25)); 
@@ -75,6 +84,18 @@ function rainEffectBehavior(this_sprite) {
   if (getProp(this_sprite, "y") < -100) {
     destroy(this_sprite);
   }
+}
+function spiralEffectBehavior(this_sprite) {
+  if (getProp(this_sprite, "delay") <= 0) {
+    changePropBy(this_sprite, "scale", 1);
+    setProp(this_sprite, "x", 200 + cos((-getProp(this_sprite, "delay")) *5 - (getProp(this_sprite, "initialAngle"))) * (-getProp(this_sprite, "delay"))*5);
+    setProp(this_sprite, "y", 200 + sin((-getProp(this_sprite, "delay")) *5 - (getProp(this_sprite, "initialAngle"))) * (-getProp(this_sprite, "delay"))*5);
+    changePropBy(this_sprite, "rotation",-12);
+    if (getProp(this_sprite, "delay") < -60) {
+      destroy(this_sprite);
+    }
+  }
+  changePropBy(this_sprite, "delay",-1);
 }
 
 function zigzagEffectBehavior(this_sprite) {

@@ -64,7 +64,7 @@
           "name": "Texte et invites "
         },
         "pause_and_think_online/coursef/2021": {
-          "name": "Faire une Pause et Penser en ligne",
+          "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
@@ -186,11 +186,11 @@
           "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
         },
         "feeling_faces_emotion_image/courseb/2021": {
-          "name": "Image d'émotions de ressentis sur les visages",
+          "name": "Image d'émotions de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "Visages de Sentiments"
+          "name": "Visages expressifs"
         },
         "course-ab-blockly-blocks/courseb/2021": {
           "name": "Blocs Blockly Débranchés (NIveaux Maternelle - CP)"
@@ -235,7 +235,7 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/courseb/2021": {
-          "name": "Faire une Pause et Penser en ligne",
+          "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "the-right-app-scenarios/courseb/2021": {
@@ -286,7 +286,14 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Programmation en Binôme"
         },
+        "20_20_20_rule/coursea/2021": {
+          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "Wiggles-Go Noodle"
+        },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "Démarrage - Création d'une section de classe ",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -305,48 +312,66 @@
           "name": "Pièces du Jeu de la Carte Joyeuse"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "Image d'émotions -ressentis sur les visages",
+          "name": "Image d'émotions - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Blocs Blockly Débranchés (NIveaux Maternelle - CP)"
         },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "Toutes les 20 minutes, regardez 20 secondes à plus de 5 mètres hors de l'écran"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "name": "Wiggles - GoNoodle"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "Débogage avec le bouton Step (étape)",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+        },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "Image d'émotions de ressentis sur les visages",
+          "name": "Image d'émotions de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "Image d'émotions - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "Imprimés XL de la Carte Joyeuse"
+          "name": "Imprimés XL de la Carte Joyeuse",
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "Paquet Bonus de Pièces du Jeu de la Carte Joyeuse"
+          "name": "Paquet Bonus de Pièces du Jeu de la Carte Joyeuse",
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "Image d'émotions de ressentis sur les visages",
+          "name": "Image d'émotions de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "Visages de Sentiments"
+          "name": "Visages expressifs"
+        },
+        "pair-programming/coursea/2021": {
+          "name": "Programmation en Binôme"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "Image d'émotions de ressentis sur les visages",
+          "name": "Image d'émotions de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations/coursea/2021": {
+          "name": "Recommandations de cours CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "common-sense-media-pause-think/coursea/2021": {
-          "name": "Faire une Pause et Penser en ligne",
+          "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "Image d'émotions de ressentis sur les visages",
+          "name": "Image d'émotions de visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "Recommandations de cours CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "unplugged-video-big-event/coursea/2021": {
@@ -366,6 +391,7 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "Image d'émotions - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf-lesson-recommend/coursea/2021": {
@@ -373,19 +399,57 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "Image d'émotions - Visages expressifs",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "Recommandations de cours CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "Guide de planification du projet de l'Artiste",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "Guide de planification du projet de l'Artiste",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "Cartographie des normes du CSTA ",
+          "url": "https://studio.code.org/s/coursea-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "Guide du tronc commun et de la NGSS ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "Activités interdisciplinaires supplémentaires",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "Vocabulaire du cours",
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
         "implementation_guide/coursea/2021": {
           "name": "Guide de mise en œuvre"
         },
+        "lesson_type_guide/coursea/2021": {
+          "name": "Guide des types de cours"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "Guide de Débogage"
+        },
         "curriculum_guide_1/coursea/2021": {
           "name": "Guide Pédagogique"
         },
+        "2021_change_log/coursea/2021": {
+          "name": "Journal des modifications 2021 "
+        },
         "teacher_forum_1/coursea/2021": {
           "name": "Forum des Enseignants"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Mes amis les robots"
@@ -412,21 +476,29 @@
           "name": "CS Fundamentals Conseils pour l'Activité Principale",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
+        "debugging_guide/coursec/2021": {
+          "name": "Guide de débogage",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
+        },
         "course-cf-blockly-blocks/coursec/2021": {
           "name": " Blocs Débranchés (Cours C à F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Introduction à l'Artiste"
+          "name": "Introduction à l'Artiste",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Les Tours et les Angles"
+          "name": "Les Tours et les Angles",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Les Tours et les Angles"
+          "name": "Les Tours et les Angles",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "feeling_faces_emotion_image/coursec/2021": {
-          "name": "Image d'émotions de ressentis sur les visages"
+          "name": "Image d'émotions de visages expressifs",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Le Grand Événement",
@@ -444,26 +516,36 @@
           "name": "Le Grand Événement (Cours C)"
         },
         "pause_and_think_online/coursec/2021": {
-          "name": "Faire une Pause et Penser en ligne",
+          "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
+        "right-app-scenarios/coursec/2021": {
+          "name": "Représentation graphique des données de Play Lab",
+          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5"
+        },
         "csf-bit-byte-video/coursec/2021": {
-          "name": "Les Bits par Rapport aux Octets"
+          "name": "Les Bits par Rapport aux Octets",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "Les bracelets binaires"
+          "name": "Les bracelets binaires",
+          "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "Les bracelets binaires"
+          "name": "Les bracelets binaires",
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "Les bracelets binaires"
+          "name": "Les bracelets binaires",
+          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "Les bracelets binaires"
+          "name": "Les bracelets binaires",
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "Les bracelets binaires"
+          "name": "Les bracelets binaires",
+          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "implementation_guide/coursec/2021": {
           "name": "Guide de mise en œuvre"
@@ -524,7 +606,7 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "Faire une Pause et Penser en ligne",
+          "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "dance-party-playlist/coursed/2021": {
@@ -534,10 +616,10 @@
           "name": " Débranché"
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "Visages de Sentiments"
+          "name": "Visages expressifs"
         },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "Faire une Pause et Penser en ligne",
+          "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
@@ -577,13 +659,16 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
-          "name": "Introduction à l'Artiste"
+          "name": "Introduction à l'Artiste",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "turns_angles/express/2021": {
-          "name": "Les Tours et les Angles"
+          "name": "Les Tours et les Angles",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "turns_angles_1/express/2021": {
-          "name": "Les Tours et les Angles"
+          "name": "Les Tours et les Angles",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Documentation sur le Labo des Sprites",
@@ -600,7 +685,7 @@
           "name": "Les Sprites en Action"
         },
         "pause_and_think_online/express/2021": {
-          "name": "Faire une Pause et Penser en ligne",
+          "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "dance-party-playlist/express/2021": {
@@ -639,10 +724,10 @@
           "name": "Programmation en Binôme"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "Visages de Sentiments"
+          "name": "Visages expressifs"
         },
         "common-sense-media-pause-think/pre-express/2021": {
-          "name": "Faire une Pause et Penser en ligne",
+          "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "teacher_forum_1/pre-express/2021": {
@@ -659,13 +744,15 @@
           "name": " Informations Privées et Personnelles"
         },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "Faire une Pause et Penser en ligne"
+          "name": "Faire une Pause et réfléchir en ligne"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "Les Tours et les Angles"
+          "name": "Les Tours et les Angles",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Les Tours et les Angles"
+          "name": "Les Tours et les Angles",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "L'Écriture de Chansons avec des fonctions"

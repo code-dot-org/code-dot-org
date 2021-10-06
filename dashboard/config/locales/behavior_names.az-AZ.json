@@ -2076,7 +2076,11 @@
           "moving east": "şərqə doğru hərəkət",
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
-          "moving west": "qərbə doğru hərəkət"
+          "moving west": "qərbə doğru hərəkət",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti"
         },
         "helloworld_emoji_backgrounds": {
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
@@ -2134,7 +2138,11 @@
           "moving east": "şərqə doğru hərəkət",
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
-          "moving west": "qərbə doğru hərəkət"
+          "moving west": "qərbə doğru hərəkət",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti"
         },
         "helloworld_food_backgrounds": {
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
@@ -2178,7 +2186,11 @@
           "moving east": "şərqə doğru hərəkət",
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
-          "moving west": "qərbə doğru hərəkət"
+          "moving west": "qərbə doğru hərəkət",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti"
         },
         "helloworld_retro_backgrounds": {
           "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
@@ -2236,7 +2248,11 @@
           "moving east": "şərqə doğru hərəkət",
           "moving north": "şimala hərəkət",
           "moving south": "cənuba hərəkət",
-          "moving west": "qərbə doğru hərəkət"
+          "moving west": "qərbə doğru hərəkət",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti"
         }
       }
     }

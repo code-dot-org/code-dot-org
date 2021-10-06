@@ -2,6 +2,12 @@
   "sk-SK": {
     "data": {
       "lesson_activities": {
+        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": "Úvodná aktivita"
+        },
+        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Zhrnutie"
+        },
         "06dfaf3b-e495-4577-baa6-883a782e198f": {
           "name": "Úrovne"
         },
@@ -470,17 +476,38 @@
         "171c9649-255a-4357-b532-6e6dc632285a": {
           "name": "Úvodná aktivita"
         },
+        "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c": {
+          "name": "Hlavná aktivita"
+        },
         "160b0f38-c5d3-4b28-b797-981888824dcf": {
           "name": "Zhrnutie"
+        },
+        "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
+          "name": "Ďalšie študijné materiály"
+        },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Príležitosť na prepojenie predmetov"
         },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Úvodná aktivita"
         },
+        "a26761fc-1bdc-4474-a043-307dbef1453a": {
+          "name": "Hlavná aktivita"
+        },
         "4a54982d-83d3-4040-b499-46d8dc535774": {
           "name": "Zhrnutie"
         },
+        "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
+          "name": "Ďalšie študijné materiály"
+        },
         "0fbc0a74-9eca-48af-960b-6ec8e381e852": {
           "name": "Úvodná aktivita"
+        },
+        "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
+          "name": "Aktivita na premostenie"
+        },
+        "813fd866-1517-4302-b080-b035a842ae06": {
+          "name": "Hlavná aktivita"
         },
         "43620129-a609-440d-80aa-b76ac08ef87e": {
           "name": "Zhrnutie"
@@ -488,11 +515,23 @@
         "a42e7dc3-d50c-4be9-b17c-338d432a17ca": {
           "name": "Úvodná aktivita"
         },
+        "cf315c97-3c5a-49bf-a6ca-71bbab3a73ca": {
+          "name": "Hlavná aktivita"
+        },
         "ab1fc6fb-495e-4ae1-9685-c0c64d5bfa06": {
           "name": "Zhrnutie"
         },
+        "1d75c580-140f-4796-9e75-5863162c676b": {
+          "name": "Ďalšie študijné materiály"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Príležitosť na prepojenie predmetov"
+        },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Úvodná aktivita"
+        },
+        "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6": {
+          "name": "Hlavná aktivita"
         },
         "3ba524d7-98f9-4c54-a616-1ffb77d3f190": {
           "name": "Zhrnutie"
@@ -500,11 +539,17 @@
         "82634dba-ecce-4213-9e2b-4435bf9c1b5d": {
           "name": "Úvodná aktivita"
         },
+        "9e0e1792-f9b4-4a5b-a282-e297ccf9d497": {
+          "name": "Hlavná aktivita"
+        },
         "6c03cbfc-a38d-4aba-9cab-7e7520800342": {
           "name": "Zhrnutie"
         },
         "46e18a1e-d87a-4452-aa83-d5f742e61da6": {
           "name": "Úvodná aktivita"
+        },
+        "184d2f0c-1709-4440-95bc-9030c4ff73ed": {
+          "name": "Hlavná aktivita"
         },
         "70774562-2a5b-4a27-80d4-d731fc280abf": {
           "name": "Zhrnutie"
@@ -512,11 +557,20 @@
         "ca2f991e-1866-4b1d-994c-d7a6a3c33b45": {
           "name": "Úvodná aktivita"
         },
+        "30742072-e383-4bf2-b103-2d9c6209706c": {
+          "name": "Hlavná aktivita"
+        },
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Zhrnutie"
         },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Príležitosť na prepojenie predmetov"
+        },
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Úvodná aktivita"
+        },
+        "21f7a935-c3ff-4593-a261-53d0d4c29e21": {
+          "name": "Aktivita (30 – 45 minút)"
         },
         "bc6111e2-2d2b-4d09-ba39-ad4f401202c0": {
           "name": "Zhrnutie"
@@ -524,17 +578,32 @@
         "1924e7bb-be68-49eb-b3fb-1099623da9f6": {
           "name": "Úvodná aktivita"
         },
+        "f1bf8e7e-997a-4d4b-b37f-5b38e2f0047f": {
+          "name": "Hlavná aktivita"
+        },
         "a3dd3aa4-52be-42e3-8093-b5f2bd7441f0": {
           "name": "Zhrnutie"
+        },
+        "3392a940-9b70-4634-bfa5-a197b8d2941e": {
+          "name": "Ďalšie študijné materiály"
         },
         "e1b92a7f-657f-4825-aa00-576f89e67200": {
           "name": "Úvodná aktivita"
         },
+        "3582d645-06f9-4bac-8787-2530ccff7f71": {
+          "name": "Hlavná aktivita"
+        },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Zhrnutie"
         },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Príležitosť na prepojenie predmetov"
+        },
         "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
           "name": "Úvodná aktivita"
+        },
+        "4a006482-722c-43cd-81cd-cfc8b1180f80": {
+          "name": "Hlavná aktivita"
         },
         "3206b220-9995-40b3-ac06-29cdc44b3f03": {
           "name": "Zhrnutie"
@@ -542,23 +611,41 @@
         "4f1634b7-4e0e-471d-9c41-53ea1eaebcdb": {
           "name": "Úvodná aktivita"
         },
+        "08d1726a-8015-44e3-85de-32f581681241": {
+          "name": "Hlavná aktivita"
+        },
         "d682de82-34c6-4a16-bff5-b40e2abf88c1": {
           "name": "Zhrnutie"
         },
         "46092127-2648-4c2c-ada8-f13deb240e11": {
           "name": "Úvodná aktivita"
         },
+        "4043e8c0-b143-40dc-a8f5-9c8de6b1cc32": {
+          "name": "Hlavná aktivita"
+        },
         "8e27bf8f-68a5-42b3-ae4e-c58c2dd2d355": {
           "name": "Zhrnutie"
+        },
+        "62694f2e-0bae-4e9d-b285-ce262bc3dfce": {
+          "name": "Ďalšie študijné materiály"
         },
         "4c3dc207-714d-4cee-bcc7-249ff9b10f0c": {
           "name": "Úvodná aktivita"
         },
+        "fd8ff4dc-206c-4e0d-a30e-fd0480efaafe": {
+          "name": "Hlavná aktivita"
+        },
         "00f7b6d4-a585-4d87-ba85-2c780734b876": {
           "name": "Zhrnutie"
         },
+        "95494f38-9a95-4778-a3db-bc35cd58cbc0": {
+          "name": "Ďalšie študijné materiály"
+        },
         "f7461142-82fd-41d4-b3e2-93ca77d0a546": {
           "name": "Úvodná aktivita"
+        },
+        "daa8b2ed-7ca7-4691-a728-672a7d1ccf90": {
+          "name": "Hlavná aktivita"
         },
         "4c8f291e-8892-44b6-aa97-925faa5554eb": {
           "name": "Zhrnutie"
@@ -566,11 +653,20 @@
         "5ad8f2f2-18ef-4477-b1ea-b57cb5cb328a": {
           "name": "Úvodná aktivita"
         },
+        "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673": {
+          "name": "Hlavná aktivita"
+        },
         "6b43b84e-bffc-427b-8b1f-983968a21f29": {
           "name": "Zhrnutie"
         },
+        "d8254f7a-d3ba-4079-932c-1e0f6e2f03b2": {
+          "name": "Ďalšie študijné materiály"
+        },
         "4b6c37da-c087-41f8-94bd-6eddba55804d": {
           "name": "Úvodná aktivita"
+        },
+        "c2bcd776-9900-4043-99e5-939545175088": {
+          "name": "Hlavná aktivita"
         },
         "13c6871a-b886-4e22-b079-7b4ee6ff6ba4": {
           "name": "Zhrnutie"
@@ -578,11 +674,17 @@
         "e2d15199-1c11-455d-b75b-2cae049dd245": {
           "name": "Úvodná aktivita"
         },
+        "1b28c789-cdfc-4565-bf6e-9b522f835bee": {
+          "name": "Hlavná aktivita"
+        },
         "318a7a4f-83f0-4b32-a712-d74801897a6e": {
           "name": "Zhrnutie"
         },
         "cc1c021d-e09b-40fc-8e6a-dff336140731": {
           "name": "Úvodná aktivita"
+        },
+        "f058e007-0df3-419f-ac78-81469311034f": {
+          "name": "Hlavná aktivita"
         },
         "aad10a4b-0819-4302-88b7-8b6e3e067c47": {
           "name": "Zhrnutie"
@@ -590,11 +692,20 @@
         "94a2ea7b-e3cb-425d-a1f0-2a519b162fb3": {
           "name": "Úvodná aktivita"
         },
+        "cb1cdc21-6fa8-4d95-8989-2eb6542f9018": {
+          "name": "Hlavná aktivita"
+        },
         "c91f6f2e-3f06-42b8-9733-1bd1b2ccfee1": {
           "name": "Zhrnutie"
         },
+        "0f7c86d3-05c8-4faa-9054-4c649cbb7f17": {
+          "name": "Ďalšie študijné materiály"
+        },
         "92dee8e9-e57d-4efc-baf7-a3ff2dba0d42": {
           "name": "Úvodná aktivita"
+        },
+        "c3bb8f31-8ec7-461d-bee1-685bc9287527": {
+          "name": "Hlavná aktivita"
         },
         "87223e22-2a4b-4de5-8e15-b14dbaddccc5": {
           "name": "Zhrnutie"
@@ -602,11 +713,17 @@
         "3e2704f0-2560-4797-8c72-11016aee5c28": {
           "name": "Úvodná aktivita"
         },
+        "5af971e3-1f0b-40a9-bc25-b2451160aecc": {
+          "name": "Hlavná aktivita"
+        },
         "d004bd95-f6d5-4659-94ea-00877e3ff3a6": {
           "name": "Zhrnutie"
         },
         "80c82efc-16a4-446c-81b9-718fc3a5d1a9": {
           "name": "Úvodná aktivita"
+        },
+        "dce03060-72a3-4d6d-a355-fa84b4a3f8dc": {
+          "name": "Hlavná aktivita"
         },
         "8286ea48-0cef-4af7-af6a-007181aa482c": {
           "name": "Zhrnutie"
@@ -614,11 +731,17 @@
         "eef7a8c5-5a54-442c-ac88-6ed7ba0cc4fb": {
           "name": "Úvodná aktivita"
         },
+        "8cf2e681-004c-4624-90f3-80c1e22ec90f": {
+          "name": "Hlavná aktivita"
+        },
         "9b90e959-3c5f-4200-af67-56b2a54fa720": {
           "name": "Zhrnutie"
         },
         "414b4e57-110f-441f-a5ca-cbdc9f741a4c": {
           "name": "Úvodná aktivita"
+        },
+        "1fe3f83f-c34b-4592-9bb6-d29c832a838e": {
+          "name": "Hlavná aktivita"
         },
         "f43312b4-a6ca-47a5-be92-1e6f77b43ff8": {
           "name": "Zhrnutie"
@@ -626,11 +749,17 @@
         "24f48744-cb50-4dd5-8a1f-95571f2ff1ba": {
           "name": "Úvodná aktivita"
         },
+        "cfadb05d-8467-41a8-9b69-9ce179c53375": {
+          "name": "Hlavná aktivita"
+        },
         "8ea04c5a-f6d5-45de-b07c-e39b2b94b799": {
           "name": "Zhrnutie"
         },
         "91422f13-9b33-46bf-890c-709607a6cdb1": {
           "name": "Úvodná aktivita"
+        },
+        "50ece396-6470-4834-8f7f-a09ea19db492": {
+          "name": "Hlavná aktivita"
         },
         "ad1dcf3b-f77c-42da-a554-438231d3393a": {
           "name": "Zhrnutie"
