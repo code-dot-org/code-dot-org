@@ -178,6 +178,9 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
   const state = getState();
   const currentlyHidden = getRoot(state).sections[sectionId].hidden;
   dispatch(editSectionProperties({hidden: !currentlyHidden}));
+
+  // ADD FIREHOSE EVENT HERE
+
   return dispatch(finishEditingSection());
 };
 
