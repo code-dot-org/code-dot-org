@@ -70,18 +70,15 @@
     "thumbnail_url": "https://studio.code.org/api/v1/animation-library/gamelab/S0AVI7mnOI8nWDxmZ1NPz2lMDRfmhAF3/category_food/face_taco.png",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel7();",
     "instructions_icon": "emoji",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "user_id": 9,
   "game_id": 64,
-  "published": true,
   "created_at": "2021-09-13T20:40:03.000Z",
   "level_num": "custom",
-  "user_id": 9,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-13T20:40:03.973+00:00\",\"changed\":[\"cloned from \\\"helloworld_animals_costumes\\\"\"],\"cloned_from\":\"helloworld_animals_costumes\"},{\"changed_at\":\"2021-09-13 20:43:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:20:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:31:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:32:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:34:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:36:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:37:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 18:24:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-17 20:40:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-02 01:11:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-13T20:40:03.973+00:00\",\"changed\":[\"cloned from \\\"helloworld_animals_costumes\\\"\"],\"cloned_from\":\"helloworld_animals_costumes\"},{\"changed_at\":\"2021-09-13 20:43:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:20:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:31:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:32:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:34:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:36:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-14 20:37:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-16 18:24:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-17 20:40:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-02 01:11:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-06 15:18:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-06 15:18:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -96,7 +93,7 @@
                 <block type="gamelab_makeNewSpriteAnon">
                   <title name="ANIMATION_NAME">"emoji_18_1"</title>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker">
+                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
                       <title name="LOCATION">{"x":200,"y":200}</title>
                     </block>
                   </value>
@@ -542,7 +539,7 @@
         </block>
         <block type="gamelab_setBackground">
           <value name="COLOR">
-            <block type="colour_picker">
+            <block type="colour_picker" can_disconnect_from_parent="false">
               <title name="COLOUR">#339999</title>
             </block>
           </value>
@@ -550,7 +547,7 @@
         <block type="gamelab_makeNewSpriteAnon">
           <title name="ANIMATION_NAME">"emoji_18_1"</title>
           <value name="LOCATION">
-            <block type="gamelab_location_picker">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
               <title name="LOCATION">{"x":211,"y":258}</title>
             </block>
           </value>
@@ -558,7 +555,7 @@
         <block type="gamelab_spriteSay">
           <title name="SPEECH">I love it!</title>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <title name="ANIMATION">"emoji_18_1"</title>
             </block>
           </value>
@@ -566,7 +563,7 @@
         <block type="gamelab_setAnimation">
           <title name="ANIMATION">"emoji_25_1"</title>
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <title name="ANIMATION">"emoji_18_1"</title>
             </block>
           </value>
@@ -574,7 +571,7 @@
         <block type="gamelab_spriteClicked">
           <title name="CONDITION">"when"</title>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
               <title name="ANIMATION">"emoji_18_1"</title>
             </block>
           </value>
