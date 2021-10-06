@@ -292,7 +292,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">growing</title>
+          <title name="NAME" id="growing">growing</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy" inline="true" uservisible="false">
               <title name="PROPERTY">"scale"</title>
@@ -313,7 +313,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">jittering</title>
+          <title name="NAME" id="jittering">jittering</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy" inline="true" uservisible="false">
               <title name="PROPERTY">"scale"</title>
@@ -448,7 +448,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if" inline="false" uservisible="false">
               <value name="IF0">

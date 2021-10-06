@@ -398,7 +398,7 @@ class ApiController < ApplicationController
     if current_user
       script = Script.get_from_cache(params[:script])
       user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
-      teacher_viewing_student = current_user.students.include?(user)
+      teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
       render json: summarize_user_progress(script, user).merge(
         {
           signedIn: true,
