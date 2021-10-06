@@ -19,17 +19,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_redirected_to '/home'
   end
 
-  test "teacher logging in gets expected cookies set" do
-    teacher = create :teacher
-    sign_in teacher
-    get :index
-
-    cookie_header = @response.header['Set-Cookie']
-    assert cookie_header.include?("teacher_account_age_in_years")
-    assert cookie_header.include?("teacher_within_us")
-    assert cookie_header.include?("teacher_has_attended_pd")
-  end
-
   test "teacher with assigned course/script redirected to index" do
     teacher = create :teacher
     script = create :script
@@ -322,6 +311,17 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#thank-donors-modal', true
+  end
+
+  test "teacher visiting homepage gets expected cookies set" do
+    teacher = create :teacher
+    sign_in teacher
+    get :home
+
+    cookie_header = @response.header['Set-Cookie']
+    assert cookie_header.include?("teacher_account_age_in_years")
+    assert cookie_header.include?("teacher_within_us")
+    assert cookie_header.include?("teacher_has_attended_pd")
   end
 
   test 'student on second login does not get thank donors dialog' do

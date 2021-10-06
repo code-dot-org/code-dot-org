@@ -145,6 +145,12 @@ class HomeController < ApplicationController
       donor_banner_name ||= params[:forceDonorTeacherBanner]
       show_census_banner = !!(!donor_banner_name && current_user.show_census_teacher_banner?)
 
+      # The following cookies are used by marketing to create personalized experiences for teachers, such as displaying
+      # specific banner content.
+      current_user.marketing_segment_data&.compact&.each do |segment_name, value|
+        cookies[environment_specific_cookie_name("_teacher_#{segment_name}")] = {value: value, domain: :all}
+      end
+
       @homepage_data[:isTeacher] = true
       @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
       @homepage_data[:joined_sections] = student_sections
