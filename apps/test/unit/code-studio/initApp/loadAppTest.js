@@ -144,7 +144,7 @@ describe('loadApp.js', () => {
     });
   });
 
-  it('passes load_channel true to load user progress if appOptions has shouldLoadChannel true and no channel', done => {
+  it('passes get_channel_id true to load user progress if appOptions has shouldLoadChannel true and no channel', done => {
     appOptions = {
       ...appOptions,
       scriptName: 'test-script',
@@ -158,7 +158,7 @@ describe('loadApp.js', () => {
     const ajaxStub = sinon.stub($, 'ajax');
     const responseChannel = 'fakeChannelId';
     ajaxStub
-      .withArgs(`/api/user_progress/test-script/1/2/123?load_channel=true`)
+      .withArgs(`/api/user_progress/test-script/1/2/123?get_channel_id=true`)
       .callsFake(() => ({
         done: successCallback => ({
           fail: failureCallback => {

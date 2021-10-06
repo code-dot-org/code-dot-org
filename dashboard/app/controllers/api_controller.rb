@@ -469,7 +469,7 @@ class ApiController < ApplicationController
       )
     end
 
-    if params[:load_channel] == "true"
+    if params[:get_channel_id] == "true"
       response[:channel] = get_channel_for(level, script.id, current_user)
     end
 

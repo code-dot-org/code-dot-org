@@ -41,7 +41,7 @@ module ViewOptionsHelper
     :useGoogleBlockly,
     :disallowed_html_tags,
     :backpack_channel,
-    :should_load_channel
+    :level_requires_channel
   )
   # Sets custom options to be used by the view layer. The option hash is frozen once read.
   def view_options(opts = nil)

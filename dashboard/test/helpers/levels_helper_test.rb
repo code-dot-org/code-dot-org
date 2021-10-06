@@ -218,9 +218,9 @@ class LevelsHelperTest < ActionView::TestCase
     assert_nil app_options['channel']
   end
 
-  test "app_options sets should_load_channel to true if level is channel backed" do
+  test "app_options sets level_requires_channel to true if level is channel backed" do
     @level = create :applab
-    assert_equal true, app_options['shouldLoadChannel']
+    assert_equal true, app_options['levelRequiresChannel']
   end
 
   test 'get_channel_for sets a channel' do
