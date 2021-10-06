@@ -5,6 +5,7 @@ import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
+import ExampleImage from './ExampleImage';
 import i18n from '@cdo/locale';
 
 /**
@@ -76,7 +77,7 @@ class Instructions extends React.Component {
         )}
 
         {this.props.imgURL && !this.props.inTopPane && (
-          <img className="aniGif example-image" src={this.props.imgURL} />
+          <ExampleImage src={this.props.imgURL} />
         )}
         {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
         {this.props.authoredHints}
