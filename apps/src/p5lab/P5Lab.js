@@ -78,7 +78,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -102,7 +101,8 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @implements LogTarget
  */
 export default class P5Lab {
-  constructor() {
+  constructor(defaultSprites) {
+    this.defaultAnimations = defaultSprites;
     this.skin = null;
     this.level = null;
     this.tickIntervalId = 0;
@@ -262,21 +262,19 @@ export default class P5Lab {
 
     this.startAnimations = null;
 
-    getDefaultListMetadata().then(defaultSprites => {
-      if (this.level.useDefaultSprites) {
-        this.startAnimations = defaultSprites;
-      } else if (
-        this.level.startAnimations &&
-        this.level.startAnimations.length > 0
-      ) {
-        try {
-          this.startAnimations = JSON.parse(this.level.startAnimations);
-        } catch (err) {
-          console.error('Unable to parse default animation list', err);
-        }
+    if (this.level.useDefaultSprites) {
+      this.startAnimations = this.defaultAnimations;
+    } else if (
+      this.level.startAnimations &&
+      this.level.startAnimations.length > 0
+    ) {
+      try {
+        this.startAnimations = JSON.parse(this.level.startAnimations);
+      } catch (err) {
+        console.error('Unable to parse default animation list', err);
       }
-      this.loadAndSetInitialAnimationList(config, defaultSprites);
-    });
+    }
+    this.loadAndSetInitialAnimationList(config, this.defaultAnimations);
 
     config.usesAssets = true;
 
