@@ -47,14 +47,14 @@ module Pd
         current_role: 'What is your current role at your school?',
         completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
         completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
-        how_heard: 'How did you hear about this program?'
-      },
-      teaching_background: {
+        how_heard: 'How did you hear about this program?',
         previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
         )
+      },
+      teaching_background: {
       },
       choose_your_program: {
         program: clean_multiline(

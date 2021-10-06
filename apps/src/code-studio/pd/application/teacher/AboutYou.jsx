@@ -39,10 +39,7 @@ export default class AboutYou extends LabeledFormComponent {
 
   static labels = PageLabels.aboutYou;
 
-  static associatedFields = [
-    ...Object.keys(PageLabels.aboutYou),
-    ...Object.keys(PageLabels.teachingBackground)
-  ];
+  static associatedFields = [...Object.keys(PageLabels.aboutYou)];
 
   resetCountry = () => this.handleChange({country: US});
   exitApplication = () => (window.location = PD_RESOURCES_URL);
