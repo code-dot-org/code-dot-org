@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import Instructions from './Instructions';
-import msg from '@cdo/locale';
 
 /**
  * Component for displaying our instructions in the context of a modal dialog
@@ -27,10 +26,6 @@ class DialogInstructions extends React.Component {
     const showImg = !this.props.hintsOnly;
     return (
       <Instructions
-        puzzleTitle={msg.puzzleTitle({
-          stage_total: this.props.lessonTotal,
-          puzzle_number: this.props.puzzleNumber
-        })}
         shortInstructions={
           showInstructions ? this.props.shortInstructions : undefined
         }
