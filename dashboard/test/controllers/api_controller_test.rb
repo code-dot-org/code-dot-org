@@ -828,7 +828,7 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
-  test "user_progress_for_lesson should return channel when param load_channel is true" do
+  test "user_progress_for_lesson should return channel when param get_channel_id is true" do
     script = create(:script, :with_levels, levels_count: 1)
     level = script.script_levels.first.level
 
@@ -842,14 +842,14 @@ class ApiControllerTest < ActionController::TestCase
       script: script.name,
       lesson_position: 1,
       level_position: 1,
-      load_channel: true
+      get_channel_id: true
     }
 
     body = JSON.parse(response.body)
     assert_equal expected_channel, body['channel']
   end
 
-  test "user_progress_for_lesson should not return channel when param load_channel is false" do
+  test "user_progress_for_lesson should not return channel when param get_channel_id is false" do
     script = create(:script, :with_levels, levels_count: 1)
     level = script.script_levels.first.level
 
@@ -862,7 +862,7 @@ class ApiControllerTest < ActionController::TestCase
       script: script.name,
       lesson_position: 1,
       level_position: 1,
-      load_channel: false
+      get_channel_id: false
     }
 
     body = JSON.parse(response.body)
