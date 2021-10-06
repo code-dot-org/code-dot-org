@@ -589,6 +589,28 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Yeni blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Yeni blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Yeni blok!",
+          "poetry_foreground": "Yeni blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Yeni blok!",
+          "poetry_multiple_sprites": "Yeni blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Yeni blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Yeni blok!",
+          "poetry_sprite_stops": "Yeni blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Yeni blok!",
+          "poetry_remove_sprite": "Yeni blok!"
         }
       }
     }

@@ -229,7 +229,7 @@ vi:
             kỳ diệu và vẻ đẹp của băng tuyết.
           lessons:
             Artist:
-              name: Họa sĩ
+              name: Mã hóa cùng  Anna và Elsa
           student_description: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám
             phá sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu
             như bạn trượt băng  và làm cho một thế giới thần tiên mùa đông mà sau
@@ -390,7 +390,7 @@ vi:
             hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
           lessons:
             Infinity:
-              name: Vô cùng
+              name: Chơi thử nghiệm Disney Infinity
           student_description: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện
             hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
         algebrademo:
@@ -1694,7 +1694,7 @@ vi:
             các vì sao của riêng bạn ở một thiên hà xa rất xa.
           lessons:
             Hour of Code 2015:
-              name: Giờ lập trình 2015
+              name: 'Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh (Blockly)'
           student_description: Học cách lập trình droid và làm game Chiến tranh giữa
             các vì sao của riêng bạn ở một thiên hà xa rất xa.
         mc:
@@ -3180,7 +3180,6 @@ vi:
           description: Chọn đội của bạn và làm game bóng rổ
           lessons:
             Bounce:
-              name: Bật lại
               description_student: Bạn đã bao giờ ước mình có thể chơi game ở trường
                 chưa? Trong bài học này, bạn sẽ tự làm game đấy!
               description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ tìm
@@ -3591,7 +3590,6 @@ vi:
           title: Tự lập trình game thể thao của riêng bạn
           lessons:
             Sports:
-              name: Thể thao
               description_student: Bạn đã bao giờ ước mình có thể chơi game ở trường
                 chưa? Trong bài học này, bạn sẽ tự làm game đấy!
               description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ tìm
@@ -5818,7 +5816,7 @@ vi:
             of Code! Cuộc hành trình đi qua Minecraft với mật mã.
           lessons:
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: Hero''s Journey'
           student_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới
             cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
         applab-intro-staging:
@@ -7619,7 +7617,7 @@ vi:
             cho Giờ Lập trình!
           lessons:
             Aquatic:
-              name: Đại dương
+              name: Minecraft Chuyến thám hiểm đại dương
         dance--draft:
           lessons:
             Dance Party:

@@ -1190,6 +1190,17 @@ zh-TW:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": 緊縮
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": 泡泡
+            "'sound://category_animals/bear.mp3'": 熊仔
+            "'sound://category_animals/cat.mp3'": 貓
+            "'sound://category_animals/cow.mp3'": 乳牛
+            "'sound://category_animals/pig.mp3'": 豬
+            "'sound://category_animals/sheep.mp3'": 綿羊
+            "'sound://category_animals/chicken.mp3'": 雞
+            "'sound://category_animals/elephant.mp3'": 大象
+            "'sound://category_animals/dolphin.mp3'": 海豚
+            "'sound://category_animals/chick.mp3'": 小雞
+            "'sound://category_animals/dog.mp3'": 狗
             "'sound://category_instrumental/harpe_pluck_1.mp3'": 豎琴
             "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_pointInDirection:
@@ -1747,10 +1758,14 @@ zh-TW:
         options:
           EFFECT:
             '"rain"': 下雨
+      Poetry_makeNewSpriteAnon:
+        text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       Poetry_makeNumSprites:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       Poetry_playSound:
         text: 播放音效 {SOUND}
+      Poetry_setBackground:
+        text: 背景顏色設為 {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

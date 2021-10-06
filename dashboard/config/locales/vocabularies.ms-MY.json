@@ -11,16 +11,24 @@
           "definition": "Seseorang individu yang menggunakan objek, termasuk perisian dan perkakasan."
         },
         "behavior/coursef/2021": {
-          "word": "Tingkah laku"
+          "word": "Tingkah laku",
+          "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
+        },
+        "program/coursef/2021": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritma"
+          "word": "Algoritma",
+          "definition": "Senarai langkah untuk melengkapkan tugas."
         },
         "event/coursef/2021": {
-          "word": "Acara"
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "variable/coursef/2021": {
-          "word": "Pemboleh ubah"
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
         },
         "prompt/coursef/2021": {
           "word": "Prom"
@@ -82,7 +90,8 @@
           "word": "Gerakan Jatuh"
         },
         "program/courseb/2021": {
-          "word": "Atur Cara"
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "programming/courseb/2021": {
           "word": "Pengaturcaraan"
@@ -96,7 +105,8 @@
           "definition": "Untuk melakukan sesuatu lagi."
         },
         "event/courseb/2021": {
-          "word": "Acara"
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "algorithm/coursea/2021": {
           "word": "Algoritma",
@@ -106,7 +116,8 @@
           "word": "Penyahpepijatan"
         },
         "program/coursea/2021": {
-          "word": "Atur Cara"
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "click/coursea/2021": {
           "word": "Klik",
@@ -138,7 +149,8 @@
           "definition": "Untuk melakukan sesuatu lagi."
         },
         "event/coursea/2021": {
-          "word": "Acara"
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "algorithm/coursec/2021": {
           "word": "Algoritma",
@@ -149,6 +161,10 @@
         },
         "debugging/coursec/2021": {
           "word": "Penyahpepijatan"
+        },
+        "program/coursec/2021": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "sequencing/coursec/2021": {
           "word": "Penjujukan"
@@ -165,11 +181,16 @@
           "definition": "Untuk melakukan sesuatu lagi."
         },
         "event/coursec/2021": {
-          "word": "Acara"
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "algorithm/coursed/2021": {
           "word": "Algoritma",
           "definition": "Senarai langkah untuk menyelesaikan tugas. "
+        },
+        "program/coursed/2021": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "bug/coursed/2021": {
           "word": "Pepijat"
@@ -185,7 +206,8 @@
           "word": "Pengaturcaraan"
         },
         "event/coursed/2021": {
-          "word": "Acara"
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "repeat/coursed/2021": {
           "word": "Ulang",
@@ -207,18 +229,24 @@
         "sequencing/express/2021": {
           "word": "Penjujukan"
         },
+        "program/express/2021": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
         "programming/express/2021": {
           "word": "Pengaturcaraan"
         },
         "behavior/express/2021": {
-          "word": "Tingkah laku"
+          "word": "Tingkah laku",
+          "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "sprite/express/2021": {
           "word": "Peperi",
           "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
         },
         "event/express/2021": {
-          "word": "Acara"
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "loop/express/2021": {
           "word": "Gelung",
@@ -235,7 +263,8 @@
           "word": "Fungsi"
         },
         "variable/express/2021": {
-          "word": "Pemboleh ubah"
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
         },
         "for_loop/express/2021": {
           "word": "Gelung Untuk",
@@ -267,6 +296,10 @@
         "debugging/pre-express/2021": {
           "word": "Penyahpepijatan"
         },
+        "program/pre-express/2021": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
         "programming/pre-express/2021": {
           "word": "Pengaturcaraan"
         },
@@ -279,10 +312,12 @@
           "definition": "Untuk melakukan sesuatu lagi."
         },
         "event/pre-express/2021": {
-          "word": "Acara"
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "behavior/coursee/2021": {
-          "word": "Tingkah laku"
+          "word": "Tingkah laku",
+          "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "algorithm/coursee/2021": {
           "definition": "Senarai langkah untuk menyelesaikan tugas"
@@ -292,7 +327,8 @@
           "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
         },
         "event/coursee/2021": {
-          "word": "Acara"
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "copyright/coursee/2021": {
           "word": "Hak Cipta"

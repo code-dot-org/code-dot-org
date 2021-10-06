@@ -63,18 +63,15 @@
     "hint_prompt_attempts_threshold": "1",
     "authored_hints": "[]",
     "instructions_icon": "pizza",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "user_id": 9,
   "game_id": 64,
-  "published": true,
   "created_at": "2021-10-04T16:11:37.000Z",
   "level_num": "custom",
-  "user_id": 9,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-10-04T16:11:37.161+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_multi\\\"\"],\"cloned_from\":\"helloworld_food_multi\"},{\"changed_at\":\"2021-10-04 16:12:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"project_template_level_name\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-04T16:11:37.161+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_multi\\\"\"],\"cloned_from\":\"helloworld_food_multi\"},{\"changed_at\":\"2021-10-04 16:12:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"project_template_level_name\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-06 14:35:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -86,7 +83,7 @@
             <block type="gamelab_makeNewSpriteAnon">
               <title name="ANIMATION_NAME">"face_broc_1"</title>
               <value name="LOCATION">
-                <block type="gamelab_location_picker">
+                <block type="gamelab_location_picker" can_disconnect_from_parent="false">
                   <title name="LOCATION">{"x":200,"y":200}</title>
                 </block>
               </value>
@@ -94,7 +91,7 @@
                 <block type="gamelab_makeNewSpriteAnon">
                   <title name="ANIMATION_NAME">"face_carrot_1"</title>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker">
+                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
                       <title name="LOCATION">{"x":200,"y":200}</title>
                     </block>
                   </value>

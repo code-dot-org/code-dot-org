@@ -1,3 +1,6 @@
 {
-  "makeBackground": "需要添加背景效果。"
+  "makeBackground": "需要添加背景效果。",
+  "reinfFeedbackMsg": "你已经完成！请点击“继续”进入下一关",
+  "save": "保存​​",
+  "shareGame": "分享你的游戏："
 }

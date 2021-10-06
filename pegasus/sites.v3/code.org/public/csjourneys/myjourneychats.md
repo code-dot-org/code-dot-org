@@ -86,7 +86,7 @@ As a program manager on <a href="https://about.google/" target="_blank">Google</
 <a id="chat3"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Building models of the universe</h3>
 <div class="col-33" style="padding-right:20px; padding-top:10px; margin-bottom:15px">
-<img src="/images/csjourneys/myjourney-nasa2.png" style="max-width:100%; border-radius:15px" alt="NASA">
+<a href="https://code.zoom.us/rec/play/RJ_iQjP-YSJWJEo5JkpeksVwJlAZrnkIJRwUhw6WEcvVAg9pqzI_yhmOx6lzA7pMvk2pimpJriOnamtN.krtuVdCQE-se7gow" target="_blank"><img src="/images/csjourneys/myjourney-nasa2.png" style="max-width:100%; border-radius:15px" alt="NASA"></a>
 <center><img src="/images/csjourneys/nasa-logo.svg" style="max-width:50%; margin-top:15px" alt="NASA logo"></center>
 </div>
 
@@ -101,11 +101,7 @@ As a program manager on <a href="https://about.google/" target="_blank">Google</
 <br>
 <strong>Rutuparna Das</strong> is an astrophysicist and science communicator at the <a href="https://www.cfa.harvard.edu/" target="_blank">Center for Astrophysics | Harvard & Smithsonian</a>. Through research, she weighs clusters of galaxies to figure out what the cosmos is made of. Through NASA's Universe of Learning, she spreads the joys of space in a variety of ways, including telling stories about the people behind the science.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
+<a href="https://code.zoom.us/rec/play/RJ_iQjP-YSJWJEo5JkpeksVwJlAZrnkIJRwUhw6WEcvVAg9pqzI_yhmOx6lzA7pMvk2pimpJriOnamtN.krtuVdCQE-se7gow" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
