@@ -10,8 +10,8 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
   * Ruby tests - All of the server side business logic testing is through here.
   * UI tests - Used to test overall functionality. Intended to run across browsers. Runs either on Saucelabs or with a local Chromedriver
     * Eyes tests - Subset of UI tests intended to test the precise layout of controls on certain UI pages. Eyes tests are run through Applitools and work by comparing an expected screenshot to an actual screenshot of a certain page. Eyes tests only run on Chrome for now. If you make a change that affects layout, you will likely break eyes tests. Work with whoever is reviewing your PR to figure out if the layout change should be accepted, and the baseline will be adjusted.
- * Shared directory
-   * Ruby tests - Unit tests over Ruby code in the shared directory.
+ * Shared and Lib directory
+   * Ruby tests - Unit tests over Ruby code in the shared and lib directory.
 * Pegasus directory
   * Ruby tests - Test server side logic, caching, graphics, etc.
 
@@ -19,7 +19,7 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 <!---- Can use http://markdowntable.com/ for reformatting help --->
 
-|                        | ruby lint                 | scss lint                         | haml lint          | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared unit tests  |
+|                        | ruby lint                 | scss lint                         | haml lint          | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
 |------------------------|---------------------------|-----------------------------------|--------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
 | pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `*.js`                 |                    |                      |                    |                         |                    |                    |                    |
 | circle CI (via github) |                           |                                   |                    | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
@@ -60,7 +60,9 @@ Worth noting:
 * `rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
 * `rake test:changed:apps` - runs apps tests if sub-project folder has changed
 
-### Shared Tests
+### Shared and Lib Tests
+Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
+
 `cd shared && ruby -Itest ./test/path/to/your/test.rb` will run the specified
 test file in the shared directory.
 
