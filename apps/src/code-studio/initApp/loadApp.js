@@ -285,11 +285,12 @@ function loadAppAsync(appOptions) {
     return Promise.resolve(appOptions);
   }
 
-  // maureen come back and figure out what to do about isViewingStudentAnswer here..
   if (appOptions.channel || isViewingStudentAnswer) {
     return loadProjectAndCheckAbuse(appOptions);
   }
 
+  // shouldLoadChannel will be true for channel backed levels on publicly-cached pages
+  // We will need to load the channel client-side from api/user_progress
   const shouldLoadChannel = appOptions.shouldLoadChannel && !appOptions.channel;
 
   return new Promise((resolve, reject) => {
@@ -331,7 +332,6 @@ function loadAppAsync(appOptions) {
           appOptions.level.pairingAttempt = data.pairingAttempt;
           appOptions.level.pairingChannelId = data.pairingChannelId;
         }
-        console.log(data);
 
         if (data.channel) {
           appOptions.channel = data.channel;
@@ -489,8 +489,6 @@ export default function loadAppOptions() {
     } else {
       getStore().dispatch(setAppLoadStarted());
       loadAppAsync(appOptions).then(appOptions => {
-        console.log('maureen loaded');
-        console.log(appOptions);
         project.init(sourceHandler);
         getStore().dispatch(setAppLoaded());
         resolve(appOptions);

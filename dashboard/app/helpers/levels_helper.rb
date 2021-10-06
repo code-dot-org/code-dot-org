@@ -180,7 +180,8 @@ module LevelsHelper
     return @app_options unless @app_options.nil?
 
     should_load_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
-    level_not_cached = current_user.present?
+    # If we have loaded a user, the page must not be publicly cached
+    level_not_cached = current_user || @user
     if should_load_channel && level_not_cached
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),

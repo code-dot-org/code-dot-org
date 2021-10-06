@@ -202,7 +202,28 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal blockly_level_options, level.blockly_level_options
   end
 
-  test 'app_options sets a channel' do
+  test 'app_options sets a channel if a user is present for a channel-backed level' do
+    user = create :user
+    sign_in user
+
+    @level = create :applab
+    assert_not_nil app_options['channel']
+  end
+
+  # The reason we do not set a channel if a user is not present, is that this may
+  # indicate that the level is cached and therefore we will not load user-related data
+  # server-side (but rather load it in loadApp.js, client-side)
+  test 'app_options does not set a channel if a user is not present' do
+    @level = create :applab
+    assert_nil app_options['channel']
+  end
+
+  test "app_options sets should_load_channel to true if level is channel backed" do
+    @level = create :applab
+    assert_equal true, app_options['shouldLoadChannel']
+  end
+
+  test 'get_channel_for sets a channel' do
     user = create :user
     sign_in user
 
@@ -217,14 +238,6 @@ class LevelsHelperTest < ActionView::TestCase
     # Request it for a different level, should get a different channel
     level = create(:level, :blockly)
     assert_not_equal channel, get_channel_for(level, script.id)
-  end
-
-  test 'applab levels should have channels' do
-    user = create :user
-    sign_in user
-
-    @level = create :applab
-    assert_not_nil app_options['channel']
   end
 
   test 'applab levels should not load channel when viewing student solution of a student without a channel' do
