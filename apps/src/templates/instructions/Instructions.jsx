@@ -57,7 +57,6 @@ class Instructions extends React.Component {
       // still want to render NonMarkdownInstructions to get the puzzle title
       return (
         <NonMarkdownInstructions
-          puzzleTitle={this.props.puzzleTitle}
           shortInstructions={this.props.shortInstructions}
           instructions2={this.props.instructions2}
         />
