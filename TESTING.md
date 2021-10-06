@@ -66,6 +66,9 @@ Tests in the `shared/` and `lib/` directories need to be run slightly differentl
 `cd shared && ruby -Itest ./test/path/to/your/test.rb` will run the specified
 test file in the shared directory.
 
+`cd lib && ruby -Itest ./test/path/to/your/test.rb` will run the specified
+test file in the lib directory.
+
 ### Apps Tests
 `npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory. You can expect a full test run to take about 4-8 minutes.
 
