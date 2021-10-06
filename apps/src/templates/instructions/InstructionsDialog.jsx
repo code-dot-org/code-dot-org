@@ -12,10 +12,7 @@ export function InstructionsDialog(props) {
   return (
     <StylizedBaseDialog
       isOpen={props.isOpen}
-      title={
-        props.title &&
-        props.showTitle && <h1 style={styles.title}>{props.title}</h1>
-      }
+      title={<h1 style={styles.title}>{props.title}</h1>}
       body={<DialogInstructions />}
       renderFooter={() => (
         <FooterButton
@@ -31,21 +28,16 @@ export function InstructionsDialog(props) {
 }
 
 InstructionsDialog.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 
   // Provided by Redux.
   isOpen: PropTypes.bool,
-  handleClose: PropTypes.func.isRequired,
-  showTitle: PropTypes.bool
+  handleClose: PropTypes.func.isRequired
 };
 
 export default connect(
   state => ({
-    isOpen: state.instructionsDialog.open,
-    // The presence of longInstructions determines showTitle because
-    // the grandchild of this component, <Instructions/>, uses this same calculation
-    // in its renderMainBody method. This prevents rendering the title twice.
-    showTitle: !!state.instructions.longInstructions
+    isOpen: state.instructionsDialog.open
   }),
   dispatch => ({
     handleClose: () => dispatch(closeDialog())
