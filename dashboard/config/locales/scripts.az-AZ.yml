@@ -198,7 +198,7 @@ az:
             Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək.
           lessons:
             Artist:
-              name: Rəssam
+              name: Anna və Elza ilə proqramlaşdır
           student_description: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna
             və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində
             sürüşərək siz qar dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla
@@ -281,10 +281,6 @@ az:
               name: Raket yüksəkliyi
             'Play Lab: Defining Variables (Big Game)':
               name: Böyük oyun- dəyişənlər
-        infinity:
-          lessons:
-            Infinity:
-              name: Sonsuz sayda
         algebrademo:
           lessons:
             Defining Variables:
@@ -746,7 +742,7 @@ az:
             Ulduz Müharibələri oyunu düzəldin.
           lessons:
             Hour of Code 2015:
-              name: Kod Saatı 2015
+              name: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın (Blockly)'
           student_description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
             Ulduz Müharibələri oyunu düzəldin.
         mc:
@@ -1156,10 +1152,6 @@ az:
           lessons:
             Unit 1 Overview:
               name: 1cü Hissə Baxış
-        basketball:
-          lessons:
-            Bounce:
-              name: Tullan
         csd2-2017:
           lessons:
             new stage:
@@ -1243,9 +1235,6 @@ az:
               name: Kod Saatı 2013
         sports:
           title: Özünün idman oyununu kodlaşdır
-          lessons:
-            Sports:
-              name: İdman
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1703,10 +1692,6 @@ az:
               name: Proqramlaşdırma - Kod Saatı
             Creating Webpages:
               name: Vebsaytların Yaradılması
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Maynkraft Kod Saatı
         csp-explore-2017:
           lesson_groups:
             cspSurvey:

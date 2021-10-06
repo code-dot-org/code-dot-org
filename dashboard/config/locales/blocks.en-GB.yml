@@ -115,6 +115,8 @@ en-GB:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_animals/cow.mp3'": cow
+            "'sound://category_animals/chicken.mp3'": chicken
             "'sound://category_digital/jump_7.mp3'": jump
       gamelab_randColor:
         text: random colour

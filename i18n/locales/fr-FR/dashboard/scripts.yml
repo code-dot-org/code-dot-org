@@ -193,7 +193,7 @@ fr:
           description_short: Utilisons du code pour rejoindre Anna et Elsa tandis qu’elles explorent la magie et la beauté de la glace.
           lessons:
             Artist:
-              name: Artiste
+              name: Code avec Anna et Elsa
           student_description: Utilisons le code pour rejoindre Anna et Elsa dans leur exploration de la magie et de la beauté de la glace. Tu vas créer des flocons de neige et des motifs en patinant sur la glace et faire un pays des merveilles hivernal que tu pourras partager avec tes amis !
         course4:
           title: Cours 4
@@ -336,7 +336,7 @@ fr:
           description_short: Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity.
           lessons:
             Infinity:
-              name: Infini
+              name: Labo de Jeux de Disney Infinity
           student_description: Utilise le Labo de jeux pour créer une histoire ou un jeu mettant en vedette les personnages de Disney Infinity.
         algebrademo:
           title: Démo de l'algèbre
@@ -1670,9 +1670,6 @@ fr:
         starwarsblocks:
           description: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
           description_short: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
-          lessons:
-            Hour of Code 2015:
-              name: Heure de Code 2015
           student_description: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
         mc:
           title: Hour of Code Minecraft
@@ -3413,7 +3410,6 @@ fr:
           description: Choisir une équipe et faite un match de basket
           lessons:
             Bounce:
-              name: Rebond
               description_student: Tu souhaites jouer à des jeux vidéo à l'école ? Dans cette leçon, tu apprendras à créer le tien !
               description_teacher: Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des énigmes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l'énigme, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.
           student_description: Choisir une équipe et faite un match de basket
@@ -3986,7 +3982,6 @@ fr:
           description: Coder votre propre sport
           lessons:
             Sports:
-              name: Sports
               description_student: Tu souhaites jouer à des jeux vidéo à l'école ? Dans cette leçon, tu apprendras à créer le tien !
               description_teacher: Dans cette activité en ligne, les élèves apprendront ce que sont les événements et comment les ordinateurs les utilisent dans des programmes comme les jeux vidéo. Les élèves travailleront à travers des énigmes, faisant réagir le programme aux événements (tels que les boutons fléchés quand ils sont pressés.) À la fin de l'énigme, les élèves auront la possibilité de personnaliser leur jeu avec des vitesses et des sons différents.
           student_description: Coder votre propre sport
@@ -6722,7 +6717,7 @@ fr:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: le voyage du héros dans l''Heure de Code'
             Minecraft Hour of Code:
-              name: Hour of Code Minecraft
+              name: 'Minecraft: Le voyage du héros'
           student_description: Minecraft est de retour pour l’Heure de code avec une toute nouvelle activité\_! Exploration de Minecraft avec le code.
         applab-intro-staging:
           title: Initiation à la Présentation dans Labo des Applis
@@ -9117,7 +9112,7 @@ fr:
           description: Minecraft est de retour avec une toute nouvelle activité ! Utilise ta créativité et tes compétences en résolution de problèmes pour explorer et construire des mondes sous-marins avec du code.
           lessons:
             Aquatic:
-              name: Aquatique
+              name: 'Minecraft : Voyage Aquatique'
           student_description: Minecraft est de retour avec une toute nouvelle activité ! Utilise ta créativité et tes compétences en résolution de problèmes pour explorer et construire des mondes sous-marins avec du code.
         sconyers:
           title: Le Terrain de Jeux pour Enfants de Tracey
@@ -13975,6 +13970,8 @@ fr:
               name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
               description_teacher: 'Cette leçon de synthèse guide les élèves à travers le processus de conception, de développement et de présentation de leurs propres projets Labo du Jeu ! Pour assurer le bon déroulement de ce processus, nous avons fourni aux étudiants une structure, étape par étape, à suivre, de la planification sur papier au codage sur notre site web. De plus, nous offrons des idées pour aider les enseignants à animer un show de clôture ! '
+            Putting a STOP to Online Meanness:
+              description_student: Dans cette leçon, vous découvrirez la méchanceté et ce qu'il faut faire si vous la rencontrez en ligne.
             Password Power-Up:
               description_student: Dans cette leçon, tu apprendras comment les mots de passe protègent vos informations et comment créer un bon mot de passe.
           student_description: Crée des programmes avec séquençage, boucles et événements. Traduis tes initiales en binaire, étudie différentes techniques de résolution de problèmes et apprends à réagir au cyberharcèlement. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager !
@@ -15906,6 +15903,8 @@ fr:
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
             lesson-1:
               name: Fin du projet.
+              description_student: Racontez une histoire avec l'Artiste !
+              description_teacher: Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et les boucles avec l'Artiste.
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -15998,6 +15997,8 @@ fr:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
           description_audience: 'Âges: 6 à 10 ans'
           lessons:
+            Putting a STOP to Online Meanness:
+              description_student: Dans cette leçon, vous découvrirez la méchanceté et ce qu'il faut faire si vous la rencontrez en ligne.
             'Programming: My Robotic Friends':
               key: 'Programmation : Mes Amis Robotiques'
               name: Mes Amis Robotiques Jr.
@@ -16042,6 +16043,7 @@ fr:
               key: Les Boucles dans la Moissonneuse
               name: Récolter des Cultures avec des Boucles
               description_student: Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !
+              description_teacher: Les élèves font de nouvelles boucles pour que la moissonneuse récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**.
             Looking Ahead:
               key: Regarder en avant
               name: Regarder vers l'Avenir avec Minecraft

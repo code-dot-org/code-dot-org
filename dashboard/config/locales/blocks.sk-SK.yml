@@ -1203,7 +1203,22 @@ sk:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": tlačidlo
             "'sound://category_collect/clicky_crunch.mp3'": chrúmať
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bublina
+            "'sound://category_animals/bear.mp3'": Medveď
+            "'sound://category_animals/cat.mp3'": mačka
+            "'sound://category_animals/cow.mp3'": krava
+            "'sound://category_animals/pig.mp3'": prasa
+            "'sound://category_animals/sheep.mp3'": ovca
+            "'sound://category_animals/goat.mp3'": koza
+            "'sound://category_animals/chicken.mp3'": kurča
+            "'sound://category_animals/rooster.mp3'": kohút
+            "'sound://category_animals/elephant.mp3'": slon
+            "'sound://category_animals/dolphin.mp3'": delfín
+            "'sound://category_animals/chick.mp3'": kura
+            "'sound://category_animals/dog.mp3'": pes
+            "'sound://category_animals/tiger.mp3'": tiger
             "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": vybrať
             "'sound://category_digital/jump_7.mp3'": skoč
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
@@ -1737,10 +1752,14 @@ sk:
           EFFECT:
             '"burst"': prasknutie
             '"rain"': dážď
+      Poetry_makeNewSpriteAnon:
+        text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       Poetry_makeNumSprites:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
       Poetry_playSound:
         text: playSound {SOUND}
+      Poetry_setBackground:
+        text: nastav farbu pozadia {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

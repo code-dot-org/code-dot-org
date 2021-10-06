@@ -1191,6 +1191,16 @@ zh-CN:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": 紧缩
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": 泡泡
+            "'sound://category_animals/bear.mp3'": 熊
+            "'sound://category_animals/cat.mp3'": 猫
+            "'sound://category_animals/cow.mp3'": 牛
+            "'sound://category_animals/pig.mp3'": 猪
+            "'sound://category_animals/sheep.mp3'": 羊
+            "'sound://category_animals/chicken.mp3'": 鸡
+            "'sound://category_animals/elephant.mp3'": 大象
+            "'sound://category_animals/dolphin.mp3'": 海豚
+            "'sound://category_animals/dog.mp3'": 狗
             "'sound://category_digital/jump_7.mp3'": 跳跃
       gamelab_pointInDirection:
         text: 指向 {SPRITE} {DIRECTION}
@@ -1733,10 +1743,14 @@ zh-CN:
         options:
           EFFECT:
             '"rain"': 下雨
+      Poetry_makeNewSpriteAnon:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
       Poetry_makeNumSprites:
         text: 做{NUM}新{ANIMATION_NAME}精灵图
       Poetry_playSound:
         text: 播放音效{SOUND}
+      Poetry_setBackground:
+        text: 设置背景颜色为 {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

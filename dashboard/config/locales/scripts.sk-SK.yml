@@ -230,7 +230,7 @@ sk:
             spoločne kúzlo a krásu ľadu.
           lessons:
             Artist:
-              name: Umelec
+              name: Programuj s Annou a Elsou
           student_description: Pomocou programovania sa pripojme k Anne a Else a preskúmajme
             spoločne kúzlo a krásu ľadu. Korčuľovaním v ľade vykreslíš snehové vločky
             a krásne vzory a vytvoríš tak zázračnú zimnú krajinu, ktorú môžeš zdieľať
@@ -385,7 +385,7 @@ sk:
           description_short: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
           lessons:
             Infinity:
-              name: nekonečne
+              name: Disney Infinity Play Lab
           student_description: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
         algebrademo:
           lessons:
@@ -1251,9 +1251,6 @@ sk:
             v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star
             Wars v ďalekej galaxii.
-          lessons:
-            Hour of Code 2015:
-              name: Hodina kódu 2015
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
         mc:
@@ -2349,9 +2346,6 @@ sk:
           title: Vytvor basketbalový zápas
           description_short: Vytvor basketbalový zápas
           description: Vytvor basketbalový zápas
-          lessons:
-            Bounce:
-              name: Bounce
           student_description: Vytvor basketbalový zápas
         sample-csp5:
           lessons:
@@ -2683,9 +2677,6 @@ sk:
           title: Naprogramuj si vlastný zápas
           description_short: Pomiešaj športy
           description: Pomiešaj športy
-          lessons:
-            Sports:
-              name: Športy
           student_description: Pomiešaj športy
         2016_sciencePD-phase2b:
           lessons:
@@ -4321,7 +4312,7 @@ sk:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Cesta Hrdinu v Hodine Kódu'
             Minecraft Hour of Code:
-              name: Minecraft Hodina Kódu
+              name: 'Minecraft: Cesta Hrdinu'
           student_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
             Prejdi sa po Minecrafte s kódom.
         applab-intro-staging:
@@ -6167,6 +6158,9 @@ sk:
           description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu,
             schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval podvodný
             svet.
+          lessons:
+            Aquatic:
+              name: Minecraft Vodné Dobrodužstvo
           student_description: Minecraft je späť s úplne novou aktivitou! Použi tvoju
             kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval
             podvodný svet.
@@ -11910,9 +11904,9 @@ sk:
             Programming with Rey and BB-8:
               key: Programovanie s Rey a BB-8
               name: Programovanie s Rey a BB-8
-              description_teacher: Táto lekcia **na rozvíjanie zručností** žiaci využijú
-                svoje novozískané programovacie zručnosti zložitejšími spôsobmi, aby
-                robota BB‑8 znavigovali náročnou dráhou.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci využijú svoje novozískané programovacie zručnosti zložitejšími
+                spôsobmi, aby robota BB‑8 znavigovali náročnou dráhou.
             Programming in Harvester:
               key: Programovanie so Záhradníčkou
               name: Programovanie so Záhradníčkou
@@ -11924,9 +11918,9 @@ sk:
             Loops with Scrat:
               key: Cykly so Scratom
               name: Cykly so Scratom
-              description_teacher: V tejto lekcii **na rozvíjanie zručností** si žiaci
-                precvičia koncept cyklov pri programovaní úloh, ktorých cieľom je
-                pomôcť veveričke dostať sa k žaluďu.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia koncept cyklov pri programovaní úloh, ktorých cieľom
+                je pomôcť veveričke dostať sa k žaluďu.
             Loops with Laurel:
               key: Cykly s Laurel
               name: Cykly s Laurel
@@ -11947,8 +11941,8 @@ sk:
             Drawing Gardens with Loops:
               key: Kreslenie v záhrade pomocou cyklov
               name: Kreslenie v záhrade pomocou cyklov
-              description_teacher: V tejto lekcii **na rozvíjanie zručností** sa žiaci
-                budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností
                 inštrukcií. Žiaci sa naučia vytvárať vzory pomocou cyklov. Na konci
                 lekcie budú mať príležitosť vytvoriť si vlastné obrázky.
             On the Move with Events:
