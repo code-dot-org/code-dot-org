@@ -38,7 +38,7 @@ class TeacherPanel extends React.Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired
     }),
-    unitHasLockableLessons: PropTypes.bool,
+    unitHasLockableLessons: PropTypes.bool.isRequired,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape),
     levelsWithProgress: PropTypes.array,
@@ -121,7 +121,7 @@ class TeacherPanel extends React.Component {
       viewAs === ViewType.Teacher && currentStudent;
 
     const displayLevelExamples =
-      viewAs === ViewType.Teacher && sectionData?.level_examples?.length > 0;
+      viewAs === ViewType.Teacher && sectionData && sectionData.level_examples;
 
     const displayLockInfo =
       hasSections && unitHasLockableLessons && viewAs === ViewType.Teacher;
