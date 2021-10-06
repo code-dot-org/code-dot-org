@@ -5,11 +5,13 @@
     "login_required": false,
     "properties": {
       "version_year": "unversioned",
-      "is_course": true
+      "is_course": true,
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "jigsaw",
-    "serialized_at": "2021-08-03 22:46:40 UTC",
+    "serialized_at": "2021-10-06 18:20:22 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "jigsaw"
@@ -34,9 +36,14 @@
       "name": "Jigsaw",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
+        "preparation": "- Create your own class section on Code.org and make sure every student has a card with their **passcode** on it.\r\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\r\n- Have the school IT person add a quick link for your class section to the computer desktop.\r\n- Review the Common Sense Education website for more online safety content.",
+        "purpose": "The main goal of this lesson is to build students' experience with computers. By covering the most basic computer functions such as clicking, dragging, and dropping, we are creating a more equal playing field in the class for future puzzles. This lesson also provides a great opportunity to introduce basic computer hardware terminology, potentially including \"mouse\", \"trackpad\" or \"touchscreen\", depending on your devices.",
+        "student_overview": "Click and drag to finish the puzzles."
       },
       "seeding_key": {
         "lesson.key": "Jigsaw",
@@ -46,21 +53,254 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f652e4d2-c712-4cff-a011-f1dcea192263",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f652e4d2-c712-4cff-a011-f1dcea192263",
+        "lesson.key": "Jigsaw",
+        "lesson_group.key": "",
+        "script.name": "jigsaw"
+      }
+    },
+    {
+      "key": "c9d50a06-ef6f-43b9-9344-8ce2d8caa7ca",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Preview Online Puzzles"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9d50a06-ef6f-43b9-9344-8ce2d8caa7ca",
+        "lesson.key": "Jigsaw",
+        "lesson_group.key": "",
+        "script.name": "jigsaw"
+      }
+    },
+    {
+      "key": "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2",
+      "position": 3,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2",
+        "lesson.key": "Jigsaw",
+        "lesson_group.key": "",
+        "script.name": "jigsaw"
+      }
+    },
+    {
+      "key": "4286b9b3-8562-4acf-8967-f6b6b1b18f9e",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4286b9b3-8562-4acf-8967-f6b6b1b18f9e",
+        "lesson.key": "Jigsaw",
+        "lesson_group.key": "",
+        "script.name": "jigsaw"
+      }
+    },
+    {
+      "key": "f1dc2f0d-09e0-411a-9b33-31ae70fe191a",
+      "position": 5,
+      "properties": {
+        "duration": 0,
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1dc2f0d-09e0-411a-9b33-31ae70fe191a",
+        "lesson.key": "Jigsaw",
+        "lesson_group.key": "",
+        "script.name": "jigsaw"
+      }
+    },
+    {
+      "key": "7e48fd52-decd-48b3-97bf-a71e8dd0f44e",
+      "position": 6,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e48fd52-decd-48b3-97bf-a71e8dd0f44e",
+        "lesson.key": "Jigsaw",
+        "lesson_group.key": "",
+        "script.name": "jigsaw"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b655a2bb-a62b-4a91-bf08-5c4f49cb2527",
+      "position": 1,
+      "properties": {
+        "description": "Goal: This discussion will teach students what to expect and how to behave when they enter the computer lab.",
+        "name": "Behaving in the Computer Lab\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "b655a2bb-a62b-4a91-bf08-5c4f49cb2527",
+        "lesson_activity.key": "f652e4d2-c712-4cff-a011-f1dcea192263"
+      }
+    },
+    {
+      "key": "bacf1db7-dc91-41b8-ad71-9fb655e18dfa",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": " - Use calm bodies in the lab\r\n - Remember not to chew gum or candy\r\n - Sanitize your hands\r\n - Sit with your partner at one computer\r\n - Make sure that the first \"driver\" can reach the mouse\r\n - When you get frustrated, don't hit or shake the computer or monitor\r\n - Follow the [r 202020] rule\r\n - How to deal with the [r wiggles] every 20-30 minutes (requires a free login on GoNoodle)\r\n - Ask your partner before you ask the teacher\r\n - Keep volume down so everyone else can hear their partners\r\n - Use your journal for keeping track of feelings and solutions\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bacf1db7-dc91-41b8-ad71-9fb655e18dfa",
+        "lesson_activity.key": "f652e4d2-c712-4cff-a011-f1dcea192263"
+      }
+    },
+    {
+      "key": "aa328958-bd87-4dbb-8585-cb33f905051f",
+      "position": 3,
+      "properties": {
+        "description": "Have a good discussion around the computer lab expectations to make sure that students understand the rules. Some topics of discussion might include:\r\n\r\n - Is running in the computer lab okay?\r\n - How loudly should we walk when we are in the computer lab?\r\n - What should you do if you get stuck on a puzzle?\r\n - If you get frustrated, will it help to hit the computer?\r\n - When we're about to go to the computer lab, how should we get ready?",
+        "name": "Discuss\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa328958-bd87-4dbb-8585-cb33f905051f",
+        "lesson_activity.key": "f652e4d2-c712-4cff-a011-f1dcea192263"
+      }
+    },
+    {
+      "key": "95529f90-229b-4ce3-8f92-40528f8a7830",
+      "position": 1,
+      "properties": {
+        "description": "Project a puzzle from lesson 2. Show the class how to click on the picture and place it in the correct spot by dragging and dropping. Purposely make mistakes such as clicking the background or dropping the image before it's at the right spot. Ask for help from volunteers in the class when you run into these problems."
+      },
+      "seeding_key": {
+        "activity_section.key": "95529f90-229b-4ce3-8f92-40528f8a7830",
+        "lesson_activity.key": "c9d50a06-ef6f-43b9-9344-8ce2d8caa7ca"
+      }
+    },
+    {
+      "key": "3d7433c7-ff8a-4cf9-b462-83ce39322c67",
+      "position": 1,
+      "properties": {
+        "description": "*Goal:* This will teach students how to use Code.org to complete online puzzles.\r\n\r\nThis stage was designed to give students the opportunity to practice hand-eye coordination, clicking, and drag & drop skills.  Students will also play with sequence.",
+        "name": "Learn to Drag and Drop\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d7433c7-ff8a-4cf9-b462-83ce39322c67",
+        "lesson_activity.key": "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2"
+      }
+    },
+    {
+      "key": "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c",
+      "position": 2,
+      "properties": {
+        "description": "Take some time to explicitly teach how to click, drag, and drop. Take time to introduce the language around the devices students will be using when they work on the puzzles. If you have tablets, students will be using a *touch screen*. If you have laptops, they will likely be using a *trackpad*. Desktop computers like you might find in a lab will rely on the use of the *mouse*.",
+        "tips": [
+          {
+            "key": "content",
+            "type": "contentCorner",
+            "markdown": "Considering having students break down the steps of dragging and dropping and record them on the board. For example: \r\n\r\n1. Move the arrow to the block. \r\n2. Click and hold the mouse button. \r\n3. Move the mouse. \r\n4. Let go of the button.\r\n\r\nDoing this will give students practice with creating an *algorithm*, which is a concept that will be explored in upcoming lessons.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c",
+        "lesson_activity.key": "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2"
+      }
+    },
+    {
+      "key": "f3642330-5031-4e9c-828c-29d0503a17f7",
+      "position": 3,
+      "properties": {
+        "description": "Place kids in pairs and have them watch the pair programming video as a class or at their stations.  This should help students start off in the right direction."
+      },
+      "seeding_key": {
+        "activity_section.key": "f3642330-5031-4e9c-828c-29d0503a17f7",
+        "lesson_activity.key": "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2"
+      }
+    },
+    {
+      "key": "6610529a-20b8-4b76-83d1-1215f72ed51b",
+      "position": 4,
+      "properties": {
+        "description": "Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online puzzles, the role of the teacher is primarily one of encouragement and support. Online puzzles are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are:",
+        "tips": [
+          {
+            "key": "tip",
+            "type": "teachingTip",
+            "markdown": "Show the students the right way to help classmates:\r\n\r\n - Don’t sit in the classmate’s chair\r\n - Don’t use the classmate’s keyboard\r\n - Don’t touch  the classmate’s mouse\r\n - Make sure the classmate can describe the solution to you out loud before you walk away\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6610529a-20b8-4b76-83d1-1215f72ed51b",
+        "lesson_activity.key": "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2"
+      }
+    },
+    {
+      "key": "66f2f042-aa67-41db-a756-4ab6e5623f77",
+      "position": 5,
+      "properties": {
+        "description": "- Utilize pair programming whenever possible during the activity.\r\n - Encourage students with questions/challenges to start by asking their partner.\r\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\r\n - Remind students to use the debugging process before you approach.\r\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\r\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\r\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
+      },
+      "seeding_key": {
+        "activity_section.key": "66f2f042-aa67-41db-a756-4ab6e5623f77",
+        "lesson_activity.key": "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2"
+      }
+    },
+    {
+      "key": "319eb690-ba34-4d34-9158-d30d777c4b05",
+      "position": 1,
+      "properties": {
+        "description": "Goal: Help students reflect on the things they learned in this lesson\r\n\r\nGive the students a journal prompt to help them process some of the things that they encountered during the day.\r\n\r\nJournal prompts could include:\r\n\r\n - Draw one of the feeling faces that shows how you felt about today's lesson in the corner of your journal page.\r\n - Can you draw a sequence for getting ready to go to the computer lab?\r\n - Draw a computer lab \"Do\" and a \"Don't\"\r\n -  - Draw and label the name of the computer part you used when clicking and dragging during the puzzles. (mouse button, touch screen, trackpad)",
+        "name": "Journaling\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "319eb690-ba34-4d34-9158-d30d777c4b05",
+        "lesson_activity.key": "4286b9b3-8562-4acf-8967-f6b6b1b18f9e"
+      }
+    },
+    {
+      "key": "8f47b370-5569-4a34-b105-c765a39c8460",
+      "position": 1,
+      "properties": {
+        "description": "If students complete the puzzles early, have them spend some time trying to come up with their own puzzles in their journal."
+      },
+      "seeding_key": {
+        "activity_section.key": "8f47b370-5569-4a34-b105-c765a39c8460",
+        "lesson_activity.key": "f1dc2f0d-09e0-411a-9b33-31ae70fe191a"
+      }
+    },
+    {
+      "key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14",
+        "lesson_activity.key": "7e48fd52-decd-48b3-97bf-a71e8dd0f44e"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -69,7 +309,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:1"
@@ -78,12 +319,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -92,7 +330,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:2"
@@ -101,12 +340,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -115,7 +351,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:3"
@@ -124,12 +361,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -138,7 +372,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:4"
@@ -147,12 +382,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,7 +393,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:5"
@@ -170,12 +403,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -184,7 +414,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:6"
@@ -193,12 +424,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -207,7 +435,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:7"
@@ -216,12 +445,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -230,7 +456,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:8"
@@ -239,12 +466,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -253,7 +477,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:9"
@@ -262,12 +487,9 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:10"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -276,7 +498,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:10"
@@ -285,12 +508,9 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:11"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -299,7 +519,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:11"
@@ -308,12 +529,9 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Jigsaw:12"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -322,7 +540,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       },
       "level_keys": [
         "blockly:Jigsaw:12"
@@ -338,7 +557,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -349,7 +569,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -360,7 +581,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -371,7 +593,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -382,7 +605,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -393,7 +617,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -404,7 +629,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -415,7 +641,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -426,7 +653,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -437,7 +665,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -448,7 +677,8 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     },
     {
@@ -459,15 +689,32 @@
         ],
         "lesson.key": "Jigsaw",
         "lesson_group.key": "",
-        "script.name": "jigsaw"
+        "script.name": "jigsaw",
+        "activity_section.key": "a1e213b8-5557-4708-a6f2-081ec1fbcc14"
       }
     }
   ],
   "resources": [
-
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair-programming-vid",
+      "properties": {
+        "type": "Student Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "pair-programming-vid"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Jigsaw",
+        "resource.key": "pair-programming-vid"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -485,10 +732,63 @@
 
   ],
   "objectives": [
-
+    {
+      "key": "cdbe73f5-f16f-475f-b896-e9acdb885a23",
+      "properties": {
+        "description": "Recognize what is expected when students transition into the computer lab."
+      },
+      "seeding_key": {
+        "lesson.key": "Jigsaw",
+        "objective.key": "cdbe73f5-f16f-475f-b896-e9acdb885a23"
+      }
+    },
+    {
+      "key": "d3adc58a-17d0-4cf1-9afa-ccfde96544ef",
+      "properties": {
+        "description": "Use appropriate terminology when referring to a computer mouse, trackpad, or touchscreen."
+      },
+      "seeding_key": {
+        "lesson.key": "Jigsaw",
+        "objective.key": "d3adc58a-17d0-4cf1-9afa-ccfde96544ef"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Jigsaw",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Jigsaw",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Jigsaw",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Jigsaw",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Jigsaw",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-18"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
