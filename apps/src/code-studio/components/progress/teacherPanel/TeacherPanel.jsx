@@ -38,7 +38,7 @@ class TeacherPanel extends React.Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired
     }),
-    unitHasLockableLessons: PropTypes.bool,
+    unitHasLockableLessons: PropTypes.bool.isRequired,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape),
     levelsWithProgress: PropTypes.array,
@@ -259,7 +259,11 @@ const styles = {
 export const UnconnectedTeacherPanel = TeacherPanel;
 export default connect(
   state => {
-    const {lessonsBySectionId, lockableAuthorized} = state.lessonLock;
+    const {
+      lessonsBySectionId,
+      lockableAuthorized,
+      lockableAuthorizedLoaded
+    } = state.lessonLock;
     const {
       selectedSectionId,
       sectionsAreLoaded,
@@ -281,7 +285,9 @@ export default connect(
 
     // Pretend we don't have lockable lessons if we're not authorized to see them
     const unitHasLockableLessons =
-      lockableAuthorized && hasLockableLessons(state.progress);
+      lockableAuthorizedLoaded &&
+      lockableAuthorized &&
+      hasLockableLessons(state.progress);
 
     return {
       viewAs: state.viewAs,
