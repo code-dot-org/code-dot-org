@@ -17,7 +17,7 @@ class Comment extends Component {
     onDelete: PropTypes.func.isRequired,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     // Populated by Redux
-    viewAs: PropTypes.oneOf(Object.keys(ViewType))
+    viewAsTeacher: PropTypes.bool
   };
 
   state = {isShowingCommentOptions: false};
@@ -81,7 +81,7 @@ class Comment extends Component {
       isResolved,
       hasError
     } = this.props.comment;
-    const {viewAsCodeReviewer, viewAs} = this.props;
+    const {viewAsCodeReviewer, viewAsTeacher} = this.props;
 
     const {isShowingCommentOptions} = this.state;
 
@@ -100,7 +100,7 @@ class Comment extends Component {
               {this.renderFormattedTimestamp(timestampString)}
             </span>
             {isResolved && <i className="fa fa-check" style={styles.check} />}
-            {(viewAs === ViewType.Teacher || !viewAsCodeReviewer) && (
+            {(viewAsTeacher || !viewAsCodeReviewer) && (
               <i
                 className="fa fa-ellipsis-h"
                 style={styles.ellipsisMenu}
@@ -139,7 +139,9 @@ class Comment extends Component {
 }
 
 export const UnconnectedComment = Comment;
-export default connect(state => ({viewAs: state.viewAs}))(Comment);
+export default connect(state => ({
+  viewAsTeacher: state.viewAs === ViewType.Teacher
+}))(Comment);
 
 const sharedIconStyles = {
   fontSize: 18,
