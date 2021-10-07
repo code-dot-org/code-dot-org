@@ -7,10 +7,10 @@ az:
   coming_soon: Tezliklə
   campaign_date_start_short: 4 dek.
   campaign_date_start_long: 4 dekabr
-  campaign_date_short: 4-10 dek.
-  campaign_date_full: 4-10 dekabr
+  campaign_date_short: 6-12 dekabr
+  campaign_date_full: 6-12 dekabr
   campaign_date_year: '2017'
-  campaign_date_full_year: 7-13 dekabr 2020
+  campaign_date_full_year: 6-12 dekabr 2021
   latam_campaign_date_start_short: 1 Okt.
   latam_campaign_date_start_long: 1 Oktyabr
   latam_campaign_date_short: 1 Okt. - 18 Dek.
@@ -155,7 +155,7 @@ az:
   ai_video_title_what_is_ml: Maşın öyrənməsi nədir?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
+  ai_video_title_ethics_of_ai: Süni İntellektin etikası
   ai_video_title_ml_human_bias: Machine Learning and Human Bias
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
   activity: Fəaliyyət
@@ -183,7 +183,7 @@ az:
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
   ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
+  ai_audience_hs: Yuxarı siniflər
   ai_activity_header: Activities Powered by AI and ML
   ai_activity_seeing_ai: Seeing AI
   ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
@@ -879,7 +879,7 @@ az:
   videos_hoc_2014: Kod Saatı buradadır - Hər kəs öyrənə bilər
   videos_obama_cs: Prezident Obama informatika barədə
   videos_anybody_can_learn: Hər kəs öyrənə bilər (1 dəqiqə)
-  videos_creativity: What is Creativity?
+  videos_creativity: Yaradıcılıq nədir?
   videos_creativity_series: What is Creativity? View Full Series.
   title_country_resources: Ölkənin özünəməxsus resursları
   title_hoc_advisory_committee: Hour of Code and CSEdWeek Advisory Committee
@@ -924,7 +924,7 @@ az:
   highlights_description: Some of our favorite moments from the Hour of Code campaign.
   highlights_previous: Highlights from previous years
   highlights_see_more: See more highlights
-  highlights_readmore: Read more
+  highlights_readmore: Ətraflı oxu
   highlights_watchvideo: Videoya baxın
   highlights_facebook: '"Facebook"da bölüşün'
   highlights_constant_alba_heading: The actress, activist, and entrepreneur hosted

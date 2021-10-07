@@ -30,6 +30,7 @@ class ProgrammingExpression < ApplicationRecord
   serialized_attrs %w(
     color
     syntax
+    short_description
   )
 
   def key_format
@@ -171,6 +172,16 @@ class ProgrammingExpression < ApplicationRecord
       link: documentation_path,
       programmingEnvironmentName: programming_environment.name,
       uniqueKey: [key, programming_environment.name].join('/')
+    }
+  end
+
+  def summarize_for_edit
+    {
+      id: id,
+      key: key,
+      name: name,
+      programmingEnvironmentName: programming_environment.name,
+      shortDescription: short_description || ''
     }
   end
 

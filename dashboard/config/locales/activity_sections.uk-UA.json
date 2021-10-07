@@ -2,6 +2,19 @@
   "uk-UA": {
     "data": {
       "activity_sections": {
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Розминка"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
         "f86ae28c-7f78-4f08-a649-8abf70a55601": {
           "progression_name": "Ласкаво просимо до Монстро-міста"
         },

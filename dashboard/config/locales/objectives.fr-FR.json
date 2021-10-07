@@ -215,6 +215,9 @@
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
         },
+        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
+          "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
+        },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "Traduire un algorithme en un programme"
         },
@@ -223,6 +226,12 @@
         },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
           "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
+        },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Établissez un modèle des bons comportements en salle informatique "
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
           "description": "Construire un programme en réorganisant les mouvements séquentiels"
@@ -283,6 +292,9 @@
         },
         "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
           "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "7267ef0f-cb1a-42c2-aa5c-40cd949c9479": {
+          "description": "Appliquer des concepts informatiques dans un projet ouvert. "
         },
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
@@ -376,6 +388,9 @@
         },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
+          "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prédiction. "
         },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "Encoder des lettres en binaire."
@@ -673,6 +688,9 @@
         },
         "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
           "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
+        },
+        "d1485387-01e4-484d-9935-75f7c14b9d76": {
+          "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
         },
         "a5a52414-42a7-4b32-897b-819a70572328": {
           "description": "Traduire les mouvements en une série de commandes."

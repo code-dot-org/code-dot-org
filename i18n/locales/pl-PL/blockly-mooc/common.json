@@ -1259,6 +1259,7 @@
   "paginationLabel": "Strona:",
   "pairingNavigatorWarning": "Ta łamigłówka została zakończona wspólnie z {driver}.",
   "pairingNavigatorLink": "Kliknij tutaj, aby zobaczyć rozwiązanie, które utworzyłeś w zespole.",
+  "pairingNavigatorUnknownDriver": "Ta łamigłówka została ukończona wspólnie z innym uczniem, ale kod, który wspólnie napisaliście, nie jest już dostępny. Drugi uczeń mógł usunąć swoje konto Code.org lub zresetować swoje postępy na tym poziomie.",
   "pairingUnknownPartnerName": "n/a",
   "pairProgramming": "Programowanie w parach",
   "pairProgrammingChosePartners": "Wybierz partnerów:",

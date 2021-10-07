@@ -305,6 +305,28 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "புதிய தொகுதி!",
+          "poetry_foreground": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "புதிய தொகுதி!",
+          "poetry_multiple_sprites": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "புதிய தொகுதி!",
+          "poetry_sprite_stops": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "புதிய தொகுதி!",
+          "poetry_remove_sprite": "புதிய தொகுதி!"
         }
       }
     }

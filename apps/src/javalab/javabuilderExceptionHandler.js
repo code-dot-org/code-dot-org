@@ -109,6 +109,9 @@ export function handleException(exceptionDetails, callback) {
     case PlaygroundExceptionType.PLAYGROUND_NOT_RUNNING:
       error = msg.errorPlaygroundNotRunning();
       break;
+    case PlaygroundExceptionType.INVALID_MESSAGE:
+      error = msg.errorPlaygroundInvalidMessage();
+      break;
 
     default:
       error = msg.unknownError({type, connectionId});

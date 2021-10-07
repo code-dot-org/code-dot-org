@@ -132,7 +132,6 @@ export default class JavabuilderConnection {
       case WebSocketMessageType.EXCEPTION:
         handleException(data, this.onOutputMessage);
         this.onNewlineMessage();
-        this.onExit();
         break;
       case WebSocketMessageType.DEBUG:
         if (window.location.hostname.includes('localhost')) {
