@@ -30,9 +30,9 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "hide_pause_button": "false",
-    "show_poem_dropdown": "false",
     "is_project_level": true,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "poetry"
   },
   "game_id": 69,
   "created_at": "2021-10-05T02:59:35.000Z",

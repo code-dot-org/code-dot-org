@@ -30,9 +30,10 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "hide_pause_button": "false",
-    "show_poem_dropdown": "true",
     "is_project_level": true,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "default_poem": "hafez",
+    "standalone_app_name": "poetry_hoc"
   },
   "game_id": 69,
   "published": true,

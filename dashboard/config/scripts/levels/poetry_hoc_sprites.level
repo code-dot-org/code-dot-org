@@ -18,7 +18,8 @@
     "hide_animation_mode": true,
     "show_type_hints": true,
     "use_modal_function_editor": true,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "poetry"
   },
   "published": true
 }]]></config>
