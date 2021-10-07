@@ -71,7 +71,7 @@ PoemEditor.propTypes = {
 };
 
 function PoemSelector(props) {
-  if (!appOptions.level.showPoemDropdown) {
+  if (appOptions.level.standaloneAppName !== 'poetry_hoc') {
     return null;
   }
 
