@@ -1109,6 +1109,15 @@ nn:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": knas
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Bobble
+            "'sound://category_animals/bear.mp3'": bjørn
+            "'sound://category_animals/cat.mp3'": katt
+            "'sound://category_animals/cow.mp3'": ku
+            "'sound://category_animals/sheep.mp3'": sau
+            "'sound://category_animals/chicken.mp3'": kylling
+            "'sound://category_animals/elephant.mp3'": elefant
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": hopp
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
@@ -1487,10 +1496,15 @@ nn:
         text: x-koordinator til {SPRITE}
       Mikelab_yLocationOf:
         text: y-koordinator til {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
+      Poetry_playSound:
         text: spillLyd {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: vel bakgrunnseffekt {EFFECT} {PALETTE}
+      Poetry_setBackground:
+        text: vel bakgrunnsfarge {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Fargar
@@ -1498,13 +1512,26 @@ nn:
             '"stars"': Stjerner
           PALETTE:
             '"rainbow"': Regnboge
-      PoemBot_setForegroundEffect:
-        text: velg forgrunnseffekt {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Regn
             '"bubbles"': Bobler
             '"confetti"': Konfetti
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: gå framover
       RyanLab_turnLeft:

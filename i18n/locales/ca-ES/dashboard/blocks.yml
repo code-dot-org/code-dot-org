@@ -781,6 +781,12 @@ ca:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": cruixit
+            "'sound://category_animals/bear.mp3'": Ós
+            "'sound://category_animals/cow.mp3'": vaca
+            "'sound://category_animals/sheep.mp3'": ovella
+            "'sound://category_animals/chicken.mp3'": gallina
+            "'sound://category_animals/dolphin.mp3'": Dofí
+            "'sound://category_animals/dog.mp3'": gos
             "'sound://category_digital/jump_7.mp3'": salt
       gamelab_randColor:
         text: color aleatori
@@ -981,16 +987,16 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
-      PoemBot_setBackgroundEffect:
-        text: definir l'efecte de fons {EFFECT} {PALETTE}
+      Poetry_setBackground:
+        text: definir el color de fons {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"space"': Espai
             '"stars"': Estrelles
           PALETTE:
             '"rainbow"': Arc de Sant Martí
-      PoemBot_setForegroundEffect:
-        text: definir l'efecte de fons {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Pluja

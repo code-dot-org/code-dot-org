@@ -25,7 +25,9 @@ export const JavabuilderExceptionType = {
   INTERNAL_COMPILER_EXCEPTION: 'INTERNAL_COMPILER_EXCEPTION',
   INTERNAL_EXCEPTION: 'INTERNAL_EXCEPTION',
   INTERNAL_RUNTIME_EXCEPTION: 'INTERNAL_RUNTIME_EXCEPTION',
+  INVALID_JAVA_FILE_NAME: 'INVALID_JAVA_FILE_NAME',
   JAVA_EXTENSION_MISSING: 'JAVA_EXTENSION_MISSING',
+  MISSING_PROJECT_FILE_NAME: 'MISSING_PROJECT_FILE_NAME',
   NO_MAIN_METHOD: 'NO_MAIN_METHOD',
   RUNTIME_ERROR: 'RUNTIME_ERROR',
   TWO_MAIN_METHODS: 'TWO_MAIN_METHODS',
@@ -99,7 +101,8 @@ export const TheaterExceptionType = makeEnum(
 
 export const PlaygroundExceptionType = {
   PLAYGROUND_RUNNING: 'PLAYGROUND_RUNNING',
-  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING'
+  PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING',
+  INVALID_MESSAGE: 'INVALID_MESSAGE'
 };
 
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
@@ -124,5 +127,27 @@ export const PlaygroundSignalType = {
   // Play a sound
   PLAY_SOUND: 'PLAY_SOUND',
   // Set the background image of the Playground
-  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
+  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE',
+  // Set of updates to the playground
+  UPDATE: 'UPDATE',
+  // Indicate that the current update cycle has completed
+  UPDATE_COMPLETE: 'UPDATE_COMPLETE'
+};
+
+export const PlaygroundFontTypeFontFamilies = {
+  SANS: 'Arial, Helvetica, sans-serif',
+  SERIF: '"Times New Roman", Times, serif',
+  MONO: '"Courier New", Courier, monospace'
+};
+
+export const PlaygroundFontStyleType = makeEnum(
+  'NORMAL',
+  'BOLD',
+  'ITALIC',
+  'BOLD_ITALIC'
+);
+
+export const PlaygroundItemType = {
+  IMAGE: 'image',
+  TEXT: 'text'
 };

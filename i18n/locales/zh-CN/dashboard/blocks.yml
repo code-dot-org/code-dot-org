@@ -1191,6 +1191,16 @@ zh-CN:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": 紧缩
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": 泡泡
+            "'sound://category_animals/bear.mp3'": 熊
+            "'sound://category_animals/cat.mp3'": 猫
+            "'sound://category_animals/cow.mp3'": 牛
+            "'sound://category_animals/pig.mp3'": 猪
+            "'sound://category_animals/sheep.mp3'": 羊
+            "'sound://category_animals/chicken.mp3'": 鸡
+            "'sound://category_animals/elephant.mp3'": 大象
+            "'sound://category_animals/dolphin.mp3'": 海豚
+            "'sound://category_animals/dog.mp3'": 狗
             "'sound://category_digital/jump_7.mp3'": 跳跃
       gamelab_pointInDirection:
         text: 指向 {SPRITE} {DIRECTION}
@@ -1729,12 +1739,19 @@ zh-CN:
         text: 随机布局怪物
       Outbreak_stopMoving:
         text: 怪物停止移动
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': 下雨
+      Poetry_makeNewSpriteAnon:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
+      Poetry_makeNumSprites:
         text: 做{NUM}新{ANIMATION_NAME}精灵图
-      PoemBot_playSound:
+      Poetry_playSound:
         text: 播放音效{SOUND}
-      PoemBot_setBackgroundEffect:
-        text: 设置背景效果为 {EFFECT}
+      Poetry_setBackground:
+        text: 设置背景颜色为 {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': 颜色
@@ -1744,10 +1761,9 @@ zh-CN:
             '"ripples"': 波纹
           PALETTE:
             '"rainbow"': 彩虹
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: 设置背景为 {IMG}
-      PoemBot_setForegroundEffect:
-        text: 设置前景效果为 {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': 下雨
@@ -1755,7 +1771,7 @@ zh-CN:
             '"hearts"': 五彩心
             '"confetti"': 彩纸屑
             '"starburst"': 星爆
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: 飘动
@@ -1767,7 +1783,7 @@ zh-CN:
             swimming_left_and_right: 游泳
             wandering: 徘徊
             wobbling: 摇摆
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: 飘动
@@ -1779,13 +1795,23 @@ zh-CN:
             swimming_left_and_right: 游泳
             wandering: 徘徊
             wobbling: 摇摆
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "？？？"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: 当{VAR}被回答
       RyanLab_moveForward:
         text: 向前移动

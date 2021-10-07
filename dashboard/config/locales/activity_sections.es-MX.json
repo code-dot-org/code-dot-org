@@ -2,6 +2,35 @@
   "es-MX": {
     "data": {
       "activity_sections": {
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Actividad previa"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Actividad de cierre"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Bienvenido a la Ciudad de Monstruos"
+        },
+        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+          "progression_name": "Desarrollo de habilidades"
+        },
+        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+          "progression_name": "Miniproyecto: Simulador de Brotes"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Juego libre",
+          "progression_name": "Juego libre"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Introducción",
           "description": "En este curso aprenderemos a programar. El código se utiliza para crear aplicaciones, juegos, páginas web, simulaciones y muchas cosas más que usamos en una computadora."
@@ -431,17 +460,18 @@
           "name": "Introducción"
         },
         "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
-          "name": "Brote",
+          "name": "Epidemia",
           "progression_name": "Brote"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "description": "**Haz esto:** Lean el módulo _Bienvenidos a la Ciudad de Monstruos_ en clase.",
           "progression_name": "Bienvenido a la Ciudad de Monstruos"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
           ],
-          "progression_name": "Vídeo: Muchos Sprites"
+          "progression_name": "Video: Muchos Sprites"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "progression_name": "Desarrollo de habilidades"
@@ -450,7 +480,7 @@
           "progression_name": "Aprendiendo con Simulaciones"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
-          "progression_name": "Miniproyecto: Simulador de Brotes"
+          "progression_name": "Miniproyecto: Simulador de Epidemias"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Reflexión"
@@ -553,57 +583,138 @@
         },
         "4c778537-489f-4c5c-913b-38cbf385737c": {
           "name": "Vocabulario Clave: ",
+          "description": "-   **Huella digital**: registro de lo que haces en línea, incluidos los sitios que visitas y las cosas que compartes\n-   **Permanente**: algo que dura para siempre\n-   **Información privada**: información sobre ti que puede utilizarse para identificar quién eres\n-   **Rastro**: un camino o una pista\n\n**Antes de la clase**: Recorta los [Cuadros del Rastro Digital](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) con antelación, guardando los cuadrados de cada animal en dos montones separados.\n\n**Comenta**: _Hoy vamos a ver un vídeo llamado \"Sigue el rastro digital\".  ¿Alguno de vosotros ha oído hablar antes de la palabra \"rastro\"?_\n\nInvita a los alumnos a responder, y define rastro como _un camino o pista que alguien puede seguir_. ([Diapositiva 3](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g524b55ab78_0_23))",
           "progression_name": "Vídeo: Sigue el Rastro Digital"
         },
+        "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef": {
+          "description": "**Muestra** el vídeo [Sigue el rastro digital](https://www.commonsense.org/education/videos/follow-the-digital-trail) en la [Diapositiva 4](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g56a0663814_5_26). Mientras lo ven, haz que los alumnos presten atención a los tipos de información que se pueden compartir en Internet y los que no.\n\n**Comenta**: En el vídeo, Feet hablaba de la huella digital. ¿Qué es una huella digital? \n\nInvita a los alumnos a responder. Aclara que una **huella digital** es _un registro (o rastro) de lo que haces en Internet, incluyendo los sitios que visitas y las cosas que compartes_. ([Diapositiva 5](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_19))\n\n**Pregunta**: _¿Qué información dice Feet que NO hay que compartir en Internet?_\n\nDespués de que los alumnos hayan tenido la oportunidad de compartir, proyecta [Diapositiva 6](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g513c004c7f_0_192) y repasa: Información privada\\_ como el \\_nombre completo, la dirección, el número de teléfono, la edad, la fecha de nacimiento, el nombre de la escuela.\n\nDefine **información privada** como _información sobre ti que puede utilizarse para identificar quién eres_. ([Diapositiva 7](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5af742ae8d_0_0))\n\n\\*\\*Pregunta: _¿Qué información cree Feet que está bien compartir en línea?_\n\nDespués de que los alumnos hayan tenido la oportunidad de compartir, proyecta [Diapositiva 8](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_27) y repasa: _Información personal_ como _aficiones, cosas favoritas._"
+        },
+        "732166f3-fa43-4af1-ae51-fa6136a7a8e7": {
+          "description": "Coloca los **Cuadros de Rastros Digitales** en el suelo en dos rastros diferentes, manteniendo los rastros de Mervin el ratón y de Ellie el elefante separados entre sí.  También puedes colocarlos en diferentes lugares del aula para ver si los alumnos los encuentran.\n\n**Comenta**: El ratón Mervin y la elefanta Ellie estaban jugando a un juego en línea y se dieron cuenta de que había un cuadro de chat. Pensaron que sería divertido hablar con los otros jugadores y empezaron a compartir información sobre ellos mismos. El único problema es que se olvidaron de preguntar primero a sus padres si estaba bien. \n\nTodos vosotros sois detectives en la Agencia de Detectives Little Foot. Como detective, habéis sido contratados para averiguar todo lo posible sobre Mervin y Ellie.\\_\n\n**Dividir** a los alumnos en grupos de cuatro. Distribuye el **Manual del Estudiante sobre las Huellas de los Animales** a cada uno de los estudiantes y explica que, mientras trabajan juntos, cada uno debe tomar notas detalladas y responder a las preguntas de reflexión en su propio manual. ([Diapositiva 9](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g513c004c7f_0_10))\n\n\\*\\*Invita a los alumnos a buscar información en el aula. Hazles saber que la información que publicaron Mervin y Ellie puede ser vista por cualquier persona en Internet, incluidos los detectives. Cada grupo debe seguir el rastro digital de ambos animales. Distribuye los grupos de manera que sigan los rastros en momentos ligeramente diferentes. Pídeles que respondan a las dos preguntas del folleto una vez que hayan terminado."
+        },
+        "2ec9f664-2513-4fd2-972a-32193c8ab3a8": {
+          "description": "**Invita** a cada grupo a informar al resto de la clase de lo que han aprendido sobre cada uno de los animales. Como clase, completar el cuadro de la [Diapositiva 10](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g513c004c7f_0_180). \n\n| El ratón Mervin. El elefante Ellie.\n\\| -------------------------------------------------------------- \\| ---------------- \\| ------------------ \\|\n| 1. ¿De quién conoces el nombre completo?                                | X... X...\n| 2. ¿De quién es la casa que has encontrado?                                 | | X |\n| 3. ¿De quién conoces la fecha de nacimiento?                               | | X |\n| 4. ¿De quién conoces el nombre de usuario y la contraseña?                    | | X |\n| 5. ¿Quién ha soltado un secreto en Internet?                       | X | |\n| 6. ¿Qué animal puedes describir mejor a partir de su foto? | | X |\n\n<br />\n\n**Pregunta**: _¿De quién pueden saber más los detectives y por qué?_.\n\nExplica que la respuesta es Ellie, ya que ahora saben dónde vive, cómo es y mucha información privada sobre su vida. \n\n**Pregunta**: ¿Hay algo que Ellie o Mervin hayan publicado que pueda ser un problema para ellos?\n\nInvita a los alumnos a compartir. Explica que, aunque está bien compartir información divertida e interesante en Internet, compartir información privada como dónde viven o su nombre completo no es seguro, ya que Internet es un espacio público donde los desconocidos pueden ver su información. Y compartir secretos en línea puede herir los sentimientos de otras personas.\n\n**Explica** que es importante pensar cuidadosamente en lo que compartimos en Internet porque la información es permanente. Define permanente como algo que dura para siempre. ([Diapositiva 11](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_36))\n\n**Proyecta** [Diapositiva 12](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_44) y pide a los alumnos que resuman qué información está bien compartir en Internet y cuál no. Añade sus respuestas a la tabla. Respuestas sugeridas:\n\n| Información que no está bien compartir.\n\\| ----------- \\| ---------------------------------- \\|\n| Intereses: Nombre completo.\nAficiones | Dirección | Apodos | Nacimiento\n| Apodos Fecha de nacimiento\n| Contraseña\n| Nombre de la escuela\n| | Información que podría perjudicar a otros | |\n\n<br />\n\nHacer hincapié en que los alumnos deben pedir permiso a sus padres o cuidadores antes de compartir cualquier información sobre ellos mismos en Internet."
+        },
+        "aada1356-e4af-422e-897b-8ff511b2b4d3": {
+          "description": "**Comenta**: Hoy hemos aprendido sobre las huellas digitales, que dejan un rastro permanente sobre nosotros en Internet. Ahora tómate un momento para reflexionar sobre qué información está bien compartir en Internet y cuál no.\n\n**Procura que** los alumnos completen el momento de pausa y reflexión en el [Folleto del alumno sobre huellas de animales](https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/edit). Lee las instrucciones en voz alta y deja que los alumnos completen la reflexión de forma independiente. ([Diapositiva 13](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g56eaf833bc_0_443))\n\n**Invita** a los alumnos a compartir sus reflexiones con la clase. Recoge los folletos para evaluar el aprendizaje de los alumnos."
+        },
+        "6e508233-b35d-43b1-ae77-81359ff95e99": {
+          "description": "A continuación se presentan otros recursos familiares que puede proporcionar a los alumnos para mejorar su aprendizaje en casa:\n\n-   [\\*\\*Actividad Familiar\\*\\*](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8)\n-   [\\*\\*Consejos Familiares\\*\\*](https://www.commonsense.org/education/family-tips/k-5-digital-footprint-and-identity)"
+        },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "name": "¿En qué me he equivocado?",
+          "description": "**Objetivo:** En esta lección, queremos ayudar a los alumnos a que aprendan a identificar y arreglar errores en sus propios programas.  La forma más fácil de hacerlo es presentar primero a los estudiantes un programa que contenga errores que no sean culpa suya.  Una vez que te hayan ayudado a arreglar \"tu\" programa, comparte con ellos lo frustrante que puede ser cometer errores, y ayúdales a ver que esos sentimientos son completamente normales y que no deben sentirse avergonzados por ellos.",
           "tips": [
-            null
+            "Si tu clase aún no ha aprendido las direcciones cardinales, valdrá la pena aprenderlas antes de que comiencen el Curso B. Esta conversión será útil para casi todos los rompecabezas en línea dirigidos a primer grado, así como para varias de las actividades no conectadas.\n\nInforma a los alumnos de que seguirán viendo esas direcciones en los programas en línea junto a las flechas de dirección.  "
           ]
         },
+        "b58c10d1-6292-477b-9e94-af2238d56214": {
+          "description": "**Mostrar:** Mostrar la imagen de abajo para que todos puedan verla.\n\n![expandable](https://curriculum.code.org/media/uploads/Screenshot-2018-04-17-19.48.23.png)\n\n**Debatir:** ¡Consigue la atención de la clase y hazles saber que estás atascado!  Tienes este reto y pensabas que lo habías resuelto, pero parece que no funciona.  Tu programa tiene un error, ¿pueden ayudarte a solucionarlo?\n\nTómate un momento para explicarles las reglas:\n\n-   Empieza por la rosa de los vientos\n-   Sigue las instrucciones paso a paso\n-   Termina en el tesoro\n\n(_Opcional:_ Recorre tu programa usando tus dedos sobre el mapa, bajo la cámara de documentos.  Expresa tu frustración cuando tus dedos acaben fuera del mapa, en lugar de en el tesoro).\n\n**Pensar:** _Mi programa dice \"Este, Este, Norte\"._ _¿Puedes averiguar por qué mi programa no funciona?_\n\n**Por parejas:** Deja que los alumnos trabajen juntos para ver si pueden averiguar lo que se supone que dice el programa.\n\n**Compartir:** Pregunta a los alumnos si alguien ha sido capaz de averiguar la forma de resolver el problema.  Cuando obtengas una respuesta correcta, haz saber a los alumnos que son muy buenos depurando."
+        },
         "7d459337-19c7-4d00-a1de-ec2286ea373c": {
+          "description": "**Consulta:** Pregunta a los alumnos si pueden saber cómo te sentías cuando no podías averiguar la respuesta.  Pueden sugerir que estabas \"enfadado\" o \"triste\".  En lugar de decirles que \"no\", describe que te sentías un poco enfadado, un poco triste y un poco confuso.  Cuando se juntan todas esas emociones, se crea un sentimiento llamado \"frustración\".  Cuando te sientes \"frustrado\" puedes pensar que estás enfadado, triste o confuso, y puedes sentirte tentado a abandonar, pero la frustración es un sentimiento natural y es una gran pista de que estás a punto de aprender algo.  En lugar de abandonar, practica la persistencia.  Sigue intentándolo una y otra vez.  Después de unas cuantas veces, empezarás a entender cómo depurar tus problemas.",
           "tips": [
-            null
+            "Dedica un momento a cubrir los consejos sobre la frustración y la persistencia como clase:\n\n##### Consejos para ayudar con la frustración\n\n-   Cuenta hasta 10\n-   Respira profundamente\n-   Escribe un diario sobre ellas\n-   Habla con un compañero sobre ellas\n-   Pide ayuda\n\n##### Consejos para ser persistente\n\n-   Lleva un registro de lo que ya has intentado\n-   Describe lo que está ocurriendo\n-   Describe lo que se supone que va a ocurrir\n-   ¿Qué te dice eso?\n-   Haz un cambio y vuelve a intentarlo"
           ]
+        },
+        "d75d074a-5ebe-4143-bfbb-91c12750dd30": {
+          "description": "**Distribuye:** Para asegurarte de que los estudiantes entienden la idea de encontrar y corregir errores (depuración) reparte la **\\*Hoja de trabajo** y haz que los estudiantes completen la tarea en parejas.  \n\n(_Opcional:_ Si quieres que la actividad avance más rápidamente, siéntete libre de completarlas como clase, en su lugar).\n\n**Transición:** \\_¡Ahora es el momento de jugar!"
         },
         "b87acbf5-a0a2-4c86-a344-3fbf143431f6": {
           "progression_name": "Vídeo: Muévete Muévete  - Actividad Desconectada"
         },
         "0c64d280-12f6-4d9a-9329-dac1aa620ca5": {
-          "name": "Muévelo, muévelo"
+          "name": "Muévelo, muévelo",
+          "description": "**Distribuye:** Entrega a cada grupo de 2-3 alumnos un **\\*Mapa de actividad**, así como los papeles en blanco para la cuadrícula del suelo.  Permite a los estudiantes que corten las mitades de cada mapa, o que doblen las hojas por la mitad para que cada mapa sea claramente visible (sin distracción).\n\n**Configuración:** En cada grupo, cada jugador tendrá una tarea.\n\n-   Jugador 1: Elegir/configurar el mapa para jugar\n-   Jugador 2: Programador\n-   Jugador 3: Máquina de caminar\n\n**Instrucciones para la clase:**\n\n1.  Decidir quién se encargará de cada trabajo.\n\n2.  Haz que el jugador 1 coloque una cuadrícula en el suelo formada por trozos de papel (como se muestra en uno de los Mapas de Muévete), excepto con el papel de la gema hacia el suelo.\n\n3.  El jugador 3 comenzará situándose en la hoja con la rosa de los vientos.\n\n4.  El jugador 2 guiará entonces al jugador 3 paso a paso a través del laberinto de papel utilizando las señales de brazo proporcionadas.\n\n5.  Cuando el jugador 2 dé la señal de \"STOP\", el jugador 3 dará la vuelta a la página en la que se encuentra. Si esa página es una gema, ¡el laberinto ha sido un éxito!\n\n6.  Si hay tiempo, que todos roten sus posiciones y vuelvan a jugar.\n\nTen en cuenta que las reglas no son lo más importante aquí. No dudes en aclararlo si los alumnos tienen preguntas, pero si los alumnos juegan de forma diferente a la descrita, no es necesario que los mantengas al pie de la letra. Lo más importante es que pasen de dar instrucciones inmediatas a dar dos o tres instrucciones antes de que el Andador se mueva."
         },
         "93f8de74-6246-4227-8418-08d5c736633b": {
           "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿Cuáles eran las cuatro direcciones de la rosa de los vientos?\n    -   ¿Qué trucos podemos utilizar para recordar el Norte, el Sur, el Este y el Oeste?\n-   Dibuja otra forma en la que podríamos haber dado instrucciones sin usar los brazos.\n-   Dibuja tu parte favorita de ese juego.",
           "tips": [
-            null
+            "Este tipo de reflexiones se pueden llevar a cabo de diferentes maneras. ¡La redacción de un diario o el debate (en grupo o en pareja) son buenas opciones!"
           ]
+        },
+        "d8233290-3b13-4062-b13e-6bc56ccd2f7f": {
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Pueden utilizarse como actividades fuera de clase o como enriquecimiento.\n\n**X y O**\n\n-   Dibuja un tablero de tres en raya para la clase.\n-   Coloca una sola X y una sola O en algún lugar del tablero.\n-   Pregunta a la clase si pueden llevar la X a la O utilizando gestos con los brazos como clase.\n\n**X, O y Flechas**\n\n-   Similar a la actividad anterior, pero haz que los alumnos escriban sus programas por adelantado utilizando flechas en lugar de gestos con las manos.\n    -   Esto puede hacerse en grupos.\n    -   Los grupos pueden compartir sus soluciones para la clase."
+        },
+        "6fbe07dc-fe00-448c-89a6-39971bfcc99f": {
+          "name": "Comportamiento en el Laboratorio de Informática",
+          "description": "Repasar las expectativas y cómo comportarse al entrar en el Laboratorio de Informática."
         },
         "af269d6d-e57d-4331-bc8d-daae801d1db0": {
           "tips": [
-            null
+            "-   Mantente tranquilo en el laboratorio\n-   Recuerda no masticar chicles ni caramelos\n-   Desinfecta tus manos\n-   Siéntate con tu compañero en un ordenador\n-   Asegurarse de que el primer \"conductor\" pueda alcanzar el ratón\n-   Cuando te sientas frustrado, no golpees ni agites el ordenador o el monitor\n-   Sigue la regla del **\\*20/20/20.**\n-   Cómo lidiar con los **\\*Meneos** cada 20-30 minutos (requiere un inicio de sesión gratuito en GoNoodle).\n-   Pregunta a tu compañero antes de preguntar al profesor\n-   Baja el volumen para que los demás puedan oír a sus compañeros\n-   Utiliza tu diario para registrar los sentimientos y las soluciones"
           ]
+        },
+        "bc3a3305-ab8c-4998-95f6-8fe5c68fb211": {
+          "description": "**Debatir:** Ten una buena deliberación sobre las expectativas del laboratorio de informática para asegurarte de que los alumnos entienden las reglas. Algunos temas de debate podrían ser:\n\n-   ¿Está bien correr en el laboratorio de informática?\n-   ¿Debemos hacer ruido al caminar cuando estamos en el laboratorio de informática?\n-   ¿Qué debes hacer si te quedas atascado en un rompecabezas?\n-   Si te frustras, ¿te ayudará golpear el ordenador?\n-   Cuando estemos a punto de ir al laboratorio de informática, ¿Cómo debemos prepararnos?"
+        },
+        "097eb409-6a3c-41f3-935e-dd1f235231c7": {
+          "description": "Para conectar la lección desconectada con la próxima lección en línea, elije _una_ de las siguientes actividades para realizar con tu clase."
+        },
+        "bca3fd9d-6986-4755-80d1-056fcf486977": {
+          "name": "Actividad Desconectada Utilizando Bloques de Papel",
+          "description": "**Modelo:** Selecciona un mapa de \"Muévete, Muévete - Actividad de mapa\" de la lección desconectada \"Muévete, Muévete\". Utilizando las piezas de movimiento de los manipulativos, muestra a los alumnos cómo codificarías esta estructura de esta nueva manera. \n\n**Participación/Pensamiento:** A continuación, elige otro mapa y haz que los alumnos programen qué bloques tendría que leer un \"robot\" para llegar a la meta.  \n\n¡Asegúrate de que entienden que los bloques deben ir de arriba a abajo y que todos deben tocarse!\n\n**Comparte:** Haz que los alumnos comprueben las respuestas de los demás y resuelvan las dudas o errores que puedan surgir.\n\n#### -O-"
+        },
+        "be611371-ad73-4d3a-b3cf-7e20b4687b61": {
+          "name": "Actividad en Línea Usando Flechas Desconectadas",
+          "description": "**Modelo:** Saca un puzzle de los niveles online correspondientes. Muestre a los alumnos cómo llevar a _Angry Bird_ hasta el cerdo utilizando los símbolos. Puede ser útil cambiar el nombre de las flechas \"Norte\", \"Sur, \"Este\" y \"Oeste\".  Una vez que tengas el programa, traza con el dedo (o con un puntero) y muestra cómo viajará el pájaro cuando se ejecute el programa.\n\n**Participación/Pensamiento:** A continuación, vuelve a un rompecabezas más fácil, y haz que los alumnos intenten escribir programas (usando flechas) por su cuenta.\n\n\\*\\*Compartir: Anima a los alumnos a que compartan sus programas con otros grupos y a que vean si se les ocurren soluciones iguales o diferentes.  ¿Se le ocurre a alguien otra forma de resolver el rompecabezas?"
         },
         "07f0915c-fd00-4787-8a53-251613824cc8": {
           "name": "Secuencias con Angry Birds",
           "tips": [
-            null
+            "Muestra a los alumnos la forma correcta de ayudar a los compañeros:\n\n-   No sentarse en la silla del compañero\n-   No utilizar el teclado del compañero\n-   No tocar el ratón del compañero\n-   Asegúrate de que el compañero puede describirte la solución en voz alta antes de que te vayas"
           ]
+        },
+        "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
+          "description": "Esta lección enseñará a los estudiantes a utilizar Code.org para completar rompecabezas en línea.\n\nReproduce el vídeo del estudiante **\\*Programación por parejas** con tus alumnos, y luego colócalos en parejas.  Esto debería ayudar a los estudiantes a empezar en la dirección correcta."
         },
         "52466cb4-0b52-4d09-aeb9-7db1a558001e": {
           "progression_name": "Vídeo - Introducción al Laberinto: Programación con Bloques"
+        },
+        "b9d126ca-d582-403d-a4dc-45c555d65700": {
+          "description": "Los profesores desempeñan un papel fundamental en la enseñanza de la informática y en el apoyo a un entorno de colaboración y dinamismo en el aula. Durante las actividades en línea, el papel del profesor es principalmente de estímulo y apoyo. Las lecciones en línea están pensadas para centrarse en el alumno, por lo que los profesores deben evitar intervenir cuando los alumnos se atascan. Algunas ideas sobre cómo hacerlo son:\n\n-   Utilizar la programación por parejas siempre que sea posible durante la actividad.\n-   Animar a los alumnos que tengan preguntas/desafíos a que empiecen por preguntar a su compañero.\n-   Las preguntas sin respuesta se pueden dirigir a un grupo cercano, que podría conocer ya la solución.\n-   Recordar a los alumnos que deben utilizar el proceso de depuración antes de acercarse.\n-   Hacer que los alumnos describan el problema que están viendo. ¿Qué se supone que hace? ¿Qué hace? ¿Qué les dice eso?\n-   Recordar a los alumnos frustrados que la frustración es un paso en el camino del aprendizaje y que la persistencia dará sus frutos.\n-   Si un alumno sigue atascado después de todo esto, sería bueno hacerle preguntas orientativas para que detecte un error por sí mismo."
         },
         "b43821ea-fcde-4389-a55f-285b77e61964": {
           "progression_name": "Desarrollo de habilidades"
         },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Proporciona a los alumnos una sugerencia en su diario para ayudarles a procesar algunas de las cosas que han encontrado durante el día.\n\n**Sugerencias:**\n\n-   Dibuja en la esquina de la página de tu diario una de las **\\*Caras de sentimiento** que muestra cómo te has sentido en la lección de hoy.\n-   ¿Puedes dibujar una secuencia para prepararte a entrar en el laboratorio de informática?\n-   Dibuja un \"hacer\" y un \"no hacer\" en el laboratorio de informática"
+        },
+        "0375d24a-10d8-4f65-87a3-d832c268c183": {
+          "description": "Si los alumnos completan los rompecabezas antes de tiempo, pídeles que dediquen algún tiempo a idear sus propios rompecabezas en su Diario de Reflexión."
+        },
+        "dcd637b9-bd6f-4cc8-a0bf-d4a0b8096749": {
+          "description": "### Interpretando Datos Adhesivos (15-20 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informática + Matemáticas**\n\n[Interpretando Datos Adhesivos](https://docs.google.com/document/d/1TJo-CP8G8HewzH-2SbSNlgBjbPV8qzNImOVZdwDHyYo/edit?usp=sharing) es una actividad opcional alineada con los estándares de Common Core Math, escrita por nuestra comunidad de profesores. Los alumnos utilizarán manipuladores de papel para organizar, representar e interpretar datos. \n\nEstándares que se aplican: \n\n-   **CCSS.MATH.1.MD.C.4:** Organizar, representar e interpretar datos con hasta tres categorías; hacer y responder preguntas sobre el número total de puntos de datos, cuántos en cada categoría y cuántos más o menos hay en una categoría que en otra."
         },
         "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
+          "name": "Repaso de la Actividad Desconectada",
+          "description": "Esta lección se basa en muchas de las ideas desconectadas que los alumnos han aprendido en las semanas previas a esta primera actividad en línea.  Es importante que pongas esos conceptos (como la persistencia, los algoritmos y los programas) en un círculo completo para que tu clase pueda beneficiarse de ellos también en su trabajo en línea.",
           "tips": [
-            null
+            "Si tu clase ya ha aprendido los puntos cardinales, cambiar \"Arriba\" y \"Abajo\" por \"Norte\" y \"Sur\" no debería ser un problema.  Si no lo han hecho, hemos proporcionado una práctica hoja de trabajo con la Rosa de los vientos de Code.org que puedes utilizar para que los alumnos se familiaricen con ella.  Esta conversión será muy útil para casi todos los rompecabezas en línea dirigidos a los niños de preescolar y primer grado.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nAvisa a los alumnos de que verán esas letras en sus programas online junto a las flechas de dirección.  "
           ]
         },
+        "85e4f61b-eaec-4bf9-b9d3-58afc91322bf": {
+          "description": "\\*\\*Muestra: Muestra a los alumnos una imagen del ejercicio \"Muévete, muévete\" que has completado en las lecciones anteriores a ésta. \n\n**Comenta:** Pide a los alumnos que recuerden los símbolos utilizados en \"Muévete, Muévete\".    \n\n-   ¿Qué harías al ver la flecha del \"Norte\"?\n-   ¿Qué harías al ver la flecha del \"Este\"?\n\n**Transición:** Una vez que estés seguro de que tus alumnos recuerdan \"Muévete, muévete\", puedes pasar a la actividad de puente."
+        },
+        "8b5a63fd-e737-4cfe-bd6d-ae6e37c1cefc": {
+          "description": "Esta actividad ayudará a llevar los conceptos desconectados de Muévete, Muévete al mundo online en el que se mueven los alumnos. Elige _una_ de las siguientes actividades para realizar con tu clase:"
+        },
+        "4d06cf45-70a0-47fb-a3ff-0d4818645b5c": {
+          "name": "Actividad Desconectada con Bloques de Papel",
+          "description": "**Distribuye: \\*\\* Entrega a los alumnos \\*_\\\\_Manipuladores** con comandos cardinales como `E →` (Este) y `W ←` (Oeste). \n\n**Muestra:** Elige un mapa de la **\\*Actividad de Mapas** y muéstralo para que la clase lo vea.\n**Modelo:** Empezando por el lugar de inicio, utiliza tu dedo para mostrar a los alumnos lo que hace cada bloque.  Muéstreles cómo la `E →` corresponde a la flecha de la derecha y mueve el \"robot\" un paso hacia la derecha.  Haz lo mismo con cada uno de los otros tres.\n\n**Piensa:** A estas alturas, la clase debería saber cómo llegar a una meta utilizando flechas. ¿Cómo llegarías a una meta utilizando los bloques Blockly?\n\n**En Parejas:** ¡Asegúrate de que entienden que los bloques deben ir de arriba a abajo y que todos deben estar conectados!\n\n**Comparte:** Haz que las parejas discutan sus respuestas con sus compañeros de codo.  ¿Consiguieron todos lo mismo?\n\n### -O-"
+        },
+        "af41bb35-0f50-4787-81ac-3658bfa59b98": {
+          "name": "Rompecabezas en Línea con Flechas",
+          "description": "**Muestra:** Enseña a los alumnos el espacio de juego de uno de los rompecabezas correspondientes a esta lección. Recomendamos el rompecabezas 5. \n\n**Piensa:** Pide a los alumnos que imaginen que este rompecabezas es como el de los mapas, pero en su lugar, es un pájaro que intenta llegar al cerdo.  ¿Cómo pueden escribir un programa para que el pájaro llegue al cerdo utilizando flechas?\n\n**En Parejas:** Utilizando sólo los símbolos de las **\\*Piezas de Juego**, haz que los alumnos tracen un patrón que crean que llevará al pájaro hasta el cerdo. \n\n**Comparte:** Pide a los alumnos que compartan sus respuestas con la clase. ¿Alguien más tiene la misma respuesta?"
+        },
+        "72a8989a-9059-4d0b-8744-2956025dc538": {
+          "description": "Los alumnos deberían estar ahora preparados para ver un rompecabezas real en acción.\n\n**Modelo:** Saca el rompecabezas 5 para hacerlo frente a la clase. Este será el mismo rompecabezas que acaban de ver en la actividad Puente. Mientras trabajan en este rompecabezas con la clase, recuérdales que está bien cometer errores y recuérdales que la única manera de tener éxito es ser persistente. Vincula las cuestiones con las ideas que han visto en lecciones anteriores, como qué hacer cuando un programa no funciona (¡depurarlo!) o cómo superar la frustración que puede suponer trabajar con un ordenador.\n\nA continuación, tendrá que describir cómo los bloques del espacio de trabajo mueven al pájaro hacia el cerdo.  Muestra a los alumnos cómo arrastrar los bloques de la caja de herramientas y conectarlos debajo del bloque \"cuando corre\", pero no resuelva el rompecabezas.\n\n**Comenta:** Piensa en cómo llevaríamos el pájaro al cerdo utilizando flechas.  ¿Cómo podemos utilizar estos bloques en su lugar?\n\nHaz que los alumnos utilicen sus dedos para señalar la dirección en la que debe ir el pájaro.  Una vez que sientas que tienes un consenso en el aula, intenta que los alumnos expresen con palabras qué bloque hará que se realice esa acción.  Pasa el ratón por encima de las diferentes opciones y pídeles que griten \"Sí\" o \"No\".\n\nArrastra los bloques a su sitio de uno en uno y haz clic en \"Ejecutar\" después de cada uno.  Esto no sólo les permitirá ver hasta dónde ha llegado el pájaro, sino que establecerá buenos hábitos para cuando empiecen a trabajar para resolver sus propios rompecabezas.\n\nContinúa con este patrón, corrigiendo los errores a medida que surjan, hasta que el pájaro llegue con éxito al cerdo.\n\n**Transición:** Ahora que los alumnos han visto un rompecabezas en línea en la práctica, deberían estar preparados para empezar a resolver sus propios rompecabezas, continuar con el laboratorio o sacar sus máquinas de clase."
+        },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
-          "name": "Programación con Angry Birds"
+          "name": "Programación con Angry Birds",
+          "description": "#### Demostración Adicional\n\nHemos incluido algunos niveles de predicción de opción múltiple que son difíciles para los no lectores. También se pueden utilizar después de terminar la etapa como repaso para la clase.\n\nNiveles de Predicción:\n\n-   [Programación en el Laberinto #1](https://studio.code.org/levels/8730)\n-   [Programación en el Laberinto #2](https://studio.code.org/levels/8729)"
         },
         "32a0cded-433b-4111-b1a5-8513247d783b": {
           "progression_name": "Vídeo: Programación en Pareja"
@@ -622,25 +733,37 @@
         },
         "6a3d0163-b925-4e7a-933a-93f7d6432233": {
           "tips": [
-            null
+            "Muestra a los alumnos la forma _correcta_ de ayudar a los compañeros:\n\n-   No sentarse en su silla\n-   No utilizar su teclado\n-   No tocar su ratón\n-   Asegúrate de que el compañero puede describirte la solución antes de que te vayas."
           ]
         },
+        "49e55532-9f30-4591-a6ff-1f9c6abf32f1": {
+          "description": "**Circular:** Los profesores desempeñan un papel fundamental en la enseñanza de las ciencias de la computación y en el apoyo a un entorno de colaboración y de vida en el aula. Durante las actividades en línea, el papel del profesor es principalmente de estímulo y apoyo. Las lecciones en línea están pensadas para ser centradas en el estudiante, por lo que los profesores deben evitar intervenir cuando los estudiantes se atascan. Algunas ideas sobre cómo hacerlo son: \n\n-   Utilizar el vídeo de los alumnos **\\*Programación por parejas** -siempre que sea posible durante la actividad.\n-   Animar a los estudiantes con preguntas/retos a que empiecen preguntando a su compañero.\n-   Las preguntas no respondidas pueden pasar a un grupo cercano, que podría conocer ya la solución.\n-   Procurar que los alumnos describan el problema que están viendo. ¿Qué se supone que hace? ¿Qué hace? ¿Qué les dice eso?\n-   Recordar a los alumnos frustrados que la frustración es un paso en el camino del aprendizaje y que la persistencia dará sus frutos.\n-   Si un alumno sigue atascado después de todo esto, hazle preguntas que le lleven a detectar un error por sí mismo.\n\n**Debatir:** Después de proporcionar a los alumnos las advertencias del final de la clase, llama la atención de todos y haz que reflexionen sobre las experiencias que acaban de vivir.\n\n-   ¿Alguien se sintió frustrado durante alguno de los rompecabezas?\n-   ¿Alguien notó la necesidad de ser persistente?\n\n**Transición:** Haz que los alumnos cojan sus diarios de reflexión y se tomen un momento para repasar las lecciones por sí mismos."
+        },
         "c0a1cc94-6551-4771-841c-2b480772c527": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja algo que no deberías hacer mientras ayudas a un amigo con un rompecabezas de Code.org."
         },
         "82f16207-0435-4b48-bbb4-9378a2567b03": {
           "description": "En grupos pequeños, permite que los alumnos diseñen sus propios laberintos en papel y que desafíen a otros grupos a escribir programas para resolverlos. Para agregar diversión, haz laberintos en tamaño real con alumnos como el pájaro y el cerdo. "
         },
         "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Vocabulario\n\nEsta lección tiene tres palabras de vocabulario nuevas e importantes:\n\n-   **Error** - _Dilo conmigo: E-rror._\n\nAlgo que va mal. Un error.\n\n-   **Depuración** - _Dilo conmigo: De-pu-ra-ción._\n\nEncontrar y corregir errores.\n\n-   **Persistencia** - _Dilo conmigo: Per-sis-ten-cia._ \n\nNo rendirse. La persistencia funciona mejor cuando intentas las cosas de muchas maneras diferentes, muchas veces diferentes."
+        },
+        "9aac4851-ae7d-497a-967e-1926a3d77c21": {
+          "description": "#### Depuración, Persistencia y Frustración\n\n**Debate:** Prepara a los estudiantes para los ejercicios en línea de hoy preguntándoles qué harían si creyeran que tienen un error en su código. Más concretamente, ¿qué se preguntarían? \n\n-   ¿Fue todo correcto en el primer paso?\n-   ¿Y el segundo? ¿Y el tercero?\n-   ¿Dónde se ha equivocado mi programa?\n-   ¿Qué me dice eso?\n\n**Estímulo**: **La depuración** puede ser frustrante. Pero la persistencia puede ayudarnos a superarlo. ¿Qué podemos hacer para persistir en la frustración? \n\nEjemplos de respuestas:\n\n-   Contar hasta 10\n-   Respirar profundamente \n-   Escribir un diario sobre los errores que hemos encontrado\n-   Hablar con un compañero sobre los errores.\n-   Pedir ayuda\n\n**Transición:** Haz saber a tus alumnos que la frustración forma parte de la codificación. Todo el mundo tiene errores. No pasa nada si creen que tienen un error pero no pueden encontrarlo o arreglarlo de inmediato. Utilizar estrategias como las mencionadas anteriormente puede ayudarles a persistir en la frustración y a resolver cualquier problema."
         },
         "478f0185-2792-46bb-8d0d-e88788ebb722": {
-          "name": "Programación con la cosechadora"
+          "name": "Programación con la cosechadora",
+          "description": "En este punto, los alumnos deberían estar ya familiarizados con el entorno de programación. Algunas cosas nuevas que hay que tener en cuenta en esta lección son la confusión sobre el proceso de depuración o no acordarse de utilizar el bloque \"recoger maíz\" cuando la cosechadora llegue al maíz."
         },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
           "tips": [
-            null
+            "Muestra a los alumnos la forma _correcta_ de ayudar a los compañeros:\n\n-   No sentarse en su silla\n-   No utilizar su teclado\n-   No tocar su ratón\n-   Asegúrate de que el compañero puede describirte la solución antes de que te vayas."
           ]
+        },
+        "c99faf85-9a98-4efe-8843-65d04bed20f6": {
+          "description": "**Circular:** Durante las actividades en línea, el papel del profesor es principalmente de estímulo y apoyo. Además de las ideas enumeradas en la última lección, algunas más sobre cómo hacerlo son:\n\n-   Recuerda a los alumnos que deben utilizar el proceso de depuración antes de acercarse.\n-   Procura que los alumnos describan el problema que están viendo. ¿Qué se supone que hace? ¿Qué hace? ¿Qué les dice eso?\n-   Recuerda a los alumnos frustrados que la frustración es un paso en el camino del aprendizaje y que la persistencia dará sus frutos.\n-   Si un alumno sigue atascado después de todo esto, hazle preguntas que le lleven a detectar un error por sí mismo.\n\n**Transición:** Pide a los alumnos que cojan su diario de reflexión y se tomen un momento para repasar las lecciones por sí mismos."
         },
         "0f52c6dc-5602-4905-a924-f7756676f53f": {
           "progression_name": "Vídeo: La Cosechadora"
@@ -661,7 +784,15 @@
           "progression_name": "Práctica"
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja una vez que hayas encontrado un error en tu código."
+        },
+        "8d66f089-ec12-474c-9410-cff9a1d9042a": {
+          "name": "Repite Conmigo",
+          "description": "**Modelo:** Solicita un voluntario y pídele que se ponga de pie.\n\n-   Indícale que camine alrededor de la mesa (de su silla, o de un amigo).\n-   Cuando termine, pídele que lo haga de nuevo, utilizando exactamente las mismas palabras que tú usaste antes.\n-   Cuando termine, vuelve a darles instrucciones.\n-   Y luego otra vez.\n\n**Pregunta:** _¿Habría sido más fácil pedirte que dieras cuatro vueltas a la mesa?_\n\n**Piensa:** \\_¿Y si quisiera que lo hicieras diez veces? ¿Cómo redactarías mis instrucciones para que fueran más eficaces y no tuviera que repetirme tanto? Puedes escribir las instrucciones en un trozo de papel.\n\n**Comparte:** Pide a algunos alumnos que compartan sus instrucciones con la clase, señalando cómo cada enfoque ha simplificado el planteamiento general de dar instrucciones."
+        },
+        "f1742404-d822-4885-a44e-f05f9bc991f3": {
+          "description": "Hoy vamos a trabajar en la manera de hacer más fácil la tarea de dar muchas instrucciones, especialmente cuando esas instrucciones se repiten mucho. Esto será muy útil cuando volvamos a los ordenadores y tengamos que escribir muchas instrucciones en nuestros programas."
         },
         "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
           "progression_name": "Video: Getting Loopy"
@@ -670,21 +801,51 @@
           "name": "Girar y girar"
         },
         "0d345591-6747-4a5e-aeb9-196c42f905cd": {
+          "description": "Presenta la actividad principal haciendo saber a la clase que vamos a celebrar una fiesta de baile. Para hacer esa fiesta, necesitaremos saber cuáles son todos los pasos del baile y cuántas veces debemos hacerlos.\n\n**Proyecta:** Muéstrales la **\\*Hoja de Trabajo** para que todos los alumnos la puedan ver. Habla con la clase sobre las diferentes secciones del baile. Señala la sección que se repite, en particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Modelo:** Muestra a la clase cómo es la danza completa realizada a toda velocidad. A continuación, repasa la danza lentamente, pidiendo a un alumno diferente que diga cada línea de instrucciones. A continuación, haz que los alumnos ejecuten el baile contigo, diciendo las instrucciones en voz alta cuando lleguen a cada movimiento.\n\n**Pregunta:** Pide a los alumnos que trabajen con un compañero para encontrar todas las secciones de la danza que se repiten.\n\n**Comparte:** Pide a algunos alumnos que compartan los patrones de repetición que han encontrado. Como clase, habla de cómo podrías rehacer las instrucciones para que sean aún más cortas repitiendo esos patrones.\n\nPor último, ayúdales a entender una simbología para capturar estos bucles en su programa de imágenes, ya que la evaluación utilizará este mismo método.  He aquí un ejemplo:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
           "tips": [
-            null
+            "\\*\\*¿Buscando algo de buena música? Aquí hay algunos lugares estupendos para encontrarla:\n\n-   [Radio Disney](http://music.disney.com/radio-disney)\n-   [Nick Radio](http://www.nick.com/nick-radio/)\n-   [Kidz Bop Radio](http://www.jango.com/music/Kidz+Bop+Kids?l=0)\n\nHay que tener en cuenta que algunas de estas emisoras pueden mostrar anuncios con contenido de terceros. Si encuentras que los anuncios mostrados son inapropiados, puedes dirigir a los alumnos a un sitio diferente, o buscar bloqueadores de anuncios que puedan evitar este contenido."
           ]
         },
+        "c19f7d42-9e78-4dc2-9d00-5c6e211be4ac": {
+          "description": "Terminar con una hoja de evaluación ayudará a consolidar esta lección para tus alumnos.\n\n**Distribuir:** Reparte la **\\*Evaluación** a cada alumno. Permite que los estudiantes completen la actividad de forma independiente después de que las instrucciones hayan sido bien explicadas. Esto debería resultarles familiar, gracias a las actividades anteriores."
+        },
+        "5d225181-2af4-4b13-a7ef-96c2af34a7b2": {
+          "description": "**Muestra:** Presenta el vocabulario de esta lección, bucle. Pide a la clase que señale el bucle principal que había en el baile. ¿Por qué crees que lo llamamos bucle?"
+        },
+        "41aa9a16-e91e-4cdc-a3cd-b6dd125a2d0c": {
+          "description": "#### Flash Chat: ¿Qué hemos aprendido?\n\n-   ¿Qué crees que es más fácil, añadir más imágenes a la pantalla o cambiar el número de veces que hacemos el bucle?\n    -   ¿Sería tu respuesta la misma si quisiéramos hacer un bucle 100 veces?\n-   ¿Podríamos utilizar estos mismos bucles con diferentes movimientos de baile?\n-   ¿Conoces algún baile que se haga dentro de un bucle?\n-   ¿Cuál fue tu parte favorita de esta actividad?"
+        },
         "740f60c7-c857-4947-804e-498fb18ab620": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Preguntas:**\n\n-   ¿De qué ha tratado la lección de hoy?\n-   ¿Cómo te has sentido durante la lección de hoy?\n-   Haz un dibujo de cómo has bailado hoy. Dibuja los bucles que has hecho, como aplaudir tres veces. \n-   ¿Para qué más puedes utilizar un bucle?"
+        },
+        "7bf673c3-c5d7-43a4-b847-4548326462a1": {
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o como refuerzo."
+        },
+        "98b7009b-0d2e-4b16-80bb-72decac5a3a7": {
+          "description": "**Así que Moverse**\n\n-   Entrega a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n-   Procura que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase."
+        },
+        "16800831-7ae9-4206-baf3-71ceeb512506": {
+          "description": "**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repiten.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
         },
         "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Repasa con tus alumnos la actividad \"Getting Loopy\":\n\n-   ¿Qué son los bucles?\n-   ¿Por qué los utilizamos?"
+        },
+        "bd8c9fb2-0968-4f8e-8186-c54ac0fc9870": {
+          "description": "Estas actividades ayudarán a trasladar los conceptos desconectados de \"Getting Loopy\" al mundo online en el que se mueven los alumnos. Escoge _una_ de las siguientes para hacer con tu clase:"
+        },
+        "312282bb-1122-4f51-b143-605d761309d1": {
+          "name": "Actividad Desconectada Utilizando Bloques de Papel",
+          "description": "Repasa el baile de \"Getting Loopy\".  Esta vez, trabaja con la clase para \"codificarlo\" utilizando **\\*manipulativos** en lugar de escribir las instrucciones del baile en papel. Asegúrate de que los alumnos sepan que los bloques deben ir de arriba a abajo y que todos deben tocarse.\n\n#### -O-"
         },
         "bce6dafd-6066-46f8-872c-1b793b1098c7": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Previsualizar desafíos online como clase",
+          "description": "Busca los rompecabezas en línea y elige un rompecabezas para hacer frente a la clase. Recomendamos el rompecabezas 7. Pide a los alumnos que escriban un programa para resolver el rompecabezas en papel.  Haz que los alumnos rodeen los trozos repetidos y los etiqueten con el número de repeticiones, de la misma manera que hicieron en \"Getting Loopy\"."
         },
         "11be2bd6-803f-4a86-9f3c-f366fbcbea4b": {
-          "name": "Bucles con la cosechadora"
+          "name": "Bucles con la cosechadora",
+          "description": "A medida que los estudiantes trabajan con los rompecabezas, comprueba si pueden averiguar cuántos bloques utilizan con bucle y sin bucle."
         },
         "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
           "progression_name": "Desarrollo de habilidades"
@@ -702,10 +863,25 @@
           "progression_name": "Práctica"
         },
         "8342e7d2-b605-4c73-80a9-2d3d97aad783": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   ¿Cómo hicieron los bucles que tu programa fuera más fácil de escribir?\n-   Dibuja algo que utilice bucles."
+        },
+        "edccf663-8ffc-4d68-973b-04b5dc5cdcfd": {
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que Muévete**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
+        },
+        "73d6d577-ed28-4b7a-948a-8c9aea13dec4": {
+          "description": "#### Tablero de Elección Maíz Loco (45-60 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informática + Lengua y Literatura Inglesas + Ciencias**\n\n[Tablero de Elección Maíz Loco](https://docs.google.com/document/d/1fFXhTfqPGrAyiyYWhh8Wfc6eRaDJh8F2iFRJqXPXxTI/edit#heading=h.oa0z8i3xy1ys) es una actividad opcional alineada con los Estándares Básicos Comunes de ELA y Ciencia de la Próxima Generación, escrita por nuestra comunidad de profesores. Los alumnos practicarán sus habilidades para hablar y escuchar mientras determinan qué propiedades del maíz de Cosechadora pueden utilizarse para resolver un problema humano a través de la biomímesis.\n\n_Estándares abordados:_\n\n-   **CSCSS.ELA-LITERACY.SL.1.1.A:** Seguir las reglas acordadas para las discusiones (por ejemplo, escuchar a los demás con atención, hablar de uno en uno sobre los temas y textos que se discuten).\n\n-   **CSCS.ELA-LITERACY.SL.1.1.B:** Aprovechar las conversaciones de los demás respondiendo a los comentarios de los compañeros a través de múltiples intercambios.\n\n-   **CCSS.ELA-LITERACY.SL.1.1.C:** Hacer preguntas para aclarar cualquier confusión sobre los temas y textos que se están discutiendo.\n\n-   **NGSS.1-LS1-1:** Utilizar materiales para diseñar una solución a un problema humano imitando cómo las plantas y/o los animales utilizan sus partes externas para ayudarles a sobrevivir, crecer y satisfacer sus necesidades."
         },
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Repasa rápidamente la definición de bucle, la acción de hacer algo una y otra vez.\n\n-   ¿Qué son los bucles?\n-   ¿Por qué los utilizamos?"
+        },
+        "f9049e6f-d7f9-44c9-b38f-721d93ab7c0f": {
+          "description": "#### Fundamentos en Línea: Vista Previa de los Bucles en el Coleccionista\n\nPara introducir a Laurel el Coleccionista, muestra un rompecabezas en línea (o dos) como clase.\n\n**Modelo:** Muestra un rompecabezas online completo de la progresión que viene.  Recomendamos el Rompecabezas 8.  ¿Ven los alumnos alguna similitud con la última serie de ejercicios que hicieron?  ¿Cuáles son las grandes diferencias? ¿Cuándo se debe utilizar el bloque `obtener tesoro`?\n\nTrabaja con tu clase para arrastrar el código al espacio de trabajo de manera que Laurel (finalmente) recoja todo el tesoro. \n\n**Transición:** Los alumnos deberían estar ahora preparados para pasar a los ordenadores y completar los rompecabezas en línea por sí mismos."
+        },
+        "080f9c60-77da-4902-a7ba-a5b21efd9aca": {
+          "name": "Demostración del Profesor",
+          "description": "Hemos incluido un nivel de predicción de opción múltiple que podría ser difícil para los no lectores. Estos niveles son opcionales para que los repases con tu clase y te ayuden a preparar los rompecabezas que vienen. También se pueden utilizar después de terminar la etapa como repaso para la clase.\n\nNivel de predicción:\n\n-   [Curso B, Bucles en Coleccionista](https://studio.code.org/levels/8746)"
         },
         "fe653971-9c18-44ee-adbc-727e8978b387": {
           "progression_name": "Vídeo: El Coleccionista"
@@ -728,16 +904,28 @@
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
           "progression_name": "Lecciones adicionales"
         },
+        "65456981-db3c-42cb-b698-e162463df4d1": {
+          "description": "A medida que los estudiantes trabajan en los rompecabezas, vea si pueden averiguar cuántos bloques utilizan con un **bucle** frente a uno sin **bucle**."
+        },
         "b4e46590-0e84-4574-9230-c8fb9e768647": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja una línea de tesoros que Laurel pueda recoger.\n-   Dibuja algo que utilice bucles."
+        },
+        "9dca7720-b4ca-46ac-9d8a-c224721ddb12": {
+          "description": "### Rastreador de Tesoros (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png)  ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informática + Lengua Inglesa + Matemáticas**\n\n[Rastreador de Tesoros](https://www.google.com/url?q=https://docs.google.com/document/d/1WyrORBKmFRYyAGRokCVN9TuBS5TNDvUtltlUiKSWwIo/edit&sa=D&source=editors&ust=1613260836480000&usg=AFQjCNErmCoQ1jd5s0fvi29aLJwztIwTRw)  es una actividad opcional alineada con los estándares de Common Core ELA y Math, escrita por nuestra comunidad de profesores. ¡Los estudiantes ayudarán a Laurel a rastrear su tesoro mientras cuenta y clasifica su botín!\n\n_Estándares que se abordan:_ \n\n-   **CCCSS.ELA-LITERACY.L.1.5.A:** Clasificar palabras en categorías (por ejemplo, colores, ropa) para obtener un sentido de los conceptos que representan las categorías.\n\n-   **CCSS.MATH.CONTENT.1.OA.A.1:** Utilizar la adición y la sustracción dentro de 20 para resolver problemas de palabras que implican situaciones de sumar, quitar, juntar, separar y comparar, con incógnitas en todas las posiciones, por ejemplo, utilizando objetos, dibujos y ecuaciones con un símbolo para el número desconocido para representar el problema.\n\n-   **CCSS.MATH.CONTENT.1.OA.A.2:** Resolver problemas de palabras que requieran la adición de tres números enteros cuya suma sea menor o igual a 20, por ejemplo, usando objetos, dibujos y ecuaciones con un símbolo para el número desconocido para representar el problema."
         },
         "bd9b2ae7-e0c5-43b5-8416-ab1b164feb2b": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "-   Repasa rápidamente la definición de bucle, la acción de hacer algo una y otra vez. \n-   Discute diferentes patrones como los zigzags y los pasos de escalera.\n    -   ¿Cómo explicarías a alguien cómo dibujar ese patrón?\n    -   ¿Cómo podrías dibujar esto utilizando un bucle?\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nEn los niveles de artista, los alumnos utilizarán ángulos de 45 grados descritos como noroeste, noreste, suroeste y sureste. Recomendamos comentar brevemente estas direcciones con la clase y dibujar una imagen para que los alumnos puedan consultarla.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)"
         },
         "d5bea39f-5b7a-4eea-84f2-3f3c9bb07945": {
+          "name": "Demostración del Profesor",
           "tips": [
-            null
+            "Recuerda a los alumnos que sólo deben compartir su trabajo con sus amigos o familiares cercanos. Para más información, vea o muestre a la clase el vídeo **\\*Pausa y piensa en línea**."
           ]
+        },
+        "6e4b782c-58b7-4079-bec6-7fe157198276": {
+          "description": "Hemos incluido algunos niveles de predicción de opción múltiple que son difíciles para los no lectores. Estos niveles son opcionales para que los revises con tu clase y te ayuden a preparar los rompecabezas que vienen. También se pueden utilizar después de terminar la etapa como repaso para la clase. \n\n**Nivel de Predicción:** - [Curso B, Bucles en Artista](https://studio.code.org/levels/8745)"
         },
         "6bf24dc0-0251-49fc-b9d2-04603cbb7a06": {
           "progression_name": "Vídeo: El Artista en Code Studio"
@@ -764,7 +952,11 @@
           "progression_name": "Lecciones adicionales"
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja los patrones que has hecho con un bucle.\n-   Dibuja un patrón que te gustaría hacer con un lazo."
+        },
+        "bd7a8ad1-e3a1-441a-89e7-eba01f59a615": {
+          "description": "### Formas de Loopy (30-45 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png)  ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informática + Lengua Inglesa + Matemáticas**\n\n[Formas de Loopy](https://docs.google.com/document/d/1bFOIBY40RMppmUFlAa7Cb0O28mej5lEw2yc7NxkNrWo/edit#heading=h.vowrbq6ykmt2) es una actividad opcional alineada con los estándares de Common Core ELA y Math, escrita por nuestra comunidad de profesores. Trabajando con un compañero, los estudiantes utilizarán bucles para programar formas bidimensionales mientras utilizan conversaciones colaborativas para hacer preguntas aclaratorias.\n\n_Estándares que se abordan:_\n\n-   **CSCS.ELA-LITERACY.SL.1.1:** Participar en conversaciones colectivas con diversos compañeros sobre temas y textos de primer grado con compañeros y adultos en grupos pequeños y grandes.\n\n-   **C.C.S.ELA-LITERACY.SL.1.1:** Hacer preguntas para aclarar cualquier confusión sobre los temas y textos que se están discutiendo.\n\n-   **CCSS.ELA-LITERACY.SL.1.5:** Añadir dibujos u otras muestras visuales a las descripciones cuando sea apropiado para aclarar ideas, pensamientos y sentimientos.\n\n-   **CSCS.MATH.1.G.A.2:** Componer formas bidimensionales (rectángulos, cuadrados, trapezoides, triángulos, semicírculos y cuartos de círculo) o formas tridimensionales (cubos, prismas rectangulares, conos circulares rectos y cilindros circulares rectos) para crear una forma compuesta, y componer nuevas formas a partir de la forma compuesta."
         },
         "8c2a2318-b39e-4940-b04a-eb0319ed0d45": {
           "progression_name": "La Aplicación Correcta - Actividad Desconectada"
@@ -1188,10 +1380,15 @@
           "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   ¿Cómo hicieron los bucles que tu programa fuera más fácil de escribir?\n-   Dibuja algo que utilice bucles."
         },
         "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "-   Repasa rápidamente la definición de bucle, la acción de hacer algo una y otra vez. \n-   Analiza diferentes patrones como los zigzags y los pasos de escalera.\n    -   ¿Cómo explicarías a alguien cómo dibujar ese patrón?\n    -   ¿Cómo podrías dibujar esto utilizando un bucle?\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nEn los niveles de artista los alumnos utilizarán ángulos de 45 grados descritos como noroeste, noreste, suroeste y sureste. Recomendamos analizar brevemente estas direcciones con la clase y dibujar una imagen para que los alumnos puedan consultarla.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)"
         },
         "13752711-384a-4249-bf95-632d8a8ad185": {
-          "name": "Escena del océano con bucles"
+          "name": "Escena del océano con bucles",
+          "description": "#### Demostración del Profesor"
+        },
+        "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
+          "description": "Hemos incluido algunos niveles de predicción de opción múltiple que son difíciles para los no lectores. Estos niveles son opcionales para que los revises con tu clase y te ayuden a preparar los rompecabezas que vienen. También se pueden utilizar después de terminar la etapa como repaso para la clase.\n\nNiveles de Predicción:\n\n-   [Curso A, Bucles en Artista](https://studio.code.org/levels/8726)"
         },
         "6d5074a8-2f60-46de-b974-532be01603c4": {
           "progression_name": "Vídeo: El Artista en Code Studio"
@@ -1213,7 +1410,7 @@
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
-            null
+            "Recuerda a los alumnos que sólo deben compartir su trabajo con sus amigos o familiares cercanos. Para más información, visualiza o muestra a la clase el vídeo \"Pausa y Piensa en Línea\"."
           ],
           "progression_name": "Juego libre"
         },
@@ -1221,45 +1418,69 @@
           "progression_name": "Lecciones adicionales"
         },
         "75843546-1fa3-4171-b034-3c14d8d9d5a4": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja unas escaleras. Imagina el bucle necesario para dibujar esto.\n-   Dibuja algo más en tu vida que utilice bucles."
+        },
+        "85143426-6671-4809-8601-8502634e2f51": {
+          "description": "### Codificar mi dibujo (30-45 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) **Informática + Lengua y Literatura inglesas**\n\n[\\*\\*Codificar mi dibujo\\*\\*](https://docs.google.com/document/d/1ez9QdAtpHr4ra-zCkJu0A_BRdksVO5JU-qxO1B5RDLE/edit#) es una actividad opcional alineada con los estándares Common Core ELA, escrita por nuestra comunidad de profesores. En parejas o grupos de tres, los alumnos practicarán una comunicación clara para codificar los dibujos de los demás en Artista.\n\n_Estándares a los que se dirige:_\n\n-   **CSCS.ELA-Literacy.SL.K.2**: Confirmar la comprensión de un texto leído en voz alta o de la información presentada oralmente o a través de otros medios de comunicación, haciendo y respondiendo a preguntas sobre detalles clave y solicitando aclaraciones si no se entiende algo.\n-   **CSCS.ELA-Literacy.SL.K.3**: Hacer y responder preguntas para buscar ayuda, obtener información o aclarar algo que no se entiende.\n-   **CSCS.ELA-Literacy.SL.K.6**: Hablar de forma audible y expresar claramente los pensamientos, sentimientos e ideas."
         },
         "ac847e89-ccab-4f15-8585-b06d61723c4c": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Vocabulario\n\nEsta lección tiene una palabra de vocabulario nueva e importante:\n\n-   **Evento** - _Dilo conmigo: E-vento._ \n\nUn acontecimiento es una acción que hace que algo ocurra."
+        },
+        "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6": {
+          "description": "#### Una serie de acontecimientos\n\nVeamos si podemos encontrar un patrón aquí:\n\n-   Cuando pulsas un interruptor, se encienden las luces.\n-   Cuando tocas un dispositivo, se inicia una aplicación.\n-   Cuando suena la alarma, te levantas de la cama.\n-   Cuando (evento)*, \\_(acción)*.\n\nEn informática, los **eventos** provocan otras acciones. Nuestra nueva palabra de vocabulario de hoy es **evento**. Normalmente, cuando oímos \"evento\" pensamos en:\n\n-   Excursión\n-   Competición\n-   Fiesta de cumpleaños\n\nHoy vamos a aprender un nuevo significado de la palabra evento. Vamos a centrarnos en los acontecimientos que provocan otras acciones, como cuando al pulsar un interruptor se encienden las luces o al pulsar un botón se mueve un personaje de un juego."
         },
         "14f82c4a-fa73-4426-adb6-b32b5f14f3be": {
           "progression_name": "El Gran Evento - Actividad Desconectada"
         },
         "6ffda847-c078-4edf-b7ca-4499b1d9249e": {
           "name": "El gran evento",
+          "description": "-   _¿Recuerdas haber ayudado a los flurbs a encontrar fruta?_\n    -   _En ese ejercicio, sabías de antemano dónde querías que terminara tu flurb, así que podías hacer un programa que los llevara de principio a fin sin ninguna interrupción._\n    -   _En la mayoría de los programas reales, no podemos hacer eso porque queremos tener opciones, dependiendo de las necesidades del usuario._\n        -   _Digamos que quiero que mi personaje sólo se mueva cuando mi dedo está en la pantalla de mi teléfono. Tendría que programar el personaje para que sólo se mueva cuando ponga el dedo en la pantalla de mi teléfono._\n        -   _El hecho de poner el dedo en la pantalla se convertiría en un suceso que le dice a mi personaje que se mueva._",
           "tips": [
-            null
+            "Si tus alumnos parecen confusos, habla de sus juegos favoritos y de todas las formas en que hacen saber a los personajes lo que deben hacer. Señala que el juego sería muy aburrido si se desarrollara de principio a fin sin necesidad de realizar ningún suceso."
           ]
+        },
+        "ab5654c4-0bfd-4ef4-8a0c-c33db9dbeecd": {
+          "description": "En lecciones anteriores, creamos algoritmos que nos permitían controlar a un amigo o flurb durante varios pasos a la vez. Era divertido y útil, pero ¿qué pasa cuando no sabes todo lo que quieres que haga tu amigo de antemano? ¡Aquí es donde entran los sucesos!\n\n**Direcciones:**\n\n-   Proyecta\\*\\* **\\*El Gran Suceso (Cursos A, B) - Imagen del Controlador** en la pantalla de tu aula.\n\n![El Gran Suceso](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n-   Decide con tu clase qué hace cada botón. Sugerimos:\n    -   Botón Rosa -> Decir \"¡Wooooo!\"\n    -   Botón Azul -> \"¡Si!\"\n    -   Botón Morado -> \"¡Boom!\"\n-   Practica tocando los botones en la pantalla y haz que tu clase reaccione.\n-   Añade algunas secuencias de botones a la mezcla y haz que los alumnos intenten seguir el ritmo de sus sonidos.\n-   Haz saber a tu clase que cada vez que se pulsa un botón, es un suceso que les permite saber lo que se espera que hagan a continuación.\n-   Haz que la clase comience una tarea planificada antes de interrumpirla de nuevo con los botones. Sugerimos:\n    -   Contar hasta 10\n    -   Cantar \"El viejo MacDonald\"\n-   Una vez que su plan esté en marcha, interrumpa la pulsación de los botones de forma esporádica.\n-   Continúe con la mezcla hasta que comprendan la diferencia entre las acciones guiadas por un plan y las impulsadas por un suceso."
         },
         "40978575-9e16-4760-a200-0678f187ff4c": {
           "name": "Reflexión",
+          "description": "Debatir: Pide a los alumnos que reflexionen sobre lo que han aprendido mediante las siguientes preguntas:\n\n-   ¿Qué hemos aprendido?\n-   ¿Qué hemos aprendido?\n\n**Sugerencias:**\n\n-   ¿De qué ha tratado la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja un \"suceso\" que haya causado una acción hoy.\n-   Dibuja una acción causada por un \"suceso\" que haya ocurrido hoy.",
           "tips": [
-            null
+            "Los alumnos deben demostrar que comprenden que los \"sucesos\" son algo que puede provocar otras acciones. Recuerda los ejemplos anteriores de la lección o anima a los alumnos a inventar los suyos propios."
           ]
         },
         "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5": {
-          "name": "Evaluación"
+          "name": "Evaluación",
+          "description": "**Distribuir**: Reparte una **\\*Evaluación** a cada alumno y permíteles que la completen de forma independiente después de haberles explicado bien las instrucciones. Esto debería resultarles familiar, gracias a las actividades anteriores."
         },
         "d540fe6c-fd83-4e7d-98cc-6e78a2d36073": {
           "description": "Use estas actividades para mejorar el aprendizaje de los alumnos. Pueden usarse como actividades fuera del aula u otros enriquecimientos. \n\n**El Evento de una Persona es la Reacción de Otra**\n\nAsigne a cada estudiante un evento del cual encargarse y una reacción apropiada para ese evento. Encadene las acciones para que así la reacción de un/a niño/a se convierta en un evento que gatilla la reacción de otro/a estudiante. Siga asignando hasta que todos tengan algo que hacer y que todos hagan reaccionar a alguien. \n\n**Eventopalooza**\n\nDivida la clase en grupos. Usando el Controlador de Eventos, asigne a cada grupo una reacción diferente para el mismo botón. Haga esto para cada uno de los tres botones, ¡y entonces observe el caos!"
         },
         "cb6735d8-d986-408b-adef-61e9a52ad30f": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Repasa la actividad \"El gran evento\" con los alumnos:\n\n-   _¿Qué hemos \"programado\" que hagan los eventos de los botones?_\n\n_Ahora vamos a añadir eventos a nuestro código. Específicamente, vamos a tener un evento para cuando dos personajes se toquen._\n\n-   _¿Cuándo has visto que dos personajes se toquen como evento en los juegos?_"
+        },
+        "59ef2dfe-0dad-4172-8225-3e844fecb36f": {
+          "description": "Estas actividades ayudarán a trasladar los conceptos desconectados de \"El Gran Evento\" al mundo online en el que se mueven los alumnos. Escoge _una_ de las siguientes para hacer con tu clase:"
         },
         "4282b236-dd48-4702-81fd-452fb86a8288": {
           "tips": [
-            null
+            "Los alumnos tendrán la oportunidad de compartir su producto final con un enlace. Esta es una gran oportunidad para mostrar a tu comunidad escolar las grandes cosas que tus alumnos están haciendo. Recoge todos los enlaces y guárdalos en la página web de tu clase para que todos los vean.\n\nRecuerda a los alumnos que sólo deben compartir sus trabajos con sus amigos o familiares cercanos. Para más información, mira o muestra el vídeo de la clase **\\*Pausa y piensa en línea**."
           ]
         },
+        "9126c997-86b1-4d78-9eaf-3d07e06c6355": {
+          "name": "Actividad Desconectada Utilizando Bloques de Papel",
+          "description": "Utilizando el mando de la **\\*Imagen del controlador** y los bloques de **\\*Manipulativos**, reúne a tu clase para repetir la actividad de la lección anterior. Pregunta a la clase: \"Cuando se pulsa el botón verde, ¿qué hacemos?\" y luego rellena uno de los bloques de eventos \"cuando\" y uno de los bloques de acción azules.  Asegúrate de que los alumnos entienden que los bloques `cuando` tienen que estar encima del bloque azul y que tienen que tocarse para que el programa se ejecute.\n\n#### -O-"
+        },
         "b4da0866-a056-4d28-bbca-119bbd17fe04": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Previsualizar desafíos online como clase",
+          "description": "Selecciona un rompecabezas de los correspondientes en línea. Recomendamos el rompecabezas 7.  Pide a diferentes alumnos que hagan un ruido divertido cuando hagas clic en Jorge. Explica que se trata de un evento al que están reaccionando y que Jorge puede ser codificado para hacer ruido cuando se hace clic sobre él."
         },
         "d20df183-f25b-45af-ae7c-f80a4405f2d2": {
-          "name": "En movimiento con eventos"
+          "name": "En movimiento con eventos",
+          "description": "Esta es la actividad más libre del curso. En la fase final, los alumnos tienen libertad para crear su propia historia. Es posible que quieras darles pautas estructuradas sobre el tipo de historia que deben escribir, sobre todo a los alumnos que se sientan abrumados por el exceso de opciones."
         },
         "c37ca368-ea56-4b4d-a06c-1d2b94516bf8": {
           "progression_name": "Vídeo: Introducción al Laboratorio de Juegos"
@@ -1277,32 +1498,46 @@
           "progression_name": "Lecciones adicionales"
         },
         "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué ha tratado la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una cara que muestre cómo te has sentido con la lección de hoy.\n-   Dibuja un evento que hayas utilizado en tu programa de hoy.\n-   Imagina que tienes un robot con mando a distancia. ¿Qué aspecto tendría el mando a distancia? Haz un dibujo de lo que crees que podrías hacer con el robot."
         },
         "807c4bfd-ed3e-4400-a83a-a535c56f3155": {
           "description": "Usa estas actividades para mejorar el aprendizaje del alumno. Se pueden usar como actividades al aire libre u otro tipo de enriquecimiento. \n\n**Mirar bajo la capucha**\n\nCuando compartes un enlace a tu historia, también compartes todo el código que va de fondo. Esta es una buena forma para que los alumnos aprendan de los demás. \n\n Publica enlaces para historias completas en línea. \n    \\-   ¡También inventa una historia para compartir! \n\n-   Cuando los alumnos suban un enlace, pídeles que hagan clic en el botón \"Cómo Funciona\" para ver el código que está detrás de la historia.\n-   Discutan como grupo las formas diferentes en que sus compañeros codificaron sus historias. \n    -   ¿Qué te sorprendió?\n    -   ¿Qué te gustaría intentar?\n-   Escoge la historia de alguien más y haz clic en `Remix` para construir desde ahí. (No te preocupes, la historia original será guardada)."
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
           "name": "Revisión",
+          "description": "**Haz esto:**\n\n-   Procura que los alumnos se entusiasmen y se preparen para la actividad de hoy. Comienza pidiendo a los alumnos que recuerden lo que ya han hecho en la lección anterior utilizando las herramientas del Artista.\n-   Repasa la palabra de vocabulario **bucle**.\n-   Si has creado tu propio ejemplo de proyecto, compártelo ahora.",
           "progression_name": "Proyecto"
         },
         "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
+          "name": "Contando una historia con el Artista",
+          "description": "**Hazlo:** Sube el nivel de esta lección en el proyector.",
           "progression_name": "Proyecto"
+        },
+        "22c1ade3-49af-45ce-84bb-ba4337206074": {
+          "description": "Hoy celebraremos lo mucho que habéis aprendido creando nuestros propios proyectos para contar una historia con el Artista.   El Artista viajará hoy a tres lugares: un jardín, un zoo y el espacio exterior.\n\nTu trabajo es crear un camino para él y contar una historia sobre lo que hizo y vio.\n\n¿Caminará entre las flores?\n\n¿Construirá una casa para los animales? \n\n¿Qué más puede ver o hacer?"
         },
         "76119a2d-a3f8-4c17-b38a-c0194431de25": {
           "name": "Planificación",
+          "description": "**Haz esto:** Distribuye la **guía de planificación** y repásala con los alumnos.\nLos alumnos elegirán _al menos un_ lugar para el artista. A continuación, deberán dibujar el camino que seguirá el artista. (Es como un rompecabezas de puntos, pero sin los números).\nJunto a la imagen, los alumnos deben escribir sus historias. ",
           "tips": [
-            null
+            "Las historias pueden ser de una o dos frases, lo que se consideres apropiado para tu clase."
           ]
         },
         "0ab5b62b-a464-4801-a963-d23d293ea5ff": {
           "name": "Proyecto",
+          "description": "Cuando tengas la actividad en tu ordenador, haz clic en cualquiera de las opciones para empezar. Empieza con tu plan, pero puedes hacer que el artista dibuje lo que quieras. Al final de la clase, compartiremos nuestros proyectos con la clase.",
           "progression_name": "Proyecto"
         },
         "16e34527-4efe-46f1-970b-f365858958a9": {
+          "description": "A medida que los alumnos trabajen, apóyalos respondiendo a sus preguntas y aportando ideas. Anímales a compartir ideas para que la actividad sea más colaborativa.",
           "tips": [
-            null
+            "Todas las opciones de esta lección se consideran \"Juego Libre\", lo que significa que no hay una única respuesta correcta. Si un alumno pulsa \"Terminar\", volverá a la lista de opciones. Puedes pedir a los alumnos que completen una sola opción o todas las que les interesen según el tiempo disponible."
           ]
+        },
+        "adc355f7-34d5-450e-aa57-e001b2a7973c": {
+          "name": "Escaparate",
+          "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos y cuenten su historia delante de la clase. Mientras lo hacen, pídeles que hablen de cómo fue para ellos la experiencia de planificar y codificar. \n-   **Cuentacuentos en pareja**: Si la clase es muy numerosa o tiene poco tiempo, haz que los alumnos o los grupos se pongan en parejas y hagan una demostración de sus proyectos de esta manera. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Haz que los estudiantes se muevan al estilo \"sillas musicales\" a otro ordenador y ejecuten el proyecto allí y lean la historia. Cuando reciban una señal tuya, deben trasladarse a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan hacer una demostración del mayor número posible de proyectos de sus compañeros."
         },
         "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
           "name": "Vocabulario Clave"
@@ -1322,7 +1557,7 @@
         "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
           "name": "Reflexión",
           "tips": [
-            null
+            "Este tipo de reflexiones se pueden llevar a cabo de diferentes maneras. ¡La redacción de un diario o el debate (en grupo o en pareja) son buenas opciones!"
           ]
         },
         "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
@@ -1569,13 +1804,13 @@
         },
         "67fb7588-f699-4cf5-9a67-065456c6baee": {
           "tips": [
-            null
+            "Si tus alumnos parecen confusos, habla de sus juegos favoritos y de todas las formas en que hacen saber a los personajes lo que deben hacer. Señala que el juego sería muy aburrido si se desarrollara de principio a fin sin necesidad de realizar ningún suceso."
           ]
         },
         "abca79b2-6a21-4f74-b06d-07ea956d12bc": {
           "name": "Reflexión",
           "tips": [
-            null
+            "Los alumnos deben demostrar que comprenden que los \"sucesos\" son algo que puede provocar otras acciones. Recuerda los ejemplos anteriores de la lección o anima a los alumnos a inventar los suyos propios."
           ]
         },
         "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
@@ -1712,7 +1947,7 @@
         "47c800d4-0c46-42ae-bc19-d837d28fd912": {
           "name": "Reflexión",
           "tips": [
-            null
+            "Este tipo de reflexiones se pueden llevar a cabo de diferentes maneras. ¡La redacción de un diario o el debate (en grupo o en pareja) son buenas opciones!"
           ]
         },
         "8d3b579a-9959-4190-aa92-858495574689": {
@@ -1741,7 +1976,11 @@
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "name": "Reflexión"
         },
+        "67688952-e1da-43b1-a7d0-f2889dec7e48": {
+          "name": "¿En qué me he equivocado?"
+        },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
+          "description": "**Consulta:** Pregunta a los alumnos si pueden saber cómo te sentías cuando no podías averiguar la respuesta.  Pueden sugerir que estabas \"enfadado\" o \"triste\".  En lugar de decirles que \"no\", describe que te sentías un poco enfadado, un poco triste y un poco confuso.  Cuando se juntan todas esas emociones, se crea un sentimiento llamado \"frustración\".  Cuando te sientes \"frustrado\" puedes pensar que estás enfadado, triste o confuso, y puedes sentirte tentado a abandonar, pero la frustración es un sentimiento natural y es una gran pista de que estás a punto de aprender algo.  En lugar de abandonar, practica la persistencia.  Sigue intentándolo una y otra vez.  Después de unas cuantas veces, empezarás a entender cómo depurar tus problemas.",
           "tips": [
             null
           ]
@@ -1881,7 +2120,8 @@
           "name": "Introducción a los bucles"
         },
         "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
-          "name": "Bucles de la Era de Hielo"
+          "name": "Bucles de la Era de Hielo",
+          "description": "A medida que los estudiantes trabajan con los rompecabezas, comprueba si pueden averiguar cuántos bloques utilizan con bucle y sin bucle."
         },
         "dad54c78-6c91-4ba8-bb15-eff5861db842": {
           "progression_name": "Desarrollo de habilidades"
@@ -1905,6 +2145,9 @@
         },
         "37881eab-e326-4635-89a0-382e72e6fffc": {
           "name": "Reflexión"
+        },
+        "d1bdbe9c-8bc0-4401-96e0-636b3066c782": {
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que Muévete**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
         },
         "f34cb485-1f89-4670-bb09-f170b83be646": {
           "name": "Introducción"
@@ -2973,7 +3216,7 @@
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
           "description": "Los profesores desempeñan un papel fundamental en la enseñanza de las ciencias de la computación y en el apoyo a un entorno de colaboración y dinamismo en el aula. Durante los rompecabezas en línea, el papel del profesor es principalmente de estímulo y apoyo. Los rompecabezas en línea están pensados para centrarse en el alumno, por lo que los profesores deben evitar intervenir cuando los alumnos se atascan. Algunas ideas sobre cómo hacerlo son:",
           "tips": [
-            null
+            "Muestra a los alumnos la forma correcta de ayudar a los compañeros:\n\n-   No sentarse en la silla del compañero\n-   No utilizar el teclado del compañero\n-   No tocar el ratón del compañero\n-   Asegúrate de que el compañero puede describirte la solución en voz alta antes de que te vayas"
           ]
         },
         "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
@@ -2990,6 +3233,7 @@
           "description": "Si los alumnos completan los rompecabezas de la Etapa 4 antes de tiempo, pídeles que dediquen algún tiempo a intentar idear sus propios rompecabezas en sus diarios de reflexión."
         },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
+          "name": "Comportamiento en el Laboratorio de Informática",
           "description": "Repasa las expectativas y cómo comportarse cuando entran en el laboratorio de informática.\n\n**Debatir:**\n\nTen un buen debate sobre las expectativas del laboratorio de informática para asegurarte de que los alumnos entienden las normas. Algunos temas de reflexión pueden ser:\n\n-   ¿Está bien correr en el laboratorio de informática?\n-   ¿Cómo de ruidoso debemos caminar cuando estamos en el laboratorio de informática?\n-   ¿Qué debes hacer si te quedas atascado en un rompecabezas?\n-   Si te frustras, ¿te ayudará golpear el ordenador?\n-   Cuando estemos a punto de ir al laboratorio de informática, ¿Cómo debemos prepararnos?",
           "tips": [
             "-   Mantente en calma en el laboratorio\n-   Recuerda no masticar chicles ni caramelos\n-   Desinfecta tus manos\n-   Siéntate con tu compañero en un ordenador\n-   Asegurarse de que el primer \"conductor\" pueda alcanzar el ratón\n-   Cuando te sientas frustrado, no golpees ni agites el ordenador o el monitor\n-   Sigue la regla del **\\*20/20/20**.\n-   Cómo lidiar con los **\\*Meneos** cada 20-30 minutos (requiere un inicio de sesión gratuito en GoNoodle).\n-   Pregunta a tu compañero antes de preguntar al profesor\n-   Baja el volumen para que los demás puedan oír a sus compañeros\n-   Utiliza tu diario para registrar los sentimientos y las soluciones"
@@ -3004,7 +3248,7 @@
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "name": "Programación con Bloques",
           "tips": [
-            null
+            "Muestra a los alumnos la forma correcta de ayudar a los compañeros:\n\n-   No sentarse en la silla del compañero\n-   No utilizar el teclado del compañero\n-   No tocar el ratón del compañero\n-   Asegúrate de que el compañero puede describirte la solución en voz alta antes de que te vayas"
           ]
         },
         "20e998a3-d920-48f1-9d92-ec4102990042": {
@@ -3083,11 +3327,12 @@
           "description": "#### Depuración, Persistencia y Frustración\n\n**Debatir:** Prepara a los estudiantes para los ejercicios en línea de hoy preguntándoles qué harían si creyeran que tienen un error en su código. Más concretamente, ¿Qué se preguntarían? \n\n-   ¿Fue todo correcto en el primer paso?\n-   ¿Y el segundo? ¿Y el tercero?\n-   ¿Dónde se ha equivocado mi programa?\n-   ¿Qué me dice eso?\n\n**Estímulo:** **La depuración** puede ser frustrante. Pero la persistencia puede ayudarnos a superarlo. ¿Qué podemos hacer para persistir en la frustración? \n\nEjemplos de respuestas:\n\n-   Contar hasta 10\n-   Respirar profundamente\n-   Escribir un diario sobre los insectos que hemos encontrado\n-   Hablar con un compañero sobre los bichos\n-   Pedir ayuda\n\n**Transición:** Haz saber a tus alumnos que la frustración forma parte de la codificación. Todo el mundo tiene errores. No pasa nada si creen que tienen un error pero no pueden encontrarlo o arreglarlo de inmediato. Utilizar estrategias como las mencionadas anteriormente puede ayudarles a persistir en la frustración y a resolver cualquier problema."
         },
         "0684b025-9c16-437c-936c-d9743cad2d94": {
-          "name": "Programación con la cosechadora"
+          "name": "Programación con la cosechadora",
+          "description": "En este punto, los alumnos deberían estar ya familiarizados con el entorno de programación. Algunas cosas nuevas que hay que tener en cuenta en esta lección son la confusión sobre el proceso de depuración o no acordarse de utilizar el bloque \"recoger maíz\" cuando la cosechadora llegue al maíz."
         },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [
-            null
+            "Muestra a los alumnos la forma _correcta_ de ayudar a los compañeros:\n\n-   No sentarse en su silla\n-   No utilizar su teclado\n-   No tocar su ratón\n-   Asegúrate de que el compañero puede describirte la solución antes de que te vayas."
           ]
         },
         "45d59019-4dd4-4a32-b08c-fd79528eab76": {
@@ -3128,6 +3373,9 @@
         "388885b9-02f4-4150-b753-0b33d7db86fa": {
           "description": "**Transición:** Los alumnos deberían estar ahora preparados para la transición a los ordenadores y completar los rompecabezas en línea por su cuenta."
         },
+        "0c3cdd42-4e3e-4b16-942b-47ce55609295": {
+          "description": "A medida que los estudiantes trabajan con los rompecabezas, comprueba si pueden averiguar cuántos bloques utilizan con bucle y sin bucle."
+        },
         "c6bb8fa9-dfaa-414e-ac47-0f6196d8fa9e": {
           "tips": [
             "Muestra a los alumnos la forma _correcta_ de ayudar a los compañeros de clase:\n\n-   No sentarse en la silla del compañero\n-   No utilizar el teclado del compañero\n-   No tocar el ratón del compañero\n-   Asegurarse de que el compañero puede describirle la solución en voz alta antes de que usted se vaya"
@@ -3155,6 +3403,9 @@
           "name": "Reflexión",
           "description": "Pedir a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto puede ayudar a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso que les sirva para el futuro.\n\n**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una de las **\\*Caras de emoción** que muestra cómo te has sentido con la lección de hoy.\n-   Dibuja a _Scrat_ y una bellota.\n-   Dibújate a ti mismo utilizando un bucle para realizar una actividad cotidiana, como lavarte los dientes."
         },
+        "efb62b8a-4d4e-446b-aa68-1f20c45fc7a3": {
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que Muévete**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
+        },
         "3948532c-fefc-466f-a7ff-7d95e6692b96": {
           "name": "Introducción",
           "description": "Repasa rápidamente la definición de bucle, la acción de hacer algo una y otra vez.\n\n-   ¿Qué son los bucles?\n-   ¿Por qué los utilizamos?"
@@ -3167,7 +3418,8 @@
           "description": "### Demostración para el Profesor\n\nHemos incluido algunos niveles de predicción de opción múltiple que son difíciles para los no lectores. Estos niveles son opcionales para que los revises con tu clase y te ayuden a preparar los rompecabezas que vienen. También se pueden utilizar después de terminar la etapa como repaso para la clase.\n\nNiveles de predicción:\n\n-   [Bucles en Coleccionista](https://studio.code.org/levels/8746)"
         },
         "b8fea05b-6234-4075-8416-bbfdef9e22f0": {
-          "name": "Rompecabezas en Línea "
+          "name": "Rompecabezas en Línea ",
+          "description": "A medida que los estudiantes trabajan con los rompecabezas, comprueba si pueden averiguar cuántos bloques utilizan con bucle y sin bucle."
         },
         "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
           "progression_name": "Vídeo: El Coleccionista"
@@ -3195,10 +3447,12 @@
           "description": "Pedir a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto puede ayudar a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso que les sirva para el futuro.\n\n\\*\\*Sugerencias: \\*\\*\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una de las **\\*Caras de Emoción** que muestre cómo te has sentido con la lección de hoy.\n-   Dibuja una línea de tesoros que Laurel pueda recoger.\n-   Dibuja algo que utilice bucles."
         },
         "6361a98f-3232-4060-8758-b1f8064507a8": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "-   Repasa rápidamente la definición de bucle, la acción de hacer algo una y otra vez. \n-   Analiza diferentes patrones como los zigzags y los pasos de escalera.\n    -   ¿Cómo explicarías a alguien cómo dibujar ese patrón?\n    -   ¿Cómo podrías dibujar esto utilizando un bucle?\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nEn los niveles de artista los alumnos utilizarán ángulos de 45 grados descritos como noroeste, noreste, suroeste y sureste. Recomendamos analizar brevemente estas direcciones con la clase y dibujar una imagen para que los alumnos puedan consultarla.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)"
         },
         "8cb479d1-0b50-4d24-998d-9fff971dcf0c": {
-          "name": "Escena del océano con bucles"
+          "name": "Escena del océano con bucles",
+          "description": "#### Demostración del Profesor"
         },
         "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
           "tips": [

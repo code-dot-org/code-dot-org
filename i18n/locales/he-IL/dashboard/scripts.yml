@@ -161,7 +161,7 @@ he:
           description_short: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם והיופי של קרח.
           lessons:
             Artist:
-              name: אמן
+              name: תכנתו עם אנה ואלזה
           student_description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
         course4:
           title: מסלול 4
@@ -255,7 +255,7 @@ he:
           description_short: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
           lessons:
             Infinity:
-              name: אינסוף
+              name: מעבדת הצעצועים עם דיסני אינסוף
           student_description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
         algebrademo:
           lessons:
@@ -637,9 +637,6 @@ he:
         starwarsblocks:
           description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
           description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-          lessons:
-            Hour of Code 2015:
-              name: שעת קוד 2015
           student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
         mc:
           title: 'שעת הקוד: גרסת מיינקראפט'
@@ -953,10 +950,7 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        basketball:
-          lessons:
-            Bounce:
-              name: להקפיץ
+        basketball: {}
         hoc-encryption: {}
         csd2-2017:
           lesson_groups:
@@ -1618,7 +1612,7 @@ he:
           title: 'מיינקראפט: המסע של הירו'
           lessons:
             Minecraft Hour of Code:
-              name: 'שעת הקוד: גרסת מיינקראפט'
+              name: 'מיינקראפט: המסע של הירו'
         applab-intro-staging: {}
         csp-explore-2017:
           lesson_groups:
@@ -2343,6 +2337,9 @@ he:
         aquatic:
           title: 'מיינקראפט: מסע ימי'
           description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות עולמות תת-ימיים עם קוד!
+          lessons:
+            Aquatic:
+              name: 'מיינקראפט: מסע ימי'
         sconyers: {}
         dance--draft:
           lessons:
@@ -3254,8 +3251,6 @@ he:
         dance-extras-2019:
           title: המשיכו לרקוד (2019)
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
-          lessons:
-            Dance Party - Go Further: {}
           student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         csp10-pilot: {}
         csp4-preview:
@@ -4275,13 +4270,27 @@ he:
         csa1-pilot:
           lessons:
             lesson-21: {}
+            lesson-24: {}
+            lesson-22: {}
+            lesson-23: {}
         csa2-pilot:
           lessons:
             lesson-1: {}
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
         csa3-pilot:
           lessons:
             lesson-16: {}
-        csa4-pilot: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
+        csa4-pilot:
+          lessons:
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
         csa5-pilot: {}
         csa6-pilot: {}
         csa7-pilot: {}
@@ -4611,21 +4620,33 @@ he:
         csa1-pilot-facilitator:
           lessons:
             Unit 1 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-21: {}
         csa2-pilot-facilitator:
           lessons:
             Unit 2 Pilot Survey: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-1: {}
         csa3-pilot-facilitator:
           lessons:
             Unit 3 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-16: {}
         csa4-pilot-facilitator:
           lessons:
+            lesson-1: {}
+            lesson-3: {}
+            lesson-4: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
             lesson-10: {}
+            lesson-2: {}
         csa5-pilot-facilitator:
           lessons:
             Reversing Elements: {}
@@ -4672,9 +4693,7 @@ he:
             lesson-19:
               name: פּרוֹיֶקט
             lesson-20: {}
-        hello-world-food:
-          lessons:
-            lesson-1: {}
+        hello-world-food: {}
         csa-u7-dev:
           lessons:
             lesson-1: {}
@@ -4728,6 +4747,16 @@ he:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            lesson-16: {}
         csc-things:
+          lessons:
+            lesson-1: {}
+        poetry-hoc2:
+          lessons:
+            lesson-1: {}
+        poetry-hoc3:
+          lessons:
+            lesson-1: {}
+        spritelab-effects-challenge:
           lessons:
             lesson-1: {}

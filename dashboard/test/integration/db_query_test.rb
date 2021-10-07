@@ -20,7 +20,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    assert_cached_queries(26) do
+    assert_cached_queries(14) do
       get script_lesson_script_level_path(
         script_id: script.name,
         lesson_position: 1,
@@ -51,18 +51,18 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level.id
     )
 
-    assert_cached_queries(12) do
+    assert_cached_queries(11) do
       get user_progress_path,
         headers: {'HTTP_USER_AGENT': 'test'}
       assert_response :success
     end
   end
 
-  test "post milestone to course1 passing" do
+  test "post milestone passing" do
     student = create :student
     sign_in student
 
-    sl = Script.find_by_name('course1').script_levels[2]
+    sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
     params = {program: 'fake program', testResult: 100, result: 'true'}
 
     assert_cached_queries(8) do
@@ -74,11 +74,11 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "post milestone to course1 not passing" do
+  test "post milestone not passing" do
     student = create :student
     sign_in student
 
-    sl = Script.find_by_name('course1').script_levels[2]
+    sl = create(:script, :with_levels, levels_count: 3).script_levels[2]
     params = {program: 'fake program', testResult: 0, result: 'false'}
 
     assert_cached_queries(8) do
@@ -86,6 +86,44 @@ class DBQueryTest < ActionDispatch::IntegrationTest
         user_id: student.id,
         script_level_id: sl.id
       ), params: params
+      assert_response :success
+    end
+  end
+
+  test "student in section views uncached hoc unit" do
+    script = create(
+      :script,
+      :with_levels,
+      levels_count: 10,
+      is_course: true,
+      family_name: 'hoc-family',
+      version_year: 'unversioned',
+      published_state: SharedConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(script)
+
+    teacher = create :teacher
+    section = create :section, user: teacher
+    student = create :student
+    section.students = [student]
+    student.assign_script(script)
+    sign_in student
+
+    assert_cached_queries(6) do
+      get "/s/#{script.name}"
+      assert_response :success
+    end
+
+    # Simulate all the ajax requests which the unit overview page sends to the
+    # server on page load.
+
+    assert_cached_queries(9) do
+      get "/api/user_progress/#{script.name}"
+      assert_response :success
+    end
+
+    assert_cached_queries(3) do
+      get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
       assert_response :success
     end
   end

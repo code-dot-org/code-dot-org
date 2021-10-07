@@ -585,6 +585,18 @@
         "courseF_text_choice_multiprompt": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto ma urodziny?",
           "d1210f945885351b13feb9bbb868aeef": "Ile będą mieli lat?"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
         }
       }
     }

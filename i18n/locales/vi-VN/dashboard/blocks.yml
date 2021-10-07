@@ -1131,6 +1131,13 @@ vi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": khủng hoảng
+            "'sound://category_animals/bear.mp3'": Gấu
+            "'sound://category_animals/cat.mp3'": con mèo
+            "'sound://category_animals/cow.mp3'": con bò
+            "'sound://category_animals/sheep.mp3'": con cừu
+            "'sound://category_animals/chicken.mp3'": con gà
+            "'sound://category_animals/dolphin.mp3'": cá heo
+            "'sound://category_animals/dog.mp3'": con chó
             "'sound://category_digital/jump_7.mp3'": nhảy
       gamelab_pointInDirection:
         text: điểm {SPRITE} {DIRECTION}
@@ -1588,10 +1595,17 @@ vi:
         text: bố trí quái vật ngẫu nhiên
       Outbreak_stopMoving:
         text: quái vật ngừng di chuyển
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': mưa
+      Poetry_makeNewSpriteAnon:
+        text: làm mới {ANIMATION_NAME} sprite tại {LOCATION}
+      Poetry_playSound:
         text: Âm thanh chơi {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: thiết lập hiệu ứng nền {EFFECT} {PALETTE}
+      Poetry_setBackground:
+        text: thiết lập màu nền {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Màu sắc
@@ -1601,10 +1615,9 @@ vi:
             '"ripples"': Gợn sóng
           PALETTE:
             '"rainbow"': Cầu vồng
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: thiết lập nền để {IMG}
-      PoemBot_setForegroundEffect:
-        text: thiết lập hiệu ứng tiền cảnh {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Mưa
@@ -1612,6 +1625,20 @@ vi:
             '"hearts"': Trái tim sặc sỡ
             '"confetti"': Hoa giấy
             '"starburst"': Lóe sáng
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: đi thẳng
       RyanLab_turnLeft:

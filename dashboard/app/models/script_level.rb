@@ -445,10 +445,11 @@ class ScriptLevel < ApplicationRecord
     summary
   end
 
-  def summarize_for_lesson_show(can_view_teacher_markdown)
+  def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
     summary = summarize
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
+    summary[:exampleSolutions] = get_example_solutions(current_user)
     summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
@@ -555,14 +556,11 @@ class ScriptLevel < ApplicationRecord
     passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
     contained = contained_levels.any?
 
-    if user_level
-      paired = user_level.paired?
-
-      driver_info = UserLevel.most_recent_driver(script, levels, student)
-      driver = driver_info[0] if driver_info
-
-      navigator_info = UserLevel.most_recent_navigator(script, levels, student)
-      navigator = navigator_info[0] if navigator_info
+    if user_level && user_level.paired?
+      is_driver = user_level.driver?
+      is_navigator = user_level.navigator?
+      driver = user_level.driver&.name
+      navigators = user_level.navigators_names
     end
 
     if teacher.present?
@@ -575,9 +573,11 @@ class ScriptLevel < ApplicationRecord
       id: level.id.to_s,
       contained: contained,
       submitLevel: level.properties['submittable'] == 'true',
-      paired: paired,
+      paired: is_driver || is_navigator || false,
+      isDriver: is_driver,
+      isNavigator: is_navigator,
       driver: driver,
-      navigator: navigator,
+      navigators: navigators,
       isConceptLevel: level.concept_level?,
       userId: student.id,
       passed: passed,
@@ -724,6 +724,45 @@ class ScriptLevel < ApplicationRecord
     if Rails.application.config.levelbuilder_mode
       script.write_script_json
     end
+  end
+
+  def get_example_solutions(current_user, section=nil)
+    level_example_links = []
+
+    return [] unless current_user&.teacher?
+
+    level = levels.first
+
+    if level.try(:examples).present? && (current_user.authorized_teacher? || script.csf?) # 'solutions' for applab-type levels
+      level_example_links = level.examples.map do |example|
+        # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
+        # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
+        # We treat Dancelab as a sub-set of Sprite Lab levels so have to check and set that before GamelabJr.
+        # Artist levels have @level.game.app of "turtle" and Playlab levels have @level.game.app of "studio"
+        # so need to set those too.
+        # Java Lab levels use levels rather than projects as their example, so the URL is much more clearly
+        # defined and is directly set on the level. Because of this, the value of "example" is already in its
+        # final state - a string representation of the URL of the exemplar level: studio.code.org/s/<course>/...
+        if level.is_a?(Dancelab)
+          send("#{'dance'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(GamelabJr)
+          send("#{'spritelab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Artist)
+          artist_type = ['elsa', 'anna'].include?(level.skin) ? 'frozen' : 'artist'
+          send("#{artist_type}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Studio) # playlab
+          send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        elsif level.is_a?(Javalab)
+          example
+        else
+          send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
+        end
+      end
+    elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
+      level_example_links.push(build_script_level_url(self, {solution: true}.merge(section ? {section_id: section.id} : {})))
+    end
+
+    level_example_links
   end
 
   private

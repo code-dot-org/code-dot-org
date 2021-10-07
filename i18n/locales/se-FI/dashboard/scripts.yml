@@ -175,7 +175,7 @@ se:
           description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid luistiiguin ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
           lessons:
             Artist:
-              name: Dáiddár
+              name: Kode Annain ja Elsain
           student_description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid luistiiguin ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
         course4:
           title: Kursa 4
@@ -305,6 +305,9 @@ se:
           title: Disney Infinitiija Speallan-lab
           description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija figurat leat mielde.
           description_short: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija figurat leat mielde.
+          lessons:
+            Infinity:
+              name: Disney Infinitiija Speallan-lab
           student_description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija figurat leat mielde.
         algebrademo:
           lessons:
@@ -1480,9 +1483,6 @@ se:
         starwarsblocks:
           description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
           description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
-          lessons:
-            Hour of Code 2015:
-              name: KodenDiibmu 2015
           student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
         mc:
           description_short: Guorahala Minecraft máilmmi kodemiin.
@@ -5676,7 +5676,7 @@ se:
               display_name: Iskkadeapmi
           lessons:
             CSP post-course survey:
-              name: CSP maŋŋil-kurssa iskkadeapmi
+              name: CSP Oahppi Maŋŋil kurssa Iskkadeapmi ('18-'19)
         csp5-pilot:
           lessons:
             Unit 5 Assessment:

@@ -180,6 +180,8 @@ tr:
           lessons:
             Artist:
               name: Sanatçı
+              description_student: Sanatçıyı programlayarak güzel resimler oluşturun.
+              description_teacher: Bu derste öğrenciler, ekrandaki çizimleri tamamlaması için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin, '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak sağlayacaktır.
           student_description: Sanatçı ile harika resimler ve tasarımlar yap!
         hourofcode:
           title: Klasik Labirent
@@ -195,7 +197,7 @@ tr:
           description_short: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya katılıp kodlama yapalım.
           lessons:
             Artist:
-              name: Sanatçı
+              name: Anna ve Elsa ile kodlama yap
           student_description: Anna ve Elsa sihri ve buzun güzelliğini keşfederken sen de onlara kod yazarak katıl. Buz-kayağı ile kar kristalleri ve desenler oluşturarak yarattığın kış harikalar diyarını arkadaşlarınla da paylaşabilirsin!
         course4:
           title: Kurs 4
@@ -339,7 +341,7 @@ tr:
           description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
           lessons:
             Infinity:
-              name: Sonsuz
+              name: Disney Infinity Play Lab
           student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
         algebrademo:
           title: Cebir Demo
@@ -1666,9 +1668,6 @@ tr:
         starwarsblocks:
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
-          lessons:
-            Hour of Code 2015:
-              name: Kodlama saati 2015
           student_description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
         mc:
           title: Minecraft Kod Saati
@@ -1685,6 +1684,7 @@ tr:
           lessons:
             Oceans:
               name: Okyanuslar
+              description_student: 'Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır.'
           student_description: Yapay zekâ ve makine öğreniminin dünyanın sorunlarını yönlendirmek için nasıl kullanılabileceğini öğrenin.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3416,7 +3416,8 @@ tr:
           description: Takımınızı seçin ve bir basketbol oyunu oynayın
           lessons:
             Bounce:
-              name: Sıçrama
+              description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!
+              description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.
           student_description: Takımınızı seçin ve bir basketbol oyunu oynayın
         sample-csp5:
           lessons:
@@ -3980,7 +3981,8 @@ tr:
           description: Kendi sporunu kodla
           lessons:
             Sports:
-              name: Spor
+              description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!
+              description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.
           student_description: Kendi sporunu kodla
         2016_sciencePD-phase2b:
           lessons:
@@ -6706,7 +6708,7 @@ tr:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Kahramanın Yolculuğu Kod Saati'
             Minecraft Hour of Code:
-              name: Minecraft Kod Saati
+              name: 'Minecraft: Kahramanın Yolculuğu'
           student_description: Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
         applab-intro-staging:
           title: Uygulama Laboratuarı Hazırlama'ya Giriş
@@ -9077,7 +9079,7 @@ tr:
           description: Minecraft yeni bir etkinlik ile için geri döndü. Yaratıcılığını ve problem çözme becerilerini kullanarak su altı dünyalarını bu kod ile keşfet ve inşa et.
           lessons:
             Aquatic:
-              name: Su
+              name: 'Minecraft: Su Yolculuğu'
           student_description: Minecraft yeni bir etkinlik ile için geri döndü. Yaratıcılığını ve problem çözme becerilerini kullanarak su altı dünyalarını bu kod ile keşfet ve inşa et.
         sconyers:
           title: Tracey'nin Oyun Alanı
@@ -11790,7 +11792,7 @@ tr:
               display_name: Anket
           lessons:
             CSD post-course survey:
-              name: CSD kurs sonrası anketi
+              name: CSD Öğrenci Kurs Sonrası Anketi ('18-'19)
         csp-post-survey-2018:
           title: CSP Öğrenci Kurs Sonrası Anketi ('18-'19)
           description_audience: CSP Öğrencileri
@@ -11800,7 +11802,7 @@ tr:
               display_name: Anket
           lessons:
             CSP post-course survey:
-              name: CSP kurs sonrası anketi
+              name: CSP Öğrenci Kurs Sonrası Anketi ('18-'19)
         csp5-pilot:
           title: CSP Ünite 5 Pilot - Listeler, Döngüler ve Gezinmeler
           lesson_groups:

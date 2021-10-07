@@ -1084,6 +1084,13 @@ mi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": karihi
+            "'sound://category_animals/bear.mp3'": pea
+            "'sound://category_animals/cat.mp3'": ngeru
+            "'sound://category_animals/cow.mp3'": kau
+            "'sound://category_animals/sheep.mp3'": hipi
+            "'sound://category_animals/chicken.mp3'": heihei
+            "'sound://category_animals/dolphin.mp3'": aihe
+            "'sound://category_animals/dog.mp3'": kurī
             "'sound://category_digital/jump_7.mp3'": peke
       gamelab_randColor:
         text: tae matapōkere
@@ -1344,7 +1351,13 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
-      PoemBot_setBackgroundEffect:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ua
+      Poetry_setBackground:
+        text: kowhiri te tae papamuri {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Tae
@@ -1354,8 +1367,7 @@ mi:
             '"ripples"': Ngā Pungarungaru
           PALETTE:
             '"rainbow"': Āniwaniwa
-      PoemBot_setForegroundEffect:
-        text: whakarite i te papamua {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Ua
@@ -1363,6 +1375,20 @@ mi:
             '"hearts"': Manawa Tae
             '"confetti"': Pepa tae iti
             '"starburst"': Pāpahu Whetū
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:

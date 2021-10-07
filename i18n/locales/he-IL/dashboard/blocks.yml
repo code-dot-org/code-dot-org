@@ -1150,6 +1150,14 @@ he:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": כפתור
             "'sound://category_collect/clicky_crunch.mp3'": מעיכה
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": בועה
+            "'sound://category_animals/bear.mp3'": דוב
+            "'sound://category_animals/cat.mp3'": חתול
+            "'sound://category_animals/cow.mp3'": פרה
+            "'sound://category_animals/sheep.mp3'": כבשה
+            "'sound://category_animals/chicken.mp3'": תרנגולת
+            "'sound://category_animals/dolphin.mp3'": דולפין
+            "'sound://category_animals/dog.mp3'": כלב
             "'sound://category_digital/jump_7.mp3'": קפוץ
       gamelab_pointInDirection:
         text: נקודה {SPRITE} {DIRECTION}
@@ -1584,12 +1592,19 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
-      PoemBot_makeNumSprites:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': גשום
+      Poetry_makeNewSpriteAnon:
+        text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
+      Poetry_makeNumSprites:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
-      PoemBot_playSound:
+      Poetry_playSound:
         text: נגן צליל {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: קבעו אפקט רקע {EFFECT} {PALETTE}
+      Poetry_setBackground:
+        text: קבע צבע רקע {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': צבעים
@@ -1599,10 +1614,9 @@ he:
             '"ripples"': אדוות
           PALETTE:
             '"rainbow"': קשת
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: להגדיר רקע ל {IMG}
-      PoemBot_setForegroundEffect:
-        text: קבע אפקט חזית {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': גשם
@@ -1610,7 +1624,7 @@ he:
             '"hearts"': לבבות צבעוניים
             '"confetti"': קונפטי
             '"starburst"': כוכבים
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: לגדול
@@ -1619,7 +1633,7 @@ he:
             spinning_left: להסתובב שמאלה
             spinning_right: להסתובב ימינה
             wandering: לשוטט
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: לגדול
@@ -1628,6 +1642,20 @@ he:
             spinning_left: להסתובב שמאלה
             spinning_right: להסתובב ימינה
             wandering: לשוטט
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: זוז קדימה
       RyanLab_turnLeft:

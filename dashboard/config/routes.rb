@@ -315,7 +315,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [] do
+  resources :programming_expressions, only: [:new, :create, :edit, :update] do
     collection do
       get :search
     end

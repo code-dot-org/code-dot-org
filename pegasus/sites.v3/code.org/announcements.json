@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-faq"
+    "/home": "nextsteps-showcase"
   },
 
   "banners": {
-    "nextsteps-faq": {
-      "image": "/images/csjourneys/nextsteps-faq-banner3.png",
-      "title": "Demystify next steps for your students",
-      "body": "Give high school students the opportunity to hear answers to some of the most common questions about computer science, including what career options are available and how artificial intelligence and big data will shape the job market.",
+    "nextsteps-showcase": {
+      "image": "/images/csjourneys/showcase-banner.png",
+      "title": "Learn how computer science is used in college",
+      "body": "Give high school students the opportunity to learn how CS is used at the college level to help with research and projects in different fields of study they may want to pursue. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-1",
-      "buttonId": "nextsteps-faq-details"
+      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-2",
+      "buttonId": "nextsteps-showcase-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

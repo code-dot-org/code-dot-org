@@ -31,7 +31,8 @@ const DEFAULT_PROPS = {
   isMinecraft: false,
   isBlockly: false,
   isRtl: false,
-  displayReviewTab: false
+  displayReviewTab: false,
+  exampleSolutions: []
 };
 
 describe('TopInstructions', () => {
@@ -72,6 +73,50 @@ describe('TopInstructions', () => {
     );
 
     expect(wrapper.state().tabSelected).to.equal(TabType.REVIEW);
+  });
+
+  it('does not display any buttons when there are no example solutions', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+      />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
+    expect(wrapper.find('Button')).to.have.lengthOf(0);
+  });
+
+  it('displays example solutions as buttons in teacher only tab when available', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        initialSelectedTab={TabType.TEACHER_ONLY}
+        exampleSolutions={['link/1', 'link/2']}
+      />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
+    expect(wrapper.find('Button')).to.have.lengthOf(2);
+    expect(
+      wrapper
+        .find('Button')
+        .at(0)
+        .props().text
+    ).to.equal('Example Solution 1');
+  });
+
+  it('does not display example solutions buttons in other tabs when available', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        initialSelectedTab={TabType.INSTRUCTIONS}
+        exampleSolutions={['link/1', 'link/2']}
+      />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.INSTRUCTIONS);
+    expect(wrapper.find('Button')).to.have.lengthOf(0);
   });
 
   describe('viewing the Feedback Tab', () => {

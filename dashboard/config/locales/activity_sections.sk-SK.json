@@ -2,6 +2,32 @@
   "sk-SK": {
     "data": {
       "activity_sections": {
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Úvodná aktivita"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Zhrnutie"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Vitajte v mestečku Monster Town"
+        },
+        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+          "progression_name": "Budovanie zručností"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Voľná hra",
+          "progression_name": "Voľná hra"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Úvod"
         },
@@ -1602,15 +1628,17 @@
         },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "Úvod",
+          "description": "\\\n**Ukážka:** Otvorte úlohu č. 5 pred celou triedou. Keď ňou budete prechádzať, pripomeňte žiakom, že robenie chýb je v poriadku a uspieť sa dá jedine vďaka vytrvalosti. Rozoberte s nimi, čo treba robiť, keď program nefunguje (ladenie!), prípadne prediskutujte, ako prekonať frustráciu, ktorú človek môže cítiť pri práci s počítačom.\n\nĎalej budete musieť žiakom opísať, ako bloky na pracovnej ploche umožňujú vtáčikovi presúvať sa smerom k prasiatku. Ukážte žiakom, ako sa bloky vyberajú z panela nástrojov a ako sa pripájajú pod blok `pri spustení`. Úlohu však za nich nevyriešte.\n\n**Diskusia:** Zamyslite sa nad tým, ako by sme vtáčika dostali k prasiatku pomocou šípok. Ako vieme namiesto šípok využiť tieto bloky?\n\nDajte žiakom za úlohu, aby prstom ukazovali smer, kam by sa mal vtáčik pohnúť ďalej. Keď už to bude vyzerať, že v triede panuje o smere zhoda, nech žiaci skúsia povedať, ktorým blokom takýto pohyb dosiahnu. Prechádzajte myšou ponad jednotlivé možnosti a pri každej žiakov nechajte vykríknuť „áno“ alebo „nie“.\n\nBloky presúvajte na správne miesto postupne. Zakaždým, keď jeden blok presuniete, kliknite Spustiť. Takto žiaci uvidia, ako ďaleko sa už vtáčik dostal, a zároveň si vytvoria dobré návyky, ktoré sa im zídu, keď budú riešiť úlohy samostatne.\n\nPokračujte v tomto postupe a odstraňujte chyby, ktoré sa vyskytnú, až kým sa vtáčik úspešne dostane k prasiatku.\n\n#### Ďalšie ukážky\n\nV lekcii nájdete niekoľko úrovní, kde majú žiaci výberom z viacerých možností predpovedať, čo sa bude diať. Môžete ich využiť po dokončení úvodnej aktivity.\n\nÚrovne s predpoveďou:\n\n-   [Programovanie v bludisku č. 1](https://studio.code.org/levels/8730)\n-   [Programovanie v bludisku č. 2](https://studio.code.org/levels/8729)\n\n**Premostenie:** Keď už žiaci videli ukážku on‑line úlohy, mali by byť schopní pustiť sa do riešenia úloh samostatne. Prejdite do počítačovej učebne alebo prineste žiakom počítače/tablety do triedy.",
           "tips": [
-            null
+            "Pre niektorých žiakov môže byť náročné otočiť vtáčika správnym smerom, najmä ak nie je otočený dohora. Pripomeňte žiakom, že keď hovoríme o otáčaní vľavo alebo vpravo, dávame pokyny z pohľadu vtáčika."
           ]
         },
         "7b5f9e78-8c46-4ffa-ab19-355d6d63624b": {
           "name": "Programovanie s Angry Birds",
           "tips": [
-            null
-          ]
+            "Ukážte žiakom správny spôsob, ako pomáhať spolužiakom:\nNesadám si na spolužiakovu stoličku.\nNepoužívam spolužiakovu klávesnicu.\nNechytám spolužiakovu myšku.\nKým odídem, uistím sa, že spolužiak mi vie nahlas opísať riešenie."
+          ],
+          "progression_name": "Video: Úvod k bludiskám – Programovanie pomocou blokov"
         },
         "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
           "progression_name": "Budovanie zručností"
@@ -1630,17 +1658,33 @@
         "19367182-a8f0-442e-9a7d-e7852546f961": {
           "progression_name": "Výzva"
         },
+        "d09eb753-cf01-4cfa-b252-0e6d4faa4f97": {
+          "description": "**Monitorovanie:** Učitelia zohrávajú nenahraditeľnú úlohu pri vyučovaní informatiky a vytváraní živej triednej atmosféry, ktorá kladie dôraz na spoluprácu. Pri on‑line aktivitách je úlohou učiteľa predovšetkým povzbudzovať žiakov a poskytovať im podporu. On‑line lekcie sú stavané pre žiakov, takže učitelia sa mali snažiť nezasahovať, keď sa žiaci pri niečom zaseknú. Tu je niekoľko nápadov, ako to robiť:\n\n-   Počas aktivity využívajte video Párové programovanie vždy, keď je to možné.\n-   Ak má žiak nejakú otázku alebo problém, povzbudzujte ho k tomu, aby sa najskôr spýtal svojho partnera.\n-   S nezodpovedanými otázkami sa môžu žiaci obrátiť na okolité skupiny, ktoré už možno odpoveď poznajú.\n-   Požiadajte žiakov, aby vám svoj problém opísali. Čo sa má diať? Čo sa deje? Čo z toho vyplýva?\n-   Frustrovaným žiakom pripomínajte, že frustrácia je dôležitým krokom na ceste k učeniu a oplatí sa byť vytrvalý.\n-   Ak je žiak aj napriek tomuto všetkému naďalej zaseknutý, klaďte mu navádzajúce otázky, aby chybu našiel sám.\n\n**Diskusia:** Po tom, čo všetkých žiakov upozorníte na blížiaci sa koniec hodiny, upútajte ich pozornosť a dajte im za úlohu zamyslieť sa nad tým, čo si práve zažili.\n\n-   Zažil niekto pri riešení niektorej z úloh pocit frustrácie?\n-   Všimol si niekto, že potrebuje byť vytrvalý?\n\n**Premostenie:** Povedzte žiakom, aby si vybrali svoje **\\*zápisníky na poznámky** a samostatne sa zamysleli, čo si práve zažili."
+        },
         "0cf25b1a-ce7f-42e1-9460-f17762284ea3": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti. Takto si vytvoria poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Ako ste sa počas dnešnej hodiny cítili?\n-   Nakreslite aktivitu, ktorú máte radi, no keď ste sa s ňou stretli prvýkrát, bola pre vás náročná. Nakreslite alebo opíšte, ako ste sa v nej zlepšili."
+        },
+        "40f4df14-8aed-40b1-85e7-573b721ab1c9": {
+          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n**Vytvorte si vlastné**\n\nRozdeľte žiakov do malých skupín a dajte im za úlohu navrhnúť vlastné bludiská, ktorými potom ostatní budú prechádzať pomocou vlastných programov. Ak chcete, aby bola aktivita ešte zábavnejšia, môžete vytvárať bludiská v životnej veľkosti, kde sa budú namiesto prasaťa a vtáka pohybovať žiaci."
+        },
+        "fd91455b-7ab0-4a8a-b4d2-844e630c5549": {
+          "description": "### Chyby, chyby a zase chyby (45 – 60 minút)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informatika + anglický jazyk + matematika**\n\n[Chyby, chyby a zase chyby](https://docs.google.com/document/d/1TdvVXM9Tf8lv9L3rgDqMJFTe-iG0PjTpMtBb2f4pXDo/edit#) je nepovinná aktivita v súlade s normami Common Core ELA a Math, ktorú vytvorila naša komunita učiteľov. Žiaci si precvičia ladenie a budú opravovať kód, riešiť matematické úlohy a kontrolovať texty.\n\n_Dotknuté normy_:\n\n-   **CCSS.ELA-LITERACY.L.2.1.B:** Vytváranie a používanie často sa vyskytujúcich nepravidelných plurálov podstatných mien.\n\n-   **CCSS.ELA-LITERACY.L.2.2.A:** Správne písanie veľkých písmen v názvoch sviatkov, výrobkov a geografických lokalít.\n\n-   **CCSS.ELA-LITERACY.L.2.2.C:** Použitie apostrofu na vytváranie skrátených tvarov a často sa vyskytujúcich privlastňovacích tvarov.\n\n-   **CCSS.MATH.CONTENT.2.OA.B.2:** Plynulé pripočítavanie a odpočítavanie v rámci čísel do 20 pomocou mentálnych stratégií.\n\n-   **CCSS.MATH.CONTENT.2.NBT.A.4:** Porovnanie dvoch trojciferných čísel na základe významu stoviek, tisícov a jednotiek pomocou znamienok >, = a \\< na zaznamenanie výsledku porovnaní."
         },
         "defc5a97-b60a-4a6b-8617-e05be08dab35": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Dajte žiakom za úlohu zamyslieť sa nad problémami, ktoré musia riešiť vo svojom každodennom živote.\n\n-   Ako opravíte niečo, čo nefunguje?\n-   Musíte postupovať podľa konkrétneho sledu krokov?\n-   Úlohy v tejto úrovni sú už vyriešené (hurá!), ale zdá sa, že nefungujú (ale nie!)\n-   Problémom v týchto programoch hovoríme „chyby“ a vašou úlohou bude nájsť a vyriešiť ich – tomu sa zase hovorí „ladenie“."
         },
         "a03b28fc-fd86-4f3a-ba44-ade5b7437f24": {
-          "name": "Slovník"
+          "name": "Slovník",
+          "description": "Táto lekcia obsahuje tri nové dôležité výrazy:\n\n-   **Chyba** – po anglicky známa ako _bug_ (vyslovuj „bag“)\n\nNiečo nefunguje správne.\n\n-   **Ladenie** – po anglicky známe ako _debugging_ (vyslovuj „dí-ba-ging“)\n\nHľadanie a odstraňovanie chýb.\n\n-   **Vytrvalosť**\n\nSchopnosť nevzdávať sa. Človek dokáže byť najvytrvalejší vtedy, keď veci skúša veľakrát a mnohými rôznymi spôsobmi.\n\n**Povedzte:** _**Ladenie** je proces. Najprv človek musí zistiť, že v programe má chybu. Potom si program krok po kroku prejde, aby chybu našiel. Skúsime prvý krok – funguje program správne? Potom druhý krok – čo teraz? Ak postupne riadok po riadku prechádzam svojím kódom, keď sa zrazu dostanem na miesto, kde nefunguje tak, ako má, chyba je odhalená. A po nájdení chyby sa môžem pustiť do jej odstraňovania!_\n\nAk si myslíte, že tak u svojich žiakov vyvoláte väčší záujem, môžete v dnešných úlohách predstaviť postavu _Scrata_ z _Doby ľadovej_. Ak žiaci _Scrata_ nepoznajú, ukážte im videá, ako sa táto zábavná veverička (ako vždy) dostane do problémov."
         },
         "a253c018-c2ce-4147-a5a4-24db47788f78": {
-          "name": "Odstraňovanie chýb so Scratom"
+          "name": "Odstraňovanie chýb so Scratom",
+          "description": "Kým sa žiaci pustia do práce na počítači, pripomeňte im výhody **\\*párového programovania** (video) a radenia sa so spolužiakmi. Rozdeľte žiakov do dvojíc a odporučte im, aby sa s každým problémom vždy najprv obrátili aspoň na dvoch spolužiakov, až potom na učiteľa.\n\nAko je uvedené v cieli tejto lekcie, uistite sa, že študenti si uvedomujú, že budú riešiť náročné úlohy. Vysvetlite im, že pocit frustrácie je v poriadku, no je dôležité snažiť sa problém prekonať a požiadať o pomoc. Keď budú žiaci riešiť úlohy, prechádzajte sa po triede a dávajte pozor na to, aby sa žiadny žiak necítil natoľko zaseknutý, že už nebude chcieť ďalej pokračovať."
+        },
+        "33b2c6a8-031f-4fc3-b4aa-d3712abcf111": {
+          "progression_name": "Video: Ladenie so Scratom"
         },
         "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
           "progression_name": "Budovanie zručností"
@@ -1658,13 +1702,26 @@
           "progression_name": "Doplnkové materiály"
         },
         "0406b536-ef27-4e66-aebd-6163d05bcc36": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Ako ste sa počas dnešnej hodiny cítili?\n-   Aké chyby ste dnes našli?\n-   Nakreslite chybu, na ktorú ste dnes narazili v jednej z úloh. Ako ste pri „ladení“ programu postupovali?"
+        },
+        "52871970-e896-42ac-905c-d5968ce5e009": {
+          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n**Úmyselné chyby**\n\nDajte žiakom za úlohu vrátiť sa k predchádzajúcim úrovniam a naschvál do svojich riešení popridávať chyby. Potom môžu iných žiakov požiadať, aby chyby našli. Táto aktivita sa dá robiť aj na papieri.\n\nKeď žiaci hľadajú chyby, dbajte na to, aby bola ich kritika konštruktívna. Ak by toto mohol byť pre vašu triedu problém, pred touto aktivitou s pomocou nejakého žiaka zahrajte, ako má vyzerať rešpektujúca komunikácia pri hľadaní chýb."
         },
         "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Táto lekcia využíva prevažne rovnaké bloky ako predchádzajúce lekcie, ku ktorým pribudol blok `zbieraj`. Vysvetlite žiakom, že tento blok umožňuje _dobrodružke Laurel_ zbierať poklad, nad ktorým práve stojí. Tento nový blok budeme bližšie rozoberať v premosťovacej aktivite."
+        },
+        "ad798cc3-1721-4ad2-a8b1-4bde9a67bb80": {
+          "name": "Spoločné predstavenie on‑line úloh",
+          "description": "Vyberte úlohu zo súboru on‑line úloh. Odporúčame úlohu č. 7.  Povedzte žiakom, aby sa zamysleli nad tým, aký vzor podľa nich umožní _dobrodružke Laurel_ pozbierať všetky poklady. Požiadajte žiakov, aby sa podelili o svoje nápady. Pozrite sa, koľko žiakov dospelo k rovnakému riešeniu."
         },
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
-          "name": "Zbieranie pokladov s Laurel"
+          "name": "Zbieranie pokladov s Laurel",
+          "description": "_Dobrodružka Laurel_ chce pozbierať čo najviac kusov pokladu. Vysvetlite žiakom, že ich úlohou je prejsť po mape a pozbierať všetky poklady, ktoré vedia. V niektorých úrovniach bude na vyriešenie stačiť, ak žiaci zodvihnú jeden kus pokladu, no v iných treba vyzbierať všetky. Pozorne si čítajte pokyny, aby ste vedeli, čo musia žiaci robiť!"
+        },
+        "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
+          "progression_name": "Video: Zberateľka"
         },
         "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
           "progression_name": "Budovanie zručností"
@@ -1685,20 +1742,26 @@
           "progression_name": "Doplnkové materiály"
         },
         "c1db98cf-ca82-4092-a167-fc450bf6fd0f": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoriť si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Ako ste sa počas dnešnej hodiny cítili?\n-   Nakreslite bludisko, ktorým by ste dokázali prejsť pomocou blokov, ktoré ste dnes používali."
         },
         "493408f8-a48b-457f-924d-0c99519b55e2": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Ukážte žiakom jedno alebo obe videá, ktoré slúžia ako úvod do práce s uhlami:\n\n**\\*Umelec – predstavenie** (1,5 minúty)\n\n**\\*Otáčanie a uhly** (2 minúty)\n\nPomocou **\\*podkladových materiálov** vysvetlite žiakom vnútorné a vonkajšie uhly rôznych útvarov. Tento dokument môžete žiakom rozdať alebo ho môžete vytlačiť ako plagát, ktorý budú mať žiaci na očiach.\n\n**Prediskutujte** informácie, ktoré sú v dokumente uvedené o štvorcoch a trojuholníkoch.\n\n-   _Ako by ste naprogramovali počítač, aby nakreslil tento tvar?_\n-   _V akom poradí musia byť usporiadané inštrukcie?_\n\nPovedzte žiakom, že v týchto úlohách budú pohybovať postavou, ktorá za sebou zanecháva čiaru. Žiaci budú písať kód, vďaka ktorému postava nakreslí rôzne tvary vrátane štvorca."
         },
         "9594ae73-93bc-4660-aa85-9346451fdf4a": {
-          "name": "Umenie s pomocou kódu"
+          "name": "Umenie s pomocou kódu",
+          "description": "V tomto súbore úloh Umelec už nebude obmedzený len na 90-stupňové uhly. Žiakom môže pomôcť, ak budú mať k dispozícii uhlomery, aby si vedeli lepšie vizualizovať uhly, ktoré budú potrebovať použiť. Lekcia však obsahuje aj obrázky uhlov a žiak si môže vybrať, ktorý použije. (Upozornenie: Výber uhlov je obmedzený na dve možnosti v rozbaľovacej ponuke, aby žiaci nemuseli prechádzať príliš veľkým počtom možností.)\n\nKým žiakov pošlete pracovať na úlohách pri počítačoch, môže byť užitočné stručne im ukázať, ako fungujú nástroje potrebné na vyriešenie tejto úrovne. Odporúčame použiť úlohu č. 5, v ktorej sa dá dobre ukázať, ako sa dá uhlomer využiť on‑line."
+        },
+        "c01e356b-bb48-45a6-bf67-5bcb3d959cc1": {
+          "progression_name": "Video: Umelec - Predstavenie (JR Hildebrand)"
         },
         "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
           "progression_name": "Budovanie zručností"
         },
         "91b196fb-aecb-44e0-ac99-e74dfa8e586d": {
           "tips": [
-            null
+            "V ôsmej úlohe majú žiaci za úlohu nakresliť nepravidelný šesťuholník. Pre niektorých žiakov to môže byť náročné. Ak sa im to nedarí, odporúčame, aby to najprv niekoľkokrát skúsili, potom sa spýtali spolužiaka a nakoniec sa obrátili na učiteľa. Nasledujúci obrázok môže žiakom pomôcť.\n\n![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
           ],
           "progression_name": "Výzva"
         },
@@ -1712,27 +1775,43 @@
           "progression_name": "Doplnkové materiály"
         },
         "6e2ecb9e-09e6-4af0-b1b4-7b704334ba6c": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoriť si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Ako ste sa počas dnešnej hodiny cítili?\n-   Aké veľké vnútorné uhly má štvorec? A čo trojuholník?\n-   Nakreslite na papier jednoduchý útvar a skúste si predstaviť kód, pomocou ktorého by sa dal nakresliť. Dokážete tento kód spísať vedľa útvaru?"
+        },
+        "1a55320c-d609-4aff-94de-fc844ab7ae53": {
+          "description": "Použite túto aktivitu na podporu výučby. Môžete ju využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n**Kopírka**\n\n-   Dajte žiakom dva listy papiera.\n-   Na jeden list žiaci nakreslia jednoduchý obrázok iba pomocou rovných čiar.\n-   Na druhý list napíšu inštrukcie, ako daný obrázok nakresliť pomocou príkazov na pohyb dopredu a otočenie o konkrétny uhol.\n-   Žiaci si medzi sebou vymenia papiere s inštrukciami a pokúsia sa zreprodukovať obrázok iba pomocou poskytnutých inštrukcií."
+        },
+        "75d98318-614b-4891-ac17-4856233ec63d": {
+          "description": "### Tvary a krajina (45 – 60 minút)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Informatika + anglický jazyk + matematika + prírodné vedy**\n\n[Tvary a krajina](https://docs.google.com/document/d/1cPejd3i4v1A6iTMDtyOvlOfTVU9nlMg21bovwFThvvc/edit#) je nepovinná aktivita v súlade s normami Common Core ELA, Common Core Math a Next Generation Science Standards, ktorú vytvorila naša komunita učiteľov. Žiaci dostanú za úlohu navrhnúť priehradu, ktorá má zabrániť záplavám. Pomocou kódu vytvoria plán, pomocou ktorého ukážu miestnej mestskej rade, ako bude priehrada fungovať.\n\n_Dotknuté normy:_\n\n-   **CCSS.ELA-LITERACY.W.2.8:** Odpovedanie na otázky tým, že si žiaci vybavia si informácie na základe skúseností alebo zozbierajú informácie z poskytnutých zdrojov.\n\n-   **CCSS.MATH.CONTENT.2.MD.A.3:** Odhadovanie dĺžky v palcoch, stopách, centimetroch a metroch.\n\n-   **NGSS.2-ESS2-1:** Porovnávanie viacerých riešení vytvorených na to, aby sa spomalil alebo zastavil vplyv vetra alebo vody na tvar krajiny."
         },
         "0d4256d9-a4f5-4fed-9958-f515dd431f6e": {
           "name": "Úvod",
+          "description": "Dnes sa žiaci naučia, ako pracovať so sprajtmi (postavami) v Sprite Labe.\n\n**Ukážka:** Vyberte niektorú z predchádzajúcich úloh, ktoré ste so žiakmi robili na Code.org, ideálne úlohu s „hlavnou postavou“, ako je _Scrat_ z _Doby ľadovej_ alebo niektorý z vtáčikov z _Angry Birds._\n\n**Diskusia:** Povedzte študentom, že postave na obrazovke hovoríme sprajt. Je to grafika, ktorú ovládame prostredníctvom programu. V tejto lekcii budú mať žiaci príležitosť vybrať si vlastné sprajty, ktoré budú ovládať.\n\nTáto ukážka a diskusia môžu žiakom pomôcť lepšie sa pripraviť na prostredie Sprite Labu.\n\n#### [Plávajúca ryba – priestor učiteľa](https://studio.code.org/levels/18623)\n\nPomocou projektora predveďte voľnú úroveň svojim žiakom. Cieľom je nadviazať na predchádzajúcu lekciu a ukázať im jedinečné spôsoby, ako Sprite Lab funguje. Napíšte zopár ukážkových programov a požiadajte žiakov, aby sa podelili o svoje postrehy.\n\n-   _Aké bloky by sme potrebovali prepojiť, aby sa klbko sena otáčalo?_\n-   _Čo by sa stalo, ak by sme sprajtu dali pokyn, aby začal vykonávať dve činnosti naraz?_\n-   _Prestane sprajt niekedy vykonávať tieto činnosti sám od seba?_\n-   _Čo musíme spraviť, ak chceme, aby sprajt prestal vykonávať istú činnosť, keď naň klikneme?_\n\nSkôr než prejdete na hlavnú aktivitu, predstavte alebo si zopakujte si slovnú zásobu pre dnešnú lekciu.",
           "tips": [
-            null
+            "Sprite Lab funguje v istých ohľadoch inak ako iné online nástroje používané v rámci kurzu. V prvom rade sa všetok kód spúšťa v poradí a okamžite, pokiaľ nie je pripojený k bloku s udalosťou. Ak teda postave dáme príkazy, aby začala a potom zastavila nejaké správanie, nič sa nestane, pretože medzi vykonaním týchto príkazov nebude žiadna prestávka."
           ]
         },
         "34fa0257-d60c-41dd-b16e-fde95d6ca02c": {
-          "name": "Plávajúca ryba so Sprite Labom"
+          "name": "Plávajúca ryba so Sprite Labom",
+          "description": "**Cieľ:** Dnes žiaci naprogramujú svoje vlastné akvárium. Začnú tým, že sa naučia umiestňovať sprajty na obrazovku, potom ich rozhýbu. Napokon si svoje akvárium prispôsobia tak, že doň pridajú tvory alebo predmety, ktoré \nchcú."
         },
         "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21": {
+          "description": "**Prechod:** Usaďte žiakov za počítače. Povedzte im, že majú postupovať podľa pokynov pre každú úlohu. Prízvukujte im, že ide o kreatívnu aktivitu, ktorej cieľom je pomôcť im naučiť sa používať Sprite Lab. V žiadnom prípade nejde o hodnotiacu aktivitu.",
           "tips": [
-            null
+            "Podporujte žiakov pomocou otázok alebo ich vyzvite k tomu, aby sa spýtali svojho partnera. Nezodpovedané otázky môžete položiť blízkej skupine, ktorá už môže poznať riešenie. Požiadajte žiakov, aby opísali problém, ktorý pred sebou vidia:  \n\n-   Čo sa má diať? \n-   Čo sa deje? \n-   Čo to podľa vás znamená?"
           ]
+        },
+        "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
+          "progression_name": "Video: Predstavenie Sprite Labu"
         },
         "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
           "progression_name": "Predpoklad"
         },
         "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
           "progression_name": "Budovanie zručností"
+        },
+        "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb": {
+          "progression_name": "Video: Ako vytvoriť sprajt"
         },
         "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
           "progression_name": "Cvičenie"
@@ -1741,78 +1820,174 @@
           "progression_name": "Voľná hra"
         },
         "35c19cbc-9b7b-4a5c-9d88-5f971a66fab2": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoriť si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Aký máte z dnešnej hodiny pocit?\n-   Aký ste mali pocit z toho, že ste mohli vytvoriť tvorivejšiu scénu?\n-   Bolo náročné dokončiť lekciu, kde nebolo stanovené, čo je správne a čo je nesprávne riešenie?"
         },
         "9b131ffd-535f-4044-b7f7-d8aa2ba715ae": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "#### Pokyny k scéne"
+        },
+        "5a8f455d-1681-4101-b70c-73117d7172a4": {
+          "description": "Naposledy sme sa si prezerali aplikácie a hry vytvorené pomocou Sprite Labu. Dnes začneme tým, že si napíšeme vlastný kód a vytvoríme jednoduché animácie so sprajtmi (postavami)."
+        },
+        "d3c5cb2c-aa26-41cb-9e54-dd8e8ae43402": {
+          "description": "**Urobte toto:** Pomocou úvodných snímok k lekcii alebo tohto [vzorového projektu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ukážte žiakom animáciu mravca a vážky.\n\n**Diskusia:** _Ako by ste opísali túto scénu so sprajtmi?\nAk by ste chceli, aby pre vás niekto túto scénu vytvoril na počítači, aké inštrukcie by potreboval?_\n\n**Cieľ diskusie:** Žiaci by mali byť schopní identifikovať oba sprajty v tomto projekte, opísať ich správanie (pohyby) a všimnúť si aj pozadie.\nNechajte žiakom čas na to, aby prišli s nápadmi. Ak si nie sú istí, čo majú povedať, vysvetlite im, že od nich očakávate iba opis toho, čo vidia.\n\nPotom ukáže samotný kód k projektu a vyzvite žiakov, aby sa pokúsili prečítať si ho.\n\n**Reflexia:** V čom sú si naše inštrukcie s týmto kódom podobné? Aké sú medzi nimi rozdiely?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Vytváranie postáv",
+          "description": "#### Predpoveď (3 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "tips": [
-            null
+            "V úlohách s predpoveďou majú žiaci za úlohu prezrieť si hotový program a odpovedať na otázku, ktorá sa ho týka. Otázku musia zodpovedať ešte predtým, ako stlačia tlačidlo Spustiť. Hoci je možné využiť tieto otázky ako formu hodnotenia, myslite na to, že často sa nachádzajú na začiatku lekcie, aby sa žiaci nad novými vecami začali zamýšľať ešte skôr, než sa naučia, ako v skutočnosti fungujú. "
           ],
           "progression_name": "Predpoklad"
         },
+        "60d05bd8-d452-4ff7-8d42-afc78df62133": {
+          "description": "**Urobte toto:** Prehrajte video „Ako vytvoriť sprajt“",
+          "progression_name": "Video: Ako vytvoriť sprajt"
+        },
         "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "description": "#### Budovanie zručností a precvičovanie (20 minút)\n\n**Premostenie:** Povedzte žiakom, aby sa presunuli k počítačom a zapli ich. \n\nTieto aktivity sú vhodné na samostatné učenie aj párové programovanie.\n\nŽiaci by mali najprv prejsť úrovne zamerané na budovanie zručností, potom môžu stráviť zvyšný čas s aktivitami na precvičovanie podľa svojho výberu.",
           "progression_name": "Budovanie zručností"
         },
         "8fd35c57-6015-4e9b-97cd-a8ade679fe05": {
           "progression_name": "Cvičenie"
         },
+        "676dfae2-cb99-4395-a262-f61ed61a3d28": {
+          "description": "#### Voľná hra (10 minút)\n\n**Premostenie:** Žiaci by teraz mali preskočiť poslednú úroveň v lekcii, kde budú mať možnosť vytvoriť si svoj vlastný projekt.",
+          "progression_name": "Voľná hra: Vytvor scénu"
+        },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Dnes ste sa učili, ako písať kód a vytvárať programy v Sprite Labe. \n\n**Program** – Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť.\n\n**Algoritmus** – Zoznam krokov na dokončenie úlohy."
+        },
+        "e80dde92-1c60-43ad-86ab-8688fbc0b52b": {
+          "description": "#### Používanie zápisníka\n\nKeď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\nČo by ste poradili kamarátovi, ktorý si chce vytvárať vlastné programy v Sprite Labe?"
+        },
+        "88fed7fa-5670-4ce5-af7e-e4ece0814bdc": {
+          "description": "**Urobte toto:** Zopakujte si alebo predstavte termín **algoritmus**: _zoznam krokov na dokončenie úlohy._"
         },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
+          "name": "Sleduj algoritmus",
+          "description": "Dnes si zahráme krátku hru. V tejto hre vám dám príkazy, ktoré máte splniť, a vašou úlohou bude dodržať algoritmus. Všetky tieto príkazy budú začínať slovami „začni“ alebo „prestaň“. Keď vám poviem, aby ste niečo začali robiť, začnete robiť, čo vám poviem, a budete to robiť, až kým vám nepoviem, že máte prestať. Môžem vám tiež povedať: „prestaň všetko“, čo znamená, že máte prestať plniť všetky pokyny, ktoré ste odo mňa do tej chvíle dostali. Zahráme si tri kolá a po každom kole vám dám zopár otázok.",
           "tips": [
-            null
+            "Nezabudnite medzi jednotlivými príkazmi nechať krátky časový odstup. V každom kole skúste prejsť celým sledom príkazov bez diskusie a potom ho zopakovať, keď už mali všetci žiaci možnosť zamyslieť sa a utriasť si aktivitu v hlave."
           ]
+        },
+        "5c75924f-ef1f-4b61-9850-820fb68c0972": {
+          "description": "#### 1. kolo (ľahké):\n\n-   Začni pochodovať na mieste.\n-   Prestaň pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň tlieskať.\n-   Začni pochodovať na mieste.\n-   Začni tlieskať.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:** _Čo sa stalo, keď ste dostali príkaz tlieskať, ale už ste pochodovali na mieste? Čo sa stane, keď naraz dostanete dva príkazy, aby ste niečo spravili?_\n\n#### 2. kolo (stredne ťažké):\n\n-   Začni mávať ramenami vo vzduchu.\n-   Začni kývať hlavou.\n-   Prestaň mávať ramenami vo vzduchu.\n-   Prestaň kývať hlavou.\n-   Začni triasť kolenami.\n-   Začni mávať ramenami ako vták.\n-   Prestaň triasť kolenami.\n-   Začni kývať hlavou.\n-   Začni pochodovať na mieste.\n-   Prestaň mávať ramenami ako vták.\n-   Prestaň všetko.\n\n**Diskusia po aktivite:**\n\n_Aké typy aktivít spôsobili, že sa ľudia začali mýliť?\nAké postupy sú podľa vás užitočné na to, aby ste dokázali správne nasledovať pokyny?\nPrečo je dôležité samostatne sledovať každú činnosť?_\n\n#### 3. kolo (ťažké)\n\n-   Začni čupieť.\n-   Začni si ťukať na čelo.\n-   Prestaň čupieť.\n-   Prestaň si ťukať na čelo.\n-   Začni skákať.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni tlieskať.\n-   Začni mávať ramenami ako vták.\n-   Prestaň všetko.\n-   Začni čupieť.\n-   Začni skákať.\n-   Prestaň všetko.\n-   Začni si búchať do kolien.\n-   Začni si ťukať na čelo.\n-   Prestaň všetko.\n-   Začni sa točiť doľava.\n-   Začni sa točiť doprava.\n-   Prestaň sa točiť doľava.\n-   Prestaň sa točiť doprava.\n\n**Diskusia:** _Čo sa stane, keď sú dve činnosti zdanlivo protichodné?_\n\n_Čo treba spraviť, keď dostaneš naraz príkaz tlieskať rukami a mávať ramenami?_\n\n_Ako môžeš skákať, keď čupíš?_\n\n_Čo sa stane, keď si máš naraz búchať do kolien a ťukať na čelo?_\n\n_Čo robili ostatní hráči, keď ste dostali príkaz točiť sa do protichodných smerov?_ \n\n_Čo by sa stalo, ak by ste dostali príkaz točiť sa doľava aj doprava naraz?_\n\nŽiaci by mali chápať, že niektoré činnosti sú protichodné, čo môže viesť k nepredvídateľným výsledkom. Dve protichodné činnosti sa môžu navzájom zrušiť."
         },
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
           "name": "Postavy v akcii",
+          "description": "#### Predpoveď (2 minúty)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "progression_name": "Predpoklad"
         },
+        "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
+          "description": "#### Video: Sprajty v akcii (3 minúty)\n\n**Urobte toto:** Prehrajte video „Sprajty v akcii“",
+          "progression_name": "Video: Sprajty v akcii"
+        },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "description": "#### Budovanie zručností a precvičovanie (20 minút)\n\n**Premostenie:** Povedzte žiakom, aby sa presunuli k počítačom a zapli ich. Tieto aktivity sú vhodné na samostatné učenie aj párové programovanie.\n\nŽiaci by mali najprv prejsť úrovne zamerané na budovanie zručností, potom môžu stráviť zvyšný čas s aktivitami na precvičovanie podľa svojho výberu.",
           "progression_name": "Budovanie zručností"
         },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "Cvičenie"
         },
+        "482633ae-1c8c-4ca2-b44b-ba150352c610": {
+          "description": "#### Voľná hra (10 minút)\n\n**Premostenie:** Žiaci by teraz mali prejsť na poslednú úroveň v lekcii, kde budú mať v rámci voľnej hry rovnaké možnosti, ako v predchádzajúcich lekciách. Motivujte žiakov k tomu, aby popridávali udalosti do svojich predchádzajúcich projektov alebo aby vytvorili nový projekt.",
+          "progression_name": "Voľná hra: Vytvor interaktívnu scénu"
+        },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Dnes ste sa učili vytvárať programy, ktoré sa vďaka udalostiam postupom času menia. \n\n**Udalosť** - _Akcia, ktorá spôsobí, že sa niečo stane._"
+        },
+        "c2c39f4c-ffb6-483d-931a-222e52751d81": {
+          "description": "#### Používanie zápisníka\n\nKeď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\nŠípky sú dobrý spôsob, ako vytvoriť interaktívnejší program. Akými inými spôsobmi vieme používateľovi umožniť ovládať, čo sa v aplikácii alebo hre deje?"
         },
         "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Predstavte žiakom nástroj „kostýmy“, ktorý im v Sprite Labe umožňuje kresliť postavám vlastné kostýmy.\n\n**Opakovanie:** Klaďte žiakom otázky o udalostiach a správaniach. \n\n-   Pamätáte si, čo je to udalosť?\n\n-   Pamätáte si, čo je to správanie?\n\n-   Spomínate si na niektoré správania, ktoré ste už používali? Čo tieto správania robili?\n    -   hliadkovanie\n    -   chvenie\n    -   točenie vpravo/vľavo\n\n**Ukážka:** Najprv žiakom ukážte úroveň č. 1 z dnešnej lekcie.\n\n**Premýšľanie v pároch:** Povedzte žiakom, aby skúsili predpovedať, čo sa stane po spustení kódu, a porozprávali sa o tom so susedom. Potom spustite kód a prediskutujte so žiakmi, čo sa stalo.\n\n**Ukážka:** Ukážte žiakom úroveň č. 2. Krátko im ukážte, ako sa robia nasledujúce veci: \n\n-   Prepínanie medzi kartami _Kód_ a _Kostýmy_. \n-   Kreslenie kostýmu. \n-   Výber kostýmu z knižnice kostýmov.\n-   Zmena kostýmu virtuálneho zvieratka na vlastný."
         },
         "660e66d6-d582-4568-9274-8971b0f5b344": {
-          "name": "Virtuálne zvieratko so Sprite Labom"
+          "name": "Virtuálne zvieratko so Sprite Labom",
+          "description": "**Cieľ:** Dnes si budú žiaci vytvárať vlastné virtuálne zvieratko! Najprv postave nakreslia alebo vyberú nový kostým. Potom vytvoria udalosti, ktoré pri interakcii s postavou aktivujú akcie a správania."
         },
         "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
+          "description": "#### On‑line úlohy\n\n**Premostenie:** Usaďte žiakov za počítače. Povedzte im, že majú postupovať podľa pokynov pre každú úlohu. Prízvukujte im, že ide o kreatívnu aktivitu, ktorej cieľom je pomôcť im naučiť sa používať Sprite Lab.",
           "tips": [
-            null
+            "Podporujte žiakov pomocou otázok alebo ich vyzvite k tomu, aby sa spýtali svojho partnera. Nezodpovedané otázky môžete položiť blízkej skupine, ktorá už môže poznať riešenie. Požiadajte žiakov, aby opísali problém, ktorý pred sebou vidia:  \n\n-   Čo sa má diať? \n-   Čo sa deje? \n-   Čo to podľa vás znamená?"
           ]
+        },
+        "c3d9f173-a46d-417e-8e56-049c94014db2": {
+          "description": "**Pripomenutie:** Ak sa úlohy dajú zdieľať, pripomeňte žiakom, aby svoju prácu zdieľali iba s najbližšími kamarátmi a rodinou. Viac informácií nájdete vo videu **\\*Mysli celým telom, keď si online**, ktoré si môžu žiaci pozrieť v triede alebo samostatne\\*\\*."
         },
         "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
           "progression_name": "Objavovanie"
+        },
+        "bee07420-6a4f-4f4f-9058-c651486b7b38": {
+          "progression_name": "Miniprojekt: Vytvor si virtuálne zvieratko"
         },
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
           "progression_name": "Voľná hra"
         },
         "8970ddea-49ba-429a-9607-6239c33e06be": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoriť si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Aký máte z dnešnej hodiny pocit?\n-   Aké ďalšie veci by ste chceli, aby vaše zvieratko dokázalo robiť?"
+        },
+        "cea77f0d-7de9-4eb3-8637-2d3f42663d9f": {
+          "description": "### Energia pre moje virtuálne zvieratko (60 – 90 minút)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)**Informatika + anglický jazyk + prírodné vedy**\n\n[Energia pre moje virtuálne zvieratko](https://docs.google.com/document/d/1ZwHXzgPKSyO5F-QnYT9cvy2WWKMvZ19-GY6-2FxUCf0/edit?usp=sharing) je nepovinná aktivita v súlade s normami Common Core ELA a Next Generation Science Standards, ktorú vytvorila naša komunita učiteľov. Žiaci budú vytvárať vedecký model na zobrazenie toho, ako bude ich virtuálne zvieratko získavať energiu potrebnú na prežitie. \n\n_Dotknuté normy:_\n\n-   **CCSS.ELA.RI.5.7:** Stavanie na informáciách z viacerých tlačených alebo digitálnych zdrojov, preukázanie schopnosti rýchlo nájsť odpoveď na otázku alebo efektívne vyriešiť problém. \n\n-   **CCSS.ELA.RI.5.9:** Kombinovanie informácií z viacerých textov na rovnakú tému, aby žiaci dokázali o danej téme informovane písať alebo hovoriť. \n\n-   **5- PS3-1:** Používanie modelov na opísanie toho, že pôvodným zdrojom energie v potrave pre zvieratá (ktorá je potrebná na regeneráciu tela, rast, pohyb a udržiavanie telesného tepla) bolo slnko. \n\n-   **5-LS2-1:** Vytvorenie modelu na opis toho, ako funguje kolobeh látok medzi rastlinami, zvieratami, reducentami a okolitým prostredím\n\n-   **SL.5.5:** Použitie multimediálnych súčastí (napríklad grafiky alebo zvuku) a vizuálnych prvkov na vhodných miestach v prezentácii s cieľom to podporiť rozpracovanie hlavných myšlienok alebo motívov. "
+        },
+        "9886bd75-e2c9-419e-8818-f4373a296270": {
+          "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu."
+        },
+        "af98f91b-4ac2-4500-97b0-2437e960cb76": {
+          "description": "Dnes budeme robiť niečo naozaj tvorivé. Čomu tvorivému sa najradšej venujete vy?"
+        },
+        "2a089231-5563-4b8e-a861-8faf4bda0cf5": {
+          "description": "Motivujte žiakov, aby sa podelili o spôsoby, ako sa tvorivo vyjadrujú, napríklad prostredníctvom výtvarného umenia, tanca, hudby či písania.\n\nVysvetlite žiakom, že dnes bude ich úlohou tvorivé programovanie. Rovnako ako keď si človek pri maľovaní vyberá farby alebo pri písaní slová, aj pri programovaní si môže vybrať, aký kód použije a ako s ním ľudia budú interagovať. Tiež teda ide o dobrú príležitosť ukázať svoju kreativitu.\n\n**Postav sa a tancuj:** Oznámte žiakom, že dnes sa pokúsia tvorivým spôsobom skombinovať programovanie s tancom. Vyzvite žiakov, aby si po 10-sekundových úsekoch vyskúšali známe alebo vlastné tanečné kroky, aby sa dostali do tej správnej nálady. Môžete pustiť pieseň z tohto **\\*zoznamu skladieb na Spotify**, aby sa žiaci rozhýbali. Ich tance môžete zachytiť na video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
+        "88b00482-3c11-4079-9869-faaa51c340c2": {
+          "name": "Naprogramuj si vlastnú Tanečnú Párty",
+          "description": "#### Filtrovanie hudby\n\nV tejto lekcii sú k dispozícii piesne od populárnych umelcov. Ak chcete získať predstavu o tom, aké piesne sa v tejto lekcii dajú využiť, pozrite si tento **\\*zoznam skladieb na Spotify.** Všetky piesne sú v rádiovej verzii, pričom žiaci mladší ako 13 rokov majú k dispozícii zúžený zoznam hudby. Ak chcete tento zúžený zoznam hudby použiť aj so staršími žiakmi, môžete **\\*zoznam skladieb na Spotify** zdieľať s celou triedou."
+        },
+        "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
+          "name": "Podpora k jednotlivým úrovniam",
+          "description": "#### Úvodná aktivita",
+          "progression_name": "Video: Tanečná párty – Zahrej sa"
         },
         "5283ba21-7c54-44c0-a4c2-00c1f5d240e6": {
+          "description": "-   Z panela nástrojov vľavo vyberte červený blok `vytvoriť nový` a presuňte ho na pracovnú plochu vpravo. Pripojte ho dovnútra bloku `nastavenie`.\n-   A prvý program je hotový! Nezabudnite stlačiť tlačidlo Spustiť a sledovať, čo sa stane. Mala by sa spustiť hudba a na prehrávacej ploche by sa mala začať pohybovať postava.",
           "progression_name": "Cvičenie"
         },
+        "1a057037-bf26-4ab2-830f-80a5d94f87c7": {
+          "description": "#### Udalosti",
+          "progression_name": "Video: Tanečná párty – Udalosti"
+        },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
+          "description": "#### Udalosti – 4. úroveň\n\n-   Úrovne č. 4 a 5 sa zameriavajú na vytváranie interaktívnych tancov. \n-   Zelené bloky sa používajú na programovanie udalostí. Zelený blok začína samostatnú postupnosť kódu a nemusí byť pripojený dovnútra bloku „nastavenie“. \n-   Ak pod zelený blok s udalosťou pripojíte fialový blok, postava bude tancovať pri stláčaní oranžových šípok na obrazovke alebo šípok na klávesnici.\n-   Po stlačení tlačidla Spustiť nezabudnite stláčať šípky, inak sa tanečníci nebudú hýbať.\n\n#### Udalosti – 5. úroveň\n\n-   Nezabudnite vybrať druhý fialový blok „urobte jedenkrát“. Na pracovnej ploche potrebujete mať jeden blok „medvede urobte jedenkrát“ a jeden blok „mačky urobte jedenkrát“. Oba by mali byť pripojené k zelenému bloku s udalosťou „pri stlačení“.\n-   Po stlačení tlačidla Spustiť nezabudnite stláčať šípky, inak sa tanečníci nebudú hýbať.",
           "progression_name": "Udalosti"
         },
+        "ec1bf1ca-d9d0-41e3-8234-638ae029834d": {
+          "description": "#### Takty",
+          "progression_name": "Video: Tanečná párty – Takty"
+        },
         "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
+          "description": "#### Takty – 7. úroveň\n\n-   Úrovne č. 7 a 8 sa zameriavajú na synchronizáciu tanca a hudby.\n-   Bloky s udalosťou „po \\_\\_\\_ merania“ zároveň aktivujú novú postupnosť kódu a nemali by byť pripojené v bloku „nastavenie“.\n-   Ak pod zelený blok „po **\\_ merania“ pripojíte fialový blok „urobte \\_** nekonečne krát“, postava by mala po zadanom počte taktov začať tancovať.\n-   Blok „urobte **\\_ nekonečne krát“ funguje inak ako bloky „urobte \\_** jedenkrát“, s ktorými sme sa stretli v predchádzajúcich úrovniach.\n\n#### Takty – 8. úroveň\n\n-   Nezabudnite vybrať druhý zelený blok s udalosťou. Na pracovnej ploche by mali byť bloky „po 4 merania“ a „po 6 merania“. Pod obomi by mal byť pripojený fialový blok.\n\n#### Takty – 9. úroveň\n\n-   Úroveň č. 9 sa zameriava na rýchle vytváranie skupín tanečníkov.\n-   Pomocou nového bloku, ktorý nájdete v paneli nástrojov, vytvorte skupinu menších tanečníkov.\n    \\*Nezabudnite použiť aj klasický blok „vytvoriť nový“ na vytvorenie väčšieho „hlavného“ tanečníka.\n-   Mnohí žiaci už budú vedieť, že veci pôsobia vzdialené, ak sú nakreslené v menšej mierke. V nasledujúcej úrovni budete môcť tento efekt využiť na dotvorenie vzhľadu.",
           "progression_name": "Takty"
         },
+        "5d59e7e4-25f4-4278-b777-878c7df2681b": {
+          "description": "#### Vlastnosti",
+          "progression_name": "Video: Tanečná párty – Vlastnosti"
+        },
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
+          "description": "#### Vlastnosti – 11. úroveň\n\n-   Úrovne č. 11 – 13 sa zameriavajú na upravovanie vlastností (napríklad veľkosti, farby) tanečníkov.\n-   Je dôležité uistiť sa, aby bol tyrkysový blok „nastav“ umiestnený v programe až _po_ vytvorení tanečníkov. Na vyriešenie tejto úlohy treba umiestniť blok „nastav veľkosť“ do ktorejkoľvek časti programu a použiť ho na zmenu veľkosti niektorých tanečníkov. \n-   Tanečníci vytvorení v rámci skupiny majú predvolenú veľkosť 30. Ostatní tanečníci majú predvolenú veľkosť 100.\n\n#### Vlastnosti – 12. úroveň\n\n-   Rovnako ako v prechádzajúcej úrovni, blok „nastav sfarbenie“ treba v programe použiť až po vytvorení tanečníkov. Ak by bol napríklad umiestnený na prvom miestne v rámci bloku „nastavenie“, nemal by žiadny účinok.\n\n#### Vlastnosti – 13. úroveň\n\n-   Pri použití vhodného kódu by mali tanečníci obmieňať rôzne farby, veľkosti a tanečné kroky.\n-   Do bloku „opakuj každé 2 merania“ treba umiestniť tyrkysový blok „zmeň“, tyrkysový blok „nastaviť náhodne“ alebo fialový blok „urobte nekonečne krát“. \n-   Bloky „urobte nekonečne krát“ by mali mať nastavenú možnosť (Ďalší), (Predchádzajúci) alebo (Náhodný). Inak bude tanečník opakovať stále ten istý tanečný krok.\n-   Upozorňujeme, že kódu, ktorý žiaci v tejto úrovni vytvoria, nekontrolujeme správnosť. To znamená, že úroveň vždy úspešne dokončia, aj ak v programe neurobia žiadne zmeny. Žiaci totiž potrebujú mať slobodu experimentovať s kódom spôsobom, ktorý ich najviac zaujme. Pokračujte kliknutím na tlačidlo  Dokončiť\n-   Ak je b bloku „opakuj každé 2 merania“ umiestnený blok na vytváranie tanečníkov, tanečníci sa budú vytvárať na rovnakom mieste, čo môže mať nechcené dôsledky!",
           "tips": [
             null
           ],
           "progression_name": "Vlastnosti"
+        },
+        "97583afa-79d7-487a-a962-9366e1d17bba": {
+          "description": "#### Párty pokračuje!",
+          "progression_name": "Video: Tanečná párty – Párty pokračuje!"
         },
         "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
           "progression_name": "Voľná hra"
@@ -1822,6 +1997,10 @@
         },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
           "name": "Reflexia"
+        },
+        "163a2d46-638a-490a-81b4-f34a3d78a096": {
+          "name": "Príležitosť na prepojenie predmetov",
+          "description": "### Prirodzený výber tanečníkov (45 – 60 minút)\n\n![](https://images.code.org/f3f1ac23b2159ea18328486c61a7cf24-scienceSmall.png)\n**Informatika + prírodné vedy**\n\n[Prirodzený výber tanečníkov](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing) je nepovinná aktivita v súlade s normami Next Generation Science Standards, ktorú vytvorila naša komunita učiteľov. Žiaci si v Tanečnej párty vyberú aspoň jeden organizmus (tanečníka), ktorý je dobre prispôsobený prostrediu, ktoré vytvoria. Žiakov motivujeme k tomu, aby využívali bloky z kategórie Vlastnosti, a prispôsobili tak vlastnosti jednotlivých organizmov (tanečníkov). \n\n_Dotknuté normy:_\n\n-   **NGSS.3-LS4-2:** Využívanie dôkazov na vytvorenie vysvetlenia, ako môžu variácie vo vlastnostiach rôznych jedincov rovnakého druhu poskytnúť výhodu pri prežití, hľadaní partnerov a rozmnožovaní. \n\n-   **NGSS.3-LS4-3:** Vytvorenie argumentu podporeného dôkazmi o tom, že v konkrétnom prostredí dokážu niektoré organizmy prežívať dobre, iné menej a niektoré vôbec. \n\n-   **OPTIONAL EXTENSION: NGSS.3-LS4-4:** Sformulovať tvrdenie o prínosoch riešenia nejakého problému, ktorý je spôsobený zmenou životného prostredia a s ňou súvisiacou potenciálnou zmenou v zložení miestnej flóry a fauny."
         },
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
           "name": "Úvod"
@@ -1834,6 +2013,9 @@
         },
         "63ea23b9-ceb6-4e5a-b795-000673bca7d9": {
           "progression_name": "Predpoklad"
+        },
+        "d7c1115e-9c85-40fc-a0f8-10f6c715a292": {
+          "progression_name": "Video: Bloky „opakuj“ s BB-8"
         },
         "f62e3109-74fd-45b6-b335-059ef71dc3c3": {
           "progression_name": "Budovanie zručností"
@@ -1866,6 +2048,7 @@
           ]
         },
         "8661dd7f-0898-4902-89a3-9695c52e77c4": {
+          "description": "#### Miniprojekt: Navrhovanie nálepiek",
           "progression_name": "Mini-Projekt: Dizajn nálepky"
         },
         "ea33c4e3-5280-41e4-9496-1dc01d2fcbd3": {
@@ -1873,6 +2056,9 @@
         },
         "c40cef20-3f9c-4084-8440-4394cc4ea03a": {
           "name": "Reflexia"
+        },
+        "c3334d37-d450-44ad-9d39-2e6a3880256b": {
+          "description": "### Tvary s cyklami a ich funkcie (45 – 60 minút)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Informatika + anglický jazyk + matematika + prírodné vedy**\n\n[\\*\\*Tvary s cyklami a ich funkcie \\*\\*](https://docs.google.com/document/d/1F2wNw1yUfaob_-PXLN_A7k0mm0uSaa7fYtMhGJOC95U/edit) je nepovinná aktivita v súlade s normami Common Core ELA, Common Core Math a Next Generation Science Standards, ktorú vytvorila naša komunita učiteľov. Umelec potrebuje svojim kamarátom pomôcť a vytvoriť im plány domov. Je dôležité, aby žiaci chápali základné tvary a to, že každý tvár zohráva v pláne domu inú funkciu. Následne budú písať svoj názor, argumentovať dôvodmi a používať spájacie výrazy, aby odôvodnili svoje rozhodnutia pri vytváraní návrhov.\n\n_Dotknuté normy:_\n\n-   **CCSS.ELA-LITERACY.W.2.1:** Písanie názorových textových útvarov, kde žiaci predstavia tému alebo knihu, o ktorej píšu, sformulujú názor, spíšu dôvody na podporu daného názoru, pomocou spájacích výrazov (napríklad „lebo“, „a“, „tiež“) prepoja svoj názor s dôvodmi a na konci textu sformulujú záver.\n\n-   **CCSS.MATH.CONTENT.2.G.A.1:** Rozlišovanie a kreslenie tvarov s určenými vlastnosťami, napríklad s určeným počtom uhlov alebo identických stien. Schopnosť rozlíšiť trojuholník, štvoruholník, päťuholník, šesťuholník a kocku.\n\n-   **NGSS.K-2-ETS1-2:** Vytvorenie jednoduchého náčrtu, kresby alebo fyzického modelu na ilustráciu toho, ako predmetu vďaka svojmu tvaru dokáže pomôcť s vyriešením určitého problému."
         },
         "05c7c3a3-3378-4904-9136-be16d24330a3": {
           "name": "Úvod"
@@ -1991,7 +2177,8 @@
           "progression_name": "Doplnkové materiály"
         },
         "4860c6c5-d580-4865-a582-3c33cdb8e4da": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoriť si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Aký máte z dnešnej hodiny pocit?\n-   Aký je rozdiel medzi cyklom „pokiaľ“ a bežným cyklom „opakuj“?\n-   Uveďte príklad úlohy, kde by ste použili cyklus „pokiaľ“ a nie bežný cyklus „opakuj“. Viete uviezť aj opačný príklad úlohy, kde by ste použili bežný cyklus „opakuj“ a nie cyklus „pokiaľ“?"
         },
         "dc1332e9-8b48-4325-a310-3de22c787e7d": {
           "name": "Úvod"
@@ -2037,7 +2224,8 @@
           "progression_name": "Predpoklad"
         },
         "8995dda6-6311-4747-a13d-9e793d658e20": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoriť si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Aký máte z dnešnej hodiny pocit?\n-   Aký je rozdiel medzi cyklom „opakuj pokiaľ neplatí“ a cyklom „pokiaľ“?"
         },
         "dc6adaa2-5c73-48d3-b84e-b046c054bfe6": {
           "name": "Úvod"
@@ -2064,7 +2252,8 @@
           "progression_name": "Doplnkové materiály"
         },
         "294fb9eb-4bd1-497a-8326-562ddd2671bf": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoriť si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Aký máte z dnešnej hodiny pocit?\n-   Čím môžu byť podmienky v programoch užitočné?\n-   Ako by to vyzeralo, keby sa ľudia vyjadrovali iba pomocou podmienok ak/inak? Aké by to malo výhody a nevýhody?"
         },
         "88c1c297-1627-45ec-9eb7-f6fffbe45240": {
           "name": "Úvod",
@@ -2076,13 +2265,20 @@
           "name": "Funkcie v Minecrafte",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Minecraft – Agent"
         },
         "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
           "progression_name": "Budovanie zručností"
         },
+        "d6f5eb3b-e998-4865-88d4-35c8381a7739": {
+          "progression_name": "Video: Minecraft – opakovacie cykly"
+        },
         "08364a41-ef59-40a4-b3ec-e55ca40c2e6f": {
           "progression_name": "Budovanie zručností"
+        },
+        "d76b4004-1ad8-425d-9748-b84512b06b9d": {
+          "progression_name": "Video: Minecraft – Funkcie"
         },
         "f05f4ec1-71a1-4e00-8d93-935c6f47e01d": {
           "progression_name": "Budovanie zručností"
@@ -2091,7 +2287,8 @@
           "progression_name": "Voľná hra"
         },
         "18f44055-e1bd-4cc4-9291-26a997c32a45": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Aký máte z dnešnej hodiny pocit?\n-   Čo robili funkcie v programoch, ktoré ste dnes vytvorili? Ako vám to pomohlo?\n-   Kedy je dobré použiť funkciu namiesto cyklu?"
         },
         "99fdf72d-5290-448c-a15d-5da9d2cac486": {
           "name": "Úvod"
@@ -2121,6 +2318,9 @@
         "48eb2965-3a46-402c-9bcd-c38037adf810": {
           "name": "Reflexia"
         },
+        "7bfb907e-d28d-486c-b4be-1e8d30a47682": {
+          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n#### Kreslíme funkciami\n\nRozdeľte žiakov do dvojíc alebo trojčlenných skupín. Každej skupine dajte za úlohu napísať funkciu na kreslenie nejakého tvaru a potom vytvoriť program, ktorý danú funkciu využíva. V závislosti od toho, ako veľmi tvorivé a sústredené skupiny budú, možno bude potrebné prideliť žiakom konkrétny tvar, ktorý majú vytvoriť. Keď budú všetky skupiny hotové, nech si vymenia programy. Každá skupina potom na samostatný kus papiera nakreslí, aký útvar program, ktorý dostali, vytvára. Skupiny by potom mali vrátiť programy a kresby pôvodným skupinám.\n\nVrátila sa každej skupine kresba, ktorú očakávali? Ak nie, kde nastala chyba? Dajte triede za úlohu prejsť si procesom ladenia a skúsiť to znova."
+        },
         "efc04a38-eabb-4c39-8ba5-571b966a2bd7": {
           "name": "Úvod"
         },
@@ -2144,18 +2344,22 @@
           "progression_name": "Predpoklad"
         },
         "3c8c44ae-c181-41c0-9574-54a236e706f9": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoriť si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Aký máte z dnešnej hodiny pocit?\n-   Kedy si počas programovania uvedomíte, že vo vašom programe by sa zišla funkcia?\n-   Na čo sú cykly `pokiaľ` a podmienky `ak/inak` vo vašich programoch užitočné?"
         },
         "8df13f72-0404-4fa0-8fe7-1b7847e7072f": {
           "name": "Zrevidovať"
         },
         "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "Text a výzvy",
+          "description": "#### Predpoveď (5 minút)\n\n**Urobte toto:** Dajte žiakom za úlohu prečítať poskytnutý kód a skúsiť predpovedať, čo sa stane. Po stlačení tlačidla Spustiť dajte žiakom čas na to, aby sa zamysleli nad čímkoľvek, čo ich zaujalo alebo prekvapilo.",
           "progression_name": "Predpoklad"
         },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Text a výzvy"
         },
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "tips": [
@@ -2167,7 +2371,8 @@
           "progression_name": "Cvičenie"
         },
         "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
-          "name": "Zrevidovať"
+          "name": "Zrevidovať",
+          "description": "**Urobte toto:** Pomocou prezentácie k lekcii si zopakujte slovnú zásobu, ktorá sa bude v lekcii používať. Uistite sa, že žiaci si termíny vedia vybaviť z lekcie, kde sa s týmito konceptmi stretli. "
         },
         "ba16d75f-cd57-4bf6-9c71-78f6bbe31603": {
           "name": "Reflexia"
@@ -2176,7 +2381,11 @@
           "name": "Zrevidovať"
         },
         "b270733d-2d48-4470-a0e4-7a805255d765": {
+          "name": "Používanie premenných s Umelcom",
           "progression_name": "Predpoklad"
+        },
+        "536186e7-e25b-4cd2-b93e-27b935a8f69c": {
+          "progression_name": "Video: Premenné s Umelcom"
         },
         "79a73c29-5877-4ffc-8570-fad97926f939": {
           "progression_name": "Budovanie zručností"
@@ -2202,6 +2411,9 @@
         },
         "b3ac68a6-7600-49ad-bfb3-88d318e25658": {
           "name": "Úvod"
+        },
+        "eac3c96a-98e8-4d3f-95de-b60f44c66df2": {
+          "name": "Cykly „for“ so včelou"
         },
         "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
           "progression_name": "Zrevidovať"
@@ -2231,6 +2443,7 @@
           "name": "Úvod"
         },
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
+          "name": "Cykly „for“ s Umelcom",
           "tips": [
             null
           ],
@@ -2274,54 +2487,91 @@
         },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "Úvod",
+          "description": "### Správanie v počítačovej učebni\n\n**Cieľ:** Táto diskusia žiakov naučí, čo môžu očakávať a ako sa majú správať po príchode do počítačovej učebne.",
           "tips": [
-            null
+            "### Vyučujete tento kurz ako predmet?\n\nNaše kurzy Základy informatiky, ktoré sú rozdelené podľa ročníkov, využívajú hodiny bez počítača na budovanie komunity a predstavovanie náročných informatických pojmov, ako je napríklad **digitálne občianstvo**. Pozrite si lekciu [Bezpečný pohyb na internete](https://curriculum.code.org/csf-19/coursea/1/) z [kurzu A](https://curriculum.code.org/csf-19/coursea/)!"
           ]
         },
         "03c8c7bd-1824-4ac2-b70b-a627df1abcb5": {
           "tips": [
-            null
+            "-   V učebni sedíme pokojne.\n-   Žuvačky a iné sladkosti sú zakázané.\n-   Pri vstupe si umyjeme alebo dezinfikujeme ruky.\n-   Dvojice sedia pri jednom počítači.\n-   Dávame pozor, aby „vodič“ dvojice dosiahol na myš.\n-   Keď sa nám nedarí, neudierame do počítača ani monitoru.\n-   Dodržiavame **\\*pravidlo 20/20/20.**\n-   Ako si poradiť s tým, \\*_\\\\_keď už nevieme obsedieť \\*\\* – každých 20 až 30 minút (vyžaduje sa bezplatný účet na GoNoodle).\n-   Najprv sa pýtam spolužiaka, až potom učiteľa.\n-   Pracujem tak potichu, aby sa dvojice navzájom počuli.\n-   Pocity a riešenia si zapisujem do zápisníka."
           ]
+        },
+        "1c2125d9-33ff-4e9b-af87-c814567226a5": {
+          "description": "**Diskusia:**\n\nPrediskutujte so žiakmi, aké majú očakávania od práce v počítačovej učebni, aby bolo jasné, či rozumejú pravidlám. Rozobrať môžete napríklad tieto témy:\n\n-   Je pobehovanie v počítačovej učebni v poriadku?\n-   Ako nahlas by sme mali rozprávať, keď sme v počítačovej učebni?\n-   Čo treba robiť, ak sa pri nejakej úlohe zasekneme?\n-   Ak sa nám niečo nedarí, pomôže, ak udrieme počítač?\n-   Keď ideme do počítačovej učebne, ako sa na to treba pripraviť?"
+        },
+        "3e550dce-3786-49bf-8181-0db85bf76550": {
+          "description": "### Ukážka on‑line úloh (5 minút)\n\nUkážte na projektore úlohu z 1. lekcie. Ukážte žiakom, ako kliknúť na obrázok a pretiahnuť ho na správne miesto. Naschvál robte chyby, napríklad klikajte na pozadie alebo pustite obrázok príliš skoro. Vyvolajte z triedy dobrovoľníkov, ktorí vám s týmito „problémami“ pomôžu."
         },
         "4dd75533-0a88-4007-b78d-c6237dc99e05": {
-          "name": "Nauč sa presunúť a pustiť"
+          "name": "Učíme sa presúvať objekty",
+          "description": "**Cieľ:** Táto aktivita žiakov naučí riešiť on‑line úlohy na platforme Code.org.\n\nTáto aktivita je navrhnutá tak, aby žiakom poskytla príležitosť precvičiť si koordináciu oka a ruky, klikanie, ako aj presúvanie objektov.  Žiaci sa budú hrať aj s postupnosťami."
         },
         "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
+          "description": "Vyhraďte si čas na to, aby ste žiakom názorne ukázali, ako klikať, ťahať a púšťať objekty. Dajte si záležať na tom, aby ste používali výrazy týkajúce sa zariadení, ktoré budú žiaci používať na riešenie úloh. Ak máte tablety, žiaci budú používať _dotykovú obrazovku_. Ak máte laptopy, pravdepodobne ich budú ovládať _touchpadom_. Stolové počítače v počítačovej učebni sa zase ovládajú pomocou _myši_.",
           "tips": [
-            null
+            "Dajte žiakom za úlohu rozdeliť presúvanie objektov na menšie časti a vypísať ich na tabuľu. Napríklad: \n\n1.  Umiestnime kurzor nad blok. \n2.  Klikneme a podržíme tlačidlo myši. \n3.  Pohneme myšou. \n4.  Pustíme tlačidlo.\n\nPri tejto krátkej aktivite si žiaci precvičia vytváranie _algoritmov_. Vyskúšajú si teda koncept, s ktorým sa bližšie stretnú v nasledujúcich lekciách."
           ]
         },
+        "88dc7233-0f13-40b9-8ce1-8a021d175bb5": {
+          "description": "Rozdeľte žiakov do dvojíc a dajte im za úlohu pozrieť si na svojom zariadení video o párovom programovaní. Video by žiakom malo pomôcť vydať sa do spoločnej práce správnou nohou."
+        },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "Učitelia zohrávajú nenahraditeľnú úlohu pri vyučovaní informatiky a vytváraní živej triednej atmosféry, ktorá kladie dôraz na spoluprácu. Pri riešení on‑line úloh je úlohou učiteľa predovšetkým povzbudzovať žiakov a poskytovať im podporu. On‑line úlohy sú stavané pre žiakov, takže učitelia sa mali snažiť nezasahovať, keď sa žiaci pri niečom zaseknú. Tu je niekoľko nápadov, ako to robiť:",
           "tips": [
-            null
+            "Ukážte žiakom správny spôsob, ako pomáhať spolužiakom:\n\n-   Nesadám si na spolužiakovu stoličku.\n-   Nepoužívam spolužiakovu klávesnicu.\n-   Nechytám spolužiakovu myšku.\n-   Kým odídem, uistím sa, že spolužiak mi vie nahlas opísať riešenie."
           ]
+        },
+        "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
+          "description": "-   Využívajte počas aktivity párové programovanie vždy, keď je to možné.\n-   Ak má žiak nejakú otázku alebo problém, povzbudzujte ho k tomu, aby sa najskôr spýtal svojho partnera.\n-   S nezodpovedanými otázkami sa môžu žiaci obrátiť na okolité skupiny, ktoré už možno odpoveď poznajú.\n-   Kým za žiakmi prídete, pripomeňte im, aby použili proces ladenia (hľadania chýb).\n-   Požiadajte žiakov, aby vám svoj problém opísali. Čo sa má diať? Čo sa deje? Čo z toho vyplýva?\n-   Frustrovaným žiakom pripomínajte, že frustrácia je dôležitým krokom na ceste k učeniu a oplatí sa byť vytrvalý.\n-   Ak je žiak aj napriek tomuto všetkému naďalej zaseknutý, klaďte mu navádzajúce otázky, aby chybu našiel sám."
         },
         "bde027df-b2a3-4252-980a-7e8493d898e6": {
           "progression_name": "Budovanie zručností"
         },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   Na rohu strany v zápisníku nakreslite smajlíka podľa toho, ako sa po dnešnej hodine cítite.\n-   Viete nakresliť postupnosť krokov, ako sa pripravujeme na príchod do počítačovej učebne?\n-   Nakreslite zoznam vecí, ktoré sa v počítačovej učebni majú a nemajú robiť.\n-   Nakreslite a označte tú časť zariadenia, ktorú ste používali pri riešení úloh s presúvaním. (tlačidlo myši, dotyková obrazovka, touchpad)"
+        },
+        "d69fc3f9-0235-4de1-90c7-13f7c8c22cc9": {
+          "description": "Ak žiaci dokončia úlohy zo 4. fázy príliš skoro, dajte im za úlohu vymyslieť si vlastnú úlohu a poznačiť ju do zápisníka."
         },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
+          "name": "Správanie v počítačovej učebni",
+          "description": "Rozoberte so žiakmi ich očakávania a pravidlá správania pri príchode do počítačovej učebne.\n\n**Diskusia:**\n\nPrediskutujte so žiakmi, aké majú očakávania od práce v počítačovej učebni, aby bolo jasné, či rozumejú pravidlám. Rozobrať môžete napríklad tieto témy:\n\n-   Je pobehovanie v počítačovej učebni v poriadku?\n-   Ako nahlas by sme mali rozprávať, keď sme v počítačovej učebni?\n-   Čo treba robiť, ak sa pri nejakej úlohe zasekneme?\n-   Ak sa nám niečo nedarí, pomôže, ak udrieme počítač?\n-   Keď ideme do počítačovej učebne, ako sa na to treba pripraviť?",
           "tips": [
-            null
+            "-   V učebni sedíme pokojne.\n-   Žuvačky a iné sladkosti sú zakázané.\n-   Pri vstupe si umyjeme alebo dezinfikujeme ruky.\n-   Dvojice sedia pri jednom počítači.\n-   Dávame pozor, aby „vodič“ dvojice dosiahol na myš.\n-   Keď sa nám nedarí, neudierame do počítača ani monitoru.\n-   Dodržiavame **\\*pravidlo 20/20/20.**\n-   Ako si poradiť s tým, \\*_\\\\_keď už nevieme obsedieť \\*\\* – každých 20 až 30 minút (vyžaduje sa bezplatný účet na GoNoodle).\n-   Najprv sa pýtam spolužiaka, až potom učiteľa.\n-   Pracujem tak potichu, aby sa dvojice navzájom počuli.\n-   Pocity a riešenia si zapisujem do zápisníka."
           ]
         },
         "e3728ba7-a25a-431b-8a91-f1aee34cc177": {
+          "description": "Ukážte na projektore úlohu z lekcie. Ukážte žiakom, ako kliknúť na blok a pretiahnuť ho na správne miesto. Naschvál robte chyby, napríklad klikajte na pozadie alebo pustite obrázok príliš skoro. Vyvolajte z triedy dobrovoľníkov, ktorí vám s týmito „problémami“ pomôžu, a pomôžte im využiť pri tom zručnosti, ktoré získali na poslednej hodine bez počítača.",
           "tips": [
-            null
+            "### Vyučujete tento kurz ako predmet?\n\nNaše kurzy Základy informatiky, ktoré sú rozdelené podľa ročníkov, využívajú hodiny bez počítača na budovanie komunity a predstavovanie náročných informatických pojmov, ako sú napríklad **postupnosti**. Pozrite si lekciu [Veselé mapy](https://curriculum.code.org/csf-19/coursea/3/) z [kurzu A](https://curriculum.code.org/csf-19/coursea/) alebo [Pohni sa, pohni sa](https://curriculum.code.org/csf-19/courseb/2/) z [kurzu B](https://curriculum.code.org/csf-19/courseb/)!"
           ]
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
+          "name": "Programovanie pomocou blokov",
           "tips": [
-            null
+            "Ukážte žiakom správny spôsob, ako pomáhať spolužiakom:\n\n-   Nesadám si na spolužiakovu stoličku.\n-   Nepoužívam spolužiakovu klávesnicu.\n-   Nechytám spolužiakovu myšku.\n-   Kým odídem, uistím sa, že spolužiak mi vie nahlas opísať riešenie."
           ]
+        },
+        "20e998a3-d920-48f1-9d92-ec4102990042": {
+          "description": "Táto aktivita žiakov naučí, ako na platforme Code.org riešiť on‑line úlohy.\n\nAktivita je navrhnutá tak, aby žiakom poskytla príležitosť precvičiť si koordináciu oka a ruky, klikanie, ako aj presúvanie objektov. Žiaci sa budú hrať aj s postupnosťami.\n\nPri tejto aktivite žiaci budú využívať slovnú zásobu, s ktorou sa v lekcii oboznámili. Vyhraďte si čas na to, aby ste žiakom názorne ukázali, ako klikať, ťahať a púšťať objekty. Možno bude fungovať lepšie, ak tieto výrazy predstavíte celej triede, aby ste mohli ísť príkladom. Naopak, možno u vás bude dávať väčší zmysel, ak ich žiakom predstavíte jednotlivo, keď budú v počítačovej učebni pracovať na riešení úloh. Je na vás, aby ste sa rozhodli, ktorá možnosť bude pre vašu triedu dávať väčší zmysel.\n\nPozrite si so žiakmi video **\\*Párové programovanie** a potom ich rozdeľte do dvojíc. Video by žiakom malo pomôcť vydať sa do spoločnej práce správnou nohou.\n\nUčitelia zohrávajú nenahraditeľnú úlohu pri vyučovaní informatiky a vytváraní živej triednej atmosféry, ktorá kladie dôraz na spoluprácu. Pri riešení on‑line úloh je úlohou učiteľa predovšetkým povzbudzovať žiakov a poskytovať im podporu. On‑line úlohy sú stavané pre žiakov, takže učitelia sa mali snažiť nezasahovať, keď sa žiaci pri niečom zaseknú. Tu je niekoľko nápadov, ako to robiť:\n\n-   Využívajte počas aktivity párové programovanie vždy, keď je to možné.\n-   Ak má žiak nejakú otázku alebo problém, povzbudzujte ho k tomu, aby sa najskôr spýtal svojho partnera.\n-   S nezodpovedanými otázkami sa môžu žiaci obrátiť na okolité skupiny, ktoré už možno odpoveď poznajú.\n-   Kým za žiakmi prídete, pripomeňte im, aby použili proces ladenia (hľadania chýb).\n-   Požiadajte žiakov, aby vám svoj problém opísali. Čo sa má diať? Čo sa deje? Čo z toho vyplýva?\n-   Frustrovaným žiakom pripomínajte, že frustrácia je dôležitým krokom na ceste k učeniu a oplatí sa byť vytrvalý.\n-   Ak je žiak aj napriek tomuto všetkému naďalej zaseknutý, klaďte mu navádzajúce otázky, aby chybu našiel sám."
+        },
+        "1ed021eb-9033-4d39-98d7-e9e245a7f785": {
+          "progression_name": "Video: Blokové programovanie"
         },
         "0394c5d4-246e-42bc-aca2-97d7bd159173": {
           "progression_name": "Budovanie zručností"
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   Viete nakresliť postupnosť krokov, ako sa pripravujeme na príchod do počítačovej učebne?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite zoznam vecí, ktoré sa v počítačovej učebni majú a nemajú robiť."
+        },
+        "f810e0b8-71b7-4b54-8c8b-4205a471ca3b": {
+          "description": "Ak žiaci dokončia úlohy z tejto lekcie príliš skoro, dajte im za úlohu vymyslieť si vlastnú úlohu a poznačiť ju do zápisníka."
+        },
+        "14da8da8-681c-4934-97fc-01e71ad67ef3": {
+          "description": "Na upevnenie vedomostí ukážte celej triede jednu či dve on‑line úlohy.\n\n**Ukážka:** Ukážte celú on‑line úlohu z dnešnej lekcie. Odporúčame použiť úlohu 5. Všimnú si žiaci nejaké podobnosti s cvičením, ktoré práve robili?  Aké veľké rozdiely si všimnú?\n\nSpolu so žiakmi popresúvajte kód na pracovnú plochu tak, aby sa vták (nakoniec) dostal k prasaťu. \n\n**Premostenie:** Žiaci by teraz mali byť pripravení na to, aby prešli k počítačom a riešili on‑line úlohy samostatne."
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Programovanie s Angry Birds",
@@ -2331,24 +2581,33 @@
           "progression_name": "Výzva"
         },
         "dd1d935e-48f8-4f2b-b884-ab48d5ac79e9": {
-          "progression_name": "Cvičenie"
+          "progression_name": "Precvičovanie"
         },
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
           "progression_name": "Doplnkové materiály"
         },
+        "dec19d15-6248-4a60-87e3-b8bf155470bc": {
+          "description": "**Monitorovanie:** Učitelia zohrávajú nenahraditeľnú úlohu pri vyučovaní informatiky a vytváraní živej triednej atmosféry, ktorá kladie dôraz na spoluprácu. Pri on‑line aktivitách je úlohou učiteľa predovšetkým povzbudzovať žiakov a poskytovať im podporu. On‑line lekcie sú stavané pre žiakov, takže učitelia sa mali snažiť nezasahovať, keď sa žiaci pri niečom zaseknú. Tu je niekoľko nápadov, ako to robiť:\n\n-   Využívajte video **\\*Párové programovanie** vždy, keď je to možné.\n-   Ak má žiak nejakú otázku alebo problém, povzbudzujte ho k tomu, aby sa najskôr spýtal svojho partnera.\n-   S nezodpovedanými otázkami sa môžu žiaci obrátiť na okolité skupiny, ktoré už možno odpoveď poznajú.\n-   Kým za žiakmi prídete, pripomeňte im, aby použili proces ladenia (hľadania chýb).\n-   Požiadajte žiakov, aby vám svoj problém opísali. Čo sa má diať? Čo sa deje? Čo z toho vyplýva?\n-   Frustrovaným žiakom pripomínajte, že frustrácia je dôležitým krokom na ceste k učeniu a oplatí sa byť vytrvalý.\n-   Ak je žiak aj napriek tomuto všetkému naďalej zaseknutý, klaďte mu navádzajúce otázky, aby chybu našiel sám."
+        },
         "179a6d3a-af19-4c62-85c7-82844964d06a": {
           "tips": [
-            null
+            "Ukážte žiakom _správny_ spôsob, ako pomáhať spolužiakom:\n\n-   Nesadám si na spolužiakovu stoličku.\n-   Nepoužívam spolužiakovu klávesnicu.\n-   Nechytám spolužiakovu myšku.\n-   Kým odídem, uistím sa, že spolužiak mi vie nahlas opísať riešenie."
           ]
         },
         "12c1b1b7-2a91-4f58-ae14-136ea1536a67": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite."
+        },
+        "4bda804b-66e2-4290-8cf1-79b0649b470d": {
+          "description": "Rozdeľte žiakov do malých skupín a dajte im za úlohu navrhnúť si na papieri vlastné bludiská. Hotové bludiská posunú iným žiakom alebo skupinám, ktorých úlohou potom bude prejsť bludiskom pomocou programu. Ak chcete, aby bola aktivita ešte zábavnejšia, môžete vytvárať bludiská v životnej veľkosti, kde sa budú namiesto prasaťa a vtáka pohybovať žiaci."
         },
         "5990c610-f353-48fd-9d5f-a813486a237f": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Pomocou nasledujúcich otázok sa opýtajte na predchádzajúcu lekciu (Programovanie s Angry Birds), aby si žiaci stručne zopakovali informácie o programovaní a ladení. \n\n-   Ktoré úlohy boli príliš ťažké alebo príliš ľahké? \n-   Ktoré úlohy boli frustrujúce alebo zábavné?\n-   Ak by ste potrebovali učivo z tejto lekcie naučiť kamaráta, ktorú časť lekcie by ste si chceli predtým ešte zopakovať?\n\nAk sa na to cítite, môžete stručne predstaviť robota _BB‑8_ z _Hviezdnych vojen_. Mnohí žiaci už tohto milého robota poznajú, no stručný úvod u nich zaručene vyvolá väčší záujem."
         },
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
-          "name": "Programovanie s Rey a BB-8"
+          "name": "Programovanie s Rey a BB-8",
+          "progression_name": "Video: Programovanie s Rey a BB-8"
         },
         "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
           "progression_name": "Budovanie zručností"
@@ -2357,24 +2616,36 @@
           "progression_name": "Výzva"
         },
         "8a743287-1638-4c96-8c21-387ebf05d760": {
-          "progression_name": "Cvičenie"
+          "progression_name": "Precvičovanie"
+        },
+        "720aa090-bf1d-4934-9c4f-f8cad6b511ac": {
+          "description": "Dôrazne odporúčame, aby ste si s celou triedou pozreli video **\\*Párové programovanie** a túto techniku aj využívali. Párové programovanie u žiakov podporuje diskusie, ktoré im pomôžu hľadať odpovede na otázky, opakovať si základné koncepty a budovať si v danej téme väčšie sebavedomie."
         },
         "4f8c5eb5-a782-4698-a471-19808d1dbbc4": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite obrázok robota BB‑8, ktorého ste dnes previedli bludiskom, a napíšte zoznam príkazov, ktoré ste použili."
         },
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "#### Ladenie, vytrvalosť a frustrácia\n\n**Diskusia:** Pripravte žiakov na dnešné on‑line cvičenia otázkou, čo by robili, keby mali pocit, že majú niekde v kóde chybu. Konkrétnejšie sa ich spýtajte, aké otázky by si kládli. \n\n-   Funguje v prvom kroku programu všetko správne?\n-   Čo pri druhom? A pri treťom?\n-   Kde v mojom programe nastala chyba?\n-   Čo to pre mňa znamená?\n\n**Otázka pre triedu**: **Ladenie** vie byť frustrujúce! Vytrvalosť nám však môže pomôcť zvládnuť to. Čo môžeme urobiť pre to, aby sme prekonali frustráciu? \n\nPríklady odpovedí:\n\n-   Napočítaj do desať.\n-   Zhlboka dýchaj.\n-   Napíš si do zápisníka viac o chybách, ktoré sme našli.\n-   Porozprávaj o chybách svojmu partnerovi.\n-   Popros o pomoc.\n\n**Premostenie:** Vysvetlite svojim žiakom, že frustrácia je pri programovaní normálna. Chyby sa v programe vyskytnú každému! Je v poriadku, ak žiaci nedokážu nájsť alebo opraviť chybu okamžite. Ak budú používať stratégie ako tie, ktoré sú uvedené vyššie, frustráciu budú vedieť prekonať a dokážu vyriešiť hocijaký problém."
         },
         "0684b025-9c16-437c-936c-d9743cad2d94": {
-          "name": "Programovanie so Záhradníčkou"
+          "name": "Programovanie so Záhradníčkou",
+          "description": "V tomto bode by už žiaci mali poznať programovacie prostredie. Pri tejto lekcii si však treba dávať pozor na niektoré veci. Žiaci si napríklad nemusia dobre pamätať, ako funguje proces ladenia, alebo sa im môže stať, že keď záhradníčka príde ku kukurici, zabudnú použiť blok `zbieraj kukuricu`."
         },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [
-            null
+            "Ukážte žiakom _správny_ spôsob, ako pomáhať spolužiakom:\n\n-   Nesadám si na spolužiakovu stoličku.\n-   Nepoužívam spolužiakovu klávesnicu.\n-   Nechytám spolužiakovu myšku.\n-   Kým odídem, uistím sa, že spolužiak mi vie nahlas opísať riešenie."
           ]
+        },
+        "45d59019-4dd4-4a32-b08c-fd79528eab76": {
+          "progression_name": "Video: Záhradníčka"
         },
         "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
           "progression_name": "Budovanie zručností"
+        },
+        "629aedef-bd99-44af-a6bc-9ee890a1c7c8": {
+          "progression_name": "Video: Ladenie pomocou tlačidla Krok"
         },
         "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
           "progression_name": "Budovanie zručností"
@@ -2383,26 +2654,41 @@
           "progression_name": "Výzva"
         },
         "6f0b2804-a745-47e0-8211-45bfc553e106": {
-          "progression_name": "Cvičenie"
+          "progression_name": "Precvičovanie"
+        },
+        "465fb2e2-097a-4f1b-a2e1-9dc16c0a15e1": {
+          "description": "**Monitorovanie:** Pri on‑line aktivitách je úlohou učiteľa predovšetkým povzbudzovať žiakov a poskytovať im podporu. Okrem nápadov uvedených v predchádzajúcich nápadov môžete vyskúšať aj nasledujúce spôsoby, ako na to : \n\n-   Kým za žiakmi prídete, pripomeňte im, aby použili proces ladenia (hľadania chýb).\n-   Požiadajte žiakov, aby vám svoj problém opísali. Čo sa má diať? Čo sa deje? Čo z toho vyplýva?\n-   Frustrovaným žiakom pripomínajte, že frustrácia je dôležitým krokom na ceste k učeniu a oplatí sa byť vytrvalý.\n-   Ak je žiak aj napriek tomuto všetkému naďalej zaseknutý, klaďte mu navádzajúce otázky, aby chybu našiel sám.\n\n**Premostenie:** Povedzte žiakom, aby si vybrali svoje zápisníky na poznámky, a nechajte ich chvíľu pracovať samostatne."
         },
         "94b18069-db8a-43d7-bbf0-8912ac563349": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite, ako ste raz vo svojom kóde našli chybu. "
         },
         "f6ac49ff-86ee-444b-9e56-62de0b794363": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Na upevnenie vedomostí ukážte celej triede jednu či dve on‑line úlohy."
         },
         "cc53970f-5da8-46dc-9d2b-ba8af22f7f27": {
+          "description": "**Ukážka:** Ukážte celú on‑line úlohu z dnešnej lekcie. Spolu so žiakmi popresúvajte kód na pracovnú plochu tak, aby sa Scrat (nakoniec) dostal k žaluďu. Nezabudnite zdôrazniť, že používate opakovacie bloky.",
           "tips": [
-            null
+            "### Vyučujete tento kurz ako predmet?\n\nNaše kurzy Základy informatiky, ktoré sú rozdelené podľa ročníkov, využívajú hodiny bez počítača na budovanie komunity a predstavovanie náročných informatických pojmov, ako sú napríklad **cykly**. Pozrite si lekciu [Veselé cykly](https://curriculum.code.org/csf-19/coursea/7/) z [kurzu A](https://curriculum.code.org/csf-19/coursea/) alebo [Cykly sa zacykľujú](https://curriculum.code.org/csf-19/courseb/6/) z [kurzu B](https://curriculum.code.org/csf-19/courseb/)!"
           ]
+        },
+        "388885b9-02f4-4150-b753-0b33d7db86fa": {
+          "description": "**Premostenie:** Žiaci by teraz mali byť pripravení na to, aby prešli k počítačom a riešili on‑line úlohy samostatne."
+        },
+        "0c3cdd42-4e3e-4b16-942b-47ce55609295": {
+          "description": "Keď budú žiaci riešiť úlohy, dajte im za úlohu porovnať, koľko blokov použijú, ak úlohy riešia s cyklami alebo bez nich."
         },
         "c6bb8fa9-dfaa-414e-ac47-0f6196d8fa9e": {
           "tips": [
-            null
+            "Ukážte žiakom _správny_ spôsob, ako pomáhať spolužiakom:\n\n-   Nesadám si na spolužiakovu stoličku.\n-   Nepoužívam spolužiakovu klávesnicu.\n-   Nechytám spolužiakovu myšku.\n-   Kým odídem, uistím sa, že spolužiak mi vie nahlas opísať riešenie."
           ]
         },
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
           "progression_name": "Budovanie zručností"
+        },
+        "eb340c7e-d71e-49fb-aaf8-73205f85d432": {
+          "progression_name": "Video: Cykly Doby ľadovej"
         },
         "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
           "progression_name": "Budovanie zručností"
@@ -2411,19 +2697,41 @@
           "progression_name": "Výzva"
         },
         "01ea78e0-acb4-4a08-8295-6257c3d3aa29": {
-          "progression_name": "Cvičenie"
+          "progression_name": "Precvičovanie"
+        },
+        "9a875694-a4f4-4cd2-8bf8-31f8441d4a50": {
+          "description": "**Monitorovanie:** Učitelia zohrávajú nenahraditeľnú úlohu pri vyučovaní informatiky a vytváraní živej triednej atmosféry, ktorá kladie dôraz na spoluprácu. Pri on‑line aktivitách je úlohou učiteľa predovšetkým povzbudzovať žiakov a poskytovať im podporu. On‑line lekcie sú stavané pre žiakov, takže učitelia sa mali snažiť nezasahovať, keď sa žiaci pri niečom zaseknú. Tu je niekoľko nápadov, ako to robiť:\n\n-   Využívajte video **\\*Párové programovanie** vždy, keď je to možné.\n-   Ak má žiak nejakú otázku alebo problém, povzbudzujte ho k tomu, aby sa najskôr spýtal svojho partnera.\n-   S nezodpovedanými otázkami sa môžu žiaci obrátiť na okolité skupiny, ktoré už možno odpoveď poznajú.\n-   Kým za žiakmi prídete, pripomeňte im, aby použili proces ladenia (hľadania chýb).\n-   Požiadajte žiakov, aby vám svoj problém opísali. Čo sa má diať? Čo sa deje? Čo z toho vyplýva?\n-   Frustrovaným žiakom pripomínajte, že frustrácia je dôležitým krokom na ceste k učeniu a oplatí sa byť vytrvalý.\n-   Ak je žiak aj napriek tomuto všetkému naďalej zaseknutý, klaďte mu navádzajúce otázky, aby chybu našiel sám."
         },
         "0366b799-b555-4aef-b6c7-741c035590aa": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite _Scrata_ a žaluď.\n-   Nakreslite sami seba, ako pomocou cyklu robíte nejakú každodennú činnosť, napríklad umývanie zubov. "
+        },
+        "efb62b8a-4d4e-446b-aa68-1f20c45fc7a3": {
+          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n**Toľko pohybu**\n\n-   Dajte žiakom obrázky akcií alebo tanečných krokov, ktoré môžu robiť.\n    -   Dajte žiakom za úlohu usporiadať kroky a pridať k nim cykly, aby si vytvorili vlastnú tanečnú choreografiu.\n-   Žiaci sa o tance podelia so zvyškom triedy.\n\n**Prepoj to späť**\n\n-   Nájdite na YouTube videá populárnych tancov, v ktorých sa opakujú kroky.\n-   Dokážu vaši žiaci v tancoch identifikovať cykly?\n-   Skúste to isté s pesničkami!"
         },
         "3948532c-fefc-466f-a7ff-7d95e6692b96": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Rýchlo si zopakujte definíciu cyklu, teda štruktúry, ktorá nám umožňuje robiť veci dokola.\n\n-   Čo sú cykly?\n-   Načo ich používame?"
+        },
+        "525d11d6-d492-48d2-b775-6dd460d72215": {
+          "description": "Na predstavenie zberateľky Laurel ukážte celej triede jednu či dve on‑line úlohy.\n\n**Ukážka:** Ukážte celú on‑line úlohu z dnešnej lekcie. Odporúčame použiť úlohu 8. Všimnú si žiaci nejaké podobnosti s poslednými cvičeniami, ktoré robili? Aké veľké rozdiely si všimnú? Kedy by mali použiť blok `získaj drahokam`? \n\nSpolu so žiakmi popresúvajte kód na pracovnú plochu tak, aby Laurel (nakoniec) pozbierala všetky poklady.  \n\n**Premostenie:** Žiaci by teraz mali byť pripravení na to, aby prešli k počítačom a riešili on‑line úlohy samostatne."
         },
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
-          "name": "Cykly s Laurel"
+          "name": "Cykly s Laurel",
+          "description": "### Ukážka učiteľa\n\nDo lekcie sme zahrnuli niekoľko úrovní, v ktorých majú žiaci v nejakej situácii predpovedať, čo sa bude diať, výberom správnej odpovede z viacerých možností. Tieto úlohy sú pre deti, ktoré ešte nevedia čítať, náročné. Preto sú voliteľné, no pomôžu vám pripraviť sa s triedou na úlohy, ktoré nasledujú po nich. Prípadne ich môžete po dokončení úrovne použiť na to, aby ste si s triedou zopakovali nové učivo.\n\nÚrovne s predpoveďami:\n\n-   [Cykly v Zberateľke](https://studio.code.org/levels/8746)"
+        },
+        "b8fea05b-6234-4075-8416-bbfdef9e22f0": {
+          "name": "On‑line úlohy",
+          "description": "Keď budú žiaci riešiť úlohy, dajte im za úlohu porovnať, koľko blokov použijú, ak úlohy riešia s cyklami alebo bez nich."
+        },
+        "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
+          "progression_name": "Video: Zberateľka"
         },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
           "progression_name": "Budovanie zručností"
+        },
+        "dead7fa5-406d-419c-a084-3a913cbd2499": {
+          "progression_name": "Video: Používanie bloku „opakuj“"
         },
         "08049c61-d346-4c06-96f3-58775b4bf69d": {
           "progression_name": "Budovanie zručností"
@@ -2432,27 +2740,39 @@
           "progression_name": "Výzva"
         },
         "c08bd0ec-993c-4554-b855-96bdf024e9ef": {
-          "progression_name": "Cvičenie"
+          "progression_name": "Precvičovanie"
         },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
           "progression_name": "Doplnkové materiály"
         },
         "6397718f-1733-47e6-8ace-820b3f9d1701": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite rad drahokamov, ktorý mohla Laurel pozbierať.\n-   Nakreslite niečo, čo využíva cykly."
         },
         "6361a98f-3232-4060-8758-b1f8064507a8": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "-   Rýchlo si zopakujte definíciu cyklu, teda štruktúry, ktorá nám umožňuje robiť veci dokola.\n-   Porozprávajte sa o rôznych vzoroch, ako sú kľukaté čiary či schody.\n    -   _Ako by ste niekomu vysvetlili, ako nakresliť tento vzor?_\n    -   _Ako by ste tento vzor nakreslili pomocou cyklu?_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nV úrovniach s Umelcom budú žiaci využívať 45-stupňové uhly označené ako severozápad, severovýchod, juhozápad a juhovýchod. Odporúčame vám, aby ste so žiakmi tieto smery stručne rozobrali a nakreslili obrázok, ku ktorému sa budú môcť kedykoľvek vrátiť.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)"
         },
         "8cb479d1-0b50-4d24-998d-9fff971dcf0c": {
-          "name": "Na mori s cyklami"
+          "name": "Na mori s cyklami",
+          "description": "#### Ukážka učiteľa"
         },
         "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
           "tips": [
-            null
+            "Pripomeňte žiakom, aby svoju prácu zdieľali iba s najbližšími kamarátmi a rodinou. Viac informácií nájdete vo videu **\\*Mysli celým telom, keď si online**, ktoré si môžu žiaci pozrieť v triede alebo samostatne."
           ]
+        },
+        "bbc61306-32dd-4de2-9a6b-35b47408093f": {
+          "description": "Do lekcie sme zahrnuli niekoľko úrovní, v ktorých majú žiaci v nejakej situácii predpovedať, čo sa bude diať, výberom správnej odpovede z viacerých možností. Tieto úlohy sú pre deti, ktoré ešte nevedia čítať, náročné. Preto sú voliteľné, no pomôžu vám pripraviť sa s triedou na úlohy, ktoré nasledujú po nich. Prípadne ich môžete po dokončení úrovne použiť na to, aby ste si s triedou zopakovali nové učivo.\n\nÚrovne s predpoveďami:\n\n-   [Cykly v Umelcovi](https://studio.code.org/levels/8726)"
+        },
+        "7ccc621e-43b3-4402-a0cc-c626dfa1ea79": {
+          "progression_name": "Video: Umelec v Code štúdiu"
         },
         "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
           "progression_name": "Budovanie zručností"
+        },
+        "eabc47c6-9f94-4b32-aab1-4a138064532b": {
+          "progression_name": "Video: Cykly v Umelcovi"
         },
         "94271c9b-4000-4e8c-a99c-9a04d851549e": {
           "progression_name": "Budovanie zručností"
@@ -2461,7 +2781,7 @@
           "progression_name": "Výzva"
         },
         "c2ef410e-28ad-4ebe-9061-f5658d8fe975": {
-          "progression_name": "Cvičenie"
+          "progression_name": "Precvičovanie"
         },
         "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
           "progression_name": "Voľná hra"
@@ -2470,15 +2790,20 @@
           "progression_name": "Doplnkové materiály"
         },
         "7043a915-b252-47d3-bb01-5975d613129c": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite schody. Skúste sa zamyslieť nad cyklom, pomocou ktorého by sa schody dali nakresliť. \n-   Nakreslite niečo iné zo svojho života, čo využíva cykly."
         },
         "b53a9767-0731-41e2-b2fe-0b8b841cd403": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "-   Rýchlo si zopakujte definíciu cyklu, teda štruktúry, ktorá nám umožňuje robiť veci dokola.\n-   Porozprávajte sa o rôznych vzoroch, ako sú kľukaté čiary či schody.\n    -   _Ako by ste niekomu vysvetlili, ako nakresliť tento vzor?_\n    -   _Ako by ste tento vzor nakreslili pomocou cyklu?_"
+        },
+        "e5e50ac0-9ede-4521-8a97-17ab48738bfc": {
+          "description": "Do lekcie sme úroveň, v ktorej majú žiaci v danej situácii predpovedať, čo sa bude diať, výberom správnej odpovede z viacerých možností. Táto úloha je pre deti, ktoré ešte nevedia čítať, náročná. Preto je voliteľná, no pomôže vám pripraviť sa s triedou na úlohy, ktoré nasledujú po nej. Prípadne ju môžete po dokončení úrovne použiť na to, aby ste si s triedou zopakovali nové učivo.\n\nÚrovne s predpoveďami:\n\n-   [Cykly v Umelcovi](https://studio.code.org/levels/8745)"
         },
         "21511f7a-c70c-4aa0-ba16-d10d2e64fd4f": {
           "name": "Kreslenie v záhrade pomocou cyklov",
           "tips": [
-            null
+            "Pripomeňte žiakom, aby svoju prácu zdieľali iba s najbližšími kamarátmi a rodinou. Viac informácií nájdete vo videu **\\*Mysli celým telom, keď si online**, ktoré si môžu žiaci pozrieť v triede alebo samostatne."
           ]
         },
         "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
@@ -2488,7 +2813,7 @@
           "progression_name": "Výzva"
         },
         "5620ec7b-1ab2-40ae-9468-13e15bb2d4e0": {
-          "progression_name": "Cvičenie"
+          "progression_name": "Precvičovanie"
         },
         "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
           "progression_name": "Voľná hra"
@@ -2497,22 +2822,35 @@
           "progression_name": "Doplnkové materiály"
         },
         "e382cc47-35ef-4c10-80a1-4b9090d86856": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite vzory, ktoré ste vytvorili pomocou cyklu.\n-   Nakreslite vzor, ktorý by ste pomocou cyklu ešte chceli vytvoriť."
         },
         "e54a7c2e-64b2-4b83-a007-845a622ca484": {
           "name": "Úvod",
+          "description": "Teraz do nášho kódu pridáme udalosti. Konkrétne budeme mať udalosť na to, keď sa dve postavy navzájom dotknú.",
           "tips": [
-            null
+            "### Vyučujete tento kurz ako predmet?\n\nNaše kurzy Základy informatiky, ktoré sú rozdelené podľa ročníkov, využívajú hodiny bez počítača na budovanie komunity a predstavovanie náročných informatických pojmov, ako je napríklad **udalosti**. Pozrite si lekciu [Veľká udalosť Jr.](https://curriculum.code.org/csf-19/coursea/11/) z [kurzu A](https://curriculum.code.org/csf-19/coursea/)!"
           ]
         },
+        "7d0da3ba-532d-4204-860e-8506667f52f0": {
+          "description": "-   Kedy ste videli príklad toho, že v hre sa dve postavy dotknú v rámci udalosti?"
+        },
+        "76c12b77-7e58-4d27-b6b5-ae529ae291ba": {
+          "name": "Spoločné predstavenie on‑line úloh",
+          "description": "Vyberte úlohu zo súboru on‑line úloh. Odporúčame úlohu č. 7. Vyvolávajte rôznych žiakov, aby robili zábavné zvuky vždy, keď kliknete na Jorgeho. Vysvetlite im, že takto reagujú na udalosť a Jorgeho vieme naprogramovať tak, vydával zvuk vždy, keď naňho klikneme."
+        },
         "6c8d4815-0e66-45fd-980a-dacf20015a66": {
-          "name": "Udalosti v pohybe"
+          "name": "Udalosti v pohybe",
+          "description": "V poslednej úrovni majú žiaci možnosť vytvoriť si vlastný príbeh. Môžete im poskytnúť štruktúrovaný návod, aký typ príbehu môžu písať, najmä pre študentov, ktorých môže príliš veľká sloboda možností paralyzovať."
+        },
+        "dbb4fe5e-fe4d-40d4-8509-c11f826128ae": {
+          "progression_name": "Video: Úvod do Play Labu"
         },
         "708df6be-8599-4a1a-993b-13ca6e874d5c": {
           "progression_name": "Voľná hra"
         },
         "dd7a6bce-6e0d-4774-8588-76327c4315d6": {
-          "progression_name": "Cvičenie"
+          "progression_name": "Precvičovanie"
         },
         "bf84d5a1-77c9-4769-9963-84b33df1e0b9": {
           "progression_name": "Mini projekt: Pes Jorge"
@@ -2521,13 +2859,19 @@
           "progression_name": "Doplnkové materiály"
         },
         "9336ef6c-3ac8-4703-8f8d-98e88518e5e9": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite  [r feeling-faces-image/pre-express/2021] podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite udalosť, ktorú ste dnes použili vo svojom programe\n-   Predstavte si, že máte robota na diaľkové ovládanie. Ako by takéto diaľkové ovládanie vyzeralo? Nakreslite obrázok toho, čo by podľa vás tento robot dokázal urobiť."
+        },
+        "93b502d2-fe7e-4895-a9e2-349a3d7a0bb0": {
+          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n**Pozri sa pod kapotu**\n\nKeď žiaci zdieľajú odkaz na svoj príbeh, zdieľajú aj všetok kód, pomocou ktorého funguje. Ide o výborný spôsob, ako sa od seba môžu žiaci učiť.\n\n-   Dajte na internet odkazy na hotové príbehy.\n    -   Aj vy vytvorte príbeh, ktorý budete môcť zdieľať!\n-   Keď žiaci načítajú odkaz, dajte im za úlohu kliknúť tlačidlo „Ako to funguje“ a pozrieť si, pomocou akého kódu príbeh funguje.\n-   V skupine sa porozprávajte o tom, akými rôznymi spôsobmi jednotliví žiaci programovali svoje príbehy.\n    -   Čo vás prekvapilo?\n    -   Čo by ste si chceli vyskúšať?\n-   Vyberte si príbeh niekoho iného, kliknite na tlačidlo `Remix` a skúste ho upraviť. (Nemusíte sa báť, pôvodný príbeh zostane bezpečne uložený.)"
         },
         "e41f8532-e8cd-4df7-a729-43346d3df6d1": {
-          "name": "Úvod"
+          "name": "Úvod",
+          "description": "Vyberte úlohu zo súboru on‑line úloh. Odporúčame úlohu č. 4. Vyvolávajte rôznych žiakov, aby robili zábavné grimasy predstavujúce rôzne nálady, keď kliknete na Daisy. Vysvetlite im, že takto reagujú na udalosť a Daisy vieme naprogramovať tak, sa jej menila nálada vždy, keď naňho klikneme."
         },
         "fbc5ec8c-04e4-4690-8361-be9c49c1daca": {
-          "name": "Kráľovská bitka s udalosťami"
+          "name": "Kráľovská bitka s udalosťami",
+          "description": "V poslednej úrovni majú žiaci možnosť vytvoriť si vlastný príbeh. Môžete im poskytnúť štruktúrovaný návod, aký typ príbehu môžu písať, najmä pre študentov, ktorých môže príliš veľká sloboda možností paralyzovať."
         },
         "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7": {
           "progression_name": "Mini-Projekt: Kráľovský súboj"
@@ -2539,7 +2883,11 @@
           "progression_name": "Doplnkové materiály"
         },
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "Keď žiaci napíšu o tom, čo sa naučili, prečo je to užitočné a aké majú o dnešnom učive pocity, pomôže im to upevniť si získané vedomosti a vytvoria si poznámky, ku ktorým sa budú môcť neskôr pri opakovaní vrátiť.\n\n**Úlohy pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Na rohu strany v zápisníku nakreslite **\\*smajlíka** podľa toho, ako sa po dnešnej hodine cítite.\n-   Nakreslite udalosť, ktorú ste dnes použili vo svojom programe\n-   Predstavte si, že máte robota na diaľkové ovládanie. Ako by takéto diaľkové ovládanie vyzeralo? Nakreslite obrázok toho, čo by podľa vás tento robot dokázal urobiť."
+        },
+        "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
+          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n**Pozri sa pod kapotu**\n\nKeď žiaci zdieľajú odkaz na svoj príbeh, zdieľajú aj všetok kód, pomocou ktorého funguje. Ide o výborný spôsob, ako sa od seba môžu žiaci učiť.\n\n-   Dajte na internet odkazy na hotové príbehy.\n    -   Aj vy vytvorte príbeh, ktorý budete môcť zdieľať!\n-   Keď žiaci načítajú odkaz, dajte im za úlohu kliknúť tlačidlo „Ako to funguje“ a pozrieť si, pomocou akého kódu príbeh funguje.\n-   V skupine sa porozprávajte o tom, akými rôznymi spôsobmi jednotliví žiaci programovali svoje príbehy.\n    -   Čo vás prekvapilo?\n    -   Čo by ste si chceli vyskúšať?\n-   Vyberte si príbeh niekoho iného, kliknite na tlačidlo `Remix` a skúste ho upraviť. (Nemusíte sa báť, pôvodný príbeh zostane bezpečne uložený.)"
         },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Úvod",
@@ -2871,7 +3219,8 @@
           "progression_name": "Voľná hra"
         },
         "9639ed09-b00f-4186-a5e8-0a1020965a44": {
-          "name": "Reflexia"
+          "name": "Reflexia",
+          "description": "**Otázky pre triedu:**\n\n-   O čom bola dnešná hodina?\n-   Aký máte z dnešnej hodiny pocit?\n-   Čo robili funkcie v programoch, ktoré ste dnes vytvorili? Ako vám to pomohlo?\n-   Kedy je dobré použiť funkciu namiesto cyklu?"
         },
         "efa5dada-af20-4c6f-bcc3-1c3ad1b2ef8d": {
           "name": "Úvod"
@@ -2894,6 +3243,9 @@
         },
         "c8e5eb74-9ded-4c7c-bfbf-3fb3a144fe3a": {
           "name": "Reflexia"
+        },
+        "32cfd519-6691-4e68-82de-f080fc4c2c6a": {
+          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n#### Kreslíme funkciami\n\nRozdeľte žiakov do dvojíc alebo trojčlenných skupín. Každej skupine dajte za úlohu napísať funkciu na kreslenie nejakého tvaru a potom vytvoriť program, ktorý danú funkciu využíva. V závislosti od toho, ako veľmi tvorivé a sústredené skupiny budú, možno bude potrebné prideliť žiakom konkrétny tvar, ktorý majú vytvoriť. Keď budú všetky skupiny hotové, nech si vymenia programy. Každá skupina potom na samostatný kus papiera nakreslí, aký útvar program, ktorý dostali, vytvára. Skupiny by potom mali vrátiť programy a kresby pôvodným skupinám.\n\nVrátila sa každej skupine kresba, ktorú očakávali? Ak nie, kde nastala chyba? Dajte triede za úlohu prejsť si procesom ladenia a skúsiť to znova."
         },
         "26475297-6a91-4f8c-a64d-ded841ff0cb9": {
           "name": "Úvod"

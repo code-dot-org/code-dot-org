@@ -176,6 +176,8 @@ pl:
           lessons:
             Play Lab:
               name: Lab Gier
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Utwórz historyjkę lub grę z Play Lab!
         artist:
           title: Artysta
@@ -184,6 +186,8 @@ pl:
           lessons:
             Artist:
               name: Artysta
+              description_student: Twórz piękne obrazki programując Artystę.
+              description_teacher: Na wej lekcji uczniowie przejmą sterowania Artystą, aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych bloków takich jak "idź do przodu o 100 pikseli" oraz "skręć w prawo o 90 stopni".
           student_description: Rysuj fajne obrazki i wzory z Artystą!
         hourofcode:
           title: Klasyczny labirynt
@@ -192,6 +196,8 @@ pl:
           lessons:
             Maze:
               name: Labirynt
+              description_student: Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla młodych uczniów w wieku 4-10 lat, ale można ją dostosować dla starszych uczniów, korzystając z przedstawionych sugestii różnicowania.
+              description_teacher: Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla młodych uczniów w wieku 4-10 lat, ale można ją dostosować dla starszych uczniów, korzystając z przedstawionych sugestii różnicowania.
           student_description: Poznaj podstawy informatyki z postaciami z Angry Birds, Plants vs Zombies i Wiewióra z Epoki lodowcotej!
         frozen:
           title: Koduj z Anną i Elsą
@@ -199,7 +205,9 @@ pl:
           description_short: Użyjmy kodu, by przyłączyć się do Anny i Elsy zachwycających się magią i pięknem lodu.
           lessons:
             Artist:
-              name: Artysta
+              name: Koduj z Anną i Elsą
+              description_student: Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów ze średnich klas, w wieku 10-13 lat, ale można ją dostosować dla młodszych lub starszych uczniów, korzystając z przedstawionych sugestii różnicowania. Uczniowie powinni mieć podstawową wiedzę na temat prostej geometrii i rysowania kątów.
+              description_teacher: Podczas tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów ze średnich klas, w wieku 10-13 lat, ale można ją dostosować dla młodszych lub starszych uczniów, korzystając z przedstawionych sugestii różnicowania. Uczniowie powinni mieć podstawową wiedzę na temat prostej geometrii i rysowania kątów.
           student_description: Użyjmy kodowania, by przyłączyć się do Anny i Elsy, które poszukują magii i piękna w lodzie. Będziesz tworzył płatki śniegu oraz wzory podczas jazdy na łyżwach i przepiękną zimową krainę, którą później możesz udostępnić znajomym!
         course4:
           title: Kurs 4
@@ -340,7 +348,9 @@ pl:
           description_short: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           lessons:
             Infinity:
-              name: Nieskończoność
+              name: Disney Infinity Play Lab
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
         algebrademo:
           lessons:
@@ -384,6 +394,8 @@ pl:
               name: nowy etap
         netsim:
           title: Symulator internetowy
+          description: Dowiedz się, jak działa Internet.
+          description_short: Dowiedz się, jak działa Internet.
           lessons:
             Automatic DNS node:
               name: Automatyczny węzeł DNS
@@ -405,6 +417,7 @@ pl:
               name: Peer to Peer - Wysyłanie liczb
             Routers and addresses:
               name: Routery i adresy
+          student_description: Dowiedz się, jak działa Internet.
         pixelation:
           lessons:
             Black & White Pixelation Freeplay:
@@ -501,6 +514,8 @@ pl:
           lessons:
             Flappy Code:
               name: Kod Flappiego
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Czy chciałbyś utworzyć własną grę w mniej niż 10 minut? Wypróbuj nasz samouczek dla kodowania Flappiego!
         jigsaw:
           title: Układanka
@@ -613,6 +628,8 @@ pl:
           lessons:
             Text Compression:
               name: Kompresja tekstu
+              description_student: W pewnym momencie osiągamy fizyczną granicę szybkości przesyłania bitów i jeśli chcemy szybciej przesłać dużą ilość informacji, musimy znaleźć sposób na przedstawienie tej samej informacji za pomocą mniejszej liczby bitów – musimy skompresować dane.
+              description_teacher: W pewnym momencie osiągamy fizyczną granicę szybkości przesyłania bitów i jeśli chcemy szybciej przesłać dużą ilość informacji, musimy znaleźć sposób na przedstawienie tej samej informacji za pomocą mniejszej liczby bitów - musimy **skompresować** dane. Podczas tej lekcji uczniowie będą używać widżetu do kompresji tekstu, aby kompresować fragmenty tekstu w języku angielskim, szukając wzorców i zastępując symbolami większe wzorce tekstu.\\r
         CSPPD:
           lessons:
             Exploring CSP Instructional Materials:
@@ -677,9 +694,13 @@ pl:
             What to Expect:
               name: Czego się spodziewać
         rbo-reference:
+          title: rbo-reference
+          description: rbo-reference
+          description_short: rbo-reference
           lessons:
             reference:
               name: referencja
+          student_description: rbo-reference
         Test Wednesday:
           lessons:
             PDK5 Intro:
@@ -765,6 +786,7 @@ pl:
             The Design Recipe:
               name: Przepisy projektowe
         ECSPD-NexTech:
+          logo_image: nextech\_logo.png
           lessons:
             Growth Mindset:
               name: Rozwój myślenia
@@ -779,6 +801,7 @@ pl:
             What is ECS?:
               name: Co to jest ECS?
         ECSPD-iZone:
+          logo_image: izone\_logo.png
           lessons:
             Growth Mindset:
               name: Rozwój myślenia
@@ -793,6 +816,7 @@ pl:
             What is ECS?:
               name: Co to jest ECS?
         algebraPD-NexTech:
+          logo_image: nextech\_logo.png
           lessons:
             Course Overview:
               name: Przegląd kursu
@@ -807,6 +831,7 @@ pl:
             Why Computer Science belongs in Algebra:
               name: Dlaczego Informatyka jest częścią Algebry?
         algebraPD-iZone:
+          logo_image: izone\_logo.png
           lessons:
             Course Overview:
               name: Przegląd kursu
@@ -821,6 +846,7 @@ pl:
             Why Computer Science belongs in Algebra:
               name: Dlaczego Informatyka jest częścią Algebry?
         sciencePD-NexTech:
+          logo_image: nextech\_logo.png
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelowanie złożonych systemów adaptacyjnych w oparciu o agenta
@@ -847,6 +873,7 @@ pl:
             What to Expect:
               name: Czego się spodziewać
         sciencePD-iZone:
+          logo_image: izone\_logo.png
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelowanie złożonych systemów adaptacyjnych w oparciu o agenta
@@ -896,6 +923,14 @@ pl:
               name: Tajemny model
             Welcome Back!:
               name: Witaj ponownie!
+        Testing:
+          title: Testowanie
+          description: Testowanie
+          description_short: Testowanie
+          lessons:
+            Testing:
+              name: Testowanie
+          student_description: Testowanie
         cspunit2:
           lessons:
             Algorithms Detour - Hard Problems TSP:
@@ -1118,6 +1153,9 @@ pl:
             Welcome!:
               name: Witamy!
         K5-OnlinePD:
+          title: Nauczanie podstaw informatyki (2017)
+          description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org, z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
+          description_short: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org, z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
           lessons:
             Best Practices for Teaching Computer Science:
               name: Najlepsze praktyki w nauczaniu informatyki
@@ -1141,6 +1179,7 @@ pl:
               name: Następne Kroki
             Planning:
               name: Planowanie
+          student_description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org, z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
           name: K5-OnlinePD
         ECSPD2:
           description: 'Faza 2 Online: Mieszane letnie studia'
@@ -1580,6 +1619,8 @@ pl:
           lessons:
             Ice Age Play Lab:
               name: Epoka Lodowcowa w Play Lab
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej w Play Lab!
         CSPPD3-Unit3:
           title: 'Podstawy informatyki: Jednostka 3 Rozwój zawodowy (PD)'
@@ -1648,6 +1689,8 @@ pl:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Utwórz historyjkę lub grę z pomoc Gumball Play Lab!
         starwars:
           title: 'Star Wars: Tworzenie Galaktyki za pomocą kodu (Javascript)'
@@ -1656,6 +1699,7 @@ pl:
           lessons:
             Hour of Code 2015:
               name: Godzina Kodowania 2015
+              description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje.
           student_description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
         starwarsblocks:
           title: 'Star Wars: Tworzenie Galaktyki za pomocą kodu (Blockly)'
@@ -1663,7 +1707,8 @@ pl:
           description_short: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
           lessons:
             Hour of Code 2015:
-              name: Godzina Kodowania 2015
+              name: 'Star Wars: Tworzenie Galaktyki za pomocą kodu (Blockly)'
+              description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje.
           student_description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
         mc:
           title: Godzina Kodowania z Minecraft
@@ -1680,6 +1725,8 @@ pl:
           lessons:
             Oceans:
               name: Oceany
+              description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.'
+              description_teacher: Po pierwsze, uczniowie klasyfikują przedmioty jako „ryby” lub „nie ryby”, aby spróbować usunąć śmieci z oceanu. Następnie rozszerzają zestaw danych treningowych o inne stworzenia morskie. W drugiej części ćwiczenia uczniowie wybiorą własne etykiety do nałożenia na obrazy losowo generowanych ryb. Te dane treningowe są używane w modelu uczenia maszynowego, który następnie powinien być w stanie samodzielnie oznaczać nowe obrazy.
           student_description: Poznaj sposób, w jaki sztuczna inteligencja i uczenie maszynowe mogą być wykorzystywana do zajmowania się problemami całego świata.
         CSPPD3-Unit3-pt2:
           title: 'Podstawy informatyki: Jednostka 3 Wyzwania zawodowego rozwoju'
@@ -2559,12 +2606,14 @@ pl:
             App Presentation:
               name: Prezentacja aplikacji
         CSDU1-Draft:
+          description_short: Rozwiązywanie problemów
           lessons:
             Exploring Apps:
               name: Badanie aplikacji
             Processing Information:
               name: Przetwarzanie informacji
         CSDU2-Draft:
+          description_short: Opracowywaniem stron internetowych
           lessons:
             Clean Code and Debugging:
               name: Czysty kod i debugowanie
@@ -2906,6 +2955,8 @@ pl:
             Close & Next Steps:
               name: Zamknij i wykonaj kolejne kroki
         ecs-unit6:
+          description: 'Jednostka 6: Robotyka'
+          description_short: 'Jednostka 6: Robotyka'
           lessons:
             Alternative Ideas for Unit 6:
               name: Inne pomysły dla Jednostki 6
@@ -2921,6 +2972,7 @@ pl:
               name: Jednostka 6 Lekcje
             Close & Next Steps:
               name: Zamknij i wykonaj kolejne kroki
+          student_description: 'Jednostka 6: Robotyka'
         grade3:
           title: Klasa 3
           description_audience: W wieku 5-18
@@ -3121,6 +3173,7 @@ pl:
               name: Ankieta po zakończeniu kursu  CSP
           student_description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania w trakcie programowania animacji, sztuki interaktywną i gry w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w nim bardziej wyszukane animacje i gry oparte na duszku, używając tych samych koncepcji programowania i procesu projektowania, którego informatycy używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać spersonalizowany program interaktywny.
         grade2:
+          title: Klasa 2
           description_audience: W wieku 5-18
           lessons:
             At The Dog Park:
@@ -3404,7 +3457,8 @@ pl:
           description: Wybierz swoją drużynę i zrób grę w koszykówkę
           lessons:
             Bounce:
-              name: Odbicie
+              description_student: Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!
+              description_teacher: Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.
           student_description: Wybierz swoją drużynę i zrób grę w koszykówkę
         sample-csp5:
           lessons:
@@ -3414,6 +3468,8 @@ pl:
           lessons:
             Simple Encryption:
               name: Proste szyfrowanie
+              description_student: Na tej lekcji uczniowie zapoznają się z potrzebą szyfrowania i prostymi technikami łamania tajnych wiadomości. Próbują samodzielnie złamać wiadomość zakodowaną klasycznym szyfrem Cezara, a także losowym szyfrem podstawieniowym. Powinni dobrze poznać ideę, że w dobie potężnych narzędzi obliczeniowych techniki szyfrowania muszą być bardziej wyrafinowane. Najważniejszym aspektem tej lekcji jest zrozumienie, w jaki sposób i dlaczego szyfrowanie odgrywa taką rolę w naszym codziennym życiu w Internecie oraz że stworzenie dobrego szyfrowania nie jest trywialne. Uczniowie będą stawiać pierwsze kroki i napocą się, by zrozumieć czynniki, które należy wziąć pod uwagę przy tworzeniu silnego szyfrowania w obliczu potężnych narzędzi obliczeniowych, które można wykorzystać do jego złamania. Konieczność zachowania tajemnicy podczas przesyłania bitów przez Internet jest ważna dla każdego, kto korzysta z Internetu.
+              description_teacher: Na tej lekcji uczniowie zapoznają się z potrzebą szyfrowania i prostymi technikami łamania tajnych wiadomości. Próbują samodzielnie złamać wiadomość zakodowaną klasycznym szyfrem Cezara, a także losowym szyfrem podstawieniowym. Powinni dobrze poznać ideę, że w dobie potężnych narzędzi obliczeniowych techniki szyfrowania muszą być bardziej wyrafinowane. Najważniejszym aspektem tej lekcji jest zrozumienie, w jaki sposób i dlaczego szyfrowanie odgrywa taką rolę w naszym codziennym życiu w Internecie oraz że stworzenie dobrego szyfrowania nie jest trywialne. Uczniowie będą stawiać pierwsze kroki i napocą się, by zrozumieć czynniki, które należy wziąć pod uwagę przy tworzeniu silnego szyfrowania w obliczu potężnych narzędzi obliczeniowych, które można wykorzystać do jego złamania. Konieczność zachowania tajemnicy podczas przesyłania bitów przez Internet jest ważna dla każdego, kto korzysta z Internetu.
         csd2-2017:
           title: CSD Jednostka 2 - Rozwój sieci ('17- '18)
           description_short: "  Naucz się budować swoją własną stronę internetową w Web Lab."
@@ -3975,7 +4031,8 @@ pl:
           description: Mieszaj i łącz różne dyscypliny sportowe
           lessons:
             Sports:
-              name: Zawody
+              description_student: Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!
+              description_teacher: Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.
           student_description: Mieszaj i łącz różne dyscypliny sportowe
         2016_sciencePD-phase2b:
           lessons:
@@ -4996,6 +5053,7 @@ pl:
               name: Widgety krypto klucza publicznego
         csd2-old:
           title: CSD Jednostka 2 (NIEAKTUALNA)
+          description_short: Opracowywaniem stron internetowych
           lessons:
             Quality Websites:
               name: Wysokiej jakości strony internetowe
@@ -6731,7 +6789,7 @@ pl:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Podróż Bohatera. Godzina Kodowania'
             Minecraft Hour of Code:
-              name: Godzina Kodowania z Minecraft
+              name: 'Minecraft: Podróż Bohatera'
           student_description: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu.
         applab-intro-staging:
           title: Wprowadzenie do inscenizacji App Lab
@@ -7362,7 +7420,7 @@ pl:
             'Conditionals: Conditionals with Cards':
               name: 'Wyrażenia warunkowe: Wyrażenia warunkowe z kartami'
             While Loops in Farmer:
-              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" z Farmerem
             Conditional Loops in Maze:
               name: Pętle warunkowe w labiryncie
             Conditionals in Minecraft:
@@ -9111,6 +9169,8 @@ pl:
               name: nowy etap
             Dance Party:
               name: Potańcówka
+              description_student: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
         frozen-2018-test-b:
           title: Nowy skrypt zamrożony
@@ -9123,7 +9183,7 @@ pl:
           description: Minecraft powraca z zupełnie nowymi zajęciami! Wykorzystaj swoją kreatywność i umiejętność rozwiązywania problemów, aby odkrywać i budować podwodne światy za pomocą kodu.
           lessons:
             Aquatic:
-              name: Wodny
+              name: 'Minecraft: Wodna podróż'
           student_description: Minecraft powraca z zupełnie nowymi zajęciami! Wykorzystaj swoją kreatywność i umiejętność rozwiązywania problemów, aby odkrywać i budować podwodne światy za pomocą kodu.
         sconyers:
           title: Plac zabaw Tracey
@@ -9214,6 +9274,8 @@ pl:
           lessons:
             Dance Party - Go Further:
               name: Potańcówka - Przejdź dalej
+              description_student: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
           student_description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursef-2019:
           title: Kurs F (2019)
@@ -9719,7 +9781,7 @@ pl:
             Nested Loops in Frozen:
               name: Płatki śniegu z Anną i Elzą
             While Loops in Farmer:
-              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" z Farmerem
             Until Loops in Maze:
               name: Pętle "dopóki" w labiryncie
             Conditionals with Cards:
@@ -11144,6 +11206,8 @@ pl:
           lessons:
             Computers and Problem Solving:
               name: Komputery i rozwiązywanie problemów
+            Web Development:
+              name: Opracowywaniem stron internetowych
             Interactive Animations and Games:
               name: Animacje i gry interaktywne
         csd-videos:
@@ -11155,6 +11219,8 @@ pl:
               name: nowy etap
             Problem Solving and Computers:
               name: Rozwiązywanie problemów i komputery
+            Web Development:
+              name: Opracowywaniem stron internetowych
             Games and Animations:
               name: Gry i animacje
             User Centered Design:
@@ -11883,7 +11949,7 @@ pl:
               display_name: Ankieta
           lessons:
             CSD post-course survey:
-              name: CSD Ankieta po zakończeniu kursu
+              name: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           student_description: "Ankieta po kursie Odkrycia informatyki stanowi ważne narzędzie, którego używamy do uzyskania od Ciebie informacji zwrotnej oraz wprowadzenia udoskonaleń do kursu. \nAnkieta ma charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko zbiorczy wyniki dla całej klasy. Takie wyniki mają kluczowe znaczenie dla Twojego nauczyciela oraz dla Code.org, umożliwiając rozwijanie i doskonalenie kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie."
         csp-post-survey-2018:
           title: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
@@ -11895,7 +11961,7 @@ pl:
               display_name: Ankieta
           lessons:
             CSP post-course survey:
-              name: CSP Ankieta po zakończeniu kursu
+              name: Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)
           student_description: Witamy w ankiecie po ukończeniu kursu poświęconego "Zasadom informatyki" Code.org. Jej wypełnienie potrwa około 15 minut. Twoje odpowiedzi mają charakter prywatny i anonimowy - Twój nauczyciel zobaczy tylko wyniki w ujęciu zbiorczym, pochodzące od całej klasy. Takie wyniki mają znaczenie kluczowe dla Twojego nauczyciela oraz dla Code.org, umożliwiając im doskonalenie kursu. Dziękujemy Ci za poświęcony czas i zaangażowanie.
         csp5-pilot:
           title: 'CSP Jednostka 5 Pilotaż: Listy, pętle i przejścia'
@@ -12813,9 +12879,12 @@ pl:
           lessons:
             Dance Party:
               name: Potańcówka
+              description_student: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
         k5-onlinepd-2019:
           description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
+          description_short: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org, z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
           lesson_groups:
             k5_getting_started:
               display_name: Pierwsze kroki
@@ -15048,7 +15117,7 @@ pl:
             If/Else with Bee:
               name: '"jeśli/w przeciwnym razie" z Pszczółką'
             While Loops with the Farmer:
-              name: Pętle "dopóki" przy pomocy interfejsu Farmer
+              name: Pętle "dopóki" z Farmerem
             Harvesting with Conditionals:
               name: Żniwa z wyrażeniami warunkowymi
             Functions with Harvester:
@@ -15838,6 +15907,7 @@ pl:
           student_description: Ten rozdział wprowadza koncepcje fundamentalne programowania komputerowego, co odblokowuje możliwość tworzenia bogatych, interaktywnych aplikacji. W tym kursie używa się JavaScript jako języka oprogramowania oraz App Lab jako środowiska programowania do budowania aplikacji, ale koncepcje poznane w ramach tych lekcji obejmują wszystkie języki i narzędzia programowania.
         k5-onlinepd-2020:
           description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
+          description_short: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org, z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
               name: Witamy na "Podstawach Nauczania Informatyki"
@@ -16419,7 +16489,7 @@ pl:
             lesson-2:
               name: Przechowywanie i przetwarzanie tekstu
             lesson-3:
-              name: Utwórz Chat-Bot
+              name: 'Mini-projekt: Programy z danymi użytkownika'
             lesson-5:
               name: Grupy duszków
             lesson-6:
@@ -16483,6 +16553,8 @@ pl:
               display_name: Kurs A i B Projekt EOC
             debugging:
               display_name: Debugowanie
+            Argentina:
+              display_name: Argentyna
           title: Planowanie skryptów dla CI i CSF 2021
           description_audience: Wewnętrzne
           description_short: Wewnętrzne
@@ -17083,6 +17155,7 @@ pl:
               description: "### Jednostka Filozofia i Pedagogika\n\n-   **Budowanie silnej kultury klasowej:** Ta jednostka została zaprojektowana tak, aby była praktyczna, oparta na współpracy i odkrywcza. Głównym celem jednostki jest budowanie pozytywnej kultury w klasie, w której uczniowie pracują razem, badają problemy i komunikują się o swoim myśleniu. Większość lekcji dotyczy fizycznych manipulacji lub widżetów cyfrowych, a większość czasu zajęć należy poświęcić uczniom na wspólne badanie tych narzędzi, aby zrozumieć pojęcia, które odzwierciedlają. Kurs celowo nie rozpoczyna się od programowania, ponieważ w niektórych salach niektórzy uczniowie mają doświadczenie w programowaniu, a inni nie. Decydując się na rozpoczęcie od informacji cyfrowych i Internetu, możesz budować społeczność w sali, zajmując się tematem, który może być przystępny dla wszystkich uczniów. Wspierające i integrujące środowisko klasowe budowane w tej jednostce powinno pomóc w nadaniu pozytywnego nastawienia, które będzie można utrzymywać przez cały rok szkolny.\n\n-   **Wzmocnienie „Decydentów”:** Ważnym celem kursu jest nie tylko przekazanie uczniom wiedzy technicznej, ale także wykorzystanie tych umiejętności w znaczący sposób. Jednostka ta jest ukierunkowana na projekt, który daje uczniom możliwość „decydowania” o wpływie informatyki na współczesne życie. Inne jednostki będą podkreślać wzmacnianie osób jako „twórców”.\n\n### Główne oceny i projekty\n\nProjekt jednostki zwraca się do uczniów o rozważenie i przedyskutowanie problemów, które pojawiają się we współczesnym społeczeństwie w związku z digitalizacją informacji. Uczniowie przeanalizują artykuł, który dotyczy powiązań digitalizacji informacji z bieżącymi wydarzeniami. Ocenią, jakie dane są digitalizowane oraz korzyści i szkody spowodowane przetwarzaniem tych informacji na postać cyfrową. Wykonają również ocenę końcową jednostki zgodną z celami ramowymi Zasad Informatyki, którym jest poświęcona ta jednostka.\n\n### Powiązania z AP\n\nTa jednostka i związany z nią projekt pomagają budować trwałe zrozumienie wymienione poniżej. Aby uzyskać szczegółowe odniesienie jednostek do celów nauczania i EK, zobacz stronę „Standardy” dla tej jednostki.\n\n-   DAT-1: Sposób, w jaki komputer reprezentuje dane wewnętrznie, różni się od sposobu, w jaki dane są interpretowane i wyświetlane użytkownikowi. Programy służą do tłumaczenia danych na reprezentacje łatwiejsze do zrozumienia dla ludzi.\n-   IOC-1: podczas gdy innowacje komputerowe są zwykle zaprojektowane do osiągnięcia określonego celu, mogą mieć niezamierzone konsekwencje\n\nTa jednostka zawiera treści z następujących zagadnień ram AP w Zasadach Informatyki. Bardziej szczegółowe informacje na temat zakresu tematycznego można znaleźć w przeglądzie kursu [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n-   2.1 Liczby binarne\n-   2.2 Kompresja danych\n-   5.5 Kwestie prawne i etyczne. "
           name: csp1-2021
         csp2-2021:
+          title: Internet ('21-'22)
           lessons:
             Welcome to the Internet:
               key: Witamy w Internecie
@@ -17101,6 +17174,7 @@ pl:
               name: Pakiety
             DNS and HTTP:
               key: DNS i HTTP
+              name: HTTP i DNS
             Project - Internet Dilemmas Part 1:
               key: Projekt - Dylematy z Internetem Część 1
             Project - Internet Dilemmas Part 2:
@@ -18052,7 +18126,7 @@ pl:
               name: Moc słów
               description_student: Nękanie nigdy nie jest w porządku. Ta lekcja ma Cię nauczyć, co jest w porządku, a co nie, jeśli chodzi o rzeczy, które mówi się w Internecie.
             lesson-11:
-              name: Utwórz Chat-Bot
+              name: 'Mini-projekt: Programy z danymi użytkownika'
               description_student: Zastosuj swoje nowe umiejętności ze zmiennymi do jednego z trzech otwartych projektów.
               description_teacher: Uczniowie zastosują swoje nowe umiejętności ze zmiennymi w jednym z trzech otwartych **mini-projektów**. Zapoznają się z przykładowymi programami, utworzą plan własnego projektu i zaprogramują go od podstaw.
           lesson_groups:
@@ -18132,7 +18206,7 @@ pl:
               description_student: Teraz rozumiesz już wyrażenia warunkowe, czas zaprogramować pszczółkę tak, aby użyć jej przy zbieraniu miodu i nektaru.
               description_teacher: Do tego momentu uczniowie pisali kod, który realizuje się dokładnie tak samo po każdym uruchomieniu - wiarygodny, ale niezbyt elastyczny. Na tej lekcji Twoja klasa rozpocznie kodować przy pomocy wyrażeń warunkowych, pozwalając im na pisanie kodu, który funkcjonuje inaczej, w zależności od konkretnych warunków, na które napotyka program.
             While Loops with the Farmer:
-              key: Pętle "dopóki" przy pomocy interfejsu Farmer
+              key: Pętle "dopóki" z Farmerem
               name: Pętle "dopóki" z Rolnikiem
               description_student: 'Pętle są przydatne do kodowania. Na tej lekcji nauczysz się o nowym rodzaju pętli: pętle "dopóki"!'
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -18350,7 +18424,7 @@ pl:
             blank-space-stories:
               name: Historie pustej przestrzeni
             user-input-programs:
-              name: Utwórz Chat-Bot
+              name: 'Mini-projekt: Programy z danymi użytkownika'
           lesson_groups:
             ramp_up:
               display_name: Wstęp
@@ -18728,11 +18802,17 @@ pl:
               description_teacher: "Na tej lekcji uczniowie rozwiązują swoje pierwsze zadanie w stylu pytania o wolną odpowiedź (FRQ). Zaznaczają pytanie jako klasę, a następnie implementują pełną klasę `SpiralPainter` w parach poprzez działanie w stylu „Dookoła świata”.\n\nCele tej lekcji są trojakie:\n\n-   Stworzenie poczucia ekscytacji i spełnienia podczas wypełniania FRQ\n-   Przećwiczenie pytania w stylu FRQ (napisane odręcznie)\n-   Podsumowujące ocenienie treści z Jednostki 1\n\nChociaż format tej FRQ nie jest taki sam jak FRQ na egzaminie AP, jest to element składowy pomagający uczniom przygotować się do rozwiązywania tego typu pytań. W miarę postępów uczniów podczas kursu, napotykane przez nich pytania FRQ powoli zbliżają się do rzeczywistych rzeczy. "
             lesson-20:
               name: Dzień sprawdzianu
+            lesson-24:
+              name: Java Lab
+            lesson-23:
+              name: Korzystanie z poleceń
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
           name: csa1-pilotaż
         csa2-pilot:
           lessons:
@@ -18771,11 +18851,17 @@ pl:
               name: Dzień sprawdzianu
             lesson-1:
               name: Jednostka 2 Badanie pilotażowe
+            lesson-16:
+              name: Java Lab
+            lesson-18:
+              name: Korzystanie z poleceń
           lesson_groups:
             lesson group:
               display_name: Treści
             lessonGroup-2:
               display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Piaskownica
           name: csa2-pilotaż
         csa3-pilot:
           lessons:
@@ -18813,11 +18899,17 @@ pl:
               name: Dzień sprawdzianu
             lesson-16:
               name: Jednostka 3 Badanie pilotażowe
+            lesson-17:
+              name: Java Lab
+            lesson-19:
+              name: Korzystanie z poleceń
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
           name: csa3-pilotaż
         csa4-pilot:
           lessons:
@@ -18827,7 +18919,14 @@ pl:
             lesson-7:
               description_student: Porównaliśmy dwa „int” lub „double” pod kątem równości, ale jak porównać obiekty? Co może oznaczać, że dwa 'łańcuchy' są równe? A co z dwoma pączkami? Odkrywasz, jak przetestować dwa obiekty pod kątem równości i wdrożyć swoje odkrycia w grze Pop the Balloons.
               description_teacher: uczniowie rozróżniają porównania obiektów i wartości pierwotnych. Badają efekty używania `==` lub `!=` z obiektami, aby zidentyfikować potrzebę zastosowania metody `equals()` do porównywania obiektów jako danych. Używając metody `equals()`, uczniowie dodają do gry Pop the Balloons, aby porównać obiekty `Balloon` i określić, czy pozostały prawidłowe ruchy.
+            lesson-8:
+              description_student: Przeglądasz instrukcje `jeśli/w przeciwnym razie` i używasz ich do implementowania alternatywnych działań na podstawie wartości wyrażenia logicznego. Stosujesz instrukcje `jeśli/w przeciwnym razie`, aby uzyskać dostęp do elementów z tablic i używasz metody `Math.random()`, aby uzyskać dostęp do elementów losowych. Następnie implementujesz instrukcje `jeśli/w przeciwnym razie` w grze Pop the Balloons, aby sprawdzić, czy ruch jest prawidłowy.
+              description_teacher: Uczniowie przeglądają instrukcje `jeśli/w przeciwnym razie` i używają ich do implementowania alternatywnych działań na podstawie wartości wyrażenia logicznego. Stosują instrukcje `jeśli/w przeciwnym razie`, aby uzyskać dostęp do elementów z tablic i używają metody `Math.random()`, aby uzyskać dostęp do elementów losowych. Następnie implementują instrukcje `jeśli/w przeciwnym razie` w grze Pop the Balloons, aby sprawdzić, czy ruch jest prawidłowy.
+            lesson-9:
+              description_student: Dzisiaj chodzi o ocenę wielu warunków w celu wybrania konkretnego pożądanego rezultatu. W The Neighborhood używa się instrukcji `jeśli/w przeciwnym razie-jeśli/w przeciwnym razie` do rozwiązywania problemów dla `Malarza`. Następnie implementujesz instrukcje `jeśli/w przeciwnym razie-jeśli/w przeciwnym razie` w grze Pop the Balloons, aby zaktualizować obraz balonu, jeśli został on wystrzelony.
+              description_teacher: Uczniowie stosują instrukcje 'jeśli/w przeciwnym razie-jeśli/w przeciwnym razie' do oceny wielu warunków, by wybrać określony pożądany wynik. Opracowują funkcję wyświetlania balonów w grze Pop the Balloons, używając instrukcji 'jeśli/w przeciwnym razie-jeśli/w przeciwnym razie', aby zmienić obraz balonu, jeśli został on wystrzelony.
             lesson-10:
+              description_student: Dowiesz się, jak pisać zagnieżdżone instrukcje i wyrażenia „jeśli” zawierające trzy operatory logiczne. Upraszczasz bardziej złożone wielokrotne warunki warunkowe, używając operatorów logicznych do rozwiązywania problemów. Wracasz do The Neighborhood i dodajesz zagnieżdżone instrukcja `jeśli`, aby rozwiązać dany problem dla `Malarza`. Następnie implementujesz zagnieżdżone instrukcje „jeśli” i operatory logiczne w grze Pop the Balloons, aby sprawdzić, ile pozostało ruchów i obliczyć wynik gry.
               description_teacher: Uczniowie badają problemy dotyczące wielu warunków i piszą zagnieżdżone instrukcje „jeśli”, aby utworzyć rozwiązania tych problemów. Piszą wyrażenia zawierające operatory logiczne w instrukcjach warunkowych i identyfikują wpływ operatorów logicznych na wynik wyrażenia. Zagnieżdżone instrukcje „jeśli” i operatory logiczne są następnie implementowane w grze Pop the Balloons, aby sprawdzić, ile ruchów pozostało i obliczyć wynik.
             lesson-12:
               description_student: Teraz, gdy masz już plan, dzisiejszym celem jest napisanie kodu. Rozwój silnika gry rozpoczynasz od przetłumaczenia pseudokodu na język Java. Przeglądasz kod i zastanawiasz się nad postępem, aby przygotować się do ostatecznego opracowania silnika gry.
@@ -18839,11 +18938,17 @@ pl:
               name: Dzień FRQ
             lesson-15:
               name: Dzień sprawdzianu
+            lesson-16:
+              name: Java Lab
+            lesson-18:
+              name: Korzystanie z poleceń
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Piaskownica
           name: csa4-pilotaż
         csa5-pilot:
           lessons:
@@ -18873,12 +18978,20 @@ pl:
               description_teacher: Uczniowie stosują standardowe algorytmy, które napisali w Jednostce 3, do tablic 2D, aby tworzyć efekty wizualne na obrazach. Kontynuują opracowywanie koncertu w Teatrze, pisząc metodę `grayscale()`, która znajduje średnią wartości RGB piksela na obrazie i ustawia piksel na tę średnią wartość. Uczniowie znajdują minimalne i maksymalne wartości koloru czerwonego, zielonego lub niebieskiego i używają tych wartości do ustawienia wszystkich innych wartości czerwonego, zielonego lub niebieskiego. Uczniowie uczestniczą w przeglądach kodu, aby dawać, otrzymywać i wdrażać informacje zwrotne na temat swoich nowych metod i postępów.
             lesson-7:
               name: Odwracanie elementów
+              description_student: Aby utworzyć efekt obrazu w Teatrze, stosuje się standardowe algorytmy, pisząc klasę `ReversedImage`, która tworzy odwróconą wersję obrazu. Włączasz poprzednie pomysły, których się nauczyłeś i funkcje Teatru, aby animować swój efekt i uwzględniać interakcję z użytkownikiem.
+              description_teacher: Uczniowie nadal stosują standardowe algorytmy do tworzenia efektów obrazu w Teatrze, pisząc klasę `ReversedImage`, która tworzy odwróconą wersję obrazu. Wykorzystują poprzednie pomysły i funkcje Teatru, aby animować ich efekt i uwzględniać interakcję z użytkownikiem.
             lesson-8:
               name: Przesuwanie elementów
+              description_student: Aby utworzyć efekt obrazu w Teatrze, stosuje się standardowe algorytmy, pisząc klasę `ShiftedImage`, która tworzy odwróconą wersję obrazu. Włączasz poprzednie pomysły, których się nauczyłeś i funkcje Teatru, aby animować swój efekt i uwzględniać interakcję z użytkownikiem.
+              description_teacher: Uczniowie nadal stosują standardowe algorytmy do tworzenia efektów obrazu w Teatrze, pisząc klasę `ReversedImage`, która tworzy odwróconą wersję obrazu. Wykorzystują poprzednie pomysły i funkcje Teatru, aby animować ich efekt i uwzględniać interakcję z użytkownikiem.
             lesson-9:
               name: Znajdowanie duplikatów
+              description_student: Wcześniej opracowałeś standardowy algorytm do znajdowania i zastępowania zduplikowanych wartości w tablicy 1D. W tej lekcji zastosujesz ten standardowy algorytm, aby znaleźć zduplikowane obiekty `Deser` w tablicy 2D. Przed napisaniem metody `removeDuplicates()` dokonujesz refaktoryzacji danych food trucka, aby utworzyć tablicę 2D obiektów `Deser`, do poprawiy organizacji inwentarza food trucka.
+              description_teacher: Uczniowie wcześniej opracowali standardowy algorytm do znajdowania i zastępowania zduplikowanych wartości w tablicy 1D. W tej lekcji zastosują ten standardowy algorytm, aby znaleźć zduplikowane obiekty `Deser` w tablicy 2D. Przed napisaniem metody `removeDuplicates()` dokonują refaktoryzacji danych food trucka, aby utworzyć tablicę 2D obiektów `Deser`, do poprawy organizacji inwentarza food trucka.
             lesson-10:
               name: Poszukiwanie elementów
+              description_student: Aby utworzyć efekt obrazu w Teatrze, stosuje się standardowe algorytmy, pisząc klasę `SepiaImage`, która stosuje efekt sepii na obrazie. Włączasz poprzednie pomysły, których się nauczyłeś i funkcje Teatru, aby animować swój efekt i uwzględniać interakcję z użytkownikiem.
+              description_teacher: Uczniowie nadal stosują standardowe algorytmy do tworzenia efektów obrazu w teatrze, pisząc klasę „SepiaImage”, która stosuje efekt sepii na obrazie. Uczniowie wykorzystują poprzednie pomysły i funkcje Teatru, aby animować ich efekt i uwzględniać interakcję z użytkownikiem.
             lesson-11:
               name: Projekt Zrównoważonego Sąsiedztwa - Dzień 1
             lesson-12:
@@ -19220,6 +19333,9 @@ pl:
           name: csd7-2021
           title: AI i uczenie maszynowe
         kodea-pd-2021:
+          description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org, z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
+          student_description: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org, z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
+          description_short: Dowiedz się, jak uczyć informatyki korzystając z Podstaw Informatyki Code.org, z pomocą tego bezpłatnego kursu internetowego, przerabianego we własnym tempie.
           lessons:
             Getting Started:
               key: Pierwsze kroki
@@ -19335,12 +19451,15 @@ pl:
           name: vpl-csp-2021
         self-paced-pl-csd1-2021:
           lessons:
+            lesson-1:
+              name: Witaj na Code.org
             lesson-4:
               name: Witaj
           lesson_groups:
             lessonGroup-2:
               display_name: Witaj
           name: self-paced-pl-csd1-2021
+          title: 'Moduł 1: Powitanie'
         self-paced-pl-csd2-2021:
           lessons:
             lesson-2:
@@ -19369,6 +19488,8 @@ pl:
           name: self-paced-pl-csd4-2021
         self-paced-pl-csd5-2021:
           lessons:
+            lesson-2:
+              name: Opracowywaniem stron internetowych
             lesson-3:
               name: Animacje i gry interaktywne
             lesson-4:
@@ -19405,6 +19526,10 @@ pl:
               name: Przygotowanie do uczenia Jednostki 3
             lesson-6:
               name: Dane i społeczeństwo
+            lesson-7:
+              name: Jednostka 6
+            lesson-8:
+              name: Przygotowanie do uczenia Jednostki 7
             lesson-9:
               name: Przykładowe prace ucznia
             lesson-10:
@@ -19459,6 +19584,9 @@ pl:
               name: Przykładowe prace ucznia
             lesson-35:
               name: Jednostka 1 Projekty
+          lesson_groups:
+            lessonGroup-8:
+              display_name: 'Przygotowanie do uczenia Jednostki 7: Sztuczna inteligencja i uczenie maszynowe'
           name: self-paced-pl-csd6-2021
         self-paced-pl-csd7-2021:
           name: self-paced-pl-csd7-2021
@@ -19532,6 +19660,7 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+          name: csa1-exemplars
         csa2-exemplars:
           lessons:
             lesson-2:
@@ -19561,6 +19690,7 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+          name: csa4-exemplars
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -19934,17 +20064,12 @@ pl:
               name: Dzień sprawdzianu
             lesson-1:
               key: lekcja 1
-              description_student: Na tej lekcji poznasz wartości inżynierii oprogramowania i sposoby, w jakie je praktykujesz w innych aspektach swojego życia. Pod koniec tej lekcji odkryjesz własną tożsamość inżynierii oprogramowania!
-              description_teacher: Wiara we własną tożsamość inżynierii oprogramowania rozwija pewność siebie i wytrwałość. Ta lekcja wprowadza podstawowe wartości inżynierii oprogramowania i bada typowe spostrzeżenia, jakie mogą mieć uczniowie. Zastanawiają się oni, jak już praktykują wiele z tych wartości, aby odkryć własną tożsamość inżynierii oprogramowania.
+              name: Java Lab
             lesson-2:
               key: lekcja 2
-              description_student: Zbadasz, jak działa The Neighborhood i poznasz niektóre kluczowe komponenty języka programowania Java. Spotykasz „Malarza” i wprowadzisz zmiany w kodzie, aby dowiedzieć się, co potrafi „Malarz".
-              description_teacher: 'Uczniowie korzystają z Java Lab, aby zbadać The Neighborhood i zapoznają się z klasą „Malarz”. Badają kod startowy i dokonują prostych modyfikacji, aby otrzymać różne wyniki za pomocą obiektu „Malarz” i ćwiczą tworzenie obiektu „Malarz”, aby zidentyfikować relacje między klasą a obiektem. '
             lesson-3:
               key: lekcja 3
               name: Korzystanie z poleceń
-              description_student: Teraz, gdy poznałeś „Malarza”, możesz użyć poleceń akcji w tej lekcji, aby przesunąć „Malarza” po okolicy. Dowiesz się o niektórych zasadach Javy, których musisz przestrzegać, aby Malarz się poruszał.
-              description_teacher: Podczas tej lekcji uczniowie wdrażają rozwiązania za pomocą poleceń akcji, aby poruszać „Malarzem” po okolicy. Rozwijają umiejętności myślenia komputacyjnego, tłumacząc rozwiązania na kod Java, ćwicząc powielanie wzorców. Podczas rozwiązywania tych problemów, uczą się, jak ważne jest uwzględnianie wielkości liter i średników w Javie, i są narażeni na użycie notacji kropkowej do wywoływania poleceń „Malarz”.
             lesson-4:
               key: lekcja 4
               name: Warunki i debugowanie
@@ -20017,6 +20142,8 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
           name: csa1-pilot-facilitator
         csa2-pilot-facilitator:
           lessons:
@@ -20061,12 +20188,9 @@ pl:
               description_teacher: Podczas tej lekcji bez komputerów uczniowie tworzą obiekty i reprezentują odpowiednie atrybuty za pomocą zmiennych instancji. Poznają różnicę między „publicznym” i „prywatnym” oraz cel hermetyzacji, aby ukryć wewnętrzną implementację obiektu.
             lesson-2:
               key: lekcja 2
-              name: Stosowanie zmiennych
             lesson-3:
               key: lekcja 3
-              name: Pisząc konstruktory
-              description_student: Projekt Mercury Pastries food truck potrzebuje Twojej pomocy! Właściciel chce sprzedawać desery w w Sąsiedztwie, ale musi mieć możliwość wprowadzania i przechowywania deserów w programie. Poproszono Cię o wykorzystanie umiejętności inżynierii oprogramowania do stworzenia programu, który może tworzyć obiekty deserowe, aby właściciel mógł śledzić swoje zapasy. Zaczynasz od utworzenia klasy „Deser”, aby właściciel mógł wprowadzić smak, dostępną ilość i cenę każdego sprzedawanego przez siebie deseru.
-              description_teacher: Uczniowie zapoznają się z projektem Mercury Pastries food truckem i potrzebą właściciela programu do wprowadzania i przechowywania deserów. Jako inżynierowie oprogramowania uczniowie  wykorzystują strategie projektowania zorientowanego obiektowo, aby zidentyfikować niezbędne atrybuty i odpowiednie typy danych dla klasy „Deser”. Uczniowie piszą konstruktor i używają obiektu `Skaner` w celu uzyskania wartości zmiennych instancji w celu zainicjowania obiektu`Deser`.
+              name: Korzystanie z poleceń
             lesson-4:
               key: lekcja 4
               name: Dodawanie wielu konstruktorów
@@ -20105,12 +20229,14 @@ pl:
               name: Dzień sprawdzianu
             lesson-1:
               key: lekcja 1
-              name: Jednostka 2 Badanie pilotażowe
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Treści
             lessonGroup-2:
               display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Piaskownica
           name: csa2-pilot-facilitator
         csa3-pilot-facilitator:
           lessons:
@@ -20150,19 +20276,12 @@ pl:
               name: Jednostka 3 Badanie pilotażowe
             lesson-1:
               key: lekcja 1
-              name: Tworzenie tablic
-              description_student: Właścicielka food trucka powiększyła swój asortyment deserów. Wcześniej musiałeś deklarować osobne zmienne, aby śledzić zapasy, ale co, jeśli masz 150 deserów? To byłoby wiele zmiennych! W tej lekcji dowiesz się, jak utworzyć tablicę jednowymiarową (1D), określić jej długość i użyć wartości indeksu, aby uzyskać dostęp do poszczególnych elementów.
-              description_teacher: Na tej lekcji bez komputerów, uczniowie tworzą jednowymiarowe (1D) tablice do przechowywania list wartości. Uczniowie uczą się, jak odnosić się do długości tablicy 1D i uzyskiwać dostęp do poszczególnych elementów, które są przechowywane.
+              name: Java Lab
             lesson-2:
               key: lekcja 2
-              name: Uzyskiwanie dostępu i modyfikowanie elementów
-              description_student: Tablice do przechowywania wartości tworzy się za pomocą słowa kluczowego „new”. Eksplorujesz The Theatre, który pozwala manipulować dźwiękami i kształtami. Korzystasz z The Neighborhood i The Theatre, aby ćwiczyć dostęp i modyfikowanie elementów w tablicach za pomocą wartości indeksów.
-              description_teacher: Podczas tej lekcji uczniowie tworzą tablice do przechowywania wartości za pomocą słowa kluczowego „nowy”. Eksplorują Teatr, który pozwala im manipulować dźwiękami i kształtami. Używają Sąsiedztwa i Teatr, aby ćwiczyć dostęp i modyfikowanie elementów w tablicach za pomocą wartości indeksów.
             lesson-3:
               key: lekcja 3
-              name: Trawersowanie tablic z pętlami "dla"
-              description_student: Na tej lekcji dowiesz się o pętlach „dla” i sposobach ich używania do przechodzenia przez tablice. Ponownie odwiedzasz Sąsiedztwo i użyjesz tabel śledzenia, aby udokumentować, jak kod jest wykonywany w pętli "dla". Użyjesz pętli „dla” do rozwiązywania problemów w Sąsiedztwie i uzyskasz informacje zwrotne na temat swojej pracy poprzez przegląd kodu.
-              description_teacher: Uczniowie piszą pętle „dla” do przechodzenia przez tablice oraz do wyszukiwania i modyfikowania elementów spełniających określone warunki. Ponownie odwiedzają Sąsiedztwo i używają tabel śledzenia do udokumentowania, jak kod działa w pętli „dla”. Uczestniczą w przeglądzie kodu po ukończeniu wybranego poziomu i poprawiają swój kod.
+              name: Korzystanie z poleceń
             lesson-4:
               key: lekcja 4
               name: Trawersowanie tablic z pętlami "dopóki"
@@ -20208,6 +20327,8 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
           name: csa3-pilot-facilitator
         csa4-pilot-facilitator:
           lessons:
@@ -20238,8 +20359,10 @@ pl:
               name: Dzień sprawdzianu
             lesson-1:
               key: lekcja 1
+              name: Java Lab
             lesson-3:
               key: lekcja 3
+              name: Korzystanie z poleceń
             lesson-4:
               key: lekcja 4
             lesson-5:
@@ -20258,8 +20381,6 @@ pl:
               key: lekcja 11
             lesson-2:
               key: lekcja 2
-              description_student: W tym projekcie projektujesz podstawowe elementy prostej gry, planując i rozwijając silnik gry. Nakreślasz mechanikę gry, pseudokodujesz każdy komponent, a następnie używasz interaktywnego procesu projektowania, aby stworzyć grę, która reaguje na interakcję użytkownika. Pod koniec tego projektu bierzesz udział w imprezie blokowej, aby grać nawzajem w gry!
-              description_teacher: Studenci projektują i budują silnik gry dla tego projektu, skupiając się przede wszystkim na logice warunkowej potrzebnej do tego, aby gra była interaktywna i responsywna. Rozpoczynają od wybrania prostej gry i określenia jej podstawowych funkcji. Piszą pseudokod dla tych komponentów i rozpoczynają rozwijanie swojego projektu.
             lesson-12:
               key: lekcja 12
               description_student: Teraz, gdy masz już plan, dzisiejszym celem jest napisanie kodu. Rozwój silnika gry rozpoczynasz od przetłumaczenia pseudokodu na język Java. Przeglądasz kod i zastanawiasz się nad postępem, aby przygotować się do ostatecznego opracowania silnika gry.
@@ -20279,6 +20400,8 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Piaskownica
           name: csa4-pilot-facilitator
         csa5-pilot-facilitator:
           lessons:
@@ -20502,6 +20625,20 @@ pl:
               name: Narzędzia
             lesson-4:
               name: Badanie obiektów całkowitych i podwójnych
+            lesson-8:
+              name: Metody przeciążania
+            lesson-9:
+              name: Dostęp do zachowania obiektu
+            lesson-10:
+              name: Nadrzędne metody
+            lesson-11:
+              name: Odkrywanie metod rekurencyjnych
+            lesson-12:
+              name: Porównanie rozwiązań rekurencyjnych i iteracyjnych
+            lesson-13:
+              name: Pisanie metod rekurencyjnych
+            lesson-14:
+              name: Maksymalizacja niezawodności systemu
           lesson_groups:
             lessonGroup-2:
               display_name: Lekcje
@@ -20562,6 +20699,8 @@ pl:
           lessons:
             lesson-1:
               name: Godzina kodowania - Etyka AI
+              description_student: Wspólnie badaj etykę AI i stwórz kodeks postępowania, który można udostępnić.
+              description_teacher: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI). Następnie każda grupa opracowuje co najmniej jedną zasadę zorientowaną na rozwiązanie, która odnosi się do wybranego obszaru. Zasady te są następnie łączone w ogólnoklasowy zasób „Nasz kodeks etyki sztucznej inteligencji” (np. prezentacja slajdów, dokument lub strona internetowa) dla twórców sztucznej inteligencji i ustawodawców na całym świecie.
           name: ai-ethics
           title: Godzina kodowania - Etyka AI
           description_audience: klasy 6-12
@@ -20569,9 +20708,41 @@ pl:
           description: W małych grupach uczniowie prowadzą badania, korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez siebie obszarze sztucznej inteligencji (AI). Następnie każda grupa opracowuje co najmniej jedną zasadę zorientowaną na rozwiązanie, która odnosi się do wybranego obszaru. Zasady te są następnie łączone w ogólnoklasowy zasób „Nasz kodeks etyki sztucznej inteligencji” (np. prezentacja slajdów, dokument lub strona internetowa) dla twórców sztucznej inteligencji i ustawodawców na całym świecie.
           student_description: Przeprowadź badania korzystając z artykułów i filmów, które ujawniają etyczne pułapki w wybranym przez Ciebie obszarze sztucznej inteligencji (AI).
         dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Potańcówka: bez komputera'
+              description_student: 'Zrób potańcówkę, aby dowiedzieć się o zdarzeniach. '
+              description_teacher: Uczniowie dowiedzą się, że zdarzenia są przydatnym sposobem sterowania akcjami, a nawet mogą być stosowane do spowodowania, że wiele wydarzy się synchronicznie. W programowaniu zdarzenia są wykorzystywane, by reagować na działania użytkownika (np. na naciśnięcie przycisku lub kliknięcie myszką). Zdarzenia mogą uczynić Twój program bardziej interesującym i interaktywnym.
           name: dance-unplugged
           title: Godzina Kodowania - Potańcówka - Bez komputera
           description_audience: klasy 0-12
           description_short: Uczniowie w każdym wieku otrzymują wstępne doświadczenia z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku i uczą się myśleć o kontrolowaniu działań za pomocą zdarzeń.
           description: Uczniowie dowiedzą się, że zdarzenia są przydatnym sposobem sterowania akcjami, a nawet mogą być stosowane do spowodowania, że wiele wydarzy się synchronicznie. W programowaniu zdarzenia są wykorzystywane, by reagować na działania użytkownika (np. na naciśnięcie przycisku lub kliknięcie myszką). Zdarzenia mogą uczynić Twój program bardziej interesującym i interaktywnym.
           student_description: Naucz się myśleć o kontrolowaniu działań za pomocą zdarzeń. Zdarzenia są szeroko stosowane w programowaniu i powinny być łatwo rozpoznawalne po tej lekcji.
+        csc-things:
+          lessons:
+            lesson-1:
+              name: Papier do szkicowania poezji
+          name: csc-things
+          title: CSC Zrzut mózgu
+          description: To dopiero prace w toku :)
+        poetry-hoc2:
+          lessons:
+            lesson-1:
+              name: Poezja Godziny Kodowania v2
+          name: poetry-hoc2
+          title: Poezja Godziny Kodowania v2
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: Badanie nastroju
+          name: poetry-hoc3
+          title: Poezja Godziny Kodowania v3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Wyzwanie efektu duszka
+          name: spritelab-effects-challenge
+          title: Wyzwanie efektu duszka
+          description_audience: Średnio zaawansowani/zaawansowani użytkownicy Sprite Lab
+          description_short: Podejmij wyzwanie stworzenia własnego efektu duszka za pomocą Sprite Lab!

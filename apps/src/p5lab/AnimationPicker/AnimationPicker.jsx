@@ -11,10 +11,12 @@ import {
   pickLibraryAnimation,
   beginUpload,
   handleUploadComplete,
-  handleUploadError
+  handleUploadError,
+  saveSelectedAnimations
 } from '../redux/animationPicker';
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
+import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
@@ -52,13 +54,15 @@ class AnimationPicker extends React.Component {
     uploadInProgress: PropTypes.bool.isRequired,
     uploadError: PropTypes.string,
     is13Plus: PropTypes.bool,
+    selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     onClose: PropTypes.func.isRequired,
     onPickNewAnimation: PropTypes.func.isRequired,
     onPickLibraryAnimation: PropTypes.func.isRequired,
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
-    playAnimations: PropTypes.bool.isRequired
+    playAnimations: PropTypes.bool.isRequired,
+    onAnimationSelectionComplete: PropTypes.func.isRequired
   };
 
   onUploadClick = () => this.refs.uploader.openFileChooser();
@@ -77,6 +81,7 @@ class AnimationPicker extends React.Component {
         onDrawYourOwnClick={this.props.onPickNewAnimation}
         onPickLibraryAnimation={this.props.onPickLibraryAnimation}
         onUploadClick={this.onUploadClick}
+        onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
         playAnimations={this.props.playAnimations}
         libraryManifest={this.props.libraryManifest}
         hideUploadOption={this.props.hideUploadOption}
@@ -85,6 +90,7 @@ class AnimationPicker extends React.Component {
         defaultQuery={this.props.defaultQuery}
         hideBackgrounds={this.props.hideBackgrounds}
         canDraw={this.props.canDraw}
+        selectedAnimations={this.props.selectedAnimations}
       />
     );
   }
@@ -128,7 +134,8 @@ export default connect(
     uploadInProgress: state.animationPicker.uploadInProgress,
     uploadError: state.animationPicker.uploadError,
     is13Plus: state.pageConstants.is13Plus,
-    playAnimations: !state.pageConstants.allAnimationsSingleFrame
+    playAnimations: !state.pageConstants.allAnimationsSingleFrame,
+    selectedAnimations: Object.values(state.animationPicker.selectedAnimations)
   }),
   dispatch => ({
     onClose() {
@@ -137,8 +144,8 @@ export default connect(
     onPickNewAnimation() {
       dispatch(pickNewAnimation());
     },
-    onPickLibraryAnimation(animation) {
-      dispatch(pickLibraryAnimation(animation));
+    onPickLibraryAnimation(animation, isMultiSelectEnabled) {
+      dispatch(pickLibraryAnimation(animation, isMultiSelectEnabled));
     },
     onUploadStart(data) {
       if (data.files[0].size >= MAX_UPLOAD_SIZE) {
@@ -158,6 +165,9 @@ export default connect(
     },
     onUploadError(status) {
       dispatch(handleUploadError(status));
+    },
+    onAnimationSelectionComplete() {
+      dispatch(saveSelectedAnimations());
     }
   })
 )(AnimationPicker);

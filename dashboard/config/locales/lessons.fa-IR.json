@@ -2,6 +2,12 @@
   "fa-IR": {
     "data": {
       "lessons": {
+        "hello-world-food/lesson-1": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "coursef-2021/lesson-6": {
           "overview": "",
           "preparation": "",

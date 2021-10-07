@@ -179,6 +179,8 @@ pt:
           lessons:
             Artist:
               name: Artista
+              description_student: Crie belas imagens programando o Artista.
+              description_teacher: Nesta lição, os alunos assumirão o controle do Artista para concluir os desenhos na tela. Esta etapa do Artista permitirá que os alunos criem imagens de complexidade crescente usando novos blocos como "avançar em 100 pixels" e "virar à direita em 90 graus".
           student_description: Faça desenhos e figuras legais com o Artista!
         hourofcode:
           title: Labirinto clássico
@@ -194,7 +196,7 @@ pt:
           description_short: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
           lessons:
             Artist:
-              name: Artista
+              name: Programação com Anna e Elsa
           student_description: Vamos usar programação para explorar a magia e a beleza do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto patina no gelo e cria um país das maravilhas congelante que pode compartilhar com seus amigos!
         course4:
           title: Curso 4
@@ -338,7 +340,7 @@ pt:
           description_short: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratório Infinito Disney
           student_description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
         algebrademo:
           title: Demonstração de algébra
@@ -1768,9 +1770,6 @@ pt:
         starwarsblocks:
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
-          lessons:
-            Hour of Code 2015:
-              name: Hora do Código 2015
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
         mc:
           title: Hora do Código Minecraft
@@ -1787,6 +1786,7 @@ pt:
           lessons:
             Oceans:
               name: Oceanos
+              description_student: 'Resumo do Tutorial: primeiro os estudantes classificam objetos como "peixe" ou "não peixe" para tentar remover o lixo do oceano. Em seguida, eles precisarão expandir seu conjunto de dados para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, irão escolher suas próprias marcações para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que depois deve ser capaz de marcar novas imagens sozinho.'
           student_description: Aprenda como a Inteligência Artificial e aprendizado de máquina pode ser usado para resolver problemas mundiais.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3539,7 +3539,8 @@ pt:
           description: Escolha seu time e faça um jogo de basquete
           lessons:
             Bounce:
-              name: Pingue-pongue
+              description_student: Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!
+              description_teacher: Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.
           student_description: Escolha seu time e faça um jogo de basquete
         sample-csp5:
           lessons:
@@ -4108,7 +4109,8 @@ pt:
           description: Esportes
           lessons:
             Sports:
-              name: Esportes
+              description_student: Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!
+              description_teacher: Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.
           student_description: Esportes
         2016_sciencePD-phase2b:
           lessons:
@@ -6859,7 +6861,7 @@ pt:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft : Hora do Código da Jornada do Herói'
             Minecraft Hour of Code:
-              name: Hora do Código Minecraft
+              name: 'Minecraft: Jornada do Herói'
           student_description: O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código.
         applab-intro-staging:
           title: Introdução ao armazenamento temporário do App Lab
@@ -9279,7 +9281,7 @@ pt:
           description: Minecraft está de volta com uma nova atividade! Use sua criatividade e habilidade de resolver problemas para explorar e construir mundos submarinos usando código.
           lessons:
             Aquatic:
-              name: Aquático
+              name: 'Minecraft: Viagem Aquática'
           student_description: Minecraft está de volta com uma nova atividade! Use sua criatividade e habilidade de resolver problemas para explorar e construir mundos submarinos usando código.
         sconyers:
           title: Parque da Tracey
@@ -12039,7 +12041,7 @@ pt:
               display_name: Questionário
           lessons:
             CSD post-course survey:
-              name: CSD pesquisa pós-curso
+              name: CSD pesquisa pós-curso de estudantes ('18'19)
           student_description: |-
             A pesquisa pós-curso do CS Discoveries é uma ferramenta importante que usamos para obter feedback de você e fazer melhorias no curso.
              A pesquisa é privada e anônima - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
@@ -12053,7 +12055,7 @@ pt:
               display_name: Questionário
           lessons:
             CSP post-course survey:
-              name: Pesquisa Pós-Curso PCC
+              name: Inquérito pós-curso do aluno CSP ('18 -'19)
           student_description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org. Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas são privadas e anônimas - seu professor pode ver resultados agregados anônimos para toda a turma. Os resultados são vitais para o seu professor e para o Code.org sustentar e melhorar o curso. Obrigado pelo seu tempo e consideração.
         csp5-pilot:
           title: CSP Unidade Piloto Pilot - Listas, Loops e Travessias
@@ -17627,3 +17629,7 @@ pt:
               display_name: Conteúdo
             lessonGroup-2:
               display_name: Conteúdo
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Festa: Desconectada'

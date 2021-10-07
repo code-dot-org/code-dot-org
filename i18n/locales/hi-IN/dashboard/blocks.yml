@@ -1130,6 +1130,15 @@ hi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": चरमराना
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": बुदबुदा रहा है
+            "'sound://category_animals/bear.mp3'": भालू
+            "'sound://category_animals/cat.mp3'": बिल्ली
+            "'sound://category_animals/cow.mp3'": गाय
+            "'sound://category_animals/sheep.mp3'": भेड़
+            "'sound://category_animals/chicken.mp3'": murghi
+            "'sound://category_animals/dolphin.mp3'": डॉल्फिन
+            "'sound://category_animals/chick.mp3'": मुर्गी का बच्चा
+            "'sound://category_animals/dog.mp3'": कुत्ता
             "'sound://category_digital/jump_7.mp3'": कूदें
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION} की ओर संकेत दें"
@@ -1571,10 +1580,17 @@ hi:
         text: "{SPRITE} का x निर्देशांक"
       Mikelab_yLocationOf:
         text: "{SPRITE} का y निर्देशांक"
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': बारिश
+      Poetry_makeNewSpriteAnon:
+        text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
+      Poetry_playSound:
         text: प्लेसाउंड {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: पृष्ठभूमि प्रभाव सेट करें {EFFECT} {PALETTE}
+      Poetry_setBackground:
+        text: पृष्ठभूमि का रंग {COLOR} सेट करें
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': रंग
@@ -1584,10 +1600,9 @@ hi:
             '"ripples"': लहरें
           PALETTE:
             '"rainbow"': इंद्रधनुष
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: पृष्ठभूमि के तौर पर {IMG} सेट करें
-      PoemBot_setForegroundEffect:
-        text: आगे के भाग का प्रभाव {EFFECT} सेट करें
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': बारिश
@@ -1595,6 +1610,20 @@ hi:
             '"hearts"': रंगीन दिल
             '"confetti"': कॉन्फेटी
             '"starburst"': स्टारबर्स्ट
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': १
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: आगे जाएं
       RyanLab_turnLeft:

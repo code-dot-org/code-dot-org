@@ -34,6 +34,8 @@ import {hasInstructions} from './utils';
 import * as topInstructionsDataApi from './topInstructionsDataApi';
 import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
+import Button from '../Button';
+import i18n from '@cdo/locale';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -65,6 +67,7 @@ class TopInstructions extends Component {
   static propTypes = {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
+    exampleSolutions: PropTypes.array,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
@@ -553,6 +556,7 @@ class TopInstructions extends Component {
       dynamicInstructionsKey,
       overlayVisible,
       hasContainedLevels,
+      exampleSolutions,
       noInstructionsWhenCollapsed,
       noVisualization,
       isRtl,
@@ -620,8 +624,8 @@ class TopInstructions extends Component {
 
     const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
-    // If we're displaying the review tab the teacher can leave feedback in that tab
-    // so we hide the teacher feedback tab if there's no rubric to avoid confusion about
+    // If we're displaying the review tab (for CSA peer review) the teacher can leave feedback in that tab,
+    // in that case we hide the feedback tab (unless there's a rubric) to avoid confusion about
     // where the teacher should leave feedback
     const displayFeedback =
       !!rubric ||
@@ -647,6 +651,7 @@ class TopInstructions extends Component {
       isMinecraft,
       ttsLongInstructionsUrl,
       hasContainedLevels,
+      exampleSolutions,
       isRtl,
       documentationUrl,
       teacherMarkdown,
@@ -727,6 +732,24 @@ class TopInstructions extends Component {
                 onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
               />
             )}
+            {tabSelected === TabType.TEACHER_ONLY &&
+              exampleSolutions.length > 0 && (
+                <div style={styles.exampleSolutions}>
+                  {exampleSolutions.map((example, index) => (
+                    <Button
+                      __useDeprecatedTag
+                      key={index}
+                      text={i18n.exampleSolution({number: index + 1})}
+                      color={Button.ButtonColor.blue}
+                      href={example}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ref={ref => (this.teacherOnlyTab = ref)}
+                      style={styles.exampleSolutionButton}
+                    />
+                  ))}
+                </div>
+              )}
             {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (
                 <div>
@@ -810,6 +833,12 @@ const styles = {
   },
   dynamicInstructionsWithOverlay: {
     zIndex: OVERLAY_Z_INDEX + 1
+  },
+  exampleSolutions: {
+    marginTop: 10
+  },
+  exampleSolutionButton: {
+    marginLeft: 20
   }
 };
 // Note: usually the unconnected component is only used for tests, in this case it is used
@@ -848,7 +877,9 @@ export default connect(
     isRtl: state.isRtl,
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
-    overlayVisible: state.instructions.overlayVisible
+    overlayVisible: state.instructions.overlayVisible,
+    exampleSolutions:
+      (state.pageConstants && state.pageConstants.exampleSolutions) || []
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

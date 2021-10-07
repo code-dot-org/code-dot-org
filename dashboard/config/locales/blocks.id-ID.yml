@@ -1148,6 +1148,16 @@ id:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": menjongkok
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Gelembung
+            "'sound://category_animals/bear.mp3'": beruang
+            "'sound://category_animals/cat.mp3'": kucing
+            "'sound://category_animals/cow.mp3'": sapi
+            "'sound://category_animals/sheep.mp3'": domba
+            "'sound://category_animals/chicken.mp3'": ayam
+            "'sound://category_animals/elephant.mp3'": Gajah
+            "'sound://category_animals/dolphin.mp3'": lumba-lumba
+            "'sound://category_animals/chick.mp3'": Anak aym
+            "'sound://category_animals/dog.mp3'": anjing
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
@@ -1595,9 +1605,17 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
-      PoemBot_playSound:
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': hujan
+      Poetry_makeNewSpriteAnon:
+        text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
+      Poetry_playSound:
         text: Playsound {SOUND}
-      PoemBot_setBackgroundEffect:
+      Poetry_setBackground:
+        text: tetapkan warna latar belakang {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Warna
@@ -1607,10 +1625,9 @@ id:
             '"ripples"': Riak
           PALETTE:
             '"rainbow"': Pelangi
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: atur latar belakang ke {IMG}
-      PoemBot_setForegroundEffect:
-        text: tetapkan efek latar depan {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Hujan
@@ -1618,7 +1635,7 @@ id:
             '"hearts"': Hati Penuh Warna
             '"confetti"': Konfeti
             '"starburst"': Semburan bintang
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             growing: pertumbuhan
@@ -1627,7 +1644,7 @@ id:
             spinning_left: berputar ke kiri
             spinning_right: berputar ke kanan
             wandering: pengembaraan
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             growing: pertumbuhan
@@ -1636,6 +1653,20 @@ id:
             spinning_left: berputar ke kiri
             spinning_right: berputar ke kanan
             wandering: pengembaraan
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: Gerak maju
       RyanLab_turnLeft:

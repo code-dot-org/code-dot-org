@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
 
@@ -12,37 +13,44 @@ import Button from '@cdo/apps/templates/Button';
  * Includes a FooterButton component that appropriately styles buttons for the dialog.
  */
 
+const FooterButtonType = makeEnum('cancel', 'confirm', 'default');
+const FooterButtonColor = {
+  [FooterButtonType.cancel]: Button.ButtonColor.gray,
+  [FooterButtonType.confirm]: Button.ButtonColor.orange
+};
+
+const DialogStyle = makeEnum('default', 'simple');
+
 export function FooterButton(props) {
-  const isConfirm = props.type === 'confirm';
-  const isCancel = props.type === 'cancel';
-  const color = props.color || (isConfirm && 'orange') || (isCancel && 'gray');
+  function color() {
+    if (props.color) {
+      return props.color;
+    }
+
+    return FooterButtonColor[props.type];
+  }
 
   // TODO: We shouldn't need to override <Button/> styles -- they should likely be default.
   // Tracked by https://codedotorg.atlassian.net/browse/STAR-1616.
   const style = {
     ...styles.buttons.all,
-    ...(isConfirm && styles.buttons.confirmation)
+    ...(styles.buttons[props.type] || {})
   };
 
-  return (
-    <Button
-      style={style}
-      color={typeof color === 'string' ? color : undefined}
-      {...props}
-    />
-  );
+  return <Button style={style} color={color()} {...props} />;
 }
 
 // This component renders a <Button/>, so it will also accept/require any propTypes
 // from that component.
 FooterButton.propTypes = {
-  type: PropTypes.oneOf(['confirm', 'cancel', 'default']).isRequired,
+  type: PropTypes.oneOf(Object.keys(FooterButtonType)).isRequired,
   color: PropTypes.string
 };
 
 FooterButton.defaultProps = {
-  type: 'default'
+  type: FooterButtonType.default
 };
+
 export default function StylizedBaseDialog(props) {
   // Remove any props that should *not* be passed through to <BaseDialog/>.
   function passThroughProps() {
@@ -53,16 +61,27 @@ export default function StylizedBaseDialog(props) {
     return passThrough;
   }
 
+  function renderTitle() {
+    const {title} = props;
+    if (typeof title === 'string') {
+      return <h1 style={styles.title}>{title}</h1>;
+    } else {
+      return title;
+    }
+  }
+
+  const horizontalRule =
+    props.type === DialogStyle.simple ? null : <hr style={styles.hr} />;
   const defaultButtons = [
     <FooterButton
       key="cancel"
-      type="cancel"
+      type={FooterButtonType.cancel}
       text={props.cancellationButtonText}
       onClick={props.handleCancellation || props.handleClose}
     />,
     <FooterButton
       key="confirm"
-      type="confirm"
+      type={FooterButtonType.confirm}
       text={props.confirmationButtonText}
       onClick={props.handleConfirmation || props.handleClose}
     />
@@ -70,14 +89,23 @@ export default function StylizedBaseDialog(props) {
 
   return (
     <BaseDialog {...passThroughProps()} useUpdatedStyles>
-      <div style={styles.container}>
-        <h1 style={styles.title}>{props.title}</h1>
+      {props.title && (
+        <>
+          <div style={styles.container}>{renderTitle()}</div>
+          {horizontalRule}
+        </>
+      )}
+      <div
+        style={{
+          ...styles.container,
+          ...(styles.body[props.type] || {})
+        }}
+      >
+        {props.body}
       </div>
-      <hr style={styles.hr} />
-      <div style={{...styles.container, ...styles.body}}>{props.body}</div>
       {!props.hideFooter && (
         <div>
-          <hr style={styles.hr} />
+          {horizontalRule}
           <div
             style={{
               ...styles.container,
@@ -94,7 +122,7 @@ export default function StylizedBaseDialog(props) {
 }
 
 StylizedBaseDialog.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
   body: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
   footerJustification: PropTypes.oneOf([
     'flex-start',
@@ -107,7 +135,8 @@ StylizedBaseDialog.propTypes = {
   cancellationButtonText: PropTypes.string.isRequired,
   handleConfirmation: PropTypes.func,
   handleClose: PropTypes.func.isRequired,
-  handleCancellation: PropTypes.func
+  handleCancellation: PropTypes.func,
+  type: PropTypes.oneOf(Object.keys(DialogStyle))
 };
 
 StylizedBaseDialog.defaultProps = {
@@ -115,7 +144,8 @@ StylizedBaseDialog.defaultProps = {
   renderFooter: buttons => buttons,
   hideFooter: false,
   confirmationButtonText: i18n.dialogOK(),
-  cancellationButtonText: i18n.dialogCancel()
+  cancellationButtonText: i18n.dialogCancel(),
+  type: DialogStyle.default
 };
 
 const GUTTER = 20;
@@ -131,7 +161,7 @@ const styles = {
     borderColor: color.lighter_gray
   },
   body: {
-    padding: GUTTER
+    [DialogStyle.default]: {padding: GUTTER}
   },
   footer: {
     display: 'flex',
@@ -140,6 +170,6 @@ const styles = {
   },
   buttons: {
     all: {boxShadow: 'none'},
-    confirmation: {borderColor: color.orange}
+    [FooterButtonType.confirm]: {borderColor: color.orange}
   }
 };

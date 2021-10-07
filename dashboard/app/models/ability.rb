@@ -46,10 +46,7 @@ class Ability
       Pd::Application::ApplicationBase,
       Pd::Application::Facilitator1819Application,
       Pd::Application::Facilitator1920Application,
-      Pd::Application::Teacher1819Application,
-      Pd::Application::Teacher1920Application,
-      Pd::Application::Teacher2021Application,
-      Pd::Application::Teacher2122Application,
+      Pd::Application::TeacherApplication,
       Pd::InternationalOptIn,
       :maker_discount,
       :edit_manifest,
@@ -331,10 +328,13 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingExpression,
         UnitGroup,
+        Resource,
         Script,
         ScriptLevel,
         Video,
+        Vocabulary,
         :foorm_editor,
         Foorm::Form,
         Foorm::Library,
@@ -370,11 +370,10 @@ class Ability
     # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
       if user.has_pilot_experiment?(CSA_PILOT) ||
-        (!user.teachers.empty? &&
-          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)}) ||
+        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)} ||
           user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
-        (!user.teachers.empty? &&
-          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)})
+          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)}
+
         can :get_access_token, :javabuilder_session
       end
     end

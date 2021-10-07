@@ -5,10 +5,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
     only: [:join_session, :confirm_join_session]
 
-  def csd_or_csp_workshop
-    [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].include?(@workshop.course)
-  end
-
   # GET /pd/workshops/1/enroll
   def new
     view_options(no_footer: true, answerdash: true)
@@ -85,7 +81,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
           enrollment: @enrollment,
           facilitators: facilitators,
           workshop_enrollment_status: "unsubmitted",
-          previous_courses: Pd::Teacher2021ApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
+          previous_courses: Pd::TeacherApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
           collect_demographics: collect_demographics
         }.to_json
       }

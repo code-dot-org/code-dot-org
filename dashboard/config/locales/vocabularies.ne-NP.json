@@ -17,8 +17,14 @@
         "debugging/courseb/2021": {
           "word": "Debugging"
         },
+        "drop/courseb/2021": {
+          "word": "खसाल्नु"
+        },
         "debugging/coursea/2021": {
           "word": "Debugging"
+        },
+        "drop/coursea/2021": {
+          "word": "खसाल्नु"
         },
         "debugging/coursec/2021": {
           "word": "Debugging"
@@ -50,6 +56,9 @@
         "define/express/2021": {
           "word": "परिभाषित गर्नुहोस्"
         },
+        "drop/pre-express/2021": {
+          "word": "खसाल्नु"
+        },
         "debugging/pre-express/2021": {
           "word": "Debugging"
         },
@@ -57,7 +66,7 @@
           "word": "व्यवहार"
         },
         "copyright/coursee/2021": {
-          "word": "Copyright"
+          "word": "प्रतिलिपि अधिकार"
         },
         "function/coursee/2021": {
           "word": "Function"
