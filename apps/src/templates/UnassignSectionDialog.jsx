@@ -20,7 +20,10 @@ class UnassignSectionDialog extends Component {
 
   close = () => this.props.onClose();
 
-  unassign = () => this.props.unassignSection(this.props.sectionId);
+  unassign = () => {
+    this.props.unassignSection(this.props.sectionId);
+    this.close();
+  };
 
   render() {
     const {isOpen, courseName, sectionName} = this.props;
@@ -48,7 +51,7 @@ class UnassignSectionDialog extends Component {
             text={i18n.dialogCancel()}
             onClick={this.close}
             color={Button.ButtonColor.gray}
-            className="no-mc"
+            className="no-mc ui-unassign-cancel-button"
           />
           <Button
             __useDeprecatedTag
