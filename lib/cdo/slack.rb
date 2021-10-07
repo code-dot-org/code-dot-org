@@ -2,6 +2,7 @@ require 'uri'
 require 'net/http'
 require 'retryable'
 require 'json'
+require 'cdo/honeybadger'
 
 class Slack
   COLOR_MAP = {
@@ -30,7 +31,8 @@ class Slack
     'server-operations' => 'C0CCSS3PX'
   }.freeze
 
-  SLACK_TOKEN = CDO.slack_token.freeze
+  SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
+  SLACK_BOT_TOKEN = CDO.methods.include?(:slack_bot_token) ? CDO.slack_bot_token.freeze : nil
 
   # Returns the user (mention) name of the user.
   # WARNING: Does not include the mention character '@'.
@@ -39,6 +41,7 @@ class Slack
   # @return [nil | String] The user (mention) name for the Slack user.
   def self.user_name(email)
     members = post_to_slack("https://slack.com/api/users.list")['members']
+    raise "Failed to query users.list" unless members
     user = members.find {|member| email == member['profile']['email']}
     raise "Slack email #{email} not found" unless user
     user['name']
@@ -46,6 +49,7 @@ class Slack
 
   def self.user_id(name)
     members = post_to_slack("https://slack.com/api/users.list")['members']
+    raise "Failed to query users.list" unless members
     user = members.find {|member| name == member['name']}
     raise "Slack user #{name} not found" unless user
     user['id']
@@ -62,8 +66,7 @@ class Slack
     return nil unless channel_id
 
     response = post_to_slack("https://slack.com/api/conversations.info?channel=#{channel_id}")
-
-    return nil unless response['ok']
+    return nil unless response
     replace_user_links(response['channel']['topic']['value'])
   end
 
@@ -84,8 +87,8 @@ class Slack
     payload = {"channel" => channel_id, "topic" => new_topic}
     result = post_to_slack(url, payload)
 
-    raise "Failed to update_topic, with error: #{result['error']}" if result['error']
-    result['ok']
+    raise "Failed to update topic in #{channel_name}" unless result
+    return true
   end
 
   def self.replace_user_links(message)
@@ -93,13 +96,15 @@ class Slack
   end
 
   # @param user_id [String] The user whose name you are looking for.
-  # @return [String] Slack 'display_name' if one is set, otherwise Slack 'real_name'.
+  # @return [String] Slack 'display_name' if one is set, otherwise Slack 'name'.
   #   Returns provided user_id if not found.
   def self.get_display_name(user_id)
     response = post_to_slack("https://slack.com/api/users.info?user=#{user_id}")
-    return user_id unless response['ok']
-    return response['user']['profile']['display_name'] unless response['user']['profile']['display_name'] == ""
-    response['user']['real_name']
+
+    return user_id unless response
+    profile = response['user']['profile']
+    return profile['display_name'] unless profile['display_name'] == ""
+    response['user']['name']
   end
 
   # For more information about the Slack API, see
@@ -154,7 +159,8 @@ class Slack
   # @param time [String] Unix timestamp of the time the message should be sent.
   # @param message [String] Text to be sent in the scheduled message.
   def self.remind(recipient_id, time, message)
-    post_to_slack("https://slack.com/api/chat.scheduleMessage", {"channel" => recipient_id, "post_at" => time, "text" => message})
+    result = post_to_slack("https://slack.com/api/chat.scheduleMessage", {"channel" => recipient_id, "post_at" => time, "text" => message})
+    return !!result
   end
 
   # @param room [String] Channel name or id to post the snippet.
@@ -163,15 +169,15 @@ class Slack
     # omit leading '#' when passing channel names to this API
     channel = CHANNEL_MAP[room] || room
     result = post_to_slack("https://slack.com/api/files.upload?channels=#{channel}&content=#{URI.escape(text)}")
-    result['ok']
+    return !!result
   end
 
   # @param name [String] Name of the Slack channel to join.
   def self.join_room(name)
-    result = post_to_slack("https://slack.com/api/conversations.join", {"channel" => get_channel_id(name)})
-
-    raise "Failed to join_room, with error: #{result['error']}" if result['error']
-    result['ok']
+    channel = get_channel_id(name)
+    return false unless channel
+    result = post_to_slack("https://slack.com/api/conversations.join", {"channel" => channel})
+    return !!result
   end
 
   # Returns the channel ID for the channel with the requested channel_name.
@@ -185,8 +191,8 @@ class Slack
     # Documentation at https://api.slack.com/methods/channels.list.
     url = "https://slack.com/api/conversations.list?limit=1000&types=public_channel&exclude_archived=true"
     parsed_channels = post_to_slack(url)
+    return nil unless parsed_channels && parsed_channels['channels']
 
-    return nil unless parsed_channels['channels']
     parsed_channels['channels'].each do |parsed_channel|
       return parsed_channel['id'] if parsed_channel['name'] == channel_name
     end
@@ -209,9 +215,23 @@ class Slack
   end
 
   private_class_method def self.post_to_slack(url, payload = nil)
+    if SLACK_BOT_TOKEN && SLACK_BOT_TOKEN != ''
+      token = SLACK_BOT_TOKEN
+    else
+      # TODO: Remove after deprecating legacy SLACK_TOKEN
+      opts = {
+        error_class: "Slack integration [warn]",
+        error_message: "Using legacy token",
+        context: {url: url, payload: payload}
+      }
+      Honeybadger.notify_cronjob_error opts
+
+      token = SLACK_TOKEN
+    end
+
     headers = {
       "Content-type" => "application/json; charset=utf-8",
-      "Authorization" => "Bearer #{SLACK_TOKEN}"
+      "Authorization" => "Bearer #{token}"
     }
 
     uri = URI(url)
@@ -220,7 +240,29 @@ class Slack
     req = Net::HTTP::Post.new(url, headers)
     req.body = payload.to_json if payload
 
-    res = https.request(req)
-    JSON.parse(res.body)
+    begin
+      res = https.request(req)
+      parsed_res = JSON.parse(res.body)
+      response = parsed_res
+
+      unless response['ok']
+        opts = {
+          error_class: "Slack integration [error]",
+          error_message: parsed_res['error'],
+          context: {url: url, payload: payload, response: parsed_res}
+        }
+        Honeybadger.notify_cronjob_error opts
+        response = false
+      end
+    rescue Exception => error
+      opts = {
+        error_class: "Slack integration [error]",
+        error_message: error,
+        context: {url: url, payload: payload}
+      }
+      Honeybadger.notify_cronjob_error opts
+      response = false
+    end
+    response
   end
 end
