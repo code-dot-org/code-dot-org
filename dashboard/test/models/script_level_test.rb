@@ -214,6 +214,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal false, summary[:passed]
     assert_equal student.id, summary[:userId]
     assert_equal false, summary[:paired]
+    assert_equal [], summary[:partnerNames]
+    assert_equal 0, summary[:partnerCount]
   end
 
   test 'teacher panel summarize with progress on this level in another script' do
@@ -258,10 +260,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
       contained: false,
       submitLevel: false,
       paired: false,
-      isDriver: nil,
-      isNavigator: nil,
-      driver: nil,
-      navigators: nil,
+      partnerNames: [],
+      partnerCount: 0,
       isConceptLevel: false,
       userId: student.id,
       passed: false,
@@ -282,6 +282,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     expected_summary[:userLevelId] = ul.id
     expected_summary[:updatedAt] = ul.updated_at
     expected_summary[:paired] = false
+    expected_summary[:partnerNames] = []
+    expected_summary[:partnerCount] = 0
     expected_summary[:passed] = true
     expected_summary[:status] = LEVEL_STATUS.perfect
     summary = script_level.summarize_for_teacher_panel(student, teacher)
@@ -348,12 +350,17 @@ class ScriptLevelTest < ActiveSupport::TestCase
     )
     create :paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul
 
+    # driver
     summary1 = sl.summarize_for_teacher_panel(student, teacher)
-    summary2 = sl.summarize_for_teacher_panel(student2, teacher)
     assert_equal true, summary1[:paired]
+    assert_equal [student2.name], summary1[:partnerNames]
+    assert_equal 1, summary1[:partnerCount]
+
+    # navigator
+    summary2 = sl.summarize_for_teacher_panel(student2, teacher)
     assert_equal true, summary2[:paired]
-    assert_equal student.name, summary2[:driver]
-    assert_equal student2.name, summary1[:navigators][0]
+    assert_equal [student.name], summary2[:partnerNames]
+    assert_equal 1, summary2[:partnerCount]
   end
 
   test 'teacher panel summarize for lesson extra' do
