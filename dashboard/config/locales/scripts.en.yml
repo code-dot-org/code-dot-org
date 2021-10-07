@@ -574,6 +574,8 @@ en:
           lessons:
             Jigsaw:
               name: Jigsaw
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
           student_description: Try our Jigsaw tutorial.
         step:
           title: Step
