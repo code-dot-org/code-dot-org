@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U4 Template",
-    "long_instructions": "instructions to add balloons",
+    "long_instructions": "In the Pop the Balloons game, the user rolls two dice. Complete `Dice.java` to represent each dice that will be displayed on the board. A `Dice` has an `ImageItem` array called `diceImages` to represent each side of a dice. A `Dice` also has a method `getSide()` to get the image representing a specified value.\r\n\r\n1. In `Dice.java`, import The Playground.\r\n\r\n2. Write the constructor for the `Dice`. It should take `String[] filenames`, `int xPos`, `int yPos`, `int width`, and `int height` as its parameters.\r\n\r\n3. In the constructor:\r\n\r\n   * Initialize the `diceImages` to contain **six** elements.\r\n   \r\n   * Loop through the `diceImages` array and set each element in `diceImages` to an `ImageItem` object. Use the `GameControl.createImage()` to create the `ImageItem` objects from each element in `filenames`.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -15,6 +15,6 @@
   "created_at": "2021-08-31T16:34:44.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-03 16:06:29 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:45:52 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-03 16:06:29 +0000\",\"changed\":[\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-16 19:45:52 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 20:09:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 20:19:06 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 20:22:11 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 20:43:27 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 20:46:51 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 21:05:51 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 21:06:31 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 21:13:34 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
