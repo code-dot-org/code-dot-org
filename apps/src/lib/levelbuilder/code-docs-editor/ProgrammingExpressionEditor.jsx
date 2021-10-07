@@ -193,9 +193,13 @@ const programmingExpressionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  category: PropTypes.string,
   shortDescription: PropTypes.string,
   externalDocumentation: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+  syntax: PropTypes.string,
+  returnValue: PropTypes.string,
+  tips: PropTypes.string
 });
 
 ProgrammingExpressionEditor.propTypes = {
