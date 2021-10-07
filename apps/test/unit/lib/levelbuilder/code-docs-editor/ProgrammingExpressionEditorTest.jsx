@@ -128,7 +128,6 @@ describe('ProgrammingExpressionEditor', () => {
     expect(fetchSpy).to.be.called.once;
     const fetchCall = fetchSpy.getCall(0);
     expect(fetchCall.args[0]).to.equal('/programming_expressions/1');
-    console.log(fetchCall.args[1]);
     expect(JSON.parse(fetchCall.args[1].body)).to.eql({
       name: 'Block',
       shortDescription: 'This is a short description.',
