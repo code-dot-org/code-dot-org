@@ -59,7 +59,6 @@ class UnassignSectionDialog extends Component {
             onClick={this.unassign}
             color={Button.ButtonColor.orange}
             className="no-mc ui-confirm-unassign-section-button"
-            pendingText={i18n.unassigning()}
           />
         </DialogFooter>
       </BaseDialog>
