@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
@@ -7,13 +8,16 @@ import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
 import CommentOptions from './CommentOptions';
 import Tooltip from '@cdo/apps/templates/Tooltip';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-export default class Comment extends Component {
+class Comment extends Component {
   static propTypes = {
     comment: commentShape.isRequired,
     onResolveStateToggle: PropTypes.func.isRequired,
     onDelete: PropTypes.func.isRequired,
-    viewAsCodeReviewer: PropTypes.bool.isRequired
+    viewAsCodeReviewer: PropTypes.bool.isRequired,
+    // Populated by Redux
+    viewAs: PropTypes.oneOf(Object.keys(ViewType))
   };
 
   state = {isShowingCommentOptions: false};
@@ -77,7 +81,7 @@ export default class Comment extends Component {
       isResolved,
       hasError
     } = this.props.comment;
-    const {viewAsCodeReviewer} = this.props;
+    const {viewAsCodeReviewer, viewAs} = this.props;
 
     const {isShowingCommentOptions} = this.state;
 
@@ -96,7 +100,7 @@ export default class Comment extends Component {
               {this.renderFormattedTimestamp(timestampString)}
             </span>
             {isResolved && <i className="fa fa-check" style={styles.check} />}
-            {!viewAsCodeReviewer && (
+            {(viewAs === ViewType.Teacher || !viewAsCodeReviewer) && (
               <i
                 className="fa fa-ellipsis-h"
                 style={styles.ellipsisMenu}
@@ -133,6 +137,9 @@ export default class Comment extends Component {
     );
   }
 }
+
+export const UnconnectedComment = Comment;
+export default connect(state => ({viewAs: state.viewAs}))(Comment);
 
 const sharedIconStyles = {
   fontSize: 18,
