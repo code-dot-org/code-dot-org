@@ -133,12 +133,16 @@ class TopInstructions extends Component {
       this.props.readOnlyWorkspace &&
       window.location.search.includes('user_id');
 
+    const defaultTeacherTab = this.props.displayReviewTab
+      ? TabType.REVIEW
+      : TabType.COMMENTS;
+
     this.state = {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
         this.props.initialSelectedTab ||
         (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
-          ? TabType.COMMENTS
+          ? defaultTeacherTab
           : TabType.INSTRUCTIONS),
       feedbacks: [],
       rubric: null,
