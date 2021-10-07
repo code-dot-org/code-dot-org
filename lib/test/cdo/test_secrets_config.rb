@@ -15,7 +15,7 @@ class SecretsConfigTest < Minitest::Test
   def test_load
     secrets_file = CDO.dir('config/secrets.yml.template')
     secrets = Cdo::SecretsConfig.load(secrets_file)
-    assert_equal 'bar', secrets['staging/cdo/foo']
+    assert_equal 'my_key_value_shared_by_non_production_systems', secrets['staging/cdo/my_key_name']
   end
 
   def load_configuration(yml_erb)
