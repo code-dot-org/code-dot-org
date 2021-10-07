@@ -24,8 +24,6 @@ import AbuseError from './code-studio/components/AbuseError';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
 import ChallengeDialog from './templates/ChallengeDialog';
-import DialogButtons from './templates/DialogButtons';
-import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
@@ -53,12 +51,10 @@ import {
   configCircuitPlayground,
   configMicrobit
 } from './lib/kits/maker/dropletConfig';
-import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
-import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
