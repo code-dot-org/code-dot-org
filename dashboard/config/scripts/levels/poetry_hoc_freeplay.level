@@ -34,8 +34,8 @@
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "instructions_icon": "octiGeneral",
-    "show_poem_dropdown": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "poetry"
   },
   "game_id": 69,
   "published": true,
