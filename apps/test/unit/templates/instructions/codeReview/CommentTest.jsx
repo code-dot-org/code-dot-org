@@ -6,7 +6,6 @@ import './CodeReviewTestHelper';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {UnconnectedComment as Comment} from '@cdo/apps/templates/instructions/codeReview/Comment';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const DEFAULT_COMMENT = Factory.build('CodeReviewComment');
 const DEFAULT_PROPS = {
@@ -14,7 +13,7 @@ const DEFAULT_PROPS = {
   onResolveStateToggle: () => {},
   onDelete: () => {},
   viewAsCodeReviewer: false,
-  viewAs: ViewType.Student
+  viewAsTeacher: false
 };
 
 describe('Code Review Comment', () => {
@@ -77,7 +76,7 @@ describe('Code Review Comment', () => {
   it('shows ellipsis and comment options when viewing as teacher', () => {
     const wrapper = renderWrapper(
       {},
-      {viewAsCodeReviewer: true, viewAs: ViewType.Teacher}
+      {viewAsCodeReviewer: true, viewAsTeacher: true}
     );
     expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(1);
   });
