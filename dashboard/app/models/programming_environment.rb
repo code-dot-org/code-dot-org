@@ -50,4 +50,8 @@ class ProgrammingEnvironment < ApplicationRecord
   def summarize_for_lesson_edit
     {id: id, name: name}
   end
+
+  def categories
+    programming_expressions.pluck(:category).uniq
+  end
 end
