@@ -20,7 +20,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 class CourseScript extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
     courseId: PropTypes.number,

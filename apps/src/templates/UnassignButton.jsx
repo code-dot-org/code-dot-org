@@ -9,7 +9,7 @@ import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 class UnassignButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    courseName: PropTypes.string.isRequired,
+    courseName: PropTypes.string,
     // Redux
     unassignSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
