@@ -2,6 +2,6 @@
   "category": "",
   "config": {
     "func": "animatePoem",
-    "blockText": "animate poem"
+    "blockText": "animate text"
   }
 }
