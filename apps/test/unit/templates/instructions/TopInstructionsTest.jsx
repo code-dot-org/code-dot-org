@@ -106,6 +106,19 @@ describe('TopInstructions', () => {
     ).to.equal('Example Solution 1');
   });
 
+  it('does not display example solutions buttons in other tabs when available', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        initialSelectedTab={TabType.INSTRUCTIONS}
+        exampleSolutions={['link/1', 'link/2']}
+      />
+    );
+
+    expect(wrapper.state().tabSelected).to.equal(TabType.INSTRUCTIONS);
+    expect(wrapper.find('Button')).to.have.lengthOf(0);
+  });
+
   describe('viewing the Feedback Tab', () => {
     describe('as a teacher', () => {
       it('passes displayFeedback = false to TopInstructionsHeader on a level with no rubric where the teacher is not giving feedback', () => {

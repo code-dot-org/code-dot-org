@@ -2,7 +2,7 @@
   "category": "",
   "config": {
     "func": "setAuthor",
-    "blockText": "set poem author {AUTHOR}",
+    "blockText": "set author {AUTHOR}",
     "args": [
       {
         "name": "AUTHOR",
