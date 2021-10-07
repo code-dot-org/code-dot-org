@@ -12,16 +12,21 @@ import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 export function InstructionsDialog(props) {
   function body() {
     if (props.imgOnly && props.imgUrl) {
-      return <ExampleImage src={props.imgUrl} />;
-    } else {
       return (
-        <Instructions
-          longInstructions={props.longInstructions || props.shortInstructions}
-          imgURL={props.imgUrl}
-          isBlockly={props.isBlockly}
-        />
+        <div style={styles.imgContainer}>
+          <ExampleImage src={props.imgUrl} />
+        </div>
       );
     }
+
+    return (
+      <Instructions
+        longInstructions={props.longInstructions || props.shortInstructions}
+        imgURL={props.imgUrl}
+        isBlockly={props.isBlockly}
+        inTopPane={false}
+      />
+    );
   }
 
   return (
@@ -72,5 +77,9 @@ export default connect(
 const styles = {
   title: {
     fontSize: 24
+  },
+  imgContainer: {
+    display: 'flex',
+    justifyContent: 'center'
   }
 };
