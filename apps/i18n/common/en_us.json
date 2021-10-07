@@ -1988,7 +1988,6 @@
   "usingHints": "Using hints",
   "usingTooManyBlocks": "Using too many blocks",
   "unassignConfirm": "Unassign",
-  "unassigning": "Unassigning",
   "unassignSection": "Unassign {courseName}?",
   "unassignSectionConfirm": "Your students in {sectionName} will no longer be taken to {courseName} when they sign in.",
   "uncompletedLessons": "Lesson not completed",

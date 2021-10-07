@@ -540,7 +540,6 @@ const initialState = {
   loadError: null,
   // The page where the action is occurring
   pageType: '',
-
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null
 };
