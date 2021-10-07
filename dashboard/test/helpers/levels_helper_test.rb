@@ -202,19 +202,26 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal blockly_level_options, level.blockly_level_options
   end
 
-  test 'app_options sets a channel if a user is present for a channel-backed level' do
+  test 'app_options sets a channel if the level is not cached for a channel-backed level' do
     user = create :user
     sign_in user
 
+    ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
+
+    @script = create(:script)
     @level = create :applab
+    create(:script_level, script: @script, levels: [@level])
+
     assert_not_nil app_options['channel']
   end
 
-  # The reason we do not set a channel if a user is not present, is that this may
-  # indicate that the level is cached and therefore we will not load user-related data
-  # server-side (but rather load it in loadApp.js, client-side)
-  test 'app_options does not set a channel if a user is not present' do
+  test 'app_options does not set a channel if the level is cached' do
+    ScriptConfig.stubs(:allows_public_caching_for_script).returns(true)
+
+    @script = create(:script)
     @level = create :applab
+    create(:script_level, script: @script, levels: [@level])
+
     assert_nil app_options['channel']
   end
 
