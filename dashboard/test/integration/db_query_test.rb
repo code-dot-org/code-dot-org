@@ -129,7 +129,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
   end
 
   test "student in section views uncached hoc level" do
-    script = create(
+    unit = create(
       :script,
       :with_levels,
       levels_count: 10,
@@ -138,18 +138,18 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       version_year: 'unversioned',
       published_state: SharedConstants::PUBLISHED_STATE.stable
     )
-    CourseOffering.add_course_offering(script)
-    level = script.levels.first
+    CourseOffering.add_course_offering(unit)
+    level = unit.levels.first
 
     teacher = create :teacher
-    section = create :section, user: teacher, script: script
+    section = create :section, user: teacher, script: unit
     student = create :student
     section.students = [student]
-    student.assign_script(script)
+    student.assign_script(unit)
     sign_in student
 
     assert_cached_queries(19) do
-      get "/s/#{script.name}/lessons/1/levels/1"
+      get "/s/#{unit.name}/lessons/1/levels/1"
       assert_response :success
     end
 
@@ -157,7 +157,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     # server on page load.
 
     assert_cached_queries(10) do
-      get "/api/user_progress/#{script.name}/1/1/#{level.id}"
+      get "/api/user_progress/#{unit.name}/1/1/#{level.id}"
       assert_response :success
     end
 
