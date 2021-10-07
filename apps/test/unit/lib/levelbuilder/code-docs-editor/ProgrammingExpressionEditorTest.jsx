@@ -15,8 +15,14 @@ describe('ProgrammingExpressionEditor', () => {
         id: 1,
         name: 'Block',
         key: 'block',
-        shortDescription: 'This is a short description.'
-      }
+        shortDescription: 'This is a short description.',
+        externalDocumentation: 'developer.mozilla.org',
+        content: 'This is a longer description of the code.',
+        syntax: 'block()',
+        returnValue: 'none',
+        tips: 'some tips on how to use this block'
+      },
+      environmentCategories: ['Circuit', 'Variables', 'Canvas']
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -52,10 +58,56 @@ describe('ProgrammingExpressionEditor', () => {
     ).to.be.true;
 
     // short description
-    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(1);
     expect(
-      wrapper.find('TextareaWithMarkdownPreview').props().markdown
+      wrapper
+        .find('textarea')
+        .at(0)
+        .props().value
     ).to.equal('This is a short description.');
+
+    // Documentation section
+    const documentationSection = wrapper.find('CollapsibleEditorSection').at(0);
+    expect(
+      documentationSection
+        .find('input')
+        .at(0)
+        .props().value
+    ).to.equal('developer.mozilla.org');
+    expect(
+      documentationSection
+        .find('select')
+        .at(0)
+        .find('option').length
+    ).to.equal(4);
+    expect(
+      documentationSection
+        .find('TextareaWithMarkdownPreview')
+        .at(0)
+        .props().markdown
+    ).to.equal('This is a longer description of the code.');
+
+    const detailsSection = wrapper.find('CollapsibleEditorSection').at(1);
+    expect(
+      detailsSection
+        .find('TextareaWithMarkdownPreview')
+        .at(0)
+        .props().markdown
+    ).to.equal('block()');
+    expect(
+      detailsSection
+        .find('textarea')
+        .at(0)
+        .props().value
+    ).to.equal('none');
+
+    // Tips section
+    const tipsSection = wrapper.find('CollapsibleEditorSection').at(2);
+    expect(
+      tipsSection
+        .find('TextareaWithMarkdownPreview')
+        .at(0)
+        .props().markdown
+    ).to.equal('some tips on how to use this block');
   });
 
   it('attempts to save when save is pressed', () => {
@@ -76,10 +128,14 @@ describe('ProgrammingExpressionEditor', () => {
     expect(fetchSpy).to.be.called.once;
     const fetchCall = fetchSpy.getCall(0);
     expect(fetchCall.args[0]).to.equal('/programming_expressions/1');
-    console.log(fetchCall.args[1]);
     expect(JSON.parse(fetchCall.args[1].body)).to.eql({
       name: 'Block',
-      shortDescription: 'This is a short description.'
+      shortDescription: 'This is a short description.',
+      content: 'This is a longer description of the code.',
+      externalDocumentation: 'developer.mozilla.org',
+      returnValue: 'none',
+      syntax: 'block()',
+      tips: 'some tips on how to use this block'
     });
   });
 });
