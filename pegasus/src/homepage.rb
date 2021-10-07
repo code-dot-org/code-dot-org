@@ -505,10 +505,6 @@ class Homepage
     false
   end
 
-  def self.show_csjourneys_banner(request)
-    request.locale == "en-US"
-  end
-
   def self.show_professional_learning_banner(request)
     teacher_application_mode = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
     request.locale == "en-US" && %w(open closing-soon).include?(teacher_application_mode)
