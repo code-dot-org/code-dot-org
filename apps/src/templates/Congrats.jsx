@@ -43,8 +43,8 @@ export default class Congrats extends Component {
    */
   renderExtraCertificateLinks = (language, tutorial) => {
     let extraLinkUrl, extraLinkText;
-    // https://codedotorg.atlassian.net/browse/FND-1604
-    // these can be removed after July 25 2021
+    // https://codedotorg.atlassian.net/browse/FND-1749
+    // these can be removed after November 21 2021
     if (language === 'ko') {
       if (/oceans/.test(tutorial)) {
         extraLinkUrl = pegasus('/files/online-coding-party-2021-oceans.pdf');
