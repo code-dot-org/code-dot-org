@@ -16,9 +16,7 @@ export function InstructionsDialog(props) {
     } else {
       return (
         <Instructions
-          longInstructions={props.longInstructions}
-          shortInstructions={props.shortInstructions}
-          instructions2={props.shortInstructions2}
+          longInstructions={props.longInstructions || props.shortInstructions}
           imgURL={props.imgUrl}
           isBlockly={props.isBlockly}
         />
@@ -53,7 +51,6 @@ InstructionsDialog.propTypes = {
   imgUrl: PropTypes.string,
   longInstructions: PropTypes.string,
   shortInstructions: PropTypes.string,
-  shortInstructions2: PropTypes.string,
   isBlockly: PropTypes.bool,
   handleClose: PropTypes.func.isRequired
 };
@@ -65,7 +62,6 @@ export default connect(
     imgUrl: state.instructionsDialog.imgUrl || state.pageConstants.aniGifURL,
     longInstructions: state.instructions.longInstructions,
     shortInstructions: state.instructions.shortInstructions,
-    shortInstructions2: state.instructions.shortInstructions2,
     isBlockly: state.pageConstants.isBlockly
   }),
   dispatch => ({
