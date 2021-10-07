@@ -732,28 +732,27 @@ class TopInstructions extends Component {
                 onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
               />
             )}
+            {tabSelected === TabType.TEACHER_ONLY &&
+              exampleSolutions.length > 0 && (
+                <div style={styles.exampleSolutions}>
+                  {exampleSolutions.map((example, index) => (
+                    <Button
+                      __useDeprecatedTag
+                      key={index}
+                      text={i18n.exampleSolution({number: index + 1})}
+                      color={Button.ButtonColor.blue}
+                      href={example}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ref={ref => (this.teacherOnlyTab = ref)}
+                      style={styles.exampleSolutionButton}
+                    />
+                  ))}
+                </div>
+              )}
             {this.isViewingAsTeacher &&
-              (hasContainedLevels ||
-                teacherMarkdown ||
-                exampleSolutions.length > 0) && (
+              (hasContainedLevels || teacherMarkdown) && (
                 <div>
-                  {exampleSolutions.length > 0 && (
-                    <div style={styles.exampleSolutions}>
-                      {exampleSolutions.map((example, index) => (
-                        <Button
-                          key={index}
-                          text={i18n.exampleSolution({number: index + 1})}
-                          color={Button.ButtonColor.blue}
-                          href={example}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          ref={ref => (this.teacherOnlyTab = ref)}
-                          hidden={tabSelected !== TabType.TEACHER_ONLY}
-                          style={styles.exampleSolutionButton}
-                        />
-                      ))}
-                    </div>
-                  )}
                   {hasContainedLevels && (
                     <ContainedLevelAnswer
                       ref={ref => (this.teacherOnlyTab = ref)}
