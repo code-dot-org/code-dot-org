@@ -142,7 +142,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     level = script.levels.first
 
     teacher = create :teacher
-    section = create :section, user: teacher
+    section = create :section, user: teacher, script: script
     student = create :student
     section.students = [student]
     student.assign_script(script)
