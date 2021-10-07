@@ -9,6 +9,11 @@ import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
 
 export default class SpriteLab extends P5Lab {
+  getAvatarUrl(levelInstructor) {
+    const defaultAvatar = 'avatar';
+    return `/blockly/media/spritelab/${levelInstructor || defaultAvatar}.png`;
+  }
+
   getMsg() {
     return msg;
   }
@@ -62,15 +67,15 @@ export default class SpriteLab extends P5Lab {
   onPause(isPaused) {
     const current = new Date().getTime();
     if (isPaused) {
-      this.spritelabLibrary.endPause(current);
+      this.library.endPause(current);
     } else {
-      this.spritelabLibrary.startPause(current);
+      this.library.startPause(current);
     }
   }
 
   onPromptAnswer(variableName, value) {
     getStore().dispatch(popPrompt());
-    this.spritelabLibrary.onPromptAnswer(variableName, value);
+    this.library.onPromptAnswer(variableName, value);
   }
 
   setupReduxSubscribers(store) {

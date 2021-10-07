@@ -246,7 +246,10 @@
         },
         "courseE_aboutme_1_2021": {
           "8e985f60f328934accd78e7649584840": "Kem là món ăn yêu thích của mình đó!",
-          "31ba97bb501bb1f5b448221be09bad32": "Đây là chú chó corgi của mình, Lollipop! Mình phải dạy cậu ấy cách viết mã lệnh mới được!"
+          "31ba97bb501bb1f5b448221be09bad32": "Đây là chú chó corgi của mình, Lollipop! Mình phải dạy cậu ấy cách viết mã lệnh mới được!",
+          "b63151482630edd1589a9ac24d107c49": "Chính là tôi! Rikki nè! Tôi thích lập trình, đi chơi với Thủy và ăn kem!",
+          "810896b14fc6615f0c76628b9b6a727e": "Thủy là cô bạn thân nhất của tôi đó! Cô ấy rất giỏi chơi thể thao!",
+          "6f97975a0bda0c9219915161149cbb26": "Đây là máy tính của tôi! Tôi lập trình trên đó SUỐT cả ngày!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Chào cả thế giới!"
@@ -255,7 +258,8 @@
           "ed076287532e86365e841e92bfc50d8c": "Chào cả thế giới!"
         },
         "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Chào cả thế giới!"
+          "ed076287532e86365e841e92bfc50d8c": "Chào cả thế giới!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!"
         },
         "courseF_apps_aquarium": {
           "f655df68ec33643278de7e69794e8d76": "Bể cá ảo",
@@ -315,7 +319,7 @@
           "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
           "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
-          "ae096fbf24d913754b01a1601672bf62": "giống bạn nè!"
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!"
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
@@ -408,6 +412,9 @@
           "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
           "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?",
           "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
         }
       }
     }

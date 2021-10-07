@@ -1,7 +1,12 @@
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
-import Playground from '@cdo/apps/javalab/Playground';
-import {PlaygroundSignalType} from '@cdo/apps/javalab/constants';
+import Playground, {
+  REENABLE_CLICK_EVENTS_TIMEOUT_MS
+} from '@cdo/apps/javalab/Playground';
+import {
+  PlaygroundSignalType,
+  WebSocketMessageType
+} from '@cdo/apps/javalab/constants';
 import javalabMsg from '@cdo/javalab/locale';
 import {
   getStore,
@@ -11,7 +16,6 @@ import {
 } from '@cdo/apps/redux';
 import playgroundRedux from '@cdo/apps/javalab/playgroundRedux';
 import color from '@cdo/apps/util/color';
-import {WebSocketMessageType} from '../../../src/javalab/constants';
 
 describe('Playground', () => {
   const levelName = 'level';
@@ -29,14 +33,18 @@ describe('Playground', () => {
     onJavabuilderMessage,
     starterAssetsApi,
     assetsApi,
-    playground;
+    playground,
+    setIsProgramRunning,
+    clock;
 
   beforeEach(() => {
     stubRedux();
     registerReducers({playground: playgroundRedux});
+    clock = sinon.useFakeTimers();
     onOutputMessage = sinon.stub();
     onNewlineMessage = sinon.stub();
     onJavabuilderMessage = sinon.stub();
+    setIsProgramRunning = sinon.stub();
     starterAssetsApi = {
       getStarterAssets: (levelName, onSuccess, onFailure) => {
         onSuccess({
@@ -66,6 +74,7 @@ describe('Playground', () => {
       onNewlineMessage,
       onJavabuilderMessage,
       levelName,
+      setIsProgramRunning,
       starterAssetsApi,
       assetsApi
     );
@@ -78,6 +87,7 @@ describe('Playground', () => {
   afterEach(() => {
     sinon.restore();
     restoreRedux();
+    clock.restore();
   });
 
   it('sets background image when receiving a SET_BACKGROUND_IMAGE message for a starter asset', () => {
@@ -166,52 +176,6 @@ describe('Playground', () => {
     verifyOnFileLoadError(assetFile);
   });
 
-  it("doesn't set background image if game is over", () => {
-    const exitMessage = {
-      value: PlaygroundSignalType.EXIT
-    };
-
-    const data = {
-      value: PlaygroundSignalType.SET_BACKGROUND_IMAGE,
-      detail: {
-        filename: 'filename'
-      }
-    };
-
-    playground.handleSignal(exitMessage);
-
-    verifyDefaultMediaElementState(backgroundElement);
-    expect(backgroundElement.style.opacity).to.equal(0);
-
-    playground.handleSignal(data);
-
-    // Background should not update
-    verifyDefaultMediaElementState(backgroundElement);
-    expect(backgroundElement.style.opacity).to.equal(0);
-  });
-
-  it("doesn't play sound if game is over", () => {
-    const exitMessage = {
-      value: PlaygroundSignalType.EXIT
-    };
-
-    const data = {
-      value: PlaygroundSignalType.PLAY_SOUND,
-      detail: {
-        filename: 'filename'
-      }
-    };
-
-    playground.handleSignal(exitMessage);
-
-    verifyDefaultMediaElementState(audioElement);
-
-    playground.handleSignal(data);
-
-    // Audio element should not update
-    verifyDefaultMediaElementState(audioElement);
-  });
-
   it('resets the background image on reset()', () => {
     const data = {
       value: PlaygroundSignalType.SET_BACKGROUND_IMAGE,
@@ -237,39 +201,36 @@ describe('Playground', () => {
     const id = 'test_id';
     const data = {
       value: PlaygroundSignalType.ADD_CLICKABLE_ITEM,
-      detail: {
-        filename: starterAsset1,
-        x: 0,
-        y: 0,
-        width: 100,
-        height: 50,
-        id: id
-      }
+      detail: createSampleImageDetails('assetFile', id)
     };
 
     playground.handleSignal(data);
     const itemData = getStore().getState().playground.itemData;
-    expect(itemData[id].width).to.equal(100);
+    expect(itemData[id].width).to.equal('100');
   });
 
   it('adds clickable image when receiving a ADD_CLICKABLE_ITEM message for an uploaded asset', () => {
-    const assetFile = 'assetFile';
     const id = 'test_id';
     const data = {
       value: PlaygroundSignalType.ADD_CLICKABLE_ITEM,
-      detail: {
-        filename: assetFile,
-        x: 0,
-        y: 0,
-        width: 100,
-        height: 50,
-        id: id
-      }
+      detail: createSampleImageDetails('assetFile', id)
     };
 
     playground.handleSignal(data);
     const itemData = getStore().getState().playground.itemData;
-    expect(itemData[id].height).to.equal(50);
+    expect(itemData[id].height).to.equal('50');
+  });
+
+  it('adds text item when receiving a ADD_TEXT_ITEM message', () => {
+    const id = 'test_id';
+    const data = {
+      value: PlaygroundSignalType.ADD_TEXT_ITEM,
+      detail: createSampleTextDetails(id)
+    };
+
+    playground.handleSignal(data);
+    const itemData = getStore().getState().playground.itemData;
+    expect(itemData[id].height).to.equal('50');
   });
 
   it('resets sound element on reset()', () => {
@@ -338,6 +299,25 @@ describe('Playground', () => {
     expect(Object.keys(itemData).length).to.equal(2);
   });
 
+  it('can add multiple text items via ADD_TEXT_ITEM', () => {
+    const firstId = 'first_id';
+    const secondId = 'second_id';
+    const firstData = {
+      value: PlaygroundSignalType.ADD_TEXT_ITEM,
+      detail: createSampleTextDetails(firstId)
+    };
+    const secondData = {
+      value: PlaygroundSignalType.ADD_TEXT_ITEM,
+      detail: createSampleTextDetails(secondId)
+    };
+
+    playground.handleSignal(firstData);
+    playground.handleSignal(secondData);
+
+    const itemData = getStore().getState().playground.itemData;
+    expect(Object.keys(itemData).length).to.equal(2);
+  });
+
   it('does not add duplicate images from ADD_IMAGE_ITEM', () => {
     const assetFile = 'assetFile';
     const id = 'first_id';
@@ -353,7 +333,21 @@ describe('Playground', () => {
     expect(Object.keys(itemData).length).to.equal(1);
   });
 
-  it('call changeItem after CHANGE_ITEM', () => {
+  it('does not add duplicate text items from ADD_TEXT_ITEM', () => {
+    const id = 'first_id';
+    const data = {
+      value: PlaygroundSignalType.ADD_TEXT_ITEM,
+      detail: createSampleTextDetails(id)
+    };
+
+    playground.handleSignal(data);
+    playground.handleSignal(data);
+
+    const itemData = getStore().getState().playground.itemData;
+    expect(Object.keys(itemData).length).to.equal(1);
+  });
+
+  it('updates an image item via CHANGE_ITEM after adding it', () => {
     const assetFile = 'assetFile';
     const id = 'first_id';
     const addData = {
@@ -364,7 +358,7 @@ describe('Playground', () => {
       value: PlaygroundSignalType.CHANGE_ITEM,
       detail: {
         id: id,
-        height: 200
+        height: '200'
       }
     };
 
@@ -372,7 +366,30 @@ describe('Playground', () => {
     playground.handleSignal(changeData);
 
     const itemData = getStore().getState().playground.itemData;
-    expect(itemData[id].height).to.equal(200);
+    expect(itemData[id].height).to.equal('200');
+  });
+
+  it('updates a text item via CHANGE_ITEM after adding it', () => {
+    const id = 'first_id';
+    const addData = {
+      value: PlaygroundSignalType.ADD_TEXT_ITEM,
+      detail: createSampleTextDetails(id)
+    };
+    const changeData = {
+      value: PlaygroundSignalType.CHANGE_ITEM,
+      detail: {
+        id: id,
+        height: '200',
+        fontStyle: 'NORMAL'
+      }
+    };
+
+    playground.handleSignal(addData);
+    playground.handleSignal(changeData);
+
+    const itemData = getStore().getState().playground.itemData;
+    expect(itemData[id].height).to.equal('200');
+    expect(itemData[id].fontStyle).to.equal('NORMAL');
   });
 
   it('can remove an item with REMOVE_ITEM', () => {
@@ -426,6 +443,50 @@ describe('Playground', () => {
     expect(onJavabuilderMessage).to.not.have.been.called;
   });
 
+  it('sets isProgramRunning to false on stop', () => {
+    playground.onClose();
+    expect(setIsProgramRunning).to.have.been.calledWith(false);
+    expect(onOutputMessage).to.have.been.calledOnce;
+    expect(onNewlineMessage).to.have.been.calledOnce;
+  });
+
+  it('does not send click event if update is in progress', () => {
+    playground.handleSignal({value: PlaygroundSignalType.RUN});
+
+    const imageId = 'id';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
+
+    onJavabuilderMessage.reset();
+    playground.handleImageClick(imageId);
+    // Should not be called again
+    expect(onJavabuilderMessage).to.have.not.been.called;
+
+    playground.handleSignal({value: PlaygroundSignalType.UPDATE_COMPLETE});
+    playground.handleImageClick(imageId);
+    // Should be able to send message after receiving UPDATE_COMPLETE
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
+  });
+
+  it('re-enables click events after timeout', () => {
+    playground.handleSignal({value: PlaygroundSignalType.RUN});
+
+    const imageId = 'id';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
+
+    onJavabuilderMessage.reset();
+    playground.handleImageClick(imageId);
+    // Should not be called again
+    expect(onJavabuilderMessage).to.have.not.been.called;
+
+    clock.tick(REENABLE_CLICK_EVENTS_TIMEOUT_MS + 1);
+
+    // Should be able to send message after timeout
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
+  });
+
   function verifyOnFileLoadError(filename) {
     sinon.assert.calledOnce(onOutputMessage);
     sinon.assert.calledWith(
@@ -438,11 +499,28 @@ describe('Playground', () => {
   function createSampleImageDetails(filename, id) {
     return {
       filename: filename,
-      x: 0,
-      y: 0,
-      width: 100,
-      height: 50,
+      x: '0',
+      y: '0',
+      width: '100',
+      height: '50',
       id: id
+    };
+  }
+
+  function createSampleTextDetails(id) {
+    return {
+      id: id,
+      text: 'some text',
+      x: '200',
+      y: '200',
+      height: '50',
+      index: '1',
+      rotation: '45',
+      colorRed: '0',
+      colorGreen: '0',
+      colorBlue: '255',
+      font: 'SANS',
+      fontStyle: 'BOLD'
     };
   }
 

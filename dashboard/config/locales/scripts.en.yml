@@ -574,6 +574,8 @@ en:
           lessons:
             Jigsaw:
               name: Jigsaw
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
           student_description: Try our Jigsaw tutorial.
         step:
           title: Step
@@ -22793,16 +22795,16 @@ en:
           lessons:
             lesson-1:
               name: Creating Tables of Data
-              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
-              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
+              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students use the `new` keyword and initializer lists to create 2D arrays to store `int` and `double` elements to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
             lesson-2:
               name: Traversing a 2D Array by Rows
-              description_student: Now that you have seen 2D arrays, you write nested `for` loops to traverse them! You revisit The Theater to develop a new concert to educate The Neighborhood about sustainable transportation. After choosing an initial welcome image for the concert, you write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
-              description_teacher: Students use nested `for` loops to traverse 2D arrays in row-major order and apply a standard algorithm they wrote in Unit 3 to evaluate data. Students revisit The Theater to begin development on a new concert to educate The Neighborhood about sustainable transportation. They choose an initial welcome image for the concert and write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
+              description_student: Now that you have seen 2D arrays, you use nested loops to traverse them and revisit standard algorithms to evaluate data. You begin development on a new concert to educate The Neighborhood about sustainable transportation. You create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
+              description_teacher: Students use nested loops to traverse 2D arrays in row-major order and revisit standard algorithms to evaluate data. Students begin development on a new concert in The Theater to educate The Neighborhood about sustainable transportation. They create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
             lesson-3:
               name: Traversing a 2D Array by Columns
               description_student: 'Data is organized into rows and columns. In the previous lesson, you traversed a 2D array to access elements and make calculations across a row. Today, you learn how to traverse a 2D array in column-major order. Using this traversal algorithm, you develop image effects that manipulate pixels to mirror an image vertically. '
-              description_teacher: Students use nested `for` loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and further develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
+              description_teacher: Students use nested loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
             lesson-4:
               name: Using Enhanced for Loops
               description_student: 'Today, you learn the structure of using enhanced `for` loops to traverse 2D arrays. You identify the similarities and differences between using an enhanced `for` loop with 1D arrays and 2D arrays. You use a nested enhanced `for` loop to write methods to modify the color values of pixels and create effects on the images for the concert. '
@@ -22813,31 +22815,67 @@ en:
               description_teacher: 'Students explore the effect of executing a `return` statement inside a loop compared to executing outside a loop. Students write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria. Students solve problems for the Project Mercury Pastries Food Truck by implementing these algorithms. '
             lesson-6:
               name: Applying Standard Algorithms
-              description_student: The standard algorithms you wrote in Unit 3 also work with 2D arrays and can create visual effects on images. In this lesson, you continue to develop your concert in The Theater by writing a `grayscale()` method. You find the minimum and maximum red, green, or blue color values and use that value to set all other red, green, or blue values. You participate in code reviews to give, receive, and implement feedback on your new methods and progress.
-              description_teacher: Students apply the standard algorithms they wrote in Unit 3 to 2D arrays to create visual effects on images. Students continue developing the concert in The Theater by writing a `grayscale()` method that finds the average of the RGB values of a pixel in an image and sets the pixel to that average value. Students find the minimum and maximum red, green, or blue color values and use the value to set all other red, green, or blue values. Students participate in code reviews to give, receive, and implement feedback on their new methods and progress.
+              description_student: The standard algorithms you wrote for 1D arrays also work with 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. In this lesson, you use a standard algorithm to create a new image filter to create a grayscale image. You also use a standard algorithm to help the food truck owner maximize their dessert inventory.
+              description_teacher: Students apply the standard algorithms they wrote for 1D arrays to 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. Students write a `GrayscaleImage` class that creates a grayscale image by finding the average of the RGB values of a `Pixel` in an image and setting the RGB values of the `Pixel` to that average value. Students find the maximum value in a 2D array of dessert quantities to compare to a quantity entered and update the array based on a condition.
             lesson-7:
               name: Reversing Elements
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             lesson-8:
               name: Shifting Elements
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             lesson-9:
               name: Finding Duplicates
+              description_student: You previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, you apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. You refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
+              description_teacher: Students previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, students apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. Students refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
             lesson-10:
               name: Searching for Elements
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             lesson-11:
               name: A Sustainable Neighborhood Project - Day 1
+              description_student: For this project, you develop a concert in The Theater about your chosen sustainable goal. You begin by choosing a new image filter or effect and writing pseudocode for its algorithm. You then begin the first iteration of your project.
+              description_teacher: For this project, students develop a concert in The Theater about their chosen sustainable goal. Students begin by choosing a new image filter or effect and writing pseudocode for its algorithm. Students then begin the first iteration of their project.
             lesson-12:
               name: A Sustainable Neighborhood Project - Day 2
+              description_student: In the previous lesson, you completed the first iteration of your concert. Today, you complete the second iteration of your project and reflect with a group as you prepare for the final development of your Sustainable Neighborhood Concert. You self-assess your work against the project rubric and create a final priority list for your last iteration.
+              description_teacher: In the previous lesson, students completed the first iteration of their concert. Students complete the second iteration of their project and reflect with a group as they prepare for the final development of their Sustainable Neighborhood Concert. Students self-assess their work against the project rubric and create a final priority list for their last iteration.
             lesson-13:
               name: A Sustainable Neighborhood Project - Day 3
+              description_student: You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer.
+              description_teacher: Students complete their last iteration and present their concert to their peers. Students finish the project with a final reflection and celebrate their identity as software engineers.
             lesson-14:
               name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
             lesson-15:
               name: Assessment Day
+              description_student: In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            Java Lab:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            The Theater:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            The Playground:
+              name: The Playground
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandbox
           name: csa5-pilot
           title: Giving Objects Organization
           description_audience: ''
@@ -23713,7 +23751,7 @@ en:
               description_teacher: ''
             Module 5:
               key: Module 5
-              name: 'Module 5: Unit 7 and understanding functions with parameters and return'
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
               description_student: ''
               description_teacher: ''
             Module 6:
@@ -25834,16 +25872,16 @@ en:
           lessons:
             Creating Tables of Data:
               name: Creating Tables of Data
-              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
-              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
+              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students use the `new` keyword and initializer lists to create 2D arrays to store `int` and `double` elements to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
             Traversing a 2D Array by Rows:
               name: Traversing a 2D Array by Rows
-              description_student: Now that you have seen 2D arrays, you write nested `for` loops to traverse them! You revisit The Theater to develop a new concert to educate The Neighborhood about sustainable transportation. After choosing an initial welcome image for the concert, you write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
-              description_teacher: Students use nested `for` loops to traverse 2D arrays in row-major order and apply a standard algorithm they wrote in Unit 3 to evaluate data. Students revisit The Theater to begin development on a new concert to educate The Neighborhood about sustainable transportation. They choose an initial welcome image for the concert and write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
+              description_student: Now that you have seen 2D arrays, you use nested loops to traverse them and revisit standard algorithms to evaluate data. You begin development on a new concert to educate The Neighborhood about sustainable transportation. You create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
+              description_teacher: Students use nested loops to traverse 2D arrays in row-major order and revisit standard algorithms to evaluate data. Students begin development on a new concert in The Theater to educate The Neighborhood about sustainable transportation. They create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
             Traversing a 2D Array by Columns:
               name: Traversing a 2D Array by Columns
               description_student: 'Data is organized into rows and columns. In the previous lesson, you traversed a 2D array to access elements and make calculations across a row. Today, you learn how to traverse a 2D array in column-major order. Using this traversal algorithm, you develop image effects that manipulate pixels to mirror an image vertically. '
-              description_teacher: Students use nested `for` loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and further develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
+              description_teacher: Students use nested loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
             Using Enhanced for Loops:
               name: Using Enhanced for Loops
               description_student: 'Today, you learn the structure of using enhanced `for` loops to traverse 2D arrays. You identify the similarities and differences between using an enhanced `for` loop with 1D arrays and 2D arrays. You use a nested enhanced `for` loop to write methods to modify the color values of pixels and create effects on the images for the concert. '
@@ -25854,44 +25892,44 @@ en:
               description_teacher: 'Students explore the effect of executing a `return` statement inside a loop compared to executing outside a loop. Students write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria. Students solve problems for the Project Mercury Pastries Food Truck by implementing these algorithms. '
             Applying Standard Algorithms:
               name: Applying Standard Algorithms
-              description_student: The standard algorithms you wrote in Unit 3 also work with 2D arrays and can create visual effects on images. In this lesson, you continue to develop your concert in The Theater by writing a `grayscale()` method. You find the minimum and maximum red, green, or blue color values and use that value to set all other red, green, or blue values. You participate in code reviews to give, receive, and implement feedback on your new methods and progress.
-              description_teacher: Students apply the standard algorithms they wrote in Unit 3 to 2D arrays to create visual effects on images. Students continue developing the concert in The Theater by writing a `grayscale()` method that finds the average of the RGB values of a pixel in an image and sets the pixel to that average value. Students find the minimum and maximum red, green, or blue color values and use the value to set all other red, green, or blue values. Students participate in code reviews to give, receive, and implement feedback on their new methods and progress.
+              description_student: The standard algorithms you wrote for 1D arrays also work with 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. In this lesson, you use a standard algorithm to create a new image filter to create a grayscale image. You also use a standard algorithm to help the food truck owner maximize their dessert inventory.
+              description_teacher: Students apply the standard algorithms they wrote for 1D arrays to 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. Students write a `GrayscaleImage` class that creates a grayscale image by finding the average of the RGB values of a `Pixel` in an image and setting the RGB values of the `Pixel` to that average value. Students find the maximum value in a 2D array of dessert quantities to compare to a quantity entered and update the array based on a condition.
             Reversing Elements:
               name: Reversing Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             Shifting Elements:
               name: Shifting Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             Finding Duplicates:
               name: Finding Duplicates
-              description_student: 
-              description_teacher: 
+              description_student: You previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, you apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. You refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
+              description_teacher: Students previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, students apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. Students refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
             Searching for Elements:
               name: Searching for Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             A Sustainable Neighborhood Project - Day 1:
               name: A Sustainable Neighborhood Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student: For this project, you develop a concert in The Theater about your chosen sustainable goal. You begin by choosing a new image filter or effect and writing pseudocode for its algorithm. You then begin the first iteration of your project.
+              description_teacher: For this project, students develop a concert in The Theater about their chosen sustainable goal. Students begin by choosing a new image filter or effect and writing pseudocode for its algorithm. Students then begin the first iteration of their project.
             A Sustainable Neighborhood Project - Day 2:
               name: A Sustainable Neighborhood Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student: In the previous lesson, you completed the first iteration of your concert. Today, you complete the second iteration of your project and reflect with a group as you prepare for the final development of your Sustainable Neighborhood Concert. You self-assess your work against the project rubric and create a final priority list for your last iteration.
+              description_teacher: In the previous lesson, students completed the first iteration of their concert. Students complete the second iteration of their project and reflect with a group as they prepare for the final development of their Sustainable Neighborhood Concert. Students self-assess their work against the project rubric and create a final priority list for their last iteration.
             A Sustainable Neighborhood Project - Day 3:
               name: A Sustainable Neighborhood Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student: You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer.
+              description_teacher: Students complete their last iteration and present their concert to their peers. Students finish the project with a final reflection and celebrate their identity as software engineers.
             FRQ Day:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
             Assessment Day:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student: In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-1:
               key: lesson-1
               name: Creating Tables of Data
@@ -25967,11 +26005,29 @@ en:
               name: Assessment Day
               description_student: ''
               description_teacher: ''
+            Java Lab:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            The Theater:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            The Playground:
+              name: The Playground
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandbox
           title: Giving Objects Organization
           description: In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
           student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
@@ -26126,7 +26182,7 @@ en:
             lesson-1:
               name: Hello World
               description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
-              description_teacher: In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. There are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
           lesson_groups: {}
           name: hello-world-food
           title: Hello World
@@ -26410,6 +26466,86 @@ en:
           lesson_groups: {}
           name: poetry-hoc3
           title: Poetry HoC v3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Sprite Effect Challenge
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: spritelab-effects-challenge
+          title: Sprite Effect Challenge
+          description_audience: Intermediate/advanced users of Sprite Lab
+          description_short: Take the challenge to create your own sprite effect using Sprite Lab!
+          description: ''
+          student_description: ''
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Tools
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Examples
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demos and Resources
+          name: csa-u8-dev
+          title: CSA Unit 8 Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poem-art
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poetry:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Code Your Own Poem
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Variables
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Build a Poem Generator
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Word Choice
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Poetry Circle
+          lesson_groups: {}
+          name: poetry
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

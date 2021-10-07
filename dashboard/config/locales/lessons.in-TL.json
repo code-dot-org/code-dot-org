@@ -2,6 +2,12 @@
   "in-TL": {
     "data": {
       "lessons": {
+        "hello-world-food/lesson-1": {
+          "overview": "crwdns2695585:0[0]crwdne2695585:0",
+          "preparation": "crwdns2695587:0[0]crwdnd2695587:0[1]crwdnd2695587:0[2]crwdnd2695587:0[certificate]crwdnd2695587:0[3]crwdne2695587:0",
+          "purpose": "crwdns2695589:0crwdne2695589:0",
+          "student_overview": "crwdns2695591:0crwdne2695591:0"
+        },
         "coursef-2021/lesson-6": {
           "overview": "crwdns2590762:0crwdne2590762:0",
           "preparation": "crwdns2590764:0crwdne2590764:0",

@@ -2,6 +2,19 @@
   "ms-MY": {
     "data": {
       "activity_sections": {
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Penggulungan"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
         "f86ae28c-7f78-4f08-a649-8abf70a55601": {
           "progression_name": "Inilah Bandar Raksasa"
         },
@@ -65,6 +78,12 @@
           "name": "Pengenalan",
           "description": "#### Arahan untuk Adegan"
         },
+        "a7ddf80c-6efc-4650-bc93-fb329d06bca1": {
+          "description": "Masa lalu, kita meneroka aplikasi dan permainan yang dicipta dengan Makmal Peperi. Hari ini kita akan mula menulis kod kita sendiri untuk mencipta animasi peperi yang mudah."
+        },
+        "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5": {
+          "description": "**Lakukan ini:** Dengan menggunakan slaid mula memanas pelajaran, atau [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ini, tunjukkan kepada murid animasi semut dan pepatung.\n\n**Bincangkan:** _Bagaimanakah anda menghuraikan adegan peperi ini?\nJika anda mahu seseorang mencipta adegan ini untuk anda pada komputer, apakah arahan yang diperlukan oleh mereka?_\n\n**Matlamat perbincangan:** Pelajar perlu mengenal pasti kedua-dua peperi dalam projek ini, huraikan tingkah laku (pergerakan) peperi tersebut dan perhatikan juga latar belakangnya.\nSila berikan masa kepada pelajar melakukan sumbang saran ke atas idea. Jika mereka tidak pasti mengenai perkara yang perlu dikatakan, terangkan bahawa anda hanya meminta mereka menyatakan pemerhatian tentang perkara yang mereka lihat.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?"
+        },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
           "name": "Membuat Peperi",
           "description": "#### Ramalan (3 minit)\n\n**Lakukan Ini:** Minta pelajar baca kod yang disediakan dan buat ramalan tentang perkara yang akan berlaku. Selepas menekan “Jalankan”, berikan masa untuk pelajar merenungkan apa-apa perkara yang mereka dapati menarik atau mengejutkan mereka.",
@@ -72,6 +91,10 @@
             " Dalam teka-teki ramalan pelajar diminta membaca atur cara yang disediakan dan menjawab soalan tentangnya. Soalan mesti dijawab sebelum pelajar boleh menekan butang “Jalankan”. Sungguhpun ia mungkin boleh menggunakan soalan ini sebagai bentuk penilaian, perlu diingatkan bahawa soalan tersebut sering diletakkan pada permulaan pelajaran sebagai cara meminta pelajar membuat pertanyaan ke atas sesuatu sebelum ia ditunjukkan secara formal sejauh mana sesuatu yang baharu berfungsi. "
           ],
           "progression_name": "Ramalan"
+        },
+        "3eb6f356-a55c-4c86-a056-e8af46058092": {
+          "description": "**Lakukan Ini:**  Mainkan video, “Cara Membuat Peperi”",
+          "progression_name": "Video: Cara Membuat Peperi"
         },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "description": "#### Membina Kemahiran dan Latihan (20 minit)\n\n**Peralihan:** Minta pelajar bergerak ke komputer mereka dan daftar masuk. \n\nAktiviti ini sesuai untuk pembelajaran sendiri atau pengaturcaraan berpasangan.\n\nPelajar perlu melengkapkan tahap Membina Kemahiran dan kemudian meluangkan mana-mana lebihan masa memilih daripada pelbagai aktiviti Latihan.",
@@ -84,18 +107,31 @@
           "progression_name": "Latihan"
         },
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
+          "description": "#### Permainan Bebas (10 minit)\n\n**Peralihan:** Sekarang, pelajar sepatutnya sudah melangkau kepada tahap akhir dalam pelajaran apabila mereka akan dapat membuat projek mereka sendiri.",
           "tips": [
-            null
-          ]
+            "Tahap Permainan Bebas direka bentuk untuk menjadi peluang pantas pelajar menggunakan perkara yang telah mereka pelajari dengan cara yang kreatif. Pelajar perlu melakukan eksperimen dengan idea mereka sendiri dan digalakkan berkongsi dan bekerjasama antara satu sama lain."
+          ],
+          "progression_name": "Permainan Bebas: Membuat Adegan"
         },
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Hari ini anda mempelajari cara menulis kod untuk mencipta atur cara Makmal Peperi. \n\n**Atur Cara** - Algoritma yang telah dikodkan menjadi sesuatu yang boleh dijalankan oleh mesin.\n\n**Algoritma** - Senarai langkah untuk menyelesaikan tugas."
+        },
+        "84a55315-a3fb-4f8c-a451-b167ff8700cb": {
+          "description": "#### Jurnal\n\nMeminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\nApakah nasihat yang anda boleh berikan kepada rakan yang berminat mencipta atur cara mereka sendiri dalam Makmal Peperi?"
+        },
+        "18cec2c2-3023-4456-b199-32f93d8b5287": {
+          "description": "**Lakukan ini:** Semak atau perkenalkan perkataan **algoritma**: senarai langkah untuk melengkapkan tugas."
         },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
           "name": "Ikuti Algoritma",
+          "description": "Hari ini kita akan memulakan dengan permainan pantas. Dalam permainan ini, saya akan memberikan anda semua perintah untuk diikuti dan tugas anda ialah mengikuti **algoritma**. Perintah akan sentiasa dimulakan dengan “mula” atau “henti”. Jika saya memberitahu anda untuk mulakan sesuatu, anda perlu memulakan tingkah laku itu dan teruskannya sehingga saya memberitahu anda supaya berhenti. Saya juga mungkin memberitahu anda “hentikan semuanya” yang bermaksud anda boleh menamatkan semua tingkah laku yang saya telah berikan setakat ini. Kita akan bermain 3 pusingan dan selepas setiap pusingan, saya akan mengemukakan beberapa soalan kepada anda.",
           "tips": [
-            null
+            "Pastikan anda memberikan sedikit ruang masa antara perintah. Bagi setiap bahagian ini, sila pertimbangkan untuk menjalankan keseluruhan jujukan tanpa apa-apa perbincangan dan kemudian mengulanginya selepas semua individu mendapat peluang membuat ulasan dan memproses mana-mana kekeliruan."
           ]
+        },
+        "294a81ac-fc2a-417c-b3c5-e9330376b5a8": {
+          "description": "#### Pusingan 1 (Asas):\n\n-   Mula berkawat setempat.\n-   Henti berkawat setempat.\n-   Mula bertepuk tangan.\n-   Henti bertepuk tangan.\n-   Mula berkawat setempat.\n-   Mula bertepuk tangan.\n-   Hentikan semuanya.\n\n**Perbincangan:** _Apakah yang berlaku apabila anda diberitahu untuk bertepuk tangan tetapi anda sudah berkawat setempat? Apakah yang akan berlaku sekiranya anda diberitahu untuk memulakan dua tingkah laku berbeza sekaligus?_\n\nPelajar perlu memahami bahawa tingkah laku berbilang boleh berlaku secara serentak.\n\n#### Pusingan 2 (Pertengahan):\n\n-   Mula melambaikan tangan ke udara.\n-   Mula menganggukkan kepala anda.\n-   Henti melambaikan tangan ke udara.\n-   Henti menganggukkan kepala anda.\n-   Mula menggoyangkan lutut anda.\n-   Mula mengibaskan lengan anda seperti burung.\n-   Henti menggoyangkan lutut anda.\n-   Mula menganggukkan kepala anda.\n-   Mula berkawat setempat.\n-   Henti mengibaskan lengan anda seperti burung.\n-   Hentikan semuanya.\n\n**Perbincangan:**\n\n_Apakah jenis arahan yang menyebabkan individu melakukan kesilapan?\nPada pendapat anda, apakah strategi yang berguna untuk memastikan anda mengikuti arahan dengan betul?\nMengapakah penting untuk menjejaki setiap tingkah laku secara berasingan?_\n\nPelajar harus memahami bahawa setiap tingkah laku perlu dihentikan secara individu. Mereka perlu menjejaki setiap satu secara berasingan.\n\n#### Mencabar\n\n-   Mula mendekam.\n-   Mula menepuk-nepuk kepala anda.\n-   Henti mendekam.\n-   Henti menepuk-nepuk kepala anda.\n-   Mula melompat ke atas dan ke bawah.\n-   Mula menepuk-nepuk kepala anda.\n-   Hentikan semuanya.\n-   Mula bertepuk tangan.\n-   Mula mengibaskan lengan anda seperti burung.\n-   Hentikan semuanya.\n-   Mula mendekam.\n-   Mula melompat ke atas dan ke bawah.\n-   Hentikan semuanya.\n-   Mula menepuk-nepuk lutut anda.\n-   Mula menepuk-nepuk kepala anda.\n-   Hentikan semuanya.\n-   Mula berpusing ke kiri.\n-   Mula berpusing ke kanan.\n-   Henti berpusing ke kiri.\n-   Henti berpusing ke kanan.\n\n**Perbincangan:** _Apakah yang berlaku jika dua tingkah laku kelihatan bertentangan antara satu sama lain?_\n\n_Apakah yang perlu anda lakukan apabila diberitahu untuk bertepuk tangan dan mengibaskan lengan anda pada masa yang sama?_\n\n_Bagaimanakah anda boleh melompat ke atas dan ke bawah semasa mendekam?_\n\n_Apakah yang berlaku jika anda perlu menepuk-nepuk lutut dan kepala anda pada masa yang sama?_\n\n_Apabila anda diberitahu untuk berpusing ke dua arah yang bertentangan, apakah yang anda lihat individu lakukan?_ \n\n_Apakah yang akan berlaku sekiranya anda diberitahu untuk berpusing ke kiri dan ke kanan pada masa yang sama?_\n\nPelajar perlu memahami bahawa sesetengah tingkah laku bertentangan antara satu sama lain yang boleh menyebabkan hasil yang tidak dijangkakan. Berkemungkinan dua tingkah laku bertentangan membatalkan satu sama lain secara berkesan."
         },
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
           "name": "Peperi sedang Beraksi",
@@ -103,6 +139,7 @@
           "progression_name": "Ramalan"
         },
         "275316f1-8a17-411e-881a-0841ede9cd01": {
+          "description": "#### Video: Peperi sedang Beraksi (3 min)\n\n**Lakukan Ini:** Mainkan video, “Peperi sedang Beraksi”",
           "progression_name": "Video: Peperi sedang Beraksi"
         },
         "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
@@ -113,12 +150,18 @@
           "progression_name": "Latihan"
         },
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
+          "description": "#### Permainan Bebas (10 minit)\n\n**Peralihan:** Sekarang, pelajar sepatutnya sudah melangkau kepada tahap akhir dalam pelajaran apabila mereka akan melihat pilihan permainan bebas yang sama seperti pelajaran sebelumnya. Sila galakkan pelajar menambah peristiwa kepada projek mereka dari masa lalu, atau mulakan projek baharu.",
           "tips": [
-            null
-          ]
+            "Pilihan permainan bebas dalam pelajaran ini mencerminkan pilihan daripada pelajaran terdahulu. Sebenarnya, mana-mana kod pelajar daripada pelajaran yang lalu akan dibawa ke hari ini. Perbezaan utama ialah, pada masa sekarang pelajar mempunyai blok tambahan di dalam kotak alatan mereka yang perlu diguna untuk menjadikan atur cara mereka lebih menarik atau kompleks."
+          ],
+          "progression_name": "Permainan Bebas: Membuat Adegan yang Berinteraktif"
         },
         "47bca048-39fb-4014-a480-e21d163469db": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Hari ini anda belajar mencipta atur cara yang berubah mengikut masa dengan menggunakan peristiwa. \n\n**Peristiwa** - _tindakan yang menyebabkan sesuatu berlaku._"
+        },
+        "663232b3-1a0c-4d35-a039-f6219180dd04": {
+          "description": "#### Jurnal\n\nMeminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\nKekunci anak panah ialah satu cara untuk menjadikan program lebih berinteraktif. Apakah cara lain yang boleh kita berikan kepada pengguna untuk mengawal perkara yang berlaku dalam aplikasi atau permainan?"
         },
         "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
           "name": "Pengenalan"
@@ -134,6 +177,9 @@
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "Penerokaan"
         },
+        "7a07175e-ed69-46f8-a2c0-3f479f3966f8": {
+          "progression_name": "Projek Mini: Cipta Haiwan Peliharaan Maya"
+        },
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "Permainan Bebas"
         },
@@ -142,6 +188,18 @@
         },
         "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
           "name": "Perbendaharaan Kata Utama"
+        },
+        "06057973-b621-4a48-a991-4f99aafdedca": {
+          "progression_name": "Kuasa Kata-kata - Aktiviti Nirplag"
+        },
+        "c03754de-e580-4e9f-b58e-af136a073898": {
+          "name": "Makanan Kegemaran"
+        },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Permainan Majlis"
+        },
+        "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
+          "name": "Cipta Cerita Anda Sendiri (20 minit)"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
@@ -157,7 +215,8 @@
           "name": "Memperkenalkan Pemboleh Ubah"
         },
         "035f92b6-2d03-4fec-adc4-a15a1b620f08": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "**Prom:**\n\n-   Pada pendapat anda, bagaimanakah cerita ruang kosong berkaitan dengan pembelajaran sains komputer?"
         },
         "d2b97c32-0187-432e-9fa2-979e9f34280a": {
           "name": "Semak"
@@ -212,9 +271,12 @@
         },
         "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea": {
           "tips": [
-            null
+            "Tahap ini memberikan pelajar menu pilihan yang sepadan dengan jenis projek utama yang mereka pilih. Perbezaan ketara antara subtahap ini ialah arahan dan kostum peperi lalai. Pelajar mungkin memerlukan arahan yang sangat jelas untuk memahami cara menavigasi pilihan di sini. Untuk setiap pilihan projek, terdapat dua subtahap di sini. Untuk memulakan, pelajar perlu memilih satu daripada tahap yang bertanda \"Bahagian 1\". Sebaik sahaja mereka menyelesaikan tahap itu, mereka perlu kembali ke sini dan memilih \"Bahagian 2\" daripada projek yang sama. Tahap pertama untuk setiap pilihan akan memberikan maklum balas kepada pelajar sebaik sahaja mereka mengatur komponen asas projek mereka bersama. Tahap kedua ialah \"permainan bebas,\" yang bertujuan membolehkan pelajar membuat apa-apa perubahan kepada kod yang mereka suka."
           ],
           "progression_name": "Projek Mini: Atur Cara Input Pengguna"
+        },
+        "d5bf3b23-128d-4078-bdb2-a806a59a2db1": {
+          "name": "Pameran"
         },
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Pengenalan"
@@ -298,6 +360,9 @@
           "tips": [
             null
           ]
+        },
+        "6dd8f3bb-f8c8-4ad9-857a-73fc00f922f1": {
+          "description": "Edarkan lembaran kerja penilaian dan biarkan pelajar melengkapkan aktiviti mereka sendiri selepas arahan telah dijelaskan dengan baik. Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
         },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Pengenalan"
@@ -404,7 +469,7 @@
           "name": "Renungan"
         },
         "3218da5f-4f6d-4679-bc7a-178c91cb9bb6": {
-          "name": "A.I. dalam Acara Semasa"
+          "name": "A.I. dalam Peristiwa Semasa"
         },
         "fda34361-ffaa-4440-98c7-a5ab57d1cf17": {
           "name": "Pengenalan"
@@ -438,6 +503,9 @@
           "tips": [
             null
           ]
+        },
+        "6b2de955-080b-4dc9-a71d-ef478aa88b02": {
+          "description": "Edarkan lembaran kerja **\\*penilaian** dan biarkan pelajar melengkapkan aktiviti mereka sendiri selepas arahan telah dijelaskan dengan baik. Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
         },
         "db7f26e9-547b-4801-8328-a93aefc4ce9e": {
           "progression_name": "Projek contoh"
@@ -563,9 +631,13 @@
           "progression_name": "Video: Menjadi Bergelung"
         },
         "0d345591-6747-4a5e-aeb9-196c42f905cd": {
+          "description": "Perkenalkan aktiviti utama dengan memberitahu kelas bahawa kita akan mengadakan majlis tari-menari. Untuk mengadakan majlis itu, kita perlu mengetahui semua jenis langkah dalam tarian dan bilangan yang mesti kita lakukan.\n\n**Paparkan:** Tunjukkan **\\*Lembaran Kerja** supaya semua pelajar dapat melihatnya. Berikan tunjuk ajar bahagian tarian berbeza kepada seluruh kelas. Tunjukkan bahagian yang berulang, secara khususnya.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Tunjukkan kepada kelas bentuk keseluruhan tarian apabila dilakukan dengan kelajuan penuh. Kemudian lakukan tarian itu dengan perlahan, sambil meminta pelajar yang berlainan berteriak setiap baris arahan. Seterusnya, minta pelajar melakukan tarian bersama anda, dengan menyebut arahan dengan kuat semasa tiba untuk mereka melakukan setiap pergerakan.\n\n**Prom:** Minta pelajar bekerjasama dengan jiran untuk mencari semua bahagian tarian yang berulang.\n\n**Kongsikan:** Minta beberapa pelajar berkongsi corak berulang yang mereka temui. Sebagai kelas, berikan tunjuk ajar cara anda mungkin boleh melakukan semula arahan itu agar lebih singkat dengan mengulangi corak tersebut.\n\nAkhir sekali, bantu mereka memahami simbologi untuk menangkap gelung ini pada atur cara gambar mereka, kerana penilaian akan menggunakan kaedah yang sama. Berikut ialah contohnya:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
           "tips": [
             null
           ]
+        },
+        "c19f7d42-9e78-4dc2-9d00-5c6e211be4ac": {
+          "description": "Mengakhiri dengan lembaran penilaian akan membantu memantapkan pelajaran ini untuk pelajar anda.\n\n**Edarkan**: Edarkan **\\*Lembaran Kerja** kepada setiap pelajar. Biarkan pelajar melengkapkan aktiviti mereka sendiri selepas arahan dijelaskan dengan baik. Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
         },
         "740f60c7-c857-4947-804e-498fb18ab620": {
           "name": "Renungan"
@@ -657,6 +729,9 @@
             null
           ]
         },
+        "e8051393-643c-4b38-acfd-5fbb3071c8d8": {
+          "description": "**Edarkan**: Edarkan satu **\\*Penilaian** kepada setiap pelajar dan biarkan mereka melengkapkannya sendiri selepas arahan telah dijelaskan dengan baik. Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
+        },
         "3506957f-7430-4cc9-8e53-36f1d67496a7": {
           "name": "Pengenalan"
         },
@@ -672,10 +747,10 @@
           "progression_name": "Video: Pengenalan kepada Makmal Mainan"
         },
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
-          "progression_name": "Free Play"
+          "progression_name": "Permainan Bebas"
         },
         "afc1b191-5ed3-4f1e-9457-8499c5445f54": {
-          "progression_name": "Free Play"
+          "progression_name": "Permainan Bebas"
         },
         "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a": {
           "progression_name": "Tambahan Pelajaran"
@@ -704,6 +779,9 @@
           "tips": [
             null
           ]
+        },
+        "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
+          "name": "Pameran"
         },
         "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
           "progression_name": "Kejiranan Dalam Talian Saya"
@@ -745,13 +823,17 @@
         "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
           "description": "Bahagikan sedikit masa untuk mengajar cara mengklik, menyeret dan melepaskan dengan betul-betul. Bahagikan masa untuk memperkenalkan bahasa di sekeliling peranti yang akan digunakan oleh pelajar semasa mereka berusaha menyelesaikan teka-teki. Jika anda mempunyai tablet, pelajar akan menggunakan _skrin sentuh_. Jika anda mempunyai komputer riba, mereka mungkin akan menggunakan _pad jejak_. Komputer desktop seperti yang anda mungkin temui di dalam makmal akan bergantung pada penggunaan _tetikus_.",
           "tips": [
-            null
+            "Sila pertimbangkan untuk meminta pelajar memecahkan langkah menyeret dan melepaskan, serta merekodkannya pada papan tulis. Sebagai contoh: \n\n1.  Gerakkan anak panah kepada blok. \n2.  Klik dan tahan butang tetikus. \n3.  Gerakkan tetikus. \n4.  Lepaskan butang itu.\n\nDengan melakukan perkara ini, ia akan memberikan pelajar latihan dengan mencipta algoritma, iaitu konsep yang akan diterokai dalam pelajaran akan datang."
           ]
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
+          "description": "Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa teka-teki dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Teka-teki dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah:",
           "tips": [
-            null
+            "Tunjukkan kepada pelajar cara yang betul untuk membantu rakan sekelas:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
+        },
+        "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
+          "description": "-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar untuk menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. _Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?_\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangku selepas semua ini, cuba tanyakan soalan utama untuk meminta pelajar mengesan ralat mereka sendiri."
         },
         "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
           "progression_name": "Membina Kemahiran"
@@ -759,7 +841,7 @@
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Renungan",
           "tips": [
-            null
+            "Prom renungan seperti ini boleh diselesaikan dalam pelbagai gaya. Jurnal atau perbincangan (dengan kumpulan atau rakan kongsi) ialah pilihan hebat!"
           ]
         },
         "1a3b430e-95cd-4425-b5d7-953dfae5e5d2": {
@@ -767,11 +849,12 @@
         },
         "d62f31be-e1c0-4384-a410-e8a8f1b84d7b": {
           "tips": [
-            null
+            "Jika kelas mula menjerit secara serentak, terangkan bahawa anda hanya boleh mendengar satu arahan pada satu masa. Panggil pelajar secara individu jika ia membantu."
           ]
         },
         "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
-          "name": "Pengaturcaraan Peta Bahagia"
+          "name": "Pengaturcaraan Peta Bahagia",
+          "progression_name": "Video: Peta Bahagia - Aktiviti Nirplag"
         },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
           "tips": [
@@ -958,6 +1041,10 @@
             null
           ]
         },
+        "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5": {
+          "name": "Penilaian",
+          "description": "**Edarkan**: Edarkan satu **\\*Penilaian** kepada setiap pelajar dan biarkan mereka melengkapkannya sendiri selepas arahan telah dijelaskan dengan baik. Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
+        },
         "cb6735d8-d986-408b-adef-61e9a52ad30f": {
           "name": "Pengenalan"
         },
@@ -985,7 +1072,11 @@
           "name": "Renungan"
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
-          "name": "Semak"
+          "name": "Semak",
+          "progression_name": "Projek"
+        },
+        "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
+          "progression_name": "Projek"
         },
         "76119a2d-a3f8-4c17-b38a-c0194431de25": {
           "name": "Perancangan",
@@ -993,10 +1084,17 @@
             null
           ]
         },
+        "0ab5b62b-a464-4801-a963-d23d293ea5ff": {
+          "name": "Projek",
+          "progression_name": "Projek"
+        },
         "16e34527-4efe-46f1-970b-f365858958a9": {
           "tips": [
-            null
+            "Semua pilihan dalam pelajaran ini dianggap sebagai \"Permainan Bebas\", yang bermaksud tiada jawapan tunggal yang tepat. Jika pelajar menekan Selesai, maka mereka akan kembali kepada senarai pilihan. Anda boleh meminta pelajar melengkapkan hanya satu pilihan atau seberapa banyak pilihan yang mereka minat untuk melengkapkannya selagi masa membenarkan."
           ]
+        },
+        "adc355f7-34d5-450e-aa57-e001b2a7973c": {
+          "name": "Pameran"
         },
         "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
           "name": "Perbendaharaan Kata Utama"
@@ -1202,7 +1300,7 @@
           "name": "Renungan"
         },
         "a252a858-6aeb-414f-8529-0f5b89a3791e": {
-          "name": "Siri Acara"
+          "name": "Siri Peristiwa"
         },
         "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
           "name": "Peristiwa Besar",
@@ -1219,6 +1317,10 @@
             null
           ]
         },
+        "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
+          "name": "Penilaian",
+          "description": "-   Edarkan **\\*Penilaian** dan biarkan pelajar melengkapkan aktiviti mereka sendiri selepas arahan telah dijelaskan dengan baik.\n-   Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
+        },
         "7e3d14a1-a677-4c9d-a695-e043db71c52e": {
           "tips": [
             null
@@ -1228,7 +1330,8 @@
           "name": "Pengenalan"
         },
         "64988ef3-1287-4486-9d41-cd475637575b": {
-          "name": "Membina Permainan Kibasan"
+          "name": "Membina Permainan Kibasan",
+          "description": "#### Teka-teki dalam Talian dan Permainan Bebas\n\nSeluruh pelajaran ini membina ke arah pelajar mencipta permainan Kibasan mereka sendiri, tetapi kesemua separuh tahap kedua dipautkan. Ini bermaksud pelajar akan melihat kod mereka sendiri semasa mereka bergerak antara gelembung 6-10, membolehkan penyesuaian secara lebih peribadi yang akan diteruskan sehingga produk akhir selesai.\n\nPada peringkat akhir pelajaran ini pelajar dapat mengubah sedikit permainan mereka untuk menjadikannya unik - menggalakkan mereka untuk melihat sejauh mana perbezaan yang mereka boleh dibuat ke atas setiap permainan dengan kekangan yang dihadapi. Jika kelas tidak menggunakan pengaturcaraan berpasangan, maka sila beritahu pelajar untuk pergi ke sekeliling dan lihat permainan pelajar lain. Jika tidak, minta pelajar berbincang dan cuba cara berbeza untuk menyediakan permainan dengan pasangan mereka."
         },
         "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
           "progression_name": "Membina Kemahiran"
@@ -1289,6 +1392,9 @@
         "02945b11-d2db-485d-9002-9aff256a4ed4": {
           "name": "Renungan"
         },
+        "8ab38e6e-a0b5-4cac-ace3-4336e3b01746": {
+          "description": "-   Edarkan lembaran kerja **\\*penilaian** dan biarkan pelajar melengkapkannya sendiri selepas arahan telah dijelaskan dengan baik.\n-   Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
+        },
         "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
           "name": "Perancangan"
         },
@@ -1304,6 +1410,9 @@
         },
         "1c65a4a2-b069-4b30-b733-a80c5081f8e3": {
           "progression_name": "Penerokaan: Projek Sampel"
+        },
+        "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
+          "name": "Pameran"
         },
         "b8f03681-d01e-4384-b88f-5e562eab172f": {
           "name": "Perbendaharaan Kata Utama"
@@ -1324,6 +1433,9 @@
           "tips": [
             null
           ]
+        },
+        "7ae979e9-a47d-4858-aa74-c4c258f2a916": {
+          "description": "-   Edarkan **\\*Pengaturcaraan Kertas Graf - Penilaian** dan biarkan pelajar melengkapkan aktiviti mereka sendiri selepas arahan telah dijelaskan dengan baik. \n-   Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
         },
         "1ac03584-29b5-4a3d-8420-44259c0b1064": {
           "name": "Pengenalan"
@@ -1349,6 +1461,9 @@
           "tips": [
             null
           ]
+        },
+        "f3c9c8ad-1f77-4506-ba5e-076eaa74813d": {
+          "description": "**Edarkan:** Untuk memastikan bahawa pelajar memahami idea mencari dan membaiki ralat (penyahpepijatan) edarkan **\\*Lembaran Kerja** dan minta pelajar melengkapkan tugas secara berpasangan.  \n\n_Pilihan:_ Jika anda mahu menggerakkan aktiviti bersama dengan lebih pantas, sebaliknya, sila luangkan masa melengkapkannya seluruh kelas.\n\n**Peralihan:** Sekarang tiba masanya untuk bermain permainan!"
         },
         "3b65cbfa-b176-412f-abd3-357bc1a825ab": {
           "name": "Pengaturcaraan penyampai"
@@ -1432,7 +1547,7 @@
           "progression_name": "Latihan"
         },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
-          "progression_name": "Acara-acara"
+          "progression_name": "Peristiwa"
         },
         "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
           "progression_name": "Corak Berirama"
@@ -1456,6 +1571,12 @@
         },
         "a450ad93-b5c8-492e-98bc-84a719f014e2": {
           "name": "Renungan"
+        },
+        "9c113356-76b9-4324-b22f-e35ce5a49216": {
+          "name": "Penilaian"
+        },
+        "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
+          "name": "Peluang Kurikulum Bersilang"
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Pengenalan kepada Gelung"
@@ -1522,8 +1643,14 @@
             null
           ]
         },
+        "810f850f-370f-4cf5-beb4-3caca272ec00": {
+          "description": "#### Sembang Bebas: Apakah yang kita pelajari?\n\n-   Jika anda mahu mengekod ini dalam Blocky, apakah yang perlu anda tambahkan di sekitar bersyarat anda bagi membolehkan kod berjalan lebih daripada sekali? (Gelung)\n-   Apakah perkara lain yang anda lakukan semasa waktu siang di bawah syarat tertentu?\n-   Jika anda sepatutnya melakukan sesuatu apabila nilai kad melebihi daripada 5 dan anda mencabut 5, adakah anda memenuhi syarat itu?\n-   Perhatikan bahawa syaratnya sama ada \"Benar\" atau \"Palsu.\" Tidak ada penilaian syarat yang menilai \"Pisang.\"\n-   Apabila anda perlu memenuhi beberapa kombinasi syarat, kita boleh menggunakan sesuatu yang panggil sebagai \"bersyarat bersarang.\"\n    -   Apakah yang anda fikir maksudnya?\n    -   Bolehkah anda berikan contoh di manakah kita melihatnya semasa dalam permainan?\n-   Apakah bahagian permainan yang paling anda gemari?"
+        },
         "95951ba3-d513-4635-a484-1d1819906049": {
           "name": "Renungan"
+        },
+        "d3c82a83-b5e1-498a-a130-9df9f7f36e88": {
+          "description": "Edarkan **\\*Bersyarat dengan Kad - Penilaian** dan biarkan pelajar melengkapkan aktiviti mereka sendiri selepas arahan dijelaskan dengan baik. Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya. Jika diperlukan, sila rujuk kepada sumber **Video Penilaian** sebagai panduan."
         },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Pengenalan"
@@ -1632,6 +1759,9 @@
             null
           ]
         },
+        "bfb31158-7c6c-4e30-9e86-141b77445111": {
+          "name": "Pameran"
+        },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "Pengenalan",
           "tips": [
@@ -1735,6 +1865,7 @@
           "name": "Ikan Berenang dengan Makmal Peperi"
         },
         "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21": {
+          "description": "**Peralihan:** Gerakkan pelajar kepada komputer mereka. Galakkan pelajar mengikuti arahan untuk setiap teka-teki. Bantu mereka menyedari bahawa ini ialah aktiviti kreatif, bertujuan membantu mereka mempelajari Makmal Peperi. Ini bukan aktiviti penilaian dalam apa jua bentuk.",
           "tips": [
             null
           ]
@@ -1758,6 +1889,12 @@
           "name": "Pengenalan",
           "description": "#### Arahan untuk Adegan"
         },
+        "5a8f455d-1681-4101-b70c-73117d7172a4": {
+          "description": "Masa lalu, kita meneroka aplikasi dan permainan yang dicipta dengan Makmal Peperi. Hari ini kita akan mula menulis kod kita sendiri untuk mencipta animasi peperi yang mudah."
+        },
+        "d3c5cb2c-aa26-41cb-9e54-dd8e8ae43402": {
+          "description": "**Lakukan ini:** Dengan menggunakan slaid mula memanas pelajaran, atau [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) ini, tunjukkan kepada murid animasi semut dan pepatung.\n\n**Bincangkan:** _Bagaimanakah anda menghuraikan adegan peperi ini?\nJika anda mahu seseorang mencipta adegan ini untuk anda pada komputer, apakah arahan yang diperlukan oleh mereka?_\n\n**Matlamat perbincangan:** Pelajar perlu mengenal pasti kedua-dua peperi dalam projek ini, huraikan tingkah laku (pergerakan) peperi tersebut dan perhatikan juga latar belakangnya.\nSila berikan masa kepada pelajar melakukan sumbang saran ke atas idea. Jika mereka tidak pasti mengenai perkara yang perlu dikatakan, terangkan bahawa anda hanya meminta mereka menyatakan pemerhatian tentang perkara yang mereka lihat.\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n**Reflect:** What is the same or different about our instructions and this code?"
+        },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
           "name": "Membuat Peperi",
           "description": "#### Ramalan (3 minit)\n\n**Lakukan Ini:** Minta pelajar baca kod yang disediakan dan buat ramalan tentang perkara yang akan berlaku. Selepas menekan “Jalankan”, berikan masa untuk pelajar merenungkan apa-apa perkara yang mereka dapati menarik atau mengejutkan mereka.",
@@ -1766,6 +1903,9 @@
           ],
           "progression_name": "Ramalan"
         },
+        "60d05bd8-d452-4ff7-8d42-afc78df62133": {
+          "description": "**Lakukan Ini:**  Mainkan video, “Cara Membuat Peperi”"
+        },
         "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
           "description": "#### Membina Kemahiran dan Latihan (20 minit)\n\n**Peralihan:** Minta pelajar bergerak ke komputer mereka dan daftar masuk. \n\nAktiviti ini sesuai untuk pembelajaran sendiri atau pengaturcaraan berpasangan.\n\nPelajar perlu melengkapkan tahap Membina Kemahiran dan kemudian meluangkan mana-mana lebihan masa memilih daripada pelbagai aktiviti Latihan.",
           "progression_name": "Membina Kemahiran"
@@ -1773,11 +1913,24 @@
         "8fd35c57-6015-4e9b-97cd-a8ade679fe05": {
           "progression_name": "Latihan"
         },
+        "676dfae2-cb99-4395-a262-f61ed61a3d28": {
+          "description": "#### Permainan Bebas (10 minit)\n\n**Peralihan:** Sekarang, pelajar sepatutnya sudah melangkau kepada tahap akhir dalam pelajaran apabila mereka akan dapat membuat projek mereka sendiri.",
+          "progression_name": "Permainan Bebas: Membuat Adegan"
+        },
+        "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
+          "description": "Hari ini anda mempelajari cara menulis kod untuk mencipta atur cara Makmal Peperi. \n\n**Atur Cara** - Algoritma yang telah dikodkan menjadi sesuatu yang boleh dijalankan oleh mesin.\n\n**Algoritma** - Senarai langkah untuk menyelesaikan tugas."
+        },
+        "e80dde92-1c60-43ad-86ab-8688fbc0b52b": {
+          "description": "#### Jurnal\n\nMeminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\nApakah nasihat yang anda boleh berikan kepada rakan yang berminat mencipta atur cara mereka sendiri dalam Makmal Peperi?"
+        },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
           "name": "Ikuti Algoritma",
           "tips": [
-            null
+            "Pastikan anda memberikan sedikit ruang masa antara perintah. Bagi setiap bahagian ini, sila pertimbangkan untuk menjalankan keseluruhan jujukan tanpa apa-apa perbincangan dan kemudian mengulanginya selepas semua individu mendapat peluang membuat ulasan dan memproses mana-mana kekeliruan."
           ]
+        },
+        "5c75924f-ef1f-4b61-9850-820fb68c0972": {
+          "description": "#### Pusingan 1 (Asas):\n\n-   Mula berkawat setempat.\n-   Henti berkawat setempat.\n-   Mula bertepuk tangan.\n-   Henti bertepuk tangan.\n-   Mula berkawat setempat.\n-   Mula bertepuk tangan.\n-   Hentikan semuanya.\n\n**Perbincangan:** _Apakah yang berlaku apabila anda diberitahu untuk bertepuk tangan tetapi anda sudah berkawat setempat? Apakah yang akan berlaku sekiranya anda diberitahu untuk memulakan dua tingkah laku berbeza sekaligus?_\n\nPelajar perlu memahami bahawa tingkah laku berbilang boleh berlaku secara serentak.\n\n#### Pusingan 2 (Pertengahan):\n\n-   Mula melambaikan tangan ke udara.\n-   Mula menganggukkan kepala anda.\n-   Henti melambaikan tangan ke udara.\n-   Henti menganggukkan kepala anda.\n-   Mula menggoyangkan lutut anda.\n-   Mula mengibaskan lengan anda seperti burung.\n-   Henti menggoyangkan lutut anda.\n-   Mula menganggukkan kepala anda.\n-   Mula berkawat setempat.\n-   Henti mengibaskan lengan anda seperti burung.\n-   Hentikan semuanya.\n\n**Perbincangan:**\n\n_Apakah jenis arahan yang menyebabkan individu melakukan kesilapan?\nPada pendapat anda, apakah strategi yang berguna untuk memastikan anda mengikuti arahan dengan betul?\nMengapakah penting untuk menjejaki setiap tingkah laku secara berasingan?_\n\nPelajar harus memahami bahawa setiap tingkah laku perlu dihentikan secara individu. Mereka perlu menjejaki setiap satu secara berasingan.\n\n#### Mencabar\n\n-   Mula mendekam.\n-   Mula menepuk-nepuk kepala anda.\n-   Henti mendekam.\n-   Henti menepuk-nepuk kepala anda.\n-   Mula melompat ke atas dan ke bawah.\n-   Mula menepuk-nepuk kepala anda.\n-   Hentikan semuanya.\n-   Mula bertepuk tangan.\n-   Mula mengibaskan lengan anda seperti burung.\n-   Hentikan semuanya.\n-   Mula mendekam.\n-   Mula melompat ke atas dan ke bawah.\n-   Hentikan semuanya.\n-   Mula menepuk-nepuk lutut anda.\n-   Mula menepuk-nepuk kepala anda.\n-   Hentikan semuanya.\n-   Mula berpusing ke kiri.\n-   Mula berpusing ke kanan.\n-   Henti berpusing ke kiri.\n-   Henti berpusing ke kanan.\n\n**Perbincangan:** _Apakah yang berlaku jika dua tingkah laku kelihatan bertentangan antara satu sama lain?_\n\n_Apakah yang perlu anda lakukan apabila diberitahu untuk bertepuk tangan dan mengibaskan lengan anda pada masa yang sama?_\n\n_Bagaimanakah anda boleh melompat ke atas dan ke bawah semasa mendekam?_\n\n_Apakah yang berlaku jika anda perlu menepuk-nepuk lutut dan kepala anda pada masa yang sama?_\n\n_Apabila anda diberitahu untuk berpusing ke dua arah yang bertentangan, apakah yang anda lihat individu lakukan?_ \n\n_Apakah yang akan berlaku sekiranya anda diberitahu untuk berpusing ke kiri dan ke kanan pada masa yang sama?_\n\nPelajar perlu memahami bahawa sesetengah tingkah laku bertentangan antara satu sama lain yang boleh menyebabkan hasil yang tidak dijangkakan. Berkemungkinan dua tingkah laku bertentangan membatalkan satu sama lain secara berkesan."
         },
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
           "name": "Peperi sedang Beraksi",
@@ -1794,6 +1947,16 @@
         },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
           "progression_name": "Latihan"
+        },
+        "482633ae-1c8c-4ca2-b44b-ba150352c610": {
+          "description": "#### Permainan Bebas (10 minit)\n\n**Peralihan:** Sekarang, pelajar sepatutnya sudah melangkau kepada tahap akhir dalam pelajaran apabila mereka akan melihat pilihan permainan bebas yang sama seperti pelajaran sebelumnya. Sila galakkan pelajar menambah peristiwa kepada projek mereka dari masa lalu, atau mulakan projek baharu.",
+          "progression_name": "Permainan Bebas: Membuat Adegan yang Berinteraktif"
+        },
+        "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
+          "description": "Hari ini anda belajar mencipta atur cara yang berubah mengikut masa dengan menggunakan peristiwa. \n\n**Peristiwa** - _tindakan yang menyebabkan sesuatu berlaku._"
+        },
+        "c2c39f4c-ffb6-483d-931a-222e52751d81": {
+          "description": "#### Jurnal\n\nMeminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\nKekunci anak panah ialah satu cara untuk menjadikan program lebih berinteraktif. Apakah cara lain yang boleh kita berikan kepada pengguna untuk mengawal perkara yang berlaku dalam aplikasi atau permainan?"
         },
         "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
           "name": "Pengenalan"
@@ -1816,10 +1979,10 @@
           "progression_name": "Latihan"
         },
         "1a057037-bf26-4ab2-830f-80a5d94f87c7": {
-          "description": "#### Acara"
+          "description": "#### Peristiwa"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
-          "progression_name": "Acara-acara"
+          "progression_name": "Peristiwa"
         },
         "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
           "progression_name": "Corak Berirama"
@@ -1835,6 +1998,9 @@
         },
         "436d2aa5-5369-462c-acdd-5ae81d6b0423": {
           "progression_name": "Tambahan Pelajaran"
+        },
+        "163a2d46-638a-490a-81b4-f34a3d78a096": {
+          "name": "Peluang Kurikulum Bersilang"
         },
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
           "name": "Pengenalan"
@@ -2240,6 +2406,9 @@
             null
           ]
         },
+        "d99249e4-021e-4a39-9462-045e0306c00a": {
+          "name": "Pameran"
+        },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "Pengenalan",
           "description": "### Berkelakuan di dalam Makmal Komputer\n\n\\*Matlamat:\\*\\* Perbincangan ini akan mengajar pelajar perkara yang dijangkakan dan cara berkelakuan baik apabila memasuki makmal komputer.",
@@ -2263,6 +2432,7 @@
           ]
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
+          "description": "Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa teka-teki dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Teka-teki dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah:",
           "tips": [
             null
           ]
@@ -2528,6 +2698,7 @@
           "name": "Ikan Berenang dengan Makmal Peperi"
         },
         "65fd5465-cd74-4e68-a4de-c174e2cbd8f6": {
+          "description": "**Peralihan:** Gerakkan pelajar kepada komputer mereka. Galakkan pelajar mengikuti arahan untuk setiap teka-teki. Bantu mereka menyedari bahawa ini ialah aktiviti kreatif, bertujuan membantu mereka mempelajari Makmal Peperi. Ini bukan aktiviti penilaian dalam apa jua bentuk.",
           "tips": [
             null
           ]
@@ -2555,6 +2726,9 @@
           "tips": [
             null
           ]
+        },
+        "e6231ccd-be57-4480-b049-ef0dda99d28c": {
+          "description": "**Peralihan:** Gerakkan pelajar kepada mesin mereka. Galakkan pelajar mengikuti arahan untuk setiap teka-teki. Bantu mereka menyedari bahawa ini ialah aktiviti kreatif, bertujuan membantu mereka mempelajari Makmal Peperi. Ini bukan aktiviti penilaian dalam apa jua bentuk."
         },
         "96bbba0e-e5f3-443f-b2c6-f228953a7b98": {
           "progression_name": "Ramalan"
@@ -2670,6 +2844,9 @@
           "tips": [
             null
           ]
+        },
+        "0abea6de-f093-42f4-a3de-e84fba11870e": {
+          "description": "Edarkan **\\*Lembaran Kerja Penilaian Penulisan Lagu** dan biarkan pelajar melengkapkan aktiviti mereka sendiri selepas arahan telah dijelaskan dengan baik. Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
         },
         "5051f377-1e03-4348-91f8-5ba36d7dd8c6": {
           "name": "Pengenalan"

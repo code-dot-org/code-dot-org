@@ -26,8 +26,14 @@
 
 class Poetry < GamelabJr
   serialized_attrs %w(
+    show_poem_dropdown
     default_poem
   )
+
+  # Poetry levels use the same shared_functions as GamelabJr
+  def shared_function_type
+    GamelabJr
+  end
 
   def self.skins
     ['gamelab']
@@ -62,6 +68,7 @@ class Poetry < GamelabJr
   # Used by levelbuilders to set a default poem on a Poetry level.
   def self.hoc_poems
     [
+      ['', ''],
       ['My Brilliant Image', 'hafez'],
       ['Twinkle, Twinkle Little Star', 'carroll_1'],
       ['Crocodile', 'carroll_2'],

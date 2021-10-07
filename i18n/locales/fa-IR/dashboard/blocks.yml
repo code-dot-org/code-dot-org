@@ -262,6 +262,11 @@ fa:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": خرد شدن
+            "'sound://category_animals/cat.mp3'": گربه
+            "'sound://category_animals/cow.mp3'": گاو
+            "'sound://category_animals/sheep.mp3'": گوسفند
+            "'sound://category_animals/chicken.mp3'": مرغ
+            "'sound://category_animals/dog.mp3'": سگ
             "'sound://category_digital/jump_7.mp3'": پرش
       gamelab_randColor:
         text: رنگ تصادفی

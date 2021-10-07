@@ -50,7 +50,6 @@ function PoemEditor(props) {
       onClick={() =>
         props.handleClose({title, author, lines: poem.split('\n')})
       }
-      key="confirm"
       type="confirm"
     />
   );
@@ -72,6 +71,10 @@ PoemEditor.propTypes = {
 };
 
 function PoemSelector(props) {
+  if (!appOptions.level.showPoemDropdown) {
+    return null;
+  }
+
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPoem, setSelectedPoem] = useState(undefined);
 
@@ -96,8 +99,10 @@ function PoemSelector(props) {
 
   if (!selectedPoem) {
     const defaultPoem = POEMS[appOptions.level.defaultPoem];
-    setSelectedPoem(defaultPoem.title);
-    props.onChangePoem(defaultPoem);
+    if (defaultPoem) {
+      setSelectedPoem(defaultPoem.title);
+      props.onChangePoem(defaultPoem);
+    }
   }
 
   return (

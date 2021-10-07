@@ -239,7 +239,7 @@ pt:
             gelo com Anna e Elsa.
           lessons:
             Artist:
-              name: Artista
+              name: Programação com Anna e Elsa
           student_description: Vamos usar programação para explorar a magia e a beleza
             do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões
             enquanto patina no gelo e cria um país das maravilhas congelante que pode
@@ -403,7 +403,7 @@ pt:
             usando personagens da Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratório Infinito Disney
           student_description: Use o Laboratório para criar uma história ou um jogo
             usando personagens da Disney Infinity.
         algebrademo:
@@ -1908,9 +1908,6 @@ pt:
             Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do
             Star Wars em uma galáxia muito, muito distante.
-          lessons:
-            Hour of Code 2015:
-              name: Hora do Código 2015
           student_description: Aprenda a programar droids, e crie seu próprio jogo
             do Star Wars em uma galáxia muito, muito distante.
         mc:
@@ -4127,7 +4124,6 @@ pt:
           description: Escolha seu time e faça um jogo de basquete
           lessons:
             Bounce:
-              name: Pingue-pongue
               description_student: Você já desejou poder jogar videogame na escola?
                 Nesta lição, você poderá fazer o seu próprio!
               description_teacher: Nesta atividade online, os alunos aprenderão o
@@ -5145,7 +5141,6 @@ pt:
           description: Esportes
           lessons:
             Sports:
-              name: Esportes
               description_student: Você já desejou poder jogar videogame na escola?
                 Nesta lição, você poderá fazer o seu próprio!
               description_teacher: Nesta atividade online, os alunos aprenderão o
@@ -9232,7 +9227,7 @@ pt:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft : Hora do Código da Jornada do Herói'
             Minecraft Hour of Code:
-              name: Hora do Código Minecraft
+              name: 'Minecraft: Jornada do Herói'
           student_description: O Minecraft está de volta para a Hora do Código com
             uma nova atividade! Viaje através de Minecraft com código.
         applab-intro-staging:
@@ -13289,7 +13284,7 @@ pt:
             usando código.
           lessons:
             Aquatic:
-              name: Aquático
+              name: 'Minecraft: Viagem Aquática'
           student_description: Minecraft está de volta com uma nova atividade! Use
             sua criatividade e habilidade de resolver problemas para explorar e construir
             mundos submarinos usando código.
