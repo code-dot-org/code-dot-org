@@ -213,7 +213,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def get_color
-    puts programming_environment.name
     if programming_environment.name == 'spritelab'
       color
     else
