@@ -144,14 +144,14 @@ describe('loadApp.js', () => {
     });
   });
 
-  it('passes get_channel_id true to load user progress if appOptions has shouldLoadChannel true and no channel', done => {
+  it('passes get_channel_id true to load user progress if appOptions has levelRequiresChannel true and no channel', done => {
     appOptions = {
       ...appOptions,
       scriptName: 'test-script',
       lessonPosition: '1',
       levelPosition: '2',
       serverLevelId: '123',
-      shouldLoadChannel: true
+      levelRequiresChannel: true
     };
 
     $.ajax.restore();

@@ -186,6 +186,7 @@ module LevelsHelper
     is_cached_level = @public_caching && !is_caching_exception
 
     level_requires_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !is_cached_level
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
