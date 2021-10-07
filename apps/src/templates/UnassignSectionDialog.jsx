@@ -33,13 +33,13 @@ class UnassignSectionDialog extends Component {
       >
         <h2 className="unassign-dialog-title">
           {i18n.unassignSection({
-            courseName: courseName
+            courseName: courseName || 'this unit'
           })}
         </h2>
         <div style={{marginBottom: 10}}>
           {i18n.unassignSectionConfirm({
             sectionName: sectionName,
-            courseName: courseName
+            courseName: courseName || 'this unit'
           })}
         </div>
         <DialogFooter>

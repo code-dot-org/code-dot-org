@@ -18,7 +18,7 @@ class SectionAssigner extends Component {
     // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
-    assignmentName: PropTypes.string.isRequired
+    assignmentName: PropTypes.string
   };
 
   onChangeSection = sectionId => {
