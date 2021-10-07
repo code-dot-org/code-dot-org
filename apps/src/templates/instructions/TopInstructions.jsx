@@ -737,6 +737,7 @@ class TopInstructions extends Component {
                 <div style={styles.exampleSolutions}>
                   {exampleSolutions.map((example, index) => (
                     <Button
+                      __useDeprecatedTag
                       key={index}
                       text={i18n.exampleSolution({number: index + 1})}
                       color={Button.ButtonColor.blue}
@@ -744,7 +745,6 @@ class TopInstructions extends Component {
                       target="_blank"
                       rel="noopener noreferrer"
                       ref={ref => (this.teacherOnlyTab = ref)}
-                      hidden={tabSelected !== TabType.TEACHER_ONLY}
                       style={styles.exampleSolutionButton}
                     />
                   ))}
