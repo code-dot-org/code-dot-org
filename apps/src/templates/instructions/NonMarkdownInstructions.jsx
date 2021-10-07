@@ -12,8 +12,6 @@ var styles = {
 /**
  * Non-markdown version of our instructions, displayed in a dialog when our top
  * pane instructions are not enabled.
- *
- * Currently only used by NetSim levels
  */
 var NonMarkdownInstructions = function(props) {
   return (
