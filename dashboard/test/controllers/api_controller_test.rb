@@ -1217,10 +1217,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  # test "" do
-
-  # end
-
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
