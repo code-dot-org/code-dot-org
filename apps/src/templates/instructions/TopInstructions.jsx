@@ -133,7 +133,7 @@ class TopInstructions extends Component {
       this.props.readOnlyWorkspace &&
       window.location.search.includes('user_id');
 
-    const defaultTeacherTab = this.props.displayReviewTab
+    const teacherViewingStudentTab = this.props.displayReviewTab
       ? TabType.REVIEW
       : TabType.COMMENTS;
 
@@ -142,7 +142,7 @@ class TopInstructions extends Component {
       tabSelected:
         this.props.initialSelectedTab ||
         (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
-          ? defaultTeacherTab
+          ? teacherViewingStudentTab
           : TabType.INSTRUCTIONS),
       feedbacks: [],
       rubric: null,
