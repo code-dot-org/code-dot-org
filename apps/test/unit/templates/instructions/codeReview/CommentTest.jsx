@@ -5,14 +5,15 @@ import {Factory} from 'rosie';
 import './CodeReviewTestHelper';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
-import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import {UnconnectedComment as Comment} from '@cdo/apps/templates/instructions/codeReview/Comment';
 
 const DEFAULT_COMMENT = Factory.build('CodeReviewComment');
 const DEFAULT_PROPS = {
   comment: DEFAULT_COMMENT,
   onResolveStateToggle: () => {},
   onDelete: () => {},
-  viewAsCodeReviewer: false
+  viewAsCodeReviewer: false,
+  viewAsTeacher: false
 };
 
 describe('Code Review Comment', () => {
@@ -69,6 +70,14 @@ describe('Code Review Comment', () => {
 
   it('shows ellipsis and comment options when viewing not as code reviewer', () => {
     const wrapper = renderWrapper();
+    expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(1);
+  });
+
+  it('shows ellipsis and comment options when viewing as teacher', () => {
+    const wrapper = renderWrapper(
+      {},
+      {viewAsCodeReviewer: true, viewAsTeacher: true}
+    );
     expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(1);
   });
 
