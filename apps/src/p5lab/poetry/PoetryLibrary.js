@@ -23,7 +23,6 @@ export default class PoetryLibrary extends CoreLibrary {
       ..._.cloneDeep(getStore().getState().poetry.selectedPoem),
       font: {
         fill: 'black',
-        stroke: 'rgba(0,0,0,0)',
         font: 'Arial'
       },
       isVisible: true,
@@ -39,6 +38,7 @@ export default class PoetryLibrary extends CoreLibrary {
     this.lineEvents = {};
     this.p5.textAlign(this.p5.CENTER);
     this.p5.angleMode(this.p5.DEGREES);
+    this.p5.noStroke();
 
     this.commands = {
       // Keep everything from Core Sprite Lab
@@ -91,12 +91,9 @@ export default class PoetryLibrary extends CoreLibrary {
         this.poemState.lines.push(line || '');
       },
 
-      setFontColor(fill, stroke) {
+      setFontColor(fill) {
         if (fill) {
           this.poemState.font.fill = fill;
-        }
-        if (stroke) {
-          this.poemState.font.stroke = stroke;
         }
       },
 
@@ -208,10 +205,6 @@ export default class PoetryLibrary extends CoreLibrary {
   getScaledFontSize(text, font, desiredSize) {
     this.p5.push();
     this.p5.textFont(font);
-    // stroke color doesn't matter here, we just need to set a stroke to get an
-    // accurate width calculation.
-    this.p5.stroke('black');
-    this.p5.strokeWeight(3);
     this.p5.textSize(desiredSize);
     const fullWidth = this.p5.textWidth(text);
     const scaledSize = Math.min(
@@ -368,8 +361,6 @@ export default class PoetryLibrary extends CoreLibrary {
 
   drawFromRenderInfo(renderInfo) {
     this.p5.fill(renderInfo.font.fill);
-    this.p5.stroke(renderInfo.font.stroke);
-    this.p5.strokeWeight(3);
     this.p5.textFont(renderInfo.font.font);
     if (renderInfo.title) {
       this.p5.textSize(renderInfo.title.size);
@@ -391,8 +382,6 @@ export default class PoetryLibrary extends CoreLibrary {
     renderInfo.lines.forEach(item => {
       let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);
       this.p5.fill(fillColor);
-      let strokeColor = this.getP5Color(renderInfo.font.stroke, item.alpha);
-      this.p5.stroke(strokeColor);
       this.p5.text(item.text, item.x, item.y);
     });
   }
