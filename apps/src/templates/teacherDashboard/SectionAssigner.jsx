@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
 import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignButton from '@cdo/apps/templates/UnassignButton';
+import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class SectionAssigner extends Component {
@@ -52,7 +52,7 @@ class SectionAssigner extends Component {
             scriptId={scriptId}
           />
           {selectedSection && selectedSection.isAssigned && (
-            <UnassignButton
+            <UnassignSectionButton
               courseName={assignmentName}
               sectionId={selectedSection.id}
             />

@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 
-class UnassignButton extends React.Component {
+class UnassignSectionButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     courseName: PropTypes.string,
@@ -92,11 +92,11 @@ const styles = {
   }
 };
 
-export const UnconnectedUnassignButton = UnassignButton;
+export const UnconnectedUnassignSectionButton = UnassignSectionButton;
 
 export default connect(
   state => ({
     isRtl: state.isRtl
   }),
   {unassignSection}
-)(UnassignButton);
+)(UnassignSectionButton);

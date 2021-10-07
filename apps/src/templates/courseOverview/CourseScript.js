@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignButton from '@cdo/apps/templates/UnassignButton';
+import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -114,7 +114,7 @@ class CourseScript extends Component {
             />
             {isAssigned && viewAs === ViewType.Student && <Assigned />}
             {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
-              <UnassignButton
+              <UnassignSectionButton
                 courseName={title}
                 sectionId={selectedSectionId}
               />
