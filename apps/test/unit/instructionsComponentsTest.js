@@ -46,17 +46,13 @@ describe('instructions components', () => {
   describe('NonMarkdownInstructions', function() {
     it('can have just instructions', function() {
       const wrapper = shallow(
-        <NonMarkdownInstructions
-          puzzleTitle="title"
-          shortInstructions="instructions"
-        />
+        <NonMarkdownInstructions shortInstructions="instructions" />
       );
       const elements = wrapper
         .find('div')
         .first()
         .children();
-      expect(elements.length).to.equal(2);
-      expect(elements.first().text()).to.equal('title');
+      expect(elements.length).to.equal(1);
 
       const markdownElements = wrapper.find('SafeMarkdown');
       expect(markdownElements.length).to.equal(1);
@@ -68,7 +64,6 @@ describe('instructions components', () => {
     it('can have both instructions and instructions2', function() {
       const wrapper = shallow(
         <NonMarkdownInstructions
-          puzzleTitle="title"
           shortInstructions="short instructions"
           instructions2="long instructions"
         />
@@ -77,8 +72,7 @@ describe('instructions components', () => {
         .find('div')
         .first()
         .children();
-      expect(elements.length).to.equal(3);
-      expect(elements.at(0).text()).to.equal('title');
+      expect(elements.length).to.equal(2);
 
       const markdownElements = wrapper.find('SafeMarkdown');
       expect(markdownElements.length).to.equal(2);
