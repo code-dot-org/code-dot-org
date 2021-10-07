@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import i18n from '@cdo/locale';
 
 export default function ProgrammingExpressionOverview({programmingExpression}) {
   return (
     <div>
       <h1>{programmingExpression.name}</h1>
       <div>
-        <strong>Category:</strong>
+        <strong>{`${i18n.category()}:`}</strong>
         <span
           style={{
             backgroundColor: programmingExpression.color,
@@ -28,7 +29,7 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       )}
       {programmingExpression.syntax?.length > 0 && (
         <div>
-          <h2>Syntax</h2>
+          <h2>{i18n.syntaxHeader()}</h2>
           <EnhancedSafeMarkdown
             markdown={`\`${programmingExpression.syntax}\``}
             expandableImages
@@ -37,13 +38,13 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       )}
       {programmingExpression.returnValue?.length > 0 && (
         <div>
-          <h2>Returns</h2>
+          <h2>{i18n.returnsHeader()}</h2>
           <div>{programmingExpression.returnValue}</div>
         </div>
       )}
       {programmingExpression.tips?.length > 0 && (
         <div>
-          <h2>Tips</h2>
+          <h2>{i18n.tipsHeader()}</h2>
           <EnhancedSafeMarkdown
             markdown={programmingExpression.tips}
             expandableImages
@@ -52,11 +53,12 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
       )}
       {programmingExpression.externalDocumentation?.length > 0 && (
         <div>
-          <h2>Additional Information</h2>
+          <h2>{i18n.additionalInformationHeader()}</h2>
           <EnhancedSafeMarkdown
-            markdown={`For more information, see [${
-              programmingExpression.externalDocumentation
-            }](${programmingExpression.externalDocumentation})`}
+            markdown={i18n.additionalInformationText({
+              externalDocumentationUrl:
+                programmingExpression.externalDocumentation
+            })}
           />
         </div>
       )}
