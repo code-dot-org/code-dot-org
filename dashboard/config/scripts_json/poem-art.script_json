@@ -1,0 +1,448 @@
+{
+  "script": {
+    "name": "poem-art",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-10-07 12:57:13 UTC",
+    "published_state": "beta",
+    "seeding_key": {
+      "script.name": "poem-art"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Poem Art",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "901e8625-9092-42fc-9fcc-9c665720b1f4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "901e8625-9092-42fc-9fcc-9c665720b1f4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    },
+    {
+      "key": "b20b4bbb-2eb1-4c77-b938-e60cd435ce93",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b20b4bbb-2eb1-4c77-b938-e60cd435ce93",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    },
+    {
+      "key": "18913d21-3c6f-4dd8-864e-09b70f80e640",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18913d21-3c6f-4dd8-864e-09b70f80e640",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b16d189d-d990-44c4-be49-8f81ac81a96e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b16d189d-d990-44c4-be49-8f81ac81a96e",
+        "lesson_activity.key": "901e8625-9092-42fc-9fcc-9c665720b1f4"
+      }
+    },
+    {
+      "key": "e9831edc-da5e-4560-8a4e-efef3db2373b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b",
+        "lesson_activity.key": "b20b4bbb-2eb1-4c77-b938-e60cd435ce93"
+      }
+    },
+    {
+      "key": "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033",
+        "lesson_activity.key": "18913d21-3c6f-4dd8-864e-09b70f80e640"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_backgroundEffects"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_backgroundEffects"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_exemplar1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_exemplar1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_sounds"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_events1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_events1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_exemplar2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_exemplar2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_addSprites"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_addSprites"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_spriteBehaviors"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_spriteSizes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_spriteSizes"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_hoc_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      },
+      "level_keys": [
+        "poetry_hoc_freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_backgroundEffects",
+        "script_level.level_keys": [
+          "poetry_hoc_backgroundEffects"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_exemplar1",
+        "script_level.level_keys": [
+          "poetry_hoc_exemplar1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_sounds",
+        "script_level.level_keys": [
+          "poetry_hoc_sounds"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_events1",
+        "script_level.level_keys": [
+          "poetry_hoc_events1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_exemplar2",
+        "script_level.level_keys": [
+          "poetry_hoc_exemplar2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_addSprites",
+        "script_level.level_keys": [
+          "poetry_hoc_addSprites"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_spriteBehaviors",
+        "script_level.level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_spriteSizes",
+        "script_level.level_keys": [
+          "poetry_hoc_spriteSizes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_hoc_freeplay",
+        "script_level.level_keys": [
+          "poetry_hoc_freeplay"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "poem-art",
+        "activity_section.key": "e9831edc-da5e-4560-8a4e-efef3db2373b"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
