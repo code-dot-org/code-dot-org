@@ -2,19 +2,62 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "playground"
+    "csa_view_mode": "playground",
+    "start_sources": {
+      "MyPlayground.java": {
+        "text": "public class MyPlayground {\n  public static void main(String[] args) {\n\n    PopBalloonsGame.play();\n    \n  }\n}",
+        "isVisible": true
+      },
+      "PopBalloonsGame.java": {
+        "text": "import org.code.playground.*;\nimport org.code.media.*;\n\npublic final class PopBalloonsGame {\n\n  private static Board myBoard = Playground.board;\t\t// the board to display the game\n\n  // initiates gameplay of the Pop the Balloons game\n  public static void play() {\n    \n    \n    myBoard.start();  // starts gameplay\n  }\n\n  ////////// TO DO: Develop the logic for the game below this line. \\\\\\\\\\\\\\\\\\\\\n  \n  \n}",
+        "isVisible": true
+      },
+      "GameControl.java": {
+        "text": "import org.code.playground.*;\nimport java.io.FileNotFoundException;\n\npublic class GameControl {\n\n  private static Board myBoard = Playground.board;\n  private static ImageItem temp;\n\n  public static void startPlayground() {\n    try {\n      myBoard.start();\n    } catch (PlaygroundException e) {\n      System.out.println(\"Error starting The Playground.\");\n    }\n  }\n\n  public static ImageItem createImage(String filename, int x, int y, int width, int height) {\n    try {\n      temp = new ImageItem(filename, x, y, width, height);\n    } catch (FileNotFoundException e) {\n      System.out.println(\"Error creating image: \" + filename);\n    }\n\n    return temp;\n  }\n}",
+        "isVisible": true
+      },
+      "GameDisplay.java": {
+        "text": "import org.code.playground.*;\n\npublic final class GameDisplay {\n\n  private static Board myBoard = Playground.board;\t\t// the board to display the game\n  private static Dice leftDice;\t\t\t\t\t\t\t\t\t\t\t\t// the left dice\n  private static Dice rightDice;\t\t\t\t\t\t\t\t\t\t\t// the right dice\n\n  // prints an introductory message to the console\n  public static void showIntro() {\n    System.out.println(\"Pop the Balloons!\");\n    System.out.println(\"---------------------\");\n    System.out.println(\"This game involves balloons that are numbered 1 through 10.\");\n    System.out.println(\"Your goal is to pop all of them!\");\n    System.out.println(\"You may pop any combination of unpopped ballons to add up to the sum on the dice.\\n\");\n  }\n\n  public static void showDice() {\n    // array of image files for each side of a dice\n    String[] diceImageFiles = {\"dice1.png\", \"dice2.png\", \"dice3.png\", \"dice4.png\", \"dice5.png\", \"dice6.png\"};\n\t\t\n    int diceSize = 70;\t\t\t// the width and height of the dice\n    int diceXPos = 120;\t\t\t// the starting x position of the dice\n    int diceYPos = 240;\t\t\t// the y position of the dice\n    leftDice = new Dice(diceImageFiles, diceXPos, diceYPos, diceSize, diceSize);\n    rightDice = new Dice(diceImageFiles, diceXPos + diceSize + 20, diceYPos, diceSize, diceSize);\n\n    myBoard.addImageItem(leftDice.getSide(0));\n    myBoard.addImageItem(rightDice.getSide(0));\n  }\n}",
+        "isVisible": true
+      },
+      "Dice.java": {
+        "text": "// TO DO: Import The Playground.\n\n\npublic class Dice {\n\n  private ImageItem[] diceImages;\t\t\t// array to represent each side of a dice\n\n  // TO DO: Write the constructor.\n\n\n\t// gets an image from the array representing a side of the dice\n  public ImageItem getSide(int value) {\n    return diceImages[value];\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "starter_assets": {
+      "balloon1.png": "7e51a750-4ebf-462c-a797-b9ad616cb4a3.png",
+      "balloon2.png": "3cc48505-3309-46ba-ac2d-e61490c22235.png",
+      "balloon3.png": "6651a9a6-d9fb-41e3-871e-86558eea2780.png",
+      "balloon4.png": "3cef12f5-f565-4a78-85f7-656f672d6e75.png",
+      "balloon5.png": "0f939dd6-e4c0-4370-ace6-f5b5da9d8923.png",
+      "balloon6.png": "1babcfc8-0074-47dd-8991-544ad52f124d.png",
+      "balloon7.png": "edafc3ab-d9b3-4e57-9413-5faa8e71501e.png",
+      "balloon8.png": "67f55c7f-1d24-42ca-8949-a941f716df5e.png",
+      "balloon9.png": "dec8b1ac-11f0-40a0-a65d-f8d1608b6758.png",
+      "balloon10.png": "537fc704-97ef-4806-95ce-51d1220c02de.png",
+      "dice1.png": "04733c58-b3b4-4e0b-8e1f-0b2c4c0522a2.png",
+      "dice2.png": "ea3f9104-e1bf-4044-a7f7-e81d8bddd65d.png",
+      "dice3.png": "17434a9d-0cc4-4108-81e5-118547d92551.png",
+      "dice4.png": "10036352-5109-4654-947c-2bb15c6d7612.png",
+      "dice5.png": "71cb7d07-5f72-4bc4-bf99-f00a3ab89b4f.png",
+      "dice6.png": "8b4386cb-98d1-483a-ac2c-1fd155602569.png",
+      "poppedBlue.png": "efdf222e-8526-4395-b05e-69e3ad64e74a.png",
+      "poppedGreen.png": "ef644fab-7eba-4e3a-a3e7-6b02581fedbf.png",
+      "poppedOrange.png": "09cd12b7-70b9-4308-9f29-569fbe2de935.png",
+      "poppedPurple.png": "163b1f2d-fb06-46db-a6b6-8d2cfd18dffd.png",
+      "poppedTeal.png": "9d18fce9-4841-4236-9049-ef177d4478e0.png",
+      "rollButton.png": "5917984e-d2c3-46c1-aa3d-edf31af9adef.png"
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2021-09-03T16:06:07.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-03 16:06:32 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-09-03 16:06:32 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 19:57:58 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 20:45:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 21:09:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-07 21:21:52 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>
