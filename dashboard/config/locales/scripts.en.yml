@@ -26504,3 +26504,47 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poem-art
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poetry:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Code Your Own Poem
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Variables
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Build a Poem Generator
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Word Choice
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Poetry Circle
+          lesson_groups: {}
+          name: poetry
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
