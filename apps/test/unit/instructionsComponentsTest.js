@@ -4,7 +4,6 @@ import {shallow} from 'enzyme';
 import {expect} from '../util/reconfiguredChai';
 import {setExternalGlobals} from '../util/testUtils';
 
-import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';
 import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
 describe('instructions components', () => {
@@ -40,48 +39,6 @@ describe('instructions components', () => {
       );
       const element = wrapper.find('.instructions-markdown').first();
       expect(element.props().style.paddingTop).to.equal(0);
-    });
-  });
-
-  describe('NonMarkdownInstructions', function() {
-    it('can have just instructions', function() {
-      const wrapper = shallow(
-        <NonMarkdownInstructions shortInstructions="instructions" />
-      );
-      const elements = wrapper
-        .find('div')
-        .first()
-        .children();
-      expect(elements.length).to.equal(1);
-
-      const markdownElements = wrapper.find('SafeMarkdown');
-      expect(markdownElements.length).to.equal(1);
-      expect(markdownElements.first().props().markdown).to.equal(
-        'instructions'
-      );
-    });
-
-    it('can have both instructions and instructions2', function() {
-      const wrapper = shallow(
-        <NonMarkdownInstructions
-          shortInstructions="short instructions"
-          instructions2="long instructions"
-        />
-      );
-      const elements = wrapper
-        .find('div')
-        .first()
-        .children();
-      expect(elements.length).to.equal(2);
-
-      const markdownElements = wrapper.find('SafeMarkdown');
-      expect(markdownElements.length).to.equal(2);
-      expect(markdownElements.first().props().markdown).to.equal(
-        'short instructions'
-      );
-      expect(markdownElements.last().props().markdown).to.equal(
-        'long instructions'
-      );
     });
   });
 });
