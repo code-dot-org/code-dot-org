@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useReducer, useState} from 'react';
+import ParameterEditor from './ParameterEditor';
+import Button from '@cdo/apps/templates/Button';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {navigateToHref} from '@cdo/apps/utils';
+import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
@@ -20,6 +22,27 @@ function useProgrammingExpression(initialProgrammingExpression) {
   return [programmingExpression, updateProgrammingExpression];
 }
 
+function initParameters(parameters) {
+  const newParameters = [...parameters];
+  newParameters.forEach(p => (p.key = createUuid()));
+  return {parameters: newParameters};
+}
+
+function parametersReducer(state, action) {
+  switch (action.type) {
+    case 'add':
+      return {...state, parameters: [...state.parameters, {key: createUuid()}]};
+    case 'update': {
+      const newParams = [...state.parameters];
+      const paramToUpdate = newParams[action.index];
+      paramToUpdate[action.key] = action.value;
+      return {...state, parameters: newParams};
+    }
+    default:
+      return {...state};
+  }
+}
+
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
   environmentCategories
@@ -28,6 +51,7 @@ export default function ProgrammingExpressionEditor({
   const {
     id,
     key,
+    parameters: initialParameters,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
   const [
@@ -37,6 +61,11 @@ export default function ProgrammingExpressionEditor({
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
+  const [parameters, parametersDispatch] = useReducer(
+    parametersReducer,
+    initialParameters,
+    initParameters
+  );
 
   const save = () => {
     if (isSaving) {
@@ -49,7 +78,10 @@ export default function ProgrammingExpressionEditor({
         'content-type': 'application/json',
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       },
-      body: JSON.stringify(programmingExpression)
+      body: JSON.stringify({
+        ...programmingExpression,
+        parameters: JSON.stringify(parameters.parameters)
+      })
     })
       .then(response => {
         setIsSaving(false);
@@ -63,6 +95,10 @@ export default function ProgrammingExpressionEditor({
         setIsSaving(false);
         setError(error.responseText);
       });
+  };
+
+  const addParameter = () => {
+    parametersDispatch({type: 'add'});
   };
 
   const markdownEditorFeatures = {
@@ -176,6 +212,22 @@ export default function ProgrammingExpressionEditor({
           }
           features={markdownEditorFeatures}
           helpTip="List of tips for using this code documentation"
+        />
+      </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Parameters" collapsed>
+        {parameters.parameters.map((param, idx) => (
+          <ParameterEditor
+            key={param.key}
+            parameter={param}
+            updateParameter={(key, value) =>
+              parametersDispatch({type: 'update', index: idx, key, value})
+            }
+          />
+        ))}
+        <Button
+          onClick={addParameter}
+          text="Add Another Parameter"
+          color="gray"
         />
       </CollapsibleEditorSection>
       <SaveBar
