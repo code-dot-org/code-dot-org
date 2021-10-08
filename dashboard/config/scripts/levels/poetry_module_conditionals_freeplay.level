@@ -38,15 +38,15 @@
     "default_poem": "singer",
     "blockly_variables": "word1, word2, word3",
     "min_workspace_height": "0",
-    "preload_asset_list": null,
-    "project_template_level_name": "poetry_module_template"
+    "project_template_level_name": "poetry_module_template",
+    "preload_asset_list": null
   },
   "game_id": 69,
   "published": true,
   "created_at": "2021-10-07T14:52:52.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-07T14:52:52.563+00:00\",\"changed\":[\"cloned from \\\"poetry_module_freeplay\\\"\"],\"cloned_from\":\"poetry_module_freeplay\"},{\"changed_at\":\"2021-10-07 14:55:24 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-07T14:52:52.563+00:00\",\"changed\":[\"cloned from \\\"poetry_module_freeplay\\\"\"],\"cloned_from\":\"poetry_module_freeplay\"},{\"changed_at\":\"2021-10-07 14:55:24 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:33:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:34:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:34:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -87,8 +87,8 @@
               </block>
             </value>
           </block>
-          <block type="Poetry_animatePoem"/>
-          <block type="Poetry_hidePoem"/>
+          <block type="Poetry_animateText"/>
+          <block type="Poetry_hideText"/>
           <block type="gamelab_textJoin">
             <title name="TEXT1"/>
           </block>
@@ -176,6 +176,9 @@
                 <title name="COLOUR">#cc0000</title>
               </block>
             </value>
+          </block>
+          <block type="Poetry_setBackgroundImageAs">
+            <title name="IMG">"cave"</title>
           </block>
           <block type="Poetry_setBackgroundEffect">
             <title name="EFFECT">"colors"</title>

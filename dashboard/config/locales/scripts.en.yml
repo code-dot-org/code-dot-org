@@ -26545,7 +26545,53 @@ en:
               name: Poetry Circle
           lesson_groups: {}
           name: poetry
-          title: ''
+          title: Computer Science and Poetry
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+          lesson_groups: {}
+          name: spelling-bee
+          title: CSC - Spelling Bee
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Outbreak Day 1
+            lesson-2:
+              name: Outbreak Day 2
+          lesson_groups: {}
+          name: outbreak-csc
+          title: Outbreak
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Exploring Box Plots and Histograms
+          lesson_groups: {}
+          name: explore-data-1
+          title: Exploring Box Plots and Histograms
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Counting with Laurel
+          lesson_groups: {}
+          name: counting-csc
+          title: Counting with Laurel
           description_audience: ''
           description_short: ''
           description: ''
