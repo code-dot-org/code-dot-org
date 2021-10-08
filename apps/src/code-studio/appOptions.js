@@ -64,6 +64,7 @@
  * @property {string} locale
  * @property {?Object} azureSpeechServiceVoices
  * @property {?string} authenticityToken
+ * @property {boolean} levelRequiresChannel
  */
 
 /**
