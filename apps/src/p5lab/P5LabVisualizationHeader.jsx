@@ -11,6 +11,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import {allowAnimationMode, countAllowedModes} from './stateQueries';
 import PoemSelector from './poetry/PoemSelector';
 import * as utils from '../utils';
+import color from '@cdo/apps/util/color';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -66,6 +67,7 @@ class P5LabVisualizationHeader extends React.Component {
               onChange={this.changeInterfaceMode}
             >
               <button
+                style={styles.buttonFocus}
                 type="button"
                 value={P5LabInterfaceMode.CODE}
                 id="codeMode"
@@ -74,6 +76,7 @@ class P5LabVisualizationHeader extends React.Component {
               </button>
               {allowAnimationMode && (
                 <button
+                  style={styles.buttonFocus}
                   type="button"
                   value={P5LabInterfaceMode.ANIMATION}
                   id="animationMode"
@@ -94,6 +97,12 @@ class P5LabVisualizationHeader extends React.Component {
 const styles = {
   main: {
     height: styleConstants['workspace-headers-height']
+  },
+  buttonFocus: {
+    ':focus': {
+      outlineWidth: 1,
+      outlineColor: color.black
+    }
   }
 };
 export default connect(

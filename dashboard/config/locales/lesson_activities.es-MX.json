@@ -2,8 +2,14 @@
   "es-MX": {
     "data": {
       "lesson_activities": {
+        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": "Actividad previa"
+        },
         "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
           "name": "Actividad Principal"
+        },
+        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Actividad de cierre"
         },
         "06dfaf3b-e495-4577-baa6-883a782e198f": {
           "name": "Niveles"
@@ -223,6 +229,18 @@
         },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Aprendizaje Extendido"
+        },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "Ver: Sigue el Rastro Digital"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Juego: Huellas de Animales"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Revisión: ¿Se puede compartir?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Recapitulación: Momento de Pausa y Reflexión"
         },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Aprendizaje Extendido"
@@ -559,6 +577,9 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Actividad de cierre"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Recapitulación: Momento de Pausa y Reflexión"
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Aprendizaje Extendido"

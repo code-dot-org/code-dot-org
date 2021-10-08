@@ -315,6 +315,12 @@
           },
           "draw a house": {
             "name": "рисува къща"
+          },
+          "sun": {
+            "name": "слънце"
+          },
+          "square": {
+            "name": "квадрат"
           }
         },
         "InspirationalArtwork": {

@@ -164,6 +164,18 @@
         },
         "helloworld_retro_behaviors": {
           "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
         }
       }
     }

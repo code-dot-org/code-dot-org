@@ -1236,11 +1236,24 @@ pl:
             "'sound://category_swish/quick_swing.mp3'": huśtać się
             "'sound://category_nature/summer_night_loop.mp3'": letnia noc
             "'sound://category_background/ocean_waves.mp3'": fale oceanu
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": fala na plaży
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bąbel
+            "'sound://category_animals/bear.mp3'": niedźwiedź
+            "'sound://category_animals/cat.mp3'": kot
+            "'sound://category_animals/cow.mp3'": krowa
+            "'sound://category_animals/pig.mp3'": świnka
+            "'sound://category_animals/sheep.mp3'": owca
+            "'sound://category_animals/goat.mp3'": koza
+            "'sound://category_animals/chicken.mp3'": kurczak
+            "'sound://category_animals/rooster.mp3'": kogut
+            "'sound://category_animals/elephant.mp3'": słoń
             "'sound://category_animals/dolphin.mp3'": kliknięcia delfina
             "'sound://category_nature/thunderstorm_1.mp3'": burza z piorunami
             "'sound://category_animals/chick.mp3'": ćwierkanie ptaszka
             "'sound://category_animals/dog.mp3'": szczekanie psa
             "'sound://category_animals/tiger.mp3'": ryk tygrysa
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": jasny
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": mistyczny
             "'sound://category_transition/trippy_robotic_transition.mp3'": głos robota
@@ -1302,12 +1315,14 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tęcza
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SF
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazdy
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce i tęcza
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice słoneczne
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': kort tenicowy
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa drzew
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: żaden
@@ -1724,11 +1739,13 @@ pl:
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': widok parku
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': sosny
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce i tęcza
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice słoneczne
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': kort tenicowy
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa drzew
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1840,6 +1857,8 @@ pl:
         text: potwory zatrzymują się
       Poetry_addLine:
         text: dodaj linię {LINE}
+      Poetry_animatePoem:
+        text: animuj wiersz
       Poetry_destroy:
         text: usuń {ANIMATION_NAME}
       Poetry_hidePoem:
@@ -1852,6 +1871,8 @@ pl:
             '"pop"': popularny
             '"rain"': deszcz
             '"zigzag"': zigzag
+      Poetry_makeNewSpriteAnon:
+        text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
       Poetry_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       Poetry_playSound:
@@ -1874,6 +1895,8 @@ pl:
         text: losowe słowo
       Poetry_setAuthor:
         text: ustaw autora wiersza {AUTHOR}
+      Poetry_setBackground:
+        text: ustaw kolor tła {COLOR}
       Poetry_setBackgroundEffect:
         text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
@@ -1888,6 +1911,8 @@ pl:
             '"ripples"': Fale
             '"clouds"': Chmury
           PALETTE:
+            '"rainbow"': Tęcza
+            '"grayscale"': Czarny i biały
             '"sky"': Niebo
             '"ocean"': Ocean
             '"sunrise"': Wschód słońca
@@ -1896,8 +1921,6 @@ pl:
             '"summer"': Lato
             '"autumn"': Jesień
             '"winter"': Zima
-            '"grayscale"': Czarny i biały
-            '"rainbow"': Tęcza
             '"roses"': Róże
       Poetry_setBackgroundImageAs:
         text: ustaw tło na {IMG}
@@ -1917,6 +1940,7 @@ pl:
       Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
       Poetry_setForegroundEffect:
+        text: wykonaj efekt pierwszego planu {EFFECT}
         options:
           EFFECT:
             '"rain"': Deszcz
@@ -1946,6 +1970,11 @@ pl:
             '"hughes"': Harlem
             '"hopler"': W ogrodzie
             '"lomeli"': Zwróć
+            '"singer"': Opiekanie pianek
+      Poetry_setPrompt:
+        text: monituj użytkownika {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} o zmienną {VAR}
+      Poetry_setPromptWithChoices:
+        text: monit użytkownika {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} o zmienną {VAR} z możliwością wyboru {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
       Poetry_setSize:
         text: ustaw {SPRITE} rozmiar na {VAL}
       Poetry_setTextEffect:
@@ -1969,6 +1998,10 @@ pl:
             fluttering: trzepotanie
             growing: rośnięcie
             jittering: trzęsienie się
+            moving_north_and_looping: pętla na północ
+            moving_south_and_looping: pętla na południe
+            moving_east_and_looping: pętla na wschód
+            moving_west_and_looping: pętla na zachód
             shrinking: zwężenie
             spinning_left: obracanie się w lewo
             spinning_right: obracanie się w prawo
@@ -1982,6 +2015,10 @@ pl:
             fluttering: trzepotanie
             growing: rośnięcie
             jittering: trzęsienie się
+            moving_north_and_looping: pętla na północ
+            moving_south_and_looping: pętla na południe
+            moving_east_and_looping: pętla na wschód
+            moving_west_and_looping: pętla na zachód
             shrinking: zwężenie
             spinning_left: obracanie się w lewo
             spinning_right: obracanie się w prawo

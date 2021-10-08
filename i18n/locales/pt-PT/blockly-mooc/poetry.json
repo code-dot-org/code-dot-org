@@ -1,3 +1,6 @@
 {
-  "makeBackground": "Precisas de adicionar um efeito de fundo."
+  "makeBackground": "Precisas de adicionar um efeito de fundo.",
+  "reinfFeedbackMsg": "Terminaste! Clica em 'Continuar' para avançar para o próximo nível.",
+  "save": "Guardar",
+  "shareGame": "Partilha o teu jogo:"
 }

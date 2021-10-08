@@ -2875,7 +2875,16 @@
           "moving north": "przechodzenie na północ",
           "moving south": "przechodzenie na południe",
           "moving west": "przechodzenie na zachód",
-          "spinning right": "obracanie się w prawo"
+          "spinning right": "obracanie się w prawo",
+          "spinning left": "obracanie się w lewo",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "fluttering": "trzepotanie",
+          "wobbling": "chybotanie",
+          "moving west and looping": "przechodząc na zachód i powtarzając w pętli",
+          "moving east and looping": "przechodząc na wschód i powtarzając w pętli",
+          "moving north and looping": "poruszanie się na północ i w pętli",
+          "moving south and looping": "poruszanie się na południe i w pętli"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "pływanie w lewo i prawo",
@@ -2954,7 +2963,16 @@
           "moving north": "przechodzenie na północ",
           "moving south": "przechodzenie na południe",
           "moving west": "przechodzenie na zachód",
-          "spinning right": "obracanie się w prawo"
+          "spinning right": "obracanie się w prawo",
+          "spinning left": "obracanie się w lewo",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "fluttering": "trzepotanie",
+          "wobbling": "chybotanie",
+          "moving west and looping": "przechodząc na zachód i powtarzając w pętli",
+          "moving east and looping": "przechodząc na wschód i powtarzając w pętli",
+          "moving north and looping": "poruszanie się na północ i w pętli",
+          "moving south and looping": "poruszanie się na południe i w pętli"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "pływanie w lewo i prawo",
@@ -3011,7 +3029,16 @@
           "moving north": "przechodzenie na północ",
           "moving south": "przechodzenie na południe",
           "moving west": "przechodzenie na zachód",
-          "spinning right": "obracanie się w prawo"
+          "spinning right": "obracanie się w prawo",
+          "spinning left": "obracanie się w lewo",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "fluttering": "trzepotanie",
+          "wobbling": "chybotanie",
+          "moving west and looping": "przechodząc na zachód i powtarzając w pętli",
+          "moving east and looping": "przechodząc na wschód i powtarzając w pętli",
+          "moving north and looping": "poruszanie się na północ i w pętli",
+          "moving south and looping": "poruszanie się na południe i w pętli"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "pływanie w lewo i prawo",
@@ -3090,7 +3117,16 @@
           "moving north": "przechodzenie na północ",
           "moving south": "przechodzenie na południe",
           "moving west": "przechodzenie na zachód",
-          "spinning right": "obracanie się w prawo"
+          "spinning right": "obracanie się w prawo",
+          "spinning left": "obracanie się w lewo",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "fluttering": "trzepotanie",
+          "wobbling": "chybotanie",
+          "moving west and looping": "przechodząc na zachód i powtarzając w pętli",
+          "moving east and looping": "przechodząc na wschód i powtarzając w pętli",
+          "moving north and looping": "poruszanie się na północ i w pętli",
+          "moving south and looping": "poruszanie się na południe i w pętli"
         }
       }
     }

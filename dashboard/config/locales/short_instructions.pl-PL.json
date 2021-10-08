@@ -3674,7 +3674,15 @@
         "helloworld_retro_multi": "Niech każdy z twoich dwóch duszków coś powie.",
         "helloworld_retro_say": "Użyj bloku „powiedz”, abym powiedział, co chcesz!",
         "helloworld_retro_sizes": "Nauczmy się zmieniać rozmiar duszków.",
-        "helloworld_retro_sounds": "Nauczmy się, jak odtwarzać dźwięki."
+        "helloworld_retro_sounds": "Nauczmy się, jak odtwarzać dźwięki.",
+        "poetry_hoc_events1": "Wykorzystajmy zdarzenia, aby zmienić animację, gdy wiersz wspomina o czymś nowym.",
+        "poetry_hoc_exemplar1": "Czy mógłbyś przewidzieć!",
+        "poetry_hoc_exemplar2": "Czy mógłbyś przewidzieć!",
+        "poetry_hoc_sounds": "Dodaj muzykę w tle do swojego programu, aby zmienić nastrój wiersza podczas jego czytania.",
+        "poetry_hoc_addSprites": "Autorzy używają obrazów, aby namalować obraz w umyśle czytelnika. Możesz dodać duszki, aby zilustrować swój wiersz.",
+        "poetry_hoc_backgroundEffects": "Kiedy czytasz ten wiersz, jaki kolor przychodzi Ci na myśl? Znajdź efekt tła, który pasuje do nastroju tego wiersza.",
+        "poetry_hoc_spriteBehaviors": "W trakcie działania programu duszki mogą w kółko wykonywać określone czynności lub zachowania.",
+        "poetry_hoc_spriteSizes": "Możesz zmienić rozmiar już utworzonego duszka."
       }
     }
   }

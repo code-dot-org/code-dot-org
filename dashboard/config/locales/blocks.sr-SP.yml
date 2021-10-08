@@ -484,6 +484,9 @@ sr:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": крц
+            "'sound://category_animals/cow.mp3'": крава
+            "'sound://category_animals/sheep.mp3'": овца
+            "'sound://category_animals/chicken.mp3'": пиле
             "'sound://category_digital/jump_7.mp3'": скок
       gamelab_randColor:
         text: насумична боја
