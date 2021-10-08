@@ -1167,7 +1167,19 @@ var projects = (module.exports = {
           replaceCurrentSourceVersion = !forceNewVersion;
           current.migratedToS3 = true;
 
-          this.updateChannels_(callback);
+          // Normally, reduceChannelUpdates is false and we update the channel
+          // metadata every time source code is saved. When in emergency mode,
+          // reduceChannelUpdates is true for HoC levels and we only update
+          // channel metadata on the initial save to reduce write pressure on
+          // the database. The main user-visible effect of this is that the
+          // project's 'last saved' time shown in the UI may be inaccurate for
+          // all projects that were saved while emergency mode was active.
+          if (appOptions.reduceChannelUpdates && initialSaveComplete) {
+            console.log('Skipping channel metadata update');
+            this.onUpdateChannel(callback, null, current);
+          } else {
+            this.updateChannels_(callback);
+          }
         }.bind(this)
       );
     } else {
@@ -1187,15 +1199,15 @@ var projects = (module.exports = {
    * @private
    */
   updateChannels_(callback) {
-    channels.update(
-      current.id,
-      current,
-      function(err, data) {
-        initialSaveComplete = true;
-        this.updateCurrentData_(err, data, false);
-        executeCallback(callback, err, data);
-      }.bind(this)
+    channels.update(current.id, current, (err, data) =>
+      this.onUpdateChannel(callback, err, data)
     );
+  },
+
+  onUpdateChannel(callback, err, data) {
+    initialSaveComplete = true;
+    this.updateCurrentData_(err, data);
+    executeCallback(callback, err, data);
   },
 
   getSourceForChannel(channelId, callback) {

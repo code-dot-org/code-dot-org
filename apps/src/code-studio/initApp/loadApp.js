@@ -337,6 +337,7 @@ function loadAppAsync(appOptions) {
 
         if (data.channel) {
           appOptions.channel = data.channel;
+          appOptions.reduceChannelUpdates = data.reduceChannelUpdates;
           loadProjectAndCheckAbuse(appOptions).then(appOptions => {
             resolve(appOptions);
           });
