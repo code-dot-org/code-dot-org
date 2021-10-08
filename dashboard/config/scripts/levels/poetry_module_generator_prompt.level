@@ -15,9 +15,9 @@
     "show_type_hints": true,
     "use_modal_function_editor": "true",
     "embed": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_burst\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "instructions_important": "false",
-    "long_instructions": "Lesson 4 Free Play\r\n",
+    "callout_json": "[]",
+    "instructions_important": "true",
+    "long_instructions": "*We need to restructure your code a little bit to make it work with prompts.*\r\n\r\n* Drag a `when all prompts answered` event block from the toolbox to your workspace.\r\n* Drag **all** your old text commands from under the `when run` event to the `when all prompts answered` event.\r\n* Drag a `prompt user` block from the toolbox to under the `when run` block.\r\n* Press Run and enter something into the prompt. Your poem should show up after the prompt is answered.\r\n\r\n<xml>\r\n\r\n</xml>",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -39,14 +39,15 @@
     "blockly_variables": "word1, word2, word3",
     "min_workspace_height": "0",
     "project_template_level_name": "poetry_module_template",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Move your old code to the `when all prompts answered` event. \\nAdd a prompt command under `when run`.\\n\\n<div style=\\\"width: 100%;height:245px;\\\">\\n        <div style=\\\"width: 50%; float: left;\\\"> \\n        \\n<xml>\\n  <block type=\\\"when_run\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n  <block type=\\\"gamelab_setPrompt\\\">\\n    <value name=\\\"QUESTION\\\">\\n      <block type=\\\"text\\\">\\n        <title name=\\\"TEXT\\\">Enter a word:</title>\\n      </block>\\n    </value>\\n    <value name=\\\"VAR\\\">\\n      <block type=\\\"variables_get\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"VAR\\\">word1</title>\\n      </block>\\n    </value>\\n  </block>\\n  </xml>\\n</div>\\n        <div style=\\\"margin-left: 50%; \\\"> \\n  <xml>\\n  <block type=\\\"gamelab_whenAllPromptsAnswered\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n <block type=\\\"Poetry_setTitle\\\">\\n    <value name=\\\"TITLE\\\">\\n      <block type=\\\"Poetry_stringValue\\\">\\n        <title name=\\\"TEXT\\\"></title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"Poetry_setAuthor\\\">\\n        <value name=\\\"AUTHOR\\\">\\n          <block type=\\\"Poetry_stringValue\\\">\\n            <title name=\\\"TEXT\\\"></title>\\n          </block>\\n        </value>\\n        <next>\\n          <block type=\\\"Poetry_addLine\\\">\\n            <value name=\\\"LINE\\\">\\n              <block type=\\\"Poetry_stringValue\\\">\\n                <title name=\\\"TEXT\\\"></title>\\n              </block>\\n            </value>\\n            <next>\\n              <block type=\\\"Poetry_addLine\\\">\\n                <value name=\\\"LINE\\\">\\n                  <block type=\\\"Poetry_stringValue\\\">\\n                    <title name=\\\"TEXT\\\"></title>\\n                  </block>\\n                </value>\\n                <next>\\n                  <block type=\\\"Poetry_addLine\\\">\\n                    <value name=\\\"LINE\\\">\\n                      <block type=\\\"Poetry_stringValue\\\">\\n                        <title name=\\\"TEXT\\\"></title>\\n                      </block>\\n                    </value>\\n                  </block>\\n                </next>\\n              </block>\\n            </next>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block>\\n          </xml>\\n\\n\\n\\n\\n\",\"hint_id\":\"poetry_refactor_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b0fb5357189b0fc50d06f7875862cbc7/poetry_module_generator_prompt.mp3\"}]",
     "preload_asset_list": null
   },
   "game_id": 69,
   "published": true,
-  "created_at": "2021-10-07T14:56:36.000Z",
+  "created_at": "2021-10-08T18:07:34.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-07T14:56:36.195+00:00\",\"changed\":[\"cloned from \\\"poetry_module_conditionals_freeplay\\\"\"],\"cloned_from\":\"poetry_module_conditionals_freeplay\"},{\"changed_at\":\"2021-10-07 14:56:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 14:57:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:11:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-08T18:07:34.182+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_concatenation\\\"\"],\"cloned_from\":\"poetry_module_generator_concatenation\"},{\"changed_at\":\"2021-10-08 18:11:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:16:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:18:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:19:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -87,8 +88,8 @@
               </block>
             </value>
           </block>
-          <block type="Poetry_animatePoem"/>
-          <block type="Poetry_hidePoem"/>
+          <block type="Poetry_animateText"/>
+          <block type="Poetry_hideText"/>
           <block type="gamelab_textJoin">
             <title name="TEXT1"/>
           </block>
