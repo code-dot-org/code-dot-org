@@ -31,6 +31,10 @@ class ProgrammingExpression < ApplicationRecord
     color
     syntax
     short_description
+    external_documentation
+    content
+    return_value
+    tips
   )
 
   def key_format
@@ -180,8 +184,14 @@ class ProgrammingExpression < ApplicationRecord
       id: id,
       key: key,
       name: name,
+      category: category,
       programmingEnvironmentName: programming_environment.name,
-      shortDescription: short_description || ''
+      shortDescription: short_description || '',
+      externalDocumentation: external_documentation || '',
+      content: content || '',
+      syntax: syntax || '',
+      returnValue: return_value || '',
+      tips: tips || ''
     }
   end
 
