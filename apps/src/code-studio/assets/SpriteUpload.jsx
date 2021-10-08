@@ -3,6 +3,7 @@ import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
 import {
   getManifest,
+  getLevelAnimationsFiles,
   uploadSpriteToAnimationLibrary,
   uploadMetadataToAnimationLibrary
 } from '@cdo/apps/assetManagement/animationLibraryApi';
@@ -18,7 +19,8 @@ export default class SpriteUpload extends React.Component {
     spriteAvailability: '',
     category: '',
     currentCategories: [],
-    currentManifest: [],
+    currentLibrarySprites: [],
+    currentLevelSprites: [],
     aliases: [],
     metadata: '',
     willOverride: false,
@@ -29,10 +31,16 @@ export default class SpriteUpload extends React.Component {
   };
 
   componentDidMount() {
+    // Get list of sprites from level-specific folder
+    getLevelAnimationsFiles().then(files => {
+      this.setState({currentLevelSprites: files.filenames});
+    });
+
+    // Get data from the spritelab library manifest
     getManifest('spritelab', 'en_us').then(data => {
       this.setState({
         currentCategories: Object.keys(data.categories),
-        currentManifest: Object.keys(data.metadata)
+        currentLibrarySprites: Object.keys(data.metadata)
       });
     });
   }
@@ -85,11 +93,18 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleImageChange = event => {
+    let {
+      currentLibrarySprites,
+      currentLevelSprites,
+      spriteAvailability,
+      category
+    } = this.state;
     let file = event.target.files[0];
     const name = file.name.split('.')[0];
-    const willOverride = this.state.currentManifest.includes(
-      `category_${this.state.category}/${name}`
-    );
+    const willOverride =
+      spriteAvailability === SpriteLocation.library
+        ? currentLibrarySprites.includes(`category_${category}/${name}`)
+        : currentLevelSprites.includes(`level_animations/${name}`);
     this.setState({
       fileData: file,
       filename: file.name,
