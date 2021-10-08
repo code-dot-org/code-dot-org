@@ -10,6 +10,7 @@ export const FormContext = React.createContext({});
 
 /**
  * @param {String} name
+ * @param {Array<String>} errors
  * @returns {String|undefined}
  */
 export const getValidationState = (name, errors) => {
@@ -20,13 +21,6 @@ export const getValidationState = (name, errors) => {
 
 /**
  * Construct a controlled input
- *
- * @param {String} name
- * @param {String} label
- * @param {String} type - should match a standard HTML input type
- * @param {boolean} [required=false]
- *
- * @returns {FieldGroupComponent}
  */
 export const FieldGroup = props => {
   const {errors, errorMessages, onChange, data} = useContext(FormContext);
@@ -44,23 +38,13 @@ export const FieldGroup = props => {
   );
 };
 FieldGroup.propTypes = {
+  ...FieldGroupComponent.propTypes,
+  // the name of the input
   name: PropTypes.string.isRequired
 };
 
 /**
  * Construct a controlled Select dropdown with supplied options
- *
- * @param {String} name - the name of the input. Should match a key in options
- * @param {String} label
- * @param {String} [placeholder] - if specified, will add a valueless option
- *        with the specified placeholder text
- * @param {boolean} [required=false]
- * @param {Answer[]|SimpleAnswer[]|Object} options - can be specified as
- *        either an array (of either Answers or SimpleAnswers, as defined in
- *        utils.js) or an object (in which case we'll use the keys for the
- *        values and the values for the display names)
- *
- * @returns {FieldGroupComponent}
  */
 export const SelectFieldGroup = props => {
   const {errors, errorMessages, onChange, data} = useContext(FormContext);
@@ -104,23 +88,20 @@ export const SelectFieldGroup = props => {
   );
 };
 SelectFieldGroup.propTypes = {
+  ...FieldGroupComponent.propTypes,
+  // the name of the input. Should match a key in options
   name: PropTypes.string.isRequired,
+  // can be specified as either an array (of either Answers or SimpleAnswers, as defined in
+  // utils.js) or an object (in which case we'll use the keys for the
+  // values and the values for the display names)
   options: PropTypes.arrayOf(PropTypes.string),
+  // if specified, will add a valueless option
+  // with the specified placeholder text
   placeholder: PropTypes.string
 };
 
 /**
- * Construct a controlled Select dropdown from the options specified in
- * this.props
- *
- * @param {String} name - the name of the input. Should match a key in
- *        this.props.options
- * @param {String} label
- * @param {String} [placeholder] - if specified, will add a valueless option
- *        with the specified placeholder text
- * @param {boolean} [required=false]
- *
- * @returns {FieldGroupComponent}
+ * Construct a controlled Select dropdown from the options specified in FormContext
  */
 export const SelectFieldGroupFromOptions = props => {
   const {options} = useContext(FormContext);
@@ -129,17 +110,13 @@ export const SelectFieldGroupFromOptions = props => {
   return <SelectFieldGroup options={componentOptions} {...props} />;
 };
 SelectFieldGroupFromOptions.propTypes = {
+  ...SelectFieldGroup.propTypes,
+  // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired
 };
 
 /**
  * Construct a controlled US phone number input
- *
- * @param {String} name
- * @param {String} label
- * @param {boolean} [required=false]
- *
- * @returns {UsPhoneNumberInput}
  */
 export const UsPhoneNumberInput = props => {
   const {errors, errorMessages, onChange, data} = useContext(FormContext);
@@ -156,22 +133,13 @@ export const UsPhoneNumberInput = props => {
   );
 };
 UsPhoneNumberInput.propTypes = {
+  ...UsPhoneNumberInputComponent.propTypes,
+  // the name of the input
   name: PropTypes.string.isRequired
 };
 
 /**
  * Construct a controlled radio or checkbox input from the provided options
- *
- * @param {String} name - the name of the input. Should match a key in
- *        this.props.options
- * @param {String} label
- * @param {String} type - should be one of 'radio' or 'check'
- * @param {boolean} [required=true]
- * @param {Array<String|Object>} answers - list of available answers for the ButtonList.
- *        These can be strings, or objects which will generate an additional text field.
- *        See #ButtonList for more details.
- *
- * @returns {ButtonList}
  */
 export const Buttons = props => {
   const {onChange, data, errors} = useContext(FormContext);
@@ -190,21 +158,15 @@ export const Buttons = props => {
   );
 };
 Buttons.propTypes = {
-  name: PropTypes.string.isRequired, // the name of the input. Should match a key in FormContext options
+  ...ButtonListComponent.propTypes,
+  // the name of the input. Should match a key in FormContext options
+  name: PropTypes.string.isRequired,
   required: PropTypes.bool
 };
 
 /**
  * Construct a controlled radio or checkbox input from the options specified
- * in this.props
- *
- * @param {String} name - the name of the input. Should match a key in
- *        this.props.options
- * @param {String} label
- * @param {String} type - should be one of 'radio' or 'check'
- * @param {boolean} [required=true]
- *
- * @returns {ButtonList}
+ * in FormContext
  */
 export const ButtonsFromOptions = props => {
   const {options} = useContext(FormContext);
@@ -217,26 +179,14 @@ export const ButtonsFromOptions = props => {
   return <Buttons answers={answers} {...props} />;
 };
 ButtonsFromOptions.propTypes = {
+  ...Buttons.propTypes,
+  // the name of the input. Should match a key in FormContext
   name: PropTypes.string.isRequired
 };
 
 /**
  * Construct a controlled radio or checkbox input from the options specified
- * in this.props with additional text fields on certain answers
- *
- * @param {String} name - the name of the input. Should match a key in
- *        this.props.options
- * @param {String} label
- * @param {String} type - should be one of 'radio' or 'check'
- * @param {boolean} [required=true]
- * @param {Array<String>} options - list of available options for the ButtonList.
- * @param {Object} textFieldMap - map specifying which answers should be followed by a text field
- *        Each key is an answer text from options.
- *        Each value is the suffix (appended to `${name}_`) which will become the name of the new text field
- *
- *        For example, {"Other" : "other"} will add a text field called `${name}_other` after the "Other" option.
- *
- * @returns {ButtonList}
+ * in FormContext with additional text fields on certain answers
  */
 export const ButtonsWithAdditionalTextFields = props => {
   const {data, onChange} = useContext(FormContext);
@@ -257,27 +207,21 @@ export const ButtonsWithAdditionalTextFields = props => {
   return <Buttons answers={answers} {...props} />;
 };
 ButtonsWithAdditionalTextFields.propTypes = {
+  ...Buttons.propTypes,
+  // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired,
+  // list of available options for the ButtonList
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  // map specifying which answers should be followed by a text field
+  // Each key is an answer text from options.
+  // Each value is the suffix (appended to `${name}_`) which will become the name of the new text field
+  // For example, {"Other" : "other"} will add a text field called `${name}_other` after the "Other" option.
   textFieldMap: PropTypes.object.isRequired
 };
 
 /**
  * Construct a controlled radio or checkbox input from the options specified
- * in this.props with additional text fields on certain answers
- *
- * @param {String} name - the name of the input. Should match a key in
- *        this.props.options
- * @param {String} label
- * @param {String} type - should be one of 'radio' or 'check'
- * @param {boolean} [required=true]
- * @param {Object} textFieldMap - map specifying which answers should be followed by a text field
- *        Each key is an answer text from options.
- *        Each value is the suffix (appended to `${name}_`) which will become the name of the new text field
- *
- *        For example, {"Other" : "other"} will add a text field called `${name}_other` after the "Other" option.
- *
- * @returns {ButtonList}
+ * in FormContext with additional text fields on certain answers
  */
 export const ButtonsWithAdditionalTextFieldsFromOptions = props => {
   const {options} = useContext(FormContext);
@@ -292,18 +236,13 @@ export const ButtonsWithAdditionalTextFieldsFromOptions = props => {
   );
 };
 ButtonsWithAdditionalTextFieldsFromOptions.propTypes = {
+  ...ButtonsWithAdditionalTextFields.propTypes,
+  // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired
 };
 
 /**
  * Construct a controlled single checkbox input from the provided options
- *
- * @param {String} name - the name of the input. Should match a key in
- *        this.props.options
- * @param {String} label
- * @param {boolean} [required=true]
- *
- * @returns {SingleCheckbox}
  */
 export const SingleCheckbox = props => {
   const {errors, data, onChange} = useContext(FormContext);
@@ -321,6 +260,8 @@ export const SingleCheckbox = props => {
   );
 };
 SingleCheckbox.propTypes = {
-  name: PropTypes.string.isRequired, // the name of the input. Should match a key in FormContext options
+  ...SingleCheckboxComponent.propTypes,
+  // the name of the input. Should match a key in FormContext options
+  name: PropTypes.string.isRequired,
   required: PropTypes.bool
 };
