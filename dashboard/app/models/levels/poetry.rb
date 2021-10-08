@@ -83,7 +83,12 @@ class Poetry < GamelabJr
       ['Dream Variations', 'hughes_1'],
       ['In the Garden', 'hopler'],
       ['Return', 'lomeli'],
-      ['Toasting Marshmallows', 'singer']
+      ['Toasting Marshmallows', 'singer'],
+      ['Affirmation', 'ewing'],
+      ['Dream Destroyed', 'alexander'],
+      ['Remember', 'harjo'],
+      ['Mountain', 'po'],
+      ['Rejoice', 'tzu']
     ]
   end
 end

@@ -199,10 +199,12 @@ export const POEMS = {
     author: 'Caia Lomeli',
     title: 'Return',
     lines: [
-      'Anywhere the air settles its hand on your head like a gentle father',
+      'Anywhere the air settles its hand on your head ',
+      'like a gentle father',
       'And the morning sings to you —',
       'or',
-      'When you find your reflection in another breathing body',
+      'When you find your reflection ',
+      'in another breathing body',
       'And carry a calm pebble in your chest ',
       '',
       'Here',
@@ -222,6 +224,71 @@ export const POEMS = {
       'And you lose the game, ',
       'the marshmallow ',
       'to the flame. '
+    ]
+  },
+  ewing: {
+    author: 'Eve L. Ewing',
+    title: 'Affirmation',
+    lines: [
+      'Somewhere it rains,',
+      'and things will grow green and wonderful.',
+      'Somewhere inside me, too, it rains,',
+      'and things will grow green and wonderful.',
+      'Sometimes my insides rain from the inside out.',
+      'And then I know',
+      'I am alive',
+      'I am alive',
+      'I am alive'
+    ]
+  },
+  alexander: {
+    author: 'Kwame Alexander',
+    title: 'Dream Destroyed',
+    lines: [
+      'What happened to a dream destroyed?',
+      '',
+      'Does it sink',
+      'like a wrecked ship in the sea?',
+      '',
+      'Or wade in the water',
+      'Like a boy overboard?',
+      '',
+      'Maybe it just floats',
+      'Around and around...',
+      '',
+      'Or does it drown?'
+    ]
+  },
+  harjo: {
+    author: 'Joy Harjo',
+    title: 'Remember',
+    lines: [
+      'Remember the sky that you were born under,',
+      "know each of the star's stories.",
+      'Remember the moon, know who she is.',
+      "Remember the sun's birth at dawn, that is the",
+      'strongest point of time. Remember sundown',
+      'and the giving away to night.'
+    ]
+  },
+  po: {
+    author: 'Li Po',
+    title: 'Mountain',
+    lines: [
+      'The birds have vanished into the sky,',
+      'And now the last cloud drains away.',
+      'We sit together, the mountain and me,',
+      'Until only the mountain remains.'
+    ]
+  },
+  tzu: {
+    author: 'Lao Tzu',
+    title: 'Rejoice',
+    lines: [
+      'Be content with what you have;',
+      'Rejoice in the way things are.',
+      'When you realize there is nothing lacking,',
+      'The whole world belongs to you.'
     ]
   }
 };
