@@ -129,6 +129,22 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # GET /api/v1/animation-library/level-animations-filenames/
+  #
+  # Retrieve filenames from the level-animations bucket
+  get %r{/api/v1/animation-library/level-animations-filenames} do
+    animations_by_name = []
+    prefix = 'level_animations'
+    bucket = Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET)
+    bucket.objects({prefix: prefix}).each do |object_summary|
+      animation_name = object_summary.key[/level_animations[^.]+/]
+      # Push into animations collection if unique
+      animations_by_name.push(animation_name)
+    end
+    {filenames: animations_by_name}.to_json
+  end
+
+  #
   # POST /api/v1/animation-library/default-spritelab/
   #
   # Update default sprite list in S3
