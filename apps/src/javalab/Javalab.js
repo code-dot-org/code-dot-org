@@ -251,7 +251,7 @@ Javalab.prototype.init = function(config) {
       // unsubmit it. That is generally the only exception to a readonly workspace. However if a
       // student is reviewing another student's code, we'd always want to disable the finish button.
       (!!config.readonlyWorkspace && !config.level.submittable) ||
-        config.isCodeReviewing
+        !!config.isCodeReviewing
     )
   );
 
