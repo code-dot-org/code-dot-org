@@ -72,9 +72,7 @@ class ProgrammingExpressionsController < ApplicationController
       :tips,
       :parameters
     )
-    puts transformed_params.keys.inspect
     transformed_params[:parameters] = JSON.parse(transformed_params[:parameters]) if transformed_params[:parameters]
-    puts transformed_params.inspect
     transformed_params
   end
 end
