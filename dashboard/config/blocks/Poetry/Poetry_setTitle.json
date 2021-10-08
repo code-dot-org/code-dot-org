@@ -2,7 +2,7 @@
   "category": "",
   "config": {
     "func": "setTitle",
-    "blockText": "set poem title {TITLE}",
+    "blockText": "set title {TITLE}",
     "args": [
       {
         "name": "TITLE",

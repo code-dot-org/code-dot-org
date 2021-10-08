@@ -2,6 +2,12 @@
   "pl-PL": {
     "data": {
       "objectives": {
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Twórz nowe duszki i przypisuj im kostiumy i lokalizacje"
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Stwórz interaktywną animację za pomocą duszków i zdarzeń."
+        },
         "d67e0be9-d618-464a-9f80-4549d63a2e03": {
           "description": "Zidentyfikuj duszki w uruchomionym programie komputerowym."
         },

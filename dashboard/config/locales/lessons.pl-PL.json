@@ -2,6 +2,10 @@
   "pl-PL": {
     "data": {
       "lessons": {
+        "hello-world-food/lesson-1": {
+          "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
+          "purpose": "Ta lekcja ma na celu przygotowanie uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dzięki tej umiejętności uczniowie mogą tworzyć projekty na dowolny temat, na przykład inny temat szkolny lub coś, co jest dla nich osobiście istotne."
+        },
         "coursef-2021/lesson-6": {
           "student_overview": "Omówisz rolę komputerów i technologii w Twoim życiu, koncentrując się na tym, jak aplikacje i narzędzia dają użytkownikom możliwość wyboru sposobu ich używania. "
         },

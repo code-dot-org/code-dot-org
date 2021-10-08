@@ -250,7 +250,7 @@ es-MX:
             exploran la magia y la belleza del hielo.
           lessons:
             Artist:
-              name: Artista
+              name: Programa con Ana y Elsa
           student_description: Vamos a usar un código para explorar junto a Ana y
             Elsa la magia y la belleza del hielo. ¡Crearás copos de nieve y patrones
             a medida que patinas sobre hielo y crearás un paisaje invernal que luego
@@ -415,7 +415,7 @@ es-MX:
             o un juego protagonizado por personajes de Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratorio de juegos Disney Infinity
           student_description: Utiliza el laboratorio de juegos para crear una historia
             o un juego protagonizado por personajes de Disney Infinity.
         algebrademo:
@@ -683,6 +683,8 @@ es-MX:
               name: Compresión de texto
         algebraPD:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -696,6 +698,7 @@ es-MX:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         algPDmiami:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar álgebra a través de programación funcional
@@ -759,6 +762,8 @@ es-MX:
             Lesson 15:
               name: Lección 15
         ECSPD:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -772,7 +777,10 @@ es-MX:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         sciencePD:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -799,6 +807,7 @@ es-MX:
               name: Uso de modelos en el aula
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         rbo-reference:
           lessons:
             reference:
@@ -888,6 +897,8 @@ es-MX:
             The Design Recipe:
               name: La receta de diseño
         ECSPD-NexTech:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -901,7 +912,10 @@ es-MX:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         ECSPD-iZone:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -915,8 +929,11 @@ es-MX:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         algebraPD-NexTech:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -930,8 +947,11 @@ es-MX:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         algebraPD-iZone:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -945,7 +965,10 @@ es-MX:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         sciencePD-NexTech:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -972,7 +995,10 @@ es-MX:
               name: Uso de modelos en el aula
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         sciencePD-iZone:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -999,7 +1025,9 @@ es-MX:
               name: Uso de modelos en el aula
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         sciencePD2:
+          title: 'CS en ciencias: parte 2'
           lessons:
             Creating Breeds in Starlogo Nova:
               name: Creación de especies en StarLogo Nova
@@ -1016,6 +1044,7 @@ es-MX:
             Wrap-Up:
               name: Cierre
         sciencePD3:
+          title: 'CS en ciencias: parte 3'
           lessons:
             Decode and Share:
               name: Decodificar y compartir
@@ -1718,6 +1747,7 @@ es-MX:
             Halloween 2015:
               name: Halloween 2015
         SpecialSeries:
+          title: Niveles especiales
           description_audience: De 10 a 18 años
           lessons:
             Spring 2016:
@@ -1821,9 +1851,6 @@ es-MX:
             en una galaxia muy, muy lejana.
           description_short: Aprende a programar droides y crea tu propio juego Star
             Wars en una galaxia muy, muy lejana.
-          lessons:
-            Hour of Code 2015:
-              name: Hora del código 2015
           student_description: Aprende a programar droides y crea tu propio juego
             Star Wars en una galaxia muy, muy lejana.
         mc:
@@ -1933,6 +1960,7 @@ es-MX:
             Unit 4 Overview:
               name: Resumen de la Unidad 4
         cspunit6draft:
+          description_short: Apps de datos
           lessons:
             Creating Javascript Objects:
               name: Creación de objetos de JavaScript
@@ -2050,6 +2078,7 @@ es-MX:
         algebraPD1:
           title: CS en Algebra Parte 1
           description: Enseñar álgebra a través de programación funcional
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -2524,6 +2553,7 @@ es-MX:
             Using the Game Design Process:
               name: Uso del proceso de diseño de juegos
         2016_sciencePD_phase1:
+          title: 'CS en ciencias: parte 1'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -2561,6 +2591,7 @@ es-MX:
             Sample Stage:
               name: Etapa de muestra
         ECSPD1:
+          description_short: 'Fase 1: introducción online'
           lessons:
             Background and Context:
               name: Experiencia y contexto
@@ -2590,6 +2621,8 @@ es-MX:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
           student_description: Enseñar álgebra a través de programación funcional
         sciencePD1:
+          title: 'CS en ciencias: parte 1'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -4084,7 +4117,6 @@ es-MX:
           description: Crea un juego de baloncesto
           lessons:
             Bounce:
-              name: Rebotar
               description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
                 en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
               description_teacher: En esta actividad en línea, los alumnos aprenderán
@@ -5147,7 +5179,6 @@ es-MX:
           description: Combina deportes
           lessons:
             Sports:
-              name: Deportes
               description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
                 en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
               description_teacher: En esta actividad en línea, los alumnos aprenderán
@@ -5281,6 +5312,7 @@ es-MX:
             en un Curso de Aprendizaje Profesional para los profesores de CSP que
             se preparan para enseñar la Unidad 4.
         sciencepd4:
+          title: 'CS en ciencias: parte 4'
           lessons:
             Welcome!:
               name: "¡Bienvenido!"
@@ -5330,6 +5362,7 @@ es-MX:
             Snowflakes:
               name: Copos de nieve
         sciencepd5:
+          title: 'CS en ciencias: parte 5'
           lessons:
             Welcome!:
               name: "¡Bienvenido!"
@@ -9350,7 +9383,7 @@ es-MX:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Hora del Código para el Viaje del héroe'
             Minecraft Hour of Code:
-              name: Hora de Código de Minecraft
+              name: 'Minecraft: Viaje del héroe'
           student_description: "¡Minecraft está de vuelta para la Hora del Código
             con una actividad nueva! Viaja a través de Minecraft con códigos."
         applab-intro-staging:
@@ -13572,7 +13605,7 @@ es-MX:
             mundos acuáticos a través del código."
           lessons:
             Aquatic:
-              name: Aquatic
+              name: 'Minecraft: Voyage Aquatic'
           student_description: "¡Minecraft está de vuelta con una nueva actividad!
             Usa tu creatividad y tu capacidad de resolver problemas para explorar
             y construir mundos acuáticos a través del código."

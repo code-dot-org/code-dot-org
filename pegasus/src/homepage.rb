@@ -421,11 +421,6 @@ class Homepage
     false
   end
 
-  def self.show_csjourneys_banner(request)
-    hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    request.locale == "en-US" && hoc_mode != "soon-hoc"
-  end
-
   def self.show_professional_learning_banner(request)
     teacher_application_mode = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
     request.locale == "en-US" && %w(open closing-soon).include?(teacher_application_mode)

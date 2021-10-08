@@ -4,6 +4,7 @@
     "encrypted": "false",
     "skin": "gamelab",
     "block_pools": [
+      "GamelabJr",
       "Poetry"
     ],
     "helper_libraries": [
@@ -18,7 +19,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Find this block and click the `50`.\\n<xml><block type=\\\"Poetry_setSize\\\">\\n    <title name=\\\"SPRITE\\\">\\\"night_moon\\\"</title>\\n    <title name=\\\"VAL\\\">50</title>\\n  </block></xml>\\n\\nTry changing the number to `150`. \\n\\n<xml><block type=\\\"Poetry_setSize\\\">\\n    <title name=\\\"SPRITE\\\">\\\"night_moon\\\"</title>\\n    <title name=\\\"VAL\\\">150</title>\\n  </block></xml>\\n\\nWhat happens when the number is `25`? \\n<xml><block type=\\\"Poetry_setSize\\\">\\n    <title name=\\\"SPRITE\\\">\\\"night_moon\\\"</title>\\n    <title name=\\\"VAL\\\">25</title>\\n  </block></xml>\\n\",\"hint_id\":\"size hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6f21723fc1bbe5de6fd94b1e4aad54bb/poetry_hoc_spriteSizes.mp3\"}]",
     "instructions_important": "false",
     "short_instructions": "You can change the size of a sprite you already made. ",
-    "long_instructions": "You can change the **size** of a sprite you already made.\r\n\r\n* Change the size of your sprite by using the new `set size` block. \r\n* Replace `50` with another size, like `150`.\r\n\r\n*Extra Challenge:* Use an **event** and the new blocks to change the size of a sprite *or* remove it completely when the **mood** of the poem shifts!",
+    "long_instructions": "You can change the **size** of a sprite you already made.\r\n\r\n* Change the size of your sprite by using the new `set size` block. \r\n* Replace `50` with another size, like `150`.",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -36,6 +37,8 @@
     "validation_code": "var validationInfo = getValidationInfo();\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\n\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {\r\n    usedEvent: false\r\n  };\r\n}\r\n\r\n// Keep track of sprites' current sizes\r\nif(!validationProps.spritesSizes) {\r\n  validationProps.spritesSizes = {};\r\n}\r\n\r\nfor (var spriteId in spriteIds) {\r\n  var spriteSize = getProp({id: spriteId}, \"scale\");\r\n  if (World.frameCount == 1) {\r\n    if (spriteSize !== 100) {\r\n      setSuccessFrame();\r\n    }\r\n    validationProps.spritesSizes[spriteId] = spriteSize;\r\n  } else {\r\n    if (spriteSize !== validationProps.spritesSizes[spriteId] && hasLineEvent) {\r\n      validationProps.previous.usedEvent = true;\r\n      setSuccessFrame();\r\n      break;\r\n    }\r\n  }\r\n}\r\n\r\n\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    if (validationProps.previous.usedEvent) {\r\n      levelFailure(0, 'genericBonusSuccess');\r\n    } else {\r\n      levelFailure(0, 'poemBotSuccessLevel5');\r\n    }\r\n  } else if (spriteIds.length == 0) {\r\n    levelFailure(3, 'poemBotRemovedSprite');\r\n  } else {\r\n    levelFailure(3, 'poemBotSetSize');\r\n  }\r\n}",
     "hide_pause_button": "true",
     "instructions_icon": "octiHopeful",
+    "show_poem_dropdown": "true",
+    "default_poem": "hopler",
     "preload_asset_list": null
   },
   "game_id": 69,
@@ -43,7 +46,7 @@
   "created_at": "2021-09-28T16:35:19.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-09-28 16:41:17 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:15:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:15:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 19:01:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-28 16:41:17 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:15:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:15:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 19:01:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-01 21:47:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-01 21:49:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-07 13:01:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:20:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:21:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"show_poem_dropdown\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:24:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 15:56:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -90,16 +93,24 @@
         <block type="Poetry_whenLineShows">
           <title name="N">0</title>
         </block>
+        <block type="Poetry_makeNewSpriteAnon">
+          <title name="ANIMATION_NAME">"night_cloud"</title>
+          <title name="LOCATION">{"x":200,"y":200}</title>
+        </block>
         <block type="Poetry_setSize">
           <title name="SPRITE">"night_moon"</title>
           <title name="VAL">50</title>
         </block>
+        <block type="Poetry_startBehavior">
+          <title name="ANIMATION_NAME">"night_moon"</title>
+          <title name="BEHAVIOR">fluttering</title>
+        </block>
+        <block type="Poetry_stopBehavior">
+          <title name="ANIMATION_NAME">"night_moon"</title>
+          <title name="BEHAVIOR">wandering</title>
+        </block>
         <block type="Poetry_destroy">
           <title name="ANIMATION_NAME">"night_moon"</title>
-        </block>
-        <block type="Poetry_makeNewSpriteAnon">
-          <title name="ANIMATION_NAME">"night_cloud"</title>
-          <title name="LOCATION">{"x":200,"y":200}</title>
         </block>
         <block type="Poetry_setFont">
           <title name="FONT">"Arial"</title>

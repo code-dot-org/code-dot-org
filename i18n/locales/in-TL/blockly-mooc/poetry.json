@@ -1,15 +1,23 @@
 {
+  "author": "crwdns2695475:0crwdne2695475:0",
   "backgroundOrTextEffect": "crwdns2694359:0crwdne2694359:0",
   "deletedSprite": "crwdns2694361:0crwdne2694361:0",
+  "editCustomPoem": "crwdns2695477:0crwdne2695477:0",
   "effectWithEvent": "crwdns2694363:0crwdne2694363:0",
+  "enterMyOwn": "crwdns2695479:0crwdne2695479:0",
   "foregroundEffectWithEvent": "crwdns2694365:0crwdne2694365:0",
   "makeBackground": "crwdns2694367:0crwdne2694367:0",
   "makeForeground": "crwdns2694369:0crwdne2694369:0",
   "noBehavior": "crwdns2694371:0crwdne2694371:0",
   "noTextEffects": "crwdns2694373:0crwdne2694373:0",
   "oneTextEffect": "crwdns2694375:0crwdne2694375:0",
+  "poem": "crwdns2695481:0crwdne2695481:0",
+  "reinfFeedbackMsg": "crwdns2695483:0crwdne2695483:0",
   "removedSprite": "crwdns2694377:0crwdne2694377:0",
+  "save": "crwdns2695485:0crwdne2695485:0",
+  "selectPoem": "crwdns2695487:0crwdne2695487:0",
   "setSize": "crwdns2694379:0crwdne2694379:0",
+  "shareGame": "crwdns2695489:0crwdne2695489:0",
   "spriteEvent": "crwdns2694381:0crwdne2694381:0",
   "successAddedSprite": "crwdns2694383:0crwdne2694383:0",
   "successBackgroundEvent": "crwdns2694385:0crwdne2694385:0",
@@ -27,5 +35,6 @@
   "successLevel10": "crwdns2694409:0crwdne2694409:0",
   "successRemovedSprite": "crwdns2694411:0crwdne2694411:0",
   "successTextEvent": "crwdns2694413:0crwdne2694413:0",
-  "textEffectWithEvent": "crwdns2694415:0crwdne2694415:0"
+  "textEffectWithEvent": "crwdns2694415:0crwdne2694415:0",
+  "title": "crwdns2695491:0crwdne2695491:0"
 }

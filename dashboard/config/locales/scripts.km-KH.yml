@@ -37,10 +37,6 @@ km:
           lessons:
             'Eval: Conditionals':
               name: លក្ខខណ្ឌ
-        infinity:
-          lessons:
-            Infinity:
-              name: អនន្ត
         K5PD:
           lessons:
             Teacher Dashboard:
@@ -247,7 +243,6 @@ km:
           description: បង្កើតហ្គេមបោះបាល់
           lessons:
             Bounce:
-              name: បាល់​លោត
               description_student: ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ?
                 នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!
               description_teacher: នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ
@@ -1123,7 +1118,7 @@ km:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
           student_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
             ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
         course-e-2018:

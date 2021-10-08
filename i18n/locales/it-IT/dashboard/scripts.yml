@@ -200,7 +200,7 @@ it:
           description_short: Usa la programmazione per unirti ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio.
           lessons:
             Artist:
-              name: Artista
+              name: Programma con Anna ed Elsa
           student_description: Usa la programmazione per unirti ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve, pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio invernale che potrai poi condividere con i tuoi amici!
         course4:
           title: Corso 4
@@ -344,7 +344,7 @@ it:
           description_short: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Disney Infinity
           student_description: Usa il Laboratorio per creare una storia o inventare un gioco con i personaggi di Disney Infinity.
         algebrademo:
           title: Demo per l'Algebra
@@ -1408,9 +1408,6 @@ it:
         starwarsblocks:
           description: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
           description_short: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
-          lessons:
-            Hour of Code 2015:
-              name: L'Ora del Codice 2015
           student_description: Impara a programmare i droidi e crea la tua versione di Guerre Stellari, in una galassia lontana lontana...
         mc:
           title: L'Ora del Codice con Minecraft
@@ -2206,7 +2203,6 @@ it:
             Scegli la tua squadra e fai una partita di basket
           lessons:
             Bounce:
-              name: Ping-Pong
               description_student: Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!
               description_teacher: In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.
           student_description: |-
@@ -2498,7 +2494,6 @@ it:
           description: Combina diversi sport
           lessons:
             Sports:
-              name: Sport
               description_student: Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!
               description_teacher: In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.
           student_description: Combina diversi sport
@@ -3858,7 +3853,7 @@ it:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Ora del Codice - Il viaggio dell''eroe'
             Minecraft Hour of Code:
-              name: L'Ora del Codice con Minecraft
+              name: 'Minecraft: Il viaggio dell''eroe'
           student_description: Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
           lessons:
@@ -5115,6 +5110,9 @@ it:
           title: 'Minecraft: Viaggio Acquatico'
           description_short: Usa la tua creatività e le competenze di problem solving per esplorare e costruire mondi sottomarini con la programmazione!
           description: Anche quest'anno Minecraft propone un'attività nuova di zecca! Usa la tua creatività e le competenze di problem solving per esplorare e creare mondi sottomarini grazie alla potenza della programmazione.
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Viaggio Acquatico'
           student_description: Anche quest'anno Minecraft propone un'attività nuova di zecca! Usa la tua creatività e le competenze di problem solving per esplorare e creare mondi sottomarini grazie alla potenza della programmazione.
         dance--draft:
           lessons:

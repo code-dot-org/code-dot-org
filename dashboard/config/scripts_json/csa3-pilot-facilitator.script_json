@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-23 18:03:04 UTC",
+    "serialized_at": "2021-10-05 20:57:09 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csa3-pilot-facilitator"
@@ -3316,7 +3316,7 @@
       "key": "062adf4b-8ca9-43ac-9a2c-e17ae9effbc6",
       "position": 1,
       "properties": {
-        "description": "**Display:** Show the `main` method from the Lesson 11 Level 1 exemplar for this project.\n\n**Do This:**\n1. Describe to students that they will hear the original beat.\n2. Uncomment the line `emojiConcert.playSoundtrack(mainBeat);` and run the code to play the main beat.\n3. Comment out the line after playing it.\n4. Describe to students that the next remix algorithm will play only seconds 2-3.\n5. Uncomment the two lines that declare and play `cropBeat`, then run the code.\n6. Comment out the lines after playing.\n7. Repeat steps 4-6 to demonstrate `increaseSpeed`, `decreaseSpeed`, `combine`, and `blend`. Refer to the comments before each code segment to describe the corresponding algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which remix is your favorite? Why?*\n\n**Discussion Goal:** Students share their favorite remix and what they liked about it.",
+        "description": "**Display:** Show the `main` method from the Lesson 11 Level 1 exemplar for this project.\n\n**Do This:**\n1. Describe to students that they will hear the original beat.\n2. Uncomment the line `emojiConcert.playSoundtrack();` and run the code to play the concert.\n3. Comment out the line after playing it.\n4. Uncomment Lines 16 and 17 that declare and play `originalBeat`, then run the code.\n6. Comment out Line 17 after playing.\n7. Repeat this process to demonstrate `increaseSpeed` (Lines 19 and 20), `decreaseSpeed` (Lines 22 and 23), `combine` (Lines 25-28), and `blend` (Lines 30-33). Refer to the comments before each code segment to describe the corresponding algorithm.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which remix is your favorite? Why?*\n\n**Discussion Goal:** Students share their favorite remix and what they liked about it.",
         "name": "Listen to Remixes"
       },
       "seeding_key": {
@@ -5510,6 +5510,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -5532,6 +5535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -5554,6 +5560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
