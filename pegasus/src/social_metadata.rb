@@ -92,12 +92,12 @@ def get_social_metadata_for_page(request)
     "hourofcode.com" => {
       "soon-hoc" => {
         title: hoc_s(:social_hoc_is_coming),
-        description: hoc_s(:social_hoc2020_hoc_is_about_csforgood),
+        description: hoc_s(:social_hoc2021_cse),
         image: images[:hoc_2020_social]
       },
       "actual-hoc" => {
         title: hoc_s(:social_hoc2018_hoc_here),
-        description: hoc_s(:social_hoc2020_hoc_is_about_csforgood),
+        description: hoc_s(:social_hoc2021_cse),
         image: images[:hoc_2020_social]
       },
       "default" => {
