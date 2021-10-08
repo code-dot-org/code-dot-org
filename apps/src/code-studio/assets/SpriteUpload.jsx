@@ -215,6 +215,17 @@ export default class SpriteUpload extends React.Component {
             <h3>Image Preview:</h3>
             <img ref="spritePreview" src={filePreviewURL} />
           </label>
+          {willOverride && (
+            <p
+              style={{
+                ...styles.uploadStatusMessage,
+                ...styles.uploadFailure
+              }}
+            >
+              A sprite already exists with this name. Please rename the sprite
+              and re-upload.
+            </p>
+          )}
           <br />
 
           <h2 style={styles.spriteUploadStep}>
