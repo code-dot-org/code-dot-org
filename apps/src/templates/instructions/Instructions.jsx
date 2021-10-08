@@ -17,7 +17,6 @@ import i18n from '@cdo/locale';
  */
 class Instructions extends React.Component {
   static propTypes = {
-    puzzleTitle: PropTypes.string,
     shortInstructions: PropTypes.string,
     instructions2: PropTypes.string,
     longInstructions: PropTypes.string,
@@ -67,7 +66,7 @@ class Instructions extends React.Component {
         style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
       >
         <ImmersiveReaderButton
-          title={this.props.puzzleTitle || i18n.instructions()}
+          title={i18n.instructions()}
           text={this.props.longInstructions || this.props.shortInstructions}
         />
         {this.renderMainBody()}
