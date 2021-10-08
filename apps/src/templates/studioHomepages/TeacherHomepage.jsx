@@ -5,7 +5,7 @@ import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
 import SpecialAnnouncement from './SpecialAnnouncement';
 import Notification from '../Notification';
-import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
+import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
 import StudentSections from './StudentSections';
@@ -156,7 +156,7 @@ export const UnconnectedTeacherHomepage = ({
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
         {isEnglish && specialAnnouncement && (
-          <SpecialAnnouncementActionBlock
+          <MarketingAnnouncementBanner
             announcement={specialAnnouncement}
             marginBottom="30px"
           />
