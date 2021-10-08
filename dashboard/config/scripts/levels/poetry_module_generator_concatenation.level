@@ -47,7 +47,7 @@
   "created_at": "2021-10-08T18:01:06.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-08T18:01:06.540+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_repeat\\\"\"],\"cloned_from\":\"poetry_module_generator_repeat\"},{\"changed_at\":\"2021-10-08 18:05:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-08T18:01:06.540+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_repeat\\\"\"],\"cloned_from\":\"poetry_module_generator_repeat\"},{\"changed_at\":\"2021-10-08 18:05:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:24:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:25:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -61,9 +61,6 @@
     <toolbox_blocks>
       <xml>
         <category name="Events">
-          <block type="Poetry_whenLineShows">
-            <title name="N">0</title>
-          </block>
           <block type="gamelab_whenAllPromptsAnswered"/>
         </category>
         <category name="Text">
@@ -88,8 +85,8 @@
               </block>
             </value>
           </block>
-          <block type="Poetry_animatePoem"/>
-          <block type="Poetry_hidePoem"/>
+          <block type="Poetry_animateText"/>
+          <block type="Poetry_hideText"/>
           <block type="gamelab_textJoin">
             <title name="TEXT1"/>
           </block>
@@ -114,68 +111,6 @@
           </block>
           <block type="gamelab_textVariableJoin">
             <title name="VAR">word2</title>
-          </block>
-        </category>
-        <category name="Effects">
-          <block type="Poetry_setFont">
-            <title name="FONT">"Courier"</title>
-          </block>
-          <block type="Poetry_setFontColor">
-            <value name="FILL">
-              <block type="colour_picker">
-                <title name="COLOUR">#99ff99</title>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_setTextEffect">
-            <title name="EFFECT">"fade"</title>
-          </block>
-          <block type="Poetry_playSound">
-            <title name="SOUND">"sound://category_bell/bells_win_low.mp3"</title>
-          </block>
-          <block type="Poetry_setForegroundEffect">
-            <title name="EFFECT">"rain"</title>
-          </block>
-          <block type="Poetry_setBackground">
-            <value name="COLOR">
-              <block type="colour_picker">
-                <title name="COLOUR">#cc0000</title>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_setBackgroundEffect">
-            <title name="EFFECT">"colors"</title>
-            <title name="PALETTE">"grayscale"</title>
-          </block>
-        </category>
-        <category name="Sprites">
-          <block type="Poetry_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="LOCATION">{"x":75,"y":200}</title>
-          </block>
-          <block type="Poetry_setSize">
-            <title name="SPRITE">"bear"</title>
-            <title name="VAL">50</title>
-          </block>
-          <block type="Poetry_startBehavior">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="BEHAVIOR">fluttering</title>
-          </block>
-          <block type="Poetry_stopBehavior">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="BEHAVIOR">fluttering</title>
-          </block>
-          <block type="Poetry_destroy">
-            <title name="ANIMATION_NAME">"bear"</title>
-          </block>
-          <block type="Poetry_makeBurst">
-            <title name="EFFECT">"burst"</title>
-            <title name="NUM">10</title>
-            <title name="ANIMATION_NAME">"bear"</title>
-          </block>
-          <block type="Poetry_makeNumSprites">
-            <title name="NUM">3</title>
-            <title name="ANIMATION_NAME">"bear"</title>
           </block>
         </category>
       </xml>
