@@ -21,7 +21,7 @@ class UnassignSectionDialog extends Component {
   close = () => this.props.onClose();
 
   unassign = () => {
-    this.props.unassignSection(this.props.sectionId);
+    this.props.unassignSection();
     this.close();
   };
 

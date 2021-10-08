@@ -5,11 +5,23 @@ import Button from './Button';
 import i18n from '@cdo/locale';
 import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+/**
+ * Removes null values from stringified object before sending firehose record
+ */
+function removeNullValues(key, val) {
+  if (val === null || typeof val === undefined) {
+    return undefined;
+  }
+  return val;
+}
 
 class UnassignSectionButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     courseName: PropTypes.string,
+    buttonLocationAnalytics: PropTypes.string.isRequired,
     // Redux
     unassignSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
@@ -32,14 +44,59 @@ class UnassignSectionButton extends React.Component {
     this.setState({text: i18n.assigned(), icon: 'check'});
   };
 
-  toggleUnassignDialog = () => {
+  openUnassignDialog = getState => {
     this.setState({
-      showUnassignDialog: !this.state.showUnassignDialog
+      showUnassignDialog: true
     });
+    const {initialCourseId, initialUnitId} = getState().teacherSections;
+    firehoseClient.putRecord(
+      {
+        study: 'assignment',
+        event: 'start-course-unassigned-from-section',
+        data_json: JSON.stringify(
+          {
+            sectionId: this.props.sectionId,
+            scriptId: initialUnitId,
+            courseId: initialCourseId,
+            location: this.props.buttonLocationAnalytics,
+            date: new Date()
+          },
+          removeNullValues
+        )
+      },
+      {includeUserId: true}
+    );
+  };
+
+  closeUnassignDialog = getState => {
+    this.setState({
+      showUnassignDialog: false
+    });
+    const {initialCourseId, initialUnitId} = getState().teacherSections;
+    firehoseClient.putRecord(
+      {
+        study: 'assignment',
+        event: 'cancel-course-unassigned-from-section',
+        data_json: JSON.stringify(
+          {
+            sectionId: this.props.sectionId,
+            scriptId: initialUnitId,
+            courseId: initialCourseId,
+            location: this.props.buttonLocationAnalytics,
+            date: new Date()
+          },
+          removeNullValues
+        )
+      },
+      {includeUserId: true}
+    );
   };
 
   confirmUnassign = () => {
-    this.props.unassignSection(this.props.sectionId);
+    this.props.unassignSection(
+      this.props.sectionId,
+      this.props.buttonLocationAnalytics
+    );
   };
 
   render() {
@@ -63,14 +120,14 @@ class UnassignSectionButton extends React.Component {
           color={Button.ButtonColor.green}
           text={text}
           icon={icon}
-          onClick={this.toggleUnassignDialog}
+          onClick={this.openUnassignDialog}
         />
         {showUnassignDialog && (
           <UnassignSectionDialog
             isOpen={true}
             sectionId={sectionId}
             courseName={courseName}
-            onClose={this.toggleUnassignDialog}
+            onClose={this.closeUnassignDialog}
             unassignSection={this.confirmUnassign}
           />
         )}
