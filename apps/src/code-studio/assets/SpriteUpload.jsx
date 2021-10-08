@@ -18,8 +18,10 @@ export default class SpriteUpload extends React.Component {
     spriteAvailability: '',
     category: '',
     currentCategories: [],
+    currentManifest: [],
     aliases: [],
     metadata: '',
+    willOverride: false,
     uploadStatus: {
       success: null,
       message: ''
@@ -27,9 +29,12 @@ export default class SpriteUpload extends React.Component {
   };
 
   componentDidMount() {
-    getManifest('spritelab', 'en_us').then(data =>
-      this.setState({currentCategories: Object.keys(data.categories)})
-    );
+    getManifest('spritelab', 'en_us').then(data => {
+      this.setState({
+        currentCategories: Object.keys(data.categories),
+        currentManifest: Object.keys(data.metadata)
+      });
+    });
   }
 
   handleSubmit = event => {
@@ -81,11 +86,16 @@ export default class SpriteUpload extends React.Component {
 
   handleImageChange = event => {
     let file = event.target.files[0];
+    const name = file.name.split('.')[0];
+    const willOverride = this.state.currentManifest.includes(
+      `category_${this.state.category}/${name}`
+    );
     this.setState({
       fileData: file,
       filename: file.name,
       filePreviewURL: URL.createObjectURL(file),
-      uploadStatus: {success: null, message: ''}
+      uploadStatus: {success: null, message: ''},
+      willOverride: willOverride
     });
   };
 
@@ -127,7 +137,8 @@ export default class SpriteUpload extends React.Component {
       spriteAvailability,
       category,
       filename,
-      metadata
+      metadata,
+      willOverride
     } = this.state;
 
     // Only display the upload button when the user has uploaded an image and generated metadata
@@ -135,7 +146,8 @@ export default class SpriteUpload extends React.Component {
       spriteAvailability === '' ||
       (spriteAvailability === SpriteLocation.library && category === '') ||
       filename === '' ||
-      metadata === '';
+      metadata === '' ||
+      willOverride;
 
     return (
       <div>
