@@ -8,6 +8,7 @@ import loadAppOptions, {
 } from '@cdo/apps/code-studio/initApp/loadApp';
 import {files} from '@cdo/apps/clientApi';
 import * as imageUtils from '@cdo/apps/imageUtils';
+import project from '@cdo/apps/code-studio/initApp/project';
 
 const SERVER_LEVEL_ID = 5;
 const SERVER_PROJECT_LEVEL_ID = 10;
@@ -29,6 +30,14 @@ describe('loadApp.js', () => {
         readLevelId = levelId;
         return OLD_CODE;
       });
+    sinon.stub(project, 'load').callsFake(() => ({
+      then: successCallback => successCallback()
+    }));
+    sinon.stub(project, 'hideBecauseAbusive').returns(false);
+    sinon.stub(project, 'hideBecausePrivacyViolationOrProfane').returns(false);
+    sinon.stub(project, 'getSharingDisabled').returns(false);
+  });
+  beforeEach(() => {
     sinon.stub($, 'ajax').callsFake(() => ({
       done: successCallback => ({
         fail: failureCallback => {
@@ -36,8 +45,6 @@ describe('loadApp.js', () => {
         }
       })
     }));
-  });
-  beforeEach(() => {
     writtenLevelId = undefined;
     readLevelId = undefined;
     appOptions = {
@@ -52,8 +59,14 @@ describe('loadApp.js', () => {
   after(() => {
     clientState.writeSourceForLevel.restore();
     clientState.sourceForLevel.restore();
-    $.ajax.restore();
+    project.load.restore();
+    project.hideBecauseAbusive.restore();
+    project.hideBecausePrivacyViolationOrProfane.restore();
+    project.getSharingDisabled.restore();
     window.appOptions = oldAppOptions;
+  });
+  afterEach(() => {
+    $.ajax.restore();
   });
 
   it('loads attempt stored under server level id', done => {
@@ -127,6 +140,40 @@ describe('loadApp.js', () => {
 
       document.body.removeChild(appOptionsData);
       queryParamsStub.restore();
+      done();
+    });
+  });
+
+  it('passes get_channel_id true to load user progress if appOptions has levelRequiresChannel true and no channel', done => {
+    appOptions = {
+      ...appOptions,
+      scriptName: 'test-script',
+      lessonPosition: '1',
+      levelPosition: '2',
+      serverLevelId: '123',
+      levelRequiresChannel: true
+    };
+
+    $.ajax.restore();
+    const ajaxStub = sinon.stub($, 'ajax');
+    const responseChannel = 'fakeChannelId';
+    ajaxStub
+      .withArgs(`/api/user_progress/test-script/1/2/123?get_channel_id=true`)
+      .callsFake(() => ({
+        done: successCallback => ({
+          fail: failureCallback => {
+            successCallback({signedIn: false, channel: responseChannel});
+          }
+        })
+      }));
+
+    const appOptionsData = document.createElement('script');
+    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
+    document.body.appendChild(appOptionsData);
+
+    loadAppOptions().then(() => {
+      expect(window.appOptions.channel).to.equal(responseChannel);
+      document.body.removeChild(appOptionsData);
       done();
     });
   });
