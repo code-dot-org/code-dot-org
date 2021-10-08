@@ -17,6 +17,9 @@ import {
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_BACKGROUND_COLOR = color.white;
+// Amount of time in ms after a click to re-enable click events
+// (in case an UPDATE_COMPLETE message is never received)
+export const REENABLE_CLICK_EVENTS_TIMEOUT_MS = 1500;
 
 export default class Playground {
   constructor(
@@ -32,9 +35,11 @@ export default class Playground {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.onJavabuilderMessage = onJavabuilderMessage;
+    this.levelName = levelName;
     this.setIsProgramRunning = setIsProgramRunning;
     this.isGameRunning = false;
-    this.levelName = levelName;
+    this.updateInProgress = false;
+    this.reenableClickEventsTimeoutId = null;
     this.starterAssetFilenames = [];
 
     // Assigned only for testing; should use imports from clientApi normally
@@ -74,12 +79,18 @@ export default class Playground {
     this.onNewlineMessage();
   };
 
+  reenableClickEvents = () => {
+    this.updateInProgress = false;
+    this.reenableClickEventsTimeoutId = null;
+  };
+
   handleSignal(data) {
     switch (data.value) {
       case PlaygroundSignalType.RUN:
         this.isGameRunning = true;
         break;
       case PlaygroundSignalType.EXIT:
+        this.handleUpdateComplete();
         this.endGame();
         break;
       case PlaygroundSignalType.ADD_CLICKABLE_ITEM:
@@ -103,6 +114,12 @@ export default class Playground {
       case PlaygroundSignalType.SET_BACKGROUND_IMAGE:
         this.setBackgroundImage(data.detail);
         break;
+      case PlaygroundSignalType.UPDATE:
+        this.handleBatchUpdate(data.detail);
+        break;
+      case PlaygroundSignalType.UPDATE_COMPLETE:
+        this.handleUpdateComplete();
+        break;
     }
   }
 
@@ -112,6 +129,12 @@ export default class Playground {
     );
     this.onNewlineMessage();
     this.setIsProgramRunning(false);
+  }
+
+  handleBatchUpdate(details) {
+    details.updates.forEach(data => {
+      this.handleSignal(data);
+    });
   }
 
   addClickableItem(itemData) {
@@ -219,11 +242,23 @@ export default class Playground {
   }
 
   handleImageClick(imageId) {
-    if (!this.isGameRunning) {
-      // can only handle click events if game is running
+    if (!this.isGameRunning || this.updateInProgress) {
+      // can only handle click events if game is running and update is not in progress
       return;
     }
+    this.updateInProgress = true;
+    this.reenableClickEventsTimeoutId = setTimeout(
+      this.reenableClickEvents,
+      REENABLE_CLICK_EVENTS_TIMEOUT_MS
+    );
     this.onJavabuilderMessage(WebSocketMessageType.PLAYGROUND, imageId);
+  }
+
+  handleUpdateComplete() {
+    this.updateInProgress = false;
+    if (this.reenableClickEventsTimeoutId) {
+      clearTimeout(this.reenableClickEventsTimeoutId);
+    }
   }
 
   getUrl(filename) {

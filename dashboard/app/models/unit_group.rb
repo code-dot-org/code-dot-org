@@ -36,7 +36,11 @@ class UnitGroup < ApplicationRecord
         :plc_course,
         :default_unit_group_units,
         :alternate_unit_group_units,
-        :course_version
+        {
+          course_version: {
+            course_offering: :course_versions
+          }
+        }
       ]
     )
   end
