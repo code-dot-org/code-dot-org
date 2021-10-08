@@ -1407,8 +1407,7 @@ NetSim.prototype.showInstructionsDialog = function() {
   getStore().dispatch(
     openInstructionsDialog({
       autoClose: false,
-      imgOnly: false,
-      hintsOnly: false
+      imgOnly: false
     })
   );
 };

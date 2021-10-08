@@ -55,8 +55,7 @@ export default connect(
       dispatch(
         openDialog({
           autoClose: false,
-          imgOnly: true,
-          hintsOnly: false
+          imgOnly: true
         })
       );
     }
