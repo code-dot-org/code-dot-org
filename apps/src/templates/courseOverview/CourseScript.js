@@ -117,6 +117,7 @@ class CourseScript extends Component {
               <UnassignSectionButton
                 courseName={title}
                 sectionId={selectedSectionId}
+                buttonLocationAnalytics={'course-overview-unit'}
               />
             )}
             {!isAssigned &&
