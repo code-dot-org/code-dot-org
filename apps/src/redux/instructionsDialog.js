@@ -3,7 +3,6 @@ const CLOSE_DIALOG = 'instructionsDialog/CLOSE_DIALOG';
 
 const initialState = {
   open: false,
-  autoClose: false,
   imgOnly: false
 };
 
@@ -14,7 +13,6 @@ export default function reducer(state = initialState, action) {
     }
     return {
       open: true,
-      autoClose: action.autoClose,
       imgOnly: action.imgOnly,
       imgUrl: action.imgUrl
     };
@@ -31,9 +29,8 @@ export default function reducer(state = initialState, action) {
   return state;
 }
 
-export const openDialog = ({autoClose, imgOnly, imgUrl}) => ({
+export const openDialog = ({imgOnly, imgUrl}) => ({
   type: OPEN_DIALOG,
-  autoClose,
   imgOnly,
   imgUrl
 });
