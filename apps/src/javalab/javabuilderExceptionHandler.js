@@ -5,7 +5,8 @@ import {
   SoundExceptionType,
   MediaExceptionType,
   TheaterExceptionType,
-  PlaygroundExceptionType
+  PlaygroundExceptionType,
+  EXCEPTION_PREFIX
 } from './constants';
 
 export function handleException(exceptionDetails, callback) {
@@ -117,5 +118,6 @@ export function handleException(exceptionDetails, callback) {
       error = msg.unknownError({type, connectionId});
       break;
   }
+  error = `${EXCEPTION_PREFIX} ${error}`;
   callback(error);
 }
