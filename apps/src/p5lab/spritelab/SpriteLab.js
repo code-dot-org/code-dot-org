@@ -67,15 +67,15 @@ export default class SpriteLab extends P5Lab {
   onPause(isPaused) {
     const current = new Date().getTime();
     if (isPaused) {
-      this.spritelabLibrary.endPause(current);
+      this.library.endPause(current);
     } else {
-      this.spritelabLibrary.startPause(current);
+      this.library.startPause(current);
     }
   }
 
   onPromptAnswer(variableName, value) {
     getStore().dispatch(popPrompt());
-    this.spritelabLibrary.onPromptAnswer(variableName, value);
+    this.library.onPromptAnswer(variableName, value);
   }
 
   setupReduxSubscribers(store) {

@@ -24,6 +24,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csd_unit = create :csd_script, name: 'csd1'
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
+    @csc_unit = create :csc_script, name: 'csc1'
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -694,9 +695,11 @@ class ScriptTest < ActiveSupport::TestCase
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
     create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
     create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
+    CourseOffering.add_course_offering(csp_2018)
     section = create :section, unit_group: csp_2018
     section.students << student
 
@@ -708,8 +711,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit not belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
-    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
+    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(courseg_2017)
+    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(courseg_2018)
     section = create :section, script: courseg_2018
     section.students << student
 
@@ -831,6 +836,66 @@ class ScriptTest < ActiveSupport::TestCase
     section.students << student
 
     assert_equal courseg_2017, Script.latest_assigned_version('courseg', student)
+  end
+
+  test 'has_other_versions? makes no queries when there is one other unit group version' do
+    Script.stubs(:should_cache?).returns true
+
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
+
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018')
+    create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
+    CourseOffering.add_course_offering(csp_2018)
+
+    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    assert_queries(0) do
+      assert csp1_2017.has_other_versions?
+    end
+  end
+
+  test 'has_other_versions? makes no queries when there are no other unit group versions' do
+    Script.stubs(:should_cache?).returns true
+
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
+
+    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    assert_queries(0) do
+      refute csp1_2017.has_other_versions?
+    end
+  end
+
+  test 'has_other_versions? makes no queries when there is one other unit version' do
+    Script.stubs(:should_cache?).returns true
+
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(foo18)
+
+    foo17 = Script.get_from_cache(foo17.id)
+    assert_queries(0) do
+      assert foo17.has_other_versions?
+    end
+  end
+
+  # we expect to hit this case when serving uncached hoc unit overview pages.
+  test 'has_other_versions? makes no queries when there are no other unit versions' do
+    Script.stubs(:should_cache?).returns true
+
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+
+    foo17 = Script.get_from_cache(foo17.id)
+    assert_queries(0) do
+      refute foo17.has_other_versions?
+    end
   end
 
   test 'banner image' do
@@ -1183,8 +1248,10 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_script_version_warning' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
-    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(foo18)
     user = create(:student)
 
     refute foo17.summarize[:show_script_version_warning]
@@ -1226,8 +1293,16 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes versions' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
 
     versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
@@ -1240,9 +1315,21 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize excludes unlaunched versions' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2019', family_name: 'foo', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
+    foo19 = create(
+      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.beta
+    )
+    CourseOffering.add_course_offering(foo19)
 
     versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
@@ -2418,6 +2505,10 @@ class ScriptTest < ActiveSupport::TestCase
       [@csa_unit.name],
       Script.unit_names_by_curriculum_umbrella('CSA')
     )
+    assert_equal(
+      [@csc_unit.name],
+      Script.unit_names_by_curriculum_umbrella('CSC')
+    )
   end
 
   test "under_curriculum_umbrella and helpers" do
@@ -2429,6 +2520,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csp_unit.csp?
     assert @csa_unit.under_curriculum_umbrella?('CSA')
     assert @csa_unit.csa?
+    assert @csc_unit.under_curriculum_umbrella?('CSC')
+    assert @csc_unit.csc?
   end
 
   test "units_with_standards" do

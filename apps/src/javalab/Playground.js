@@ -17,6 +17,9 @@ import {
 import color from '@cdo/apps/util/color';
 
 const DEFAULT_BACKGROUND_COLOR = color.white;
+// Amount of time in ms after a click to re-enable click events
+// (in case an UPDATE_COMPLETE message is never received)
+export const REENABLE_CLICK_EVENTS_TIMEOUT_MS = 1500;
 
 export default class Playground {
   constructor(
@@ -32,10 +35,11 @@ export default class Playground {
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.onJavabuilderMessage = onJavabuilderMessage;
+    this.levelName = levelName;
     this.setIsProgramRunning = setIsProgramRunning;
     this.isGameRunning = false;
-    this.isGameOver = false;
-    this.levelName = levelName;
+    this.updateInProgress = false;
+    this.reenableClickEventsTimeoutId = null;
     this.starterAssetFilenames = [];
 
     // Assigned only for testing; should use imports from clientApi normally
@@ -75,12 +79,18 @@ export default class Playground {
     this.onNewlineMessage();
   };
 
+  reenableClickEvents = () => {
+    this.updateInProgress = false;
+    this.reenableClickEventsTimeoutId = null;
+  };
+
   handleSignal(data) {
     switch (data.value) {
       case PlaygroundSignalType.RUN:
         this.isGameRunning = true;
         break;
       case PlaygroundSignalType.EXIT:
+        this.handleUpdateComplete();
         this.endGame();
         break;
       case PlaygroundSignalType.ADD_CLICKABLE_ITEM:
@@ -104,6 +114,12 @@ export default class Playground {
       case PlaygroundSignalType.SET_BACKGROUND_IMAGE:
         this.setBackgroundImage(data.detail);
         break;
+      case PlaygroundSignalType.UPDATE:
+        this.handleBatchUpdate(data.detail);
+        break;
+      case PlaygroundSignalType.UPDATE_COMPLETE:
+        this.handleUpdateComplete();
+        break;
     }
   }
 
@@ -115,6 +131,12 @@ export default class Playground {
     this.setIsProgramRunning(false);
   }
 
+  handleBatchUpdate(details) {
+    details.updates.forEach(data => {
+      this.handleSignal(data);
+    });
+  }
+
   addClickableItem(itemData) {
     this.addImageHelper(itemData, true);
   }
@@ -124,8 +146,8 @@ export default class Playground {
   }
 
   addImageHelper(itemData, isClickable) {
-    // ignore request if the game is over or if the item already exists
-    if (this.isGameOver || this.itemExists(itemData)) {
+    // ignore request if the item already exists
+    if (this.itemExists(itemData)) {
       return;
     }
 
@@ -146,8 +168,8 @@ export default class Playground {
   }
 
   addTextItem(itemData) {
-    if (this.isGameOver || this.itemExists(itemData)) {
-      // can't add new items if the game is over or if the item already exists
+    if (this.itemExists(itemData)) {
+      // can't add new items if the item already exists
       return;
     }
 
@@ -159,18 +181,14 @@ export default class Playground {
   }
 
   removeItem(itemData) {
-    if (this.isGameOver) {
-      // can't remove items if game is over
-      return;
-    }
     if (this.itemExists(itemData)) {
       this.removePlaygroundItem(itemData.id);
     }
   }
 
   changeItem(itemData) {
-    if (this.isGameOver || !this.itemExists(itemData)) {
-      // can't change items if game is over or if the item does not exist
+    if (!this.itemExists(itemData)) {
+      // can't change items if the item does not exist
       return;
     }
 
@@ -197,20 +215,10 @@ export default class Playground {
   }
 
   playSound(soundData) {
-    if (this.isGameOver) {
-      // can't play sound if game is over
-      return;
-    }
-
     this.setMediaElement(this.getAudioElement(), soundData.filename);
   }
 
   setBackgroundImage(backgroundData) {
-    if (this.isGameOver) {
-      // can't set background if game is over
-      return;
-    }
-
     const filename = backgroundData.filename;
     const backgroundElement = this.getBackgroundElement();
     this.setMediaElement(backgroundElement, filename);
@@ -225,7 +233,6 @@ export default class Playground {
   }
 
   reset() {
-    this.isGameOver = false;
     this.isGameRunning = false;
     // reset playground items to be empty
     this.setPlaygroundItems({});
@@ -235,11 +242,23 @@ export default class Playground {
   }
 
   handleImageClick(imageId) {
-    if (this.isGameOver || !this.isGameRunning) {
-      // can only handle click events if game is not over and game is running
+    if (!this.isGameRunning || this.updateInProgress) {
+      // can only handle click events if game is running and update is not in progress
       return;
     }
+    this.updateInProgress = true;
+    this.reenableClickEventsTimeoutId = setTimeout(
+      this.reenableClickEvents,
+      REENABLE_CLICK_EVENTS_TIMEOUT_MS
+    );
     this.onJavabuilderMessage(WebSocketMessageType.PLAYGROUND, imageId);
+  }
+
+  handleUpdateComplete() {
+    this.updateInProgress = false;
+    if (this.reenableClickEventsTimeoutId) {
+      clearTimeout(this.reenableClickEventsTimeoutId);
+    }
   }
 
   getUrl(filename) {
@@ -288,7 +307,6 @@ export default class Playground {
 
   endGame() {
     this.isGameRunning = false;
-    this.isGameOver = true;
   }
 
   itemExists(itemData) {

@@ -398,7 +398,7 @@ class ApiController < ApplicationController
     if current_user
       script = Script.get_from_cache(params[:script])
       user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
-      teacher_viewing_student = current_user.students.include?(user)
+      teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
       render json: summarize_user_progress(script, user).merge(
         {
           signedIn: true,
@@ -464,9 +464,13 @@ class ApiController < ApplicationController
         tag: 'activity_start',
         script_level_id: script_level.try(:id),
         level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
-        user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
+        user_agent: request.user_agent&.valid_encoding? ? request.user_agent : 'invalid_encoding',
         locale: locale
       )
+    end
+
+    if params[:get_channel_id] == "true"
+      response[:channel] = get_channel_for(level, script.id, current_user)
     end
 
     render json: response

@@ -130,9 +130,9 @@ export default class JavabuilderConnection {
         this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:
+        this.onNewlineMessage();
         handleException(data, this.onOutputMessage);
         this.onNewlineMessage();
-        this.onExit();
         break;
       case WebSocketMessageType.DEBUG:
         if (window.location.hostname.includes('localhost')) {
