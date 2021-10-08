@@ -47,14 +47,6 @@ GIT
       tilt
 
 GIT
-  remote: https://github.com/code-dot-org/seamless_database_pool.git
-  revision: ce3cfc0b56cbca1cb3c468a2263767fd0b6197fb
-  ref: rails-6-compatibility
-  specs:
-    seamless_database_pool (1.0.20)
-      activerecord (>= 3.2.0)
-
-GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
   revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
   specs:
@@ -794,6 +786,8 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    seamless_database_pool (1.0.20)
+      activerecord (>= 3.2.0)
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
@@ -1052,7 +1046,7 @@ DEPENDENCIES
   scenic-mysql_adapter
   scss_lint
   sdoc
-  seamless_database_pool!
+  seamless_database_pool (>= 1.0.20)
   selenium-webdriver (= 3.141.0)
   sequel
   shotgun

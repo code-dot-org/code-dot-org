@@ -29,13 +29,7 @@ gem 'sinatra', '2.0.2', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 
-# Rails 6 introduced some chages to the way database configurations are
-# implemented that seamless_database_pool does not support. We provide our own
-# version that knows how to interact with Rails 6, to give us a transiton path
-# from "Rails 5 with seamless_database_pool" to "Rails 6 with Rails Multiple
-# Databases". Once we are fully transitioned to the latter, this dependency can
-# be entirely removed.
-gem 'seamless_database_pool', github: 'code-dot-org/seamless_database_pool', ref: 'rails-6-compatibility'
+gem 'seamless_database_pool', '>= 1.0.20'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
