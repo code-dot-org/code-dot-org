@@ -16,7 +16,7 @@ module Services
         # default.
         def self.serialize
           Script.all.each do |script|
-            next unless script.is_migrated? && !script.use_legacy_lesson_plans?
+            next unless script.is_migrated?
             next unless ScriptConstants.i18n? script.name
 
             # prepare data
