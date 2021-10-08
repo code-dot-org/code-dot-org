@@ -38,6 +38,20 @@ function parametersReducer(state, action) {
       paramToUpdate[action.key] = action.value;
       return {...state, parameters: newParams};
     }
+    case 'remove': {
+      const newParams = [...state.parameters];
+      newParams.splice(action.index, 1);
+      return {...state, parameters: newParams};
+    }
+    case 'move': {
+      const newParams = [...state.parameters];
+      const swapIdx =
+        action.direction === 'up' ? action.index - 1 : action.index + 1;
+      const temp = newParams[action.index];
+      newParams[action.index] = newParams[swapIdx];
+      newParams[swapIdx] = temp;
+      return {...state, parameters: newParams};
+    }
     default:
       return {...state};
   }
@@ -221,6 +235,15 @@ export default function ProgrammingExpressionEditor({
             parameter={param}
             updateParameter={(key, value) =>
               parametersDispatch({type: 'update', index: idx, key, value})
+            }
+            moveParameterUp={() =>
+              parametersDispatch({type: 'move', index: idx, direction: 'up'})
+            }
+            moveParameterDown={() =>
+              parametersDispatch({type: 'move', index: idx, direction: 'down'})
+            }
+            removeParameter={() =>
+              parametersDispatch({type: 'remove', index: idx})
             }
           />
         ))}

@@ -3,9 +3,20 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
-export default function ParameterEditor({parameter, updateParameter}) {
+export default function ParameterEditor({
+  parameter,
+  updateParameter,
+  moveParameterUp,
+  moveParameterDown,
+  removeParameter
+}) {
   return (
     <div>
+      <div style={styles.control}>
+        <i onClick={() => moveParameterUp()} className="fa fa-caret-up" />
+        <i onClick={() => moveParameterDown()} className="fa fa-caret-down" />
+        <i onClick={() => removeParameter()} className="fa fa-trash" />
+      </div>
       <label>
         Name
         <input
@@ -44,7 +55,10 @@ export default function ParameterEditor({parameter, updateParameter}) {
 
 ParameterEditor.propTypes = {
   parameter: PropTypes.object,
-  updateParameter: PropTypes.func
+  updateParameter: PropTypes.func,
+  moveParameterUp: PropTypes.func,
+  moveParameterDown: PropTypes.func,
+  removeParameter: PropTypes.func
 };
 
 const styles = {
@@ -56,5 +70,8 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     margin: 0
+  },
+  controls: {
+    display: 'flex'
   }
 };
