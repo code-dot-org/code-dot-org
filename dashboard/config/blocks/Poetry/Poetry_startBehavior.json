@@ -1,5 +1,5 @@
 {
-  "category": "Experimental",
+  "category": "Poetry - Sprites",
   "config": {
     "func": "startBehavior",
     "blockText": "sprite {ANIMATION_NAME} begins {BEHAVIOR} ",
