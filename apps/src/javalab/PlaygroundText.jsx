@@ -39,7 +39,7 @@ export default class PlaygroundText extends React.Component {
       left: x * 2,
       top: y * 2,
       zIndex: index,
-      height: height * 2,
+      lineHeight: 1,
       color: `rgb(${parseInt(colorRed)}, ${parseInt(colorGreen)}, ${parseInt(
         colorBlue
       )})`,
@@ -85,6 +85,7 @@ const styles = {
     position: 'absolute',
     display: 'flex',
     alignItems: 'center',
-    transformOrigin: 'top left'
+    transformOrigin: 'top left',
+    whiteSpace: 'nowrap'
   }
 };
