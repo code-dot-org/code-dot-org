@@ -21,7 +21,7 @@ export function InstructionsDialog(props) {
 
     return (
       <Instructions
-        longInstructions={props.longInstructions || props.shortInstructions}
+        instructions={props.longInstructions || props.shortInstructions}
         imgURL={props.imgUrl}
         isBlockly={props.isBlockly}
         inTopPane={false}

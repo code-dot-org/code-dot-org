@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import MarkdownInstructions from './MarkdownInstructions';
-import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
@@ -12,14 +11,11 @@ import i18n from '@cdo/locale';
  * A component for displaying our level instructions text, and possibly also
  * authored hints UI and/or an anigif. These instructions can appear in the top
  * pane or in a modal dialog. In the latter case, we will sometimes show just
- * the hints or just the anigif (in this case instructions/longInstructions
- * props will be undefined).
+ * the anigif (in this case the instructions prop may be undefined).
  */
-class Instructions extends React.Component {
+export default class Instructions extends React.Component {
   static propTypes = {
-    shortInstructions: PropTypes.string,
-    instructions2: PropTypes.string,
-    longInstructions: PropTypes.string,
+    instructions: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
     inputOutputTable: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
@@ -29,57 +25,35 @@ class Instructions extends React.Component {
     noInstructionsWhenCollapsed: PropTypes.bool
   };
 
-  /**
-   * Body logic is as follows:
-   *
-   * If we have been given long instructions, render a div containing
-   * that, optionally with inline-styled margins.
-   *
-   * Otherwise, render up to two sets of instructions.
-   * These instructions may contain spans and images as determined by
-   * substituteInstructionImages
-   */
-  renderMainBody() {
-    if (this.props.longInstructions) {
-      return (
-        <MarkdownInstructions
-          markdown={this.props.longInstructions}
-          onResize={this.props.onResize}
-          inTopPane={this.props.inTopPane}
-          isBlockly={this.props.isBlockly}
-          noInstructionsWhenCollapsed={this.props.noInstructionsWhenCollapsed}
-        />
-      );
-    } else {
-      return (
-        <NonMarkdownInstructions
-          shortInstructions={this.props.shortInstructions}
-          instructions2={this.props.instructions2}
-        />
-      );
-    }
-  }
-
   render() {
+    const {
+      inTopPane,
+      instructions,
+      onResize,
+      isBlockly,
+      noInstructionsWhenCollapsed,
+      inputOutputTable,
+      imgURL,
+      authoredHints
+    } = this.props;
+
     return (
-      <div
-        style={this.props.inTopPane ? styles.inTopPane : styles.notInTopPane}
-      >
+      <div style={inTopPane ? styles.inTopPane : styles.notInTopPane}>
         <ImmersiveReaderButton
           title={i18n.instructions()}
-          text={this.props.longInstructions || this.props.shortInstructions}
+          text={instructions}
         />
-        {this.renderMainBody()}
-
-        {this.props.inputOutputTable && (
-          <InputOutputTable data={this.props.inputOutputTable} />
-        )}
-
-        {this.props.imgURL && !this.props.inTopPane && (
-          <ExampleImage src={this.props.imgURL} />
-        )}
-        {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
-        {this.props.authoredHints}
+        <MarkdownInstructions
+          markdown={instructions}
+          onResize={onResize}
+          inTopPane={inTopPane}
+          isBlockly={isBlockly}
+          noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
+        />
+        {inputOutputTable && <InputOutputTable data={inputOutputTable} />}
+        {imgURL && !inTopPane && <ExampleImage src={imgURL} />}
+        {imgURL && inTopPane && <AniGifPreview />}
+        {authoredHints}
       </div>
     );
   }
@@ -93,5 +67,3 @@ const styles = {
     overflow: 'auto'
   }
 };
-
-module.exports = Instructions;
