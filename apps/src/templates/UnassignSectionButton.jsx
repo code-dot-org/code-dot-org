@@ -23,6 +23,8 @@ class UnassignSectionButton extends React.Component {
     courseName: PropTypes.string,
     buttonLocationAnalytics: PropTypes.string.isRequired,
     // Redux
+    initialUnitId: PropTypes.number,
+    initialCourseId: PropTypes.number,
     unassignSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
@@ -48,7 +50,6 @@ class UnassignSectionButton extends React.Component {
     this.setState({
       showUnassignDialog: true
     });
-    const {initialCourseId, initialUnitId} = getState().teacherSections;
     firehoseClient.putRecord(
       {
         study: 'assignment',
@@ -56,8 +57,8 @@ class UnassignSectionButton extends React.Component {
         data_json: JSON.stringify(
           {
             sectionId: this.props.sectionId,
-            scriptId: initialUnitId,
-            courseId: initialCourseId,
+            scriptId: this.props.initialUnitId,
+            courseId: this.props.initialCourseId,
             location: this.props.buttonLocationAnalytics,
             date: new Date()
           },
@@ -72,7 +73,6 @@ class UnassignSectionButton extends React.Component {
     this.setState({
       showUnassignDialog: false
     });
-    const {initialCourseId, initialUnitId} = getState().teacherSections;
     firehoseClient.putRecord(
       {
         study: 'assignment',
@@ -80,8 +80,8 @@ class UnassignSectionButton extends React.Component {
         data_json: JSON.stringify(
           {
             sectionId: this.props.sectionId,
-            scriptId: initialUnitId,
-            courseId: initialCourseId,
+            scriptId: this.props.initialUnitId,
+            courseId: this.props.initialCourseId,
             location: this.props.buttonLocationAnalytics,
             date: new Date()
           },
@@ -153,7 +153,9 @@ export const UnconnectedUnassignSectionButton = UnassignSectionButton;
 
 export default connect(
   state => ({
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
+    initialUnitId: state.teacherSections.initialUnitId,
+    initialCourseId: state.teacherSections.initialCourseId
   }),
   {unassignSection}
 )(UnassignSectionButton);
