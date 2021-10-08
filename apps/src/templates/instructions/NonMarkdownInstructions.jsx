@@ -12,13 +12,10 @@ var styles = {
 /**
  * Non-markdown version of our instructions, displayed in a dialog when our top
  * pane instructions are not enabled.
- *
- * Currently only used by NetSim levels
  */
 var NonMarkdownInstructions = function(props) {
   return (
     <div style={styles.main}>
-      <p className="dialog-title">{props.puzzleTitle}</p>
       {props.shortInstructions && (
         <div className="instructions">
           <SafeMarkdown markdown={props.shortInstructions} />
@@ -34,7 +31,6 @@ var NonMarkdownInstructions = function(props) {
 };
 
 NonMarkdownInstructions.propTypes = {
-  puzzleTitle: PropTypes.string.isRequired,
   shortInstructions: PropTypes.string,
   instructions2: PropTypes.string
 };
