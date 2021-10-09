@@ -93,18 +93,13 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleImageChange = event => {
-    let {
-      currentLibrarySprites,
-      currentLevelSprites,
-      spriteAvailability,
-      category
-    } = this.state;
+    let {spriteAvailability, category} = this.state;
     let file = event.target.files[0];
-    const name = file.name.split('.')[0];
-    const willOverride =
-      spriteAvailability === SpriteLocation.library
-        ? currentLibrarySprites.includes(`category_${category}/${name}`)
-        : currentLevelSprites.includes(`level_animations/${name}`);
+    const willOverride = this.determineIfSpriteAlreadyExists(
+      spriteAvailability,
+      file.name.split('.')[0],
+      category
+    );
     this.setState({
       fileData: file,
       filename: file.name,
@@ -115,19 +110,45 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleCategoryChange = event => {
+    let {filename, spriteAvailability} = this.state;
+    const willOverride = this.determineIfSpriteAlreadyExists(
+      spriteAvailability,
+      filename.split('.')[0],
+      event.target.value
+    );
     this.setState({
-      category: event.target.value
+      category: event.target.value,
+      willOverride: willOverride
     });
   };
 
   handleAvailabilityChange = event => {
-    this.setState({spriteAvailability: event.target.value, category: ''});
+    let {filename, category} = this.state;
+    const willOverride = this.determineIfSpriteAlreadyExists(
+      event.target.value,
+      filename.split('.')[0],
+      category
+    );
+    this.setState({
+      spriteAvailability: event.target.value,
+      category: '',
+      willOverride: willOverride
+    });
   };
 
   handleAliasChange = event => {
     const aliases = event.target.value?.split(',') || [];
     let processedAliases = aliases.map(alias => alias.trim());
     this.setState({aliases: processedAliases});
+  };
+
+  determineIfSpriteAlreadyExists = (spriteAvailability, filename, category) => {
+    let {currentLibrarySprites, currentLevelSprites, fileData} = this.state;
+    const willOverride =
+      spriteAvailability === SpriteLocation.library
+        ? currentLibrarySprites.includes(`category_${category}/${filename}`)
+        : currentLevelSprites.includes(`level_animations/${filename}`);
+    return fileData && willOverride;
   };
 
   generateMetadata = () => {
