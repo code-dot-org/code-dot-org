@@ -7,12 +7,18 @@
 
 - main_actions = capture_haml do
   - if show_single_hero == "cse"
-    %div{style: "max-width: 480px; margin: 0 auto;"}
+    - cse_actions = capture_haml do
       .hero-message-line1{style: "color: black; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
         = hoc_s(:codeorg_homepage_hoc_is_coming)
       %div{style: "padding-bottom: 20px; text-align: center"}
         %span.hero-message-line2{style: "color: black; font-size: 44px; line-height: 1.2em; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
           = hoc_s(:codeorg_homepage_celebrate_cse)
+
+    .tablet-feature{style: "width: 40%; margin: 0 auto"}
+      = cse_actions
+    .phone-feature{style: "margin: 0 auto; width: 100%"}
+      = cse_actions
+
   - if show_single_hero == "changeworld"
     .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
       = hoc_s(:hoc2019_header_line1_mobile)
@@ -43,13 +49,11 @@
 
 #hero{style: "position: relative"}
   - if hoc_mode == "soon-hoc"
-    .desktop-feature
-      .outer.widehero_do_not_hide{style: "display: flex; justify-content: center; margin: 0 auto;"}
-        .inner{style: "flex-shrink: 0; width: 1200px; "}
-          - if hoc_cse_disable_svg
-            %img{src: "/images/homepage/hoc_cse_wide.png"}
-          - else
-            %svg.bars{viewBox: "0 0 1200 440", style: "width:initial; opacity: 1"}
+    .tablet-feature{style: "width: 100%; position: absolute; z-index: -5; height: 100%;"}
+      - if hoc_cse_disable_svg
+        %img{src: "/images/homepage/hoc_cse_wide.png", style: "width: 100%; position: relative; top: 50%; transform: translateY(-50%);"}
+      - else
+        %svg.bars{viewBox: "0 0 1200 440", style: "width:100%; opacity: 1"}
 
   - else
     - heroes_arranged.each_with_index do |entry, index|
@@ -81,7 +85,7 @@
       = main_actions
 
   - if hoc_mode == "soon-hoc"
-    .mobile-feature
+    .phone-feature
       - if hoc_cse_disable_svg
         %div{style: "width: 100%; text-align: center"}
           %img{src: "/images/homepage/hoc_cse_narrow.png", style: "width: 100%; max-width: 400px"}
