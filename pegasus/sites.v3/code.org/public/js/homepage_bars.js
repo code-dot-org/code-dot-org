@@ -5,7 +5,8 @@ var lenTimes = 1;
 var step = 0;
 
 $(document).ready(function() {
-  var barDefinitions = [
+  var barDefinitions = [];
+  barDefinitions[0] = [
     [
       {
         type: "line",
@@ -148,17 +149,61 @@ $(document).ready(function() {
       },
       { type: "line", end: [28, 5], color: "rgba(0,128,128, 0.8)" },
       { type: "arrow", color: "rgba(128,0,128, 0.8)", direction: "up" }
+    ],
+    [
+      {
+        type: "line",
+        start: [26, 15],
+        end: [26, 7],
+        color: "rgba(0,128,128, 0.8)"
+      },
+      { type: "arrow", color: "rgba(128,0,128, 0.8)", direction: "up" }
+    ]
+  ];
+
+  barDefinitions[1] = [
+    [
+      {
+        type: "line",
+        start: [3, 0],
+        end: [3, 3],
+        color: "rgba(92,187,216, 0.8)"
+      },
+      {
+        type: "arc",
+        end: [4, 4],
+        color: "rgba(96,197,169, 0.8)",
+        direction: "down-right"
+      },
+      { type: "line", end: [5, 4], color: "rgba(96,197,169, 0.8)" },
+      { type: "line", end: [6, 4], color: "rgba(135,201,115, 0.8)" },
+      { type: "arrow", color: "rgba(135,201,115, 0.8)", direction: "right" }
+    ],
+    [
+      {
+        type: "line",
+        start: [4, 0],
+        end: [4, 3],
+        color: "rgba(68,91,162, 0.8)"
+      },
+      { type: "arrow", color: "rgba(244,137,221, 0.8)", direction: "down" }
     ]
   ];
 
   var bars = [];
-  for (var bar = 0; bar < barDefinitions.length; bar++) {
-    bars[bar] = drawBar(barDefinitions[bar]);
+  for (var panel = 0; panel < 2; panel++) {
+    bars[panel] = [];
+    var panelRef = $(".bars")[panel];
+    for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
+      bars[panel][bar] = drawBar(panelRef, barDefinitions[panel][bar]);
+    }
   }
 
   setInterval(function() {
-    for (var bar = 0; bar < barDefinitions.length; bar++) {
-      updateBar(barDefinitions[bar], bars[bar], bar, step);
+    for (var panel = 0; panel < 2; panel++) {
+      for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
+        updateBar(barDefinitions[panel][bar], bars[panel][bar], bar, step);
+      }
     }
     step += 0.02;
   }, 1000 / 60);
@@ -210,7 +255,7 @@ function updateBar(barDefinition, bar, barIndex, step) {
   }
 }
 
-function drawBar(barDefinition, startX, startY) {
+function drawBar(panelRef, barDefinition, startX, startY) {
   var result = [];
 
   var currentX, currentY;
@@ -246,7 +291,7 @@ function drawBar(barDefinition, startX, startY) {
       obj.setAttributeNS(null, "stroke-dashoffset", len * lenTimes);
       obj.totalLength = len;
 
-      $("#bars")[0].appendChild(obj);
+      panelRef.appendChild(obj);
     } else if (barDef.type === "arc") {
       var sweepValue;
       if (barDef.direction === "down-right" || barDef.direction === "up-left") {
@@ -282,7 +327,7 @@ function drawBar(barDefinition, startX, startY) {
       obj.setAttributeNS(null, "stroke-dashoffset", len * lenTimes);
       obj.totalLength = len;
 
-      $("#bars")[0].appendChild(obj);
+      panelRef.appendChild(obj);
     } else if (barDef.type === "arrow") {
       var head1Offset, head2Offset;
       if (barDef.direction === "right") {
@@ -350,8 +395,8 @@ function drawBar(barDefinition, startX, startY) {
       obj.head2.setAttributeNS(null, "stroke-dashoffset", len * lenTimes);
       obj.head2.totalLength = len;
 
-      $("#bars")[0].appendChild(obj.head1);
-      $("#bars")[0].appendChild(obj.head2);
+      panelRef.appendChild(obj.head1);
+      panelRef.appendChild(obj.head2);
     }
 
     if (barDef.type !== "arrow") {
