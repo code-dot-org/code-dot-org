@@ -8,6 +8,12 @@ social:
   og:image:height: '630'
 ---
 
+:ruby
+  hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+  hoc_image_desktop = hoc_mode == "soon-hoc" ? '/images/learn/hoc_cse_background.png' : '/images/learn/hoc2020_background.png'
+  hoc_image_tablet = hoc_mode == "soon-hoc" ? '/images/learn/hoc_cse_background_tablet.png' : '/images/learn/hoc2020_background_tablet.png'
+  hoc_image_narrow = hoc_mode == "soon-hoc" ? '/images/learn/hoc_cse_background_narrow.png' : '/images/learn/hoc2020_background_narrow.png'
+
 -# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
 :css
   @media (min-width: 992px)
@@ -57,13 +63,13 @@ social:
   }
   @media screen and (min-width: 992px) {
     #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background.png')});
+      background-image: url(#{CDO.code_org_url(hoc_image_desktop)});
       background-position: 70% 70%;
     }
   }
   @media screen and (min-width: 768px) and (max-width: 991px) {
     #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_tablet.png')});
+      background-image: url(#{CDO.code_org_url(hoc_image_tablet)});
       background-position: 67% 50%;
       padding-bottom: 200px;
     }
@@ -71,7 +77,7 @@ social:
   /* Use the narrow image for narrower screens */
   @media screen and (max-width: 767px) {
     #fullwidth {
-      background-image: url(#{CDO.code_org_url('/images/learn/hoc2020_background_narrow.png')});
+      background-image: url(#{CDO.code_org_url(hoc_image_narrow)});
       background-position: 50% 80%;
       padding-bottom: 160px;
     }
