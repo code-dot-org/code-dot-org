@@ -3,24 +3,14 @@
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
-  hoc_cse_enable_svg = DCDO.get("hoc_cse_enable_svg", false)
 
 - main_actions = capture_haml do
   - if show_single_hero == "cse"
-    %div{style: "display: flex"}
-      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/images/hoc_cse_left.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
-      .col-33
-        .hero-message-line1{style: "color: black; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
-          = hoc_s(:codeorg_homepage_hoc_is_coming)
-        %div{style: "padding-bottom: 20px; text-align: center"}
-          %span.hero-message-line2{style: "color: black; font-size: 44px; line-height: 1.2em; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
-            = hoc_s(:codeorg_homepage_celebrate_cse)
-      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/images/hoc_cse_right.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
-
-    -# .tablet-feature{style: "width: 40%; margin: 0 auto"}
-      = cse_actions
-    -# .phone-feature{style: "margin: 0 auto; width: 100%"}
-      = cse_actions
+    .hero-message-line1{style: "color: black; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
+      = hoc_s(:codeorg_homepage_hoc_is_coming)
+    %div{style: "padding-bottom: 20px; text-align: center"}
+      %span.hero-message-line2{style: "color: black; font-size: 44px; line-height: 1.2em; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
+        = hoc_s(:codeorg_homepage_celebrate_cse)
 
   - if show_single_hero == "changeworld"
     .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
@@ -51,14 +41,7 @@
   .clear{style: "clear: both"}
 
 #hero{style: "position: relative"}
-  - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
-    -# .tablet-feature{style: "width: 100%; position: absolute; z-index: -5; height: 100%;"}
-      - if hoc_cse_enable_svg
-        %svg.bars{viewBox: "0 0 1200 440", style: "width:100%; opacity: 1"}
-      - else
-        %img{src: "/images/homepage/hoc_cse_wide.png", style: "width: 100%; position: relative; top: 50%; transform: translateY(-50%);"}
-
-  - else
+  - unless ["soon-hoc", "actual-hoc"].include?(hoc_mode)
     - heroes_arranged.each_with_index do |entry, index|
       -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
       - if index == 0
@@ -82,10 +65,18 @@
       #mobile-header.mobile-headers.mobile-feature
         = view :mobile_header_responsive
 
-
-  - if show_single_hero
+  - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
     #actions
-      = main_actions
+      %div{style: "display: flex"}
+        .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/images/hoc_cse_left.png); background-position: 100% 50%; background-size: contain; background-repeat: no-repeat"}
+        .col-33
+          = main_actions
+        .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/images/hoc_cse_right.png); background-position: 0% 50%; background-size: contain; background-repeat: no-repeat"}
+
+  - else
+    - if show_single_hero
+      #actions
+        = main_actions
 
   #caption_container.container_responsive
     - unless show_single_hero
@@ -201,6 +192,3 @@
 
     showQuote(lastImage, currentImage);
   }
-
-- if hoc_cse_enable_svg
-  %script{:src=>"/js/homepage_bars.js"}
