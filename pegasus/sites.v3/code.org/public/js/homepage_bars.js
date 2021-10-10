@@ -1,6 +1,7 @@
 var gridSize = 30; // how many pixels is each grid spaced by
 var strokeWidth = 12;
 var lenTimes = 1;
+var numPanels = 1;
 
 var step = 0;
 
@@ -191,7 +192,7 @@ $(document).ready(function() {
   ];
 
   var bars = [];
-  for (var panel = 0; panel < 2; panel++) {
+  for (var panel = 0; panel < numPanels; panel++) {
     bars[panel] = [];
     var panelRef = $(".bars")[panel];
     for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
@@ -200,7 +201,7 @@ $(document).ready(function() {
   }
 
   setInterval(function() {
-    for (var panel = 0; panel < 2; panel++) {
+    for (var panel = 0; panel < numPanels; panel++) {
       for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
         updateBar(barDefinitions[panel][bar], bars[panel][bar], bar, step);
       }
