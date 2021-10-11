@@ -51,7 +51,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body
       key = "level_animations/#{animation_name}"
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
@@ -67,7 +67,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body
       key = "spritelab/#{category}/#{animation_name}"
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
@@ -138,7 +138,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body.string
       key = ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
@@ -154,7 +154,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body.string
       key = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end

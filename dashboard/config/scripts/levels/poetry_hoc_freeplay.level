@@ -34,7 +34,7 @@
     "validation_enabled": "false",
     "hide_pause_button": "false",
     "instructions_icon": "octiGeneral",
-    "show_poem_dropdown": "true",
+    "standalone_app_name": "poetry_hoc",
     "preload_asset_list": null
   },
   "game_id": 69,

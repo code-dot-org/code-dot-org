@@ -594,7 +594,7 @@ class Level < ApplicationRecord
     {
       id: id.to_s,
       type: self.class.to_s,
-      name: name,
+      name: name == 'blockly' ? level_num : name,
       updated_at: updated_at.localtime.strftime("%D at %r"),
       owner: user&.name,
       url: "/levels/#{id}/edit",
