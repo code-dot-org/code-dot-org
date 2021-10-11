@@ -2,8 +2,12 @@
   "func": "startWebRequest",
   "category": "Data",
   "paletteParams": [
-    "url",
-    "callback"
+    {
+      "name": "url"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "\"https://en.wikipedia.org/w/api.php?origin=*&action=parse&format=json&prop=text&page=computer&section=1&disablelimitreport=true\"",

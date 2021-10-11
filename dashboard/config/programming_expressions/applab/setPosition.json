@@ -6,11 +6,21 @@
     "maxArgs": 5
   },
   "paletteParams": [
-    "id",
-    "x",
-    "y",
-    "width",
-    "height"
+    {
+      "name": "id"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "width"
+    },
+    {
+      "name": "height"
+    }
   ],
   "params": [
     "\"id\"",

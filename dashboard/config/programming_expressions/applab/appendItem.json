@@ -2,8 +2,12 @@
   "func": "appendItem",
   "category": "Variables",
   "paletteParams": [
-    "list",
-    "item"
+    {
+      "name": "list"
+    },
+    {
+      "name": "item"
+    }
   ],
   "params": [
     "list",

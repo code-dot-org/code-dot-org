@@ -2,7 +2,9 @@
   "func": "displace",
   "category": "Sprites",
   "paletteParams": [
-    "target"
+    {
+      "name": "target"
+    }
   ],
   "params": [
     "target"

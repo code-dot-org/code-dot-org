@@ -2,9 +2,15 @@
   "func": "setKeyValue",
   "category": "Data",
   "paletteParams": [
-    "key",
-    "value",
-    "callback"
+    {
+      "name": "key"
+    },
+    {
+      "name": "value"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "\"key\"",

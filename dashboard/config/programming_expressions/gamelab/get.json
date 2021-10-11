@@ -2,7 +2,9 @@
   "func": "get",
   "category": "Groups",
   "paletteParams": [
-    "i"
+    {
+      "name": "i"
+    }
   ],
   "params": [
     "0"

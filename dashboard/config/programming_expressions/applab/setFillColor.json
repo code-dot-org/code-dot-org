@@ -2,7 +2,9 @@
   "func": "setFillColor",
   "category": "Canvas",
   "paletteParams": [
-    "color"
+    {
+      "name": "color"
+    }
   ],
   "params": [
     "\"yellow\""

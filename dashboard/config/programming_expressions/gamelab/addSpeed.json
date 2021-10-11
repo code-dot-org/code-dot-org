@@ -2,8 +2,12 @@
   "func": "addSpeed",
   "category": "Sprites",
   "paletteParams": [
-    "speed",
-    "angle"
+    {
+      "name": "speed"
+    },
+    {
+      "name": "angle"
+    }
   ],
   "params": [
     "1",

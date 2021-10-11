@@ -2,7 +2,9 @@
   "func": "group.overlap",
   "category": "Groups",
   "paletteParams": [
-    "target"
+    {
+      "name": "target"
+    }
   ],
   "params": [
     "target"

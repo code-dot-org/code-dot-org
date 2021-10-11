@@ -2,7 +2,9 @@
   "func": "atan",
   "category": "Math",
   "paletteParams": [
-    "value"
+    {
+      "name": "value"
+    }
   ],
   "params": [
     "0"

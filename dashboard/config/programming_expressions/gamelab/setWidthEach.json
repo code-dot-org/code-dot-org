@@ -2,7 +2,9 @@
   "func": "setWidthEach",
   "category": "Groups",
   "paletteParams": [
-    "width"
+    {
+      "name": "width"
+    }
   ],
   "params": [
     "50"

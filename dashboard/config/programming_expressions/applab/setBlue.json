@@ -2,10 +2,18 @@
   "func": "setBlue",
   "category": "Canvas",
   "paletteParams": [
-    "imgData",
-    "x",
-    "y",
-    "b"
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "b"
+    }
   ],
   "params": [
     "imgData",

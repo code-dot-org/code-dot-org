@@ -2,7 +2,9 @@
   "func": "cos",
   "category": "Math",
   "paletteParams": [
-    "angle"
+    {
+      "name": "angle"
+    }
   ],
   "params": [
     "0"

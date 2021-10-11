@@ -2,7 +2,9 @@
   "func": "strokeWeight",
   "category": "Drawing",
   "paletteParams": [
-    "size"
+    {
+      "name": "size"
+    }
   ],
   "params": [
     "3"

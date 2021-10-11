@@ -5,7 +5,9 @@
     "500"
   ],
   "paletteParams": [
-    "ms"
+    {
+      "name": "ms"
+    }
   ],
   "type": "value"
 }

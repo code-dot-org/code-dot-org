@@ -2,8 +2,12 @@
   "func": "random",
   "category": "Math",
   "paletteParams": [
-    "min",
-    "max"
+    {
+      "name": "min"
+    },
+    {
+      "name": "max"
+    }
   ],
   "params": [
     "1",

@@ -2,8 +2,12 @@
   "func": "arcRight",
   "category": "Turtle",
   "paletteParams": [
-    "angle",
-    "radius"
+    {
+      "name": "angle"
+    },
+    {
+      "name": "radius"
+    }
   ],
   "params": [
     "90",

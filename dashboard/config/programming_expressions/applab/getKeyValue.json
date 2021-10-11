@@ -2,8 +2,12 @@
   "func": "getKeyValue",
   "category": "Data",
   "paletteParams": [
-    "key",
-    "callback"
+    {
+      "name": "key"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "\"key\"",
