@@ -46,17 +46,20 @@ module Services
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq.sort_by(&:key)
+      programming_environments = ProgrammingEnvironment.all
+      programming_expressions = ProgrammingExpression.all
 
-      # Use the existing seeding_key code to efficiently sort LessonsResource
-      # and ScriptsResource objects in a manner that will be stable across environments.
+      # Use existing seeding_key code to efficiently sort join model objects
+      # in a manner that will be stable across environments.
       lr_seed_context = SeedContext.new(lessons: script.lessons, resources: resources)
       lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(lr_seed_context).to_json}
       sr_seed_context = SeedContext.new(script: script, resources: resources)
       scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sr_seed_context).to_json}
+      lpe_seed_context = SeedContext.new(lessons: script.lessons, programming_environments: programming_environments, programming_expressions: programming_expressions)
+      lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten.sort_by {|lpe| lpe.seeding_key(lpe_seed_context).to_json}
 
       vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
-      lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
       objectives = script.lessons.map(&:objectives).flatten
       lessons_standards = script.lessons.map(&:lessons_standards).flatten
       lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten
@@ -76,8 +79,8 @@ module Services
         scripts_student_resources: script.scripts_student_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
-        programming_environments: ProgrammingEnvironment.all,
-        programming_expressions: ProgrammingExpression.all,
+        programming_environments: programming_environments,
+        programming_expressions: programming_expressions,
         lessons_programming_expressions: lessons_programming_expressions,
         objectives: objectives,
         frameworks: Framework.all,
