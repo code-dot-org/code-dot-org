@@ -106,7 +106,7 @@ module Services
         lessons_standards: lessons_standards.map {|ls| ScriptSeed::LessonsStandardSerializer.new(ls, scope: scope).as_json},
         lessons_opportunity_standards: lessons_opportunity_standards.map {|ls| ScriptSeed::LessonsOpportunityStandardSerializer.new(ls, scope: scope).as_json},
       }
-      JSON.pretty_generate(data)
+      JSON.pretty_generate(data) + "\n"
     end
 
     # Convenience wrapper around seed_from_json. Reads the content from the given file and then seeds using it.
