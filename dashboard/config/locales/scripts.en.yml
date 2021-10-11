@@ -24838,7 +24838,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod1:
           lessons:
             lesson-1:
@@ -24920,7 +24921,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by October 15, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csd-mod4:
           lessons:
             lesson-1:
@@ -24936,7 +24938,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod2:
           lessons:
             lesson-1:
@@ -24969,7 +24972,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by October 18, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-overview:
           lessons: {}
           lesson_groups: {}
