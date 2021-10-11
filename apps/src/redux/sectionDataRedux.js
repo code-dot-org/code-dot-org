@@ -44,6 +44,7 @@ export const setSection = section => {
   // Filter data to match sectionDataPropType
   const filteredSectionData = {
     id: section.id,
+    curriculumUmbrella: section.curriculum_umbrella,
     script: section.script,
     students: sortedStudents,
     codeReviewEnabled: section.code_review_enabled,

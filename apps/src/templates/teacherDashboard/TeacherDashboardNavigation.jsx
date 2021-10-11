@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import i18n from '@cdo/locale';
@@ -15,10 +16,11 @@ export const TeacherDashboardPath = {
   stats: '/stats',
   manageStudents: '/manage_students',
   loginInfo: '/login_info',
-  standardsReport: '/standards_report'
+  standardsReport: '/standards_report',
+  codeReviewGroups: '/code_review_groups'
 };
 
-const teacherDashboardLinks = [
+const defaultTeacherDashboardLinks = [
   {
     label: i18n.teacherTabProgress(),
     url: TeacherDashboardPath.progress
@@ -45,21 +47,37 @@ const teacherDashboardLinks = [
   }
 ];
 
+const codeReviewLink = {
+  label: i18n.teacherTabCodeReviewGroups(),
+  url: TeacherDashboardPath.codeReviewGroups
+};
+
 const ListPosition = {
   start: 'start',
   middle: 'middle',
   end: 'end'
 };
 
-export default class TeacherDashboardNavigation extends Component {
+class TeacherDashboardNavigation extends Component {
   static propTypes = {
     links: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
         url: PropTypes.string.isRequired
       })
-    )
+    ),
+    // Populated from Redux
+    curriculumUmbrella: PropTypes.string
   };
+
+  constructor(props) {
+    super(props);
+
+    this.links = this.props.links || defaultTeacherDashboardLinks;
+    if (this.props.curriculumUmbrella === 'CSA') {
+      this.links.push(codeReviewLink);
+    }
+  }
 
   state = {
     listPosition: ListPosition.start,
@@ -120,7 +138,6 @@ export default class TeacherDashboardNavigation extends Component {
 
   render() {
     const {listPosition, shouldScroll} = this.state;
-    const links = this.props.links || teacherDashboardLinks;
     const containerStyles = this.state.shouldScroll
       ? {...styles.container, ...styles.scrollableContainer}
       : {...styles.container, ...styles.centerContainer};
@@ -142,7 +159,7 @@ export default class TeacherDashboardNavigation extends Component {
             onClick={() => this.scrollTo(ListPosition.start)}
           />
         )}
-        {links.map(link => (
+        {this.links.map(link => (
           <NavLink
             key={link.url}
             to={link.url}
@@ -163,6 +180,12 @@ export default class TeacherDashboardNavigation extends Component {
     );
   }
 }
+
+export const UnconnectedTeacherDashboardNavigation = TeacherDashboardNavigation;
+
+export default connect(state => ({
+  curriculumUmbrella: state.sectionData.section.curriculumUmbrella
+}))(TeacherDashboardNavigation);
 
 const NAVBAR_HEIGHT = 50;
 const PADDING = 10;
