@@ -15,6 +15,7 @@ import i18n from '@cdo/locale';
  */
 export default class Instructions extends React.Component {
   static propTypes = {
+    // TODO: make instructions required?
     instructions: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,
@@ -39,17 +40,21 @@ export default class Instructions extends React.Component {
 
     return (
       <div style={inTopPane ? styles.inTopPane : styles.notInTopPane}>
-        <ImmersiveReaderButton
-          title={i18n.instructions()}
-          text={instructions}
-        />
-        <MarkdownInstructions
-          markdown={instructions}
-          onResize={onResize}
-          inTopPane={inTopPane}
-          isBlockly={isBlockly}
-          noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
-        />
+        {instructions && (
+          <>
+            <ImmersiveReaderButton
+              title={i18n.instructions()}
+              text={instructions}
+            />
+            <MarkdownInstructions
+              markdown={instructions}
+              onResize={onResize}
+              inTopPane={inTopPane}
+              isBlockly={isBlockly}
+              noInstructionsWhenCollapsed={noInstructionsWhenCollapsed}
+            />
+          </>
+        )}
         {inputOutputTable && <InputOutputTable data={inputOutputTable} />}
         {imgURL && !inTopPane && <ExampleImage src={imgURL} />}
         {imgURL && inTopPane && <AniGifPreview />}
