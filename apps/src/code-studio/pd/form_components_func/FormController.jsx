@@ -152,7 +152,9 @@ const FormController = props => {
       }
     });
 
-    pageData = Object.assign(pageData, page.processPageData(pageData));
+    if (page.processPageData) {
+      pageData = Object.assign(pageData, page.processPageData(pageData));
+    }
     setData({
       ...data,
       ...pageData
@@ -162,7 +164,8 @@ const FormController = props => {
       getRequiredFields().includes(f)
     );
     const missingRequiredFields = pageRequiredFields.filter(f => !pageData[f]);
-    const formatErrors = page.getErrorMessages(pageData);
+    const formatErrors =
+      (page.getErrorMessages && page.getErrorMessages(pageData)) || [];
 
     if (missingRequiredFields.length || Object.keys(formatErrors).length) {
       setErrors([...missingRequiredFields, ...Object.keys(formatErrors)]);
@@ -252,14 +255,14 @@ const FormController = props => {
   const handleChange = newState => {
     // clear any errors for newly changed fields
     const newFields = Object.keys(newState);
-    const errors = errors.filter(error => !newFields.includes(error));
+    const updatedErrors = errors.filter(error => !newFields.includes(error));
 
     // update state with new data
-    const data = Object.assign({}, data, newState);
-    setData(data);
-    setErrors(errors);
+    const updatedData = {...data, ...newState};
+    setData(updatedData);
+    setErrors(updatedErrors);
 
-    saveToSessionStorage({data});
+    saveToSessionStorage({data: updatedData});
   };
 
   /**
@@ -378,7 +381,7 @@ const FormController = props => {
 
     if (shouldShowError) {
       return (
-        <Alert key="error-header" bsStyle="danger">
+        <Alert bsStyle="danger">
           <h3>{errorHeader}</h3>
         </Alert>
       );
@@ -407,8 +410,11 @@ const FormController = props => {
    */
   const getRequiredFields = () => {
     const propsRequiredFields = [...requiredFields];
-    const pageRequiredFields = pageComponents.map(page =>
-      page.getDynamicallyRequiredFields(data, getPageProps())
+    const pageRequiredFields = pageComponents.map(
+      page =>
+        (page.getDynamicallyRequiredFields &&
+          page.getDynamicallyRequiredFields(data, getPageProps())) ||
+        []
     );
     return pageRequiredFields.reduce(
       (flattened, subArray) => flattened.concat(subArray),
