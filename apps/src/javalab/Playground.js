@@ -15,6 +15,7 @@ import {
   getItemIds
 } from './playgroundRedux';
 import color from '@cdo/apps/util/color';
+import {resetMediaElement, resetAudioElement} from './MediaUtils';
 
 const DEFAULT_BACKGROUND_COLOR = color.white;
 // Amount of time in ms after a click to re-enable click events
@@ -64,7 +65,7 @@ export default class Playground {
 
   onStop() {
     this.endGame();
-    this.resetAudioElement();
+    resetAudioElement(this.getAudioElement());
   }
 
   onStarterAssetsReceived = result => {
@@ -237,7 +238,7 @@ export default class Playground {
     // reset playground items to be empty
     this.setPlaygroundItems({});
     this.resetBackgroundElement();
-    this.resetAudioElement();
+    resetAudioElement(this.getAudioElement());
     this.resetContainer();
   }
 
@@ -283,21 +284,10 @@ export default class Playground {
     return document.getElementById('playground-container');
   }
 
-  resetAudioElement() {
-    const audioElement = this.getAudioElement();
-    audioElement.pause();
-    this.resetMediaElement(audioElement);
-  }
-
   resetBackgroundElement() {
     const backgroundElement = this.getBackgroundElement();
     backgroundElement.style.opacity = 0.0;
-    this.resetMediaElement(backgroundElement);
-  }
-
-  resetMediaElement(element) {
-    element.onerror = undefined;
-    element.src = '';
+    resetMediaElement(backgroundElement);
   }
 
   resetContainer() {
