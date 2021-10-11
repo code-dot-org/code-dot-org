@@ -21,7 +21,7 @@ class UnassignSectionButton extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     courseName: PropTypes.string,
-    buttonLocationAnalytics: PropTypes.string.isRequired,
+    buttonLocationAnalytics: PropTypes.string,
     // Redux
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
