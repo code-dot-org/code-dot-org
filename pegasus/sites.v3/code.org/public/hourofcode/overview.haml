@@ -53,7 +53,7 @@ social:
   .clear
 
   - hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
-  - hoc_image = hoc_mode == "soon-hoc" ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
+  - hoc_image = ["soon-hoc", "actual-hoc"].include?(hoc_mode) ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
 
   .full-resource-block
     %img.full-resource-image{src: hoc_image}
