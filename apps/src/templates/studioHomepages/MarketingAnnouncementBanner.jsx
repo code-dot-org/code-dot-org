@@ -10,7 +10,7 @@ import shapes from './shapes';
 // a button to dismiss the banner. It also listens for modifications to the banner through
 // optimizely and checks if the new version of the banner has been dismissed.
 const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
-  const id = 'special-annoucement-action-block';
+  const id = 'special-announcement-action-block';
   const [displayBanner, setDisplayBanner] = useState(true);
 
   useEffect(() => {
@@ -32,10 +32,33 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   };
 
   const getLocalStorageBannerKey = () => {
-    // The banner ID will be modified by marketing when they create a variation of the banner
-    // in optimizely, so we query it from the DOM instead of storing it in the component
-    const bannerId = document.getElementById(id).dataset.bannerId;
+    let bannerId = announcement.id;
+
+    const optimizelyId = getOptimizelyModifiedElementId();
+    if (optimizelyId) {
+      bannerId = optimizelyId;
+    }
+
     return `display-announcement-${bannerId}`;
+  };
+
+  const getOptimizelyModifiedElementId = () => {
+    const allBannerElements = document.getElementById(id).querySelectorAll('*');
+
+    const getOptlyDataAttrKey = element => {
+      return Object.keys(element.dataset).find(key => key.includes('optly'));
+    };
+
+    // Finds an element that was modified by optimizely if one exists
+    const optlyModifiedElement = [...allBannerElements].find(el =>
+      getOptlyDataAttrKey(el)
+    );
+
+    if (optlyModifiedElement) {
+      // Returns the optimizely data attribute key for the changed element
+      // will be something like optly-0ef57bf5F12b-4290A4dbA1de95a9b5cd
+      return getOptlyDataAttrKey(optlyModifiedElement);
+    }
   };
 
   const onDismiss = () => {
@@ -52,20 +75,18 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
 
   return (
     <div
-      id={id}
-      // When marketing makes a variation of the banner they will
-      // update the data-banner-id, we will track variations of the banner
-      // through this data attribute
-      data-banner-id={announcement.id}
+      id="homepage-banner"
       style={{
         ...styles.container,
         display: bannerDisplayStyle
       }}
     >
-      <SpecialAnnouncementActionBlock
-        announcement={announcement}
-        marginBottom={marginBottom}
-      />
+      <div id={id}>
+        <SpecialAnnouncementActionBlock
+          announcement={announcement}
+          marginBottom={marginBottom}
+        />
+      </div>
       <Button
         text="×"
         onClick={onDismiss}
