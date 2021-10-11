@@ -3,7 +3,6 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import SpecialAnnouncement from './SpecialAnnouncement';
 import Notification from '../Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
@@ -134,11 +133,6 @@ export const UnconnectedTeacherHomepage = ({
   // Whether we show the regular announcement/notification
   const showAnnouncement = false;
 
-  // Whether we show the fallback (translatable) SpecialAnnouncement if there is no
-  // specialAnnouncement passed in as a prop. Currently we only show the fallback for
-  // English-speaking teachers.
-  const showFallbackSpecialAnnouncement = true;
-
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
@@ -177,14 +171,6 @@ export const UnconnectedTeacherHomepage = ({
           </div>
         )}
         {!showAnnouncement && <br />}
-        {/* The current fallback announcement is for English-speaking teachers only. This announcement type
-        is designed to be translatable and in the future can be used for non-English teachers as a fallback
-        to the marketing-configured announcement. */}
-        {showFallbackSpecialAnnouncement &&
-          isEnglish &&
-          !specialAnnouncement && (
-            <SpecialAnnouncement isEnglish={isEnglish} isTeacher={true} />
-          )}
         {displayCensusBanner && (
           <div>
             <CensusTeacherBanner
