@@ -422,7 +422,7 @@ class Pd::Workshop < ApplicationRecord
   # Returns the school year the summer workshop is preparing for, in
   # the form "2019-2020", like application_year on Pd Applications.
   # The school year runs 6/1-5/31.
-  # @see Pd::Application::ActiveApplicationModels::APPLICATION_YEARS
+  # @see Pd::SharedApplicationConstants::APPLICATION_YEARS
   def school_year
     return nil if sessions.empty?
 

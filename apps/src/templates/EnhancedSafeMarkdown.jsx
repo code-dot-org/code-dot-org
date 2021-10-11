@@ -42,24 +42,8 @@ export const ExpandableImagesWrapper = connect(
   dispatch => ({
     showImageDialog(imgUrl) {
       dispatch(
-        /*
-         * TODO: Using the 'DialogInstructions' component to display the
-         * "expanded image" dialog generates the following warning:
-         *
-         * > Warning: Failed prop type: The prop `shortInstructions` is marked as
-         * > required in `DialogInstructions`, but its value is `undefined`.
-         * >     in DialogInstructions (created by Connect(DialogInstructions))
-         * >     in Connect(DialogInstructions)
-         * >     in Provider
-         *
-         * We should either update the existing DialogInstructions component to
-         * make it more compatible with non-instructions content, or create a
-         * separate Dialog component specifically for these images.
-         */
         openDialog({
-          autoClose: false,
           imgOnly: true,
-          hintsOnly: false,
           imgUrl
         })
       );
