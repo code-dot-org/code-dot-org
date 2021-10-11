@@ -136,18 +136,23 @@ export default class VersionHistoryWithCommits extends React.Component {
 
     if (this.state.statusMessage) {
       title = i18n.versionHistory_header();
-      body = <div>{this.state.statusMessage}</div>;
+      body = <div style={styles.defaultBody}>{this.state.statusMessage}</div>;
     } else if (this.state.showSpinner) {
       title = i18n.versionHistory_header();
       body = (
-        <div style={{margin: '1em 0', textAlign: 'center'}}>
+        <div
+          style={{
+            ...{margin: '1em 0', textAlign: 'center'},
+            ...styles.defaultBody
+          }}
+        >
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
     } else if (this.state.confirmingClearPuzzle) {
       title = i18n.versionHistory_clearProgress_header();
       body = (
-        <div>
+        <div style={styles.defaultBody}>
           <p>{i18n.versionHistory_clearProgress_prompt()}</p>
           {this.props.isProjectTemplateLevel && (
             <p className="template-level-warning">
@@ -191,7 +196,7 @@ export default class VersionHistoryWithCommits extends React.Component {
         this.state.versions.length % 2 === 0 ? color.lightest_gray : null;
       body = (
         <div style={{margin: 10}}>
-          <div style={styles.body}>
+          <div style={styles.versionHistoryBody}>
             <table style={{width: '100%'}}>
               <tbody>
                 {rows}
@@ -319,9 +324,10 @@ const styles = {
     fontSize: 14,
     color: color.charcoal
   },
-  body: {
+  versionHistoryBody: {
     overflowY: 'auto',
     maxHeight: 300,
     margin: '1em 0'
-  }
+  },
+  defaultBody: {color: color.charcoal}
 };
