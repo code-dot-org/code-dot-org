@@ -54,7 +54,7 @@ module Services
       sr_seed_context = SeedContext.new(script: script, resources: resources)
       scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sr_seed_context).to_json}
 
-      vocabularies = script.lessons.map(&:vocabularies).flatten
+      vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
       lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
       objectives = script.lessons.map(&:objectives).flatten
