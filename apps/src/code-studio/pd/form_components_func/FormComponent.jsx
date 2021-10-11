@@ -38,7 +38,6 @@ export const FieldGroup = props => {
   );
 };
 FieldGroup.propTypes = {
-  ...FieldGroupComponent.propTypes,
   // the name of the input
   name: PropTypes.string.isRequired
 };
@@ -88,7 +87,6 @@ export const SelectFieldGroup = props => {
   );
 };
 SelectFieldGroup.propTypes = {
-  ...FieldGroupComponent.propTypes,
   // the name of the input. Should match a key in options
   name: PropTypes.string.isRequired,
   // can be specified as either an array (of either Answers or SimpleAnswers, as defined in
@@ -133,7 +131,6 @@ export const UsPhoneNumberInput = props => {
   );
 };
 UsPhoneNumberInput.propTypes = {
-  ...UsPhoneNumberInputComponent.propTypes,
   // the name of the input
   name: PropTypes.string.isRequired
 };
@@ -158,7 +155,6 @@ export const Buttons = props => {
   );
 };
 Buttons.propTypes = {
-  ...ButtonListComponent.propTypes,
   // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired,
   required: PropTypes.bool
@@ -179,7 +175,6 @@ export const ButtonsFromOptions = props => {
   return <Buttons answers={answers} {...props} />;
 };
 ButtonsFromOptions.propTypes = {
-  ...Buttons.propTypes,
   // the name of the input. Should match a key in FormContext
   name: PropTypes.string.isRequired
 };
@@ -207,7 +202,6 @@ export const ButtonsWithAdditionalTextFields = props => {
   return <Buttons answers={answers} {...props} />;
 };
 ButtonsWithAdditionalTextFields.propTypes = {
-  ...Buttons.propTypes,
   // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired,
   // list of available options for the ButtonList
@@ -236,7 +230,6 @@ export const ButtonsWithAdditionalTextFieldsFromOptions = props => {
   );
 };
 ButtonsWithAdditionalTextFieldsFromOptions.propTypes = {
-  ...ButtonsWithAdditionalTextFields.propTypes,
   // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired
 };
@@ -260,7 +253,6 @@ export const SingleCheckbox = props => {
   );
 };
 SingleCheckbox.propTypes = {
-  ...SingleCheckboxComponent.propTypes,
   // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired,
   required: PropTypes.bool
