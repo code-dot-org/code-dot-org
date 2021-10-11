@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "playlab",
-    "serialized_at": "2021-10-11 18:16:46 UTC",
+    "serialized_at": "2021-10-11 18:17:41 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "playlab"
