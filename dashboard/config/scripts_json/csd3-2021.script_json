@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-11 21:45:45 UTC",
+    "serialized_at": "2021-10-11 21:46:41 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2021"
@@ -15528,9 +15528,107 @@
   "lessons_programming_expressions": [
     {
       "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
+        "lesson.key": "Collision Detection",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "rect"
+        "programming_expression.key": "debug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "isTouching"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounce"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounceOff"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounciness"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "collide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "displace"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "setCollider"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "equalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "greaterThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "greaterThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ifBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "inequalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "lessThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "lessThanOrEqualOperator"
       }
     },
     {
@@ -15549,37 +15647,86 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "background"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
+        "lesson.key": "Drawing in Game Lab",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "rect"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
+        "lesson.key": "Functions",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "ellipse"
+        "programming_expression.key": "callMyFunction"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
+        "lesson.key": "Functions",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "declareAssign_x"
+        "programming_expression.key": "functionParams_none"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
+        "lesson.key": "Keyboard Input",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "declareNoAssign_x"
+        "programming_expression.key": "keyDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ifElseBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "keyWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "keyWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseDidMove"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "visible"
       }
     },
     {
@@ -15591,16 +15738,30 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprites",
+        "lesson.key": "Shapes and Parameters",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "drawSprites"
+        "programming_expression.key": "background"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprites",
+        "lesson.key": "Shapes and Parameters",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "createSprite"
+        "programming_expression.key": "ellipse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "rect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "rotation"
       }
     },
     {
@@ -15626,16 +15787,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Properties",
+        "lesson.key": "Sprites",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "rotation"
+        "programming_expression.key": "createSprite"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
+        "lesson.key": "Sprites",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "draw"
+        "programming_expression.key": "drawSprites"
       }
     },
     {
@@ -15647,114 +15808,23 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals",
+        "lesson.key": "The Draw Loop",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "lessThanOrEqualOperator"
+        "programming_expression.key": "draw"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals",
+        "lesson.key": "Variables",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "greaterThanOperator"
+        "programming_expression.key": "declareAssign_x"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals",
+        "lesson.key": "Variables",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "greaterThanOrEqualOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "equalityOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "inequalityOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "lessThanOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "ifBlock"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "keyDown"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "keyWentUp"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "visible"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseDidMove"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "ifElseBlock"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseWentUp"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseWentDown"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseDown"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "keyWentDown"
+        "programming_expression.key": "declareNoAssign_x"
       }
     },
     {
@@ -15768,84 +15838,14 @@
       "seeding_key": {
         "lesson.key": "Velocity",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "velocityY"
+        "programming_expression.key": "velocityX"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Velocity",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "velocityX"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "debug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "isTouching"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "displace"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "collide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "bounciness"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "setCollider"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "bounceOff"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "bounce"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "functionParams_none"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "callMyFunction"
+        "programming_expression.key": "velocityY"
       }
     }
   ],
