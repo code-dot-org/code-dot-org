@@ -9,12 +9,7 @@ import {
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const SpriteLocation = makeEnum('library', 'level');
-const UploadStatus = makeEnum(
-  'uploadFail',
-  'uploadSuccess',
-  'filenameOverride',
-  'none'
-);
+const UploadStatus = makeEnum('fail', 'success', 'filenameOverride', 'none');
 
 // Levelbuilder tool for adding sprites to the Spritelab animation library.
 export default class SpriteUpload extends React.Component {
@@ -79,7 +74,7 @@ export default class SpriteUpload extends React.Component {
       .then(() => {
         this.setState({
           uploadStatus: {
-            success: UploadStatus.uploadSuccess,
+            status: UploadStatus.success,
             message: 'Successfully Uploaded Sprite and Metadata'
           }
         });
@@ -90,7 +85,7 @@ export default class SpriteUpload extends React.Component {
         }
         this.setState({
           uploadStatus: {
-            success: UploadStatus.uploadFailure,
+            status: UploadStatus.failure,
             message: `${error.toString()}: Error Uploading Sprite or Metadata. Please try again. If this occurs again, please reach out to an engineer.`
           }
         });
@@ -153,7 +148,7 @@ export default class SpriteUpload extends React.Component {
     this.setState({aliases: processedAliases});
   };
 
-  // Returns an upload status object - noting "filenameOverride" or "null"
+  // Set the upload status to indicate whether this file would override another
   determineIfSpriteAlreadyExists = (spriteAvailability, filename, category) => {
     let {currentLibrarySprites, currentLevelSprites} = this.state;
     let willOverride;
@@ -214,7 +209,7 @@ export default class SpriteUpload extends React.Component {
       metadata === '' ||
       uploadStatus.status === UploadStatus.filenameOverride;
 
-    const uploadSuccessful = uploadStatus.status === UploadStatus.uploadSuccess;
+    const uploadSuccessful = uploadStatus.status === UploadStatus.success;
 
     return (
       <div>
