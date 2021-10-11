@@ -43,9 +43,7 @@ export const ExpandableImagesWrapper = connect(
     showImageDialog(imgUrl) {
       dispatch(
         openDialog({
-          autoClose: false,
           imgOnly: true,
-          hintsOnly: false,
           imgUrl
         })
       );

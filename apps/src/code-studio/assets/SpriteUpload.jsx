@@ -106,15 +106,16 @@ export default class SpriteUpload extends React.Component {
   };
 
   generateMetadata = () => {
-    const {filename, aliases} = this.state;
+    const {filename, aliases, category} = this.state;
     let image = this.refs.spritePreview;
     let metadata = {
-      name: filename,
+      name: filename.split('.')[0],
       aliases: aliases,
       frameCount: 1,
       frameSize: {x: image.clientWidth, y: image.clientHeight},
       looping: true,
-      frameDelay: 2
+      frameDelay: 2,
+      categories: [category]
     };
     this.setState({metadata: JSON.stringify(metadata)});
   };
