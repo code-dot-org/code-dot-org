@@ -1,5 +1,6 @@
 import {TheaterSignalType, STATUS_MESSAGE_PREFIX} from './constants';
 import javalabMsg from '@cdo/javalab/locale';
+import {resetAudioElement, resetMediaElement} from './MediaUtils';
 
 export default class Theater {
   constructor(onOutputMessage, onNewlineMessage) {
@@ -43,7 +44,16 @@ export default class Theater {
   reset() {
     this.loadEventsFinished = 0;
     this.getImgElement().style.visibility = 'hidden';
-    this.getAudioElement().src = '';
+    this.resetAudioAndVideo();
+  }
+
+  onStop() {
+    this.resetAudioAndVideo();
+  }
+
+  resetAudioAndVideo() {
+    resetAudioElement(this.getAudioElement());
+    resetMediaElement(this.getImgElement());
   }
 
   getImgElement() {
