@@ -29,7 +29,6 @@ describe('PlaygroundImageTest', () => {
     // check dynamically generated styles
     expect(textStyles.top).to.equal(0);
     expect(textStyles.left).to.equal(700);
-    expect(textStyles.height).to.equal(200);
     expect(textStyles.fontSize).to.equal(200);
     expect(textStyles.fontFamily).to.equal(PlaygroundFontTypeFontFamilies.MONO);
     expect(textStyles.fontWeight).to.equal('bold');
