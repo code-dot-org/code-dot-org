@@ -19,15 +19,15 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
           {programmingExpression.category}
         </span>
       </div>
-      {programmingExpression.content?.length > 0 && (
+      {!!programmingExpression.content && (
         <div style={{paddingTop: 20}}>
           <EnhancedSafeMarkdown
-            markdown={programmingExpression.content}
+            markdown={programmingExpression.content.trim()}
             expandableImages
           />
         </div>
       )}
-      {programmingExpression.syntax?.length > 0 && (
+      {!!programmingExpression.syntax && (
         <div>
           <h2>{i18n.syntaxHeader()}</h2>
           <EnhancedSafeMarkdown
@@ -36,28 +36,27 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
           />
         </div>
       )}
-      {programmingExpression.returnValue?.length > 0 && (
+      {!!programmingExpression.returnValue && (
         <div>
           <h2>{i18n.returnsHeader()}</h2>
           <div>{programmingExpression.returnValue}</div>
         </div>
       )}
-      {programmingExpression.tips?.length > 0 && (
+      {!!programmingExpression.tips && (
         <div>
           <h2>{i18n.tipsHeader()}</h2>
           <EnhancedSafeMarkdown
-            markdown={programmingExpression.tips}
+            markdown={programmingExpression.tips.trim()}
             expandableImages
           />
         </div>
       )}
-      {programmingExpression.externalDocumentation?.length > 0 && (
+      {!!programmingExpression.externalDocumentation && (
         <div>
           <h2>{i18n.additionalInformationHeader()}</h2>
           <EnhancedSafeMarkdown
             markdown={i18n.additionalInformationText({
-              externalDocumentationUrl:
-                programmingExpression.externalDocumentation
+              externalDocumentationUrl: programmingExpression.externalDocumentation.trim()
             })}
           />
         </div>
