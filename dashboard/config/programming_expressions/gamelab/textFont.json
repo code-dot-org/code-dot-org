@@ -2,7 +2,9 @@
   "func": "textFont",
   "category": "Drawing",
   "paletteParams": [
-    "font"
+    {
+      "name": "font"
+    }
   ],
   "params": [
     "\"Arial\""

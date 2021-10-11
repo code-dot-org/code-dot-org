@@ -2,8 +2,12 @@
   "func": "button",
   "category": "UI controls",
   "paletteParams": [
-    "id",
-    "text"
+    {
+      "name": "id"
+    },
+    {
+      "name": "text"
+    }
   ],
   "params": [
     "\"id\"",

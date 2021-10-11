@@ -3,7 +3,9 @@
   "category": "Variables",
   "modeOptionName": "*.join",
   "paletteParams": [
-    "separator"
+    {
+      "name": "separator"
+    }
   ],
   "params": [
     "\"-\""

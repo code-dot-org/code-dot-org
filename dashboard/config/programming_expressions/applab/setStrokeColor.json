@@ -2,7 +2,9 @@
   "func": "setStrokeColor",
   "category": "Canvas",
   "paletteParams": [
-    "color"
+    {
+      "name": "color"
+    }
   ],
   "params": [
     "\"red\""

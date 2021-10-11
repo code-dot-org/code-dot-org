@@ -2,7 +2,9 @@
   "func": "setVelocityYEach",
   "category": "Groups",
   "paletteParams": [
-    "velocityY"
+    {
+      "name": "velocityY"
+    }
   ],
   "params": [
     "3"

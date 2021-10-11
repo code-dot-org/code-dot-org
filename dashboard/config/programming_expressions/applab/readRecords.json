@@ -2,9 +2,15 @@
   "func": "readRecords",
   "category": "Data",
   "paletteParams": [
-    "table",
-    "terms",
-    "callback"
+    {
+      "name": "table"
+    },
+    {
+      "name": "terms"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "\"mytable\"",

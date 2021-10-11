@@ -2,8 +2,14 @@
   "func": "circle",
   "category": "Canvas",
   "paletteParams": [
-    "x",
-    "y",
-    "radius"
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "radius"
+    }
   ]
 }

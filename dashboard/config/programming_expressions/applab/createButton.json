@@ -2,7 +2,9 @@
   "func": "createButton",
   "category": "Maker",
   "paletteParams": [
-    "pin"
+    {
+      "name": "pin"
+    }
   ],
   "params": [
     "0"

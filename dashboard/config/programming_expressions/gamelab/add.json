@@ -2,7 +2,9 @@
   "func": "add",
   "category": "Groups",
   "paletteParams": [
-    "sprite"
+    {
+      "name": "sprite"
+    }
   ],
   "params": [
     "sprite"

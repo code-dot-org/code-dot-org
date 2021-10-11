@@ -6,7 +6,9 @@
     "maxArgs": 6
   },
   "paletteParams": [
-    "type"
+    {
+      "name": "type"
+    }
   ],
   "params": [
     "\"rectangle\""

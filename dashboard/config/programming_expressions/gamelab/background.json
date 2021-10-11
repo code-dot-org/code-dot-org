@@ -2,7 +2,9 @@
   "func": "background",
   "category": "Drawing",
   "paletteParams": [
-    "color"
+    {
+      "name": "color"
+    }
   ],
   "params": [
     "\"white\""

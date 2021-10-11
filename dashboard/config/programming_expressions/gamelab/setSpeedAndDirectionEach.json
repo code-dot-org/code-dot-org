@@ -2,8 +2,12 @@
   "func": "setSpeedAndDirectionEach",
   "category": "Groups",
   "paletteParams": [
-    "speed",
-    "angle"
+    {
+      "name": "speed"
+    },
+    {
+      "name": "angle"
+    }
   ],
   "params": [
     "1",

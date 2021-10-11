@@ -1,7 +1,9 @@
 {
   "func": "mouseWentDown",
   "paletteParams": [
-    "button"
+    {
+      "name": "button"
+    }
   ],
   "params": [
     "\"leftButton\""

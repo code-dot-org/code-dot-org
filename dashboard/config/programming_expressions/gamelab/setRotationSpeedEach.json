@@ -2,7 +2,9 @@
   "func": "setRotationSpeedEach",
   "category": "Groups",
   "paletteParams": [
-    "speed"
+    {
+      "name": "speed"
+    }
   ],
   "params": [
     "5"

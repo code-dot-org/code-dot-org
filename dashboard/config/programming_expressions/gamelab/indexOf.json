@@ -2,7 +2,9 @@
   "func": "indexOf",
   "category": "Variables",
   "paletteParams": [
-    "searchValue"
+    {
+      "name": "searchValue"
+    }
   ],
   "params": [
     "\"World\""

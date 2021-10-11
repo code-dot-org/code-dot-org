@@ -2,8 +2,12 @@
   "func": "pointToEach",
   "category": "Groups",
   "paletteParams": [
-    "x",
-    "y"
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
   "params": [
     "200",

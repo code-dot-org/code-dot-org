@@ -2,7 +2,9 @@
   "func": "getYPosition",
   "category": "UI controls",
   "paletteParams": [
-    "id"
+    {
+      "name": "id"
+    }
   ],
   "params": [
     "\"id\""

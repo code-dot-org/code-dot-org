@@ -5,6 +5,8 @@
     "\"Hello World!\""
   ],
   "paletteParams": [
-    "string"
+    {
+      "name": "string"
+    }
   ]
 }

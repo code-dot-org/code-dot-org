@@ -3,7 +3,9 @@
   "category": "Circuit",
   "type": "value",
   "paletteParams": [
-    "orientationType"
+    {
+      "name": "orientationType"
+    }
   ],
   "params": [
     "\"inclination\""

@@ -2,8 +2,12 @@
   "func": "setImageURL",
   "category": "UI controls",
   "paletteParams": [
-    "id",
-    "url"
+    {
+      "name": "id"
+    },
+    {
+      "name": "url"
+    }
   ],
   "params": [
     "\"id\"",

@@ -2,10 +2,18 @@
   "func": "setRed",
   "category": "Canvas",
   "paletteParams": [
-    "imgData",
-    "x",
-    "y",
-    "r"
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "r"
+    }
   ],
   "params": [
     "imgData",

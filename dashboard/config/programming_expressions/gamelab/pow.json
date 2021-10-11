@@ -2,8 +2,12 @@
   "func": "pow",
   "category": "Math",
   "paletteParams": [
-    "n",
-    "e"
+    {
+      "name": "n"
+    },
+    {
+      "name": "e"
+    }
   ],
   "params": [
     "10",

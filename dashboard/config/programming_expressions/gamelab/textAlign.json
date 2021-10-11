@@ -2,8 +2,12 @@
   "func": "textAlign",
   "category": "Drawing",
   "paletteParams": [
-    "horiz",
-    "vert"
+    {
+      "name": "horiz"
+    },
+    {
+      "name": "vert"
+    }
   ],
   "params": [
     "CENTER",

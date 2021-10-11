@@ -2,8 +2,12 @@
   "func": "setKeyValueSync",
   "category": "Data",
   "paletteParams": [
-    "key",
-    "value"
+    {
+      "name": "key"
+    },
+    {
+      "name": "value"
+    }
   ],
   "params": [
     "\"key\"",

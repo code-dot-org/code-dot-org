@@ -6,8 +6,12 @@
     "maxArgs": 2
   },
   "paletteParams": [
-    "url",
-    "loop"
+    {
+      "name": "url"
+    },
+    {
+      "name": "loop"
+    }
   ],
   "params": [
     "\"sound://default.mp3\"",

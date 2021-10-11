@@ -2,7 +2,9 @@
   "func": "moveForward",
   "category": "Turtle",
   "paletteParams": [
-    "pixels"
+    {
+      "name": "pixels"
+    }
   ],
   "params": [
     "25"

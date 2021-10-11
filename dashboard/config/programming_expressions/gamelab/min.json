@@ -2,8 +2,12 @@
   "func": "min",
   "category": "Math",
   "paletteParams": [
-    "n1",
-    "n2"
+    {
+      "name": "n1"
+    },
+    {
+      "name": "n2"
+    }
   ],
   "params": [
     "1",

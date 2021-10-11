@@ -2,7 +2,9 @@
   "func": "pulse",
   "category": "Circuit",
   "paletteParams": [
-    "interval"
+    {
+      "name": "interval"
+    }
   ],
   "params": [
     "300"

@@ -2,9 +2,15 @@
   "func": "onEvent",
   "category": "UI controls",
   "paletteParams": [
-    "id",
-    "type",
-    "callback"
+    {
+      "name": "id"
+    },
+    {
+      "name": "type"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "\"id\"",
