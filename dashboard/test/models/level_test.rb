@@ -163,6 +163,14 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 
+  test "summarize_for_edit returns level_num for name on blockly level" do
+    blockly_level = create(:level, name: 'blockly', level_num: 'special_blockly_level')
+
+    summary = blockly_level.summarize_for_edit
+
+    assert_equal(summary[:name], 'special_blockly_level')
+  end
+
   test "get_question_text returns question text for free response level" do
     free_response_level = create :level, name: 'A question', long_instructions: 'Answer this question.',
       type: 'FreeResponse'

@@ -35,9 +35,9 @@
     "validation_code": "var validationInfo = getValidationInfo();\r\nif (!validationInfo.successFrame) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  levelFailure(0, 'poemBotSuccessLevel1');\r\n}",
     "hide_pause_button": "true",
     "instructions_icon": "octiHopeful",
-    "show_poem_dropdown": "false",
     "default_poem": "rumi_1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "poetry"
   },
   "user_id": 13468,
   "game_id": 69,

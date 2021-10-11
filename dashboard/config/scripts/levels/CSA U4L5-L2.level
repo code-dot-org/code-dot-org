@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U4 Template",
-    "long_instructions": "implementing dice roll function",
+    "long_instructions": "The `rollDice()` method in `PopBalloonsGame.java` currently assigns the value `2` to `diceLeftValue` and the value `3` to the `diceRightValue`.\r\n\r\nUse `Math.random()` to assign a random numbers between 1 and 6 to both the `diceLeftValue` and `diceRightValue`.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -15,6 +15,6 @@
   "created_at": "2021-09-07T14:02:55.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-07 14:02:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:08:50 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-07 14:02:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:08:50 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-11 16:10:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

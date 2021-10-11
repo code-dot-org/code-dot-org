@@ -375,6 +375,12 @@ const sourceHandler = {
   getSelectedSong() {
     return getAppOptions().level.selectedSong;
   },
+  setSelectedPoem(poem) {
+    getAppOptions().level.selectedPoem = poem;
+  },
+  getSelectedPoem() {
+    return getAppOptions().level.selectedPoem;
+  },
   setInitialLevelHtml(levelHtml) {
     getAppOptions().level.levelHtml = levelHtml;
   },
