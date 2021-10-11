@@ -26,7 +26,7 @@ import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
-import {CsaViewMode, InputMessageType} from './constants';
+import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
@@ -305,6 +305,15 @@ Javalab.prototype.onRun = function() {
   }
 
   this.miniApp?.reset?.();
+  this.executeJavabuilder(ExecutionType.TEST);
+};
+
+Javalab.prototype.onTest = function() {
+  // TODO: Add any necessary pre-run steps here (incrementing attempts count, resetting mini-app, etc)
+  this.executeJavabuilder(ExecutionType.TEST);
+};
+
+Javalab.prototype.executeJavabuilder = function(executionType) {
   const options = {};
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     options.useNeighborhood = true;
@@ -319,7 +328,7 @@ Javalab.prototype.onRun = function() {
     this.setIsRunning
   );
   project.autosave(() => {
-    this.javabuilderConnection.connectJavabuilder();
+    this.javabuilderConnection.connectJavabuilder(executionType);
   });
   postContainedLevelAttempt(this.studioApp_);
 };
