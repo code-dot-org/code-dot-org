@@ -1,5 +1,7 @@
 module Pd
   module SharedApplicationConstants
+    # These constants are shared across rails and js so that the display strings can be tied to
+    # the current application year on both sides.
     APPLICATION_TYPES = [
       TEACHER_APPLICATION = 'Teacher'.freeze,
       FACILITATOR_APPLICATION = 'Facilitator'.freeze,
