@@ -161,8 +161,8 @@ export function uploadMetadataToAnimationLibrary(destination, jsonData) {
     });
 }
 
-export function getLevelAnimationsFiles() {
-  return fetch(`/api/v1/animation-library/level-animations-filenames`).then(
+export function getLevelAnimationsFilenames() {
+  return fetch('/api/v1/animation-library/level-animations-filenames').then(
     response => response.json()
   );
 }

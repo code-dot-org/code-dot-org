@@ -3,12 +3,18 @@ import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
 import {
   getManifest,
-  getLevelAnimationsFiles,
+  getLevelAnimationsFilenames,
   uploadSpriteToAnimationLibrary,
   uploadMetadataToAnimationLibrary
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const SpriteLocation = makeEnum('library', 'level');
+const UploadStatus = makeEnum(
+  'uploadFail',
+  'uploadSuccess',
+  'filenameOverride',
+  'none'
+);
 
 // Levelbuilder tool for adding sprites to the Spritelab animation library.
 export default class SpriteUpload extends React.Component {
@@ -23,16 +29,15 @@ export default class SpriteUpload extends React.Component {
     currentLevelSprites: [],
     aliases: [],
     metadata: '',
-    willOverride: false,
     uploadStatus: {
-      success: null,
+      status: UploadStatus.none,
       message: ''
     }
   };
 
   componentDidMount() {
     // Get list of sprites from level-specific folder
-    getLevelAnimationsFiles().then(files => {
+    getLevelAnimationsFilenames().then(files => {
       this.setState({currentLevelSprites: files.filenames});
     });
 
@@ -74,7 +79,7 @@ export default class SpriteUpload extends React.Component {
       .then(() => {
         this.setState({
           uploadStatus: {
-            success: true,
+            success: UploadStatus.uploadSuccess,
             message: 'Successfully Uploaded Sprite and Metadata'
           }
         });
@@ -85,7 +90,7 @@ export default class SpriteUpload extends React.Component {
         }
         this.setState({
           uploadStatus: {
-            success: false,
+            success: UploadStatus.uploadFailure,
             message: `${error.toString()}: Error Uploading Sprite or Metadata. Please try again. If this occurs again, please reach out to an engineer.`
           }
         });
@@ -95,45 +100,51 @@ export default class SpriteUpload extends React.Component {
   handleImageChange = event => {
     let {spriteAvailability, category} = this.state;
     let file = event.target.files[0];
-    const willOverride = this.determineIfSpriteAlreadyExists(
+
+    this.setState({
+      fileData: file,
+      filename: file.name,
+      filePreviewURL: URL.createObjectURL(file)
+    });
+
+    this.determineIfSpriteAlreadyExists(
       spriteAvailability,
       file.name.split('.')[0],
       category
     );
-    this.setState({
-      fileData: file,
-      filename: file.name,
-      filePreviewURL: URL.createObjectURL(file),
-      uploadStatus: {success: null, message: ''},
-      willOverride: willOverride
-    });
   };
 
   handleCategoryChange = event => {
-    let {filename, spriteAvailability} = this.state;
-    const willOverride = this.determineIfSpriteAlreadyExists(
-      spriteAvailability,
-      filename.split('.')[0],
-      event.target.value
-    );
+    let {filename, spriteAvailability, fileData} = this.state;
+
     this.setState({
-      category: event.target.value,
-      willOverride: willOverride
+      category: event.target.value
     });
+
+    if (fileData) {
+      this.determineIfSpriteAlreadyExists(
+        spriteAvailability,
+        filename.split('.')[0],
+        event.target.value
+      );
+    }
   };
 
   handleAvailabilityChange = event => {
-    let {filename, category} = this.state;
-    const willOverride = this.determineIfSpriteAlreadyExists(
-      event.target.value,
-      filename.split('.')[0],
-      category
-    );
+    let {filename, category, fileData} = this.state;
+
     this.setState({
       spriteAvailability: event.target.value,
-      category: '',
-      willOverride: willOverride
+      category: ''
     });
+
+    if (fileData) {
+      this.determineIfSpriteAlreadyExists(
+        event.target.value,
+        filename.split('.')[0],
+        category
+      );
+    }
   };
 
   handleAliasChange = event => {
@@ -142,13 +153,32 @@ export default class SpriteUpload extends React.Component {
     this.setState({aliases: processedAliases});
   };
 
+  // Returns an upload status object - noting "filenameOverride" or "null"
   determineIfSpriteAlreadyExists = (spriteAvailability, filename, category) => {
-    let {currentLibrarySprites, currentLevelSprites, fileData} = this.state;
-    const willOverride =
-      spriteAvailability === SpriteLocation.library
-        ? currentLibrarySprites.includes(`category_${category}/${filename}`)
-        : currentLevelSprites.includes(`level_animations/${filename}`);
-    return fileData && willOverride;
+    let {currentLibrarySprites, currentLevelSprites} = this.state;
+    let willOverride;
+    switch (spriteAvailability) {
+      case SpriteLocation.level:
+        willOverride = currentLevelSprites.includes(
+          `level_animations/${filename}`
+        );
+        break;
+      case SpriteLocation.library:
+        willOverride = currentLibrarySprites.includes(
+          `category_${category}/${filename}`
+        );
+        break;
+    }
+
+    const uploadStatus = willOverride
+      ? UploadStatus.filenameOverride
+      : UploadStatus.none;
+    const uploadStatusMessage = willOverride
+      ? 'A sprite already exists with this name. Please rename the sprite and re-upload.'
+      : '';
+    this.setState({
+      uploadStatus: {status: uploadStatus, message: uploadStatusMessage}
+    });
   };
 
   generateMetadata = () => {
@@ -173,8 +203,7 @@ export default class SpriteUpload extends React.Component {
       spriteAvailability,
       category,
       filename,
-      metadata,
-      willOverride
+      metadata
     } = this.state;
 
     // Only display the upload button when the user has uploaded an image and generated metadata
@@ -183,7 +212,9 @@ export default class SpriteUpload extends React.Component {
       (spriteAvailability === SpriteLocation.library && category === '') ||
       filename === '' ||
       metadata === '' ||
-      willOverride;
+      uploadStatus.status === UploadStatus.filenameOverride;
+
+    const uploadSuccessful = uploadStatus.status === UploadStatus.uploadSuccess;
 
     return (
       <div>
@@ -251,15 +282,14 @@ export default class SpriteUpload extends React.Component {
             <h3>Image Preview:</h3>
             <img ref="spritePreview" src={filePreviewURL} />
           </label>
-          {willOverride && (
+          {uploadStatus.status === UploadStatus.filenameOverride && (
             <p
               style={{
                 ...styles.uploadStatusMessage,
                 ...styles.uploadFailure
               }}
             >
-              A sprite already exists with this name. Please rename the sprite
-              and re-upload.
+              {uploadStatus.message}
             </p>
           )}
           <br />
@@ -297,7 +327,7 @@ export default class SpriteUpload extends React.Component {
           <p
             style={{
               ...styles.uploadStatusMessage,
-              ...(!uploadStatus.success && styles.uploadFailure)
+              ...(!uploadSuccessful && styles.uploadFailure)
             }}
           >
             {uploadStatus.message}
