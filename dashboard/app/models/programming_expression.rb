@@ -35,6 +35,7 @@ class ProgrammingExpression < ApplicationRecord
     content
     return_value
     tips
+    parameters
   )
 
   def key_format
@@ -69,6 +70,7 @@ class ProgrammingExpression < ApplicationRecord
       {
         key: expression_config['config']['docFunc'] || expression_config['config']['func'] || expression_config['config']['name'],
         name: expression_config['config']['func'] || expression_config['config']['name'],
+        parameters: expression_config['parameters'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         color: expression_config['config']['color'],
@@ -78,6 +80,7 @@ class ProgrammingExpression < ApplicationRecord
       {
         key: expression_config['docFunc'] || expression_config['func'],
         name: expression_config['func'],
+        parameters: expression_config['parameters'],
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         color: ProgrammingExpression.get_category_color(expression_config['category']),
