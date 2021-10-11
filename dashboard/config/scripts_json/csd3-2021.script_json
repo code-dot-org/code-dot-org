@@ -4,18 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
-      "curriculum_umbrella": "CSD",
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true,
-      "tts": true,
       "announcements": [
         {
           "notice": "Supports to Teach CS Discoveries",
@@ -24,11 +12,23 @@
           "type": "information",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "curriculum_umbrella": "CSD",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "tts": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-14 21:48:08 UTC",
+    "serialized_at": "2021-10-11 21:45:45 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2021"
@@ -15508,1921 +15508,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "All Code",
-      "url": "/s/csd3-2021/code",
-      "key": "all_code_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_code_1"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csd3-2021/resources",
-      "key": "all_resources_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_2"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csd3-2021/standards",
-      "key": "all_standards_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_2"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csd3-2021/vocab",
-      "key": "all_vocabulary_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_2"
-      }
-    },
-    {
-      "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
-      "key": "animated-scene",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "animated-scene"
-      }
-    },
-    {
-      "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit",
-      "key": "animated-scene-1",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "animated-scene-1"
-      }
-    },
-    {
-      "name": "Animated Scene Planning",
-      "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
-      "key": "animated-scene-planning-exemplar-2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "animated-scene-planning-exemplar-2020"
-      }
-    },
-    {
-      "name": "Sprite Movement",
-      "url": "https://youtu.be/G666sFzAg5g",
-      "key": "animating-sprites",
-      "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "animating-sprites"
-      }
-    },
-    {
-      "name": "Animation Tab",
-      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
-      "key": "animation_tab",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "name": "Boolean Expressions",
-      "url": "https://youtu.be/_j9nvYKaOVE",
-      "key": "boolean_expressions",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/csd_booleans_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "boolean_expressions"
-      }
-    },
-    {
-      "name": "Booleans and Comparison Operators",
-      "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
-      "key": "booleans_and_comparison_operators",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "booleans_and_comparison_operators"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://youtu.be/3ZfqwCuDZaQ",
-      "key": "calling_and_defining_functions",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "calling_and_defining_functions"
-      }
-    },
-    {
-      "name": "Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
-      "key": "captioned-scenes",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "captioned-scenes"
-      }
-    },
-    {
-      "name": "Collision Detection",
-      "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
-      "key": "collision-detection-exemplar-2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "collision-detection-exemplar-2020"
-      }
-    },
-    {
-      "name": "Collision Detection",
-      "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
-      "key": "collision_detection",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection"
-      }
-    },
-    {
-      "name": "Collision Detection (Version A)",
-      "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
-      "key": "collision_detection_version_a_",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_version_a_"
-      }
-    },
-    {
-      "name": "Collision Detection (Version B)",
-      "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
-      "key": "collision_detection_version_b_",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_version_b_"
-      }
-    },
-    {
-      "name": "Sample Shape Drawing",
-      "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
-      "key": "colored-shape-drawing",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "colored-shape-drawing"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer-science-practices",
-      "properties": {
-        "type": "Reflection",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "name": "Conditional Statements",
-      "url": "https://youtu.be/TuLIK7DcPWs",
-      "key": "conditional_statements",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/csd_conditionals_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "name": "CS in Entertainment",
-      "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
-      "key": "cs-entertainment-activity",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "cs-entertainment-activity"
-      }
-    },
-    {
-      "name": "CS in Entertainment",
-      "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
-      "key": "cs_in_entertainment",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "cs_in_entertainment"
-      }
-    },
-    {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
-      "key": "csd_curriculum_guide",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
-      }
-    },
-    {
-      "name": "CSD Guide to Debugging",
-      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
-      "key": "csd_guide_to_debugging",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging"
-      }
-    },
-    {
-      "name": "CSD Guide to Differentiation",
-      "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
-      "key": "csd_guide_to_differentiation",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation"
-      }
-    },
-    {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
-      "key": "csd_implementation_guide",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
-      "name": "CSD Unit 3 - Interactive Animations and Games",
-      "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
-      "key": "csd_unit_3_-_interactive_animations_and_games",
-      "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/15FeSXeuREENXZ8ghAK7c4V7VWbSLG0kBr6nmuHQv7Cc/edit",
-      "key": "drawing-shapes-exemplar-2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "drawing-shapes-exemplar-2020"
-      }
-    },
-    {
-      "name": "Drawing in Game Lab - Part 1",
-      "url": "https://youtu.be/PXn9gKiKKFo",
-      "key": "drawing_in_game_lab_-_part_1",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_in_game_lab_-_part_1"
-      }
-    },
-    {
-      "name": "Drawing in Game Lab - Part 2",
-      "url": "https://youtu.be/QLabeWhw_O0",
-      "key": "drawing_in_game_lab_-_part_2",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_in_game_lab_-_part_2"
-      }
-    },
-    {
-      "name": "Drawing Shapes",
-      "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
-      "key": "drawing_shapes",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes"
-      }
-    },
-    {
-      "name": "Drawing Shapes (Version A)",
-      "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
-      "key": "drawing_shapes_version_a_",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "name": "Drawing Shapes (Version B)",
-      "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
-      "key": "drawing_shapes_version_b_",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_version_b_"
-      }
-    },
-    {
-      "name": "Extra Code in Challenge Levels",
-      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
-      "key": "extra_code_in_challenge_levels_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "extra_code_in_challenge_levels_1"
-      }
-    },
-    {
-      "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
-      "key": "flyer-game",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "flyer-game"
-      }
-    },
-    {
-      "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
-      "key": "flyer-game-1",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "flyer-game-1"
-      }
-    },
-    {
-      "name": "Flyer Game - Project Guide",
-      "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
-      "key": "flyer-game-project-guide-exemplar",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "flyer-game-project-guide-exemplar"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
-      "key": "functions_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "functions_1"
-      }
-    },
-    {
-      "name": "If-Else Statements",
-      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
-      "key": "if-else_statements_-_map_level_pdf_",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "if-else_statements_-_map_level_pdf_"
-      }
-    },
-    {
-      "name": "If/Else Statements",
-      "url": "https://youtu.be/6m6FFUJsOzo",
-      "key": "if_else_statements",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/csd_ifelse_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "if_else_statements"
-      }
-    },
-    {
-      "name": "If Statements",
-      "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
-      "key": "if_statements",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "if_statements"
-      }
-    },
-    {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
-      "key": "interactive-card-1-2-3-4",
-      "properties": {
-        "type": "Peer Review",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "interactive-card-1-2-3-4"
-      }
-    },
-    {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
-      "key": "interactive-card-exemplar-2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "interactive-card-exemplar-2020"
-      }
-    },
-    {
-      "name": "Interactive Card - Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
-      "key": "interactive-card-marked-rubrics",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "interactive-card-marked-rubrics"
-      }
-    },
-    {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
-      "key": "interactive-card-project-guide-2019",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "interactive-card-project-guide-2019"
-      }
-    },
-    {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
-      "key": "interactive_card",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card"
-      }
-    },
-    {
-      "name": "Interactive Card - Student Checklist",
-      "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view",
-      "key": "interactive_card_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_-_student_checklist"
-      }
-    },
-    {
-      "name": "Introduction to Variables",
-      "url": "https://youtu.be/UG7Q1Sr0_F0",
-      "key": "introduction-to-variables",
-      "properties": {
-        "type": "Video",
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/variables_1.mp4"
-      },
-      "seeding_key": {
-        "resource.key": "introduction-to-variables"
-      }
-    },
-    {
-      "name": "Introduction to Sprites",
-      "url": "https://youtu.be/aUHzpGt9nso",
-      "key": "introduction_to_sprites",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_sprites-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "name": "Introduction to the Draw Loop",
-      "url": "https://youtu.be/G6QJeuHhqCM",
-      "key": "introduction_to_the_draw_loop",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_the_draw_loop"
-      }
-    },
-    {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing",
-      "key": "make-your-own-game",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "make-your-own-game"
-      }
-    },
-    {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1s2Q7SMhJCogVU5mht16UIzZLT-aAVz0gw5JRTuW9Vq0/edit",
-      "key": "make-your-own-game-1-2-3",
-      "properties": {
-        "type": "Peer Review",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "make-your-own-game-1-2-3"
-      }
-    },
-    {
-      "name": "Make Your Own Game ",
-      "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
-      "key": "make-your-own-game-exemplar-2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "make-your-own-game-exemplar-2020"
-      }
-    },
-    {
-      "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
-      "key": "make-your-own-game-sample-marked-rubrics",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "make-your-own-game-sample-marked-rubrics"
-      }
-    },
-    {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
-      "key": "make_your_own_game",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game"
-      }
-    },
-    {
-      "name": "Make Your Own Game - Student Checklist",
-      "url": "https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/edit",
-      "key": "make_your_own_game_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_-_student_checklist"
-      }
-    },
-    {
-      "name": "Mini Project - Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
-      "key": "mini-project-captioned-scenes-2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project-captioned-scenes-2020"
-      }
-    },
-    {
-      "name": "Mini-Project Guide - Side Scroller",
-      "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
-      "key": "mini-project-guide-side-scroller-exemplar-2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project-guide-side-scroller-exemplar-2020"
-      }
-    },
-    {
-      "name": "Naming Variables",
-      "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
-      "key": "naming_variables",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "naming_variables"
-      }
-    },
-    {
-      "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
-      "key": "planning-your-platform-game-exemplar-2020",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "planning-your-platform-game-exemplar-2020"
-      }
-    },
-    {
-      "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1JcjgqryqRKeyxieHrJlNlFQnSBybBjPIp3zolO3iJAE/edit",
-      "key": "platform-game-project-guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "platform-game-project-guide"
-      }
-    },
-    {
-      "name": "Defender Game",
-      "url": "https://docs.google.com/document/d/1vazgDOA8UtbbTfDLXC45DHVINs0LCKCOuJIc7tnFytY/edit",
-      "key": "project-guide-defender-game",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "project-guide-defender-game"
-      }
-    },
-    {
-      "name": "Random Dot Flipbook",
-      "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit",
-      "key": "random-dot-flipbook",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random-dot-flipbook"
-      }
-    },
-    {
-      "name": "Random Sprite Flipbook",
-      "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit",
-      "key": "random-sprite-flipbook",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random-sprite-flipbook"
-      }
-    },
-    {
-      "name": "Random Numbers",
-      "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
-      "key": "random_numbers",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "name": "Shapes and Parameters",
-      "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
-      "key": "shapes_and_parameters",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "shapes_and_parameters"
-      }
-    },
-    {
-      "name": "Shapes and Parameters",
-      "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
-      "key": "shapes_and_parameters_-_map_level",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher",
-        "download_url": "https://drive.google.com/a/code.org/uc?id=1qjYMu7Kvs-sKyAVGM2c_6NK3S6_Lo7Pm&export=download"
-      },
-      "seeding_key": {
-        "resource.key": "shapes_and_parameters_-_map_level"
-      }
-    },
-    {
-      "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
-      "key": "side-scroller",
-      "properties": {
-        "type": "Project Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "side-scroller"
-      }
-    },
-    {
-      "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
-      "key": "side-scroller-1",
-      "properties": {
-        "type": "Rubric",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "side-scroller-1"
-      }
-    },
-    {
-      "name": "Sprite Scene Planning",
-      "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
-      "key": "sprite-scene-planning",
-      "properties": {
-        "type": "Activity Guide",
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "sprite-scene-planning"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
-      "key": "sprite_properties",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "name": "Sprites",
-      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
-      "key": "sprites_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd3",
-      "key": "teacher_forum_1",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum_1"
-      }
-    },
-    {
-      "name": "The Animation Tab",
-      "url": "https://youtu.be/DQPruYTJ0Fk",
-      "key": "the_animation_tab",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_theanimationtab-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "name": "The Counter Pattern",
-      "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
-      "key": "the_counter_pattern",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the_counter_pattern"
-      }
-    },
-    {
-      "name": "The Draw Loop",
-      "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
-      "key": "the_draw_loop",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "the_draw_loop"
-      }
-    },
-    {
-      "name": "Variables",
-      "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
-      "key": "variables_1",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "variables_1"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://youtu.be/zcP94yMYqrI",
-      "key": "velocity_1",
-      "properties": {
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_velocity-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_1"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
-      "key": "velocity_2",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_2"
-      }
-    },
-    {
-      "name": "Velocity and the Counter Pattern",
-      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
-      "key": "velocity_and_the_counter_pattern_-_map_level_pdf_",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_and_the_counter_pattern_-_map_level_pdf_"
-      }
-    },
-    {
-      "name": "Flipbook Example - by Marnic Bos",
-      "url": "https://youtu.be/hol0p29cd8o",
-      "key": "youtube-flipbook",
-      "properties": {
-        "type": "Video",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "youtube-flipbook"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision-detection-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "velocity_and_the_counter_pattern_-_map_level_pdf_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "boolean_expressions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "booleans_and_comparison_operators"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "if_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_in_game_lab_-_part_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_in_game_lab_-_part_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_shapes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "calling_and_defining_functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "resource.key": "animated-scene"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "resource.key": "animated-scene-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "resource.key": "animated-scene-planning-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "resource.key": "captioned-scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "resource.key": "mini-project-captioned-scenes-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "resource.key": "sprite-scene-planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "flyer-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "flyer-game-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "resource.key": "flyer-game-project-guide-exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "mini-project-guide-side-scroller-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "side-scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "resource.key": "side-scroller-1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "if-else_statements_-_map_level_pdf_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "if_else_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "colored-shape-drawing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing-shapes-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs-entertainment-activity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "cs_in_entertainment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "extra_code_in_challenge_levels_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-1-2-3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make-your-own-game-sample-marked-rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "computer-science-practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "extra_code_in_challenge_levels_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-1-2-3-4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-marked-rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive-card-project-guide-2019"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters_-_map_level"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "animating-sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "the_counter_pattern"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "introduction_to_the_draw_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "random-dot-flipbook"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "random-sprite-flipbook"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "the_draw_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "youtube-flipbook"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "project-guide-defender-game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "planning-your-platform-game-exemplar-2020"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "platform-game-project-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "introduction-to-variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "naming_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "velocity_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "velocity_2"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_code_1",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_2",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_2",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_2",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "csd3-2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum_1",
-        "script.name": "csd3-2021"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "parameter",
-      "word": "Parameter",
-      "definition": "An extra piece of information passed to a function to customize it for a specific need",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "property",
-      "word": "Property",
-      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A character on the screen with properties that describe its location, movement, and look.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "dot_notation",
-      "word": "Dot notation",
-      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "key": "property",
-      "word": "Property",
-      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see whether it is true before deciding to take an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run when certain conditions are true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "boolean_expression",
-      "word": "Boolean Expression",
-      "definition": "in programming, an expression that evaluates to True or False. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run when certain conditions are true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "abstraction",
-      "word": "Abstraction",
-      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "key": "abstraction",
-      "word": "Abstraction",
-      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A named bit of programming instructions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "vocabulary.key": "function"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
     {
@@ -17450,14 +15551,14 @@
       "seeding_key": {
         "lesson.key": "Shapes and Parameters",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "rect"
+        "programming_expression.key": "background"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Shapes and Parameters",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "background"
+        "programming_expression.key": "rect"
       }
     },
     {
@@ -17471,14 +15572,14 @@
       "seeding_key": {
         "lesson.key": "Variables",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "declareNoAssign_x"
+        "programming_expression.key": "declareAssign_x"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "declareAssign_x"
+        "programming_expression.key": "declareNoAssign_x"
       }
     },
     {
@@ -17492,28 +15593,14 @@
       "seeding_key": {
         "lesson.key": "Sprites",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "createSprite"
+        "programming_expression.key": "drawSprites"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprites",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "drawSprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "rotation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "y"
+        "programming_expression.key": "createSprite"
       }
     },
     {
@@ -17532,9 +15619,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Draw Loop",
+        "lesson.key": "Sprite Properties",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "World.frameRate"
+        "programming_expression.key": "y"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "rotation"
       }
     },
     {
@@ -17546,16 +15640,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals",
+        "lesson.key": "The Draw Loop",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "equalityOperator"
+        "programming_expression.key": "World.frameRate"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "greaterThanOrEqualOperator"
+        "programming_expression.key": "lessThanOrEqualOperator"
       }
     },
     {
@@ -17569,14 +15663,14 @@
       "seeding_key": {
         "lesson.key": "Conditionals",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "ifBlock"
+        "programming_expression.key": "greaterThanOrEqualOperator"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "lessThanOperator"
+        "programming_expression.key": "equalityOperator"
       }
     },
     {
@@ -17590,7 +15684,14 @@
       "seeding_key": {
         "lesson.key": "Conditionals",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "lessThanOrEqualOperator"
+        "programming_expression.key": "lessThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ifBlock"
       }
     },
     {
@@ -17618,7 +15719,21 @@
       "seeding_key": {
         "lesson.key": "Mouse Input",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "keyWentDown"
+        "programming_expression.key": "mouseDidMove"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ifElseBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseWentUp"
       }
     },
     {
@@ -17639,21 +15754,14 @@
       "seeding_key": {
         "lesson.key": "Mouse Input",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "ifElseBlock"
+        "programming_expression.key": "keyWentDown"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Mouse Input",
+        "lesson.key": "Velocity",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseDidMove"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseWentUp"
+        "programming_expression.key": "rotationSpeed"
       }
     },
     {
@@ -17668,13 +15776,6 @@
         "lesson.key": "Velocity",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "velocityX"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "rotationSpeed"
       }
     },
     {
@@ -17695,6 +15796,27 @@
       "seeding_key": {
         "lesson.key": "Collisions",
         "programming_environment.name": "gamelab",
+        "programming_expression.key": "displace"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "collide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "bounciness"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
         "programming_expression.key": "setCollider"
       }
     },
@@ -17709,28 +15831,7 @@
       "seeding_key": {
         "lesson.key": "Collisions",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "displace"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "bounciness"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
         "programming_expression.key": "bounce"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "collide"
       }
     },
     {
