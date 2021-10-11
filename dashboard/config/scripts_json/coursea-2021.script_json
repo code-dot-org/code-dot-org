@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-10-11 21:31:45 UTC",
+    "serialized_at": "2021-10-11 21:32:14 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursea-2021"
@@ -7656,23 +7656,13 @@
       }
     },
     {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
+        "vocabulary.key": "bug"
       }
     },
     {
@@ -7683,6 +7673,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "click"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "double_click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double_click"
       }
     },
     {
@@ -7706,206 +7716,6 @@
       }
     },
     {
-      "key": "double_click",
-      "word": "Double-Click",
-      "definition": "Press the mouse button very quickly",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "double_click"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -7923,6 +7733,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
       }
     }
   ],
