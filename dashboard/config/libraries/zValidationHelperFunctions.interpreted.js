@@ -18,11 +18,14 @@ function setSuccessCriteria(criteria){
  * Sets successTime if all success criteria
  * have been met.
  */
-function setSuccessTime(){
+function setSuccessTime(criteria){
   if (!validationProps.successTime) {
     var success = true;
-    for (var criterion in validationProps.successCriteria) {
-      if (!criterion) { success = false; break; }
+    for (var criterion in criteria) {
+      if (!criterion) {
+        success = false;
+        break;
+      }
     }
     if (success) {
       validationProps.successTime = World.frameCount;
@@ -275,6 +278,24 @@ function checkSpriteClicked(){
 }
 
 /**
+ * Checks if a sprite was clicked in current frame and returns spriteId if so.
+ *
+ * @return {int} Returns spriteId of the sprite that was
+ *         clicked and and -1 otherwise.
+ */
+function getClickedSpriteId(){
+  if (eventLog.length > validationProps.previous.eventLogLength) {
+    var currentEvent = eventLog[eventLog.length - 1];
+    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
+    if ((currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) &&
+        clickedSpriteId) {
+      return clickedSpriteId;
+    }
+  }
+  return -1;
+}
+
+/**
  * Checks if a clicked sprite causes some sprite to speak in the frame.
  *
  * @return {boolean} Returns true if a clicked sprite
@@ -328,12 +349,11 @@ function checkBackgroundChanged(){
 }
 
 
-//check for unclicked sprites, and show hand with rings
+
 /**
- * Checks if the background was changed.
+ * Checks for unclicked sprites, and show hand with rings
  *
- * @return {boolean} Returns true if the background
- *         was changed and false otherwise.
+ * @return 
  */
 function checkForUnclickedSprites(spriteIds, eventLog){
   for(var i=0;i<spriteIds.length;i++){
