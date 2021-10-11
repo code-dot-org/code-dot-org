@@ -681,7 +681,7 @@ class ScriptLevel < ApplicationRecord
       end
       raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
     end
-    my_levels.sort_by(&:id).map(&:key)
+    my_levels.sort_by(&:id).map(&:key).sort
   end
 
   # @param [Array<Hash>] levels_data - Array of hashes each representing a level
