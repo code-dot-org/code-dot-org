@@ -9,15 +9,21 @@
     "id",
     "checked"
   ],
-  "params": [
-    "\"id\"",
-    "false",
-    "\"group\""
-  ],
   "dropdown": {
     "1": [
       "true",
       "false"
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "false"
+    },
+    {
+      "name": "\"group\""
+    }
+  ]
 }

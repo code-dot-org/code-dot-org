@@ -4,8 +4,10 @@
   "paletteParams": [
     "depth"
   ],
-  "params": [
-    "1"
-  ],
-  "modeOptionName": "*.setDepthEach"
+  "modeOptionName": "*.setDepthEach",
+  "parameters": [
+    {
+      "name": "1"
+    }
+  ]
 }

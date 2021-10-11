@@ -5,11 +5,15 @@
     "ms",
     "callback"
   ],
-  "params": [
-    "1000",
-    "function() {\n  \n}"
-  ],
   "allowFunctionDrop": {
     "1": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "1000"
+    },
+    {
+      "name": "function() {\n  \n}"
+    }
+  ]
 }

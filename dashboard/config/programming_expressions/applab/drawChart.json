@@ -10,12 +10,18 @@
     "chartType",
     "chartData"
   ],
-  "params": [
-    "\"chartId\"",
-    "\"bar\"",
-    "[\n\t{ label: \"Row 1\", value: 1 },\n\t{ label: \"Row 2\", value: 2 }\n]"
-  ],
   "allowFunctionDrop": {
     "4": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"chartId\""
+    },
+    {
+      "name": "\"bar\""
+    },
+    {
+      "name": "[\n\t{ label: \"Row 1\", value: 1 },\n\t{ label: \"Row 2\", value: 2 }\n]"
+    }
+  ]
 }

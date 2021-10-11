@@ -6,9 +6,15 @@
     "\"key\"",
     "\"value\""
   ],
-  "params": [
-    "object",
-    "\"key\"",
-    "\"value\""
+  "parameters": [
+    {
+      "name": "object"
+    },
+    {
+      "name": "\"key\""
+    },
+    {
+      "name": "\"value\""
+    }
   ]
 }

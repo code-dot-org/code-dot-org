@@ -6,10 +6,16 @@
     "low",
     "high"
   ],
-  "params": [
-    "1.1",
-    "0",
-    "1"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "1.1"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "1"
+    }
+  ]
 }

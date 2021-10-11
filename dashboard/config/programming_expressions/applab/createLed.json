@@ -4,8 +4,10 @@
   "paletteParams": [
     "pin"
   ],
-  "params": [
-    "0"
-  ],
-  "type": "either"
+  "type": "either",
+  "parameters": [
+    {
+      "name": "0"
+    }
+  ]
 }

@@ -4,9 +4,11 @@
   "paletteParams": [
     "frame"
   ],
-  "params": [
-    "0"
-  ],
   "modeOptionName": "*.changeFrame",
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "0"
+    }
+  ]
 }

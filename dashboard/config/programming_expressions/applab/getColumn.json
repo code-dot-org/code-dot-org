@@ -5,10 +5,14 @@
     "table",
     "column"
   ],
-  "params": [
-    "\"mytable\"",
-    "\"mycolumn\""
-  ],
   "nativeIsAsync": true,
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "\"mytable\""
+    },
+    {
+      "name": "\"mycolumn\""
+    }
+  ]
 }

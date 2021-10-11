@@ -9,15 +9,19 @@
     "url",
     "loop"
   ],
-  "params": [
-    "\"sound://default.mp3\"",
-    "false"
-  ],
   "dropdown": {
     "1": [
       "true",
       "false"
     ]
   },
-  "nativeCallsBackInterpreter": true
+  "nativeCallsBackInterpreter": true,
+  "parameters": [
+    {
+      "name": "\"sound://default.mp3\""
+    },
+    {
+      "name": "false"
+    }
+  ]
 }

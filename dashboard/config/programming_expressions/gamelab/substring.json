@@ -5,10 +5,14 @@
     "start",
     "end"
   ],
-  "params": [
-    "6",
-    "11"
-  ],
   "modeOptionName": "*.substring",
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "6"
+    },
+    {
+      "name": "11"
+    }
+  ]
 }

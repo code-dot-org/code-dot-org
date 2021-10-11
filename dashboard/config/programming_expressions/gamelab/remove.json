@@ -4,8 +4,10 @@
   "paletteParams": [
     "sprite"
   ],
-  "params": [
-    "sprite"
-  ],
-  "modeOptionName": "*.remove"
+  "modeOptionName": "*.remove",
+  "parameters": [
+    {
+      "name": "sprite"
+    }
+  ]
 }

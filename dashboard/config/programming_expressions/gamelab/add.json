@@ -4,8 +4,10 @@
   "paletteParams": [
     "sprite"
   ],
-  "params": [
-    "sprite"
-  ],
-  "modeOptionName": "*.add"
+  "modeOptionName": "*.add",
+  "parameters": [
+    {
+      "name": "sprite"
+    }
+  ]
 }

@@ -6,10 +6,16 @@
     "stop",
     "amt"
   ],
-  "params": [
-    "0",
-    "100",
-    "0.1"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "0"
+    },
+    {
+      "name": "100"
+    },
+    {
+      "name": "0.1"
+    }
+  ]
 }

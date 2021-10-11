@@ -4,8 +4,10 @@
   "paletteParams": [
     "url"
   ],
-  "params": [
-    "\"https://code.org/images/logo.png\""
-  ],
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "\"https://code.org/images/logo.png\""
+    }
+  ]
 }

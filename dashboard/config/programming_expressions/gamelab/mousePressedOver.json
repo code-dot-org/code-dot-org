@@ -3,9 +3,11 @@
   "paletteParams": [
     "sprite"
   ],
-  "params": [
-    "sprite"
-  ],
   "category": "World",
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "sprite"
+    }
+  ]
 }

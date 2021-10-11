@@ -5,8 +5,12 @@
     "object",
     "\"key\""
   ],
-  "params": [
-    "{\"key\": \"value\"}",
-    "\"key\""
+  "parameters": [
+    {
+      "name": "{\"key\": \"value\"}"
+    },
+    {
+      "name": "\"key\""
+    }
   ]
 }

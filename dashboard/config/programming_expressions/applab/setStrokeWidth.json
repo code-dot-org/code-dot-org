@@ -4,7 +4,9 @@
   "paletteParams": [
     "width"
   ],
-  "params": [
-    "3"
+  "parameters": [
+    {
+      "name": "3"
+    }
   ]
 }

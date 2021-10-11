@@ -5,14 +5,16 @@
   "paletteParams": [
     "orientationType"
   ],
-  "params": [
-    "\"inclination\""
-  ],
   "dropdown": {
     "0": [
       "\"inclination\"",
       "\"pitch\"",
       "\"roll\""
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"inclination\""
+    }
+  ]
 }

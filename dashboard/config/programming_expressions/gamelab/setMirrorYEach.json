@@ -4,8 +4,10 @@
   "paletteParams": [
     "dir"
   ],
-  "params": [
-    "-1"
-  ],
-  "modeOptionName": "*.setMirrorYEach"
+  "modeOptionName": "*.setMirrorYEach",
+  "parameters": [
+    {
+      "name": "-1"
+    }
+  ]
 }

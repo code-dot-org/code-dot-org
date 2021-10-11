@@ -4,10 +4,12 @@
   "paletteParams": [
     "target"
   ],
-  "params": [
-    "target"
-  ],
   "modeOptionName": "group_isTouching",
   "noAutocomplete": true,
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "target"
+    }
+  ]
 }

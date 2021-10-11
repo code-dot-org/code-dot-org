@@ -5,9 +5,13 @@
     "min",
     "max"
   ],
-  "params": [
-    "1",
-    "5"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "1"
+    },
+    {
+      "name": "5"
+    }
+  ]
 }

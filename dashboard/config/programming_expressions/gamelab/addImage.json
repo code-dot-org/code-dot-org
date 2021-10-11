@@ -5,10 +5,14 @@
     "label",
     "image"
   ],
-  "params": [
-    "\"img1\"",
-    "img"
-  ],
   "modeOptionName": "*.addImage",
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "\"img1\""
+    },
+    {
+      "name": "img"
+    }
+  ]
 }

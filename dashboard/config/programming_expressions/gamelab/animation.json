@@ -6,10 +6,16 @@
     "x",
     "y"
   ],
-  "params": [
-    "anim",
-    "50",
-    "50"
-  ],
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "anim"
+    },
+    {
+      "name": "50"
+    },
+    {
+      "name": "50"
+    }
+  ]
 }

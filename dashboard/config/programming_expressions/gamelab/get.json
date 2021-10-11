@@ -4,9 +4,11 @@
   "paletteParams": [
     "i"
   ],
-  "params": [
-    "0"
-  ],
   "modeOptionName": "*.get",
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "0"
+    }
+  ]
 }

@@ -4,8 +4,10 @@
   "paletteParams": [
     "lifetime"
   ],
-  "params": [
-    "5"
-  ],
-  "modeOptionName": "*.setLifetimeEach"
+  "modeOptionName": "*.setLifetimeEach",
+  "parameters": [
+    {
+      "name": "5"
+    }
+  ]
 }

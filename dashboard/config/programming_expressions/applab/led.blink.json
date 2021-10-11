@@ -4,7 +4,9 @@
   "paletteParams": [
     "interval"
   ],
-  "params": [
-    "200"
+  "parameters": [
+    {
+      "name": "200"
+    }
   ]
 }

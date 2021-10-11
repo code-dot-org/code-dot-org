@@ -4,7 +4,9 @@
   "paletteParams": [
     "mode"
   ],
-  "params": [
-    "DEGREES"
+  "parameters": [
+    {
+      "name": "DEGREES"
+    }
   ]
 }

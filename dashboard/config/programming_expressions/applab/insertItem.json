@@ -6,10 +6,16 @@
     "index",
     "item"
   ],
-  "params": [
-    "list",
-    "2",
-    "\"c\""
-  ],
-  "dontMarshal": true
+  "dontMarshal": true,
+  "parameters": [
+    {
+      "name": "list"
+    },
+    {
+      "name": "2"
+    },
+    {
+      "name": "\"c\""
+    }
+  ]
 }

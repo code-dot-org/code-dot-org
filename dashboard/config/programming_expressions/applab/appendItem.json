@@ -5,9 +5,13 @@
     "list",
     "item"
   ],
-  "params": [
-    "list",
-    "\"f\""
-  ],
-  "dontMarshal": true
+  "dontMarshal": true,
+  "parameters": [
+    {
+      "name": "list"
+    },
+    {
+      "name": "\"f\""
+    }
+  ]
 }

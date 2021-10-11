@@ -8,8 +8,11 @@
   "paletteParams": [
     "url"
   ],
-  "params": [
-    "\"sound://default.mp3\""
-  ],
-  "dropdown": {}
+  "dropdown": {
+  },
+  "parameters": [
+    {
+      "name": "\"sound://default.mp3\""
+    }
+  ]
 }

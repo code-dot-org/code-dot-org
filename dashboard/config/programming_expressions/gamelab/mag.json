@@ -5,9 +5,13 @@
     "a",
     "b"
   ],
-  "params": [
-    "100",
-    "100"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "100"
+    },
+    {
+      "name": "100"
+    }
+  ]
 }

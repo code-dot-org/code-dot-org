@@ -5,9 +5,13 @@
     "y",
     "x"
   ],
-  "params": [
-    "10",
-    "10"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "10"
+    },
+    {
+      "name": "10"
+    }
+  ]
 }

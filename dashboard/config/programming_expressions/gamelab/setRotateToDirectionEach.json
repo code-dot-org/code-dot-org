@@ -4,8 +4,10 @@
   "paletteParams": [
     "bool"
   ],
-  "params": [
-    "true"
-  ],
-  "modeOptionName": "*.setRotateToDirectionEach"
+  "modeOptionName": "*.setRotateToDirectionEach",
+  "parameters": [
+    {
+      "name": "true"
+    }
+  ]
 }

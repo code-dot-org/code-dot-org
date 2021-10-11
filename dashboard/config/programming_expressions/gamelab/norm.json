@@ -6,10 +6,16 @@
     "start",
     "stop"
   ],
-  "params": [
-    "90",
-    "0",
-    "100"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "90"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "100"
+    }
+  ]
 }

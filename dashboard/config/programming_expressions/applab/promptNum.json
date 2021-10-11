@@ -2,7 +2,9 @@
   "func": "promptNum",
   "category": "Variables",
   "type": "value",
-  "params": [
-    "__"
+  "parameters": [
+    {
+      "name": "__"
+    }
   ]
 }

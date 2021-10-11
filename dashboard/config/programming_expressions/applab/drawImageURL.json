@@ -8,11 +8,13 @@
   "paletteParams": [
     "url"
   ],
-  "params": [
-    "\"https://code.org/images/logo.png\""
-  ],
   "allowFunctionDrop": {
     "1": true,
     "5": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"https://code.org/images/logo.png\""
+    }
+  ]
 }

@@ -8,8 +8,10 @@
   "paletteParams": [
     "type"
   ],
-  "params": [
-    "\"rectangle\""
-  ],
-  "modeOptionName": "*.setColliderEach"
+  "modeOptionName": "*.setColliderEach",
+  "parameters": [
+    {
+      "name": "\"rectangle\""
+    }
+  ]
 }

@@ -1,8 +1,12 @@
 {
   "func": "setStyle",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"color:red;\""
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "\"color:red;\""
+    }
   ]
 }

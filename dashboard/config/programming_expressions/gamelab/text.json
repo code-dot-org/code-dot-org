@@ -6,13 +6,19 @@
     "x",
     "y"
   ],
-  "params": [
-    "\"text\"",
-    "0",
-    "15"
-  ],
   "paramButtons": {
     "minArgs": 3,
     "maxArgs": 5
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"text\""
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "15"
+    }
+  ]
 }

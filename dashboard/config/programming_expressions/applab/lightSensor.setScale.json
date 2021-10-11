@@ -1,12 +1,16 @@
 {
   "func": "lightSensor.setScale",
   "category": "Circuit",
-  "params": [
-    "0",
-    "100"
-  ],
   "paletteParams": [
     "low",
     "high"
+  ],
+  "parameters": [
+    {
+      "name": "0"
+    },
+    {
+      "name": "100"
+    }
   ]
 }

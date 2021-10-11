@@ -5,9 +5,6 @@
   "paletteParams": [
     "orientationType"
   ],
-  "params": [
-    "\"x\""
-  ],
   "dropdown": {
     "0": [
       "\"x\"",
@@ -15,5 +12,10 @@
       "\"z\"",
       "\"total\""
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"x\""
+    }
+  ]
 }

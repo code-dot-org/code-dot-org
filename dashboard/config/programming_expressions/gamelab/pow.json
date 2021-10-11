@@ -5,9 +5,13 @@
     "n",
     "e"
   ],
-  "params": [
-    "10",
-    "2"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "10"
+    },
+    {
+      "name": "2"
+    }
+  ]
 }

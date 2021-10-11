@@ -8,9 +8,6 @@
   "paletteParams": [
     "angle"
   ],
-  "params": [
-    "90"
-  ],
   "dropdown": {
     "0": [
       "30",
@@ -18,5 +15,10 @@
       "60",
       "90"
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "90"
+    }
+  ]
 }

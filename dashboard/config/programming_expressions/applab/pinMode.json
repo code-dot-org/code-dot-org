@@ -5,15 +5,19 @@
     "pin",
     "mode"
   ],
-  "params": [
-    "13",
-    "\"output\""
-  ],
   "dropdown": {
     "1": [
       "\"output\"",
       "\"input\"",
       "\"analog\""
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "13"
+    },
+    {
+      "name": "\"output\""
+    }
+  ]
 }

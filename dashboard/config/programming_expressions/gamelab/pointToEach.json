@@ -5,9 +5,13 @@
     "x",
     "y"
   ],
-  "params": [
-    "200",
-    "200"
-  ],
-  "modeOptionName": "*.pointToEach"
+  "modeOptionName": "*.pointToEach",
+  "parameters": [
+    {
+      "name": "200"
+    },
+    {
+      "name": "200"
+    }
+  ]
 }

@@ -4,7 +4,9 @@
   "paletteParams": [
     "message"
   ],
-  "params": [
-    "\"message\""
+  "parameters": [
+    {
+      "name": "\"message\""
+    }
   ]
 }

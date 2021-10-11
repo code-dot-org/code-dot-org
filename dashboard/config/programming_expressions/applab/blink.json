@@ -4,8 +4,10 @@
   "paletteParams": [
     "interval"
   ],
-  "params": [
-    "100"
-  ],
-  "modeOptionName": "*.blink"
+  "modeOptionName": "*.blink",
+  "parameters": [
+    {
+      "name": "100"
+    }
+  ]
 }

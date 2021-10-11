@@ -5,12 +5,16 @@
     "frequency",
     "duration"
   ],
-  "params": [
-    "500",
-    "100"
-  ],
   "paramButtons": {
     "minArgs": 1,
     "maxArgs": 2
-  }
+  },
+  "parameters": [
+    {
+      "name": "500"
+    },
+    {
+      "name": "100"
+    }
+  ]
 }

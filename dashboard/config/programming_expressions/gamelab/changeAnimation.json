@@ -4,9 +4,11 @@
   "paletteParams": [
     "label"
   ],
-  "params": [
-    "\"animation_1\""
-  ],
   "modeOptionName": "*.changeAnimation",
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "\"animation_1\""
+    }
+  ]
 }

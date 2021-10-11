@@ -4,7 +4,9 @@
   "paletteParams": [
     "id"
   ],
-  "params": [
-    "\"id\""
+  "parameters": [
+    {
+      "name": "\"id\""
+    }
   ]
 }

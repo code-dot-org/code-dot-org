@@ -6,11 +6,15 @@
     "callback",
     "ms"
   ],
-  "params": [
-    "function() {\n  \n}",
-    "1000"
-  ],
   "allowFunctionDrop": {
     "0": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "function() {\n  \n}"
+    },
+    {
+      "name": "1000"
+    }
+  ]
 }

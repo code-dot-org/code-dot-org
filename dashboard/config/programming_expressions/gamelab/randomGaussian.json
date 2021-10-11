@@ -5,9 +5,13 @@
     "mean",
     "sd"
   ],
-  "params": [
-    "0",
-    "15"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "0"
+    },
+    {
+      "name": "15"
+    }
+  ]
 }

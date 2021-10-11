@@ -4,7 +4,9 @@
   "paletteParams": [
     "pixels"
   ],
-  "params": [
-    "12"
+  "parameters": [
+    {
+      "name": "12"
+    }
   ]
 }

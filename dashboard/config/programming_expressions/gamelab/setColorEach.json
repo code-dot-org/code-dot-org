@@ -4,9 +4,6 @@
   "paletteParams": [
     "color"
   ],
-  "params": [
-    "\"blue\""
-  ],
   "dropdown": {
     "0": [
       "\"red\"",
@@ -17,5 +14,10 @@
       "rgb(255, 0, 0, 0.5)"
     ]
   },
-  "modeOptionName": "*.setColorEach"
+  "modeOptionName": "*.setColorEach",
+  "parameters": [
+    {
+      "name": "\"blue\""
+    }
+  ]
 }

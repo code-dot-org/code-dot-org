@@ -5,8 +5,12 @@
     "pin",
     "value"
   ],
-  "params": [
-    "5",
-    "150"
+  "parameters": [
+    {
+      "name": "5"
+    },
+    {
+      "name": "150"
+    }
   ]
 }

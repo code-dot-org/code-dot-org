@@ -4,8 +4,10 @@
   "paletteParams": [
     "speed"
   ],
-  "params": [
-    "5"
-  ],
-  "modeOptionName": "*.setRotationSpeedEach"
+  "modeOptionName": "*.setRotationSpeedEach",
+  "parameters": [
+    {
+      "name": "5"
+    }
+  ]
 }

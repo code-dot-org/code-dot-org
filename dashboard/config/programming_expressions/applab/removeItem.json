@@ -5,9 +5,13 @@
     "list",
     "index"
   ],
-  "params": [
-    "list",
-    "0"
-  ],
-  "dontMarshal": true
+  "dontMarshal": true,
+  "parameters": [
+    {
+      "name": "list"
+    },
+    {
+      "name": "0"
+    }
+  ]
 }

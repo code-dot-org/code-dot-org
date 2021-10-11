@@ -5,9 +5,13 @@
     "x",
     "y"
   ],
-  "params": [
-    "200",
-    "200"
-  ],
-  "modeOptionName": "*.pointTo"
+  "modeOptionName": "*.pointTo",
+  "parameters": [
+    {
+      "name": "200"
+    },
+    {
+      "name": "200"
+    }
+  ]
 }

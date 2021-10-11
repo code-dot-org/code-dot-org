@@ -4,9 +4,11 @@
   "paletteParams": [
     "label"
   ],
-  "params": [
-    "\"img1\""
-  ],
   "modeOptionName": "*.changeImage",
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "\"img1\""
+    }
+  ]
 }

@@ -4,14 +4,16 @@
   "paletteParams": [
     "radius"
   ],
-  "params": [
-    "5"
-  ],
   "dropdown": {
     "0": [
       "1",
       "5",
       "10"
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "5"
+    }
+  ]
 }

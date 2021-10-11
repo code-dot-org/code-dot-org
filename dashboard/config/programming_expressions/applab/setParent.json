@@ -1,8 +1,12 @@
 {
   "func": "setParent",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"parentId\""
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "\"parentId\""
+    }
   ]
 }

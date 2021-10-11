@@ -9,13 +9,25 @@
     "x3",
     "y3"
   ],
-  "params": [
-    "200",
-    "0",
-    "0",
-    "400",
-    "400",
-    "400"
-  ],
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "200"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "400"
+    },
+    {
+      "name": "400"
+    },
+    {
+      "name": "400"
+    }
+  ]
 }

@@ -4,8 +4,10 @@
   "paletteParams": [
     "dir"
   ],
-  "params": [
-    "-1"
-  ],
-  "modeOptionName": "*.mirrorX"
+  "modeOptionName": "*.mirrorX",
+  "parameters": [
+    {
+      "name": "-1"
+    }
+  ]
 }

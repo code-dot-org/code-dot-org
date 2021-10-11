@@ -6,11 +6,19 @@
     "dpadFourWay",
     "mobileOnly"
   ],
-  "params": [
-    "true",
-    "true",
-    "true",
-    "true"
-  ],
-  "category": "World"
+  "category": "World",
+  "parameters": [
+    {
+      "name": "true"
+    },
+    {
+      "name": "true"
+    },
+    {
+      "name": "true"
+    },
+    {
+      "name": "true"
+    }
+  ]
 }

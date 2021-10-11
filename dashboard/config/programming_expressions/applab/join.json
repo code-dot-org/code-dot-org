@@ -5,8 +5,10 @@
   "paletteParams": [
     "separator"
   ],
-  "params": [
-    "\"-\""
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "\"-\""
+    }
+  ]
 }

@@ -4,8 +4,10 @@
   "paletteParams": [
     "interval"
   ],
-  "params": [
-    "300"
-  ],
-  "modeOptionName": "*.pulse"
+  "modeOptionName": "*.pulse",
+  "parameters": [
+    {
+      "name": "300"
+    }
+  ]
 }

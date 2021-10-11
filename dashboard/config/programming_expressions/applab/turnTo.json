@@ -4,9 +4,6 @@
   "paletteParams": [
     "angle"
   ],
-  "params": [
-    "0"
-  ],
   "dropdown": {
     "0": [
       "0",
@@ -14,5 +11,10 @@
       "180",
       "270"
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "0"
+    }
+  ]
 }

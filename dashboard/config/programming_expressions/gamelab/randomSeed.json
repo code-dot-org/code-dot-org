@@ -4,7 +4,9 @@
   "paletteParams": [
     "seed"
   ],
-  "params": [
-    "99"
+  "parameters": [
+    {
+      "name": "99"
+    }
   ]
 }
