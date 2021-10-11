@@ -36,8 +36,8 @@
     "validation_code": "var spriteIds = getSpriteIdsInUse();\r\nvar validationInfo = getValidationInfo();\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {};\r\n}\r\n\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\nvar newForegroundEffect =\r\n    validationProps.previous.numForegroundEffects <\r\n    validationInfo.foregroundEffects.length;\r\n\r\nif (hasLineEvent && newForegroundEffect) {\r\n  setSuccessFrame();\r\n  validationProps.previous.newForegroundEffect =\r\n    validationProps.previous.newForegroundEffect || newForegroundEffect;\r\n}\r\nvalidationProps.previous.numForegroundEffects = validationInfo.foregroundEffects.length;\r\n\r\ndrawProgressBar();\r\n\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'poemBotSuccessLevel4');\r\n  } else {\r\n    levelFailure(3, 'poemBotForegroundEffectWithEvent');\r\n  }\r\n}",
     "hide_pause_button": "true",
     "instructions_icon": "octiSomber",
-    "show_poem_dropdown": "true",
     "preload_asset_list": null,
+    "standalone_app_name": "poetry_hoc",
     "default_poem": "twain"
   },
   "game_id": 69,

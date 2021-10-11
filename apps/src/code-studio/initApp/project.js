@@ -906,6 +906,8 @@ var projects = (module.exports = {
           return 'basketball';
         }
         return 'bounce';
+      case 'poetry':
+        return appOptions.level.standaloneAppName;
       default:
         return null;
     }
