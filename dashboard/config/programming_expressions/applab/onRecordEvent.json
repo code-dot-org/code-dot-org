@@ -5,11 +5,15 @@
     "table",
     "callback"
   ],
-  "params": [
-    "\"mytable\"",
-    "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"
-  ],
   "allowFunctionDrop": {
     "1": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"mytable\""
+    },
+    {
+      "name": "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"
+    }
+  ]
 }

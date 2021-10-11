@@ -7,11 +7,19 @@
     "y",
     "a"
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0",
-    "255"
-  ],
-  "dontMarshal": true
+  "dontMarshal": true,
+  "parameters": [
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "255"
+    }
+  ]
 }

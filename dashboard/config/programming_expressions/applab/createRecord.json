@@ -6,13 +6,19 @@
     "record",
     "callback"
   ],
-  "params": [
-    "\"mytable\"",
-    "{name:'Alice'}",
-    "function(record) {\n  \n}"
-  ],
   "allowFunctionDrop": {
     "2": true,
     "3": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"mytable\""
+    },
+    {
+      "name": "{name:'Alice'}"
+    },
+    {
+      "name": "function(record) {\n  \n}"
+    }
+  ]
 }

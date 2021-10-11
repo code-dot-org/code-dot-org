@@ -4,10 +4,12 @@
   "paletteParams": [
     "key"
   ],
-  "params": [
-    "\"key\""
-  ],
   "type": "value",
   "nativeIsAsync": true,
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "\"key\""
+    }
+  ]
 }

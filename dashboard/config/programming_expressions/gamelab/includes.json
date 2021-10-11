@@ -4,9 +4,11 @@
   "paletteParams": [
     "searchValue"
   ],
-  "params": [
-    "\"World\""
-  ],
   "modeOptionName": "*.includes",
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "\"World\""
+    }
+  ]
 }

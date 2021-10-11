@@ -4,8 +4,10 @@
   "paletteParams": [
     "velocityY"
   ],
-  "params": [
-    "3"
-  ],
-  "modeOptionName": "*.setVelocityYEach"
+  "modeOptionName": "*.setVelocityYEach",
+  "parameters": [
+    {
+      "name": "3"
+    }
+  ]
 }

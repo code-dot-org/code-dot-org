@@ -5,9 +5,13 @@
     "speed",
     "angle"
   ],
-  "params": [
-    "1",
-    "90"
-  ],
-  "modeOptionName": "*.addSpeed"
+  "modeOptionName": "*.addSpeed",
+  "parameters": [
+    {
+      "name": "1"
+    },
+    {
+      "name": "90"
+    }
+  ]
 }

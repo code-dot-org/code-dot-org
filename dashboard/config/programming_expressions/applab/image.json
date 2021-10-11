@@ -5,9 +5,14 @@
     "id",
     "url"
   ],
-  "params": [
-    "\"id\"",
-    "\"https://code.org/images/logo.png\""
-  ],
-  "dropdown": {}
+  "dropdown": {
+  },
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "\"https://code.org/images/logo.png\""
+    }
+  ]
 }

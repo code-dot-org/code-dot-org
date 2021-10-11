@@ -4,9 +4,11 @@
   "paletteParams": [
     "sprite"
   ],
-  "params": [
-    "sprite"
-  ],
   "modeOptionName": "*.contains",
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "sprite"
+    }
+  ]
 }

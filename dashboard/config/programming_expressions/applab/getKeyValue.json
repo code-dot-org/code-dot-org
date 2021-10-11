@@ -5,12 +5,16 @@
     "key",
     "callback"
   ],
-  "params": [
-    "\"key\"",
-    "function (value) {\n  \n}"
-  ],
   "allowFunctionDrop": {
     "1": true,
     "2": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"key\""
+    },
+    {
+      "name": "function (value) {\n  \n}"
+    }
+  ]
 }

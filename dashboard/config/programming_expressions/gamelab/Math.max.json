@@ -2,8 +2,10 @@
   "func": "Math.max",
   "category": "Math",
   "type": "value",
-  "params": [
-    "__"
-  ],
-  "docFunc": "mathMax"
+  "docFunc": "mathMax",
+  "parameters": [
+    {
+      "name": "__"
+    }
+  ]
 }

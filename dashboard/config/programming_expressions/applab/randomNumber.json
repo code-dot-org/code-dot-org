@@ -2,8 +2,12 @@
   "func": "randomNumber",
   "category": "Math",
   "type": "value",
-  "params": [
-    "1",
-    "10"
+  "parameters": [
+    {
+      "name": "1"
+    },
+    {
+      "name": "10"
+    }
   ]
 }

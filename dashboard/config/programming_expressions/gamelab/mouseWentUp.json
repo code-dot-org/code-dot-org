@@ -3,9 +3,11 @@
   "paletteParams": [
     "button"
   ],
-  "params": [
-    "\"leftButton\""
-  ],
   "category": "World",
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "\"leftButton\""
+    }
+  ]
 }

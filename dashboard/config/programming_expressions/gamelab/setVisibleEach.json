@@ -4,8 +4,10 @@
   "paletteParams": [
     "bool"
   ],
-  "params": [
-    "false"
-  ],
-  "modeOptionName": "*.setVisibleEach"
+  "modeOptionName": "*.setVisibleEach",
+  "parameters": [
+    {
+      "name": "false"
+    }
+  ]
 }

@@ -5,10 +5,14 @@
     "x",
     "y"
   ],
-  "params": [
-    "200",
-    "200"
-  ],
   "noAutocomplete": true,
-  "docFunc": "createSprite"
+  "docFunc": "createSprite",
+  "parameters": [
+    {
+      "name": "200"
+    },
+    {
+      "name": "200"
+    }
+  ]
 }

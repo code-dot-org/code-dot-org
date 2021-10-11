@@ -5,9 +5,13 @@
     "x",
     "y"
   ],
-  "params": [
-    "1",
-    "1"
-  ],
-  "modeOptionName": "*.setVelocityEach"
+  "modeOptionName": "*.setVelocityEach",
+  "parameters": [
+    {
+      "name": "1"
+    },
+    {
+      "name": "1"
+    }
+  ]
 }

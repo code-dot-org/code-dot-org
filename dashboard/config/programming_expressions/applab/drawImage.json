@@ -6,10 +6,16 @@
     "x",
     "y"
   ],
-  "params": [
-    "\"id\"",
-    "0",
-    "0"
-  ],
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "0"
+    }
+  ]
 }

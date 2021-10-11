@@ -4,8 +4,10 @@
   "paletteParams": [
     "num"
   ],
-  "params": [
-    "0.1"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "0.1"
+    }
+  ]
 }

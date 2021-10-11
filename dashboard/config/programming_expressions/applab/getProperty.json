@@ -5,9 +5,13 @@
     "id",
     "property"
   ],
-  "params": [
-    "\"id\"",
-    "\"width\""
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "\"width\""
+    }
+  ]
 }

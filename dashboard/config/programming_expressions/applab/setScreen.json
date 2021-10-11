@@ -4,7 +4,9 @@
   "paletteParams": [
     "screenId"
   ],
-  "params": [
-    "\"screen1\""
+  "parameters": [
+    {
+      "name": "\"screen1\""
+    }
   ]
 }

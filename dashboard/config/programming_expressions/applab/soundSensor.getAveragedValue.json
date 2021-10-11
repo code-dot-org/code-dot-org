@@ -1,11 +1,13 @@
 {
   "func": "soundSensor.getAveragedValue",
   "category": "Circuit",
-  "params": [
-    "500"
-  ],
   "paletteParams": [
     "ms"
   ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "500"
+    }
+  ]
 }

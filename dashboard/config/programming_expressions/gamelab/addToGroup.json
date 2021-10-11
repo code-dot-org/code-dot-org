@@ -4,9 +4,11 @@
   "paletteParams": [
     "group"
   ],
-  "params": [
-    "group"
-  ],
   "modeOptionName": "*.addToGroup",
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "group"
+    }
+  ]
 }

@@ -4,7 +4,9 @@
   "paletteParams": [
     "font"
   ],
-  "params": [
-    "\"Arial\""
+  "parameters": [
+    {
+      "name": "\"Arial\""
+    }
   ]
 }

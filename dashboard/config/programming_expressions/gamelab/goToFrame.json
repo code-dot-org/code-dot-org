@@ -4,9 +4,11 @@
   "paletteParams": [
     "frame"
   ],
-  "params": [
-    "1"
-  ],
   "modeOptionName": "*.goToFrame",
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "1"
+    }
+  ]
 }

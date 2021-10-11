@@ -12,16 +12,34 @@
     "w",
     "h"
   ],
-  "params": [
-    "img",
-    "0",
-    "0",
-    "img.width",
-    "img.height",
-    "0",
-    "0",
-    "img.width",
-    "img.height"
-  ],
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "img"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "img.width"
+    },
+    {
+      "name": "img.height"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "img.width"
+    },
+    {
+      "name": "img.height"
+    }
+  ]
 }

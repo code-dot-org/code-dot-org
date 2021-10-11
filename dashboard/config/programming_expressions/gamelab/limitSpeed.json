@@ -4,9 +4,11 @@
   "paletteParams": [
     "max"
   ],
-  "params": [
-    "3"
-  ],
   "modeOptionName": "*.limitSpeed",
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "3"
+    }
+  ]
 }

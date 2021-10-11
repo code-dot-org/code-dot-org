@@ -4,8 +4,10 @@
   "paletteParams": [
     "width"
   ],
-  "params": [
-    "50"
-  ],
-  "modeOptionName": "*.setWidthEach"
+  "modeOptionName": "*.setWidthEach",
+  "parameters": [
+    {
+      "name": "50"
+    }
+  ]
 }

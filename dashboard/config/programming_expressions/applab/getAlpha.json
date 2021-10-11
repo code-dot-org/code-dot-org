@@ -6,11 +6,17 @@
     "x",
     "y"
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0"
-  ],
   "type": "value",
-  "dontMarshal": true
+  "dontMarshal": true,
+  "parameters": [
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "0"
+    },
+    {
+      "name": "0"
+    }
+  ]
 }

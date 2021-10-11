@@ -4,9 +4,12 @@
   "paletteParams": [
     "label"
   ],
-  "params": [
-    "\"animation_1\""
-  ],
-  "dropdown": {},
-  "modeOptionName": "*.setAnimationEach"
+  "dropdown": {
+  },
+  "modeOptionName": "*.setAnimationEach",
+  "parameters": [
+    {
+      "name": "\"animation_1\""
+    }
+  ]
 }

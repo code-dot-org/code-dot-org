@@ -11,13 +11,21 @@
     "tableName",
     "columns"
   ],
-  "params": [
-    "\"chartId\"",
-    "\"bar\"",
-    "\"mytable\"",
-    "[\"columnOne\", \"columnTwo\"]"
-  ],
   "allowFunctionDrop": {
     "5": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"chartId\""
+    },
+    {
+      "name": "\"bar\""
+    },
+    {
+      "name": "\"mytable\""
+    },
+    {
+      "name": "[\"columnOne\", \"columnTwo\"]"
+    }
+  ]
 }

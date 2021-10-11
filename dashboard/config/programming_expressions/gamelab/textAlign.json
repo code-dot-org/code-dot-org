@@ -5,8 +5,12 @@
     "horiz",
     "vert"
   ],
-  "params": [
-    "CENTER",
-    "TOP"
+  "parameters": [
+    {
+      "name": "CENTER"
+    },
+    {
+      "name": "TOP"
+    }
   ]
 }

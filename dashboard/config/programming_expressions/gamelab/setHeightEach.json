@@ -4,8 +4,10 @@
   "paletteParams": [
     "height"
   ],
-  "params": [
-    "50"
-  ],
-  "modeOptionName": "*.setHeightEach"
+  "modeOptionName": "*.setHeightEach",
+  "parameters": [
+    {
+      "name": "50"
+    }
+  ]
 }

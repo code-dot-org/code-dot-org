@@ -5,10 +5,14 @@
     "key",
     "value"
   ],
-  "params": [
-    "\"key\"",
-    "\"value\""
-  ],
   "nativeIsAsync": true,
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "\"key\""
+    },
+    {
+      "name": "\"value\""
+    }
+  ]
 }

@@ -4,9 +4,6 @@
   "paletteParams": [
     "color"
   ],
-  "params": [
-    "\"yellow\""
-  ],
   "dropdown": {
     "0": [
       "\"yellow\"",
@@ -14,5 +11,10 @@
       "rgb(255,255,0,0.5)",
       "\"#FFFF00\""
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"yellow\""
+    }
+  ]
 }

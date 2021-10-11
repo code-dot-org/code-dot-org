@@ -4,7 +4,9 @@
   "paletteParams": [
     "text"
   ],
-  "params": [
-    "\"text\""
+  "parameters": [
+    {
+      "name": "\"text\""
+    }
   ]
 }

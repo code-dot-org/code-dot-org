@@ -1,8 +1,12 @@
 {
   "func": "innerHTML",
   "category": "Advanced",
-  "params": [
-    "\"id\"",
-    "\"html\""
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "\"html\""
+    }
   ]
 }

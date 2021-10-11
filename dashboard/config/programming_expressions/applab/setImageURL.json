@@ -5,8 +5,12 @@
     "id",
     "url"
   ],
-  "params": [
-    "\"id\"",
-    "\"https://code.org/images/logo.png\""
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "\"https://code.org/images/logo.png\""
+    }
   ]
 }

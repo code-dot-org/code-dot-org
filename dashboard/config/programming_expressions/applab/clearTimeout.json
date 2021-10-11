@@ -4,7 +4,9 @@
   "paletteParams": [
     "__"
   ],
-  "params": [
-    "__"
+  "parameters": [
+    {
+      "name": "__"
+    }
   ]
 }

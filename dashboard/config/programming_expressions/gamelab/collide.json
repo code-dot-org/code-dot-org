@@ -4,9 +4,11 @@
   "paletteParams": [
     "target"
   ],
-  "params": [
-    "target"
-  ],
   "modeOptionName": "*.collide",
-  "type": "either"
+  "type": "either",
+  "parameters": [
+    {
+      "name": "target"
+    }
+  ]
 }

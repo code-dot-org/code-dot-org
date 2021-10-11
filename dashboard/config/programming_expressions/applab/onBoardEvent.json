@@ -6,12 +6,18 @@
     "event",
     "callback"
   ],
-  "params": [
-    "buttonA",
-    "\"down\"",
-    "function(event) {\n  \n}"
-  ],
   "allowFunctionDrop": {
     "2": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "buttonA"
+    },
+    {
+      "name": "\"down\""
+    },
+    {
+      "name": "function(event) {\n  \n}"
+    }
+  ]
 }

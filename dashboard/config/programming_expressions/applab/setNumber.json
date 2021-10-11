@@ -5,8 +5,12 @@
     "id",
     "number"
   ],
-  "params": [
-    "\"id\"",
-    "0"
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "0"
+    }
   ]
 }

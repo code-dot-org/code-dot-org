@@ -4,7 +4,9 @@
   "paletteParams": [
     "url"
   ],
-  "params": [
-    "\"https://code.org\""
+  "parameters": [
+    {
+      "name": "\"https://code.org\""
+    }
   ]
 }

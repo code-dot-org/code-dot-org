@@ -4,8 +4,10 @@
   "paletteParams": [
     "frame"
   ],
-  "params": [
-    "0"
-  ],
-  "modeOptionName": "*.setFrame"
+  "modeOptionName": "*.setFrame",
+  "parameters": [
+    {
+      "name": "0"
+    }
+  ]
 }

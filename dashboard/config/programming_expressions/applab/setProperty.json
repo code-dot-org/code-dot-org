@@ -6,9 +6,15 @@
     "property",
     "value"
   ],
-  "params": [
-    "\"id\"",
-    "\"width\"",
-    "100"
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "\"width\""
+    },
+    {
+      "name": "100"
+    }
   ]
 }

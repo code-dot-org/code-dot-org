@@ -6,9 +6,15 @@
     "width",
     "height"
   ],
-  "params": [
-    "\"id\"",
-    "100",
-    "100"
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "100"
+    },
+    {
+      "name": "100"
+    }
   ]
 }

@@ -4,9 +4,6 @@
   "paletteParams": [
     "pixels"
   ],
-  "params": [
-    "25"
-  ],
   "dropdown": {
     "0": [
       "25",
@@ -14,5 +11,10 @@
       "100",
       "200"
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "25"
+    }
+  ]
 }

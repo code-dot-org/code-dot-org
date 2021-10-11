@@ -3,9 +3,6 @@
   "paletteParams": [
     "code"
   ],
-  "params": [
-    "\"up\""
-  ],
   "dropdown": {
     "0": [
       "\"up\"",
@@ -17,5 +14,10 @@
     ]
   },
   "category": "World",
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "\"up\""
+    }
+  ]
 }

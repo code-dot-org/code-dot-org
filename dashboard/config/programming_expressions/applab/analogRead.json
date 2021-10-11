@@ -6,7 +6,9 @@
   "paletteParams": [
     "pin"
   ],
-  "params": [
-    "5"
+  "parameters": [
+    {
+      "name": "5"
+    }
   ]
 }

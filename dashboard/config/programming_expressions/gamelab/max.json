@@ -5,9 +5,13 @@
     "n1",
     "n2"
   ],
-  "params": [
-    "1",
-    "3"
-  ],
-  "type": "value"
+  "type": "value",
+  "parameters": [
+    {
+      "name": "1"
+    },
+    {
+      "name": "3"
+    }
+  ]
 }

@@ -5,10 +5,14 @@
     "label",
     "animation"
   ],
-  "params": [
-    "\"animation_1\"",
-    "anim"
-  ],
   "modeOptionName": "*.addAnimation",
-  "noAutocomplete": true
+  "noAutocomplete": true,
+  "parameters": [
+    {
+      "name": "\"animation_1\""
+    },
+    {
+      "name": "anim"
+    }
+  ]
 }

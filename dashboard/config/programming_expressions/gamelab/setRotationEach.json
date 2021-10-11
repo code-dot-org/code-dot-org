@@ -4,8 +4,10 @@
   "paletteParams": [
     "angle"
   ],
-  "params": [
-    "90"
-  ],
-  "modeOptionName": "*.setRotationEach"
+  "modeOptionName": "*.setRotationEach",
+  "parameters": [
+    {
+      "name": "90"
+    }
+  ]
 }

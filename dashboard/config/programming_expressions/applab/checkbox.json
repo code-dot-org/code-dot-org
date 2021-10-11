@@ -5,14 +5,18 @@
     "id",
     "checked"
   ],
-  "params": [
-    "\"id\"",
-    "false"
-  ],
   "dropdown": {
     "1": [
       "true",
       "false"
     ]
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "false"
+    }
+  ]
 }

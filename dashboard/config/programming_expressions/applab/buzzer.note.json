@@ -5,12 +5,16 @@
     "note",
     "duration"
   ],
-  "params": [
-    "\"A4\"",
-    "100"
-  ],
   "paramButtons": {
     "minArgs": 1,
     "maxArgs": 2
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"A4\""
+    },
+    {
+      "name": "100"
+    }
+  ]
 }

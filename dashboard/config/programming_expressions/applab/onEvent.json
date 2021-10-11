@@ -6,12 +6,18 @@
     "type",
     "callback"
   ],
-  "params": [
-    "\"id\"",
-    "\"click\"",
-    "function( ) {\n  \n}"
-  ],
   "allowFunctionDrop": {
     "2": true
-  }
+  },
+  "parameters": [
+    {
+      "name": "\"id\""
+    },
+    {
+      "name": "\"click\""
+    },
+    {
+      "name": "function( ) {\n  \n}"
+    }
+  ]
 }

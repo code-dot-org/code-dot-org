@@ -2,8 +2,10 @@
   "func": "Math.pow",
   "category": "Math",
   "type": "value",
-  "params": [
-    "__"
-  ],
-  "docFunc": "mathPow"
+  "docFunc": "mathPow",
+  "parameters": [
+    {
+      "name": "__"
+    }
+  ]
 }

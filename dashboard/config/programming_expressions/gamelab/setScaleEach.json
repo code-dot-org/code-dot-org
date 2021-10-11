@@ -4,8 +4,10 @@
   "paletteParams": [
     "scale"
   ],
-  "params": [
-    "5"
-  ],
-  "modeOptionName": "*.setScaleEach"
+  "modeOptionName": "*.setScaleEach",
+  "parameters": [
+    {
+      "name": "5"
+    }
+  ]
 }
