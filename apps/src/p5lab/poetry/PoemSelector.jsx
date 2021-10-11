@@ -109,6 +109,10 @@ function PoemSelector(props) {
     }
   };
 
+  const getPoemOptions = () => {
+    return Object.values(POEMS).sort((a, b) => (a.title > b.title ? 1 : -1));
+  };
+
   return (
     <div style={styles.container}>
       <PoemEditor isOpen={isOpen} handleClose={handleClose} />
@@ -120,7 +124,7 @@ function PoemSelector(props) {
         style={styles.selector}
         onChange={onChange}
       >
-        {Object.values(POEMS).map(poem => (
+        {getPoemOptions().map(poem => (
           <option key={poem.title} value={poem.title}>
             {poem.title}
           </option>
