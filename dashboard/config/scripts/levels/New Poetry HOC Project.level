@@ -5,7 +5,7 @@
     "skin": "gamelab",
     "block_pools": [
       "GamelabJr",
-      "PoemBot"
+      "Poetry"
     ],
     "helper_libraries": [
       "NativeSpriteLab"
@@ -17,28 +17,30 @@
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "include_shared_functions": "false",
-    "free_play": "false",
+    "free_play": "true",
+    "validation_enabled": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
-    "validation_enabled": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "hide_pause_button": "false",
+    "is_project_level": true,
     "preload_asset_list": null,
-    "standalone_app_name": "poetry"
+    "default_poem": "hafez",
+    "standalone_app_name": "poetry_hoc"
   },
   "game_id": 69,
   "published": true,
-  "created_at": "2021-09-27T16:47:03.000Z",
+  "created_at": "2021-10-07T01:07:43.000Z",
   "level_num": "custom",
-  "user_id": 886,
-  "audit_log": "[{\"changed_at\":\"2021-09-27 16:47:25 +0000\",\"changed\":[\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-09-27 16:49:00 +0000\",\"changed\":[],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-09-27 16:52:02 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"}]",
+  "user_id": 1,
+  "audit_log": "[{\"changed_at\":\"2021-10-06T11:07:43.207-07:00\",\"changed\":[\"cloned from \\\"New Poetry Project\\\"\"],\"cloned_from\":\"New Poetry Project\"},{\"changed_at\":\"2021-10-06 11:15:40 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-06 11:29:48 -0700\",\"changed\":[\"show_poem_dropdown\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"anjali+labs@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -50,30 +52,24 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="PoemBot_setPoem">
-          <title name="POEM">"---"</title>
-        </block>
-        <block type="PoemBot_setForegroundEffect">
-          <title name="EFFECT">"rain"</title>
-        </block>
-        <block type="PoemBot_setBackgroundEffect">
+        <block type="Poetry_setBackgroundEffect">
           <title name="EFFECT">"colors"</title>
           <title name="PALETTE">"sky"</title>
         </block>
-        <block type="PoemBot_whenLineShows">
-          <title name="N">0</title>
+        <block type="Poetry_setForegroundEffect">
+          <title name="EFFECT">"rain"</title>
         </block>
-        <block type="PoemBot_setFont">
+        <block type="Poetry_setFont">
           <title name="FONT">"Arial"</title>
         </block>
-        <block type="PoemBot_setFontColor">
+        <block type="Poetry_setFontColor">
           <value name="FILL">
-            <block type="colour_picker">
-              <title name="COLOUR">#99ff99</title>
+            <block type="colour_picker" can_disconnect_from_parent="false">
+              <title name="COLOUR">#ffcc99</title>
             </block>
           </value>
         </block>
-        <block type="PoemBot_setTextEffect">
+        <block type="Poetry_setTextEffect">
           <title name="EFFECT">"fade"</title>
         </block>
       </xml>
