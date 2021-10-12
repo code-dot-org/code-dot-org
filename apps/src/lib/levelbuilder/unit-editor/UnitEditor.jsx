@@ -691,7 +691,9 @@ class UnitEditor extends React.Component {
                 style={{margin: 0, height: 30, lineHeight: '8px'}}
                 onClick={e => {
                   e.preventDefault();
-                  const msg = 'Are you sure? This action cannot be undone.';
+                  const msg =
+                    'Are you sure? This action cannot be undone. Please ' +
+                    'confirm that translations are complete before proceeding.';
                   if (window.confirm(msg)) {
                     this.setState({useLegacyLessonPlans: false});
                   }
