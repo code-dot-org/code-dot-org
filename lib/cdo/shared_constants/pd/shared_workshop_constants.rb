@@ -3,15 +3,18 @@ module Pd
     COURSES = [
       COURSE_CSF = 'CS Fundamentals'.freeze,
       COURSE_CSP = 'CS Principles'.freeze,
+      COURSE_CSD = 'CS Discoveries'.freeze,
+      COURSE_CSA = 'Computer Science A'.freeze,
+      COURSE_FACILITATOR = 'Facilitator'.freeze,
+      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze
+    ].freeze
+
+    ARCHIVED_COURSES = [
       COURSE_ECS = 'Exploring Computer Science'.freeze,
       COURSE_CS_IN_A = 'CS in Algebra'.freeze,
       COURSE_CS_IN_S = 'CS in Science'.freeze,
-      COURSE_CSD = 'CS Discoveries'.freeze,
-      COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_COUNSELOR = 'Counselor'.freeze,
-      COURSE_ADMIN = 'Admin'.freeze,
-      COURSE_FACILITATOR = 'Facilitator'.freeze,
-      COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze
+      COURSE_ADMIN = 'Admin'.freeze
     ].freeze
 
     STATES = [
