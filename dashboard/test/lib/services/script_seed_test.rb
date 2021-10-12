@@ -486,7 +486,7 @@ module Services
 
       # give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
+      new_standard = create :standard, framework: @framework, shortcode: '-abc', description: 'New Standard'
 
       expected_shortcodes = [
         new_standard.shortcode,
@@ -547,7 +547,7 @@ module Services
 
       # give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
+      new_standard = create :standard, framework: @framework, shortcode: '-abc', description: 'New Standard'
 
       expected_shortcodes = [
         new_standard.shortcode,
