@@ -69,6 +69,64 @@ export const commands = {
     }
   },
 
+  makeBurst(num, animation, effectName) {
+    for (let i = 0; i < num; i++) {
+      switch (effectName) {
+        case 'burst':
+          this.addSprite({
+            animation,
+            speed: Math.floor(Math.random() * 10 + 10),
+            delay: Math.floor(Math.random() * 20 + 1),
+            scale: 1,
+            direction: Math.floor(Math.random() * 360),
+            rotation: Math.floor(Math.random() * 360),
+            lifetime: 60
+          });
+
+          break;
+        case 'pop':
+          this.addSprite({
+            animation,
+            speed: Math.floor(Math.random() * 15 + 10),
+            scale: 50,
+            direction: Math.floor(Math.random() * 90 + 225),
+            location: {
+              x: Math.floor(Math.random() * 400),
+              y: Math.floor(Math.random() * 50 + 400)
+            },
+            lifetime: 60
+          });
+          break;
+        case 'rain':
+          this.addSprite({
+            animation,
+            speed: 0,
+            scale: 50,
+            location: {
+              x: Math.floor(Math.random() * 400),
+              y: Math.floor(Math.random() * 100 - 150)
+            },
+            rotation: Math.floor(Math.random() * 20 - 10),
+            lifetime: 60
+          });
+          break;
+        case 'zig-zag':
+          this.addSprite({
+            animation,
+            speed: Math.floor(Math.random() * 15 + 10),
+            scale: 50,
+            location: {
+              x: Math.floor(Math.random() * 50 - 100) + 550 * (i % 2),
+              y: Math.floor(Math.random() * 400)
+            },
+            direction: 180 * (i % 2)
+          });
+          break;
+        default:
+      }
+    }
+  },
+
   setAnimation(spriteArg, animation) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
