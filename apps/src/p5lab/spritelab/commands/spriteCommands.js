@@ -116,7 +116,7 @@ export const commands = {
             scale: 50,
             location: {
               x: Math.floor(Math.random() * 400),
-              y: Math.floor(Math.random() * 100 - 150)
+              y: Math.floor(Math.random() * 100 - 125)
             },
             rotation: Math.floor(Math.random() * 20 - 10),
             lifetime: 60
