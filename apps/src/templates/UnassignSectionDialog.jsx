@@ -18,47 +18,45 @@ class UnassignSectionDialog extends Component {
     sectionName: PropTypes.string
   };
 
-  close = () => this.props.onClose();
-
   unassign = () => {
     this.props.unassignSection();
-    this.close();
+    this.props.onClose();
   };
 
   render() {
-    const {isOpen, courseName, sectionName} = this.props;
+    const {isOpen, courseName, sectionName, onClose} = this.props;
     return (
       <BaseDialog
         isOpen={isOpen}
-        handleClose={this.close}
+        handleClose={onClose}
         useUpdatedStyles
         style={styles.dialog}
       >
         <h2 className="unassign-dialog-title">
           {i18n.unassignSection({
-            courseName: courseName || 'this unit'
+            courseName: courseName || i18n.thisUnit()
           })}
         </h2>
-        <div style={{marginBottom: 10}}>
+        <div style={styles.confirm}>
           {i18n.unassignSectionConfirm({
             sectionName: sectionName,
-            courseName: courseName || 'this unit'
+            courseName: courseName || i18n.thisUnit()
           })}
         </div>
         <DialogFooter>
           <Button
             __useDeprecatedTag
             text={i18n.dialogCancel()}
-            onClick={this.close}
+            onClick={onClose}
             color={Button.ButtonColor.gray}
-            className="no-mc ui-unassign-cancel-button"
+            className="ui-unassign-cancel-button"
           />
           <Button
             __useDeprecatedTag
             text={i18n.unassignConfirm()}
             onClick={this.unassign}
             color={Button.ButtonColor.orange}
-            className="no-mc ui-confirm-unassign-section-button"
+            className="ui-confirm-unassign-section-button"
           />
         </DialogFooter>
       </BaseDialog>
@@ -71,6 +69,9 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20
+  },
+  confirm: {
+    marginBottom: 10
   }
 };
 
