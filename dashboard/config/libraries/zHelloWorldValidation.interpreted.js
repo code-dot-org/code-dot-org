@@ -159,9 +159,10 @@ function level4(){
   }
 
   validationProps.successCriteria.clickedAllSprites = validationProps.clickedSprites.length>=2;
+  console.log(validationProps.successCriteria.clickedAllSprites);
 
-  setSuccessTime();
-  console.log("successTime: " + validationProps.successTime);
+  setSuccessTime(validationProps.successCriteria);
+  //console.log("successTime: " + validationProps.successTime);
 
   if (!validationProps.successTime) {
     drawProgressBar("fail");

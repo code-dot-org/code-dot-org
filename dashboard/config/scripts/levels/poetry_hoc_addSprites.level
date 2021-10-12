@@ -37,8 +37,8 @@
     "validation_enabled": "false",
     "hide_pause_button": "true",
     "instructions_icon": "octiGeneral",
-    "show_poem_dropdown": "true",
     "preload_asset_list": null,
+    "standalone_app_name": "poetry_hoc",
     "default_poem": "carroll_2"
   },
   "game_id": 69,

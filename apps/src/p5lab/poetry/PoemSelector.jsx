@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import project from '@cdo/apps/code-studio/initApp/project';
 import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
@@ -71,21 +72,20 @@ PoemEditor.propTypes = {
 };
 
 function PoemSelector(props) {
-  if (!appOptions.level.showPoemDropdown) {
+  if (appOptions.level.standaloneAppName !== 'poetry_hoc') {
     return null;
   }
 
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedPoem, setSelectedPoem] = useState(undefined);
 
   const handleClose = poem => {
+    project.saveSelectedPoem(poem);
     props.onChangePoem(poem);
     setIsOpen(false);
   };
 
   const onChange = e => {
     const poemTitle = e.target.value;
-    setSelectedPoem(poemTitle);
 
     if (poemTitle === msg.enterMyOwn()) {
       setIsOpen(true);
@@ -93,17 +93,25 @@ function PoemSelector(props) {
       const poem = Object.values(POEMS).find(poem => poem.title === poemTitle);
       if (poem) {
         props.onChangePoem(poem);
+        project.saveSelectedPoem(poem);
       }
     }
   };
 
-  if (!selectedPoem) {
-    const defaultPoem = POEMS[appOptions.level.defaultPoem];
-    if (defaultPoem) {
-      setSelectedPoem(defaultPoem.title);
-      props.onChangePoem(defaultPoem);
+  const getDropdownValue = () => {
+    const poem = Object.values(POEMS).find(
+      poem => poem.title === props.selectedPoem.title
+    );
+    if (poem) {
+      return poem.title;
+    } else {
+      return msg.enterMyOwn();
     }
-  }
+  };
+
+  const getPoemOptions = () => {
+    return Object.values(POEMS).sort((a, b) => (a.title > b.title ? 1 : -1));
+  };
 
   return (
     <div style={styles.container}>
@@ -111,8 +119,12 @@ function PoemSelector(props) {
       <label>
         <b>{msg.selectPoem()}</b>
       </label>
-      <select value={selectedPoem} style={styles.selector} onChange={onChange}>
-        {Object.values(POEMS).map(poem => (
+      <select
+        value={getDropdownValue()}
+        style={styles.selector}
+        onChange={onChange}
+      >
+        {getPoemOptions().map(poem => (
           <option key={poem.title} value={poem.title}>
             {poem.title}
           </option>
@@ -127,6 +139,7 @@ function PoemSelector(props) {
 
 PoemSelector.propTypes = {
   // from Redux
+  selectedPoem: PropTypes.object.isRequired,
   onChangePoem: PropTypes.func.isRequired
 };
 
@@ -151,7 +164,9 @@ const styles = {
 };
 
 export default connect(
-  state => ({}),
+  state => ({
+    selectedPoem: state.poetry.selectedPoem
+  }),
   dispatch => ({
     onChangePoem(poem) {
       dispatch(setPoem(poem));

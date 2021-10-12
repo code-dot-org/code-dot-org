@@ -108,6 +108,7 @@ export const PlaygroundExceptionType = {
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
+export const EXCEPTION_PREFIX = '[EXCEPTION]';
 
 export const PlaygroundSignalType = {
   // Indicate that the Playground game has started
