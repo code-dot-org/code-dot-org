@@ -7,6 +7,9 @@ import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSecti
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
+const FIREHOSE_START_EVENT = 'start-course-unassigned-from-section';
+const FIREHOSE_CANCEL_EVENT = 'cancel-course-unassigned-from-section';
+
 /**
  * Removes null values from stringified object before sending firehose record
  */
@@ -29,8 +32,8 @@ class UnassignSectionButton extends React.Component {
     isRtl: PropTypes.bool
   };
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       text: i18n.assigned(),
       showUnassignDialog: false,
@@ -50,33 +53,28 @@ class UnassignSectionButton extends React.Component {
     this.setState({
       showUnassignDialog: true
     });
-    firehoseClient.putRecord(
-      {
-        study: 'assignment',
-        event: 'start-course-unassigned-from-section',
-        data_json: JSON.stringify(
-          {
-            sectionId: this.props.sectionId,
-            scriptId: this.props.initialUnitId,
-            courseId: this.props.initialCourseId,
-            location: this.props.buttonLocationAnalytics,
-            date: new Date()
-          },
-          removeNullValues
-        )
-      },
-      {includeUserId: true}
-    );
+    this.firehoseSendRecord(FIREHOSE_START_EVENT);
   };
 
   closeUnassignDialog = getState => {
     this.setState({
       showUnassignDialog: false
     });
+    this.firehoseSendRecord(FIREHOSE_CANCEL_EVENT);
+  };
+
+  confirmUnassign = () => {
+    this.props.unassignSection(
+      this.props.sectionId,
+      this.props.buttonLocationAnalytics
+    );
+  };
+
+  firehoseSendRecord = event => {
     firehoseClient.putRecord(
       {
         study: 'assignment',
-        event: 'cancel-course-unassigned-from-section',
+        event: event,
         data_json: JSON.stringify(
           {
             sectionId: this.props.sectionId,
@@ -89,13 +87,6 @@ class UnassignSectionButton extends React.Component {
         )
       },
       {includeUserId: true}
-    );
-  };
-
-  confirmUnassign = () => {
-    this.props.unassignSection(
-      this.props.sectionId,
-      this.props.buttonLocationAnalytics
     );
   };
 
@@ -122,15 +113,13 @@ class UnassignSectionButton extends React.Component {
           icon={icon}
           onClick={this.openUnassignDialog}
         />
-        {showUnassignDialog && (
-          <UnassignSectionDialog
-            isOpen={true}
-            sectionId={sectionId}
-            courseName={courseName}
-            onClose={this.closeUnassignDialog}
-            unassignSection={this.confirmUnassign}
-          />
-        )}
+        <UnassignSectionDialog
+          isOpen={showUnassignDialog}
+          sectionId={sectionId}
+          courseName={courseName}
+          onClose={this.closeUnassignDialog}
+          unassignSection={this.confirmUnassign}
+        />
       </div>
     );
   }
