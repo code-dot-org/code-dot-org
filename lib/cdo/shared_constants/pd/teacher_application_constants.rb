@@ -171,7 +171,10 @@ module Pd
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
-        principal_approval_url: "Principal Approval Form URL"
+        principal_approval_url: "Principal Approval Form URL",
+        street_address: 'Home street address',
+        city: 'Home city',
+        state: 'Home state',
       },
       principal: {
         title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
@@ -351,7 +354,10 @@ module Pd
         :race,
         :how_heard,
         :principal_approval_url,
-        :previous_used_curriculum
+        :previous_used_curriculum,
+        :street_address,
+        :city,
+        :state
       ],
       principal: [
         :title,
