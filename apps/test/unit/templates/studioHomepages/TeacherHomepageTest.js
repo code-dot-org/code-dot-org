@@ -91,11 +91,6 @@ describe('TeacherHomepage', () => {
     assert(!wrapper.find('Notification').exists());
   });
 
-  it('renders a SpecialAnnouncement if isEnglish and there is no specialAnnouncement', () => {
-    const wrapper = setUp({specialAnnouncement: null, isEnglish: true});
-    assert(wrapper.find('SpecialAnnouncement').exists());
-  });
-
   it('renders a CensusTeacherBanner if showCensusBanner is true', () => {
     const wrapper = setUp({showCensusBanner: true});
     assert(wrapper.find('CensusTeacherBanner').exists());
