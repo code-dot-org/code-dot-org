@@ -1,4 +1,5 @@
 import {commands as locationCommands} from './locationCommands';
+import {commands as behaviorCommands} from './behaviorCommands';
 
 export const commands = {
   countByAnimation(spriteArg) {
@@ -72,8 +73,8 @@ export const commands = {
   makeBurst(num, animation, effectName) {
     for (let i = 0; i < num; i++) {
       switch (effectName) {
-        case 'burst':
-          this.addSprite({
+        case 'burst': {
+          let spriteId = this.addSprite({
             animation,
             speed: Math.floor(Math.random() * 10 + 10),
             delay: Math.floor(Math.random() * 20 + 1),
@@ -82,10 +83,15 @@ export const commands = {
             rotation: Math.floor(Math.random() * 360),
             lifetime: 60
           });
-
+          let sprite = this.getSpriteArray({id: spriteId})[0];
+          this.addBehavior(sprite, {
+            func: behaviorCommands.burstFunc.apply(this),
+            name: 'burst'
+          });
           break;
-        case 'pop':
-          this.addSprite({
+        }
+        case 'pop': {
+          let spriteId = this.addSprite({
             animation,
             speed: Math.floor(Math.random() * 15 + 10),
             scale: 50,
@@ -96,9 +102,15 @@ export const commands = {
             },
             lifetime: 60
           });
+          let sprite = this.getSpriteArray({id: spriteId})[0];
+          this.addBehavior(sprite, {
+            func: behaviorCommands.popFunc.apply(this),
+            name: 'pop'
+          });
           break;
-        case 'rain':
-          this.addSprite({
+        }
+        case 'rain': {
+          let spriteId = this.addSprite({
             animation,
             speed: 0,
             scale: 50,
@@ -109,9 +121,30 @@ export const commands = {
             rotation: Math.floor(Math.random() * 20 - 10),
             lifetime: 60
           });
+          let sprite = this.getSpriteArray({id: spriteId})[0];
+          this.addBehavior(sprite, {
+            func: behaviorCommands.rainFunc.apply(this),
+            name: 'rain'
+          });
           break;
-        case 'zig-zag':
-          this.addSprite({
+        }
+        case 'spiral': {
+          let spriteId = this.addSprite({
+            animation,
+            initalAngle: (i * 360) / num - 180 * (i % 2),
+            delay: (i * 60) / num,
+            start: (i * 60) / num,
+            lifetime: 60
+          });
+          let sprite = this.getSpriteArray({id: spriteId})[0];
+          this.addBehavior(sprite, {
+            func: behaviorCommands.spiralFunc.apply(this),
+            name: 'spiral'
+          });
+          break;
+        }
+        case 'zig-zag': {
+          let spriteId = this.addSprite({
             animation,
             speed: Math.floor(Math.random() * 15 + 10),
             scale: 50,
@@ -119,9 +152,16 @@ export const commands = {
               x: Math.floor(Math.random() * 50 - 100) + 550 * (i % 2),
               y: Math.floor(Math.random() * 400)
             },
-            direction: 180 * (i % 2)
+            direction: 180 * (i % 2),
+            lifetime: 60
+          });
+          let sprite = this.getSpriteArray({id: spriteId})[0];
+          this.addBehavior(sprite, {
+            func: behaviorCommands.zigZagFunc.apply(this),
+            name: 'zig-zag'
           });
           break;
+        }
         default:
       }
     }
