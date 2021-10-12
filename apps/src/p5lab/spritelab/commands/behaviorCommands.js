@@ -13,26 +13,43 @@ export const commands = {
   burstFunc() {
     return spriteArg => {
       let sprite = this.getSpriteArray(spriteArg)[0];
-      const allSprites = this.getSpriteArray({costume: 'all'});
-      if (this.p5.mousePressedOver(sprite) && this.p5.mouseWentDown()) {
-        const topOtherSprite = Math.max(
-          ...allSprites
-            .filter(s => s !== sprite && this.p5.mousePressedOver(s))
-            .map(s => s.depth)
-        );
-        if (sprite.depth > topOtherSprite) {
-          sprite.dragging = true;
-          sprite.xOffset = sprite.x - this.p5.World.mouseX;
-          sprite.yOffset = sprite.y - this.p5.World.mouseY;
-        }
+      if (sprite.delay === 0) {
+        sprite.scale = 0.4 * sprite.baseScale;
+      } else if (sprite.delay < 0) {
+        let dy = Math.sin(sprite.direction) * sprite.speed;
+        let dx = Math.cos(sprite.direction) * sprite.speed;
+        sprite.x += dx;
+        sprite.y += dy;
+        sprite.scale += 0.01 * sprite.baseScale;
+        sprite.rotation += 6;
       }
-      if (sprite.dragging) {
-        sprite.x = this.p5.World.mouseX + sprite.xOffset;
-        sprite.y = this.p5.World.mouseY + sprite.yOffset;
-      }
-      if (this.p5.mouseWentUp()) {
-        sprite.dragging = false;
-      }
+      sprite.delay -= 1;
+    };
+  },
+
+  popFunc() {
+    return spriteArg => {
+      let sprite = this.getSpriteArray(spriteArg)[0];
+      console.log(sprite.y);
+    };
+  },
+
+  rainFunc() {
+    return spriteArg => {
+      let sprite = this.getSpriteArray(spriteArg)[0];
+      console.log(sprite.y);
+    };
+  },
+  spiralFunc() {
+    return spriteArg => {
+      let sprite = this.getSpriteArray(spriteArg)[0];
+      console.log(sprite.y);
+    };
+  },
+  zigZagFunc() {
+    return spriteArg => {
+      let sprite = this.getSpriteArray(spriteArg)[0];
+      console.log(sprite.y);
     };
   },
 
