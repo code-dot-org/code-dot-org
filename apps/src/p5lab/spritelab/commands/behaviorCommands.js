@@ -10,6 +10,32 @@ export const commands = {
     return {func: func, name: func.funcName};
   },
 
+  burstFunc() {
+    return spriteArg => {
+      let sprite = this.getSpriteArray(spriteArg)[0];
+      const allSprites = this.getSpriteArray({costume: 'all'});
+      if (this.p5.mousePressedOver(sprite) && this.p5.mouseWentDown()) {
+        const topOtherSprite = Math.max(
+          ...allSprites
+            .filter(s => s !== sprite && this.p5.mousePressedOver(s))
+            .map(s => s.depth)
+        );
+        if (sprite.depth > topOtherSprite) {
+          sprite.dragging = true;
+          sprite.xOffset = sprite.x - this.p5.World.mouseX;
+          sprite.yOffset = sprite.y - this.p5.World.mouseY;
+        }
+      }
+      if (sprite.dragging) {
+        sprite.x = this.p5.World.mouseX + sprite.xOffset;
+        sprite.y = this.p5.World.mouseY + sprite.yOffset;
+      }
+      if (this.p5.mouseWentUp()) {
+        sprite.dragging = false;
+      }
+    };
+  },
+
   draggableFunc() {
     return spriteArg => {
       let sprite = this.getSpriteArray(spriteArg)[0];
