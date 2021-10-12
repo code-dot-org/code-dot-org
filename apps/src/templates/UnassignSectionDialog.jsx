@@ -1,11 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class UnassignSectionDialog extends Component {
   static propTypes = {
@@ -14,7 +12,6 @@ class UnassignSectionDialog extends Component {
     onClose: PropTypes.func.isRequired,
     unassignSection: PropTypes.func.isRequired,
     courseName: PropTypes.string.isRequired,
-    // Redux
     sectionName: PropTypes.string
   };
 
@@ -75,8 +72,4 @@ const styles = {
   }
 };
 
-export const UnconnectedUnassignSectionDialog = UnassignSectionDialog;
-
-export default connect((state, props) => ({
-  sectionName: sectionName(state, props.sectionId)
-}))(UnassignSectionDialog);
+export default UnassignSectionDialog;

@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
-import {unassignSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  unassignSection,
+  sectionName
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -29,6 +32,7 @@ class UnassignSectionButton extends React.Component {
     initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
     unassignSection: PropTypes.func.isRequired,
+    sectionName: PropTypes.string,
     isRtl: PropTypes.bool
   };
 
@@ -92,7 +96,7 @@ class UnassignSectionButton extends React.Component {
 
   render() {
     const {text, icon, showUnassignDialog} = this.state;
-    const {isRtl, sectionId, courseName} = this.props;
+    const {isRtl, sectionId, courseName, sectionName} = this.props;
 
     // Adjust styles if locale is RTL
     const buttonMarginStyle = isRtl
@@ -117,6 +121,7 @@ class UnassignSectionButton extends React.Component {
           isOpen={showUnassignDialog}
           sectionId={sectionId}
           courseName={courseName}
+          sectionName={sectionName}
           onClose={this.closeUnassignDialog}
           unassignSection={this.confirmUnassign}
         />
@@ -141,10 +146,11 @@ const styles = {
 export const UnconnectedUnassignSectionButton = UnassignSectionButton;
 
 export default connect(
-  state => ({
+  (state, props) => ({
     isRtl: state.isRtl,
     initialUnitId: state.teacherSections.initialUnitId,
-    initialCourseId: state.teacherSections.initialCourseId
+    initialCourseId: state.teacherSections.initialCourseId,
+    sectionName: sectionName(state, props.sectionId)
   }),
   {unassignSection}
 )(UnassignSectionButton);
