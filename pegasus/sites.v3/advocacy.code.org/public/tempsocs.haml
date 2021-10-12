@@ -49,6 +49,26 @@ layout: none
 
 %br
 
+/ .carousel.slide{:id=>"slide-images", :data => {:ride => "carousel"}}
+/   %ol
+/        %li.active{:data => {:target => "slide-images", :slide_to => "0"}}
+/        %li{:data => {:target => "slide-images", :slide_to => "1"}}
+/        %li{:data => {:target => "slide-images", :slid1_to => "2"}}
+/   .carousel-inner
+/        .item.active
+/             %img{:src => "@path /tempsocs-images/advocacy1.jpg", :alt => ""}/
+/        .item
+/             %img{:src => "@path /tempsocs-images/advocacy2.jpg", :alt => ""}/
+/        .item
+/             %img{:src => "@path /tempsocs-images/advocacy3.jpg", :alt => ""}/
+
+/   %a.left.carousel-control{:href => "#slide-images", :data => {:slide => "prev"}}
+/        %span.glyphicon.glyphicon-chevron-left
+/   %a.right.carousel-control{:href => "#slide-images", :data => {:slide => "next"}}
+/        %span.glyphicon.glyphicon-chevron-right
+
+%br
+
 .container_responsive{style: "background-color: #F5F5F5"}
   .col-50{style: "background-color: white; text-align: center"}
     %img{src: "/tempsocs-images/percentage-heatmap.png", style: "width: 100%;"}
