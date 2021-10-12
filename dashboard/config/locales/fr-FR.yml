@@ -88,7 +88,7 @@ fr:
   appname: Code.org
   stage: étape
   stage_number: Leçon %{number}
-  puzzle: Puzzle
+  puzzle: Énigme
   trophies: trophées
   courses: Cours
   courses_page:
@@ -236,6 +236,10 @@ fr:
     email_preference_yes: Oui
     email_preference_no: Non
     email_preference_required: Vous devez spécifier une adresse e-mail préférée.
+    share_teacher_email_reg_partner_preference_yes: Oui
+    share_teacher_email_reg_partner_preference_no: Non
+    share_teacher_email_reg_partner_preference_required: Vous devez spécifier une
+      adresse e-mail préférée.
     parent_account_checkbox: Je suis un parent/tuteur inscrit au nom de mon enfant
     parent_account_email_progress_permission: Pouvons-nous vous envoyer, par courriel,
       des mises à jour occasionnelles, sur les progrès et les projets de votre enfant,

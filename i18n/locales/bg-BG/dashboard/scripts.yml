@@ -177,7 +177,7 @@ bg:
           description_short: Нека да използваме кода, за да се присъединим към Анна и Елза и заедно  опознаем  магията и красотата на леда.
           lessons:
             Artist:
-              name: Художник
+              name: Код с Анна и Елза
           student_description: Нека да използваме кода, за да се присъединим към Анна и Елза, които опознават магията и красотата на леда. Вие ще създадете снежинки и модели в градината на своята зимна приказка, които след това можете да споделите с приятелите си!
         course4:
           title: Курс 4
@@ -321,7 +321,7 @@ bg:
           description_short: Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.
           lessons:
             Infinity:
-              name: Инфинити
+              name: Дисни Инфинити Игрална лаборатория
           student_description: Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.
         algebrademo:
           title: 'Алгебра: демо'
@@ -1143,9 +1143,6 @@ bg:
         starwarsblocks:
           description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           description_short: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
-          lessons:
-            Hour of Code 2015:
-              name: Часът на кодирането 2015
           student_description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
         mc:
           title: Minecraft Hour of Code
@@ -1655,9 +1652,6 @@ bg:
           title: Направете баскетболна игра
           description_short: Направете баскетболна игра
           description: Направете баскетболна игра
-          lessons:
-            Bounce:
-              name: Bounce
           student_description: Направете баскетболна игра
         csd2-2017:
           lessons:
@@ -1773,9 +1767,6 @@ bg:
           title: Програмирай своя спортна игра
           description_short: Програмирай свой собствен спорт
           description: Програмирай свой собствен спорт
-          lessons:
-            Sports:
-              name: Спорт
           student_description: Програмирай свой собствен спорт
         2016_sciencePD-phase2b:
           lessons:
@@ -2243,7 +2234,7 @@ bg:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Пътуването на героя в часът на кода'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: Пътуването на героя'
           student_description: Minecraft се завръща за часът на кода с чисто нова дейност! Пътешествай през Minecraft с код.
         csp-explore-2017:
           lesson_groups:
@@ -2711,6 +2702,9 @@ bg:
               name: Художник
         aquatic:
           title: 'Minecraft: Подводното пътешествие'
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Подводното пътешествие'
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -4140,6 +4134,12 @@ bg:
           lessons:
             lesson-2:
               name: Урок 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Етап 1
+            lessonGroup-3:
+              display_name: Етап 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -4154,6 +4154,8 @@ bg:
               name: Общ преглед
         csa-u6-dev:
           lessons:
+            lesson-13:
+              name: Примери
             lesson-18:
               name: Джаджи
         csa1-pilot-facilitator:
@@ -4174,5 +4176,21 @@ bg:
               display_name: Съдържание
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Джаджи
+            lesson-4:
+              name: Примери
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Съдържание
+            content:
+              display_name: Съдържание
+            lesson_group:
+              display_name: Съдържание
             lessonGroup-2:
               display_name: Съдържание

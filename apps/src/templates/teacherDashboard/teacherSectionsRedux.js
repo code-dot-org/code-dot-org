@@ -178,6 +178,16 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
   const state = getState();
   const currentlyHidden = getRoot(state).sections[sectionId].hidden;
   dispatch(editSectionProperties({hidden: !currentlyHidden}));
+
+  // Track archive/restore section action
+  firehoseClient.putRecord({
+    study: 'teacher_dashboard_actions',
+    study_group: 'toggleSectionHidden',
+    event: currentlyHidden ? 'restoreSection' : 'archiveSection',
+    data_json: JSON.stringify({
+      section_id: sectionId
+    })
+  });
   return dispatch(finishEditingSection());
 };
 

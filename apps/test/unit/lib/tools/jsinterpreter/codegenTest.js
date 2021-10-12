@@ -1,4 +1,4 @@
-import {assert} from '../../../../util/deprecatedChai';
+import {assert} from '../../../../util/reconfiguredChai';
 import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 
 describe('codegen', function() {

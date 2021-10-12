@@ -1114,8 +1114,19 @@ ro:
         text: locaţia {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ploaie
       gamelab_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': dreapta
+            '90': jos
+            '180': stânga
+            '270': sus
       gamelab_mirrorSprite:
         text: "{SPRITE} îndreptat {DIRECTION}"
         options:
@@ -1142,6 +1153,21 @@ ro:
         text: a făcut clic pe {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": buton
+            "'sound://category_collect/clicky_crunch.mp3'": criză
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": balon
+            "'sound://category_animals/bear.mp3'": ursi
+            "'sound://category_animals/cat.mp3'": pisică
+            "'sound://category_animals/cow.mp3'": vacă
+            "'sound://category_animals/sheep.mp3'": oaie
+            "'sound://category_animals/chicken.mp3'": gaina
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": câine
+            "'sound://category_digital/jump_7.mp3'": sari
       gamelab_pointInDirection:
         text: îndreaptă {SPRITE} {DIRECTION}
         options:
@@ -1598,20 +1624,50 @@ ro:
         text: coordonatele x ale {SPRITE}
       Mikelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: |-
-          setează efectul de fundal la
-          {BG_EFFECT} [PALETTE][1]
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': curcubeu
-      PoemBot_setForegroundEffect:
-        text: setează efect pentru planul din faţă {FG_EFFECT}
-        options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': ploaie
-            '"bubbles"': baloane
+      Poetry_makeNewSpriteAnon:
+        text: face noi {ANIMATION_NAME} sprite la {LOCATION}
+      Poetry_playSound:
+        text: PlaySound {SOUND}
+      Poetry_setBackground:
+        text: setează culoarea de fundal la {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Culori
+            '"squiggles"': Mâzgălituri
+            '"space"': Spaţiu
+            '"stars"': Stele
+            '"ripples"': Ondulații
+          PALETTE:
+            '"rainbow"': Curcubeu
+      Poetry_setBackgroundImageAs:
+        text: setează fundalul cu {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Ploaie
+            '"bubbles"': Baloane
+            '"hearts"': Inimi colorate
+            '"confetti"': Confeti
+            '"starburst"': Accelerare
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: mută înainte
       RyanLab_turnLeft:

@@ -58,8 +58,10 @@ export default class JavabuilderConnection {
           this.onOutputMessage(
             javalabMsg.errorJavabuilderConnectionNotAuthorized()
           );
+          this.onNewlineMessage();
         } else {
           this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
+          this.onNewlineMessage();
           console.error(error.responseText);
         }
       });
@@ -80,22 +82,26 @@ export default class JavabuilderConnection {
 
   onStatusMessage(messageKey) {
     let message;
-    let includeLineBreak = false;
+    let lineBreakCount = 0;
     switch (messageKey) {
       case StatusMessageType.COMPILING:
         message = javalabMsg.compiling();
+        lineBreakCount = 1;
         break;
       case StatusMessageType.COMPILATION_SUCCESSFUL:
         message = javalabMsg.compilationSuccess();
+        lineBreakCount = 1;
         break;
       case StatusMessageType.RUNNING:
         message = javalabMsg.running();
-        includeLineBreak = true;
+        lineBreakCount = 2;
         break;
       case StatusMessageType.GENERATING_RESULTS:
         message = javalabMsg.generatingResults();
+        lineBreakCount = 1;
         break;
       case StatusMessageType.EXITED:
+        this.onNewlineMessage();
         this.onExit();
         break;
       default:
@@ -104,7 +110,7 @@ export default class JavabuilderConnection {
     if (message) {
       this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
     }
-    if (includeLineBreak) {
+    for (let lineBreak = 0; lineBreak < lineBreakCount; lineBreak++) {
       this.onNewlineMessage();
     }
   }
@@ -124,8 +130,9 @@ export default class JavabuilderConnection {
         this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:
+        this.onNewlineMessage();
         handleException(data, this.onOutputMessage);
-        this.onExit();
+        this.onNewlineMessage();
         break;
       case WebSocketMessageType.DEBUG:
         if (window.location.hostname.includes('localhost')) {
@@ -171,6 +178,7 @@ export default class JavabuilderConnection {
     this.onOutputMessage(
       'We hit an error connecting to our server. Try again.'
     );
+    this.onNewlineMessage();
     // Set isRunning to false
     this.setIsRunning(false);
     console.error(`[error] ${error.message}`);

@@ -173,6 +173,8 @@ vi:
           lessons:
             Artist:
               name: Họa sĩ
+              description_student: Tạo hình ảnh đẹp bằng cách lập trình Artist.
+              description_teacher: Trong bài học này, học sinh sẽ điều khiển Artist để hoàn thành bức tranh trên màn hình. Giai đoạn Artist này sẽ giúp học sinh tạo ra các hình ảnh có độ phức tạp tăng dần bằng cách sử dụng các khối mới như `di chuyển về phía trước 100 pixel` và `quay sang phải 90 độ`.
           student_description: Tạo hình cá tính và thiết kế cùng các nghệ sĩ!
         hourofcode:
           title: Mê cung cổ điển
@@ -188,7 +190,7 @@ vi:
           description_short: Hãy sử dụng mã lệnh để cùng Anna và Elsa khám phá sự kỳ diệu và vẻ đẹp của băng tuyết.
           lessons:
             Artist:
-              name: Họa sĩ
+              name: Mã hóa cùng  Anna và Elsa
           student_description: Hãy sử dụng mã để tham gia Anna và Elsa khi họ khám phá sự kỳ diệu và vẻ đẹp của băng. Bạn sẽ tạo ra bông tuyết và các mẫu như bạn trượt băng  và làm cho một thế giới thần tiên mùa đông mà sau đó bạn có thể chia sẻ với bạn bè của bạn!
         course4:
           title: Khóa học 4
@@ -329,7 +331,7 @@ vi:
           description_short: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
           lessons:
             Infinity:
-              name: Vô cùng
+              name: Chơi thử nghiệm Disney Infinity
           student_description: Sử dụng trò chơi thử nghiệm để tạo ra một câu chuyện hay trò chơi với các nhân vật Disney Infinity nổi tiếng.
         algebrademo:
           lessons:
@@ -1604,7 +1606,7 @@ vi:
           description_short: Học cách lập trình droid và làm game Chiến tranh giữa các vì sao của riêng bạn ở một thiên hà xa rất xa.
           lessons:
             Hour of Code 2015:
-              name: Giờ lập trình 2015
+              name: 'Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh (Blockly)'
           student_description: Học cách lập trình droid và làm game Chiến tranh giữa các vì sao của riêng bạn ở một thiên hà xa rất xa.
         mc:
           title: Minecraft Hour of Code
@@ -1618,6 +1620,9 @@ vi:
           title: Trí Tuệ Nhân Tạo cho Đại Dương
           description: Tìm hiểu cách AI và học máy có thể được sử dụng để giải quyết các vấn đề của thế giới.
           description_short: Tìm hiểu cách AI và học máy có thể được sử dụng để giải quyết các vấn đề của thế giới.
+          lessons:
+            Oceans:
+              description_student: 'Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới.'
           student_description: Tìm hiểu cách AI và học máy có thể được sử dụng để giải quyết các vấn đề của thế giới.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3002,7 +3007,8 @@ vi:
           description: Chọn đội của bạn và làm game bóng rổ
           lessons:
             Bounce:
-              name: Bật lại
+              description_student: Bạn đã bao giờ ước mình có thể chơi game ở trường chưa? Trong bài học này, bạn sẽ tự làm game đấy!
+              description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ tìm hiểu định nghĩa sự kiện và cách máy tính sử dụng chúng trong các chương trình như video game. Học sinh sẽ xử lý các bài tập lập trình để chương trình phản ứng với các sự kiện (như khi nhấn phím mũi tên). Sau khi hoàn thành bài tập, học sinh sẽ có cơ hội tùy chỉnh game của mình với tốc độ và âm thanh khác nhau.
           student_description: Chọn đội của bạn và làm game bóng rổ
         sample-csp5:
           lessons:
@@ -3379,7 +3385,8 @@ vi:
           title: Tự lập trình game thể thao của riêng bạn
           lessons:
             Sports:
-              name: Thể thao
+              description_student: Bạn đã bao giờ ước mình có thể chơi game ở trường chưa? Trong bài học này, bạn sẽ tự làm game đấy!
+              description_teacher: Trong hoạt động trực tuyến này, học sinh sẽ tìm hiểu định nghĩa sự kiện và cách máy tính sử dụng chúng trong các chương trình như video game. Học sinh sẽ xử lý các bài tập lập trình để chương trình phản ứng với các sự kiện (như khi nhấn phím mũi tên). Sau khi hoàn thành bài tập, học sinh sẽ có cơ hội tùy chỉnh game của mình với tốc độ và âm thanh khác nhau.
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -5178,7 +5185,7 @@ vi:
           description: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
           lessons:
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: Hero''s Journey'
           student_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
         applab-intro-staging:
           lessons:
@@ -6596,7 +6603,7 @@ vi:
           description_short: Minecraft đã trở lại với một hoạt động hoàn toàn mới cho Giờ Lập trình!
           lessons:
             Aquatic:
-              name: Đại dương
+              name: Minecraft Chuyến thám hiểm đại dương
         dance--draft:
           lessons:
             Dance Party:
@@ -9603,6 +9610,8 @@ vi:
               name: Tạo nhân vật
             End of Course Project:
               name: Dự án tổng kết khóa học
+            Outbreaklab:
+              name: Phòng thí nghiệm độc lập dịch bệnh bùng phát
           lesson_groups:
             introduction:
               display_name: Giới thiệu
@@ -10329,6 +10338,8 @@ vi:
               description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết kế các giải pháp trợ năng cho các ứng dụng giả định.
             lesson-7:
               name: Tạo nhân vật
+            lesson-5:
+              name: Dịch bệnh bùng phát
             lesson-2:
               name: Sức mạnh của ngôn từ
               description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến.
@@ -10675,12 +10686,34 @@ vi:
               display_name: Giới thiệu
             Introduction:
               display_name: Giới thiệu
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Bài học 3
+            Lesson 4:
+              display_name: Bài học 4
+            Lesson 5:
+              display_name: Bài học 5
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Dịch bệnh bùng phát ở Thị Trấn Quái Vật
+          lesson_groups:
+            Outbreak Module:
+              display_name: Mô-đun Dịch bệnh bùng phát
+          name: môđundịchbệnhbùngphát
+          title: Mô-đun Dịch bệnh bùng phát\_V2
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
               display_name: Khảo sát
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
             lesson-22:
               name: Bộ sưu tập Thiết kế dữ liệu
           lesson_groups:
@@ -10688,6 +10721,11 @@ vi:
               display_name: Khảo sát
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.
+
+                **Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?
             Survey Planning:
               name: Bộ sưu tập Thiết kế dữ liệu
           lesson_groups:
@@ -10743,6 +10781,9 @@ vi:
           lessons:
             lesson-4:
               name: Quy trình thiết kế
+        outbreak-module:
+          name: mô-đun-dịch-bệnh-bùng-phát
+          title: Dịch bệnh bùng phát
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -10788,6 +10829,12 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: màn 1
+            lessonGroup-3:
+              display_name: màn 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -10869,14 +10916,6 @@ vi:
             new lesson:
               description_student: Thông qua kinh nghiệm của chúng tôi trong dự án Khu phố, chúng tôi biết rằng các nhóm và đối tượng là các thành phần quan trọng của ngôn ngữ lập trình Java. Nhưng chính xác thì các nhóm tạo ra đối tượng như thế nào? Trong bài học này, bạn sẽ khám phá cách tạo ra đối tượng và tìm hiểu về quá trình đóng gói dữ liệu.
               description_teacher: Trong bài học không dùng thiết bị điện tử này, học sinh tạo các đối tượng và biểu diễn các thuộc tính có liên quan bằng cách sử dụng các biến thực thể. Học sinh sẽ tìm hiểu sự khác biệt giữa `public` và `private` và mục đích của việc đóng gói để ẩn cài đặt bên trong của một đối tượng.
-            lesson-2:
-              name: Sử dụng biến
-              description_student: Các biến tạo ra phương pháp lưu trữ thông tin cho các kỹ sư phần mềm. Loại thông tin chúng ta cần lưu trữ xác định loại biến chúng ta cần sử dụng, kiểu dữ liệu của biến và cách chúng ta sử dụng biến đó. Trong bài học này, bạn sẽ sử dụng biến để lưu trữ thông tin dùng để tạo các đối tượng `Painter` và lưu trữ thông tin do người dùng nhập.
-              description_teacher: Trong bài học này, học sinh sẽ khám phá chức năng của biến và phân biệt giữa biến nguyên thủy và biến tham chiếu. Học sinh sử dụng lớp `Scanner` để lấy dữ liệu đầu vào từ người dùng và xác định biến để lưu trữ giá trị do người dùng cung cấp. Các giá trị này được sử dụng để tạo các đối tượng `Painter` trong dự án Khu phố.
-            lesson-3:
-              name: Viết hàm khởi tạo
-              description_student: Xe bán hàng Tiệm bánh dự án Mercury cần sự giúp đỡ của bạn! Chủ tiệm muốn bán món tráng miệng trong Khu phố nhưng cần nhập và lưu trữ món tráng miệng của họ trong một chương trình. Bạn cần sử dụng các kỹ năng kỹ thuật phần mềm của mình để viết chương trình có thể tạo các đối tượng món tráng miệng, giúp chủ tiệm theo dõi hàng tồn kho. Bạn bắt đầu bằng cách tạo lớp `dessert` để chủ tiệm có thể nhập hương vị, số lượng có sẵn và giá của mỗi món tráng miệng mà họ bán.
-              description_teacher: Học sinh được giới thiệu về xe bán hàng Tiệm bánh dự án Mercury và nhu cầu của chủ tiệm là một chương trình nhập và lưu trữ các món tráng miệng. Với tư cách là kỹ sư phần mềm, học sinh sử dụng các chiến lược thiết kế hướng đối tượng để xác định các thuộc tính cần thiết và các kiểu dữ liệu thích hợp cho lớp `Dessert`. Học sinh viết hàm khởi tạo và sử dụng đối tượng `Scanner` để lấy các giá trị cho các biến thực thể nhằm khởi tạo đối tượng `Dessert`.
             lesson-4:
               name: Thêm nhiều hàm khởi tạo
             lesson-5:
@@ -10910,5 +10949,19 @@ vi:
               display_name: Nội dung
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Vật dụng
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Nội dung
+            content:
+              display_name: Nội dung
+            lesson_group:
+              display_name: Nội dung
             lessonGroup-2:
               display_name: Nội dung

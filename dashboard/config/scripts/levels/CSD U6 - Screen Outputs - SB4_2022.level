@@ -9,7 +9,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "<img src=\"https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif\" style=\"float:right; max-width: 150px; margin: 10px;\">\r\n\r\n# Randomization\r\n\r\nMoving on the first click is fine, but this smiley would be even cooler if it moved somewhere new _every time_ we clicked. Fortunately, we can use the `randomNumber` block to do just that.\r\n\r\n# Do This\r\n\r\nInstead of setting the \"x\" and \"y\" properties to a specific number, use the `randomNumber` block to pick a new random \"x\" and \"y\" each time the smiley is clicked.\r\n\r\n_Tip: The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random numbers will ensure that the smiley is always visible on screen?_",
+    "long_instructions": "<img src=\"https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif\" style=\"float:right; max-width: 150px; margin: 10px;\">\r\n\r\n# Randomization\r\n\r\nMoving on the first click is fine, but this smiley would be even cooler if it moved somewhere new _every time_ we clicked. Fortunately, we can use the `randomNumber` block to do just that.\r\n\r\n# Do This\r\n\r\n- Edit your code so it uses the `randomNumber` block to set a new \"x\" and \"y\" position.\r\n- Change the start and end values of `randomNumber` so the smiley will jump across the whole screen\r\n\t- _Tip: The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random numbers will ensure that the smiley is always visible on screen?_\r\n- Run your code. Every time you click the smiley, it should jump to a new random location",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -60,10 +60,10 @@
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
-    "preload_asset_list": null,
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -71,7 +71,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T15:43:21.533+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty xy random_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty xy random_2021\"},{\"changed_at\":\"2021-08-31 15:43:35 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T15:43:21.533+00:00\",\"changed\":[\"cloned from \\\"CSD U6 setProperty xy random_2021\\\"\"],\"cloned_from\":\"CSD U6 setProperty xy random_2021\"},{\"changed_at\":\"2021-08-31 15:43:35 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-14 17:59:45 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

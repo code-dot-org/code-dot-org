@@ -928,6 +928,13 @@ mr:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': उजवा
+            '90': खाली
+            '180': डावा
+            '270': वर
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -937,6 +944,12 @@ mr:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": बुडबुडा
+            "'sound://category_animals/bear.mp3'": अस्वल
+            "'sound://category_animals/elephant.mp3'": हत्ती
       gamelab_randColor:
         text: कोणताही रंग
       gamelab_randomColor:
@@ -1092,6 +1105,8 @@ mr:
             '"scale"': आकार
             '"rotation"': फिरणे
             '"direction"': हालचालीची दिशा
+      Mikelab_setupOutbreak:
+        text: "आऊटब्रेक सेटअप\nलोकसंख्या:{SPRITE2N}\n{TOGGLE}विषाणू  "
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1121,13 +1136,46 @@ mr:
         text: राक्षस इकडे तिकडे फिरायला सुरुवात करतात
       Outbreak_beginWearingMasks:
         text: राक्षस मास्क्स घालायला सुरुवात करतात
+      Outbreak_layoutBorder:
+        text: राक्षसांना सीमेवर ठेवा
+      Outbreak_layoutClusters:
+        text: राक्षसांना  {NUM} च्या क्लस्टरमध्ये ठेवा
+      Outbreak_layoutGrid:
+        text: राक्षस एका ग्रीडमध्ये बसवा
+      Outbreak_layoutRandom:
+        text: राक्षसांना तुम्हाला हवे त्या ठिकाणी ठेवा
       Outbreak_stopMoving:
         text: राक्षस हालचाल थांबायला सुरुवात करतात
-      PoemBot_setForegroundEffect:
-        text: अग्रभूमीचा प्रभाव {FG_EFFECT} करा
+      Poetry_setBackground:
+        text: पार्श्वभूमीचा रंग {COLOR} करा
+      Poetry_setBackgroundEffect:
         options:
-          FG_EFFECT:
+          EFFECT:
+            '"colors"': रंग
+            '"space"': स्पेस
+            '"stars"': तारे
+          PALETTE:
+            '"rainbow"': इंद्रधनुष्य
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': पाऊस
             '"bubbles"': फुगे
+            '"confetti"': कॉन्फेटी
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       aalab_layoutSprites:
         options:
           FORMAT:

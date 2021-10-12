@@ -177,7 +177,7 @@ pt:
           description_short: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
           lessons:
             Artist:
-              name: Artista
+              name: Programa com a Anna e com a Elsa
           student_description: Vamos usar programação para explorar a magia e a beleza do gelo com a Anna e com a Elsa. Vais criar flocos de neve e padrões enquanto patinas no gelo, e ainda conseguirás construir a ilha encantada do inverno que poderás partilhar com os teus amigos!
         course4:
           title: Curso 4
@@ -293,7 +293,7 @@ pt:
           description_short: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratório Infinito Disney
           student_description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
         algebrademo:
           lessons:
@@ -759,9 +759,6 @@ pt:
         starwarsblocks:
           description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
-          lessons:
-            Hour of Code 2015:
-              name: Hora de Código 2015
           student_description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
         mc:
           title: Hora do Código de Minecraft
@@ -1143,10 +1140,6 @@ pt:
               display_name: Conteúdo
             practice:
               display_name: Práticas de Ensino
-        basketball:
-          lessons:
-            Bounce:
-              name: Bounce
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1729,10 +1722,6 @@ pt:
               name: Inovação Pessoal
             Simple Encryption:
               name: Encriptação Simples
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Hora do Código de Minecraft
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -3817,6 +3806,14 @@ pt:
               display_name: Introdução
             Introduction:
               display_name: Introdução
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lição 3
+            Lesson 4:
+              display_name: Lição 4
+            Lesson 5:
+              display_name: Lição 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3871,6 +3868,12 @@ pt:
           lessons:
             lesson-3:
               name: Teste
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.ª ETAPA
+            lessonGroup-3:
+              display_name: 2.ª ETAPA
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -3912,5 +3915,30 @@ pt:
               display_name: Conteúdo
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Projecto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Ferramentas
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Aulas
+            lessonGroup-3:
+              display_name: Projecto
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Conteúdo
+            content:
+              display_name: Conteúdo
+            lesson_group:
+              display_name: Conteúdo
             lessonGroup-2:
               display_name: Conteúdo

@@ -196,10 +196,6 @@ ku:
               name: گرێکان
             Variables:
               name: گۆڕاوەکان
-        basketball:
-          lessons:
-            Bounce:
-              name: هەڵبەزینەوە
         csd2-2017:
           lessons:
             Lists:
@@ -795,6 +791,12 @@ ku:
             Variables:
               key: گۆڕاوەکان
               name: گۆڕاوەکان
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: قۆناغی 1
+            lessonGroup-3:
+              display_name: قۆناغی 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

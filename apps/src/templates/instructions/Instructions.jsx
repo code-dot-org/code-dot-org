@@ -5,6 +5,7 @@ import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
 import AniGifPreview from './AniGifPreview';
 import ImmersiveReaderButton from './ImmersiveReaderButton';
+import ExampleImage from './ExampleImage';
 import i18n from '@cdo/locale';
 
 /**
@@ -33,11 +34,9 @@ class Instructions extends React.Component {
    * Body logic is as follows:
    *
    * If we have been given long instructions, render a div containing
-   * that, optionally with inline-styled margins. We don't need to
-   * worry about the title in this case, as it is rendered by the
-   * Dialog header
+   * that, optionally with inline-styled margins.
    *
-   * Otherwise, render the title and up to two sets of instructions.
+   * Otherwise, render up to two sets of instructions.
    * These instructions may contain spans and images as determined by
    * substituteInstructionImages
    */
@@ -53,11 +52,8 @@ class Instructions extends React.Component {
         />
       );
     } else {
-      // Note: In this case props.shortInstructions might be undefined, but we
-      // still want to render NonMarkdownInstructions to get the puzzle title
       return (
         <NonMarkdownInstructions
-          puzzleTitle={this.props.puzzleTitle}
           shortInstructions={this.props.shortInstructions}
           instructions2={this.props.instructions2}
         />
@@ -81,7 +77,7 @@ class Instructions extends React.Component {
         )}
 
         {this.props.imgURL && !this.props.inTopPane && (
-          <img className="aniGif example-image" src={this.props.imgURL} />
+          <ExampleImage src={this.props.imgURL} />
         )}
         {this.props.imgURL && this.props.inTopPane && <AniGifPreview />}
         {this.props.authoredHints}

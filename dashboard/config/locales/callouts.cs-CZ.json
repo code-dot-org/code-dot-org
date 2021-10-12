@@ -787,6 +787,70 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Přesuň bloky do pracovního prostoru."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Když budete potřebovat nápovědu, klikněte na žárovku!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Nový blok!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Nový blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nový blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nový blok!",
+          "poetry_foreground": "Nový blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nový blok!",
+          "poetry_multiple_sprites": "Nový blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nový blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nový blok!",
+          "poetry_sprite_stops": "Nový blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nový blok!",
+          "poetry_remove_sprite": "Nový blok!"
         }
       }
     }

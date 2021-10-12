@@ -2,6 +2,23 @@
   "az-AZ": {
     "data": {
       "activity_sections": {
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Yekun"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Azad Oyna",
+          "progression_name": "Azad Oyna"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Giriş"
         },

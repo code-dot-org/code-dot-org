@@ -78,17 +78,27 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 22, JSON.parse(@response.body)['numPages']
   end
 
+  test "should get filtered levels with name matching level_num for blockly levels" do
+    create(:level, name: 'blockly', level_num: 'special_blockly_level')
+
+    get :get_filtered_levels, params: {name: 'special_blockly_level'}
+    assert_equal 'special_blockly_level', JSON.parse(@response.body)['levels'][0]["name"]
+  end
+
   test "should get filtered levels with level_type" do
+    existing_levels_count = Odometer.all.count
+    level = create(:level, type: 'Odometer')
     get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
-    assert_equal 1, JSON.parse(@response.body)['levels'].length
-    assert_equal "Odometer", JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal existing_levels_count + 1, JSON.parse(@response.body)['levels'].length
+    assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with script_id" do
-    get :get_filtered_levels, params: {page: 1, script_id: 2}
+    script = create(:script, :with_levels, levels_count: 7)
+    get :get_filtered_levels, params: {page: 1, script_id: script.id}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 3, JSON.parse(@response.body)['numPages']
+    assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with owner_id" do
@@ -561,7 +571,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not edit level if not custom level" do
-    level = Script.twenty_hour_unit.levels.first
+    level = create(:level, user_id: nil)
     refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
@@ -642,11 +652,14 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
+    level_path = 'config/scripts/test_external_markdown.external'
+    data, _ = External.parse_file level_path
+    External.setup data
     CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     level = Level.find_by_name 'Test External Markdown'
     get :edit, params: {id: level.id}
 
-    assert_equal 'config/scripts/test_external_markdown.external', assigns(:level).filename
+    assert_equal level_path, assigns(:level).filename
     assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
     assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
   end
@@ -694,7 +707,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should prevent rename of stanadalone project level" do
     level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
-    # standalone project levels are created when we generate fixtures
+    create(:level, name: level_name) unless Level.where(name: level_name).exists?
     level = Level.find_by(name: level_name)
 
     get :edit, params: {id: level.id}

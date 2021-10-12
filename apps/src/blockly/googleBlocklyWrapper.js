@@ -123,7 +123,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Msg');
   blocklyWrapper.wrapReadOnlyProperty('Names');
   blocklyWrapper.wrapReadOnlyProperty('netsim_locale');
-  blocklyWrapper.wrapReadOnlyProperty('PluginManager');
   blocklyWrapper.wrapReadOnlyProperty('Procedures');
   blocklyWrapper.wrapReadOnlyProperty('registry');
   blocklyWrapper.wrapReadOnlyProperty('removeChangeListener');
@@ -161,6 +160,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.blockly_.registry.Type.METRICS_MANAGER,
     blocklyWrapper.blockly_.registry.DEFAULT,
     CdoMetricsManager,
+    true /* opt_allowOverrides */
+  );
+
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.BLOCK_DRAGGER,
+    blocklyWrapper.blockly_.registry.DEFAULT,
+    CdoBlockDragger,
     true /* opt_allowOverrides */
   );
 

@@ -37,10 +37,6 @@ km:
           lessons:
             'Eval: Conditionals':
               name: លក្ខខណ្ឌ
-        infinity:
-          lessons:
-            Infinity:
-              name: អនន្ត
         K5PD:
           lessons:
             Teacher Dashboard:
@@ -243,7 +239,8 @@ km:
           description: បង្កើតហ្គេមបោះបាល់
           lessons:
             Bounce:
-              name: បាល់​លោត
+              description_student: ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!
+              description_teacher: នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ ហើយនិងការប្រេីកុំព្យូទ័រដុចនៅក្នុងកម្មវិធីដូចជាហ្គេមវីដេអូ។ សិស្សនឹងធ្វើការតាមរយៈល្បែងផ្គុំរូបដែលធ្វើឱ្យកម្មវិធីមានប្រតិកម្មទៅនឹងព្រឹត្តិការណ៍ (ដូចជាប៊ូតុងព្រួញត្រូវបានចុច។ ) នៅចុងបញ្ចប់នៃល្បែងផ្គុំរូបសិស្សនឹងមានឱកាសប្តូរហ្គេមរបស់ពួកគេតាមល្បឿននិងសំឡេងខុសៗគ្នា។
           student_description: បង្កើតហ្គេមបោះបាល់
         hoc-encryption:
           lessons:
@@ -313,6 +310,11 @@ km:
           lessons:
             Conditionals:
               name: លក្ខខណ្ឌ
+        sports:
+          lessons:
+            Sports:
+              description_student: ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ? នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!
+              description_teacher: នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ ហើយនិងការប្រេីកុំព្យូទ័រដុចនៅក្នុងកម្មវិធីដូចជាហ្គេមវីដេអូ។ សិស្សនឹងធ្វើការតាមរយៈល្បែងផ្គុំរូបដែលធ្វើឱ្យកម្មវិធីមានប្រតិកម្មទៅនឹងព្រឹត្តិការណ៍ (ដូចជាប៊ូតុងព្រួញត្រូវបានចុច។ ) នៅចុងបញ្ចប់នៃល្បែងផ្គុំរូបសិស្សនឹងមានឱកាសប្តូរហ្គេមរបស់ពួកគេតាមល្បឿននិងសំឡេងខុសៗគ្នា។
         csp3-support:
           lesson_groups:
             required:
@@ -910,7 +912,7 @@ km:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
           student_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
         course-e-2018:
           lesson_groups:
@@ -2660,6 +2662,12 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: ប្រភពមេរៀន
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ដំណាក់កាល 1
+            lessonGroup-3:
+              display_name: ដំណាក់កាល 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

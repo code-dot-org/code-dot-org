@@ -1140,10 +1140,21 @@ zh-TW:
         text: 位置 {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': 下雨
       gamelab_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       gamelab_makeNumSprites:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': 向右
+            '90': 向下
+            '180': " 向左"
+            '270': 向上
       gamelab_mirrorSprite:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 向
         options:
@@ -1174,6 +1185,24 @@ zh-TW:
         text: 到處巡邏
       gamelab_playSound:
         text: 播放音效 {SOUND}
+      gamelab_playSoundOptions:
+        text: 播放音效 {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": 緊縮
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": 泡泡
+            "'sound://category_animals/bear.mp3'": 熊仔
+            "'sound://category_animals/cat.mp3'": 貓
+            "'sound://category_animals/cow.mp3'": 乳牛
+            "'sound://category_animals/pig.mp3'": 豬
+            "'sound://category_animals/sheep.mp3'": 綿羊
+            "'sound://category_animals/chicken.mp3'": 雞
+            "'sound://category_animals/elephant.mp3'": 大象
+            "'sound://category_animals/dolphin.mp3'": 海豚
+            "'sound://category_animals/chick.mp3'": 小雞
+            "'sound://category_animals/dog.mp3'": 狗
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": 豎琴
+            "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_pointInDirection:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 度
         options:
@@ -1617,6 +1646,11 @@ zh-TW:
             '"direction"': 移動方向
       Mikelab_setTint:
         text: 角色 {SPRITE} 顏色設為 {COLOR}
+      Mikelab_setupOutbreak:
+        text: |-
+          疫情爆發設定
+          人口：{SPRITE2N}
+          {TOGGLE}病毒
       Mikelab_setupSim:
         text: |-
           設置類比
@@ -1700,18 +1734,96 @@ zh-TW:
         text: x 座標 {SPRITE}
       Mikelab_yLocationOf:
         text: y 座標 {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: 背景效果設為 {BG_EFFECT} [PALETTE][1]
+      Outbreak_beginCongregating:
+        text: 怪物開始聚集
+      Outbreak_beginQuarantining:
+        text: 怪物生病時開始隔離
+      Outbreak_beginSocialDistancing:
+        text: 怪物開始保持社交距離
+      Outbreak_beginWandering:
+        text: 怪物開始徘徊
+      Outbreak_beginWearingMasks:
+        text: 怪物開始戴口罩
+      Outbreak_layoutBorder:
+        text: 在邊界上佈局怪物
+      Outbreak_layoutClusters:
+        text: 在{NUM}的集群中佈局怪物
+      Outbreak_layoutGrid:
+        text: 按網格佈局怪物
+      Outbreak_layoutRandom:
+        text: 隨機佈局怪物
+      Outbreak_stopMoving:
+        text: 怪物停止移動
+      Poetry_makeBurst:
         options:
-          BG_EFFECT:
-            '"solid"': 實心
-            '"rainbow"': 彩虹
-      PoemBot_setForegroundEffect:
-        text: 前景效果設為 {FG_EFFECT}
-        options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': 下雨
+      Poetry_makeNewSpriteAnon:
+        text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
+      Poetry_makeNumSprites:
+        text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
+      Poetry_playSound:
+        text: 播放音效 {SOUND}
+      Poetry_setBackground:
+        text: 背景顏色設為 {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': 色塊
+            '"squiggles"': 蜿曲線段
+            '"space"': 太空
+            '"stars"': 星星
+            '"ripples"': 漣漪
+          PALETTE:
+            '"rainbow"': 彩虹
+      Poetry_setBackgroundImageAs:
+        text: 背景設為 {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': 雨滴
             '"bubbles"': 氣泡
+            '"hearts"': 繽紛愛心
+            '"confetti"': 紙屑
+            '"starburst"': 星爆
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: 飄移
+            growing: 放大
+            jittering: 抖動
+            shrinking: 縮小
+            spinning_left: 向左旋轉
+            spinning_right: 向右旋轉
+            swimming_left_and_right: 游泳
+            wandering: 徘徊
+            wobbling: 搖晃
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            fluttering: 飄移
+            growing: 放大
+            jittering: 抖動
+            shrinking: 縮小
+            spinning_left: 向左旋轉
+            spinning_right: 向右旋轉
+            swimming_left_and_right: 游泳
+            wandering: 徘徊
+            wobbling: 搖晃
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: 移動-向前
       RyanLab_turnLeft:

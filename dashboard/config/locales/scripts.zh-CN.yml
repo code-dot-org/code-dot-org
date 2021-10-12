@@ -183,6 +183,9 @@ zh-CN:
           lessons:
             Artist:
               name: 小艺术家
+              description_student: 通过小艺术家编程创造美丽的图画。
+              description_teacher: 这节课中，学生们会控制小艺术家来完成画画。小艺术家阶段让学生们用 `向前移动 100 像素`
+                和 `向右转 90 度` 这样的新模块来创造不断增加难度的图画。
           student_description: 和小艺术家一起设计出很酷的图形！
         hourofcode:
           title: 经典迷宫
@@ -198,7 +201,7 @@ zh-CN:
           description_short: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
           lessons:
             Artist:
-              name: 小艺术家
+              name: 和安娜、爱莎一起编程
           student_description: 让我们用代码与安娜和艾莎一起探索神奇而又美丽的冰雪世界。你将能创造雪花，溜冰，以及冬季仙境，你还可与朋友分享它们！
         course4:
           title: 课程 4
@@ -340,7 +343,7 @@ zh-CN:
           description_short: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
           lessons:
             Infinity:
-              name: 无限
+              name: 迪斯尼无限游戏实验室
           student_description: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
         algebrademo:
           lessons:
@@ -1676,9 +1679,6 @@ zh-CN:
         starwarsblocks:
           description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
           description_short: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
-          lessons:
-            Hour of Code 2015:
-              name: "《编程一小时 2015》"
           student_description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
         mc:
           title: 我的世界 编程一小时
@@ -1695,6 +1695,7 @@ zh-CN:
           lessons:
             Oceans:
               name: 海洋
+              description_student: 教程摘要：第一批学生将物体分类为“鱼”或“非鱼”，试图清除海洋中的垃圾。然后，学生们将需要扩展他们的训练数据集，以覆盖水中的其它海洋生物。在活动的第二部分，学生们将选择他们自己的标签应用于随机生成的鱼的图像。该训练数据用于能够自行标记新图像的机器学习模型。
           student_description: 学习人工智能和机器学习如何用来解决世界性的问题。
         CSPPD3-Unit3-pt2:
           lessons:
@@ -3488,7 +3489,8 @@ zh-CN:
           description: 进行一场篮球赛
           lessons:
             Bounce:
-              name: 跳
+              description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
+              description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 进行一场篮球赛
         sample-csp5:
           lessons:
@@ -4137,7 +4139,8 @@ zh-CN:
           description: 为你自己的运动编写代码
           lessons:
             Sports:
-              name: 运动
+              description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
+              description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 为你自己的运动编写代码
         2016_sciencePD-phase2b:
           lessons:
@@ -6962,7 +6965,7 @@ zh-CN:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: "《我的世界》: 编程一小时英雄之旅"
             Minecraft Hour of Code:
-              name: 我的世界 编程一小时
+              name: "《我的世界》: 英雄之旅"
           student_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
         applab-intro-staging:
           title: 应用实验室阶段简介
@@ -9513,7 +9516,7 @@ zh-CN:
           description: "《我的世界》带来了一个全新的活动！用你的创造力和解决问题的技能用代码来探索并建造一个水下世界。"
           lessons:
             Aquatic:
-              name: 水上
+              name: "《我的世界》：水上航行"
           student_description: "《我的世界》带来了一个全新的活动！用你的创造力和解决问题的技能用代码来探索并建造一个水下世界。"
         sconyers:
           title: 特蕾西的游乐场
@@ -12411,7 +12414,7 @@ zh-CN:
               display_name: 调查
           lessons:
             CSD post-course survey:
-              name: 计算机科学发现课后问卷
+              name: 计算机科学发现学生课程后调查
           student_description: |-
             计算机科学发现课后问卷是我们获取反馈，提高课程的重要工具。
              问卷是保密、匿名的 - 你的老师可以看见整个课堂的匿名汇总结果。结果对你的老师和 Code.org 改善课程非常重要。谢谢你的时间和思考。
@@ -12424,7 +12427,7 @@ zh-CN:
               display_name: 调查
           lessons:
             CSP post-course survey:
-              name: 计算机科学原理课后问卷
+              name: 计算机科学原理学生课程后调查 ('18-'19)
         csp5-pilot:
           title: '单元 5: 列表、循环和遍历'
           lesson_groups:
@@ -16050,6 +16053,8 @@ zh-CN:
               name: 动作精灵图
             End of Course Project:
               name: 课程结束项目
+            Outbreaklab:
+              name: 疫情爆发独立实验室
           lesson_groups:
             introduction:
               display_name: 介绍
@@ -17414,6 +17419,8 @@ zh-CN:
               name: 制作精灵图
             lesson-8:
               name: 动作精灵图
+            lesson-5:
+              name: 疫情爆发
             lesson-2:
               name: 语言的力量
               description_student: 永远不能恐吓。这节课要教会你在线上什么能说，而什么不能说。
@@ -17965,6 +17972,8 @@ zh-CN:
           lessons:
             lesson-20:
               name: 评估日
+            lesson-24:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17972,6 +17981,8 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            lesson-16:
+              name: Java实验室
           lesson_groups:
             lesson group:
               display_name: 内容
@@ -17979,6 +17990,8 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            lesson-17:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17986,6 +17999,8 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            lesson-16:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -18056,6 +18071,15 @@ zh-CN:
               display_name: 第 4 课
             Lesson 5:
               display_name: 第 5 课
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: 怪兽城镇疫情爆发
+          lesson_groups:
+            Outbreak Module:
+              display_name: 疫情爆发模块
+          name: 疫情爆发模块
+          title: 疫情爆发模块\_V2
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -18069,6 +18093,11 @@ zh-CN:
           lessons:
             lesson1:
               name: 机器学习的简介
+            lesson9:
+              description_teacher: |-
+                在本课中，学生参与一个线下活动，模拟僵尸疫情爆发。学生必须利用邻近城镇的数据来预测城镇的哪一部分拥有最少的僵尸。学生们将使用相似度和平均值来预测某一特定地点的僵尸数量。然后，学生得到拯救，并将他们的预测与实际数字进行比较，以讨论数字数据与分类数据的准确性有何不同。
+
+                **今日问题。**计算机如何学习用数字数据进行预测？
             lesson-22:
               name: 设计数据收集
           lesson_groups:
@@ -18078,6 +18107,11 @@ zh-CN:
           lessons:
             Introduction to Machine Learning:
               name: 机器学习的简介
+            Similarity Models:
+              description_teacher: |-
+                在本课中，学生参与一个线下活动，模拟僵尸疫情爆发。学生必须利用邻近城镇的数据来预测城镇的哪一部分拥有最少的僵尸。学生们将使用相似度和平均值来预测某一特定地点的僵尸数量。然后，学生得到拯救，并将他们的预测与实际数字进行比较，以讨论数字数据与分类数据的准确性有何不同。
+
+                **今日问题。**计算机如何学习用数字数据进行预测？
             Survey Planning:
               name: 设计数据收集
           lesson_groups:
@@ -18171,8 +18205,10 @@ zh-CN:
               name: 模块 2
             Module 3:
               key: 模块 3
+              name: 模块 3
             Module 4:
               key: 模块 4
+              name: 模块 4
             Module 5:
               key: 模块 5
             Module 6:
@@ -18208,6 +18244,9 @@ zh-CN:
               name: 单元 2：网页开发
             lesson-6:
               name: 数据与社会
+        outbreak-module:
+          name: 疫情爆发-模块
+          title: 疫情爆发
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -18254,6 +18293,12 @@ zh-CN:
           lessons:
             lesson-2:
               name: 第 2 课
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第一阶段
+            lessonGroup-3:
+              display_name: 第二阶段
         dlp21-csp-mod1:
           title: 计算机科学原理进一步学习模块 1
         dlp21-csd:
@@ -18290,6 +18335,8 @@ zh-CN:
           lessons:
             Assessment Day:
               name: 评估日
+            lesson-1:
+              name: Java实验室
             lesson-20:
               name: 评估日
           lesson_groups:
@@ -18303,6 +18350,8 @@ zh-CN:
               key: 新课程
             lesson-15:
               name: 评估日
+            lesson-1:
+              name: Java实验室
           lesson_groups:
             lesson group:
               display_name: 内容
@@ -18310,6 +18359,8 @@ zh-CN:
           lessons:
             Assessment Day:
               name: 评估日
+            lesson-1:
+              name: Java实验室
             lesson-15:
               name: 评估日
           lesson_groups:
@@ -18319,6 +18370,8 @@ zh-CN:
           lessons:
             Assessment Day:
               name: 评估日
+            lesson-1:
+              name: Java实验室
             lesson-15:
               name: 评估日
           lesson_groups:
@@ -18333,3 +18386,39 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: 计算中的创新
+            lesson-13:
+              name: 加速传感器
+            lesson-19:
+              name: 项目
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: 小部件
+            lesson-3:
+              name: 工具
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 课程
+            lessonGroup-3:
+              display_name: 项目
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: 评估日
+          lesson_groups:
+            lesson group:
+              display_name: 内容
+            content:
+              display_name: 内容
+            lesson_group:
+              display_name: 内容
+            lessonGroup-2:
+              display_name: 内容
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 舞会：离线

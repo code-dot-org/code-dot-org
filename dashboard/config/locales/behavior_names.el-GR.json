@@ -150,6 +150,32 @@
         },
         "simcustom_2021": {
           "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "international_outbreak_freeplay": {
+          "recovering": "αναρρώνοντας",
+          "moving left and right": "κίνηση αριστερά και δεξιά",
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
         }
       }
     }

@@ -15,6 +15,7 @@ const ButtonColor = {
   orange: 'orange',
   gray: 'gray',
   blue: 'blue',
+  teal: 'teal',
   white: 'white',
   red: 'red',
   green: 'green',
@@ -233,6 +234,24 @@ const styles = {
         boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
+    [ButtonColor.teal]: {
+      color: color.white,
+      backgroundColor: color.teal,
+      fontWeight: 'bold',
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.teal,
+        borderColor: color.teal,
+        backgroundColor: color.lightest_teal
+      },
+      ':disabled': {
+        color: color.lighter_cyan,
+        backgroundColor: color.lightest_cyan,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
+      }
+    },
+
     [ButtonColor.white]: {
       color: color.charcoal,
       backgroundColor: color.white,

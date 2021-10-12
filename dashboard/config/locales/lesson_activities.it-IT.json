@@ -2,6 +2,18 @@
   "it-IT": {
     "data": {
       "lesson_activities": {
+        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": "Riscaldamento"
+        },
+        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
+          "name": "Attività principale"
+        },
+        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Conclusione"
+        },
+        "06dfaf3b-e495-4577-baa6-883a782e198f": {
+          "name": "Esercizi"
+        },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Riscaldamento"
         },

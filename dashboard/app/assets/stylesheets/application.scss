@@ -205,17 +205,6 @@ img.video_thumbnail {
       float: left;
       clear: left;
     }
-    // TODO: Remove when Game Lab is no longer in beta
-    .beta-notice {
-      float: left;
-      margin-left: 10px;
-      display: inline-block;
-      padding: 7px 0;
-      font-family: $gotham-extra-bold;
-      font-size: 20px;
-      line-height: 20px;
-      color: $droplet_yellow;
-    }
   }
 
   .header_text {
@@ -1021,17 +1010,6 @@ $default-modal-width: 640px;
   .project_name_wrapper .header_text {
     float: left;
     clear: left;
-  }
-  // TODO: Remove when Game Lab is no longer in beta
-  .beta-notice {
-    float: left;
-    margin-left: 10px;
-    display: inline-block;
-    padding: 7px 0;
-    font-family: $gotham-extra-bold;
-    font-size: 20px;
-    line-height: 20px;
-    color: $droplet_yellow;
   }
 }
 
@@ -2902,7 +2880,8 @@ $modal-no-icon-gap: 22px;
 }
 
 .modal-image {
-  width: $modal-image-width;
+  max-width: $modal-image-width;
+  max-height: 100px;
   height: auto;
   margin-top: -75px;
   position: absolute;

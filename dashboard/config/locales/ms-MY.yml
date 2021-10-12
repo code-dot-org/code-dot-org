@@ -86,6 +86,8 @@ ms:
     field_is_required: adalah diperlukan
     email_preference_yes: Ya
     email_preference_no: Tidak
+    share_teacher_email_reg_partner_preference_yes: Ya
+    share_teacher_email_reg_partner_preference_no: Tidak
     parent_account_checkbox: Saya ibubapa/penjaga yang daftar bagi pihak anak saya
     parent_account_email_progress_permission: Bolehkah kami sekali-sekala e-mel anda
       kemaskini kemajuan dan projek anak anda, serta kemaskini kursus dan sains komputer

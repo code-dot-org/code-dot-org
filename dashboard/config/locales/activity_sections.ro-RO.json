@@ -2,6 +2,26 @@
   "ro-RO": {
     "data": {
       "activity_sections": {
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Încheiere"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
+        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+          "progression_name": "Bine ai venit în Orașul Monștrilor"
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "Joc la liber",
+          "progression_name": "Joc la liber"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Introducere"
         },
@@ -227,10 +247,16 @@
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Introducere"
         },
+        "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
+          "progression_name": "Bine ai venit în Orașul Monștrilor"
+        },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
           ]
+        },
+        "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
+          "progression_name": "Învață din Simulări"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Reflecţie"

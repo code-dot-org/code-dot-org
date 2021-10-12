@@ -130,8 +130,12 @@ ar:
       عن طريق Clever Portal.
     use_clever: عذرا، حسابك على Code.org غير مرتبط بـ %{provider}. الرجاء تسجيل الدخول
       عن طريق Clever Portal.
+    invalid_provider: حسابك على %{provider} مرتبط بالفعل مع حساب Code.org آخر.
+    migration_required: عذرًا ، لا يمكننا الاتصال أو فصل الحسابات التي لا تزال تستخدم
+      تجربة الحساب القديمة. يرجى التحديث إلى تجربة الحساب الجديدة.
     unable_to_connect_provider: لا يمكن الاتصال بين حسابك على Code.org وحساب %{provider}.
       يُرجى المحاولة لاحقًا.
+    disconnect_successful: تم بنجاح ! قمنا بفصل حسابك من حساب Code.org الخاص بك.
     already_in_use: حسابك على %{provider} مرتبط بالفعل بحساب Code.org آخر.
     already_linked: حسابك على %{provider} مرتبط بالفعل بحساب  Code.org آخر.
     existing_account:
@@ -206,7 +210,15 @@ ar:
     user_type_button: تحديث نوع الحساب
     user_type_label: نوع الحساب
     user_type_student: طالب
+    user_type_student_desc: 'اكتشف جميع دوراتنا وأنشطتنا ، بالإضافة إلى:'
+    user_type_student_ability_1: احفظ تقدمك ومشاريعك
+    user_type_student_ability_2: انضم إلى الفصل الخاص لمعلمك
     user_type_teacher: المدرس
+    user_type_teacher_desc: 'كل ما يمكن للطلاب الوصول إليه ، بالإضافة إلى:'
+    user_type_teacher_ability_1: إنشاء أقسام جديده للفصل الدراسي
+    user_type_teacher_ability_2: تعيين وتتبع عمل الطلاب
+    user_type_teacher_ability_3: التسجيل في التعلم المهني
+    user_type_teacher_ability_4: تفاعل في منتدى المعلم
     field_is_required: مطلوب
     accept_terms: يجب عليك الموافقة على إنشاء حساب
     error: حدث خطأ.
@@ -217,6 +229,10 @@ ar:
     email_preference_yes: نعم
     email_preference_no: لا
     email_preference_required: عليكم تحديد البريد الالكتروني المفضل.
+    share_teacher_email_reg_partner_preference_yes: نعم
+    share_teacher_email_reg_partner_preference_no: لا
+    share_teacher_email_reg_partner_preference_required: عليكم تحديد البريد الالكتروني
+      المفضل.
     parent_account_checkbox: أنا أحد الوالدين / الوصي أسجل الدخول نيابة عن طفلي
     parent_account_email_progress_permission: هل يمكننا إرسال تحديثات إليك عبر البريد
       الإلكتروني حول تقدم طفلك ومشاريعه وتحديثات حول الدورة التدريبية وعلم الحاسوب؟
@@ -312,6 +328,7 @@ ar:
     invite_sent: تم إرسال الدعوة
     added_teacher: "%{name} تم اضافتك كمعلم"
     registered: لقد قمت بتسجيل %{section_name}.
+    captcha_required: يرجى ملء CAPTCHA للانضمام إلى هذا القسم.
     already_exists: لقد انضممت بالفعل إلى قسم %{section_name}.
     error:
       signed_in: من فضلك قم بتسجيل الخروج قبل المتابعة
@@ -324,6 +341,10 @@ ar:
       cant_join_own_section: عذراً، لا يمكنك الانضمام إلى القسم الخاص بك.
       provider_managed_section: يدير هذا القسم مزود آخر، ولا يمكن الانضمام إليه. لذا؛
         يُرجى منك أن تطلب من معلمك أن يضيفك عبر %{provider}، ثم أعِد مزامنة القسم.
+      restricted_section: 'لم نتمكن من إضافتك إلى القسم %{section_code} لأنه مقفل.
+        يرجى الاتصال بمعلمك للحصول على المساعدة. '
+      full_section: لم نتمكن من إضافتك إلى القسم %{section_code} لأنه يوجد بالفعل
+        %{section_capacity} طلاب فيه. يرجى الاتصال بمعلمك للحصول على المساعدة.
     mail:
       student_disassociated:
         subject: 'إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب.'
@@ -374,6 +395,7 @@ ar:
       game_lab_tutorials: البرامج التعليمية لمختبر الألعاب
       sprite_lab_documentation: وثائق مختبر الرسوم المتحركة
       sprite_lab_tutorials: البرامج التعليمية لمختبر الرسوم المتحركة
+      web_lab_documentation: توثيق معمل الويب
       educate_overview: لمحة عن المعلم
       educate_elementary: المدرسة الابتدائية
       educate_middle: المرحلة المتوسطة
@@ -488,6 +510,7 @@ ar:
       worked_with: بالعمل مع
       update_lock_settings: تحديث إعداد القفل هنا.
       clear_response: استجابة واضحة
+    student_code_view_diabled: لا يمكن عرض رمز الطالب لهذا النشاط.
   user:
     email_confirm_needed: 'لم يتم تأكيد عنوان البريد الإلكتروني:'
     email_confirm_needed_required: 'لم يتم تأكيد عنوان بريدك الإلكتروني %{email}:'
@@ -656,6 +679,8 @@ ar:
     code_from_html: Code.org يستخدم p5.play المُرخَّص بموجب <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       رخصة جنو العمومية الصغرى 2.1</a>.
     powered_by_aws: تعمل على خدمات أمازون للويب
+    google_copyright: "&copy; Google Inc .و تم استخدامها بعد الحصول على الإذن من Google
+      Classroom وهي علامة تجارية لـ Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour
       of Code&reg; هما علامات تجارية لـ Code.org."
     copyright: حقوق النسخ
@@ -897,6 +922,8 @@ ar:
     open_response_body: شكرا لردكم!
     correct_title: صحيح
     correct_body: هذا هو الجواب الصحيح.
+  lesson_extras:
+    bonus_level: مستوى المكافأة
   dialog:
     ok: موافق
     startover_title: هل أنت متأكد من أنك تريد البدء من جديد؟
@@ -954,6 +981,16 @@ ar:
       لا تتوفر أدواتنا لتدريس لغة جافا سكريبت لطلابك قبل الموافقة على الشروط التي
       تم تحديثها.
     review_terms: راجع الشروط المُحدَّثَة
+  donor_interstitial:
+    title: أصبحت دورات علوم الكمبيوتر المجانية الخاصة بك ممكنة عن طريق ...
+    subtitle: نود أن نشكر الجهات المانحة السخية التي جعل دعمها نجاح Code.org ممكنًا.
+      نحن ملتزمون بالحفاظ على Code.org مجانًا للمدارس والطلاب ، على مستوى العالم ،
+      بفضل كرمنا المستمر[donors](%{donors_url})!
+    local_supporters: الداعمون المحليون
+    global_supporters: الداعمون العالميون
+    support_codeorg_1: كل دولار يتم منحه لـ Code.org يجلب الفرصة لمزيد من الطلاب.
+    support_codeorg_2: "[تبرع الآن] (%{donate_url}) لدعم Code.org."
+    get_started: ابدأ على Code.org
   school_info_interstitial:
     title: نريد أن نوصل علم الحاسوب إلى جميع الطلاب - ساعدنا على مواصلة تقدمنا في
       ذلك!
@@ -1080,6 +1117,7 @@ ar:
     instructor_feedback: تعليقات المحاضر
     peer_feedback: تعليقات الزملاء
     outdated: تمت إضافة هذه التعليقات لإصدار تم إرساله مسبقًا
+    peer_review: استعراض النظراء
   external_links:
     disclaimer: إخلاء مسؤولية
     leaving_domain: أنت الآن تغادر من هذا النطاق إلى موقع إلكتروني لا تديره مؤسسة
@@ -1181,7 +1219,11 @@ ar:
       school_city: مدينة المدرسة
       school_country: بلد المدرسة
       colombian_school_city: مدينة المدرسة
+      colombian_chilean_school_department: قسم المدرسة / المنطقة
+      colombian_school_municipality: بلدية المدرسة
       colombian_chilean_school_name: اسم المدرسة
+      chilean_school_commune: البلدية
+      chilean_school_id: معرف المدرسة
       ages: ما العمر/الأعمار التي تدرِّس لها هذا العام؟
       subjects: ما المادة/المواد الدراسية التي تدرِّسها هذا العام؟
       resources: أي من المصادر التالية تستخدمها لتعليم علم الحاسوب ؟
@@ -1210,10 +1252,12 @@ ar:
       school_country:
         canada: كندا
         chile: التشيلي
+        colombia: كولومبيا
         israel: '"إسرائيل"'
         malaysia: ماليزيا
         mexico: المكسيك
         thailand: تايلاند
+        uzbekistan: أوزبكستان
       ages:
         ages_under_6: أقل من 6 سنوات
         ages_7_8: 7-8 سنوات
@@ -1276,6 +1320,7 @@ ar:
         csf_express: أساسيات علوم الكمبيوتر (ما قبل السريعة أو السريعة)
         csd: اكتشافات علوم الكمبيوتر
         csp: مبادئ علوم الكمبيوتر
+        not_applicable: لا ينطبق
       email_opt_in:
         opt_in_yes: نعم
         opt_in_no: لا
@@ -1291,6 +1336,9 @@ ar:
         إلى المقرر الدراسي على Code.org وأدواتها. يُرجى منك أن تواصل مشاركة أسئلتك
         وتعليقاتك معنا من خلال مراسلتنا كتابةً على البريد الإلكتروني [support@code.org](%)
         أو من خلال النشر في [منتدى المعلمين](%)!
+      facilitator_not_listed: الميسر الخاص بي غير مدرج
+      facilitator_not_applicable: لا ينطبق
+      organizer_not_listed: المنظم الخاص بي غير مدرج
     logged_out:
       heading: شكرًا على اهتمامك ببرنامج التعلم المهني!
       body: للبدء، يلزم أولاً أن تسجيل دخولك إلى حسابك على Code.org. وإذا كنت تريد
@@ -1331,8 +1379,13 @@ ar:
       error_wrong_provider: مقدِّم خاطئ. يُرجى التأكد من تسجيل دخولك بحساب Google.
       error_invalid_user: معرِّف مستخدِم غير صحيح. يُرجى محاولة تسجيل الدخول مرة أخرى.
       error_no_code: يُرجى إدخال كود تسجيل الدخول الخاص بك.
+      confirm_login: حدد "تأكيد" لتسجيل الدخول باستخدام حساب Google الخاص بك.
   parent_email_banner:
     text: "** هل أنت والد أو وصي؟ ** اربط بريدك الإلكتروني بهذا الحساب لتبقى على اطلاع
       دائم بتقدم طفلك ومشاريعه!"
     link_your_email: 'اربط عنوان بريدك الإلكتروني '
     not_now: ليس الآن
+  behaviors:
+    this_sprite: هذا العفريت
+  unit_prefix: وحدة %{n}
+  code_org_logo_alt: الصفحة الرئيسية Code.org

@@ -47,6 +47,7 @@ class LevelsController < ApplicationController
     NetSim,
     Odometer,
     Pixelation,
+    Poetry,
     PublicKeyCryptography,
     StandaloneVideo,
     StarWarsGrid,
@@ -111,7 +112,7 @@ class LevelsController < ApplicationController
   def filter_levels(params)
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
-    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%").or(@levels.where('levels.level_num LIKE ?', "%#{params[:name]}%")) if params[:name]
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
     @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
@@ -220,6 +221,7 @@ class LevelsController < ApplicationController
     blocks_xml = params[:program]
     type = params[:type]
     set_solution_image_url(@level) if type == 'solution_blocks'
+    blocks_xml = Blockly.remove_counter_mutations(blocks_xml)
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
     @level.log_changes(current_user)

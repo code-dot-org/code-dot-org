@@ -1,22 +1,12 @@
 <Javalab>
   <config><![CDATA[{
-  "properties": {
-    "encrypted": "false",
-    "long_instructions": "updateDice()",
-    "mini_rubric": "false",
-    "submittable": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSA U4 Template"
-  },
   "game_id": 68,
   "published": true,
   "created_at": "2021-09-02T14:54:36.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-02 14:54:39 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-03 16:03:13 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-03 16:07:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-02 14:54:39 +0000\",\"changed\":[\"encrypted_examples\",\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-03 16:03:13 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-03 16:07:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-09-17 15:02:34 +0000\",\"changed\":[\"encrypted\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-08 16:25:29 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-11 16:31:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-11 16:42:35 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "gryN+UMIil/IryToWJ6erMuVxmmq/u8eNt7NnmaOnMexO5/yPvdsjFBt4SZz\nvSax86fiCql3MVMb8k8dSFZnkkqVlh80f4hb5nC0o3jMMIZ7SaU7/tgF8tEW\nQqOHHPncarogk1qhHAPAHIHueprjtfnLoOsBoUFtbRmIZT1ZxneD4a9Y2vbg\ne+3T6QuBZYCkKAhrN8Lk+EvdEUa+oncB75S3gV/wSqsi576HtTOuDA83gWL9\n003G22ls49KCT4wfwdv8ji9MvUWuPU6EUc37JmzoPGmKHfEKoBDd+S+iRovE\nLHnzIEh3WA4KbVWIbKyTHoeQHwvHFQEwUktk7gQPxWn5nowcGJ3FJeA73dAt\n5S0V7DVelozv6YaTbDfWs5KKeCladRLYrO+9zphf1NfKt0Ti91vrg8T67dlX\ni8JqqD32kGJrQVAsnZ/ZmBG8Vi/6Po6+Iw17ot4WcE8nX4Y8gjlbgZ+Lkl99\nG2rMt6lMhc7TINfIErpHPBUMzzrq/0KK4QayB/A7gWUxSMosU56aoJPFftx9\nTClr4ecZUAmQ6g16LtIMUt/BOUsmHA7L9lodWYr2AufPbnaG6voOK/HqWG/5\n1ebwyOC7SV0fvDQhtVlAJIfi1hmayzqrJZgkh0on5jGMuXBc+98rMv4CKWx9\nW8rnQPIvLA2hGj+vN1+gNdc0y61nfVHiZVBZtXv5A7E/C2b6E50vwXWY9fwH\ny3vphShzNYV3kpvujEkHS86SiNZfZsEsbv3RygKLGODhs9d2rfGf7ogFX7hw\ncGZ3ZxoR+s7tdQhmrPZm+IETtr+1jLag0kz/Cvn6UO8nlIQs805+S+U5qz4X\ncpVCf7Ked6xlzs2C2SMaDC3NpKKnNZ2jvwLXbmHEOkXhRlVuQfu/876i00Df\nN6J86NQF/QTO5PjJMlOxDz+oqeUcKe1m7BKsWZFJitL58MWhLCiFTN4aRqxg\nkppopu/yZs4bx1XYj11NSxthOuZzDWCi+3soM9jkhT/TwM+yJoZf1OQDWOp8\nx0Np+gJ3rZHAGKLHoIl0gYkig2qVii/k/IkD8Z9HY1u/Vevm0y9YmRGMTBaO\njYRVueTGA4/PmYVQTSd2AX4KeN0lZD1eYxz1nDQq1c4WRA5yjI+Mz24+w8U+\nd4w+uGzKfzUDSJbOkM//fYFVFYNLQMN/0mVEYPylRuajItrdf/XUkrwONH94\nDQmzUgMVtcvLT3H4Atmn6ElpRQsujX3eRIZW5Jy0KZ/l5JZeZCFRgZ/xManD\nwj086dyMCnSNCe5qUsq7DCXyNw84nLEI4oZI3iNC7HhpH8GD5nP+iSsL3Pfg\nDJIMm5hl7BWjBueGdRdHhkOy2dNIzzK2k7i1NU2O7pU8TSCKTx8j92IWWEHs\nfjxyb683Z38WwGqK2X+pibuDU2AIh/2TKBqqzUOd0dAafeqvwqR68lH3cL3P\nTkGE9VtfDu83mlmVEdu3pODfhJxzj0/V97AWBnMKyHtLTuzsESJXBAoq6M4D\nC9erzf4BG2U9DU2CrVQ/SAMMWmfNf42Z8od93tya9OeGtHwpxUctqkbHltzL\nL+zGAyzeL9Y/KvlIa1vWNPMwIbUbrgzlNnZ55K3ZrDMUTW6G3vRn23vlUb9i\n6TtdppolCXj8eGizeq/NFBsn+GiD/o2kCML3Cg1TynRHX7sCUILmriOp1rld\nyeFdxIoH3shONrbU1Ah5BN0u5quorst4s9ktMWIRP8gAxSIjc7Dgc2MluWp4\nIvD2+a8Sd4wcnKwTqDWBi1/YFKVDtt3b/gmFv68tT1NHCsYxnlNxuqXStKVH\nUklE66zdHfn7Pmlrw6JMbWdTeIvueguhTq8=\n",
+  "encrypted_notes": null
 }]]></config>
 </Javalab>

@@ -226,6 +226,15 @@ class Blockly < Level
     xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
   end
 
+  # "counter" mutations should not be stored because it results in the language being
+  # hardcoded. The only exception to this is student saved projects.
+  def self.remove_counter_mutations(xml_string)
+    xml = Nokogiri::XML(xml_string, &:noblanks)
+    return xml_string if xml.nil?
+    xml.xpath("//block[@type='controls_for_counter']//mutation[@counter='counter']").each(&:remove)
+    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+  end
+
   # for levels with solutions
   def update_ideal_level_source
     return if !respond_to?(:solution_blocks) || solution_blocks.blank?
@@ -700,9 +709,15 @@ class Blockly < Level
     Block.for(type)
   end
 
+  # Default to getting shared_functions of same level type, but allows subclasses to override
+  # this value if needed. See poetry.rb
+  def shared_function_type
+    type
+  end
+
   def shared_functions
-    Rails.cache.fetch("shared_functions/#{type}", force: !Script.should_cache?) do
-      SharedBlocklyFunction.where(level_type: type).map(&:to_xml_fragment)
+    Rails.cache.fetch("shared_functions/#{shared_function_type}", force: !Script.should_cache?) do
+      SharedBlocklyFunction.where(level_type: shared_function_type).map(&:to_xml_fragment)
     end.join
   end
 

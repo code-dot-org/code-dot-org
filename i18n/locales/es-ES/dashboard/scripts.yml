@@ -23,6 +23,7 @@ es:
         csp_2021_category_name: Principios de Ciencias de la Computación ('21-'22)
         cspexams_category_name: Prueba de práctica de Principios de Ciencias de la Computación
         csp17_category_name: Principios de Ciencias de la Computación ('17-'18)
+        aiml_2021_category_name: IA / ML
         full_course_category_name: Cursos completos
         hoc_category_name: Hora del Código
         math_category_name: Matemáticas
@@ -183,6 +184,8 @@ es:
           lessons:
             Artist:
               name: Artista
+              description_student: Programa el Artista para crear imágenes hermosas.
+              description_teacher: En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.
           student_description: "¡Dibuja imagenes estupendas y diseños con el Artista!"
         hourofcode:
           title: Laberinto clásico
@@ -198,7 +201,7 @@ es:
           description_short: Vamos a usar código para unirnos a Anna y Elsa mientras exploran la magia y la belleza del hielo.
           lessons:
             Artist:
-              name: Artista
+              name: Programa con Ana y Elsa
           student_description: Vamos a usar código para unirnos a Ana y Elsa mientras exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que patinas sobre hielo y harás un paisaje invernal que luego puedes compartir con tus amigos!
         course4:
           title: Curso 4
@@ -342,7 +345,7 @@ es:
           description_short: Utiliza el laboratorio de juegos para crear una historia o un juego protagonizado por personajes de Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratorio de Juego Disney Infinity
           student_description: Utiliza el laboratorio de juegos para crear una historia o un juego protagonizado por personajes de Disney Infinity.
         algebrademo:
           title: Demo de álgebra
@@ -594,6 +597,8 @@ es:
               name: Compresión de texto
         algebraPD:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -607,6 +612,7 @@ es:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         algPDmiami:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar álgebra a través de programación funcional
@@ -668,6 +674,8 @@ es:
             Lesson 15:
               name: Lección 15
         ECSPD:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -681,7 +689,10 @@ es:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         sciencePD:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -707,6 +718,7 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         rbo-reference:
           lessons:
             reference:
@@ -796,6 +808,8 @@ es:
             The Design Recipe:
               name: La receta de diseño
         ECSPD-NexTech:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -809,7 +823,10 @@ es:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         ECSPD-iZone:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -823,8 +840,11 @@ es:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         algebraPD-NexTech:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -838,8 +858,11 @@ es:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         algebraPD-iZone:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -853,7 +876,10 @@ es:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         sciencePD-NexTech:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -879,7 +905,10 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         sciencePD-iZone:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -905,7 +934,9 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         sciencePD2:
+          title: 'CS en ciencias: parte 2'
           lessons:
             Creating Breeds in Starlogo Nova:
               name: Creación de especies en StarLogo Nova
@@ -922,6 +953,7 @@ es:
             Wrap-Up:
               name: Cierre
         sciencePD3:
+          title: 'CS en ciencias: parte 3'
           lessons:
             Decode and Share:
               name: Decodificar y compartir
@@ -929,6 +961,14 @@ es:
               name: Modelo misterioso
             Welcome Back!:
               name: "¡Hola otra vez!"
+        Testing:
+          title: Probando
+          description: Probando
+          description_short: Probando
+          lessons:
+            Testing:
+              name: Probando
+          student_description: Probando
         cspunit2:
           lessons:
             Algorithms Detour - Hard Problems TSP:
@@ -973,6 +1013,8 @@ es:
               name: La necesidad de DNS
         algebraPD2a:
           title: Ciencias de la computación en álgebra PD
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Big Game - Animation:
               name: El gran juego - Animación
@@ -1004,6 +1046,7 @@ es:
               name: La receta de diseño
             Big GAme - Collision Detection:
               name: El gran juego - Detección de colisiones
+          student_description: Enseñar programación funcional a través de álgebra
         allthethings:
           title: "¡Todas las cosas!"
           description: Todos los tipos de niveles para las pruebas de la Interfaz de Usuario
@@ -1107,6 +1150,8 @@ es:
           name: todo lo que hay
         algebraPD2b:
           title: Ciencias de la computación en álgebra PD
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Best Practices for Teaching Computer Science:
               name: Mejores prácticas para la enseñanza de ciencias de la computación
@@ -1132,6 +1177,7 @@ es:
               name: Panel del docente
             Writing Contracts:
               name: Contratos de redacción
+          student_description: Enseñar programación funcional a través de álgebra
         cspfacilitator:
           lessons:
             App Lab:
@@ -1174,6 +1220,8 @@ es:
             Planning:
               name: Planificación
         ECSPD2:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidad 1, Día 10 Contar una historia con datos
@@ -1195,6 +1243,7 @@ es:
               name: Cierre
             Unit 1, Days 1-2 What Is a Computer?:
               name: Unidad 1, Días 1-2 ¿Qué es un ordenador?
+          student_description: Enseñar programación funcional a través de álgebra
         equityPD:
           lessons:
             Equity PD:
@@ -1202,6 +1251,7 @@ es:
             Necessary Background:
               name: Experiencia necesaria
         algebraPD2:
+          title: CS en Algebra Parte 2
           lessons:
             Lesson Prep:
               name: Preparación de la lección
@@ -1216,6 +1266,8 @@ es:
             Welcome!:
               name: "¡Bienvenido!"
         sciencePD2b:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Advanced StarLogo Nova:
               name: StarLogo Nova avanzado
@@ -1231,6 +1283,7 @@ es:
               name: "¡Bienvenido!"
             Wrap-Up:
               name: Cierre
+          student_description: Enseñar programación funcional a través de álgebra
         equity-pd:
           lessons:
             Code.org Equity PD:
@@ -1264,6 +1317,8 @@ es:
             Next Steps:
               name: Próximos pasos
         sciencePD2b-iZone:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Advanced StarLogo Nova:
               name: StarLogo Nova avanzado
@@ -1279,7 +1334,10 @@ es:
               name: "¡Bienvenido!"
             Wrap-Up:
               name: Cierre
+          student_description: Enseñar programación funcional a través de álgebra
         ECSPD2-iZone:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidad 1, Día 10 Contar una historia con datos
@@ -1301,7 +1359,10 @@ es:
               name: Cierre
             Unit 1, Days 1-2 What Is a Computer?:
               name: Unidad 1, Días 1-2 ¿Qué es un ordenador?
+          student_description: Enseñar programación funcional a través de álgebra
         ECSPD2-NexTech:
+          description: Enseñar programación funcional a través de álgebra
+          description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Unit 1, Day 10 Telling a Story with Data:
               name: Unidad 1, Día 10 Contar una historia con datos
@@ -1323,6 +1384,7 @@ es:
               name: Cierre
             Unit 1, Days 1-2 What Is a Computer?:
               name: Unidad 1, Días 1-2 ¿Qué es un ordenador?
+          student_description: Enseñar programación funcional a través de álgebra
         CSPPD2:
           lessons:
             Getting Started:
@@ -1583,6 +1645,7 @@ es:
             Halloween 2015:
               name: Halloween 2015
         SpecialSeries:
+          title: Niveles especiales
           description_audience: Edades de 10 a 18 años
           lessons:
             Spring 2016:
@@ -1674,9 +1737,6 @@ es:
         starwarsblocks:
           description: Aprende a programar droides y crea tu propio juego de La guerra de las galaxias en una galaxia muy, muy lejana.
           description_short: Aprende a programar droides y crea tu propio juego de La guerra de las galaxias en una galaxia muy, muy lejana.
-          lessons:
-            Hour of Code 2015:
-              name: Hora de Code 2015
           student_description: Aprende a programar droides y crea tu propio juego de La guerra de las galaxias en una galaxia muy, muy lejana.
         mc:
           title: Hora de Code de Minecraft
@@ -1693,6 +1753,7 @@ es:
           lessons:
             Oceans:
               name: Océanos
+              description_student: 'Resumen de la tutoría: En primer lugar, los alumnos clasifican los objetos como "peces" o "no peces" para intentar eliminar la basura del océano. A continuación, los alumnos deberán ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias etiquetas para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de etiquetar nuevas imágenes por sí mismo.'
           student_description: Aprende cómo IA y el aprendizaje automático se pueden usar para abordar problemas del mundo.
         CSPPD3-Unit3-pt2:
           lessons:
@@ -1771,6 +1832,7 @@ es:
             Unit 4 Overview:
               name: Resumen de la Unidad 4
         cspunit6draft:
+          description_short: Apps de datos
           lessons:
             Creating Javascript Objects:
               name: Creación de objetos de JavaScript
@@ -1885,7 +1947,9 @@ es:
             Middle_School_Hackathon:
               name: Hackatón_Escuela_Secundaria
         algebraPD1:
+          title: CS en Algebra Parte 1
           description: Enseñar álgebra a través de programación funcional
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -2316,6 +2380,7 @@ es:
             Using the Game Design Process:
               name: Uso del proceso de diseño de juegos
         2016_sciencePD_phase1:
+          title: 'CS en ciencias: parte 1'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -2352,6 +2417,7 @@ es:
             Sample Stage:
               name: Etapa de muestra
         ECSPD1:
+          description_short: 'Fase 1: introducción online'
           lessons:
             Background and Context:
               name: Experiencia y contexto
@@ -2381,6 +2447,8 @@ es:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
           student_description: Enseñar álgebra a través de programación funcional
         sciencePD1:
+          title: 'CS en ciencias: parte 1'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -3004,6 +3072,7 @@ es:
         csd3-2017:
           title: CSD Unidad 3 - Animaciones y juegos ('17-'18)
           description: " En la Unidad 3, desarrollarás tu experiencia de programación a medida que programes animaciones, arte interactivo y juegos en el Laboratorio de juegos. La unidad comienza con formas simples y, a partir de los mismos conceptos de programación y el proceso de diseño que usan los científicos informáticos a diario, añade juegos más sofisticados basados en sprites. En el proyecto final, desarrollarás un programa personalizado e interactivo."
+          description_short: Programación
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imágenes y animaciones'
@@ -3430,7 +3499,8 @@ es:
           description: Elije un equipo y crea un juego de basquetbol
           lessons:
             Bounce:
-              name: Rebotar
+              description_student: "¿Has pensado que alguna vez puedes jugar videojuegos en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+              description_teacher: En esta actividad online, los/as estudiantes aprenderán lo que son los eventos, y cómo los computadores los usan en los programas como los videojuegos. Los/as estudiantes trabajarán los desafíos haciendo que el programa reaccione a los eventos (como presionar los botones de flecha). Al final del desafío, los/as estudiantes tendrán la oportunidad de personalizar su juego con diferentes velocidades y sonidos.
           student_description: Elije un equipo y crea un juego de basquetbol
         sample-csp5:
           lessons:
@@ -3830,6 +3900,7 @@ es:
             Loops in Harvester:
               name: Bucles en la cosechadora
         coursed-draft:
+          title: 'Fundamentos de Ciencias de la Computación: Curso D'
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -4004,7 +4075,8 @@ es:
           description: Multideporte
           lessons:
             Sports:
-              name: Deportes
+              description_student: "¿Has pensado que alguna vez puedes jugar videojuegos en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+              description_teacher: En esta actividad online, los/as estudiantes aprenderán lo que son los eventos, y cómo los computadores los usan en los programas como los videojuegos. Los/as estudiantes trabajarán los desafíos haciendo que el programa reaccione a los eventos (como presionar los botones de flecha). Al final del desafío, los/as estudiantes tendrán la oportunidad de personalizar su juego con diferentes velocidades y sonidos.
           student_description: Multideporte
         2016_sciencePD-phase2b:
           lessons:
@@ -4119,6 +4191,7 @@ es:
               name: Resumen de la Unidad 4
           student_description: Se trata de un conjunto de apoyos en línea organizados en un Curso de Aprendizaje Profesional para los profesores de CSP que se preparan para enseñar la Unidad 4.
         sciencepd4:
+          title: 'CS en ciencias: parte 4'
           lessons:
             Welcome!:
               name: "¡Bienvenido!"
@@ -4168,6 +4241,7 @@ es:
             Snowflakes:
               name: Copos de nieve
         sciencepd5:
+          title: 'CS en ciencias: parte 5'
           lessons:
             Welcome!:
               name: "¡Bienvenido!"
@@ -4431,6 +4505,7 @@ es:
               name: Getters y setters
           student_description: Este taller está diseñado para dar a los estudiantes una introducción básica de 2 horas al laboratorio de aplicaciones. Los estudiantes deberían contar con experiencia en Ciencias de la Computación y tener la capacidad de divertirse mientras crean algo.
         coursed-ramp:
+          title: 'Fundamentos de Ciencias de la Computación: Curso D'
           lessons:
             Introduction:
               name: Introducción
@@ -6750,6 +6825,8 @@ es:
               name: Implementación de la encuesta final de CSD de 2019
             Place for testing crazy stuff:
               name: Un lugar para probar cosas locas
+            CSD pre-survey 2021:
+              name: Encuesta previa a CSD 2021
         k1hoc2017:
           title: Hora del Código para escuela primaria 2017
           lessons:
@@ -6763,7 +6840,7 @@ es:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Hora del Código para el Viaje del Héroe'
             Minecraft Hour of Code:
-              name: Hora de Code de Minecraft
+              name: 'Minecraft: Viaje del héroe'
           student_description: "¡Minecraft está de vuelta para la Hora del Código con una actividad nueva! Viaja a través de Minecraft con códigos."
         applab-intro-staging:
           title: Introducción a la preparación del Laboratorio de aplicaciones
@@ -9172,7 +9249,7 @@ es:
           description: "¡Minecraft está de vuelta con una nueva actividad! Usa tu creatividad y tu capacidad de resolver problemas para explorar y construir mundos acuáticos a través del código."
           lessons:
             Aquatic:
-              name: Aquatic
+              name: 'Minecraft: Voyage Aquatic'
           student_description: "¡Minecraft está de vuelta con una nueva actividad! Usa tu creatividad y tu capacidad de resolver problemas para explorar y construir mundos acuáticos a través del código."
         sconyers:
           title: Playground de Tracey
@@ -11231,6 +11308,8 @@ es:
               display_name: 'Colección 1: Everglades y sus ecosistemas'
             time4cs_c2:
               display_name: 'Colección 2: Cadenas de comida (en Everglades)'
+            time4cs_c3:
+              display_name: Vivir en Everglades
             time4cs_c4:
               display_name: 'Colección 4: El impacto de las especies invasivas (en Everglades)'
             time4cs_c5:
@@ -11486,6 +11565,8 @@ es:
               name: Proyecto - Diseñar una aplicación Parte 3
             Project - Designing an App Part 4:
               name: Proyecto - Diseñar una aplicación Parte 4
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
         csp4-pilot-staging:
           title: 'Unidad 4: Variables, condicionales y funciones'
           lesson_groups:
@@ -11934,7 +12015,7 @@ es:
               display_name: Encuesta
           lessons:
             CSD post-course survey:
-              name: Encuesta de fin de curso de CSD
+              name: Encuesta de fin de curso para estudiantes de CSD ('18-'19)
           student_description: "La encuesta de fin de curso de Descubrimientos de Ciencias de la Computación de Code.org es una herramienta importante que usamos para obtener tus comentarios y hacer mejoras al curso. \n\nLa encuesta es privada y anónima, es decir que tu docente podrá ver los resultados anónimos acumulados para toda la clase. Los resultados son fundamentales para tu docente y para que Code.org mantenga y mejore el curso. Gracias por tu tiempo y consideración."
         csp-post-survey-2018:
           title: Encuesta de fin de curso de CSP para estudiantes ('18-'19)
@@ -11946,7 +12027,7 @@ es:
               display_name: Encuesta
           lessons:
             CSP post-course survey:
-              name: Encuesta de fin de curso de CSP
+              name: Encuesta de fin de curso de CSP para estudiantes ('18-'19)
           student_description: Bienvenido a la encuesta de fin de curso de Principios de Ciencias de la Computación de Code.org. Para completar esta encuesta, demorarás unos 15 minutos. Tus respuestas son privadas y anónimas, es decir que tu docente podrá ver los resultados anónimos acumulados para toda la clase. Los resultados son fundamentales para tu docente, y para que Code.org mantenga y mejore el curso. Gracias por tu tiempo y consideración.
         csp5-pilot:
           title: 'Unidad 5: Listas, bucles y recorridos'
@@ -12448,6 +12529,8 @@ es:
               name: Proyecto - Diseñar una aplicación Parte 4
             'Project: Share Your App':
               name: 'Proyecto: comparte tu aplicación'
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
             'Project: Finish Your App':
               name: 'Proyecto: finalizar tu aplicación'
             Programs Explore:
@@ -12469,6 +12552,8 @@ es:
         csl-vn:
           title: Enseñanza de ciencias de la computación para Vietnam
           description_audience: Tuổi 5-10
+          description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
+          description: 'Khoa Học Máy Tính (ciencias de la computación) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
           lesson_groups:
             csf_sequencing:
               display_name: Secuencias
@@ -12489,6 +12574,7 @@ es:
               name: Escena del océano con bucles
             Tell a Story in Play Lab:
               name: Contar una historia en el Laboratorio de juegos
+          student_description: 'Khoa Học Máy Tính (ciencias de la computación) là môn học cơ bản của thời đại kinh tế số và đã được đưa vào dạy đại trà từ tiểu học ở Mỹ, Canada, Anh, Nhật và các nước phát triển khác. Khoá học này nhằm giới thiệu Khoa Học Máy Tính cơ bản đến với học sinh Việt Nam. Chương trình được xây dựng trực tiếp từ chương trình hiện hành cho học sinh tiểu học ở Mỹ và cô đọng cho phù hợp với học sinh Việt Nam. '
         dlp19-csd-mod-fit:
           title: Descripción del aprendizaje profundo en Descubrimientos de Ciencias de la Computación 2019
           description_audience: Facilitadores de Descubrimientos de las Ciencias de la Computación en período de formación 2019
@@ -12874,6 +12960,7 @@ es:
               name: 'Detector de colisiones: procesamiento con eventos'
         dance-2019:
           title: Fiesta de baile (remix 2019)
+          description_short: "¡Con la presencia de Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj y muchos más!"
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           lessons:
             Dance Party:
@@ -13139,6 +13226,8 @@ es:
               display_name: 'Colección 1: Everglades y sus ecosistemas'
             time4cs_c2:
               display_name: 'Colección 2: Cadenas de comida (en Everglades)'
+            time4cs_c3:
+              display_name: Vivir en Everglades
             time4cs_c4:
               display_name: 'Colección 4: El impacto de las especies invasivas (en Everglades)'
             time4cs_c5:
@@ -15169,6 +15258,8 @@ es:
               name: Proyecto - Diseñar una aplicación Parte 1
             Project - Designing an App Part 2:
               name: Proyecto - Diseñar una aplicación Parte 2
+            The Need for Programming Languages:
+              name: La necesidad de lenguajes de programación
             Intro to Programming:
               name: Introducción a la programación
             Debugging:
@@ -15819,6 +15910,7 @@ es:
             k5_next_steps_1:
               display_name: Próximos pasos
           student_description: "¡Aprende a enseñar ciencias de la computación con este curso en línea gratuito y autodidacta de Fundamentos de Ciencias de la Computación!"
+          name: k5-enlíneapd-2020
         dani-test-2020:
           lessons:
             new lesson:
@@ -17297,6 +17389,8 @@ es:
               description_student: Los alumnos continúan trabajando en los proyectos de la unidad, en esta lección que está diseñada principalmente como tiempo de trabajo. Los alumnos siguen el proceso de desarrollo de la aplicación que se indica en su Guía de Desarrollo de Aplicaciones, transfiriendo los diseños de las interfaces de usuario de sus guías de planificación al Laboratorio de Aplicaciones.
               description_teacher: Los alumnos continúan trabajando en los proyectos de la unidad, en esta lección que está diseñada principalmente como tiempo de trabajo. Los alumnos siguen el proceso de desarrollo de la aplicación que se indica en su Guía de Desarrollo de Aplicaciones, transfiriendo los diseños de las interfaces de usuario de sus guías de planificación al Laboratorio de Aplicaciones.
             The Need for Programming Languages:
+              key: La necesidad de lenguajes de programación
+              name: La necesidad de lenguajes de programación
               description_student: 'Esta es la primera de una serie de lecciones en las que los alumnos avanzarán en la construcción de su propia aplicación operativa. '
               description_teacher: En esta lección, los alumnos exploran los desafíos de comunicar claramente las instrucciones. Construyen una pequeña disposición de bloques (piezas LEGO® o recortes de papel) y luego crean instrucciones de texto que un compañero podría seguir para construir la misma disposición. A continuación, los grupos intercambian las instrucciones para comprobar si son lo suficientemente claras como para permitir la reconstrucción de la disposición original. El debate final, se utiliza para poner de manifiesto las ambigüedades inherentes al lenguaje humano y para llamar la atención, sobre la necesidad de crear un lenguaje de programación que no deje lugar a la interpretación.
             Intro to Programming:
@@ -17760,6 +17854,7 @@ es:
               description: "### Filosofía y Pedagogía de la Unidad\n\n-   **Aprendizaje a través de la simulación de toda la clase:** El proyecto de simulación que se lleva a cabo en esta unidad cumple varios objetivos importantes. Ayuda a contextualizar lo que los alumnos están aprendiendo al pasar de las ideas abstractas de privacidad o seguridad a las posibles innovaciones concretas. Dado que la simulación se basa en la modernización de las escuelas, los alumnos pueden tener en cuenta las consecuencias de las innovaciones informáticas en un entorno familiar. Al asumir un papel asignado e interactuar con un grupo de compañeros que han hecho lo mismo, los alumnos deben tener en cuenta una amplitud de intereses y objetivos más allá de los suyos cuando se trata de innovar en las escuelas. \n\n-   Un tema importante con el que los alumnos se comprometen a lo largo de esta unidad es la necesidad de tener en cuenta las dos caras de la innovación tecnológica. La tecnología informática ha generado tanto beneficios como perjuicios para la cultura, la economía y la sociedad en general. Para responder a las cuestiones importantes a las que se enfrenta nuestro mundo es necesario comprender la tecnología y ser capaz de identificar e interpretar los impactos que provoca. Esta unidad no está diseñada para defender ningún punto de vista concreto sobre el impacto de la tecnología. Sin embargo, debería capacitar a los alumnos para ver y sopesar hábilmente las consecuencias de la tecnología que les rodea. Aunque el proyecto Crear PT puede parecer el más significativo de este curso, el requisito Explore el Plan de Estudios y las preguntas que se plantean en esta unidad son posiblemente más cruciales. Muchos de los jóvenes que cursan Principios de la informática pueden seguir estudios o carreras en las que son \"creadores\" con la tecnología, pero todos ellos tendrán que ser \"decisores\" reflexivos en un mundo profundamente moldeado por la informática. \n\n### Evaluación y Proyectos Principales\n\nLos alumnos completan la simulación de la Convención de la Escuela del Futuro a lo largo de esta unidad. Trabajando en equipos de aproximadamente cinco personas, se asigna a los alumnos un papel y una serie de intereses que deberán investigar. Investigan las innovaciones del mundo real que podrían mejorar las escuelas y que se ajustan a los intereses de su personaje. A lo largo de la unidad, tienen la oportunidad de perfeccionar sus propuestas en equipo y de debatir los beneficios y los riesgos de las distintas innovaciones informáticas. Finalmente, su equipo presenta una propuesta global para la Escuela del Futuro, y todos los alumnos votan por el equipo y la innovación que consideran mejores. Los alumnos también realizarán una evaluación al final de la unidad alineada con los objetivos del marco de los principios de la informática cubiertos en esta unidad.\n\n### Conexiones AP\n\nEsta unidad y el proyecto de la unidad ayudan a construir los entendimientos duraderos que se enumeran a continuación. Para un seguimiento detallado de las unidades con respecto a los Objetivos de Aprendizaje y EKs, por favor, consulte la página de \"Estándares\" para esta unidad.\nAP® es una marca registrada de College Board.\n\n-   IOC-1: Aunque las innovaciones informáticas suelen estar diseñadas para lograr un propósito específico, pueden tener consecuencias no deseadas.\n-   IOC-2: El uso de las innovaciones informáticas puede implicar riesgos para la seguridad personal y la identidad.\n\nEsta unidad incluye contenidos de los siguientes temas del Marco de Principios de CS de AP. Para obtener información más detallada sobre la cobertura de los temas en el curso, revisa [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n-   5.1 Efectos beneficiosos y perjudiciales\n-   5.6 Computación segura"
           name: csp10-2021
         coursea-2021:
+          title: Curso A (2021)
           description_short: Una introducción a las ciencias de la computación para prelectores.
           description_audience: De 4 a 7 años
           lessons:
@@ -17845,6 +17940,7 @@ es:
           name: Curso A - 2021
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
         courseb-2021:
+          title: Curso B (2021)
           description_short: Una introducción a las ciencias de la computación para prelectores. Es similar al Curso A, pero con conceptos más avanzados.
           description_audience: De 5 a 8 años
           lessons:
@@ -17933,6 +18029,7 @@ es:
           name: Curso B - 2021
           student_description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
         coursec-2021:
+          title: Curso C (2021)
           description_short: Aprende los conceptos básicos de las Ciencias de la Computación y crea tu propio arte, historias y juegos.
           description_audience: De 6 a 10 años
           lessons:
@@ -18186,6 +18283,7 @@ es:
               display_name: Ciudadanía Digital
           name: Curso D - 2021
         coursee-2021:
+          title: Curso E (2021)
           description_audience: De 8 a 12 años
           lessons:
             Sequencing in the Maze:
@@ -18324,6 +18422,8 @@ es:
               display_name: Impactos de la computación
           name: Curso E - 2021
         coursef-2021:
+          title: Curso F (2021)
+          description: Hemos creado el Curso F para estudiantes en el 5° grado. Al comenzar este curso los estudiantes aprenderán sobre las decisiones que la gente toma cuando utilizan las aplicaciones. Luego, los estudiantes aprenderán a crear diferentes tipos de aplicaciones con multiples opciones para los usuarios usando el Laboratorio de Sprites. En las próximas lecciones del curso, los estudiantes aprenderán conceptos mas avanzados, como los variables y los bucles "para". Los estudiantes tendrán más autonomía y la oportunidad de tomar sus propias decisiones a través del curso. Los estudiantes terminaran el curso con proyectos interactivos y obras de arte que podrán compartir con sus amigos/as y familiares.
           description_short: Aprende todos los conceptos de Fundamentos de Ciencias de la Computación y crea tu propio arte, historia o juego.
           description_audience: De 9 a 13 años
           lessons:
@@ -18433,6 +18533,7 @@ es:
             lesson-6:
               name: Presentamos el Laboratorio de sprites
               description_student: Hablarán del papel que desempeñan los ordenadores y la tecnología en sus vidas, centrándose en cómo las aplicaciones y las herramientas dan a los usuarios la posibilidad de elegir la forma de utilizarlas.
+              description_teacher: 'En esta lección **definida por el contexto**, los estudiantes debatirán sobre el papel de las computadoras y la tecnología en sus vidas, centrándose en cómo las aplicaciones y las herramientas ofrecen a los usuarios la posibilidad de elegir cómo utilizarlas. Los estudiantes explorarán aplicaciones similares a las que crearán más adelante.  '
             lesson-7:
               name: Creación de Sprites
               description_student: En esta lección escribirás programas y aprenderás sobre los sprites y los comportamientos.
@@ -18487,6 +18588,7 @@ es:
               display_name: Ciudadanía Digital
           name: Curso F - 2021
         express-2021:
+          title: Curso Express (2021)
           description: Aprende los fundamentos de las ciencias de la computación y la seguridad en Internet. Al final del curso, crea tu propio juego o historia para compartir.
           description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
           description_audience: 'Edades: 9 a 18'
@@ -19201,6 +19303,12 @@ es:
               description_teacher: Los alumnos realizan una evaluación de opción múltiple que abarca los temas de la unidad.
             lesson-21:
               name: "Lección de Prueba #1"
+            lesson-24:
+              name: Laboratorio Java
+            lesson-22:
+              name: Clases y Objetos
+            lesson-23:
+              name: Utilización de comandos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -19266,6 +19374,12 @@ es:
               name: Día de evaluación
               description_student: En esta unidad, has creado objetos y definido variables de instancia para representar atributos. Has explorado la creación y el uso de constructores para establecer valores para estos atributos y cómo trabajar con los datos almacenados en los objetos. Has implementado métodos "accessor" y "mutator" para acceder y modificar los valores almacenados en las variables de instancia y has escrito métodos `toString` para obtener información sobre el estado del objeto. Utilizaste la clase `Scanner` para obtener la entrada del usuario y utilizarla como datos del programa para crear y trabajar con tus objetos. Has aprendido a utilizar tipos de datos, operadores y expresiones y a implementar la encapsulación de datos y el diseño orientado a objetos. Ahora, debes evaluar tu logro de los objetivos de aprendizaje y habilidades de la unidad en una evaluación de opción múltiple.
               description_teacher: En esta unidad, los alumnos desarrollaron una comprensión de la encapsulación de datos y las decisiones de diseño orientado a objetos para construir un programa que respondiera a las necesidades del camión de comida del Proyecto Pastelería Mercurio. Los alumnos crearon objetos con variables de instancia apropiadas en función de las necesidades del programa, al tiempo que exploraron los tipos de datos, las variables y las expresiones para trabajar con los datos de los objetos. Los alumnos también han desarrollado métodos accessor, mutator y `toString` para recuperar, modificar y generar datos de objetos. A lo largo de la unidad, los alumnos utilizaron la clase `Scanner` para obtener información del usuario y ampliar la interactividad de sus programas. Ahora, los alumnos evalúan el logro de los objetivos de aprendizaje de la unidad y las habilidades en una evaluación de opción múltiple.
+            lesson-16:
+              name: Laboratorio Java
+            lesson-17:
+              name: Clases y Objetos
+            lesson-18:
+              name: Utilización de comandos
           lesson_groups:
             lesson group:
               display_name: Contenido
@@ -19336,6 +19450,12 @@ es:
                 -   Practicar la calificación de un FRQ con una rúbrica de calificación
             lesson-15:
               name: Día de evaluación
+            lesson-17:
+              name: Laboratorio Java
+            lesson-18:
+              name: Clases y Objetos
+            lesson-19:
+              name: Utilización de comandos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -19358,8 +19478,8 @@ es:
               description_teacher: Los alumnos vuelven a visitar el Proyecto Camión de Comida de Pasteles Mercurio para aprender sobre el reparto, el redondeo y los números aleatorios. Los alumnos resuelven escenarios para el propietario del camión de comida utilizando sus conocimientos de Java y la clase `Matemáticas`.
             lesson-5:
               name: Comparando Valores para Tomar Decisiones
-              description_student: 'Hoy, se trata de utilizar el código para tomar decisiones. Se comparan las relaciones entre los valores mientras se utilizan sentencias condicionales para ayudar al `Pintor` a tomar decisiones. '
-              description_teacher: 'Los alumnos utilizan operadores relacionales para escribir y evaluar expresiones. Los alumnos amplían el uso de las sentencias `if` para comparar valores almacenados en variables y elementos de matrices (arrays). '
+              description_student: Hoy, se trata de utilizar el código para tomar decisiones. Se comparan las relaciones entre los valores mientras se utilizan sentencias condicionales para ayudar al `Pintor` a tomar decisiones.
+              description_teacher: Los alumnos utilizan operadores relacionales para escribir y evaluar expresiones. Los alumnos amplían el uso de las sentencias `if` para comparar valores almacenados en variables y elementos de matrices (arrays).
             lesson-6:
               name: Añadiendo Aleatoriedad a un Programa
               description_student: Uno de los casos de uso más comunes para generar números aleatorios son los juegos de azar, como tirar los dados, barajar las cartas y lanzar una moneda. Los juegos suelen utilizar números aleatorios para generar diferentes resultados. Hoy, se añade la aleatoriedad al juego Explota el Globo añadiendo una función de lanzamiento de dados.
@@ -19382,6 +19502,14 @@ es:
               name: Día FRQ
             lesson-15:
               name: Día de evaluación
+            lesson-16:
+              name: Laboratorio Java
+            lesson-17:
+              name: Clases y Objetos
+            lesson-18:
+              name: Utilización de comandos
+            lesson-19:
+              name: Tratando los Datos como Tipos Diferentes
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -19977,10 +20105,10 @@ es:
               name: Módulo 2
             Module 3:
               key: Módulo 3
-              name: 'Módulo 3: Unidad 5, uso de listas en las aplicaciones y reconocimiento de las habilidades de Ciencias de la Computación en el aula'
+              name: Módulo 3
             Module 4:
               key: Módulo 4
-              name: 'Módulo 4: Unidad 5 y uso de conjuntos de datos en las aplicaciones'
+              name: Módulo 4
             Module 5:
               key: Módulo 5
               name: 'Módulo 5: Unidad 7 y comprensión de las funciones con parámetros y retorno'
@@ -20341,6 +20469,12 @@ es:
           lessons:
             lesson-2:
               name: Lección 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapa 1
+            lessonGroup-3:
+              display_name: Etapa 2
         dlp21-csp-mod1:
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         dlp21-csd:
@@ -20366,6 +20500,8 @@ es:
           lessons:
             lesson-12:
               name: Herramientas
+            lesson-13:
+              name: Ejemplos
             lesson-17:
               name: Consola
             lesson-18:
@@ -20457,17 +20593,11 @@ es:
             Unit 1 Pilot Survey:
               name: "Lección de Prueba #1"
             lesson-1:
-              name: Bienvenido a CSA
-              description_student: En esta lección, conocerás los valores de la ingeniería del software y la forma en que practicas estos principios en otros aspectos de tu vida. ¡Al final de esta lección, descubrirás tu propia identidad como ingeniero de software!
-              description_teacher: Creer en la propia identidad de la ingeniería del software fomenta la confianza y la perseverancia. Esta lección presenta los valores fundamentales de la ingeniería del software y contempla las impresiones comunes que pueden tener los alumnos. Los alumnos reflexionan sobre cómo practican ya muchos de estos valores para descubrir su propia identidad de ingeniero de software.
+              name: Laboratorio Java
             lesson-2:
               name: Clases y Objetos
-              description_student: Descubrirás el funcionamiento de "El Barrio" y aprenderás algunos de los componentes clave del lenguaje de programación Java. Conocerás al `Pintor` y harás cambios en el código para aprender lo que el `Pintor` puede hacer.
-              description_teacher: 'Los alumnos acceden al Laboratorio Java para explorar "El Barrio" y se les presenta la clase `Pintor`. Los alumnos examinan el código de inicio y realizan modificaciones sencillas para lograr diferentes resultados con un objeto `Pintor` y practican la creación de un objeto `Pintor` para identificar la relación entre una clase y un objeto.  '
             lesson-3:
               name: Utilización de comandos
-              description_student: Ahora que has conocido al `Pintor`, en esta lección utilizarás los comandos de acción para mover el `Pintor` por El Barrio. Aprenderás algunas de las reglas de Java que debes seguir para que el Pintor se mueva.
-              description_teacher: En esta lección, los alumnos aplican soluciones utilizando comandos de acción para mover al " Pintor " por El Barrio. Los alumnos desarrollan sus habilidades de pensamiento computacional traduciendo las soluciones en código Java mientras practican la duplicación de patrones. Mientras resuelven estos problemas, los alumnos aprenden la importancia de distinguir entre mayúsculas y minúsculas y del punto y coma en Java, y se les expone al uso de la notación de puntos para llamar a los comandos del "Pintor".
             lesson-4:
               name: Condicionales y Depuración
               description_student: Ahora que sabes cómo utilizar los comandos de acción, ayudas al `Pintor` a tomar decisiones sobre cómo interactuar con El Barrio utilizando comandos de recopilación de información. También aprendes a depurar e identificar estrategias para usar a lo largo del año.
@@ -20604,11 +20734,9 @@ es:
               description_student: 'A través de nuestras experiencias en El Barrio, sabemos que las clases y los objetos son componentes clave del lenguaje de programación Java. Pero, ¿cómo crean las clases objetos exactamente? En esta lección, descubrirás cómo se crea un objeto y aprenderás sobre un proceso llamado encapsulación de datos. '
               description_teacher: En esta lección desconectada, los alumnos crean objetos y representan los atributos relevantes utilizando variables de instancia. Los alumnos aprenden la diferencia entre `público` y `privado` y el propósito de la encapsulación para ocultar la construcción interna de un objeto.
             lesson-2:
-              name: Usando Variables
+              name: Clases y Objetos
             lesson-3:
-              name: Escribir Constructores
-              description_student: ¡El camión de comida del Proyecto "Pastelería Mercurio" necesita tu ayuda! El propietario quiere vender postres en El Barrio pero necesita poder introducir y almacenar sus postres en un programa. Se te ha pedido que utilices tus conocimientos de ingeniería de software para crear un programa que pueda crear objetos de postre para que el propietario pueda hacer un seguimiento de su inventario. Comienza creando una clase `Postre` para que el propietario pueda introducir el sabor, la cantidad disponible y el precio de cada postre que vende.
-              description_teacher: Los alumnos conocen el camión de comida del Proyecto "Pastelería Mercurio" y la necesidad del propietario de un programa para introducir y almacenar artículos de postre. Como ingenieros de software, los alumnos utilizan estrategias de diseño orientado a objetos para identificar los atributos necesarios y los tipos de datos apropiados para una clase "Postre". Los alumnos escriben un constructor y utilizan un objeto `Escáner` que permite obtener los valores de las variables de instancia para inicializar un objeto `Postre`.
+              name: Utilización de comandos
             lesson-4:
               name: Agregando Varios Constructores
               description_student: ¡El camión de comida del Proyecto Pastelería Mercurio ha crecido en popularidad! Para ayudar al propietario a rellenar los pedidos, mejoras la clase `Postre` para crear objetos `Postre` de forma más eficiente. Para resolver este problema, debes implementar "constructores sobrecargados" para simplificar tu código y añadir flexibilidad a la creación de objetos `Postre`. Para rellenar los pedidos estándar, creas un constructor por defecto para utilizar los valores por defecto de los `Postres`.
@@ -20657,6 +20785,8 @@ es:
               name: Día de evaluación
               description_student: En esta unidad, has creado objetos y definido variables de instancia para representar atributos. Has explorado la creación y el uso de constructores para establecer valores para estos atributos y cómo trabajar con los datos almacenados en los objetos. Has implementado métodos "accessor" y "mutator" para acceder y modificar los valores almacenados en las variables de instancia y has escrito métodos `toString` para obtener información sobre el estado del objeto. Utilizaste la clase `Scanner` para obtener la entrada del usuario y utilizarla como datos del programa para crear y trabajar con tus objetos. Has aprendido a utilizar tipos de datos, operadores y expresiones y a implementar la encapsulación de datos y el diseño orientado a objetos. Ahora, debes evaluar tu logro de los objetivos de aprendizaje y habilidades de la unidad en una evaluación de opción múltiple.
               description_teacher: En esta unidad, los alumnos desarrollaron una comprensión de la encapsulación de datos y las decisiones de diseño orientado a objetos para construir un programa que respondiera a las necesidades del camión de comida del Proyecto Pastelería Mercurio. Los alumnos crearon objetos con variables de instancia apropiadas en función de las necesidades del programa, al tiempo que exploraron los tipos de datos, las variables y las expresiones para trabajar con los datos de los objetos. Los alumnos también han desarrollado métodos accessor, mutator y `toString` para recuperar, modificar y generar datos de objetos. A lo largo de la unidad, los alumnos utilizaron la clase `Scanner` para obtener información del usuario y ampliar la interactividad de sus programas. Ahora, los alumnos evalúan el logro de los objetivos de aprendizaje de la unidad y las habilidades en una evaluación de opción múltiple.
+            lesson-1:
+              name: Laboratorio Java
           lesson_groups:
             lesson group:
               display_name: Contenido
@@ -20727,19 +20857,15 @@ es:
             Assessment Day:
               name: Día de evaluación
             lesson-1:
-              name: Creando Arrays
-              description_student: La propietaria de un "camión de comida" aumentó su inventario de postres. Antes tenía que declarar variables separadas para hacer un seguimiento del inventario, pero ¿qué pasa si tiene 150 postres? ¡Eso sería un montón de variables! En esta lección, explorarás cómo crear un array unidimensional (1D), determinar su longitud y utilizar valores índice para acceder a elementos individuales.
-              description_teacher: En esta lección desconectada, los alumnos crean matrices (Arrays) unidimensionales (1D) para almacenar listas de valores. Los alumnos aprenden a referirse a la longitud de una matriz 1D y a acceder a los elementos individuales que se almacenan.
+              name: Laboratorio Java
             lesson-2:
-              name: Acceso y Modificación de Elementos
-              description_student: Creas arrays para almacenar valores utilizando la palabra clave `new`. Se explora el Teatro, que permite manipular sonidos y formas. Utiliza El Barrio y El Teatro para practicar el acceso y la modificación de elementos en matrices utilizando valores de índice.
-              description_teacher: En esta lección, los alumnos crean matrices (arrays) para almacenar valores utilizando la palabra clave `new`. Exploran El Teatro, que les permite manipular sonidos y formas. Utilizan El barrio y El teatro para practicar el acceso y la modificación de elementos en matrices utilizando valores de índice.
+              name: Clases y Objetos
             lesson-3:
-              name: Recorrido de Arrays con Bucles For
-              description_student: En esta lección, aprenderás sobre los bucles `for` y cómo utilizarlos para recorrer arrays. Volverás a visitar El barrio y utilizarás tablas de seguimiento para documentar cómo se ejecuta el código dentro de un bucle `for`. Utilizarás los bucles `for` para resolver problemas en The Neighborhood y obtendrás experiencia sobre tu trabajo a través de una revisión de código.
-              description_teacher: Los alumnos escriben bucles "for" para recorrer matrices (arrays) y buscar y modificar elementos que cumplan determinadas condiciones. Los alumnos vuelven a visitar El barrio y utilizan tablas de seguimiento para documentar cómo se ejecuta el código dentro de un bucle `for`. Participan en una revisión del código después de completar un nivel de elección y revisan su código basándose en los comentarios.
+              name: Utilización de comandos
             lesson-4:
               name: Recorrido de Arrays con Bucles While
+              description_student: "¿Recuerdas los bucles `while`? En esta lección, investigarás los casos límite de los bucles `while` y harás conexiones entre los bucles `while` y `for`. Creas imágenes para tu música utilizando la clase `Rectangle`."
+              description_teacher: Los alumnos revisan los bucles `while` y aprenden sobre los bucles infinitos. Los alumnos exploran la creación de visuales antes de la conversión entre los bucles `while` y `for`. Los alumnos crean sus propios visuales musicales utilizando la clase `Rectangle`.
             lesson-5:
               name: Almacenando Objetos en Arrays
               description_teacher: Los alumnos exploran la funcionalidad y las ventajas del polimorfismo para crear y recorrer un array de objetos `Shape`. Después de revisar la herencia, los alumnos descubren que las subclases pueden implementar versiones específicas de comportamientos. El análisis de un segmento de código proporciona un ejemplo para guiar la implementación del polimorfismo en El Teatro.
@@ -20768,6 +20894,7 @@ es:
               description_teacher: Para este proyecto, los alumnos utilizan matrices unidimensionales y algoritmos estándar para desarrollar un concierto en El Teatro. Los alumnos comienzan eligiendo un algoritmo de remezcla de un conjunto de opciones de remezcla y escribiendo su pseudocódigo con un compañero. Traducirán el pseudocódigo en código y combinarán su nuevo algoritmo con los algoritmos que han desarrollado en lecciones anteriores para crear el audio del concierto.
             lesson-12:
               description_student: Continúa diseñando tu concierto en El Teatro, añadiendo restricciones a la duración del mismo y agregando elementos visuales. Realiza una revisión del código para obtener comentarios que te permitan seguir desarrollando tu programa.
+              description_teacher: En la lección anterior, los estudiantes escribieron un algoritmo de remezcla y lo combinaron con los algoritmos que desarrollaron en lecciones anteriores. Los alumnos utilizan variables estáticas y constantes para añadir restricciones a la duración del concierto. Añaden elementos visuales al concierto utilizando un array de `Formas`, y luego participan en una revisión del código para dar y utilizar la experiencia mientras desarrollan su programa.
             lesson-13:
               description_student: En la lección anterior, creaste una lista priorizada de trabajo para completar. Hoy, autoevaluarás tu trabajo con respecto a la rúbrica del proyecto y a continuación, revisarás tu lista priorizada para decidir qué revisiones tienes que hacer en tu concierto. ¡A continuación, compartirás tu proyecto final con los compañeros para celebrar tu éxito!
               description_teacher: En la lección anterior, los alumnos crearon una lista priorizada de trabajo para completar. En esta lección, los alumnos autoevaluarán su trabajo con respecto a la rúbrica del proyecto y, a continuación, revisarán su lista de prioridades para informar sobre las revisiones de su concierto. A continuación, los alumnos comparten sus proyectos finales con los compañeros para celebrar sus éxitos.
@@ -20805,8 +20932,8 @@ es:
               description_teacher: Los alumnos vuelven a visitar el Proyecto Camión de Comida de Pasteles Mercurio para aprender sobre el reparto, el redondeo y los números aleatorios. Los alumnos resuelven escenarios para el propietario del camión de comida utilizando sus conocimientos de Java y la clase `Matemáticas`.
             Comparing Values to Make Decisions:
               name: Comparando Valores para Tomar Decisiones
-              description_student: 'Hoy, se trata de utilizar el código para tomar decisiones. Se comparan las relaciones entre los valores mientras se utilizan sentencias condicionales para ayudar al `Pintor` a tomar decisiones. '
-              description_teacher: 'Los alumnos utilizan operadores relacionales para escribir y evaluar expresiones. Los alumnos amplían el uso de las sentencias `if` para comparar valores almacenados en variables y elementos de matrices (arrays). '
+              description_student: Hoy, se trata de utilizar el código para tomar decisiones. Se comparan las relaciones entre los valores mientras se utilizan sentencias condicionales para ayudar al `Pintor` a tomar decisiones.
+              description_teacher: Los alumnos utilizan operadores relacionales para escribir y evaluar expresiones. Los alumnos amplían el uso de las sentencias `if` para comparar valores almacenados en variables y elementos de matrices (arrays).
             Adding Randomness to a Program:
               name: Añadiendo Aleatoriedad a un Programa
               description_student: Uno de los casos de uso más comunes para generar números aleatorios son los juegos de azar, como tirar los dados, barajar las cartas y lanzar una moneda. Los juegos suelen utilizar números aleatorios para generar diferentes resultados. Hoy, se añade la aleatoriedad al juego Explota el Globo añadiendo una función de lanzamiento de dados.
@@ -20830,17 +20957,11 @@ es:
             Assessment Day:
               name: Día de evaluación
             lesson-1:
-              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
-              description_student: El Barrio está organizando una fiesta en la calle y necesita que se desarrolle un juego para que la comunidad juegue con sus amigos y familiares. Examina las API y su documentación para identificar las características que puedes añadir a tus programas. Para empezar a desarrollar el juego " Explotar el globo" en la fiesta del barrio, importas la API de El Parque y la utilizas para introducir imágenes que se puedan pulsar.
-              description_teacher: El Barrio está organizando una fiesta en la calle y necesita que se desarrolle un juego para que la comunidad juegue con sus amigos y familiares. Los alumnos exploran las API y su documentación para identificar las características que pueden añadir a sus programas. Para empezar a desarrollar el juego "Explota el Globo" para la fiesta del barrio, los estudiantes importan la API de El Parque y la utilizan para añadir imágenes que se pueden pulsar.
+              name: Laboratorio Java
             lesson-3:
-              name: Resolviendo Problemas con la Clase de Matemáticas
-              description_student: En la Unidad 3 has visto el código fuente de la clase `Matemáticas`, pero ahora es el momento de ver lo que puede hacer. En esta lección, aprenderás sobre las clases `final` y los métodos estáticos e identificarás sus propósitos y usos. Utilizarás algunos métodos de la clase `Matemáticas` - `Math.pow(double a, double b)`, `Math.abs(double a)`, y `Math.sqrt(double a)` - para resolver problemas.
-              description_teacher: Los alumnos vuelven a visitar la clase `Matemáticas`, profundizando en sus métodos. Aprenden sobre las clases `final` y los métodos estáticos e identifican sus propósitos y usos. Utilizan `Math.pow(double a, double b)`, `Math.abs(double a)` y `Math.sqrt(double a)` para resolver problemas.
+              name: Utilización de comandos
             lesson-4:
               name: Tratando los Datos como Tipos Diferentes
-              description_student: "¡El Camión de Comida se ha quedado sin monedas! Como la dueña no puede dar cambio con monedas, sólo puede cobrar cantidades enteras de euros y no céntimos. Aprende a utilizar el reparto, el redondeo y los números aleatorios para ayudar a la dueña a superar su escasez de monedas."
-              description_teacher: Los alumnos vuelven a visitar el Proyecto Camión de Comida de Pasteles Mercurio para aprender sobre el reparto, el redondeo y los números aleatorios. Los alumnos resuelven escenarios para el propietario del camión de comida utilizando sus conocimientos de Java y la clase `Matemáticas`.
             lesson-5:
               name: Comparando Valores para Tomar Decisiones
               description_student: 'Hoy, se trata de utilizar el código para tomar decisiones. Se comparan las relaciones entre los valores mientras se utilizan sentencias condicionales para ayudar al `Pintor` a tomar decisiones. '
@@ -20859,6 +20980,8 @@ es:
               name: Usando Operadores Lógicos
             lesson-11:
               name: Aplicando las Leyes de De Morgan a las Expresiones Booleanas
+            lesson-2:
+              name: Clases y Objetos
             lesson-12:
               name: El Barrio - Proyecto de fiesta vecinal - Día 2
             lesson-13:
@@ -20887,3 +21010,77 @@ es:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+        csdu6-playground:
+          lessons:
+            lesson-1:
+              name: Plantilla
+            lesson-2:
+              name: Innovaciones en computación
+            lesson-9:
+              name: LEDs de colores
+            lesson-13:
+              name: Acelerómetro
+            lesson-19:
+              name: Proyecto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgets
+            lesson-3:
+              name: Herramientas
+            lesson-4:
+              name: Ejemplos
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lecciones
+            lessonGroup-3:
+              display_name: Proyecto
+        csa4-exemplars:
+          lessons:
+            new lesson:
+              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
+            lesson-1:
+              name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
+            lesson-2:
+              name: Resolviendo Problemas con la Clase de Matemáticas
+            lesson-4:
+              name: Comparando Valores para Tomar Decisiones
+            lesson-5:
+              name: Añadiendo Aleatoriedad a un Programa
+            lesson-6:
+              name: Comparando Referencias a Objetos y Datos
+            lesson-7:
+              name: Proporcionando una Ruta Alternativa de Ejecución
+            lesson-8:
+              name: Probando Múltiples Condiciones
+            lesson-9:
+              name: Usando Operadores Lógicos
+            lesson-10:
+              name: Aplicando las Leyes de De Morgan a las Expresiones Booleanas
+            lesson-12:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 2
+            lesson-13:
+              name: El Barrio - Proyecto de fiesta vecinal - Día 3
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+            lesson-16:
+              name: Comparando Referencias a Objetos y Datos
+          lesson_groups:
+            lesson group:
+              display_name: Contenido
+            content:
+              display_name: Contenido
+            show_what_you_know:
+              display_name: "¡Demuestra lo que sabes!"
+            lesson_group:
+              display_name: Contenido
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Fiesta de baile: sin conexión'

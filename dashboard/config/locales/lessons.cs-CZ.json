@@ -23,6 +23,9 @@
         "coursef-2021/Simulating Experiments": {
           "student_overview": "Spouštějte simulace na počítači a experimentujte měněním hodnot."
         },
+        "coursef-2021/lesson-5": {
+          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. "
+        },
         "coursef-2021/End of Course Project": {
           "student_overview": "Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!"
         },

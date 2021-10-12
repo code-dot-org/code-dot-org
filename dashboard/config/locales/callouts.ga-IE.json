@@ -1710,6 +1710,67 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Tarraing blocanna ón mbosca uirlisí go dtí an spás oibre."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Bloc nua!",
+          "hello_world_new_block": "Bloc nua!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Bloc nua!",
+          "hello_world_new_block": "Bloc nua!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Bloc nua!",
+          "hello_world_new_block": "Bloc nua!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Bloc nua!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Bloc nua!",
+          "poetry_foreground": "Bloc nua!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Bloc nua!",
+          "poetry_multiple_sprites": "Bloc nua!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Bloc nua!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Bloc nua!",
+          "poetry_sprite_stops": "Bloc nua!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Bloc nua!",
+          "poetry_remove_sprite": "Bloc nua!"
         }
       }
     }

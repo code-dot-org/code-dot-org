@@ -145,6 +145,7 @@ pagerduty_token: !Secret
 pardot_password:
 pardot_user_key:
 pardot_username:
+pardot_private_key:
 
 # Honeybadger
 honeybadger_api_token:
@@ -196,6 +197,7 @@ slack_set_last_dtt_green_token:
 slack_start_build_token:
 slack_endpoint:                 !Secret
 slack_token:                    !Secret
+slack_bot_token:                !Secret
 slack_log_room:                 <%=env%>
 hip_chat_logging:               false
 # Logging endpoint used by broken link checker.
@@ -546,3 +548,10 @@ imm_reader_subdomain:     cdo-immersive-reader-<%=env%>
 
 javabuilder_private_key: !Secret
 javabuilder_key_password: !Secret
+
+# Credentials for the Spotify API, used to provide playlist data in App Labs
+spotify_api_client_id: !Secret
+spotify_api_client_secret: !Secret
+
+# Credentials for the Open Weather API, used to provide weather data in App Labs
+open_weather_api_key: !Secret

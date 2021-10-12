@@ -206,7 +206,7 @@ fi:
             taikaa ja kauneutta ohjelmoinnin avulla.
           lessons:
             Artist:
-              name: Taiteilija
+              name: Koodaa Annan ja Elsan kanssa
           student_description: Koodataan Annan ja Elsan kanssa kun he tutkivat jään
             kauneutta ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen
             ja luot taianomaisen lumimaan, jonka voit myös jakaa ystäviesi kanssa!
@@ -344,7 +344,7 @@ fi:
             Disneyn Infinity-hahmot.
           lessons:
             Infinity:
-              name: Ääretön
+              name: Disneyn Infinity-Pelilabra
           student_description: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat
             Disneyn Infinity-hahmot.
         algebrademo:
@@ -787,9 +787,6 @@ fi:
             ikioma Tähtien Sota -pelisi.
           description_short: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
             ikioma Tähtien Sota -pelisi.
-          lessons:
-            Hour of Code 2015:
-              name: Kooditunti 2015
           student_description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
             ikioma Tähtien Sota -pelisi.
         mc:
@@ -1110,9 +1107,6 @@ fi:
           title: Tee koripallopeli
           description_short: Tee koripallopeli
           description: Tee koripallopeli
-          lessons:
-            Bounce:
-              name: Bounce
           student_description: Tee koripallopeli
         csd2-2017:
           lesson_groups:
@@ -1600,9 +1594,6 @@ fi:
         hero:
           description: Minecraft on palannut takaisin Hour of Code -tunnille täysin
             uudella toiminnolla! Matka Minecraftin läpi koodilla.
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Koodaustunti
           student_description: Minecraft on palannut takaisin Hour of Code -tunnille
             täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
         csp-explore-2017:
@@ -2014,7 +2005,7 @@ fi:
             täysin uudella toiminnolla!
           lessons:
             Aquatic:
-              name: merellinen
+              name: 'Minecraft: Merellinen matka'
         dance--draft:
           lessons:
             Dance Party:
@@ -3247,6 +3238,12 @@ fi:
               display_name: Yksikkö 4
             lessonGroup-7:
               display_name: Yksikkö 5
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vaihe 1
+            lessonGroup-3:
+              display_name: Vaihe 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -3262,4 +3259,8 @@ fi:
         csa-u6-dev:
           lessons:
             lesson-18:
+              name: Pienoisohjelmat
+        csa-u7-dev:
+          lessons:
+            lesson-2:
               name: Pienoisohjelmat

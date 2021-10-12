@@ -29,6 +29,8 @@ module LevelsHelper
       end
     elsif params[:sublevel_position]
       sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+    # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
+    # not include the '/lockable/' piece added in this elsif case
     elsif !script_level.lesson.numbered_lesson?
       script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
@@ -177,14 +179,26 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
+    view_options(public_caching: @public_caching)
+
+    is_caching_exception = request ? ScriptConfig.uncached_script_level_path?(request.path) : false
+    is_cached_level = @public_caching && !is_caching_exception
+
+    level_requires_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    # If the level is cached, the channel is loaded client-side in loadApp.js
+    if level_requires_channel && !is_cached_level
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
-        server_project_level_id: @level.project_template_level.try(:id),
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
     end
+
+    view_options(
+      level_requires_channel: level_requires_channel,
+      server_project_level_id: @level.project_template_level.try(:id)
+    )
 
     # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
     if @level.is_a?(Javalab) && (@user || current_user)
@@ -227,9 +241,6 @@ module LevelsHelper
     post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone_mode: post_milestone_mode(post_milestone, post_failed_run_milestone))
 
-    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
-    view_options(public_caching: @public_caching)
-
     if PuzzleRating.enabled?
       view_options(puzzle_ratings_url: puzzle_ratings_path)
     end
@@ -248,14 +259,20 @@ module LevelsHelper
     end
 
     if pairing_check_user
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
-      if recent_driver && !recent_user.is_a?(DeletedUser)
-        level_view_options(@level.id, pairing_driver: recent_driver)
-        if recent_attempt
-          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+      user_level = UserLevel.find_by(user: pairing_check_user, script: @script, level: @level)
+      is_navigator = !user_level.nil? && user_level.navigator?
+      if is_navigator
+        driver = user_level.driver
+        driver_level_source_id = user_level.driver_level_source_id
+      end
+
+      level_view_options(@level.id, is_navigator: is_navigator)
+      if driver
+        level_view_options(@level.id, pairing_driver: driver.name)
+        if driver_level_source_id
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(driver_level_source_id))
         elsif @level.channel_backed?
-          recent_channel = get_channel_for(@level, @script&.id, recent_user) if recent_user
-          level_view_options(@level.id, pairing_channel_id: recent_channel) if recent_channel
+          level_view_options(@level.id, pairing_channel_id: get_channel_for(@level, @script&.id, driver))
         end
       end
     end
@@ -281,6 +298,10 @@ module LevelsHelper
       @app_options[:serverScriptLevelId] = @script_level.id
       @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
       @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
+    end
+
+    if @level && @script_level
+      @app_options[:exampleSolutions] = @script_level.get_example_solutions(current_user, @section)
     end
 
     # Blockly caches level properties, whereas this field depends on the user

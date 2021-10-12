@@ -1,10 +1,26 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "back-to-school-2021"
+    "/home": "codeorg-classchat"
   },
 
   "banners": {
+    "codeorg-classchat": {
+      "image": "/images/csjourneys/codeorg-classchat.png",
+      "title": "Using computer science for good",
+      "body": "Learn how two software engineers took different paths into the same career, and are now building technology that helps students all around the world learn computer science. Recommended for grades 6-12.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat4",
+      "buttonId": "codeorg-classchat-details"
+    },  
+    "csjourneys": {
+      "image": "/images/csjourneys/teacher-banner.png",
+      "title": "Explore the wide world of computer science",
+      "body": "Bring CS to life with Code.org’s new career inspiration and exploration program! Sign up for live, engaging classroom experiences like virtual field trips and class chats, or let students explore with short videos and other resources.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys",
+      "buttonId": "csjourneys-dashboard"
+    },
     "class-schedule-survey": {
       "image": "/images/class-schedule-survey.png",
       "title": "Fall 2021 Class Schedule Survey",

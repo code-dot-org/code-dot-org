@@ -215,6 +215,12 @@ it:
           lessons:
             Artist:
               name: Artista
+              description_student: Crea splendide immagini programmando l'artista.
+              description_teacher: In questa lezione gli alunni prenderanno il controllo
+                di un'artista per fargli completare dei disegni sullo schermo. Attraverso
+                i vari esercizi della lezione gli alunni creeranno immagini di complessità
+                crescente utilizzando nuovi blocchi come `vai avanti di 100 pixel`
+                e `gira a destra di 90 gradi`.
           student_description: Disegna fantastiche immagini e decorazioni con l'artista!
         hourofcode:
           title: Labirinto Classico
@@ -237,7 +243,7 @@ it:
             esplorano la magia e la bellezza del ghiaccio.
           lessons:
             Artist:
-              name: Artista
+              name: Programma con Anna ed Elsa
           student_description: Usa la programmazione per unirti ad Anna ed Elsa mentre
             esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve,
             pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio invernale
@@ -402,7 +408,7 @@ it:
             un gioco con i personaggi di Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Disney Infinity
           student_description: Usa il Laboratorio per creare una storia o inventare
             un gioco con i personaggi di Disney Infinity.
         algebrademo:
@@ -1534,9 +1540,6 @@ it:
             Stellari, in una galassia lontana lontana...
           description_short: Impara a programmare i droidi e crea la tua versione
             di Guerre Stellari, in una galassia lontana lontana...
-          lessons:
-            Hour of Code 2015:
-              name: L'Ora del Codice 2015
           student_description: Impara a programmare i droidi e crea la tua versione
             di Guerre Stellari, in una galassia lontana lontana...
         mc:
@@ -1558,6 +1561,15 @@ it:
           lessons:
             Oceans:
               name: L'Intelligenza Artificiale per il mare
+              description_student: 'Riepilogo del tutorial: i primi studenti classificano
+                gli oggetti come "pesce" o "non pesce" per tentare di rimuovere la
+                spazzatura dall''oceano. Quindi, gli studenti dovranno espandere il
+                loro set di dati di addestramento per includere altre creature marine
+                che appartengono all''acqua. Nella seconda parte dell''attività, gli
+                studenti sceglieranno le proprie etichette da applicare alle immagini
+                di pesci generati casualmente. Questi dati di addestramento vengono
+                utilizzati per un modello di apprendimento automatico che dovrebbe
+                quindi essere in grado di etichettare le nuove immagini da soli.'
           student_description: Impara come si può usare l'Intelligenza Artificiale
             per risolvere i problemi del mondo di oggi.
         CSPPD3-Unit3-pt2:
@@ -1858,7 +1870,7 @@ it:
           description_short: Programmazione
           lessons:
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Functions:
@@ -2233,7 +2245,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
             Variables:
@@ -2345,7 +2357,14 @@ it:
             Scegli la tua squadra e fai una partita di basket
           lessons:
             Bounce:
-              name: Ping-Pong
+              description_student: Ti piacerebbe poter giocare con dei videogiochi
+                a scuola? In questa lezione potrai crearne uno tutto tuo!
+              description_teacher: In questa attività online, gli studenti impareranno
+                cosa sono gli Eventi e come i computer li usano in programmi come
+                i videogiochi. Gli studenti creeranno dei programmi che reagiscono
+                agli Eventi (come la pressione dei pulsanti freccia). Alla fine della
+                lezione, gli studenti avranno la possibilità di personalizzare il
+                proprio gioco modificando velocità e suoni.
           student_description: |-
             <https://studio.code.org/s/basketball/stage/>
 
@@ -2647,7 +2666,14 @@ it:
           description: Combina diversi sport
           lessons:
             Sports:
-              name: Sport
+              description_student: Ti piacerebbe poter giocare con dei videogiochi
+                a scuola? In questa lezione potrai crearne uno tutto tuo!
+              description_teacher: In questa attività online, gli studenti impareranno
+                cosa sono gli Eventi e come i computer li usano in programmi come
+                i videogiochi. Gli studenti creeranno dei programmi che reagiscono
+                agli Eventi (come la pressione dei pulsanti freccia). Alla fine della
+                lezione, gli studenti avranno la possibilità di personalizzare il
+                proprio gioco modificando velocità e suoni.
           student_description: Combina diversi sport
         2016_sciencePD-phase2b:
           lessons:
@@ -2836,7 +2862,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
         csd5-2017:
@@ -2857,7 +2883,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
         csd1-old:
@@ -2891,7 +2917,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
             'null':
@@ -4485,7 +4511,7 @@ it:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Ora del Codice - Il viaggio dell''eroe'
             Minecraft Hour of Code:
-              name: L'Ora del Codice con Minecraft
+              name: 'Minecraft: Il viaggio dell''eroe'
           student_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
             attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
@@ -4679,7 +4705,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
         csd3-2018:
@@ -4704,7 +4730,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
         csd2-2018:
@@ -6098,6 +6124,9 @@ it:
           description: Anche quest'anno Minecraft propone un'attività nuova di zecca!
             Usa la tua creatività e le competenze di problem solving per esplorare
             e creare mondi sottomarini grazie alla potenza della programmazione.
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Viaggio Acquatico'
           student_description: Anche quest'anno Minecraft propone un'attività nuova
             di zecca! Usa la tua creatività e le competenze di problem solving per
             esplorare e creare mondi sottomarini grazie alla potenza della programmazione.
@@ -7500,7 +7529,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -8081,15 +8110,15 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
             Post-Project Test:
               name: Test finale
             Shapes and Parameters:
-              name: Shapes and Parameters
+              name: Forme e Parametri
             Random Numbers:
-              name: Random Numbers
+              name: Numeri Casuali
         maddie-test:
           lessons:
             stage 1:
@@ -8608,17 +8637,17 @@ it:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              name: Shapes and Parameters
+              name: Forme e Parametri
             Variables:
               name: Variabili
             Random Numbers:
-              name: Random Numbers
+              name: Numeri Casuali
             Conditionals:
               name: Istruzioni condizionali
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -9783,7 +9812,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
         code-break:
@@ -9872,11 +9901,11 @@ it:
             Drawing in Game Lab:
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              name: Shapes and Parameters
+              name: Forme e Parametri
             Variables:
               name: Variabili
             Random Numbers:
-              name: Random Numbers
+              name: Numeri Casuali
             Sprites:
               name: Personaggi
             Text:
@@ -9886,7 +9915,7 @@ it:
             Velocity:
               name: Velocità
             Collision Detection:
-              name: Collision Detection
+              name: Rilevamento delle Collisioni
             Functions:
               name: Funzioni
             Post-Project Test:
@@ -9956,8 +9985,8 @@ it:
               name: Codifica di una simulazione
           lesson_groups:
             outbreak:
-              display_name: Simulazione dell'epidemia
-          title: Simulazione dell'epidemia
+              display_name: Simulazione di epidemia
+          title: Simulazione di epidemia
           description_short: Usa il Laboratorio dei personaggi per programmare la
             simulazione di un'epidemia di virus.
           description: Usa il Laboratorio dei personaggi per programmare la simulazione
@@ -9981,7 +10010,7 @@ it:
             lessonGroup-3:
               display_name: Variabili
             outbreak:
-              display_name: Simulazione dell'epidemia
+              display_name: Simulazione di epidemia
             debugging:
               display_name: Correzione errori (debugging)
         csd1-2021:
@@ -10023,14 +10052,14 @@ it:
               key: Disegnare in Sviluppo Giochi
               name: Disegnare in Sviluppo Giochi
             Shapes and Parameters:
-              key: Shapes and Parameters
-              name: Shapes and Parameters
+              key: Forme e Parametri
+              name: Forme e Parametri
             Variables:
               key: Variabili
               name: Variabili
             Random Numbers:
-              key: Random Numbers
-              name: Random Numbers
+              key: Numeri Casuali
+              name: Numeri Casuali
             Sprites:
               key: Personaggi
               name: Personaggi
@@ -10044,8 +10073,8 @@ it:
               key: Velocità
               name: Velocità
             Collision Detection:
-              key: Collision Detection
-              name: Collision Detection
+              key: Rilevamento delle Collisioni
+              name: Rilevamento delle Collisioni
             Functions:
               key: Funzioni
               name: Funzioni
@@ -10170,9 +10199,9 @@ it:
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
-              description_student: Panoramica della lezione
+              description_student: Panoramica della Lezione
             'Project: Innovation Simulation Part 7':
-              description_student: Panoramica della lezione
+              description_student: Panoramica della Lezione
         coursea-2021:
           description_short: Introduzione all'informatica per bambini che non leggono
             ancora.
@@ -11111,7 +11140,7 @@ it:
             ramp_up:
               display_name: Introduzione
             outbreak:
-              display_name: Simulazione dell'epidemia
+              display_name: Simulazione di epidemia
             lessonGroup-3:
               display_name: Variabili
             Sprites:
@@ -11353,6 +11382,12 @@ it:
           lessons:
             lesson-2:
               name: Lezione 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lezione 1
+            lessonGroup-3:
+              display_name: Lezione 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -11398,3 +11433,34 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        csdu6-playground:
+          lessons:
+            lesson-9:
+              name: LED colorati
+            lesson-19:
+              name: Progetto
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Componenti
+            lesson-3:
+              name: Strumenti
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lezioni
+            lessonGroup-3:
+              display_name: Progetto
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Contenuto
+            content:
+              display_name: Contenuto
+            lesson_group:
+              display_name: Contenuto
+            lessonGroup-2:
+              display_name: Contenuto
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: Festa di ballo

@@ -207,6 +207,12 @@ tr:
           lessons:
             Artist:
               name: Sanatçı
+              description_student: Sanatçıyı programlayarak güzel resimler oluşturun.
+              description_teacher: Bu derste öğrenciler, ekrandaki çizimleri tamamlaması
+                için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin,
+                '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları
+                kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak
+                sağlayacaktır.
           student_description: Sanatçı ile harika resimler ve tasarımlar yap!
         hourofcode:
           title: Klasik Labirent
@@ -229,7 +235,7 @@ tr:
             katılıp kodlama yapalım.
           lessons:
             Artist:
-              name: Sanatçı
+              name: Anna ve Elsa ile kodlama yap
           student_description: Anna ve Elsa sihri ve buzun güzelliğini keşfederken
             sen de onlara kod yazarak katıl. Buz-kayağı ile kar kristalleri ve desenler
             oluşturarak yarattığın kış harikalar diyarını arkadaşlarınla da paylaşabilirsin!
@@ -389,7 +395,7 @@ tr:
             yaratmak için Play Lab'i kullanın.
           lessons:
             Infinity:
-              name: Sonsuz
+              name: Disney Infinity Play Lab
           student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun
             yaratmak için Play Lab'i kullanın.
         algebrademo:
@@ -1754,9 +1760,6 @@ tr:
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside
             kendi Yıldız Savaşları oyununu yaratmayı öğren.
-          lessons:
-            Hour of Code 2015:
-              name: Kodlama saati 2015
           student_description: Droidleri programlamayı ve çok çok uzaklardaki bir
             galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
         mc:
@@ -1778,6 +1781,14 @@ tr:
           lessons:
             Oceans:
               name: Okyanuslar
+              description_student: 'Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri
+                kaldırmak amacıyla nesneleri ya "balık" ya da "balık değil" olarak
+                sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait
+                olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir.
+                Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş
+                balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir.
+                Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen
+                bir makine öğrenim modeli için kullanılır.'
           student_description: Yapay zekâ ve makine öğreniminin dünyanın sorunlarını
             yönlendirmek için nasıl kullanılabileceğini öğrenin.
         CSPPD3-Unit3-pt2:
@@ -3919,7 +3930,14 @@ tr:
           description: Takımınızı seçin ve bir basketbol oyunu oynayın
           lessons:
             Bounce:
-              name: Sıçrama
+              description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz
+                mi? Bu derste kendi oyununuzu oluşturacaksınız!
+              description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların
+                ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları
+                nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine
+                basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar.
+                Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri
+                kullanabilecekleri fırsatları olacak.
           student_description: Takımınızı seçin ve bir basketbol oyunu oynayın
         sample-csp5:
           lessons:
@@ -4918,7 +4936,14 @@ tr:
           description: Kendi sporunu kodla
           lessons:
             Sports:
-              name: Spor
+              description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz
+                mi? Bu derste kendi oyununuzu oluşturacaksınız!
+              description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların
+                ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları
+                nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine
+                basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar.
+                Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri
+                kullanabilecekleri fırsatları olacak.
           student_description: Kendi sporunu kodla
         2016_sciencePD-phase2b:
           lessons:
@@ -8869,7 +8894,7 @@ tr:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Kahramanın Yolculuğu Kod Saati'
             Minecraft Hour of Code:
-              name: Minecraft Kod Saati
+              name: 'Minecraft: Kahramanın Yolculuğu'
           student_description: Minecraft Kodlama Saati için yepyeni bir faaliyetle
             geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
         applab-intro-staging:
@@ -12747,7 +12772,7 @@ tr:
             keşfet ve inşa et.
           lessons:
             Aquatic:
-              name: Su
+              name: 'Minecraft: Su Yolculuğu'
           student_description: Minecraft yeni bir etkinlik ile için geri döndü. Yaratıcılığını
             ve problem çözme becerilerini kullanarak su altı dünyalarını bu kod ile
             keşfet ve inşa et.
@@ -17046,7 +17071,7 @@ tr:
               display_name: Anket
           lessons:
             CSD post-course survey:
-              name: CSD kurs sonrası anketi
+              name: CSD Öğrenci Kurs Sonrası Anketi ('18-'19)
         csp-post-survey-2018:
           title: CSP Öğrenci Kurs Sonrası Anketi ('18-'19)
           description_audience: CSP Öğrencileri
@@ -17056,7 +17081,7 @@ tr:
               display_name: Anket
           lessons:
             CSP post-course survey:
-              name: CSP kurs sonrası anketi
+              name: CSP Öğrenci Kurs Sonrası Anketi ('18-'19)
         csp5-pilot:
           title: CSP Ünite 5 Pilot - Listeler, Döngüler ve Gezinmeler
           lesson_groups:
@@ -23109,6 +23134,8 @@ tr:
               name: Eylem halindeki Hareketli Nesneler
             End of Course Project:
               name: Ders Projesinin Sonu
+            Outbreaklab:
+              name: Salgın Bağımsız Laboratuvarı
           lesson_groups:
             introduction:
               display_name: Giriş
@@ -25082,6 +25109,8 @@ tr:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
             lesson-8:
               name: Eylem halindeki Hareketli Nesneler
+            lesson-5:
+              name: Salgın
             lesson-2:
               name: Kelimelerin gücü
               description_student: Zorbalık hiçbir zaman iyi değildir. Bu ders, size,
@@ -26221,6 +26250,15 @@ tr:
             Module 1:
               name: 'Modül 1: Ünite 4''e Giriş ve programlamayı öğretmeye yönelik
                 yeni pedagoji'
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: Canavar Şehri'nde Salgın
+          lesson_groups:
+            Outbreak Module:
+              display_name: Salgın Modülü
+          name: salgınmodülü
+          title: Salgın Modülü\_V2
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -26232,6 +26270,11 @@ tr:
           description_short: CSP Öğrenci Kurs Sonu Anketi
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.
+
+                **Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?
             lesson-22:
               name: Veri toplama tasarımı
           lesson_groups:
@@ -26239,6 +26282,11 @@ tr:
               display_name: Anket
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                Bu derste öğrenciler, bir zombi salgınını simüle eden bilgisayarsız bir etkinliğe katılırlar. Öğrenciler, komşu kasabadaki verileri kullanarak şehrin hangi bölgelerinde en az sayıda zombi olduğunu tahmin etmelidir. Öğrenciler, belirli bir yerdeki zombilerin sayısı hakkında tahminlerde bulunmak için benzerlik derecelerini ve ortalamaları kullanacaklardır. Ardından, öğrenciler, sayısal veriler için doğruluğun kategorik verilere kıyasla ne kadar farklı olduğunu tartışmak amacıyla tahminlerini gerçek sayılarla karşılaştırma imkanı elde ederler.
+
+                **Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?
             Survey Planning:
               name: Veri toplama tasarımı
           lesson_groups:
@@ -26341,8 +26389,10 @@ tr:
               name: Modül 2
             Module 3:
               key: Modül 3
+              name: Modül 3
             Module 4:
               key: Modül 4
+              name: Modül 4
             Module 5:
               key: Modül 5
             Module 6:
@@ -26378,6 +26428,9 @@ tr:
               name: Ünite 2 - Ağ Geliştirme
             lesson-6:
               name: Veri ve Toplum
+        outbreak-module:
+          name: salgın-modülü
+          title: Salgın
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -26421,6 +26474,12 @@ tr:
           lessons:
             lesson-2:
               name: Ders 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  Aşama
+            lessonGroup-3:
+              display_name: Bölüm 2
         dlp21-csp-mod1:
           title: Bilgisayar Bilimi İlkeleri Derinlemesine Öğrenim Modülü 1
         dlp21-csd:
@@ -26498,5 +26557,39 @@ tr:
             lesson-15:
               name: Değerlendirme Günü
           lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Bilişimdeki Yenilikler
+            lesson-9:
+              name: Renkli LED'ler
+            lesson-13:
+              name: İvme Ölçer
+            lesson-19:
+              name: Proje
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Araçlar
+            lesson-3:
+              name: Araçlar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Dersler
+            lessonGroup-3:
+              display_name: Proje
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lesson group:
+              display_name: İçerik
+            content:
+              display_name: İçerik
+            lesson_group:
+              display_name: İçerik
             lessonGroup-2:
               display_name: İçerik

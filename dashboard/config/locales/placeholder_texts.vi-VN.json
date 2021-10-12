@@ -236,7 +236,9 @@
           "df8312187449c70820d7c58229a6b17e": "Robot vũ trụ đang hù dọa những sinh vật khác.",
           "c084e152431f9116b9fdb3f7d465f13d": "Neila muốn giúp robot vũ trụ học cách cư xử tử tế.",
           "b2f02bf648ce32c4362afe1578d41f70": "Hiệu quả rồi! Neila đã cho robot vũ trụ thấy sức mạnh của lòng tốt.",
-          "2a28483f9f4f9ee44cec653a445d4c82": "Các sinh vật khác không còn sợ hãi nữa!"
+          "2a28483f9f4f9ee44cec653a445d4c82": "Các sinh vật khác không còn sợ hãi nữa!",
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
         },
         "courseC_PlayLab_eventsFP_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "gõ văn bản vào đây",
@@ -244,7 +246,10 @@
         },
         "courseE_aboutme_1_2021": {
           "8e985f60f328934accd78e7649584840": "Kem là món ăn yêu thích của mình đó!",
-          "31ba97bb501bb1f5b448221be09bad32": "Đây là chú chó corgi của mình, Lollipop! Mình phải dạy cậu ấy cách viết mã lệnh mới được!"
+          "31ba97bb501bb1f5b448221be09bad32": "Đây là chú chó corgi của mình, Lollipop! Mình phải dạy cậu ấy cách viết mã lệnh mới được!",
+          "b63151482630edd1589a9ac24d107c49": "Chính là tôi! Rikki nè! Tôi thích lập trình, đi chơi với Thủy và ăn kem!",
+          "810896b14fc6615f0c76628b9b6a727e": "Thủy là cô bạn thân nhất của tôi đó! Cô ấy rất giỏi chơi thể thao!",
+          "6f97975a0bda0c9219915161149cbb26": "Đây là máy tính của tôi! Tôi lập trình trên đó SUỐT cả ngày!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Chào cả thế giới!"
@@ -253,7 +258,8 @@
           "ed076287532e86365e841e92bfc50d8c": "Chào cả thế giới!"
         },
         "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Chào cả thế giới!"
+          "ed076287532e86365e841e92bfc50d8c": "Chào cả thế giới!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Này!"
         },
         "courseF_apps_aquarium": {
           "f655df68ec33643278de7e69794e8d76": "Bể cá ảo",
@@ -262,7 +268,8 @@
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "khác",
           "0d3e73168beb875063ea0f0302fe32bd": "Loài cá nào?",
           "caaf8264ca397dba2d35ef902bbbd953": "Sinh vật nào?",
-          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?"
+          "78574118d153534fd0925a2f5ca25e79": "Đồ vật nào?",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "sinh vật"
         },
         "courseF_apps_card": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Sinh nhật của ai vậy?",
@@ -276,12 +283,15 @@
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": " tuổi giống mình nè!",
           "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
-          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!"
+          "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!"
         },
         "courseF_apps_collector": {
           "077449fb290b51b9d70c9f2f3d3213bc": " giây",
           "490082498449bd20ff0199737dfa4916": "Chọn loại trò chơi:",
-          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!"
+          "41f2b2212de0105c2a942ebb4a44e449": "Trò chơi nhà sưu tầm vĩ đại!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Bạn thắng rồi!"
         },
         "courseF_apps_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
@@ -307,7 +317,9 @@
           "605f302ebc9f7fbacba60b15f551a633": "Bạn thích màu gì thế?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Nhập màu yêu thích của bạn:",
           "1f258d88a70309efc1435ef5daa277a0": "Cảm ơn bạn đã trò chuyện với mình hôm nay nhé!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Bạn bao nhiêu tuổi?",
+          "ae096fbf24d913754b01a1601672bf62": " giống bạn nè!"
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Trò chơi tiệc tùng",
@@ -375,6 +387,34 @@
         },
         "courseF_variables_madlib_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "câu hỏi của tôi"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Bạn có thể viết lời nhắn.",
+          "3e11a2dc6edb909c47778bed75a81769": "Nội dung ở đây"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Một con chó!",
+          "336ad881e37e713ba0325500a8fa1f00": " con chó!",
+          "27944770529dd15319a983bee8951560": "Một con mèo!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " con mèo!",
+          "1c64ef29c853587fbe94f69f05272b79": "Một con chim!",
+          "5b402e6ea05e847a076e03ad74420c45": " con chim!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Một con rồng!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " con rồng!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Hãy đếm tất cả các loài động vật!",
+          "f62038e77820419cd978f7b722da560a": "Có bao nhiêu con vật sẽ xuất hiện?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Đếm thú cưng"
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Tên bạn là gì?"
         }
       }
     }

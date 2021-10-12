@@ -2966,16 +2966,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -2987,7 +2993,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -2999,8 +3006,21 @@
           "draw a square": {
             "name": "एक वर्ग खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
+          },
+          "small flower": {
+            "name": "छोटा फूल"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "तर्क फूल2"
+          },
+          "LOGIC FLOWER": {
+            "name": "तर्क फूल"
+          },
+          "LOGIC FLOWERS": {
+            "name": "तर्क फूल"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -3245,6 +3265,9 @@
           },
           "draw square": {
             "name": "वर्ग खींचें"
+          },
+          "staggered squares": {
+            "name": "क्रमबद्ध किए वर्ग"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -3275,6 +3298,9 @@
           },
           "do something": {
             "name": "कुछ कीजिए"
+          },
+          "staggered squares": {
+            "name": "क्रमबद्ध किए वर्ग"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -3300,6 +3326,9 @@
           },
           "draw square": {
             "name": "वर्ग खींचें"
+          },
+          "staggered squares": {
+            "name": "क्रमबद्ध किए वर्ग"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
@@ -3363,6 +3392,137 @@
         "courseE_farmer_functions13_2021": {
           "lettuce stairs": {
             "name": "लेट्स सीढ़ियां"
+          },
+          "pick along path": {
+            "name": "मार्ग के साथ-साथ लें"
+          },
+          "check for corn": {
+            "name": "कॉर्न का पता लगाएं"
+          },
+          "corn rectangle": {
+            "name": "कॉर्न आयत"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "मेरा फंक्शन"
+          }
+        },
+        "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "पुल बनाएं"
+          }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "मार्ग साफ करें"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "लंबा मार्ग ठीक करें"
+          },
+          "fix short path": {
+            "name": "छोटा मार्ग ठीक करें"
+          }
+        },
+        "MC_HOC_2017_Ali_2021": {
+          "build short bridge": {
+            "name": "छोटा पुल बनाएं"
+          },
+          "build long bridge": {
+            "name": "लंबा पुल बनाएं"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "मार्ग के साथ-साथ लें"
+          },
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          },
+          "pumpkin square": {
+            "name": "कद्दू वर्ग"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "मार्ग के साथ-साथ लें"
+          },
+          "pumpkin square": {
+            "name": "कद्दू वर्ग"
+          },
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get produce": {
+            "name": "फसल प्राप्त करें"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "मार्ग के साथ-साथ लें"
+          },
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "कॉर्न के लिए वर्ग का पता लगाएं"
+          },
+          "get all pumpkins": {
+            "name": "सभी कद्दू प्राप्त करें"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "बाग वर्ग"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "बाग वर्ग"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "बाग वर्ग"
           }
         }
       }

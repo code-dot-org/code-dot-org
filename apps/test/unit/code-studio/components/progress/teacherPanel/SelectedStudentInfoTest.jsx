@@ -8,11 +8,11 @@ const LEVEL_WITH_PROGRESS = {
   id: '123',
   assessment: null,
   contained: false,
-  driver: null,
+  paired: null,
+  partnerNames: null,
+  partnerCount: null,
   isConceptLevel: false,
   levelNumber: 4,
-  navigator: null,
-  paired: null,
   passed: false,
   status: LevelStatus.not_tried,
   userId: 1
@@ -68,31 +68,107 @@ describe('SelectedStudentInfo', () => {
     expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 
-  it('displays time and who they worked with as navigator if paired as driver on level', () => {
+  it('displays time if paired', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
-      paired: true,
       status: LevelStatus.perfect,
-      navigator: 'Student 2'
+      paired: true,
+      partnerNames: ['Student 1'],
+      partnerCount: 1
     };
     const wrapper = setUp({levelWithProgress});
 
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Partner: Student 2')).to.equal(true);
     expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 
-  it('displays time and who they worked with as driver if paired as navigator on level', () => {
+  it('does not display partner info if not paired', () => {
+    const wrapper = setUp();
+
+    expect(wrapper.contains('Worked With:')).to.equal(false);
+  });
+
+  it('displays partner info if paired with 1 partner', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
-      paired: true,
       status: LevelStatus.perfect,
-      driver: 'Student 2'
+      paired: true,
+      partnerNames: ['Student 1'],
+      partnerCount: 1
     };
     const wrapper = setUp({levelWithProgress});
+    const tooltip = wrapper.find('Tooltip');
 
     expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Logged in: Student 2')).to.equal(true);
-    expect(wrapper.contains('Last Updated:')).to.equal(true);
+    expect(wrapper.contains('Student 1')).to.equal(true);
+    expect(tooltip).to.have.lengthOf(0);
+  });
+
+  it('displays partner info if paired with 2 partners', () => {
+    const levelWithProgress = {
+      ...LEVEL_WITH_PROGRESS,
+      status: LevelStatus.perfect,
+      paired: true,
+      partnerNames: ['Student 1', 'Student 2'],
+      partnerCount: 2
+    };
+    const wrapper = setUp({levelWithProgress});
+    const tooltip = wrapper.find('Tooltip');
+
+    expect(wrapper.contains('Worked With:')).to.equal(true);
+    expect(wrapper.contains('Student 1 + 1')).to.equal(true);
+    expect(tooltip).to.have.lengthOf(1);
+    expect(tooltip.prop('text')).to.equal('Student 1, Student 2');
+  });
+
+  it('displays partner info if paired with 1 unknown partner', () => {
+    const levelWithProgress = {
+      ...LEVEL_WITH_PROGRESS,
+      status: LevelStatus.perfect,
+      paired: true,
+      partnerNames: [],
+      partnerCount: 1
+    };
+    const wrapper = setUp({levelWithProgress});
+    const tooltip = wrapper.find('Tooltip');
+
+    expect(wrapper.contains('Worked With:')).to.equal(true);
+    expect(wrapper.contains('1 other student(s)')).to.equal(true);
+    expect(tooltip).to.have.lengthOf(0);
+  });
+
+  it('displays partner info if paired with 1 known partner and 1 unknown partner', () => {
+    const levelWithProgress = {
+      ...LEVEL_WITH_PROGRESS,
+      status: LevelStatus.perfect,
+      paired: true,
+      partnerNames: ['Student 1'],
+      partnerCount: 2
+    };
+    const wrapper = setUp({levelWithProgress});
+    const tooltip = wrapper.find('Tooltip');
+
+    expect(wrapper.contains('Worked With:')).to.equal(true);
+    expect(wrapper.contains('Student 1 + 1')).to.equal(true);
+    expect(tooltip).to.have.lengthOf(1);
+    expect(tooltip.prop('text')).to.equal('Student 1 + 1 other student(s)');
+  });
+
+  it('displays partner info if paired with 2 known partners and 2 unknown partners', () => {
+    const levelWithProgress = {
+      ...LEVEL_WITH_PROGRESS,
+      status: LevelStatus.perfect,
+      paired: true,
+      partnerNames: ['Student 1', 'Student 2'],
+      partnerCount: 4
+    };
+    const wrapper = setUp({levelWithProgress});
+    const tooltip = wrapper.find('Tooltip');
+
+    expect(wrapper.contains('Worked With:')).to.equal(true);
+    expect(wrapper.contains('Student 1 + 3')).to.equal(true);
+    expect(tooltip).to.have.lengthOf(1);
+    expect(tooltip.prop('text')).to.equal(
+      'Student 1, Student 2 + 2 other student(s)'
+    );
   });
 });

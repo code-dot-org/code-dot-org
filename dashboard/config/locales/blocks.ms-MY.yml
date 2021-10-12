@@ -1067,6 +1067,13 @@ ms:
         text: "{LOCATION}"
       gamelab_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': kanan
+            '90': bawah
+            '180': kiri
+            '270': atas
       gamelab_mirrorSprite:
         text: "{SPRITE} muka {DIRECTION}"
         options:
@@ -1087,6 +1094,15 @@ ms:
         text: mengklik {SPRITE}
       gamelab_playSound:
         text: PlaySound {SOUND}
+      gamelab_playSoundOptions:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": buih
+            "'sound://category_animals/bear.mp3'": beruang
+            "'sound://category_animals/dolphin.mp3'": lumba-lumba
+            "'sound://category_animals/dog.mp3'": anjing
+            "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1458,15 +1474,46 @@ ms:
         text: raksasa mula memakai pelitup muka
       Outbreak_stopMoving:
         text: raksasa berhenti bergerak
-      PoemBot_setBackgroundEffect:
+      Poetry_makeNewSpriteAnon:
+        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
+      Poetry_playSound:
+        text: PlaySound {SOUND}
+      Poetry_setBackground:
+        text: tetapkan warna {COLOR} latar belakang
+      Poetry_setBackgroundEffect:
         options:
-          BG_EFFECT:
-            '"rainbow"': pelangi
-      PoemBot_setForegroundEffect:
-        text: tetapkan kesan {FG_EFFECT} latar depan
+          EFFECT:
+            '"colors"': Warna
+            '"squiggles"': Cacing Kerawit
+            '"space"': Ruang
+            '"stars"': Bintang
+            '"ripples"': Riak
+          PALETTE:
+            '"rainbow"': Pelangi
+      Poetry_setBackgroundImageAs:
+        text: tetapkan latar belakang ke {IMG}
+      Poetry_setForegroundEffect:
         options:
-          FG_EFFECT:
-            '"bubbles"': gelembung
+          EFFECT:
+            '"rain"': Hujan
+            '"bubbles"': Gelembung
+            '"hearts"': Hati Berwarna-warni
+            '"confetti"': Konfeti
+            '"starburst"': Pecahan Cahaya
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: bergerak ke hadapan
       RyanLab_turnLeft:

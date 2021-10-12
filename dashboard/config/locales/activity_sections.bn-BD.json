@@ -2,6 +2,20 @@
   "bn-BD": {
     "data": {
       "activity_sections": {
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "tips": [
+            null
+          ]
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
+        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
+          "name": "বিনা পয়সায় খেলা",
+          "progression_name": "বিনা পয়সায় খেলা"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "ভূমিকা"
         },

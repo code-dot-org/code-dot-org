@@ -1,6 +1,6 @@
 /** @file Tests for our johnny-five Button wrapper */
 import _ from 'lodash';
-import {expect} from '../../../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import five from '@code-dot-org/johnny-five';
 import {makeStubBoard} from '../makeStubBoard';
 import PlaygroundButton from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Button';

@@ -125,10 +125,12 @@
         "CourseF_outbreak2": "Tukar raksasa sihat kepada raksasa sakit apabila mereka bersentuh.",
         "CourseF_outbreak3": "Tukar raksasa kepada raksasa dengan pelitup muka apabila anda klik mereka.",
         "CourseF_outbreak4": "Tukar bilangan dan saiz jin raksasa untuk simulasi anda.",
-        "CourseF_outbreak6": "Tambahkan peratusan peluang untuk raksasa jatuh sakit setiap kali raksasa yang sihat menyentuh raksasa yang sakit. Lakukan ini untuk semua kombinasi raksasa dengan dan tanpa pelitup.",
-        "CourseF_outbreak7": "Cipta kostum baru untuk raksasa dengan imuniti terhadap virus dan gunakannya dalam simulasi anda.",
-        "CourseF_outbreak8": "Kongsi mesej dengan simulasi anda.",
-        "HOC 2018 Level_12_2021": "Anda boleh merekabentuk persekitaran dalam laut mengikut idea sendiri !"
+        "CourseF_outbreak6": "Buat semua raksasa yang sakit mula pulih apabila raksasa yang sihat menyentuh raksasa yang sakit.",
+        "CourseF_outbreak7": "Tambahkan peratusan peluang untuk raksasa jatuh sakit setiap kali raksasa yang sihat menyentuh raksasa yang sakit. Lakukan ini untuk semua kombinasi raksasa dengan dan tanpa pelitup.",
+        "CourseF_outbreak8": "Cipta kostum baru untuk raksasa dengan imuniti terhadap virus dan gunakannya dalam simulasi anda.",
+        "HOC 2018 Level_12_2021": "Anda boleh merekabentuk persekitaran dalam laut mengikut idea sendiri !",
+        "CourseF_outbreak5": "Tukar bilangan dan saiz jin raksasa untuk simulasi anda.",
+        "international_outbreak_freeplay": "Kongsi mesej dengan simulasi anda."
       }
     }
   }

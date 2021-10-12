@@ -25,6 +25,7 @@ export default function NewUnitForm() {
       </label>
       <input name="script[name]" />
       <input name="is_migrated" value={true} type="hidden" />
+      <input name="lesson_groups" value={'[]'} type="hidden" />
       <br />
       <button className="btn btn-primary" type="submit" style={buttonStyle}>
         Save Changes

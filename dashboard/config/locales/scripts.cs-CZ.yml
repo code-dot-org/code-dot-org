@@ -199,6 +199,11 @@ cs:
           lessons:
             Artist:
               name: Umělec
+              description_student: Vytvářejte krásné obrazy programováním Umělce.
+              description_teacher: V této lekci studenti převezmou nadvládu nad Umělcem
+                a budou dokončovat výkresy na obrazovce. Tato fáze Umělce umožní studentům
+                vytvářet pomocí nových bloků jako například `posuv dopředu o 100 pixelů`
+                a `zabočení doprava o 90 stupňů` čím dál tím složitější obrázky.
           student_description: Bakresli v pohodě obrázky a vzory s umělcem!
         hourofcode:
           title: Klasické bludiště
@@ -219,7 +224,7 @@ cs:
             kouzlo a krásu ledu.
           lessons:
             Artist:
-              name: Umělec
+              name: Kóduj s Annou a Elsou
           student_description: Pojďme spojit Anna a Elsu, jak ony prozkoumávají pomocí
             kódu kouzlo a krásu ledu. Sněhové vločky a vzory se vytváří při bruslení
             a udělají zimní říši divů, kterou pak můžete sdílet se svými přáteli!
@@ -344,7 +349,7 @@ cs:
             Infinity postavami.
           lessons:
             Infinity:
-              name: Nekonečno
+              name: Disney Infinity Play Lab
           student_description: Použij Play Lab k vytvoření příběhu nebo hry s Disney
             Infinity postavami.
         algebrademo:
@@ -854,9 +859,6 @@ cs:
             ve vzdálené galaxii.
           description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star
             Wars ve vzdálené galaxii.
-          lessons:
-            Hour of Code 2015:
-              name: Hodina kódu 2013
           student_description: Nauč se programovat droidy a vytvoř si vlastní hru
             Star Wars ve vzdálené galaxii.
         mc:
@@ -871,6 +873,16 @@ cs:
             po světě Minecraft.
         oceans:
           title: AI pomáhá oceánům
+          lessons:
+            Oceans:
+              description_student: 'Shrnutí výukového kurzu: Nejprve studenti zařadí
+                předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit
+                odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový
+                soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé
+                části aktivity budou studenti vybírat své vlastní značky, které aplikují
+                na obrázky náhodně vytvořených ryb. Tato cvičná data se používají
+                pro model strojového učení, který by měl být schopen označovat nové
+                obrázky sám od sebe.'
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1284,7 +1296,14 @@ cs:
           description: Vyberte si svůj tým a vytvořte basketbalovou hru
           lessons:
             Bounce:
-              name: Bounce
+              description_student: Přáli jste si někdy hrát ve škole videohry? V této
+                lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
+              description_teacher: V této online aktivitě se studenti naučí, co jsou
+                události a jak je počítače využívají v programech jako jsou video
+                hry. Studenti budou pracovat na úlohách, které přimějí program reagovat
+                na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy
+                dostanou studenti příležitost přizpůsobit si svou hru různými stupni
+                rychlosti a zvuky.
           student_description: Vyberte si svůj tým a vytvořte basketbalovou hru
         hoc-encryption:
           lessons:
@@ -1583,7 +1602,14 @@ cs:
           title: Naprogramuj svoji vlastní sportovní hru
           lessons:
             Sports:
-              name: Sporty
+              description_student: Přáli jste si někdy hrát ve škole videohry? V této
+                lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
+              description_teacher: V této online aktivitě se studenti naučí, co jsou
+                události a jak je počítače využívají v programech jako jsou video
+                hry. Studenti budou pracovat na úlohách, které přimějí program reagovat
+                na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy
+                dostanou studenti příležitost přizpůsobit si svou hru různými stupni
+                rychlosti a zvuky.
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3219,9 +3245,6 @@ cs:
             kódu!
           description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj
             Minecraft s kódem.
-          lessons:
-            Minecraft Hour of Code:
-              name: Hodina kódu s Minecraftem
           student_description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou!
             Procestuj Minecraft s kódem.
         applab-intro-staging:
@@ -4503,9 +4526,6 @@ cs:
               name: Umělec
         aquatic:
           description_short: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
-          lessons:
-            Aquatic:
-              name: Vodní
         dance--draft:
           lessons:
             Dance Party:
@@ -8144,7 +8164,7 @@ cs:
               display_name: Úrovně nahrávání videí
               description: Tyto úrovně mají používat tvůrci videí.
         virustest:
-          title: Simulace šíření
+          title: Simulování epidemie
           description_short: 'Vytvořte ve Sprite Labu simulaci šíření viru. '
         ml-playground:
           lessons:
@@ -8153,30 +8173,32 @@ cs:
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
-              name: Kódování simulace
+              name: Naprogramování simulace
           lesson_groups:
             outbreak:
-              display_name: Simulace šíření
-          title: Simulátor šíření
-          description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
-          description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
-          name: šíření
-          student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+              display_name: Simulace epidemie
+          title: Simulátor epidemie
+          description_short: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          name: epidemie
+          student_description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
         2021drafting:
           lessons:
             Virus Simulation for Code Bytes:
-              name: Kódování simulace
+              name: Naprogramování simulace
             Making Sprites:
               name: Dělání sprajtů
             End of Course Project:
               name: Projekt na zakončení kurzu
+            Outbreaklab:
+              name: Samostatná laboratoř epidemií
           lesson_groups:
             introduction:
               display_name: Úvod
             lessonGroup-3:
               display_name: Proměnné
             outbreak:
-              display_name: Simulátor šíření
+              display_name: Simulátor epidemie
             debugging:
               display_name: Ladění
         csd1-2021:
@@ -9017,6 +9039,8 @@ cs:
                 pro hypotetické aplikace. '
             lesson-7:
               name: Dělání sprajtů
+            lesson-5:
+              name: Epidemie
             lesson-2:
               name: Moc slova
               description_student: Šikana není nikdy v pořádku. Tato lekce Vás poučí
@@ -9304,14 +9328,14 @@ cs:
             Learning Sprites with Sprite Lab:
               name: Plovoucí ryby s Laboratoří sprajtů
             Virus Simulation for Code Bytes:
-              name: Kódování simulace
+              name: Naprogramování simulace
             Making Sprites:
               name: Dělání sprajtů
           lesson_groups:
             ramp_up:
               display_name: Úvod
             outbreak:
-              display_name: Simulace šíření
+              display_name: Simulace epidemie
             lessonGroup-3:
               display_name: Proměnné
             Sprites:
@@ -9330,9 +9354,9 @@ cs:
               display_name: 'Kapitola 2: Řešení datových problémů'
         contagion-pilot:
           description_audience: Známky 5
-          description_short: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
-          description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
-          student_description: 'Naprogramujte ve Sprite Labu simulaci šíření viru. '
+          description_short: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
+          student_description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
         csa1-pilot:
           lessons:
             lesson-19:
@@ -9466,6 +9490,47 @@ cs:
               display_name: Úvod
             Introduction:
               display_name: Úvod
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lekce 3
+            Lesson 4:
+              display_name: Lekce 4
+            Lesson 5:
+              display_name: Lekce 5
+        outbreakmodule:
+          lessons:
+            how things spread:
+              name: Jak se věci šíří
+            contagion simulator setup:
+              name: Konfigurace simulátoru nákazy
+            sometimes but not always:
+              name: Někdy, ale ne vždy
+            modifying your model:
+              name: Úprava Vašeho modelu
+            telling a data story:
+              name: Vyprávění příběhu dat
+            intro monster town:
+              name: Epidemie ve Městě Příšer
+          lesson_groups:
+            Outbreak Module:
+              display_name: Modul epidemie
+          name: epidemický modul
+          title: Modul_epidemie_V2
+        aiml-2021:
+          lessons:
+            lesson9:
+              description_teacher: |-
+                V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.
+
+                **Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?
+        csd7-2021:
+          lessons:
+            Similarity Models:
+              description_teacher: |-
+                V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.
+
+                **Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?
         kodea-pd-2021:
           lessons:
             Getting Started:
@@ -9482,6 +9547,9 @@ cs:
           lessons:
             lesson-4:
               name: Proces návrhu
+        outbreak-module:
+          name: modul\_epidemie
+          title: Epidemie
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -9531,6 +9599,12 @@ cs:
           lessons:
             lesson-3:
               name: Test
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Fáze 1
+            lessonGroup-3:
+              display_name: Fáze 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -9662,37 +9736,6 @@ cs:
                 a znázorňovat příslušné atributy pomocí instančních proměnných. Studenti
                 se mohou naučit rozdíl mezi „veřejným“ a „soukromým“ a účel enkapsulace
                 ke skrytí vnitřní implementace objektu.
-            lesson-2:
-              name: Používání proměnných
-              description_student: Proměnné představují způsob, jak mohou softwaroví
-                inženýři ukládat informace. Typ informací, které potřebujeme uložit,
-                určuje druh proměnné, jakou budeme muset použít, její datový typ a
-                to, jak ji můžeme používat. V této lekci budete používat proměnné
-                k ukládání informací používaných k vytvoření objektů typu `Malíř`
-                a k ukládání informací zadávaných uživatelem.
-              description_teacher: V této lekci budou studenti prozkoumávat funkcionalitu
-                proměnných a učit se rozlišovat mezi základními proměnnými a referenčními
-                proměnnými. Studenti budou užívat třídu `Scanner` k získání vstupu
-                od uživatele a k vymezení proměnných k ukládání hodnot dodaných uživatelem.
-                Tyto hodnoty se používají ke zkonstruování objektů typu `Malíř` ve
-                Čtvrti.
-            lesson-3:
-              name: Psaní konstruktorů
-              description_student: Pojízdná prodejna pečiva projektu Mercury potřebuje
-                vaši pomoc! Majitel chce prodávat dezerty ve Čtvrti, ale potřebuje
-                mít možnost své dezerty zadávat a ukládat do programu. Byli jste požádáni,
-                abyste pomocí svých programátorských dovedností vytvořili program,
-                který bude umět vytvářet objekty typu dezertu, aby mohl majitel sledovat
-                svůj inventář. Začnete vytvořením třídy `Dezert`, aby majitel mohl
-                zadat příchuť, dostupné množství a cenu jednotlivých dezertů, které
-                prodává.
-              description_teacher: Studenti budou obeznámeni s druhy pečiva z pojízdné
-                prodejny projektu Mercury Pastries a s majitelovou potřebou programu
-                na zadávání a ukládání položek typu dezert. Jako softwaroví inženýři
-                budou studenti využívat objektově orientovaných strategií návrhu k
-                identifikaci nezbytných atributů a vhodných datových typů pro třídu
-                `Dezert`. Studenti napíší konstruktor a použijí objekt `Scanner` k
-                vytvoření hodnot pro instanční proměnné k inicializaci objektu `Dezert`.
             lesson-4:
               name: Přidání více konstruktorů
             lesson-5:
@@ -9726,5 +9769,22 @@ cs:
               display_name: Obsah
         csa5-pilot-facilitator:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widgety
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lekce
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Obsah
+            content:
+              display_name: Obsah
+            lesson_group:
+              display_name: Obsah
             lessonGroup-2:
               display_name: Obsah

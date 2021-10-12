@@ -2478,3 +2478,77 @@ ur-PK:
           ***
           ## مرحلہ 4: پڑھانا شروع کریں!
           کمپیوٹر سائنس کے تصورات کو اپنے کلاس روم میں لانے کے لیے صرف ایک سبق درکار ہوتا ہے۔ جب آپ کو اپنے طلباء میں CS کے لیے جوش و خروش دکھائی دینے لگے، تو اپنے طلباء کی رہنمائی کے لیے روزانہ کے سبق کے منصوبوں، پلگ نکالا سرگرمیوں جنہیں آپ ایک کمپیوٹر کے بغیر کر سکتے ہیں، اور دوسرے اساتذہ سے منسلک ہونے کے لیے فورمز، کے ساتھ آگے بڑھیں۔
+      CourseF_outbreak_story:
+        markdown: "# وباء: اپنا سیمولیشن کوڈ کر لیں\n\n## بھوت شہر مانسٹر ٹاؤن میں
+          خوش آمدید!\nمانسٹر ٹاؤن عمومی طور پر ایک خوشحال اور صحتمند جگہ تھی. اس بھوت
+          شہر میں رہنے والے بھوتوں کو دوستوں کے ساتھ گھومنا پھرنا بہت پسند تھا \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nایک دن ایک بھوت بیمار محسوس کرنے لگا. اس بھوت کو
+          **وائرس** لگ گیا تھا! وائرس ایک بہت چھوٹا جرثومہ ہوتا ہے. دیگر بھوت اس بارے
+          \ میں کچھ خاص پریشان نہیں تھے. وہ اپنے دوستوں کے پاس آتے جاتے رہے.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nاس کے بعد جلد ہی دو مزید بھوت بیمار پڑ گئے۔ ان کو
+          بھی وہی وائرس لگ گیا تھا! ایسے لگ رہا تھا ان کو یہ وائرس اپنے بیمار دوست
+          سے لگ گیا تھا.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nوہ وائرس بتدریج نزدیک میں دوسرے بھوتوں کی جانب پھیلنے
+          لگا. صحتمند بھوت سارے پریشان ہونے لگے کہ وہ خود بھی بیمار ہو جائیں گے. مریض
+          بھوتوں کو یہ پریشانی لاحق ہو گئی کہ ان سے یہ وائرس باقی سب کی جانب پھیل
+          جائے گا.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## وائرس کے پھیلاؤ کی روک تھام\nخوش
+          بختانہ، جب وائرس کا مطالعہ کیا گیا تو مانسٹر ٹاؤن کو ایک اہم بات پتہ چلی.
+          انہوں نے دریافت کیا کہ اگر وہ اپنے منہ کے اوپر ماسک پہنیں تو وائرس کے پھیلنے
+          کا امکان کم ہو جاتا ہے. ماسک پہنے رکھنے سے مریض بھوتوں سے صحتمند بھوتوں
+          تک وائرس کے پھیلنے کا امکان کم ہو جاتا تھا.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          آگے کیا ہو گا؟\n\nآج کوڈ لکھ کر اپنا **simulation** چلائیں گے کہ مانسٹر
+          ٹاؤن میں پھیلتی وبا کی روک تھام کر سکیں. ایک سیمولیشن کسی پراسس یا سسسٹم
+          کا کمپیوٹر ماڈل ہوتا ہے. کوڈ لکھنا سیکھ لیں اور پیشنگوئی کریں کہ مانسٹر
+          ٹاؤن میں مریضوں        \n       کے پڑوسیوں کے ساتھ کیا ہو گا.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *وائرس کتنی تیزی سے پھیلے گا؟*\n\n*
+          *کیا ہر کوئی بیمار ہو جائے گا؟*\n\n* *چہرے کے ماسک کیسے مددگار ثابت ہوں
+          گے؟*\n\n\nجب اپ آپنا کام ختم کر لیں تو اپنے سیمولیشن کو دوسروں کے ساتھ شریک
+          کر لیں. دوسری کے ساتھ اپنا یہ پیغام شریک کریں کہ اگر شہر میں وائرس آ جائے
+          تو آپ لوگوں کو کیسے محفوظ رکھیں گے. \n"
