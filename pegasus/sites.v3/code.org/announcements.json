@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-showcase"
+    "/home": "codeorg-classchat"
   },
 
   "banners": {
-    "nextsteps-showcase": {
-      "image": "/images/csjourneys/showcase-banner.png",
-      "title": "Learn how computer science is used in college",
-      "body": "Give high school students the opportunity to learn how CS is used at the college level to help with research and projects in different fields of study they may want to pursue. Recording will be available the day after the live session.",
+    "codeorg-classchat": {
+      "image": "/images/csjourneys/codeorg-classchat.png",
+      "title": "Using computer science for good",
+      "body": "Learn how two software engineers took different paths into the same career, and are now building technology that helps students all around the world learn computer science. Recommended for grades 6-12.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-2",
-      "buttonId": "nextsteps-showcase-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat4",
+      "buttonId": "codeorg-classchat-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
