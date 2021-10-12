@@ -411,7 +411,7 @@ FactoryGirl.define do
     association :user, factory: :teacher
 
     course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
-    application_year Pd::Application::ApplicationConstants::YEAR_19_20
+    application_year Pd::SharedApplicationConstants::YEAR_19_20
     scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
   end
 

@@ -31,6 +31,10 @@ class ProgrammingExpression < ApplicationRecord
     color
     syntax
     short_description
+    external_documentation
+    content
+    return_value
+    tips
   )
 
   def key_format
@@ -180,12 +184,39 @@ class ProgrammingExpression < ApplicationRecord
       id: id,
       key: key,
       name: name,
+      category: category,
       programmingEnvironmentName: programming_environment.name,
-      shortDescription: short_description || ''
+      shortDescription: short_description || '',
+      externalDocumentation: external_documentation || '',
+      content: content || '',
+      syntax: syntax || '',
+      returnValue: return_value || '',
+      tips: tips || ''
+    }
+  end
+
+  def summarize_for_show
+    {
+      name: name,
+      category: category,
+      color: get_color,
+      externalDocumentation: external_documentation,
+      content: content,
+      syntax: syntax,
+      returnValue: return_value,
+      tips: tips
     }
   end
 
   def summarize_for_lesson_show
     {name: name, color: color, syntax: syntax, link: documentation_path}
+  end
+
+  def get_color
+    if programming_environment.name == 'spritelab'
+      color
+    else
+      ProgrammingExpression.get_category_color(category)
+    end
   end
 end

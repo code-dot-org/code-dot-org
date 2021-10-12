@@ -109,7 +109,8 @@ var currentSources = {
   html: null,
   makerAPIsEnabled: null,
   animations: null,
-  selectedSong: null
+  selectedSong: null,
+  selectedPoem: null
 };
 
 /**
@@ -134,6 +135,7 @@ function unpackSources(data) {
     makerAPIsEnabled: data.makerAPIsEnabled,
     generatedProperties: data.generatedProperties,
     selectedSong: data.selectedSong,
+    selectedPoem: data.selectedPoem,
     libraries: data.libraries
   };
 }
@@ -677,6 +679,7 @@ var projects = (module.exports = {
    * @param {function(boolean)} sourceHandler.setMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.getMakerAPIsEnabled
    * @param {function(): boolean} sourceHandler.setSelectedSong
+   * @param {function(): boolean} sourceHandler.setSelectedPoem
    */
   init(sourceHandler) {
     this.sourceHandler = sourceHandler;
@@ -697,6 +700,10 @@ var projects = (module.exports = {
 
       if (currentSources.selectedSong) {
         sourceHandler.setSelectedSong(currentSources.selectedSong);
+      }
+
+      if (currentSources.selectedPoem) {
+        sourceHandler.setSelectedPoem(currentSources.selectedPoem);
       }
 
       if (currentSources.animations) {
@@ -906,6 +913,8 @@ var projects = (module.exports = {
           return 'basketball';
         }
         return 'bounce';
+      case 'poetry':
+        return appOptions.level.standaloneAppName;
       default:
         return null;
     }
@@ -962,7 +971,7 @@ var projects = (module.exports = {
   },
   /**
    * Saves the project only if the sources {source, html, animations,
-   * makerAPIsEnabled, selectedSong} have changed.
+   * makerAPIsEnabled, selectedSong, selectedPoem} have changed.
    * @returns {Promise} A promise containing the project data if the project
    * was saved, otherwise returns a promise which resolves with no arguments.
    */
@@ -1180,6 +1189,11 @@ var projects = (module.exports = {
     return this.save();
   },
 
+  saveSelectedPoem(poem) {
+    this.sourceHandler.setSelectedPoem(poem);
+    return this.save();
+  },
+
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
@@ -1254,6 +1268,7 @@ var projects = (module.exports = {
           const html = this.sourceHandler.getLevelHtml();
           const makerAPIsEnabled = this.sourceHandler.getMakerAPIsEnabled();
           const selectedSong = this.sourceHandler.getSelectedSong();
+          const selectedPoem = this.sourceHandler.getSelectedPoem();
           const generatedProperties = this.sourceHandler.getGeneratedProperties();
           const libraries = this.sourceHandler.getLibrariesList();
           callback({
@@ -1262,6 +1277,7 @@ var projects = (module.exports = {
             animations,
             makerAPIsEnabled,
             selectedSong,
+            selectedPoem,
             generatedProperties,
             libraries
           });

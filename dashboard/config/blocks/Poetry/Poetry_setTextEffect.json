@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Poetry - Effects",
   "config": {
     "func": "setTextEffect",
     "blockText": "set text effect {EFFECT}",

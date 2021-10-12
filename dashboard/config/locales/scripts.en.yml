@@ -24842,7 +24842,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod1:
           lessons:
             lesson-1:
@@ -24924,7 +24925,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by October 15, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csd-mod4:
           lessons:
             lesson-1:
@@ -24940,7 +24942,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod2:
           lessons:
             lesson-1:
@@ -24973,7 +24976,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by October 18, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-overview:
           lessons: {}
           lesson_groups: {}
@@ -26549,7 +26553,53 @@ en:
               name: Poetry Circle
           lesson_groups: {}
           name: poetry
-          title: ''
+          title: Computer Science and Poetry
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+          lesson_groups: {}
+          name: spelling-bee
+          title: CSC - Spelling Bee
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Outbreak Day 1
+            lesson-2:
+              name: Outbreak Day 2
+          lesson_groups: {}
+          name: outbreak-csc
+          title: Outbreak
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Exploring Box Plots and Histograms
+          lesson_groups: {}
+          name: explore-data-1
+          title: Exploring Box Plots and Histograms
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Counting with Laurel
+          lesson_groups: {}
+          name: counting-csc
+          title: Counting with Laurel
           description_audience: ''
           description_short: ''
           description: ''

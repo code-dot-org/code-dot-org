@@ -34,6 +34,7 @@ class ProgrammingExpressionsController < ApplicationController
   def edit
     @programming_expression = ProgrammingExpression.find_by_id(params[:id])
     return render :not_found unless @programming_expression
+    @environment_categories = @programming_expression.programming_environment.categories
   end
 
   def update
@@ -42,8 +43,7 @@ class ProgrammingExpressionsController < ApplicationController
       render :not_found
       return
     end
-    programming_expression.name = programming_expression_params[:name]
-    programming_expression.short_description = programming_expression_params[:short_description]
+    programming_expression.assign_attributes(programming_expression_params)
     begin
       programming_expression.save! if programming_expression.changed?
       render json: programming_expression.summarize_for_edit.to_json
@@ -52,13 +52,23 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
+  def show
+    @programming_expression = ProgrammingExpression.find(params[:id])
+  end
+
   private
 
   def programming_expression_params
     transformed_params = params.transform_keys(&:underscore)
     transformed_params = transformed_params.permit(
       :name,
+      :category,
       :short_description,
+      :external_documentation,
+      :content,
+      :syntax,
+      :return_value,
+      :tips
     )
     transformed_params
   end

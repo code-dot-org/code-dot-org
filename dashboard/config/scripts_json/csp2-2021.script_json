@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-26 16:43:24 UTC",
+    "serialized_at": "2021-10-07 22:46:00 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2021"
@@ -782,7 +782,7 @@
       "key": "d80460ab-af44-4e1d-b913-bc5861050d8f",
       "position": 2,
       "properties": {
-        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\r\n\r\nAt the end of this unit you will do a project focusing on a societal issues. As you go through these lessons keep you ears and eyes open for how things work.\r\n\r\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols late in this unit. \r\n\r\nFor example there are two major issues to think about:\r\n\r\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\r\n\r\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\r\n\r\nTo have an informed opinion though it helps to understand the technical underpinnings of how the internet works.\r\n\r\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
+        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
         "remarks": true
       },
       "seeding_key": {

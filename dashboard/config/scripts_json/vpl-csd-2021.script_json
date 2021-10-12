@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-30 14:25:26 UTC",
+    "serialized_at": "2021-10-12 00:06:25 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "vpl-csd-2021"
@@ -2022,21 +2022,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL - CSD - Module 5_Wrap Up"
+          "VPL - CSD - Module 5 Wrap Up"
         ],
         "progression": "Wrap Up (~10 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 5_Wrap Up"
+          "VPL - CSD - Module 5 Wrap Up"
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2021"
       },
       "level_keys": [
-        "VPL - CSD - Module 5_Wrap Up"
+        "VPL - CSD - Module 5 Wrap Up"
       ]
     },
     {
@@ -3285,9 +3285,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 5_Wrap Up",
+        "level.key": "VPL - CSD - Module 5 Wrap Up",
         "script_level.level_keys": [
-          "VPL - CSD - Module 5_Wrap Up"
+          "VPL - CSD - Module 5 Wrap Up"
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",

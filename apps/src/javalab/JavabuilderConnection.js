@@ -130,6 +130,7 @@ export default class JavabuilderConnection {
         this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:
+        this.onNewlineMessage();
         handleException(data, this.onOutputMessage);
         this.onNewlineMessage();
         break;
