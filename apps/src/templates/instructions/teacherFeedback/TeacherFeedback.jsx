@@ -107,7 +107,8 @@ export class TeacherFeedback extends Component {
           script_id: this.props.serverScriptId,
           level_id: this.props.serverLevelId,
           old_state: this.getLatestReviewState(),
-          new_state: this.state.reviewState
+          new_state: this.state.reviewState,
+          section_id: this.props.selectedSectionId
         })
       },
       {includeUserId: true}
@@ -356,7 +357,8 @@ export default connect(
     verifiedTeacher: state.pageConstants && state.pageConstants.verifiedTeacher,
     selectedSectionId:
       state.teacherSections && state.teacherSections.selectedSectionId,
-    canHaveFeedbackReviewState: state.pageConstants.canHaveFeedbackReviewState
+    canHaveFeedbackReviewState:
+      state.pageConstants && state.pageConstants.canHaveFeedbackReviewState
   }),
   dispatch => ({
     updateUserProgress(userId) {

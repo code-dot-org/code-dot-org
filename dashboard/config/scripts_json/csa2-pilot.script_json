@@ -15,8 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-18 15:03:59 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-09-29 19:52:04 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -55,6 +55,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Sandbox"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-pilot"
       }
     }
@@ -343,6 +355,51 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "The Neighborhood",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "The Theater",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-pilot"
       }
     }
@@ -957,6 +1014,42 @@
         "lesson_activity.key": "136cfee0-03ef-4675-b3d3-2876340bd82d",
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "1d2c28ff-e517-413a-8761-bcb3a04e0a4c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d2c28ff-e517-413a-8761-bcb3a04e0a4c",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "c8caf708-a2e8-4ab7-953b-0c3715890b54",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8caf708-a2e8-4ab7-953b-0c3715890b54",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot"
+      }
+    },
+    {
+      "key": "46c45bed-492a-460d-96ed-4d4dd8fb605d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46c45bed-492a-460d-96ed-4d4dd8fb605d",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-pilot"
       }
     }
@@ -2453,7 +2546,7 @@
       "key": "38afb102-e14e-43c3-bb46-de39a268def3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce class hierarchies.\n* Each class in a class hierarchy inherits from the class above it.\n* All classes implicitly inherit from a universal subclass called `Object`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Class Hierarchy cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students arrange the cards to create a class hierarchy of the `Painter`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce class hierarchies.\n* Each class in a class hierarchy inherits from the class above it.\n* All classes implicitly inherit from a universal superclass called `Object`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Class Hierarchy cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students arrange the cards to create a class hierarchy of the `Painter`.",
         "name": "Constructing a Class Hierarchy",
         "tips": [
           {
@@ -4226,6 +4319,39 @@
         "activity_section.key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff",
         "lesson_activity.key": "136cfee0-03ef-4675-b3d3-2876340bd82d"
       }
+    },
+    {
+      "key": "0228b4d8-e2e9-4e6a-b906-6ad8cd8d0dd3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Java Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "0228b4d8-e2e9-4e6a-b906-6ad8cd8d0dd3",
+        "lesson_activity.key": "1d2c28ff-e517-413a-8761-bcb3a04e0a4c"
+      }
+    },
+    {
+      "key": "af20f679-c352-4a7c-87a1-c5a7d5ee4ffd",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "af20f679-c352-4a7c-87a1-c5a7d5ee4ffd",
+        "lesson_activity.key": "c8caf708-a2e8-4ab7-953b-0c3715890b54"
+      }
+    },
+    {
+      "key": "3d75432d-9771-44a7-a8ac-fc92889244ea",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Theater"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d75432d-9771-44a7-a8ac-fc92889244ea",
+        "lesson_activity.key": "46c45bed-492a-460d-96ed-4d4dd8fb605d"
+      }
     }
   ],
   "script_levels": [
@@ -5778,6 +5904,81 @@
       "level_keys": [
         "CSA Pilot Survey Unit 2"
       ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "progression": "Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "0228b4d8-e2e9-4e6a-b906-6ad8cd8d0dd3"
+      },
+      "level_keys": [
+        "CSA Java Lab Sandbox"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "progression": "The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "af20f679-c352-4a7c-87a1-c5a7d5ee4ffd"
+      },
+      "level_keys": [
+        "CSA Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "progression": "The Theater"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "3d75432d-9771-44a7-a8ac-fc92889244ea"
+      },
+      "level_keys": [
+        "CSA Theater Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6523,6 +6724,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-pilot",
         "activity_section.key": "93b92b4e-a6a1-4448-983e-9aff27c3d5ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Java Lab Sandbox",
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "0228b4d8-e2e9-4e6a-b906-6ad8cd8d0dd3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "af20f679-c352-4a7c-87a1-c5a7d5ee4ffd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-pilot",
+        "activity_section.key": "3d75432d-9771-44a7-a8ac-fc92889244ea"
       }
     }
   ],

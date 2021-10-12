@@ -18,7 +18,6 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 
 class JavalabView extends React.Component {
   static propTypes = {
-    handleVersionHistory: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
     onStop: PropTypes.func.isRequired,
@@ -28,6 +27,8 @@ class JavalabView extends React.Component {
     suppliedFilesVersionId: PropTypes.string,
     visualization: PropTypes.object,
     viewMode: PropTypes.string.isRequired,
+    isProjectTemplateLevel: PropTypes.bool.isRequired,
+    handleClearPuzzle: PropTypes.func.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -133,14 +134,15 @@ class JavalabView extends React.Component {
       onCommitCode,
       onInputMessage,
       onContinue,
-      handleVersionHistory,
       isEditingStartSources,
       isRunning,
       showProjectTemplateWorkspaceIcon,
       disableFinishButton,
       awaitingContainedResponse,
       isSubmittable,
-      isSubmitted
+      isSubmitted,
+      isProjectTemplateLevel,
+      handleClearPuzzle
     } = this.props;
     const {isTesting} = this.state;
 
@@ -180,11 +182,12 @@ class JavalabView extends React.Component {
             topRightPanel={height => (
               <JavalabEditor
                 onCommitCode={onCommitCode}
-                handleVersionHistory={handleVersionHistory}
                 showProjectTemplateWorkspaceIcon={
                   showProjectTemplateWorkspaceIcon
                 }
                 height={height}
+                isProjectTemplateLevel={isProjectTemplateLevel}
+                handleClearPuzzle={handleClearPuzzle}
               />
             )}
             bottomRightPanel={() => (

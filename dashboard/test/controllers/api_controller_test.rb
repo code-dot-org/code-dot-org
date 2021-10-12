@@ -828,6 +828,47 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
+  test "user_progress_for_lesson should return channel when param get_channel_id is true" do
+    script = create(:script, :with_levels, levels_count: 1)
+    level = script.script_levels.first.level
+
+    user = create :user, total_lines: 2
+    sign_in user
+
+    channel_token = create :channel_token, level: level, script_id: script.id, storage_id: storage_id_for_user_id(user.id)
+    expected_channel = channel_token.channel
+
+    get :user_progress_for_lesson, params: {
+      script: script.name,
+      lesson_position: 1,
+      level_position: 1,
+      get_channel_id: true
+    }
+
+    body = JSON.parse(response.body)
+    assert_equal expected_channel, body['channel']
+  end
+
+  test "user_progress_for_lesson should not return channel when param get_channel_id is false" do
+    script = create(:script, :with_levels, levels_count: 1)
+    level = script.script_levels.first.level
+
+    user = create :user, total_lines: 2
+    sign_in user
+
+    create :channel_token, level: level, script_id: script.id, storage_id: storage_id_for_user_id(user.id)
+
+    get :user_progress_for_lesson, params: {
+      script: script.name,
+      lesson_position: 1,
+      level_position: 1,
+      get_channel_id: false
+    }
+
+    body = JSON.parse(response.body)
+    assert_nil body['channel']
+  end
+
   test "should slog the contained level id when present" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
@@ -1217,10 +1258,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  # test "" do
-
-  # end
-
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
@@ -1240,7 +1277,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_out :user
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = Script.find_by_name('algebra')
+    script = create(:script, :with_levels, levels_count: 5)
 
     get :script_structure, params: {script: script.id}
     assert_response :success

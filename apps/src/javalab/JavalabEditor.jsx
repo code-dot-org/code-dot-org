@@ -35,6 +35,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -51,6 +52,9 @@ class JavalabEditor extends React.Component {
     style: PropTypes.object,
     onCommitCode: PropTypes.func.isRequired,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    isProjectTemplateLevel: PropTypes.bool.isRequired,
+    handleClearPuzzle: PropTypes.func.isRequired,
+
     // populated by redux
     setRenderedHeight: PropTypes.func.isRequired,
     setEditorColumnHeight: PropTypes.func.isRequired,
@@ -64,7 +68,6 @@ class JavalabEditor extends React.Component {
     isDarkMode: PropTypes.bool,
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
-    handleVersionHistory: PropTypes.func.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired
   };
 
@@ -201,6 +204,10 @@ class JavalabEditor extends React.Component {
     };
   };
 
+  handleVersionHistory() {
+    this.setState({versionHistoryOpen: true});
+  }
+
   updateVisibility(key, isVisible) {
     this.props.sourceVisibilityUpdated(this.state.fileMetadata[key], isVisible);
     this.setState({
@@ -295,7 +302,33 @@ class JavalabEditor extends React.Component {
     });
   }
 
+  // Checks if the given file name is valid and if not,
+  // updates the state with the appropriate error message.
+  // Returns whether or not the file name is valid.
+  validateFileName(filename, errorStateKey) {
+    let errorMessage;
+
+    if (!filename) {
+      errorMessage = javalabMsg.missingFilenameError();
+    } else if (filename.endsWith('.java') && /\s/g.test(filename)) {
+      // Java file names cannot contains spaces
+      errorMessage = javalabMsg.invalidJavaFilename();
+    }
+
+    if (errorMessage) {
+      this.setState({
+        [errorStateKey]: errorMessage
+      });
+    }
+
+    return !errorMessage;
+  }
+
   onRenameFile(newFilename) {
+    newFilename = newFilename.trim();
+    if (!this.validateFileName(newFilename, 'renameFileError')) {
+      return;
+    }
     const {fileMetadata, editTabKey} = this.state;
     // check for duplicate filename
     if (Object.keys(this.props.sources).includes(newFilename)) {
@@ -328,6 +361,10 @@ class JavalabEditor extends React.Component {
   }
 
   onCreateFile(filename, fileContents) {
+    filename = filename.trim();
+    if (!this.validateFileName(filename, 'newFileError')) {
+      return;
+    }
     fileContents = fileContents || '';
     if (Object.keys(this.props.sources).includes(filename)) {
       this.setState({
@@ -483,7 +520,8 @@ class JavalabEditor extends React.Component {
       contextTarget,
       renameFileError,
       newFileError,
-      compileStatus
+      compileStatus,
+      versionHistoryOpen
     } = this.state;
     const {
       onCommitCode,
@@ -492,7 +530,9 @@ class JavalabEditor extends React.Component {
       isEditingStartSources,
       isReadOnlyWorkspace,
       showProjectTemplateWorkspaceIcon,
-      height
+      height,
+      isProjectTemplateLevel,
+      handleClearPuzzle
     } = this.props;
 
     let menuStyle = {
@@ -504,6 +544,14 @@ class JavalabEditor extends React.Component {
     };
     return (
       <div style={this.props.style} ref={ref => (this.tabContainer = ref)}>
+        {versionHistoryOpen && (
+          <VersionHistoryWithCommits
+            handleClearPuzzle={handleClearPuzzle}
+            isProjectTemplateLevel={isProjectTemplateLevel}
+            onClose={() => this.setState({versionHistoryOpen: false})}
+            isOpen={versionHistoryOpen}
+          />
+        )}
         <PaneHeader hasFocus>
           <PaneButton
             id="javalab-editor-create-file"
@@ -529,7 +577,7 @@ class JavalabEditor extends React.Component {
             label={msg.showVersionsHeader()}
             headerHasFocus
             isRtl={false}
-            onClick={this.props.handleVersionHistory}
+            onClick={() => this.handleVersionHistory()}
             isDisabled={isReadOnlyWorkspace}
           />
           <PaneButton

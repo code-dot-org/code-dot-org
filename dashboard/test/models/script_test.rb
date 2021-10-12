@@ -24,6 +24,7 @@ class ScriptTest < ActiveSupport::TestCase
     @csd_unit = create :csd_script, name: 'csd1'
     @csp_unit = create :csp_script, name: 'csp1'
     @csa_unit = create :csa_script, name: 'csa1'
+    @csc_unit = create :csc_script, name: 'csc1'
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -32,8 +33,9 @@ class ScriptTest < ActiveSupport::TestCase
     # We also want to test level_concept_difficulties, so make sure to give it
     # one.
     @cacheable_level = create(:level, :with_script, level_concept_difficulty: create(:level_concept_difficulty))
+  end
 
-    # ensure that we have freshly generated caches with this unit_group/unit
+  setup do
     UnitGroup.clear_cache
     Script.clear_cache
   end
@@ -119,6 +121,18 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.add_unit(options, parsed_unit)
     assert_equal unit_id, unit.script_levels[4].script_id
     assert_not_equal script_level_id, unit.script_levels[4].id
+  end
+
+  test 'can create course version when seeding a unit' do
+    unit = Script.add_unit(
+      {name: 'unit-name', family_name: 'family', version_year: 'unversioned', published_state: SharedConstants::PUBLISHED_STATE.preview, is_course: true},
+      {}
+    )
+    course_version = unit.course_version
+    assert_not_nil course_version
+    assert_equal 'unversioned', course_version.key
+    assert_equal 'family', course_version.course_offering&.key
+    assert_equal SharedConstants::PUBLISHED_STATE.preview, course_version.published_state
   end
 
   test 'cannot rename a unit without a new_name' do
@@ -423,6 +437,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
       }]
@@ -431,6 +446,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
       }]
@@ -442,6 +458,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:applab).name}]}]}]
       }]
@@ -450,6 +467,7 @@ class ScriptTest < ActiveSupport::TestCase
       {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
+        user_facing: true,
         display_name: "Content",
         lessons: [{name: "Lesson1", key: 'lesson1', script_levels: [{levels: [{name: create(:gamelab).name}]}]}]
       }]
@@ -504,7 +522,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with ID lookup' do
-    level = Script.first.script_levels.first.level
+    level = Script.find_by_name(Script::FLAPPY_NAME).script_levels.first.level
 
     populate_cache_and_disconnect_db
 
@@ -512,7 +530,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'cache_find_level uses cache with name lookup' do
-    level = Script.first.script_levels.first.level
+    level = Script.find_by_name(Script::FLAPPY_NAME).script_levels.first.level
 
     populate_cache_and_disconnect_db
 
@@ -677,9 +695,11 @@ class ScriptTest < ActiveSupport::TestCase
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp')
     create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp')
     create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
+    CourseOffering.add_course_offering(csp_2018)
     section = create :section, unit_group: csp_2018
     section.students << student
 
@@ -691,8 +711,10 @@ class ScriptTest < ActiveSupport::TestCase
   test 'redirect_to_unit_url returns unit url of latest assigned unit version in family for unit not belonging to course family' do
     Script.any_instance.stubs(:can_view_version?).returns(true)
     student = create :student
-    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017')
-    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018')
+    courseg_2017 = create(:script, name: 'courseg-2017', family_name: 'courseg', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(courseg_2017)
+    courseg_2018 = create(:script, name: 'courseg-2018', family_name: 'courseg', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(courseg_2018)
     section = create :section, script: courseg_2018
     section.students << student
 
@@ -816,6 +838,66 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal courseg_2017, Script.latest_assigned_version('courseg', student)
   end
 
+  test 'has_other_versions? makes no queries when there is one other unit group version' do
+    Script.stubs(:should_cache?).returns true
+
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
+
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+    csp1_2018 = create(:script, name: 'csp1-2018')
+    create :unit_group_unit, unit_group: csp_2018, script: csp1_2018, position: 1
+    CourseOffering.add_course_offering(csp_2018)
+
+    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    assert_queries(0) do
+      assert csp1_2017.has_other_versions?
+    end
+  end
+
+  test 'has_other_versions? makes no queries when there are no other unit group versions' do
+    Script.stubs(:should_cache?).returns true
+
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    csp1_2017 = create(:script, name: 'csp1-2017')
+    create :unit_group_unit, unit_group: csp_2017, script: csp1_2017, position: 1
+    CourseOffering.add_course_offering(csp_2017)
+
+    csp1_2017 = Script.get_from_cache(csp1_2017.id)
+    assert_queries(0) do
+      refute csp1_2017.has_other_versions?
+    end
+  end
+
+  test 'has_other_versions? makes no queries when there is one other unit version' do
+    Script.stubs(:should_cache?).returns true
+
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(foo18)
+
+    foo17 = Script.get_from_cache(foo17.id)
+    assert_queries(0) do
+      assert foo17.has_other_versions?
+    end
+  end
+
+  # we expect to hit this case when serving uncached hoc unit overview pages.
+  test 'has_other_versions? makes no queries when there are no other unit versions' do
+    Script.stubs(:should_cache?).returns true
+
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+
+    foo17 = Script.get_from_cache(foo17.id)
+    assert_queries(0) do
+      refute foo17.has_other_versions?
+    end
+  end
+
   test 'banner image' do
     assert_nil Script.find_by_name('flappy').banner_image
     assert_equal 'banner_course1.jpg', Script.find_by_name('course1').banner_image
@@ -828,19 +910,35 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').professional_learning_course?
   end
 
-  test 'should summarize unit' do
+  test 'should summarize migrated unit' do
     unit = create(:script, name: 'single-lesson-script')
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
     unit.teacher_resources = [['curriculum', '/link/to/curriculum']]
-
+    Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
+    Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
     summary = unit.summarize
 
     assert_equal 1, summary[:lessons].count
     assert_nil summary[:peerReviewLessonInfo]
     assert_equal 0, summary[:peerReviewsRequired]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
+    assert_equal '/overview-pdf-url', summary[:scriptOverviewPdfUrl]
+    assert_equal '/resources-pdf-url', summary[:scriptResourcesPdfUrl]
+  end
+
+  test 'should summarize migrated unit with legacy lesson plans' do
+    unit = create(:script, name: 'single-lesson-script', use_legacy_lesson_plans: true)
+    lesson_group = create(:lesson_group, key: 'key1', script: unit)
+    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
+    create(:script_level, script: unit, lesson: lesson)
+    Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
+    Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
+    summary = unit.summarize
+
+    refute summary[:scriptOverviewPdfUrl]
+    refute summary[:scriptResourcesPdfUrl]
   end
 
   test 'should summarize unit with peer reviews' do
@@ -1150,8 +1248,10 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show_script_version_warning' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017')
-    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018')
+    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true)
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true)
+    CourseOffering.add_course_offering(foo18)
     user = create(:student)
 
     refute foo17.summarize[:show_script_version_warning]
@@ -1193,8 +1293,16 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes versions' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
 
     versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
@@ -1207,9 +1315,21 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize excludes unlaunched versions' do
-    foo17 = create(:script, name: 'foo-2017', family_name: 'foo', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2018', family_name: 'foo', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
-    create(:script, name: 'foo-2019', family_name: 'foo', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
+    foo19 = create(
+      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
+      published_state: SharedConstants::PUBLISHED_STATE.beta
+    )
+    CourseOffering.add_course_offering(foo19)
 
     versions = foo17.summarize[:versions]
     assert_equal 2, versions.length
@@ -2385,6 +2505,10 @@ class ScriptTest < ActiveSupport::TestCase
       [@csa_unit.name],
       Script.unit_names_by_curriculum_umbrella('CSA')
     )
+    assert_equal(
+      [@csc_unit.name],
+      Script.unit_names_by_curriculum_umbrella('CSC')
+    )
   end
 
   test "under_curriculum_umbrella and helpers" do
@@ -2396,6 +2520,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert @csp_unit.csp?
     assert @csa_unit.under_curriculum_umbrella?('CSA')
     assert @csa_unit.csa?
+    assert @csc_unit.under_curriculum_umbrella?('CSC')
+    assert @csc_unit.csc?
   end
 
   test "units_with_standards" do
@@ -2592,7 +2718,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move lesson to later lesson group in unit' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1
@@ -2626,7 +2752,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can move last lesson group up' do
-    unit = create :script, name: 'lesson-group-test-script'
+    unit = create :script, is_migrated: false, name: 'lesson-group-test-script'
     lesson_group1 = create :lesson_group, key: 'lg-1', script: unit
     lesson1 = create :lesson, key: 'l-1', name: 'Lesson 1', lesson_group: lesson_group1
     lesson2 = create :lesson, key: 'l-2', name: 'Lesson 2', lesson_group: lesson_group1

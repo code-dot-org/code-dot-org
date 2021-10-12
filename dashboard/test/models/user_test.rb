@@ -3058,13 +3058,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'deleting user deletes dependent pd applications' do
     teacher = create :teacher
-    application = create :pd_teacher1819_application, user: teacher
+    application = create :pd_teacher_application, user: teacher
     assert_equal application.id, teacher.pd_applications.first.id
 
     teacher.destroy
 
     assert teacher.reload.deleted?
-    refute Pd::Application::Teacher1819Application.exists?(application.id)
+    refute Pd::Application::TeacherApplication.exists?(application.id)
   end
 
   test 'deleting teacher deletes dependent sections and followers' do
@@ -4514,5 +4514,103 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     user.increment_section_attempts
     assert_equal 1, user.properties['section_attempts']
+  end
+
+  test 'school_info_school returns the school associated with the user' do
+    school = create :school
+    school_info = create :school_info, school: school
+    user = create :teacher, school_info: school_info
+
+    assert_equal school.id, user.school_info_school.id
+  end
+
+  test 'school_info_school returns nil if user has no school association' do
+    user = create :teacher
+    assert_nil user.school_info_school
+  end
+
+  test 'marketing_segment_data returns nil if user is not a teacher' do
+    student = create :student
+    assert_nil student.marketing_segment_data
+  end
+
+  test 'marketing_segment_data returns expected account age for teacher' do
+    teacher = create :teacher, created_at: 20.months.ago
+    # 20 months = 1.66 years rounds to 2 years
+    assert_equal 2, teacher.marketing_segment_data[:account_age_in_years]
+  end
+
+  test 'marketing_segment_data returns expected locale' do
+    locale = "en-US"
+    teacher = create :teacher, locale: locale
+    assert_equal locale, teacher.marketing_segment_data[:locale]
+  end
+
+  test 'marketing_segment_data returns expected grades for teacher with sections' do
+    teacher = create :teacher
+    create :section, user: teacher, grade: "6"
+    create :section, user: teacher, grade: "6"
+    create :section, user: teacher, grade: "7"
+
+    expected_grades = ["6", "7"]
+    marketing_segment_grades = JSON.parse(teacher.marketing_segment_data[:grades])
+    assert_equal expected_grades.sort, marketing_segment_grades.sort
+  end
+
+  test 'marketing_segment_data does not return grades for teacher with no sections' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:grades]
+  end
+
+  test 'marketing_segment_data returns expected curriculums for teacher with sections' do
+    teacher = create :teacher
+    csf_script = create :csf_script
+    csd_script = create :csd_script
+    create :section, user: teacher, script: csf_script
+    create :section, user: teacher, script: csd_script
+
+    expected_curriculums = ["CSF", "CSD"]
+    marketing_segment_curriculums = JSON.parse(teacher.marketing_segment_data[:curriculums])
+    assert_equal expected_curriculums.sort, marketing_segment_curriculums.sort
+  end
+
+  test 'marketing_segment_data does not return curriculums for teacher with no sections' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:curriculums]
+  end
+
+  test 'marketing_segment_data returns expected value for has_attended_pd' do
+    teacher = create :teacher
+    create :pd_attendance, teacher: teacher
+    assert teacher.marketing_segment_data[:has_attended_pd]
+  end
+
+  test 'marketing_segment_data returns expected value for within_us' do
+    teacher = create :teacher
+    create :user_geo, country: "United States", user: teacher
+    assert teacher.marketing_segment_data[:within_us]
+  end
+
+  test 'marketing_segment_data returns expected value for school_percent_frl' do
+    frl_eligible_total = 35
+    school = create :school
+    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert_equal frl_eligible_total, teacher.marketing_segment_data[:school_percent_frl]
+  end
+
+  test 'marketing_segment_data returns expected value for school_title_i' do
+    title_i_status = '5'
+    school = create :school
+    create :school_stats_by_year, school: school, title_i_status: title_i_status
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert_equal title_i_status, teacher.marketing_segment_data[:school_title_i]
+  end
+
+  test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
+    teacher = create :teacher
+    assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
 end

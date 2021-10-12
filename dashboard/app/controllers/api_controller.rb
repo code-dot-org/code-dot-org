@@ -398,7 +398,7 @@ class ApiController < ApplicationController
     if current_user
       script = Script.get_from_cache(params[:script])
       user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
-      teacher_viewing_student = current_user.students.include?(user)
+      teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
       render json: summarize_user_progress(script, user).merge(
         {
           signedIn: true,
@@ -432,24 +432,29 @@ class ApiController < ApplicationController
 
       # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
       response[:progress] = summarize_user_progress(script, current_user)[:progress]
+      response[:isHoc] = script.hoc?
 
       if user_level
         response[:lastAttempt] = {
           timestamp: user_level.updated_at.to_datetime.to_milliseconds,
           source: level_source
         }
-      end
-      response[:isHoc] = script.hoc?
 
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
-      if recent_driver
-        response[:pairingDriver] = recent_driver
-        if recent_attempt
-          response[:pairingAttempt] = edit_level_source_path(recent_attempt)
-        elsif level.channel_backed?
-          @level = level
-          recent_channel = get_channel_for(level, script.id, recent_user) if recent_user
-          response[:pairingChannelId] = recent_channel if recent_channel
+        # Pairing info
+        is_navigator = user_level.navigator?
+        if is_navigator
+          driver = user_level.driver
+          driver_level_source_id = user_level.driver_level_source_id
+        end
+
+        response[:isNavigator] = is_navigator
+        if driver
+          response[:pairingDriver] = driver.name
+          if driver_level_source_id
+            response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
+          elsif level.channel_backed?
+            response[:pairingChannelId] = get_channel_for(level, script.id, driver)
+          end
         end
       end
     end
@@ -459,9 +464,13 @@ class ApiController < ApplicationController
         tag: 'activity_start',
         script_level_id: script_level.try(:id),
         level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
-        user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
+        user_agent: request.user_agent&.valid_encoding? ? request.user_agent : 'invalid_encoding',
         locale: locale
       )
+    end
+
+    if params[:get_channel_id] == "true"
+      response[:channel] = get_channel_for(level, script.id, current_user)
     end
 
     render json: response

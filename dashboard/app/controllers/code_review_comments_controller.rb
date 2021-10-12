@@ -16,7 +16,7 @@ class CodeReviewCommentsController < ApplicationController
 
     # We wait to authorize until this point because we need to know
     # who owns the project that the comment is associated with.
-    authorize! :create, @code_review_comment, @project_owner
+    authorize! :create, @code_review_comment, @project_owner, @storage_app_id, params[:level_id], params[:script_id]
 
     if @code_review_comment.save
       return render json: serialize(@code_review_comment)
@@ -45,7 +45,7 @@ class CodeReviewCommentsController < ApplicationController
 
   # GET /code_review_comments/project_comments
   def project_comments
-    authorize! :project_comments, CodeReviewComment.new, @project_owner
+    authorize! :project_comments, CodeReviewComment.new, @project_owner, @storage_app_id
 
     # Setting custom header here allows us to access the csrf-token and manually use for create
     headers['csrf-token'] = form_authenticity_token

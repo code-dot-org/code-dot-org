@@ -65,7 +65,9 @@ class JavalabPanels extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (
-      prevProps.isInstructionsCollapsed !== this.props.isInstructionsCollapsed
+      prevProps.isInstructionsCollapsed !==
+        this.props.isInstructionsCollapsed ||
+      prevProps.isVisualizationCollapsed !== this.props.isVisualizationCollapsed
     ) {
       this.updateLayoutThrottled(this.props.leftWidth);
     }
@@ -187,8 +189,10 @@ class JavalabPanels extends React.Component {
         $('#svgMaze').css('transform', scaleCss);
         break;
       case CsaViewMode.THEATER:
-      case CsaViewMode.PLAYGROUND:
         $('#theater-container').css('transform', scaleCss);
+        break;
+      case CsaViewMode.PLAYGROUND:
+        $('#playground-container').css('transform', scaleCss);
         break;
     }
 

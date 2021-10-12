@@ -121,4 +121,18 @@ class AdminSearchController < ApplicationController
     end
     redirect_to action: 'show_pilot', pilot_name: pilot_name
   end
+
+  def remove_from_pilot
+    email = params[:email]
+    pilot_name = params[:pilot_name]
+    return head :bad_request unless Pilot.exists?(name: pilot_name)
+
+    user = User.find_by_email_or_hashed_email(email)
+    e = Experiment.where(name: pilot_name, min_user_id: user.id).first
+    Experiment.delete(e.id)
+
+    flash[:notice] = "Successfully removed #{email} from #{pilot_name}"
+
+    redirect_to action: 'show_pilot', pilot_name: pilot_name
+  end
 end

@@ -24,12 +24,38 @@ class ProgrammingExpression < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :lessons_programming_expressions
   has_many :lessons_programming_expressions
 
-  validates_uniqueness_of :key, scope: :programming_environment_id
+  validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
+  validate :key_format
 
   serialized_attrs %w(
     color
     syntax
+    short_description
+    external_documentation
+    content
+    return_value
+    tips
   )
+
+  def key_format
+    if key.blank?
+      errors.add(:base, 'Key must not be blank')
+      return false
+    end
+
+    if key[0] == '.' || key[-1] == '.'
+      errors.add(:base, 'Key cannot start or end with period')
+      return false
+    end
+
+    key_char_re = /[A-Za-z0-9\-\_\.]/
+    key_re = /\A#{key_char_re}+\Z/
+    unless key_re.match?(key)
+      errors.add(:base, "must only be letters, numbers, dashes, underscores, and periods. Got ${key}")
+      return false
+    end
+    return true
+  end
 
   def self.properties_from_file(path, content)
     expression_config = JSON.parse(content)
@@ -153,7 +179,44 @@ class ProgrammingExpression < ApplicationRecord
     }
   end
 
+  def summarize_for_edit
+    {
+      id: id,
+      key: key,
+      name: name,
+      category: category,
+      programmingEnvironmentName: programming_environment.name,
+      shortDescription: short_description || '',
+      externalDocumentation: external_documentation || '',
+      content: content || '',
+      syntax: syntax || '',
+      returnValue: return_value || '',
+      tips: tips || ''
+    }
+  end
+
+  def summarize_for_show
+    {
+      name: name,
+      category: category,
+      color: get_color,
+      externalDocumentation: external_documentation,
+      content: content,
+      syntax: syntax,
+      returnValue: return_value,
+      tips: tips
+    }
+  end
+
   def summarize_for_lesson_show
     {name: name, color: color, syntax: syntax, link: documentation_path}
+  end
+
+  def get_color
+    if programming_environment.name == 'spritelab'
+      color
+    else
+      ProgrammingExpression.get_category_color(category)
+    end
   end
 end

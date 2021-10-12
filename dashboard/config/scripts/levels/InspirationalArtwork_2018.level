@@ -273,7 +273,6 @@
               <title name="TIMES">20</title>
               <statement name="DO">
                 <block type="controls_for_counter" inline="true" uservisible="false">
-                  <mutation counter="counter"/>
                   <value name="FROM">
                     <block type="math_number" uservisible="false">
                       <title name="NUM">12</title>

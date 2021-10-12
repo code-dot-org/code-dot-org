@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   stubRedux,
   restoreRedux,
