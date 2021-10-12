@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Poetry - Effects",
   "config": {
     "func": "setForegroundEffect",
     "blockText": "do {EFFECT} foreground effect",

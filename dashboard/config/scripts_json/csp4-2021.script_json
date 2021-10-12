@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:24 UTC",
+    "serialized_at": "2021-10-07 23:05:30 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp4-2021"
@@ -1325,7 +1325,7 @@
       "key": "2ad0ae81-d9f5-43b4-972b-5a707a4f4d07",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n\nHere are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to dispay the value stored in the variable `tempF`\n* A sound is played"
+        "description": "**Discuss:** Ask a few members of each section to quickly share out how their section works. Display the code at the front so you can talk through it together.\n\nHere are some points that students are likely to bring up while discussing their code:\n\n**Lines 1-12:**\n* Two variables are created: `temp` and `tempF`. `temp` gets the value `70` and `TempF` is set to an empty string, which is represented with empty quotation marks.\n* On line 7, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `downButton` is clicked.\n* When the down button is clicked, the `temp` variable decreases by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to display the value stored in the variable `tempF`\n* A sound is played.\n\n**Lines 14-21**\n\n* On line 16, an [`onEvent`(#fff176)](/docs/applab/onEvent/) is created for when the `upButton` is clicked.\n* When the up button is clicked, the `temp` variable is increased by one.\n* Then the `tempF` variable is updated with the current value of `temp` joined with the letter `F`.\n* The text on the screen is set to display the value stored in the variable `tempF`\n* A sound is played"
       },
       "seeding_key": {
         "activity_section.key": "2ad0ae81-d9f5-43b4-972b-5a707a4f4d07",
