@@ -52,6 +52,10 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
+  def show
+    @programming_expression = ProgrammingExpression.find(params[:id])
+  end
+
   private
 
   def programming_expression_params
