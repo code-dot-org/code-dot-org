@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 var userAgentParser = require('../../code-studio/initApp/userAgentParser');
+import experiments from '@cdo/apps/util/experiments';
 
 export const TeacherDashboardPath = {
   progress: '/progress',
@@ -58,7 +58,7 @@ const ListPosition = {
   end: 'end'
 };
 
-class TeacherDashboardNavigation extends Component {
+export default class TeacherDashboardNavigation extends Component {
   static propTypes = {
     links: PropTypes.arrayOf(
       PropTypes.shape({
@@ -66,7 +66,6 @@ class TeacherDashboardNavigation extends Component {
         url: PropTypes.string.isRequired
       })
     ),
-    // Populated from Redux
     curriculumUmbrella: PropTypes.string
   };
 
@@ -74,7 +73,10 @@ class TeacherDashboardNavigation extends Component {
     super(props);
 
     this.links = this.props.links || defaultTeacherDashboardLinks;
-    if (this.props.curriculumUmbrella === 'CSA') {
+    if (
+      this.props.curriculumUmbrella === 'CSA' &&
+      experiments.isEnabled(experiments.CODE_REVIEW_GROUPS)
+    ) {
       this.links.push(codeReviewLink);
     }
   }
@@ -180,12 +182,6 @@ class TeacherDashboardNavigation extends Component {
     );
   }
 }
-
-export const UnconnectedTeacherDashboardNavigation = TeacherDashboardNavigation;
-
-export default connect(state => ({
-  curriculumUmbrella: state.sectionData.section.curriculumUmbrella
-}))(TeacherDashboardNavigation);
 
 const NAVBAR_HEIGHT = 50;
 const PADDING = 10;

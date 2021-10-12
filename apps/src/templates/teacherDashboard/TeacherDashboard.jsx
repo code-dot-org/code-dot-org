@@ -23,6 +23,7 @@ class TeacherDashboard extends Component {
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
+    assignedCurriculumUmbrella: PropTypes.string,
 
     // Provided by React router in parent.
     location: PropTypes.object.isRequired
@@ -84,7 +85,9 @@ class TeacherDashboard extends Component {
             components using Connect/Redux. Library we could use to fix issue:
             https://github.com/supasate/connected-react-router */}
             <TeacherDashboardHeader />
-            <TeacherDashboardNavigation />
+            <TeacherDashboardNavigation
+              curriculumUmbrella={this.props.assignedCurriculumUmbrella}
+            />
           </div>
         )}
         <Switch>
@@ -133,6 +136,10 @@ class TeacherDashboard extends Component {
           <Route
             path={TeacherDashboardPath.stats}
             component={props => <StatsTableWithData />}
+          />
+          <Route
+            path={TeacherDashboardPath.codeReviewGroups}
+            component={props => <div>Placeholder</div>}
           />
         </Switch>
       </div>
