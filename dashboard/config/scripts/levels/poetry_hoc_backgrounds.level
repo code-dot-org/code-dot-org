@@ -35,7 +35,8 @@
     "all_animations_single_frame": "true",
     "validation_code": "var validationInfo = getValidationInfo();\r\nvar isFontSet = validationInfo.font.font != 'Arial';\r\nvar isColorSet = validationInfo.font.fill != 'black' || validationInfo.font.stroke != 'rgba(0,0,0,0)';\r\nvar hasTextEffect = validationInfo.textEffects.length > 0;\r\nvar hasBackgroundEffect = validationInfo.backgroundEffect;\r\n\r\n// Pass the level if they have at least two of the three effects.\r\nif (isFontSet || isColorSet || hasTextEffect || hasBackgroundEffect) {\r\n  setSuccessFrame();\r\n}\r\ndrawProgressBar();\r\nif (World.frameCount == validationInfo.endTime) {\r\n  if (validationInfo.successFrame) {\r\n    levelFailure(0, 'poemBotSuccessLevel1');\r\n  } else {\r\n    levelFailure(3, 'poemBotBackgroundOrTextEffect');\r\n  }\r\n}",
     "hide_pause_button": "true",
-    "instructions_icon": "octiHappy"
+    "instructions_icon": "octiHappy",
+    "standalone_app_name": "poetry"
   },
   "game_id": 69,
   "published": true,

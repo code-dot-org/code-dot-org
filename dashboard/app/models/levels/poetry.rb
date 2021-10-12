@@ -26,13 +26,17 @@
 
 class Poetry < GamelabJr
   serialized_attrs %w(
-    show_poem_dropdown
     default_poem
+    standalone_app_name
   )
 
   # Poetry levels use the same shared_functions as GamelabJr
   def shared_function_type
     GamelabJr
+  end
+
+  def self.standalone_app_names
+    [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc']]
   end
 
   def self.skins
@@ -57,6 +61,7 @@ class Poetry < GamelabJr
           hide_animation_mode: true,
           show_type_hints: true,
           use_modal_function_editor: true,
+          standalone_app_name: 'poetry'
         }
       )
     )
@@ -83,7 +88,12 @@ class Poetry < GamelabJr
       ['Dream Variations', 'hughes_1'],
       ['In the Garden', 'hopler'],
       ['Return', 'lomeli'],
-      ['Toasting Marshmallows', 'singer']
+      ['Toasting Marshmallows', 'singer'],
+      ['Affirmation', 'ewing'],
+      ['Dream Destroyed', 'alexander'],
+      ['Remember', 'harjo'],
+      ['Mountain', 'po'],
+      ['Rejoice', 'tzu']
     ]
   end
 end

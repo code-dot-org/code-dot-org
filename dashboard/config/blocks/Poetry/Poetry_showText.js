@@ -1,0 +1,3 @@
+function showText(){
+  showPoem();
+}

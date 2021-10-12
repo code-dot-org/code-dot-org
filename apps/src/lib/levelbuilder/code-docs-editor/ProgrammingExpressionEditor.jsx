@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
@@ -19,7 +21,8 @@ function useProgrammingExpression(initialProgrammingExpression) {
 }
 
 export default function ProgrammingExpressionEditor({
-  initialProgrammingExpression
+  initialProgrammingExpression,
+  environmentCategories
 }) {
   // We don't want to update id or key
   const {
@@ -62,6 +65,10 @@ export default function ProgrammingExpressionEditor({
       });
   };
 
+  const markdownEditorFeatures = {
+    imageUpload: true
+  };
+
   return (
     <div>
       <h1>{`Editing ${key}`}</h1>
@@ -81,16 +88,96 @@ export default function ProgrammingExpressionEditor({
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
       </label>
-      <TextareaWithMarkdownPreview
-        markdown={programmingExpression.shortDescription}
-        label="Short Description"
-        handleMarkdownChange={e =>
-          updateProgrammingExpression('shortDescription', e.target.value)
-        }
-        features={{
-          imageUpload: true
-        }}
-      />
+      <label>
+        Short Description
+        <textarea
+          value={programmingExpression.shortDescription}
+          onChange={e =>
+            updateProgrammingExpression('shortDescription', e.target.value)
+          }
+          style={styles.textInput}
+        />
+      </label>
+      <CollapsibleEditorSection title="Documentation" collapsed>
+        <label>
+          External Documentation
+          <HelpTip>Link to external documentation</HelpTip>
+          <input
+            value={programmingExpression.externalDocumentation}
+            onChange={e =>
+              updateProgrammingExpression(
+                'externalDocumentation',
+                e.target.value
+              )
+            }
+            style={styles.textInput}
+          />
+        </label>
+        <label>
+          Category
+          <select
+            value={programmingExpression.category}
+            onChange={e =>
+              updateProgrammingExpression('category', e.target.value)
+            }
+            style={styles.selectInput}
+          >
+            <option key="none" value={''}>
+              (None)
+            </option>
+            {environmentCategories.map(category => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+          <HelpTip>
+            Chose a category for the code documentation to fall beneath
+          </HelpTip>
+        </label>
+        <TextareaWithMarkdownPreview
+          markdown={programmingExpression.content}
+          label={'Content'}
+          handleMarkdownChange={e =>
+            updateProgrammingExpression('content', e.target.value)
+          }
+          features={markdownEditorFeatures}
+        />
+      </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Details" collapsed>
+        <TextareaWithMarkdownPreview
+          markdown={programmingExpression.syntax}
+          label={'Syntax'}
+          handleMarkdownChange={e =>
+            updateProgrammingExpression('syntax', e.target.value)
+          }
+          features={markdownEditorFeatures}
+        />
+        <label>
+          Return value
+          <HelpTip>
+            Description of return value or alternate functionality
+          </HelpTip>
+          <textarea
+            value={programmingExpression.returnValue}
+            onChange={e =>
+              updateProgrammingExpression('returnValue', e.target.value)
+            }
+            style={styles.textInput}
+          />
+        </label>
+      </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Tips" collapsed>
+        <TextareaWithMarkdownPreview
+          markdown={programmingExpression.tips}
+          label={'Tips'}
+          handleMarkdownChange={e =>
+            updateProgrammingExpression('tips', e.target.value)
+          }
+          features={markdownEditorFeatures}
+          helpTip="List of tips for using this code documentation"
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -106,11 +193,18 @@ const programmingExpressionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  shortDescription: PropTypes.string
+  category: PropTypes.string,
+  shortDescription: PropTypes.string,
+  externalDocumentation: PropTypes.string,
+  content: PropTypes.string,
+  syntax: PropTypes.string,
+  returnValue: PropTypes.string,
+  tips: PropTypes.string
 });
 
 ProgrammingExpressionEditor.propTypes = {
-  initialProgrammingExpression: programmingExpressionShape.isRequired
+  initialProgrammingExpression: programmingExpressionShape.isRequired,
+  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
 const styles = {

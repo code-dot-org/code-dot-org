@@ -289,6 +289,12 @@ function loadAppAsync(appOptions) {
     return loadProjectAndCheckAbuse(appOptions);
   }
 
+  // If the level requires a channel but no channel was passed from the server through app_options,
+  // that indicates that the level was cached and the channel id needs to be loaded client-side
+  // through the user_progress request
+  const shouldGetChannelId =
+    appOptions.levelRequiresChannel && !appOptions.channel;
+
   return new Promise((resolve, reject) => {
     if (appOptions.publicCaching) {
       // Disable social share by default on publicly-cached pages, because we don't know
@@ -302,7 +308,8 @@ function loadAppAsync(appOptions) {
         `/${appOptions.scriptName}` +
         `/${appOptions.lessonPosition}` +
         `/${appOptions.levelPosition}` +
-        `/${appOptions.serverLevelId}`
+        `/${appOptions.serverLevelId}` +
+        `?get_channel_id=${shouldGetChannelId}`
     )
       .done(data => {
         appOptions.disableSocialShare = data.disableSocialShare;
@@ -328,7 +335,14 @@ function loadAppAsync(appOptions) {
           appOptions.level.pairingChannelId = data.pairingChannelId;
         }
 
-        resolve(appOptions);
+        if (data.channel) {
+          appOptions.channel = data.channel;
+          loadProjectAndCheckAbuse(appOptions).then(appOptions => {
+            resolve(appOptions);
+          });
+        } else {
+          resolve(appOptions);
+        }
       })
       .fail(() => {
         // TODO: Show an error to the user here? (LP-1815)
@@ -360,6 +374,12 @@ const sourceHandler = {
   },
   getSelectedSong() {
     return getAppOptions().level.selectedSong;
+  },
+  setSelectedPoem(poem) {
+    getAppOptions().level.selectedPoem = poem;
+  },
+  getSelectedPoem() {
+    return getAppOptions().level.selectedPoem;
   },
   setInitialLevelHtml(levelHtml) {
     getAppOptions().level.levelHtml = levelHtml;
