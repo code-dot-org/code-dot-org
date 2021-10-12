@@ -98,7 +98,7 @@ export const commands = {
             direction: Math.floor(Math.random() * 90 + 225),
             location: {
               x: Math.floor(Math.random() * 400),
-              y: Math.floor(Math.random() * 50 + 400)
+              y: Math.floor(Math.random() * 50 + 450)
             },
             lifetime: 60
           });

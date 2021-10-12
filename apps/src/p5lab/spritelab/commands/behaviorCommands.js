@@ -30,7 +30,13 @@ export const commands = {
   popFunc() {
     return spriteArg => {
       let sprite = this.getSpriteArray(spriteArg)[0];
-      console.log(sprite.y);
+      let dy = Math.sin(sprite.direction) * 5;
+      let dx = Math.cos(sprite.direction) * 5;
+      sprite.x += dx;
+      sprite.y += dy;
+      sprite.y -= sprite.speed;
+      sprite.speed -= 1;
+      sprite.rotation += (sprite.direction - 270) / 6;
     };
   },
 
