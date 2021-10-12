@@ -43,7 +43,18 @@ export default class Theater {
   reset() {
     this.loadEventsFinished = 0;
     this.getImgElement().style.visibility = 'hidden';
-    this.getAudioElement().src = '';
+    this.resetAudioAndVideo();
+  }
+
+  onStop() {
+    this.resetAudioAndVideo();
+  }
+
+  resetAudioAndVideo() {
+    const audioElement = this.getAudioElement();
+    audioElement.pause();
+    audioElement.src = '';
+    this.getImgElement().src = '';
   }
 
   getImgElement() {
