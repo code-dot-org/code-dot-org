@@ -43,7 +43,9 @@ export const commands = {
   rainFunc() {
     return spriteArg => {
       let sprite = this.getSpriteArray(spriteArg)[0];
-      console.log(sprite.y);
+      sprite.y -= sprite.speed;
+      sprite.speed -= 0.5;
+      sprite.rotation += Math.floor(Math.random() * 10 - 5);
     };
   },
   spiralFunc() {
