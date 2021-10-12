@@ -86,9 +86,7 @@ class Slack
     url = "https://slack.com/api/conversations.setTopic"
     payload = {"channel" => channel_id, "topic" => new_topic}
     result = post_to_slack(url, payload)
-
-    raise "Failed to update topic in #{channel_name}" unless result
-    return true
+    return !!result
   end
 
   def self.replace_user_links(message)
