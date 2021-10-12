@@ -131,10 +131,10 @@ export const commands = {
         case 'spiral': {
           let spriteId = this.addSprite({
             animation,
-            initalAngle: (i * 360) / num - 180 * (i % 2),
+            scale: 1,
+            initialAngle: (i * 360) / num - 180 * ((i + 1) % 2),
             delay: (i * 60) / num,
-            start: (i * 60) / num,
-            lifetime: 60
+            lifetime: 90
           });
           let sprite = this.getSpriteArray({id: spriteId})[0];
           this.addBehavior(sprite, {

@@ -51,7 +51,25 @@ export const commands = {
   spiralFunc() {
     return spriteArg => {
       let sprite = this.getSpriteArray(spriteArg)[0];
-      console.log(sprite.y);
+      if (sprite.delay <= 0) {
+        sprite.scale += 0.005 * sprite.baseScale;
+        sprite.x =
+          200 +
+          Math.cos(
+            ((-sprite.delay * 5 - sprite.initialAngle) * Math.PI) / 180
+          ) *
+            -sprite.delay *
+            5;
+        sprite.y =
+          200 +
+          Math.sin(
+            ((-sprite.delay * 5 - sprite.initialAngle) * Math.PI) / 180
+          ) *
+            -sprite.delay *
+            5;
+        sprite.rotation -= 12;
+      }
+      sprite.delay -= 1;
     };
   },
   zigZagFunc() {
