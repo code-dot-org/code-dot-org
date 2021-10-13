@@ -1888,7 +1888,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Новый блок!",
-          "poetry_multiple_sprites": "Новый блок!"
+          "poetry_multiple_sprites": "Новый блок!",
+          "poetry_new_block": "Новый блок!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Новый блок!"
