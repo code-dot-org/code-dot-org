@@ -26414,15 +26414,7 @@ en:
             lesson-1:
               name: Our AI Code of Ethics
               description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
-              description_teacher: |-
-                This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
-
-                #### Prerequisite Skills
-                This lesson is not intended to introduce students to sound research practices or how to vet credible sources. Students should come into this lesson with prior knowledge and the skills to be able to:
-
-                - recognize credible sources on the internet
-                - summarize information from digital sources to support an argument
-                - navigate online resources and cite sources appropriately
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
           lesson_groups: {}
           name: ai-ethics
           title: Our AI Code of Ethics
@@ -26580,7 +26572,7 @@ en:
                 - recognize that words are made up of a sequence of letters.
           lesson_groups: {}
           name: spelling-bee
-          title: CSC - Spelling Bee
+          title: Spelling Bee
           description_audience: ''
           description_short: ''
           description: ''
@@ -26654,6 +26646,8 @@ en:
               description_teacher: 
             lesson-2:
               name: Traversing a 2D Array by Rows
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Traversing a 2D Array by Columns
             lesson-4:
