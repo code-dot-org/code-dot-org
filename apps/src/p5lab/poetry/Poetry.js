@@ -9,11 +9,10 @@ import {POEMS} from './constants';
 export default class Poetry extends SpriteLab {
   init(config) {
     super.init(config);
-    if (config.level.standaloneAppName === 'poetry_hoc') {
-      const poem = config.level.selectedPoem || POEMS[this.level.defaultPoem];
-      if (poem) {
-        getStore().dispatch(setPoem(poem));
-      }
+
+    const poem = config.level.selectedPoem || POEMS[this.level.defaultPoem];
+    if (poem) {
+      getStore().dispatch(setPoem(poem));
     }
   }
 
