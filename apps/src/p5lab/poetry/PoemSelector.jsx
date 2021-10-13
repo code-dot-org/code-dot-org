@@ -9,7 +9,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
-import {POEMS} from './constants';
+import {POEMS, PoetryStandaloneApp} from './constants';
 
 function PoemEditor(props) {
   const [title, setTitle] = useState('');
@@ -72,7 +72,7 @@ PoemEditor.propTypes = {
 };
 
 function PoemSelector(props) {
-  if (appOptions.level.standaloneAppName !== 'poetry_hoc') {
+  if (appOptions.level.standaloneAppName !== PoetryStandaloneApp.PoetryHoc) {
     return null;
   }
 
