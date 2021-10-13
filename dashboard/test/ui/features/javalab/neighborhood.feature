@@ -9,6 +9,7 @@ Feature: NeighborhoodPainting
     And I wait for the page to fully load
     Then I press "#levelbuilder-menu-toggle" using jQuery
     Then I set slider speed to fast
+    And I see no difference for "prior to running state" using stitch mode "none"
     Then I press "runButton"
     And I wait for 15 seconds
     And I see no difference for "paint glomming" using stitch mode "none"
