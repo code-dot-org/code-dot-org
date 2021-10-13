@@ -18982,6 +18982,10 @@ en:
           lessons:
             Virus Simulation for Code Bytes:
               name: Coding a Simulation
+            Outbreak:
+              name: Coding a Simulation
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation

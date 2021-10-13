@@ -684,8 +684,6 @@ class UnitEditor extends React.Component {
         <CollapsibleEditorSection title="Lesson Settings">
           {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
             <label>
-              {/* TODO(dave): enable or remove this button, once we figure out
-              what controls we want to make available to curriculum writers. */}
               <Button
                 text={'Use Code Studio Lesson Plans'}
                 size={Button.ButtonSize.narrow}
@@ -693,12 +691,14 @@ class UnitEditor extends React.Component {
                 style={{margin: 0, height: 30, lineHeight: '8px'}}
                 onClick={e => {
                   e.preventDefault();
-                  const msg = 'Are you sure? This action cannot be undone.';
+                  const msg =
+                    'Are you sure? This action cannot be undone. Please ' +
+                    'confirm that translations are complete before proceeding.';
                   if (window.confirm(msg)) {
                     this.setState({useLegacyLessonPlans: false});
                   }
                 }}
-                disabled
+                disabled={!this.state.useLegacyLessonPlans}
               />
               <HelpTip>
                 <p>
