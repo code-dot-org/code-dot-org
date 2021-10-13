@@ -49,6 +49,8 @@ module Services
       frameworks = Framework.all
       standards = Standard.all
       vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
+      programming_environments = ProgrammingEnvironment.all
+      programming_expressions = ProgrammingExpression.all
 
       # Use existing seeding_key code to efficiently sort join model objects
       # in a manner that will be stable across environments.
@@ -58,15 +60,17 @@ module Services
         resources: resources,
         frameworks: frameworks,
         standards: standards,
-        vocabularies: vocabularies
+        vocabularies: vocabularies,
+        programming_environments: programming_environments,
+        programming_expressions: programming_expressions,
       )
       lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(sort_context).to_json}
       scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sort_context).to_json}
       lessons_standards = script.lessons.map(&:lessons_standards).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
       lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten.sort_by {|lo| lo.seeding_key(sort_context).to_json}
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten.sort_by {|lv| lv.seeding_key(sort_context).to_json}
+      lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten.sort_by {|lpe| lpe.seeding_key(sort_context).to_json}
 
-      lessons_programming_expressions = script.lessons.map(&:lessons_programming_expressions).flatten
       objectives = script.lessons.map(&:objectives).flatten
 
       seed_context = SeedContext.new(
@@ -84,8 +88,8 @@ module Services
         scripts_student_resources: script.scripts_student_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
-        programming_environments: ProgrammingEnvironment.all,
-        programming_expressions: ProgrammingExpression.all,
+        programming_environments: programming_environments,
+        programming_expressions: programming_expressions,
         lessons_programming_expressions: lessons_programming_expressions,
         objectives: objectives,
         frameworks: frameworks,
