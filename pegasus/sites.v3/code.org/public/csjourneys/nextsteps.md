@@ -107,10 +107,7 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 13th at 11 am EDT / 8 am PDT</strong></h3>
   <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
-  <a href="https://www.eventbrite.com/e/college-project-showcase-registration-167738194455" target="_blank"><button style="margin-bottom:20px">Register on Eventbrite</button></a>
-<br>
-<p><i>By clicking above, you will be taken to www.eventbrite.com.</i></p>
-<br>
+  <a href="https://code.zoom.us/rec/play/XfZg54bXBlEGkJnHjdwN-3hQrpFX41qzwvZMC3RX4Rvlb3c4ut9mY1YbIabkwUSwL_pxEyTtKw0YGX0.0XGsrzep-oa-QCv_" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/csjourneys/erin-howard.jpg" style="border-radius:50%; width:55%" alt="Erin Howard">
