@@ -2218,7 +2218,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "新模块！",
-          "poetry_multiple_sprites": "新模块！"
+          "poetry_multiple_sprites": "新模块！",
+          "poetry_new_block": "新模块！"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "新模块！"
