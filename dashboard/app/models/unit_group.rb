@@ -160,7 +160,7 @@ class UnitGroup < ApplicationRecord
         resources: resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
         student_resources: student_resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
       }.compact
-    )
+    ) + "\n"
   end
 
   def summarize_alternate_units
