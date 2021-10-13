@@ -19,7 +19,7 @@ function PoemEditor(props) {
   const body = (
     <div>
       <div style={styles.modalContainer}>
-        <label style={styles.label}>{`${msg.title()}: `}</label>
+        <label style={styles.label}>{msg.title()}</label>
         <input
           style={styles.input}
           value={title}
@@ -27,7 +27,7 @@ function PoemEditor(props) {
         />
       </div>
       <div style={styles.modalContainer}>
-        <label style={styles.label}>{`${msg.author()}: `}</label>
+        <label style={styles.label}>{msg.author()}</label>
         <input
           style={styles.input}
           value={author}
@@ -35,7 +35,7 @@ function PoemEditor(props) {
         />
       </div>
       <div style={styles.modalContainer}>
-        <label style={styles.label}>{`${msg.poem()}: `}</label>
+        <label style={styles.label}>{msg.poem()}</label>
         <textarea
           style={styles.input}
           value={poem}
