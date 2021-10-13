@@ -492,6 +492,13 @@ module Pd::Application
           TEXT_FIELDS[:other_please_list]
         ],
 
+        previous_used_curriculum: [
+          'CS Discoveries',
+          'CS Principles',
+          'Both',
+          'Neither'
+        ],
+
         previous_yearlong_cdo_pd: [
           'CS Discoveries',
           'CS Principles',
@@ -678,6 +685,9 @@ module Pd::Application
         first_name
         last_name
         phone
+        street_address
+        city
+        state
         zip_code
         principal_first_name
         principal_last_name
@@ -686,6 +696,8 @@ module Pd::Application
         principal_phone_number
         completing_on_behalf_of_someone_else
         current_role
+        previous_used_curriculum
+        previous_yearlong_cdo_pd
 
         program
         cs_how_many_minutes
@@ -693,8 +705,6 @@ module Pd::Application
         cs_how_many_weeks_per_year
         plan_to_teach
         replace_existing
-
-        previous_yearlong_cdo_pd
 
         interested_in_online_program
 
