@@ -52,8 +52,11 @@ social:
     = view :top_hoc_tutorials
   .clear
 
+  - hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+  - hoc_image = ["soon-hoc", "actual-hoc"].include?(hoc_mode) ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
+
   .full-resource-block
-    %img.full-resource-image{src: "/images/hoc2020-banner.png"}
+    %img.full-resource-image{src: hoc_image}
     .activities-info
       %span
         %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)

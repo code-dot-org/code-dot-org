@@ -38,7 +38,7 @@
           "maxSelectedChoices": 4
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "required_course_status",
           "title": "Is Computer Science Principles a required or elective course at your school? (Check one)",
           "choices": [
@@ -55,11 +55,10 @@
               "text": "Not sure"
             }
           ],
-          "noneText": "Not sure",
-          "maxSelectedChoices": 1
+          "noneText": "Not sure"
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "section_time_minutes",
           "title": "At your school, on average, how many MINUTES PER WEEK will a typical section of Computer Science Principles meet? (Check one)",
           "choices": [
@@ -96,11 +95,10 @@
               "text": "Not sure"
             }
           ],
-          "noneText": "Not sure",
-          "maxSelectedChoices": 1
+          "noneText": "Not sure"
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "course_length_weeks",
           "title": "For a typical section of Computer Science Principles that you will teach, approximately how many WEEKS will the class run? (Check one).",
           "choices": [
@@ -133,19 +131,23 @@
               "text": "Not sure"
             }
           ],
-          "noneText": "Not sure",
-          "maxSelectedChoices": 1
+          "noneText": "Not sure"
+        },
+        {
+          "type": "html",
+          "name": "pairs_of_statements_instructions",
+          "html": "<p>Please read statements A and B below and select the value 1-5 that best shows how closely your personal beliefs or philosophy align to one statement or the other.</p>"
         },
         {
           "type": "html",
           "name": "recruit_responsibility",
-          "html": "<p><h4>5.  Please rate your alignment with the following statements.</h4></p>\n<h3>Statement A</h3>\n<p>Administrators have a responsibility to recruit a set of students into their classrooms that are representative of the school’s population in terms of diversity (gender, racial, socio-economic, etc.).</p>\n<h3>Statement B</h3>\n<p>Administrators’ responsibility is to promote their computer science classes broadly, to all students. The diversity of the class will reflect those most interested in taking a computer science class.</p>"
+          "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">Administrators have a responsibility to recruit a set of students into their classrooms that are representative of the school’s population in terms of diversity (gender, racial, socio-economic, etc.).</span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">Administrators’ responsibility is to promote their computer science classes broadly, to all students. The diversity of the class will reflect those most interested in taking a computer science class.</span>\n                  </td>\n                </tr>\n              </tbody>\n</table>"
         },
         {
           "type": "rating",
           "name": "recruit_responsibility_rating",
-          "indent": 17,
-          "titleLocation": "hidden",
+          "title": " ",
+          "titleLocation": "left",
           "minRateDescription": "Strongly aligned with A",
           "maxRateDescription": "Strongly aligned with B"
         },
@@ -184,7 +186,12 @@
           "name": "number_students",
           "visibleIf": "{take_cs_programming} <> ['none']",
           "title": "Approximately how many students in grades 9-12 in this school will take a computer science course this year that includes programming or has programming as a prerequisite? (Please enter a number).",
-          "hideNumber": true,
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 0
+            }
+          ],
           "inputType": "number"
         },
         {
@@ -520,7 +527,7 @@
           ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "grad_requirement",
           "title": "In order to graduate from this high school, how many years of computer science are grades 9-12 students required to take? (Check one). ",
           "choices": [
@@ -546,8 +553,7 @@
             }
           ],
           "hasNone": true,
-          "noneText": "Not sure",
-          "maxSelectedChoices": 1
+          "noneText": "Not sure"
         },
         {
           "type": "matrix",
@@ -708,7 +714,7 @@
           ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "assigned_or_chose_to_teach",
           "title": "We want to ask you about how CS courses at your school are typically staffed by teachers. Is it more by assignment or more by teacher choice?  (Check one).",
           "choices": [
@@ -732,8 +738,7 @@
               "value": "5",
               "text": "Most to all by choice"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
           "type": "html",
@@ -794,7 +799,7 @@
           ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "cs_community_partner",
           "title": "I see my Code.org Regional Partner as a resource and support for computer science education in my community. (Check one).\n",
           "choices": [
@@ -826,8 +831,7 @@
               "value": "6",
               "text": "Strongly agree"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
           "type": "matrix",
@@ -946,7 +950,7 @@
           "maxSelectedChoices": 12
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "student_CS_demand",
           "title": "How much do you agree or disagree with the following statement? There is student demand for more computer science courses in my school. (Check one).",
           "choices": [
@@ -978,8 +982,7 @@
               "value": "6",
               "text": "Strongly agree"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
           "type": "html",
@@ -1020,7 +1023,7 @@
           ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "student_device_policy",
           "title": "Which of the following best describes your school's policy about students using their own computing devices in classes? (Check one).\n",
           "choices": [
@@ -1036,11 +1039,10 @@
               "value": "3",
               "text": "Students are not allowed to use their own laptops or tablets in classes."
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "shortage_classrooms_1",
           "title": "Do teachers travel among different rooms to teach computer science courses?\n",
           "choices": [
@@ -1056,11 +1058,10 @@
               "value": "0",
               "text": "No"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "shortage_classrooms_2",
           "title": "In your school, are multiple computer science courses taught in the same room simultaneously? (Check one).",
           "choices": [
@@ -1076,8 +1077,7 @@
               "value": "99",
               "text": "Not sure"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
           "type": "matrix",
@@ -1422,7 +1422,7 @@
           ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "pd_workshops",
           "title": "In the last three years, has your school and/or district offered WORKSHOPS specifically focused on computer science or computer science teaching, possibly in conjunction with other organizations (e.g., other school districts/dioceses, college or universities, museums, professional associations, commercial vendors)? (Check one). \n",
           "choices": [
@@ -1438,11 +1438,10 @@
               "value": "99",
               "text": "Not sure"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "pd_teacher_study_groups",
           "title": "In the last three years, has your school and/or district offered teacher STUDY GROUPS where teachers meet on a regular basis to discuss teaching and learning of computer science, and possibly other content areas as well (sometimes referred to as Professional Learning Communities, PLCs, or lesson study)? (Check one).",
           "choices": [
@@ -1458,11 +1457,10 @@
               "value": "99",
               "text": "Not sure"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "pd_one_on_one_coaching",
           "title": "Do any teachers in your school have access to one-on-one coaching focused on improving their computer science instruction (including voluntary and/or required coaching)? (Check one). ",
           "choices": [
@@ -1478,8 +1476,7 @@
               "value": "99",
               "text": "Not sure"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
           "type": "matrix",
@@ -1608,10 +1605,16 @@
           "type": "text",
           "name": "years_k12_work",
           "title": "How many years have you been working in K-12 schools? (Please enter a number).\n",
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 0
+            }
+          ],
           "inputType": "number"
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "years_k12teach",
           "title": "Have you ever taught at the K-12 level?\n",
           "choices": [
@@ -1623,8 +1626,7 @@
               "value": "0",
               "text": "No"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
           "type": "text",
@@ -1632,10 +1634,19 @@
           "visibleIf": "{years_k12teach} = [1]",
           "title": "For how many years? (Please enter a number).",
           "hideNumber": true,
+          "validators": [
+            {
+              "type": "numeric"
+            },
+            {
+              "type": "numeric",
+              "minValue": 0
+            }
+          ],
           "inputType": "number"
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "years_k12teach_cs",
           "visibleIf": "{years_k12teach} = [1]",
           "title": "Have you ever taught computer science at the K-12 level?",
@@ -1648,8 +1659,7 @@
               "value": "0",
               "text": "No"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
           "type": "text",
@@ -1657,10 +1667,16 @@
           "visibleIf": "{years_k12teach_cs} = [1]",
           "title": "For how many years? (Please enter a number).",
           "hideNumber": true,
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 0
+            }
+          ],
           "inputType": "number"
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "general_ed_level",
           "title": "What is the highest educational degree you have earned? (Check one).\n",
           "choices": [
@@ -1684,8 +1700,7 @@
               "value": "5",
               "text": "Doctoral or Professional Degree (PhD, EdD, MD, JD, etc.)"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
           "type": "checkbox",
@@ -1737,7 +1752,7 @@
           "hideNumber": true
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "cs_background_work",
           "title": "Do you have experience working in the computer science industry as a professional?",
           "choices": [
@@ -1749,11 +1764,10 @@
               "value": "0",
               "text": "No"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "cs_background_pd",
           "title": "How much professional development on  computer science did you have before participating in the Code.org professional development sessions? (Check one).",
           "choices": [
@@ -1769,11 +1783,10 @@
               "value": "2",
               "text": "A lot"
             }
-          ],
-          "maxSelectedChoices": 1
+          ]
         },
         {
-          "type": "checkbox",
+          "type": "radiogroup",
           "name": "gender",
           "title": "What is your gender identity?",
           "choices": [
@@ -1800,8 +1813,17 @@
         {
           "type": "text",
           "name": "birth_year",
-          "title": "What is your year of birth? (Please enter a number).\n",
-          "inputType": "number"
+          "title": "What is your year of birth? (Please enter a number).",
+          "validators": [
+            {
+              "type": "numeric",
+              "minValue": 1911,
+              "maxValue": 1999
+            }
+          ],
+          "inputType": "number",
+          "minErrorText": "Are you really over 90 years old! Wow. Just enter 1911.",
+          "maxErrorText": "Are you really younger than a 22-year-old school admin.  Just enter 1999."
         },
         {
           "type": "checkbox",
