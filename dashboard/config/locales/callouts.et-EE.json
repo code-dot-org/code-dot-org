@@ -515,7 +515,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Uus plokk!",
-          "poetry_multiple_sprites": "Uus plokk!"
+          "poetry_multiple_sprites": "Uus plokk!",
+          "poetry_new_block": "Uus plokk!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Uus plokk!"
