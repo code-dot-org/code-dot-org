@@ -77,13 +77,13 @@ export const commands = {
           let spriteId = this.addSprite({
             animation,
             speed: Math.floor(Math.random() * 10 + 10),
-            delay: Math.floor(Math.random() * 20 + 1),
             scale: 1,
             direction: Math.floor(Math.random() * 360),
-            rotation: Math.floor(Math.random() * 360),
-            lifetime: 60
+            rotation: Math.floor(Math.random() * 360)
           });
           let sprite = this.getSpriteArray({id: spriteId})[0];
+          sprite.delay = Math.floor(Math.random() * 20 + 1);
+          sprite.lifetime = 60;
           this.addBehavior(sprite, {
             func: behaviorCommands.burstFunc.apply(this),
             name: 'burst'
@@ -99,10 +99,10 @@ export const commands = {
             location: {
               x: Math.floor(Math.random() * 400),
               y: Math.floor(Math.random() * 50 + 450)
-            },
-            lifetime: 60
+            }
           });
           let sprite = this.getSpriteArray({id: spriteId})[0];
+          sprite.lifetime = 60;
           this.addBehavior(sprite, {
             func: behaviorCommands.popFunc.apply(this),
             name: 'pop'
@@ -118,10 +118,10 @@ export const commands = {
               x: Math.floor(Math.random() * 400),
               y: Math.floor(Math.random() * 100 - 125)
             },
-            rotation: Math.floor(Math.random() * 20 - 10),
-            lifetime: 60
+            rotation: Math.floor(Math.random() * 20 - 10)
           });
           let sprite = this.getSpriteArray({id: spriteId})[0];
+          sprite.lifetime = 60;
           this.addBehavior(sprite, {
             func: behaviorCommands.rainFunc.apply(this),
             name: 'rain'
@@ -131,12 +131,12 @@ export const commands = {
         case 'spiral': {
           let spriteId = this.addSprite({
             animation,
-            scale: 1,
-            initialAngle: (i * 360) / num - 180 * ((i + 1) % 2),
-            delay: (i * 30) / num,
-            lifetime: 120
+            scale: 1
           });
           let sprite = this.getSpriteArray({id: spriteId})[0];
+          sprite.initialAngle = (i * 360) / num - 180 * ((i + 1) % 2);
+          sprite.delay = (i * 30) / num;
+          sprite.lifetime = 120;
           this.addBehavior(sprite, {
             func: behaviorCommands.spiralFunc.apply(this),
             name: 'spiral'
