@@ -1175,6 +1175,7 @@ hi:
       email: ईमेल
       email_alternate: वैकल्पिक ईमेल
       gender: लैंगिक पहचान
+      school: स्कूल
       school_name: स्कूल का नाम
       school_city: स्कूल का शहर
       school_country: स्कूल देश
