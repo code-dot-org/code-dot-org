@@ -220,9 +220,6 @@ export default class CoreLibrary {
     sprite.direction = opts.direction || 0;
     sprite.rotation = opts.rotation || 0;
     sprite.speed = opts.speed || 5;
-    sprite.delay = opts.delay || 0;
-    sprite.initialAngle = opts.initialAngle || 0;
-    sprite.lifetime = opts.lifetime || -1;
     sprite.baseScale = 1;
     sprite.setScale = function(scale) {
       sprite.scale = scale * sprite.baseScale;
