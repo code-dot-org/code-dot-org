@@ -5,6 +5,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import color from '../../util/color';
 import shapes from './shapes';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // MarketingAnnouncementBanner is a wrapper around SpecialAnnouncementActionBlock which adds
 // a button to dismiss the banner. It also listens for modifications to the banner through
@@ -68,6 +69,23 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
     const bannerKey = getLocalStorageBannerKey();
     trySetLocalStorage(bannerKey, false);
     setDisplayBanner(false);
+    logBannerDismissed();
+  };
+
+  const logBannerDismissed = () => {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_signedin_homepage',
+        study_group: 'homepage_banner',
+        event: 'close_button_clicked',
+        data_json: JSON.stringify({
+          banner_title: bannerRef.current.querySelector(
+            '#two-column-action-block--sub-heading'
+          ).innerText
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   // This banner is hidden through css because it still needs to be accessible
