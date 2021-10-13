@@ -3,6 +3,16 @@ var strokeWidth = 11;
 
 var step = 0;
 
+/* Randomize array in-place using Durstenfeld shuffle algorithm */
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
+
 $(document).ready(function() {
   var barDefinitions = [];
 
@@ -275,6 +285,7 @@ $(document).ready(function() {
   for (var panel = 0; panel < barDefinitions.length; panel++) {
     bars[panel] = [];
     var panelRef = $(".bars")[panel];
+    shuffleArray(barDefinitions[panel]);
     for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
       bars[panel][bar] = drawBar(panelRef, barDefinitions[panel][bar]);
     }
