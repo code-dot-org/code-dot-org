@@ -10,7 +10,7 @@ import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {POEMS} from './constants';
-import _ from 'lodash';
+import {getPoem} from './Poetry';
 
 function PoemEditor(props) {
   const [title, setTitle] = useState('');
@@ -87,9 +87,9 @@ function PoemSelector(props) {
 
   const onChange = e => {
     const poemKey = e.target.value;
-    const poem = poemObject(poemKey);
+    const poem = getPoem(poemKey);
 
-    if (poem.key === msg.enterMyOwn()) {
+    if (poemKey === msg.enterMyOwn()) {
       setIsOpen(true);
     } else if (poem) {
       props.onChangePoem(poem);
@@ -97,22 +97,10 @@ function PoemSelector(props) {
     }
   };
 
-  const poemObject = key => {
-    if (!key || !POEMS[key]) {
-      return undefined;
-    }
-    return {
-      key: key,
-      author: POEMS[key].author,
-      title: msg[`${key}Title`](),
-      lines: msg[`${key}Lines`]().split('\n')
-    };
-  };
-
   const getDropdownValue = () => {
-    const poem = poemObject(props.selectedPoem.key);
+    const poem = getPoem(props.selectedPoem.key);
     if (poem) {
-      return poem.title;
+      return poem.key;
     } else {
       return msg.enterMyOwn();
     }
@@ -120,7 +108,7 @@ function PoemSelector(props) {
 
   const getPoemOptions = () => {
     return Object.keys(POEMS)
-      .map(poemKey => poemObject(poemKey))
+      .map(poemKey => getPoem(poemKey))
       .sort((a, b) => (a.title > b.title ? 1 : -1));
   };
 
