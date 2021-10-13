@@ -447,7 +447,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "नवीन ब्लॉक!",
-          "poetry_multiple_sprites": "नवीन ब्लॉक!"
+          "poetry_multiple_sprites": "नवीन ब्लॉक!",
+          "poetry_new_block": "नवीन ब्लॉक!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "नवीन ब्लॉक!"
