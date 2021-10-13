@@ -1,7 +1,5 @@
 var gridSize = 18;
 var strokeWidth = 11;
-var lenTimes = 1;
-var numPanels = 1;
 
 var step = 0;
 
@@ -9,7 +7,7 @@ $(document).ready(function() {
   var barDefinitions = [];
 
   barDefinitions[0] = [
-    // Right side.
+    // Originallly right side, index 0.
     [
       {
         type: "arc",
@@ -37,6 +35,7 @@ $(document).ready(function() {
 
       { type: "arrow", color: "rgba(234, 76, 155, 0.8)", direction: "right" }
     ],
+    // Originally right side, index 1.
     [
       {
         type: "line",
@@ -62,6 +61,7 @@ $(document).ready(function() {
         color: "rgba(56, 133, 201, 0.8)"
       }
     ],
+    // Originally right side, index 2.
     [
       {
         type: "line",
@@ -88,6 +88,7 @@ $(document).ready(function() {
       },
       { type: "arrow", color: "rgba(234, 76, 155, 0.8)", direction: "right" }
     ],
+    // Originally right side, index 3.
     [
       {
         type: "line",
@@ -108,6 +109,7 @@ $(document).ready(function() {
       },
       { type: "arrow", color: "rgba(176, 214, 109, 0.8)", direction: "right" }
     ],
+    // Originally right side, index 4.
     [
       {
         type: "arc",
@@ -136,6 +138,7 @@ $(document).ready(function() {
       },
       { type: "arrow", color: "rgba(0, 173, 160, 0.8)", direction: "right" }
     ],
+    // Originally right side, index 5.
     [
       {
         type: "line",
@@ -169,8 +172,7 @@ $(document).ready(function() {
 
       { type: "arrow", color: "rgba(244, 137, 221, 0.8)", direction: "left" }
     ],
-
-    // Left side.
+    // Originally left side, index 6.
     [
       {
         type: "line",
@@ -196,6 +198,7 @@ $(document).ready(function() {
         color: "rgba(136, 210, 245, 0.8)"
       }
     ],
+    // Originally left side, index 7.
     [
       {
         type: "line",
@@ -205,6 +208,7 @@ $(document).ready(function() {
       },
       { type: "arrow", color: "rgba(188, 212, 95, 0.8)", direction: "left" }
     ],
+    // Originally left side, index 8.
     [
       {
         type: "arc",
@@ -249,6 +253,7 @@ $(document).ready(function() {
       },
       { type: "arrow", color: "rgba(0, 173, 160, 0.8)", direction: "left" }
     ],
+    // Originally left side, index 9.
     [
       {
         type: "arc",
@@ -267,7 +272,7 @@ $(document).ready(function() {
   ];
 
   var bars = [];
-  for (var panel = 0; panel < numPanels; panel++) {
+  for (var panel = 0; panel < barDefinitions.length; panel++) {
     bars[panel] = [];
     var panelRef = $(".bars")[panel];
     for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
@@ -276,7 +281,7 @@ $(document).ready(function() {
   }
 
   setInterval(function() {
-    for (var panel = 0; panel < numPanels; panel++) {
+    for (var panel = 0; panel < barDefinitions.length; panel++) {
       for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
         updateBar(barDefinitions[panel][bar], bars[panel][bar], bar, step);
       }
@@ -301,8 +306,7 @@ function updateBar(barDefinition, bar, barIndex, step) {
 
     var scaledOffset;
 
-    var barDef = barDefinition[segment];
-    if (barDef.type === "arrow") {
+    if (bar[segment].head1 && bar[segment].head2) {
       scaledOffset = offset * bar[segment].head1.totalLength;
       bar[segment].head1.setAttributeNS(
         null,
@@ -353,8 +357,8 @@ function drawBar(panelRef, barDefinition, startX, startY) {
       );
       obj.setAttributeNS(null, "stroke-linecap", "round");
       len = obj.getTotalLength();
-      obj.setAttributeNS(null, "stroke-dasharray", len * lenTimes);
-      obj.setAttributeNS(null, "stroke-dashoffset", len * lenTimes);
+      obj.setAttributeNS(null, "stroke-dasharray", len);
+      obj.setAttributeNS(null, "stroke-dashoffset", len);
       obj.totalLength = len;
 
       panelRef.appendChild(obj);
@@ -393,8 +397,8 @@ function drawBar(panelRef, barDefinition, startX, startY) {
       );
       obj.setAttributeNS(null, "stroke-linecap", "round");
       len = obj.getTotalLength();
-      obj.setAttributeNS(null, "stroke-dasharray", len * lenTimes);
-      obj.setAttributeNS(null, "stroke-dashoffset", len * lenTimes);
+      obj.setAttributeNS(null, "stroke-dasharray", len);
+      obj.setAttributeNS(null, "stroke-dashoffset", len);
       obj.totalLength = len;
 
       panelRef.appendChild(obj);
@@ -436,8 +440,8 @@ function drawBar(panelRef, barDefinition, startX, startY) {
       );
       obj.head1.setAttributeNS(null, "stroke-linecap", "round");
       len = obj.head1.getTotalLength();
-      obj.head1.setAttributeNS(null, "stroke-dasharray", len * lenTimes);
-      obj.head1.setAttributeNS(null, "stroke-dashoffset", len * lenTimes);
+      obj.head1.setAttributeNS(null, "stroke-dasharray", len);
+      obj.head1.setAttributeNS(null, "stroke-dashoffset", len);
       obj.head1.totalLength = len;
 
       obj.head2 = document.createElementNS(
@@ -461,8 +465,8 @@ function drawBar(panelRef, barDefinition, startX, startY) {
       );
       obj.head2.setAttributeNS(null, "stroke-linecap", "round");
       len = obj.head2.getTotalLength();
-      obj.head2.setAttributeNS(null, "stroke-dasharray", len * lenTimes);
-      obj.head2.setAttributeNS(null, "stroke-dashoffset", len * lenTimes);
+      obj.head2.setAttributeNS(null, "stroke-dasharray", len);
+      obj.head2.setAttributeNS(null, "stroke-dashoffset", len);
       obj.head2.totalLength = len;
 
       panelRef.appendChild(obj.head1);
