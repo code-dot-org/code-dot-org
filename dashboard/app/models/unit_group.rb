@@ -156,9 +156,9 @@ class UnitGroup < ApplicationRecord
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_units: summarize_alternate_units,
         published_state: published_state,
-        properties: properties,
-        resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
-        student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
+        properties: properties.sort.to_h,
+        resources: resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
+        student_resources: student_resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
       }.compact
     )
   end
