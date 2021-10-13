@@ -25,8 +25,8 @@ if (!runnable.length) {
 describe('unit tests', function() {
   throwOnConsoleErrorsEverywhere();
 
-  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
-  // https://codedotorg.atlassian.net/browse/XTEAM-377
+  // TODO: Add warnings back once redux/react-redux have been upgraded.
+  // https://codedotorg.atlassian.net/browse/XTEAM-376
   // throwOnConsoleWarningsEverywhere();
 
   clearTimeoutsBetweenTests();
