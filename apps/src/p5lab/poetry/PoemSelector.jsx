@@ -9,6 +9,7 @@ import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {POEMS} from './constants';
+import _ from 'lodash';
 
 function PoemEditor(props) {
   const [title, setTitle] = useState('');
@@ -84,26 +85,55 @@ function PoemSelector(props) {
   };
 
   const onChange = e => {
-    const poemTitle = e.target.value;
-    setSelectedPoem(poemTitle);
+    const poemKey = e.target.value;
+    setSelectedPoem(poemKey);
 
-    if (poemTitle === msg.enterMyOwn()) {
+    if (poemKey === msg.enterMyOwn()) {
       setIsOpen(true);
     } else {
-      const poem = Object.values(POEMS).find(poem => poem.title === poemTitle);
+      const poem = poemObject(poemKey);
       if (poem) {
         props.onChangePoem(poem);
       }
     }
   };
 
+  const poemObject = key => {
+    if (!key || !POEMS[key]) {
+      return undefined;
+    }
+    return {
+      author: POEMS[key].author,
+      title: msg[`${key}Title`](),
+      lines: msg[`${key}Lines`]().split('\n')
+    };
+  };
+
   if (!selectedPoem) {
-    const defaultPoem = POEMS[appOptions.level.defaultPoem];
+    const defaultPoem = poemObject(appOptions.level.defaultPoem);
     if (defaultPoem) {
-      setSelectedPoem(defaultPoem.title);
+      setSelectedPoem(appOptions.level.defaultPoem);
       props.onChangePoem(defaultPoem);
     }
   }
+
+  const sortedPoemOptions = () => {
+    var sortedPoemsByTitle = _.sortBy(
+      // Need translated title to be sorted on
+      Object.keys(POEMS).map(poemKey => ({
+        key: poemKey,
+        title: msg[`${poemKey}Title`]()
+      })),
+      'title'
+    );
+
+    return sortedPoemsByTitle.map(poem => (
+      // Using poem.key because that remains untranslated
+      <option key={poem.key} value={poem.key}>
+        {poem.title}
+      </option>
+    ));
+  };
 
   return (
     <div style={styles.container}>
@@ -112,11 +142,7 @@ function PoemSelector(props) {
         <b>{msg.selectPoem()}</b>
       </label>
       <select value={selectedPoem} style={styles.selector} onChange={onChange}>
-        {Object.values(POEMS).map(poem => (
-          <option key={poem.title} value={poem.title}>
-            {poem.title}
-          </option>
-        ))}
+        {sortedPoemOptions()}
         <option key={msg.enterMyOwn()} value={msg.enterMyOwn()}>
           {msg.enterMyOwn()}
         </option>
