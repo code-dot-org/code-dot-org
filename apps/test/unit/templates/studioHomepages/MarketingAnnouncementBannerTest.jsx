@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {expect} from '../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
+import {mount} from 'enzyme';
 import MarketingAnnouncementBanner from '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner';
 import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
@@ -21,28 +21,9 @@ const DEFAULT_PROPS = {
   marginBottom: '20px'
 };
 
-const setUpShallow = (overrideProps = {}) => {
-  const props = {...DEFAULT_PROPS, ...overrideProps};
-  return shallow(<MarketingAnnouncementBanner {...props} />);
-};
-
 const store = createStore(combineReducers({isRtl, responsive}));
 
-before(() => {
-  // Avoid `attachTo: document.body` Warning
-  const div = document.createElement('div');
-  div.setAttribute('id', 'container');
-  document.body.appendChild(div);
-});
-
-after(() => {
-  const div = document.getElementById('container');
-  if (div) {
-    document.body.removeChild(div);
-  }
-});
-
-const setUpMount = (overrideProps = {}) => {
+const setUp = (overrideProps = {}) => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
 
   // A child of MarketingAnnouncementBanner requires the redux store
@@ -50,20 +31,22 @@ const setUpMount = (overrideProps = {}) => {
   return mount(
     <Provider store={store}>
       <MarketingAnnouncementBanner {...props} />
-    </Provider>,
-    {attachTo: document.getElementById('container')}
+    </Provider>
   );
 };
 
 const isBannerDisplayed = wrapper => {
-  return wrapper.find('#homepage-banner').props().style.display === 'block';
+  return (
+    wrapper.find('#marketing-announcement-banner').props().style.display ===
+    'block'
+  );
 };
 
 describe('MarketingAnnouncementBanner', () => {
   it('if banner has not been dismissed, banner is displayed', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns(null);
 
-    const wrapper = setUpShallow();
+    const wrapper = setUp();
     expect(isBannerDisplayed(wrapper)).to.be.true;
     utils.tryGetLocalStorage.restore();
   });
@@ -71,7 +54,7 @@ describe('MarketingAnnouncementBanner', () => {
   it('if banner has been dismissed, banner is not displayed', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns('false');
 
-    const wrapper = setUpMount();
+    const wrapper = setUp();
     expect(isBannerDisplayed(wrapper)).to.be.false;
 
     utils.tryGetLocalStorage.restore();
@@ -80,8 +63,10 @@ describe('MarketingAnnouncementBanner', () => {
   it('when banner is being displayed, clicking button hides banner', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns(null);
 
-    const wrapper = setUpShallow();
-    wrapper.find('Button').simulate('click');
+    const wrapper = setUp();
+    wrapper
+      .find('button#marketing-announcement-banner--dismiss')
+      .simulate('click');
     expect(isBannerDisplayed(wrapper)).to.be.false;
 
     utils.tryGetLocalStorage.restore();
@@ -91,8 +76,10 @@ describe('MarketingAnnouncementBanner', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns(null);
 
     const setLocalStorageSpy = sinon.spy(utils, 'trySetLocalStorage');
-    const wrapper = setUpShallow();
-    wrapper.find('Button').simulate('click');
+    const wrapper = setUp();
+    wrapper
+      .find('button#marketing-announcement-banner--dismiss')
+      .simulate('click');
     expect(setLocalStorageSpy.calledOnce);
 
     utils.tryGetLocalStorage.restore();

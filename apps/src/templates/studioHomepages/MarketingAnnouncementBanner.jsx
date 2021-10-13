@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
@@ -10,15 +10,18 @@ import shapes from './shapes';
 // a button to dismiss the banner. It also listens for modifications to the banner through
 // optimizely and checks if the new version of the banner has been dismissed.
 const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
-  const id = 'special-announcement-action-block';
   const [displayBanner, setDisplayBanner] = useState(true);
+  const bannerRef = useRef(null);
 
   useEffect(() => {
     if (window['optimizely']) {
       const optimizelyUtils = window['optimizely'].get('utils');
       // When modifications are made to the banner through optimizely, check whether
       // this version of the banner has been dismissed by the teacher
-      optimizelyUtils.observeSelector(`#${id}`, checkShouldDisplayBanner);
+      optimizelyUtils.observeSelector(
+        `#${bannerRef.current.id}`,
+        checkShouldDisplayBanner
+      );
     }
     checkShouldDisplayBanner();
   }, []);
@@ -43,7 +46,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   };
 
   const getOptimizelyModifiedElementId = () => {
-    const allBannerElements = document.getElementById(id).querySelectorAll('*');
+    const allBannerElements = bannerRef.current.querySelectorAll('*');
 
     const getOptlyDataAttrKey = element => {
       return Object.keys(element.dataset).find(key => key.includes('optly'));
@@ -75,19 +78,21 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
 
   return (
     <div
-      id="homepage-banner"
+      id="marketing-announcement-banner"
       style={{
         ...styles.container,
         display: bannerDisplayStyle
       }}
     >
-      <div id={id}>
+      {/* ID is used for easier targeting in Optimizely */}
+      <div id="special-announcement-action-block" ref={bannerRef}>
         <SpecialAnnouncementActionBlock
           announcement={announcement}
           marginBottom={marginBottom}
         />
       </div>
       <Button
+        id="marketing-announcement-banner--dismiss"
         text="×"
         onClick={onDismiss}
         style={styles.dismissButtonStyle}
