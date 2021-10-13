@@ -742,7 +742,7 @@ class Level < ApplicationRecord
     {
       levelOptions: [
         ['All types', ''],
-        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.push(['Blockly', 'Blockly']).sort_by {|a| a[0]}
       ],
       scriptOptions: [
         ['All scripts', ''],
