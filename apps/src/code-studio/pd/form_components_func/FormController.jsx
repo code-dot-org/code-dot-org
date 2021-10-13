@@ -17,6 +17,7 @@ const scrollToTop = () => {
   );
 };
 
+// parse the initial data from session storage, or return null if nothing is stored
 const getInitialStored = (storageKey, valueKey) => {
   if (!storageKey || !valueKey) {
     return null;
@@ -50,13 +51,11 @@ InvalidPagesSummary.propTypes = {
 };
 
 /**
- * Helper class for dashboard forms. Expects to be extended by a class which
- * will implement the getPageComponents method, which is expected to return an
- * array of components with extend from the FormComponent helper class.
- * Resulting form will then display those components paginated and in order,
+ * Helper component for dashboard forms.
+ * Resulting form will then display the provided pageComponents paginated and in order,
  * with a submit button on the last page.
  *
- * @see FacilitatorProgramRegistration component for example usage.
+ * @see TeacherApplication component for example usage.
  */
 const FormController = props => {
   const {
@@ -66,7 +65,7 @@ const FormController = props => {
     options,
     getInitialData = () => ({}),
     onInitialize = () => {},
-    onSetPage: onPropsSetPage = () => {},
+    onSetPage = () => {},
     onSuccessfulSubmit = () => {},
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
@@ -75,6 +74,7 @@ const FormController = props => {
     warnOnExit = false
   } = props;
 
+  // We use functions here as the initial value so that these values are only calculated once
   const [currentPage, setCurrentPage] = useState(
     () => getInitialStored(sessionStorageKey, 'currentPage') || 0
   );
@@ -90,9 +90,10 @@ const FormController = props => {
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
 
+  // do this once on mount only
   useEffect(() => {
     onInitialize();
-    onSetPage(currentPage);
+    onSetPageInternal(currentPage);
 
     if (warnOnExit) {
       window.addEventListener('beforeunload', event => {
@@ -103,8 +104,9 @@ const FormController = props => {
         }
       });
     }
-  }, []); // do this once on mount only
+  }, []);
 
+  // on errors changed
   useEffect(() => {
     // If we got new errors, navigate to the first page containing errors
     if (previousErrors.length === 0 && errors.length > 0) {
@@ -122,10 +124,10 @@ const FormController = props => {
     }
   }, [errors]);
 
+  // on page changed
   useEffect(() => {
-    // if we changed pages, scroll to top
     scrollToTop();
-    onSetPage(currentPage);
+    onSetPageInternal(currentPage);
   }, [currentPage]);
 
   /**
@@ -207,7 +209,7 @@ const FormController = props => {
     return invalidPages;
   };
 
-  const onSetPage = (newPage, setGlobalError) => {
+  const onSetPageInternal = () => {
     if (validateOnSubmitOnly && triedToSubmit) {
       // If errors exist, create a summary header containing
       // clickable links to pages that have errors.
@@ -223,12 +225,9 @@ const FormController = props => {
         setGlobalError(false);
       }
     }
-    onPropsSetPage();
+    onSetPage();
   };
 
-  /**
-   * @returns {FormComponent}
-   */
   const getCurrentPageComponent = () => {
     return pageComponents[currentPage];
   };
