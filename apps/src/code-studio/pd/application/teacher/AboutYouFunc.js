@@ -139,9 +139,8 @@ const AboutYou = props => {
 
   const handleSchoolChange = selectedSchool => {
     onChange({
-      school: selectedSchool && selectedSchool.value,
-      schoolZipCode:
-        selectedSchool && selectedSchool.school && selectedSchool.school.zip
+      school: selectedSchool?.value,
+      schoolZipCode: selectedSchool?.school?.zip
     });
   };
 
@@ -260,6 +259,7 @@ const AboutYou = props => {
             </Row>
           </FormGroup>
 
+          {/* if we have a school but it doesn't exist in our database */}
           {data.school && data.school === '-1' && (
             <div style={styles.indented}>
               <LabeledInput name="schoolName" />

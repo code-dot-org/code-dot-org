@@ -28,6 +28,7 @@ describe('Teacher Application Component', () => {
   beforeEach(() => {
     ga = sinon.fake();
     window.ga = ga;
+    window.sessionStorage.removeItem('TeacherApplication');
   });
 
   afterEach(() => {
@@ -48,7 +49,7 @@ describe('Teacher Application Component', () => {
       '50'
     );
   });
-  it('Sets the school dropdown value from props', () => {
+  it('Sets the school dropdown value from storage', () => {
     window.sessionStorage.setItem(
       'TeacherApplication',
       JSON.stringify({data: {school: '50'}})
