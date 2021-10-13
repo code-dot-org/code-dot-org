@@ -1,5 +1,5 @@
 {
-  "author": "Author",
+  "author": "Author:",
   "backgroundOrTextEffect": "You need to add a background or text effect.",
   "deletedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
   "editCustomPoem": "Edit Custom Poem",
@@ -11,7 +11,7 @@
   "noBehavior": "Click on the **Sprites** toolbox to find this block.\n<xml><block type=\"PoemBot_startBehavior\"><title name=\"ANIMATION_NAME\">\"tropicalfish_04_1\"</title><title name=\"BEHAVIOR\">swimming_left_and_right</title></block></xml>",
   "noTextEffects": "You need to add a text effect to your project.",
   "oneTextEffect": "Great work! You added one text effect. Try adding another.",
-  "poem": "Poem",
+  "poem": "Poem:",
   "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
   "removedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
   "save": "Save",
@@ -36,5 +36,5 @@
   "successRemovedSprite": "Great work removing a new sprite with an event! Click “Keep Playing” to try adding  a sprite with an event.",
   "successTextEvent": "Great job changing your text effect with an event! Click 'Keep Playing' to try changing the foreground or background effect.",
   "textEffectWithEvent": "Set a new text effect under your `when line shows` event block.",
-  "title": "Title"
+  "title": "Title:"
 }
