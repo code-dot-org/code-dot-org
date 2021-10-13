@@ -93,7 +93,7 @@ social:
       .row
         - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
           %div{style: "color: black; display: flex"}
-            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/images/hoc_cse_left.png); background-position: 100% 00%; background-size: contain; background-repeat: no-repeat"}
+            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/hoc-cse-left-fade.png); background-position: 100% 00%; background-size: contain; background-repeat: no-repeat"}
             .col-sm-12.col-md-4.no-padding-on-narrow
               #textbacking.no-padding-on-narrow
                 .front-header-banner.no-padding-on-narrow
@@ -106,7 +106,7 @@ social:
                     = view :hoc_action_buttons, hoc_mode: hoc_mode
               %br/
               %br/
-            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/images/hoc_cse_right.png); background-position: 0% 0%; background-size: contain; background-repeat: no-repeat"}
+            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/hoc-cse-right-fade.png); background-position: 0% 0%; background-size: contain; background-repeat: no-repeat"}
 
         - else
           .col-12
