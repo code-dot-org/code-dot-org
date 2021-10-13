@@ -136,7 +136,6 @@ $(document).ready(function() {
       },
       { type: "arrow", color: "rgba(0, 173, 160, 0.8)", direction: "right" }
     ],
-
     [
       {
         type: "line",
@@ -289,7 +288,7 @@ $(document).ready(function() {
 function updateBar(barDefinition, bar, barIndex, step) {
   for (var segment = 0; segment < barDefinition.length; segment++) {
     var offset;
-    var phase = (step + barIndex + 0.1 * segment) % 12;
+    var phase = 12 - ((step + barIndex + 0.1 * segment) % 12);
     if (phase > 0 && phase <= 1) {
       offset = 1 + phase;
     } else if (phase >= 11 && phase <= 12) {
@@ -304,7 +303,7 @@ function updateBar(barDefinition, bar, barIndex, step) {
 
     var barDef = barDefinition[segment];
     if (barDef.type === "arrow") {
-      scaledOffset = -offset * bar[segment].head1.totalLength;
+      scaledOffset = offset * bar[segment].head1.totalLength;
       bar[segment].head1.setAttributeNS(
         null,
         "stroke-dashoffset",
@@ -316,10 +315,7 @@ function updateBar(barDefinition, bar, barIndex, step) {
         scaledOffset
       );
     } else {
-      // 300-600 appears.  -1 to -2 * totalLength
-      // 600-900 disappears again.  -2 to -3 * totalLength.
-
-      scaledOffset = -offset * bar[segment].totalLength;
+      scaledOffset = offset * bar[segment].totalLength;
       bar[segment].setAttributeNS(null, "stroke-dashoffset", scaledOffset);
     }
   }
@@ -350,7 +346,7 @@ function drawBar(panelRef, barDefinition, startX, startY) {
           currentX * gridSize +
           "," +
           currentY * gridSize +
-          ",L" +
+          " L" +
           barDef.end[0] * gridSize +
           "," +
           barDef.end[1] * gridSize
@@ -430,13 +426,13 @@ function drawBar(panelRef, barDefinition, startX, startY) {
         null,
         "d",
         "M " +
-          currentX * gridSize +
-          " " +
-          currentY * gridSize +
-          ",L" +
           (currentX * gridSize + head1Offset[0]) +
           " " +
-          (currentY * gridSize + head1Offset[1])
+          (currentY * gridSize + head1Offset[1]) +
+          " L" +
+          currentX * gridSize +
+          " " +
+          currentY * gridSize
       );
       obj.head1.setAttributeNS(null, "stroke-linecap", "round");
       len = obj.head1.getTotalLength();
@@ -455,13 +451,13 @@ function drawBar(panelRef, barDefinition, startX, startY) {
         null,
         "d",
         "M " +
-          currentX * gridSize +
-          " " +
-          currentY * gridSize +
-          ",L" +
           (currentX * gridSize + head2Offset[0]) +
           " " +
-          (currentY * gridSize + head2Offset[1])
+          (currentY * gridSize + head2Offset[1]) +
+          " L" +
+          currentX * gridSize +
+          " " +
+          currentY * gridSize
       );
       obj.head2.setAttributeNS(null, "stroke-linecap", "round");
       len = obj.head2.getTotalLength();
