@@ -13,6 +13,8 @@
   ],
   "published_state": "stable",
   "properties": {
+    "family_name": "csp",
+    "has_verified_resources": true,
     "teacher_resources": [
       [
         "curriculum",
@@ -23,8 +25,6 @@
         "https://forum.code.org/c/csp"
       ]
     ],
-    "has_verified_resources": true,
-    "family_name": "csp",
     "version_year": "2018"
   },
   "resources": [
