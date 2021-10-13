@@ -3,11 +3,13 @@ import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
 import {
   getManifest,
+  getLevelAnimationsFilenames,
   uploadSpriteToAnimationLibrary,
   uploadMetadataToAnimationLibrary
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const SpriteLocation = makeEnum('library', 'level');
+const UploadStatus = makeEnum('fail', 'success', 'filenameOverride', 'none');
 
 // Levelbuilder tool for adding sprites to the Spritelab animation library.
 export default class SpriteUpload extends React.Component {
@@ -18,18 +20,29 @@ export default class SpriteUpload extends React.Component {
     spriteAvailability: '',
     category: '',
     currentCategories: [],
+    currentLibrarySprites: [],
+    currentLevelSprites: [],
     aliases: [],
     metadata: '',
     uploadStatus: {
-      success: null,
+      status: UploadStatus.none,
       message: ''
     }
   };
 
   componentDidMount() {
-    getManifest('spritelab', 'en_us').then(data =>
-      this.setState({currentCategories: Object.keys(data.categories)})
-    );
+    // Get list of sprites from level-specific folder
+    getLevelAnimationsFilenames().then(files => {
+      this.setState({currentLevelSprites: files.filenames});
+    });
+
+    // Get data from the spritelab library manifest
+    getManifest('spritelab', 'en_us').then(data => {
+      this.setState({
+        currentCategories: Object.keys(data.categories),
+        currentLibrarySprites: Object.keys(data.metadata)
+      });
+    });
   }
 
   handleSubmit = event => {
@@ -61,7 +74,7 @@ export default class SpriteUpload extends React.Component {
       .then(() => {
         this.setState({
           uploadStatus: {
-            success: true,
+            status: UploadStatus.success,
             message: 'Successfully Uploaded Sprite and Metadata'
           }
         });
@@ -72,7 +85,7 @@ export default class SpriteUpload extends React.Component {
         }
         this.setState({
           uploadStatus: {
-            success: false,
+            status: UploadStatus.failure,
             message: `${error.toString()}: Error Uploading Sprite or Metadata. Please try again. If this occurs again, please reach out to an engineer.`
           }
         });
@@ -80,29 +93,87 @@ export default class SpriteUpload extends React.Component {
   };
 
   handleImageChange = event => {
+    let {spriteAvailability, category} = this.state;
     let file = event.target.files[0];
+
     this.setState({
       fileData: file,
       filename: file.name,
-      filePreviewURL: URL.createObjectURL(file),
-      uploadStatus: {success: null, message: ''}
+      filePreviewURL: URL.createObjectURL(file)
     });
+
+    this.determineIfSpriteAlreadyExists(
+      spriteAvailability,
+      file.name.split('.')[0],
+      category
+    );
   };
 
   handleCategoryChange = event => {
+    let {filename, spriteAvailability, fileData} = this.state;
+
     this.setState({
       category: event.target.value
     });
+
+    if (fileData) {
+      this.determineIfSpriteAlreadyExists(
+        spriteAvailability,
+        filename.split('.')[0],
+        event.target.value
+      );
+    }
   };
 
   handleAvailabilityChange = event => {
-    this.setState({spriteAvailability: event.target.value, category: ''});
+    let {filename, category, fileData} = this.state;
+
+    this.setState({
+      spriteAvailability: event.target.value,
+      category: ''
+    });
+
+    if (fileData) {
+      this.determineIfSpriteAlreadyExists(
+        event.target.value,
+        filename.split('.')[0],
+        category
+      );
+    }
   };
 
   handleAliasChange = event => {
     const aliases = event.target.value?.split(',') || [];
     let processedAliases = aliases.map(alias => alias.trim());
     this.setState({aliases: processedAliases});
+  };
+
+  // Set the upload status to indicate whether this file would override another
+  determineIfSpriteAlreadyExists = (spriteAvailability, filename, category) => {
+    let {currentLibrarySprites, currentLevelSprites} = this.state;
+    let willOverride;
+    switch (spriteAvailability) {
+      case SpriteLocation.level:
+        willOverride = currentLevelSprites.includes(
+          `level_animations/${filename}`
+        );
+        break;
+      case SpriteLocation.library:
+        willOverride = currentLibrarySprites.includes(
+          `category_${category}/${filename}`
+        );
+        break;
+    }
+
+    const uploadStatus = willOverride
+      ? UploadStatus.filenameOverride
+      : UploadStatus.none;
+    const uploadStatusMessage = willOverride
+      ? 'A sprite already exists with this name. Please rename the sprite and re-upload.'
+      : '';
+    this.setState({
+      uploadStatus: {status: uploadStatus, message: uploadStatusMessage}
+    });
   };
 
   generateMetadata = () => {
@@ -136,7 +207,10 @@ export default class SpriteUpload extends React.Component {
       spriteAvailability === '' ||
       (spriteAvailability === SpriteLocation.library && category === '') ||
       filename === '' ||
-      metadata === '';
+      metadata === '' ||
+      uploadStatus.status === UploadStatus.filenameOverride;
+
+    const uploadSuccessful = uploadStatus.status === UploadStatus.success;
 
     return (
       <div>
@@ -204,6 +278,16 @@ export default class SpriteUpload extends React.Component {
             <h3>Image Preview:</h3>
             <img ref="spritePreview" src={filePreviewURL} />
           </label>
+          {uploadStatus.status === UploadStatus.filenameOverride && (
+            <p
+              style={{
+                ...styles.uploadStatusMessage,
+                ...styles.uploadFailure
+              }}
+            >
+              {uploadStatus.message}
+            </p>
+          )}
           <br />
 
           <h2 style={styles.spriteUploadStep}>
@@ -239,7 +323,7 @@ export default class SpriteUpload extends React.Component {
           <p
             style={{
               ...styles.uploadStatusMessage,
-              ...(!uploadStatus.success && styles.uploadFailure)
+              ...(!uploadSuccessful && styles.uploadFailure)
             }}
           >
             {uploadStatus.message}

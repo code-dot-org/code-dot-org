@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-08 18:39:24 UTC",
+    "serialized_at": "2021-10-11 15:42:45 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poetry"
@@ -688,6 +688,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_pause"
+        ],
         "progression": "Code Your Own Poem"
       },
       "bonus": false,
@@ -710,6 +713,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_addline"
+        ],
         "progression": "Code Your Own Poem"
       },
       "bonus": false,
@@ -732,6 +738,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_poem"
+        ],
         "progression": "Code Your Own Poem"
       },
       "bonus": false,
@@ -779,6 +788,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_exemplar1"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -805,6 +817,30 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "poetry_module_generator_exemplar"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "poetry",
+        "activity_section.key": "1acaa14c-9686-400d-9431-43a4a7666ff3"
+      },
+      "level_keys": [
+        "poetry_module_generator_exemplar"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "poetry_module_generator_prompt"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "poetry_module_generator_prompt"
         ],
         "lesson.key": "lesson-4",
@@ -817,11 +853,14 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_concatenation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -838,11 +877,14 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_repeat"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -859,11 +901,14 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -880,7 +925,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1071,6 +1116,18 @@
         "lesson_group.key": "",
         "script.name": "poetry",
         "activity_section.key": "f54b7d51-9f84-4533-b12f-307b11e76ded"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_generator_exemplar",
+        "script_level.level_keys": [
+          "poetry_module_generator_exemplar"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "poetry",
+        "activity_section.key": "1acaa14c-9686-400d-9431-43a4a7666ff3"
       }
     },
     {
