@@ -24,15 +24,16 @@ const TeacherApplication = props => {
   const getInitialData = () => {
     // Extract school info saved in sessionStorage, if any
     let reloadedSchoolId = undefined;
-    if (sessionStorageKey && sessionStorage.getItem(sessionStorageKey)) {
+    if (sessionStorage.getItem(sessionStorageKey)) {
       const reloadedState = JSON.parse(
         sessionStorage.getItem(sessionStorageKey)
       );
       reloadedSchoolId = reloadedState.data.school;
     }
 
-    // Populate data from server only if it doesn't override data in sessionStorage
+    // Populate additional data from server only if it doesn't override data in sessionStorage
     // (even if value in sessionStorage is null)
+    // the FormController will handle loading reloadedSchoolId as an initial value, so return empty otherwise
     if (reloadedSchoolId === undefined && schoolId) {
       return {school: schoolId};
     }
@@ -40,7 +41,7 @@ const TeacherApplication = props => {
     return {};
   };
 
-  const onInitialize = (data, setData) => {
+  const onInitialize = () => {
     // Log the user ID to firehose.
     firehoseClient.putRecord(
       {
