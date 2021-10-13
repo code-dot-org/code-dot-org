@@ -64,11 +64,11 @@ CourseSelect.propTypes = {
   permission: PermissionPropType.isRequired,
   readOnly: PropTypes.bool,
   inputStyle: PropTypes.object,
-  validation: PropTypes.object,
+  validation: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired
 };
 
-function getAllowedCourses(permission, facilitatorCourses, course) {
+export function getAllowedCourses(permission, facilitatorCourses, course) {
   if (permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
     if (ArchivedCourses.includes(course)) {
       return Courses;
