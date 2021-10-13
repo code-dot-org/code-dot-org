@@ -2,6 +2,39 @@
   "uz-UZ": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify qo'shiqlar ro'yxati (barcha yoshlar)"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Rassom. Kirish"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Burilishlar va burchaklar"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Burilishlar va burchaklar"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify qo'shiqlar ro'yxati (barcha yoshlar)"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify qo'shiqlar ro'yxati (barcha yoshlar)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify qo'shiqlar ro'yxati (barcha yoshlar)"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: Mashinalar o'rganishi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: Jamiyatga ta'siri",
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: O'rganish ma'lumotlari & yanglishishlar",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Sprite laboratoriyasi bilan tanishish",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
