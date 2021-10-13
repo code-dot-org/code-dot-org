@@ -297,13 +297,6 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
-  if (this.studioApp_.attempts === 0) {
-    // ensure we save to S3 on the first run.
-    // Javabuilder requires code to be saved to S3.
-    project.projectChanged();
-  }
-
-  this.studioApp_.attempts++;
   if (this.studioApp_.hasContainedLevels) {
     lockContainedLevelAnswers();
     getStore().dispatch(setDisableFinishButton(false));
@@ -314,11 +307,18 @@ Javalab.prototype.onRun = function() {
 };
 
 Javalab.prototype.onTest = function() {
-  // TODO: Add any necessary pre-run steps here (incrementing attempts count, resetting mini-app, etc)
   this.executeJavabuilder(ExecutionType.TEST);
 };
 
 Javalab.prototype.executeJavabuilder = function(executionType) {
+  if (this.studioApp_.attempts === 0) {
+    // ensure we save to S3 on the first run.
+    // Javabuilder requires code to be saved to S3.
+    project.projectChanged();
+  }
+
+  this.studioApp_.attempts++;
+
   const options = {};
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     options.useNeighborhood = true;
