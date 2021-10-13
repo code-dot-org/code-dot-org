@@ -92,6 +92,7 @@ module Pd::Foorm
           end
         when ANSWER_RATING, ANSWER_TEXT
           reshaped_submission_answer[:response_text] = answer
+          reshaped_submission_answer[:response_value] = answer
           reshaped_submission_answers << reshaped_submission_answer
         when ANSWER_SINGLE_SELECT
           choices = question_details[:choices]

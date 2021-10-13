@@ -38,7 +38,20 @@ module Pd::Foorm
       assert_includes reshaped_submission, {
         submission_id: submission.id,
         item_name: 'supported',
-        response_text: 'lots'
+        response_text: 'lots',
+        response_value: 'lots'
+      }
+    end
+
+    test 'reshape_submission formats rating question response as expected' do
+      form_with_rating_question = create :foorm_form, :with_rating_question
+      submission = create :basic_foorm_submission, :with_rating_answer, form_name: form_with_rating_question.name
+
+      assert_includes reshaped_submission, {
+        submission_id: submission.id,
+        item_name: 'expertise_rating',
+        response_text: '1',
+        response_value: '1'
       }
     end
 
