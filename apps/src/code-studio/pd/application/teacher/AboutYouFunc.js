@@ -294,7 +294,7 @@ const AboutYou = props => {
 AboutYou.propTypes = {
   options: PropTypes.object.isRequired,
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  errorMessages: PropTypes.array.isRequired,
+  errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
   accountEmail: PropTypes.string.isRequired
