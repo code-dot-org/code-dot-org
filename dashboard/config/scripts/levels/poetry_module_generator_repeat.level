@@ -40,14 +40,14 @@
     "min_workspace_height": "0",
     "project_template_level_name": "poetry_module_template",
     "preload_asset_list": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure each new block goes in the right part of your program. \\n<div style=\\\"width: 100%;height:165px;\\\">\\n        <div style=\\\"width: 50%; float: left;\\\"> \\n        \\n<xml>\\n  <block type=\\\"when_run\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n  <block type=\\\"gamelab_setPrompt\\\">\\n    <value name=\\\"QUESTION\\\">\\n      <block type=\\\"text\\\">\\n        <title name=\\\"TEXT\\\">Enter another word:</title>\\n      </block>\\n    </value>\\n    <value name=\\\"VAR\\\">\\n      <block type=\\\"variables_get\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"VAR\\\">word2</title>\\n      </block>\\n    </value>\\n  </block>\\n  </xml>\\n</div>\\n        <div style=\\\"margin-left: 50%; \\\"> \\n  <xml>\\n  <block type=\\\"gamelab_whenAllPromptsAnswered\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n  <block type=\\\"Poetry_addLine\\\">\\n    <value name=\\\"LINE\\\">\\n      <block type=\\\"gamelab_textJoin\\\">\\n        <title name=\\\"TEXT1\\\"></title>\\n        <value name=\\\"TEXT2\\\">\\n          <block type=\\\"gamelab_textVariableJoin\\\">\\n            <title name=\\\"VAR\\\">word2</title>\\n            <value name=\\\"TEXT2\\\">\\n              <block type=\\\"Poetry_stringValue\\\">\\n                <title name=\\\"TEXT\\\"></title>\\n              </block>\\n            </value>\\n          </block>\\n        </value>\\n      </block>\\n    </value>\\n  </block>\\n</xml>\\n</div>\\n</div>\\n\",\"hint_id\":\"poetry_prompts_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b7acb342d35adfa305826cdafb995957/poetry_module_generator_repeat.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure each new blocks go in the right part of your program. \\n<div style=\\\"width: 100%;height:245px;\\\">\\n        <div style=\\\"width: 50%; float: left;\\\"> \\n        \\n<xml>\\n  <block type=\\\"when_run\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n  <block type=\\\"gamelab_setPrompt\\\">\\n    <value name=\\\"QUESTION\\\">\\n      <block type=\\\"text\\\">\\n        <title name=\\\"TEXT\\\">Enter another word:</title>\\n      </block>\\n    </value>\\n    <value name=\\\"VAR\\\">\\n      <block type=\\\"variables_get\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"VAR\\\">word2</title>\\n      </block>\\n    </value>\\n  </block>\\n  <block type=\\\"gamelab_setPrompt\\\">\\n    <value name=\\\"QUESTION\\\">\\n      <block type=\\\"text\\\">\\n        <title name=\\\"TEXT\\\">Enter another word:</title>\\n      </block>\\n    </value>\\n    <value name=\\\"VAR\\\">\\n      <block type=\\\"variables_get\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"VAR\\\">word3</title>\\n      </block>\\n    </value>\\n  </block>\\n  </xml>\\n</div>\\n        <div style=\\\"margin-left: 50%; \\\"> \\n  <xml>\\n  <block type=\\\"gamelab_whenAllPromptsAnswered\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n  <block type=\\\"Poetry_addLine\\\">\\n    <value name=\\\"LINE\\\">\\n      <block type=\\\"gamelab_textJoin\\\">\\n        <title name=\\\"TEXT1\\\"></title>\\n        <value name=\\\"TEXT2\\\">\\n          <block type=\\\"gamelab_textVariableJoin\\\">\\n            <title name=\\\"VAR\\\">word2</title>\\n            <value name=\\\"TEXT2\\\">\\n              <block type=\\\"Poetry_stringValue\\\">\\n                <title name=\\\"TEXT\\\"></title>\\n              </block>\\n            </value>\\n          </block>\\n        </value>\\n      </block>\\n    </value>\\n  </block>\\n  <block type=\\\"Poetry_addLine\\\">\\n    <value name=\\\"LINE\\\">\\n      <block type=\\\"gamelab_textJoin\\\">\\n        <title name=\\\"TEXT1\\\"></title>\\n        <value name=\\\"TEXT2\\\">\\n          <block type=\\\"gamelab_textVariableJoin\\\">\\n            <title name=\\\"VAR\\\">word3</title>\\n            <value name=\\\"TEXT2\\\">\\n              <block type=\\\"Poetry_stringValue\\\">\\n                <title name=\\\"TEXT\\\"></title>\\n              </block>\\n            </value>\\n          </block>\\n        </value>\\n      </block>\\n    </value>\\n  </block>\\n</xml>\\n</div>\\n</div>\\n\",\"hint_id\":\"poetry_prompts_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/235c77c59f7218a4eacbed1e5a14ceb0/poetry_module_generator_repeat.mp3\"}]"
   },
   "game_id": 69,
   "published": true,
   "created_at": "2021-10-08T17:22:49.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-08T17:22:49.599+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_freeplay\\\"\"],\"cloned_from\":\"poetry_module_generator_freeplay\"},{\"changed_at\":\"2021-10-08 17:26:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:29:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:30:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:32:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:33:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:34:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:35:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:36:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:38:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:41:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:43:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:43:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:45:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:46:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:49:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:49:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:50:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:51:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_important\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:52:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:53:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-08T17:22:49.599+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_freeplay\\\"\"],\"cloned_from\":\"poetry_module_generator_freeplay\"},{\"changed_at\":\"2021-10-08 17:26:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:29:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:30:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:32:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:33:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:34:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:35:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:36:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:38:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:41:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:43:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:43:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:45:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:46:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:49:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:49:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:50:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:51:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_important\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:52:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:53:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:28:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"authored_hints\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -61,9 +61,6 @@
     <toolbox_blocks>
       <xml>
         <category name="Events">
-          <block type="Poetry_whenLineShows">
-            <title name="N">0</title>
-          </block>
           <block type="gamelab_whenAllPromptsAnswered"/>
         </category>
         <category name="Text">
@@ -88,8 +85,8 @@
               </block>
             </value>
           </block>
-          <block type="Poetry_animatePoem"/>
-          <block type="Poetry_hidePoem"/>
+          <block type="Poetry_animateText"/>
+          <block type="Poetry_hideText"/>
           <block type="gamelab_textJoin">
             <title name="TEXT1"/>
           </block>
@@ -114,68 +111,6 @@
           </block>
           <block type="gamelab_textVariableJoin">
             <title name="VAR">word2</title>
-          </block>
-        </category>
-        <category name="Effects">
-          <block type="Poetry_setFont">
-            <title name="FONT">"Courier"</title>
-          </block>
-          <block type="Poetry_setFontColor">
-            <value name="FILL">
-              <block type="colour_picker">
-                <title name="COLOUR">#99ff99</title>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_setTextEffect">
-            <title name="EFFECT">"fade"</title>
-          </block>
-          <block type="Poetry_playSound">
-            <title name="SOUND">"sound://category_bell/bells_win_low.mp3"</title>
-          </block>
-          <block type="Poetry_setForegroundEffect">
-            <title name="EFFECT">"rain"</title>
-          </block>
-          <block type="Poetry_setBackground">
-            <value name="COLOR">
-              <block type="colour_picker">
-                <title name="COLOUR">#cc0000</title>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_setBackgroundEffect">
-            <title name="EFFECT">"colors"</title>
-            <title name="PALETTE">"grayscale"</title>
-          </block>
-        </category>
-        <category name="Sprites">
-          <block type="Poetry_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="LOCATION">{"x":75,"y":200}</title>
-          </block>
-          <block type="Poetry_setSize">
-            <title name="SPRITE">"bear"</title>
-            <title name="VAL">50</title>
-          </block>
-          <block type="Poetry_startBehavior">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="BEHAVIOR">fluttering</title>
-          </block>
-          <block type="Poetry_stopBehavior">
-            <title name="ANIMATION_NAME">"bear"</title>
-            <title name="BEHAVIOR">fluttering</title>
-          </block>
-          <block type="Poetry_destroy">
-            <title name="ANIMATION_NAME">"bear"</title>
-          </block>
-          <block type="Poetry_makeBurst">
-            <title name="EFFECT">"burst"</title>
-            <title name="NUM">10</title>
-            <title name="ANIMATION_NAME">"bear"</title>
-          </block>
-          <block type="Poetry_makeNumSprites">
-            <title name="NUM">3</title>
-            <title name="ANIMATION_NAME">"bear"</title>
           </block>
         </category>
       </xml>

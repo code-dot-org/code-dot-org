@@ -24,23 +24,24 @@ export const PALETTES = {
 // Author is the only attribute not translated
 export const POEMS = {
   hafez: {author: 'Hafez'},
-  carroll1: {author: 'Lewis Carroll'},
-  carroll2: {author: 'Lewis Carroll'},
-  carroll3: {author: 'Lewis Carroll'},
-  rumi1: {author: 'Rumi'},
-  rumi2: {author: 'Rumi'},
   field: {author: 'Eugene Field'},
   twain: {author: 'Mark Twain'},
   wordsworth: {author: 'William Wordsworth'},
   hughes: {author: 'Langston Hughes'},
   rios: {author: 'Alberto Rios'},
-  hughes1: {author: 'Langston Hughes'},
   hopler: {author: 'Jay Hopler'},
-  lomeli: {author: 'Caia Lomeli'},
   singer: {author: 'Marilyn Singer\nfrom CENTRAL HEARTING (Knopf, 2005)'},
   ewing: {author: 'Eve L. Ewing'},
   alexander: {author: 'Kwame Alexander'},
   harjo: {author: 'Joy Harjo'},
   po: {author: 'Li Po'},
-  tzu: {author: 'Lao Tzu'}
+  tzu: {author: 'Lao Tzu'},
+  taylor: {author: 'Ann Taylor and Jane Taylor'},
+  carroll2: {author: 'Lewis Carroll'},
+  carroll3: {author: 'Lewis Carroll'},
+  rumi1: {author: 'Rumi'},
+  rumi2: {author: 'Rumi'},
+  hughes1: {author: 'Langston Hughes'},
+  lomeli1: {author: 'Caia Lomeli'},
+  lomeli2: {author: 'Caia Lomeli'}
 };

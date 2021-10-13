@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import project from '@cdo/apps/code-studio/initApp/project';
 import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
@@ -72,29 +73,27 @@ PoemEditor.propTypes = {
 };
 
 function PoemSelector(props) {
-  if (!appOptions.level.showPoemDropdown) {
+  if (appOptions.level.standaloneAppName !== 'poetry_hoc') {
     return null;
   }
 
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedPoem, setSelectedPoem] = useState(undefined);
 
   const handleClose = poem => {
+    project.saveSelectedPoem(poem);
     props.onChangePoem(poem);
     setIsOpen(false);
   };
 
   const onChange = e => {
     const poemKey = e.target.value;
-    setSelectedPoem(poemKey);
+    const poem = poemObject(poemKey);
 
-    if (poemKey === msg.enterMyOwn()) {
+    if (poem.key === msg.enterMyOwn()) {
       setIsOpen(true);
-    } else {
-      const poem = poemObject(poemKey);
-      if (poem) {
-        props.onChangePoem(poem);
-      }
+    } else if (poem) {
+      props.onChangePoem(poem);
+      project.saveSelectedPoem(poem);
     }
   };
 
@@ -103,36 +102,26 @@ function PoemSelector(props) {
       return undefined;
     }
     return {
+      key: key,
       author: POEMS[key].author,
       title: msg[`${key}Title`](),
       lines: msg[`${key}Lines`]().split('\n')
     };
   };
 
-  if (!selectedPoem) {
-    const defaultPoem = poemObject(appOptions.level.defaultPoem);
-    if (defaultPoem) {
-      setSelectedPoem(appOptions.level.defaultPoem);
-      props.onChangePoem(defaultPoem);
+  const getDropdownValue = () => {
+    const poem = poemObject(props.selectedPoem.key);
+    if (poem) {
+      return poem.title;
+    } else {
+      return msg.enterMyOwn();
     }
-  }
+  };
 
-  const sortedPoemOptions = () => {
-    var sortedPoemsByTitle = _.sortBy(
-      // Need translated title to be sorted on
-      Object.keys(POEMS).map(poemKey => ({
-        key: poemKey,
-        title: msg[`${poemKey}Title`]()
-      })),
-      'title'
-    );
-
-    return sortedPoemsByTitle.map(poem => (
-      // Using poem.key because that remains untranslated
-      <option key={poem.key} value={poem.key}>
-        {poem.title}
-      </option>
-    ));
+  const getPoemOptions = () => {
+    return Object.keys(POEMS)
+      .map(poemKey => poemObject(poemKey))
+      .sort((a, b) => (a.title > b.title ? 1 : -1));
   };
 
   return (
@@ -141,8 +130,17 @@ function PoemSelector(props) {
       <label>
         <b>{msg.selectPoem()}</b>
       </label>
-      <select value={selectedPoem} style={styles.selector} onChange={onChange}>
-        {sortedPoemOptions()}
+      <select
+        value={getDropdownValue()}
+        style={styles.selector}
+        onChange={onChange}
+      >
+        {getPoemOptions().map(poem => (
+          // Using poem.key because that remains untranslated
+          <option key={poem.key} value={poem.key}>
+            {poem.title}
+          </option>
+        ))}
         <option key={msg.enterMyOwn()} value={msg.enterMyOwn()}>
           {msg.enterMyOwn()}
         </option>
@@ -153,6 +151,7 @@ function PoemSelector(props) {
 
 PoemSelector.propTypes = {
   // from Redux
+  selectedPoem: PropTypes.object.isRequired,
   onChangePoem: PropTypes.func.isRequired
 };
 
@@ -177,7 +176,9 @@ const styles = {
 };
 
 export default connect(
-  state => ({}),
+  state => ({
+    selectedPoem: state.poetry.selectedPoem
+  }),
   dispatch => ({
     onChangePoem(poem) {
       dispatch(setPoem(poem));

@@ -25,6 +25,7 @@ class Pd::ScholarshipInfo < ApplicationRecord
   include Pd::Application::ApplicationConstants
   include Pd::WorkshopConstants
   include Pd::ScholarshipInfoConstants
+  include Pd::SharedApplicationConstants
 
   # We began using scholarships in 2019-2020, so remove 2018-2019 from this list
   SCHOLARSHIP_YEARS = APPLICATION_YEARS.drop(1).freeze
