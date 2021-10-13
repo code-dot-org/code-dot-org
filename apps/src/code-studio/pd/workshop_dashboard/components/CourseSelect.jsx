@@ -10,6 +10,7 @@ import {
 } from '../permission';
 import {
   Courses,
+  ActiveCourses,
   ArchivedCourses
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
@@ -68,12 +69,11 @@ CourseSelect.propTypes = {
 };
 
 function getAllowedCourses(permission, facilitatorCourses, course) {
-  console.log(ArchivedCourses);
   if (permission.hasAny(Organizer, ProgramManager, WorkshopAdmin)) {
     if (ArchivedCourses.includes(course)) {
-      return Courses.concat(ArchivedCourses);
-    } else {
       return Courses;
+    } else {
+      return ActiveCourses;
     }
   } else if (permission.has(Facilitator)) {
     return facilitatorCourses;
