@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2021-10-13 17:03:17 UTC",
+    "serialized_at": "2021-10-13 22:12:47 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "spelling-bee"
@@ -153,7 +153,7 @@
       "key": "19e61718-de1b-4694-8b77-f0e50cdf025a",
       "position": 2,
       "properties": {
-        "description": "**Do This:**  Model your thinking process out loud  for students when going through the actions and steps to help the bee find words. Share with students that they will think out loud as they help the bee find words\n\n.\n**Say:**  *As I’m getting ready to help the bee, I should think about...*\n- *counting how many letters are in the word.*\n- *reading what the word is.*\n- *pointing in the direction the bee should take to spell the word.*\n\nComplete the first problem as a class, modeling how to draw the arrows for the bee's movement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n  \n- Complete the Warm-Up worksheet with the students.  Consider using the following sequence:\n  - Complete the first problem as a class.\n\n  - Have students complete the second problem with a partner and then discuss it as a class.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Model your thinking process out loud  for students when going through the actions and steps to help the bee find words. Share with students that they will think out loud as they help the bee find words\n\n**Say:**  *As I’m getting ready to help the bee, I should think about...*\n- *counting how many letters are in the word.*\n- *reading what the word is.*\n- *pointing in the direction the bee should take to spell the word.*\n\nComplete the first problem as a class, modeling how to draw the arrows for the bee's movement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n  \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "19e61718-de1b-4694-8b77-f0e50cdf025a",
@@ -177,7 +177,13 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Open the first level of this activity on your computer in front of the class. A short video will play at first introducing students to these bee puzzles.\n\n**Model:** Model for students how to complete the level. Point out that this puzzle is the same as the puzzle on their warm-up. Ask students to describe how you should move the blocks and connect them to complete the puzzle.\n\n",
-        "progression_name": "Practice"
+        "progression_name": "Model Level",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Playful Ambiguity:** Students may use imprecise language when describing how to complete the level, saying only “Click the block” or “Drag it out” rather than “Click the right arrow block” or “Drag the arrow under the Start block”. You may decide to playfully follow their instructions literally, sometimes leading to blocks being in incorrect locations. This can prompt students to use more precise language and develop their relational language skills when describing how to solve the puzzle. However, it’s best not to go overboard to the point where students are frustrated or feel like their words are being purposefully misinterpreted."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "003aaeb9-81cb-43d0-b361-6c5d8343067b",
@@ -188,13 +194,7 @@
       "key": "865bfb38-4d08-454a-9242-7dc35527823c",
       "position": 5,
       "properties": {
-        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the third puzzle. Students can start working through these levels at their own pace.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Playful Ambiguity: Students may use imprecise language when describing how to complete the level, saying only “Click the block” or “Drag it out” rather than “Click the right arrow block” or “Drag the arrow under the Start block”. You may decide to playfully follow their instructions literally, sometimes leading to blocks being in incorrect locations. This can prompt students to use more precise language and develop their relational language skills when describing how to solve the puzzle. However, it’s best not to go overboard to the point where students are frustrated or feel like their words are being purposefully misinterpreted."
-          }
-        ]
+        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the third puzzle. Students can start working through these levels at their own pace.\n"
       },
       "seeding_key": {
         "activity_section.key": "865bfb38-4d08-454a-9242-7dc35527823c",
@@ -205,8 +205,18 @@
       "key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec",
       "position": 6,
       "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec",
+        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+      }
+    },
+    {
+      "key": "eac4530d-2f28-4baa-8d71-044aec131570",
+      "position": 7,
+      "properties": {
         "description": "**Level 3:** This level is identical to the warm-up that students completed as a class. Since students already have the correct answers from the warm-up, use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in the levels.\n",
-        "progression_name": "Practice",
         "tips": [
           {
             "type": "teachingTip",
@@ -215,7 +225,7 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec",
+        "activity_section.key": "eac4530d-2f28-4baa-8d71-044aec131570",
         "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
       }
     },
@@ -227,7 +237,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Add In Movement:** Consider having students return to the floor grid (if part of the Warm Up) or go around the learning space and collect objects.  Students count or add objects they collect to help reinforce making connections between counting and cardinality.  After students collect objects, consider a discussion with the following guiding questions:\nHow many objects did you collect?\nShow me two different ways to add up your objects.\nExample, if a student collected 4 objects, then the student can represent how many total objects they collected by separating objects and showing math facts such as 1 object and 3 objects makes (equals) 4 objects or 2 objects and 2 objects makes (equals) 4 objects.\n"
+            "markdown": "**Add In Movement:** Consider having students return to the floor grid (if part of the Warm Up) or go around the learning space and collect objects.  Students count or add objects they collect to help reinforce making connections between counting and cardinality.  After students collect objects, consider a discussion with the following guiding questions:\n- How many objects did you collect?\n- Show me two different ways to add up your objects.\n  - Example, if a student collected 4 objects, then the student can represent how many total objects they collected by separating objects and showing math facts such as 1 object and 3 objects makes (equals) 4 objects or 2 objects and 2 objects makes (equals) 4 objects.\n"
           }
         ]
       },
@@ -266,7 +276,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "progression": "Model Level"
       },
       "bonus": false,
       "seeding_key": {
