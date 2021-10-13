@@ -17,6 +17,18 @@ const scrollToTop = () => {
   );
 };
 
+const getInitialStored = (storageKey, valueKey) => {
+  if (!storageKey || !valueKey) {
+    return null;
+  }
+  const reloadedState = sessionStorage.getItem(storageKey);
+  if (reloadedState === null) {
+    return null;
+  }
+  const parsedState = JSON.parse(reloadedState);
+  return parsedState[valueKey];
+};
+
 const InvalidPagesSummary = ({pages, setPage}) => (
   <span>
     Please fill out all required fields on {pages.length > 1 ? 'pages' : 'page'}{' '}
@@ -47,21 +59,12 @@ InvalidPagesSummary.propTypes = {
  * @see FacilitatorProgramRegistration component for example usage.
  */
 const FormController = props => {
-  const [currentPage, setCurrentPage] = useState(0);
-  const [submitting, setSubmitting] = useState(false);
-  const [data, setData] = useState({});
-  const [errors, setErrors] = useState([]);
-  const previousErrors = usePrevious(errors);
-  const [errorMessages, setErrorMessages] = useState([]);
-  const [errorHeader, setErrorHeader] = useState(null);
-  const [globalError, setGlobalError] = useState(false);
-  const [triedToSubmit, setTriedToSubmit] = useState(false);
-
   const {
     pageComponents,
     requiredFields = [],
     apiEndpoint,
     options,
+    getInitialData = () => ({}),
     onInitialize = () => {},
     onSetPage: onPropsSetPage = () => {},
     onSuccessfulSubmit = () => {},
@@ -72,22 +75,24 @@ const FormController = props => {
     warnOnExit = false
   } = props;
 
+  const [currentPage, setCurrentPage] = useState(
+    () => getInitialStored(sessionStorageKey, 'currentPage') || 0
+  );
+  const [data, setData] = useState(() => ({
+    ...getInitialStored(sessionStorageKey, 'data'),
+    ...getInitialData()
+  }));
+  const [submitting, setSubmitting] = useState(false);
+  const [errors, setErrors] = useState([]);
+  const previousErrors = usePrevious(errors);
+  const [errorMessages, setErrorMessages] = useState({});
+  const [errorHeader, setErrorHeader] = useState(null);
+  const [globalError, setGlobalError] = useState(false);
+  const [triedToSubmit, setTriedToSubmit] = useState(false);
+
   useEffect(() => {
-    let newPage;
-    if (sessionStorageKey && sessionStorage[sessionStorageKey]) {
-      const reloadedState = JSON.parse(sessionStorage[sessionStorageKey]);
-
-      setCurrentPage(reloadedState.currentPage);
-      setData(reloadedState.data);
-
-      newPage = reloadedState.currentPage;
-      onInitialize(reloadedState.data, setData);
-    } else {
-      newPage = currentPage;
-      onInitialize(data, setData);
-    }
-
-    onSetPage(newPage);
+    onInitialize();
+    onSetPage(currentPage);
 
     if (warnOnExit) {
       window.addEventListener('beforeunload', event => {
@@ -530,6 +535,7 @@ FormController.propTypes = {
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageComponents: PropTypes.arrayOf(PropTypes.func),
   getPageProps: PropTypes.func,
+  getInitialData: PropTypes.func,
   onInitialize: PropTypes.func,
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
