@@ -838,6 +838,10 @@ module Services
     class ResourceSerializer < ActiveModel::Serializer
       attributes :name, :url, :key, :properties, :seeding_key
 
+      def properties
+        object.properties.sort.to_h
+      end
+
       def seeding_key
         object.seeding_key(@scope[:seed_context])
       end
