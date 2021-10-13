@@ -28,8 +28,6 @@ class UnitGroup < ApplicationRecord
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  after_save :write_serialization
-
   scope :with_associated_models, -> do
     includes(
       [
