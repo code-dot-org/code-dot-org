@@ -51,13 +51,17 @@ module Services
 
       # Use existing seeding_key code to efficiently sort join model objects
       # in a manner that will be stable across environments.
-      lr_seed_context = SeedContext.new(lessons: script.lessons, resources: resources)
-      lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(lr_seed_context).to_json}
-      sr_seed_context = SeedContext.new(script: script, resources: resources)
-      scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sr_seed_context).to_json}
-      standards_seed_context = SeedContext.new(lessons: script.lessons, frameworks: frameworks, standards: standards)
-      lessons_standards = script.lessons.map(&:lessons_standards).flatten.sort_by {|ls| ls.seeding_key(standards_seed_context).to_json}
-      lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten.sort_by {|lo| lo.seeding_key(standards_seed_context).to_json}
+      sort_context = SeedContext.new(
+        script: script,
+        lessons: script.lessons,
+        resources: resources,
+        frameworks: frameworks,
+        standards: standards,
+      )
+      lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(sort_context).to_json}
+      scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sort_context).to_json}
+      lessons_standards = script.lessons.map(&:lessons_standards).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
+      lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten.sort_by {|lo| lo.seeding_key(sort_context).to_json}
 
       vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten
