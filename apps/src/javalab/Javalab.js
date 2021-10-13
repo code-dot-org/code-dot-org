@@ -310,7 +310,7 @@ Javalab.prototype.onRun = function() {
   }
 
   this.miniApp?.reset?.();
-  this.executeJavabuilder(ExecutionType.TEST);
+  this.executeJavabuilder(ExecutionType.RUN);
 };
 
 Javalab.prototype.onTest = function() {
