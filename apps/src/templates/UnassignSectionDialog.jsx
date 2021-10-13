@@ -11,7 +11,7 @@ class UnassignSectionDialog extends Component {
     sectionId: PropTypes.number.isRequired,
     onClose: PropTypes.func.isRequired,
     unassignSection: PropTypes.func.isRequired,
-    courseName: PropTypes.string.isRequired,
+    courseName: PropTypes.string,
     sectionName: PropTypes.string
   };
 
