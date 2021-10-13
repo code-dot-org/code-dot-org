@@ -37,21 +37,21 @@ export default class Poetry extends SpriteLab {
   }
 
   preloadInstructorImage() {
-    const preloadInstructorImage_ = new Promise(resolve => {
-      this.p5Wrapper.p5.loadImage(
-        'https://studio.code.org/blockly/media/poetry/octiHappy.png',
-        image => {
-          this.preloadedInstructorImage = image;
-          resolve();
-        },
-        err => {
-          console.log(err);
-          resolve();
-        }
-      );
-    });
-    return preloadInstructorImage_.then(
-      (this.p5Wrapper.p5._preloadedInstructorImage = this.preloadedInstructorImage)
+    if (!this.preloadInstructorImage_) {
+      this.preloadInstructorImage_ = new Promise(resolve => {
+        this.p5Wrapper.p5.loadImage(
+          '/blockly/media/poetry/octiFinish.png',
+          image => resolve(image),
+          err => {
+            console.error(err);
+            resolve();
+          }
+        );
+      });
+    }
+
+    return this.preloadInstructorImage_.then(
+      image => (this.p5Wrapper.p5._preloadedInstructorImage = image)
     );
   }
 
