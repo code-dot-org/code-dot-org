@@ -9,7 +9,7 @@ import {POEMS} from './constants';
 export default class Poetry extends SpriteLab {
   init(config) {
     super.init(config);
-    const poem = config.level.selectedPoem || POEMS[this.level.defaultPoem];
+    const poem = config.level.selectedPoem || getPoem(this.level.defaultPoem);
     if (poem) {
       getStore().dispatch(setPoem(poem));
     }
@@ -51,4 +51,16 @@ export default class Poetry extends SpriteLab {
       }
     });
   }
+}
+
+export function getPoem(key) {
+  if (!key || !POEMS[key]) {
+    return undefined;
+  }
+  return {
+    key: key,
+    author: POEMS[key].author,
+    title: msg[`${key}Title`](),
+    lines: msg[`${key}Lines`]().split('\n')
+  };
 }
