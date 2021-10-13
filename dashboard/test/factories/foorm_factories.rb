@@ -19,6 +19,28 @@ FactoryGirl.define do
         ]
     }'
 
+    trait :with_rating_question do
+      questions '{
+        "pages":[
+          {
+            "name": "teaching_philosophy",
+            "elements": [
+              {
+                "type": "rating",
+                "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
+                "name": "expertise_rating",
+                "indent": 12,
+                "titleLocation": "hidden",
+                "minRateDescription": "Strongly aligned with A",
+                "maxRateDescription": "Strongly aligned with B"
+              }
+            ],
+            "title": "Teaching Philosophy"
+          },
+        ]
+      }'
+    end
+
     trait :with_multi_select_question do
       questions '{
         "pages":[
@@ -67,6 +89,12 @@ FactoryGirl.define do
     trait :with_multi_select_answer do
       answers '{
         "not_members_spice_girls": ["radical", "spicy"]
+      }'
+    end
+
+    trait :with_rating_answer do
+      answers '{
+        "expertise_rating": [1]
       }'
     end
   end
