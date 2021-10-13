@@ -21,21 +21,26 @@ const pageComponents = [
 const TeacherApplication = props => {
   const {accountEmail, userId, schoolId} = props;
 
-  const onInitialize = (data, setData) => {
+  const getInitialData = () => {
     // Extract school info saved in sessionStorage, if any
     let reloadedSchoolId = undefined;
-    if (sessionStorageKey && sessionStorage[sessionStorageKey]) {
-      const reloadedState = JSON.parse(sessionStorage[sessionStorageKey]);
+    if (sessionStorageKey && sessionStorage.getItem(sessionStorageKey)) {
+      const reloadedState = JSON.parse(
+        sessionStorage.getItem(sessionStorageKey)
+      );
       reloadedSchoolId = reloadedState.data.school;
     }
 
     // Populate data from server only if it doesn't override data in sessionStorage
     // (even if value in sessionStorage is null)
     if (reloadedSchoolId === undefined && schoolId) {
-      const schoolAutoFill = {school: schoolId};
-      setData({data: {...data, ...schoolAutoFill}});
+      return {school: schoolId};
     }
 
+    return {};
+  };
+
+  const onInitialize = (data, setData) => {
     // Log the user ID to firehose.
     firehoseClient.putRecord(
       {
@@ -75,6 +80,7 @@ const TeacherApplication = props => {
       {...props}
       pageComponents={pageComponents}
       getPageProps={getPageProps}
+      getInitialData={getInitialData}
       onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
