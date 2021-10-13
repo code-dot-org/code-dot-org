@@ -133,32 +133,13 @@ export const commands = {
             animation,
             scale: 1,
             initialAngle: (i * 360) / num - 180 * ((i + 1) % 2),
-            delay: (i * 60) / num,
-            lifetime: 90
+            delay: (i * 30) / num,
+            lifetime: 120
           });
           let sprite = this.getSpriteArray({id: spriteId})[0];
           this.addBehavior(sprite, {
             func: behaviorCommands.spiralFunc.apply(this),
             name: 'spiral'
-          });
-          break;
-        }
-        case 'zig-zag': {
-          let spriteId = this.addSprite({
-            animation,
-            speed: Math.floor(Math.random() * 15 + 10),
-            scale: 50,
-            location: {
-              x: Math.floor(Math.random() * 50 - 100) + 550 * (i % 2),
-              y: Math.floor(Math.random() * 400)
-            },
-            direction: 180 * (i % 2),
-            lifetime: 60
-          });
-          let sprite = this.getSpriteArray({id: spriteId})[0];
-          this.addBehavior(sprite, {
-            func: behaviorCommands.zigZagFunc.apply(this),
-            name: 'zig-zag'
           });
           break;
         }
