@@ -110,8 +110,9 @@ const styles = {
     position: 'absolute',
     top: '6px',
     right: '10px',
-    color: color.charcoal,
-    fontSize: '22px'
+    color: color.white,
+    fontSize: '22px',
+    fontWeight: 'bold'
   }
 };
 
