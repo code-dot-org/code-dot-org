@@ -29,6 +29,8 @@ zh:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: "  馬上開始學習，打造更美好的明天。  "
   hoc2020_header_with_line_break_markdown: "  馬上開始學習，      打造更美好的明天。  "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -57,6 +59,7 @@ zh:
   social_hoc2019_coming_dates: 程式設計一小時將於 2019 年 12 月 9 日至 15 日舉辦。電腦科學對於每個學生而言都是重要的基礎知識。
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: "  保護海洋的人工智慧 (AI for Oceans)  "
   oceans_landing_description: "  瞭解機器學習和 AI 的道德使用。  "
   cs_for_good_hashtag: "#CSforGood"
@@ -176,6 +179,8 @@ zh:
   codeorg_homepage_hoc2018_video: 觀賞影片
   hourofcode_homepage_hoc2018_header_line1: 任何人都可以在任何地方舉辦一小時玩程式活動。一小時教程支援了超過 45 種語言，你不一定要有相關經驗。
   hourofcode_homepage_hoc2018_header_line2: 年齡 4 - 104。
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: 用程式積木帶著 Alex 或 Steve 在 Minecraft 遊戲世界中四處冒險。
   codeorg_homepage_hoc2019_dance_heading: 嘗試新版 <span class="highlight-word">Dance&nbsp;Party!</span>
   codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
