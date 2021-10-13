@@ -174,6 +174,27 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
+      drawOcti() {
+        this.p5.push();
+        this.p5.noStroke();
+        if (this.p5.World.frameCount > this.validationInfo.endTime) {
+          let octiImage = this.p5._preloadedInstructorImage;
+          this.p5.image(octiImage, 325, 325, 75, 75);
+        }
+        this.p5.pop();
+      },
+
+      isOctiClicked() {
+        return (
+          this.validationInfo.successFrame &&
+          this.p5.mouseDown() &&
+          this.p5.World.mouseX > 325 &&
+          this.p5.World.mouseX < 400 &&
+          this.p5.World.mouseY > 325 &&
+          this.p5.World.mouseY < 400
+        );
+      },
+
       drawProgressBar() {
         this.p5.push();
         this.p5.noStroke();
