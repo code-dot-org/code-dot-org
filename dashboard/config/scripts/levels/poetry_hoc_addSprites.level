@@ -39,6 +39,8 @@
     "instructions_icon": "octiGeneral",
     "standalone_app_name": "poetry_hoc",
     "default_poem": "carroll_2",
+    "skip_autosave": true,
+    "skip_autosave": true,
     "preload_asset_list": null,
     "video_key": "poembot-playtest-sprites"
   },

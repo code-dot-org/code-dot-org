@@ -39,6 +39,8 @@
     "instructions_icon": "octiHopeful",
     "standalone_app_name": "poetry_hoc",
     "default_poem": "alexander",
+    "skip_autosave": true,
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "user_id": 13468,
