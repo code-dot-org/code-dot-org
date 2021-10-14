@@ -64,6 +64,7 @@
     "instructions_icon": "retro",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel6();",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"You can change the background by connecting a `set background` block under a `when clicked` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"retroship_21\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_setBackgroundImageAs\\\">\\n        <title name=\\\"IMG\\\">\\\"background_landscape11_1\\\"</title>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"hello_world_background\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b220d889d60cca00de3866ba03f8785b/helloworld_retro_backgrounds.mp3\"}]",
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "user_id": 182,

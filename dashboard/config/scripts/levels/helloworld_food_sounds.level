@@ -66,6 +66,7 @@
     "thumbnail_url": "https://studio.code.org/api/v1/animation-library/gamelab/D9I677s9Rz4Ww_Znrcm36XWuz8WA0Kh8/category_food/face_apple.png",
     "instructions_icon": "pizza",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel10();",
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "user_id": 182,
