@@ -10,7 +10,7 @@ import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {POEMS} from './constants';
-import {getPoem} from './Poetry';
+import {getPoem} from './poem';
 
 function PoemEditor(props) {
   const [title, setTitle] = useState('');
