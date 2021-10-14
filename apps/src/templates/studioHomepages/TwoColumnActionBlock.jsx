@@ -72,6 +72,7 @@ export class UnconnectedTwoColumnActionBlock extends Component {
                       ? styles.subHeadingSmallFont
                       : styles.subHeading
                   }
+                  id="two-column-action-block--sub-heading"
                 >
                   {subHeading}
                 </div>
