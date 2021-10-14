@@ -17,7 +17,6 @@ Properties defined below can be further configured through several overrides.
 The loading order is as follows (1 = highest priority):
 
 
-
 1. `ENV`
     - environment-variable overrides (`CDO_*`, plus `RACK_ENV` and `RAILS_ENV`) \
       e.g.: `CDO_MY_VARIABLE` would override `CDO.my_variable`.
