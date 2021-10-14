@@ -66,6 +66,7 @@ module Services
       )
       lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(sort_context).to_json}
       scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sort_context).to_json}
+      scripts_student_resources = script.scripts_student_resources.sort_by {|ssr| ssr.seeding_key(sort_context).to_json}
       lessons_standards = script.lessons.map(&:lessons_standards).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
       lessons_opportunity_standards = script.lessons.map(&:lessons_opportunity_standards).flatten.sort_by {|lo| lo.seeding_key(sort_context).to_json}
       lessons_vocabularies = script.lessons.map(&:lessons_vocabularies).flatten.sort_by {|lv| lv.seeding_key(sort_context).to_json}
@@ -85,7 +86,7 @@ module Services
         resources: resources,
         lessons_resources: lessons_resources,
         scripts_resources: scripts_resources,
-        scripts_student_resources: script.scripts_student_resources,
+        scripts_student_resources: scripts_student_resources,
         vocabularies: vocabularies,
         lessons_vocabularies: lessons_vocabularies,
         programming_environments: programming_environments,
