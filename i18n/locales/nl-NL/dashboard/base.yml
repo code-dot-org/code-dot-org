@@ -859,6 +859,7 @@ nl:
     form_labels:
       last_name: 'Achternaam'
       email: 'Email'
+      school: 'School'
       school_name: 'Naam van de school'
       school_city: 'School Stad'
       school_country: 'Land van de school'

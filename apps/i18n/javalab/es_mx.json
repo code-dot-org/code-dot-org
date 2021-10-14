@@ -42,7 +42,6 @@
   "errorNeighborhoodInvalidMove": "El pintor intentó salirse de la cuadrícula o chocar contra un obstáculo.",
   "errorNeighborhoodInvalidPaintLocation": "El pintor intentó salirse de la cuadrícula o pasar por encima de un obstáculo.",
   "errorPeerReviewDisabled": "La revisión de pares se ha inhabilitado en este proyecto.",
-  "errorPlaygroundMessageAfterEnd": "No puedes realizar ningún cambio en el tablero después de llamar a end().",
   "errorPlaygroundRunning": "El método start() sólo se puede llamar una vez por cada ejecución del programa.",
   "errorPlaygroundNotRunning": "El método end() no se puede llamar antes de llamar a start().",
   "errorProjectNotEditedYet": "Este proyecto aún no ha sido editado. El código deberá editarse antes de que pueda ejecutarse.",

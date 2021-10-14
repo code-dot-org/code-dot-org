@@ -1200,8 +1200,10 @@ cs:
       email: E-mail
       email_alternate: Alternativní e-mail
       gender: Rod
+      school: Škola
       school_name: Název školy
       school_country: Země školy
+      school_department_region: Školní okrsek / region
       colombian_chilean_school_department: Školní okrsek / region
       colombian_school_municipality: Školní městský obvod
       colombian_chilean_school_name: Název školy

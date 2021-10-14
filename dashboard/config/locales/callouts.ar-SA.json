@@ -1643,7 +1643,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "قطعة برمجية جديدة!",
-          "poetry_multiple_sprites": "قطعة برمجية جديدة!"
+          "poetry_multiple_sprites": "قطعة برمجية جديدة!",
+          "poetry_new_block": "قطعة برمجية جديدة!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "قطعة برمجية جديدة!"

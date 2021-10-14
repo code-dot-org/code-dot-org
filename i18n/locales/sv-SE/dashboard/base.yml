@@ -792,6 +792,7 @@ sv:
     form_labels:
       first_name: 'Förnamn'
       email: 'E-post'
+      school: 'Skola'
       school_name: 'Skolnamn'
       school_country: 'Skolans land'
       colombian_chilean_school_name: 'Skolnamn'

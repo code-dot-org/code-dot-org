@@ -1854,7 +1854,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nový blok!",
-          "poetry_multiple_sprites": "Nový blok!"
+          "poetry_multiple_sprites": "Nový blok!",
+          "poetry_new_block": "Nový blok!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Nový blok!"
@@ -1866,6 +1867,9 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Nový blok!",
           "poetry_remove_sprite": "Nový blok!"
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Pozorne sa pozri na kód pod týmto miestom."
         }
       }
     }

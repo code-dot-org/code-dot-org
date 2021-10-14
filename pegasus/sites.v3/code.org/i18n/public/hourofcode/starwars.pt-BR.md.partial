@@ -1,34 +1,34 @@
 ---
-title: Teacher Resources - Star Wars
+title: Recursos para professores - Star Wars
 nav: hoc_teacher_resources_nav
 theme: responsive
 style_min: true
 video_player: true
 ---
 
-# Star Wars: Building a Galaxy with Code
+# Star Wars: Construindo uma Galáxia com Código
 
 {{ hoc_starwars_video }}
 
 [col-50]
 
-## Teacher Resources
+## Recursos para professores
 
-### Lesson Plans:
+### Planos de aula:
 
-- [Star Wars: Building a Galaxy with Code]({{ hoc_starwars_cb_url }})
-- [Answer Sheet and Teacher Tips](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
+- [Star Wars: Construindo uma Galáxia com Código]({{ hoc_starwars_cb_url }})
+- [Folha de respostas e dicas do professor](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
 
-### Extension Activities:
+### Atividades complementares:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Além da Hora do Código](http://code.org/learn/beyond)
+- [Fundamentos de Ciência da Computação: Curso 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Outros recursos para professores:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hora do Código: Guia para Educadores](https://hourofcode.com/how-to)
+- [Melhores Práticas de Educadores de Sucesso](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Evento ao-vivo: [Guia do Educador para a Hora do Código](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -36,12 +36,12 @@ video_player: true
 
 ## Resumo
 
-Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
 
-**Recommended Age Range:** 6+
+**Faixa etária recomendada:**6+
 
-**Technology Requirements:** Modern browsers + tablets
+**Requisitos de Tecnologia:** Navegadores modernos + tablets
 
-<a href="/starwars"><button>Try the tutorial</button></a>
+<a href="/starwars"><button>Experimente o tutorial</button></a>
 
 [/col-50]

@@ -29,6 +29,8 @@ mr:
   africa_campaign_date_full: 1-31 ऑक्टोबर
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: " 1-31 ऑक्टोबर 2020"
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: आज शिका, उद्याचे उज्ज्वल भविष्य घडवा.
   hoc2020_header_with_line_break_markdown: |-
     Learn today,
@@ -61,6 +63,7 @@ mr:
     विद्यार्थ्यासाठी कॉम्प्युटर सायंस हा पाया आहे.
   social_hoc2019_dance: 'यात आहेत: केटी पेरी, जोनास ब्रदर्स, लिल नास एक्स, पॅनिक अॅट
     द डिस्को आणि इतर!'
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: AI for Oceans
   oceans_landing_description: मशीन लर्निंगबद्दल आणि AI च्या नैतिक वापराबद्दल शिका.
   cs_for_good_hashtag: "#CSforGood"
@@ -210,6 +213,8 @@ mr:
     करू शकते. 45 पेक्षा अधिक भाषांमध्ये एका तासाची ट्युटोरीयल्स उपलब्ध आहेत. कुठल्याही
     अनुभवाची गरज नाही.
   hourofcode_homepage_hoc2018_header_line2: वय 4 ते 104.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: कोडचा तासमध्ये माइनक्राफ्ट एका नवीन कामासोबत
     परत आले आहे! माइक्राफ्टमध्ये कोडच्या सहाय्याने फिरा.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>

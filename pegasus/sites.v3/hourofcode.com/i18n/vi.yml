@@ -29,6 +29,8 @@ vi:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: Hãy học hôm nay và xây dựng một tương lai tươi sáng hơn.
   hoc2020_header_with_line_break_markdown: |-
     Hãy học hôm nay,
@@ -63,6 +65,7 @@ vi:
     học máy tính là kiến thức nền tảng mà mọi học sinh cần học hỏi.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: Trí Tuệ Nhân Tạo cho Đại Dương
   oceans_landing_description: Cùng học về Trí Tuệ Nhân Tạo và cách sử dụng nó cho
     những điều tốt.
@@ -224,6 +227,8 @@ vi:
     chức sự kiện Hour of Code. Hướng dẫn một giờ đồng hồ bằng 45 ngôn ngữ. Không cần
     kinh nghiệm.
   hourofcode_homepage_hoc2018_header_line2: Từ 4 đến 104 tuổi.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Hãy thử khám phá <span class="highlight-word">Bữa

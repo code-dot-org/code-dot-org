@@ -570,6 +570,13 @@ ro:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_student: Fă clic și glisează obiecte pentru a rezolva puzzle-urile.
+              description_teacher: În această lecție, elevii își vor face o idee cu
+                privire la ce se poate întâmpla în timpul activităților desfășurate
+                în laboratorul de informatică. Această lecție începe cu o scurtă discuție
+                în care se prezintă regulile de conduită în laboratorul de informatică,
+                apoi elevii vor trece la utilizarea unui computer pentru a rezolva
+                puzzle-uri online.
         step:
           title: Pas
           lessons:
@@ -11266,3 +11273,17 @@ ro:
               display_name: Conţinut
             lessonGroup-2:
               display_name: Conţinut
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widget-uri
+            lesson-2:
+              name: Instrumente
+        poetry:
+          lessons:
+            lesson-3:
+              name: Variabile
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Albina de Ortografie

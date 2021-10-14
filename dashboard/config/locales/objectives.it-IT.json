@@ -2,6 +2,63 @@
   "it-IT": {
     "data": {
       "objectives": {
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "creare un programma costituito da una sequenza di istruzioni per completare un'immagine"
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "suddividere forme complesse in parti più semplici"
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "sviluppare programmi che rispondano ad eventi temporizzati"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "sviluppare programmi che rispondono all'input dell'utente"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "creare animazioni di danza con il codice"
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "identificare le azioni correlate agli eventi in ingresso"
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "condividere un artefatto creativo con altri alunni"
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "identificare le azioni correlate agli eventi in ingresso"
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "creare un gioco interattivo utilizzando sequenze di istruzioni e gestori di eventi"
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "condividere un artefatto creativo con altri alunni"
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "sviluppare programmi che rispondano ad eventi temporizzati"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "sviluppare programmi che rispondono all'input dell'utente"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "creare animazioni di danza con il codice"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "discutere il ruolo che l'intelligenza artificiale gioca nelle nostre vite"
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "addestrare e testare un modello di apprendimento automatico"
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "ragionare su come i pregiudizi umani giocano un ruolo nell'apprendimento automatico"
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "rendersi conto di cosa ci si aspetta dagli alunni mentre si recano in aula computer"
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "utilizzare la terminologia appropriata quando si fa riferimento al mouse, al trackpad o al touchscreen di un computer"
+        },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "usare le variabili per contenere parole e frasi"
         },

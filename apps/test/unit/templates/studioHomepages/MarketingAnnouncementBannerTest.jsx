@@ -8,6 +8,7 @@ import sinon from 'sinon';
 import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const DEFAULT_PROPS = {
   announcement: {
@@ -81,6 +82,27 @@ describe('MarketingAnnouncementBanner', () => {
       .find('button#marketing-announcement-banner--dismiss')
       .simulate('click');
     expect(setLocalStorageSpy.calledOnce);
+
+    utils.tryGetLocalStorage.restore();
+  });
+
+  it('sends event to firehose when banner is dismissed', () => {
+    sinon.stub(utils, 'tryGetLocalStorage').returns(null);
+    const firehoseSpy = sinon.spy(firehoseClient, 'putRecord');
+
+    const wrapper = setUp();
+    wrapper
+      .find('button#marketing-announcement-banner--dismiss')
+      .simulate('click');
+    expect(firehoseSpy.calledOnce);
+    firehoseSpy.calledWith({
+      study: 'teacher_signedin_homepage',
+      study_group: 'homepage_banner',
+      event: 'close_button_clicked',
+      data_json: JSON.stringify({
+        banner_title: 'Announcement Title'
+      })
+    });
 
     utils.tryGetLocalStorage.restore();
   });

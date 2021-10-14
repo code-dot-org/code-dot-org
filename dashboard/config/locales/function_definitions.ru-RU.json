@@ -317,24 +317,36 @@
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "собрать нектар х5"
+            "name": "собрать нектар х5",
+            "parameters": {
+              "direction": "направление"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "собрать нектар х5"
+            "name": "собрать нектар х5",
+            "parameters": {
+              "direction": "направление"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "собрать много нектара"
+            "name": "собрать много нектара",
+            "parameters": {
+              "direction": "направление",
+              "nectars": "нектары"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "собери нектар сделай мед",
             "parameters": {
-              "honey": "мед"
+              "honey": "мед",
+              "direction": "направление",
+              "nectars": "нектары"
             }
           }
         },
@@ -3836,6 +3848,20 @@
         "CourseF_app_computer": {
           "reset game": {
             "name": "сбросить игру"
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "направление"
+            }
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "направление"
+            }
           }
         }
       }

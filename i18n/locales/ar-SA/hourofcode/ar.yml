@@ -29,6 +29,8 @@ ar:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: نتعلم اليوم، لنبني غداً مشرقاً
   hoc2020_header_with_line_break_markdown: نتعلم اليوم، لنبني غداً مشرقاً
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -59,6 +61,7 @@ ar:
     أساسية ليتعلمها كل طالب.
   social_hoc2019_dance: يضم Katy Perry، Jonas Brothers، Lil Nas X، Panic at the Disco،
     وmany more!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: 'استخدام الذكاء الاصنطاعي في المحيطات '
   oceans_landing_description: تعرف على التعلم الآلي والاستخدام الأخلاقي للذكاء الاصطناعي.
   cs_for_good_hashtag: "#CSforGood"
@@ -208,6 +211,8 @@ ar:
   hourofcode_homepage_hoc2018_header_line1: يمكن لأي شخص في أي مكان تنظيم حدث "ساعة
     من البرمجة". درس تعليمي لمدة ساعة بأكثر من 45 لغة. وليس هناك حاجة إلى الخبرة السابقة.
   hourofcode_homepage_hoc2018_header_line2: للأعمار من 4 إلى 104 سنة.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: عادت لعبة "ماين كرافت" إلى ساعة من البرمجة مع
     نشاط جديد تمامًا! رحلة عبر "ماين كرافت" مع البرمجة.
   codeorg_homepage_hoc2019_dance_heading: جرِّب <span class="highlight-word">حفلة&nbsp;الرقص!</span>

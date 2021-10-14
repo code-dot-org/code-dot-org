@@ -1133,6 +1133,7 @@ ko:
         options:
           EFFECT:
             '"rain"': 비
+            '"spiral"': 나선
       gamelab_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNumSprites:

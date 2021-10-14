@@ -2291,7 +2291,7 @@
         },
         "courseD_iceage_loops3_2021": {
           "courseB_iceage_loops3_a": "Hãy sử dụng khối lệnh mới này!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
-          "courseB_iceage_loops3_b": "Để lặp lại mã lệnh, hãy kéo ra một vòng lặp `lặp lại`, sau đó đặt khối bạn muốn lặp lại vào bên trong."
+          "courseB_iceage_loops3_b": "Để lặp lại mã lệnh, hãy kéo ra một vòng lặp `repeat` (lặp lại), sau đó đặt khối bạn muốn lặp lại vào bên trong."
         },
         "courseD_iceage_loops4_2021": {
           "courseD_iceage_loops4_a": "Đừng lo lắng khi chạy mã của bạn và hãy xem điều gì sẽ xảy ra!",
@@ -2769,18 +2769,18 @@
         },
         "courseC_harvester_loops2_2021": {
           "courseC_harvester_loops2_a": "Nếu gặp khó khăn, hãy thử viết các bước trên giấy và tìm mẫu lặp lại.",
-          "courseC_harvester_loops2_b": "Bạn sẽ cần hai vòng lặp `repeat`(lặp lại) liên tiếp nhau.",
+          "courseC_harvester_loops2_b": "Bạn cần hai vòng lặp `repeat` (lặp lại) liên tiếp nhau.",
           "courseC_harvester_loops2_c": "Một vòng lặp sẽ lặp lại lệnh `move forward` (tiến lên) và vòng lặp còn lại sẽ lặp lại lệnh `pick command` (nhặt bí ngô)."
         },
         "courseC_harvester_loops3_2021": {
-          "courseC_harvester_loops3_a": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn nghĩ rằng mình chưa giải được bài tập này.",
+          "courseC_harvester_loops3_a": "Đừng sợ mắc lỗi nhé! Hãy thử thêm khối và chạy mã lệnh để xem điều gì sẽ xảy ra, ngay cả khi bạn chưa giải được bài tập này.",
           "courseC_harvester_loops3_c": "Nếu bạn muốn đơn giản hóa mã lệnh của mình, bạn thực sự có thể đặt một vòng lặp bên trong một vòng lặp khác! Cách này gọi là **vòng lặp lồng nhau**.",
           "courseC_harvester_loops3_b": "Với những quả bí ngô đầu tiên, bạn có thể dùng mã lệnh tương tự với bài tập trước. Sau đó bạn cần xoay theo hướng nào?"
         },
         "courseC_harvester_loops4_2021": {
           "courseC_harvester_loops4_c": "Nếu bạn muốn đơn giản hóa mã lệnh của mình, bạn thực sự có thể đặt một vòng lặp bên trong một vòng lặp khác! Cách này gọi là **vòng lặp lồng nhau**.",
           "courseC_harvester_loops4_a": "Hãy dùng khối `pick corn` (thu hoạch ngô) mới để thu hoạch ngô.",
-          "courseC_harvester_loops4_b": "Bạn có thể sử dụng nhiều vòng lặp trong mã lệnh của mình, một số để thu hoạch ngô và một số khác để thu hoạch bí ngô."
+          "courseC_harvester_loops4_b": "Bạn có thể sử dụng nhiều vòng lặp lặp lại trong mã lệnh của mình, một số để thu hoạch ngô và một số khác để thu hoạch bí ngô."
         },
         "courseC_maze_debugging1_2021": {
           "courseC_maze_debugging1_a": "-   Mọi thứ có ổn ở bước đầu tiên không?\n-   Bước thứ hai vẫn hiệu quả chứ?\n-   Sai sót nằm ở đâu?",
@@ -3012,12 +3012,12 @@
           "courseC_PlayLab_events2_b": "Hãy dùng menu thả xuống trên khối `actor __ say` (diễn viên \\_\\_\\_ nói) thứ hai để thay đổi diễn viên nói."
         },
         "courseC_PlayLab_events3_2021": {
-          "courseC_PlayLab_events3_a": "Bạn chỉ cần di chuyển Jorge sang phải khoảng 25 pixel để giải bài tập này.",
+          "courseC_PlayLab_events3_a": "Bạn chỉ cần di chuyển Jorge sang phải khoảng 25 điểm ảnh để giải bài tập này.",
           "courseC_PlayLab_events3_b": "Có khối nào trong hộp công cụ có vẻ như sẽ di chuyển diễn viên không?",
           "courseC_PlayLab_events3_c": "Gắn khối này vào khối `when run` (khi chạy):\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
         },
         "courseC_PlayLab_events4_2021": {
-          "courseC_PlayLab_events4_b": "Khi nhấp chuột vào nút  “Run” (chạy) , Jorge cần di chuyển sang phải **100** pixel để tới chỗ Cô mèo Olive.",
+          "courseC_PlayLab_events4_b": "Khi nhấp chuột vào nút  “Run” (chạy) , Jorge cần di chuyển sang phải **100** điểm ảnh để tới chỗ Cô mèo Olive.",
           "courseC_PlayLab_events4_a": "Bạn cần gắn một khối `actor __ say` (diễn viên \\_\\_\\_ nói) vào sự kiện `when actor touches` (khi diễn viên chạm vào) để giải bài tập này."
         },
         "courseC_PlayLab_events5_2021": {
@@ -3030,7 +3030,7 @@
           "courseC_PlayLab_events6_c": "Khi hoàn thành, bạn có thể di chuyển Waddles xung quanh bằng các phím mũi tên trên máy tính đấy!"
         },
         "courseC_PlayLab_events7_2021": {
-          "courseC_PlayLab_events7_a": "Hãy dùng cả khối `move actor 2 up 400 pixels` (di chuyển diễn viên 2 lên 400 pixel) và khối `move actor 2 down 400 pixels` (di chuyển diễn viên 2 xuống 400 pixel) trong vòng lặp `repeat forever` (lặp lại mãi mãi) để giải bài tập này.",
+          "courseC_PlayLab_events7_a": "Hãy dùng cả khối `move actor 2 up 400 pixels` (di chuyển diễn viên 2 lên 400 điểm ảnh) và khối `move actor 2 down 400 pixels` (di chuyển diễn viên 2 xuống 400 điểm ảnh) trong vòng lặp `repeat forever` (lặp lại mãi mãi) để giải bài tập này.",
           "courseC_PlayLab_events7_b": "Vòng lặp `repeat forever` (lặp lại mãi mãi) không cần gắn với bất kỳ khối sự kiện nào khác; vòng lặp này sẽ tự chạy."
         },
         "courseC_PlayLab_events8_2021": {
@@ -3111,7 +3111,7 @@
           "courseC_harvester_loops5_b": "Bậc thang này trông có giống với các bài tập khác không? Các bước di chuyển cũng tương tự, chỉ cần nhớ thu hoạch nông sản trên đường đi."
         },
         "courseC_harvester_loops6_2021": {
-          "courseC_harvester_loops6_a": "Hãy nhớ rằng bạn có thể đặt nhiều khối trong một vòng lặp.",
+          "courseC_harvester_loops6_a": "Hãy nhớ rằng bạn có thể đặt nhiều khối trong một vòng lặp lặp lại.",
           "courseC_harvester_loops6_b": "Đừng quên xoay ở cuối hàng ngô."
         },
         "courseC_harvester_loops7_2021": {
@@ -3129,7 +3129,7 @@
         },
         "courseC_harvester_loops_challenge2_2021": {
           "courseC_harvester_loops_challenge2_a": "Có một cách để giải bài tập này là đi theo hình zic zắc. Một cách khác là đi theo hình xoắn ốc! Có rất nhiều cách giải khác nhau cho một bài tập như thế này. Hãy kiên trì nhé!",
-          "courseC_harvester_loops_challenge2_b": "Bạn có thể lặp lại `move forward` (tiến lên) và `pick lettuce` (thu hoạch rau diếp) bao nhiêu lần tùy thích, sau đó rẽ ở mỗi góc.",
+          "courseC_harvester_loops_challenge2_b": "Bạn có thể lặp lại `move forward` (tiến lên) và `pick lettuce` (thu hoạch rau diếp) bao nhiêu lần tùy thích, sau đó xoay ở mỗi góc.",
           "courseC_harvester_loops_challenge2_c": "Bạn có thể lặp lại hình zic zắc này hai lần để hoàn thành bài tập chỉ với 20 khối!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
           "courseC_harvester_loops_challenge2_d": "Bạn có thể lập trình hình xoắn ốc này chỉ với 18 khối!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
@@ -3186,7 +3186,7 @@
           "courseD_bounce_events1s_b": "Đừng quên nhấn “Run” (chạy) và đưa tay vào rổ để giải bài tập này."
         },
         "courseD_bounce_events2s_2021": {
-          "courseD_bounce_events2s_a": "Bạn cần có hai bộ sự kiện `move` (di chuyển) được lập trình để chức năng này hoạt động:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+          "courseD_bounce_events2s_a": "Bạn cần có hai bộ sự kiện `move` (di chuyển) được lập trình để hàm này hoạt động:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
         },
         "courseD_bounce_events5s_2021": {
           "courseD_bounce_events5s_a": "Bạn không cần phải di chuyển bàn tay để giải bài tập này.",

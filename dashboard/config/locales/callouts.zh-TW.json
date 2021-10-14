@@ -1990,7 +1990,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "新的程式積木！",
-          "poetry_multiple_sprites": "新的程式積木！"
+          "poetry_multiple_sprites": "新的程式積木！",
+          "poetry_new_block": "新的程式積木！"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "新的程式積木！"

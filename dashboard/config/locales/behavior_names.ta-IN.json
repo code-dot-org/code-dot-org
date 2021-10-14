@@ -176,6 +176,9 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
         }
       }
     }

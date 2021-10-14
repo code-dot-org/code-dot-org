@@ -42,7 +42,7 @@
   "errorNeighborhoodInvalidMove": "Malarz próbował zejść z siatki lub wjechać na przeszkodę.",
   "errorNeighborhoodInvalidPaintLocation": "Malarz próbował malować poza siatką lub nad przeszkodą.",
   "errorPeerReviewDisabled": "Weryfikacja koleżeńska została wyłączona w tym projekcie.",
-  "errorPlaygroundMessageAfterEnd": "Nie możesz dokonać żadnych zmian na tablicy po wywołaniu end().",
+  "errorPlaygroundInvalidMessage": "Nie możesz dokonać żadnych zmian na tablicy po wywołaniu end().",
   "errorPlaygroundRunning": "Metodę start() można wywołać tylko raz na wykonanie programu.",
   "errorPlaygroundNotRunning": "Metoda end() nie może być wywołana przed wywołaniem start().",
   "errorProjectNotEditedYet": "Ten projekt nie był jeszcze edytowany. Kod będzie musiał zostać wyedytowany, zanim będzie można go uruchomić.",
