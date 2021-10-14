@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2021-10-13 17:03:17 UTC",
+    "serialized_at": "2021-10-13 22:42:41 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "spelling-bee"
@@ -153,7 +153,7 @@
       "key": "19e61718-de1b-4694-8b77-f0e50cdf025a",
       "position": 2,
       "properties": {
-        "description": "**Do This:**  Model your thinking process out loud  for students when going through the actions and steps to help the bee find words. Share with students that they will think out loud as they help the bee find words\n\n.\n**Say:**  *As I’m getting ready to help the bee, I should think about...*\n- *counting how many letters are in the word.*\n- *reading what the word is.*\n- *pointing in the direction the bee should take to spell the word.*\n\nComplete the first problem as a class, modeling how to draw the arrows for the bee's movement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n  \n- Complete the Warm-Up worksheet with the students.  Consider using the following sequence:\n  - Complete the first problem as a class.\n\n  - Have students complete the second problem with a partner and then discuss it as a class.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Model your thinking process out loud  for students when going through the actions and steps to help the bee find words. Share with students that they will think out loud as they help the bee find words\n\n**Say:**  *As I’m getting ready to help the bee, I should think about...*\n- *counting how many letters are in the word.*\n- *reading what the word is.*\n- *pointing in the direction the bee should take to spell the word.*\n\nComplete the first problem as a class, modeling how to draw the arrows for the bee's movement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n  \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "19e61718-de1b-4694-8b77-f0e50cdf025a",
@@ -177,7 +177,13 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Open the first level of this activity on your computer in front of the class. A short video will play at first introducing students to these bee puzzles.\n\n**Model:** Model for students how to complete the level. Point out that this puzzle is the same as the puzzle on their warm-up. Ask students to describe how you should move the blocks and connect them to complete the puzzle.\n\n",
-        "progression_name": "Practice"
+        "progression_name": "Model Level",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Playful Ambiguity:** Students may use imprecise language when describing how to complete the level, saying only “Click the block” or “Drag it out” rather than “Click the right arrow block” or “Drag the arrow under the Start block”. You may decide to playfully follow their instructions literally, sometimes leading to blocks being in incorrect locations. This can prompt students to use more precise language and develop their relational language skills when describing how to solve the puzzle. However, it’s best not to go overboard to the point where students are frustrated or feel like their words are being purposefully misinterpreted."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "003aaeb9-81cb-43d0-b361-6c5d8343067b",
@@ -188,13 +194,7 @@
       "key": "865bfb38-4d08-454a-9242-7dc35527823c",
       "position": 5,
       "properties": {
-        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the third puzzle. Students can start working through these levels at their own pace.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Playful Ambiguity: Students may use imprecise language when describing how to complete the level, saying only “Click the block” or “Drag it out” rather than “Click the right arrow block” or “Drag the arrow under the Start block”. You may decide to playfully follow their instructions literally, sometimes leading to blocks being in incorrect locations. This can prompt students to use more precise language and develop their relational language skills when describing how to solve the puzzle. However, it’s best not to go overboard to the point where students are frustrated or feel like their words are being purposefully misinterpreted."
-          }
-        ]
+        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the third puzzle. Students can start working through these levels at their own pace.\n"
       },
       "seeding_key": {
         "activity_section.key": "865bfb38-4d08-454a-9242-7dc35527823c",
@@ -202,10 +202,20 @@
       }
     },
     {
-      "key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec",
+      "key": "eac4530d-2f28-4baa-8d71-044aec131570",
       "position": 6,
       "properties": {
-        "description": "**Level 3:** This level is identical to the warm-up that students completed as a class. Since students already have the correct answers from the warm-up, use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in the levels.\n",
+        "description": "**Level 3:** This level is identical to the warm-up that students completed as a class. Since students already have the correct answers from the warm-up, use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in the levels.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "eac4530d-2f28-4baa-8d71-044aec131570",
+        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+      }
+    },
+    {
+      "key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec",
+      "position": 7,
+      "properties": {
         "progression_name": "Practice",
         "tips": [
           {
@@ -220,14 +230,38 @@
       }
     },
     {
-      "key": "aa8608c7-3ac7-4d50-acbe-88941ee158ce",
+      "key": "22809c62-55b8-490d-acfb-5d4af4540f23",
+      "position": 8,
+      "properties": {
+        "description": "While students work through levels, you can use these strategies to support a productive classroom environment and support students who may get stuck.\n- **Take Your Time:** Encourage students to take their time and experiment. Staying on a level and tinkering with their code is highly encouraged. \n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n\n",
+        "name": "General Support"
+      },
+      "seeding_key": {
+        "activity_section.key": "22809c62-55b8-490d-acfb-5d4af4540f23",
+        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+      }
+    },
+    {
+      "key": "77080cc8-ae95-481d-a927-0bbe3c87e4f5",
       "position": 1,
       "properties": {
-        "description": "####Math Talk\n**Do This:** Give each student a Wrap Up worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many letters will the bee need to find in order to spell the word SQUARE?  How many steps should the bee take to spell the word SQUARE?*\n\nThe goal of the Math Talk is to incorporate addition into the discussion using manipulatives (e.g. blocks, fingers, or images on the handout). Consider the following prompts as part of this discussion:\n- *Show me with your fingers how many letters are in the word SQUARE?*\n\n-  *What direction should the bee take to spell the word SQUARE?*\n\n- *How many steps should the bee take to the [East, West, North, or South]?*\n\n- Consider including and discussing the number zero to represent no steps in a certain direction. For example, the bee would take zero steps North to spell SQUARE.  \n\n- Use directions to help students develop multiple ways to show the total number of letters in a word.  \n\n  - SQUARE has six letters (3 + 3; three letters South, three letters East).\n\n  - Show me with your fingers another way to make six (two fingers one hand, four fingers with another hand, etc).\n",
+        "name": "Math Talk",
+        "progression_name": "Math Talk"
+      },
+      "seeding_key": {
+        "activity_section.key": "77080cc8-ae95-481d-a927-0bbe3c87e4f5",
+        "lesson_activity.key": "29e42f11-42f6-4062-9f73-8d9d1126ac8b"
+      }
+    },
+    {
+      "key": "aa8608c7-3ac7-4d50-acbe-88941ee158ce",
+      "position": 2,
+      "properties": {
+        "description": "\n**Do This:** Give each student a Wrap Up worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many letters will the bee need to find in order to spell the word SQUARE?  How many steps should the bee take to spell the word SQUARE?*\n\nThe goal of the Math Talk is to incorporate addition into the discussion using manipulatives (e.g. blocks, fingers, or images on the handout). Consider the following prompts as part of this discussion:\n- *Show me with your fingers how many letters are in the word SQUARE?*\n\n-  *What direction should the bee take to spell the word SQUARE?*\n\n- *How many steps should the bee take to the [East, West, North, or South]?*\n\n- Consider including and discussing the number zero to represent no steps in a certain direction. For example, the bee would take zero steps North to spell SQUARE.  \n\n- Use directions to help students develop multiple ways to show the total number of letters in a word.  \n\n  - SQUARE has six letters (3 + 3; three letters South, three letters East).\n\n  - Show me with your fingers another way to make six (two fingers one hand, four fingers with another hand, etc).\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Add In Movement:** Consider having students return to the floor grid (if part of the Warm Up) or go around the learning space and collect objects.  Students count or add objects they collect to help reinforce making connections between counting and cardinality.  After students collect objects, consider a discussion with the following guiding questions:\nHow many objects did you collect?\nShow me two different ways to add up your objects.\nExample, if a student collected 4 objects, then the student can represent how many total objects they collected by separating objects and showing math facts such as 1 object and 3 objects makes (equals) 4 objects or 2 objects and 2 objects makes (equals) 4 objects.\n"
+            "markdown": "**Add In Movement:** Consider having students return to the floor grid (if part of the Warm Up) or go around the learning space and collect objects.  Students count or add objects they collect to help reinforce making connections between counting and cardinality.  After students collect objects, consider a discussion with the following guiding questions:\n- How many objects did you collect?\n- Show me two different ways to add up your objects.\n  - Example, if a student collected 4 objects, then the student can represent how many total objects they collected by separating objects and showing math facts such as 1 object and 3 objects makes (equals) 4 objects or 2 objects and 2 objects makes (equals) 4 objects.\n"
           }
         ]
       },
@@ -244,6 +278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro Maze Spelling with Bee"
+        ],
         "progression": "Introduction to Maze Puzzles"
       },
       "bonus": false,
@@ -266,7 +303,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice"
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_1"
+        ],
+        "progression": "Model Level"
       },
       "bonus": false,
       "seeding_key": {
@@ -288,6 +328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_6"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -310,6 +353,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_13"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -332,6 +378,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_20"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -354,6 +403,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_2"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -376,6 +428,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_3"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -398,6 +453,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:CustomMaze:wordsearch_k_4"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -412,6 +470,31 @@
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_4"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc - stop math talk"
+        ],
+        "progression": "Math Talk"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc - stop math talk"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "spelling-bee",
+        "activity_section.key": "77080cc8-ae95-481d-a927-0bbe3c87e4f5"
+      },
+      "level_keys": [
+        "csc - stop math talk"
       ]
     }
   ],
@@ -510,6 +593,18 @@
         "lesson_group.key": "",
         "script.name": "spelling-bee",
         "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc - stop math talk",
+        "script_level.level_keys": [
+          "csc - stop math talk"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "spelling-bee",
+        "activity_section.key": "77080cc8-ae95-481d-a927-0bbe3c87e4f5"
       }
     }
   ],
