@@ -89,7 +89,7 @@ social:
 
   - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
     .banner.container{style: "color: black; display: flex"}
-      .col-sm-4.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/hoc-cse-left-fade.png); background-position: 100% 50%; background-size: contain; background-repeat: no-repeat"}
+      .col-sm-4.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 50%; background-size: contain; background-repeat: no-repeat"}
       .col-sm-4.col-xs-12{style: "text-align: center"}
         .bannerHeading= hoc_s(:learn_banner_heading)
         = hoc_s(:learn_banner_blurb)
@@ -98,7 +98,7 @@ social:
         .bannerTeachers
           %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
           != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
-      .col-sm-4.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/hoc-cse-right-fade.png); background-position: 0% 50%; background-size: contain; background-repeat: no-repeat"}
+      .col-sm-4.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 0% 50%; background-size: contain; background-repeat: no-repeat"}
 
   - else
     .banner.container{style: "color: black"}
