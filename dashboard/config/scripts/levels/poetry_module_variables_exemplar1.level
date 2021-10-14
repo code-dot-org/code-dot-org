@@ -37,6 +37,7 @@
     "show_poem_dropdown": "false",
     "blockly_variables": "word1, word2, word3",
     "min_workspace_height": "0",
+    "skip_autosave": true,
     "preload_asset_list": null,
     "standalone_app_name": "poetry"
   },
