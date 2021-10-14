@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-13 17:24:37 UTC",
+    "serialized_at": "2021-10-14 13:59:00 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa5-pilot"
@@ -1643,7 +1643,7 @@
       "key": "d7a842d2-532b-434d-ba99-8cf137dda4f6",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students independently complete the Check for Understanding on Level 1 then move on to complete Level 2 in pairs, where they use column-major order traversal to calculate the sum of each column in the inventory table. Have students continue to complete Level 3, where they update a method that prints prices elements in row-major order to column-major order.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students independently complete the Check for Understanding on Level 1 then move on to complete Level 2 in pairs, where they use column-major order traversal to calculate the sum of each column in the inventory table. Have students continue to complete Level 3, where they write a method that prints `truckPrices` elements in column-major order.",
         "progression_name": "Traversing Desserts"
       },
       "seeding_key": {
