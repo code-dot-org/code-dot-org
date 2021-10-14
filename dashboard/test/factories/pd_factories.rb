@@ -830,14 +830,12 @@ FactoryGirl.define do
     trait :csp do
       program Pd::Application::TeacherApplication::PROGRAMS[:csp]
       csp_which_grades ['11', '12']
-      csp_which_units ['Unit 1: Digital Information', 'Unit 2: The Internet']
       csp_how_offer 'As an AP course'
     end
 
     trait :csd do
       program Pd::Application::TeacherApplication::PROGRAMS[:csd]
       csd_which_grades ['6', '7']
-      csd_which_units ['Unit 1: Problem Solving', 'Unit 2: Web Development']
     end
   end
 
