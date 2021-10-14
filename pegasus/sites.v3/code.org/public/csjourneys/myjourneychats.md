@@ -123,12 +123,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <br>
 <strong>Maureen Sturgeon</strong> is a Software Engineer at Code.org. She didn’t discover computer science until college and is passionate about expanding access to computer science for K-12 students. Maureen graduated from Western Washington University with a B.S. in Mathematics. In her spare time, she enjoys hiking, traveling and watching stand-up comedy.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-computer-science-for-good-registration-166870053823" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/LPXAHFqmcwb8G3W89de3XLgyMFiy1PJ78N46pVAQcnji4DyhZuZiVOGZvo09eCb5Nsw_eVndN14zzb-1.b3Cs75dz9uhar9qv" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
