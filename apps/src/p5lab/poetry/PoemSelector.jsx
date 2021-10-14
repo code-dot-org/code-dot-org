@@ -11,9 +11,9 @@ import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {POEMS, PoetryStandaloneApp} from './constants';
-import {findProfanity} from '@cdo/apps/utils';
+import * as utils from '@cdo/apps/utils';
 
-function PoemEditor(props) {
+export function PoemEditor(props) {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [poem, setPoem] = useState('');
@@ -57,14 +57,20 @@ function PoemEditor(props) {
     const closeAndSave = () =>
       props.handleClose({title, author, lines: poem.split('\n')});
 
-    findProfanity(
-      [title, author, poem].join(' '),
-      appOptions.locale,
-      appOptions.authenticityToken
-    )
+    utils
+      .findProfanity(
+        [title, author, poem].join(' '),
+        appOptions.locale,
+        appOptions.authenticityToken
+      )
       .done(profaneWords => {
         if (profaneWords?.length > 0) {
-          setError(msg.profanityFoundError());
+          setError(
+            msg.profanityFoundError({
+              wordCount: profaneWords.length,
+              words: profaneWords.join(', ')
+            })
+          );
         } else {
           closeAndSave();
         }
