@@ -2,6 +2,82 @@
   "fa-IR": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "",
           "url": ""

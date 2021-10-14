@@ -2,6 +2,82 @@
   "in-TL": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "crwdns2696233:0crwdne2696233:0",
+          "url": "crwdns2696235:0crwdne2696235:0"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "crwdns2696749:0crwdne2696749:0",
+          "url": "crwdns2696751:0crwdne2696751:0"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "crwdns2696753:0crwdne2696753:0",
+          "url": "crwdns2696755:0crwdne2696755:0"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "crwdns2696757:0crwdne2696757:0",
+          "url": "crwdns2696759:0crwdne2696759:0"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "crwdns2696937:0crwdne2696937:0",
+          "url": "crwdns2696939:0crwdne2696939:0"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "crwdns2697121:0crwdne2697121:0",
+          "url": "crwdns2697123:0crwdne2697123:0"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "crwdns2697125:0crwdne2697125:0",
+          "url": "crwdns2697127:0crwdne2697127:0"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "crwdns2697549:0crwdne2697549:0",
+          "url": "crwdns2697551:0crwdne2697551:0"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "crwdns2697553:0crwdne2697553:0",
+          "url": "crwdns2697555:0crwdne2697555:0"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "crwdns2697557:0crwdne2697557:0",
+          "url": "crwdns2697559:0crwdne2697559:0"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "crwdns2697561:0crwdne2697561:0",
+          "url": "crwdns2697563:0crwdne2697563:0"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "crwdns2697565:0crwdne2697565:0",
+          "url": "crwdns2697567:0crwdne2697567:0"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "crwdns2697635:0crwdne2697635:0",
+          "url": "crwdns2697637:0crwdne2697637:0"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "crwdns2697789:0crwdne2697789:0",
+          "url": "crwdns2697791:0crwdne2697791:0"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "crwdns2697891:0crwdne2697891:0",
+          "url": "crwdns2697893:0crwdne2697893:0"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "crwdns2697995:0crwdne2697995:0",
+          "url": "crwdns2697997:0crwdne2697997:0"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "crwdns2698093:0crwdne2698093:0",
+          "url": "crwdns2698095:0crwdne2698095:0"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "crwdns2698097:0crwdne2698097:0",
+          "url": "crwdns2698099:0crwdne2698099:0"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "crwdns2698101:0crwdne2698101:0",
+          "url": "crwdns2698103:0crwdne2698103:0"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "crwdns2590828:0crwdne2590828:0",
           "url": "crwdns2689345:0crwdne2689345:0"

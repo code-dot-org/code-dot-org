@@ -2552,3 +2552,20 @@ ur-PK:
           گے؟*\n\n\nجب اپ آپنا کام ختم کر لیں تو اپنے سیمولیشن کو دوسروں کے ساتھ شریک
           کر لیں. دوسری کے ساتھ اپنا یہ پیغام شریک کریں کہ اگر شہر میں وائرس آ جائے
           تو آپ لوگوں کو کیسے محفوظ رکھیں گے. \n"
+      courseD_project_exemplars_2020_2021:
+        markdown: |-
+          # پروجیکٹ کی مثالیں
+
+          آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے، مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+
+
+          | اچھال پر بے ترتیب رفتار (باسکٹ بال) | اسٹارم ٹروپرز کی تعداد بڑھانا (اسٹار وارز) |
+          |---|---|
+          | [![اچھال پر بے ترتیب رفتار (باسکٹ بال)](https://images.code.org/b8c4fb3e6838ed7ceb4cbe82ad4a935f-image-1592507103767.png "اچھال پر بے ترتیب رفتار (باسکٹ بال)")](https://studio.code.org/projects/basketball/-v43GAnRDrVqG266q_Z-LPWeKInuU6oNIVpkepY81n4/view) | [![اسٹارم ٹروپرز کی تعداد بڑھانا (اسٹار وارز)](https://images.code.org/9999fe364e597cf5e7d4cd74456e27e3-image-1592507338941.png "اسٹارم ٹروپرز کی تعداد بڑھانا (اسٹار وارز)")](https://studio.code.org/projects/starwarsblocks/8ALnYQ_igeHBahKD2t8HMM8pm_M9pPGLcxAjOZNnkkI/view) |
+          | جب گیند اچھلتی ہے تو رفتار تبدیل ہو جاتی ہے! | اسٹارم ٹروپرز سے بچیں یا ان کی تعداد بڑھ جائے گی! |
+
+
+          | دہشت زدہ! ڈسکو میں (ڈانس پارٹی) | بیچ سین (فنکار) |
+          |---|---|
+          | [![پیٹرن (فنکار)](https://images.code.org/73ae79b4070ef734c1b5130333efc1f4-image-1592507673667.png "پیٹرن(فنکار)")](https://studio.code.org/projects/dance/UZLatmMAfCTcyIOCIvsTSf6zoPAZ524VQDuDThd5vAk/view) | [![سنوفلیک پھول (منجمد)](https://images.code.org/36570ade5dd92be16de34b06e614ee92-image-1592507892956.png "سنوفلیک پھول (منجمد)")](https://studio.code.org/projects/artist/7WY8_OM2z4cucIR9n5I6_RJ7LWhrpf82VM0pve-4Aqc/view) |
+          | آپ کے بیک اپ ڈانسرز اپنی حرکات بدلتے رہتے ہیں! | اس منظر میں مزید رنگ اور پس منظر شامل کرنے کی کوشش کریں! |

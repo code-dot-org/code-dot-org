@@ -615,6 +615,7 @@ th:
   pd:
     form_labels:
       email: อีเมล
+      school: โรงเรียน
       school_name: ชื่อโรงเรียน
       school_country: ประเทศของโรงเรียน
       colombian_chilean_school_name: ชื่อโรงเรียน

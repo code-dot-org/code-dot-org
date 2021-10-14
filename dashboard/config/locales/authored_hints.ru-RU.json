@@ -9421,7 +9421,11 @@
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "У тебя должны быть четыре блока события \"при нажатии стрелки\" с направлением движения, указанным под каждым из них.",
-          "courseE_playLab_scaffold1_c": "Закончив, ты сможешь двигать своего героя клавишами со стрелками!"
+          "courseE_playLab_scaffold1_c": "Закончив, ты сможешь двигать своего героя клавишами со стрелками!",
+          "playlab_up": "Чтобы переместить персонаж вверх, можно соединить эти блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Чтобы переместить персонаж вниз, можно соединить эти блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Чтобы переместить персонаж влево, можно соединить эти блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Чтобы переместить персонаж вправо, можно соединить эти блоки:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>"
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "Используй блок \"прибавить очко\" для прибавления очка и блок \"отнять очко\" для его вычитания."
@@ -9443,7 +9447,7 @@
           "courseC_PlayLab_events4_a": "Для решения этой головоломки тебе потребуется присоединить блок \"персонаж \\_\\_ говорит\" к событию \"когда персонаж касается\"."
         },
         "courseC_PlayLab_events5_2021": {
-          "courseC_PlayLab_events5_a": "Чтобы найти текст \"Что нового?\", открой выпадающее меню на блоке \"персонаж говорит\".",
+          "courseC_PlayLab_events5_a": "Чтобы найти текст \"Что нового?\", открой выпадающее меню в блоке \"персонаж говорит\".",
           "courseC_PlayLab_events5_b": "Запустив программу, нажми на фигурку Октавии, чтобы убедиться, что программа работает!"
         },
         "courseC_PlayLab_events6_2021": {

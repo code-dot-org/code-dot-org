@@ -2,6 +2,40 @@
   "es-MX": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Lista de Reproducción en Spotify (todas las edades)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Introducción a Artista"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Giros & Ángulos"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Giros & Ángulos"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Lista de Reproducción en Spotify (todas las edades)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Lista de Reproducción en Spotify (todas las edades)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Lista de Reproducción en Spotify (todas las edades)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: aprendizaje automático"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: implicaciones para la sociedad"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: datos de entrenamiento"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Presentamos el Laboratorio de sprites",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
@@ -241,6 +275,7 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "the-right-app-scenarios/courseb/2021": {
+          "name": "La Aplicación Correcta - Escenarios",
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
         "unplugged-video-big-event/courseb/2021": {

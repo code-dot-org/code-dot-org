@@ -1061,6 +1061,7 @@ tr:
           EFFECT:
             '"burst"': patlama
             '"rain"': yağmur
+            '"spiral"': sarmal
       gamelab_makeNewSpriteAnon:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:

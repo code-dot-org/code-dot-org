@@ -1168,6 +1168,7 @@ in:
             '"burst"': crwdns2692825:0crwdne2692825:0
             '"pop"': crwdns2692827:0crwdne2692827:0
             '"rain"': crwdns2692829:0crwdne2692829:0
+            '"spiral"': crwdns2696057:0crwdne2696057:0
             '"zigzag"': crwdns2693583:0crwdne2693583:0
       gamelab_makeNewSpriteAnon:
         text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
@@ -1372,18 +1373,6 @@ in:
             '"while"': crwdns2658654:0crwdne2658654:0
       gamelab_spriteSay:
         text: crwdns2572170:0[SPRITE]crwdnd2572170:0[0]crwdnd2572170:0[SPEECH]crwdnd2572170:0[1]crwdne2572170:0
-      gamelab_spriteSayChoices:
-        text: crwdns2688552:0[SPRITE]crwdnd2688552:0[0]crwdnd2688552:0[SPEECH]crwdnd2688552:0[1]crwdne2688552:0
-        options:
-          SPEECH:
-            '"I am Batman!"': crwdns2688554:0crwdne2688554:0
-            '"Being kind is never wasted."': crwdns2688556:0crwdne2688556:0
-            '"When you know better, you do better."': crwdns2688558:0crwdne2688558:0
-            '"You always pass failure on the way to success."': crwdns2688560:0crwdne2688560:0
-            '"Make each day your masterpiece."': crwdns2688562:0crwdne2688562:0
-            '"I am Catwoman!"': crwdns2688564:0crwdne2688564:0
-            '"Never quit!"': crwdns2688566:0crwdne2688566:0
-            '"Live Fast."': crwdns2688568:0crwdne2688568:0
       gamelab_spriteSayTime:
         text: crwdns2590328:0[SPRITE]crwdnd2590328:0[0]crwdnd2590328:0[TEXT1]crwdnd2590328:0[1]crwdnd2590328:0[NUM]crwdnd2590328:0[2]crwdne2590328:0
       gamelab_startAvoiding:
@@ -1870,12 +1859,12 @@ in:
         text: crwdns2546980:0crwdne2546980:0
       Poetry_addLine:
         text: crwdns2694079:0[LINE]crwdnd2694079:0[0]crwdne2694079:0
-      Poetry_animatePoem:
-        text: crwdns2695451:0crwdne2695451:0
+      Poetry_animateText:
+        text: crwdns2696059:0crwdne2696059:0
       Poetry_destroy:
         text: crwdns2694081:0[ANIMATION_NAME]crwdnd2694081:0[0]crwdne2694081:0
-      Poetry_hidePoem:
-        text: crwdns2694083:0crwdne2694083:0
+      Poetry_hideText:
+        text: crwdns2696061:0crwdne2696061:0
       Poetry_makeBurst:
         text: crwdns2694085:0[EFFECT]crwdnd2694085:0[0]crwdnd2694085:0[NUM]crwdnd2694085:0[1]crwdnd2694085:0[ANIMATION_NAME]crwdnd2694085:0[2]crwdne2694085:0
         options:
@@ -1943,13 +1932,10 @@ in:
           FONT:
             '"Arial"': crwdns2694173:0crwdne2694173:0
             '"Georgia"': crwdns2694175:0crwdne2694175:0
-            '"Palatino"': crwdns2694177:0crwdne2694177:0
             '"Times"': crwdns2694179:0crwdne2694179:0
             '"Courier"': crwdns2694181:0crwdne2694181:0
             '"Arial Black"': crwdns2694183:0crwdne2694183:0
             '"Impact"': crwdns2694185:0crwdne2694185:0
-            '"Tahoma"': crwdns2694187:0crwdne2694187:0
-            '"Verdana"': crwdns2694189:0crwdne2694189:0
       Poetry_setFontColor:
         text: crwdns2694191:0[FILL]crwdnd2694191:0[0]crwdne2694191:0
       Poetry_setForegroundEffect:
@@ -2002,8 +1988,8 @@ in:
             '"flyBottom"': crwdns2694263:0crwdne2694263:0
       Poetry_setTitle:
         text: crwdns2694265:0[TITLE]crwdnd2694265:0[0]crwdne2694265:0
-      Poetry_showPoem:
-        text: crwdns2694267:0crwdne2694267:0
+      Poetry_showText:
+        text: crwdns2696063:0crwdne2696063:0
       Poetry_startBehavior:
         text: crwdns2694269:0[ANIMATION_NAME]crwdnd2694269:0[0]crwdnd2694269:0[BEHAVIOR]crwdnd2694269:0[1]crwdne2694269:0
         options:

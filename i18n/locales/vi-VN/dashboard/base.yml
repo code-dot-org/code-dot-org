@@ -900,6 +900,7 @@ vi:
     form_labels:
       email: 'Thư điện tử'
       email_alternate: 'Email thay thế'
+      school: 'Trường'
       school_name: 'Tên trường'
       school_city: 'Thành phố của trường'
       school_country: 'Quốc gia'

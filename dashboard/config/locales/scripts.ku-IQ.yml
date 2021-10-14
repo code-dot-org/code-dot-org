@@ -801,3 +801,7 @@ ku:
           lesson_groups:
             lessonGroup-2:
               description: تاقیکردنەوە
+        poetry:
+          lessons:
+            lesson-3:
+              name: گۆڕاوەکان

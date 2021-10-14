@@ -405,8 +405,8 @@ fr:
       app_lab_tutorials: Tutoriels du Labo des Applis
       game_lab_documentation: Documentation sur le Labo des Jeux
       game_lab_tutorials: Tutoriels du Labo des Jeux
-      sprite_lab_documentation: Documentation sur le Labo des Lutins
-      sprite_lab_tutorials: Tutoriels du Labo des Lutins
+      sprite_lab_documentation: Documentation sur le Labo des Sprites
+      sprite_lab_tutorials: Tutoriels du Labo des Sprites
       web_lab_documentation: Documentation Web Lab
       educate_overview: Aperçu enseignant
       educate_elementary: École primaire
@@ -1285,6 +1285,7 @@ fr:
       email: E-mail
       email_alternate: Autre email
       gender: Sexe
+      school: École
       school_name: Nom de l'école
       school_city: Ville de l’École
       school_country: Pays de l’École

@@ -10711,7 +10711,7 @@
         },
         "helloworld_retro_location": {
           "storyboard_location": "Aby zmienić lokalizację duszka, kliknij pinezkę na bloku lokalizacji.\n\n<xml><block type=\"gamelab_location_picker\" id=\"pin\">\n          <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n        </block></xml>",
-          "location_pin_hint": "Aby zmienić lokalizację duszka, kliknij pinezkę na bloku lokalizacji, a następnie kliknij w miejsce, w którym ma się znaleźć.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+          "location_pin_hint": "Aby zmienić lokalizację duszka, kliknij pinezkę na bloku lokalizacji, a następnie kliknij w miejsce, w którym ma się znaleźć.\n\n![](<https://images.code.org/3d5dca5681f9a2e59233d3ee9f21cde0-image-1633536216302.2021-10-06 12_02_56.gif>)"
         },
         "helloworld_retro_multi": {
           "storyboard_costume": "Upewnij się, że kostiumy pasują do każdego duszka.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"

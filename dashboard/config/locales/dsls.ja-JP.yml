@@ -909,6 +909,7 @@ ja-JP:
         - correct: true
         questions:
         - {}
+        title: 予測する
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -917,6 +918,7 @@ ja-JP:
         - correct: true
         questions:
         - {}
+        title: 予測する
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -925,6 +927,7 @@ ja-JP:
         - correct: true
         questions:
         - {}
+        title: 予測する
       ConditionalsWithCards-Unplugged:
         markdown: |
           # 条件判定について
@@ -1092,10 +1095,40 @@ ja-JP:
           キャラをうごかして めいろを クリアする ほうほうを かんがえよう。
       Internet Simulator Setup:
         content1: 説明
+        markdown: "＃Code.orgのインターネットシミュレーター\n\n_注：このチュートリアルに記載されている手順は、Code.orgコンピュータサイエンス原則カリキュラムとは別に、インターネットシミュレーターをスタンドアロンツールとして使用したい教師向けに挙げられたものです。Code.orgコンピュータサイエンス原則カリキュラムの一部として設計されたアクティビティの使用を計画している場合は、[CSPカリキュラムページ]（https://code.org/educate/csp）をご覧ください_\n\n###
+          内容\n\n以下のような背景および情報が3ページにわたって用意されています。\n\n* インターネットシミュレータとは？ 概要（以下を参照）\n*
+          [セットアップ手順]（/s/netsim/レッスン/1/レベル/2）\n* [よくある質問]（/s/netsim/レッスン/1/レベル/3）\n
+          \n###　インターネットシミュレータとは？ 概要："
       Internet Simulator Setup 2:
         content1: 説明
+        markdown: |
+          ＃インターネットシミュレーター：セットアップの説明
+
+          1. **コードスタジオでセクションを作成します。**授業で生徒が互いに通信できるようにするには、すべての生徒をコードスタジオの同じセクションに関連付ける必要があります。教師用アカウントでサインインした場合、全生徒が参加するセクションを作成する必要があります。 セクションを作成する方法は次の通りです。
+           * 教師ダッシュボードの[sections]（https://code.org/teacher-dashboard#/sections）エリアに移動します
+           * 「新しいセクション」ボタンをクリックします。コースには、ログインタイプ「Eメール」と「cspunit1」を選択することをお勧めします。
+          <br>
+          <img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png" width="600px" />
+          <br><br>
+          2. **生徒にセクションに参加してもらいます。**セクションを作成したら、セクションの「生徒の管理」リンクをクリックします。生徒が自分のコードスタジオアカウントを作成したら、参加を求めることのできるセクションコードが表示されます。
+          <br><img src="https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png" width="400px" />
+          <br><br>
+          3. **使用するインターネットシミュレータバージョンへのURLを生徒に提供します。** [code.org/internetsimulator]（http://code.org/internetsimulator）で、インターネットシミュレータの構成を複数、作成しています。アクティビティに適した構成を見つけたら、URLを生徒に共有してください。全員が同じセクションにいれば、同じURLに到達すると自動的に相互につながれるようになります。
+
+          _次のステップ：よくある質問_
       Internet Simulator Setup 3:
         content1: 説明
+        markdown: |-
+          ＃インターネットシミュレータ：よくある質問
+
+          #### インターネットシミュレータで使用するよう設計されたアクティビティはどこにありますか？
+          特定のインターネットシミュレーター設定を含む、コンピューターサイエンス原則のカリキュラム用に設計したアクティビティは、ユニットレッスンプラン[here]（https://code.org/educate/csp）にあります。レッスンプランの多くに「教師用ヒントとコツ」サポートビデオがあり、教室でのアクティビティの一部として使用できるインターネットシミュレータのデモンストレーションを見ることができます。これらのアクティビティはそのまま使用することも、クラスに合わせて自由に変更することも可能です。
+
+          #### 授業用にインターネットシミュレータをカスタマイズできますか？
+          残念ながら、現時点では、Code.orgの外部の人がインターネットシミュレータの特定の設定や手順を作成する方法は用意していません。教室でアクティビティ中にうまく機能するさまざまな設定公開を試みています。長期的には、他の方にもツールを設定してもらう方法を考えたいと思っています。
+
+          #### インターネットシミュレーター用に指定したURLにアクセスしても、生徒がお互いを見つけられません。どうすれば良いですか？
+          インターネットシミュレータのロビーでお互いを見つけるには、生徒は同じセクションにいなくてはなりません。前のページのセクション設定手順を完了し、問題の生徒が、その特定のセクションコードに参加しているか再確認してください。また、以前にCode.orgのコースワークを行ったことがある場合、生徒によっては複数のセクションにいる可能性があります。ロビーに入る前に、セクションの名前を知らせて、ドロップダウンで選択してもらうようにしてください。
       Internet-Unplugged:
         markdown: |
           # インターネット
@@ -1336,6 +1369,8 @@ ja-JP:
         content1: 説明
       OPD-K5 Reviewing Reflections:
         content1: 説明
+        markdown: "# リフレクションのレビュー\n\nお疲れさまです！ これで基本的なコーディングの概念に慣れて、それらを実践する手がかりが得られました。\n\nこのレッスンでは、次のステップに進む前に、オンラインコース全体で書き留めたリフレクションのいくつかを確認する機会を設けました。
+          必要に応じて、自由に変更または更新しましょう！ \n\nコースEからFのオプションのセクションを完了しなかった場合は、このレベルをスキップして構いません。"
       OPD-K5 Stage3aGo:
         content1: 説明
       OPD-K5 Stage3aGo_copy:
@@ -1695,8 +1730,24 @@ ja-JP:
           - レッスン16：スプライトラボで学ぶバーチャルペット
       OPD-K5 sprite lab unplugged:
         content1: 説明
+        markdown: |
+          # アンプラグドレッスン：サイモンの言うとおり
+
+          > **スプライト**は、場所、動き、外観を説明するプロパティのある画面上の図形キャラクターです。**動き**とは、停止するように指示されるまでスプライトが継続的に実行するアクションです。
+
+          ***
+
+          ## **1. コースEの「<a href="https://curriculum.code.org/csf-19/coursee/5/" target="blank" rel="noopener noreferrer">サイモンの言うとおり</a>」レッスンプランを確認します。**
+          <br/>
+          コースEは4年生を対象としています。動きとスプライトはコースEとFでも登場します。
+
+          ***
+          <a href="https://curriculum.code.org/csf-19/coursee/5/" target="blank" rel="noopener noreferrer">![](https://images.code.org/991a82dba5edbd6c4909c540a1777041-image-1573149641437.00.20 AM.png)</a>
       OPD-K5 sprite lab video:
         content1: 説明
+        markdown: "# スプライトラボの紹介\n\nスプライト raboの紹介については、このビデオをご覧ください。  \n\n<a href=\"https://www.youtube.com/watch?v=l0B0gDuHHC8\"
+          target=\"blank\" rel=\"noopener noreferrer\">![](https://images.code.org/929bd692b7029063aa9bf5835f6e6397-image-1571775211459.12.36
+          PM.png)</a>"
       OPD-K5 types of lessons:
         content1: 説明
         markdown: |
@@ -4957,7 +5008,7 @@ ja-JP:
           - コンピュータサイエンス教育に関心のある教育者仲間のグローバルなコミュニティと繋がります
           - このコースで学んだことや感想を共有します
 
-          > **注**：以上が、学習計画を立てるのに役立つ推奨時間です。事前の知識、興味、能力により、特定の段階で費やす時間を調整することが望まれますので、その点にご留意ください。このコースは、完全に自分のペースで進めることが可能です。いつでもコースを離れたり、コースに戻ったり、任意のステージやレベルを再訪問したりすることができます。
+          > **注**：以上が、学習計画を立てるのに役立つ推奨時間です。事前の知識、興味、能力により、特定の段階で費やす時間を調整することが望まれますので、その点にご留意ください。このコースは、完全に自分のペースで進めることが可能です。いつでもコースを離れたり、コースに戻ったり、任意のステージやレベルを再訪したりすることができます。
       OPD-K5 Pair_copy:
         markdown: |+
           ＃指導実践：ペアプログラミング
@@ -5014,7 +5065,7 @@ ja-JP:
           最後に、オンライン学習は誰もにぴったりというわけではありません。このコースには、インストラクターがおらず、同僚とリアルタイムでコミュニケーションをとるビルトインの仕組みもありません。1対1の対応が必要な場合、またはコラボレーションやエンゲージメントの機会が多い、実際の教室でのほうがより学習できると分かっている場合は、<a href="http://code.org/professional-development-workshops" target="blank" rel="noopener noreferrer">対面による専門能力開発の機会</a>の1つをご利用ください。
       OPD-K5 Stage2Go_copy:
         markdown: |
-          #振り返り
+          # リフレクション
 
           <img src="https://images.code.org/14c402555ec4a61bf86f8ce9e9f61667-image-1571692551306.jpg" class="level-image">
 
@@ -5206,7 +5257,7 @@ ja-JP:
               <td style="background-color:#c9c1e9; color:black; border-style:none; vertical-align: text-top;"">20レッスン、20~22時間以内で完了</td>
             </tr>
             <tr>
-              <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">コンセプト</td>
+              <td colspan="6" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;">概念</td>
             </tr>
             <tr>
               <td style="background-color:#f9cb9c; color:black; border-style:none; vertical-align: text-top;"">
@@ -5271,7 +5322,7 @@ ja-JP:
           ****今後、各コースの内容についてさらに詳しく知りたい場合は、かなり徹底した内容を備えた<a href="https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview" target="blank" rel="noopener noreferrer">コンピュータサイエンス入門カリキュラムガイド</a>をご覧ください。**
       OPD-K5 What is Mastery_copy:
         markdown: |-
-          ＃将来について考える
+          ＃将来を見据える
 
           ##指導実践
           次のコンセプトのグループでは、以下のような指導実践について学びます。
@@ -5332,4 +5383,82 @@ ja-JP:
            >></button></a>
 
           <img src="https://images.code.org/1b213b6c2256c6992b899df3c62559a0-image-1571684948168.jpg">
+
+      OPD-K5 Assessment_copy:
+        markdown: "# その他のリソース\n\n教師としてCode.orgにログインすると、生徒がアクセスできない多くの機能にアクセスできます。コースを見つけ、セクションを作成し、クラスをそのセクションに割り当てる方法については、すでに説明しました。
+          ただし、以下のようなこともできます。 \n\n## 学習を続ける\n- **専門能力開発を継続する**：教師用の<a href=\"https://code.org/professional-development-workshops\"
+          target=\"blank\" rel=\"noopener noreferrer\">対面トレーニング</a>を利用しましょう。\n- **生徒として「コンピュータサイエンス入門」を学ぶ**：学習者として、Code.orgのレッスンで自分の進捗状況を確認しましょう。生徒もアカウントで進捗状況を確認することができますが、先生は、レッスンプランを見たり、すべてのパズルの解答を確認することができます。\n-
+          **コンピュータサイエンスについてさらに学ぶ：**オンラインチュートリアルやクラスといった<a href=\"https://hourofcode.com/us/beyond\"
+          target=\"blank\" rel=\"noopener noreferrer\">これらリソース</a>をご覧ください。コンピュータサイエンスの概念の理解を深められます。\n\n\n\n##
+          ヘルプとコミュニティを見つける\n- **コンピュータサイエンスのゲストスピーカーを見つける**：授業中に自分の仕事について喜んで語ってくれる<a
+          href=\"https://code.org/volunteer/local\" target=\"blank\" rel=\"noopener
+          noreferrer\">インテリジェントで情熱的な、魅力あるテクノロジー業界のプロ</a>を探しましょう。\n- **サポートを受ける**：
+          <a href=\"https://support.code.org/\" target=\"blank\" rel=\"noopener noreferrer\">support.code.org</a>にアクセスして、質問を投稿したり、他の先生の投稿に返信したり、Code.orgスタッフによるFAQに目を通したりしましょう。質問があれば、このページでCode.orgに直接、連絡することもできます。\n-
+          **先生用フォーラムをチェックする**：質問をしたり、素晴らしい教師作成のリソースをチェックしたり<a href=\"http://forum.code.org/c/csf\"
+          target=\"blank\" rel=\"noopener noreferrer\">フォーラム</a>で他の先生とつながったりしましょう。\n\nsupport.code.orgと先生用フォーラムには、Code.orgホームページの右上にあるドロップダウンメニューから、いつでもアクセスできます。\n\n![](https://images.code.org/35d6218f47f5b0b00975369dd9f5bea5-image-1573169909110.38.03
+          PM.png)\n\n"
+      OPD-K5 Connect_copy:
+        markdown: "＃ 次のステップ\n\n\n## 事後アンケートに回答する\n\nコース全体を順番に行った場合もそうでない場合も、フィードバックをお寄せください。今後のコースの改善に役立てるため、こちらから簡単なアンケートにお答えください！
+          \n\n<a class=\"btn btn-large btn-primary submitButton\" href=\"https://form.jotform.com/93176494681166?user_id=<user_id/>\"
+          target=\"blank\" rel=\"noopener noreferrer\"> 事後アンケートに回答する</a>\n\n## 証明書を印刷する\n\n専門能力開発オンラインコースの修了、おめでとうございます。このトレーニングの全レベルを完了した場合は、次の手順で、今すぐ修了証明書をダウンロードして印刷できます。\n\n-
+          <a href=\"https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals\"
+          target=\"blank\" rel=\"noopener noreferrer\">このリンク</a>にアクセスします。\n- 入力フィールド/ボックスに名前を入力します。\n-
+          [証明書を印刷する] をクリックします。\n- 証明書の画像を右クリックし、[名前を付けて画像を保存...] を選択すると、コンピュータにダウンロードできます。\n-
+          それから、お忘れなく...いつでもこのオンラインコースに戻って、学習内容を確認したり、リンクやリソースにアクセスしたり、記憶を呼び起こしたりできます！\n\n##
+          対面の専門能力開発ワークショップに参加しましょう\n- <a href=\"http://code.org/professional-development-workshops\"
+          target=\"blank\" rel=\"noopener noreferrer\">専門学習マップ</a>から、あなたの地域で提供されている「コンピュータサイエンス入門」ワークショップを確認しましょう！\n\n##
+          つながる\n- ** code.orgの教師用の専門学習コミュニティに今後も参加しましょう。**このコース全体で使用してきたフォーラムは、上達のための優れたリソースとなります。このコースで学んだことを振り返るだけでなく、ジャーニーを続ける中でサポートを受けたり、専門知識を必要とする他の人にサポートを提供したりするためにも使用できます。今すぐブックマークして、頻繁にアクセスしましょう。<a
+          href=\"http://forum.code.org/c/csf\" target=\"blank\" rel=\"noopener noreferrer\">http://forum.code.org/c/csf</a>\n-
+          ** Twitterでは <a href=\"http://twitter.com/teachcode\" target=\"blank\" rel=\"noopener
+          noreferrer\">@teachcode</a>を使ってつながりましょう。**\n- **コンピュータサイエンス教師協会（CSTA）に参加しましょう。**
+          <a href=\"http://csta.acm.org/index.html\" target=\"blank\" rel=\"noopener
+          noreferrer\">The CSTA</a>は、全国の教育者の熱心なコミュニティで、一般の人々にこのトピックに関する意識を高めてもらいながら、生徒へのコンピュータサイエンス教育の提供に取り組んでいます。毎年、カンファレンスが行われ、各地方でミーティングを開催する支部もあります。\n\n\n>
+          ご参加ありがとうございました！ 教室でコンピュータサイエンスとCodeStudioをどのように実装されるのか、お話を伺えるのを心待ちにしています！"
+      OPD-K5 PreSurvey:
+        markdown: |-
+          # はじめに > 事前アンケートに答える
+
+          この専門能力開発から可能な限り多くのことを引き出して欲しいと願っています。そこで、[この短い事前アンケート]（https://form.jotform.com/90556900301146）にお答えください。アンケートでは、このコースの目標を振り返っていただき、あなたについての情報、そして、どのようなサポートが必要かを少し教えてください。
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/> ">事前アンケートに答える</a>
+      OPD-K5 PreSurvey_dani:
+        markdown: |-
+          # はじめに > 事前アンケートに答える
+
+          この専門能力開発から可能な限り多くのことを引き出して欲しいと願っています。そこで、[この短い事前アンケート]（https://form.jotform.com/90556900301146）にお答えください。アンケートでは、このコースの目標を振り返っていただき、あなたについての情報、そして、どのようなサポートが必要かを少し教えてください。
+
+          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/> ">事前アンケートに答える</a>
+      OPD-K5 Stage10Start_copy:
+        markdown: "# 概要：次のステップ\n\n<img src=\"https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG\"
+          class=\"level-image\">\n\n##これまでに行ったこと\n\n  - 「コンピュータサイエンス入門」のカリキュラムの構成と内容をしっかり理解しました\n
+          \ - コーディングの基本を実践しました\n  - 指導実践と、教室での使用方法について考えました\n\n \n## この概念グループの内容\n
+          \nこの最後の概念グループを完了することで、次のことができます。\n\n  - 教師用リソースを探す\n  - Code.orgでクラスセクションを設定する方法を学ぶ\n
+          \ - 「コンピュータサイエンス入門」を教室に導入するための計画を立てる\n  - 学習を継続するためにとれる次のステップを計画する\n  -
+          コンピュータサイエンス教育に関心のある教育者仲間のグローバルコミュニティとつながる\n  - 事後アンケートを通じてフィードバックを提供する\n
+          \ - 修了証明書を印刷する"
+      OPD-K5 Stage9Start_copy:
+        markdown: |-
+          # 教師用リソースを探究する
+
+          では、指導の計画を立て始めましょう。この段階では、Code.orgプラットフォームのその他の領域と**<a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">教師用ダッシュボード</a> **を一巡します。
+
+          教師ダッシュボードのスクリーンショットは次のようなものです。これを表示するには、Code.orgの教師用アカウントにログインする必要があります。ログインすると、Code.orgウェブサイトに表示されるデフォルトの画面が表示されます。教師用アカウントがない場合は、** <a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">こちらから登録できます</a>**。
+
+          <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
+      OPD-K5 Your Plan_copy:
+        markdown: |+
+          ＃あなたの計画
+
+          このステージでは、Code Studioで利用できるリソースを紹介したいと思います。code.orgまたはCode Studioのリソースを使用して、将来どのようにコンピュータサイエンスを教えるか考えるにあたり、<a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer">あなたの計画を専門学習コミュニティ（PLC）で共有しましょう</a>。
+
+          次のようなことを共有してください：
+
+          - 授業の目標は何ですか？ コンピュータサイエンスまたはcode.orgのリソースは、これらの目標を達成するのにどのように役立っていますか？
+          - これらのリソースのいくつかを実装することについて、最も心を躍らせていることは何ですか？
+          - 目標達成のために、どのような難題が予想されますか？
+          - このコミュニティで答えが分かりそうな質問はありますか？
+
+          最初の計画を投稿した後も、<a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer">このスレッド</a>に再度アクセスして、状況を更新しましょう！他の人の投稿も確認して、さらにインスピレーションを得ることをお勧めします。
+
+          > <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank" rel="noopener noreferrer"><button class="plc">計画を投稿する>></button></a>
 

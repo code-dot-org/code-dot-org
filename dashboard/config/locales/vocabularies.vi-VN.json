@@ -2,6 +2,72 @@
   "vi-VN": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "function/hero/unversioned": {
+          "word": "Hàm"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "code/artist/unversioned": {
+          "word": "Mã"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Điều kiện"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Vòng lặp"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "code/sports/unversioned": {
+          "word": "Mã"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Sửa lỗi"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Học máy"
+        },
         "behavior/coursef/2021": {
           "word": "Hành vi"
         },

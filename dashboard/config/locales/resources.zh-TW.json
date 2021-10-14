@@ -2,6 +2,36 @@
   "zh-TW": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify 播放清單（所有年齡段）"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "藝術家簡介"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "轉向與角度"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "轉向與角度"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify 播放清單（所有年齡段）"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify 播放清單（所有年齡段）"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify 播放清單（所有年齡段）"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI（人工智慧）：機器學習"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI（人工智慧）：社會影響"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI（人工智慧）：訓練資料與偏見"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Sprite Lab 簡介"
         },

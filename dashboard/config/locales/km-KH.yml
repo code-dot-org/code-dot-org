@@ -582,6 +582,7 @@ km:
   pd:
     form_labels:
       email: អ៊ីម៉ែល
+      school: សាលា
       school_name: ឈ្មោះរបស់សាលា
       school_city: ទីក្រុងរបស់សាលា
       school_country: សាលាក្នុងប្រទេស

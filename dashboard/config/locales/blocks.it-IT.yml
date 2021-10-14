@@ -1144,6 +1144,7 @@ it:
           EFFECT:
             '"burst"': scoppio
             '"rain"': pioggia
+            '"spiral"': spirale
       gamelab_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       gamelab_makeNumSprites:

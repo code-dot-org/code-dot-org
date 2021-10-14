@@ -9406,3 +9406,11 @@ se:
               display_name: Sisdoallu
             lessonGroup-2:
               display_name: Sisdoallu
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Modulat
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stávengilvu

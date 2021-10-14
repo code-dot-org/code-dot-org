@@ -964,6 +964,7 @@ pt:
       email: 'E-mail'
       email_alternate: 'Email Alternativo'
       gender: 'Identidade de Gênero'
+      school: 'Escola'
       school_name: 'Nome da escola'
       school_city: 'Cidade da Escola'
       school_country: 'País da Escola'
