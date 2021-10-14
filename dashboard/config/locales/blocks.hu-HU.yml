@@ -1139,6 +1139,7 @@ hu:
           EFFECT:
             '"burst"': robbanás
             '"rain"': esős
+            '"spiral"': spirál
       gamelab_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNumSprites:

@@ -163,7 +163,10 @@ az:
     user_type_button: "Hesab növünü yeniləyin"
     user_type_label: "Hesab növü"
     user_type_student: "şagird"
+    user_type_student_ability_1: "Tərəqqinizi və layihələrinizi saxlayın"
+    user_type_student_ability_2: "Müəlliminizin sinif bölməsinə qoşulun"
     user_type_teacher: "Müəllim"
+    user_type_teacher_ability_1: "sinif bölmələri yaradın"
     field_is_required: "zəruridir"
     accept_terms: "Hesabı yaratmaq üçün razılaşmalısınız."
     error: "Xəta baş verdi."
@@ -184,6 +187,7 @@ az:
     charter: 'Nizamnamə'
     private: 'Gizli'
     public: 'İctimai'
+    homeschool: 'ev məktəbi'
     after_school: 'Məktəbdən sonra'
     other: 'Digər'
     state: 'Ştat'
@@ -516,6 +520,7 @@ az:
   share:
     title: "Code Studio-da öyrənin"
     description: "Hər kəs kompüter elmini öyrənə bilər. Kodlarla oyunlar, proqramlar və sənət hazırlayın."
+    try_hour_of_code: 'Kodun bir saatını  yoxlayın !'
   gender:
     male: 'Kişi'
     female: 'Qadın'
@@ -541,6 +546,7 @@ az:
     built_on_code_studio: 'Code Studio-da inşa edilmişdir'
     make_my_own_app: 'Öz tətbiqimi hazırla'
     how_it_works: 'Necə işləyir (Kodu göstər)'
+    try_hour_of_code: 'Kodun bir saatını  yoxlayın !'
     store: 'Mağaza'
   reference_area:
     title: 'Kömək lazımdır?'
@@ -549,6 +555,7 @@ az:
     teacher_no_solution: 'Həll görməyi dayandırın'
     auth_error: 'Həlli görməyə səlahiyyətiniz yoxdur.'
     submit: 'Sənətçinin yerini yeniləyin'
+    direction: 'Istiqamətə başlayın (dərəcələrdə)'
   video:
     tab: 'Video.'
     notes: 'Video yoxdur? Qeydləri göstər.'
@@ -594,6 +601,7 @@ az:
       title: 'Proqram Labı'
       body: "App Lab sadə tətbiqetmələr hazırlaya biləcəyiniz bir proqramlaşdırma mühitidir. Bir tətbiq hazırlayın, işləməsi üçün bloklarla və ya JavaScript ilə kod hazırlayın, sonra tətbiqinizi saniyələr içində paylaşın."
       audience: '13+ yaş'
+      cta: "Öyrənin necə \n"
     dance:
       title: 'Rəqs şənliyi'
     dance-2019:
@@ -616,8 +624,11 @@ az:
     gamelab:
       title: "Oyun labaratoriyası"
       audience: "13+ yaş"
+      cta: "Öyrənin necə \n"
     weblab:
+      title: "veb-laboratoriya (beta)"
       audience: "13+ yaş"
+      cta: "Öyrənin necə \n"
     frozen:
       title: "Buzlu ürək"
     starwars:
@@ -640,6 +651,7 @@ az:
       title: "Şərti ifadələr"
     widgets:
       audience: "14+ yaş"
+      cta: "Öyrənin necə \n"
   landing:
     report_bug: "Xəta bildirin"
     support: "Kömək istə"
@@ -689,6 +701,7 @@ az:
   text_match:
     placeholder: "Cavabınızı buraya daxil edin"
     open_response_title: "Təşəkkürlər,"
+    open_response_body: "Cavabınız  üçün təşəkkürlər!"
     correct_title: "Düzgün"
     correct_body: "Bu düzgün cavabdır."
   lesson_extras:
@@ -806,6 +819,7 @@ az:
       things_you_liked_s: 'Bu məşğələdə yerinə yetirdiyiniz tapşırıqlar barədə ən çox bəyəndiyiniz iki şey və bəyənməyinizin səbəbi nə idi?'
     form_labels:
       email: 'E-poçt'
+      school: 'Məktəb'
       school_name: 'Məktəbin adı'
       colombian_chilean_school_name: 'Məktəbin adı'
     form_entries:

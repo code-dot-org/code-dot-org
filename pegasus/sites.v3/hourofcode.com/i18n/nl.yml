@@ -30,6 +30,8 @@ nl:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: "  Leer vandaag, bouw een mooiere morgen.  "
   hoc2020_header_with_line_break_markdown: "  Leer vandaag, bouw een mooiere morgen.
     \ "
@@ -61,6 +63,7 @@ nl:
     Informatica is elementair voor alle leerlingen.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: "  AI for Oceans  "
   oceans_landing_description: "  Leer over machine learning en het ethisch gebruik
     van AI.  "
@@ -220,6 +223,8 @@ nl:
     Code-evenement organiseren. Eén uur durende tutorials in meer dan 45 talen. Geen
     ervaring nodig.
   hourofcode_homepage_hoc2018_header_line2: Leeftijd 4 tot 104.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: Gebruik blokken code om Alex of Steve op avontuur
     te sturen door deze Minecraft wereld.
   codeorg_homepage_hoc2019_dance_heading: Probeer de nieuwe <span class="highlight-word">Dance&nbsp;Party!</span>

@@ -2873,7 +2873,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "helloworld_animals_sounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -2957,7 +2958,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "helloworld_emoji_sounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -3021,7 +3023,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "helloworld_food_sounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -3105,7 +3108,8 @@
           "spinning left": "rýchlo sa otočiť vľavo",
           "fluttering": "chvenie",
           "moving west and looping": "posun na západ a cyklenie",
-          "moving east and looping": "posun na východ a cyklenie"
+          "moving east and looping": "posun na východ a cyklenie",
+          "moving forward": "posúvanie dopredu"
         },
         "helloworld_retro_sounds": {
           "swimming left and right": "plávať vľavo a vpravo",
@@ -3120,6 +3124,26 @@
           "moving west": "posúvať sa na západ",
           "spinning right": "točenie vpravo",
           "spinning left": "rýchlo sa otočiť vľavo",
+          "moving with arrow keys": "posúvanie klávesami so šípkami",
+          "driving with arrow keys": "ovládanie pomocou šípok",
+          "fluttering": "chvenie",
+          "wobbling": "kolísanie",
+          "moving west and looping": "posun na západ a cyklenie",
+          "moving east and looping": "posun na východ a cyklenie"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "túlať sa",
+          "moving east": "posúvať sa na východ",
+          "spinning left": "rýchlo sa otočiť vľavo",
+          "spinning right": "točenie vpravo",
+          "shrinking": "zmenšovať sa",
+          "growing": "rásť",
+          "moving south": "posúvať sa na juh",
+          "swimming left and right": "plávať vľavo a vpravo",
+          "moving north": "posúvať sa na sever",
+          "jittering": "chvieť sa",
+          "moving west": "posúvať sa na západ",
+          "patrolling": "hliadkovať",
           "moving with arrow keys": "posúvanie klávesami so šípkami",
           "driving with arrow keys": "ovládanie pomocou šípok",
           "fluttering": "chvenie",

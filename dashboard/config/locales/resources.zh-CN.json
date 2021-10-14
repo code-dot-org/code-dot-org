@@ -2,6 +2,36 @@
   "zh-CN": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify 播放列表（所有年龄段）"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "《小艺术家》简介"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "转向与角度"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "转向与角度"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify 播放列表（所有年龄段）"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify 播放列表（所有年龄段）"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify 播放列表（所有年龄段）"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "人工智能：机器学习"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "人工智能：对社会的影响"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "人工智能：训练数据与偏差"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "向你介绍精灵图实验室"
         },

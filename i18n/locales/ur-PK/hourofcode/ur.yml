@@ -30,6 +30,8 @@ ur:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: اج سیکھیں، اور اپنا مستقبل روشن بنائیں.
   hoc2020_header_with_line_break_markdown: |-
     آج سیکھیں،
@@ -62,6 +64,7 @@ ur:
     ہر طالب علم کے سیکھنے کے لئے بنیادی ہے۔.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: سمندروں کے مصنوعی ذہانت
   oceans_landing_description: مشین لرننگ اور AI کے اخلاقی استعمال کے بارے جانیں.
   cs_for_good_hashtag: "#CSforGood"
@@ -216,6 +219,8 @@ ur:
   hourofcode_homepage_hoc2018_header_line1: کوئی بھی، کہیں بھی کوڈ ایونٹ منظم کرسکتا
     ہے. 45 گھنٹے سے زائد زبانوں میں ایک گھنٹے کا سبق. کوئی تجربہ نہیں ہے.
   hourofcode_homepage_hoc2018_header_line2: 4 کے لئے 104 عمر ۔
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: ایک نئی نئی سرگرمی کے ساتھ کوڈ کا قیام کے لئے
     میرا کرافٹ واپس آتا ہے! کوڈ کے ساتھ میرا دستکاری کے ذریعے سفر.
   codeorg_homepage_hoc2019_dance_heading: نیا آزمائیں <span class="highlight-word">Dance&nbsp;Party!</span>

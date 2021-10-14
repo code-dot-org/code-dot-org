@@ -968,7 +968,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nieuw blok!",
-          "poetry_multiple_sprites": "Nieuw blok!"
+          "poetry_multiple_sprites": "Nieuw blok!",
+          "poetry_new_block": "Nieuw blok!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Nieuw blok!"

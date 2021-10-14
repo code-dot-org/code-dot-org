@@ -315,7 +315,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "புதிய தொகுதி!",
-          "poetry_multiple_sprites": "புதிய தொகுதி!"
+          "poetry_multiple_sprites": "புதிய தொகுதி!",
+          "poetry_new_block": "புதிய தொகுதி!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "புதிய தொகுதி!"

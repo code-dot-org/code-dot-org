@@ -29,6 +29,8 @@ hi:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: "  आज सीखें, अपना कल बेहतर बनाएँ।  "
   hoc2020_header_with_line_break_markdown: "  आज सीखें,\tअपना कल बेहतर बनाएँ।  "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -59,6 +61,7 @@ hi:
     लिए कंप्यूटर विज्ञान सीखने के लिए एक मजबूत आधार है।
   social_hoc2019_dance: कैटी पेरी, जोनास ब्रदर्स, लिल नास एक्स, पैनिक एट द डिस्को,
     और बहुत कोई!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: "  समुद्रों के लिए कृत्रिम बुद्धि  "
   oceans_landing_description: "  मशीन प्रशिक्षण और कृत्रिम बुद्धि के नैतिकतापूर्ण
     इस्तेमाल के बारे में जानें।  "
@@ -225,6 +228,8 @@ hi:
   hourofcode_homepage_hoc2018_header_line1: कोई भी, कहीं भी एक ऑवर ऑफ़ कोड इवेंट आयोजित
     कर सकता है।45 से अधिक भाषाओं में एक घंटे के ट्यूटोरियल।किसी अनुभव की जरूरत नहीं।
   hourofcode_homepage_hoc2018_header_line2: 4 से 104 उम्र।
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: एक नई गतिविधि के साथ Minecraft ऑवर ऑफ़ कोड के
     लिए वापस आ गया है! कोड के साथ Minecraft के माध्यम से यात्रा करें।
   codeorg_homepage_hoc2019_dance_heading: नई <span class="highlight-word">डांस&nbsp;पार्टी

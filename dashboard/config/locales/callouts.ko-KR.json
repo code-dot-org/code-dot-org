@@ -1690,7 +1690,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "새 블록!",
-          "poetry_multiple_sprites": "새 블록!"
+          "poetry_multiple_sprites": "새 블록!",
+          "poetry_new_block": "새 블록!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "새 블록!"

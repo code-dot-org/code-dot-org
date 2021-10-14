@@ -2,6 +2,72 @@
   "is-IS": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Villuleit"
+        },
+        "function/hero/unversioned": {
+          "word": "Aðgerð"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Villuleit"
+        },
+        "code/artist/unversioned": {
+          "word": "Kóði"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Villuleit"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Skilyrði"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Lykkjur"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Villuleit"
+        },
+        "code/sports/unversioned": {
+          "word": "Kóði"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Villuleit"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Villuleit"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Vélarnám"
+        },
         "variable/coursef/2021": {
           "word": "Breyta"
         },

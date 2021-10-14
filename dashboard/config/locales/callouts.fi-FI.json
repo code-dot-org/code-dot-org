@@ -458,7 +458,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Uusi blokki!",
-          "poetry_multiple_sprites": "Uusi blokki!"
+          "poetry_multiple_sprites": "Uusi blokki!",
+          "poetry_new_block": "Uusi blokki!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Uusi blokki!"
