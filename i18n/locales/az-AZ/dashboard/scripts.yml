@@ -639,6 +639,7 @@ az:
             Unit 6 Overview:
               name: 6cü Hissə Baxış
         cspunit4draft:
+          description_short: məlumat
           lessons:
             Cleaning Data:
               name: Məlumatların Təmizlənməsi
@@ -864,10 +865,16 @@ az:
           lessons:
             Unit 1 Overview:
               name: 1cü Hissə Baxış
+        CSDU1-Draft:
+          lessons:
+            Exploring Apps:
+              name: Tətbiqləri araşdırmaq
         CSDU2-Draft:
           lessons:
             Website Design:
               name: Vebsayt Dizaynı
+        CSDU5-Draft:
+          description_short: məlumat
         CSF_Secret_Sample_Story:
           description_audience: 8-18 yaş+
           lessons:
@@ -2076,6 +2083,8 @@ az:
           lesson_groups:
             csf_variables:
               display_name: dəyişənlər
+            csf_data:
+              display_name: məlumat
             csf_internet:
               display_name: İnternet
             csf_digcit:
@@ -2197,6 +2206,8 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+            csf_data:
+              display_name: məlumat
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2822,6 +2833,8 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+            csf_data:
+              display_name: məlumat
         coursed-2020:
           title: D Kursu (2020)
           lesson_groups:
@@ -2867,6 +2880,8 @@ az:
               display_name: Rəqəmsal vətəndaşlıq
             csf_variables:
               display_name: dəyişənlər
+            csf_data:
+              display_name: məlumat
           lessons:
             Internet:
               name: İnternet
@@ -3178,6 +3193,8 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+            csf_data:
+              display_name: məlumat
         coursed-2021:
           title: D Kursu (2021)
           lessons:
@@ -3445,3 +3462,11 @@ az:
               display_name: Məzmun
             lessonGroup-2:
               display_name: Məzmun
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: Alətlər
+        poetry:
+          lessons:
+            lesson-3:
+              name: dəyişənlər

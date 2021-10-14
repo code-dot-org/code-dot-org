@@ -152,3 +152,10 @@ export const PlaygroundItemType = {
   IMAGE: 'image',
   TEXT: 'text'
 };
+
+export const ExecutionType = {
+  // Compile and run the main method
+  RUN: 'RUN',
+  // Compile and run tests
+  TEST: 'TEST'
+};

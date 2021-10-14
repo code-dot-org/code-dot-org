@@ -485,7 +485,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "בלוק חדש!",
-          "poetry_multiple_sprites": "בלוק חדש!"
+          "poetry_multiple_sprites": "בלוק חדש!",
+          "poetry_new_block": "בלוק חדש!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "בלוק חדש!"

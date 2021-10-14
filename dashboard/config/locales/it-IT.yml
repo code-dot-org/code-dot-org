@@ -1269,6 +1269,7 @@ it:
       email: Indirizzo email
       email_alternate: Email alternativa
       gender: Identità di genere
+      school: Scuola
       school_name: Nome della scuola
       school_city: Città della scuola
       school_country: Paese della Scuola

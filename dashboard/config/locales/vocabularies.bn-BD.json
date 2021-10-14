@@ -2,6 +2,21 @@
   "bn-BD": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "ফাংশন"
+        },
+        "code/artist/unversioned": {
+          "word": "কোড"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "শর্তযুক্ত"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "চক্র"
+        },
+        "code/sports/unversioned": {
+          "word": "কোড"
+        },
         "variable/coursef/2021": {
           "word": "চলক"
         },

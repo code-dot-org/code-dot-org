@@ -2,6 +2,41 @@
   "fr-FR": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Playlist Spotify (tous âges)"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Introduction à l'Artiste",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Les Tours et les Angles"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Les Tours et les Angles",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Playlist Spotify (tous âges)"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Playlist Spotify (tous âges)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Playlist Spotify (tous âges)"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": " Apprentissage Automatique",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "IA : Impact sur la Société",
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "IA : Les Données de Formation et la Déformation",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Introduction au Labo des Sprites",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
@@ -27,9 +62,11 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "Les Sprites en Action"
+          "name": "Les Sprites en Action",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "Le pouvoir des mots : diapos de la leçon ",
           "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
@@ -61,7 +98,14 @@
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
         "text_and_prompts/coursef/2021": {
-          "name": "Texte et invites "
+          "name": "Texte et invites ",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
+        },
+        "user_input_programs/coursef/2021": {
+          "name": "Programmes de saisie utilisateur "
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "Niveau de Sandbox du professeur"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Faire une Pause et réfléchir en ligne",
@@ -140,18 +184,40 @@
         "rubric-csf-final-projects/coursef/2021": {
           "name": "CS Fundamentals Projet Final"
         },
+        "course_vocabulary/coursef/2021": {
+          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        },
         "implementation_guide/coursef/2021": {
-          "name": "Guide de mise en œuvre"
+          "name": "Guide de mise en œuvre",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "name": "Guide des types de cours",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "Guide de débogage",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursef/2021": {
-          "name": "Guide Pédagogique"
+          "name": "Guide Pédagogique",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "Journal des modifications 2021 ",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des Enseignants",
+          "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "Documentation sur le Labo des Sprites",
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Modifications de cours virtuels ",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "Sentiers numériques : diapositives de cours",
@@ -259,13 +325,30 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "implementation_guide/courseb/2021": {
-          "name": "Guide de mise en œuvre"
+          "name": "Guide de mise en œuvre",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/courseb/2021": {
+          "name": "Guide des types de cours",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "Guide de débogage",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "Guide Pédagogique"
         },
+        "2021_change_log/courseb/2021": {
+          "name": "Journal des modifications 2021 ",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
         "teacher_forum_1/courseb/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des Enseignants",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Modifications de cours virtuels "
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "Sécurité dans mon quartier en ligne : diapositives de la leçon ",
@@ -431,24 +514,30 @@
           "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
         "implementation_guide/coursea/2021": {
-          "name": "Guide de mise en œuvre"
+          "name": "Guide de mise en œuvre",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursea/2021": {
-          "name": "Guide des types de cours"
+          "name": "Guide des types de cours",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursea/2021": {
-          "name": "Guide de Débogage"
+          "name": "Guide de Débogage",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "Guide Pédagogique"
         },
         "2021_change_log/coursea/2021": {
-          "name": "Journal des modifications 2021 "
+          "name": "Journal des modifications 2021 ",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursea/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des Enseignants",
+          "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
+          "name": "Modifications de cours virtuels ",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
@@ -547,14 +636,54 @@
           "name": "Les bracelets binaires",
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
+        "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "name": "Guide de planification de projet Play Lab (exemple) ",
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+        },
+        "play-lab-project-guide/coursec/2021": {
+          "name": "Guide de planification du projet Play Lab",
+          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "Cartographie des normes du CSTA ",
+          "url": "https://studio.code.org/s/coursec-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "Guide du tronc commun et de la NGSS ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "Activités interdisciplinaires supplémentaires"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "Vocabulaire du cours",
+          "url": "https://studio.code.org/s/coursec-2021/vocab"
+        },
         "implementation_guide/coursec/2021": {
-          "name": "Guide de mise en œuvre"
+          "name": "Guide de mise en œuvre",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursec/2021": {
+          "name": "Guide des types de cours",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "Guide de Débogage",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "Guide Pédagogique"
         },
+        "2021_change_log/coursec/2021": {
+          "name": "Journal des modifications 2021 ",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
         "teacher_forum_1/coursec/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des Enseignants",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Modifications de cours virtuels "
         },
         "password_power-up_lesson_quiz/coursed/2021": {
           "name": ""
@@ -578,28 +707,35 @@
           "name": "Programmation sur papier quadrillé"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Programmation sur papier quadrillé"
+          "name": "Programmation sur papier quadrillé",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Programmation en Binôme"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Programmation de relais"
+          "name": "Programmation de relais",
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
         },
         "relay-assessment/coursed/2021": {
-          "name": "Programmation de relais"
+          "name": "Programmation de relais",
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Programmation de relais"
+          "name": "Programmation de relais",
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Programmation de relais"
+          "name": "Programmation de relais",
+          "url": "https://youtu.be/l5MKkXbzOsk"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Programmation de relais"
+          "name": "Programmation de relais",
+          "url": "https://youtu.be/ZULpfAVJOBo"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Programmation de relais"
+          "name": "Programmation de relais",
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
         },
         "course-cf-blockly-blocks/coursed/2021": {
           "name": " Blocs Débranchés (Cours C à F)",
@@ -615,6 +751,10 @@
         "dance_party_unplugged/coursed/2021": {
           "name": " Débranché"
         },
+        "open-ended_programming_levels_2/coursed/2021": {
+          "name": "Niveaux de programmation ouverts ",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+        },
         "feeling-faces-image/coursed/2021": {
           "name": "Visages expressifs"
         },
@@ -623,39 +763,64 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes"
+          "name": "Instructions conditionnelles avec des cartes",
+          "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes"
+          "name": "Instructions conditionnelles avec des cartes",
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "Les Conditions avec des Cartes - Exemple de Programme"
+          "name": "Les Conditions avec des Cartes - Exemple de Programme",
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes"
+          "name": "Instructions conditionnelles avec des cartes",
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes"
+          "name": "Instructions conditionnelles avec des cartes",
+          "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Instructions conditionnelles avec des cartes"
+          "name": "Instructions conditionnelles avec des cartes",
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "implementation_guide/coursed/2021": {
-          "name": "Guide de mise en œuvre"
+          "name": "Guide de mise en œuvre",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "Guide des types de cours",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "Guide de débogage",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "Guide Pédagogique"
         },
+        "2021_change_log/coursed/2021": {
+          "name": "Journal des modifications 2021 ",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
         "teacher_forum_1/coursed/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des Enseignants",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Modifications de cours virtuels "
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "Blocs Débranchés de Labyrinthe"
+          "name": "Blocs Débranchés de Labyrinthe",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair_programming/express/2021": {
           "name": "Programmation en Binôme"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "Blocs hors ligne (Cours C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
@@ -691,13 +856,19 @@
         "dance-party-playlist/express/2021": {
           "name": "Playlist Spotify (tous âges)"
         },
+        "open-ended_programming_levels/express/2021": {
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+        },
         "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "Blocs hors ligne (Cours C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "Blocs hors ligne (Cours C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "Blocs hors ligne (Cours C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
@@ -709,7 +880,8 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
-          "name": "Texte et invites "
+          "name": "Texte et invites ",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
           "name": "variables"
@@ -718,7 +890,11 @@
           "name": "CS Fundamentals Projet Final"
         },
         "teacher_forum_1/express/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des Enseignants",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "debugging_guide/express/2021": {
+          "name": "Guide de débogage"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Programmation en Binôme"
@@ -731,7 +907,14 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "teacher_forum_1/pre-express/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des Enseignants",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "Guide de débogage"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "Suivez l'algorithme "
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Documentation sur le Labo des Sprites",
@@ -786,17 +969,34 @@
           "name": "72 Façons Créatives pour Vos Élèves de Montrer Ce Qu'ils Savent"
         },
         "implementation_guide/coursee/2021": {
-          "name": "Guide de mise en œuvre"
+          "name": "Guide de mise en œuvre",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "name": "Guide des types de cours",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "Guide de débogage",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "Guide Pédagogique"
         },
+        "2021_change_log/coursee/2021": {
+          "name": "Journal des modifications 2021 ",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
+        },
         "teacher_forum_1/coursee/2021": {
-          "name": "Forum des Enseignants"
+          "name": "Forum des Enseignants",
+          "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Documentation sur le Labo des Sprites",
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Modifications de cours virtuels "
         }
       }
     }

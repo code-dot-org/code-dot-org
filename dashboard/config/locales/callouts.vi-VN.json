@@ -949,7 +949,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Khối mới!",
-          "poetry_multiple_sprites": "Khối mới!"
+          "poetry_multiple_sprites": "Khối mới!",
+          "poetry_new_block": "Khối mới!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Khối mới!"

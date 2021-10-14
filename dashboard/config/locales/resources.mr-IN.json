@@ -2,11 +2,348 @@
   "mr-IN": {
     "data": {
       "resources": {
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "कलाकाराचा परिचय"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "वळण आणि कोन"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "वळण आणि कोन"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: मशीन लर्निंग"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: समाजावर परिणाम"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "एक्सप्लोरींग ॲप्स"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "एक्सप्लोरींग ॲप्स"
+        },
         "making_sprites/coursef/2021": {
           "name": "स्प्राईट्स तयार करणे"
         },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "ब्लॅंक स्पेस स्टोरीज"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "ब्लॅंक स्पेस स्टोरीज"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "टेक्स्ट आणि प्रॉम्प्ट्स"
+        },
+        "user_input_programs/coursef/2021": {
+          "name": "वापरकर्ता इनपुट प्रोग्राम"
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "शिक्षक सँडबॉक्स लेव्हल "
+        },
+        "pause_and_think_online/coursef/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "running-simulations/coursef/2021": {
+          "name": "रनिंग सिम्युलेशन"
+        },
+        "ai-ml/coursef/2021": {
+          "name": "AI: मशीन लर्निंग"
+        },
+        "ai-training/coursef/2021": {
+          "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह"
+        },
+        "ai-societal/coursef/2021": {
+          "name": "AI: समाजावर परिणाम"
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/"
+        },
+        "design-process/coursef/2021": {
+          "name": "डिझाईन प्रक्रिया"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "अंतिम प्रकल्प डिझाइन"
+        },
+        "csta_standards_mapping/coursef/2021": {
+          "name": "CSTA मानक मॅपिंग"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "कोर्स शब्दावली"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "name": "लेसन टाईप गाईड "
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "2021 लॉग बदला"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "चेहऱ्यावरील भावना"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "ड्रॅग आणि ड्रॉप चा सराव"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "name": "Wiggles - Go Noodle"
+        },
+        "20_20_20_rule/courseb/2021": {
+          "name": "20/20/20 नियम"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "हॅपी मॅप गेम पीसेस"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "कंपास रोझ "
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "the-right-app-scenarios/courseb/2021": {
+          "name": "राइट अॅप परिदृश्य"
+        },
+        "csta_standards_mapping/courseb/2021": {
+          "name": "CSTA मानक मॅपिंग"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "अभ्यासक्रम शब्दसंग्रह"
+        },
+        "lesson_type_guide/courseb/2021": {
+          "name": "लेसन टाईप गाईड "
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "2021_change_log/courseb/2021": {
+          "name": "2021 लॉग बदला"
+        },
+        "20_20_20_rule/coursea/2021": {
+          "name": "20/20/20 नियम"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "Wiggles - Go Noodle"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "हॅपी मॅप कार्ड्स"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "हॅपी मॅप कार्ड्स"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "हॅपी मॅप गेम पीसेस"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "20/20/20 नियम"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "name": "Wiggles - Go Noodle"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "हॅपी मॅप कार्ड्स XL"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "चेहऱ्यावरील भावना"
+        },
+        "pair-programming/coursea/2021": {
+          "name": "पेअर- प्रोग्रामिंग"
+        },
+        "csf_lesson_recommendations/coursea/2021": {
+          "name": "CSF पाठासाठी असलेल्या शिफारसी "
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "CSF पाठासाठी असलेल्या शिफारसी "
+        },
+        "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "CSF पाठासाठी असलेल्या शिफारसी "
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "CSTA मानक मॅपिंग"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "अभ्यासक्रम शब्दसंग्रह"
+        },
+        "lesson_type_guide/coursea/2021": {
+          "name": "लेसन टाईप गाईड "
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "2021 लॉग बदला"
+        },
+        "c2-maze-bridge/coursec/2021": {
+          "name": "मेझ ब्रिजिंग पेज"
+        },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "अनप्लग केलेले मेझ ब्लॉक्स"
+        },
+        "debugging_guide/coursec/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "कलाकाराचा परिचय"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "वळण आणि कोन"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "वळण आणि कोन"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "मोठा इव्हेंट (अभ्यासक्रम C)"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "बिट्स विरुद्ध बाइट्स"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "CSTA मानक मॅपिंग"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "अभ्यासक्रम शब्दसंग्रह"
+        },
+        "lesson_type_guide/coursec/2021": {
+          "name": "लेसन टाईप गाईड "
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "2021_change_log/coursec/2021": {
+          "name": "2021 लॉग बदला"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "डांस पार्टी प्रोजेक्ट गाईड "
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": "डान्स पार्टी: अनप्लग केलेले"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "चेहऱ्यावरील भावना"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "CSTA मानक मॅपिंग"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "अभ्यासक्रम शब्दसंग्रह"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "लेसन टाईप गाईड "
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "2021_change_log/coursed/2021": {
+          "name": "2021 लॉग बदला"
+        },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "अनप्लग केलेले मेझ ब्लॉक्स"
+        },
+        "artist_introduction/express/2021": {
+          "name": "कलाकाराचा परिचय"
+        },
+        "turns_angles/express/2021": {
+          "name": "वळण आणि कोन"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "वळण आणि कोन"
+        },
         "making_sprites/express/2021": {
           "name": "स्प्राईट्स तयार करणे"
+        },
+        "pause_and_think_online/express/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "dance-party-project-guide/express/2021": {
+          "name": "डांस पार्टी प्रोजेक्ट गाईड "
+        },
+        "pair_programming_video/express/2021": {
+          "name": "प्रोग्रामिंग व्हिडिओ जोडा"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "टेक्स्ट आणि प्रॉम्प्ट्स"
+        },
+        "csta_standards_mapping/express/2021": {
+          "name": "CSTA मानक मॅपिंग"
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": "कोर्स शब्दावली"
+        },
+        "debugging_guide/express/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "चेहऱ्यावरील भावना"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "20/20/20 नियम"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "name": "Wiggles - Go Noodle"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "CSTA मानक मॅपिंग"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "कोर्स शब्दावली"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "अल्गोरिदमचे अनुसरण करा"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
+        },
+        "about_me_planning_guide/coursee/2021": {
+          "name": "माझ्या बद्दल नियोजन मार्गदर्शक"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "वळण आणि कोन"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "वळण आणि कोन"
+        },
+        "types_of_disabilities/coursee/2021": {
+          "name": "अपंगत्वाचे प्रकार"
+        },
+        "design-process/coursee/2021": {
+          "name": "डिझाईन प्रक्रिया"
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "name": "CSTA मानक मॅपिंग"
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "कोर्स शब्दावली"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "name": "लेसन टाईप गाईड "
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "2021_change_log/coursee/2021": {
+          "name": "2021 लॉग बदला"
         }
       }
     }

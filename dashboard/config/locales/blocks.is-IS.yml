@@ -1289,8 +1289,6 @@ is:
             '"while"': meðan
       gamelab_spriteSay:
         text: "{SPRITE} segir {SPEECH}"
-      gamelab_spriteSayChoices:
-        text: "{SPRITE} segir {SPEECH}"
       gamelab_subjectSpritePointer:
         text: ásmellt vera
       gamelab_textVariableJoin:

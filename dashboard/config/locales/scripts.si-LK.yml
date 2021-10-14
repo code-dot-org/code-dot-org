@@ -2830,3 +2830,11 @@ si:
               display_name: අන්තර්ගතය
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        poetry:
+          lessons:
+            lesson-3:
+              name: විචල්‍යන්
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: අක්ෂර වින්‍යාස බඹරා

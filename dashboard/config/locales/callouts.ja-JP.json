@@ -1755,7 +1755,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "新しいブロック！",
-          "poetry_multiple_sprites": "新しいブロック！"
+          "poetry_multiple_sprites": "新しいブロック！",
+          "poetry_new_block": "新しいブロック！"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "新しいブロック！"

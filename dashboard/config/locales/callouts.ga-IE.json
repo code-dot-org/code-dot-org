@@ -1759,7 +1759,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Bloc nua!",
-          "poetry_multiple_sprites": "Bloc nua!"
+          "poetry_multiple_sprites": "Bloc nua!",
+          "poetry_new_block": "Bloc nua!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Bloc nua!"

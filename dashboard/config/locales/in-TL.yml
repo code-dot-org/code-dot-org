@@ -1029,9 +1029,12 @@ in:
       email: crwdns136838:0crwdne136838:0
       email_alternate: crwdns136839:0crwdne136839:0
       gender: crwdns136840:0crwdne136840:0
+      school: crwdns2696065:0crwdne2696065:0
       school_name: crwdns136841:0crwdne136841:0
       school_city: crwdns136842:0crwdne136842:0
+      school_city_district: crwdns2696067:0crwdne2696067:0
       school_country: crwdns136843:0crwdne136843:0
+      school_department_region: crwdns2696069:0crwdne2696069:0
       colombian_school_city: crwdns2462256:0crwdne2462256:0
       colombian_chilean_school_department: crwdns2689315:0crwdne2689315:0
       colombian_school_municipality: crwdns2462260:0crwdne2462260:0

@@ -2,6 +2,9 @@
   "az-AZ": {
     "data": {
       "lessons": {
+        "hoc-encryption/Simple Encryption": {
+          "preparation": "Vidjetlərin hər iki variantını yoxla"
+        },
         "coursef-2021/lesson-6": {
           "overview": "Bu **kontekst-xassə** dərsində tələbələr, tətbiqetmələrin və vasitələrin istifadəçilərə bunlardan necə istifadə etmə seçimləri verdiyinə diqqət yetirərək kompüterlərin və texnologiyaların həyatındakı rolunu müzakirə edəcəklər. Tələbələr, daha sonra özləri yaratacaqlarına oxşar tətbiqləri araşdıracaqlar."
         },
