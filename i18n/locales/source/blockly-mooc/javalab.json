@@ -42,7 +42,7 @@
   "errorNeighborhoodInvalidMove": "Painter tried to move off the grid or into an obstacle.",
   "errorNeighborhoodInvalidPaintLocation": "Painter tried to paint off the grid or over an obstacle.",
   "errorPeerReviewDisabled": "Peer Review has been disabled on this project.",
-  "errorPlaygroundMessageAfterEnd": "You cannot make any changes to the board after you call end().",
+  "errorPlaygroundInvalidMessage": "You cannot make any changes to the board after you call end().",
   "errorPlaygroundRunning": "The start() method can only be called once per execution of the program.",
   "errorPlaygroundNotRunning": "The end() method cannot be called before start() is called.",
   "errorProjectNotEditedYet": "This project has not been edited yet. The code will need to be edited before it can run.",
