@@ -129,7 +129,8 @@ $debug-header-border-width: 1px;
   clear: both;
   margin-bottom: 1px;
 
-  .watch-variable, .watch-separator {
+  .watch-variable,
+  .watch-separator {
     color: purple;
   }
   .watch-unavailable {
@@ -198,12 +199,4 @@ $debug-header-border-width: 1px;
 .step-over-btn {
   background-position: 0px 21px;
   margin-right: 3px;
-}
-
-.Select-input {
-  height: 28px !important;
-}
-
-.Select-arrow-zone {
-  display: none !important;
 }

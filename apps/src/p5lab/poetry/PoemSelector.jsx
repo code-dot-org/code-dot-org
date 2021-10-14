@@ -2,6 +2,8 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
@@ -85,7 +87,7 @@ function PoemSelector(props) {
   };
 
   const onChange = e => {
-    const poemTitle = e.target.value;
+    const poemTitle = e.value;
 
     if (poemTitle === msg.enterMyOwn()) {
       setIsOpen(true);
@@ -110,7 +112,14 @@ function PoemSelector(props) {
   };
 
   const getPoemOptions = () => {
-    return Object.values(POEMS).sort((a, b) => (a.title > b.title ? 1 : -1));
+    const options = Object.values(POEMS)
+      .sort((a, b) => (a.title > b.title ? 1 : -1))
+      .map(poem => ({
+        value: poem.title,
+        label: poem.title
+      }));
+    options.push({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
+    return options;
   };
 
   return (
@@ -119,20 +128,15 @@ function PoemSelector(props) {
       <label>
         <b>{msg.selectPoem()}</b>
       </label>
-      <select
-        value={getDropdownValue()}
-        style={styles.selector}
-        onChange={onChange}
-      >
-        {getPoemOptions().map(poem => (
-          <option key={poem.title} value={poem.title}>
-            {poem.title}
-          </option>
-        ))}
-        <option key={msg.enterMyOwn()} value={msg.enterMyOwn()}>
-          {msg.enterMyOwn()}
-        </option>
-      </select>
+      <div style={styles.selector}>
+        <Select
+          value={getDropdownValue()}
+          clearable={false}
+          searchable={false}
+          onChange={onChange}
+          options={getPoemOptions()}
+        />
+      </div>
     </div>
   );
 }
@@ -148,7 +152,8 @@ const styles = {
     maxWidth: APP_WIDTH
   },
   selector: {
-    width: '100%'
+    width: '100%',
+    marginBottom: 10
   },
   label: {
     flex: 1
