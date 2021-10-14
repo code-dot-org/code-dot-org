@@ -12,6 +12,7 @@
   "noTextEffects": "You need to add a text effect to your project.",
   "oneTextEffect": "Great work! You added one text effect. Try adding another.",
   "poem": "Poem:",
+  "profanityFoundError": "Profane!",
   "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
   "removedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
   "save": "Save",

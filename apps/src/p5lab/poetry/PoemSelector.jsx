@@ -1,7 +1,8 @@
 /* global appOptions */
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
 import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
@@ -10,11 +11,18 @@ import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {POEMS, PoetryStandaloneApp} from './constants';
+import {findProfanity} from '@cdo/apps/utils';
 
 function PoemEditor(props) {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [poem, setPoem] = useState('');
+  const [error, setError] = useState(null);
+
+  // Reset error if editor is opened/closed or form state changes.
+  useEffect(() => {
+    setError(null);
+  }, [props.isOpen, title, author, poem]);
 
   const body = (
     <div>
@@ -45,15 +53,34 @@ function PoemEditor(props) {
     </div>
   );
 
-  const footerButton = (
-    <FooterButton
-      text={msg.save()}
-      onClick={() =>
-        props.handleClose({title, author, lines: poem.split('\n')})
-      }
-      type="confirm"
-    />
-  );
+  const onSave = () => {
+    const closeAndSave = () =>
+      props.handleClose({title, author, lines: poem.split('\n')});
+
+    findProfanity(
+      [title, author, poem].join(' '),
+      appOptions.locale,
+      appOptions.authenticityToken
+    )
+      .done(profaneWords => {
+        if (profaneWords?.length > 0) {
+          setError(msg.profanityFoundError());
+        } else {
+          closeAndSave();
+        }
+      })
+      // Don't block the user in the case of a server error.
+      .fail(closeAndSave);
+  };
+
+  const footer = [
+    error && (
+      <div style={styles.error} key="error">
+        {error}
+      </div>
+    ),
+    <FooterButton text={msg.save()} onClick={onSave} type="confirm" key="btn" />
+  ];
 
   return (
     <StylizedBaseDialog
@@ -61,7 +88,7 @@ function PoemEditor(props) {
       title={msg.editCustomPoem()}
       isOpen={props.isOpen}
       handleClose={props.handleClose}
-      renderFooter={() => footerButton}
+      renderFooter={() => footer}
     />
   );
 }
@@ -160,6 +187,12 @@ const styles = {
     display: 'flex',
     justifyContent: 'flex-end',
     padding: 10
+  },
+  error: {
+    color: color.red,
+    fontStyle: 'italic',
+    textAlign: 'right',
+    marginRight: 5
   }
 };
 
