@@ -127,7 +127,7 @@ export const LabeledDynamicRadioButtonsWithAdditionalTextFields = props => {
 LabeledDynamicRadioButtonsWithAdditionalTextFields.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
-  options: PropTypes.object,
+  options: PropTypes.array,
   textFieldMap: PropTypes.object
 };
 
@@ -143,7 +143,7 @@ export const LabeledDynamicCheckBoxes = props => {
 LabeledDynamicCheckBoxes.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
-  options: PropTypes.object
+  options: PropTypes.array
 };
 
 export const LabeledDynamicCheckBoxesWithAdditionalTextFields = props => {
@@ -159,7 +159,7 @@ export const LabeledDynamicCheckBoxesWithAdditionalTextFields = props => {
 LabeledDynamicCheckBoxesWithAdditionalTextFields.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string,
-  options: PropTypes.object,
+  options: PropTypes.array,
   textFieldMap: PropTypes.object
 };
 
