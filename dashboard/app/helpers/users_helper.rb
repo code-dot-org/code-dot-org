@@ -261,7 +261,13 @@ module UsersHelper
             sum_time_spent = bubble_choice_progress.values.reduce(0) do |sum, sublevel_progress|
               sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
             end
-            level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
+
+            begin
+              level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
+            # re-raising the error with more information to debug
+            rescue NoMethodError => error
+              raise error, "Level: #{level.id}, User: #{user.id}, Level_for_progress: #{level_for_progress.id}", error.backtrace
+            end
           end
         end
 

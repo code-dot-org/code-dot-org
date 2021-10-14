@@ -106,7 +106,7 @@ style_min: false
 
   - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
     .banner.container_responsive{style: "display: flex"}
-      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/hoc-cse-left-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
+      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
       .col-33
         .bannerHeading= hoc_s(:learn_banner_heading)
         = hoc_s(:learn_banner_blurb)
@@ -115,7 +115,7 @@ style_min: false
         .bannerTeachers
           %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
           != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/#join", howto_url: "https://hourofcode.com/how-to"})
-      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/hoc-cse-right-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
+      .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat"}
 
   - else
     .banner.container_responsive
