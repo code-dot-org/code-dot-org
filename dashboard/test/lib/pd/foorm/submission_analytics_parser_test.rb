@@ -38,8 +38,7 @@ module Pd::Foorm
       assert_includes reshaped_submission, {
         submission_id: submission.id,
         item_name: 'supported',
-        response_text: 'lots',
-        response_value: 'lots'
+        response_text: 'lots'
       }
     end
 
