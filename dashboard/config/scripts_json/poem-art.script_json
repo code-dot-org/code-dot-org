@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poem-art",
-    "serialized_at": "2021-10-14 18:58:39 UTC",
+    "serialized_at": "2021-10-14 19:49:45 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poem-art"
@@ -39,6 +39,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n",
+        "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n",
         "student_overview": "Poetry is making art with words. Add visual effects and images to your own animated poem. "
       },
       "seeding_key": {
@@ -447,10 +448,26 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "List of Poems",
+      "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
+      "key": "list_of_poems_1",
+      "properties": {
+        "type": "Slides",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "list_of_poems_1"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "list_of_poems_1"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -459,16 +476,123 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "code",
+      "word": "Code",
+      "definition": "(v) to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "mood",
+      "word": "Mood",
+      "definition": "the expression of a feeling, atmosphere, or emotion in art or writing.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "mood"
+      }
+    },
+    {
+      "key": "line",
+      "word": "Line",
+      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "line"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "mood"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "line"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "51f73d6a-bf90-47a4-b9bf-c2cda6e453ea",
+      "properties": {
+        "description": "Develop programs that respond to timed events."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "51f73d6a-bf90-47a4-b9bf-c2cda6e453ea"
+      }
+    },
+    {
+      "key": "5c0185c8-e049-4138-8bbf-115e12c1c167",
+      "properties": {
+        "description": "Illustrate shifts in the mood of a poem."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "5c0185c8-e049-4138-8bbf-115e12c1c167"
+      }
+    },
+    {
+      "key": "54a9ca33-8eeb-4ebd-9e52-f73808e17517",
+      "properties": {
+        "description": "Represent figurative and literal language in a text."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "54a9ca33-8eeb-4ebd-9e52-f73808e17517"
+      }
+    }
   ],
   "lessons_standards": [
 
