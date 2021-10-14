@@ -4,7 +4,7 @@ import {setPoem} from '../redux/poetry';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
-import {POEMS} from './constants';
+import {getPoem} from './poem';
 
 export default class Poetry extends SpriteLab {
   init(config) {
@@ -51,16 +51,4 @@ export default class Poetry extends SpriteLab {
       }
     });
   }
-}
-
-export function getPoem(key) {
-  if (!key || !POEMS[key]) {
-    return undefined;
-  }
-  return {
-    key: key,
-    author: POEMS[key].author,
-    title: msg[`${key}Title`](),
-    lines: msg[`${key}Lines`]().split('\n')
-  };
 }
