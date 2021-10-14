@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "codeorg-classchat"
+    "/home": "irobot-classchat"
   },
 
   "banners": {
-    "codeorg-classchat": {
-      "image": "/images/csjourneys/codeorg-classchat.png",
-      "title": "Using computer science for good",
-      "body": "Learn how two software engineers took different paths into the same career, and are now building technology that helps students all around the world learn computer science. Recommended for grades 6-12.",
+    "irobot-classchat": {
+      "image": "/images/csjourneys/irobot-classchat.png",
+      "title": "Building robots with iRobot",
+      "body": "Learn how two women are helping build software for robots and designing learning experiences that inspire the next generation of technologists. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat4",
-      "buttonId": "codeorg-classchat-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat5",
+      "buttonId": "irobot-classchat-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
