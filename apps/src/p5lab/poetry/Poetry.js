@@ -4,12 +4,12 @@ import {setPoem} from '../redux/poetry';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
-import {POEMS} from './constants';
+import {getPoem} from './poem';
 
 export default class Poetry extends SpriteLab {
   init(config) {
     super.init(config);
-    const poem = config.level.selectedPoem || POEMS[this.level.defaultPoem];
+    const poem = config.level.selectedPoem || getPoem(this.level.defaultPoem);
     if (poem) {
       getStore().dispatch(setPoem(poem));
     }
