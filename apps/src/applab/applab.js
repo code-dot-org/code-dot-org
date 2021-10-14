@@ -947,6 +947,7 @@ function setupReduxSubscribers(store) {
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
       tableName = unescapeFirebaseKey(tableName);
+      checkDataSetForWarning(tableName);
       store.dispatch(addTableName(tableName, tableType.SHARED));
     });
     currentTableRef.on('child_removed', snapshot => {
@@ -956,6 +957,27 @@ function setupReduxSubscribers(store) {
       store.dispatch(deleteTableName(tableName));
     });
   }
+}
+
+/**
+ * Show warning if project is using spotify datasets that will be deprecated.
+ * To be removed once old datasets are removed (https://codedotorg.atlassian.net/browse/STAR-1797)
+ */
+function checkDataSetForWarning(tableName) {
+  if (tableName !== 'Top 200 USA' && tableName !== 'Top 200 Worldwide') {
+    return;
+  }
+
+  const msg =
+    tableName === 'Top 200 USA'
+      ? applabMsg.top200UsaWarning()
+      : applabMsg.top200WorldwideWarning();
+
+  studioApp().displayWorkspaceAlert(
+    'warning',
+    <div>{msg}</div>,
+    true /* bottom */
+  );
 }
 
 Applab.onIsRunningChange = function() {
