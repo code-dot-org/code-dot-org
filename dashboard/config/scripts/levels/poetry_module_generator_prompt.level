@@ -17,7 +17,7 @@
     "embed": "false",
     "callout_json": "[]",
     "instructions_important": "true",
-    "long_instructions": "*We need to restructure your code a little bit to make it work with prompts.*\r\n\r\n* Drag a `when all prompts answered` event block from the toolbox to your workspace.\r\n* Drag **all** your old text commands from under the `when run` event to the `when all prompts answered` event.\r\n* Drag a `prompt user` block from the toolbox to under the `when run` block.\r\n* Press Run and enter something into the prompt. Your poem should show up after the prompt is answered.\r\n\r\n<xml>\r\n\r\n</xml>",
+    "long_instructions": "*Let's start building prompts.*\r\n\r\nFor each prompt that you need to create, do the following:\r\n* Drag a `prompt user` block from the toolbox to under the `when run` block.\r\n* Type a message to the user that tells them what kind of word to enter.\r\n* Choose a unique variable label for each prompt. You can use labels like `word1`, or rename them to whatever you want.\r\n\r\n*Nothing else will happen after you use the prompts, but that's okay!*\r\n\r\n<xml>\r\n<block type=\"gamelab_setPrompt\">\r\n    <value name=\"QUESTION\">\r\n      <block type=\"text\">\r\n        <title name=\"TEXT\">Enter a word:</title>\r\n      </block>\r\n    </value>\r\n    <value name=\"VAR\">\r\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\r\n        <title name=\"VAR\">word1</title>\r\n      </block>\r\n    </value>\r\n  </block>\r\n</xml>",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -35,11 +35,11 @@
     "hide_pause_button": "false",
     "instructions_icon": "octiGeneral",
     "show_poem_dropdown": "false",
-    "default_poem": "singer",
     "blockly_variables": "word1, word2, word3",
     "min_workspace_height": "0",
     "project_template_level_name": "poetry_module_template",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Move your old code to the `when all prompts answered` event. \\nAdd a prompt command under `when run`.\\n\\n<div style=\\\"width: 100%;height:245px;\\\">\\n        <div style=\\\"width: 50%; float: left;\\\"> \\n        \\n<xml>\\n  <block type=\\\"when_run\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n  <block type=\\\"gamelab_setPrompt\\\">\\n    <value name=\\\"QUESTION\\\">\\n      <block type=\\\"text\\\">\\n        <title name=\\\"TEXT\\\">Enter a word:</title>\\n      </block>\\n    </value>\\n    <value name=\\\"VAR\\\">\\n      <block type=\\\"variables_get\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"VAR\\\">word1</title>\\n      </block>\\n    </value>\\n  </block>\\n  </xml>\\n</div>\\n        <div style=\\\"margin-left: 50%; \\\"> \\n  <xml>\\n  <block type=\\\"gamelab_whenAllPromptsAnswered\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n <block type=\\\"Poetry_setTitle\\\">\\n    <value name=\\\"TITLE\\\">\\n      <block type=\\\"Poetry_stringValue\\\">\\n        <title name=\\\"TEXT\\\"></title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"Poetry_setAuthor\\\">\\n        <value name=\\\"AUTHOR\\\">\\n          <block type=\\\"Poetry_stringValue\\\">\\n            <title name=\\\"TEXT\\\"></title>\\n          </block>\\n        </value>\\n        <next>\\n          <block type=\\\"Poetry_addLine\\\">\\n            <value name=\\\"LINE\\\">\\n              <block type=\\\"Poetry_stringValue\\\">\\n                <title name=\\\"TEXT\\\"></title>\\n              </block>\\n            </value>\\n            <next>\\n              <block type=\\\"Poetry_addLine\\\">\\n                <value name=\\\"LINE\\\">\\n                  <block type=\\\"Poetry_stringValue\\\">\\n                    <title name=\\\"TEXT\\\"></title>\\n                  </block>\\n                </value>\\n                <next>\\n                  <block type=\\\"Poetry_addLine\\\">\\n                    <value name=\\\"LINE\\\">\\n                      <block type=\\\"Poetry_stringValue\\\">\\n                        <title name=\\\"TEXT\\\"></title>\\n                      </block>\\n                    </value>\\n                  </block>\\n                </next>\\n              </block>\\n            </next>\\n          </block>\\n        </next>\\n      </block>\\n    </next>\\n  </block>\\n          </xml>\\n\\n\\n\\n\\n\",\"hint_id\":\"poetry_refactor_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b0fb5357189b0fc50d06f7875862cbc7/poetry_module_generator_prompt.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Connect your prompt commands under `when run`.\\n\\n<div style=\\\"width: 100%;height:165px;\\\">\\n        <div style=\\\"width: 50%; float: left;\\\"> \\n        \\n<xml>\\n  <block type=\\\"when_run\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n  <block type=\\\"gamelab_setPrompt\\\">\\n    <value name=\\\"QUESTION\\\">\\n      <block type=\\\"text\\\">\\n        <title name=\\\"TEXT\\\">Enter a word:</title>\\n      </block>\\n    </value>\\n    <value name=\\\"VAR\\\">\\n      <block type=\\\"variables_get\\\" can_disconnect_from_parent=\\\"false\\\">\\n        <title name=\\\"VAR\\\">word1</title>\\n      </block>\\n    </value>\\n  </block>\\n  </xml>\\n</div>\\n</div>\\n\\n\\n\",\"hint_id\":\"poetry_refactor_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5b7ef4a90481c0c30aebcea5f81cc1fa/poetry_module_generator_prompt.mp3\"}]",
+    "standalone_app_name": "poetry",
     "preload_asset_list": null
   },
   "game_id": 69,
@@ -47,7 +47,7 @@
   "created_at": "2021-10-08T18:07:34.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-08T18:07:34.182+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_concatenation\\\"\"],\"cloned_from\":\"poetry_module_generator_concatenation\"},{\"changed_at\":\"2021-10-08 18:11:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:16:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:18:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:19:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 19:12:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-08T18:07:34.182+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_concatenation\\\"\"],\"cloned_from\":\"poetry_module_generator_concatenation\"},{\"changed_at\":\"2021-10-08 18:11:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:16:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:18:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:19:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 18:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 19:12:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:25:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 12:42:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 12:52:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 13:23:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 13:24:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 14:40:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -60,59 +60,18 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <category name="Events">
-          <block type="gamelab_whenAllPromptsAnswered"/>
-        </category>
-        <category name="Text">
-          <block type="Poetry_setTitle">
-            <value name="TITLE">
-              <block type="Poetry_stringValue">
-                <title name="TEXT"/>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_setAuthor">
-            <value name="AUTHOR">
-              <block type="Poetry_stringValue">
-                <title name="TEXT"/>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_addLine">
-            <value name="LINE">
-              <block type="Poetry_stringValue">
-                <title name="TEXT"/>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_animateText"/>
-          <block type="Poetry_hideText"/>
-          <block type="gamelab_textJoin">
-            <title name="TEXT1"/>
-          </block>
-          <block type="Poetry_textConcat"/>
-          <block type="Poetry_randomWord"/>
-        </category>
-        <category name="Variables" custom="VARIABLE">
-          <block type="gamelab_setPrompt">
-            <value name="QUESTION">
-              <block type="text">
-                <title name="TEXT"/>
-              </block>
-            </value>
-            <value name="VAR">
-              <block type="variables_get" can_disconnect_from_parent="false">
-                <title name="VAR">word1</title>
-              </block>
-            </value>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">word1</title>
-          </block>
-          <block type="gamelab_textVariableJoin">
-            <title name="VAR">word2</title>
-          </block>
-        </category>
+        <block type="gamelab_setPrompt">
+          <value name="QUESTION">
+            <block type="text">
+              <title name="TEXT">Enter a word:</title>
+            </block>
+          </value>
+          <value name="VAR">
+            <block type="variables_get" can_disconnect_from_parent="false">
+              <title name="VAR">word1</title>
+            </block>
+          </value>
+        </block>
       </xml>
     </toolbox_blocks>
   </blocks>

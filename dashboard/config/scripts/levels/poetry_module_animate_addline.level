@@ -35,9 +35,9 @@
     "hide_pause_button": "false",
     "instructions_icon": "octiIntimate",
     "show_poem_dropdown": "false",
-    "default_poem": "singer",
     "blockly_variables": "word1, word2, word3",
     "min_workspace_height": "0",
+    "standalone_app_name": "poetry",
     "preload_asset_list": null
   },
   "game_id": 69,
@@ -45,7 +45,7 @@
   "created_at": "2021-10-08T14:11:12.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-08T14:11:12.514+00:00\",\"changed\":[\"cloned from \\\"poetry_module_animate_freeplay\\\"\"],\"cloned_from\":\"poetry_module_animate_freeplay\"},{\"changed_at\":\"2021-10-08 14:13:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"use_modal_function_editor\",\"long_instructions\",\"instructions_icon\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:14:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:16:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:16:30 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:16:30 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 16:13:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 16:13:27 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions_important\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 16:14:58 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-08T14:11:12.514+00:00\",\"changed\":[\"cloned from \\\"poetry_module_animate_freeplay\\\"\"],\"cloned_from\":\"poetry_module_animate_freeplay\"},{\"changed_at\":\"2021-10-08 14:13:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"use_modal_function_editor\",\"long_instructions\",\"instructions_icon\",\"project_template_level_name\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:14:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:16:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:16:30 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 14:16:30 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 16:13:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 16:13:27 +0000\",\"changed\":[\"toolbox_blocks\",\"instructions_important\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 16:14:58 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 19:49:28 +0000\",\"changed\":[\"start_blocks\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 22:03:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 12:35:35 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,7 +57,7 @@
             <block type="Poetry_setTitle">
               <value name="TITLE">
                 <block type="Poetry_stringValue">
-                  <title name="TEXT">Return</title>
+                  <title name="TEXT">Afternoon Nap</title>
                 </block>
               </value>
               <next>
@@ -71,49 +71,49 @@
                     <block type="Poetry_addLine">
                       <value name="LINE">
                         <block type="Poetry_stringValue">
-                          <title name="TEXT">Anywhere the air settles its hand on your head like a gentle father</title>
+                          <title name="TEXT">Imagine:</title>
                         </block>
                       </value>
                       <next>
                         <block type="Poetry_addLine">
                           <value name="LINE">
                             <block type="Poetry_stringValue">
-                              <title name="TEXT">And the morning sings to you &#x2014;</title>
+                              <title name="TEXT">A sun-lit sky</title>
                             </block>
                           </value>
                           <next>
                             <block type="Poetry_addLine">
                               <value name="LINE">
                                 <block type="Poetry_stringValue">
-                                  <title name="TEXT">or</title>
+                                  <title name="TEXT">Vibrant against your eyelids</title>
                                 </block>
                               </value>
                               <next>
                                 <block type="Poetry_addLine">
                                   <value name="LINE">
                                     <block type="Poetry_stringValue">
-                                      <title name="TEXT">When you find your reflection in another breathing body</title>
+                                      <title name="TEXT">A distant lawnmower stops</title>
                                     </block>
                                   </value>
                                   <next>
                                     <block type="Poetry_addLine">
                                       <value name="LINE">
                                         <block type="Poetry_stringValue">
-                                          <title name="TEXT">And carry a calm pebble in your chest </title>
+                                          <title name="TEXT">A breeze crisp on your skin</title>
                                         </block>
                                       </value>
                                       <next>
                                         <block type="Poetry_addLine">
                                           <value name="LINE">
                                             <block type="Poetry_stringValue">
-                                              <title name="TEXT">Here</title>
+                                              <title name="TEXT">A warm snoring beside you</title>
                                             </block>
                                           </value>
                                           <next>
                                             <block type="Poetry_addLine">
                                               <value name="LINE">
                                                 <block type="Poetry_stringValue">
-                                                  <title name="TEXT">you are home</title>
+                                                  <title name="TEXT">&#x2014; I really miss my dog</title>
                                                 </block>
                                               </value>
                                               <next>
