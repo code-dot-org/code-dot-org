@@ -36,6 +36,32 @@ export default class Poetry extends SpriteLab {
     return new PoetryLibrary(args.p5);
   }
 
+  preloadInstructorImage() {
+    if (!this.preloadInstructorImage_) {
+      this.preloadInstructorImage_ = new Promise(resolve => {
+        this.p5Wrapper.p5.loadImage(
+          '/blockly/media/poetry/octiFinish.png',
+          image => resolve(image),
+          err => {
+            console.error(err);
+            resolve();
+          }
+        );
+      });
+    }
+
+    return this.preloadInstructorImage_.then(
+      image => (this.p5Wrapper.p5._preloadedInstructorImage = image)
+    );
+  }
+
+  preloadLabAssets() {
+    return Promise.all([
+      super.preloadLabAssets(),
+      this.preloadInstructorImage()
+    ]);
+  }
+
   setupReduxSubscribers(store) {
     super.setupReduxSubscribers(store);
     let state = {};
