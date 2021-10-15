@@ -1,5 +1,6 @@
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
+import {utils} from '../../utils';
 
 export const commands = {
   countByAnimation(spriteArg) {
@@ -78,18 +79,18 @@ export const commands = {
       spiral: behaviorCommands.spiralFunc
     };
     //Makes sure that same-frame multiple spiral effects start at a different angles
-    const sprialRandomizer = Math.floor(Math.random() * 360);
+    const sprialRandomizer = utils.randomInt(0, 359);
     for (let i = 0; i < num; i++) {
       let spriteOptions = {};
       switch (effectName) {
         case 'burst': {
           spriteOptions = {
             animation,
-            speed: Math.floor(Math.random() * 10 + 10),
+            speed: utils.randomInt(10, 20),
             scale: 0.01,
-            direction: Math.floor(Math.random() * 360),
-            rotation: Math.floor(Math.random() * 360),
-            delay: Math.floor(Math.random() * 20 + 1),
+            direction: utils.randomInt(0, 359),
+            rotation: utils.randomInt(0, 359),
+            delay: utils.randomInt(1, 21),
             lifetime: 60
           };
           break;
@@ -97,12 +98,12 @@ export const commands = {
         case 'pop': {
           spriteOptions = {
             animation,
-            speed: Math.floor(Math.random() * 15 + 10),
+            speed: utils.randomInt(10, 25),
             scale: 0.5,
-            direction: Math.floor(Math.random() * 90 + 225),
+            direction: utils.randomInt(225, 315),
             location: {
-              x: Math.floor(Math.random() * 400),
-              y: Math.floor(Math.random() * 50 + 450)
+              x: utils.randomInt(0, 400),
+              y: utils.randomInt(450, 500)
             },
             lifetime: 60
           };
@@ -114,10 +115,10 @@ export const commands = {
             speed: 0,
             scale: 0.5,
             location: {
-              x: Math.floor(Math.random() * 400),
-              y: Math.floor(Math.random() * 100 - 125)
+              x: utils.randomInt(0, 400),
+              y: utils.randomInt(-125, -25)
             },
-            rotation: Math.floor(Math.random() * 20 - 10),
+            rotation: utils.randomInt(-10, 10),
             lifetime: 60
           };
           break;

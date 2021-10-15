@@ -1,4 +1,5 @@
 import {commands as actionCommands} from './actionCommands';
+import {utils} from '../../utils';
 
 export const commands = {
   addBehaviorSimple(spriteArg, behavior) {
@@ -59,7 +60,7 @@ export const commands = {
       const sprite = this.getSpriteArray(spriteArg)[0];
       sprite.y -= sprite.speed;
       sprite.speed -= 0.5;
-      sprite.rotation += Math.floor(Math.random() * 10 - 5);
+      sprite.rotation += utils.randomInt(-5, 5);
       if (sprite.lifetime === 0) {
         sprite.destroy();
         this.removeAllBehaviors(sprite);
