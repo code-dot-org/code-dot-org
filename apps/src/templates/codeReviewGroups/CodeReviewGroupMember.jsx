@@ -5,7 +5,12 @@ import {grid} from './CodeReviewGroup';
 
 export default function CodeReviewGroupMember({member, index}) {
   return (
-    <Draggable draggableId={member.id} index={index} tab-index={index}>
+    <Draggable
+      key={member.id}
+      draggableId={member.id}
+      index={index}
+      tab-index={index}
+    >
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}
@@ -30,7 +35,7 @@ export default function CodeReviewGroupMember({member, index}) {
   );
 }
 
-// TO DO: should specify shape of item -- needs ID and content property that can be rendered.
+// TO DO: should specify shape of member -- needs ID and content property that can be rendered.
 CodeReviewGroupMember.propTypes = {
   member: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired
