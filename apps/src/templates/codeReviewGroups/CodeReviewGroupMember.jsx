@@ -5,12 +5,7 @@ import {grid} from './CodeReviewGroup';
 
 export default function CodeReviewGroupMember({member, index}) {
   return (
-    <Draggable
-      key={member.id}
-      draggableId={member.id}
-      index={index}
-      tab-index={index}
-    >
+    <Draggable draggableId={member.id} index={index} tab-index={index}>
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}

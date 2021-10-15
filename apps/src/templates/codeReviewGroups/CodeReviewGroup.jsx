@@ -5,7 +5,7 @@ import CodeReviewGroupMember from './CodeReviewGroupMember';
 
 export default function CodeReviewGroup({members, index}) {
   return (
-    <Droppable key={index} droppableId={`${index}`}>
+    <Droppable droppableId={`${index}`}>
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}
@@ -13,7 +13,11 @@ export default function CodeReviewGroup({members, index}) {
           {...provided.droppableProps}
         >
           {members.map((member, index) => (
-            <CodeReviewGroupMember member={member} index={index} />
+            <CodeReviewGroupMember
+              key={member.id}
+              member={member}
+              index={index}
+            />
           ))}
           {provided.placeholder}
         </div>
