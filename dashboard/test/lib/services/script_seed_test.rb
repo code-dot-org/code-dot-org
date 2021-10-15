@@ -323,7 +323,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear before the existing
       # level keys in the sort order.
-      new_level = create :level, name: '-abc', level_num: 'custom'
+      new_level = create :level, name: 'abc', level_num: 'custom'
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -507,7 +507,7 @@ module Services
 
       # give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: '-abc', description: 'New Standard'
+      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
 
       expected_shortcodes = [
         new_standard.shortcode,
@@ -568,7 +568,7 @@ module Services
 
       # give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
-      new_standard = create :standard, framework: @framework, shortcode: '-abc', description: 'New Standard'
+      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
 
       expected_shortcodes = [
         new_standard.shortcode,
@@ -1201,7 +1201,12 @@ module Services
       # TODO: how can this be simplified and/or moved into factories.rb?
       script = create(
         :script,
-        name: "#{name_prefix}-script",
+        # Avoid randomly generated characters at the start of the script name,
+        # to help avoid flaky tests. The script name gets used as the prefix of
+        # various other keys, which in turn can determine the order of things in
+        # the serialized output, which can lead to flaky tests if the first
+        # few characters of the script name changes between test runs.
+        name: "script-#{name_prefix}",
         curriculum_path: 'my_curriculum_path',
         is_migrated: true
       )
