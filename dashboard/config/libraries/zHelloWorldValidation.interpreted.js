@@ -9,7 +9,7 @@ function level1(){
     });
   }
 
-  setSuccessTime();
+  setSuccessTime(validationProps.successCriteria);
 
   if (!validationProps.successCriteria.starterSprite ||
     !validationProps.successCriteria.usedSpeech) {
@@ -41,12 +41,11 @@ function level2(){
     setSuccessCriteria({
       twoSprites: checkTwoSprites(spriteIds),
       differentLocations: checkSpriteLocations(spriteIds),
-      differentCostumes: checkSpriteCostumes(spriteIds),
-      changedBackground: checkBackgroundChanged()
+      differentCostumes: checkSpriteCostumes(spriteIds)
     });
   }
 
-  setSuccessTime();
+  setSuccessTime(validationProps.successCriteria);
 
   if (!validationProps.successCriteria.twoSprites ||
     !validationProps.successCriteria.differentLocations ||
@@ -67,11 +66,7 @@ function level2(){
   }
 
   if (World.frameCount - validationProps.successTime >= WAIT_TIME) {
-    if (validationProps.successCriteria.changedBackground) {
-      levelFailure(0, "genericBonusSuccess");
-    } else {
-      levelFailure(0, "genericExplore");
-    }
+    levelFailure(0, "genericSuccess");
   }
 
 }
@@ -89,6 +84,9 @@ function level3(){
       differentCostumes: checkSpriteCostumes(spriteIds),
       allSpritesSpeaking: false
     });
+    validationProps.challengeCriteria = {
+      changedBackground: checkBackgroundChanged()
+    };
   }
 
   // Check sprites speaking
@@ -98,8 +96,11 @@ function level3(){
     }
   }
   validationProps.successCriteria.allSpritesSpeaking = numSpritesWithSayBlocks == spriteIds.length;
+  if(!validationProps.successTime){
+    console.log(validationProps.successCriteria);
+  }
 
-  setSuccessTime();
+  setSuccessTime(validationProps.successCriteria);
 
   if (!validationProps.successCriteria.twoSprites ||
     !validationProps.successCriteria.differentLocations ||
@@ -132,7 +133,11 @@ function level3(){
   }
 
   if (World.frameCount - validationProps.successTime >= WAIT_TIME) {
-    levelFailure(0, "genericSuccess");
+    if (validationProps.challengeCriteria.changedBackground) {
+      levelFailure(0, "genericBonusSuccess");
+    } else {
+      levelFailure(0, "genericExplore");
+    }
   }
 
 }
@@ -159,7 +164,6 @@ function level4(){
   }
 
   validationProps.successCriteria.clickedAllSprites = validationProps.clickedSprites.length>=2;
-  console.log(validationProps.successCriteria.clickedAllSprites);
 
   setSuccessTime(validationProps.successCriteria);
   //console.log("successTime: " + validationProps.successTime);
@@ -172,7 +176,7 @@ function level4(){
 
   if (World.frameCount - validationProps.successTime >= WAIT_TIME) {
     levelFailure(0, "genericSuccess");
-  } else if (World.frameCount > WAIT_TIME) {
+  } else if (World.frameCount > WAIT_TIME && !validationProps.successTime) {
     levelFailure(3, "clickAllSprites");
   }
 
