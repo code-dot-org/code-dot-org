@@ -11,7 +11,7 @@ import Sounds from '@cdo/apps/Sounds';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import * as redux from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {
   sandboxDocumentBody,
@@ -30,8 +30,8 @@ describe('StudioApp', () => {
 
     beforeEach(() => {
       stubStudioApp();
-      stubRedux();
-      registerReducers(commonReducers);
+      redux.stubRedux();
+      redux.registerReducers(commonReducers);
       replaceOnWindow('setTimeout', () => {});
 
       codeWorkspaceDiv = document.createElement('div');
@@ -50,7 +50,7 @@ describe('StudioApp', () => {
 
     afterEach(() => {
       restoreStudioApp();
-      restoreRedux();
+      redux.restoreRedux();
       restoreOnWindow('setTimeout');
 
       document.body.removeChild(codeWorkspaceDiv);
@@ -254,6 +254,27 @@ describe('StudioApp', () => {
         expect(studio.milestoneStartTime).to.equal(2000);
       });
 
+      it('sets the milestoneStartTotalIdleTime to the total idle time in redux', () => {
+        sinon.stub(redux, 'getStore').returns({
+          getState: () => ({
+            studioAppActivity: {
+              idleTimeMs: 3000
+            },
+            pageConstants: {
+              isReadOnlyWorkspace: false
+            }
+          })
+        });
+
+        studio.milestoneStartTotalIdleTime = 0;
+
+        studio.report({});
+
+        expect(studio.milestoneStartTotalIdleTime).to.equal(3000);
+
+        redux.getStore.restore();
+      });
+
       it('sets hasReported to true', () => {
         studio.hasReported = false;
         studio.report({});
@@ -261,19 +282,36 @@ describe('StudioApp', () => {
       });
 
       it('calculates the timeSinceLastMilestone', () => {
+        sinon.stub(redux, 'getStore').returns({
+          getState: () => ({
+            studioAppActivity: {
+              idleTimeMs: 2500
+            },
+            pageConstants: {
+              isReadOnlyWorkspace: false
+            }
+          })
+        });
+
+        studio.milestoneStartTotalIdleTime = 1500;
         studio.milestoneStartTime = 1000;
         studio.initTime = 1000;
         clock.tick(3000);
 
         studio.report({});
 
+        // time since last milestone = 3000 - 1000 = 2000
+        // idle time since last milestone = 2500 - 1500 = 1000
+        // time spent = 2000 - 1000 = 1000
         expect(onAttemptSpy).to.have.been.calledWith({
           pass: undefined,
           time: 2000,
-          timeSinceLastMilestone: 2000,
+          timeSinceLastMilestone: 1000,
           attempt: 0,
           lines: undefined
         });
+
+        redux.getStore.restore();
       });
     });
   });
@@ -464,11 +502,11 @@ describe('StudioApp', () => {
   describe('addChangeHandler', () => {
     beforeEach(() => {
       stubStudioApp();
-      stubRedux();
-      registerReducers(commonReducers);
+      redux.stubRedux();
+      redux.registerReducers(commonReducers);
     });
     afterEach(() => {
-      restoreRedux();
+      redux.restoreRedux();
       restoreStudioApp();
     });
 

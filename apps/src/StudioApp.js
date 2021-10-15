@@ -1738,8 +1738,6 @@ StudioApp.prototype.report = function(options) {
   const idleTimeSinceLastMilestone =
     totalIdleTime - this.milestoneStartTotalIdleTime;
 
-  console.log('idleTimeSinceLastMilestone', idleTimeSinceLastMilestone);
-
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
