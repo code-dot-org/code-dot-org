@@ -28,7 +28,7 @@ module Services
 
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
-      #File.write(filename, ScriptSeed.serialize_seeding_json(script))
+      # File.write(filename, ScriptSeed.serialize_seeding_json(script))
 
       expected = JSON.parse(File.read(filename))
       actual = JSON.parse(ScriptSeed.serialize_seeding_json(script))
@@ -1259,16 +1259,15 @@ module Services
       num_standards_per_lesson: 2,
       with_unit_group: false
     )
-      name_prefix ||= SecureRandom.uuid
+      # Avoid randomly generated characters at the start of the name prefix,
+      # to help avoid flaky tests. The name_prefix gets used in various fields,
+      # and the sort order of those fields can affect the order of the
+      # serialized output.
+      name_prefix ||= "uuid-#{SecureRandom.uuid}"
       # TODO: how can this be simplified and/or moved into factories.rb?
       script = create(
         :script,
-        # Avoid randomly generated characters at the start of the script name,
-        # to help avoid flaky tests. The script name gets used as the prefix of
-        # various other keys, which in turn can determine the order of things in
-        # the serialized output, which can lead to flaky tests if the first
-        # few characters of the script name changes between test runs.
-        name: "script-#{name_prefix}",
+        name: "#{name_prefix}-script",
         curriculum_path: 'my_curriculum_path',
         is_migrated: true
       )
