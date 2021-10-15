@@ -1,21 +1,16 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
 import CodeReviewGroup from './CodeReviewGroup';
 
-export default function CodeReviewGroupsEditor() {
-  const [state, setState] = useState([getItems(4), getItems(4, 4)]);
+export default function CodeReviewGroups({groups}) {
+  const [state, setState] = useState(groups);
 
   function onDragEnd(result) {
-    console.log(result);
-    console.log(
-      `[ON DRAG END] Moved item ${result.draggableId} from container ${
-        result.source.droppableId
-      } to ${result.destination ? result.destination.droppableId : 'outside'}`
-    );
     const {source, destination} = result;
     const sInd = +source.droppableId;
 
-    // dropped outside the list
+    // dropped outside the group
     if (!destination) {
       return;
     }
@@ -39,27 +34,15 @@ export default function CodeReviewGroupsEditor() {
 
   return (
     <div>
-      <p>
-        Try using a keyboard! Press tab / shift+tab to navigate items, spacebar
-        to pick up / drop, and arrow keys to move.
-      </p>
       <button
         type="button"
         onClick={() => {
-          setState([...state, []]);
+          setState([[], ...state]);
         }}
       >
         Add new group
       </button>
-      <button
-        type="button"
-        onClick={() => {
-          setState([...state, getItems(1)]);
-        }}
-      >
-        Add new item
-      </button>
-      <div style={{display: 'flex'}}>
+      <div style={styles.groupsContainer}>
         <DragDropContext onDragEnd={onDragEnd}>
           {state.map((groupMembers, groupIndex) => (
             <CodeReviewGroup members={groupMembers} index={groupIndex} />
@@ -70,24 +53,9 @@ export default function CodeReviewGroupsEditor() {
   );
 }
 
-const names = [
-  'Sanchit',
-  'Mike',
-  'Mark',
-  'Molly',
-  'Ben',
-  'Jessie',
-  'Jamila',
-  'Hannah'
-];
+CodeReviewGroups.propTypes = {groups: PropTypes.array.isRequired};
 
-// fake data generator
-const getItems = (count, offset = 0) =>
-  Array.from({length: count}, (v, k) => k).map(k => ({
-    id: `item-${names[k + offset]}-${new Date().getTime()}`,
-    content: names[k + offset]
-  }));
-
+// Reorders items in a group if item dragged elsewhere in the same group.
 const reorder = (list, startIndex, endIndex) => {
   const result = Array.from(list);
   const [removed] = result.splice(startIndex, 1);
@@ -96,9 +64,7 @@ const reorder = (list, startIndex, endIndex) => {
   return result;
 };
 
-/**
- * Moves an item from one list to another list.
- */
+// Moves an item from one group to another group.
 const move = (source, destination, droppableSource, droppableDestination) => {
   const sourceClone = Array.from(source);
   const destClone = Array.from(destination);
@@ -111,4 +77,11 @@ const move = (source, destination, droppableSource, droppableDestination) => {
   result[droppableDestination.droppableId] = destClone;
 
   return result;
+};
+
+const styles = {
+  groupsContainer: {
+    display: 'flex',
+    flexDirection: 'column'
+  }
 };
