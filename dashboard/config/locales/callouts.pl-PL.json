@@ -1944,7 +1944,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nowy blok!",
-          "poetry_multiple_sprites": "Nowy blok!"
+          "poetry_multiple_sprites": "Nowy blok!",
+          "poetry_new_block": "Nowy blok!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Nowy blok!"

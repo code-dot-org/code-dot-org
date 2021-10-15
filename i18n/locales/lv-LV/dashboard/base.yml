@@ -505,6 +505,7 @@ lv:
       first_name: 'Vārds'
       last_name: 'Uzvārds'
       email: 'E-pasts'
+      school: 'Skola'
       school_name: 'Skolas nosaukums'
       colombian_chilean_school_name: 'Skolas nosaukums'
     form_entries:

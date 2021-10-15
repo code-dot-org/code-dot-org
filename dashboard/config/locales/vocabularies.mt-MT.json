@@ -2,6 +2,9 @@
   "mt-MT": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Funzjoni"
+        },
         "variable/coursef/2021": {
           "word": "Varjabbli"
         },

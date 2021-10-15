@@ -330,6 +330,7 @@ ku:
   pd:
     form_labels:
       email: 'پۆستی ئەلیكترۆنی'
+      school: 'قوتابخانە'
       school_name: 'ناوی قوتابخانە'
       school_country: 'وڵاتی قوتابخانە'
       colombian_chilean_school_name: 'ناوی قوتابخانە'

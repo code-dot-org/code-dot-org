@@ -540,7 +540,7 @@ class TopInstructions extends Component {
         return (
           <Instructions
             ref={ref => this.setInstructionsRef(ref)}
-            longInstructions={longInstructions}
+            instructions={longInstructions}
             onResize={this.adjustMaxNeededHeight}
             inTopPane
             isBlockly={isBlockly}

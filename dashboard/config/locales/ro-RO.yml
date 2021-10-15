@@ -1241,6 +1241,7 @@ ro:
       email: E-mail
       email_alternate: Email alternativ
       gender: Identitate de gen
+      school: Școală
       school_name: Numele școlii
       school_city: Orașul în care se află școala
       school_country: Țara școlii

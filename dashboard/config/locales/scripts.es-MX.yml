@@ -606,6 +606,12 @@ es-MX:
           lessons:
             Jigsaw:
               name: Rompecabezas
+              description_student: Haz clic y arrastra para terminar los desafíos.
+              description_teacher: Esta lección dará a los estudiantes una idea de
+                qué esperar cuando se dirigen al laboratorio de computación. Comienza
+                con una discusión como breve introducción a modales de un laboratorio
+                de computación, luego proceden a el uso de un ordenador para completar
+                el acertijo en línea.
           student_description: Prueba nuestro tutorial de rompecabezas.
         step:
           title: Paso
@@ -32476,6 +32482,14 @@ es-MX:
               name: Día FRQ
             lesson-15:
               name: Día de evaluación
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -35500,6 +35514,14 @@ es-MX:
               name: Día FRQ
             lesson-15:
               name: Día de evaluación
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -35579,3 +35601,23 @@ es-MX:
           lessons:
             lesson-1:
               name: 'Fiesta de baile: sin conexión'
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Herramientas
+            lesson-3:
+              name: Ejemplos
+        poetry:
+          lessons:
+            lesson-3:
+              name: Variables
+            lesson-6:
+              name: Círculo de Poesía
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Concurso de ortografía
+        outbreak-csc:
+          title: Epidemia

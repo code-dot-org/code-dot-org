@@ -2,6 +2,78 @@
   "id-ID": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Debugging"
+        },
+        "function/hero/unversioned": {
+          "word": "Fungsi"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Debugging"
+        },
+        "code/artist/unversioned": {
+          "word": "kode"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugging"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Kondisi"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Loop"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Enkripsi"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Debugging"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Lossless Compression"
+        },
+        "code/sports/unversioned": {
+          "word": "kode"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Debugging"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Pembelajaran Mesin"
+        },
         "behavior/coursef/2021": {
           "word": "Perilaku"
         },

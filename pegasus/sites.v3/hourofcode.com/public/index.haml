@@ -93,7 +93,7 @@ social:
       .row
         - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
           %div{style: "color: black; display: flex"}
-            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/images/hoc_cse_left.png); background-position: 100% 00%; background-size: contain; background-repeat: no-repeat"}
+            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 00%; background-size: contain; background-repeat: no-repeat"}
             .col-sm-12.col-md-4.no-padding-on-narrow
               #textbacking.no-padding-on-narrow
                 .front-header-banner.no-padding-on-narrow
@@ -101,12 +101,13 @@ social:
                     = hoc_s(:codeorg_homepage_celebrate_cse, markdown: true)
                   .front-header-description{style: "margin-bottom: 20px"}
                     = hoc_s(:hourofcode_homepage_hoc2018_header_line1)
+                %img.hidden-md.hidden-lg{src: "/shared/images/fit-1200/hoc-cse-arrows.png", style: "width: 100%; padding-bottom: 20px"}
                 .ctabuttongroup
                   #tryittext.ctatext
                     = view :hoc_action_buttons, hoc_mode: hoc_mode
               %br/
               %br/
-            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/images/hoc_cse_right.png); background-position: 0% 0%; background-size: contain; background-repeat: no-repeat"}
+            .col-md-4.hidden-sm.hidden-xs{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 0% 0%; background-size: contain; background-repeat: no-repeat"}
 
         - else
           .col-12

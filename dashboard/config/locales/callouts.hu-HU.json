@@ -993,7 +993,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Új blokk!",
-          "poetry_multiple_sprites": "Új blokk!"
+          "poetry_multiple_sprites": "Új blokk!",
+          "poetry_new_block": "Új blokk!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Új blokk!"

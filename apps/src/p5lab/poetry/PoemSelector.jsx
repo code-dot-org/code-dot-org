@@ -10,6 +10,7 @@ import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
 import {POEMS} from './constants';
+import {getPoem} from './poem';
 
 function PoemEditor(props) {
   const [title, setTitle] = useState('');
@@ -85,32 +86,30 @@ function PoemSelector(props) {
   };
 
   const onChange = e => {
-    const poemTitle = e.target.value;
+    const poemKey = e.target.value;
+    const poem = getPoem(poemKey);
 
-    if (poemTitle === msg.enterMyOwn()) {
+    if (poemKey === msg.enterMyOwn()) {
       setIsOpen(true);
-    } else {
-      const poem = Object.values(POEMS).find(poem => poem.title === poemTitle);
-      if (poem) {
-        props.onChangePoem(poem);
-        project.saveSelectedPoem(poem);
-      }
+    } else if (poem) {
+      props.onChangePoem(poem);
+      project.saveSelectedPoem(poem);
     }
   };
 
   const getDropdownValue = () => {
-    const poem = Object.values(POEMS).find(
-      poem => poem.title === props.selectedPoem.title
-    );
+    const poem = getPoem(props.selectedPoem.key);
     if (poem) {
-      return poem.title;
+      return poem.key;
     } else {
       return msg.enterMyOwn();
     }
   };
 
   const getPoemOptions = () => {
-    return Object.values(POEMS).sort((a, b) => (a.title > b.title ? 1 : -1));
+    return Object.keys(POEMS)
+      .map(poemKey => getPoem(poemKey))
+      .sort((a, b) => (a.title > b.title ? 1 : -1));
   };
 
   return (
@@ -125,7 +124,8 @@ function PoemSelector(props) {
         onChange={onChange}
       >
         {getPoemOptions().map(poem => (
-          <option key={poem.title} value={poem.title}>
+          // Using poem.key because that remains untranslated
+          <option key={poem.key} value={poem.key}>
             {poem.title}
           </option>
         ))}
