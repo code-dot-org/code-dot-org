@@ -66,6 +66,7 @@
     "instructions_icon": "pizza",
     "project_template_level_name": "helloworld_food_template",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel3();",
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "user_id": 9,
