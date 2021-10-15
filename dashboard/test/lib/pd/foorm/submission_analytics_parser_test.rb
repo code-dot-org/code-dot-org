@@ -45,6 +45,7 @@ module Pd::Foorm
     test 'reshape_submission formats rating question response as expected' do
       form_with_rating_question = create :foorm_form, :with_rating_question
       submission = create :basic_foorm_submission, :with_rating_answer, form_name: form_with_rating_question.name
+      reshaped_submission = SubmissionAnalyticsParser.reshape_submission(submission)
 
       assert_includes reshaped_submission, {
         submission_id: submission.id,
