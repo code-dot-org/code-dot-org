@@ -1006,4 +1006,15 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal ['csx1', 'csx3'], csx.units_for_user(teacher).map(&:name)
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
   end
+
+  test 'load_from_path does not write course json file' do
+    unit_group_name = 'test-course-offering'
+    refute UnitGroup.find_by_name(unit_group_name)
+
+    File.stubs(:write).raises('must not modify filesystem')
+
+    filepath = "#{Rails.root}/test/fixtures/#{unit_group_name}.course"
+    UnitGroup.load_from_path(filepath)
+    assert UnitGroup.find_by_name(unit_group_name)
+  end
 end
