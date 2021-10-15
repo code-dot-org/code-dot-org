@@ -39,6 +39,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Snap a `sprite begins` block to your code. Make sure you already made the sprite you are giving a behavior to. \\n\\n<xml><block type=\\\"when_run\\\"><next><block type=\\\"Poetry_makeNewSpriteAnon\\\"><title name=\\\"ANIMATION_NAME\\\">\\\"cloud_single\\\"</title><title name=\\\"LOCATION\\\">{\\\"x\\\":292,\\\"y\\\":224}</title><next><block type=\\\"Poetry_startBehavior\\\"><title name=\\\"ANIMATION_NAME\\\">\\\"cloud_single\\\"</title><title name=\\\"BEHAVIOR\\\">wandering</title></block></next></block></next></block></xml>\",\"hint_id\":\"add_behavior\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5bd201b8ce23c1b8e19853c897704de6/poetry_hoc_spriteBehaviors.mp3\"}]",
     "standalone_app_name": "poetry_hoc",
     "default_poem": "wordsworth",
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "game_id": 69,
