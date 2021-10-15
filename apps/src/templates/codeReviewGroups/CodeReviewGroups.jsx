@@ -45,7 +45,11 @@ export default function CodeReviewGroups({groups}) {
       <div style={styles.groupsContainer}>
         <DragDropContext onDragEnd={onDragEnd}>
           {state.map((groupMembers, groupIndex) => (
-            <CodeReviewGroup members={groupMembers} index={groupIndex} />
+            <CodeReviewGroup
+              key={groupIndex}
+              members={groupMembers}
+              index={groupIndex}
+            />
           ))}
         </DragDropContext>
       </div>

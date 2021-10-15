@@ -12,7 +12,10 @@ const names = [
   'Hannah'
 ];
 
-// fake data generator
+// Fake data generator.
+// Returns an array of objects that can be used to render a group.
+// Offset will creating objects starting at the offset indexed
+// element in the names array above, rather than the first element (default).
 const getItems = (count, offset = 0) =>
   Array.from({length: count}, (v, k) => k).map(k => ({
     id: `item-${names[k + offset]}-${new Date().getTime()}`,
