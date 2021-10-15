@@ -302,7 +302,9 @@ module Services
 
     test 'seed updates levels_script_levels' do
       script = create_script_tree
-      new_level = create :level
+      # give the new level a level key that will appear after the existing
+      # level keys in the sort order.
+      new_level = create :level, name: 'xyz', level_num: 'custom'
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
