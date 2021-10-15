@@ -40,6 +40,7 @@
     "project_template_level_name": "poetry_module_template",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure each new block goes in the right part of your program. \\n<div style=\\\"width: 100%;height:165px;\\\">\\n\\n  <xml>\\n  <block type=\\\"gamelab_whenAllPromptsAnswered\\\"></block>\\n  </xml>\\n   &emsp;&emsp;&ensp; ↑\\n  <xml>\\n  <block type=\\\"Poetry_addLine\\\">\\n    <value name=\\\"LINE\\\">\\n      <block type=\\\"gamelab_textJoin\\\">\\n        <title name=\\\"TEXT1\\\"></title>\\n        <value name=\\\"TEXT2\\\">\\n          <block type=\\\"gamelab_textVariableJoin\\\">\\n            <title name=\\\"VAR\\\">word1</title>\\n            <value name=\\\"TEXT2\\\">\\n              <block type=\\\"Poetry_stringValue\\\">\\n                <title name=\\\"TEXT\\\"></title>\\n              </block>\\n            </value>\\n          </block>\\n        </value>\\n      </block>\\n    </value>\\n  </block>\\n</xml>\\n</div>\\n\",\"hint_id\":\"poetry_prompts_hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9e0cbb67f0aee90293595236708b026a/poetry_module_generator_concatenation.mp3\"}]",
     "standalone_app_name": "poetry",
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "game_id": 69,
