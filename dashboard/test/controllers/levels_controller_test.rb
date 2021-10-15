@@ -78,11 +78,11 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 22, JSON.parse(@response.body)['numPages']
   end
 
-  test "should get filtered levels with name matching level_num for blockly levels" do
+  test "should get filtered levels with name matching level key for blockly levels" do
     create(:level, name: 'blockly', level_num: 'special_blockly_level')
 
-    get :get_filtered_levels, params: {name: 'special_blockly_level'}
-    assert_equal 'special_blockly_level', JSON.parse(@response.body)['levels'][0]["name"]
+    get :get_filtered_levels, params: {name: 'blockly:Studio:special_blockly_level'}
+    assert_equal 'blockly:Studio:special_blockly_level', JSON.parse(@response.body)['levels'][0]["name"]
   end
 
   test "should get filtered levels with level_type" do

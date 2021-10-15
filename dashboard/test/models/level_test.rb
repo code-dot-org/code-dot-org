@@ -168,7 +168,7 @@ class LevelTest < ActiveSupport::TestCase
 
     summary = blockly_level.summarize_for_edit
 
-    assert_equal(summary[:name], 'special_blockly_level')
+    assert_equal(summary[:name], 'blockly:Studio:special_blockly_level')
   end
 
   test "get_question_text returns question text for free response level" do
