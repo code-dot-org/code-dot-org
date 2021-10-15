@@ -66,6 +66,7 @@
     "instructions_icon": "pizza",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To make the pizza say something, connect the blocks of code like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\"><next>  <block type=\\\"gamelab_makeNewSpriteAnon\\\">\\n    <title name=\\\"ANIMATION_NAME\\\">\\\"face_pizza_1\\\"</title>\\n    <value name=\\\"LOCATION\\\">\\n      <block type=\\\"gamelab_location_picker\\\">\\n        <title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</title>\\n      </block>\\n    </value><next>  <block type=\\\"gamelab_spriteSay\\\">\\n    <title name=\\\"SPEECH\\\">Hello, world!</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_pizza_1\\\"</title>\\n      </block>\\n    </value>\\n  </block></next>\\n  </block></next></block>\\n</xml>\",\"hint_id\":\"hello-world-first-solution-pizza\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b37310b0c44442dede5daaa2c1ce96a0/helloworld_food_say.mp3\"}]",
     "video_key": "hello_world_intro",
+    "skip_autosave": true,
     "preload_asset_list": null,
     "encrypted_examples": "Wao2CB+999XcuWgtwhzMiapqj3NBqk4XREhbUIAzevPrHpFjG9wRcTMxBkel\nFfs7cEhGmbjXv7PwAEqUNGguYQ==\n"
   },

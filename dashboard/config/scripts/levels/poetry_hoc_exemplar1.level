@@ -37,6 +37,7 @@
     "instructions_icon": "octiHopeful",
     "default_poem": null,
     "standalone_app_name": "poetry",
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "game_id": 69,

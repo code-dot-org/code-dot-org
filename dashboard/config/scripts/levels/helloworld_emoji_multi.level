@@ -67,6 +67,7 @@
     "instructions_icon": "emoji",
     "project_template_level_name": "helloworld_emoji_template",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel3();",
+    "skip_autosave": true,
     "preload_asset_list": null,
     "encrypted_examples": [
 

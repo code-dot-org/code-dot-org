@@ -65,6 +65,7 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Click on the sprites while the program is running.\",\"hint_id\":\"hw_click_sprites\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5ccdc39ffb113caab99c572f56a16df/helloworld_food_click.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to change any of the code in this level.\",\"hint_id\":\"hw_no_changes\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ec039212f05e3efb2779a92da1ee94a/helloworld_food_click.mp3\"}]",
     "instructions_icon": "pizza",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel4();",
+    "skip_autosave": true,
     "preload_asset_list": null,
     "encrypted_examples": "g5jS9n/i0sraWVM3r4yc6q82Hnlxs3aGMrGWE2t2rXenbZjCCMdluXDf0Ez5\nqSX5EKuXjH7pp+kqCB/NiqJ3iQ==\n"
   },

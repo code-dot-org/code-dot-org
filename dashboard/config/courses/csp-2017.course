@@ -25,6 +25,8 @@
   ],
   "published_state": "stable",
   "properties": {
+    "family_name": "csp",
+    "has_verified_resources": true,
     "teacher_resources": [
       [
         "curriculum",
@@ -39,8 +41,6 @@
         "https://studio.code.org/courses/CSP%20Support"
       ]
     ],
-    "has_verified_resources": true,
-    "family_name": "csp",
     "version_year": "2017"
   },
   "resources": [
