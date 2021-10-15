@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "explore-data-1",
-    "serialized_at": "2021-10-13 16:19:30 UTC",
+    "serialized_at": "2021-10-13 22:03:38 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "explore-data-1"
@@ -138,15 +138,9 @@
       "key": "51210a6a-e15c-41b4-a995-544dd2b61c56",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Watch the video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the \n[r data_visualizer_in_app_lab_part_1/explore-data-1/2021]",
         "name": "Making Bar Charts and Histograms",
-        "progression_name": "Video: Data Visualizer in App Lab Part 1",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Re-Watching the Video:** If students have questions about navigating App Lab and the Data Visualizer, they can click on the Help and Tips tab at the top of their screen and re-watch the video."
-          }
-        ]
+        "progression_name": "Video: Data Visualizer in App Lab Part 1"
       },
       "seeding_key": {
         "activity_section.key": "51210a6a-e15c-41b4-a995-544dd2b61c56",
@@ -157,8 +151,14 @@
       "key": "52ed69a5-ec3b-4e88-9a4f-8367bb910f0e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [Exploring Bar Charts and Histograms](https://docs.google.com/document/d/15oXKCaqWYPaiBZGW-xW-HFsnwbFsMMdbVwQmxD9K3UY/edit) - ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.",
-        "progression_name": "Data Visualizer"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [r exploring_bar_charts_and_histograms_2/explore-data-1/2021] - ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.",
+        "progression_name": "Data Visualizer",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Re-Watching the Video:** If students have questions about navigating App Lab and the Data Visualizer, they can click on the Help and Tips tab at the top of their screen and re-watch the video."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "52ed69a5-ec3b-4e88-9a4f-8367bb910f0e",
@@ -343,18 +343,6 @@
     },
     {
       "name": "Exploring Bar Charts and Histograms",
-      "url": "https://docs.google.com/document/d/1rqbr3Gs4uLBYiH3t8wvzsA0xdMCPI2R1b8Nca_UKhEg/edit",
-      "key": "exploring_bar_charts_and_histograms_1",
-      "properties": {
-        "type": "Exemplar",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_bar_charts_and_histograms_1"
-      }
-    },
-    {
-      "name": "Exploring Bar Charts and Histograms",
       "url": "https://docs.google.com/document/d/15oXKCaqWYPaiBZGW-xW-HFsnwbFsMMdbVwQmxD9K3UY/edit",
       "key": "exploring_bar_charts_and_histograms_2",
       "properties": {
@@ -377,12 +365,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "exploring_bar_charts_and_histograms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "exploring_bar_charts_and_histograms_1"
       }
     },
     {
