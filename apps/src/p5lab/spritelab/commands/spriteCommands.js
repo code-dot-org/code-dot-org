@@ -71,80 +71,73 @@ export const commands = {
   },
 
   makeBurst(num, animation, effectName) {
+    const behaviorFuncs = {
+      burst: behaviorCommands.burstFunc,
+      pop: behaviorCommands.popFunc,
+      rain: behaviorCommands.rainFunc,
+      spiral: behaviorCommands.spiralFunc
+    };
     for (let i = 0; i < num; i++) {
+      let spriteOptions = {};
       switch (effectName) {
         case 'burst': {
-          const spriteId = this.addSprite({
+          spriteOptions = {
             animation,
             speed: Math.floor(Math.random() * 10 + 10),
-            scale: 1,
+            scale: 0.01,
             direction: Math.floor(Math.random() * 360),
-            rotation: Math.floor(Math.random() * 360)
-          });
-          const sprite = this.getSpriteArray({id: spriteId})[0];
-          sprite.delay = Math.floor(Math.random() * 20 + 1);
-          sprite.lifetime = 60;
-          this.addBehavior(sprite, {
-            func: behaviorCommands.burstFunc.apply(this),
-            name: 'burst'
-          });
+            rotation: Math.floor(Math.random() * 360),
+            delay: Math.floor(Math.random() * 20 + 1),
+            lifetime: 60
+          };
           break;
         }
         case 'pop': {
-          const spriteId = this.addSprite({
+          spriteOptions = {
             animation,
             speed: Math.floor(Math.random() * 15 + 10),
-            scale: 50,
+            scale: 0.5,
             direction: Math.floor(Math.random() * 90 + 225),
             location: {
               x: Math.floor(Math.random() * 400),
               y: Math.floor(Math.random() * 50 + 450)
-            }
-          });
-          const sprite = this.getSpriteArray({id: spriteId})[0];
-          sprite.lifetime = 60;
-          this.addBehavior(sprite, {
-            func: behaviorCommands.popFunc.apply(this),
-            name: 'pop'
-          });
+            },
+            lifetime: 60
+          };
           break;
         }
         case 'rain': {
-          const spriteId = this.addSprite({
+          spriteOptions = {
             animation,
             speed: 0,
-            scale: 50,
+            scale: 0.5,
             location: {
               x: Math.floor(Math.random() * 400),
               y: Math.floor(Math.random() * 100 - 125)
             },
-            rotation: Math.floor(Math.random() * 20 - 10)
-          });
-          const sprite = this.getSpriteArray({id: spriteId})[0];
-          sprite.lifetime = 60;
-          this.addBehavior(sprite, {
-            func: behaviorCommands.rainFunc.apply(this),
-            name: 'rain'
-          });
+            rotation: Math.floor(Math.random() * 20 - 10),
+            lifetime: 60
+          };
           break;
         }
         case 'spiral': {
-          const spriteId = this.addSprite({
+          spriteOptions = {
             animation,
-            scale: 1
-          });
-          const sprite = this.getSpriteArray({id: spriteId})[0];
-          sprite.initialAngle = (i * 360) / num - 180 * ((i + 1) % 2);
-          sprite.delay = (i * 30) / num;
-          sprite.lifetime = 120;
-          this.addBehavior(sprite, {
-            func: behaviorCommands.spiralFunc.apply(this),
-            name: 'spiral'
-          });
+            scale: 0.01,
+            initialAngle: (i * 360) / num - 180 * ((i + 1) % 2),
+            delay: (i * 30) / num,
+            lifetime: 90
+          };
           break;
         }
         default:
       }
+      const spriteId = this.addSprite(spriteOptions);
+      const sprite = this.getSpriteArray({id: spriteId})[0];
+      this.addBehavior(sprite, {
+        func: behaviorFuncs[effectName].apply(this),
+        name: effectName
+      });
     }
   },
 
