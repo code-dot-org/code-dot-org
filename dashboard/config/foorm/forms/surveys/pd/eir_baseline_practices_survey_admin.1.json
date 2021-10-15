@@ -798,51 +798,6 @@
         },
         {
           "type": "matrix",
-          "name": "cs_4_all_4",
-          "title": "How important is it for teachers to do each of the following in their computer science instruction?  ",
-          "columns": [
-            {
-              "value": "0",
-              "text": "Not important"
-            },
-            {
-              "value": "1",
-              "text": "Somewhat important"
-            },
-            {
-              "value": "2",
-              "text": "Moderately important"
-            },
-            {
-              "value": "3",
-              "text": "Very important"
-            },
-            {
-              "value": "4",
-              "text": "Extremely important"
-            }
-          ],
-          "rows": [
-            {
-              "value": "support_interest",
-              "text": "Support students’ interest in computer science"
-            },
-            {
-              "value": "support_females",
-              "text": "Support participation of females in computer science"
-            },
-            {
-              "value": "support_color",
-              "text": "Support participation of students of color in computer science"
-            },
-            {
-              "value": "support_low_ses",
-              "text": "Support participation of students from low socioeconomic backgrounds in computer science"
-            }
-          ]
-        },
-        {
-          "type": "matrix",
           "name": "cs_classroom_1",
           "title": "How much do you agree or disagree with the following statements about what good computer science classes are like?",
           "columns": [
