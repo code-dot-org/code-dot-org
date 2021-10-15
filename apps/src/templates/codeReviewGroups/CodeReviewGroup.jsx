@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Droppable} from 'react-beautiful-dnd';
 import CodeReviewGroupMember from './CodeReviewGroupMember';
 
-function CodeReviewGroup({members, index}) {
+export default function CodeReviewGroup({members, index}) {
   return (
     <Droppable key={index} droppableId={`${index}`}>
       {(provided, snapshot) => (
@@ -37,4 +37,3 @@ const getListStyle = isDraggingOver => ({
 });
 
 export const grid = 8;
-export default CodeReviewGroup;

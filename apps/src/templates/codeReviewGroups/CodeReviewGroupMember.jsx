@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Draggable} from 'react-beautiful-dnd';
 import {grid} from './CodeReviewGroup';
 
-function CodeReviewGroupMember({member, index}) {
+export default function CodeReviewGroupMember({member, index}) {
   return (
     <Draggable
       key={member.id}
@@ -57,5 +57,3 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   // styles we need to apply on draggables
   ...draggableStyle
 });
-
-export default CodeReviewGroupMember;
