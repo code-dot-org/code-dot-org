@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "counting-csc",
-    "serialized_at": "2021-10-13 18:34:53 UTC",
+    "serialized_at": "2021-10-13 22:41:38 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "counting-csc"
@@ -57,7 +57,7 @@
       "key": "8a00e35f-038b-4fb0-b85b-79b22953b2bd",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -171,7 +171,7 @@
       "key": "cdf431db-9a1d-4333-9f25-fb22d630f091",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the second puzzle. Students can start working through levels two through five.\n\n**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n\n\n\n**Levels 2-3:** These levels are meant to introduce the Maze and drag-and-drop environment to your students before returning to the collector puzzles with Laurel. Use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in these levels.",
+        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the second puzzle. Students can start working through levels two through five.\n\n\n\n\n**Levels 2-3:** These levels are meant to introduce the Maze and drag-and-drop environment to your students before returning to the collector puzzles with Laurel. Use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in these levels.",
         "progression_name": "Maze Practice"
       },
       "seeding_key": {
@@ -217,7 +217,8 @@
       "key": "a61f7370-8907-4a93-8617-345ead283c49",
       "position": 8,
       "properties": {
-        "progression_name": "Teacher Demonstration"
+        "description": "**Model:** Continue to the next level as a class. Model for students how to use the Repeat block to solve the puzzle, emphasizing the relationship between counting and the number that goes into the top of the repeat block.",
+        "progression_name": "Model Level"
       },
       "seeding_key": {
         "activity_section.key": "a61f7370-8907-4a93-8617-345ead283c49",
@@ -228,7 +229,7 @@
       "key": "2708da1f-1279-4a7b-92c5-5df00921fe17",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**Have students continue to work through the levels in Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students continue to work through the levels in Code Studio.",
         "progression_name": "Practice",
         "tips": [
           {
@@ -246,7 +247,8 @@
       "key": "b9cf9060-68c1-4070-bc45-27f7037d983d",
       "position": 10,
       "properties": {
-        "description": "####General Support\n- While circling the room, encourage students to take their time and experiment. Staying on a level and tinkering with their code is highly encouraged. \n- Collaborate with Neighbors: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n\nFor the times when a student feels stuck: \n\nRead the Instructions: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n\n- Students can also click on this [text-to-speech] icon to hear the instructions read aloud.\n- Look for hints ![](https://curriculum.code.org/media/uploads/hint.png) : Most levels include at least one hint with more explicit details about how to pass the level. \n\n- Celebrate bugs: Getting a bug in your code is a natural part of the coding process. Encourage students to use debugging practices to tinker with their code. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n"
+        "description": "While students work through levels, you can use these strategies to support a productive classroom environment and support students who may get stuck.\n- **Take Your Time:** Encourage students to take their time and experiment. Staying on a level and tinkering with their code is highly encouraged. \n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n\n",
+        "name": "General Support"
       },
       "seeding_key": {
         "activity_section.key": "b9cf9060-68c1-4070-bc45-27f7037d983d",
@@ -254,11 +256,22 @@
       }
     },
     {
-      "key": "24bae88f-77be-4be4-bdf7-d922de329dd0",
+      "key": "b6cf49d2-a18c-4288-ba1a-848c081650a4",
       "position": 1,
       "properties": {
-        "description": "\n\n**Do This:** Pass out the Wrap Up worksheet to each student.\n\nGuide the Math Talk with the whole class by using the example in the Wrap-Up worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How many gems should Laurel collect?  How many steps should Laurel take to collect the gems? \n\nAs you discuss these prompts with students, incorporate concepts of addition into the discussion by pointing out the different gems along Laurel’s path (West, South, then West again). Students can use manipulatives (ie: blocks, fingers) or images from the handout to help explain their reasoning. Consider the following prompts as part of this discussion:\n\n- *Show me with your fingers how many gems Laurel should collect going West? Going South? Going West Again.*\n- *What if Laurel collects the first three gems, how many more gems should Laurel collect to finish the puzzle?*\n\n  - For this type of question, using directions might help students develop multiple ways to show collecting gems such as 3 + 5 + 2 ( three west, five south, two west).\n",
         "name": "Math Talk",
+        "progression_name": "Math Talk"
+      },
+      "seeding_key": {
+        "activity_section.key": "b6cf49d2-a18c-4288-ba1a-848c081650a4",
+        "lesson_activity.key": "3914a045-61d6-4c93-b71d-89018a22723a"
+      }
+    },
+    {
+      "key": "24bae88f-77be-4be4-bdf7-d922de329dd0",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Pass out the Wrap Up worksheet to each student.\n\nGuide the Math Talk with the whole class by using the example in the Wrap-Up worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How many gems should Laurel collect?  How many steps should Laurel take to collect the gems?_\n\nAs you discuss these prompts with students, incorporate concepts of addition into the discussion by pointing out the different gems along Laurel’s path (West, South, then West again). Students can use manipulatives (ie: blocks, fingers) or images from the handout to help explain their reasoning. Consider the following prompts as part of this discussion:\n\n- *Show me with your fingers how many gems Laurel should collect going West? Going South? Going West Again.*\n- *What if Laurel collects the first three gems, how many more gems should Laurel collect to finish the puzzle?*\n  - For this type of question, using directions might help students develop multiple ways to show collecting gems such as 3 + 5 + 2 ( three west, five south, two west).\n",
         "progression_name": "Math Talk"
       },
       "seeding_key": {
@@ -274,6 +287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-1"
+        ],
         "progression": "Video: Introduction to Maze Puzzles"
       },
       "bonus": false,
@@ -296,6 +312,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-2"
+        ],
         "progression": "Maze Practice"
       },
       "bonus": false,
@@ -318,6 +337,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-3"
+        ],
         "progression": "Maze Practice"
       },
       "bonus": false,
@@ -340,6 +362,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-4"
+        ],
         "progression": "Video: The Collector"
       },
       "bonus": false,
@@ -362,6 +387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-5"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -384,6 +412,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-6"
+        ],
         "progression": "Video: The Repeat Block"
       },
       "bonus": false,
@@ -406,7 +437,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Teacher Demonstration"
+        "level_keys": [
+          "csc-laurel-7"
+        ],
+        "progression": "Model Level"
       },
       "bonus": false,
       "seeding_key": {
@@ -553,6 +587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc - stop math talk"
+        ],
         "progression": "Math Talk"
       },
       "bonus": false,
@@ -563,7 +600,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "counting-csc",
-        "activity_section.key": "24bae88f-77be-4be4-bdf7-d922de329dd0"
+        "activity_section.key": "b6cf49d2-a18c-4288-ba1a-848c081650a4"
       },
       "level_keys": [
         "csc - stop math talk"
@@ -724,7 +761,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "counting-csc",
-        "activity_section.key": "24bae88f-77be-4be4-bdf7-d922de329dd0"
+        "activity_section.key": "b6cf49d2-a18c-4288-ba1a-848c081650a4"
       }
     }
   ],

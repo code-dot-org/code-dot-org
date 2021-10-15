@@ -26418,15 +26418,7 @@ en:
             lesson-1:
               name: Our AI Code of Ethics
               description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
-              description_teacher: |-
-                This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
-
-                #### Prerequisite Skills
-                This lesson is not intended to introduce students to sound research practices or how to vet credible sources. Students should come into this lesson with prior knowledge and the skills to be able to:
-
-                - recognize credible sources on the internet
-                - summarize information from digital sources to support an argument
-                - navigate online resources and cite sources appropriately
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
           lesson_groups: {}
           name: ai-ethics
           title: Our AI Code of Ethics
@@ -26526,8 +26518,8 @@ en:
           lessons:
             lesson-1:
               name: Poem Art
-              description_student: 
-              description_teacher: 
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
           lesson_groups: {}
           name: poem-art
           title: ''
@@ -26584,7 +26576,7 @@ en:
                 - recognize that words are made up of a sequence of letters.
           lesson_groups: {}
           name: spelling-bee
-          title: CSC - Spelling Bee
+          title: Spelling Bee
           description_audience: ''
           description_short: ''
           description: ''
@@ -26658,8 +26650,12 @@ en:
               description_teacher: 
             lesson-2:
               name: Traversing a 2D Array by Rows
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Traversing a 2D Array by Columns
+              description_student: 
+              description_teacher: 
             lesson-4:
               name: Using Enhanced for Loops
             lesson-5:
@@ -26674,10 +26670,16 @@ en:
               name: Searching for Elements
             lesson-10:
               name: A Sustainable Neighborhood Project - Day 1
+              description_student: 
+              description_teacher: 
             lesson-11:
               name: A Sustainable Neighborhood Project - Day 2
+              description_student: 
+              description_teacher: 
             lesson-12:
               name: A Sustainable Neighborhood Project - Day 3
+              description_student: 
+              description_teacher: 
             lesson-13:
               name: FRQ Day
               description_student: 
@@ -26686,6 +26688,8 @@ en:
               name: Assessment Day
               description_student: 
               description_teacher: 
+            lesson-15:
+              name: Reversing Elements
           lesson_groups:
             lessonGroup-2:
               display_name: Content

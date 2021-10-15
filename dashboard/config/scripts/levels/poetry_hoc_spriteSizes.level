@@ -38,7 +38,8 @@
     "hide_pause_button": "true",
     "instructions_icon": "octiHopeful",
     "standalone_app_name": "poetry_hoc",
-    "default_poem": "ewing",
+    "default_poem": "alexander",
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "user_id": 13468,
@@ -46,7 +47,7 @@
   "created_at": "2021-09-28T16:35:19.000Z",
   "level_num": "custom",
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-09-28 16:41:17 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:15:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:15:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 19:01:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-01 21:47:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-01 21:49:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-07 13:01:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:20:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:21:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"show_poem_dropdown\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:24:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 15:56:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:22:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"validation_code\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:25:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:26:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:29:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-09-28 16:41:17 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:15:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:15:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 19:01:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-01 21:47:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-01 21:49:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-07 13:01:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:20:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:21:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"show_poem_dropdown\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:24:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 15:56:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:22:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"validation_code\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:25:18 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:26:43 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:29:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:31:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:35:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:37:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:38:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:39:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:40:26 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -69,12 +70,12 @@
                       <title name="EFFECT">"fade"</title>
                       <next>
                         <block type="Poetry_makeNewSpriteAnon">
-                          <title name="ANIMATION_NAME">"flowers_purple"</title>
-                          <title name="LOCATION">{"x":332,"y":55}</title>
+                          <title name="ANIMATION_NAME">"ocean_wave"</title>
+                          <title name="LOCATION">{"x":349,"y":346}</title>
                           <next>
                             <block type="Poetry_makeNewSpriteAnon">
-                              <title name="ANIMATION_NAME">"flowers_white"</title>
-                              <title name="LOCATION">{"x":60,"y":61}</title>
+                              <title name="ANIMATION_NAME">"shipwreck"</title>
+                              <title name="LOCATION">{"x":54,"y":346}</title>
                             </block>
                           </next>
                         </block>
@@ -1408,31 +1409,31 @@
           <title name="N">0</title>
         </block>
         <block type="Poetry_makeNewSpriteAnon">
-          <title name="ANIMATION_NAME">"flowers_purple"</title>
+          <title name="ANIMATION_NAME">"ocean_wave"</title>
           <title name="LOCATION">{"x":200,"y":200}</title>
         </block>
         <block type="Poetry_setSize">
-          <title name="SPRITE">"flowers_purple"</title>
-          <title name="VAL">50</title>
+          <title name="SPRITE">"ocean_wave"</title>
+          <title name="VAL">150</title>
         </block>
         <block type="Poetry_startBehavior">
-          <title name="ANIMATION_NAME">"flowers_purple"</title>
-          <title name="BEHAVIOR">fluttering</title>
+          <title name="ANIMATION_NAME">"ocean_wave"</title>
+          <title name="BEHAVIOR">moving_west_and_looping</title>
         </block>
         <block type="Poetry_stopBehavior">
-          <title name="ANIMATION_NAME">"flowers_purple"</title>
-          <title name="BEHAVIOR">wandering</title>
+          <title name="ANIMATION_NAME">"ocean_wave"</title>
+          <title name="BEHAVIOR">moving_west_and_looping</title>
         </block>
         <block type="Poetry_destroy">
-          <title name="ANIMATION_NAME">"flowers_purple"</title>
+          <title name="ANIMATION_NAME">"ocean_wave"</title>
         </block>
         <block type="Poetry_setFont">
-          <title name="FONT">"Arial"</title>
+          <title name="FONT">"Arial Black"</title>
         </block>
         <block type="Poetry_setFontColor">
           <value name="FILL">
             <block type="colour_picker">
-              <title name="COLOUR">#3333ff</title>
+              <title name="COLOUR">#000000</title>
             </block>
           </value>
         </block>
@@ -1455,6 +1456,9 @@
         <block type="Poetry_setBackgroundEffect">
           <title name="EFFECT">"fadeColors"</title>
           <title name="PALETTE">"ocean"</title>
+        </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <title name="IMG">"rainbow_watercolor"</title>
         </block>
       </xml>
     </toolbox_blocks>
