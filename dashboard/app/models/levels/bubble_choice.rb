@@ -182,6 +182,35 @@ class BubbleChoice < DSLDefined
     return best_result_sublevel(student, script)
   end
 
+  def get_sublevel_for_progress_from_data(user_levels_by_level, teacher_feedback_by_level)
+    sublevel_for_progress = nil
+    latest_keep_working_feedback = nil
+    best_result = nil
+
+    sublevels.each do |sublevel|
+      teacher_feedback = teacher_feedback_by_level.try(:[], sublevel.id)
+      if teacher_feedback && teacher_feedback.keep_working?
+        is_latest = latest_keep_working_feedback.nil? || teacher_feedback.updated_at > latest_keep_working_feedback
+        if is_latest
+          sublevel_for_progress = sublevel
+          latest_keep_working_feedback = teacher_feedback.updated_at
+        end
+      elsif latest_keep_working_feedback.nil?
+        user_level = user_levels_by_level.try(:[], sublevel.id)
+
+        if user_level
+          is_best_result = best_result.nil? || user_level.best_result > best_result
+          if is_best_result
+            sublevel_for_progress = sublevel
+            best_result = user_level.best_result
+          end
+        end
+      end
+    end
+
+    return sublevel_for_progress
+  end
+
   # Returns an array of BubbleChoice parent levels for any given sublevel name.
   # @param [String] level_name. The name of the sublevel.
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
@@ -246,7 +275,7 @@ class BubbleChoice < DSLDefined
     latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)
 
     if latest_feedbacks.any?
-      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking}
+      keep_working_feedback = latest_feedbacks&.find {|feedback| feedback.keep_working?}
       return keep_working_feedback&.level
     end
   end

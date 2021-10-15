@@ -228,7 +228,11 @@ class TeacherFeedback < ApplicationRecord
   def awaiting_teacher_review?(is_latest = false)
     return false unless is_latest
 
-    return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
+    return keep_working? && student_updated_since_feedback?
+  end
+
+  def keep_working?
+    return review_state == REVIEW_STATES.keepWorking
   end
 
   private

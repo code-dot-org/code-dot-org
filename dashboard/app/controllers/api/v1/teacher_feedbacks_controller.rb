@@ -53,7 +53,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
     @teacher_feedback.teacher_id = current_user.id
 
     if @teacher_feedback.save
-      if @teacher_feedback.review_state == TeacherFeedback::REVIEW_STATES.keepWorking
+      if @teacher_feedback.keep_working?
         reset_progress_for_keep_working(@teacher_feedback)
       end
 
