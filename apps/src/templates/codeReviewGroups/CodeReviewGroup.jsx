@@ -5,7 +5,7 @@ import CodeReviewGroupMember from './CodeReviewGroupMember';
 
 export default function CodeReviewGroup({members, index}) {
   return (
-    <Droppable droppableId={`${index}`}>
+    <Droppable key={index} droppableId={`${index}`}>
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}
@@ -26,7 +26,7 @@ export default function CodeReviewGroup({members, index}) {
   );
 }
 
-// TO DO: specify shape of elements of array
+// TO DO: specify shape of members
 CodeReviewGroup.propTypes = {
   members: PropTypes.array.isRequired,
   index: PropTypes.number.isRequired
