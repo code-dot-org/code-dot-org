@@ -74,14 +74,14 @@ export const commands = {
     for (let i = 0; i < num; i++) {
       switch (effectName) {
         case 'burst': {
-          let spriteId = this.addSprite({
+          const spriteId = this.addSprite({
             animation,
             speed: Math.floor(Math.random() * 10 + 10),
             scale: 1,
             direction: Math.floor(Math.random() * 360),
             rotation: Math.floor(Math.random() * 360)
           });
-          let sprite = this.getSpriteArray({id: spriteId})[0];
+          const sprite = this.getSpriteArray({id: spriteId})[0];
           sprite.delay = Math.floor(Math.random() * 20 + 1);
           sprite.lifetime = 60;
           this.addBehavior(sprite, {
@@ -91,7 +91,7 @@ export const commands = {
           break;
         }
         case 'pop': {
-          let spriteId = this.addSprite({
+          const spriteId = this.addSprite({
             animation,
             speed: Math.floor(Math.random() * 15 + 10),
             scale: 50,
@@ -101,7 +101,7 @@ export const commands = {
               y: Math.floor(Math.random() * 50 + 450)
             }
           });
-          let sprite = this.getSpriteArray({id: spriteId})[0];
+          const sprite = this.getSpriteArray({id: spriteId})[0];
           sprite.lifetime = 60;
           this.addBehavior(sprite, {
             func: behaviorCommands.popFunc.apply(this),
@@ -110,7 +110,7 @@ export const commands = {
           break;
         }
         case 'rain': {
-          let spriteId = this.addSprite({
+          const spriteId = this.addSprite({
             animation,
             speed: 0,
             scale: 50,
@@ -120,7 +120,7 @@ export const commands = {
             },
             rotation: Math.floor(Math.random() * 20 - 10)
           });
-          let sprite = this.getSpriteArray({id: spriteId})[0];
+          const sprite = this.getSpriteArray({id: spriteId})[0];
           sprite.lifetime = 60;
           this.addBehavior(sprite, {
             func: behaviorCommands.rainFunc.apply(this),
@@ -129,11 +129,11 @@ export const commands = {
           break;
         }
         case 'spiral': {
-          let spriteId = this.addSprite({
+          const spriteId = this.addSprite({
             animation,
             scale: 1
           });
-          let sprite = this.getSpriteArray({id: spriteId})[0];
+          const sprite = this.getSpriteArray({id: spriteId})[0];
           sprite.initialAngle = (i * 360) / num - 180 * ((i + 1) % 2);
           sprite.delay = (i * 30) / num;
           sprite.lifetime = 120;
