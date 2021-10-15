@@ -66,6 +66,7 @@
     "short_instructions": "Give each sprite a different location.",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To change a sprite's location, click the pin on the location block, then click where you want it to go.\\n\\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)\",\"hint_id\":\"location_pin_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1ed0088f4d385255f8d59e42ae9133ed/helloworld_animals_location.mp3\"}]",
     "instructions_icon": "bear",
+    "skip_autosave": true,
     "preload_asset_list": null,
     "encrypted_examples": [
 

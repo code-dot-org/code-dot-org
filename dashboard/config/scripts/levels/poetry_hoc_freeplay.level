@@ -35,6 +35,7 @@
     "hide_pause_button": "false",
     "instructions_icon": "octiGeneral",
     "standalone_app_name": "poetry_hoc",
+    "skip_autosave": true,
     "preload_asset_list": null,
     "default_poem": "carroll_3"
   },
