@@ -430,6 +430,8 @@ module Services
           definition: "new definition",
           course_version: script.course_version
         )
+        vocab_keys = lesson.vocabularies.map(&:key)
+        assert_equal vocab_keys, vocab_keys.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -463,6 +465,8 @@ module Services
           definition: "new definition",
           course_version: script.course_version
         )
+        vocab_keys = lesson.vocabularies.map(&:key)
+        refute_equal vocab_keys, vocab_keys.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -492,6 +496,7 @@ module Services
         script.lessons.first.programming_expressions.last.key,
         new_programming_expression.key
       ]
+      assert_equal expected_keys, expected_keys.sort
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
@@ -519,6 +524,7 @@ module Services
         script.lessons.first.programming_expressions.last.key,
         new_programming_expression.key
       ]
+      refute_equal expected_keys, expected_keys.sort
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
@@ -554,6 +560,8 @@ module Services
         lesson = script.lessons.first
         lesson.standards.first.destroy
         lesson.standards.push(new_standard)
+        shortcodes = lesson.standards.map(&:shortcode)
+        assert_equal shortcodes, shortcodes.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -585,6 +593,8 @@ module Services
         lesson = script.lessons.first
         lesson.standards.first.destroy
         lesson.standards.push(new_standard)
+        shortcodes = lesson.standards.map(&:shortcode)
+        refute_equal shortcodes, shortcodes.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -615,6 +625,8 @@ module Services
         lesson = script.lessons.first
         lesson.opportunity_standards.first.destroy
         lesson.opportunity_standards.push(new_standard)
+        shortcodes = lesson.opportunity_standards.map(&:shortcode)
+        assert_equal shortcodes, shortcodes.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -652,6 +664,8 @@ module Services
         lesson = script.lessons.first
         lesson.opportunity_standards.first.destroy
         lesson.opportunity_standards.push(new_standard)
+        shortcodes = lesson.opportunity_standards.map(&:shortcode)
+        refute_equal shortcodes, shortcodes.sort
       end
 
       ScriptSeed.seed_from_json(json)
