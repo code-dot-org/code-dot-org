@@ -23,12 +23,17 @@ FactoryGirl.define do
       questions '{
         "pages":[
           {
-            "type": "rating",
-            "name": "teacher_comfort",
-            "title": "I feel comfortable collaborating with teachers in my cohort and asking for support.",
-            "rateMax": 7,
-            "minRateDescription": "Strongly Disagree",
-            "maxRateDescription": "Strongly Agree"
+            "name":"page_1",
+            "elements":[
+              {
+                "type": "rating",
+                "name": "teacher_comfort",
+                "title": "I feel comfortable collaborating with teachers in my cohort and asking for support.",
+                "rateMax": 7,
+                "minRateDescription": "Strongly Disagree",
+                "maxRateDescription": "Strongly Agree"
+              }
+            ]
           },
         ]
       }'
