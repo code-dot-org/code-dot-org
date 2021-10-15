@@ -2637,3 +2637,11 @@ fa:
           lessons:
             lesson-1:
               name: بررسی اجمالی
+        poetry:
+          lessons:
+            lesson-3:
+              name: متغیرها
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: زنبور عسل هجی کن

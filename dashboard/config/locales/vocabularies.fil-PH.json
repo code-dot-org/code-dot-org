@@ -2,6 +2,72 @@
   "fil-PH": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "function/hero/unversioned": {
+          "word": "Function"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Mga conditional"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Mga loop"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Pag-Encrypt"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Pagdedebug"
+        },
         "variable/coursef/2021": {
           "word": "Variable"
         },

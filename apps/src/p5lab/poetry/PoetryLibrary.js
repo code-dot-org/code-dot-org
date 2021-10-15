@@ -11,6 +11,7 @@ const LINE_HEIGHT = 50;
 const FONT_SIZE = 25;
 const PLAYSPACE_SIZE = 400;
 const POEM_DURATION = 400;
+const OCTI_SIZE = 75;
 
 export default class PoetryLibrary extends CoreLibrary {
   constructor(p5) {
@@ -172,6 +173,33 @@ export default class PoetryLibrary extends CoreLibrary {
           // frame at which we know the student will pass the level).
           this.validationInfo.successFrame = this.p5.frameCount;
         }
+      },
+
+      drawOcti() {
+        this.p5.push();
+        this.p5.noStroke();
+        if (this.p5.World.frameCount > this.validationInfo.endTime) {
+          let octiImage = this.p5._preloadedInstructorImage;
+          this.p5.image(
+            octiImage,
+            PLAYSPACE_SIZE - OCTI_SIZE /* x */,
+            PLAYSPACE_SIZE - OCTI_SIZE /* y */,
+            OCTI_SIZE /* width */,
+            OCTI_SIZE /* height */
+          );
+        }
+        this.p5.pop();
+      },
+
+      isOctiClicked() {
+        return (
+          this.validationInfo.successFrame &&
+          this.p5.mouseDown() &&
+          this.p5.World.mouseX > PLAYSPACE_SIZE - OCTI_SIZE &&
+          this.p5.World.mouseX < PLAYSPACE_SIZE &&
+          this.p5.World.mouseY > PLAYSPACE_SIZE - OCTI_SIZE &&
+          this.p5.World.mouseY < PLAYSPACE_SIZE
+        );
       },
 
       drawProgressBar() {

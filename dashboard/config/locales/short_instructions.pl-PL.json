@@ -3682,7 +3682,9 @@
         "poetry_hoc_addSprites": "Autorzy używają obrazów, aby namalować obraz w umyśle czytelnika. Możesz dodać duszki, aby zilustrować swój wiersz.",
         "poetry_hoc_backgroundEffects": "Kiedy czytasz ten wiersz, jaki kolor przychodzi Ci na myśl? Znajdź efekt tła, który pasuje do nastroju tego wiersza.",
         "poetry_hoc_spriteBehaviors": "W trakcie działania programu duszki mogą w kółko wykonywać określone czynności lub zachowania.",
-        "poetry_hoc_spriteSizes": "Możesz zmienić rozmiar już utworzonego duszka."
+        "poetry_hoc_spriteSizes": "Możesz zmienić rozmiar już utworzonego duszka.",
+        "courseF_sprites_make": "Utwórz duszka.",
+        "courseF_sprites_moreSprites": "Utwórz 4 duszki."
       }
     }
   }

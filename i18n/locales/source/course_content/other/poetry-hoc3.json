@@ -77,8 +77,7 @@
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/9": {
     "long_instructions": "Let's get moody. Illustrate a poem however you'd like and share it with your friends!",
     "callouts": {
-      "poetry_burst": "New block!",
-      "poetry_multiple_sprites": "New block!"
+      "poetry_new_block": "New block!"
     }
   }
 }

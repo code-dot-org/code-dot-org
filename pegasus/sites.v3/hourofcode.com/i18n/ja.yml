@@ -29,6 +29,8 @@ ja:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: "  今日から学び、明るい明日を築く。  "
   hoc2020_header_with_line_break_markdown: "  今日から学び、　　　明るい明日を築く。  "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -56,6 +58,7 @@ ja:
   social_hoc2019_coming_dates: もうすぐ2018年12月3～9日がHour of Codeです。コンピューターサイエンスはすべての生徒たちが学ぶべき基礎です。
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: "  AI for Oceans  "
   oceans_landing_description: "  機械学習とAIの倫理的利用について学びます。  "
   cs_for_good_hashtag: "#CSforGood"
@@ -173,6 +176,8 @@ ja:
   codeorg_homepage_hoc2018_video: Watch our video
   hourofcode_homepage_hoc2018_header_line1: 世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。経験は必要ありません。
   hourofcode_homepage_hoc2018_header_line2: 4歳から104歳まで。
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: コードブロックで、アレックスやスティーブをマインクラフト世界の冒険に連れ出しましょう。
   codeorg_homepage_hoc2019_dance_heading: 新しい <span class="highlight-word"> Dance&nbsp;Party!</span>
     をお試しください

@@ -921,6 +921,7 @@ fil:
   pd:
     form_labels:
       email: 'Email'
+      school: 'Paaralan'
       school_name: 'Pangalan ng Paaralan'
       school_city: 'Lungsod ng Paaralan'
       school_country: 'Bansa ng Paaralan'

@@ -881,6 +881,7 @@ sq:
   pd:
     form_labels:
       email: Email
+      school: Shkolla
       school_name: Emri i shkollës
       school_country: Qyteti i shkollës
       colombian_chilean_school_name: Emri i shkollës

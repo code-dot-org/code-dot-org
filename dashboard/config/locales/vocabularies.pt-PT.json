@@ -2,6 +2,69 @@
   "pt-PT": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Depuração"
+        },
+        "function/hero/unversioned": {
+          "word": "Função"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Depuração"
+        },
+        "code/artist/unversioned": {
+          "word": "Código"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Depuração"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Condicionais"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Ciclos"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Depuração"
+        },
+        "code/sports/unversioned": {
+          "word": "Código"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Depuração"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Depuração"
+        },
         "behavior/coursef/2021": {
           "word": "Comportamento"
         },

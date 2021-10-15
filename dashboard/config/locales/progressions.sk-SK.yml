@@ -122,6 +122,7 @@ sk:
       Learning from Simulations: Učenie sa zo simulácií
       Lesson Extras: Doplnkové materiály
       Lesson Overview: Prehľad lekcie
+      Levels: Úrovne
       Light Show: Svetelná show
       Lists: Zoznamy
       Lists in HTML: Zoznamy v HTML
@@ -135,6 +136,7 @@ sk:
       'Maze Intro: Programming with Blocks': 'Úvod k bludiskám: Programovanie pomocou
         blokov'
       Measures: Takty
+      'Minecraft: Hero''s Journey': 'Minecraft: Cesta Hrdinu'
       'Mini-Project: About Me': '"O mne" so Sprite Labom'
       'Mini-Project: Alien Dance Moves': 'Mini-Projekt: Tanečné pohyby votrelca'
       'Mini-Project: Alien Dance Party': 'Mini-Projekt: Votrelcova tanečná párty'
@@ -242,6 +244,7 @@ sk:
       Variables: Premenné
       Velocity: Rýchlosť
       Video: Video
+      'Video: "If/Else"': 'Video: "Ak/Inak"'
       'Video: "If/Else" Statements': 'Video: Podmienkové výroky'
       'Video: Booleans': 'Video: Logické výrazy'
       'Video: CS Matters': 'Video: záležitosti počítačových vied'

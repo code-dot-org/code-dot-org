@@ -2,6 +2,69 @@
   "hu-HU": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "function/hero/unversioned": {
+          "word": "Függvény"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "code/artist/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Feltételek"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "hurkok"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "code/sports/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Hibakeresés"
+        },
         "behavior/coursef/2021": {
           "word": "Viselkedés"
         },

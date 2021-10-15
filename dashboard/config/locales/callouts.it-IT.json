@@ -1758,7 +1758,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nuovo blocco!",
-          "poetry_multiple_sprites": "Nuovo blocco!"
+          "poetry_multiple_sprites": "Nuovo blocco!",
+          "poetry_new_block": "Nuovo blocco!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Nuovo blocco!"

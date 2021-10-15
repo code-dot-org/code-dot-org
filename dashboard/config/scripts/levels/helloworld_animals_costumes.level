@@ -70,6 +70,7 @@
     "thumbnail_url": "https://studio.code.org/api/v1/animation-library/gamelab/S0AVI7mnOI8nWDxmZ1NPz2lMDRfmhAF3/category_food/face_taco.png",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel7();",
     "instructions_icon": "bear",
+    "skip_autosave": true,
     "preload_asset_list": null
   },
   "user_id": 9,

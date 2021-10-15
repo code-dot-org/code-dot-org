@@ -35,9 +35,9 @@
     "hide_pause_button": "false",
     "instructions_icon": "octiIntimate",
     "show_poem_dropdown": "false",
-    "default_poem": "singer",
     "blockly_variables": "word1, word2, word3",
     "min_workspace_height": "0",
+    "skip_autosave": true,
     "preload_asset_list": null,
     "standalone_app_name": "poetry"
   },
@@ -46,7 +46,7 @@
   "created_at": "2021-10-08T16:59:22.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-08T16:59:22.731+00:00\",\"changed\":[\"cloned from \\\"poetry_module_animate_addline\\\"\"],\"cloned_from\":\"poetry_module_animate_addline\"},{\"changed_at\":\"2021-10-08 16:59:41 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:04:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:04:16 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:05:00 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 17:58:02 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-08T16:59:22.731+00:00\",\"changed\":[\"cloned from \\\"poetry_module_animate_addline\\\"\"],\"cloned_from\":\"poetry_module_animate_addline\"},{\"changed_at\":\"2021-10-08 16:59:41 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:04:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:04:16 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 17:05:00 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 17:58:02 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-13 20:16:47 +0000\",\"changed\":[\"start_blocks\",\"default_poem\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

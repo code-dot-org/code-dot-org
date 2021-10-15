@@ -2253,6 +2253,20 @@
           "wobbling": "titrəmə(titrəmək)",
           "moving west and looping": "qərbə doğru hərəkət edin və dönün",
           "moving east and looping": "şərqə doğru döngə hərəkəti"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "gəzən",
+          "moving east": "şərqə doğru hərəkət",
+          "shrinking": "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)",
+          "moving south": "cənuba hərəkət",
+          "moving north": "şimala hərəkət",
+          "jittering": "titrəmək\n(hər hansı cihazın titrəməsi)",
+          "moving west": "qərbə doğru hərəkət",
+          "patrolling": "patrul",
+          "moving with arrow keys": "işarə düymələri ilə hərəkət edin",
+          "wobbling": "titrəmə(titrəmək)",
+          "moving west and looping": "qərbə doğru hərəkət edin və dönün",
+          "moving east and looping": "şərqə doğru döngə hərəkəti"
         }
       }
     }

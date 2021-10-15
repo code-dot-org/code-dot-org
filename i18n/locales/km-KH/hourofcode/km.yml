@@ -35,6 +35,8 @@ km:
   africa_campaign_date_full: ថ្ងៃទី 1-31 តុលា
   africa_campaign_date_year: ឆ្នាំ​២០១៦
   africa_campaign_date_full_year: ថ្ងៃទី 1-31 តុលា
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: រៀនថ្ងៃនេះ កសាងថ្ងៃស្អែកភ្លឺថ្លាជាងមុន។
   hoc2020_header_with_line_break_markdown: |
     រៀនថ្ងៃនេះ
@@ -69,6 +71,7 @@ km:
     វិទ្យាសាស្ត្រកុំព្យូទ័រជាមូលដ្ឋានគ្រឹះសម្រាប់សិស្សគ្រប់រូបក្នុងការរៀន។
   social_hoc2019_dance: មានបញ្ចាំងជូនជាពិសេស Katy Perry, Shawn Mendes, Panicលោ! នៅឌីស្កូ,
     Lil Nas X, បងប្រុសចូណាស, នីគីមីណានិង ៣៤ ទៀត!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: 'AI សំរាប់មហាសមុទ្រ
 
 '
@@ -225,6 +228,8 @@ km:
   hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
     of Code event. One-hour tutorials in over 45 languages. No experience needed.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>

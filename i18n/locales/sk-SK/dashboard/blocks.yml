@@ -1156,6 +1156,7 @@ sk:
           EFFECT:
             '"burst"': prasknutie
             '"rain"': dážď
+            '"spiral"': špirála
       gamelab_makeNewSpriteAnon:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
@@ -1340,8 +1341,6 @@ sk:
             '"when"': keď
             '"while"': pokiaľ
       gamelab_spriteSay:
-        text: "{SPRITE} povedz {SPEECH}"
-      gamelab_spriteSayChoices:
         text: "{SPRITE} povedz {SPEECH}"
       gamelab_stopCollectingData:
         text: prestaň zbierať údaje
