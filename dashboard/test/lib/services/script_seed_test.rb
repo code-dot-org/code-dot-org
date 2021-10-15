@@ -319,6 +319,25 @@ module Services
       assert_equal 2, script.script_levels.first.levels.count
     end
 
+    test 'seed updates levels_script_levels when level keys are out of order' do
+      script = create_script_tree
+      # give the new level a level key that will appear before the existing
+      # level keys in the sort order.
+      new_level = create :level, name: '-abc', level_num: 'custom'
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        updated_script_level = script.script_levels.first
+        updated_script_level.add_variant(new_level)
+        assert_equal 2, script.script_levels.first.levels.count
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      assert_equal 2, script.script_levels.first.levels.count
+    end
+
     test 'seed updates lesson resources' do
       script = create_script_tree
       CourseOffering.add_course_offering(script)
