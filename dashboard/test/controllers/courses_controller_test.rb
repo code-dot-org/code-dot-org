@@ -315,6 +315,16 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp/edit'
   end
 
+  test "create: writes course json file" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/courses/csp.course"}.once
+
+    post :create, params: {course: {name: 'csp'}}
+    assert_response :redirect
+  end
+
   test "create: failure to save redirects to new" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -333,6 +343,17 @@ class CoursesControllerTest < ActionController::TestCase
 
     post :update, params: {course_name: 'csp', scripts: ['unit1', 'unit2']}
     assert_response 403
+  end
+
+  test "update: writes course json file" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    create :unit_group, name: 'csp'
+
+    File.stubs(:write).with {|filename, _| filename.to_s == "#{Rails.root}/config/courses/csp.course"}.once
+
+    post :update, params: {course_name: 'csp', scripts: []}
+    assert_response :success
   end
 
   test "update: persists changes to default_unit_group_units" do
