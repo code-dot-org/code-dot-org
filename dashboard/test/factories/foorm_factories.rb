@@ -34,7 +34,7 @@ FactoryGirl.define do
                 "maxRateDescription": "Strongly Agree"
               }
             ]
-          },
+          }
         ]
       }'
     end
