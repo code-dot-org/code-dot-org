@@ -1342,7 +1342,8 @@ function resizePinnedBelowVisualizationArea() {
     'spelling-table-wrapper',
     'gameButtons',
     'gameButtonExtras',
-    'song-selector-wrapper'
+    'song-selector-wrapper',
+    'poemSelector'
   ];
   possibleElementsAbove.forEach(id => {
     let element = document.getElementById(id);
