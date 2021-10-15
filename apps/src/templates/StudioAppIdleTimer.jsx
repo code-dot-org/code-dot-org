@@ -4,50 +4,44 @@ import {connect} from 'react-redux';
 import IdleTimer from 'react-idle-timer';
 import {setIdleTimeMs} from '@cdo/apps/redux/studioAppActivity';
 
+const IDLE_AFTER = 1000 * 60 * 2;
+
 /**
- * Wrapper component for all Code Studio app types, which provides rotate
- * container and clear-div but otherwise just renders children.
+ * Timer component for all Code Studio app types, this component does idle time tracking
+ * which is stored in redux and used for calculating time spent on a level.
  */
 class StudioAppIdleTimer extends React.Component {
   static propTypes = {
-    setIdleTime: PropTypes.func
+    totalIdleTime: PropTypes.number.isRequired,
+    setIdleTime: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
-    this.idleTimer = null;
 
     this.state = {
-      lastIdleStart: null,
-      totalIdleTime: 0
+      idleStart: null
     };
   }
 
+  // This method isn't called until user has been idle for IDLE_AFTER ms,
+  // which is when we start actually tracking idle time
   onIdle = () => {
-    console.log('on Idle');
-    // Don't start calculating idle time until user has been idle for timeout seconds
-    this.setState({lastIdleStart: new Date().getTime()});
+    this.setState({idleStart: new Date().getTime()});
   };
 
   onActive = () => {
-    console.log('onAction');
-    if (this.state.lastIdleStart) {
+    if (this.state.idleStart) {
       const now = new Date().getTime();
-      const newIdleTime = now - this.state.lastIdleStart;
-      this.setState({
-        totalIdleTime: this.state.totalIdleTime + newIdleTime
-      });
-      this.props.setIdleTime(this.state.totalIdleTime + newIdleTime);
+      const timeSpentIdle = now - this.state.idleStart;
+      this.props.setIdleTime(this.props.totalIdleTime + timeSpentIdle);
     }
   };
 
   render() {
     return (
       <IdleTimer
-        ref={ref => {
-          this.idleTimer = ref;
-        }}
-        timeout={1000 * 15}
+        timeout={IDLE_AFTER}
         onIdle={this.onIdle}
         onActive={this.onActive}
         debounce={250}
@@ -57,7 +51,9 @@ class StudioAppIdleTimer extends React.Component {
 }
 
 export default connect(
-  null,
+  state => ({
+    totalIdleTime: state.studioAppActivity.idleTimeMs
+  }),
   dispatch => ({
     setIdleTime(ms) {
       dispatch(setIdleTimeMs(ms));

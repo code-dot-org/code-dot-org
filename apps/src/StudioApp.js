@@ -184,6 +184,13 @@ class StudioApp extends EventEmitter {
     this.milestoneStartTime = undefined;
 
     /**
+     * The amount of idle time when the last milestone was recorded. Used for
+     * recording the time a student has spent on a level.
+     * @type {?number}
+     */
+    this.milestoneStartTotalIdleTime = undefined;
+
+    /**
      * Whether we've reported a milestone yet for this run/reset cycle
      * @type {boolean}
      */
@@ -695,6 +702,7 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
 
 StudioApp.prototype.initTimeSpent = function() {
   this.milestoneStartTime = new Date().getTime();
+  this.milestoneStartTotalIdleTime = 0;
   this.debouncedSilentlyReport = _.debounce(
     this.silentlyReport.bind(this),
     1000
@@ -1725,11 +1733,19 @@ StudioApp.prototype.report = function(options) {
   // We don't need to report again on reset.
   this.hasReported = true;
   const currentTime = new Date().getTime();
+
+  const totalIdleTime = getStore().getState().studioAppActivity.idleTimeMs;
+  const idleTimeSinceLastMilestone =
+    totalIdleTime - this.milestoneStartTotalIdleTime;
+
+  console.log('idleTimeSinceLastMilestone', idleTimeSinceLastMilestone);
+
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
     time: currentTime - this.initTime,
-    timeSinceLastMilestone: currentTime - this.milestoneStartTime,
+    timeSinceLastMilestone:
+      currentTime - this.milestoneStartTime - idleTimeSinceLastMilestone,
     attempt: this.attempts,
     lines: this.feedback_.getNumBlocksUsed()
   });
@@ -1737,6 +1753,8 @@ StudioApp.prototype.report = function(options) {
   // After we log the reported time we should update the start time of the milestone
   // otherwise if we don't leave the page we are compounding the total time
   this.milestoneStartTime = currentTime;
+
+  this.milestoneStartTotalIdleTime = totalIdleTime;
 
   this.lastTestResult = options.testResult;
 
