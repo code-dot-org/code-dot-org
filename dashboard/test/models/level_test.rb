@@ -164,11 +164,12 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "summarize_for_edit returns level_num for name on blockly level" do
-    blockly_level = create(:level, name: 'blockly', level_num: 'special_blockly_level')
+    game = Game.find_by_name("CustomMaze")
+    blockly_level = create(:level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze")
 
     summary = blockly_level.summarize_for_edit
 
-    assert_equal(summary[:name], 'blockly:Studio:special_blockly_level')
+    assert_equal(summary[:name], 'blockly:CustomMaze:special_blockly_level')
   end
 
   test "get_question_text returns question text for free response level" do
