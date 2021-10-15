@@ -19,10 +19,21 @@ export function PoemEditor(props) {
   const [poem, setPoem] = useState('');
   const [error, setError] = useState(null);
 
-  // Reset error if editor is opened/closed or form state changes.
+  // Reset error if poem state changes.
   useEffect(() => {
     setError(null);
-  }, [props.isOpen, title, author, poem]);
+  }, [title, author, poem]);
+
+  useEffect(() => {
+    // Only clear poem state if the editor is closed when an error is present.
+    if (!props.isOpen && error) {
+      setTitle('');
+      setAuthor('');
+      setPoem('');
+    }
+
+    setError(null);
+  }, [props.isOpen]);
 
   const body = (
     <div>
@@ -112,8 +123,11 @@ function PoemSelector(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = poem => {
-    project.saveSelectedPoem(poem);
-    props.onChangePoem(poem);
+    // If the dialog is dismissed, poem will be falsy. Don't update selected poem.
+    if (poem) {
+      project.saveSelectedPoem(poem);
+      props.onChangePoem(poem);
+    }
     setIsOpen(false);
   };
 
