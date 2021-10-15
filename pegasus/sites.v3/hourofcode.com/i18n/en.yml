@@ -54,7 +54,7 @@
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn computer science. Change the world.'
   social_hoc2019_coming_dates: 'The Hour of Code is coming December 9-15, 2019. Computer science is foundational for every student to learn.'
   social_hoc2019_dance: 'Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!'
-  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
 
   oceans_landing_title: 'AI for Oceans'
   oceans_landing_description: 'Learn about machine learning and ethical use of AI.'
@@ -1255,7 +1255,7 @@
   tutorial_codespeakhappy_name: "Code a Happy Place Meditation App"
   tutorial_grokimage_name: "Image Magic with Python"
   tutorial_icomputelearn_name: "Learn Coding with iCompute"
-  tutorial_rpstress_name: "Stress ball"
+  tutorial_rpstress_name: "Stress Ball: Code a clickable onscreen stress ball"
   tutorial_bsdcause_name: "Support My Cause"
   tutorial_vidcodeanimoji_name: "Animoji"
   tutorial_vidcodeanimojies_name: "Animoji"
@@ -2506,7 +2506,7 @@
   tutorial_codespeakhappy_longdescription: "Learn to program a meditation app that transports you to your 'happy place.'"
   tutorial_grokimage_longdescription: "Use the programming language Python to make speedy changes to images. Make fun image editing programs and make your own image filter!"
   tutorial_icomputelearn_longdescription: "When you learn to code with iCompute you program your own fantastic interactive stories, games, and animations. Following our creative, fun, activities means that you will develop computational thinking as well as coding skills!"
-  tutorial_rpstress_longdescription: "Use Scratch to create a stress ball that you can squash!"
+  tutorial_rpstress_longdescription: "Use Scratch blocks to create and personalise your clickable stress ball with graphic effects, costume animation, and sound effects."
   tutorial_bsdcause_longdescription: "This course allows students to use code as a way to share what is important or interesting to them. They can follow the lesson or create unique projects while learning HTML, CSS and JavaScript. They are guided with video tutorials, live coding and access to the code glossary. The Support My Cause focuses on designing and coding a landing page that will collect data from supporters of your favorite cause. #codeisyourvoice"
   tutorial_vidcodeanimoji_longdescription: "Use a loop to iterate over an array, causing an emoji to animate through multiple options."
   tutorial_vidcodeanimojies_longdescription: "Use a loop to iterate over an array, causing an emoji to animate through multiple options."
@@ -3190,7 +3190,7 @@
   tutorial_codespeakhappy_language: "English"
   tutorial_grokimage_language: "English, English (UK)"
   tutorial_icomputelearn_language: "English"
-  tutorial_rpstress_language: "Arabic, Dutch, English, English (UK), French, Spanish (Mexico)"
+  tutorial_rpstress_language: "English, English (UK)"
   tutorial_bsdcause_language: "English"
   tutorial_vidcodeanimoji_language: "English, Spanish (Spain), Spanish (Mexico)"
   tutorial_vidcodeanimojies_language: "English, Spanish (Spain), Spanish (Mexico)"
@@ -4558,7 +4558,7 @@
   tutorial_codespeakhappy_string_platforms: "Chrome, Firefox"
   tutorial_grokimage_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_icomputelearn_string_platforms: "All modern browsers"
-  tutorial_rpstress_string_platforms: "Chrome, Firefox"
+  tutorial_rpstress_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_bsdcause_string_platforms: "Chrome"
   tutorial_vidcodeanimoji_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_vidcodeanimojies_string_platforms: "All modern browsers, Android tablet, iPad"

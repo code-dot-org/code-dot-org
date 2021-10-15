@@ -60,7 +60,7 @@ describe('TeacherHomepage', () => {
     assert(wrapper.find('NpsSurveyBlock').exists());
   });
 
-  it('renders a SpecialAnnouncementActionBlock if isEnglish and specialAnnouncement exists', () => {
+  it('renders a MarketingAnnouncementBanner if isEnglish and specialAnnouncement exists', () => {
     const specialAnnouncement = {
       title: 'An announcement',
       image: '/image',
@@ -72,7 +72,7 @@ describe('TeacherHomepage', () => {
       isEnglish: true,
       specialAnnouncement
     });
-    assert(wrapper.find('SpecialAnnouncementActionBlock').exists());
+    assert(wrapper.find('MarketingAnnouncementBanner').exists());
   });
 
   // Notifications are configured not to be rendered right now with showAnnouncement = false

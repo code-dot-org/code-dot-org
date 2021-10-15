@@ -4,7 +4,8 @@ import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
-  SectionHeaders
+  SectionHeaders,
+  TextFields
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {isEmail, isZipCode} from '@cdo/apps/util/formatValidation';
 import {
@@ -20,7 +21,7 @@ import {
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import queryString from 'query-string';
 import {styles} from './TeacherApplicationConstants';
-import _ from 'lodash';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 
 const CSD_URL = 'https://code.org/educate/csd';
 const CSP_URL = 'https://code.org/educate/csp';
@@ -38,31 +39,7 @@ export default class AboutYou extends LabeledFormComponent {
 
   static labels = PageLabels.aboutYou;
 
-  static associatedFields = [
-    // Gender Identity and Race are things we want rendered in Section 1 in the detail view
-    // but we want to ask in section 5. So they need to be removed here.
-    // Also remove a whole mess of fields (from school to principal to role) which we have
-    // moved to Section 3, and therefore don't want to validate here in Section 1.
-    ..._.difference(Object.keys(PageLabels.aboutYou), [
-      'genderIdentity',
-      'race',
-      'school',
-      'schoolName',
-      'schoolDistrictName',
-      'schoolAddress',
-      'schoolCity',
-      'schoolState',
-      'schoolZipCode',
-      'schoolType',
-      'principalTitle',
-      'principalFirstName',
-      'principalLastName',
-      'principalEmail',
-      'principalConfirmEmail',
-      'principalPhoneNumber',
-      'currentRole'
-    ])
-  ];
+  static associatedFields = [...Object.keys(PageLabels.aboutYou)];
 
   resetCountry = () => this.handleChange({country: US});
   exitApplication = () => (window.location = PD_RESOURCES_URL);
@@ -110,6 +87,14 @@ export default class AboutYou extends LabeledFormComponent {
       />
     );
   }
+
+  handleSchoolChange = selectedSchool => {
+    this.handleChange({
+      school: selectedSchool && selectedSchool.value,
+      schoolZipCode:
+        selectedSchool && selectedSchool.school && selectedSchool.school.zip
+    });
+  };
 
   render() {
     const nominated = queryString.parse(window.location.search).nominated;
@@ -161,6 +146,10 @@ export default class AboutYou extends LabeledFormComponent {
 
         {this.renderInternationalModal()}
 
+        {this.radioButtonsFor('completingOnBehalfOfSomeoneElse')}
+        {this.props.data.completingOnBehalfOfSomeoneElse === 'Yes' &&
+          this.largeInputFor('completingOnBehalfOfName')}
+
         <Row>
           <Col md={3}>{this.nameInput('firstName')}</Col>
           <Col md={3}>{this.nameInput('lastName')}</Col>
@@ -175,11 +164,72 @@ export default class AboutYou extends LabeledFormComponent {
 
         {this.usPhoneNumberInputFor('phone')}
 
+        <p>
+          Code.org or your Regional Partner may need to ship workshop materials
+          to you. Please provide the address where you can receive mail when
+          school is not in session.
+        </p>
+        {this.inputFor('streetAddress')}
+        {this.inputFor('city')}
+        {this.inputFor('state')}
+
         {this.inputFor('zipCode')}
 
-        {this.radioButtonsFor('completingOnBehalfOfSomeoneElse')}
-        {this.props.data.completingOnBehalfOfSomeoneElse === 'Yes' &&
-          this.largeInputFor('completingOnBehalfOfName')}
+        {this.checkBoxesFor('previousUsedCurriculum')}
+        {this.checkBoxesFor('previousYearlongCdoPd')}
+        {this.radioButtonsWithAdditionalTextFieldsFor('currentRole', {
+          [TextFields.otherPleaseList]: 'other'
+        })}
+
+        <p>Please provide your school and principal information below:</p>
+
+        <FormGroup
+          id="school"
+          controlId="school"
+          validationState={this.getValidationState('school')}
+        >
+          <Row>
+            <Col md={6}>
+              <ControlLabel>
+                School
+                <span style={{color: 'red'}}> *</span>
+              </ControlLabel>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={6}>
+              <SchoolAutocompleteDropdown
+                value={this.props.data.school}
+                onChange={this.handleSchoolChange}
+              />
+            </Col>
+          </Row>
+        </FormGroup>
+
+        {this.props.data.school && this.props.data.school === '-1' && (
+          <div style={styles.indented}>
+            {this.inputFor('schoolName')}
+            {this.inputFor('schoolDistrictName', {required: false})}
+            {this.inputFor('schoolAddress', {required: false})}
+            {this.inputFor('schoolCity', {required: false})}
+            {this.selectFor('schoolState', {placeholder: 'Select a state'})}
+            {this.inputFor('schoolZipCode')}
+            {this.radioButtonsFor('schoolType')}
+          </div>
+        )}
+
+        {
+          // Disable auto complete for principal fields, so they are not filled with the teacher's details.
+          // Using a custom unmatched string "never" instead of "off" for wider browser compatibility.
+          // See https://developer.mozilla.org/en-US/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#Disabling_autocompletion
+        }
+        {this.inputFor('principalFirstName', {autoComplete: 'never'})}
+        {this.inputFor('principalLastName', {autoComplete: 'never'})}
+        {this.inputFor('principalEmail', {autoComplete: 'never'})}
+        {this.inputFor('principalConfirmEmail', {autoComplete: 'never'})}
+        {this.usPhoneNumberInputFor('principalPhoneNumber', {
+          autoComplete: 'never'
+        })}
       </FormGroup>
     );
   }
@@ -192,6 +242,13 @@ export default class AboutYou extends LabeledFormComponent {
 
     if (data.completingOnBehalfOfSomeoneElse === 'Yes') {
       requiredFields.push('completingOnBehalfOfName');
+    }
+
+    if (data.school === '-1') {
+      requiredFields.push('schoolName');
+      requiredFields.push('schoolState');
+      requiredFields.push('schoolZipCode');
+      requiredFields.push('schoolType');
     }
 
     return requiredFields;
@@ -220,6 +277,23 @@ export default class AboutYou extends LabeledFormComponent {
 
     if (!UsPhoneNumberInput.isValid(data.phone)) {
       formatErrors.phone = 'Must be a valid phone number including area code';
+    }
+
+    if (!UsPhoneNumberInput.isValid(data.principalPhoneNumber)) {
+      formatErrors.principalPhoneNumber =
+        'Must be a valid phone number including area code';
+    }
+
+    if (!isEmail(data.principalEmail)) {
+      formatErrors.principalEmail = 'Must be a valid email address';
+    }
+
+    if (data.principalEmail !== data.principalConfirmEmail) {
+      formatErrors.principalConfirmEmail = 'Must match above email';
+    }
+
+    if (data.schoolZipCode && !isZipCode(data.schoolZipCode)) {
+      formatErrors.schoolZipCode = 'Must be a valid zip code';
     }
 
     return formatErrors;
