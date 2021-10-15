@@ -79,10 +79,11 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should get filtered levels with name matching level key for blockly levels" do
-    create(:level, name: 'blockly', level_num: 'special_blockly_level')
+    game = Game.find_by_name("CustomMaze")
+    create(:level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze")
 
-    get :get_filtered_levels, params: {name: 'blockly:Studio:special_blockly_level'}
-    assert_equal 'blockly:Studio:special_blockly_level', JSON.parse(@response.body)['levels'][0]["name"]
+    get :get_filtered_levels, params: {name: 'blockly:CustomMaze:special_blockly_level'}
+    assert_equal 'blockly:CustomMaze:special_blockly_level', JSON.parse(@response.body)['levels'][0]["name"]
   end
 
   test "should get filtered levels with level_type" do
