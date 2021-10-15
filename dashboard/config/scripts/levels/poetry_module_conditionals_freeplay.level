@@ -38,6 +38,7 @@
     "blockly_variables": "word1, word2, word3",
     "min_workspace_height": "0",
     "project_template_level_name": "poetry_module_template",
+    "skip_autosave": true,
     "preload_asset_list": null,
     "standalone_app_name": "poetry"
   },
