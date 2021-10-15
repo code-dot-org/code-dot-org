@@ -23,24 +23,12 @@ FactoryGirl.define do
       questions '{
         "pages":[
           {
-            "name": "teaching_philosophy",
-            "elements": [
-            {
-              "type": "html",
-              "name": "statement_AB_expertise",
-              "html": "<table style=\"width: 600px; margin-left: auto; margin-right: auto;\" cellpadding=\"5\">\n<tbody>\n                <tr>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement A</strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>      </strong>\n                    </span>\n                  </td>\n                  <td style=\"padding-top: 10px; text-align: center;\">\n                    <span style=\"font-family: arial, helvetica, sans-serif; font-size: 12pt;\">\n                      <strong>Statement B</strong>\n                    </span>\n                  </td>\n                </tr>\n                <tr>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\">\n                    <span style=\"color: black;\">\"I do not need to have deep expertise in computer science in order to successfully teach it. I have expertise in how to learn, and I can model that for my students as we learn the content together.\" </span>\n                  </td>\n                  <td style=\"text-align: center;\">\n                    <em><span style=\"color: #999999;\"> </span></em>\n                  </td>\n                  <td style=\"border: 1px solid black; width: 250px; vertical-align: top; text-align: left;\"> \t\n<span style=\"color: black;\">\"As the teacher, I need to have deep content expertise so that I can properly answer students’ questions and guide instruction appropriately.\"</span>\n                    \n                  </td>\n                </tr>\n              </tbody>\n</table>"
-            },
-            {
-              "type": "rating",
-              "title": "Lead Learner. 1. model expertise in how to learn  --- 5. need deep content expertise",
-              "name": "expertise_rating",
-              "indent": 12,
-              "titleLocation": "hidden",
-              "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B"
-            }
-            ],
-            "title": "Teaching Philosophy"
+            "type": "rating",
+            "name": "teacher_comfort",
+            "title": "I feel comfortable collaborating with teachers in my cohort and asking for support.",
+            "rateMax": 7,
+            "minRateDescription": "Strongly Disagree",
+            "maxRateDescription": "Strongly Agree"
           },
         ]
       }'
@@ -99,7 +87,7 @@ FactoryGirl.define do
 
     trait :with_rating_answer do
       answers '{
-        "expertise_rating": [1]
+        "teacher_comfort": 1
       }'
     end
   end
