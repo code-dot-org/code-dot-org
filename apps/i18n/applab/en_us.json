@@ -19,6 +19,7 @@
   "designWorkspaceHeader": "Workspace",
   "designElementPhotoSelectClickName": "Change",
   "designElementPhotoSelectClickDescription": "Triggered when a photo is selected.",
+  "deprecatedDataset": "The {name} dataset is deprecated. Use {alternative} instead!",
   "dropletBlock_appendItem_description": "Append the item to the end of the array.",
   "dropletBlock_appendItem_param0_description": "The array to be modified.",
   "dropletBlock_appendItem_param1_description": "The item to add to the end of the array.",
@@ -392,8 +393,6 @@
   "shareApplabTwitterDonor": "Check out the app I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Share your app:",
   "tableDoesNotExistError": "You tried to read records from a table called \"{tableName}\" but that table doesn't exist in this app",
-  "top200UsaWarning": "The Top 200 USA dataset used in this project is being removed on Dec. 1. Consider using the supported Top 50 USA dataset instead.",
-  "top200WorldwideWarning": "The Top 200 Worldwide dataset used in this project is being removed on Dec. 1. Consider using the supported Top 50 Worldwide dataset instead.",
   "tryAgainText": "Keep working",
   "viewData": "View Data",
   "yes": "Yes"

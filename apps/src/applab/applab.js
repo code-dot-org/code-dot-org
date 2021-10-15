@@ -90,6 +90,14 @@ import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
 import autogenerateML from '@cdo/apps/applab/ai';
 
 /**
+ * Constants for Spotify dataset alert
+ */
+const TOP_200_USA = 'Top 200 USA';
+const TOP_200_Worldwide = 'Top 200 Worldwide';
+const TOP_50_USA = 'Top 200 USA';
+const TOP_50_Worldwide = 'Top 200 Worldwide';
+
+/**
  * Create a namespace for the application.
  * @implements LogTarget
  */
@@ -964,14 +972,15 @@ function setupReduxSubscribers(store) {
  * To be removed once old datasets are removed (https://codedotorg.atlassian.net/browse/STAR-1797)
  */
 function checkDataSetForWarning(tableName) {
-  if (tableName !== 'Top 200 USA' && tableName !== 'Top 200 Worldwide') {
+  // Only two datasets will need to be handled: TOP_200_USA and TOP_200_WORLDWIDE
+  if (tableName !== TOP_200_USA && tableName !== TOP_200_Worldwide) {
     return;
   }
 
-  const msg =
-    tableName === 'Top 200 USA'
-      ? applabMsg.top200UsaWarning()
-      : applabMsg.top200WorldwideWarning();
+  const msg = applabMsg.deprecatedDataset({
+    name: tableName === TOP_200_USA ? TOP_200_USA : TOP_200_Worldwide,
+    alternative: tableName === TOP_200_USA ? TOP_50_USA : TOP_50_Worldwide
+  });
 
   studioApp().displayWorkspaceAlert(
     'warning',
