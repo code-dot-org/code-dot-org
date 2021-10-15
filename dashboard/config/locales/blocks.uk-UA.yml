@@ -1322,10 +1322,6 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
-      gamelab_spriteSayChoices:
-        options:
-          SPEECH:
-            '"I am Catwoman!"': Я Жінка-кішка!
       gamelab_stopCollectingData:
         text: припинити збір даних
       gamelab_subjectSpritePointer:

@@ -4291,7 +4291,12 @@ he:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
-        csa5-pilot: {}
+        csa5-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
         csa6-pilot: {}
         csa7-pilot: {}
         csa8-pilot: {}
@@ -4649,15 +4654,6 @@ he:
             lesson-2: {}
         csa5-pilot-facilitator:
           lessons:
-            Reversing Elements: {}
-            Shifting Elements: {}
-            Finding Duplicates: {}
-            Searching for Elements: {}
-            A Sustainable Neighborhood Project - Day 1: {}
-            A Sustainable Neighborhood Project - Day 2: {}
-            A Sustainable Neighborhood Project - Day 3: {}
-            FRQ Day: {}
-            Assessment Day: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -4667,6 +4663,10 @@ he:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
         poetry-hoc:
           lessons:
             lesson-1: {}
@@ -4760,3 +4760,28 @@ he:
         spritelab-effects-challenge:
           lessons:
             lesson-1: {}
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: ווידג'טים
+            lesson-2:
+              name: כלים
+            lesson-3: {}
+        poem-art:
+          lessons:
+            lesson-1: {}
+        poetry:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3:
+              name: משתנים
+            lesson-4: {}
+            lesson-5: {}
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: תחרות איות
+        outbreak-csc: {}
+        explore-data-1: {}
+        counting-csc: {}

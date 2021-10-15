@@ -1896,7 +1896,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Yeni blok!",
-          "poetry_multiple_sprites": "Yeni blok!"
+          "poetry_multiple_sprites": "Yeni blok!",
+          "poetry_new_block": "Yeni blok!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Yeni blok!"

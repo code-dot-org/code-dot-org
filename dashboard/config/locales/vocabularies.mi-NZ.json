@@ -2,6 +2,21 @@
   "mi-NZ": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Taumahi"
+        },
+        "code/artist/unversioned": {
+          "word": "Waehere"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Ngā Here"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Ngā Koromeke"
+        },
+        "code/sports/unversioned": {
+          "word": "Waehere"
+        },
         "variable/coursef/2021": {
           "word": "Taurangi"
         },

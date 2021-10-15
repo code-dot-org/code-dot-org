@@ -5641,3 +5641,19 @@ uk:
               display_name: Зміст
             lessonGroup-2:
               display_name: Зміст
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Віджети
+            lesson-2:
+              name: Інструменти
+            lesson-3:
+              name: Приклади
+        poetry:
+          lessons:
+            lesson-3:
+              name: Змінні
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Грамотна Бджілка

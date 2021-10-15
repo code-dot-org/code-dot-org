@@ -90,6 +90,10 @@ ka:
         options:
           UNIT:
             '"seconds"': წამები
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -342,11 +346,22 @@ ka:
           STRING:
             '"diamond"': ბრილიანტი
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"2"': '2'
+            '"3"': '3'
             '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
             '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         options:
           KEY:
@@ -357,13 +372,34 @@ ka:
             '"space"': კოსმოსი
             '"enter"': შეიყვანეთ
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"2"': '2'
+            '"3"': '3'
             '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
             '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -419,11 +455,25 @@ ka:
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -436,11 +486,25 @@ ka:
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
             '"y"': y
+            '"z"': z
       gamelab_locationModifier:
         options:
           DIRECTION:

@@ -7,12 +7,11 @@
       "is_migrated": true,
       "version_year": "unversioned",
       "is_course": true,
-      "use_legacy_lesson_plans": true,
       "curriculum_umbrella": "CSC"
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-10-13 17:46:20 UTC",
+    "serialized_at": "2021-10-14 17:30:23 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "ai-ethics"
@@ -41,7 +40,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.\n\n#### Prerequisite Skills\nThis lesson is not intended to introduce students to sound research practices or how to vet credible sources. Students should come into this lesson with prior knowledge and the skills to be able to:\n\n- recognize credible sources on the internet\n- summarize information from digital sources to support an argument\n- navigate online resources and cite sources appropriately",
+        "overview": "This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.",
         "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\r\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\r\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.\r\n- (Optional) Watch our **How AI Works** video series and prepare to share it with students after the lesson.",
         "student_overview": "Collaboratively research about AI ethics and create a shareable code of conduct."
       },
@@ -54,8 +53,20 @@
   ],
   "lesson_activities": [
     {
-      "key": "3ef6076d-4e33-452d-94e4-e8c397d5f718",
+      "key": "9716fb52-9f67-464d-b5af-d2d22629216e",
       "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9716fb52-9f67-464d-b5af-d2d22629216e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-ethics"
+      }
+    },
+    {
+      "key": "3ef6076d-4e33-452d-94e4-e8c397d5f718",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -69,7 +80,7 @@
     },
     {
       "key": "419061fc-19ea-45ab-9da0-b3f2afffb2fc",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -83,7 +94,7 @@
     },
     {
       "key": "08ecab58-0081-46ec-af01-044c64d486fc",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -97,7 +108,7 @@
     },
     {
       "key": "740f1945-7982-48c2-9ff3-f45c0648beed",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -111,10 +122,38 @@
   ],
   "activity_sections": [
     {
-      "key": "f9300a15-4df7-4de2-b95e-3e706dbea3fc",
+      "key": "c9cb6df9-6b22-406f-8416-7c7d44004dab",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _What comes to mind when you hear the term \"artificial intelligence?\" What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\n\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\n\n**Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\n\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
+        "description": "This lesson is not intended to introduce students to sound research practices or how to vet credible sources. Students should come into this lesson with prior knowledge and the skills to be able to:\n\n- recognize credible sources on the internet\n- summarize information from digital sources to support an argument\n- navigate online resources and cite sources appropriately",
+        "name": "Prerequisite Skills"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9cb6df9-6b22-406f-8416-7c7d44004dab",
+        "lesson_activity.key": "9716fb52-9f67-464d-b5af-d2d22629216e"
+      }
+    },
+    {
+      "key": "8e332a68-31da-4dc3-8da5-dd50990e9168",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces summarizing an article or determining how an article could be used as evidence in an argument.\n\n**Slides:** The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8e332a68-31da-4dc3-8da5-dd50990e9168",
+        "lesson_activity.key": "3ef6076d-4e33-452d-94e4-e8c397d5f718"
+      }
+    },
+    {
+      "key": "f9300a15-4df7-4de2-b95e-3e706dbea3fc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _What comes to mind when you hear the term artificial intelligence? What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\n\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\n\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -124,7 +163,7 @@
     },
     {
       "key": "9dbb65b4-9099-49c2-bd60-2d8f19bda742",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": " **Discussion Goal**: This prompt is intentionally open-ended and vague with how we define \"good\", \"bad\", \"right\", and \"wrong\". Give students space to explore how they would describe artificial technology and find examples of \"good\" or \"bad\". Try to hear from a wide variety of voices in your classroom. When ready, advance to the next slide and use the remarks below to wrap up the discussion."
       },
@@ -135,7 +174,7 @@
     },
     {
       "key": "9061ada9-e33b-4b99-ad85-8e4796fbd011",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary**: \n\n- **Ethics:** guidelines for good behavior."
       },
@@ -146,7 +185,7 @@
     },
     {
       "key": "3fe2d19b-cc2a-4aad-964f-a1776a93f206",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "When we discuss right and wrong, good and bad, we are discussing “ethics”. As we create our own apps using machine learning and AI, it's important to consider the ethical impact of our decisions. No matter how “intelligent” machines may appear, they are still tools that humans create. If created or used without the right guidelines, machines with AI can easily make unethical decisions, such as being biased against someone’s gender or race. The more aware we are of ethical issues involving AI, the better we will be able to make sure that AI benefits everyone in society.",
         "remarks": true
@@ -195,7 +234,7 @@
       "key": "609afe62-77fe-4acd-88b8-5678c8d7b6db",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai-ethics-research-areas/ai-ethics/unversioned] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai-ethics-research-reflection/ai-ethics/unversioned] handout. \n\n#### AI Ethics Research Reflection\n\n**Work**: Have groups research their area with their fellow group members, answering questions on the handout along the way. Encourage students to skim longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai-ethics-research-areas/ai-ethics/unversioned] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai-ethics-research-reflection/ai-ethics/unversioned] handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "609afe62-77fe-4acd-88b8-5678c8d7b6db",
@@ -206,8 +245,14 @@
       "key": "ff631d39-5a3b-4f29-87fa-96eb5786386f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics similar to what they will be creating, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\n**Work**: Allow groups time to write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page). The format of the resource is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation, or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!",
-        "name": "Draft “Our AI Code of Ethics” Resource "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
+        "name": "Draft “Our AI Code of Ethics” Resource ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Displaying a Class Code of Ethics:** The format of your class Code of Ethics is completely up to you and your students. For example, you might ask groups to create a poster, or for each take a single slide from a shared presentation (such as the one from our [r our-ai-code-of-ethics-template-slides/ai-ethics/unversioned]), or a page from a shared document. You might even ask students to use their webcams to record short video clips that you can compile and publish as a single video. Be as creative as you wish!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ff631d39-5a3b-4f29-87fa-96eb5786386f",
@@ -218,7 +263,7 @@
       "key": "a0593f59-439e-4c5e-83e9-bb3a37baa511",
       "position": 1,
       "properties": {
-        "description": "**Discuss**: Allow students to discuss how today’s lesson has impacted them. Here are some example questions to facilitate discussion:\n\n*   What were your thoughts, if any, about AI before today’s lesson? What do you think about AI now?\n*   What are you still unsure about? How might you go about learning more?\n*   How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson? \n*   Why are AI ethics important for everyone to be aware of?",
+        "description": "**Discuss**: _How would you describe “AI ethics” to a family member or friend who didn’t participate in today’s lesson?_\n\nEncourage student to use evidence from their research in explaining what AI Ethics is and the need for an ethical code.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -449,6 +494,20 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "9-10.RI.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "9-10.RI.8"
       }
     }
   ],
