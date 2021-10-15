@@ -755,9 +755,14 @@ class Level < ApplicationRecord
     }
   end
 
-  def get_level_for_progress(student, script)
+  def get_level_for_progress(student, script, user_levels_by_level = nil, teacher_feedback_by_level = nil)
     if is_a?(BubbleChoice)
-      sublevel_for_progress = try(:get_sublevel_for_progress, student, script)
+      sublevel_for_progress = if user_levels_by_level.nil? && teacher_feedback_by_level.nil?
+                                try(:get_sublevel_for_progress, student, script)
+                              else
+                                try(:get_sublevel_for_progress_from_data, user_levels_by_level, teacher_feedback_by_level)
+                              end
+
       return sublevel_for_progress || self
     elsif contained_levels.any?
       # https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/app/views/levels/_contained_levels.html.haml#L1

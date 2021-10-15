@@ -243,7 +243,7 @@ module UsersHelper
     script.script_levels.each do |sl|
       sl.level_ids.each do |level_id|
         level = Level.cache_find(level_id)
-        level_for_progress = level.get_level_for_progress(user, script)
+        level_for_progress = level.get_level_for_progress(user, script, user_levels_by_level, teacher_feedback_by_level)
         ul = user_levels_by_level.try(:[], level_for_progress.id)
 
         feedback = teacher_feedback_by_level.try(:[], level_for_progress.id)
