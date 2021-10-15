@@ -39,7 +39,8 @@
     "min_workspace_height": "0",
     "standalone_app_name": "poetry",
     "preload_asset_list": null,
-    "default_poem": null
+    "default_poem": null,
+    "skip_autosave": true
   },
   "game_id": 69,
   "published": true,
