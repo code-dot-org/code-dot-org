@@ -632,28 +632,35 @@ module Services
       # existing standards in the sort order.
       new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
 
+      # when the order of the serialized lessons_opportunity_standards changes,
+      # the sort order of opportunity standards in the database is preserved.
+      # strangely, the same is not true for lessons_standards. this may be
+      # related to the fact that LessonsOpportunityStandard contains an id
+      # column, while LessonsStandard does not.
+
       expected_shortcodes = [
+        script.lessons.first.opportunity_standards.last.shortcode,
         new_standard.shortcode,
-        script.lessons.first.standards.last.shortcode,
       ]
 
       expected_descriptions = [
+        script.lessons.first.opportunity_standards.last.description,
         new_standard.description,
-        script.lessons.first.standards.last.description,
       ]
 
-      _script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
-        lesson.standards.first.destroy
-        lesson.standards.push(new_standard)
+        lesson.opportunity_standards.first.destroy
+        lesson.opportunity_standards.push(new_standard)
       end
 
       ScriptSeed.seed_from_json(json)
       script = Script.with_seed_models.find(script.id)
 
+      assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
-      assert_equal expected_shortcodes, lesson.standards.map(&:shortcode)
-      assert_equal expected_descriptions, lesson.standards.map(&:description)
+      assert_equal expected_shortcodes, lesson.opportunity_standards.map(&:shortcode)
+      assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
     end
 
     test 'seed deletes lesson_groups' do
