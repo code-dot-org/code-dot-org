@@ -11,6 +11,7 @@ style_min: true
 {{ spritelab_module, title: "Animals", color: "#00ADBC", image: "images/csc/helloworld/module0.png", url: "/" }}
 {{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/module0.png", url: "/" }}
 {{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/module0.png", url: "/" }}
+{{ clearfix }}
 
 {{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Hello World", description: "Description goes here.", button_text: "Learn more" }}
 
@@ -24,3 +25,4 @@ style_min: true
 {{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
 {{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/helloworld/creation0.png", url: "/" }}
 {{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ clearfix }}

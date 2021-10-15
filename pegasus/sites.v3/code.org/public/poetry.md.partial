@@ -23,3 +23,4 @@ Some description goes here.
 {{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
 {{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
 {{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ clearfix }}
