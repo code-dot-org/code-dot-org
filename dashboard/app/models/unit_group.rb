@@ -28,8 +28,6 @@ class UnitGroup < ApplicationRecord
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  after_save :write_serialization
-
   scope :with_associated_models, -> do
     includes(
       [
@@ -156,11 +154,11 @@ class UnitGroup < ApplicationRecord
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_units: summarize_alternate_units,
         published_state: published_state,
-        properties: properties,
-        resources: resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
-        student_resources: student_resources.map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
+        properties: properties.sort.to_h,
+        resources: resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
+        student_resources: student_resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
       }.compact
-    )
+    ) + "\n"
   end
 
   def summarize_alternate_units
@@ -354,8 +352,8 @@ class UnitGroup < ApplicationRecord
         unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
+      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,

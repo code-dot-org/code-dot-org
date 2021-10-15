@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-14 13:59:33 UTC",
+    "serialized_at": "2021-10-15 18:31:02 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csa5-pilot-facilitator"
@@ -1470,7 +1470,7 @@
       "key": "3a5de01a-4b5b-4613-b528-517142336160",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write the `ImageFilter` class and `getPixels()` method, which accepts an `Image` object and returns a 2D array of `Pixel` objects in row-major order.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write the `ImageEditor` class and `getPixels()` method, which accepts an `Image` object and returns a 2D array of `Pixel` objects in row-major order.",
         "progression_name": "Getting Pixels from an Image"
       },
       "seeding_key": {
