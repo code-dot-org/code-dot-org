@@ -77,6 +77,8 @@ export const commands = {
       rain: behaviorCommands.rainFunc,
       spiral: behaviorCommands.spiralFunc
     };
+    //Makes sure that same-frame multiple spiral effects start at a different angles
+    const sprialRandomizer = Math.floor(Math.random() * 360);
     for (let i = 0; i < num; i++) {
       let spriteOptions = {};
       switch (effectName) {
@@ -124,7 +126,8 @@ export const commands = {
           spriteOptions = {
             animation,
             scale: 0.01,
-            initialAngle: (i * 360) / num - 180 * ((i + 1) % 2),
+            initialAngle:
+              (i * 360) / num - 180 * ((i + 1) % 2) + sprialRandomizer,
             delay: (i * 30) / num,
             lifetime: 90
           };
