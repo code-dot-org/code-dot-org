@@ -24,6 +24,11 @@ export const commands = {
         sprite.rotation += 6;
       }
       sprite.delay -= 1;
+      if (sprite.lifetime === 0) {
+        sprite.destroy();
+        this.removeAllBehaviors(sprite);
+        this.deleteSprite(sprite.id);
+      }
     };
   },
 
@@ -37,6 +42,11 @@ export const commands = {
       sprite.y -= sprite.speed;
       sprite.speed -= 1;
       sprite.rotation += (sprite.direction - 270) / 6;
+      if (sprite.lifetime === 0) {
+        sprite.destroy();
+        this.removeAllBehaviors(sprite);
+        this.deleteSprite(sprite.id);
+      }
     };
   },
 
@@ -46,8 +56,14 @@ export const commands = {
       sprite.y -= sprite.speed;
       sprite.speed -= 0.5;
       sprite.rotation += Math.floor(Math.random() * 10 - 5);
+      if (sprite.lifetime === 0) {
+        sprite.destroy();
+        this.removeAllBehaviors(sprite);
+        this.deleteSprite(sprite.id);
+      }
     };
   },
+
   spiralFunc() {
     return spriteArg => {
       const sprite = this.getSpriteArray(spriteArg)[0];
@@ -70,6 +86,11 @@ export const commands = {
         sprite.rotation -= 12;
       }
       sprite.delay -= 1;
+      if (sprite.lifetime === 0) {
+        sprite.destroy();
+        this.removeAllBehaviors(sprite);
+        this.deleteSprite(sprite.id);
+      }
     };
   },
 
