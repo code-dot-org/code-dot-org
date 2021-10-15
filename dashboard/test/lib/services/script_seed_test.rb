@@ -422,7 +422,41 @@ module Services
         lesson = script.lessons.first
         lesson.vocabularies.first.update!(definition: 'updated definition')
         key = Vocabulary.sanitize_key("#{lesson.name}-vocab-3")
+        # uniquify_key always produces a key later in the sort order
         key = Vocabulary.uniquify_key(key, script.course_version.id)
+        lesson.vocabularies.create(
+          word: 'new word',
+          key: key,
+          definition: "new definition",
+          course_version: script.course_version
+        )
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal(
+        ['word', 'word', 'new word'],
+        lesson.vocabularies.map(&:word)
+      )
+      assert_equal(
+        ['updated definition', 'definition', 'new definition'],
+        lesson.vocabularies.map(&:definition)
+      )
+    end
+
+    test 'seed updates lesson vocabularies with out of order keys' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.vocabularies.first.update!(definition: 'updated definition')
+        # choose a key earlier in the sort order
+        key = 'abc'
         lesson.vocabularies.create(
           word: 'new word',
           key: key,
