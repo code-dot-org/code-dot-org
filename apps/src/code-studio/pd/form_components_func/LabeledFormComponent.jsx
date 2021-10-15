@@ -1,170 +1,226 @@
-import React from 'react';
-import FormComponent from './FormComponent';
+import PropTypes from 'prop-types';
+import React, {useContext} from 'react';
+import {
+  SingleCheckbox,
+  ButtonsFromOptions,
+  ButtonsWithAdditionalTextFieldsFromOptions,
+  ButtonsWithAdditionalTextFields,
+  Buttons,
+  SelectFieldGroupFromOptions,
+  FieldGroup,
+  UsPhoneNumberInput
+} from './FormComponent';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-export default class LabeledFormComponent extends FormComponent {
-  /**
-   * Override in derived classes
-   * @type {Object} - map of control name to label
-   */
-  static labels = {};
+// Containers of labeled form components should provide this context
+// using <LabelsContext.Provider value={context}>
+// The format of the context is { labelName: labelString }
+export const LabelsContext = React.createContext({});
 
-  // UI Helpers
-  labelFor(name) {
-    if (!(name in this.constructor.labels)) {
-      console.warn(`Label missing for ${name}`);
-      return name;
-    }
-
-    return (
-      // SafeMarkdown wraps markdown in a <div> and uses <p> tags for each
-      // paragraph, but the form system was built using a prior markdown
-      // renderer which didn't do that for single-line entries, and so we rely
-      // on some CSS styling in pd.scss to set these elements to
-      // "display: inline" to maintain backwards compatibility.
-      <div className="inline_markdown">
-        <SafeMarkdown
-          openExternalLinksInNewTab
-          markdown={this.constructor.labels[name]}
-        />
-      </div>
-    );
+// UI Helpers
+export const labelFor = name => {
+  const labels = useContext(LabelsContext);
+  if (!(name in labels)) {
+    console.warn(`Label missing for ${name}`);
+    return name;
   }
 
-  indented(depth = 1) {
-    return {
-      controlWidth: {smOffset: depth},
-      labelWidth: {smOffset: depth}
-    };
-  }
+  return (
+    // SafeMarkdown wraps markdown in a <div> and uses <p> tags for each
+    // paragraph, but the form system was built using a prior markdown
+    // renderer which didn't do that for single-line entries, and so we rely
+    // on some CSS styling in pd.scss to set these elements to
+    // "display: inline" to maintain backwards compatibility.
+    <div className="inline_markdown">
+      <SafeMarkdown openExternalLinksInNewTab markdown={labels[name]} />
+    </div>
+  );
+};
 
-  defaultOptions(name, props = {}) {
-    return {
-      name,
-      label: props.label || this.labelFor(name),
-      controlWidth: {md: 6},
-      required: true
-    };
-  }
-
-  singleCheckboxFor(name, props = {}) {
-    return this.buildSingleCheckbox({
-      ...this.defaultOptions(name, props),
-      ...props
-    });
-  }
-
-  checkBoxesFor(name, props = {}) {
-    return this.buildButtonsFromOptions({
-      ...this.defaultOptions(name, props),
-      type: 'check',
-      ...props
-    });
-  }
-
-  checkBoxesWithAdditionalTextFieldsFor(name, textFieldMap, props = {}) {
-    return this.buildButtonsWithAdditionalTextFieldsFromOptions({
-      ...this.defaultOptions(name, props),
-      type: 'check',
-      textFieldMap,
-      ...props
-    });
-  }
-
-  radioButtonsWithAdditionalTextFieldsFor(name, textFieldMap, props = {}) {
-    return this.buildButtonsWithAdditionalTextFieldsFromOptions({
-      ...this.defaultOptions(name, props),
-      type: 'radio',
-      textFieldMap,
-      ...props
-    });
-  }
-
-  radioButtonsFor(name, props = {}) {
-    return this.buildButtonsFromOptions({
-      ...this.defaultOptions(name, props),
-      type: 'radio',
-      ...props
-    });
-  }
-
-  dynamicRadioButtonsWithAdditionalTextFieldsFor(
+const defaultOptions = (name, label) => {
+  return {
     name,
-    options,
-    textFieldMap,
-    props = {}
-  ) {
-    return this.buildButtonsWithAdditionalTextFields({
-      ...this.defaultOptions(name, props),
-      type: 'radio',
-      options,
-      textFieldMap,
-      ...props
-    });
-  }
+    label: label || labelFor(name),
+    controlWidth: {md: 6},
+    required: true
+  };
+};
 
-  dynamicCheckBoxesFor(name, options, props = {}) {
-    return this.buildButtons({
-      ...this.defaultOptions(name, props),
-      type: 'check',
-      answers: options,
-      ...props
-    });
-  }
+export const LabeledSingleCheckbox = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    ...props
+  };
+  return <SingleCheckbox {...passProps} />;
+};
+LabeledSingleCheckbox.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string
+};
 
-  dynamicCheckBoxesWithAdditionalTextFieldsFor(
-    name,
-    options,
-    textFieldMap,
-    props = {}
-  ) {
-    return this.buildButtonsWithAdditionalTextFields({
-      ...this.defaultOptions(name, props),
-      type: 'check',
-      options,
-      textFieldMap,
-      ...props
-    });
-  }
+export const LabeledCheckBoxes = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'check',
+    ...props
+  };
+  return <ButtonsFromOptions {...passProps} />;
+};
+LabeledCheckBoxes.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string
+};
 
-  selectFor(name, props = {}) {
-    return this.buildSelectFieldGroupFromOptions({
-      ...this.defaultOptions(name, props),
-      type: 'select',
-      ...props
-    });
-  }
+export const LabeledCheckBoxesWithAdditionalTextFields = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'check',
+    textFieldMap: props.textFieldMap,
+    ...props
+  };
+  return <ButtonsWithAdditionalTextFieldsFromOptions {...passProps} />;
+};
+LabeledCheckBoxesWithAdditionalTextFields.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  textFieldMap: PropTypes.object
+};
 
-  inputFor(name, props = {}) {
-    return this.buildFieldGroup({
-      ...this.defaultOptions(name, props),
-      type: 'text',
-      ...props
-    });
-  }
+export const LabeledRadioButtonsWithAdditionalTextFields = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'radio',
+    textFieldMap: props.textFieldMap,
+    ...props
+  };
+  return <ButtonsWithAdditionalTextFieldsFromOptions {...passProps} />;
+};
+LabeledRadioButtonsWithAdditionalTextFields.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  textFieldMap: PropTypes.object
+};
 
-  numberInputFor(name, props = {}) {
-    return this.buildFieldGroup({
-      ...this.defaultOptions(name, props),
-      type: 'number',
-      ...props
-    });
-  }
+export const LabeledRadioButtons = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'radio',
+    ...props
+  };
+  return <ButtonsFromOptions {...passProps} />;
+};
+LabeledRadioButtons.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string
+};
 
-  largeInputFor(name, props = {}) {
-    return this.inputFor(name, {
-      componentClass: 'textarea',
-      controlWidth: {md: 12},
-      rows: 4,
-      maxLength: 500,
-      ...props
-    });
-  }
+export const LabeledDynamicRadioButtonsWithAdditionalTextFields = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'radio',
+    options: props.options,
+    textFieldMap: props.textFieldMap,
+    ...props
+  };
+  return <ButtonsWithAdditionalTextFields {...passProps} />;
+};
+LabeledDynamicRadioButtonsWithAdditionalTextFields.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  options: PropTypes.array,
+  textFieldMap: PropTypes.object
+};
 
-  usPhoneNumberInputFor(name, props = {}) {
-    return this.buildUsPhoneNumberInput({
-      ...this.defaultOptions(name, props),
-      ...props
-    });
-  }
-}
+export const LabeledDynamicCheckBoxes = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'check',
+    answers: props.options,
+    ...props
+  };
+  return <Buttons {...passProps} />;
+};
+LabeledDynamicCheckBoxes.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  options: PropTypes.array
+};
+
+export const LabeledDynamicCheckBoxesWithAdditionalTextFields = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'check',
+    options: props.options,
+    textFieldMap: props.textFieldMap,
+    ...props
+  };
+  return <ButtonsWithAdditionalTextFields {...passProps} />;
+};
+LabeledDynamicCheckBoxesWithAdditionalTextFields.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  options: PropTypes.array,
+  textFieldMap: PropTypes.object
+};
+
+export const LabeledSelect = (props = {}) => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'select',
+    ...props
+  };
+  return <SelectFieldGroupFromOptions {...passProps} />;
+};
+LabeledSelect.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string
+};
+
+export const LabeledInput = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'text',
+    ...props
+  };
+  return <FieldGroup {...passProps} />;
+};
+LabeledInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string
+};
+
+export const LabeledNumberInput = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    type: 'number',
+    ...props
+  };
+  return <FieldGroup {...passProps} />;
+};
+LabeledNumberInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string
+};
+
+export const LabeledLargeInput = props => {
+  const passProps = {
+    componentClass: 'textarea',
+    controlWidth: {md: 12},
+    rows: 4,
+    maxLength: 500,
+    ...props
+  };
+  return <LabeledInput {...passProps} />;
+};
+
+export const LabeledUsPhoneNumberInput = props => {
+  const passProps = {
+    ...defaultOptions(props.name, props.label),
+    ...props
+  };
+  return <UsPhoneNumberInput {...passProps} />;
+};
+LabeledUsPhoneNumberInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string
+};
