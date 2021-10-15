@@ -12,12 +12,12 @@ export const commands = {
 
   burstFunc() {
     return spriteArg => {
-      let sprite = this.getSpriteArray(spriteArg)[0];
+      const sprite = this.getSpriteArray(spriteArg)[0];
       if (sprite.delay === 0) {
         sprite.scale = 0.4 * sprite.baseScale;
       } else if (sprite.delay < 0) {
-        let dy = Math.sin(sprite.direction) * sprite.speed;
-        let dx = Math.cos(sprite.direction) * sprite.speed;
+        const dy = Math.sin(sprite.direction) * sprite.speed;
+        const dx = Math.cos(sprite.direction) * sprite.speed;
         sprite.x += dx;
         sprite.y += dy;
         sprite.scale += 0.01 * sprite.baseScale;
@@ -29,9 +29,9 @@ export const commands = {
 
   popFunc() {
     return spriteArg => {
-      let sprite = this.getSpriteArray(spriteArg)[0];
-      let dy = Math.sin(sprite.direction) * 5;
-      let dx = Math.cos(sprite.direction) * 5;
+      const sprite = this.getSpriteArray(spriteArg)[0];
+      const dy = Math.sin(sprite.direction) * 5;
+      const dx = Math.cos(sprite.direction) * 5;
       sprite.x += dx;
       sprite.y += dy;
       sprite.y -= sprite.speed;
@@ -42,7 +42,7 @@ export const commands = {
 
   rainFunc() {
     return spriteArg => {
-      let sprite = this.getSpriteArray(spriteArg)[0];
+      const sprite = this.getSpriteArray(spriteArg)[0];
       sprite.y -= sprite.speed;
       sprite.speed -= 0.5;
       sprite.rotation += Math.floor(Math.random() * 10 - 5);
@@ -50,7 +50,7 @@ export const commands = {
   },
   spiralFunc() {
     return spriteArg => {
-      let sprite = this.getSpriteArray(spriteArg)[0];
+      const sprite = this.getSpriteArray(spriteArg)[0];
       if (sprite.delay <= 0) {
         sprite.scale += 0.01 * sprite.baseScale;
         sprite.x =

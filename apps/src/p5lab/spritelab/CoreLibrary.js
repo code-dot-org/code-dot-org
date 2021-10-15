@@ -239,7 +239,7 @@ export default class CoreLibrary {
         );
       sprite.scale *= sprite.baseScale;
     }
-    sprite.setScale(opts.scale / 100 || this.defaultSpriteSize / 100);
+    sprite.setScale(opts.scale || this.defaultSpriteSize) / 100;
 
     // If there are any whenSpriteCreated events, call the callback immediately
     // so that the event happens during the same draw loop frame.
