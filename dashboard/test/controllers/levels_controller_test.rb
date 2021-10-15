@@ -88,7 +88,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with level_type" do
     existing_levels_count = Odometer.all.count
-    level = create(:level, type: 'Odometer')
+    level = create(:odometer)
     get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
     assert_equal existing_levels_count + 1, JSON.parse(@response.body)['levels'].length
     assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
@@ -104,9 +104,9 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with owner_id" do
     Level.where(user_id: @levelbuilder.id).destroy_all
-    level = create :level, user: @levelbuilder
+    level = create :applab, user: @levelbuilder
     get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
-    assert_equal level[:name], JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
