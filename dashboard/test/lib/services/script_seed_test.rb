@@ -485,7 +485,35 @@ module Services
 
       # create the programming expression outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the programming expression for us.
-      new_programming_expression = create :programming_expression, key: 'new-block'
+      # choose a key later in the sort order than existing keys.
+      new_programming_expression = create :programming_expression, key: 'xyz'
+
+      expected_keys = [
+        script.lessons.first.programming_expressions.last.key,
+        new_programming_expression.key
+      ]
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.programming_expressions.first.destroy
+        lesson.programming_expressions.push(new_programming_expression)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal expected_keys, lesson.programming_expressions.map(&:key)
+    end
+
+    test 'seed updates lesson programming expressions with out of order keys' do
+      script = create_script_tree
+
+      # create the programming expression outside of the rollback block, because unlike vocab
+      # or resources, the seed process will not re-create the programming expression for us.
+      # choose a key earlier in the sort order than existing keys.
+      new_programming_expression = create :programming_expression, key: 'abc'
 
       expected_keys = [
         script.lessons.first.programming_expressions.last.key,
