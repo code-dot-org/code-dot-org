@@ -35,13 +35,17 @@ export const commands = {
   popFunc() {
     return spriteArg => {
       const sprite = this.getSpriteArray(spriteArg)[0];
-      const dy = Math.sin(sprite.direction) * 5;
-      const dx = Math.cos(sprite.direction) * 5;
+      const distance = 5;
+      const dy = Math.sin(sprite.direction) * distance;
+      const dx = Math.cos(sprite.direction) * distance;
       sprite.x += dx;
       sprite.y += dy;
       sprite.y -= sprite.speed;
       sprite.speed -= 1;
-      sprite.rotation += (sprite.direction - 270) / 6;
+      //Sprites with movement direction of 270 should not rotate. Sprites moving at other angles, should rotate more or less depending on the angle.
+      const rotationOffset = Math.abs(sprite.direction - 270);
+      const rotationIntensity = 1 / 6;
+      sprite.rotation += rotationOffset * rotationIntensity;
       if (sprite.lifetime === 0) {
         sprite.destroy();
         this.removeAllBehaviors(sprite);
@@ -69,21 +73,12 @@ export const commands = {
       const sprite = this.getSpriteArray(spriteArg)[0];
       if (sprite.delay <= 0) {
         sprite.scale += 0.01 * sprite.baseScale;
-        sprite.x =
-          200 +
-          Math.cos(
-            ((-sprite.delay * 6 - sprite.initialAngle) * Math.PI) / 180
-          ) *
-            -sprite.delay *
-            6;
-        sprite.y =
-          200 +
-          Math.sin(
-            ((-sprite.delay * 6 - sprite.initialAngle) * Math.PI) / 180
-          ) *
-            -sprite.delay *
-            6;
-        sprite.rotation -= 12;
+        const degrees = sprite.delay * 6 + sprite.initialAngle;
+        const radians = (degrees * Math.PI) / 180;
+        const spread = sprite.delay * 6;
+        const center = {x: 200, y: 200};
+        sprite.x = Math.cos(radians) * spread + center.x;
+        sprite.y = Math.sin(radians) * spread + center.y;
       }
       sprite.delay -= 1;
       if (sprite.lifetime === 0) {
