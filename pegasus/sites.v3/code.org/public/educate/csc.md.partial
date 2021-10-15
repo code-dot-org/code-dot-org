@@ -10,15 +10,16 @@ style_min: true
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
 
 {{ tutorial_promo2, heading: "New Hour of Code activities", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "Learn about computer science and poetry by creating an animated poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Start", right_heading: "Hello World", right_description: "Learn computer science fundamentals with Sprite Lab", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start" }}
+{{ clearfix }}
 
 ## Modules
 
-CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project. 
+CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
 
 They’re perfect for teachers who’d like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
 
-
 {{ csc_module, title: "Coding with Poetry", grades: "3+", subject: "ELA", duration: "5 hours", description: "Students explore the elements of poetry and the basics of coding by building a poem generator based off a poem they write.", button_text: "Learn more", url: "/about" }}
+{{ clearfix }}
 
 <em>We’re working on more modules to help bring computer science into even more subjects. Is there a particular subject you’d like to see next? Let us know!</em>
 
@@ -33,6 +34,7 @@ Continue making connections between computer science and traditional subjects wi
 {{ csc_module, title: "Cycles", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Go from egg to tadpole to frog with this project, in which students use code to create a model of a scientific cycle — like the life cycle of a frog or the transfer of energy!", button_text: "Learn more", url: "/" }}
 {{ csc_module, title: "Character Study", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "Every action has a reaction! No, this isn’t physics — this project allows students to use code to build a scene from a story that shows how one character’s actions affects the chain of events.", button_text: "Learn more", url: "/" }}
 {{ csc_module, title: "Story Morals", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "What’s between “Once upon a time” and “The End?” Students code an interactive app that recounts a story and its morals. Students could apply this skill to any story, folktale, book, or fable.", button_text: "Learn more", url: "/" }}
+{{ clearfix }}
 
 ## Bridging Lessons
 
@@ -46,3 +48,4 @@ Our bridging lessons provide a quick and interesting way to make a connection be
 {{ csc_module, title: "Algorithms and Math Functions", grades: "9+", subject: "Math", duration: "1 hour", description: "Students learn about Big O notation by reading graphs and extending function tables. Students describe the efficiencies of exponential algorithms versus linear and polynomial algorithms.", button_text: "Learn more", url: "/" }}
 {{ csc_module, title: "AI Code of Ethics", grades: "6+", subject: "ELA or Humanities", duration: "1 hour", description: "After researching the potential ethical pitfalls of artificial intelligence (AI), students work together to develop a class “AI Code of Ethics” resource.", button_text: "Learn more", url: "/" }}
 {{ csc_module, title: "Data Visualization", grades: "9+", subject: "Math", duration: "1 hour", description: "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types: a bar chart and a histogram. Over the course of the lesson, students will build skills in using this tool and in reading data.", button_text: "Learn more", url: "/" }}
+{{ clearfix }}

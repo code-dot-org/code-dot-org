@@ -27,3 +27,4 @@ Our Poem Art Hour of Code activity is also the first lesson in the Coding with P
 {{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
 {{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
 {{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ clearfix }}
