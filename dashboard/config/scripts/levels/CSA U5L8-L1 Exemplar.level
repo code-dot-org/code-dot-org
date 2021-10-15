@@ -1,0 +1,12 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-10-15T18:36:11.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-10-15T18:36:11.029+00:00\",\"changed\":[\"cloned from \\\"CSA U5L8-L1\\\"\"],\"cloned_from\":\"CSA U5L8-L1\"},{\"changed_at\":\"2021-10-15 18:36:27 +0000\",\"changed\":[\"encrypted\",\"project_template_level_name\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "encrypted_properties": "aNsSnqBwpDD9ZtSljJLbajVf3SL+tP2rdlwe0XrqKncNB/xz62Jy/5yJH9Wl\nwBTfCuqFRPfnHrAWLYqp0zCPej7AchZ0C/qrR2aQY7HdJg8XmuTDOoVkRKb9\nVtNm1Gq4b07+XfD5gQBjfbEl9GfBYU5gLC4MrZjbJaCIY0WduZSJQczx/InF\n7YvUUtDHtwm6cgKIciqAbG8ivqHOM2+HV9owiV3YvQYRqnWmKl5z6nvF3L9A\nxeewOa8j4QsV2HRxV4FkMIZZAAHiClRj6unY4CWuCZjsp+GKZ/WH7O3VTv/g\nbvLscOq9Hmmv93kYNvgEMjL1D9b3s1PuSDOybzAiIpOeUU7z12y4Sw3/zhgi\nDaAUu96YQvC/fvypFdjpfxq0H6QFBVtlwmopBwwC5Zav/nggypwuEdJEAh3/\n4AKaUzPGlLoLRMtZbPvGA9yzQtmwBao6GAuxE5sdz0fTRPAqo0I3VfpNq+MF\no3z+sdBBjIXSkKbZJn/L2o/ecmVXLXPLm3s6oUK6vdTDs1/cCXY3vkjnbpGQ\nreI1kIcxCIacajgagtQTID/mCOust4gGGJ0bftS2ptq5Pp2AZSoya8cih9DC\nOjQL4XQwviMDJjF+u154tQZhe8mbiQa3gAV762EDyfOmkBJV4MEwXMHW2vDh\nObVInuu4jSn5ppUbj8Pke1hPKl8dRGnJdV0A6/lB00uKmHETaDzCnq29AW1l\nAetoGjbk9Z6iJPUZnk2KyrVJ+ATljstmIOQBaNgzXLh6+ogaXVKJ4EGodXsD\nmeFxFHl8RopVbnGQcIPQI9W+S3S3jtFPwLFKcSjvJg18Bm8W8JCd5O8rII4P\nMNJYzXzgrBBfGQIrOajW9iHfW5L9Ler0onciLpGI1sTQClfxm8ZvSJjVLeux\nLMR5sxMl5ImRCplAZQFAiB6eW5yqzKW7kkDeM0/ImIves0fiEZEdMPs6J1GE\nGQked+uH1f3oo/h3kT7USuI1K7hHSyFcKYkzEltMK9DGkKo36NXTo6zV3v0e\nYsYDiD4PqKCaPNZp/gtKov++uYVCBTsulRGU5eOTYNH5itTQYOuKT1feyhAr\nXIBl6oHgIeS+PBS3+k0jPX8Abnz4mqtOKFMW2DR2wNM2jHdbgyuOkgDYFNb/\nHsOG+I7S6Wo56V9GHaoE5r2NGlTM4CSTo9TDTjsYT1g3QTDd8FPQrwzSoxef\nm0J5StHhKJQb9ulVcdvl71dNT9DvSHMHKhlUY42y6pQqYr87pfGNnwcNuVUd\nF9eoYYsvQGljs+ia8T1oktD+SioehMPC7HcYgoJIFfc4fHe73Y0+RLFut+XS\nQNV6NTYBD//1PPjJsXn5lZlwVuDr+6dxB9YvutLzPLeOYqL+fBdLawHOflQS\nNjxuLpI=\n",
+  "encrypted_notes": null
+}]]></config>
+</Javalab>
