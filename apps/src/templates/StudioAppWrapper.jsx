@@ -4,6 +4,7 @@ import FixZoomHelper from '../templates/FixZoomHelper';
 import HideToolbarHelper from '../templates/HideToolbarHelper';
 import RotateContainer from '../templates/RotateContainer';
 import {connect} from 'react-redux';
+import StudioAppIdleTimer from '@cdo/apps/templates/StudioAppIdleTimer';
 
 /**
  * Wrapper component for all Code Studio app types, which provides rotate
@@ -29,6 +30,7 @@ class StudioAppWrapper extends React.Component {
         {this.requiresLandscape() && (
           <RotateContainer assetUrl={this.props.assetUrl} />
         )}
+        <StudioAppIdleTimer />
         {this.props.children}
         <div className="clear" />
       </div>
