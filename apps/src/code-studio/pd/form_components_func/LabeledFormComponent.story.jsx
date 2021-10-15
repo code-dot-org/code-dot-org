@@ -1,93 +1,25 @@
 import React from 'react';
-import LabeledFormComponent from './LabeledFormComponent';
+import PropTypes from 'prop-types';
+import {
+  LabelsContext,
+  LabeledRadioButtons,
+  LabeledLargeInput,
+  LabeledInput,
+  LabeledUsPhoneNumberInput,
+  LabeledCheckBoxes,
+  LabeledSelect,
+  LabeledSingleCheckbox,
+  LabeledCheckBoxesWithAdditionalTextFields,
+  LabeledRadioButtonsWithAdditionalTextFields,
+  LabeledDynamicRadioButtonsWithAdditionalTextFields,
+  LabeledDynamicCheckBoxes,
+  LabeledDynamicCheckBoxesWithAdditionalTextFields
+} from './LabeledFormComponent';
+import {FormContext} from './FormComponent';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 import {action} from '@storybook/addon-actions';
 
 const OTHER = 'Other (please specify):';
-
-class SingleCheckboxComponent extends LabeledFormComponent {
-  static labels = {singleCheckbox: 'This is a single checkbox'};
-  render = () => this.singleCheckboxFor('singleCheckbox');
-}
-
-class CheckboxesComponent extends LabeledFormComponent {
-  static labels = {checkBoxes: 'Select options'};
-  render = () => this.checkBoxesFor('checkBoxes');
-}
-
-class CheckboxesWithAdditionalTextComponent extends LabeledFormComponent {
-  static labels = {checkBoxesWithOther: 'Select options and add text'};
-  render = () =>
-    this.checkBoxesWithAdditionalTextFieldsFor('checkBoxesWithOther', {
-      [OTHER]: 'other'
-    });
-}
-
-class RadioButtonsComponent extends LabeledFormComponent {
-  static labels = {radioButtons: 'Select an option'};
-  render = () => this.radioButtonsFor('radioButtons');
-}
-
-class RadioButtonsWithAdditionalTextComponent extends LabeledFormComponent {
-  static labels = {radioButtonsWithOther: 'Select an option and add text'};
-  render = () =>
-    this.checkBoxesWithAdditionalTextFieldsFor('radioButtonsWithOther', {
-      [OTHER]: 'other'
-    });
-}
-
-class DynamicRadioButtonsWithAdditionalTextComponent extends LabeledFormComponent {
-  static labels = {
-    dynamicRadioButtonsWithOther: 'Select a dynamic option and add text'
-  };
-  render = () =>
-    this.dynamicRadioButtonsWithAdditionalTextFieldsFor(
-      'dynamicRadioButtonsWithOther',
-      [1, 2, 3].map(n => `Dynamic option #${n}`).concat([OTHER]),
-      {[OTHER]: 'other'}
-    );
-}
-
-class DynamicCheckboxesComponent extends LabeledFormComponent {
-  static labels = {dynamicCheckBoxes: 'Select all dynamic options that apply'};
-  render = () =>
-    this.dynamicCheckBoxesFor(
-      'dynamicCheckBoxes',
-      [1, 2, 3].map(n => `Dynamic option #${n}`)
-    );
-}
-
-class DynamicCheckboxesWithAdditionalTextComponent extends LabeledFormComponent {
-  static labels = {
-    dynamicCheckboxesWithOther: 'Select a dynamic option and add text'
-  };
-  render = () =>
-    this.dynamicRadioButtonsWithAdditionalTextFieldsFor(
-      'dynamicCheckboxesWithOther',
-      [1, 2, 3].map(n => `Dynamic option #${n}`).concat([OTHER]),
-      {[OTHER]: 'other'}
-    );
-}
-
-class SelectComponent extends LabeledFormComponent {
-  static labels = {select: 'Select an option'};
-  render = () => this.selectFor('select', {placeholder: 'Select an option'});
-}
-
-class InputComponent extends LabeledFormComponent {
-  static labels = {input: 'Enter some text'};
-  render = () => this.inputFor('input');
-}
-
-class LargeInputComponent extends LabeledFormComponent {
-  static labels = {largeInput: 'Enter some longer text'};
-  render = () => this.largeInputFor('largeInput');
-}
-
-class UsPhoneNumberComponent extends LabeledFormComponent {
-  static labels = {usPhoneNumber: 'Enter a phone number'};
-  render = () => this.usPhoneNumberInputFor('usPhoneNumber');
-}
 
 export default storybook => {
   const defaultProps = {
@@ -98,96 +30,182 @@ export default storybook => {
     onChange: action('onChange')
   };
 
+  const Context = ({name, label, children, ...props}) => (
+    <FormContext.Provider value={{...defaultProps, ...props}}>
+      <LabelsContext.Provider value={{[name]: label}}>
+        {children}
+      </LabelsContext.Provider>
+    </FormContext.Provider>
+  );
+  Context.propTypes = {
+    name: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    children: PropTypes.node
+  };
+
   storybook
-    .storiesOf('FormComponents/LabeledFormComponent', module)
+    .storiesOf('FormComponents/LabeledFormComponentFunctional', module)
     .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([
       {
         name: 'Single Checkbox',
-        story: () => <SingleCheckboxComponent {...defaultProps} />
+        story: () => (
+          <Context name="singleCheckbox" label="This is a single checkbox">
+            <LabeledSingleCheckbox name="singleCheckbox" />
+          </Context>
+        )
       },
       {
         name: 'Checkboxes',
         story: () => (
-          <CheckboxesComponent
-            {...defaultProps}
+          <Context
+            name="checkBoxes"
+            label="Select options"
             options={{
               checkBoxes: ['option 1', 'option 2', 'option 3']
             }}
-          />
+          >
+            <LabeledCheckBoxes name="checkBoxes" />
+          </Context>
         )
       },
       {
         name: 'CheckboxesWithAdditionalFields',
         story: () => (
-          <CheckboxesWithAdditionalTextComponent
-            {...defaultProps}
+          <Context
+            name="checkBoxesWithOther"
+            label="Select options and add text"
             options={{
               checkBoxesWithOther: ['option 1', 'option 2', OTHER]
             }}
-          />
+          >
+            <LabeledCheckBoxesWithAdditionalTextFields
+              name="checkBoxesWithOther"
+              textFieldMap={{
+                [OTHER]: 'other'
+              }}
+            />
+          </Context>
         )
       },
       {
         name: 'RadioButtons',
         story: () => (
-          <RadioButtonsComponent
-            {...defaultProps}
+          <Context
+            name="radioButtons"
+            label="Select an option"
             options={{
               radioButtons: ['option 1', 'option 2', 'option 3']
             }}
-          />
+          >
+            <LabeledRadioButtons name="radioButtons" />
+          </Context>
         )
       },
       {
         name: 'RadioButtonsWithAdditionalFields',
         story: () => (
-          <RadioButtonsWithAdditionalTextComponent
-            {...defaultProps}
+          <Context
+            name="radioButtonsWithOther"
+            label="Select an option and add text"
             options={{
               radioButtonsWithOther: ['option 1', 'option 2', OTHER]
             }}
-          />
+          >
+            <LabeledRadioButtonsWithAdditionalTextFields
+              name="radioButtonsWithOther"
+              textFieldMap={{
+                [OTHER]: 'other'
+              }}
+            />
+          </Context>
         )
       },
       {
         name: 'DynamicRadioButtonsWithAdditionalFields',
         story: () => (
-          <DynamicRadioButtonsWithAdditionalTextComponent {...defaultProps} />
+          <Context
+            name="dynamicRadioButtonsWithOther"
+            label="Select a dynamic option and add text"
+          >
+            <LabeledDynamicRadioButtonsWithAdditionalTextFields
+              name="dynamicRadioButtonsWithOther"
+              options={[1, 2, 3]
+                .map(n => `Dynamic option #${n}`)
+                .concat([OTHER])}
+              textFieldMap={{[OTHER]: 'other'}}
+            />
+          </Context>
         )
       },
       {
         name: 'DynamicCheckboxes',
-        story: () => <DynamicCheckboxesComponent {...defaultProps} />
+        story: () => (
+          <Context
+            name="dynamicCheckBoxes"
+            label="Select all dynamic options that apply"
+          >
+            <LabeledDynamicCheckBoxes
+              name="dynamicCheckBoxes"
+              options={[1, 2, 3].map(n => `Dynamic option #${n}`)}
+            />
+          </Context>
+        )
       },
       {
         name: 'DynamicCheckboxesWithAdditionalFields',
         story: () => (
-          <DynamicCheckboxesWithAdditionalTextComponent {...defaultProps} />
+          <Context
+            name="dynamicCheckboxesWithOther"
+            label="Select a dynamic option and add text"
+          >
+            <LabeledDynamicCheckBoxesWithAdditionalTextFields
+              name="dynamicCheckboxesWithOther"
+              options={[1, 2, 3]
+                .map(n => `Dynamic option #${n}`)
+                .concat([OTHER])}
+              textFieldMap={{[OTHER]: 'other'}}
+            />
+          </Context>
         )
       },
       {
         name: 'Select',
         story: () => (
-          <SelectComponent
-            {...defaultProps}
+          <Context
+            name="select"
+            label="Select an option"
             options={{
               select: ['option 1', 'option 2', 'option 3']
             }}
-          />
+          >
+            <LabeledSelect name="select" placeholder="Select an option" />
+          </Context>
         )
       },
       {
         name: 'Input',
-        story: () => <InputComponent {...defaultProps} />
+        story: () => (
+          <Context name="input" label="Enter some text">
+            <LabeledInput name="input" />
+          </Context>
+        )
       },
       {
         name: 'LargeInput',
-        story: () => <LargeInputComponent {...defaultProps} />
+        story: () => (
+          <Context name="largeInput" label="Enter some longer text">
+            <LabeledLargeInput name="largeInput" />
+          </Context>
+        )
       },
       {
         name: 'UsPhoneNumber',
-        story: () => <UsPhoneNumberComponent {...defaultProps} />
+        story: () => (
+          <Context name="usPhoneNumber" label="Enter a phone number">
+            <LabeledUsPhoneNumberInput name="usPhoneNumber" />
+          </Context>
+        )
       }
     ]);
 };
