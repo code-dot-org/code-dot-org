@@ -22,7 +22,7 @@ function setSuccessTime(criteria){
   if (!validationProps.successTime) {
     var success = true;
     for (var criterion in criteria) {
-      if (!criterion) {
+      if (!criteria[criterion]) { //was just (!criterion)
         success = false;
         break;
       }
@@ -419,7 +419,7 @@ function drawProgressBar(status){
       break;
     case "pass":
       fill(PASS_COLOR);
-      rect(0,PLAYSPACE_SIZE - 10,(World.frameCount*PLAYSPACE_SIZE/WAIT_TIME),10);
+      rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.successTime)*PLAYSPACE_SIZE/WAIT_TIME),10);
       break;
     case "challengePass":
     //Do something for challengePass

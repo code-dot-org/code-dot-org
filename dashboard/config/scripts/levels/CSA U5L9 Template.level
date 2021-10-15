@@ -2,19 +2,22 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyFoodTruck.java": {
+        "text": "public class MyFoodTruck {\n  public static void main(String[] args) {\n\n    Cake cake1;\n    Cake cake2;\n    Cake cake3;\n\n    FrozenTreat treat1;\n    FrozenTreat treat2;\n    FrozenTreat treat3;\n    \n    // TO DO: Declare and initialize objects for your additional Dessert subclass (Pie, Cookie, Donut, Cupcake).\n    \n    \n    Dessert[][] myInventory;\n    \n\t\tOwner foodTruckOwner = new Owner(\"Kathy\", myInventory);\n\n    \n\t\t\n  }\n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2021-09-28T21:19:38.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-28 21:19:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-09-28 21:19:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-15 21:32:54 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

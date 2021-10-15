@@ -40,7 +40,8 @@
     "standalone_app_name": "poetry",
     "skip_autosave": true,
     "preload_asset_list": null,
-    "default_poem": null
+    "default_poem": null,
+    "skip_autosave": true
   },
   "game_id": 69,
   "published": true,
