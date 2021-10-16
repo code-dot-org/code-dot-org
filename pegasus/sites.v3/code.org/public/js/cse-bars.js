@@ -391,21 +391,34 @@ function updateBar(barDefinition, bar, barIndex, step) {
 
     var scaledOffset;
 
-    if (bar[segment].head1 && bar[segment].head2) {
-      scaledOffset = offset * bar[segment].head1.totalLength;
-      bar[segment].head1.setAttributeNS(
-        null,
-        "stroke-dashoffset",
-        scaledOffset
-      );
-      bar[segment].head2.setAttributeNS(
-        null,
-        "stroke-dashoffset",
-        scaledOffset
-      );
+    if (bar[segment].element.head1 && bar[segment].element.head2) {
+      scaledOffset = offset * bar[segment].element.head1.totalLength;
+
+      if (scaledOffset !== bar[segment].offset) {
+        bar[segment].element.head1.setAttributeNS(
+          null,
+          "stroke-dashoffset",
+          scaledOffset
+        );
+        bar[segment].element.head2.setAttributeNS(
+          null,
+          "stroke-dashoffset",
+          scaledOffset
+        );
+
+        bar[segment].offset = scaledOffset;
+      }
     } else {
-      scaledOffset = offset * bar[segment].totalLength;
-      bar[segment].setAttributeNS(null, "stroke-dashoffset", scaledOffset);
+      scaledOffset = offset * bar[segment].element.totalLength;
+
+      if (scaledOffset !== bar[segment].offset) {
+        bar[segment].element.setAttributeNS(
+          null,
+          "stroke-dashoffset",
+          scaledOffset
+        );
+        bar[segment].offset = scaledOffset;
+      }
     }
   }
 }
@@ -563,7 +576,7 @@ function drawBar(panelRef, barDefinition, startX, startY) {
       currentY = barDef.end[1];
     }
 
-    result[segment] = obj;
+    result[segment] = { element: obj, offset: len };
   }
 
   /*
