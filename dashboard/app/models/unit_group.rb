@@ -18,6 +18,7 @@
 #
 
 require 'cdo/script_constants'
+require 'cdo/shared_constants/courses/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
