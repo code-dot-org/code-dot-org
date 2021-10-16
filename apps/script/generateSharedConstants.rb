@@ -90,6 +90,7 @@ def main
     generate_multiple_constants(
         %w(
       PUBLISHED_STATE
+      INSTRUCTION_TYPE
     ),
       source_module: SharedCourseConstants, transform_keys: false
     ),
