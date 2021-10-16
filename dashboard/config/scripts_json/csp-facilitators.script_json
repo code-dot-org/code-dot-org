@@ -4,12 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:58 UTC",
+    "serialized_at": "2021-10-16 00:27:08 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp-facilitators"

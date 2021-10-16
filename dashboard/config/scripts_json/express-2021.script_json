@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-10-07 20:23:29 UTC",
+    "serialized_at": "2021-10-16 00:27:39 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "express-2021"
@@ -18596,16 +18596,6 @@
       }
     },
     {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
@@ -18613,6 +18603,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
       }
     },
     {
@@ -18646,16 +18646,6 @@
       }
     },
     {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
@@ -18663,6 +18653,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
       }
     },
     {
@@ -18686,16 +18686,6 @@
       }
     },
     {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A list of steps to finish a task. ",
@@ -18726,16 +18716,6 @@
       }
     },
     {
-      "key": "code",
-      "word": "code",
-      "definition": "to write code, or to write instructions for a computer.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "code"
-      }
-    },
-    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -18753,6 +18733,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "code",
+      "word": "code",
+      "definition": "to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
       }
     },
     {
@@ -19206,13 +19206,13 @@
     {
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
-        "vocabulary.key": "program"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Collecting Treasure with Laurel",
-        "vocabulary.key": "algorithm"
+        "vocabulary.key": "program"
       }
     },
     {
@@ -19236,13 +19236,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "program"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "vocabulary.key": "algorithm"
+        "vocabulary.key": "program"
       }
     },
     {
@@ -19260,18 +19260,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-3",
         "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Virtual Pet with Sprite Lab",
+        "lesson.key": "lesson-3",
         "vocabulary.key": "event"
       }
     },
@@ -19283,8 +19277,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Virtual Pet with Sprite Lab",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "code"
+        "vocabulary.key": "program"
       }
     },
     {
@@ -19296,7 +19296,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "program"
+        "vocabulary.key": "code"
       }
     },
     {

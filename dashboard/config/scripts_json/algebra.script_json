@@ -4,14 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true,
       "hideable_lessons": true,
       "version_year": "unversioned",
       "is_course": true
     },
     "new_name": null,
     "family_name": "algebra",
-    "serialized_at": "2021-08-03 22:46:45 UTC",
+    "serialized_at": "2021-10-16 00:26:07 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "algebra"

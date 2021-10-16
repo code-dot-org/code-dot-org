@@ -4,8 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "exclude_csf_column_in_legend": true,
+      "version_year": "2017",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "project_sharing": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -27,19 +31,11 @@
           "professionalLearning",
           "https://studio.code.org/s/csp2-support"
         ]
-      ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp2",
-      "hideable_lessons": true
+      ]
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2021-08-03 22:46:56 UTC",
+    "serialized_at": "2021-10-16 00:27:12 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2017"
@@ -1952,8 +1948,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_affirmation_intervention_2",
-          "csp_affirmation_control_2"
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
         ],
         "progression": "Pre-test reflection",
         "variants": {
@@ -1975,16 +1971,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_affirmation_intervention_2",
-          "csp_affirmation_control_2"
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
         ],
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
         "script.name": "csp2-2017"
       },
       "level_keys": [
-        "csp_affirmation_intervention_2",
-        "csp_affirmation_control_2"
+        "csp_affirmation_control_2",
+        "csp_affirmation_intervention_2"
       ]
     },
     {
@@ -2788,10 +2784,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_2",
+        "level.key": "csp_affirmation_control_2",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_2",
-          "csp_affirmation_control_2"
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
         ],
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",
@@ -2800,10 +2796,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_2",
+        "level.key": "csp_affirmation_intervention_2",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_2",
-          "csp_affirmation_control_2"
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
         ],
         "lesson.key": "Unit 2 Chapter 2 Assessment",
         "lesson_group.key": "csp2_2",

@@ -4,26 +4,9 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "exclude_csf_column_in_legend": true,
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}",
-      "version_year": "2019",
-      "project_sharing": true,
-      "is_stable": true,
-      "family_name": "csppostap",
-      "script_announcements": [
-        {
-          "notice": "No Lesson Plans in Chapter 2",
-          "details": "Please note there are no lesson plans for Chapter 2 of this unit.",
-          "link": "",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "tts": true,
       "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}",
       "announcements": [
         {
           "notice": "No Lesson Plans in Chapter 2",
@@ -32,11 +15,15 @@
           "type": "information",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "version_year": "2019",
+      "has_verified_resources": true,
+      "project_sharing": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": "csppostap",
-    "serialized_at": "2021-08-03 22:47:45 UTC",
+    "serialized_at": "2021-10-16 00:27:26 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csppostap-2019"

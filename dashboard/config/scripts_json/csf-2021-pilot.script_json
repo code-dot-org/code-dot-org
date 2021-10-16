@@ -4,12 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
-        ]
-      ],
+      "hideable_lessons": true,
       "announcements": [
         {
           "notice": "Attention pilot teachers!",
@@ -20,11 +15,16 @@
         }
       ],
       "pilot_experiment": "csf-2021-pilot",
-      "hideable_lessons": true
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
+        ]
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:03 UTC",
+    "serialized_at": "2021-10-16 00:27:07 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csf-2021-pilot"

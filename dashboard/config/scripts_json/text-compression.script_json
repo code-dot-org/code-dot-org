@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "text-compression",
-    "serialized_at": "2021-09-30 23:11:19 UTC",
+    "serialized_at": "2021-10-16 00:28:01 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "text-compression"

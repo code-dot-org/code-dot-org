@@ -4,16 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
       "student_detail_progress_view": true,
+      "version_year": "unversioned",
       "has_verified_resources": true,
       "project_sharing": true,
-      "hideable_lessons": true,
-      "version_year": "unversioned",
       "is_course": true
     },
     "new_name": null,
     "family_name": "csp3-virtual",
-    "serialized_at": "2021-08-03 22:47:57 UTC",
+    "serialized_at": "2021-10-16 00:27:16 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csp3-virtual"

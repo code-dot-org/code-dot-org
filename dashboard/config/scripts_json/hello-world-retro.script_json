@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-13 21:14:33 UTC",
+    "serialized_at": "2021-10-16 00:27:43 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "hello-world-retro"
@@ -77,6 +77,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_say"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -98,6 +101,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_location"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -119,6 +125,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_multi"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +149,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_click"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +173,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_events"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +197,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_backgrounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +221,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_costumes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +245,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_sizes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +269,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_behaviors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +293,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_sounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,6 +317,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_retro_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
