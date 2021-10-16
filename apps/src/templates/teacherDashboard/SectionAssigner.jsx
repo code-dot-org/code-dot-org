@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
 import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignButton from '@cdo/apps/templates/UnassignButton';
+import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 class SectionAssigner extends Component {
@@ -15,6 +15,7 @@ class SectionAssigner extends Component {
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
+    buttonLocationAnalytics: PropTypes.string,
     // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
@@ -33,7 +34,8 @@ class SectionAssigner extends Component {
       scriptId,
       selectedSectionId,
       forceReload,
-      assignmentName
+      assignmentName,
+      buttonLocationAnalytics
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -52,7 +54,11 @@ class SectionAssigner extends Component {
             scriptId={scriptId}
           />
           {selectedSection && selectedSection.isAssigned && (
-            <UnassignButton sectionId={selectedSection.id} />
+            <UnassignSectionButton
+              courseName={assignmentName}
+              sectionId={selectedSection.id}
+              buttonLocationAnalytics={buttonLocationAnalytics}
+            />
           )}
           {selectedSection &&
             !selectedSection.isAssigned &&
