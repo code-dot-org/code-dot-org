@@ -88,6 +88,10 @@
   hoc_overview_oceans_tutorial_header: 'AI for Oceans'
   hoc_overview_oceans_tutorial_desc: 'Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
+  hoc_overview_csc_header: 'Introducing CS Connections'
+  hoc_overview_csc_desc: 'Our newest curriculum highlights the connections between computer science and other subjects like math, language arts, science, and social studies. Through these modules, projects, and lessons, classrooms can explore their usual subjects in exciting new ways!'
+  hoc_overview_csc_learn_more: 'Learn more about CS Connections'
+
   ai_video_title_what_is_ai: 'What is AI?'
   ai_video_title_algorithm_bias: 'Fighting bias in algorithms'
   ai_video_title_phone_knows_dog: 'How does your phone know this is a dog?'
@@ -143,6 +147,7 @@
   hourofcode_homepage_hoc2018_header_line2: 'Ages 4 to 104.'
   codeorg_homepage_hoc_is_coming: 'The Hour of Code is coming.'
   codeorg_homepage_celebrate_cse: 'Celebrate computer science everywhere!'
+  codeorg_homepage_csc: 'Computer science meets language arts, math, and more in CS Connections'
 
   hoc2018_tutorial_mchoc_description: 'Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.'
 
