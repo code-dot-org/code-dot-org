@@ -29,6 +29,8 @@ si:
   africa_campaign_date_full: ඔක්තෝම්බර් 1 - 31
   africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: 2021 ඔක්තෝම්බර් 1 - 31
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: අද ඉගෙන ගන්න, හෙට දවස දීප්තිමත් කරන්න.
   hoc2020_header_with_line_break_markdown: අද ඉගෙන ගන්න, හෙට දවස දීප්තිමත් කරන්න.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -59,6 +61,7 @@ si:
     science is foundational for every student to learn.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
@@ -211,6 +214,8 @@ si:
   hourofcode_homepage_hoc2018_header_line1: ඕනෑම කෙනෙකුට, ඕනෑම තැනක Hour of Code උත්සවයක්
     සංවිධානය කළ හැකිය. භාෂා 45 කට වැඩි ගණනක පැයක නිබන්ධන. අත්දැකීම් අවශ්‍ය නොවේ.
   hourofcode_homepage_hoc2018_header_line2: වයස අවුරුදු 4 සිට 104 දක්වා.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>

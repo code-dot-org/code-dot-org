@@ -1186,6 +1186,7 @@ en:
             '"burst"': burst
             '"pop"': pop
             '"rain"': rain
+            '"spiral"': spiral
             '"zigzag"': zig-zag
       gamelab_makeNewSpriteAnon:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
@@ -1395,18 +1396,6 @@ en:
             '"while"': while
       gamelab_spriteSay:
         text: "[SPRITE][0] say [SPEECH][1]"
-      gamelab_spriteSayChoices:
-        text: "[SPRITE][0] say [SPEECH][1]"
-        options:
-          SPEECH:
-            '"I am Batman!"': I am Batman!
-            '"Being kind is never wasted."': Being kind is never wasted.
-            '"When you know better, you do better."': When you know better, you do better.
-            '"You always pass failure on the way to success."': You always pass failure on the way to success.
-            '"Make each day your masterpiece."': Make each day your masterpiece.
-            '"I am Catwoman!"': I am Catwoman!
-            '"Never quit!"': Never quit!
-            '"Live Fast."': Live Fast.
       gamelab_spriteSayTime:
         text: "[SPRITE][0]say[TEXT1][1]for[NUM][2]seconds"
       gamelab_startAvoiding:
@@ -1922,12 +1911,12 @@ en:
         text: monsters stop moving
       Poetry_addLine:
         text: add line [LINE][0]
-      Poetry_animatePoem:
-        text: animate poem
+      Poetry_animateText:
+        text: animate text
       Poetry_destroy:
         text: remove [ANIMATION_NAME][0]
-      Poetry_hidePoem:
-        text: hide poem
+      Poetry_hideText:
+        text: hide text
       Poetry_makeBurst:
         text: create [EFFECT][0] effect with [NUM][1] [ANIMATION_NAME][2] sprites
         options:
@@ -1959,7 +1948,7 @@ en:
       Poetry_randomWord:
         text: random word
       Poetry_setAuthor:
-        text: set poem author [AUTHOR][0]
+        text: set author [AUTHOR][0]
       Poetry_setBackground:
         text: set background color [COLOR][0]
       Poetry_setBackgroundEffect:
@@ -1980,8 +1969,8 @@ en:
             '"grayscale"': Grays
             '"sky"': Sky
             '"ocean"': Ocean
-            '"sunrise"': Sunrise
-            '"sunset"': Sunset
+            '"sunrise"': Dawn
+            '"sunset"': Dusk
             '"spring"': Spring
             '"summer"': Summer
             '"autumn"': Autumn
@@ -1995,13 +1984,10 @@ en:
           FONT:
             '"Arial"': Arial
             '"Georgia"': Georgia
-            '"Palatino"': Palatino
             '"Times"': Times
             '"Courier"': Courier
             '"Arial Black"': Arial Black
             '"Impact"': Impact
-            '"Tahoma"': Tahoma
-            '"Verdana"': Verdana
       Poetry_setFontColor:
         text: set font color [FILL][0]
       Poetry_setForegroundEffect:
@@ -2053,9 +2039,9 @@ en:
             '"flyTop"': fly from top
             '"flyBottom"': fly from bottom
       Poetry_setTitle:
-        text: set poem title [TITLE][0]
-      Poetry_showPoem:
-        text: show poem
+        text: set title [TITLE][0]
+      Poetry_showText:
+        text: show text
       Poetry_startBehavior:
         text: 'sprite [ANIMATION_NAME][0] begins [BEHAVIOR][1] '
         options:

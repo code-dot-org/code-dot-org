@@ -802,6 +802,7 @@ az:
           EFFECT:
             '"burst"': partlayış
             '"rain"': yağış
+            '"spiral"': spiral
       gamelab_makeProjectile:
         options:
           DIRECTION:

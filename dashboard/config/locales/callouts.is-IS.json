@@ -1794,7 +1794,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nýr kubbur!",
-          "poetry_multiple_sprites": "Nýr kubbur!"
+          "poetry_multiple_sprites": "Nýr kubbur!",
+          "poetry_new_block": "Nýr kubbur!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Nýr kubbur!"

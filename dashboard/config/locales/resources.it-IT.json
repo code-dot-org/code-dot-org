@@ -2,6 +2,36 @@
   "it-IT": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Playlist Spotify (tutte le età)"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Introduzione all'artista"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Curve e angoli"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Curve e angoli"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Playlist Spotify (tutte le età)"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Playlist Spotify (tutte le età)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Playlist Spotify (tutte le età)"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "IA: Apprendimento Automatico (Machine Learning)"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "IA: Ripercussioni sociali"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "IA: Dati di apprendimento e distorsioni"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Introduzione al Laboratorio dei Personaggi"
         },

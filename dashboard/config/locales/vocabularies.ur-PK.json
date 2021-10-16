@@ -2,6 +2,21 @@
   "ur-PK": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "فنکشن"
+        },
+        "code/artist/unversioned": {
+          "word": "ضابطہ کار(کوڈ)"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "شرائط"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "لوپس"
+        },
+        "code/sports/unversioned": {
+          "word": "ضابطہ کار(کوڈ)"
+        },
         "variable/coursef/2021": {
           "word": "متغیر"
         },

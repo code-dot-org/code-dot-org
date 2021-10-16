@@ -25,10 +25,16 @@
 #
 
 class Poetry < GamelabJr
+  before_save :check_default_poem
+
   serialized_attrs %w(
     default_poem
     standalone_app_name
   )
+
+  def check_default_poem
+    self.default_poem = nil unless standalone_app_name == 'poetry_hoc'
+  end
 
   # Poetry levels use the same shared_functions as GamelabJr
   def shared_function_type

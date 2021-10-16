@@ -273,7 +273,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "نیا بلاک!",
-          "poetry_multiple_sprites": "نیا بلاک!"
+          "poetry_multiple_sprites": "نیا بلاک!",
+          "poetry_new_block": "نیا بلاک!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "نیا بلاک!"
@@ -285,6 +286,15 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "نیا بلاک!",
           "poetry_remove_sprite": "نیا بلاک!"
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "اس پزل میں آپ کے پاس صرف ایک بلاک دستیاب ہے۔"
         }
       }
     }

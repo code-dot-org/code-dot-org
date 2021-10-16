@@ -4616,3 +4616,15 @@ ga:
               display_name: Ábhar
             lessonGroup-2:
               display_name: Ábhar
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Giuirléidí
+        poetry:
+          lessons:
+            lesson-3:
+              name: Athróga
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Comórtas Litrithe

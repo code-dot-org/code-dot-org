@@ -1317,13 +1317,6 @@ pt:
             '"while"': enquanto
       gamelab_spriteSay:
         text: "{SPRITE} diga {SPEECH}"
-      gamelab_spriteSayChoices:
-        text: "{SPRITE} diga {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Batman!"': Eu sou o Batman!
-            '"I am Catwoman!"': Eu sou a Mulher Gato!
-            '"Never quit!"': Nunca desista!
       gamelab_stopCollectingData:
         text: parar de coletar dados
       gamelab_stopFollowing:

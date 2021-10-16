@@ -4194,3 +4194,17 @@ bg:
               display_name: Съдържание
             lessonGroup-2:
               display_name: Съдържание
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Джаджи
+            lesson-3:
+              name: Примери
+        poetry:
+          lessons:
+            lesson-3:
+              name: Променливи
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Правопис

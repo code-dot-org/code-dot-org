@@ -518,6 +518,8 @@ tr:
           lessons:
             Jigsaw:
               name: Yapboz
+              description_student: Bulmacaları tamamlamak için tıklayıp sürükleyin.
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
           student_description: Yapboz eğitimini dene.
         step:
           title: Adım
@@ -18136,3 +18138,19 @@ tr:
               display_name: İçerik
             lessonGroup-2:
               display_name: İçerik
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Araçlar
+            lesson-2:
+              name: Araçlar
+        poetry:
+          lessons:
+            lesson-3:
+              name: Değişkenler
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Heceleme Yarışması
+        outbreak-csc:
+          title: Salgın

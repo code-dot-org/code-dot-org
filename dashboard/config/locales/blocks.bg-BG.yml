@@ -780,6 +780,7 @@ bg:
           EFFECT:
             '"burst"': пръсва
             '"rain"': дъжд
+            '"spiral"': спирала
       gamelab_makeProjectile:
         options:
           DIRECTION:

@@ -1354,6 +1354,7 @@
   header_documentation: "დოკუმენტაცია"
   user_header_label: "გამარჯობა %{username}"
   user_header_team: "გუნდი"
+  user_header_my_projects: "ჩემი პროექტები"
   user_header_settings: "ანგარიშის პარამეტრები"
   user_header_logout: "გასვლა"
   user_header_signin: "შესვლა"

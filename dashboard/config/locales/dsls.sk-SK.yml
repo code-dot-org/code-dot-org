@@ -5556,7 +5556,8 @@ sk-SK:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Nestane sa nič.
-        - {}
+          feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
+        - feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
         - correct: true
           feedback: Správne!
         - {}
@@ -5734,6 +5735,7 @@ sk-SK:
           #  Skvelý digitálny občan
 
           ## Ako sa vieme postaviť proti kyberšikane, keď ju vidíme?
+        content1: Sem pridať popis
       csf_digital_trails_2021:
         markdown: |-
           # Nasleduj digitálnu stopu
@@ -5826,3 +5828,8 @@ sk-SK:
         display_name: Ukážky projektov
         description: O chvíľu začneš pracovať na záverečnom projekte. Skôr, než začneš,
           venuj chvíľu pozornosti ukážkovým projektom.
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Sleduj algoritmus
+
+          Zahraj si hru a porozmýšľaj, aké príkazu sú potrebné na dosiahnutie správnych výsledkov.

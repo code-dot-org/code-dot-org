@@ -329,3 +329,7 @@ mk:
           lesson_groups:
             lessonGroup-2:
               description: тест
+        poetry:
+          lessons:
+            lesson-3:
+              name: Променливи

@@ -2,6 +2,69 @@
   "sq-AL": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Rregullimi"
+        },
+        "function/hero/unversioned": {
+          "word": "Funksion"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Rregullimi"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Rregullimi"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Kushtet"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "cikle "
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Rregullimi"
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Rregullimi"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Rregullimi"
+        },
         "behavior/coursef/2021": {
           "word": "Sjellja"
         },

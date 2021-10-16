@@ -87,6 +87,7 @@ class CoursesController < ApplicationController
       has_numbered_units: true
     )
     if unit_group.save
+      unit_group.write_serialization
       redirect_to action: :edit, course_name: unit_group.name
     else
       render 'new', locals: {unit_group: unit_group}
@@ -97,6 +98,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.find_by_name!(params[:course_name])
     unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
     unit_group.update(course_params)
+    unit_group.write_serialization
     CourseOffering.add_course_offering(unit_group)
     unit_group.reload
 

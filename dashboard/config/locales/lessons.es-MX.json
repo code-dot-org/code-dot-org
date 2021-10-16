@@ -2,6 +2,37 @@
   "es-MX": {
     "data": {
       "lessons": {
+        "dance-extras/Dance Party - Go Further": {
+          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques)."
+        },
+        "artist/Artist": {
+          "overview": "En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.",
+          "student_overview": "Programa el Artista para crear imágenes hermosas."
+        },
+        "dance/Dance Party": {
+          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques)."
+        },
+        "sports/Sports": {
+          "overview": "En esta actividad en línea, los alumnos aprenderán qué son los eventos y cómo las computadoras los utilizan en programas como juegos de video. Los alumnos trabajarán a través de acertijos haciendo que el programa reaccione a eventos (como presionar los botones de dirección). Al final del rompecabezas, los estudiantes tendrán la oportunidad de personalizar su juego con diferentes sonidos y velocidades.",
+          "student_overview": "¿Has pensado que alguna vez puedes jugar videojuegos en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+        },
+        "basketball/Bounce": {
+          "overview": "En esta actividad en línea, los alumnos aprenderán qué son los eventos y cómo las computadoras los utilizan en programas como juegos de video. Los alumnos trabajarán a través de acertijos haciendo que el programa reaccione a eventos (como presionar los botones de dirección). Al final del rompecabezas, los estudiantes tendrán la oportunidad de personalizar su juego con diferentes sonidos y velocidades.",
+          "student_overview": "¿Has pensado que alguna vez puedes jugar videojuegos en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
+        },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques)."
+        },
+        "dance-2019/Dance Party": {
+          "purpose": "Esta lección presenta los conceptos básicos de las ciencias de la computación para la codificación y la programación de eventos (con bloques)."
+        },
+        "oceans/Oceans": {
+          "student_overview": "Resumen de la tutoría: En primer lugar, los alumnos clasifican los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, los alumnos deberán ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias etiquetas para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de etiquetar nuevas imágenes por sí mismo."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con una discusión como breve introducción a modales de un laboratorio de computación, luego proceden a el uso de un ordenador para completar el acertijo en línea.",
+          "student_overview": "Haz clic y arrastra para terminar los desafíos."
+        },
         "coursef-2021/lesson-6": {
           "overview": "En esta lección **definida por el contexto**, los estudiantes debatirán sobre el papel de las computadoras y la tecnología en sus vidas, centrándose en cómo las aplicaciones y las herramientas ofrecen a los usuarios la posibilidad de elegir cómo utilizarlas. Los estudiantes explorarán aplicaciones similares a las que crearán más adelante.",
           "preparation": "-   Determina cómo los estudiantes inician sesión en Code.org.\n-   Si es necesario, crea cuentas de Code.org para los estudiantes.\n-   Asigna Introducción al Sprite Lab a los estudiantes.\n-   Imprime copias de la hoja de trabajo **\\*Exploración de aplicaciones** (o publica la versión digital en tu LMS).",
@@ -160,10 +191,13 @@
         "courseb-2021/The Right App": {
           "overview": "En esta lección, los estudiantes reconocen que las ciencias de la computación pueden ayudar a las personas en la vida real. Primero, los estudiantes se identifican con varios usuarios ficticios de smartphones para ayudarlos a encontrar la “aplicación correcta” que se adapte a sus necesidades. Luego, los estudiantes ejercitan la empatía y la creatividad para esbozar una aplicación para smartphone que responda a las necesidades de otro usuario. ",
           "preparation": "-   Lee las notas de los ponentes en el **\\*módulo de diapositivas**. \n-   Prepara suficientes materiales de dibujo para todos los alumnos.\n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
+          "purpose": "Hoy en día, la informática es más accesible que nunca. Personas de toda condición utilizan programas informáticos en muchos dispositivos diferentes, en particular los teléfonos inteligentes, para informarse, comunicarse y entretenerse. Dado que las personas tienen experiencias y necesidades tan diversas, es importante que los informáticos en ciernes empaticen con las personas e identifiquen soluciones pensando en ellas. ",
           "student_overview": "Esboza tu propia aplicación para smartphone."
         },
         "courseb-2021/Events: The Big Event": {
           "overview": "Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.",
+          "preparation": "-   Prepárate para proyectar **\\*La Imagen del Controlador**.\n-   Imprime una **\\*Evaluación** por alumno.\n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
+          "purpose": "Hoy, los alumnos aprenderán a distinguir los eventos de las acciones. Los alumnos verán cómo se interrumpen las actividades al pulsar un \"botón\" en un mando de papel. Al ver este evento, la clase reaccionará con una acción única. Los eventos son muy utilizados en programación y deberían ser fácilmente reconocibles después de esta lección.",
           "student_overview": "Muévete o grita cuando tu docente presione los botones de un control remoto gigante."
         },
         "courseb-2021/Events in Play Lab": {

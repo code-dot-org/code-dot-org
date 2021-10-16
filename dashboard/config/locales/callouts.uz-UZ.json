@@ -1582,7 +1582,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Yangi blok!",
-          "poetry_multiple_sprites": "Yangi blok!"
+          "poetry_multiple_sprites": "Yangi blok!",
+          "poetry_new_block": "Yangi blok!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Yangi blok!"

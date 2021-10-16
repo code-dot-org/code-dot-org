@@ -242,7 +242,10 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
  * the server
  * @param {number} sectionId
  */
-export const unassignSection = sectionId => (dispatch, getState) => {
+export const unassignSection = (sectionId, location) => (
+  dispatch,
+  getState
+) => {
   dispatch(beginEditingSection(sectionId, true));
   const {initialCourseId, initialUnitId} = getState().teacherSections;
   dispatch(editSectionProperties({courseId: '', scriptId: ''}));
@@ -255,6 +258,7 @@ export const unassignSection = sectionId => (dispatch, getState) => {
           sectionId,
           scriptId: initialUnitId,
           courseId: initialCourseId,
+          location: location,
           date: new Date()
         },
         removeNullValues
@@ -550,7 +554,6 @@ const initialState = {
   loadError: null,
   // The page where the action is occurring
   pageType: '',
-
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null
 };
