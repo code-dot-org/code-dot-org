@@ -310,6 +310,8 @@ module Services
         updated_script_level = script.script_levels.first
         updated_script_level.add_variant(new_level)
         assert_equal 2, script.script_levels.first.levels.count
+        level_keys = script.script_levels.first.levels.map(&:key)
+        assert_equal level_keys, level_keys.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -329,6 +331,8 @@ module Services
         updated_script_level = script.script_levels.first
         updated_script_level.add_variant(new_level)
         assert_equal 2, script.script_levels.first.levels.count
+        level_keys = script.script_levels.first.levels.map(&:key)
+        refute_equal level_keys, level_keys.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -572,7 +576,7 @@ module Services
       assert_equal expected_descriptions, lesson.standards.map(&:description)
     end
 
-    test 'seed sorts lesson standards' do
+    test 'seed reorders existing lesson standards by key' do
       script = create_script_tree
 
       # give the new standard a shortcode that will make it appear before the
@@ -637,7 +641,7 @@ module Services
       assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
     end
 
-    test 'seed sorts opportunity standards' do
+    test 'seed does not reorder existing opportunity standards by key' do
       script = create_script_tree
 
       # give the new standard a shortcode that will make it appear before the
