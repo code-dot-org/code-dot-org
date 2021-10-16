@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "starwarsblocks",
-    "serialized_at": "2021-10-16 00:28:00 UTC",
+    "serialized_at": "2021-10-16 00:32:17 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "starwarsblocks"
@@ -880,13 +880,13 @@
   ],
   "objectives": [
     {
-      "key": "e475558e-d7ca-4fc3-950a-b09be116dafb",
+      "key": "663f8e5f-9d35-425b-8d51-931fcef2c2d4",
       "properties": {
-        "description": "Define “coding” and “computer science”"
+        "description": "Make connections between computer science concepts and the real world"
       },
       "seeding_key": {
         "lesson.key": "Hour of Code 2015",
-        "objective.key": "e475558e-d7ca-4fc3-950a-b09be116dafb"
+        "objective.key": "663f8e5f-9d35-425b-8d51-931fcef2c2d4"
       }
     },
     {
@@ -900,16 +900,6 @@
       }
     },
     {
-      "key": "663f8e5f-9d35-425b-8d51-931fcef2c2d4",
-      "properties": {
-        "description": "Make connections between computer science concepts and the real world"
-      },
-      "seeding_key": {
-        "lesson.key": "Hour of Code 2015",
-        "objective.key": "663f8e5f-9d35-425b-8d51-931fcef2c2d4"
-      }
-    },
-    {
       "key": "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce",
       "properties": {
         "description": "Identify places to go to continue learning computer science and coding"
@@ -917,6 +907,16 @@
       "seeding_key": {
         "lesson.key": "Hour of Code 2015",
         "objective.key": "a0f7e9e7-2933-4f5a-942b-6cc0c7f4f7ce"
+      }
+    },
+    {
+      "key": "e475558e-d7ca-4fc3-950a-b09be116dafb",
+      "properties": {
+        "description": "Define “coding” and “computer science”"
+      },
+      "seeding_key": {
+        "lesson.key": "Hour of Code 2015",
+        "objective.key": "e475558e-d7ca-4fc3-950a-b09be116dafb"
       }
     }
   ],

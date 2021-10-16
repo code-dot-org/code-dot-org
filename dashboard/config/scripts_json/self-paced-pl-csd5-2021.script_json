@@ -4,15 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true,
-      "student_detail_progress_view": true,
-      "lesson_extras_available": true,
       "has_verified_resources": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
+      "student_detail_progress_view": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:58 UTC",
+    "serialized_at": "2021-10-16 00:32:16 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd5-2021"

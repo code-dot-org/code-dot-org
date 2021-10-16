@@ -4,13 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2017",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
+      "hideable_lessons": true,
       "project_sharing": true,
-      "tts": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -32,11 +30,13 @@
           "codeIntroduced",
           "https://curriculum.code.org/csd/unit3/code/"
         ]
-      ]
+      ],
+      "tts": true,
+      "version_year": "2017"
     },
     "new_name": "csd3-2017",
     "family_name": "csd3",
-    "serialized_at": "2021-10-16 00:26:50 UTC",
+    "serialized_at": "2021-10-16 00:31:08 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2017"

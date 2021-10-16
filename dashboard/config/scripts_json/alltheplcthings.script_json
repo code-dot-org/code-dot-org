@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "All The PLC Things",
-      "peer_reviews_to_complete": 5
+      "peer_reviews_to_complete": 5,
+      "professional_learning_course": "All The PLC Things"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:26:10 UTC",
+    "serialized_at": "2021-10-16 00:30:25 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "alltheplcthings"

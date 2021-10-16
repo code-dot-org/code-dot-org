@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:08 UTC",
+    "serialized_at": "2021-10-16 00:31:27 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csp-novice-18"

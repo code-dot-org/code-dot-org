@@ -4,13 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit4/{LESSON}",
-      "version_year": "2019",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
+      "hideable_lessons": true,
       "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -32,11 +31,12 @@
           "professionalLearning",
           "https://code.org/educate/professional-learning/middle-high"
         ]
-      ]
+      ],
+      "version_year": "2019"
     },
     "new_name": null,
     "family_name": "csp4",
-    "serialized_at": "2021-10-16 00:27:16 UTC",
+    "serialized_at": "2021-10-16 00:31:35 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp4-2019"

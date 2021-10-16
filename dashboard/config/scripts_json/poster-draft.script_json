@@ -5,12 +5,12 @@
     "login_required": false,
     "properties": {
       "is_migrated": true,
-      "weekly_instructional_minutes": 225,
-      "project_sharing": true
+      "project_sharing": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:53 UTC",
+    "serialized_at": "2021-10-16 00:32:11 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poster-draft"

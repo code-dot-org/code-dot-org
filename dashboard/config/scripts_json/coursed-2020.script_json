@@ -4,13 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
-      "lesson_extras_available": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursed/{LESSON}",
-      "version_year": "2020",
       "curriculum_umbrella": "CSF",
-      "tts": true,
+      "hideable_lessons": true,
       "is_course": true,
+      "lesson_extras_available": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -32,11 +30,13 @@
           "curriculumGuide",
           "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         ]
-      ]
+      ],
+      "tts": true,
+      "version_year": "2020"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-10-16 00:26:27 UTC",
+    "serialized_at": "2021-10-16 00:30:43 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursed-2020"

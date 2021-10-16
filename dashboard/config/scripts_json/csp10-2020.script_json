@@ -4,9 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit10/{LESSON}",
       "announcements": [
         {
           "notice": "",
@@ -37,9 +34,12 @@
           "visibility": "Student-only"
         }
       ],
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit10/{LESSON}",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
+      "hideable_lessons": true,
       "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -53,7 +53,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:11 UTC",
+    "serialized_at": "2021-10-16 00:31:30 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp10-2020"

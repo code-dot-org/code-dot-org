@@ -4,14 +4,6 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
-      "project_widget_visible": true,
-      "project_widget_types": [
-        "playlab",
-        "artist"
-      ],
-      "lesson_extras_available": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}",
       "announcements": [
         {
           "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
@@ -20,14 +12,20 @@
           "type": "bullhorn"
         }
       ],
-      "version_year": "2018",
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}",
+      "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
+      "is_course": true,
+      "lesson_extras_available": true,
+      "project_widget_types": [
+        "playlab",
+        "artist"
+      ],
+      "project_widget_visible": true,
       "supported_locales": [
         "it-IT",
         "sk-SK"
       ],
-      "curriculum_umbrella": "CSF",
-      "tts": true,
-      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -45,11 +43,13 @@
           "standardMappings",
           "https://curriculum.code.org/csf-18/express/standards/"
         ]
-      ]
+      ],
+      "tts": true,
+      "version_year": "2018"
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-10-16 00:27:35 UTC",
+    "serialized_at": "2021-10-16 00:31:54 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "express-2018"
