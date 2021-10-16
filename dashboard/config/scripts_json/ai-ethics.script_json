@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "is_course": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-10-16 00:30:20 UTC",
+    "serialized_at": "2021-10-16 00:26:05 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "ai-ethics"
@@ -287,9 +287,9 @@
       "url": "https://docs.google.com/document/d/16D3jRO2Q3KxM8FHvC8sdGLa19sxa5DGperetnX9gqcY/edit?usp=sharing",
       "key": "ai-ethics-research-areas",
       "properties": {
+        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "ai-ethics-research-areas"
@@ -300,9 +300,9 @@
       "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
       "key": "ai-ethics-research-reflection",
       "properties": {
+        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "ai-ethics-research-reflection"
@@ -313,8 +313,8 @@
       "url": "https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y",
       "key": "how-ai-works-video-series",
       "properties": {
-        "audience": "Student",
-        "type": "Video Series"
+        "type": "Video Series",
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "how-ai-works-video-series"
@@ -325,8 +325,8 @@
       "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
       "key": "our-ai-code-of-ethics-template-slides",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
+        "type": "Slides",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "our-ai-code-of-ethics-template-slides"
@@ -406,6 +406,16 @@
   ],
   "objectives": [
     {
+      "key": "da3ad7a2-d100-4521-b04e-139a7488779f",
+      "properties": {
+        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "da3ad7a2-d100-4521-b04e-139a7488779f"
+      }
+    },
+    {
       "key": "440db7c0-d217-4abe-b348-515a57c0d0d9",
       "properties": {
         "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
@@ -423,16 +433,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "b55b0bd5-5b57-4317-ab28-8b615334f9b4"
-      }
-    },
-    {
-      "key": "da3ad7a2-d100-4521-b04e-139a7488779f",
-      "properties": {
-        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "da3ad7a2-d100-4521-b04e-139a7488779f"
       }
     }
   ],

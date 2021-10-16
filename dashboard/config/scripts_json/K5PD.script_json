@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "professional_learning_course": "K5 Support",
       "announcements": [
         {
           "notice": "This Online PD Resource is no longer available",
@@ -12,12 +13,11 @@
           "type": "failure",
           "visibility": "Teacher and student"
         }
-      ],
-      "professional_learning_course": "K5 Support"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:30:20 UTC",
+    "serialized_at": "2021-10-16 00:26:04 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "K5PD"

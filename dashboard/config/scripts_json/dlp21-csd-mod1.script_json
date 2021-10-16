@@ -5,13 +5,13 @@
     "login_required": true,
     "properties": {
       "is_migrated": true,
-      "peer_reviews_to_complete": 6,
       "professional_learning_course": "2021 CS Discoveries Deeper Learning",
+      "peer_reviews_to_complete": 6,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:31:50 UTC",
+    "serialized_at": "2021-10-16 00:27:31 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "dlp21-csd-mod1"

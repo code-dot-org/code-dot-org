@@ -4,8 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
       "hideable_lessons": true,
+      "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
       "pilot_experiment": "ai-unit-pilot",
       "teacher_resources": [
         [
@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:30:21 UTC",
+    "serialized_at": "2021-10-16 00:26:05 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "ai-unit-pilot"

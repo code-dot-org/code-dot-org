@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
       "announcements": [
         {
           "notice": "Check out the CSP mid-course survey",
@@ -13,8 +15,6 @@
         }
       ],
       "curriculum_umbrella": "CSP",
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -44,7 +44,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:31:34 UTC",
+    "serialized_at": "2021-10-16 00:27:15 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp3-research-mxghyt"

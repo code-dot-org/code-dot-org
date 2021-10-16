@@ -4,16 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursef/{LESSON}",
-      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
-      "lesson_extras_available": true,
+      "project_widget_visible": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "project_widget_visible": true,
+      "lesson_extras_available": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursef/{LESSON}",
+      "version_year": "2020",
+      "curriculum_umbrella": "CSF",
+      "tts": true,
+      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -35,13 +37,11 @@
           "curriculumGuide",
           "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         ]
-      ],
-      "tts": true,
-      "version_year": "2020"
+      ]
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-10-16 00:30:52 UTC",
+    "serialized_at": "2021-10-16 00:26:35 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursef-2020"

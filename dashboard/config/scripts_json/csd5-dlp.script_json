@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "peer_reviews_to_complete": 6,
       "professional_learning_course": "CS Discoveries Facilitator in Training",
+      "peer_reviews_to_complete": 6,
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:31:18 UTC",
+    "serialized_at": "2021-10-16 00:27:00 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd5-dlp"

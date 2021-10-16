@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
     "family_name": "pixelation",
-    "serialized_at": "2021-10-16 00:32:10 UTC",
+    "serialized_at": "2021-10-16 00:27:52 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "pixelation"

@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
       "announcements": [
         {
           "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
@@ -13,11 +15,10 @@
           "visibility": "Teacher-only"
         }
       ],
+      "version_year": "2018",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
-      "hideable_lessons": true,
       "project_sharing": true,
-      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -35,12 +36,11 @@
           "standardMappings",
           "https://curriculum.code.org/csd-18/unit5/standards/"
         ]
-      ],
-      "version_year": "2018"
+      ]
     },
     "new_name": null,
     "family_name": "csd5",
-    "serialized_at": "2021-10-16 00:31:17 UTC",
+    "serialized_at": "2021-10-16 00:26:59 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd5-2018"

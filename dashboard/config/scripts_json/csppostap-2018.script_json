@@ -4,6 +4,9 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}",
       "announcements": [
         {
           "notice": "No Lesson Plans for Chapter 2",
@@ -40,17 +43,14 @@
           "visibility": "Teacher-only"
         }
       ],
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}",
+      "version_year": "2018",
       "has_verified_resources": true,
-      "hideable_lessons": true,
       "project_sharing": true,
-      "student_detail_progress_view": true,
-      "tts": true,
-      "version_year": "2018"
+      "tts": true
     },
     "new_name": null,
     "family_name": "csppostap",
-    "serialized_at": "2021-10-16 00:31:44 UTC",
+    "serialized_at": "2021-10-16 00:27:25 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csppostap-2018"

@@ -5,8 +5,9 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
-      "pilot_experiment": "20-21-virtual-AYW-CSD",
       "student_detail_progress_view": true,
+      "version_year": "2021",
+      "pilot_experiment": "20-21-virtual-AYW-CSD",
       "teacher_resources": [
         [
           "curriculum",
@@ -20,12 +21,11 @@
           "curriculumGuide",
           "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview"
         ]
-      ],
-      "version_year": "2021"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:32:21 UTC",
+    "serialized_at": "2021-10-16 00:28:04 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "vpl-csd-2021"

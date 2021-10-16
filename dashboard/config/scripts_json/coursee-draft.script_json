@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:30:49 UTC",
+    "serialized_at": "2021-10-16 00:26:32 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "coursee-draft"

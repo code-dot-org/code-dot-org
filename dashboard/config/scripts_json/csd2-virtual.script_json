@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_verified_resources": true,
       "hideable_lessons": true,
-      "project_sharing": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "has_verified_resources": true,
+      "project_sharing": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:31:07 UTC",
+    "serialized_at": "2021-10-16 00:26:49 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd2-virtual"

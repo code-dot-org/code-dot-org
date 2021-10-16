@@ -5,13 +5,13 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
-      "is_course": true,
       "student_detail_progress_view": true,
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "is_course": true
     },
     "new_name": null,
     "family_name": "code-break-younger",
-    "serialized_at": "2021-10-16 00:30:29 UTC",
+    "serialized_at": "2021-10-16 00:26:13 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "code-break-younger"
