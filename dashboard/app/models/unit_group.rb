@@ -48,7 +48,7 @@ class UnitGroup < ApplicationRecord
     self.class.get_from_cache(id)
   end
 
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation
     !!plc_course
@@ -86,11 +86,11 @@ class UnitGroup < ApplicationRecord
   # Any course with a plc_course is considered stable.
   # All other courses must specify a published_state.
   def stable?
-    plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
+    plc_course || (published_state == SharedCourseConstants::PUBLISHED_STATE.stable)
   end
 
   def in_development?
-    published_state == SharedConstants::PUBLISHED_STATE.in_development
+    published_state == SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   def self.file_path(name)

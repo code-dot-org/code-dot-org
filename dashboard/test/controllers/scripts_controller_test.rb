@@ -4,10 +4,10 @@ class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
-    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
-    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
-    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedConstants::PUBLISHED_STATE.beta
-    @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedConstants::PUBLISHED_STATE.beta
+    @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    @coursez_2019 = create :script, name: 'coursez-2019', family_name: 'coursez', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @partner_unit = create :script, editor_experiment: 'platformization-partners', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
 
     @migrated_unit = create :script
     @unmigrated_unit = create :script, is_migrated: false
@@ -426,24 +426,24 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
-      published_state: SharedConstants::PUBLISHED_STATE.preview
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     unit.reload
-    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -453,18 +453,18 @@ class ScriptsControllerTest < ActionController::TestCase
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
-      published_state: SharedConstants::PUBLISHED_STATE.preview
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to in_development" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -474,18 +474,18 @@ class ScriptsControllerTest < ActionController::TestCase
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
-      published_state: SharedConstants::PUBLISHED_STATE.in_development
+      published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   test "update published state to pilot" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -495,19 +495,19 @@ class ScriptsControllerTest < ActionController::TestCase
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
-      published_state: SharedConstants::PUBLISHED_STATE.pilot,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.pilot
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.pilot
   end
 
   test "update published state to beta" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.preview
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -517,18 +517,18 @@ class ScriptsControllerTest < ActionController::TestCase
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
-      published_state: SharedConstants::PUBLISHED_STATE.beta
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.beta
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
   test "update published state to preview" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -538,18 +538,18 @@ class ScriptsControllerTest < ActionController::TestCase
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
-      published_state: SharedConstants::PUBLISHED_STATE.preview
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.preview
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test "update published state to stable" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -559,11 +559,11 @@ class ScriptsControllerTest < ActionController::TestCase
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
-      published_state: SharedConstants::PUBLISHED_STATE.stable
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
     unit.reload
-    assert_equal unit.get_published_state, SharedConstants::PUBLISHED_STATE.stable
+    assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.stable
   end
 
   test "can update on test without modifying filesystem" do
@@ -571,7 +571,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
