@@ -1045,6 +1045,7 @@ class Script < ApplicationRecord
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
         published_state: new_suffix ? SharedCourseConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
+        instruction_type: new_suffix ? SharedCourseConstants::INSTRUCTION_TYPE.teacher_led : unit_data[:instruction_type],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1363,6 +1364,7 @@ class Script < ApplicationRecord
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
           published_state: (unit_group.present? && general_params[:published_state] == unit_group.published_state) ? nil : general_params[:published_state],
+          instruction_type: unit_group.present? ? nil : general_params[:instruction_type],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
