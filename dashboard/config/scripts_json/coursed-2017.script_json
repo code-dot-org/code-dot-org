@@ -4,16 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursed/{LESSON}",
-      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
-      "lesson_extras_available": true,
+      "project_widget_visible": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "project_widget_visible": true,
+      "lesson_extras_available": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursed/{LESSON}",
+      "version_year": "2017",
       "supported_locales": [
         "ar-SA",
         "cs-CZ",
@@ -43,12 +42,13 @@
         "zh-CN",
         "zh-TW"
       ],
+      "curriculum_umbrella": "CSF",
       "tts": true,
-      "version_year": "2017"
+      "is_course": true
     },
     "new_name": "coursed-2017",
     "family_name": "coursed",
-    "serialized_at": "2021-10-16 00:30:42 UTC",
+    "serialized_at": "2021-10-16 00:26:25 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursed-2017"

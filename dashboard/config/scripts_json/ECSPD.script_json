@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "deprecated": true,
-      "professional_learning_course": "ECS Support Legacy"
+      "professional_learning_course": "ECS Support Legacy",
+      "deprecated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:30:18 UTC",
+    "serialized_at": "2021-10-16 00:26:03 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "ECSPD"

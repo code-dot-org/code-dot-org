@@ -4,6 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
+      "project_widget_visible": true,
+      "project_widget_types": [
+        "playlab_k1",
+        "artist_k1"
+      ],
+      "lesson_extras_available": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
       "announcements": [
         {
           "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
@@ -12,26 +20,18 @@
           "type": "bullhorn"
         }
       ],
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
-      "curriculum_umbrella": "CSF",
-      "hideable_lessons": true,
-      "is_course": true,
-      "lesson_extras_available": true,
-      "project_widget_types": [
-        "playlab_k1",
-        "artist_k1"
-      ],
-      "project_widget_visible": true,
+      "version_year": "2018",
       "supported_locales": [
         "it-IT",
         "sk-SK"
       ],
+      "curriculum_umbrella": "CSF",
       "tts": true,
-      "version_year": "2018"
+      "is_course": true
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-10-16 00:32:12 UTC",
+    "serialized_at": "2021-10-16 00:27:54 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "pre-express-2018"

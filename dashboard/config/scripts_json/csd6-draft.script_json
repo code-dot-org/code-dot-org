@@ -5,18 +5,18 @@
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
-      "lesson_extras_available": true,
+      "student_detail_progress_view": true,
+      "project_widget_visible": true,
       "project_widget_types": [
         "applab",
         "gamelab",
         "weblab"
       ],
-      "project_widget_visible": true,
-      "student_detail_progress_view": true
+      "lesson_extras_available": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:31:23 UTC",
+    "serialized_at": "2021-10-16 00:27:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csd6-draft"

@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
       "announcements": [
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
@@ -20,11 +22,10 @@
           "visibility": "Teacher-only"
         }
       ],
+      "version_year": "2018",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
-      "hideable_lessons": true,
       "project_sharing": true,
-      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -38,12 +39,11 @@
           "standardMappings",
           "https://curriculum.code.org/csp-18/csp-explore/standards/"
         ]
-      ],
-      "version_year": "2018"
+      ]
     },
     "new_name": null,
     "family_name": "csp-explore",
-    "serialized_at": "2021-10-16 00:31:26 UTC",
+    "serialized_at": "2021-10-16 00:27:08 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp-explore-2018"

@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_verified_resources": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:31:27 UTC",
+    "serialized_at": "2021-10-16 00:27:09 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp-post-survey-2018"

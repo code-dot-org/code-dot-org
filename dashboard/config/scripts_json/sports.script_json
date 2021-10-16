@@ -4,15 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
+      "tts": true,
       "is_course": true,
       "is_migrated": true,
-      "tts": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "unversioned"
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "sports",
-    "serialized_at": "2021-10-16 00:32:17 UTC",
+    "serialized_at": "2021-10-16 00:27:59 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "sports"
@@ -547,8 +547,8 @@
       "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing",
       "key": "events-in-bounce-how-do-they-happen",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slide Deck"
+        "type": "Slide Deck",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "events-in-bounce-how-do-they-happen"
@@ -571,6 +571,16 @@
   ],
   "vocabularies": [
     {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
       "key": "code",
       "word": "Code",
       "definition": "(v) to write code or to write instructions for a computer.",
@@ -591,16 +601,6 @@
       }
     },
     {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
@@ -612,6 +612,12 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Sports",
+        "vocabulary.key": "event"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Sports",
@@ -627,12 +633,6 @@
     {
       "seeding_key": {
         "lesson.key": "Sports",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sports",
         "vocabulary.key": "program"
       }
     }
@@ -642,33 +642,13 @@
   ],
   "objectives": [
     {
-      "key": "0e2bbedd-f066-4dc1-b80c-291dac187c62",
+      "key": "93e23857-027c-4711-9033-a41de9430672",
       "properties": {
-        "description": "Identify places to go to continue learning computer science and coding."
+        "description": "Identify actions that correlate to input events."
       },
       "seeding_key": {
         "lesson.key": "Sports",
-        "objective.key": "0e2bbedd-f066-4dc1-b80c-291dac187c62"
-      }
-    },
-    {
-      "key": "559aa8ee-c19e-41b2-8820-8cf04cf72dad",
-      "properties": {
-        "description": "Define “coding” and “computer science.”"
-      },
-      "seeding_key": {
-        "lesson.key": "Sports",
-        "objective.key": "559aa8ee-c19e-41b2-8820-8cf04cf72dad"
-      }
-    },
-    {
-      "key": "67dec84f-bfa5-4756-9dbd-02a20ce3da52",
-      "properties": {
-        "description": "Share a creative artifact with other students."
-      },
-      "seeding_key": {
-        "lesson.key": "Sports",
-        "objective.key": "67dec84f-bfa5-4756-9dbd-02a20ce3da52"
+        "objective.key": "93e23857-027c-4711-9033-a41de9430672"
       }
     },
     {
@@ -682,13 +662,23 @@
       }
     },
     {
-      "key": "93e23857-027c-4711-9033-a41de9430672",
+      "key": "67dec84f-bfa5-4756-9dbd-02a20ce3da52",
       "properties": {
-        "description": "Identify actions that correlate to input events."
+        "description": "Share a creative artifact with other students."
       },
       "seeding_key": {
         "lesson.key": "Sports",
-        "objective.key": "93e23857-027c-4711-9033-a41de9430672"
+        "objective.key": "67dec84f-bfa5-4756-9dbd-02a20ce3da52"
+      }
+    },
+    {
+      "key": "559aa8ee-c19e-41b2-8820-8cf04cf72dad",
+      "properties": {
+        "description": "Define “coding” and “computer science.”"
+      },
+      "seeding_key": {
+        "lesson.key": "Sports",
+        "objective.key": "559aa8ee-c19e-41b2-8820-8cf04cf72dad"
       }
     },
     {
@@ -699,6 +689,16 @@
       "seeding_key": {
         "lesson.key": "Sports",
         "objective.key": "bd8e3dc4-47f2-41ac-8c7f-01126eb5e68a"
+      }
+    },
+    {
+      "key": "0e2bbedd-f066-4dc1-b80c-291dac187c62",
+      "properties": {
+        "description": "Identify places to go to continue learning computer science and coding."
+      },
+      "seeding_key": {
+        "lesson.key": "Sports",
+        "objective.key": "0e2bbedd-f066-4dc1-b80c-291dac187c62"
       }
     }
   ],

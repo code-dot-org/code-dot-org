@@ -4,23 +4,23 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSF",
-      "has_lesson_plan": true,
       "hideable_lessons": true,
-      "is_course": true,
-      "is_migrated": true,
-      "lesson_extras_available": true,
+      "project_widget_visible": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "project_widget_visible": true,
-      "tts": true,
-      "version_year": "2021"
+      "lesson_extras_available": true,
+      "version_year": "2021",
+      "curriculum_umbrella": "CSF",
+      "is_course": true,
+      "is_migrated": true,
+      "has_lesson_plan": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-10-16 00:30:41 UTC",
+    "serialized_at": "2021-10-16 00:26:24 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursec-2021"
@@ -8285,8 +8285,8 @@
       "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
       "key": "2021_change_log",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "2021_change_log"
@@ -8297,9 +8297,9 @@
       "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
       "key": "assessment-answer-big-event",
       "properties": {
+        "type": "Assessment Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Assessment Answer Key"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "assessment-answer-big-event"
@@ -8310,9 +8310,9 @@
       "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit",
       "key": "assessment-answer-binary-bracelets",
       "properties": {
+        "type": "Assessment Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Assessment Answer Key"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "assessment-answer-binary-bracelets"
@@ -8334,8 +8334,8 @@
       "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q",
       "key": "common_core_and_ngss_guidance",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "common_core_and_ngss_guidance"
@@ -8346,8 +8346,8 @@
       "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit",
       "key": "course-cf-blockly-blocks",
       "properties": {
-        "audience": "Student",
-        "type": "Manipulatives"
+        "type": "Manipulatives",
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "course-cf-blockly-blocks"
@@ -8358,8 +8358,8 @@
       "url": "https://studio.code.org/s/coursec-2021/vocab",
       "key": "course_vocabulary",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -8370,8 +8370,8 @@
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
       "key": "cross-curricular_extension_activities",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "cross-curricular_extension_activities"
@@ -8382,8 +8382,8 @@
       "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
       "key": "csf-artist-intro-video",
       "properties": {
-        "audience": "Student",
-        "type": "Student Video"
+        "type": "Student Video",
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "csf-artist-intro-video"
@@ -8394,9 +8394,9 @@
       "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit",
       "key": "csf-binary-bracelets-activity",
       "properties": {
+        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Worksheet"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-binary-bracelets-activity"
@@ -8407,9 +8407,9 @@
       "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
       "key": "csf-binary-bracelets-assessment",
       "properties": {
+        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Assessment"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-binary-bracelets-assessment"
@@ -8420,8 +8420,8 @@
       "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
       "key": "csf-bit-byte-video",
       "properties": {
-        "audience": "Student",
-        "type": "Student Video"
+        "type": "Student Video",
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "csf-bit-byte-video"
@@ -8432,9 +8432,9 @@
       "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
       "key": "csf-lesson-recommend",
       "properties": {
+        "type": "Lesson Recommendations",
         "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Lesson Recommendations"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-lesson-recommend"
@@ -8445,9 +8445,9 @@
       "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit",
       "key": "csf-mrf-cup-spacing",
       "properties": {
+        "type": "Cup Spacing",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Cup Spacing"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-mrf-cup-spacing"
@@ -8458,9 +8458,9 @@
       "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit",
       "key": "csf-mrf-cup-stacking-ideas",
       "properties": {
+        "type": "Cup Stacking Ideas",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Cup Stacking Ideas"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-mrf-cup-stacking-ideas"
@@ -8471,9 +8471,9 @@
       "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit",
       "key": "csf-mrf-paper-trapezoid-template",
       "properties": {
+        "type": "Paper Trapezoid Template",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Paper Trapezoid Template"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-mrf-paper-trapezoid-template"
@@ -8484,9 +8484,9 @@
       "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit",
       "key": "csf-mrf-symbol-key",
       "properties": {
+        "type": "Symbol Key",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Symbol Key"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-mrf-symbol-key"
@@ -8497,9 +8497,9 @@
       "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
       "key": "csf-the-big-event-assessment",
       "properties": {
+        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Assessment"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-the-big-event-assessment"
@@ -8510,9 +8510,9 @@
       "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
       "key": "csf-turns-angles-doc",
       "properties": {
+        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csf-turns-angles-doc"
@@ -8523,8 +8523,8 @@
       "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
       "key": "csf-turns-angles-video",
       "properties": {
-        "audience": "Student",
-        "type": "Student Video"
+        "type": "Student Video",
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "csf-turns-angles-video"
@@ -8535,8 +8535,8 @@
       "url": "https://studio.code.org/s/coursec-2021/standards",
       "key": "csta_standards_mapping",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "csta_standards_mapping"
@@ -8547,8 +8547,8 @@
       "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide_1",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide_1"
@@ -8559,8 +8559,8 @@
       "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
       "key": "debugging_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "debugging_guide"
@@ -8571,8 +8571,8 @@
       "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
       "key": "debugging_guide_1",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "debugging_guide_1"
@@ -8583,8 +8583,8 @@
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs",
       "key": "feeling_faces_emotion_image",
       "properties": {
-        "audience": "Student",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "feeling_faces_emotion_image"
@@ -8595,8 +8595,8 @@
       "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
       "key": "implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "implementation_guide"
@@ -8607,8 +8607,8 @@
       "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ",
       "key": "lesson-in-action-binary-bracelets",
       "properties": {
-        "audience": "Teacher",
-        "type": "Lesson in Action Video"
+        "type": "Lesson in Action Video",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "lesson-in-action-binary-bracelets"
@@ -8619,8 +8619,8 @@
       "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
       "key": "lesson_type_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
@@ -8631,8 +8631,8 @@
       "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
       "key": "open-ended_programming_levels",
       "properties": {
-        "audience": "Teacher",
-        "type": "Answer Key"
+        "type": "Answer Key",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "open-ended_programming_levels"
@@ -8643,8 +8643,8 @@
       "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
       "key": "open-ended_programming_levels_1",
       "properties": {
-        "audience": "Teacher",
-        "type": "Answer Key"
+        "type": "Answer Key",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "open-ended_programming_levels_1"
@@ -8667,8 +8667,8 @@
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "pause_and_think_online",
       "properties": {
-        "audience": "Student",
-        "type": "Video"
+        "type": "Video",
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "pause_and_think_online"
@@ -8679,9 +8679,9 @@
       "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit",
       "key": "play-lab-project-guide",
       "properties": {
+        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Worksheet"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "play-lab-project-guide"
@@ -8692,9 +8692,9 @@
       "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing",
       "key": "play-lab-project-planning-guide-exemplar",
       "properties": {
+        "type": "Lesson Resource",
         "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Lesson Resource"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "play-lab-project-planning-guide-exemplar"
@@ -8705,8 +8705,8 @@
       "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
       "key": "putting-a-stop-to-online-meanness-lesson-slides",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slide Deck"
+        "type": "Slide Deck",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "putting-a-stop-to-online-meanness-lesson-slides"
@@ -8717,9 +8717,9 @@
       "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
       "key": "putting-a-stop-to-online-meanness-stop-online-meanness",
       "properties": {
+        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Student Handout"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "putting-a-stop-to-online-meanness-stop-online-meanness"
@@ -8730,8 +8730,8 @@
       "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5",
       "key": "right-app-scenarios",
       "properties": {
-        "audience": "Teacher",
-        "type": "Worksheet"
+        "type": "Worksheet",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "right-app-scenarios"
@@ -8742,8 +8742,8 @@
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "teacher_forum_1"
@@ -8754,9 +8754,9 @@
       "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
       "key": "the_big_event_course_c_",
       "properties": {
+        "type": "Event Controller",
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Event Controller"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "the_big_event_course_c_"
@@ -8767,8 +8767,8 @@
       "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit",
       "key": "unplugged-maze-blocks",
       "properties": {
-        "audience": "Student",
-        "type": "Manipulatives"
+        "type": "Manipulatives",
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "unplugged-maze-blocks"
@@ -8779,9 +8779,9 @@
       "url": "https://youtu.be/u0WV9shCoak",
       "key": "unplugged-video-big-event",
       "properties": {
+        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4",
-        "type": "Unplugged Video"
+        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-big-event"
@@ -8792,9 +8792,9 @@
       "url": "https://youtu.be/3S2YfoO4_CM",
       "key": "unplugged-video-binary-bracelets",
       "properties": {
+        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C2-binary-bracelets.mp4",
-        "type": "Unplugged Video"
+        "download_url": "http://videos.code.org/2014/C2-binary-bracelets.mp4"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-binary-bracelets"
@@ -8805,9 +8805,9 @@
       "url": "https://youtu.be/xaW3PAzHxCU",
       "key": "unplugged-video-robotic-friends",
       "properties": {
+        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/csf/my-robotic-friends-activity.mp4",
-        "type": "Unplugged Video"
+        "download_url": "https://videos.code.org/csf/my-robotic-friends-activity.mp4"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-robotic-friends"
@@ -8818,8 +8818,8 @@
       "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit",
       "key": "virtual_lesson_modifications",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "type": "Resource",
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "virtual_lesson_modifications"
@@ -9169,13 +9169,43 @@
       }
     },
     {
-      "key": "binary",
-      "word": "Binary",
-      "definition": "A way of representing information using only two options.",
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "binary"
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
       }
     },
     {
@@ -9199,23 +9229,43 @@
       }
     },
     {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "Putting commands in correct order so computers can read the commands.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "event"
+        "vocabulary.key": "sequencing"
       }
     },
     {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "loop"
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
       }
     },
     {
@@ -9239,6 +9289,16 @@
       }
     },
     {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
       "key": "repeat",
       "word": "Repeat",
       "definition": "To do something again.",
@@ -9249,27 +9309,153 @@
       }
     },
     {
-      "key": "sequencing",
-      "word": "Sequencing",
-      "definition": "Putting commands in correct order so computers can read the commands.",
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "sequencing"
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "repeat",
+      "word": "Repeat",
+      "definition": "To do something again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "binary",
+      "word": "Binary",
+      "definition": "A way of representing information using only two options.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "binary"
       }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "vocabulary.key": "binary"
+        "lesson.key": "Programming: My Robotic Friends",
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Build a Flappy Game",
-        "vocabulary.key": "event"
+        "lesson.key": "Programming: My Robotic Friends",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "sequencing"
       }
     },
     {
@@ -9282,54 +9468,6 @@
       "seeding_key": {
         "lesson.key": "Debugging in Maze",
         "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "vocabulary.key": "repeat"
       }
     },
     {
@@ -9352,50 +9490,38 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "vocabulary.key": "algorithm"
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "vocabulary.key": "bug"
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "vocabulary.key": "debugging"
+        "lesson.key": "Loops with Rey and BB-8",
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "vocabulary.key": "sequencing"
+        "lesson.key": "Loops with Rey and BB-8",
+        "vocabulary.key": "repeat"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "vocabulary.key": "algorithm"
+        "lesson.key": "Loops in Harvester",
+        "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "vocabulary.key": "program"
+        "lesson.key": "Loops in Harvester",
+        "vocabulary.key": "repeat"
       }
     },
     {
@@ -9409,52 +9535,36 @@
         "lesson.key": "Sticker Art with Loops",
         "vocabulary.key": "repeat"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "vocabulary.key": "binary"
+      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-    {
-      "key": "03ac24d5-21f0-45e5-b15a-3354a578b67d",
-      "properties": {
-        "description": "Use a planned design as a blueprint for creation."
-      },
-      "seeding_key": {
-        "lesson.key": "End of Course Project: Create a Play Lab Game",
-        "objective.key": "03ac24d5-21f0-45e5-b15a-3354a578b67d"
-      }
-    },
-    {
-      "key": "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69",
-      "properties": {
-        "description": "Attend to precision when creating instructions"
-      },
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "objective.key": "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69"
-      }
-    },
-    {
-      "key": "0ca67e69-bff3-4d30-96d3-3f53299353cc",
-      "properties": {
-        "description": "Make comparisons between data visualizations made by others and use them to make a prediction."
-      },
-      "seeding_key": {
-        "lesson.key": "Picturing Data",
-        "objective.key": "0ca67e69-bff3-4d30-96d3-3f53299353cc"
-      }
-    },
-    {
-      "key": "15e9cb30-5d79-4344-a82e-a98f6f29c397",
-      "properties": {
-        "description": "Create an animated, interactive game using sequence and event-handlers."
-      },
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "objective.key": "15e9cb30-5d79-4344-a82e-a98f6f29c397"
-      }
-    },
     {
       "key": "1b4ddab6-f8a7-436e-929d-8ea87e41575f",
       "properties": {
@@ -9463,16 +9573,6 @@
       "seeding_key": {
         "lesson.key": "Putting a STOP to Online Meanness",
         "objective.key": "1b4ddab6-f8a7-436e-929d-8ea87e41575f"
-      }
-    },
-    {
-      "key": "26392005-5f64-4707-b38b-847d1f009a29",
-      "properties": {
-        "description": "Identify and address bugs or errors in sequenced instructions"
-      },
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "objective.key": "26392005-5f64-4707-b38b-847d1f009a29"
       }
     },
     {
@@ -9486,43 +9586,23 @@
       }
     },
     {
-      "key": "367c7a8a-4dea-494f-87c7-77cba03711a1",
+      "key": "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69",
       "properties": {
-        "description": "Reflect on the debugging process in an age-appropriate way."
+        "description": "Attend to precision when creating instructions"
       },
       "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "objective.key": "367c7a8a-4dea-494f-87c7-77cba03711a1"
+        "lesson.key": "Programming: My Robotic Friends",
+        "objective.key": "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69"
       }
     },
     {
-      "key": "3ad547f9-c577-4953-88d5-41f7ac1ab710",
+      "key": "26392005-5f64-4707-b38b-847d1f009a29",
       "properties": {
-        "description": "Modify an existing program to solve errors."
+        "description": "Identify and address bugs or errors in sequenced instructions"
       },
       "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "objective.key": "3ad547f9-c577-4953-88d5-41f7ac1ab710"
-      }
-    },
-    {
-      "key": "46288097-dbab-437f-897c-4e14352ae388",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "objective.key": "46288097-dbab-437f-897c-4e14352ae388"
-      }
-    },
-    {
-      "key": "529f5b68-c1dc-494b-bfa9-1ada0412cf78",
-      "properties": {
-        "description": "Recognize movements of the teacher as signals to initiate commands."
-      },
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "objective.key": "529f5b68-c1dc-494b-bfa9-1ada0412cf78"
+        "lesson.key": "Programming: My Robotic Friends",
+        "objective.key": "26392005-5f64-4707-b38b-847d1f009a29"
       }
     },
     {
@@ -9546,83 +9626,33 @@
       }
     },
     {
-      "key": "5f5877b9-cf72-4bb8-8700-341d33658a7c",
+      "key": "ce53a40d-db75-451a-a901-93f93226306a",
       "properties": {
-        "description": "Share a creative artifact with other students."
+        "description": "Predict where a program will fail."
       },
       "seeding_key": {
-        "lesson.key": "Build a Flappy Game",
-        "objective.key": "5f5877b9-cf72-4bb8-8700-341d33658a7c"
+        "lesson.key": "Debugging in Maze",
+        "objective.key": "ce53a40d-db75-451a-a901-93f93226306a"
       }
     },
     {
-      "key": "6503170b-db97-4737-ae5d-5108591497a0",
+      "key": "3ad547f9-c577-4953-88d5-41f7ac1ab710",
       "properties": {
-        "description": "Create a program to complete an image using sequential steps."
+        "description": "Modify an existing program to solve errors."
       },
       "seeding_key": {
-        "lesson.key": "Programming in Artist",
-        "objective.key": "6503170b-db97-4737-ae5d-5108591497a0"
+        "lesson.key": "Debugging in Maze",
+        "objective.key": "3ad547f9-c577-4953-88d5-41f7ac1ab710"
       }
     },
     {
-      "key": "6c461f48-eb24-4fee-94f3-eb987d8f4fe9",
+      "key": "367c7a8a-4dea-494f-87c7-77cba03711a1",
       "properties": {
-        "description": "Match blocks with the appropriate event handler."
+        "description": "Reflect on the debugging process in an age-appropriate way."
       },
       "seeding_key": {
-        "lesson.key": "Build a Flappy Game",
-        "objective.key": "6c461f48-eb24-4fee-94f3-eb987d8f4fe9"
-      }
-    },
-    {
-      "key": "7232c8de-da31-441a-84c9-cabef4ea8fc0",
-      "properties": {
-        "description": "Practice differentiating pre-defined actions and event-driven ones."
-      },
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "objective.key": "7232c8de-da31-441a-84c9-cabef4ea8fc0"
-      }
-    },
-    {
-      "key": "74ce2354-89e9-4396-8cf5-5f9a43e02bd4",
-      "properties": {
-        "description": "Repeat commands given by an instructor."
-      },
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "objective.key": "74ce2354-89e9-4396-8cf5-5f9a43e02bd4"
-      }
-    },
-    {
-      "key": "757d864e-38a3-4b30-8617-b9a4174c8b08",
-      "properties": {
-        "description": "Identify when a loop can be used to simplify a repetitive action."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "objective.key": "757d864e-38a3-4b30-8617-b9a4174c8b08"
-      }
-    },
-    {
-      "key": "8e76410f-b4db-446b-88c0-00013d9c05bd",
-      "properties": {
-        "description": "Employ a combination of sequential and looped commands to reach the end of a maze."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "objective.key": "8e76410f-b4db-446b-88c0-00013d9c05bd"
-      }
-    },
-    {
-      "key": "94ed661c-bf8f-41fe-866d-86f09b4ef4ad",
-      "properties": {
-        "description": "Employ a combination of sequential and looped commands to move and perform actions."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "objective.key": "94ed661c-bf8f-41fe-866d-86f09b4ef4ad"
+        "lesson.key": "Debugging in Maze",
+        "objective.key": "367c7a8a-4dea-494f-87c7-77cba03711a1"
       }
     },
     {
@@ -9636,16 +9666,6 @@
       }
     },
     {
-      "key": "9a785141-1fe6-4728-996c-2fbb8781b62c",
-      "properties": {
-        "description": "Encode letters into binary."
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "objective.key": "9a785141-1fe6-4728-996c-2fbb8781b62c"
-      }
-    },
-    {
       "key": "a48e07da-5c86-4377-8738-4a6a06633e1d",
       "properties": {
         "description": "Represent an algorithm as a computer program."
@@ -9653,96 +9673,6 @@
       "seeding_key": {
         "lesson.key": "Programming in Collector",
         "objective.key": "a48e07da-5c86-4377-8738-4a6a06633e1d"
-      }
-    },
-    {
-      "key": "a5834224-d1d8-47e2-b203-dc8e6935aa53",
-      "properties": {
-        "description": "Overcome obstacles such as time constraints or bugs."
-      },
-      "seeding_key": {
-        "lesson.key": "End of Course Project: Create a Play Lab Game",
-        "objective.key": "a5834224-d1d8-47e2-b203-dc8e6935aa53"
-      }
-    },
-    {
-      "key": "a8e453ad-ae3a-489a-b652-5f26ea11853a",
-      "properties": {
-        "description": "Create a game using event handlers."
-      },
-      "seeding_key": {
-        "lesson.key": "Build a Flappy Game",
-        "objective.key": "a8e453ad-ae3a-489a-b652-5f26ea11853a"
-      }
-    },
-    {
-      "key": "b27f9553-dc95-452c-a4ee-dc69db0fc913",
-      "properties": {
-        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
-      },
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "objective.key": "b27f9553-dc95-452c-a4ee-dc69db0fc913"
-      }
-    },
-    {
-      "key": "bad7a754-67f5-40db-bd28-b191d6a5b4d8",
-      "properties": {
-        "description": "Write instructions that use loops to repeat patterns"
-      },
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "objective.key": "bad7a754-67f5-40db-bd28-b191d6a5b4d8"
-      }
-    },
-    {
-      "key": "bf154cd9-0914-43c2-b895-030de92d1427",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "objective.key": "bf154cd9-0914-43c2-b895-030de92d1427"
-      }
-    },
-    {
-      "key": "c0757733-5e14-4797-9615-11b61d8d490f",
-      "properties": {
-        "description": "Identify actions that correlate to input events."
-      },
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "objective.key": "c0757733-5e14-4797-9615-11b61d8d490f"
-      }
-    },
-    {
-      "key": "ce1f4117-76f3-4359-a554-683a878f82cb",
-      "properties": {
-        "description": "Relate the idea of storing letters on paper to the idea of storing information in a computer."
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "objective.key": "ce1f4117-76f3-4359-a554-683a878f82cb"
-      }
-    },
-    {
-      "key": "ce53a40d-db75-451a-a901-93f93226306a",
-      "properties": {
-        "description": "Predict where a program will fail."
-      },
-      "seeding_key": {
-        "lesson.key": "Debugging in Maze",
-        "objective.key": "ce53a40d-db75-451a-a901-93f93226306a"
-      }
-    },
-    {
-      "key": "d47b51d2-9114-4dfd-ad21-810573d85543",
-      "properties": {
-        "description": "Break complex shapes into simple parts."
-      },
-      "seeding_key": {
-        "lesson.key": "Programming in Artist",
-        "objective.key": "d47b51d2-9114-4dfd-ad21-810573d85543"
       }
     },
     {
@@ -9756,6 +9686,56 @@
       }
     },
     {
+      "key": "6503170b-db97-4737-ae5d-5108591497a0",
+      "properties": {
+        "description": "Create a program to complete an image using sequential steps."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "objective.key": "6503170b-db97-4737-ae5d-5108591497a0"
+      }
+    },
+    {
+      "key": "d47b51d2-9114-4dfd-ad21-810573d85543",
+      "properties": {
+        "description": "Break complex shapes into simple parts."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "objective.key": "d47b51d2-9114-4dfd-ad21-810573d85543"
+      }
+    },
+    {
+      "key": "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f",
+      "properties": {
+        "description": "Identify repeated patterns in code that could be replaced with a loop"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "objective.key": "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f"
+      }
+    },
+    {
+      "key": "bad7a754-67f5-40db-bd28-b191d6a5b4d8",
+      "properties": {
+        "description": "Write instructions that use loops to repeat patterns"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "objective.key": "bad7a754-67f5-40db-bd28-b191d6a5b4d8"
+      }
+    },
+    {
+      "key": "46288097-dbab-437f-897c-4e14352ae388",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "objective.key": "46288097-dbab-437f-897c-4e14352ae388"
+      }
+    },
+    {
       "key": "dea9fd7a-8b64-4d36-90a4-1eee89ea355a",
       "properties": {
         "description": "Break down a long sequence of instructions into the largest repeatable sequence."
@@ -9766,33 +9746,13 @@
       }
     },
     {
-      "key": "e972d59a-b86f-49ec-91ef-39c5ea6d9353",
+      "key": "8e76410f-b4db-446b-88c0-00013d9c05bd",
       "properties": {
-        "description": "Decode binary back to letters."
+        "description": "Employ a combination of sequential and looped commands to reach the end of a maze."
       },
       "seeding_key": {
-        "lesson.key": "Binary Bracelets",
-        "objective.key": "e972d59a-b86f-49ec-91ef-39c5ea6d9353"
-      }
-    },
-    {
-      "key": "f14af7c1-5797-4c9a-bafc-5dd0d630406b",
-      "properties": {
-        "description": "Create a bar graph and pie chart to represent simple data."
-      },
-      "seeding_key": {
-        "lesson.key": "Picturing Data",
-        "objective.key": "f14af7c1-5797-4c9a-bafc-5dd0d630406b"
-      }
-    },
-    {
-      "key": "f60bacab-23a9-428a-bfe3-629f21ce8b4c",
-      "properties": {
-        "description": "Collect and record data about quantities of real objects, or characters on a screen"
-      },
-      "seeding_key": {
-        "lesson.key": "Picturing Data",
-        "objective.key": "f60bacab-23a9-428a-bfe3-629f21ce8b4c"
+        "lesson.key": "Loops with Rey and BB-8",
+        "objective.key": "8e76410f-b4db-446b-88c0-00013d9c05bd"
       }
     },
     {
@@ -9806,27 +9766,406 @@
       }
     },
     {
-      "key": "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f",
+      "key": "757d864e-38a3-4b30-8617-b9a4174c8b08",
       "properties": {
-        "description": "Identify repeated patterns in code that could be replaced with a loop"
+        "description": "Identify when a loop can be used to simplify a repetitive action."
       },
       "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "objective.key": "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f"
+        "lesson.key": "Loops in Harvester",
+        "objective.key": "757d864e-38a3-4b30-8617-b9a4174c8b08"
+      }
+    },
+    {
+      "key": "94ed661c-bf8f-41fe-866d-86f09b4ef4ad",
+      "properties": {
+        "description": "Employ a combination of sequential and looped commands to move and perform actions."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "objective.key": "94ed661c-bf8f-41fe-866d-86f09b4ef4ad"
+      }
+    },
+    {
+      "key": "bf154cd9-0914-43c2-b895-030de92d1427",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "objective.key": "bf154cd9-0914-43c2-b895-030de92d1427"
+      }
+    },
+    {
+      "key": "b27f9553-dc95-452c-a4ee-dc69db0fc913",
+      "properties": {
+        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
+      },
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "objective.key": "b27f9553-dc95-452c-a4ee-dc69db0fc913"
+      }
+    },
+    {
+      "key": "74ce2354-89e9-4396-8cf5-5f9a43e02bd4",
+      "properties": {
+        "description": "Repeat commands given by an instructor."
+      },
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "objective.key": "74ce2354-89e9-4396-8cf5-5f9a43e02bd4"
+      }
+    },
+    {
+      "key": "529f5b68-c1dc-494b-bfa9-1ada0412cf78",
+      "properties": {
+        "description": "Recognize movements of the teacher as signals to initiate commands."
+      },
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "objective.key": "529f5b68-c1dc-494b-bfa9-1ada0412cf78"
+      }
+    },
+    {
+      "key": "7232c8de-da31-441a-84c9-cabef4ea8fc0",
+      "properties": {
+        "description": "Practice differentiating pre-defined actions and event-driven ones."
+      },
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "objective.key": "7232c8de-da31-441a-84c9-cabef4ea8fc0"
+      }
+    },
+    {
+      "key": "6c461f48-eb24-4fee-94f3-eb987d8f4fe9",
+      "properties": {
+        "description": "Match blocks with the appropriate event handler."
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "objective.key": "6c461f48-eb24-4fee-94f3-eb987d8f4fe9"
+      }
+    },
+    {
+      "key": "a8e453ad-ae3a-489a-b652-5f26ea11853a",
+      "properties": {
+        "description": "Create a game using event handlers."
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "objective.key": "a8e453ad-ae3a-489a-b652-5f26ea11853a"
+      }
+    },
+    {
+      "key": "5f5877b9-cf72-4bb8-8700-341d33658a7c",
+      "properties": {
+        "description": "Share a creative artifact with other students."
+      },
+      "seeding_key": {
+        "lesson.key": "Build a Flappy Game",
+        "objective.key": "5f5877b9-cf72-4bb8-8700-341d33658a7c"
+      }
+    },
+    {
+      "key": "15e9cb30-5d79-4344-a82e-a98f6f29c397",
+      "properties": {
+        "description": "Create an animated, interactive game using sequence and event-handlers."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "objective.key": "15e9cb30-5d79-4344-a82e-a98f6f29c397"
+      }
+    },
+    {
+      "key": "c0757733-5e14-4797-9615-11b61d8d490f",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "objective.key": "c0757733-5e14-4797-9615-11b61d8d490f"
+      }
+    },
+    {
+      "key": "f60bacab-23a9-428a-bfe3-629f21ce8b4c",
+      "properties": {
+        "description": "Collect and record data about quantities of real objects, or characters on a screen"
+      },
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "objective.key": "f60bacab-23a9-428a-bfe3-629f21ce8b4c"
+      }
+    },
+    {
+      "key": "f14af7c1-5797-4c9a-bafc-5dd0d630406b",
+      "properties": {
+        "description": "Create a bar graph and pie chart to represent simple data."
+      },
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "objective.key": "f14af7c1-5797-4c9a-bafc-5dd0d630406b"
+      }
+    },
+    {
+      "key": "0ca67e69-bff3-4d30-96d3-3f53299353cc",
+      "properties": {
+        "description": "Make comparisons between data visualizations made by others and use them to make a prediction."
+      },
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "objective.key": "0ca67e69-bff3-4d30-96d3-3f53299353cc"
+      }
+    },
+    {
+      "key": "9a785141-1fe6-4728-996c-2fbb8781b62c",
+      "properties": {
+        "description": "Encode letters into binary."
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "objective.key": "9a785141-1fe6-4728-996c-2fbb8781b62c"
+      }
+    },
+    {
+      "key": "e972d59a-b86f-49ec-91ef-39c5ea6d9353",
+      "properties": {
+        "description": "Decode binary back to letters."
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "objective.key": "e972d59a-b86f-49ec-91ef-39c5ea6d9353"
+      }
+    },
+    {
+      "key": "ce1f4117-76f3-4359-a554-683a878f82cb",
+      "properties": {
+        "description": "Relate the idea of storing letters on paper to the idea of storing information in a computer."
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "objective.key": "ce1f4117-76f3-4359-a554-683a878f82cb"
+      }
+    },
+    {
+      "key": "03ac24d5-21f0-45e5-b15a-3354a578b67d",
+      "properties": {
+        "description": "Use a planned design as a blueprint for creation."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project: Create a Play Lab Game",
+        "objective.key": "03ac24d5-21f0-45e5-b15a-3354a578b67d"
+      }
+    },
+    {
+      "key": "a5834224-d1d8-47e2-b203-dc8e6935aa53",
+      "properties": {
+        "description": "Overcome obstacles such as time constraints or bugs."
+      },
+      "seeding_key": {
+        "lesson.key": "End of Course Project: Create a Play Lab Game",
+        "objective.key": "a5834224-d1d8-47e2-b203-dc8e6935aa53"
       }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Binary Bracelets",
+        "lesson.key": "Putting a STOP to Online Meanness",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming: My Robotic Friends",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Binary Bracelets",
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: My Loopy Robotic Friends",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sticker Art with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
@@ -9847,14 +10186,49 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Debugging in Maze",
+        "lesson.key": "Events in Play Lab",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-09"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Debugging in Maze",
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Picturing Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Bracelets",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
@@ -9885,230 +10259,6 @@
         "lesson.key": "End of Course Project: Create a Play Lab Game",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops with Rey and BB-8",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: My Loopy Robotic Friends",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Picturing Data",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Picturing Data",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-DA-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Picturing Data",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-DA-07"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Collector",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Collector",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming: My Robotic Friends",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Putting a STOP to Online Meanness",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-IC-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sticker Art with Loops",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
       }
     }
   ],

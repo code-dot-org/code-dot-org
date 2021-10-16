@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "version_year": "2017",
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
-      "hideable_lessons": true,
       "project_sharing": true,
-      "student_detail_progress_view": true,
+      "tts": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -34,13 +36,11 @@
           "professionalLearning",
           "https://studio.code.org/s/csp5-support"
         ]
-      ],
-      "tts": true,
-      "version_year": "2017"
+      ]
     },
     "new_name": "csp5-2017",
     "family_name": "csp5",
-    "serialized_at": "2021-10-16 00:31:37 UTC",
+    "serialized_at": "2021-10-16 00:27:18 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp5-2017"

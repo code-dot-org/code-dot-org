@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
+      "student_detail_progress_view": true,
+      "project_widget_visible": true,
+      "project_widget_types": [
+        "applab",
+        "gamelab",
+        "weblab"
+      ],
+      "lesson_extras_available": true,
       "announcements": [
         {
           "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
@@ -13,19 +22,12 @@
           "visibility": "Teacher-only"
         }
       ],
+      "version_year": "2018",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
-      "hideable_lessons": true,
-      "is_maker_unit": true,
-      "lesson_extras_available": true,
       "project_sharing": true,
-      "project_widget_types": [
-        "applab",
-        "gamelab",
-        "weblab"
-      ],
-      "project_widget_visible": true,
-      "student_detail_progress_view": true,
+      "tts": true,
+      "is_maker_unit": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -47,13 +49,11 @@
           "codeIntroduced",
           "https://curriculum.code.org/csd-18/unit6/code/"
         ]
-      ],
-      "tts": true,
-      "version_year": "2018"
+      ]
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-10-16 00:31:20 UTC",
+    "serialized_at": "2021-10-16 00:27:02 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd6-2018"

@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "version_year": "unversioned",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true,
-      "version_year": "unversioned"
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": "minecraft",
-    "serialized_at": "2021-10-16 00:32:05 UTC",
+    "serialized_at": "2021-10-16 00:27:47 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "minecraft"
@@ -746,6 +746,16 @@
       }
     },
     {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -763,16 +773,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
       }
     }
   ],
@@ -792,6 +792,12 @@
     {
       "seeding_key": {
         "lesson.key": "Minecraft Hour of Code Designer",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Minecraft Hour of Code Designer",
         "vocabulary.key": "event"
       }
     },
@@ -799,12 +805,6 @@
       "seeding_key": {
         "lesson.key": "Minecraft Hour of Code Designer",
         "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Minecraft Hour of Code Designer",
-        "vocabulary.key": "program"
       }
     }
   ],
@@ -823,16 +823,6 @@
       }
     },
     {
-      "key": "343631be-830a-44f6-a249-a6aa96ea38f0",
-      "properties": {
-        "description": "Identify places to go to continue learning computer science and coding"
-      },
-      "seeding_key": {
-        "lesson.key": "Minecraft Hour of Code Designer",
-        "objective.key": "343631be-830a-44f6-a249-a6aa96ea38f0"
-      }
-    },
-    {
       "key": "a4ad4a3c-f2b2-4675-90e5-626ce70c2764",
       "properties": {
         "description": "Identify key computer science vocabulary"
@@ -840,6 +830,16 @@
       "seeding_key": {
         "lesson.key": "Minecraft Hour of Code Designer",
         "objective.key": "a4ad4a3c-f2b2-4675-90e5-626ce70c2764"
+      }
+    },
+    {
+      "key": "343631be-830a-44f6-a249-a6aa96ea38f0",
+      "properties": {
+        "description": "Identify places to go to continue learning computer science and coding"
+      },
+      "seeding_key": {
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "objective.key": "343631be-830a-44f6-a249-a6aa96ea38f0"
       }
     }
   ],

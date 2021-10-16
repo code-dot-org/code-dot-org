@@ -4,20 +4,22 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}",
-      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
-      "lesson_extras_available": true,
+      "project_widget_visible": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "project_widget_visible": true,
+      "lesson_extras_available": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/coursea/{LESSON}",
+      "version_year": "2019",
       "supported_locales": [
         "cs-CZ",
         "sk-SK"
       ],
+      "curriculum_umbrella": "CSF",
+      "tts": true,
+      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -39,13 +41,11 @@
           "curriculumGuide",
           "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         ]
-      ],
-      "tts": true,
-      "version_year": "2019"
+      ]
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-10-16 00:30:34 UTC",
+    "serialized_at": "2021-10-16 00:26:18 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursea-2019"

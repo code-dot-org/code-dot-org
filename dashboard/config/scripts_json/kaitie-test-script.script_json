@@ -7,7 +7,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:32:05 UTC",
+    "serialized_at": "2021-10-16 00:27:47 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "kaitie-test-script"
