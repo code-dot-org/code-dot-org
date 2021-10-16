@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import FixZoomHelper from '../templates/FixZoomHelper';
-import HideToolbarHelper from '../templates/HideToolbarHelper';
-import RotateContainer from '../templates/RotateContainer';
+import FixZoomHelper from '@cdo/apps/templates/FixZoomHelper';
+import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
+import RotateContainer from '@cdo/apps/templates/RotateContainer';
 import {connect} from 'react-redux';
 import StudioAppIdleTimer from '@cdo/apps/templates/StudioAppIdleTimer';
 
@@ -37,6 +37,8 @@ class StudioAppWrapper extends React.Component {
     );
   }
 }
+
+export const UnconnectedStudioAppWrapper = StudioAppWrapper;
 
 export default connect(state => ({
   assetUrl: state.pageConstants.assetUrl,
