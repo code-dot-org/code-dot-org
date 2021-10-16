@@ -120,7 +120,7 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_units'])
     unit_group.properties = hash['properties']
-    unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.in_development
+    unit_group.published_state = hash['published_state'] || SharedCourseConstants::PUBLISHED_STATE.in_development
 
     # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
@@ -334,7 +334,7 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
   def summarize(user = nil, for_edit: false)
@@ -529,7 +529,7 @@ class UnitGroup < ApplicationRecord
 
     all_courses.select do |course|
       course.family_name == family_name &&
-        course.published_state == SharedConstants::PUBLISHED_STATE.stable
+        course.published_state == SharedCourseConstants::PUBLISHED_STATE.stable
     end.sort_by(&:version_year).last
   end
 
