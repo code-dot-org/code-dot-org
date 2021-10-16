@@ -4,29 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
+      "exclude_csf_column_in_legend": true,
       "student_detail_progress_view": true,
-      "announcements": [
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Student-only"
-        },
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "version_year": "2018",
-      "curriculum_umbrella": "CSP",
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "tts": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -52,11 +31,52 @@
           "professionalLearning",
           "https://studio.code.org/s/csp5-support"
         ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "version_year": "2018",
+      "is_stable": true,
+      "script_announcements": [
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "project_sharing": true,
+      "curriculum_umbrella": "CSP",
+      "family_name": "csp5",
+      "tts": true,
+      "hideable_lessons": true,
+      "announcements": [
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
       ]
     },
     "new_name": null,
     "family_name": "csp5",
-    "serialized_at": "2021-10-16 00:27:19 UTC",
+    "serialized_at": "2021-08-03 22:47:33 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp5-2018"

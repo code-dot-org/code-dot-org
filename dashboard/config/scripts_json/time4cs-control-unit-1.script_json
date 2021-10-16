@@ -4,15 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "lesson_extras_available": true,
+      "editor_experiment": "broward",
       "pilot_experiment": "time4cs-control",
-      "editor_experiment": "broward"
+      "lesson_extras_available": true,
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:28:01 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2021-08-03 22:47:49 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "time4cs-control-unit-1"
     }

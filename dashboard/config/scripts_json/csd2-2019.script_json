@@ -4,14 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
+      "exclude_csf_column_in_legend": true,
       "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/csd-19/unit2/{LESSON}",
-      "version_year": "2019",
-      "curriculum_umbrella": "CSD",
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "tts": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -33,11 +27,21 @@
           "codeIntroduced",
           "https://curriculum.code.org/csd-19/unit2/code/"
         ]
-      ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "version_year": "2019",
+      "curriculum_path": "https://curriculum.code.org/csd-19/unit2/{LESSON}",
+      "project_sharing": true,
+      "curriculum_umbrella": "CSD",
+      "is_stable": true,
+      "family_name": "csd2",
+      "tts": true,
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2021-10-16 00:26:47 UTC",
+    "serialized_at": "2021-08-03 22:47:41 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd2-2019"

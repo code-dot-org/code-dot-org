@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:26:38 UTC",
+    "serialized_at": "2021-10-05 19:45:26 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa-u8-dev"
@@ -177,9 +177,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csa widget test2"
-        ],
         "progression": "Neighborhood Setup Widget"
       },
       "bonus": false,
@@ -202,9 +199,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Neighborhood 8x8 Sandbox"
-        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -227,9 +221,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Neighborhood 12x12 Sandbox"
-        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -252,9 +243,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Neighborhood 16x16 Sandbox"
-        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -277,9 +265,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Neighborhood 32x32 Sandbox"
-        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -302,9 +287,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Console Practice Level"
-        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -327,9 +309,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Playground Demo"
-        ],
         "progression": "The Playground"
       },
       "bonus": false,
@@ -352,9 +331,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Neighborhood Predict Level Example"
-        ],
         "progression": "Predict the Output Example"
       },
       "bonus": false,

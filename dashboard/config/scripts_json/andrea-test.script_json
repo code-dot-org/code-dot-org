@@ -4,9 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "Andrea Test",
-      "only_instructor_review_required": true,
       "student_detail_progress_view": true,
+      "professional_learning_course": "Andrea Test",
       "announcements": [
         {
           "notice": "Announcing",
@@ -15,11 +14,12 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "only_instructor_review_required": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:26:11 UTC",
+    "serialized_at": "2021-08-03 22:47:39 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "andrea-test"

@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "version_year": "unversioned",
+      "exclude_csf_column_in_legend": true,
       "has_verified_resources": true,
+      "version_year": "unversioned",
       "is_course": true
     },
     "new_name": null,
     "family_name": "csd-post-survey",
-    "serialized_at": "2021-10-16 00:26:45 UTC",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "csd-post-survey"

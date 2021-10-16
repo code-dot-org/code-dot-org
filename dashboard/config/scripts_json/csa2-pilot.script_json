@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:26:41 UTC",
+    "serialized_at": "2021-09-29 19:52:04 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csa2-pilot"
@@ -8103,16 +8103,6 @@
   ],
   "vocabularies": [
     {
-      "key": "attribute",
-      "word": "Attribute",
-      "definition": "A characteristic of an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
       "key": "public",
       "word": "public",
       "definition": "Indicates that an instance variable or method is accessible from outside of the class",
@@ -8140,6 +8130,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "key": "attribute",
+      "word": "Attribute",
+      "definition": "A characteristic of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribute"
       }
     },
     {
@@ -8647,12 +8647,6 @@
     {
       "seeding_key": {
         "lesson.key": "new lesson",
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "new lesson",
         "vocabulary.key": "public"
       }
     },
@@ -8666,6 +8660,12 @@
       "seeding_key": {
         "lesson.key": "new lesson",
         "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "vocabulary.key": "attribute"
       }
     },
     {

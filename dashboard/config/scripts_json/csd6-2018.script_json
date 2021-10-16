@@ -4,30 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
+      "exclude_csf_column_in_legend": true,
       "student_detail_progress_view": true,
-      "project_widget_visible": true,
       "project_widget_types": [
         "applab",
         "gamelab",
         "weblab"
       ],
-      "lesson_extras_available": true,
-      "announcements": [
-        {
-          "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
-          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
-          "link": "https://studio.code.org/s/csd-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "version_year": "2018",
-      "curriculum_umbrella": "CSD",
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "tts": true,
-      "is_maker_unit": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -49,11 +32,41 @@
           "codeIntroduced",
           "https://curriculum.code.org/csd-18/unit6/code/"
         ]
-      ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "project_widget_visible": true,
+      "version_year": "2018",
+      "is_stable": true,
+      "project_sharing": true,
+      "script_announcements": [
+        {
+          "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csd-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "curriculum_umbrella": "CSD",
+      "family_name": "csd6",
+      "tts": true,
+      "lesson_extras_available": true,
+      "hideable_lessons": true,
+      "announcements": [
+        {
+          "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csd-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "is_maker_unit": true
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-10-16 00:27:02 UTC",
+    "serialized_at": "2021-08-03 22:47:29 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd6-2018"
