@@ -2,17 +2,19 @@
 #
 # Table name: unit_groups
 #
-#  id              :integer          not null, primary key
-#  name            :string(255)
-#  properties      :text(65535)
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
-#  published_state :string(255)      default("in_development"), not null
+#  id               :integer          not null, primary key
+#  name             :string(255)
+#  properties       :text(65535)
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#  published_state  :string(255)      default("in_development"), not null
+#  instruction_type :string(255)      default("teacher_led"), not null
 #
 # Indexes
 #
-#  index_unit_groups_on_name             (name)
-#  index_unit_groups_on_published_state  (published_state)
+#  index_unit_groups_on_instruction_type  (instruction_type)
+#  index_unit_groups_on_name              (name)
+#  index_unit_groups_on_published_state   (published_state)
 #
 
 require 'cdo/script_constants'
