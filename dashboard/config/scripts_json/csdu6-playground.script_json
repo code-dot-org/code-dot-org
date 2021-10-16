@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-04 22:27:30 UTC",
+    "serialized_at": "2021-10-16 00:27:07 UTC",
     "published_state": "in_development",
     "seeding_key": {
       "script.name": "csdu6-playground"
@@ -2230,6 +2230,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Outputs - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2402,6 +2405,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Board Inputs - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2524,6 +2530,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - If Variables - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2921,6 +2930,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3118,6 +3130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Combine Inputs - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3415,6 +3430,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Sensors - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3737,6 +3755,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Accelerometer - A_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3809,6 +3830,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4106,6 +4130,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4303,6 +4330,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4350,6 +4380,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - A_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,

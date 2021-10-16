@@ -4,15 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}",
       "hideable_lessons": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}",
       "version_year": "unversioned",
       "is_course": true
     },
     "new_name": null,
     "family_name": "algebrab",
-    "serialized_at": "2021-08-03 22:46:55 UTC",
+    "serialized_at": "2021-10-16 00:26:01 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "AlgebraB"

@@ -4,13 +4,29 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "exclude_csf_column_in_legend": true,
+      "hideable_lessons": true,
       "student_detail_progress_view": true,
       "project_widget_visible": true,
       "project_widget_types": [
         "gamelab",
         "weblab"
       ],
+      "lesson_extras_available": true,
+      "curriculum_path": "https://curriculum.code.org/csd-19/unit3/{LESSON}",
+      "announcements": [
+        {
+          "notice": "Check out the new CS Discoveries resources for 2019-2020!",
+          "details": "Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!",
+          "link": "https://forum.code.org/t/new-resources-for-2019-2020/30676",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "version_year": "2019",
+      "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
+      "project_sharing": true,
+      "tts": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -32,40 +48,11 @@
           "codeIntroduced",
           "https://curriculum.code.org/csd-19/unit3/code/"
         ]
-      ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSD",
-      "is_stable": true,
-      "curriculum_path": "https://curriculum.code.org/csd-19/unit3/{LESSON}",
-      "family_name": "csd3",
-      "script_announcements": [
-        {
-          "notice": "Check out the new CS Discoveries resources for 2019-2020!",
-          "details": "Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!",
-          "link": "https://forum.code.org/t/new-resources-for-2019-2020/30676",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "announcements": [
-        {
-          "notice": "Check out the new CS Discoveries resources for 2019-2020!",
-          "details": "Read more about our new teacher guides, learning frameworks, OneNote Journal, and Flipgrid Disco Library!",
-          "link": "https://forum.code.org/t/new-resources-for-2019-2020/30676",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "version_year": "2019"
+      ]
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2021-08-03 22:47:42 UTC",
+    "serialized_at": "2021-10-16 00:26:52 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2019"

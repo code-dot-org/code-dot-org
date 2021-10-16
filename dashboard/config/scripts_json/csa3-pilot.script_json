@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-05 20:57:09 UTC",
+    "serialized_at": "2021-10-16 00:26:43 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csa3-pilot"
@@ -7800,16 +7800,6 @@
       }
     },
     {
-      "key": "efficiency",
-      "word": "Efficiency",
-      "definition": "Getting the best outcome with the least amount of waste",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "efficiency"
-      }
-    },
-    {
       "key": "algorithm",
       "word": "Algorithm",
       "definition": "A set of instructions to solve a problem or accomplish a task",
@@ -7817,6 +7807,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "efficiency",
+      "word": "Efficiency",
+      "definition": "Getting the best outcome with the least amount of waste",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficiency"
       }
     },
     {
@@ -7982,13 +7982,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "vocabulary.key": "efficiency"
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "vocabulary.key": "algorithm"
+        "vocabulary.key": "efficiency"
       }
     },
     {

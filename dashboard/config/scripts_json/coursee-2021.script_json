@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-09-22 21:09:00 UTC",
+    "serialized_at": "2021-10-16 00:26:31 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursee-2021"
@@ -9960,16 +9960,6 @@
       }
     },
     {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run under certain conditions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
       "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can easily call over and over again.",
@@ -9977,6 +9967,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditionals"
       }
     },
     {
@@ -10144,13 +10144,13 @@
     {
       "seeding_key": {
         "lesson.key": "Functions in Harvester",
-        "vocabulary.key": "conditionals"
+        "vocabulary.key": "function"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions in Harvester",
-        "vocabulary.key": "function"
+        "vocabulary.key": "conditionals"
       }
     },
     {

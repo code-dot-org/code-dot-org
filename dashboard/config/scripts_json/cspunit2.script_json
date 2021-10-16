@@ -4,11 +4,10 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:49 UTC",
+    "serialized_at": "2021-10-16 00:27:26 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "cspunit2"

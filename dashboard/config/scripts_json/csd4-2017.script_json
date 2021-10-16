@@ -4,8 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "exclude_csf_column_in_legend": true,
+      "version_year": "2017",
+      "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
+      "project_sharing": true,
+      "tts": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -27,20 +32,11 @@
           "codeIntroduced",
           "https://curriculum.code.org/csd/unit4/code/"
         ]
-      ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSD",
-      "family_name": "csd4",
-      "tts": true,
-      "hideable_lessons": true
+      ]
     },
     "new_name": "csd4-2017",
     "family_name": "csd4",
-    "serialized_at": "2021-08-03 22:47:02 UTC",
+    "serialized_at": "2021-10-16 00:26:57 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd4-2017"
