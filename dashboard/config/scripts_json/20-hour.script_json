@@ -4,17 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
-      "version_year": "unversioned",
+      "curriculum_umbrella": "CSF",
       "supported_locales": [
         "de-DE"
       ],
-      "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
+      "version_year": "unversioned",
       "is_course": true
     },
     "new_name": null,
     "family_name": "20-hour",
-    "serialized_at": "2021-10-16 00:25:59 UTC",
+    "serialized_at": "2021-08-03 22:46:39 UTC",
     "published_state": "preview",
     "seeding_key": {
       "script.name": "20-hour"

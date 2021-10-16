@@ -4,15 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
       "project_widget_visible": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "lesson_extras_available": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}",
-      "announcements": [
+      "has_lesson_plan": true,
+      "script_announcements": [
         {
           "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
           "details": "Click \"Learn More\" to read the help article on showing and hiding lessons.",
@@ -21,13 +19,7 @@
         }
       ],
       "version_year": "2018",
-      "supported_locales": [
-        "it-IT",
-        "sk-SK"
-      ],
-      "curriculum_umbrella": "CSF",
-      "tts": true,
-      "is_course": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/express/{LESSON}",
       "teacher_resources": [
         [
           "lessonPlans",
@@ -45,11 +37,30 @@
           "standardMappings",
           "https://curriculum.code.org/csf-18/express/standards/"
         ]
+      ],
+      "is_stable": true,
+      "supported_locales": [
+        "it-IT",
+        "sk-SK"
+      ],
+      "curriculum_umbrella": "CSF",
+      "family_name": "express",
+      "tts": true,
+      "lesson_extras_available": true,
+      "hideable_lessons": true,
+      "is_course": true,
+      "announcements": [
+        {
+          "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
+          "details": "Click \"Learn More\" to read the help article on showing and hiding lessons.",
+          "link": "https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses bullhorn",
+          "type": "bullhorn"
+        }
       ]
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-10-16 00:27:35 UTC",
+    "serialized_at": "2021-08-03 22:47:26 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "express-2018"

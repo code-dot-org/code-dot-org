@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-10-16 00:26:36 UTC",
+    "serialized_at": "2021-09-03 20:34:46 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursef-2021"
@@ -9300,16 +9300,6 @@
       }
     },
     {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A graphic on the screen with a location, size, and appearance.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
       "key": "behavior",
       "word": "Behavior",
       "definition": "An action that a sprite performs continuously until it’s told to stop.",
@@ -9317,6 +9307,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A graphic on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
       }
     },
     {
@@ -9340,16 +9340,6 @@
       }
     },
     {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to complete a task.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -9357,6 +9347,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to complete a task.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
       }
     },
     {
@@ -9716,13 +9716,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "vocabulary.key": "sprite"
+        "vocabulary.key": "behavior"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "vocabulary.key": "behavior"
+        "vocabulary.key": "sprite"
       }
     },
     {
@@ -9740,13 +9740,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "vocabulary.key": "algorithm"
+        "vocabulary.key": "event"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "vocabulary.key": "event"
+        "vocabulary.key": "algorithm"
       }
     },
     {

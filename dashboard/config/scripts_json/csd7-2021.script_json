@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:06 UTC",
+    "serialized_at": "2021-09-22 15:42:09 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd7-2021"
@@ -12640,7 +12640,7 @@
       "seeding_key": {
         "lesson.key": "Importing Models in App Lab",
         "programming_environment.name": "applab",
-        "programming_expression.key": "declareAssign_x"
+        "programming_expression.key": "getText"
       }
     },
     {
@@ -12654,21 +12654,21 @@
       "seeding_key": {
         "lesson.key": "Importing Models in App Lab",
         "programming_environment.name": "applab",
-        "programming_expression.key": "getPrediction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "getText"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "programming_environment.name": "applab",
         "programming_expression.key": "setText"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "getPrediction"
       }
     },
     {

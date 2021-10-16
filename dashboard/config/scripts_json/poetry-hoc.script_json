@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "poembot-hoc",
-    "serialized_at": "2021-10-16 00:27:53 UTC",
+    "serialized_at": "2021-09-16 16:53:05 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "poetry-hoc"

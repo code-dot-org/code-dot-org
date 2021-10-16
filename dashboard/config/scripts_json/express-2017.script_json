@@ -4,15 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true,
       "project_widget_visible": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "lesson_extras_available": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}",
+      "has_lesson_plan": true,
       "version_year": "2017",
+      "is_stable": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}",
       "supported_locales": [
         "ar-SA",
         "cs-CZ",
@@ -43,12 +43,15 @@
         "zh-TW"
       ],
       "curriculum_umbrella": "CSF",
+      "family_name": "express",
       "tts": true,
+      "lesson_extras_available": true,
+      "hideable_lessons": true,
       "is_course": true
     },
     "new_name": "express-2017",
     "family_name": "express",
-    "serialized_at": "2021-10-16 00:27:34 UTC",
+    "serialized_at": "2021-08-03 22:47:13 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "express-2017"
@@ -678,8 +681,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_scrat_ramp1",
-          "courseE_maze_ramp1"
+          "courseE_maze_ramp1",
+          "courseD_scrat_ramp1"
         ],
         "variants": {
           "courseE_maze_ramp1": {
@@ -690,16 +693,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_ramp1",
-          "courseE_maze_ramp1"
+          "courseE_maze_ramp1",
+          "courseD_scrat_ramp1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_ramp1",
-        "courseE_maze_ramp1"
+        "courseE_maze_ramp1",
+        "courseD_scrat_ramp1"
       ]
     },
     {
@@ -709,8 +712,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_scrat_ramp2",
-          "courseE_maze_ramp2"
+          "courseE_maze_ramp2",
+          "courseD_scrat_ramp2"
         ],
         "variants": {
           "courseE_maze_ramp2": {
@@ -721,16 +724,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_ramp2",
-          "courseE_maze_ramp2"
+          "courseE_maze_ramp2",
+          "courseD_scrat_ramp2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_ramp2",
-        "courseE_maze_ramp2"
+        "courseE_maze_ramp2",
+        "courseD_scrat_ramp2"
       ]
     },
     {
@@ -740,8 +743,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_scrat_ramp3",
-          "courseE_maze_ramp3"
+          "courseE_maze_ramp3",
+          "courseD_scrat_ramp3"
         ],
         "variants": {
           "courseE_maze_ramp3": {
@@ -752,16 +755,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_ramp3",
-          "courseE_maze_ramp3"
+          "courseE_maze_ramp3",
+          "courseD_scrat_ramp3"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_ramp3",
-        "courseE_maze_ramp3"
+        "courseE_maze_ramp3",
+        "courseD_scrat_ramp3"
       ]
     },
     {
@@ -771,8 +774,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_scrat_ramp4",
-          "courseE_maze_ramp4"
+          "courseE_maze_ramp4",
+          "courseD_scrat_ramp4"
         ],
         "variants": {
           "courseE_maze_ramp4": {
@@ -783,16 +786,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_ramp4",
-          "courseE_maze_ramp4"
+          "courseE_maze_ramp4",
+          "courseD_scrat_ramp4"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_ramp4",
-        "courseE_maze_ramp4"
+        "courseE_maze_ramp4",
+        "courseD_scrat_ramp4"
       ]
     },
     {
@@ -802,8 +805,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_scrat_ramp5",
-          "courseE_maze_ramp5"
+          "courseE_maze_ramp5",
+          "courseD_scrat_ramp5"
         ],
         "variants": {
           "courseE_maze_ramp5": {
@@ -814,16 +817,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_ramp5",
-          "courseE_maze_ramp5"
+          "courseE_maze_ramp5",
+          "courseD_scrat_ramp5"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_ramp5",
-        "courseE_maze_ramp5"
+        "courseE_maze_ramp5",
+        "courseD_scrat_ramp5"
       ]
     },
     {
@@ -833,8 +836,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_scrat_predict1",
-          "courseE_maze_predict1"
+          "courseE_maze_predict1",
+          "courseD_scrat_predict1"
         ],
         "variants": {
           "courseE_maze_predict1": {
@@ -845,16 +848,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_predict1",
-          "courseE_maze_predict1"
+          "courseE_maze_predict1",
+          "courseD_scrat_predict1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_predict1",
-        "courseE_maze_predict1"
+        "courseE_maze_predict1",
+        "courseD_scrat_predict1"
       ]
     },
     {
@@ -895,8 +898,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_scrat_ramp6",
-          "courseE_maze_ramp6"
+          "courseE_maze_ramp6",
+          "courseD_scrat_ramp6"
         ],
         "variants": {
           "courseE_maze_ramp6": {
@@ -907,16 +910,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_ramp6",
-          "courseE_maze_ramp6"
+          "courseE_maze_ramp6",
+          "courseD_scrat_ramp6"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_ramp6",
-        "courseE_maze_ramp6"
+        "courseE_maze_ramp6",
+        "courseD_scrat_ramp6"
       ]
     },
     {
@@ -926,8 +929,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseD_scrat_ramp7",
-          "courseE_maze_ramp7"
+          "courseE_maze_ramp7",
+          "courseD_scrat_ramp7"
         ],
         "variants": {
           "courseE_maze_ramp7": {
@@ -938,16 +941,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_ramp7",
-          "courseE_maze_ramp7"
+          "courseE_maze_ramp7",
+          "courseD_scrat_ramp7"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_ramp7",
-        "courseE_maze_ramp7"
+        "courseE_maze_ramp7",
+        "courseD_scrat_ramp7"
       ]
     },
     {
@@ -958,8 +961,8 @@
       "properties": {
         "challenge": true,
         "level_keys": [
-          "courseD_scrat_ramp8",
-          "courseE_artist_ramp8"
+          "courseE_artist_ramp8",
+          "courseD_scrat_ramp8"
         ],
         "variants": {
           "courseE_artist_ramp8": {
@@ -970,16 +973,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseD_scrat_ramp8",
-          "courseE_artist_ramp8"
+          "courseE_artist_ramp8",
+          "courseD_scrat_ramp8"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseD_scrat_ramp8",
-        "courseE_artist_ramp8"
+        "courseE_artist_ramp8",
+        "courseD_scrat_ramp8"
       ]
     },
     {
@@ -1020,8 +1023,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseE_artist_ramp8_2",
-          "courseE_artist_ramp9"
+          "courseE_artist_ramp9",
+          "courseE_artist_ramp8_2"
         ],
         "variants": {
           "courseE_artist_ramp9": {
@@ -1032,16 +1035,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseE_artist_ramp8_2",
-          "courseE_artist_ramp9"
+          "courseE_artist_ramp9",
+          "courseE_artist_ramp8_2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseE_artist_ramp8_2",
-        "courseE_artist_ramp9"
+        "courseE_artist_ramp9",
+        "courseE_artist_ramp8_2"
       ]
     },
     {
@@ -1051,8 +1054,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseC_video_angles2",
-          "courseE_artist_predict1"
+          "courseE_artist_predict1",
+          "courseC_video_angles2"
         ],
         "variants": {
           "courseE_artist_predict1": {
@@ -1063,16 +1066,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_video_angles2",
-          "courseE_artist_predict1"
+          "courseE_artist_predict1",
+          "courseC_video_angles2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
         "script.name": "express-2017"
       },
       "level_keys": [
-        "courseC_video_angles2",
-        "courseE_artist_predict1"
+        "courseE_artist_predict1",
+        "courseC_video_angles2"
       ]
     },
     {
@@ -7396,22 +7399,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp1",
-        "script_level.level_keys": [
-          "courseD_scrat_ramp1",
-          "courseE_maze_ramp1"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "content",
-        "script.name": "express-2017"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_maze_ramp1",
         "script_level.level_keys": [
-          "courseD_scrat_ramp1",
-          "courseE_maze_ramp1"
+          "courseE_maze_ramp1",
+          "courseD_scrat_ramp1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7420,10 +7411,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp2",
+        "level.key": "courseD_scrat_ramp1",
         "script_level.level_keys": [
-          "courseD_scrat_ramp2",
-          "courseE_maze_ramp2"
+          "courseE_maze_ramp1",
+          "courseD_scrat_ramp1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7434,8 +7425,8 @@
       "seeding_key": {
         "level.key": "courseD_scrat_ramp2",
         "script_level.level_keys": [
-          "courseD_scrat_ramp2",
-          "courseE_maze_ramp2"
+          "courseE_maze_ramp2",
+          "courseD_scrat_ramp2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7444,10 +7435,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp3",
+        "level.key": "courseE_maze_ramp2",
         "script_level.level_keys": [
-          "courseD_scrat_ramp3",
-          "courseE_maze_ramp3"
+          "courseE_maze_ramp2",
+          "courseD_scrat_ramp2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7458,8 +7449,8 @@
       "seeding_key": {
         "level.key": "courseE_maze_ramp3",
         "script_level.level_keys": [
-          "courseD_scrat_ramp3",
-          "courseE_maze_ramp3"
+          "courseE_maze_ramp3",
+          "courseD_scrat_ramp3"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7468,10 +7459,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp4",
+        "level.key": "courseD_scrat_ramp3",
         "script_level.level_keys": [
-          "courseD_scrat_ramp4",
-          "courseE_maze_ramp4"
+          "courseE_maze_ramp3",
+          "courseD_scrat_ramp3"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7482,8 +7473,8 @@
       "seeding_key": {
         "level.key": "courseE_maze_ramp4",
         "script_level.level_keys": [
-          "courseD_scrat_ramp4",
-          "courseE_maze_ramp4"
+          "courseE_maze_ramp4",
+          "courseD_scrat_ramp4"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7492,10 +7483,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp5",
+        "level.key": "courseD_scrat_ramp4",
         "script_level.level_keys": [
-          "courseD_scrat_ramp5",
-          "courseE_maze_ramp5"
+          "courseE_maze_ramp4",
+          "courseD_scrat_ramp4"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7506,8 +7497,8 @@
       "seeding_key": {
         "level.key": "courseE_maze_ramp5",
         "script_level.level_keys": [
-          "courseD_scrat_ramp5",
-          "courseE_maze_ramp5"
+          "courseE_maze_ramp5",
+          "courseD_scrat_ramp5"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7516,10 +7507,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_predict1",
+        "level.key": "courseD_scrat_ramp5",
         "script_level.level_keys": [
-          "courseD_scrat_predict1",
-          "courseE_maze_predict1"
+          "courseE_maze_ramp5",
+          "courseD_scrat_ramp5"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7530,8 +7521,20 @@
       "seeding_key": {
         "level.key": "courseE_maze_predict1",
         "script_level.level_keys": [
-          "courseD_scrat_predict1",
-          "courseE_maze_predict1"
+          "courseE_maze_predict1",
+          "courseD_scrat_predict1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "content",
+        "script.name": "express-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_predict1",
+        "script_level.level_keys": [
+          "courseE_maze_predict1",
+          "courseD_scrat_predict1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7564,22 +7567,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp6",
-        "script_level.level_keys": [
-          "courseD_scrat_ramp6",
-          "courseE_maze_ramp6"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "content",
-        "script.name": "express-2017"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_maze_ramp6",
         "script_level.level_keys": [
-          "courseD_scrat_ramp6",
-          "courseE_maze_ramp6"
+          "courseE_maze_ramp6",
+          "courseD_scrat_ramp6"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7588,10 +7579,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp7",
+        "level.key": "courseD_scrat_ramp6",
         "script_level.level_keys": [
-          "courseD_scrat_ramp7",
-          "courseE_maze_ramp7"
+          "courseE_maze_ramp6",
+          "courseD_scrat_ramp6"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7602,8 +7593,8 @@
       "seeding_key": {
         "level.key": "courseE_maze_ramp7",
         "script_level.level_keys": [
-          "courseD_scrat_ramp7",
-          "courseE_maze_ramp7"
+          "courseE_maze_ramp7",
+          "courseD_scrat_ramp7"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7612,10 +7603,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp8",
+        "level.key": "courseD_scrat_ramp7",
         "script_level.level_keys": [
-          "courseD_scrat_ramp8",
-          "courseE_artist_ramp8"
+          "courseE_maze_ramp7",
+          "courseD_scrat_ramp7"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7626,8 +7617,20 @@
       "seeding_key": {
         "level.key": "courseE_artist_ramp8",
         "script_level.level_keys": [
-          "courseD_scrat_ramp8",
-          "courseE_artist_ramp8"
+          "courseE_artist_ramp8",
+          "courseD_scrat_ramp8"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "content",
+        "script.name": "express-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_ramp8",
+        "script_level.level_keys": [
+          "courseE_artist_ramp8",
+          "courseD_scrat_ramp8"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7660,22 +7663,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_ramp8_2",
-        "script_level.level_keys": [
-          "courseE_artist_ramp8_2",
-          "courseE_artist_ramp9"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "content",
-        "script.name": "express-2017"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_artist_ramp9",
         "script_level.level_keys": [
-          "courseE_artist_ramp8_2",
-          "courseE_artist_ramp9"
+          "courseE_artist_ramp9",
+          "courseE_artist_ramp8_2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7684,10 +7675,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseC_video_angles2",
+        "level.key": "courseE_artist_ramp8_2",
         "script_level.level_keys": [
-          "courseC_video_angles2",
-          "courseE_artist_predict1"
+          "courseE_artist_ramp9",
+          "courseE_artist_ramp8_2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7698,8 +7689,20 @@
       "seeding_key": {
         "level.key": "courseE_artist_predict1",
         "script_level.level_keys": [
-          "courseC_video_angles2",
-          "courseE_artist_predict1"
+          "courseE_artist_predict1",
+          "courseC_video_angles2"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "content",
+        "script.name": "express-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_video_angles2",
+        "script_level.level_keys": [
+          "courseE_artist_predict1",
+          "courseC_video_angles2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",

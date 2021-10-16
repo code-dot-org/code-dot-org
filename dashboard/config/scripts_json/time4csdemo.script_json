@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "has_lesson_plan": true,
       "lesson_extras_available": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:28:02 UTC",
+    "serialized_at": "2021-08-03 22:47:45 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "time4csdemo"

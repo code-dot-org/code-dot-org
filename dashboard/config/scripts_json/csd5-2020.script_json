@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/csd-20/unit5/{LESSON}",
-      "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "curriculum_path": "https://curriculum.code.org/csd-20/unit5/{LESSON}",
       "project_sharing": true,
+      "curriculum_umbrella": "CSD",
       "teacher_resources": [
         [
           "lessonPlans",
@@ -27,11 +27,13 @@
           "standardMappings",
           "https://curriculum.code.org/csd-20/unit5/standards/"
         ]
-      ]
+      ],
+      "hideable_lessons": true,
+      "is_stable": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:00 UTC",
+    "serialized_at": "2021-08-03 22:47:50 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd5-2020"

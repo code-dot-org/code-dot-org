@@ -7,9 +7,9 @@
       "hideable_lessons": true,
       "student_detail_progress_view": true,
       "curriculum_path": "https://curriculum.code.org/csd-preview-21/unit5/{LESSON}",
-      "pilot_experiment": "csd-2021-preview",
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
+      "has_lesson_plan": true,
       "project_sharing": true,
       "teacher_resources": [
         [
@@ -28,11 +28,12 @@
           "standardMappings",
           "https://curriculum.code.org/csd-preview-21/unit5/standards/"
         ]
-      ]
+      ],
+      "pilot_experiment": "csd-2021-preview"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:01 UTC",
+    "serialized_at": "2021-08-03 22:48:03 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csd5-preview-2021"

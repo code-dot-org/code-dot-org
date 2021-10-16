@@ -4,14 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
+      "exclude_csf_column_in_legend": true,
       "student_detail_progress_view": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit3/{LESSON}",
-      "version_year": "2019",
-      "curriculum_umbrella": "CSP",
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "tts": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -37,11 +31,21 @@
           "professionalLearning",
           "https://code.org/educate/professional-learning/middle-high"
         ]
-      ]
+      ],
+      "has_verified_resources": true,
+      "has_lesson_plan": true,
+      "version_year": "2019",
+      "project_sharing": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-19/unit3/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "is_stable": true,
+      "family_name": "csp3",
+      "tts": true,
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": "csp3",
-    "serialized_at": "2021-10-16 00:27:14 UTC",
+    "serialized_at": "2021-08-03 22:47:43 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp3-2019"
