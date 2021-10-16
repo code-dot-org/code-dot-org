@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:43 UTC",
+    "serialized_at": "2021-10-16 00:32:01 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "hello-world-food"
@@ -596,6 +596,15 @@
   ],
   "objectives": [
     {
+      "key": "271788a1-368c-4934-8838-d59ad4eebbbd",
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "271788a1-368c-4934-8838-d59ad4eebbbd"
+      }
+    },
+    {
       "key": "a42fea5f-a36c-4c10-8c6a-025ce196bab8",
       "properties": {
         "description": "Create new sprites and assign them costumes and locations."
@@ -603,15 +612,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "a42fea5f-a36c-4c10-8c6a-025ce196bab8"
-      }
-    },
-    {
-      "key": "271788a1-368c-4934-8838-d59ad4eebbbd",
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "271788a1-368c-4934-8838-d59ad4eebbbd"
       }
     },
     {

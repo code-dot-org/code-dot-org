@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursec/{LESSON}",
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "project_widget_visible": true,
+      "is_course": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
-      "lesson_extras_available": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursec/{LESSON}",
-      "version_year": "2017",
+      "project_widget_visible": true,
       "supported_locales": [
         "ar-SA",
         "cs-CZ",
@@ -41,13 +42,12 @@
         "zh-CN",
         "zh-TW"
       ],
-      "curriculum_umbrella": "CSF",
       "tts": true,
-      "is_course": true
+      "version_year": "2017"
     },
     "new_name": "coursec-2017",
     "family_name": "coursec",
-    "serialized_at": "2021-10-16 00:26:22 UTC",
+    "serialized_at": "2021-10-16 00:30:39 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursec-2017"

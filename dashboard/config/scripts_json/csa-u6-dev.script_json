@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:26:38 UTC",
+    "serialized_at": "2021-10-16 00:30:54 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "csa-u6-dev"

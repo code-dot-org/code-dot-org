@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "editor_experiment": "broward",
       "hideable_lessons": true,
-      "lesson_extras_available": true,
-      "editor_experiment": "broward"
+      "lesson_extras_available": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:28:02 UTC",
+    "serialized_at": "2021-10-16 00:32:19 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "time4cs-experiment-unit-1"

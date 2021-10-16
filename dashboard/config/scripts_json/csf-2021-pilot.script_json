@@ -4,7 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
       "announcements": [
         {
           "notice": "Attention pilot teachers!",
@@ -14,6 +13,7 @@
           "visibility": "Teacher-only"
         }
       ],
+      "hideable_lessons": true,
       "pilot_experiment": "csf-2021-pilot",
       "teacher_resources": [
         [
@@ -24,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:07 UTC",
+    "serialized_at": "2021-10-16 00:31:25 UTC",
     "published_state": "pilot",
     "seeding_key": {
       "script.name": "csf-2021-pilot"

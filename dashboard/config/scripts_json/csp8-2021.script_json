@@ -4,21 +4,21 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-16 00:27:23 UTC",
+    "serialized_at": "2021-10-16 00:31:43 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp8-2021"
@@ -967,8 +967,8 @@
       "url": "https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-2021-create-performance-task-scoring-guidelines.pdf",
       "key": "apcsp_ct_20-21_scoring_guidelines",
       "properties": {
-        "type": "Rubric",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "apcsp_ct_20-21_scoring_guidelines"
@@ -979,8 +979,8 @@
       "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
       "key": "apcsp_ct_20-21_task_instructions",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "apcsp_ct_20-21_task_instructions"
@@ -991,8 +991,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -1015,9 +1015,9 @@
       "url": "https://docs.google.com/document/d/12Uv9n4rpSf3tULTTwfoMQlX4Zz6VZDiCzBscbtC9u_A/edit?usp=sharing",
       "key": "csp-create-pt-college-board-annotated-sample-a",
       "properties": {
-        "type": "Annotated Sample",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Annotated Sample"
       },
       "seeding_key": {
         "resource.key": "csp-create-pt-college-board-annotated-sample-a"
@@ -1028,9 +1028,9 @@
       "url": "https://docs.google.com/document/d/1-RVtSe9TeoPI2UPARg3tfsOmuNzMiSYvsPwtCn8E9xE/edit?usp=sharing",
       "key": "csp-create-pt-college-board-annotated-sample-c",
       "properties": {
-        "type": "Annotated Sample",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Annotated Sample"
       },
       "seeding_key": {
         "resource.key": "csp-create-pt-college-board-annotated-sample-c"
@@ -1041,9 +1041,9 @@
       "url": "https://docs.google.com/document/d/1dLYH7nAa5g1vXD-sST6-TkE_L5YTLl5tWachFpTQbrU/edit?usp=sharing",
       "key": "csp-create-pt-college-board-annotated-sample-f",
       "properties": {
-        "type": "Annotated Sample",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Annotated Sample"
       },
       "seeding_key": {
         "resource.key": "csp-create-pt-college-board-annotated-sample-f"
@@ -1054,9 +1054,9 @@
       "url": "https://docs.google.com/document/d/1s-M7-jIu7gifIm2eSdtfmIeeyAimx7agsNUOPp8FH0U/edit?usp=sharing",
       "key": "csp-create-pt-college-board-annotated-sample-g",
       "properties": {
-        "type": "Annotated Sample",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Annotated Sample"
       },
       "seeding_key": {
         "resource.key": "csp-create-pt-college-board-annotated-sample-g"
@@ -1067,9 +1067,9 @@
       "url": "https://docs.google.com/document/d/1UFIgYE6RlW0wbLo80JxtrRy-2gy8tzGwDWvp2jOXZIQ/edit?usp=sharing",
       "key": "csp_create_pt_code_org_annotated_sample_1",
       "properties": {
-        "type": "Annotated Sample",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Annotated Sample"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_annotated_sample_1"
@@ -1080,9 +1080,9 @@
       "url": "https://docs.google.com/document/d/1Fo5pPczV3gDcCujg_dvyneq5anEEeqAZqIvdVt8uQV8/edit?usp=sharing",
       "key": "csp_create_pt_code_org_annotated_sample_2",
       "properties": {
-        "type": "Annotated Sample",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Annotated Sample"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_annotated_sample_2"
@@ -1093,9 +1093,9 @@
       "url": "https://docs.google.com/document/d/16eWwTwyYzFJ_7z5Ru0HF9LbqTjS-XFIy4SL_ZW-T7Rg/edit?usp=sharing",
       "key": "csp_create_pt_code_org_annotated_sample_3",
       "properties": {
-        "type": "Annotated Sample",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Annotated Sample"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_annotated_sample_3"
@@ -1106,8 +1106,8 @@
       "url": "https://drive.google.com/file/d/1QkAkYVDp5pxuE_g60-vaziOknrEDfwJx/view?usp=sharing",
       "key": "csp_create_pt_code_org_sample_1_video",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_sample_1_video"
@@ -1118,9 +1118,9 @@
       "url": "https://docs.google.com/document/d/1fyoXamP6NaToEQPwH8X4IgvairKauWlkt-bwZjcC4b0/edit?usp=sharing",
       "key": "csp_create_pt_code_org_sample_1_wr",
       "properties": {
-        "type": "Written Response",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Written Response"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_sample_1_wr"
@@ -1131,8 +1131,8 @@
       "url": "https://drive.google.com/file/d/1G0kHFUkaib8eDEqa6EyGrzsJcf3smBSM/view?usp=sharing",
       "key": "csp_create_pt_code_org_sample_2_video",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_sample_2_video"
@@ -1143,9 +1143,9 @@
       "url": "https://docs.google.com/document/d/16E5NTKp9HXzgWj10JcQc7LiDTyk0v3eDNaQZi-CRKtM/edit?usp=sharing",
       "key": "csp_create_pt_code_org_sample_2_wr",
       "properties": {
-        "type": "Written Response",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Written Response"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_sample_2_wr"
@@ -1156,8 +1156,8 @@
       "url": "https://drive.google.com/file/d/13medsGUeI2T3BlWcgzebVxlAnVgSKc2e/view?usp=sharing",
       "key": "csp_create_pt_code_org_sample_3_video",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_sample_3_video"
@@ -1168,9 +1168,9 @@
       "url": "https://docs.google.com/document/d/1sd0KEIBFAVeF0mKnVko17W4bHIapQnyjRtYs_MuCC5I/edit?usp=sharing",
       "key": "csp_create_pt_code_org_sample_3_wr",
       "properties": {
-        "type": "Written Response",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Written Response"
       },
       "seeding_key": {
         "resource.key": "csp_create_pt_code_org_sample_3_wr"
@@ -1181,8 +1181,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -1193,8 +1193,8 @@
       "url": "https://docs.google.com/presentation/d/174nHpIilMIvy5kcnB-jQ6Ai9rajgnUtBrSfNObOKHCk/edit?usp=sharing",
       "key": "csp_unit_8_-_create_pt_prep",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_8_-_create_pt_prep"
@@ -1205,8 +1205,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -1217,8 +1217,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -1405,36 +1405,6 @@
   ],
   "objectives": [
     {
-      "key": "a5e27c2b-917b-4f4e-8e37-45a63683c573",
-      "properties": {
-        "description": "Describe the major components of the Create PT"
-      },
-      "seeding_key": {
-        "lesson.key": "Create PT - Review the Task",
-        "objective.key": "a5e27c2b-917b-4f4e-8e37-45a63683c573"
-      }
-    },
-    {
-      "key": "e8bff36c-f7c0-411b-8c83-e52b1adca8a0",
-      "properties": {
-        "description": "Describe how the Create PT Scoring Guidelines will be used to assess the task"
-      },
-      "seeding_key": {
-        "lesson.key": "Create PT - Review the Task",
-        "objective.key": "e8bff36c-f7c0-411b-8c83-e52b1adca8a0"
-      }
-    },
-    {
-      "key": "fb94d540-0873-40f1-ba34-9b033b207a01",
-      "properties": {
-        "description": "Evaluate sample Create PT submissions by applying the scoring guidelines"
-      },
-      "seeding_key": {
-        "lesson.key": "Create PT - Review the Task",
-        "objective.key": "fb94d540-0873-40f1-ba34-9b033b207a01"
-      }
-    },
-    {
       "key": "26d840b4-7310-455d-bb7f-76013c12dc71",
       "properties": {
         "description": "Identify remaining questions about the Create PT"
@@ -1442,6 +1412,26 @@
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
         "objective.key": "26d840b4-7310-455d-bb7f-76013c12dc71"
+      }
+    },
+    {
+      "key": "66ab6c30-48fd-4f1f-8095-b4f1c9b68e61",
+      "properties": {
+        "description": "Evaluate sample Create PT components by applying the scoring guidelines"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Make a Plan",
+        "objective.key": "66ab6c30-48fd-4f1f-8095-b4f1c9b68e61"
+      }
+    },
+    {
+      "key": "a5e27c2b-917b-4f4e-8e37-45a63683c573",
+      "properties": {
+        "description": "Describe the major components of the Create PT"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Review the Task",
+        "objective.key": "a5e27c2b-917b-4f4e-8e37-45a63683c573"
       }
     },
     {
@@ -1465,13 +1455,13 @@
       }
     },
     {
-      "key": "66ab6c30-48fd-4f1f-8095-b4f1c9b68e61",
+      "key": "e8bff36c-f7c0-411b-8c83-e52b1adca8a0",
       "properties": {
-        "description": "Evaluate sample Create PT components by applying the scoring guidelines"
+        "description": "Describe how the Create PT Scoring Guidelines will be used to assess the task"
       },
       "seeding_key": {
-        "lesson.key": "Create PT - Make a Plan",
-        "objective.key": "66ab6c30-48fd-4f1f-8095-b4f1c9b68e61"
+        "lesson.key": "Create PT - Review the Task",
+        "objective.key": "e8bff36c-f7c0-411b-8c83-e52b1adca8a0"
       }
     },
     {
@@ -1482,6 +1472,16 @@
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task",
         "objective.key": "f31a2fd3-f77b-46e7-93ad-37aeaf2a156a"
+      }
+    },
+    {
+      "key": "fb94d540-0873-40f1-ba34-9b033b207a01",
+      "properties": {
+        "description": "Evaluate sample Create PT submissions by applying the scoring guidelines"
+      },
+      "seeding_key": {
+        "lesson.key": "Create PT - Review the Task",
+        "objective.key": "fb94d540-0873-40f1-ba34-9b033b207a01"
       }
     }
   ],
