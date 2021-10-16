@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {LabelsContext} from './LabeledFormComponent';
 import {
-  LabelsContext,
-  LabeledRadioButtons,
-  LabeledLargeInput,
-  LabeledInput,
-  LabeledUsPhoneNumberInput,
   LabeledCheckBoxes,
-  LabeledSelect,
-  LabeledSingleCheckbox,
   LabeledCheckBoxesWithAdditionalTextFields,
-  LabeledRadioButtonsWithAdditionalTextFields,
-  LabeledDynamicRadioButtonsWithAdditionalTextFields,
   LabeledDynamicCheckBoxes,
   LabeledDynamicCheckBoxesWithAdditionalTextFields
-} from './LabeledFormComponent';
+} from './labeled/LabeledCheckBoxes';
+import {LabeledLargeInput, LabeledInput} from './labeled/LabeledInput';
+import {
+  LabeledRadioButtons,
+  LabeledRadioButtonsWithAdditionalTextFields,
+  LabeledDynamicRadioButtonsWithAdditionalTextFields
+} from './labeled/LabeledRadioButtons';
+import {LabeledSelect} from './labeled/LabeledSelect';
+import {LabeledSingleCheckbox} from './labeled/LabeledSingleCheckbox';
+import {LabeledUsPhoneNumberInput} from './labeled/LabeledUsPhoneNumberInput';
 import {FormContext} from './FormComponent';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 import {action} from '@storybook/addon-actions';
