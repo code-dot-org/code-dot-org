@@ -302,10 +302,10 @@ $(document).ready(function() {
     handleResize();
   });
 
-  $("#left-bars-img").fadeTo(1000, 0);
-  $("#right-bars-img").fadeTo(1000, 0);
-  $("#left-bars-svg").fadeTo(1000, 1);
-  $("#right-bars-svg").fadeTo(1000, 1);
+  $("#left-bars-img").animate({ opacity: 0 }, 1000);
+  $("#right-bars-img").animate({ opacity: 0 }, 1000);
+  $("#left-bars-svg").animate({ opacity: 1 }, 1000);
+  $("#right-bars-svg").animate({ opacity: 1 }, 1000);
 
   setInterval(function() {
     for (var panel = 0; panel < barDefinitions.length; panel++) {
