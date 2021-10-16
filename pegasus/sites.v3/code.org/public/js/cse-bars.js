@@ -17,279 +17,295 @@ $(document).ready(function() {
   var barDefinitions = [];
 
   barDefinitions[0] = [
-    // Originallly right side, index 0.
-    [
-      {
-        type: "arc",
-        start: [17, 6],
-        end: [18, 5],
-        color: "rgba(144, 140, 203, 0.8)",
-        direction: "right-up"
-      },
-      {
-        type: "line",
-        end: [18, 2],
-        color: "rgba(138, 80, 163, 0.8)"
-      },
-      {
-        type: "arc",
-        end: [19, 1],
-        color: "rgba(138, 80, 163, 0.8)",
-        direction: "up-right"
-      },
-      {
-        type: "line",
-        end: [22, 1],
-        color: "rgba(138, 80, 163, 0.8)"
-      },
-
-      { type: "arrow", color: "rgba(234, 76, 155, 0.8)", direction: "right" }
-    ],
-    // Originally right side, index 1.
-    [
-      {
-        type: "line",
-        start: [17, 4],
-        end: [20, 4],
-        color: "rgba(87, 106, 181, 0.8)"
-      },
-      {
-        type: "arc",
-        end: [21, 5],
-        color: "rgba(87, 106, 181, 0.8)",
-        direction: "right-down"
-      },
-      {
-        type: "arc",
-        end: [22, 6],
-        color: "rgba(56, 133, 201, 0.8)",
-        direction: "down-right"
-      },
-      {
-        type: "line",
-        end: [27, 6],
-        color: "rgba(56, 133, 201, 0.8)"
-      }
-    ],
-    // Originally right side, index 2.
-    [
-      {
-        type: "line",
-        start: [17, 7],
-        end: [19, 7],
-        color: "rgba(251, 164, 65, 0.8)"
-      },
-      {
-        type: "arc",
-        end: [20, 8],
-        color: "rgba(251, 164, 65, 0.8)",
-        direction: "right-down"
-      },
-      {
-        type: "arc",
-        end: [21, 9],
-        color: "rgba(251, 164, 65, 0.8)",
-        direction: "down-right"
-      },
-      {
-        type: "line",
-        end: [24, 9],
-        color: "rgba(251, 164, 65, 0.8)"
-      },
-      { type: "arrow", color: "rgba(234, 76, 155, 0.8)", direction: "right" }
-    ],
-    // Originally right side, index 3.
-    [
-      {
-        type: "line",
-        start: [22, 9],
-        end: [22, 11],
-        color: "rgba(92, 187, 216, 0.8)"
-      },
-      {
-        type: "arc",
-        end: [23, 12],
-        color: "rgba(96, 197, 169, 0.8)",
-        direction: "down-right"
-      },
-      {
-        type: "line",
-        end: [25, 12],
-        color: "rgba(135, 201, 115, 0.8)"
-      },
-      { type: "arrow", color: "rgba(176, 214, 109, 0.8)", direction: "right" }
-    ],
-    // Originally right side, index 4.
-    [
-      {
-        type: "arc",
-        start: [17, 9],
-        end: [18, 10],
-        color: "rgba(144, 140, 203, 0.8)",
-        direction: "right-down"
-      },
-      {
-        type: "line",
-        start: [18, 10],
-        end: [18, 12],
-        color: "rgba(144, 140, 203, 0.8)",
-        direction: "right-down"
-      },
-      {
-        type: "arc",
-        end: [19, 13],
-        color: "rgba(144, 140, 203, 0.8)",
-        direction: "down-right"
-      },
-      {
-        type: "line",
-        end: [22, 13],
-        color: "rgba(144, 140, 203, 0.8)"
-      },
-      { type: "arrow", color: "rgba(0, 173, 160, 0.8)", direction: "right" }
-    ],
-    // Originally right side, index 5.
-    [
-      {
-        type: "line",
-        start: [10, 5],
-        end: [9, 5],
-        color: "rgba(144, 140, 203, 0.8)"
-      },
-      {
-        type: "arc",
-        end: [8, 4],
-        color: "rgba(234, 76, 155, 0.8)",
-        direction: 'left-up"'
-      },
-      {
-        type: "line",
-        start: [8, 4],
-        end: [8, 2],
-        color: "rgba(234, 76, 155, 0.8)"
-      },
-      {
-        type: "arc",
-        end: [7, 1],
-        color: "rgba(251, 164, 65, 0.8)",
-        direction: "up-left"
-      },
-      {
-        type: "line",
-        end: [4, 1],
-        color: "rgba(251, 164, 65, 0.8)"
-      },
-
-      { type: "arrow", color: "rgba(244, 137, 221, 0.8)", direction: "left" }
-    ],
     // Originally left side, index 6.
     [
       {
         type: "line",
-        start: [8, 3],
-        end: [3, 3],
-        color: "rgba(135, 201, 115, 0.8)"
+        start: [10, 3],
+        end: [5, 3],
+        color: rgbString(135, 201, 115)
       },
       {
         type: "arc",
-        end: [2, 4],
-        color: "rgba(96, 197, 169, 0.8)",
+        end: [4, 4],
+        color: rgbString(96, 197, 169),
         direction: "left-down"
       },
       {
         type: "arc",
-        end: [1, 5],
-        color: "rgba(136, 210, 245, 0.8)",
+        end: [3, 5],
+        color: rgbString(136, 210, 245),
         direction: "down-left"
       },
       {
         type: "line",
         end: [0, 5],
-        color: "rgba(136, 210, 245, 0.8)"
-      }
+        color: rgbString(136, 210, 245)
+      },
+      { type: "arrow", color: rgbString(92, 180, 228), direction: "left" }
     ],
     // Originally left side, index 7.
     [
       {
         type: "line",
-        start: [10, 7],
-        end: [6, 7],
-        color: "rgba(204, 244, 134, 0.8)"
+        start: [12, 7],
+        end: [8, 7],
+        color: rgbString(204, 244, 134)
       },
-      { type: "arrow", color: "rgba(188, 212, 95, 0.8)", direction: "left" }
+      { type: "arrow", color: rgbString(188, 212, 95), direction: "left" }
     ],
     // Originally left side, index 8.
     [
       {
         type: "arc",
-        start: [10, 8],
-        end: [9, 9],
-        color: "rgba(138, 80, 163, 0.8)",
+        start: [12, 8],
+        end: [11, 9],
+        color: rgbString(138, 80, 163),
         direction: "left-down"
       },
       {
         type: "line",
-        end: [9, 11],
-        color: "rgba(140, 124, 189, 0.8)"
+        end: [11, 11],
+        color: rgbString(140, 124, 189)
       },
       {
         type: "arc",
-        end: [8, 12],
-        color: "rgba(138, 80, 163, 0.8)",
+        end: [10, 12],
+        color: rgbString(138, 80, 163),
         direction: "down-left"
       },
       {
         type: "line",
-        end: [6, 12],
-        color: "rgba(211, 136, 189, 0.8)"
+        end: [8, 12],
+        color: rgbString(211, 136, 189)
       },
       {
         type: "arc",
-        end: [5, 11],
-        color: "rgba(211, 136, 189, 0.8)",
+        end: [7, 11],
+        color: rgbString(211, 136, 189),
         direction: "left-up"
       },
       {
         type: "arc",
-        end: [4, 10],
-        color: "rgba(211, 136, 189, 0.8)",
+        end: [6, 10],
+        color: rgbString(211, 136, 189),
         direction: "up-left"
       },
       {
         type: "line",
-        end: [1, 10],
-        color: "rgba(211, 136, 189, 0.8)",
+        end: [3, 10],
+        color: rgbString(211, 136, 189),
         direction: "up-left"
       },
-      { type: "arrow", color: "rgba(0, 173, 160, 0.8)", direction: "left" }
+      { type: "arrow", color: rgbString(0, 173, 160), direction: "left" }
     ],
     // Originally left side, index 9.
     [
       {
         type: "arc",
-        start: [7, 12],
-        end: [6, 13],
-        color: "rgba(138, 80, 163, 0.8)",
+        start: [9, 12],
+        end: [8, 13],
+        color: rgbString(138, 80, 163),
         direction: "down-left"
       },
       {
         type: "line",
-        end: [3, 13],
-        color: "rgba(138, 80, 163, 0.8)"
+        end: [5, 13],
+        color: rgbString(138, 80, 163)
       },
-      { type: "arrow", color: "rgba(234, 76, 155, 0.8)", direction: "left" }
+      { type: "arrow", color: rgbString(234, 76, 155), direction: "left" }
+    ],
+    // Originally left side.
+    [
+      {
+        type: "line",
+        start: [12, 5],
+        end: [11, 5],
+        color: rgbString(144, 140, 203)
+      },
+      {
+        type: "arc",
+        end: [10, 4],
+        color: rgbString(234, 76, 155),
+        direction: 'left-up"'
+      },
+      {
+        type: "line",
+        end: [10, 2],
+        color: rgbString(234, 76, 155)
+      },
+      {
+        type: "arc",
+        end: [9, 1],
+        color: rgbString(251, 164, 65),
+        direction: "up-left"
+      },
+      {
+        type: "line",
+        end: [6, 1],
+        color: rgbString(251, 164, 65)
+      },
+      { type: "arrow", color: rgbString(244, 137, 221), direction: "left" }
     ]
   ];
+
+  barDefinitions[1] = [
+    // Originallly right side, index 0.
+    [
+      {
+        type: "arc",
+        start: [0, 6],
+        end: [1, 5],
+        color: rgbString(144, 140, 203),
+        direction: "right-up"
+      },
+      {
+        type: "line",
+        end: [1, 2],
+        color: rgbString(138, 80, 163)
+      },
+      {
+        type: "arc",
+        end: [2, 1],
+        color: rgbString(138, 80, 163),
+        direction: "up-right"
+      },
+      {
+        type: "line",
+        end: [5, 1],
+        color: rgbString(138, 80, 163)
+      },
+
+      { type: "arrow", color: rgbString(234, 76, 155), direction: "right" }
+    ],
+    // Originally right side, index 1.
+    [
+      {
+        type: "line",
+        start: [0, 4],
+        end: [3, 4],
+        color: rgbString(87, 106, 181)
+      },
+      {
+        type: "arc",
+        end: [4, 5],
+        color: rgbString(87, 106, 181),
+        direction: "right-down"
+      },
+      {
+        type: "arc",
+        end: [5, 6],
+        color: rgbString(56, 133, 201),
+        direction: "down-right"
+      },
+      {
+        type: "line",
+        end: [11, 6],
+        color: rgbString(56, 133, 201)
+      },
+
+      { type: "arrow", color: rgbString(88, 108, 179), direction: "right" }
+    ],
+    // Originally right side, index 2.
+    [
+      {
+        type: "line",
+        start: [0, 7],
+        end: [2, 7],
+        color: rgbString(251, 164, 65)
+      },
+      {
+        type: "arc",
+        end: [3, 8],
+        color: rgbString(251, 164, 65),
+        direction: "right-down"
+      },
+      {
+        type: "arc",
+        end: [4, 9],
+        color: rgbString(251, 164, 65),
+        direction: "down-right"
+      },
+      {
+        type: "line",
+        end: [7, 9],
+        color: rgbString(251, 164, 65)
+      },
+      { type: "arrow", color: rgbString(234, 76, 155), direction: "right" }
+    ],
+    // Originally right side, index 3.
+    [
+      {
+        type: "line",
+        start: [5, 9],
+        end: [5, 11],
+        color: rgbString(92, 187, 216)
+      },
+      {
+        type: "arc",
+        end: [6, 12],
+        color: rgbString(96, 197, 169),
+        direction: "down-right"
+      },
+      {
+        type: "line",
+        end: [8, 12],
+        color: rgbString(135, 201, 115)
+      },
+      { type: "arrow", color: rgbString(176, 214, 109), direction: "right" }
+    ],
+    // Originally right side, index 4.
+    [
+      {
+        type: "arc",
+        start: [0, 9],
+        end: [1, 10],
+        color: rgbString(144, 140, 203),
+        direction: "right-down"
+      },
+      {
+        type: "line",
+        start: [1, 10],
+        end: [1, 12],
+        color: rgbString(144, 140, 203),
+        direction: "right-down"
+      },
+      {
+        type: "arc",
+        end: [2, 13],
+        color: rgbString(144, 140, 203),
+        direction: "down-right"
+      },
+      {
+        type: "line",
+        end: [5, 13],
+        color: rgbString(144, 140, 203)
+      },
+      { type: "arrow", color: rgbString(0, 173, 160), direction: "right" }
+    ]
+  ];
+
+  var panelIds = ["#left-bars-svg", "#right-bars-svg"];
 
   var bars = [];
   for (var panel = 0; panel < barDefinitions.length; panel++) {
     bars[panel] = [];
-    var panelRef = $(".bars")[panel];
+    var panelRef = $(panelIds[panel])[0];
     shuffleArray(barDefinitions[panel]);
     for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
       bars[panel][bar] = drawBar(panelRef, barDefinitions[panel][bar]);
     }
   }
+
+  handleResize();
+  $(window).resize(function() {
+    handleResize();
+  });
+
+  $("#left-bars-img").fadeTo(1000, 0);
+  $("#right-bars-img").fadeTo(1000, 0);
+  $("#left-bars-svg").fadeTo(1000, 1);
+  $("#right-bars-svg").fadeTo(1000, 1);
 
   setInterval(function() {
     for (var panel = 0; panel < barDefinitions.length; panel++) {
@@ -300,6 +316,64 @@ $(document).ready(function() {
     step += 0.02;
   }, 1000 / 60);
 });
+
+function handleResize() {
+  handleResizePanel("#left-bars-img", "#left-bars-svg", true);
+  handleResizePanel("#right-bars-img", "#right-bars-svg", false);
+}
+
+function handleResizePanel(panelIdImg, panelIdSvg, constrainToRight) {
+  // .position() uses position relative to the offset parent,
+  var pos = $(panelIdImg).position();
+
+  // .outerWidth() takes into account border and padding.
+  var targetWidth = $(panelIdImg).outerWidth();
+  var targetHeight = $(panelIdImg).outerHeight();
+
+  // what is our width / height?
+  var aspectRatio = 0.9;
+
+  var top, left, width, height;
+
+  var targetAspectRatio = targetWidth / targetHeight;
+  if (targetAspectRatio > aspectRatio) {
+    // constrain by height
+    height = targetHeight;
+    width = targetHeight * aspectRatio;
+    top = pos.top;
+  } else {
+    // constrain by width
+    width = targetWidth;
+    height = targetWidth / aspectRatio;
+    top = pos.top + (targetHeight - height) / 2;
+  }
+
+  if (constrainToRight) {
+    left = targetWidth - width + pos.left;
+    //left = (targetWidth - width) / 2;
+  } else {
+    left = pos.left;
+  }
+  //show the menu directly over the placeholder
+  /*
+  $(".bars").first().css({
+      position: "absolute",
+      top: (pos.top + width*2) + "px",
+      left: pos.left + "px",
+      width: width
+  }).show();
+  */
+
+  $(panelIdSvg)
+    .css({
+      position: "absolute",
+      top: top + "px",
+      left: left + "px",
+      width: width,
+      height: height
+    })
+    .show();
+}
 
 function updateBar(barDefinition, bar, barIndex, step) {
   for (var segment = 0; segment < barDefinition.length; segment++) {
@@ -492,6 +566,7 @@ function drawBar(panelRef, barDefinition, startX, startY) {
     result[segment] = obj;
   }
 
+  /*
   obj = document.createElementNS("http://www.w3.org/2000/svg", "image");
   obj.setAttributeNS(null, "height", "144");
   obj.setAttributeNS(null, "width", "144");
@@ -500,6 +575,20 @@ function drawBar(panelRef, barDefinition, startX, startY) {
   obj.setAttributeNS(null, "x", "50%");
   obj.setAttributeNS(null, "y", "50%");
   panelRef.appendChild(obj);
+  */
 
   return result;
+}
+
+function rgbString(r, g, b) {
+  return (
+    "rgba(" +
+    (r - 255 + 255 * 0.8) / 0.8 +
+    ", " +
+    (g - 255 + 255 * 0.8) / 0.8 +
+    ", " +
+    (b - 255 + 255 * 0.8) / 0.8 +
+    ", " +
+    "0.8)"
+  );
 }
