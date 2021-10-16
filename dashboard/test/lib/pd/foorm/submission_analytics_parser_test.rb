@@ -50,8 +50,8 @@ module Pd::Foorm
       assert_includes reshaped_submission, {
         submission_id: submission.id,
         item_name: 'teacher_comfort',
-        response_text: '1',
-        response_value: '1'
+        response_text: 1,
+        response_value: 1
       }
     end
 
