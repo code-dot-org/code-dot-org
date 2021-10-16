@@ -16,8 +16,8 @@ function shuffleArray(array) {
 $(document).ready(function() {
   var barDefinitions = [];
 
+  // Left panel.
   barDefinitions[0] = [
-    // Originally left side, index 6.
     [
       {
         type: "line",
@@ -44,7 +44,6 @@ $(document).ready(function() {
       },
       { type: "arrow", color: rgbString(92, 180, 228), direction: "left" }
     ],
-    // Originally left side, index 7.
     [
       {
         type: "line",
@@ -54,7 +53,6 @@ $(document).ready(function() {
       },
       { type: "arrow", color: rgbString(188, 212, 95), direction: "left" }
     ],
-    // Originally left side, index 8.
     [
       {
         type: "arc",
@@ -99,7 +97,6 @@ $(document).ready(function() {
       },
       { type: "arrow", color: rgbString(0, 173, 160), direction: "left" }
     ],
-    // Originally left side, index 9.
     [
       {
         type: "arc",
@@ -115,7 +112,6 @@ $(document).ready(function() {
       },
       { type: "arrow", color: rgbString(234, 76, 155), direction: "left" }
     ],
-    // Originally left side.
     [
       {
         type: "line",
@@ -149,8 +145,8 @@ $(document).ready(function() {
     ]
   ];
 
+  // Right panel.
   barDefinitions[1] = [
-    // Originallly right side, index 0.
     [
       {
         type: "arc",
@@ -178,7 +174,6 @@ $(document).ready(function() {
 
       { type: "arrow", color: rgbString(234, 76, 155), direction: "right" }
     ],
-    // Originally right side, index 1.
     [
       {
         type: "line",
@@ -206,7 +201,6 @@ $(document).ready(function() {
 
       { type: "arrow", color: rgbString(88, 108, 179), direction: "right" }
     ],
-    // Originally right side, index 2.
     [
       {
         type: "line",
@@ -233,7 +227,6 @@ $(document).ready(function() {
       },
       { type: "arrow", color: rgbString(234, 76, 155), direction: "right" }
     ],
-    // Originally right side, index 3.
     [
       {
         type: "line",
@@ -254,7 +247,6 @@ $(document).ready(function() {
       },
       { type: "arrow", color: rgbString(176, 214, 109), direction: "right" }
     ],
-    // Originally right side, index 4.
     [
       {
         type: "arc",
@@ -287,6 +279,7 @@ $(document).ready(function() {
 
   var panelIds = ["#left-bars-svg", "#right-bars-svg"];
 
+  // For each panel, shuffle the bars, then draw the initial content.
   var bars = [];
   for (var panel = 0; panel < barDefinitions.length; panel++) {
     bars[panel] = [];
@@ -297,16 +290,20 @@ $(document).ready(function() {
     }
   }
 
+  // Adjust the SVGs to have the correct locations & size now, and make
+  // sure to do it again if the window is resized.
   handleResize();
   $(window).resize(function() {
     handleResize();
   });
 
+  // Hide the regular images and show the SVGs.
   $("#left-bars-img").animate({ opacity: 0 }, 1000);
   $("#right-bars-img").animate({ opacity: 0 }, 1000);
   $("#left-bars-svg").animate({ opacity: 1 }, 1000);
   $("#right-bars-svg").animate({ opacity: 1 }, 1000);
 
+  // Start animating smoothly.
   setInterval(function() {
     for (var panel = 0; panel < barDefinitions.length; panel++) {
       for (var bar = 0; bar < barDefinitions[panel].length; bar++) {
@@ -323,47 +320,44 @@ function handleResize() {
 }
 
 function handleResizePanel(panelIdImg, panelIdSvg, constrainToRight) {
-  // .position() uses position relative to the offset parent,
+  // We want the SVGs to match the divs (which show the regular images using
+  // background-image) in location & size.
   var pos = $(panelIdImg).position();
-
-  // .outerWidth() takes into account border and padding.
   var targetWidth = $(panelIdImg).outerWidth();
   var targetHeight = $(panelIdImg).outerHeight();
 
-  // what is our width / height?
+  // This is the width/height of our SVGs.
   var aspectRatio = 0.9;
+
+  // This is the width/height of the divs which show the regular images.
+  var targetAspectRatio = targetWidth / targetHeight;
 
   var top, left, width, height;
 
-  var targetAspectRatio = targetWidth / targetHeight;
+  // Now, we essentially simulate `background-size: contain`, by determining
+  // the maximum size and correct position of our SVG that will fit in the div which shows
+  // the regular image.
   if (targetAspectRatio > aspectRatio) {
-    // constrain by height
+    // Constrain by height...
     height = targetHeight;
     width = targetHeight * aspectRatio;
     top = pos.top;
   } else {
-    // constrain by width
+    // Constrain by width, and vertically center...
     width = targetWidth;
     height = targetWidth / aspectRatio;
     top = pos.top + (targetHeight - height) / 2;
   }
 
+  // As for horiontal positioning, we push the left panel to the right, and the right
+  // panel to the left.
   if (constrainToRight) {
     left = targetWidth - width + pos.left;
-    //left = (targetWidth - width) / 2;
   } else {
     left = pos.left;
   }
-  //show the menu directly over the placeholder
-  /*
-  $(".bars").first().css({
-      position: "absolute",
-      top: (pos.top + width*2) + "px",
-      left: pos.left + "px",
-      width: width
-  }).show();
-  */
 
+  // And now our SVG will sit directly on top of the div which shows the regular image.
   $(panelIdSvg)
     .css({
       position: "absolute",
@@ -394,6 +388,7 @@ function updateBar(barDefinition, bar, barIndex, step) {
     if (bar[segment].element.head1 && bar[segment].element.head2) {
       scaledOffset = offset * bar[segment].element.head1.totalLength;
 
+      // Improve performance by not adjsting the SVG if the value hasn't changed.
       if (scaledOffset !== bar[segment].offset) {
         bar[segment].element.head1.setAttributeNS(
           null,
@@ -411,6 +406,7 @@ function updateBar(barDefinition, bar, barIndex, step) {
     } else {
       scaledOffset = offset * bar[segment].element.totalLength;
 
+      // Improve performance by not adjsting the SVG if the value hasn't changed.
       if (scaledOffset !== bar[segment].offset) {
         bar[segment].element.setAttributeNS(
           null,
@@ -576,23 +572,21 @@ function drawBar(panelRef, barDefinition, startX, startY) {
       currentY = barDef.end[1];
     }
 
+    // We save the offset here to cache the current value, and improve
+    // performance by not changing the SVG if that value hasn't changed
+    // since last time.
     result[segment] = { element: obj, offset: len };
   }
-
-  /*
-  obj = document.createElementNS("http://www.w3.org/2000/svg", "image");
-  obj.setAttributeNS(null, "height", "144");
-  obj.setAttributeNS(null, "width", "144");
-  obj.setAttributeNS(null, "href", "/images/hour-of-code-logo-halo.png");
-  obj.setAttributeNS(null, "transform", "translate(-72,-72)");
-  obj.setAttributeNS(null, "x", "50%");
-  obj.setAttributeNS(null, "y", "50%");
-  panelRef.appendChild(obj);
-  */
 
   return result;
 }
 
+// The definitions at the top of this file use RGB values for opacity 1.
+// For SVG rendering, we draw the bars with opacity 0.8 so that we get the
+// nice colour-mixing at the intersection points.  As well as generating
+// the appropriate RGB string, this function maps the specified RGB to an
+// RGB value which will render as the specified RGB would have with opacity
+// 11, but with opacity 0.8.
 function rgbString(r, g, b) {
   return (
     "rgba(" +
