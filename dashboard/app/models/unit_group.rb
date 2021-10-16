@@ -16,8 +16,11 @@
 #
 
 require 'cdo/script_constants'
+require 'cdo/shared_constants/courses/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
+  include SharedCourseConstants
+
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
