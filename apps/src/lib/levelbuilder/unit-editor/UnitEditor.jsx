@@ -24,7 +24,10 @@ import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder
 import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  PublishedState,
+  InstructionType
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
@@ -40,6 +43,8 @@ class UnitEditor extends React.Component {
     name: PropTypes.string.isRequired,
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
+      .isRequired,
+    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
       .isRequired,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
@@ -151,7 +156,8 @@ class UnitEditor extends React.Component {
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
-      publishedState: this.props.initialPublishedState
+      publishedState: this.props.initialPublishedState,
+      instructionType: this.props.initialInstructionType
     };
   }
 
@@ -265,6 +271,7 @@ class UnitEditor extends React.Component {
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
       published_state: this.state.publishedState,
+      instruction_type: this.state.instructionType,
       deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
@@ -437,6 +444,59 @@ class UnitEditor extends React.Component {
               <p>Require users to log in before viewing this unit.</p>
             </HelpTip>
           </label>
+          {this.props.hasCourse && (
+            <div>
+              <p>
+                This unit is part of a course. Go to the course edit page to set
+                the instruction type for the course and its units.
+              </p>
+            </div>
+          )}
+          {!this.props.hasCourse && (
+            <label>
+              Instruction Type
+              <select
+                className="instructionTypeSelector"
+                value={this.state.instructionType}
+                style={styles.dropdown}
+                onChange={e =>
+                  this.setState({hasNumberedUnits: e.target.value})
+                }
+              >
+                {Object.values(InstructionType).map(state => (
+                  <option key={state} value={state}>
+                    {state}
+                  </option>
+                ))}
+              </select>
+              <HelpTip>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Instruction Type</th>
+                      <th>Overview</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style={styles.tableBorder}>Teacher-Led</td>
+                      <td style={styles.tableBorder}>
+                        A course where a instructor is directing the learning
+                        for participants in the course.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style={styles.tableBorder}>Self-Paced</td>
+                      <td style={styles.tableBorder}>
+                        A course where participants are progressing through the
+                        course at their own pace.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </HelpTip>
+            </label>
+          )}
           <label>
             Default Progress to Detail View
             <input
