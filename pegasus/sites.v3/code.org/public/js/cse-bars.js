@@ -590,11 +590,11 @@ function drawBar(panelRef, barDefinition, startX, startY) {
 function rgbString(r, g, b) {
   return (
     "rgba(" +
-    (r - 255 + 255 * 0.8) / 0.8 +
+    Math.round((r - 255 + 255 * 0.8) / 0.8) +
     ", " +
-    (g - 255 + 255 * 0.8) / 0.8 +
+    Math.round((g - 255 + 255 * 0.8) / 0.8) +
     ", " +
-    (b - 255 + 255 * 0.8) / 0.8 +
+    Math.round((b - 255 + 255 * 0.8) / 0.8) +
     ", " +
     "0.8)"
   );
