@@ -1,3 +1,6 @@
+/* Curious about this temporary code?  There's more detail at
+ * https://github.com/code-dot-org/code-dot-org/pull/43037 */
+
 var gridSize = 18;
 var strokeWidth = 11;
 
@@ -47,7 +50,7 @@ $(document).ready(function() {
     [
       {
         type: "line",
-        start: [12, 7],
+        start: [13, 7],
         end: [8, 7],
         color: rgbString(204, 244, 134)
       },
@@ -55,8 +58,13 @@ $(document).ready(function() {
     ],
     [
       {
+        type: "line",
+        start: [13, 8],
+        end: [12, 8],
+        color: rgbString(138, 80, 163)
+      },
+      {
         type: "arc",
-        start: [12, 8],
         end: [11, 9],
         color: rgbString(138, 80, 163),
         direction: "left-down"
@@ -115,7 +123,7 @@ $(document).ready(function() {
     [
       {
         type: "line",
-        start: [12, 5],
+        start: [13, 5],
         end: [11, 5],
         color: rgbString(144, 140, 203)
       },
@@ -149,26 +157,31 @@ $(document).ready(function() {
   barDefinitions[1] = [
     [
       {
-        type: "arc",
+        type: "line",
         start: [0, 6],
-        end: [1, 5],
+        end: [1, 6],
+        color: rgbString(144, 140, 203)
+      },
+      {
+        type: "arc",
+        end: [2, 5],
         color: rgbString(144, 140, 203),
         direction: "right-up"
       },
       {
         type: "line",
-        end: [1, 2],
+        end: [2, 2],
         color: rgbString(138, 80, 163)
       },
       {
         type: "arc",
-        end: [2, 1],
+        end: [3, 1],
         color: rgbString(138, 80, 163),
         direction: "up-right"
       },
       {
         type: "line",
-        end: [5, 1],
+        end: [6, 1],
         color: rgbString(138, 80, 163)
       },
 
@@ -327,7 +340,7 @@ function handleResizePanel(panelIdImg, panelIdSvg, constrainToRight) {
   var targetHeight = $(panelIdImg).outerHeight();
 
   // This is the width/height of our SVGs.
-  var aspectRatio = 0.9;
+  var aspectRatio = 1;
 
   // This is the width/height of the divs which show the regular images.
   var targetAspectRatio = targetWidth / targetHeight;
