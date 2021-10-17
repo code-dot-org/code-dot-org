@@ -31,6 +31,8 @@ class CourseEditor extends Component {
     initialVersionYear: PropTypes.string,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
+    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
+      .isRequired,
     initialPilotExperiment: PropTypes.string,
     initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
@@ -82,7 +84,8 @@ class CourseEditor extends Component {
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
       unitsInCourse: this.props.initialUnitsInCourse,
-      publishedState: this.props.initialPublishedState
+      publishedState: this.props.initialPublishedState,
+      instructionType: this.props.initialInstructionType
     };
   }
 
@@ -110,6 +113,7 @@ class CourseEditor extends Component {
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
+      instruction_type: this.state.instructionType,
       pilot_experiment: this.state.pilotExperiment,
       scripts: this.state.unitsInCourse
     };
@@ -176,7 +180,8 @@ class CourseEditor extends Component {
       versionYear,
       pilotExperiment,
       unitsInCourse,
-      publishedState
+      publishedState,
+      instructionType
     } = this.state;
     return (
       <div>
@@ -282,6 +287,47 @@ class CourseEditor extends Component {
                 this.setState({hasNumberedUnits: !hasNumberedUnits})
               }
             />
+          </label>
+          <label>
+            Instruction Type
+            <select
+              className="instructionTypeSelector"
+              value={instructionType}
+              style={styles.dropdown}
+              onChange={e => this.setState({hasNumberedUnits: e.target.value})}
+            >
+              {Object.values(InstructionType).map(state => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+            <HelpTip>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Instruction Type</th>
+                    <th>Overview</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style={styles.tableBorder}>Teacher-Led</td>
+                    <td style={styles.tableBorder}>
+                      A course where a instructor is directing the learning for
+                      participants in the course.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style={styles.tableBorder}>Self-Paced</td>
+                    <td style={styles.tableBorder}>
+                      A course where participants are progressing through the
+                      course at their own pace.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </HelpTip>
           </label>
           <AnnouncementsEditor
             announcements={announcements}
