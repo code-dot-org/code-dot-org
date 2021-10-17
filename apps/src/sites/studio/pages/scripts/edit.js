@@ -53,7 +53,6 @@ export default function initPage(unitEditorData) {
         name={unitEditorData.script.name}
         i18nData={unitEditorData.i18n}
         initialPublishedState={scriptData.publishedState}
-        initialInstructionType={scriptData.instructionType}
         initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
