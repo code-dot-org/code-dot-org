@@ -17,5 +17,6 @@ Feature: Playground
     # Click a tile and confirm that it moves as expected  
     Then I wait to see an image "/level_starter_assets/Allthethings Java Lab Playground/tile_1_2.png"
     And I click an image "/level_starter_assets/Allthethings Java Lab Playground/tile_1_2.png"
+    And I wait for 2 seconds
     And I see no difference for "image clicked" using stitch mode "none"
     Then I close my eyes
