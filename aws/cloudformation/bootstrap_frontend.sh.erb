@@ -14,7 +14,11 @@ popd
 # Run rbspy for 2 minutes on 3 dashboard worker processes at startup.
 # We're doing this temporarily to help debug our deployment unavailability issue.
 # Find 3 dashboard worker process IDs and feed them to 3 rbspy invocations, in parallel using xargs.
-ps aux | grep "cluster worker" | grep dashboard | head -n 3 | tr --squeeze-repeats ' ' | cut -d ' ' -f 2 | xargs -P 3 -I {} sudo rbspy record --silent --duration 120 --pid {} &
+
+# Temporarily stop running rbspy on server startup because the current version of Chef client we use can't install rbyspy
+# because Chef client bundles a version of OpenSSL
+# that does not include the root certificate that the github.com site's SSL certificate is signed by.
+# ps aux | grep "cluster worker" | grep dashboard | head -n 3 | tr --squeeze-repeats ' ' | cut -d ' ' -f 2 | xargs -P 3 -I {} sudo rbspy record --silent --duration 120 --pid {} &
 
 # Increase EC2 instance metadata service retries/timeouts.
 export AWS_METADATA_SERVICE_TIMEOUT=30
