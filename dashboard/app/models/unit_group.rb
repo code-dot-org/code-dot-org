@@ -18,7 +18,7 @@
 #
 
 require 'cdo/script_constants'
-require 'cdo/shared_constants/courses/shared_course_constants'
+require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
