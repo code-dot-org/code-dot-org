@@ -26,7 +26,6 @@
 #
 
 require 'cdo/script_constants'
-require 'cdo/shared_constants/courses/shared_course_constants'
 require 'cdo/shared_constants'
 require 'cdo/shared_constants/courses/shared_course_constants'
 require 'ruby-progressbar'
@@ -38,7 +37,6 @@ class Script < ApplicationRecord
   include ScriptConstants
   include SharedCourseConstants
   include SharedConstants
-  include SharedCourseConstants
   include Rails.application.routes.url_helpers
 
   include Seeded
