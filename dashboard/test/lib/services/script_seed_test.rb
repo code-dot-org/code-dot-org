@@ -550,7 +550,7 @@ module Services
       # create the standard outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the standard for us.
       #
-      # lesson standards are sorted by seed_context. give the new standard a
+      # lesson standards are sorted by seeding_key. give the new standard a
       # framework shortcode and shortcode that will make it appear after the
       # existing standards in the sort order.
       new_standard = create :standard, framework: @framework, shortcode: 'xyz', description: 'New Standard'
@@ -615,7 +615,7 @@ module Services
       # create the standard outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the standard for us.
       #
-      # opportunity standards are sorted by seed_context. give the new standard
+      # opportunity standards are sorted by seeding_key. give the new standard
       # a framework shortcode and shortcode that will make it appear after the
       # existing standards in the sort order.
       new_standard = create :standard, framework: @framework, shortcode: 'xyz', description: 'New Standard'
