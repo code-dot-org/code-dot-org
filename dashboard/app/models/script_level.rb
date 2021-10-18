@@ -449,7 +449,7 @@ class ScriptLevel < ApplicationRecord
     summary = summarize
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
-    summary[:exampleSolutions] = get_example_solutions(current_user)
+    summary[:exampleSolutions] = get_example_solutions(levels.first, current_user)
     summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
@@ -717,12 +717,10 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def get_example_solutions(current_user, section=nil)
+  def get_example_solutions(level, current_user, section=nil)
     level_example_links = []
 
     return [] unless current_user&.teacher?
-
-    level = levels.first
 
     if level.try(:examples).present? && (current_user.authorized_teacher? || script.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
