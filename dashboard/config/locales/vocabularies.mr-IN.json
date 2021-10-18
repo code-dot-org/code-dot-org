@@ -143,6 +143,12 @@
         "machine_learning/oceans/unversioned": {
           "word": "मशीन लर्निंग"
         },
+        "event/outbreak/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "मॉडेल आणि सिम्युलेशन"
+        },
         "sprite/coursef/2021": {
           "word": "स्प्राईट"
         },
@@ -240,7 +246,8 @@
           "word": "प्रोग्रॅम"
         },
         "programming/courseb/2021": {
-          "word": "प्रोग्रामिंग"
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
         },
         "persistence/courseb/2021": {
           "word": "चिकाटी"
@@ -281,7 +288,8 @@
           "word": "बग"
         },
         "programming/coursea/2021": {
-          "word": "प्रोग्रामिंग"
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
         },
         "loop/coursea/2021": {
           "word": "लूप "
@@ -309,7 +317,8 @@
           "word": "सिक्वेन्सिंग"
         },
         "programming/coursec/2021": {
-          "word": "प्रोग्रामिंग"
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
         },
         "loop/coursec/2021": {
           "word": "लूप "
@@ -337,7 +346,8 @@
           "word": "लूप "
         },
         "programming/coursed/2021": {
-          "word": "प्रोग्रामिंग"
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
         },
         "frustrated/coursed/2021": {
           "word": "निराश"
@@ -386,7 +396,8 @@
           "word": "प्रोग्रॅम"
         },
         "programming/express/2021": {
-          "word": "प्रोग्रामिंग"
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
         },
         "sprite/express/2021": {
           "word": "स्प्राईट"
@@ -461,7 +472,8 @@
           "word": "प्रोग्रॅम"
         },
         "programming/pre-express/2021": {
-          "word": "प्रोग्रामिंग"
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
         },
         "persistence/pre-express/2021": {
           "word": "चिकाटी"
