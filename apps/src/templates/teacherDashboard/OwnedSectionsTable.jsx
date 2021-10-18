@@ -77,6 +77,32 @@ export const gradeFormatter = function(grade, {rowData}) {
   return <div>{rowData.grade}</div>;
 };
 
+export const gradeComparator = (valueA, valueB, nodeA, nodeB, isInverted) => {
+  console.log('comparing grades now');
+  let weights = {
+    K: 0,
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+    '5': 5,
+    '6': 6,
+    '7': 7,
+    '8': 8,
+    '9': 9,
+    '10': 10,
+    '11': 11,
+    '12': 12,
+    'Mixed/Other': 13,
+    '': 14
+  };
+
+  if (weights[valueA] === weights[valueB]) {
+    return 0;
+  }
+  return weights[valueA] > weights[valueB] ? 1 : -1;
+};
+
 export const loginInfoFormatter = function(loginType, {rowData}) {
   let sectionCode = '';
 
@@ -213,6 +239,7 @@ class OwnedSectionsTable extends Component {
       },
       {
         property: 'grade',
+        comparator: [gradeComparator],
         header: {
           label: i18n.grade(),
           props: {style: tableLayoutStyles.headerCell},
