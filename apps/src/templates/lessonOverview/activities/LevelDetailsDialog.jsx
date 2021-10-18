@@ -125,6 +125,16 @@ class LevelDetailsDialog extends Component {
       level.shortInstructions
     ) {
       // TODO: calculate more of these parameters based on the level and pages
+      console.log(this.props.scriptLevel);
+      console.log(level);
+
+      let exampleSolutions = [];
+      if (this.state.scriptLevel.exampleSolutions.length > 0) {
+        exampleSolutions = this.state.scriptLevel.exampleSolutions;
+      } else if (level.exampleSolutions.length > 0) {
+        exampleSolutions = level.exampleSolutions;
+      }
+
       return (
         <UnconnectedTopInstructions
           hasContainedLevels={false}
@@ -166,7 +176,7 @@ class LevelDetailsDialog extends Component {
           resizable={false}
           serverLevelId={parseInt(level.id)}
           serverScriptId={this.state.scriptLevel.scriptId}
-          exampleSolutions={this.state.scriptLevel.exampleSolutions}
+          exampleSolutions={exampleSolutions}
         />
       );
     } else {

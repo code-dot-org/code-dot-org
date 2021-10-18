@@ -369,7 +369,7 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self)
   end
 
-  def summarize(include_prev_next=true, for_edit: false)
+  def summarize(include_prev_next=true, for_edit: false, user_id: nil)
     ids = level_ids
     active_id = oldest_active_level.id
     inactive_ids = ids - [active_id]
@@ -404,7 +404,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     if bubble_choice?
-      summary[:sublevels] = level.summarize_sublevels(script_level: self)
+      summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
     end
 
     if for_edit
@@ -446,7 +446,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
-    summary = summarize
+    summary = summarize(user_id: current_user.id)
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
     summary[:exampleSolutions] = get_example_solutions(levels.first, current_user)
