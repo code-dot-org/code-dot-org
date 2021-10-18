@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-15 19:06:32 UTC",
+    "serialized_at": "2021-10-18 18:50:21 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csa4-pilot"
@@ -5457,6 +5457,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 4"
+        ],
         "progression": "Unit 4 Pilot Survey"
       },
       "bonus": false,
@@ -6634,6 +6637,18 @@
       }
     },
     {
+      "name": "Equals and Aliasing",
+      "url": "https://youtu.be/o4UfB3r-TPI",
+      "key": "equals_and_aliasing",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "equals_and_aliasing"
+      }
+    },
+    {
       "name": "Exploring Operators",
       "url": "https://docs.google.com/document/d/1Oel7wKZ_3KAaDW_7R84z_AuhFixeYy6l8hgPU7R70SA/edit?usp=sharing",
       "key": "exploring_operators",
@@ -6739,6 +6754,18 @@
       },
       "seeding_key": {
         "resource.key": "object_references_manipulatives"
+      }
+    },
+    {
+      "name": "Probability with Math.random()",
+      "url": "https://youtu.be/HiRJW3IhgX8",
+      "key": "probability_with_math_random_",
+      "properties": {
+        "type": "Slides",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "probability_with_math_random_"
       }
     },
     {
@@ -7220,6 +7247,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "probability_with_math_random_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "quiz_quiz_trade_1"
       }
     },
@@ -7251,6 +7284,12 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "comparing_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "equals_and_aliasing"
       }
     },
     {

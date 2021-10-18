@@ -26682,8 +26682,12 @@ en:
               description_teacher: 
             lesson-8:
               name: Finding Duplicates
+              description_student: 
+              description_teacher: 
             lesson-9:
               name: Searching for Elements
+              description_student: 
+              description_teacher: 
             lesson-10:
               name: A Sustainable Neighborhood Project - Day 1
               description_student: 
@@ -26715,6 +26719,47 @@ en:
               display_name: Show What You Know
           name: csa5-exemplars
           title: Unit 5 - Giving Objects Organization [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Unit 2 Projects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Unit 3 Projects
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Unit 4 Projects
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Unit 5 Projects
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Unit 6 Projects
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Unit 7 Projects
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Unit 8 Projects
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-examples-21
+          title: CSA Unit Project Examples [2021-2022]
           description_audience: ''
           description_short: ''
           description: ''
