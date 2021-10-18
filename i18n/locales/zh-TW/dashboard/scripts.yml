@@ -15599,6 +15599,8 @@ zh-TW:
           lessons:
             Virus Simulation for Code Bytes:
               name: 編碼一個模擬
+            Outbreak:
+              name: 編碼一個模擬
           lesson_groups:
             outbreak:
               display_name: 疫情爆發模擬
@@ -17895,5 +17897,13 @@ zh-TW:
           lessons:
             lesson-1:
               name: 拼字蜜蜂
+          title: 拼字蜜蜂
         outbreak-csc:
           title: 疫情爆發
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 評估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
