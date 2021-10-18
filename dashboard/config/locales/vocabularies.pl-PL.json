@@ -149,7 +149,15 @@
           "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
         "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Szyfr Cezara"
+          "word": "Szyfr Cezara",
+          "definition": "technika szyfrowania, która przesuwa alfabet o pewną liczby znaków"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Szyfrowanie",
+          "definition": "termin ogólny dla techniki (lub algorytmu), wykonującej szyfrowanie"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Łamanie szyfru"
         },
         "encryption/hoc-encryption/unversioned": {
           "word": "Szyfrowanie"
@@ -206,7 +214,8 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/sports/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) napisać kod lub instrukcje dla komputera."
         },
         "debugging/sports/unversioned": {
           "word": "Debugowanie",
@@ -267,6 +276,13 @@
         "machine_learning/oceans/unversioned": {
           "word": "Uczenie maszynowe",
           "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modele i symulacje"
         },
         "sprite/coursef/2021": {
           "word": "Duszek",
