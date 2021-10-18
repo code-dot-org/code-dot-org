@@ -27,7 +27,7 @@ export default function CodeReviewGroupMember({member, index}) {
               justifyContent: 'space-around'
             }}
           >
-            {member.content}
+            {member.name}
           </div>
         </div>
       )}
