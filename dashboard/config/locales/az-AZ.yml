@@ -121,6 +121,7 @@ az:
     windowslive: Microsoft Hesabı
     microsoft_v2_auth: Microsoft Hesabı
     clever: Ağıllı
+    powerschool: Güc məktəbi
     forgot_password: Parolunuzu unutmusunuz?
     migration_success: Uğur! Yeni hesab təcrübəmizi yeniləmisiniz.
     demigration_success: Yeni hesab təcrübəsi artıq hesabınızda deaktiv edildi.
@@ -160,6 +161,25 @@ az:
       baxa bilərsiniz] (/), ancaq irəliləyişinizi və layihələrinizi saxlamaq üçün
       qeydiyyatdan keçməlisiniz.
     hoc_already_signed_up_heading: Giriş etmədən başlayın
+    hoc_already_signed_up_content: Siz  Kod saatı üçün qeydiyyatdan keçdiniz. Siz
+      və şagirdlərinizin bu fəaliyyətdə iştirak etmək üçün Code Studio-a daxil olmağınıza
+      ehtiyac yoxdur. Başlamaq üçün,<a href="%{learn_url}">  sinifinizə dərslik seçin
+      </a> , və bağlantını onlarla paylaşın. <br/><br/>Əgər Kod saatını bəyəndinizsə
+      və dahasını istəyirsinizsə, siz bir şifrə yarada və aşağıdan Code Studio hesabı
+      yaradıb şagirdlərinizi bizim hər hansı <a href="%{educate_url}">kursumuz </a>
+      üçün qeydiyyatdan keçirə bilərsiz.
+    hoc_already_signed_up_content_post_hoc: Kod saatına sahiblik etdiyiniz üçün təşəkkür
+      edirik. Code Studio-a daxil olmaq üçün şifrənizi daxil etməli olacaqsınız. Bu
+      sizə irəliləmənizi saxlamaq, və sinifinizi idarə etmək üçün kömək edəcək. Siz
+      şagirdləiniz üçün kurs təşkil edə, və onların irəliləyişini izləyə biləcəksiniz.
+      <a href="%{studio_url}"> Siz həm də müxtəlif dərsləri və səviyələri</a> hesab
+      yaratmadan nəzərdən keçirə biləcəksiniz.
+    hoc_already_signed_up_content_post_hoc_markdown: Kod Saatına sahiblik etdiyiniz
+      üçün təşəkkür edirik. Code Studioya daxil olmaq üçün hesabınızs şifrə yaratmalı
+      olacaqsınız. Bu sizə irəliləyişinizi qeyd etmək və sinfinizi idarə etmək üçün
+      kömək edəcək. Siz şagirdləriniz üçün kurs təşkil edə və onların irəliləyişini
+      izləyə biləcəksiniz. [Siz hesab yaratmadan da müxtəlif dərsləri və səviyyələri]%{studio_url}
+      nəzərdən keçirə bilərsiniz.
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
     title: Code.org da qeydiyyatdan keçin
     school_name: Məktəbin Adı (vacib deyil)
@@ -191,15 +211,24 @@ az:
       fərqli ola biləcəyini başa düşürəm.
     visit_privacy: Daha çox məlumat üçün Code.org-un [Məxfilik Siyasəti] (%{privacy_url})
       səhifəsini ziyarət edin.
+    student_terms_markdown: Elektron poçt ünvanları bizim şagirdlərlə əlaqə saxlamağımız
+      üçün götürülməyib. Şagirdlər Code.ord-dan şifrə bərpasından başqa hallarda elektron
+      poçt əldə etməyəcəklər. Daha çox məlumat üçün gizlilik politikamıza(http://code.org/privacy)
+      baxın.
     additional_information: Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara
       ehtiyacımız var.
     user_type_button: Hesab növünü yeniləyin
     user_type_label: Hesab növü
     user_type_student: şagird
+    user_type_student_desc: 'Bütün kurslarımızı və fəaliyyətlərimizi kəşf edin, üstəlik:'
     user_type_student_ability_1: Tərəqqinizi və layihələrinizi saxlayın
     user_type_student_ability_2: Müəlliminizin sinif bölməsinə qoşulun
     user_type_teacher: Müəllim
+    user_type_teacher_desc: "Bütün şagirdlərin keçidi var, əlavə olaraq :\n "
     user_type_teacher_ability_1: sinif bölmələri yaradın
+    user_type_teacher_ability_2: Tələbə işin təyin etmək və izləmək
+    user_type_teacher_ability_3: Peşəkar dərs üçün qeydiyyatdan keçin
+    user_type_teacher_ability_4: Müəllim forumumuzda əlaqə saxlayın
     field_is_required: zəruridir
     accept_terms: Hesabı yaratmaq üçün razılaşmalısınız.
     error: Xəta baş verdi.
@@ -210,6 +239,9 @@ az:
     email_preference_yes: Bəli
     email_preference_no: Xeyr
     email_preference_required: Bir e-poçt təyin etməlisiniz.
+    share_teacher_email_reg_partner_question: 'Sizin ərazinizdə, yerli peşəkar inkişaf,
+      resurs və hadisələr barəsində xəbər almağınız üçün əlaqə məlumatlarınızın Code.org
+      regional əmədaşı%{cdo_regional_partner_desc} ilə paylaşmağımızı istəyirsinizmi? '
     share_teacher_email_reg_partner_preference_yes: Bəli
     share_teacher_email_reg_partner_preference_no: Xeyr
     share_teacher_email_reg_partner_preference_required: Bir e-poçt təyin etməlisiniz.
@@ -220,6 +252,7 @@ az:
     parent_account_email_label: Valideyn / Qəyyum E-poçtu
   school_info:
     title: Məktəb haqqında məlumat (istəyə görə)
+    school_country: Məktəb Ölkəsi
     select_school_type: Məktəbin Tipi
     charter: Nizamnamə
     private: Gizli
@@ -516,6 +549,22 @@ az:
       istifadə etməyə davam etmək istəyirsinizsə, aşağıda öz girişinizi yarada bilərsiniz.
     create_personal_login_link_account: Bunun əvəzinə “Bağlı Hesabları İdarə et” bölməsi
       altındakı şəxsi hesaba qoşulmağı da seçə bilərsiniz.
+    create_personal_login_terms: Şəxsi hesab yaratmaqla, Code.org<a href='%{terms_of_service_url}',
+      target='_blank'> servisinin şərtlərinə </a>tabe olacağıma razılıq verirəm. Mən
+      qəbul edirəm ki, mənim valideynimin və ya qanuni qəyyumumun icazəsi var ki,
+      müəllim olmasa belə Code.org servislərindən istifadə edə bilim.
+    create_personal_login_terms_markdown: Şəxsi hesab yaratmaqla, Code.org [servisinin
+      şərtlərinə](%{terms_of_service_url}) tabe olacağıma razılıq verirəm. Mən müəllim
+      olmadan belə Code.org servislərindən istifadə etmək üçün valideynimdən və ya
+      qanuni qəyyumumdan icazə aldığımı təsdiqləyirəm.
+    create_personal_login_email_note: 'Qeyd: Elektron poçt ünvanları şagirdlərlə əlaqə
+      saxlamaq üçün saxlanılmır. Şagirdlər Code.ord-dan şifrə bərpasından başqa hallarda
+      E-mail qəbul etməyəcəklər. Daha çox məlumat üçün <a href=''%{privacy_policy_url}'',
+      target=''_blank''></a>gizlilik politikamıza</a> baxın.'
+    create_personal_login_email_note_markdown: 'Qeyd: Elektron poçt ünvanları şagirdlərlə
+      əlaqə saxlamaq üçün saxlanılmır. Şagirdlər Code.ord-dan şifrə bərpasından başqa
+      hallarda E-mail qəbul etməyəcəklər. Daha çox məlumat üçün [gizlilik politikamıza](%{privacy_policy_url})
+      baxın.'
     enter_new_login_info: Yeni giriş məlumatlarınızı daxil edin
     confirm_secret_words: Mövcud gizli sözlərinizi daxil edərək sizin olduğunuzu təsdiq
       edin
@@ -604,6 +653,8 @@ az:
       yazılmalıdır.
     already_enrolled_in_new_section: Bu tələbələri köçürə bilməzsiniz, çünki onlar
       artıq yeni hissədədirlər.
+    third_party_login: Siz üçüncü tərəf aracılığı ilə sinxronizasiya edilmiş bölmələrə
+      şagirdləri yönləndirə bilməzsiniz.
   share:
     title: Code Studio-da öyrənin
     description: Hər kəs kompüter elmini öyrənə bilər. Kodlarla oyunlar, proqramlar
@@ -619,7 +670,35 @@ az:
     student: şagird
     teacher: Müəllim
   footer:
+    thank_you: Biz Code Studio-nun yaradılmasında göstərdikləri dəstəyə görə <a href="https://code.org/about/donors">donorlarımıza</a>,
+      <a href="https://code.org/about/partners">tərəfdaşlarımıza</a>, <a href="https://code.org/about/team">genişləndirilmiş
+      komandamıza</a>, video heyyetimıza və <a href="https://code.org/about/advisors">təhsil
+      məsləhətçilərimizə</a> təşəkkür edirik.
+    help_from_html: 'Biz, özəlliklə Amazon, Google, və Microsoft materiallarını yaratmaqda
+      kömək edən mühəndisləri tanımaq istərik. '
+    help_from_html_old: Amazon, Google və Microsoft mühəndisləri bu materialların
+      hazırlanmasına kömək etdilər.
+    art_from_html: Minecraft&#8482; &copy; %{current_year} Microsoft. Bütün hüquqlar
+      qorunur.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm.
+      Bütün hüquqlar qorunur.<br />Frozen&#8482; &copy; %{current_year} Disney. Bütün
+      hüquqlar qorunur.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox.
+      Bütün hüquqlar qorunur.<br />Angry Birds&#8482; &copy; 2009-%{current_year}
+      Rovio Entertainment Ltd. Bütün hüquqlar qorunur.<br />Plants vs. Zombies&#8482;
+      &copy; %{current_year} Electronic Arts Inc. Bütün hüquqlar qorunur.
+    art_from_html_old: Minecraft&#8482; &copy; %{current_year} Microsoft. Bütün hüquqlar
+      qorunur. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Bütün
+      hüquqlar qorunur. Frozen&#8482; &copy; %{current_year} Disney. Bütün hüquqlar
+      qorunur. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Bütün hüquqlar
+      qorunur. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment
+      Ltd. Bütün hüquqlar qorunur. Plants vs. Zombies&#8482; &copy; %{current_year}
+      Electronic Arts Inc. Bütün hüquqlar qorunur.
+    code_from_html: Code.org <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
+      the GNU LGPL 2.1</a> lisenziyalı p5.play-dən istifadə edir.
+    powered_by_aws: Amazon Web Services və "Powered by AWS" loqotipi Amazon.com, Inc.
+      və ya onun Amerika Birləşmiş Ştatları və/və ya digər ölkələrdəki ticarət nişanlarıdır.
     built_on_github: Microsoft tərəfindən GitHub-da qurulub
+    google_copyright: "&copy; Google Inc. icazəsi ilə istifadə olunur. Google Classroom,
+      Google Inc-in ticarət markasıdır"
     copyright: Müəllif Haqqı
     more: Daha çox
     feedback: Rəy verin
@@ -655,7 +734,19 @@ az:
     label: Video
   compatibility:
     upgrade:
+      unsupported_message: Sizin brazueriniz dəstəklənmir. Xahiş edirik ki brazuerinizi
+        dəstəklənən brauzerlətimizdən birinə yüksəldəsiniz%{supported_browsers_url}.
+        Siz səhifəni izləyə bilərsiniz, amma funksiyaları işlədə bilməzsiniz.
       link: Daha ətraflı
+      applab_unsupported_tablet: App Lab siçan olan masaüstü və ya dizüstü kompüterlərdə
+        daha yaxşı işlətyir. Siz indi işlətdiyiniz cihaz ilə bu vasitəni işlədəndə
+        problem yaşaya bilərsiniz.
+      gamelab_unsupported_tablet: Game Lab siçan olan masaüstü və ya dizüstü kompüterlərdə
+        daha yaxşı işlətyir. Siz indi işlətdiyiniz cihaz ilə bu vasitəni işlədəndə
+        problem yaşaya bilərsiniz.
+      weblab_unsupported_locale_storage: Siz Web Lab-ı  gizli brauzer rejimində işlədərkən
+        problem yaşaya bilərsiniz. Xahiş edirik proyektinizi normal rejimdə yenidən
+        yükəyin. Narahatçılıq üçün üzr istəyirik.
   slow_loading: Bu, adi halda olduğundan daha çox vaxt aparır...
   try_reloading: Səhifəni yenidən yükləməyə cəhd edin
   next_stage: Bitdi! Növbəti dərsə keçin
@@ -663,6 +754,7 @@ az:
   lesson_plan: Dərs Planı
   view_lesson_plan: Dərs palnına baxın
   pdf_download: PDF faylını endir
+  download_coming_soon: Yüklənəbilən fəaliyyət tezliklə xidmətinizdə olacaq.
   video_coming_soon: Video Tezliklə gələcək!
   share_code:
     title: Proqramımı işdə görmək üçün 'Çalıştır' düyməsini vurun
@@ -691,6 +783,8 @@ az:
       body: App Lab sadə tətbiqetmələr hazırlaya biləcəyiniz bir proqramlaşdırma mühitidir.
         Bir tətbiq hazırlayın, işləməsi üçün bloklarla və ya JavaScript ilə kod hazırlayın,
         sonra tətbiqinizi saniyələr içində paylaşın.
+      body_short: Bir tətbiq dizayn edin, onu işlətmək üçün bloklarla və ya JavaScriptlə
+        kodlaşdırın, sonra tətbiqinizi saniyələr içində paylaşın.
       audience: 13+ yaş
       cta: "Öyrənin necə \n"
     dance:
@@ -713,6 +807,7 @@ az:
       body_short: İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası
         ilə öyrənin.
     hoc2014:
+      try_new_tutorial: 'Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin. '
       try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
     gallery:
       title: Qalereya
@@ -720,10 +815,17 @@ az:
         baxın
     gamelab:
       title: Oyun labaratoriyası
+      body: Game Lab, bir-biri ilə qarşılıqlı əlaqədə olan obyektlər və simvollarla
+        sadə animasiyalar və oyunlar yarada biləcəyiniz bir proqramlaşdırma mühitidir.
       audience: 13+ yaş
       cta: "Öyrənin necə \n"
+    hoc-encryption:
+      body: Şagirdlər şifrəli mesajlar yaratma və sındırma üsullarını öyrənəcəklər.
     weblab:
       title: veb-laboratoriya (beta)
+      body: Web Lab sizin HTML və CSSdən istifadə edərək sadə veb səhifələri yarada
+        biləcəyiniz proqramlaşdırma mühitidir. Veb səhifələrinizi dizayn edin və saytınızı
+        saniyələr içində paylaşın.
       audience: 13+ yaş
       cta: "Öyrənin necə \n"
     frozen:
@@ -735,17 +837,30 @@ az:
       body: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
     minecraft2016:
       title: Minecraft
+      body: Öz Minecraft versiyanızda heyvanları və başqa Minecraft varlıqlarını proqramlaşdırın.
     aquatic:
       title: Minecraft
     hero:
       title: Minecraft
     sports:
       title: İdman
+      body: Bir basketbol oyunu hazırlayın və ya qarışdırın və idmanlar boyunca uyğunlaşdırın.
+    text-compression:
+      body: Bu dərsdə şagirdlər qəlibləri simvollarla əvəz etməklə mətni qısaltmaq
+        üçün Mətn Qısaltma Vasitəsindən istifadə edəcəklər.
     unplugged:
       title: Sərbəst dərslər
       audience: 4+ yaş
+      body: Biz sinfinizdə istifadə etməniz üçün sizə bir siyahı sərbəst işlər toplamışıq.
+        İndi siz sinfinizdə kompüterin olsa da, olmasa da, kompüter elmlərinin əsaslarını
+        öyrədə bilərsiz! Bu dərsləri sərbəst kurs və ya hər hansı kompüter elmi kursu
+        üçün tamamlayıcı dərs kimi istifadə etməyə çalışın.
+      body_short: Əgər kompüterləriniz yoxdursa, sinifdə bu sərbəst işləri etməyə
+        çalışın.
     unplugged_conditionals:
       title: Şərti ifadələr
+      body: Kartlar dəstəsindən istifadə etməklə bu sərbəst işdə alqoritmlər və şərti
+        ifadələr haqqında öyrənin.
     widgets:
       audience: 14+ yaş
       cta: "Öyrənin necə \n"
@@ -821,18 +936,33 @@ az:
     week: həftə
   age_interstitial:
     age: Yaşınız
+    warning: Sizi hətta daha güclü güvənlik qorumaları ilə təmin etmək üçün biz təcrübəmizi
+      güncəlləyirik. Bunu etmək üçün mövcud istifadəçilərin yaşlarını bura yazmalarına
+      ehtiyacımız var.
+    sign_out_markdown: Əgər yaşınızı əlavə etmək istəmirsinizsə, [hesabınızı bağlaya
+      bilərsiniz](%{url}).
   terms_interstitial:
     tos: Xidmət şərtləri
     privacy: Məxfilik siyasəti
+    accept_tos: Code.org -da qeydiyyatdan keçməklə [Xidmət Şərtləri] (%{tos_url})
+      və [Məxfilik Siyasəti] (%{privacy_url}) ilə razılaşırsınız.
     accept: Qəbul et
     print: çap
+  donor_interstitial:
+    local_supporters: Yerli Dəstəkçilər
+    global_supporters: Qlobal dəstəkçilər
+    get_started: Code.orga başlayın.
   school_info_interstitial:
+    title: Biz hər bir şagirdə Kompüter Elmlərini öyrətmək istəyirik - irəliləyişimizi
+      izləməkdə bizə kömək edin!
+    message: Zəhmət olmasa, aşağıda məktəb məlumatlarınızı daxil edin.
     save: Yadda saxla
   race_interstitial:
     races:
       white: Ağ
       asian: Asyalı
       other: Digər
+      opt_out: Söyləməməyə üstünlük verirəm
     submit: Göndər
     decline: Bağla
   progress:
@@ -931,6 +1061,7 @@ az:
       email: E-poçt
       school: Məktəb
       school_name: Məktəbin adı
+      school_country: Məktəb Ölkəsi
       colombian_chilean_school_name: Məktəbin adı
     form_entries:
       gender:

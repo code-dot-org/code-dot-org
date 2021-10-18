@@ -3067,6 +3067,19 @@
               "width": "enlik"
             }
           }
+        },
+        "MC_HOC_2017_07_Cole_2021": {
+          "clear path": {
+            "name": "təmiz yol"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "uzun yolu düzəlt "
+          },
+          "fix short path": {
+            "name": "qısa yolu düzəlt"
+          }
         }
       }
     }
