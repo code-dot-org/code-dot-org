@@ -124,10 +124,6 @@ class LevelDetailsDialog extends Component {
       level.long_instructions ||
       level.shortInstructions
     ) {
-      // TODO: calculate more of these parameters based on the level and pages
-      console.log(this.props.scriptLevel);
-      console.log(level);
-
       let exampleSolutions = [];
       if (this.state.scriptLevel.exampleSolutions.length > 0) {
         exampleSolutions = this.state.scriptLevel.exampleSolutions;
@@ -135,6 +131,7 @@ class LevelDetailsDialog extends Component {
         exampleSolutions = level.exampleSolutions;
       }
 
+      // TODO: calculate more of these parameters based on the level and pages
       return (
         <UnconnectedTopInstructions
           hasContainedLevels={false}
