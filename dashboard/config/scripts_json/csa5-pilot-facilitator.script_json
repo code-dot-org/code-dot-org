@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-05 13:52:38 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-10-18 15:49:01 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csa5-pilot-facilitator"
     }
@@ -1366,7 +1366,7 @@
       "key": "1b93d1fd-522d-43ce-98d4-4e264e90d183",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some questions that we could answer by traversing through this data?*\n\n**Discussion Goal:** Students suggest different questions they could answer by traversing the table, such as finding the total inventory for each food truck, the total inventory for a specific dessert, or the average price of a dessert.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 in Code Studio to calculate sums and averages for the food truck inventory and prices.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some questions that we could answer by traversing through this data?*\n\n**Discussion Goal:** Students suggest different questions they could answer by traversing the table, such as finding the total inventory for each food truck, the total inventory for a specific dessert, or the average price of a dessert.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 in Code Studio to calculate the average price of all desserts available at all food trucks.",
         "progression_name": "Traversing Food Trucks",
         "tips": [
           {
@@ -1447,7 +1447,7 @@
       "key": "bbde20c0-ecdc-4d76-9b55-e7a5ac8a07a0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Images and Pixels video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would we store this pixel in a 2D array called `pixels`?*\n\n**Discussion Goal:** Students recall referring to an element in a 2D array using the row and column indexes. Students identify the relationship between the row index of a 2D array and the y coordinate of the pixel. The column index of a 2D array is associated with the x coordinate.\n\n**Do This:** Click through the animated slide to reveal the solution and identify the relationship between the row and column indexes of a 2D array and the x and y coordinates of the pixel in the image."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would we store this pixel in a 2D array called `pixels`?*\n\n**Discussion Goal:** Students recall referring to an element in a 2D array using the row and column indexes. Students identify the relationship between the row index of a 2D array and the y coordinate of the pixel. The column index of a 2D array is associated with the x coordinate.\n\n**Do This:** Click through the animated slide to reveal the solution and identify the relationship between the row and column indexes of a 2D array and the x and y coordinates of the pixel in the image."
       },
       "seeding_key": {
         "activity_section.key": "bbde20c0-ecdc-4d76-9b55-e7a5ac8a07a0",
@@ -1470,7 +1470,7 @@
       "key": "3a5de01a-4b5b-4613-b528-517142336160",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write the `ImageFilter` class and `getPixels()` method, which accepts an `Image` object and returns a 2D array of `Pixel` objects in row-major order.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write the `ImageEditor` class and `getPixels()` method, which accepts an `Image` object and returns a 2D array of `Pixel` objects in row-major order.",
         "progression_name": "Getting Pixels from an Image"
       },
       "seeding_key": {
@@ -1643,7 +1643,7 @@
       "key": "dff85884-68a3-4ddf-a06c-0afd2c6fc6bb",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students independently complete the Check for Understanding on Level 1 then move on to complete Level 2 in pairs, where they use column-major order traversal to calculate the sum of each column in the inventory table. Have students continue to complete Level 3, where they update a method that prints prices elements in row-major order to column-major order.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students independently complete the Check for Understanding on Level 1 then move on to complete Level 2 in pairs, where they use column-major order traversal to calculate the sum of each column in the inventory table. Have students continue to complete Level 3, where they write a method that prints `truckPrices` elements in column-major order.",
         "progression_name": "Traversing Desserts"
       },
       "seeding_key": {
@@ -2048,7 +2048,7 @@
       "key": "150584fa-250f-4ec1-8ea8-033982437363",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Return Statement video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Now, what do you think is the purpose of a `return` statement?*\n\n**Discussion Goal:** Students realize that the `return` keyword can halt the execution of a loop to exit the method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the effects of executing a `return` statement inside a loop compared to outside the loop."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Now, what do you think is the purpose of a `return` statement?*\n\n**Discussion Goal:** Students realize that the `return` keyword can halt the execution of a loop to exit the method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the effects of executing a `return` statement inside a loop compared to outside the loop."
       },
       "seeding_key": {
         "activity_section.key": "150584fa-250f-4ec1-8ea8-033982437363",
@@ -3670,6 +3670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L1"
+        ],
         "progression": "Creating 2D Arrays"
       },
       "bonus": false,
@@ -3692,6 +3695,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L2"
+        ],
         "progression": "Creating 2D Arrays"
       },
       "bonus": false,
@@ -3714,6 +3720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L3"
+        ],
         "progression": "Accessing Rows in 2D Arrays"
       },
       "bonus": false,
@@ -3736,6 +3745,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L4"
+        ],
         "progression": "Accessing Rows in 2D Arrays"
       },
       "bonus": false,
@@ -3758,6 +3770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L5"
+        ],
         "progression": "Updating Values in 2D Arrays"
       },
       "bonus": false,
@@ -3780,6 +3795,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3802,6 +3820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L1"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -3824,6 +3845,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L2"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -3846,6 +3870,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L3"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -3868,6 +3895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L4"
+        ],
         "progression": "Concert Images"
       },
       "bonus": false,
@@ -3890,6 +3920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L5"
+        ],
         "progression": "Getting Pixels from an Image"
       },
       "bonus": false,
@@ -3912,6 +3945,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3934,6 +3970,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L1"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -3956,6 +3995,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L2"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -3978,6 +4020,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L3"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -4000,6 +4045,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L4"
+        ],
         "progression": "Mirror an Image Vertically"
       },
       "bonus": false,
@@ -4022,6 +4070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L5"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -4044,6 +4095,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L6"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -4066,6 +4120,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L7"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -4088,6 +4145,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4110,6 +4170,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L1"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -4132,6 +4195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L2"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -4154,6 +4220,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L3"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -4176,6 +4245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4"
+        ],
         "progression": "Keeping a Color in a Pixel"
       },
       "bonus": false,
@@ -4198,6 +4270,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L5"
+        ],
         "progression": "Keeping a Color in a Pixel"
       },
       "bonus": false,
@@ -4220,6 +4295,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4242,6 +4320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L1"
+        ],
         "progression": "Returning Inside a Loop"
       },
       "bonus": false,
@@ -4264,6 +4345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L2"
+        ],
         "progression": "Food Truck Special"
       },
       "bonus": false,
@@ -4286,6 +4370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L3"
+        ],
         "progression": "Checking for Empty Inventory"
       },
       "bonus": false,
@@ -4308,6 +4395,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L4"
+        ],
         "progression": "Checking for Empty Inventory"
       },
       "bonus": false,
@@ -4330,6 +4420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L5"
+        ],
         "progression": "Checking Dessert Quantities"
       },
       "bonus": false,
@@ -4352,6 +4445,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4374,6 +4470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L1"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -4396,6 +4495,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L2"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -4418,6 +4520,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L3"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -4440,6 +4545,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L4"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -4462,6 +4570,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L5"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -4484,6 +4595,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L6"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -4506,6 +4620,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4528,6 +4645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L1"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -4550,6 +4670,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L2"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -4572,6 +4695,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L3"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -4594,6 +4720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L4"
+        ],
         "progression": "Animated Image Reversal"
       },
       "bonus": false,
@@ -4616,6 +4745,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L5"
+        ],
         "progression": "Animated Image Reversal"
       },
       "bonus": false,
@@ -4638,6 +4770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L6"
+        ],
         "progression": "Sustainable Goals Benefits"
       },
       "bonus": false,
@@ -4660,6 +4795,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4682,6 +4820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L1"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -4704,6 +4845,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -4726,6 +4870,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -4748,6 +4895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4"
+        ],
         "progression": "Animated Image Shift"
       },
       "bonus": false,
@@ -4770,6 +4920,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5"
+        ],
         "progression": "Animated Image Shift"
       },
       "bonus": false,
@@ -4792,6 +4945,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4814,6 +4970,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -4836,6 +4995,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -4858,6 +5020,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -4880,6 +5045,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4"
+        ],
         "progression": "Combining Duplicate Desserts"
       },
       "bonus": false,
@@ -4902,6 +5070,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L5"
+        ],
         "progression": "Combining Duplicate Desserts"
       },
       "bonus": false,
@@ -4924,6 +5095,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4946,6 +5120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L1"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4968,6 +5145,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L2"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4990,6 +5170,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L3"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -5012,6 +5195,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L4"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -5034,6 +5220,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5056,6 +5245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L11-L1"
+        ],
         "progression": "A Sustainable Neighborhood Project"
       },
       "bonus": false,
@@ -5078,6 +5270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L12-L1"
+        ],
         "progression": "A Sustainable Neighborhood Project"
       },
       "bonus": false,
@@ -5100,6 +5295,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L13-L1"
+        ],
         "progression": "A Sustainable Neighborhood Project"
       },
       "bonus": false,
@@ -5122,6 +5320,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 5 Pilot Assessment 2021"
+        ],
         "progression": "Unit 5 Assessment"
       },
       "bonus": false,
@@ -5144,6 +5345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -5166,6 +5370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -5188,6 +5395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -5210,6 +5420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox"
+        ],
         "progression": "The Playground"
       },
       "bonus": false,

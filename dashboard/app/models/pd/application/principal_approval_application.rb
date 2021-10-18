@@ -38,29 +38,27 @@
 module Pd::Application
   class PrincipalApprovalApplication < ApplicationBase
     include Pd::PrincipalApprovalApplicationConstants
+    include Pd::SharedApplicationConstants
 
     belongs_to :teacher_application, class_name: 'Pd::Application::TeacherApplication',
                primary_key: :application_guid, foreign_key: :application_guid
 
     validates_presence_of :teacher_application
 
-    # @return a valid year (see ApplicationConstants.APPLICATION_YEARS)
+    # @return a valid year (see Pd::SharedApplicationConstants::APPLICATION_YEARS)
     def year
-      self.class.year
+      application_year
     end
 
-    def self.year
-      YEAR_21_22
-    end
-
-    def self.next_year
-      YEAR_22_23
+    def self.next_year(year)
+      current_year_index = APPLICATION_YEARS.index(year)
+      current_year_index.nil? ? nil : APPLICATION_YEARS[current_year_index + 1]
     end
 
     # @override
     def set_type_and_year
       self.application_type = PRINCIPAL_APPROVAL_APPLICATION
-      self.application_year = year
+      self.application_year = ActiveApplicationModels::APPLICATION_CURRENT_YEAR unless application_year
     end
 
     def underrepresented_minority_percent
@@ -94,7 +92,7 @@ module Pd::Application
       (!existing_application || existing_application.placeholder?) ? nil : existing_application
     end
 
-    def self.options
+    def self.options(year = APPLICATION_CURRENT_YEAR)
       {
         title: COMMON_OPTIONS[:title],
         school_state: COMMON_OPTIONS[:state],
@@ -104,7 +102,7 @@ module Pd::Application
           "Yes, I plan to include this course in the #{year} master schedule",
           "Yes, I plan to include this course in the #{year} master schedule, but not taught by this teacher",
           "I hope to include this course in the #{year} master schedule",
-          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (#{next_year})",
+          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (#{next_year(year)})",
           "I don’t know if I will be able to include this course in the #{year} master schedule",
           TEXT_FIELDS[:other_with_text]
         ],
@@ -190,7 +188,7 @@ module Pd::Application
               :pay_fee
             ]
 
-            if hash[:replace_course] == self.class.options[:replace_course][0]
+            if hash[:replace_course] == self.class.options(year)[:replace_course][0]
               if teacher_application&.course == 'csd'
                 required << :replace_which_course_csd
               elsif teacher_application&.course == 'csp'

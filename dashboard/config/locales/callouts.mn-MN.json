@@ -1530,7 +1530,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Шинэ блок!",
-          "poetry_multiple_sprites": "Шинэ блок!"
+          "poetry_multiple_sprites": "Шинэ блок!",
+          "poetry_new_block": "Шинэ блок!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Шинэ блок!"

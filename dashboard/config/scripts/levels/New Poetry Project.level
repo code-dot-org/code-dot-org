@@ -1,0 +1,124 @@
+<Poetry>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "block_pools": [
+      "GamelabJr",
+      "Poetry"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "true",
+    "free_play": "true",
+    "validation_enabled": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_pause_button": "false",
+    "is_project_level": true,
+    "standalone_app_name": "poetry_hoc",
+    "preload_asset_list": null
+  },
+  "game_id": 69,
+  "published": true,
+  "created_at": "2021-10-11T22:28:52.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "audit_log": "[{\"changed_at\":\"2021-10-18 14:42:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-18 14:42:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"standalone_app_name\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Events">
+          <block type="Poetry_whenLineShows">
+            <title name="N">0</title>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="Poetry_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="LOCATION">{"x":200,"y":200}</title>
+          </block>
+          <block type="Poetry_setSize">
+            <title name="SPRITE">"bear"</title>
+            <title name="VAL">150</title>
+          </block>
+          <block type="Poetry_startBehavior">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="BEHAVIOR">fluttering</title>
+          </block>
+          <block type="Poetry_stopBehavior">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="BEHAVIOR">fluttering</title>
+          </block>
+          <block type="Poetry_destroy">
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_makeBurst">
+            <title name="EFFECT">"burst"</title>
+            <title name="NUM">10</title>
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_makeNumSprites">
+            <title name="NUM">3</title>
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+        </category>
+        <category name="Effects">
+          <block type="Poetry_setFont">
+            <title name="FONT">"Courier"</title>
+          </block>
+          <block type="Poetry_setFontColor">
+            <value name="FILL">
+              <block type="colour_picker" can_disconnect_from_parent="false">
+                <title name="COLOUR">#66ff99</title>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setTextEffect">
+            <title name="EFFECT">"fade"</title>
+          </block>
+          <block type="Poetry_setForegroundEffect">
+            <title name="EFFECT">"rain"</title>
+          </block>
+          <block type="Poetry_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker" can_disconnect_from_parent="false">
+                <title name="COLOUR">#cc0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setBackgroundImageAs">
+            <title name="IMG">"cave"</title>
+          </block>
+          <block type="Poetry_setBackgroundEffect">
+            <title name="EFFECT">"colors"</title>
+            <title name="PALETTE">"grayscale"</title>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Poetry>

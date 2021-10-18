@@ -2488,3 +2488,11 @@ eu:
           lessons:
             lesson-1:
               name: Bista orokorra
+        poetry:
+          lessons:
+            lesson-3:
+              name: Aldagaiak
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Letraz-letra

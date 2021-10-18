@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 01:42:19 UTC",
+    "serialized_at": "2021-10-14 22:49:46 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp1-2021"
@@ -1461,7 +1461,7 @@
       "key": "3d68b771-e2d0-4d0d-aa0f-59e59adb3489",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [r innovation-video-1-1/csp/2021]\n\n- The video is available for students in Code Studio as well.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything](https://www.youtube.com/watch?v=QvyTEx1wyOY)\n\n- The video is available for students in Code Studio as well.",
         "progression_name": "Computer Science is Changing Everything"
       },
       "seeding_key": {

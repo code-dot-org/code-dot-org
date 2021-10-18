@@ -26,7 +26,7 @@ import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
-import {CsaViewMode, InputMessageType} from './constants';
+import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
@@ -246,7 +246,12 @@ Javalab.prototype.init = function(config) {
 
   getStore().dispatch(
     setDisableFinishButton(
-      !!config.readonlyWorkspace && !config.level.submittable
+      // The "submit" button overrides the finish button on a submittable level. A submittable level
+      // that has been submitted will be considered "readonly" but a student must still be able to
+      // unsubmit it. That is generally the only exception to a readonly workspace. However if a
+      // student is reviewing another student's code, we'd always want to disable the finish button.
+      (!!config.readonlyWorkspace && !config.level.submittable) ||
+        !!config.isCodeReviewing
     )
   );
 
@@ -292,6 +297,20 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  if (this.studioApp_.hasContainedLevels) {
+    lockContainedLevelAnswers();
+    getStore().dispatch(setDisableFinishButton(false));
+  }
+
+  this.miniApp?.reset?.();
+  this.executeJavabuilder(ExecutionType.RUN);
+};
+
+Javalab.prototype.onTest = function() {
+  this.executeJavabuilder(ExecutionType.TEST);
+};
+
+Javalab.prototype.executeJavabuilder = function(executionType) {
   if (this.studioApp_.attempts === 0) {
     // ensure we save to S3 on the first run.
     // Javabuilder requires code to be saved to S3.
@@ -299,12 +318,7 @@ Javalab.prototype.onRun = function() {
   }
 
   this.studioApp_.attempts++;
-  if (this.studioApp_.hasContainedLevels) {
-    lockContainedLevelAnswers();
-    getStore().dispatch(setDisableFinishButton(false));
-  }
 
-  this.miniApp?.reset?.();
   const options = {};
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     options.useNeighborhood = true;
@@ -319,7 +333,7 @@ Javalab.prototype.onRun = function() {
     this.setIsRunning
   );
   project.autosave(() => {
-    this.javabuilderConnection.connectJavabuilder();
+    this.javabuilderConnection.connectJavabuilder(executionType);
   });
   postContainedLevelAttempt(this.studioApp_);
 };

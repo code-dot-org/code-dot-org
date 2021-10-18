@@ -2,6 +2,15 @@
   "fil-PH": {
     "data": {
       "lessons": {
+        "sports/Sports": {
+          "overview": "Sa online na gawaing ito, ang mga estudyante ay matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro. Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang laro gamit ang iba't ibang mga bilis at mga tunog."
+        },
+        "basketball/Bounce": {
+          "overview": "Sa online na gawaing ito, ang mga estudyante ay matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro. Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang laro gamit ang iba't ibang mga bilis at mga tunog."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan."
+        },
         "coursef-2021/lesson-2": {
           "student_overview": "Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online."
         },

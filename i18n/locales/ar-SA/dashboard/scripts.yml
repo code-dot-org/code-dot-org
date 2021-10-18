@@ -510,6 +510,8 @@ ar:
           lessons:
             Jigsaw:
               name: بانوراما
+              description_student: انقر واسحب لإنهاء الألغاز.
+              description_teacher: سيقدم هذا الدرس للطلاب فكرة عمّا يمكن توقعه عندما يتوجهون إلى مختبر الكمبيوتر. يبدأ الدرس بمناقشة موجزة لتعريفهم على آداب التعامل داخل مختبر الكمبيوتر، ثم يتقدمون في استخدام الكمبيوتر لإكمال الألغاز عبر الإنترنت.
           student_description: جرّب البرنامج التعليمي للغز تجميع الصورة.
         step:
           title: الخطوة
@@ -18012,6 +18014,8 @@ ar:
           lessons:
             lesson-15:
               name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -18357,6 +18361,8 @@ ar:
               name: يوم التقييم
             lesson-15:
               name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -18396,3 +18402,17 @@ ar:
           lessons:
             lesson-1:
               name: حفلة رقص (غير متصل)
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: عناصر واجهة المستخدم
+            lesson-2:
+              name: الأدوات
+        poetry:
+          lessons:
+            lesson-3:
+              name: المتغيرات
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: مسابقة التهجئة

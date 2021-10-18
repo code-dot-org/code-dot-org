@@ -2,6 +2,25 @@
   "ro-RO": {
     "data": {
       "lessons": {
+        "artist/Artist": {
+          "overview": "În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.",
+          "student_overview": "Creați imagini extraordinare programând Artistul."
+        },
+        "sports/Sports": {
+          "overview": "În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.",
+          "student_overview": "Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!"
+        },
+        "basketball/Bounce": {
+          "overview": "În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.",
+          "student_overview": "Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!"
+        },
+        "oceans/Oceans": {
+          "student_overview": "Rezumatul tutorialului: Mai întâi elevii vor clasifica obiectele în două categorii - „pești” și „obiecte care nu sunt pești”, încercând să îndepărteze gunoaiele din ocean. Apoi elevii vor extinde setul de date de învățare, incluzând alte creaturi marine care trăiesc în apă. În a doua parte a activității, elevii vor alege propriile etichete care vor fi aplicate unor imagini cu pești generați aleatoriu. Aceste date de învățare sunt apoi utilizate pentru un model de învățare automatizată care trebuie să poată asocia singur noile etichete cu imaginile corespunzătoare."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.",
+          "student_overview": "Fă clic și glisează obiecte pentru a rezolva puzzle-urile."
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!"
         },

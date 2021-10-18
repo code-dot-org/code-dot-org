@@ -4209,3 +4209,15 @@ hu:
               display_name: Tartalom
             lessonGroup-2:
               display_name: Tartalom
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: Eszközök
+        poetry:
+          lessons:
+            lesson-3:
+              name: változók
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Betüző méh

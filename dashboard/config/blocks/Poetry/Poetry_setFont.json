@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Poetry - Effects",
   "config": {
     "func": "setFont",
     "blockText": "set font {FONT}",
@@ -21,10 +21,6 @@
             "\"Georgia\""
           ],
           [
-            "Palatino",
-            "\"Palatino\""
-          ],
-          [
             "Times",
             "\"Times\""
           ],
@@ -39,14 +35,6 @@
           [
             "Impact",
             "\"Impact\""
-          ],
-          [
-            "Tahoma",
-            "\"Tahoma\""
-          ],
-          [
-            "Verdana",
-            "\"Verdana\""
           ]
         ]
       }

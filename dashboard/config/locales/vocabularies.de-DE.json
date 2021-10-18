@@ -2,6 +2,81 @@
   "de-DE": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "function/hero/unversioned": {
+          "word": "Funktion"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Bedingung"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Bedingungen"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Schleifen"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Verschlüsselung"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Verlustlose Kompression"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Debugging/Fehlerbeseitigung"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Maschinelles Lernen"
+        },
         "behavior/coursef/2021": {
           "word": "Verhalten"
         },

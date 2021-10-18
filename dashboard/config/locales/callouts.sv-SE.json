@@ -515,7 +515,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Nytt Block!",
-          "poetry_multiple_sprites": "Nytt Block!"
+          "poetry_multiple_sprites": "Nytt Block!",
+          "poetry_new_block": "Nytt Block!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Nytt Block!"

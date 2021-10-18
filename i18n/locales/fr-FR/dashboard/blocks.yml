@@ -1156,6 +1156,7 @@ fr:
         text: jouer le son {SOUND}
         options:
           SOUND:
+            "'sound://category_app/app_button_1.mp3'": bouton
             "'sound://category_collect/clicky_crunch.mp3'": crunch
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": bulle
             "'sound://category_animals/bear.mp3'": Ours
