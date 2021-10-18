@@ -98,6 +98,10 @@ class LevelsController < ApplicationController
   # GET /levels/get_filtered_levels/
   # Get all the information for levels after filtering
   def get_filtered_levels
+    if params[:name]&.start_with?('blockly:')
+      @levels = [Level.find_by_key(params[:name]).summarize_for_edit]
+      return render json: {numPages: 1, levels: @levels}
+    end
     filter_levels(params)
 
     @levels = @levels.limit(150)
