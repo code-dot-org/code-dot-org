@@ -20,7 +20,7 @@ import createResourcesReducer, {
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
-import {PublishedState} from '@cdo/apps/generated/courses/sharedCourseConstants';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 describe('UnitEditor', () => {
   let defaultProps, store;
