@@ -1680,6 +1680,9 @@
         },
         "helloworld_food_behaviors": {
           "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
         }
       }
     }
