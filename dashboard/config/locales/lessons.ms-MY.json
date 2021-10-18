@@ -17,6 +17,9 @@
         "oceans/Oceans": {
           "student_overview": "Rumusan Tutorial: Pelajar pertama mengklasifikasikan objek sebagai sama ada \"ikan\" atau \"bukan ikan\" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya."
         },
+        "outbreak/Outbreak": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
+        },
         "jigsaw/Jigsaw": {
           "overview": "Pelajaran ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.",
           "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."

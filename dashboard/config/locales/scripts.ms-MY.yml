@@ -6763,6 +6763,8 @@ ms:
           lessons:
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
+            Outbreak:
+              name: Mengekod Simulasi
           lesson_groups:
             outbreak:
               display_name: Simulasi Wabak
@@ -8294,5 +8296,6 @@ ms:
           lessons:
             lesson-1:
               name: Lebah Ejaan
+          title: Lebah Ejaan
         outbreak-csc:
           title: Wabak
