@@ -12,7 +12,7 @@ namespace :ci do
       ChatClient.log 'Updating local <b>chef</b> cookbooks...'
       RakeUtils.with_bundle_dir(cookbooks_dir) do
         Tempfile.open(['berks', '.tgz']) do |file|
-          RakeUtils.bundle_exec "berks package #{file.path}"
+          RakeUtils.chef_rbenv_exec "berks package #{file.path}"
           RakeUtils.sudo "tar xzf #{file.path} -C /var/chef"
         end
       end

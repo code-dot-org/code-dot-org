@@ -132,10 +132,18 @@ module RakeUtils
     Bundler.with_clean_env do
       ENV['AWS_DEFAULT_REGION'] ||= CDO.aws_region
       Dir.chdir(dir) do
-        bundle_install
+        chef_rbenv_exec('bundle install')
         yield
       end
     end
+  end
+
+  # As of October 2021, the version of Chef we require depends on
+  # Ruby 3, whereas the rest of our platform is still on Ruby
+  # 2.5. Until we are able to resolve this discrepancy, we need
+  # to provide special support for invoking Chef operations.
+  def self.chef_rbenv_exec(*args)
+    system 'RBENV_VERSION=3.0.0', 'rbenv', 'exec', *args
   end
 
   def self.bundle_exec(*args)

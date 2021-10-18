@@ -165,7 +165,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
         unless dry_run
           RakeUtils.with_bundle_dir(cookbooks_dir) do
             Tempfile.open('berks') do |tmp|
-              RakeUtils.bundle_exec 'berks', 'package', tmp.path
+              RakeUtils.chef_rbenv_exec('berks', 'package', tmp.path)
               Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
                 key: "#{CHEF_KEY}/#{branch}.tar.gz",
