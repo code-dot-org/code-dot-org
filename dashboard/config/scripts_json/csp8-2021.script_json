@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:26 UTC",
+    "serialized_at": "2021-10-18 22:03:52 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp8-2021"
@@ -66,7 +66,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "This lesson will be updated in Fall 2021 to reflect updates to the Create PT."
+        "overview": "This lesson is designed to introduce what the nuances of the Create PT are, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. ",
+        "preparation": "* Review pages 1-5 of the Create PT - Survival Guide",
+        "student_overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -83,10 +85,9 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.\r\n\r\nThe lesson concludes by providing students with resources to make a plan to complete the task staring in the next lesson.",
-        "preparation": "* [KEY - Create PT - Survival Guide](http://studio.code.org/s/csp8-2020/stage/2/puzzle/1)",
-        "purpose": "There are no new CS concepts covered in this lesson. It is a review of the processes and requirements of the Create Performance Task before students begin working on it individually. ",
-        "student_overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project."
+        "overview": "This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.",
+        "preparation": "* Review pages 8-15 of the Create PT - Survival Guide",
+        "student_overview": "This lesson uses the Create PT Survival Guide to help narrow down and brainstorm ideas for the actual project."
       },
       "seeding_key": {
         "lesson.key": "Create PT - Make a Plan",
@@ -492,6 +493,7 @@
       "key": "cd95f17e-0217-4cd7-b88c-88092457f87e",
       "position": 1,
       "properties": {
+        "description": "**Discuss**: *Based on our review of the Create PT yesterday...*\n\n**Discussion Goal**: The purpose of this discussion is to warm up students' brains and recall the elements of the Create PT. Students should start thinking about choices in light of what they have to do for the Create PT, rather than simply out of interest or \"coolness.\"  Hopefully, the two go hand in hand.\n\nIn particular, we'll be looking to understand the requirements so that students select appropriately scoped projects."
       },
       "seeding_key": {
         "activity_section.key": "cd95f17e-0217-4cd7-b88c-88092457f87e",
@@ -499,9 +501,22 @@
       }
     },
     {
+      "key": "a3419bcd-f633-4d02-ba18-d30aaf10cbbb",
+      "position": 2,
+      "properties": {
+        "description": "* What are the main things you have to do for the Create PT? \n* What should you do first?\n\n**Discuss:** *Let students call out the things they remember. Make this a quick review just to remind them of what was covered in the previous lesson.*\n\nA few of the things you need to do:\n\n* Write a program, possibly with a partner\n* Make a video of your code running\n* Answer written responses\n* Make a PDF of your code \n\nWhat should you do first?\n\n* Pick and scope down your project"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3419bcd-f633-4d02-ba18-d30aaf10cbbb",
+        "lesson_activity.key": "d83a5921-3b68-4a8d-874f-d03c0141ffcd"
+      }
+    },
+    {
       "key": "6f79ace5-1596-46ad-8e3e-67d6e7444546",
       "position": 1,
       "properties": {
+        "description": "Today we will use the Create PT Survival Guide to dig in a little deeper with the Create PT.  The beginning of the packet has a few quick activities that help get us in the right mindset for thinking about and doing the task so you are ready to hit the ground running.\n\nThe guide will be useful throughout the entire process of completing the actual Create Task as well.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "6f79ace5-1596-46ad-8e3e-67d6e7444546",
@@ -512,6 +527,7 @@
       "key": "83344e75-d6d4-4fb2-9d22-3705d0ba44e3",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: [Create PT Survival Guide 2021-22](https://docs.google.com/document/d/1G2m8yUqUdi-PI19cXMRmxtLjF2fqYXqwbdVZWhW2eLE/edit\t\n) and optionally give students access to the Scoring Guidelines and Task Directions distributed in the previous lesson."
       },
       "seeding_key": {
         "activity_section.key": "83344e75-d6d4-4fb2-9d22-3705d0ba44e3",
@@ -519,12 +535,93 @@
       }
     },
     {
+      "key": "d5699436-1460-4ef8-a97a-cdd973a90d32",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Task Overview (page 1) - 5 mins:** Have students quickly review the information on page 1 which summarizes components of the task and the role of the guide. Answer any high level questions that come up.\n    \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **What is Required of My Program (page 2) - 5 mins:** Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. These should be familiar ideas to students from reviewing sample submissions in the previous lesson.",
+        "name": "The Create PT Survival Guide"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5699436-1460-4ef8-a97a-cdd973a90d32",
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb"
+      }
+    },
+    {
+      "key": "aaeff9fb-0659-4514-b693-ace0fd673759",
+      "position": 4,
+      "properties": {
+        "description": "Based on these four takeaways, it's clear that you have a lot of freedom in deciding how to design your program. Before moving on, we're going to complete two short activities to make sure we really understand the third requirement about our functions, since that one is the most complicated.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aaeff9fb-0659-4514-b693-ace0fd673759",
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb"
+      }
+    },
+    {
+      "key": "f36923a6-6e5e-48af-9698-5403b2ac2c5c",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Function Requirement Activity 1 - Does It Count (pages 3 - 4) - 15 mins:** Ask students to complete the activity on page 3, using the scoring guidelines on page 4. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "f36923a6-6e5e-48af-9698-5403b2ac2c5c",
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb"
+      }
+    },
+    {
+      "key": "62a172d4-095c-4cbe-8afe-76abdb96b6d5",
+      "position": 6,
+      "properties": {
+        "description": "**Discuss:** *Have students share and compare their responses with a classmate. Afterwards lead a discussion on the patterns they see.*\n\n**Discussion Goal:** The main takeaways from this activity should be:\n\n* Some \"complicated\" looking functions may still not earn both rows if they are missing a component. \n* Two functions may look very similar but because of small differences, one will earn full credit while the other will not.\n* The task only includes 6 total points which are graded quickly by a very specific rubric. Knowing what the graders will be looking for gives you the best chance to demonstrate what you know.\n\nUse the Scoring Guide [Create PT Survival Guide - KEY ](https://docs.google.com/document/d/1bAAyj1BFv4hPZlOnup2AZ1SqJMKNm3gjFQ6h4nZnkJA/edit?usp=sharing)\t\n for commentary on individual algorithms.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "62a172d4-095c-4cbe-8afe-76abdb96b6d5",
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb"
+      }
+    },
+    {
+      "key": "6061340c-3cf2-41df-ab3d-974d934b3f75",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Function Requirements Activity 2 - Two Function Calls: (page 5) - 10 mins:** Ask students to \ncomplete the activity on page 5. This activity asks them to think through the different ways they might respond to response 3d. Students should brainstorm two possible arguments that could be used with the provided functions. They should then identify the condition that will run differently in each case and the ways the functions will run differently as a result."
+      },
+      "seeding_key": {
+        "activity_section.key": "6061340c-3cf2-41df-ab3d-974d934b3f75",
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb"
+      }
+    },
+    {
+      "key": "e3f0ada5-cf2e-4c06-8364-c08413564f5e",
+      "position": 8,
+      "properties": {
+        "description": "**Discuss:** *Have students share and compare their responses with a classmate. Afterward, lead a discussion on the patterns they see.*\n\n**Discussion Goal:** This activity is designed to help students anticipate how they'll need to respond to prompt 3d and potentially make some decisions about how to design their functions. Here are some things they may notice:\n\n* It is much more straightforward to answer the question in the second example since the parameter is being used directly in the conditional statement.\n* In either case students should come up with example arguments that run differently from one another.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3f0ada5-cf2e-4c06-8364-c08413564f5e",
+        "lesson_activity.key": "12127a8b-e011-4016-87bf-6bd7712405eb"
+      }
+    },
+    {
       "key": "0e6406d9-84c0-43f4-a867-651a2d416b4f",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of writing functions for the Create PT do you feel clicked today? What do you still have questions about?*\n\nHave students share with one another before sharing with the whole class.\n\n**Dicsussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. "
       },
       "seeding_key": {
         "activity_section.key": "0e6406d9-84c0-43f4-a867-651a2d416b4f",
+        "lesson_activity.key": "53d3b05b-2a35-45ed-8a9d-29e33de29fd0"
+      }
+    },
+    {
+      "key": "12be8d43-ab63-469b-a04b-6e1d798351ee",
+      "position": 2,
+      "properties": {
+        "description": "Next time we meet we'll look at strategies for narrowing down your topic and start to make a plan for completing the task.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "12be8d43-ab63-469b-a04b-6e1d798351ee",
         "lesson_activity.key": "53d3b05b-2a35-45ed-8a9d-29e33de29fd0"
       }
     },
@@ -941,6 +1038,18 @@
   ],
   "resources": [
     {
+      "name": "[KEY] Create PT Survival Guide 2021-22",
+      "url": "https://docs.google.com/document/d/1bAAyj1BFv4hPZlOnup2AZ1SqJMKNm3gjFQ6h4nZnkJA/edit?usp=sharing",
+      "key": "_key_create_pt_survival_guide_2021-22",
+      "properties": {
+        "type": "Answer Key",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "_key_create_pt_survival_guide_2021-22"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csp8-2021/resources",
       "key": "all_resources_8",
@@ -999,15 +1108,15 @@
       }
     },
     {
-      "name": "Create PT Survival Guide 2020-21",
-      "url": "https://docs.google.com/document/d/1jcK8o2w7wPODoHkYy7Tg56EjwnbIOsNEWowWRcfbbl4/edit",
-      "key": "create-pt-survival-guide-20-21",
+      "name": "Create PT Survival Guide 2021-22",
+      "url": "https://docs.google.com/document/d/1G2m8yUqUdi-PI19cXMRmxtLjF2fqYXqwbdVZWhW2eLE/edit?usp=sharing",
+      "key": "create_pt_survival_guide_2021-22",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
+        "type": "Resource",
+        "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "create-pt-survival-guide-20-21"
+        "resource.key": "create_pt_survival_guide_2021-22"
       }
     },
     {
@@ -1247,7 +1356,13 @@
     {
       "seeding_key": {
         "lesson.key": "Create PT - Make a Plan",
-        "resource.key": "create-pt-survival-guide-20-21"
+        "resource.key": "_key_create_pt_survival_guide_2021-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT - Make a Plan",
+        "resource.key": "create_pt_survival_guide_2021-22"
       }
     },
     {
@@ -1351,6 +1466,24 @@
         "lesson.key": "Create PT - Review the Task",
         "resource.key": "csp_unit_8_-_create_pt_prep"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_create_pt_survival_guide_2021-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "create_pt_survival_guide_2021-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "csp_unit_8_-_create_pt_prep"
+      }
     }
   ],
   "scripts_resources": [
@@ -1442,6 +1575,26 @@
       "seeding_key": {
         "lesson.key": "Create PT - Review the Task",
         "objective.key": "26d840b4-7310-455d-bb7f-76013c12dc71"
+      }
+    },
+    {
+      "key": "93ec839e-9481-4875-9043-709604c68dcf",
+      "properties": {
+        "description": "Describe the scoring guidelines for the Create PT"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "93ec839e-9481-4875-9043-709604c68dcf"
+      }
+    },
+    {
+      "key": "f4723cfe-854f-49c5-a229-ec7f157cb683",
+      "properties": {
+        "description": "Evaluate sample Create PT components by applying the scoring guidelines"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "f4723cfe-854f-49c5-a229-ec7f157cb683"
       }
     },
     {

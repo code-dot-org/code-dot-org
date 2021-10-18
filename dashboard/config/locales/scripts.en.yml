@@ -20753,8 +20753,8 @@ en:
             Create PT - Make a Plan:
               key: Create PT - Make a Plan
               name: Create PT   Make a Plan
-              description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.
-              description_teacher: "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.\r\n\r\nThe lesson concludes by providing students with resources to make a plan to complete the task staring in the next lesson."
+              description_student: This lesson uses the Create PT Survival Guide to help narrow down and brainstorm ideas for the actual project.
+              description_teacher: This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.
             Create PT - Complete the Task:
               key: Create PT - Complete the Task
               name: Create PT - Complete the Task (12 hrs)
@@ -20762,8 +20762,8 @@ en:
               description_teacher: "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio."
             lesson-4:
               name: Create PT Deep Dive
-              description_student: 
-              description_teacher: This lesson will be updated in Fall 2021 to reflect updates to the Create PT.
+              description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT.
+              description_teacher: 'This lesson is designed to introduce what the nuances of the Create PT are, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they''re scored. '
           lesson_groups: {}
           name: csp8-2021
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
