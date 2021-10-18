@@ -11,7 +11,7 @@ require 'fileutils'
 require 'require_all'
 
 require_relative '../../lib/cdo/shared_constants'
-require_relative '../../lib/cdo/shared_constants/courses/shared_course_constants'
+require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
 autoload_all File.expand_path('../../lib/cdo/shared_constants/pd', File.dirname(__FILE__))
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
@@ -94,7 +94,7 @@ def main
     ),
       source_module: SharedCourseConstants, transform_keys: false
     ),
-    "#{REPO_DIR}/apps/src/generated/courses/sharedCourseConstants.js"
+    "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
   )
 
   generate_shared_js_file(
