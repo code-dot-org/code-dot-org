@@ -11,6 +11,8 @@
   ],
   "published_state": "stable",
   "properties": {
+    "family_name": "csd",
+    "has_verified_resources": true,
     "teacher_resources": [
       [
         "curriculum",
@@ -21,8 +23,6 @@
         "https://forum.code.org/c/csd"
       ]
     ],
-    "has_verified_resources": true,
-    "family_name": "csd",
     "version_year": "2018"
   },
   "resources": [

@@ -5,18 +5,35 @@ import i18n from '@cdo/locale';
 import StylizedBaseDialog, {
   FooterButton
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import DialogInstructions from '@cdo/apps/templates/instructions/DialogInstructions';
+import ExampleImage from '@cdo/apps/templates/instructions/ExampleImage';
+import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 
 export function InstructionsDialog(props) {
+  function body() {
+    if (props.imgOnly && props.imgUrl) {
+      return (
+        <div style={styles.imgContainer}>
+          <ExampleImage src={props.imgUrl} />
+        </div>
+      );
+    }
+
+    return (
+      <Instructions
+        instructions={props.instructions}
+        imgURL={props.imgUrl}
+        isBlockly={props.isBlockly}
+        inTopPane={false}
+      />
+    );
+  }
+
   return (
     <StylizedBaseDialog
       isOpen={props.isOpen}
-      title={
-        props.title &&
-        props.showTitle && <h1 style={styles.title}>{props.title}</h1>
-      }
-      body={<DialogInstructions />}
+      title={<h1 style={styles.title}>{props.title}</h1>}
+      body={body()}
       renderFooter={() => (
         <FooterButton
           type="confirm"
@@ -31,21 +48,26 @@ export function InstructionsDialog(props) {
 }
 
 InstructionsDialog.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 
   // Provided by Redux.
   isOpen: PropTypes.bool,
-  handleClose: PropTypes.func.isRequired,
-  showTitle: PropTypes.bool
+  imgOnly: PropTypes.bool,
+  imgUrl: PropTypes.string,
+  instructions: PropTypes.string,
+  isBlockly: PropTypes.bool,
+  handleClose: PropTypes.func.isRequired
 };
 
 export default connect(
   state => ({
     isOpen: state.instructionsDialog.open,
-    // The presence of longInstructions determines showTitle because
-    // the grandchild of this component, <Instructions/>, uses this same calculation
-    // in its renderMainBody method. This prevents rendering the title twice.
-    showTitle: !!state.instructions.longInstructions
+    imgOnly: state.instructionsDialog.imgOnly,
+    imgUrl: state.instructionsDialog.imgUrl || state.pageConstants.aniGifURL,
+    instructions:
+      state.instructions.longInstructions ||
+      state.instructions.shortInstructions,
+    isBlockly: state.pageConstants.isBlockly
   }),
   dispatch => ({
     handleClose: () => dispatch(closeDialog())
@@ -55,5 +77,9 @@ export default connect(
 const styles = {
   title: {
     fontSize: 24
+  },
+  imgContainer: {
+    display: 'flex',
+    justifyContent: 'center'
   }
 };

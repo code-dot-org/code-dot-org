@@ -24,12 +24,9 @@ import AbuseError from './code-studio/components/AbuseError';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
 import ChallengeDialog from './templates/ChallengeDialog';
-import DialogButtons from './templates/DialogButtons';
-import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import FeedbackUtils from './feedback';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
-import InstructionsDialogWrapperDEPRECATED from './templates/instructions/InstructionsDialogWrapperDEPRECATED';
 import SmallFooter from './code-studio/components/SmallFooter';
 import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
@@ -54,12 +51,10 @@ import {
   configCircuitPlayground,
   configMicrobit
 } from './lib/kits/maker/dropletConfig';
-import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
-import {resetAniGif} from '@cdo/apps/utils';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
@@ -320,27 +315,14 @@ StudioApp.prototype.init = function(config) {
   this.configureDom(config);
 
   if (!config.level.iframeEmbedAppAndCode) {
-    // We are migrating usages of InstructionsDialogWrapperDEPRECATED to use
-    // InstructionsDialog instead. NetSim is the first consumer to be migrated.
-    const useNewDialog = config.app === 'netsim';
     ReactDOM.render(
       <Provider store={getStore()}>
-        {useNewDialog ? (
-          <InstructionsDialog
-            title={msg.puzzleTitle({
-              stage_total: config.level.lesson_total,
-              puzzle_number: config.level.puzzle_number
-            })}
-          />
-        ) : (
-          <div>
-            <InstructionsDialogWrapperDEPRECATED
-              showInstructionsDialog={autoClose => {
-                this.showInstructionsDialog_(config.level, autoClose);
-              }}
-            />
-          </div>
-        )}
+        <InstructionsDialog
+          title={msg.puzzleTitle({
+            stage_total: config.level.lesson_total,
+            puzzle_number: config.level.puzzle_number
+          })}
+        />
       </Provider>,
       document.body.appendChild(document.createElement('div'))
     );
@@ -1312,115 +1294,6 @@ StudioApp.prototype.onReportComplete = function(response) {
 };
 
 /**
- * Show our instructions dialog. This should never be called directly, and will
- * instead be called when the state of our redux store changes.
- * @param {object} level
- * @param {boolean} autoClose - closes instructions after 32s if true
- */
-StudioApp.prototype.showInstructionsDialog_ = function(level, autoClose) {
-  const reduxState = getStore().getState();
-  const isMarkdownMode =
-    !!reduxState.instructions.longInstructions &&
-    !reduxState.instructionsDialog.imgOnly;
-
-  var headerElement;
-  if (isMarkdownMode) {
-    headerElement = document.createElement('h1');
-    headerElement.className = 'markdown-level-header-text dialog-title';
-    headerElement.innerHTML = msg.puzzleTitle({
-      stage_total: level.lesson_total,
-      puzzle_number: level.puzzle_number
-    });
-    if (!this.icon) {
-      headerElement.className += ' no-modal-icon';
-    }
-  }
-
-  // Create a div to eventually hold this content, and add it to the
-  // overall container. We don't want to render directly into the
-  // container just yet, because our React component could contain some
-  // elements that don't want to be rendered until they are in the DOM
-  var instructionsReactContainer = document.createElement('div');
-  instructionsReactContainer.className = 'instructions-content';
-  var instructionsDiv = document.createElement('div');
-  instructionsDiv.className = isMarkdownMode
-    ? 'markdown-instructions-container'
-    : 'instructions-container';
-  instructionsDiv.appendChild(instructionsReactContainer);
-
-  var buttons = document.createElement('div');
-  instructionsDiv.appendChild(buttons);
-  ReactDOM.render(<DialogButtons ok={true} />, buttons);
-
-  // If there is an instructions block on the screen, we want the instructions dialog to
-  // shrink down to that instructions block when it's dismissed.
-  // We then want to flash the instructions block.
-  var hideOptions = null;
-  var endTargetSelector = '#bubble';
-
-  if ($(endTargetSelector).length) {
-    hideOptions = {};
-    hideOptions.endTarget = endTargetSelector;
-  }
-
-  var hideFn = _.bind(function() {
-    // Set focus to ace editor when instructions close:
-    if (this.editCode && this.currentlyUsingBlocks()) {
-      this.editor.aceEditor.focus();
-    }
-
-    // update redux
-    getStore().dispatch(closeInstructionsDialog());
-  }, this);
-
-  this.instructionsDialog = this.createModalDialog({
-    markdownMode: isMarkdownMode,
-    contentDiv: instructionsDiv,
-    icon: this.icon,
-    defaultBtnSelector: '#ok-button',
-    onHidden: hideFn,
-    scrollContent: true,
-    scrollableSelector: '.instructions-content',
-    header: headerElement
-  });
-
-  // Now that our elements are guaranteed to be in the DOM, we can
-  // render in our react components
-  $(this.instructionsDialog.div).on('show.bs.modal', () => {
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <DialogInstructions />
-      </Provider>,
-      instructionsReactContainer
-    );
-    resetAniGif(this.instructionsDialog.div.find('img.aniGif').get(0));
-  });
-
-  if (autoClose) {
-    setTimeout(
-      _.bind(function() {
-        this.instructionsDialog.hide();
-      }, this),
-      32000
-    );
-  }
-
-  var okayButton = buttons.querySelector('#ok-button');
-  if (okayButton) {
-    dom.addClickTouchEvent(
-      okayButton,
-      _.bind(function() {
-        if (this.instructionsDialog) {
-          this.instructionsDialog.hide();
-        }
-      }, this)
-    );
-  }
-
-  this.instructionsDialog.show({hideOptions: hideOptions});
-};
-
-/**
  *  Resizes the blockly workspace.
  */
 StudioApp.prototype.onResize = function() {
@@ -1469,7 +1342,8 @@ function resizePinnedBelowVisualizationArea() {
     'spelling-table-wrapper',
     'gameButtons',
     'gameButtonExtras',
-    'song-selector-wrapper'
+    'song-selector-wrapper',
+    'poemSelector'
   ];
   possibleElementsAbove.forEach(id => {
     let element = document.getElementById(id);
