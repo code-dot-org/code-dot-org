@@ -594,7 +594,7 @@ class Level < ApplicationRecord
     {
       id: id.to_s,
       type: self.class.to_s,
-      name: name == 'blockly' ? level_num : name,
+      name: key,
       updated_at: updated_at.localtime.strftime("%D at %r"),
       owner: user&.name,
       url: "/levels/#{id}/edit",
@@ -742,7 +742,7 @@ class Level < ApplicationRecord
     {
       levelOptions: [
         ['All types', ''],
-        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.sort_by {|a| a[0]}
+        *LevelsController::LEVEL_CLASSES.map {|x| [x.name, x.name]}.push(['Blockly', 'Blockly']).sort_by {|a| a[0]}
       ],
       scriptOptions: [
         ['All scripts', ''],

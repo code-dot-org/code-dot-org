@@ -113,7 +113,7 @@ function PoemSelector(props) {
   };
 
   return (
-    <div style={styles.container}>
+    <div id="poemSelector" style={styles.container}>
       <PoemEditor isOpen={isOpen} handleClose={handleClose} />
       <label>
         <b>{msg.selectPoem()}</b>
