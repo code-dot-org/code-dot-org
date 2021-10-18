@@ -18,8 +18,8 @@ const names = [
 // element in the names array above, rather than the first element (default).
 const getItems = (count, offset = 0) =>
   Array.from({length: count}, (v, k) => k).map(k => ({
-    id: `item-${names[k + offset]}-${new Date().getTime()}`,
-    content: names[k + offset]
+    id: names[k + offset],
+    name: names[k + offset]
   }));
 
 export default storybook => {
