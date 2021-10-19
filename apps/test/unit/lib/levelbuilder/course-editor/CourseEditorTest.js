@@ -15,7 +15,10 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  PublishedState,
+  InstructionType
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 const defaultProps = {
@@ -38,7 +41,8 @@ const defaultProps = {
   versionYearOptions: ['2017', '2018', '2019'],
   initialAnnouncements: [],
   useMigratedResources: false,
-  coursePath: '/courses/test-course'
+  coursePath: '/courses/test-course',
+  initialInstructionType: InstructionType.teacher_led
 };
 
 describe('CourseEditor', () => {
