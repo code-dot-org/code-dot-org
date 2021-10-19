@@ -207,7 +207,7 @@
     "uglifyjs-webpack-plugin": "2.1.1",
     "unminified-webpack-plugin": "^2.0.0",
     "url-loader": "^0.5.7",
-    "video.js": "7.6.6",
+    "video.js": "7.14.3",
     "vmsg": "^0.3.6",
     "webpack": "^4.29.0",
     "webpack-bundle-analyzer": "^3.3.2",
