@@ -20,7 +20,6 @@ export const UsPhoneNumberInput = props => {
   );
 };
 UsPhoneNumberInput.propTypes = {
-  ...UsPhoneNumberInputComponent.propTypes,
   // the name of the input
   name: PropTypes.string.isRequired
 };

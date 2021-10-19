@@ -22,7 +22,6 @@ export const FieldGroup = props => {
   );
 };
 FieldGroup.propTypes = {
-  ...FieldGroupComponent.propTypes,
   // the name of the input
   name: PropTypes.string.isRequired
 };
