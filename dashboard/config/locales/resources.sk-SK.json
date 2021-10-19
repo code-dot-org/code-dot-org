@@ -2,6 +2,12 @@
   "sk-SK": {
     "data": {
       "resources": {
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "Udalosti v Bounce – Ako fungujú? "
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "Udalosti v Bounce – Ako fungujú? "
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Predstavenie Sprite Labu",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
@@ -49,7 +55,14 @@
           "name": "Objav silu slov: kvíz pre lekciu",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
         },
+        "variables_blank_space_stories/coursef/2021": {
+          "name": "Premenné: Príbehy na doplnenie"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Príbehy na doplnenie"
+        },
         "blank_space_stories/coursef/2021": {
+          "name": "Príbehy na doplnenie",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
         "text_and_prompts/coursef/2021": {
@@ -57,7 +70,14 @@
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "user_input_programs/coursef/2021": {
+          "name": "Programy reagujúce na vstupy používateľa",
           "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "Miniprojekt: Programy reagujúce na vstupy používateľa"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "Miniprojekt: Programy reagujúce na vstupy používateľa"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Mysli celým telom, keď si online",
@@ -77,6 +97,9 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Zábava s cyklami \"for\""
+        },
+        "running-simulations/coursef/2021": {
+          "name": "Vytváranie simulácií"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet"
@@ -182,6 +205,9 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Mysli celým telom, keď si online"
+        },
+        "the-right-app-scenarios/courseb/2021": {
+          "name": "Vhodná aplikácia – situácie"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Veľká udalosť"
@@ -314,6 +340,9 @@
         "pause_and_think_online/coursec/2021": {
           "name": "Mysli celým telom, keď si online"
         },
+        "right-app-scenarios/coursec/2021": {
+          "name": "Grafické znázorňovanie údajov z Play Labu"
+        },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Binárne náramky"
         },
@@ -366,22 +395,22 @@
           "name": "Úpravy virtuálnych lekcií"
         },
         "graph-paper-programming/coursed/2021": {
-          "name": "Programovanie na štvorčekový papier"
+          "name": "Programovanie na štvorčekovom papieri"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Programovanie na štvorčekový papier"
+          "name": "Programovanie na štvorčekovom papieri"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Programovanie na štvorčekový papier"
+          "name": "Programovanie na štvorčekovom papieri"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Programovanie na štvorčekový papier"
+          "name": "Programovanie na štvorčekovom papieri"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Programovanie na štvorčekový papier"
+          "name": "Programovanie na štvorčekovom papieri"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Programovanie na štvorčekový papier"
+          "name": "Programovanie na štvorčekovom papieri"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Programovanie v páre"
@@ -404,8 +433,14 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Štafetové programovanie"
         },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "Udalosti v Bounce – Ako fungujú? "
+        },
         "pause_and_think_online/coursed/2021": {
           "name": "Mysli celým telom, keď si online"
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "Tanečná párty – sprievodca projektom"
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Mysli celým telom, keď si online"
@@ -504,7 +539,7 @@
           "name": "Mysli celým telom, keď si online"
         },
         "dance-party-project-guide/express/2021": {
-          "name": "Sprievodca projektom Tanečná párty"
+          "name": "Tanečná párty – sprievodca projektom"
         },
         "dance-party-playlist/express/2021": {
           "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"

@@ -1680,6 +1680,9 @@
         },
         "helloworld_food_behaviors": {
           "moving with arrow keys": "एरो कीज के साथ मूव करना।"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "एरो कीज के साथ मूव करना।"
         }
       }
     }

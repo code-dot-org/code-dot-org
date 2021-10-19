@@ -2972,3 +2972,8 @@ lt:
           lessons:
             lesson-1:
               name: Rašanti bitė
+          title: Rašanti bitė
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys

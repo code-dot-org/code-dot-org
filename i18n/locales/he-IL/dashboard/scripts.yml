@@ -3872,6 +3872,8 @@ he:
           lessons:
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
+            Outbreak:
+              name: קידוד של סימולציה
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
@@ -4291,6 +4293,7 @@ he:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
+            lesson-20: {}
         csa5-pilot:
           lessons:
             Java Lab: {}
@@ -4647,6 +4650,7 @@ he:
             lesson-1: {}
             lesson-3: {}
             lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -4767,12 +4771,9 @@ he:
             lesson-2:
               name: כלים
             lesson-3: {}
-        poem-art:
-          lessons:
-            lesson-1: {}
+        poem-art: {}
         poetry:
           lessons:
-            lesson-1: {}
             lesson-2: {}
             lesson-3:
               name: משתנים
@@ -4782,6 +4783,21 @@ he:
           lessons:
             lesson-1:
               name: תחרות איות
+          title: תחרות איות
         outbreak-csc: {}
         explore-data-1: {}
         counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}

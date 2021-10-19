@@ -331,6 +331,7 @@ function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
     var currentEvent = eventLog[eventLog.length - 1];
     var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
+      var spriteIds = getSpriteIdsInUse();
       for (var spriteId in spriteIds) {
         if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
           // clicked sprite caused speech in some sprite

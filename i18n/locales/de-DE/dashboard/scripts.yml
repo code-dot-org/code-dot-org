@@ -15683,6 +15683,8 @@ de:
           lessons:
             Virus Simulation for Code Bytes:
               name: Programmierung einer Simulation
+            Outbreak:
+              name: Programmierung einer Simulation
           lesson_groups:
             outbreak:
               display_name: Ausbruchssimulation
@@ -17608,6 +17610,7 @@ de:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
+            lesson-20: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -18167,6 +18170,7 @@ de:
             lesson-1: {}
             lesson-3: {}
             lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -18310,12 +18314,9 @@ de:
             lesson-2:
               name: Werkzeuge
             lesson-3: {}
-        poem-art:
-          lessons:
-            lesson-1: {}
+        poem-art: {}
         poetry:
           lessons:
-            lesson-1: {}
             lesson-2: {}
             lesson-3:
               name: Variablen
@@ -18325,7 +18326,26 @@ de:
           lessons:
             lesson-1:
               name: Buchstabierwettbewerb
+          title: Buchstabierwettbewerb
         outbreak-csc:
           title: Ausbruch
         explore-data-1: {}
         counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14:
+              name: Prüfungstag
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt

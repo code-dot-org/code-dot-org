@@ -22,21 +22,30 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Szyfrowanie i klucze publiczne",
           "url": "https://youtu.be/ZghMPWGXexs"
         },
         "hocencryption/hoc-encryption/unversioned": {
+          "name": "Widgety szyfrowania w Studiu kodowania",
           "url": "https://studio.code.org/s/hoc-encryption"
         },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
         "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Podsumowanie zajęć - Dekoduj tę wiadomość",
           "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/"
         },
         "decode-this-message/text-compression/unversioned": {
+          "name": "Dekoduj tę wiadomość",
           "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
         },
         "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Widgety kompresji tekstu w Studio kodowania",
           "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1"
         },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Film: Kompresja tekstu z Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {

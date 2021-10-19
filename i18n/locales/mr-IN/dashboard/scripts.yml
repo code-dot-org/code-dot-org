@@ -101,6 +101,10 @@ mr:
             Flappy Code:
               name: फ्लॅपी कोड
           student_description: 10 मिनिटांपेक्षा कमी वेळात तुमचा स्वत:चा गेम लिहायचाय? आमचे फ्लॅपी कोड ट्युटोरीयल करून बघा!
+        jigsaw:
+          lessons:
+            Jigsaw:
+              description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
         Hour of Code:
           title: अवर ऑफ कोड 2013
           description: अँग्री बर्ड्स, प्लँट्स व्हर्सेस झोम्बीज यातील पात्रांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून पहा!
@@ -734,6 +738,8 @@ mr:
           lessons:
             Learn to Drag and Drop:
               name: ड्रॅग आणि ड्रॉप करायला शिका
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             'Loops: Happy Loops':
               name: हॅपी लूप्स
             Loops in Collector:
@@ -746,6 +752,8 @@ mr:
               name: हार्वेस्टरसह प्रोग्रामिंग
             Loops in Harvester:
               name: हार्वेस्टर सोबत लूप
+            Sequencing in Maze:
+              name: अँग्री बर्ड्स सह अनुक्रम
         express-2018:
           lessons:
             Loops in Artist:
@@ -768,12 +776,18 @@ mr:
               name: मेझ मध्ये लूप पर्यंत
             Debugging in Maze:
               name: स्क्रॅट सोबत डीबगिंग
+            Programming in Collector:
+              name: लॉरेलसह खजिना गोळा करणे
             Programming in Artist:
               name: कोडसह कलात्मक गोष्टी तयार करणे
             Loops with Rey and BB-8:
               name: रे आणि बीबी -8 सह लूप
+            'Concept Practice with Minecraft ':
+              name: माइनक्राफ्ट सह पुढे  पाहणे
             Nested Loops in Frozen:
               name: अॅना आणि एल्सासह नेस्टेड लूप्स
+            Conditionals & Loops in Harvester:
+              name: कंडीशनल्स सह हार्वेस्टिंग
             Functions in Artist:
               name: आर्टीस्टमध्ये फंक्शन्स
             Build a Flappy Game:
@@ -814,25 +828,37 @@ mr:
               name: जर/अन्यथा  बी सह
             Artist Binary:
               name: आर्टीस्टसह बायनरी इमेजेस
+            Nested Loops in Frozen:
+              name: अॅना आणि एल्सा सह स्नोफ्लेक्स
             Until Loops in Maze:
               name: मेझ मध्ये लूप पर्यंत
+            Conditionals & Loops in Harvester:
+              name: कंडीशनल्स सह हार्वेस्टिंग
             Nested Loops in Maze:
               name: मेझ मध्ये नेस्टेड लूप
         coursec-2018:
           assignment_family_title: अभ्यासक्रम C
           lessons:
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Debugging in Maze:
               name: मेझ मध्ये डीबगिंग
+            Programming in Collector:
+              name: लॉरेलसह खजिना गोळा करणे
             Programming in Artist:
               name: कोडसह कलात्मक गोष्टी तयार करणे
             Loops with Rey and BB-8:
               name: रे आणि बीबी -8 सह लूप
             Loops in Artist:
               name: लूपसह स्टिकर आर्ट
+            Loops in Harvester:
+              name: लूप सह हार्वेस्टिंग क्रॉप्स
             Build a Flappy Game:
               name: " फ्लॅपी गेम तयार करा"
             Events in Play Lab:
               name: इव्हेंट सोबत गेम चा पाठलाग करणे
+            Looking Ahead:
+              name: माइनक्राफ्ट सह पुढे  पाहणे
         coursee-2018:
           assignment_family_title: अभ्यासक्रम E
           lessons:
@@ -846,6 +872,8 @@ mr:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops with Frozen:
               name: फ्रोझन सोबत नेस्टेड लूप
+            Conditionals:
+              name: शेतकऱ्यासह कंडीशनल्स
             Build a Star Wars Game:
               name: एक स्टार वॉर्स गेम तयार करा
             Functions in Artist:
@@ -876,10 +904,14 @@ mr:
               name: आर्टीस्टसह फॉर लूप्स
             Functions with Parameters in Artist:
               name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
+            Conditionals:
+              name: शेतकऱ्यासह कंडीशनल्स
             Variables as Constant in Artist:
               name: आर्टीस्टसह व्हेरीएबल्स
             Variables that Change in Artist:
               name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
+            Conditionals in Farmer:
+              name: शेतकऱ्यासह कंडीशनल्स
         csp2-2018:
           lessons:
             Text Compression:
@@ -1043,10 +1075,14 @@ mr:
               name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
             Nested Loops in the Maze:
               name: मेझ मध्ये नेस्टेड लूप
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
+            Virtual Pet:
+              name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
             Running Simulations:
               name: रनिंग सिम्युलेशन
         dance-low:
@@ -1080,6 +1116,8 @@ mr:
               name: मेझ मध्ये लूप पर्यंत
             Conditionals in Bee:
               name: जर/अन्यथा  बी सह
+            Conditionals & Loops in Harvester:
+              name: कंडीशनल्स सह हार्वेस्टिंग
             Artist Binary:
               name: आर्टीस्टसह बायनरी इमेजेस
             Build a Star Wars Game:
@@ -1102,6 +1140,8 @@ mr:
               name: नेस्टेड लूप्स
             Nested Loops with Frozen:
               name: फ्रोझन सोबत नेस्टेड लूप
+            Conditionals:
+              name: शेतकऱ्यासह कंडीशनल्स
             Build a Star Wars Game:
               name: एक स्टार वॉर्स गेम तयार करा
             Functions in Minecraft:
@@ -1110,12 +1150,16 @@ mr:
               name: हार्वेस्टर सोबत फंक्शन्स
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Frozen:
               name: फ्रोझन सोबत नेस्टेड लूप
             Programming and Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
+            Swimming Fish with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
         express-2019:
           lesson_groups:
             csf_warmup:
@@ -1125,20 +1169,30 @@ mr:
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Debugging in Maze:
               name: स्क्रॅट सोबत डीबगिंग
+            Programming in Collector:
+              name: लॉरेलसह खजिना गोळा करणे
             Programming in Artist:
               name: कोडसह कलात्मक गोष्टी तयार करणे
             Loops with Rey and BB-8:
               name: रे आणि बीबी -8 सह लूप
             Loops in Artist:
               name: लूपसह स्टिकर आर्ट
+            'Concept Practice with Minecraft ':
+              name: माइनक्राफ्ट सह पुढे  पाहणे
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
+            Nested Loops in Frozen:
+              name: अॅना आणि एल्सा सह स्नोफ्लेक्स
             Until Loops in Maze:
               name: मेझ मध्ये लूप पर्यंत
             Conditionals in Bee:
               name: जर/अन्यथा  बी सह
+            Conditionals & Loops in Harvester:
+              name: कंडीशनल्स सह हार्वेस्टिंग
             Functions in Minecraft:
               name: माईनक्राफ्ट मधील फंक्शन्स
             Functions in Harvester:
@@ -1155,6 +1209,8 @@ mr:
               name: आर्टीस्टसह फॉर लूप्स
             Artist Binary:
               name: आर्टीस्ट बायनरी
+            Virtual Pet with Sprite Lab:
+              name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
             Dance Party:
               name: डांस पार्टी
         andrea-test:
@@ -1173,18 +1229,26 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Debugging in Maze:
               name: मेझ मध्ये डीबगिंग
+            Programming in Collector:
+              name: लॉरेलसह खजिना गोळा करणे
             Programming in Artist:
               name: कोडसह कलात्मक गोष्टी तयार करणे
             Loops with Rey and BB-8:
               name: रे आणि बीबी -8 सह लूप
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
+            Loops in Harvester:
+              name: लूप सह हार्वेस्टिंग क्रॉप्स
             Build a Flappy Game:
               name: " फ्लॅपी गेम तयार करा"
             Events in Play Lab:
               name: इव्हेंट सोबत गेम चा पाठलाग करणे
+            Looking Ahead:
+              name: माइनक्राफ्ट सह पुढे  पाहणे
             Sticker Art with Loops:
               name: लूपसह स्टिकर आर्ट
         coursea-2019:
@@ -1204,10 +1268,12 @@ mr:
               name: आर्टीस्टमध्ये लूप्स
             Events in Play Lab:
               name: इव्हेंटसह मूव्ह
+              description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
             Ocean Scene with Loops:
               name: लूपसह ओशियन सीन
             Learn to Drag and Drop:
               name: ड्रॅग आणि ड्रॉप करायला शिका
+              description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
             Loops in Ice Age:
               name: स्क्रॅटसह लूप
         courseb-2019:
@@ -1223,10 +1289,16 @@ mr:
               name: लूपसह गार्डन काढणे
             Events in Play Lab:
               name: इव्हेंटसह एक शाही लढाई
+            The Right App:
+              description_student: आपले स्वतःचे स्मार्टफोन अॅप स्केच करा.
             Loops in Harvester:
               name: हार्वेस्टर सोबत लूप
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
+            Sequencing in Maze:
+              name: अँग्री बर्ड्स सह अनुक्रम
         pre-express-2019:
           lesson_groups:
             csf_sequencing:
@@ -1242,6 +1314,8 @@ mr:
               name: लूपसह गार्डन काढणे
             Learn to Drag and Drop:
               name: ड्रॅग आणि ड्रॉप करायला शिका
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
             Tell a Story in Play Lab:
@@ -1517,6 +1591,7 @@ mr:
           lessons:
             Learn to Drag and Drop:
               name: ड्रॅग आणि ड्रॉप करायला शिका
+              description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
             'Loops: Happy Loops':
               name: हॅपी लूप्स
             Loops in Ice Age:
@@ -1527,6 +1602,7 @@ mr:
               name: लूपसह ओशियन सीन
             Events in Play Lab:
               name: इव्हेंटसह मूव्ह
+              description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
         courseb-2020:
           lesson_groups:
             csf_sequencing:
@@ -1534,6 +1610,10 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
+            Sequencing in Maze:
+              name: अँग्री बर्ड्स सह अनुक्रम
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
             Loops in Harvester:
@@ -1542,6 +1622,8 @@ mr:
               name: लॉरेल सोबत लूप
             Loops in Artist:
               name: लूपसह गार्डन काढणे
+            The Right App:
+              description_student: आपले स्वतःचे स्मार्टफोन अॅप स्केच करा.
             Events in Play Lab:
               name: इव्हेंटसह एक शाही लढाई
         coursec-2020:
@@ -1552,12 +1634,20 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Debugging in Maze:
               name: मेझ मध्ये डीबगिंग
+            Programming in Collector:
+              name: लॉरेलसह खजिना गोळा करणे
             Programming in Artist:
               name: कोडसह कलात्मक गोष्टी तयार करणे
             Loops with Rey and BB-8:
               name: रे आणि बीबी -8 सह लूप
+            Loops in Harvester:
+              name: लूप सह हार्वेस्टिंग क्रॉप्स
+            Looking Ahead:
+              name: माइनक्राफ्ट सह पुढे  पाहणे
             Sticker Art with Loops:
               name: लूपसह स्टिकर आर्ट
             Build a Flappy Game:
@@ -1590,6 +1680,8 @@ mr:
               name: फार्मर मधील व्हाईल लुप्स
             Until Loops in Maze:
               name: मेझ मध्ये लूप पर्यंत
+            Conditionals & Loops in Harvester:
+              name: कंडीशनल्स सह हार्वेस्टिंग
             Artist Binary:
               name: आर्टीस्टसह बायनरी इमेजेस
             Dance Party:
@@ -1602,6 +1694,10 @@ mr:
           lessons:
             Programming and Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
+            Conditionals:
+              name: शेतकऱ्यासह कंडीशनल्स
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Frozen:
@@ -1618,6 +1714,8 @@ mr:
           lessons:
             Functions in Minecraft:
               name: माईनक्राफ्ट मधील फंक्शन्स
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
             Nested Loops in the Maze:
@@ -1630,6 +1728,8 @@ mr:
               name: आर्टीस्टमध्ये व्हेरीएबल्स बदलणे
             For Loops in Artist:
               name: आर्टीस्टसह फॉर लूप्स
+            Virtual Pet:
+              name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
             AI for Oceans:
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
               description_student: 'ट्युटोरीयल सारांश: आधी विद्यार्थी महासागरातून कचरा काढून टाकण्याचा प्रयत्न करण्यासाठी ऑब्जेक्टचे "मासा आहे" किंवा "मासा नाही" असे वर्गीकरण करतील. नंतर, विद्यार्थ्यांना पाण्यातील इतर प्राणी समाविष्ट करण्यासाठी त्यांच्या ट्रेनिंग सेटचा विस्तार करावा लागेल. कृतीच्या दुसऱ्या भागात, विद्यार्थी यादृच्छिकपणे तयार केलेल्या माशांच्या इमेजेसना लागू करण्यासाठी त्यांची स्वत:ची लेबल्स निवडतील.हा ट्रेनिंग डेटा मशीन लर्निंग मॉडेलसाठी वापरला जाईल आणि मग ते नवीन इमेजेसना स्वत: लेबल करू शकेल.'
@@ -1662,16 +1762,28 @@ mr:
               name: आर्टीस्टमध्ये फंक्शन्स
             For Loops in Artist:
               name: आर्टीस्टमध्ये फॉर लूप्स
+            Virtual Pet with Sprite Lab:
+              name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
+            Swimming Fish with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
+            Programming with Angry Birds:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Debugging with Scrat:
               name: स्क्रॅट सोबत डीबगिंग
+            Collecting Treasure with Laurel:
+              name: लॉरेलसह खजिना गोळा करणे
             Creating Art with Code:
               name: कोडसह कलात्मक गोष्टी तयार करणे
             Sticker Art with Loops:
               name: लूपसह स्टिकर आर्ट
             Nested Loops in Maze:
               name: मेझ मध्ये नेस्टेड लूप
+            Snowflakes with Anna and Elsa:
+              name: अॅना आणि एल्सा सह स्नोफ्लेक्स
             If/Else with Bee:
               name: जर/अन्यथा  बी सह
+            Harvesting with Conditionals:
+              name: कंडीशनल्स सह हार्वेस्टिंग
             Functions with Harvester:
               name: हार्वेस्टर सोबत फंक्शन्स
             Functions with Artist:
@@ -1758,6 +1870,8 @@ mr:
           lessons:
             Virus Simulation for Code Bytes:
               name: सिम्युलेशनचे कोडींग करणे
+            Outbreak:
+              name: सिम्युलेशनचे कोडींग करणे
           lesson_groups:
             outbreak:
               display_name: आऊटब्रेक सिम्युलेशन
@@ -1812,6 +1926,7 @@ mr:
             Learn to Drag and Drop:
               key: ड्रॅग आणि ड्रॉप करायला शिका
               name: ड्रॅग आणि ड्रॉप करायला शिका
+              description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
             'Loops: Happy Loops':
               name: हॅपी लूप्स
             Loops in Ice Age:
@@ -1821,6 +1936,10 @@ mr:
             Ocean Scene with Loops:
               key: लूपसह ओशियन सीन
               name: लूपसह ओशियन सीन
+            Events in Play Lab:
+              description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
+            lesson-1:
+              description_student: आर्टीस्ट सोबत एक गोष्ट सांगा!
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
@@ -1828,6 +1947,10 @@ mr:
               display_name: ईव्हेंट्स
         courseb-2021:
           lessons:
+            Sequencing in Maze:
+              name: अँग्री बर्ड्स सह अनुक्रम
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
             Loops in Harvester:
@@ -1837,6 +1960,10 @@ mr:
             Loops in Artist:
               key: आर्टीस्टमध्ये लूप्स
               name: लूपसह गार्डन काढणे
+            The Right App:
+              description_student: आपले स्वतःचे स्मार्टफोन अॅप स्केच करा.
+            lesson-1:
+              description_student: आपली स्वतःची स्टोरी किंवा गेम तयार करा.
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
@@ -1844,15 +1971,23 @@ mr:
               display_name: ईव्हेंट्स
         coursec-2021:
           lessons:
+            Programming in Maze:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Debugging in Maze:
               key: मेझ मध्ये डीबगिंग
               name: मेझ मध्ये डीबगिंग
+            Programming in Collector:
+              name: लॉरेलसह खजिना गोळा करणे
             Programming in Artist:
               key: आर्टीस्टमध्ये प्रोग्रॅमिंग
               name: कोडसह कलात्मक गोष्टी तयार करणे
             Loops with Rey and BB-8:
               key: रे आणि बीबी -8 सह लूप
               name: रे आणि बीबी -8 सह लूप
+            Loops in Harvester:
+              name: लूप सह हार्वेस्टिंग क्रॉप्स
+            Looking Ahead:
+              name: माइनक्राफ्ट सह पुढे  पाहणे
             Sticker Art with Loops:
               key: लूपसह स्टिकर आर्ट
             Build a Flappy Game:
@@ -1893,6 +2028,8 @@ mr:
             Artist Binary:
               key: आर्टीस्ट बायनरी
               name: आर्टीस्टसह बायनरी इमेजेस
+            lesson-6:
+              name: माइनक्राफ्ट सह पुढे  पाहणे
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
@@ -1906,8 +2043,11 @@ mr:
               name: लूप सोबत ड्रॉइंग
             Conditionals:
               key: कंडीशनल्स
+              name: शेतकऱ्यासह कंडीशनल्स
             Simon Says:
               name: अल्गोरिदमचे अनुसरण करा
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Artist:
@@ -1931,6 +2071,8 @@ mr:
             Functions in Minecraft:
               key: माईनक्राफ्ट मधील फंक्शन्स
               name: माईनक्राफ्ट मधील फंक्शन्स
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
             Nested Loops in the Maze:
@@ -1961,9 +2103,15 @@ mr:
             Dance Party:
               key: डांस पार्टी
               name: डांस पार्टी
+            Programming with Angry Birds:
+              key: अँग्री बर्ड्स सह प्रोग्रामिंग
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Debugging with Scrat:
               key: स्क्रॅट सोबत डीबगिंग
               name: मेझ मध्ये डीबगिंग
+            Collecting Treasure with Laurel:
+              key: लॉरेलसह खजिना गोळा करणे
+              name: लॉरेलसह खजिना गोळा करणे
             Creating Art with Code:
               key: कोडसह कलात्मक गोष्टी तयार करणे
               name: कोडसह कलात्मक गोष्टी तयार करणे
@@ -1975,6 +2123,11 @@ mr:
             Nested Loops in Maze:
               key: मेझ मध्ये नेस्टेड लूप
               name: मेझ मध्ये नेस्टेड लूप
+            Snowflakes with Anna and Elsa:
+              key: अॅना आणि एल्सा सह स्नोफ्लेक्स
+              name: अॅना आणि एल्सा सह स्नोफ्लेक्स
+            'Looking Ahead with Minecraft ':
+              name: माइनक्राफ्ट सह पुढे  पाहणे
             If/Else with Bee:
               key: जर/अन्यथा  बी सह
               name: जर/अन्यथा  बी सह
@@ -1983,6 +2136,9 @@ mr:
             Until Loops in Maze:
               key: मेझ मध्ये लूप पर्यंत
               name: मेझ मध्ये लूप पर्यंत
+            Harvesting with Conditionals:
+              key: कंडीशनल्स सह हार्वेस्टिंग
+              name: कंडीशनल्स सह हार्वेस्टिंग
             Functions in Minecraft:
               key: माईनक्राफ्ट मधील फंक्शन्स
               name: माईनक्राफ्ट मधील फंक्शन्स
@@ -2003,6 +2159,9 @@ mr:
             For Loops with Artist:
               key: आर्टीस्टसह फॉर लूप्स
               name: आर्टीस्टसह फॉर लूप्स
+            Virtual Pet with Sprite Lab:
+              key: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
+              name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
             lesson-1:
               name: डांस पार्टी
             lesson-2:
@@ -2023,6 +2182,9 @@ mr:
             Learn to Drag and Drop:
               key: ड्रॅग आणि ड्रॉप करायला शिका
               name: ड्रॅग आणि ड्रॉप करायला शिका
+              description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
+            Programming in with Angry Birds:
+              name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
             Loops with Scrat:
@@ -2040,6 +2202,7 @@ mr:
             On the Move with Events:
               key: इव्हेंटसह मूव्ह
               name: इव्हेंटसह मूव्ह
+              description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
             A Royal Battle with Events:
               key: इव्हेंटसह एक शाही लढाई
               name: इव्हेंटसह एक शाही लढाई
@@ -2050,6 +2213,8 @@ mr:
               display_name: ईव्हेंट्स
         csf-2021-pilot:
           lessons:
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लॅबसह स्विमिंग फिश
             Virus Simulation for Code Bytes:
               name: सिम्युलेशनचे कोडींग करणे
             Making Sprites:

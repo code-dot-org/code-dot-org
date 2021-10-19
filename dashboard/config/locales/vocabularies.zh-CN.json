@@ -265,6 +265,10 @@
           "word": "机器学习",
           "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
         },
+        "event/outbreak/unversioned": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
         "sprite/coursef/2021": {
           "word": "精灵"
         },
