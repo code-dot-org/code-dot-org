@@ -3,6 +3,7 @@
   "danceFeedbackNoDancers": "Sizin rəqqasınız yoxdur.",
   "danceFeedbackNoBackground": "Arxa fon effekti əlavə etməlisiniz.",
   "danceFeedbackTooManyDancers": "Diqqətli olun!  əgər  `every 2 measures` içərisinə  `make a new`  blokunu əlavə etsəniz 2 rəqqas yaratmış olacaqsınız.",
+  "danceFeedbackUseSetSize": "O rəqqası kiçiltmək üçün  `set backup_dancer2 size` komandasını istifadə et.",
   "danceFeedbackUseSetTint": "Bir rəqqasənin rəngini dəyişdirmək üçün `set tint` blokundan istifadə edin.",
   "danceFeedbackStartNewMove": "Rəqqasınız 4 cü  ölçüdən sonra yeni hərəkət icra etmədi.",
   "danceFeedbackNeedDifferentDance": "Fərqli rəqs istifadə etməlisiniz.",

@@ -1871,6 +1871,8 @@ pl:
         text: potwory zatrzymują się
       Poetry_addLine:
         text: dodaj linię {LINE}
+      Poetry_animateText:
+        text: animowany tekst
       Poetry_destroy:
         text: usuń {ANIMATION_NAME}
       Poetry_hideText:

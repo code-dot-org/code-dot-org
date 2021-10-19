@@ -479,25 +479,36 @@
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Zahřátí"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Reflexe"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Úvod"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Epidemie",
+          "description": "_V dnešní lekci se podíváte do „Města Příšer“, kde se právě chystá propuknout epidemie viru. Dr. Příšera potřebuje Vaši pomoc se zpomalováním šíření viru._\n\n_V Laboratoři sprajtů vytvoříte simulátor epidemie, který potom použijete k pochopení toho, jak se virus může šířit. Také pomůžete všem příšerám zase se uzdravit!_",
+          "progression_name": "Epidemie"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Vítejte ve Městě Příšer"
         },
-        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "progression_name": "Miniprojekt: Simulátor epidemie"
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Volná hra",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Volná hra"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simulace jsou vynikající způsob, jak se můžeme učit o věcech, které se v reálném světě nesnadno pozorují. Pomáhají vědcům řešit problémy, ¨předvídat, jak problém vyřešit a testovat nové myšlenky bezpečně a účinně. Vaše simulace je způsob, jak ukázat, jak by šíření viru ve Městě Příšer mohlo vypadat._"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflexe"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

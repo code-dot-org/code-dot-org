@@ -182,6 +182,10 @@
         "machine_learning/oceans/unversioned": {
           "word": "Strojové učenie"
         },
+        "event/outbreak/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
         "sprite/coursef/2021": {
           "word": "Sprajt (postavička)",
           "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."

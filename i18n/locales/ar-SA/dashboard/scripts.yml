@@ -16012,6 +16012,8 @@ ar:
           lessons:
             Virus Simulation for Code Bytes:
               name: برمجة محاكاة
+            Outbreak:
+              name: برمجة محاكاة
           lesson_groups:
             outbreak:
               display_name: محاكاة الانتشار
@@ -18416,3 +18418,11 @@ ar:
           lessons:
             lesson-1:
               name: مسابقة التهجئة
+          title: مسابقة التهجئة
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى

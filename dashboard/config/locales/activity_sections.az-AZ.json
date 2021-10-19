@@ -213,6 +213,9 @@
             null
           ]
         },
+        "ddf59331-16dc-488f-8170-6d12869fbb9f": {
+          "name": "Ümumi Dəstək"
+        },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
           "tips": [
             null
@@ -369,6 +372,9 @@
             null
           ]
         },
+        "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
+          "progression_name": "Dizayn Rejimi"
+        },
         "1fd99689-e90c-478b-8ae2-ce8b5d489906": {
           "name": "Qeyd et və sükanı belə saxla"
         },
@@ -423,6 +429,9 @@
             null
           ]
         },
+        "95cc8163-fcee-44bd-95c8-606999d2c378": {
+          "description": "**Düzgün ardıcıllıq: D, B, A, C**"
+        },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
             null
@@ -464,6 +473,12 @@
             null
           ]
         },
+        "2754bec9-70a7-46db-8991-16bbf01adbe7": {
+          "description": "**Düzgün ardıcıllıq: D, B, A, C**"
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "Ümumi Dəstək"
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
             null
@@ -487,6 +502,9 @@
           "tips": [
             null
           ]
+        },
+        "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
+          "name": "Ümumi Dəstək"
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
@@ -517,18 +535,18 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Yekun"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Azad Oyna",
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "Ümumi Dəstək"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Giriş"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Azad Oyna"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
@@ -818,7 +836,11 @@
             null
           ]
         },
+        "4c778537-489f-4c5c-913b-38cbf385737c": {
+          "name": "Əsas lüğət:"
+        },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "name": "Mən harada səhvə yol verdim?",
           "tips": [
             null
           ]
@@ -832,6 +854,7 @@
           "name": "Hərəkət et"
         },
         "93f8de74-6246-4227-8418-08d5c736633b": {
+          "name": "Əksetmə",
           "tips": [
             null
           ]
@@ -949,6 +972,9 @@
             null
           ]
         },
+        "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
+          "progression_name": "Onlayn Məhəlləm"
+        },
         "5cd698e0-d82e-4e9d-af4f-1923b453d12b": {
           "name": "Giriş"
         },
@@ -968,6 +994,7 @@
           ]
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
+          "name": "Əksetmə",
           "tips": [
             null
           ]
@@ -1311,6 +1338,9 @@
         "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
           "progression_name": "meydan oxumaq"
         },
+        "67688952-e1da-43b1-a7d0-f2889dec7e48": {
+          "name": "Mən harada səhvə yol verdim?"
+        },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
           "tips": [
             null
@@ -1491,6 +1521,9 @@
         },
         "5c2218aa-1499-47a7-a606-11c067735cc6": {
           "progression_name": "Praktika"
+        },
+        "6ae01f75-c26d-432f-9775-8a1743d620d7": {
+          "progression_name": "Proqnoz"
         },
         "02d18e9f-46ac-4658-8397-3896b78baea0": {
           "progression_name": "Praktika"

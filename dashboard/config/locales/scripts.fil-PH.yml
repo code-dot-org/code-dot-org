@@ -18615,6 +18615,8 @@ fil:
           lessons:
             Virus Simulation for Code Bytes:
               name: Pag-coding ng isang Simulasyon
+            Outbreak:
+              name: Pag-coding ng isang Simulasyon
           lesson_groups:
             outbreak:
               display_name: Simula ng Simulasyon
@@ -20643,3 +20645,4 @@ fil:
           lessons:
             lesson-1:
               name: Spelling Bee
+          title: Spelling Bee

@@ -82,8 +82,9 @@ az:
         turtle_1_7: Yaxşı, gəlin məsələni bir az çətinləşdirək - görün bu yaşıl eynəyi çəkə bilərsinizmi. Kvadratlar hər iki tərəfdən 100 pikseldir və onlar bir-birindən 50 piksel aralıdırlar. Yaşılla çəkməyi unutmayın!
         turtle_1_8: Yaxşı, bu kodu çalışdırsanız nə baş verəcəyini tapmağa çalışın (və ya yoxlamaq üçün "İcra et" düyməsini basın). Sonra rəsmi bitirmək üçün onu kifayət qədər çalışdırın. Rənglər hər dəfə fərqli olacaq.
         turtle_1_9: Çevrə çəkmək üçün sual işarəsini hansı rəqəmlə əvəz etmək lazım olduğunu tapa bilərsinizmi?
-        turtle_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir neçə maraqlı ideya: çubuq adam, qar dənəciyi ve ya spiral. Həm də yeni "enini təyin et" blokunu sınaqdan keçirin. Əylənin!'
+        turtle_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir neçə maraqlı ideya: çubuq adam, qar dənəciyi və ya spiral. Həm də yeni "enini təyin et" blokunu sınaqdan keçirin. Əylənin!'
         turtle_4_1: '3 blokdan istifadə edərək tərəfləri 100 piksel olan üçbucaq çəkə bilərsiniz? İpucu: "təkrarla" blokundan istifadə edin.'
+        turtle_4_2: Bu üçbucaqları çəkmək üçün proqramın ortasına "90 dərəcə sağa dön" blokunu əlavə edin.
         turtle_4_3: Ok, bu bir üçbucaq çəkmək üçün yazdığınız koddur. "Təkrar et" və "dönmə" bloklarını əlavə etməklə gözəl bir gül düzəldə bilərsiniz mi?
         turtle_4_4: 'Burada keçən tapmacadaki kod ilə eyni olan koddur, lakin burada hər üçbucaq çəkildikdən sonra 36 dərəcə dönürülür. Bu neçə dəfə təkrarlanmalıdır? (İpucu: 360 dərəcə dönüşdən sonra çəkmə prosesi bir tam dövrə edəcəkdir)'
         turtle_4_5: 'Burada keçən tapmacadaki kod ilə eyni olan koddur, lakin burada 36 dəfə dönülür. Hər dəfə neçə dərəcə dönülməlidir? (İpucu: 360 dərəcə dönüşdən sonra çəkmə prosesi bir tam dövrə edəcəkdir)'
@@ -205,7 +206,7 @@ az:
         maze_wordsearch_k_20: Bu testdir! HEKAYƏ sözünü oxumaq üçün məni bir tərəfə, sonra başqa bir yerə keçir
         applab_ec_simple: Alətlər qutusundakı blokları istifadə edərək tətbiqinizi yaradın.
         turtle_ec_1_2: 'İndi bir kvadrat çəkin. QEYD: yeni "rəng seç" blokundan götürməklə öz sevimli rənginizdən istifadə edin.'
-        turtle_ec_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir neçə maraqlı ideya: çubuq adam, qar dənəciyi ve ya spiral. Həm də yeni "enini təyin et" blokunu sınaqdan keçirin. Əylənin!'
+        turtle_ec_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir neçə maraqlı ideya: çubuq adam, qar dənəciyi və ya spiral. Həm də yeni "enini təyin et" blokunu sınaqdan keçirin. Əylənin!'
     video:
       name:
         maze_intro: Labirint oyununa giriş

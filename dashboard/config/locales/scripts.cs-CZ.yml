@@ -8179,6 +8179,8 @@ cs:
           lessons:
             Virus Simulation for Code Bytes:
               name: Naprogramování simulace
+            Outbreak:
+              name: Naprogramování simulace
           lesson_groups:
             outbreak:
               display_name: Simulace epidemie
@@ -9805,5 +9807,10 @@ cs:
           lessons:
             lesson-1:
               name: Hláskovací včelka
+          title: Hláskovací včelka
         outbreak-csc:
           title: Epidemie
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
