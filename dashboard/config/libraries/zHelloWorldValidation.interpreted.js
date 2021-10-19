@@ -96,9 +96,6 @@ function level3(){
     }
   }
   validationProps.successCriteria.allSpritesSpeaking = numSpritesWithSayBlocks == spriteIds.length;
-  if(!validationProps.successTime){
-    console.log(validationProps.successCriteria);
-  }
 
   setSuccessTime(validationProps.successCriteria);
 
@@ -186,9 +183,10 @@ function level5(){
   //This level requires zValidationHelperFunctions
   var spriteIds = getSpriteIdsInUse();
   var eventLog = getEventLog();
-
+  
   if (!validationProps.successCriteria) {
     setSuccessCriteria({
+      twoSprites: checkTwoSprites(spriteIds),
       starterSprite: checkOneSprite(spriteIds),
       differentLocations: checkSpriteLocations(spriteIds),
       differentCostumes: checkSpriteCostumes(spriteIds),
@@ -196,8 +194,11 @@ function level5(){
       clickedSprite: false,
       spriteClickCausesSpeech: false
     });
+    validationProps.challengeCriteria = {
+      twoSpritesSpoke: false
+    };
   }
-
+  
   if (!validationProps.vars) {
     validationProps.vars = {
       delay : 0,
@@ -207,7 +208,7 @@ function level5(){
     };
   }
 
-  var newId = getClickedSpriteIdCausedSpeech(eventLog, eventLogLength);
+  var newId = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);
   if (newId == -2) {
     validationProps.successCriteria.clickedSprite = true;
   } else if (newId >= 0) {
@@ -219,43 +220,13 @@ function level5(){
     }
   }
   validationProps.vars.eventLogLength = eventLog.length;
-
-
   
-  /*
-  // Check if new event happened
-  if (eventLog.length > validationProps.previous.eventLogLength) {
-    var currentEvent = eventLog[eventLog.length - 1];
-    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
-    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
-      if (!validationProps.previous.clickedSprite ||
-          validationProps.previous.clickedSprite != clickedSpriteId) {
-        // current event is a click
-        validationProps.successCriteria.clickedSprite = true;
-        for (var spriteId in spriteIds) {
-          if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
-            // new sprite caused speech in some sprite
-            validationProps.numSpritesSpoken++;
-            validationProps.previous.delay = World.frameCount;
-         
-            break;
-          }
-        }
-      }
-      validationProps.previous.clickedSprite = clickedSpriteId;
-    }
-  }
-
-  // Store previous event log length
-  validationProps.previous.eventLogLength = eventLog.length;
-*/
-  
-  
-  validationProps.successCriteria.spriteClickCausesSpeech = validationProps.vars.numSpritesSpoken.length>=1;
+  validationProps.successCriteria.spriteClickCausesSpeech = validationProps.vars.numSpritesSpoken>=1;
+  validationProps.challengeCriteria.twoSpritesSpoke = validationProps.vars.numSpritesSpoken>=2;
 
   setSuccessTime(validationProps.successCriteria);
   
-  if (!validationProps.successCriteria.starterSprite ||
+  if (!validationProps.successCriteria.twoSprites ||
     !validationProps.successCriteria.differentLocations ||
     !validationProps.successCriteria.differentCostumes) {
     drawProgressBar("earlyFail");
@@ -276,34 +247,27 @@ function level5(){
       levelFailure(3, "spritesNeedUniqueCostumes");
     }
   }
-
+/* 
   if (World.frameCount > WAIT_TIME) {
     if (!validationProps.successCriteria.allSpritesSpeaking) {
-      if (numSpritesWithSayBlocks == 0) {
+      if (validationProps.vars.numSpritesSpoken.length === 0) {
         levelFailure(3, "sayBlock");
       } else {
         levelFailure(3, "allSayBlocks");
       }
     }
-  }
+  }*/
 
   if (World.frameCount - validationProps.successTime >= WAIT_TIME) {
-    if (validationProps.challengeCriteria.changedBackground) {
+    if (validationProps.challengeCriteria.twoSpritesSpoke) {
       levelFailure(0, "genericBonusSuccess");
     } else {
       levelFailure(0, "genericExplore");
     }
   }
-  
-  
-  
-  
-  
-  
-  
 
 
-  if (World.frameCount-validationProps.previous.delay > failTime) {
+  if (World.frameCount-validationProps.vars.delay > WAIT_TIME) {
     if (!validationProps.successCriteria.noSpritesTouching) {
       levelFailure(3, "startingSpritesShouldNotTouch");
     } else if (!validationProps.successCriteria.clickedSprite) {
@@ -860,10 +824,8 @@ function level10(){
       // fail
       if (validationProps.previous.chooseSound) {
         levelFailure(3, "chooseSound");
-        console.log("You need to choose a sound from the drop-down menu.");
       } else {
         levelFailure(3, "noSound");
-        console.log("You need to add a sound.");
       }
     } else if (validationProps.successCriteria.changedSoundEvent) {
       // bonus pass
@@ -888,3 +850,35 @@ function level10(){
   }
   pop();
 }
+
+
+
+
+  
+  /*  From old level 5
+  // Check if new event happened
+  if (eventLog.length > validationProps.previous.eventLogLength) {
+    var currentEvent = eventLog[eventLog.length - 1];
+    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
+    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
+      if (!validationProps.previous.clickedSprite ||
+          validationProps.previous.clickedSprite != clickedSpriteId) {
+        // current event is a click
+        validationProps.successCriteria.clickedSprite = true;
+        for (var spriteId in spriteIds) {
+          if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+            // new sprite caused speech in some sprite
+            validationProps.numSpritesSpoken++;
+            validationProps.previous.delay = World.frameCount;
+         
+            break;
+          }
+        }
+      }
+      validationProps.previous.clickedSprite = clickedSpriteId;
+    }
+  }
+
+  // Store previous event log length
+  validationProps.previous.eventLogLength = eventLog.length;
+*/
