@@ -252,6 +252,7 @@
     "qrcode.react": "^0.8.0",
     "query-string": "4.1.0",
     "react-ace": "^9.2.1",
+    "react-beautiful-dnd": "^13.1.0",
     "react-csv": "^2.0.3",
     "react-debounce-input": "^3.2.2",
     "react-dom-confetti": "^0.2.0",
