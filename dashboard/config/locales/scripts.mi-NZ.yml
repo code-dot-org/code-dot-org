@@ -2491,3 +2491,8 @@ mi:
           lessons:
             lesson-1:
               name: Ohu Takikupu
+          title: Ohu Takikupu
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ihirangi

@@ -2,6 +2,9 @@
   "sk-SK": {
     "data": {
       "lessons": {
+        "outbreak/Outbreak": {
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+        },
         "jigsaw/Jigsaw": {
           "overview": "Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh."
         },

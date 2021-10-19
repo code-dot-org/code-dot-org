@@ -148,9 +148,15 @@
         },
         "hello-world-food/lesson-1": {
           "overview": "crwdns2695585:0[0]crwdne2695585:0",
-          "preparation": "crwdns2695587:0[0]crwdnd2695587:0[1]crwdnd2695587:0[2]crwdnd2695587:0[certificate]crwdnd2695587:0[3]crwdne2695587:0",
-          "purpose": "crwdns2695589:0crwdne2695589:0",
+          "preparation": "crwdns2695587:0[0]crwdne2695587:0",
+          "purpose": "crwdns2695589:0[0]crwdne2695589:0",
           "student_overview": "crwdns2695591:0crwdne2695591:0"
+        },
+        "outbreak/Outbreak": {
+          "overview": "crwdns2698437:0crwdne2698437:0",
+          "preparation": "crwdns2698439:0crwdne2698439:0",
+          "purpose": "crwdns2698441:0crwdne2698441:0",
+          "student_overview": "crwdns2698443:0crwdne2698443:0"
         },
         "jigsaw/Jigsaw": {
           "overview": "crwdns2698109:0crwdne2698109:0",

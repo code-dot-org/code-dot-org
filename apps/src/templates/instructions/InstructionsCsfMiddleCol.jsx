@@ -271,5 +271,5 @@ export default connect(
     };
   },
   null,
-  {forwardRef: true}
+  {withRef: true}
 )(InstructionsCsfMiddleCol);

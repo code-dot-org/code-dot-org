@@ -132,5 +132,5 @@ export default connect(
   },
   null,
   null,
-  {forwardRef: true}
+  {withRef: true}
 )(Radium(InstructionsCsfLeftCol));

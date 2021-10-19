@@ -114,7 +114,8 @@
           "word": "Hadisə"
         },
         "code/sports/unversioned": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) kod yazmaq və ya kompüter üçün təlimat yazmaq."
         },
         "debugging/sports/unversioned": {
           "word": "Sazlama"
@@ -148,6 +149,9 @@
         },
         "program/dance-2019/unversioned": {
           "word": "Proqram"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Hadisə"
         },
         "user/coursef/2021": {
           "word": "İstifadəçi"

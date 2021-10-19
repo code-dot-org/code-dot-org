@@ -265,6 +265,14 @@
           "word": "機械学習",
           "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
         },
+        "event/outbreak/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "モデルとシミュレーション",
+          "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
+        },
         "sprite/coursef/2021": {
           "word": "スプライト",
           "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
