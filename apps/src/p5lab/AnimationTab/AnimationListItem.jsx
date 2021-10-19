@@ -244,8 +244,7 @@ const styles = {
       backgroundColor: color.lighter_purple
     },
     border: 0,
-    margin: 0,
-    marginTop: 5
+    margin: '5px 0 0 0'
   },
   selectedTile: {
     backgroundColor: color.purple,
