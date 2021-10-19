@@ -265,6 +265,10 @@
           "word": "Máquina de aprendizado",
           "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
         },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
         "sprite/coursef/2021": {
           "word": "Sprite"
         },

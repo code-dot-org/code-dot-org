@@ -4628,3 +4628,8 @@ ga:
           lessons:
             lesson-1:
               name: Comórtas Litrithe
+          title: Comórtas Litrithe
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar

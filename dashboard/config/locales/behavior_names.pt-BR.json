@@ -2818,6 +2818,21 @@
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
           "moving with arrow keys": "utilizando as setas"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas"
         }
       }
     }

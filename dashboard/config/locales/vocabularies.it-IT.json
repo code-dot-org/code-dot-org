@@ -265,6 +265,10 @@
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
           "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "Un'azione che fa accadere qualcosa."
+        },
         "sprite/coursef/2021": {
           "word": "Personaggio",
           "definition": "Un disegno sullo schermo con una posizione, dimensioni e aspetto."

@@ -6,7 +6,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -47,7 +47,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -94,7 +94,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -115,7 +115,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -176,8 +176,10 @@ az:
             measures: Ölçülər
             seconds: Saniyələr
       Dancelab_everyVerseChorus:
+        text: hər {UNIT}
         options:
           UNIT:
+            '"verse"': kuplet
             '"chorus"': Xor
       Dancelab_getEnergy:
         options:
@@ -185,6 +187,7 @@ az:
             '"low"': Bass
             '"mid"': orta
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': ölçü
@@ -230,7 +233,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -254,7 +257,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -266,10 +269,13 @@ az:
             '"SHARK"': Köpək balıqları
           FORMAT:
             '"border"': kənar
+            '"inner"': kvadratın içərisində
             '"diamond"': almaz
             '"circle"': dairə
             '"grid"': tor
+            '"top"': üst sıra
             '"row"': sinif
+            '"bottom"': alt sıra
             '"plus"': üstəgəl
             '"random"': təsadüfi
       Dancelab_makeAnonymousDanceSprite:
@@ -343,7 +349,7 @@ az:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -355,10 +361,13 @@ az:
             '"SHARK"': Köpək balıqları
           LAYOUT:
             '"border"': kənar
+            '"inner"': kvadratın içərisində
             '"diamond"': almaz
             '"circle"': dairə
             '"grid"': tor
+            '"top"': üst sıra
             '"row"': sinif
+            '"bottom"': alt sıra
             '"plus"': üstəgəl
             '"random"': təsadüfi
       Dancelab_randomColor:
@@ -411,7 +420,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -449,7 +458,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -481,7 +490,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -503,7 +512,7 @@ az:
         options:
           THIS:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -517,7 +526,7 @@ az:
         options:
           THIS:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -535,7 +544,7 @@ az:
         options:
           THIS:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -564,7 +573,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -602,7 +611,7 @@ az:
         options:
           GROUP:
             sprites: bütün
-            '"ALIEN"': yadplanetli
+            '"ALIEN"': yadplanetlilər
             '"BEAR"': Ayılar
             '"CAT"': pişiklər
             '"DOG"': itlər
@@ -627,6 +636,8 @@ az:
         options:
           STRING:
             '"flowers"': Güllər
+            '"row_top"': üst sıra
+            '"row_bottom"': alt sıra
             '"diamond"': almaz
             '"s"': s
             '"t"': t
@@ -712,6 +723,7 @@ az:
             '"when"': nə zaman
             '"while"': hələ ki,
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': ölçü
@@ -1129,24 +1141,30 @@ az:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            growing: böyüyən
             jittering: |-
               titrəmək
               (hər hansı cihazın titrəməsi)
             shrinking: |-
               kiçilmək
               (ölçüdə və ya miqdarda kiçik olmaq)
+            spinning_left: sola fırlanır
+            spinning_right: sağa fırlanır
             swimming_left_and_right: üzmə
             wandering: gəzən
             wobbling: titrəmə(titrəmək)
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            growing: böyüyən
             jittering: |-
               titrəmək
               (hər hansı cihazın titrəməsi)
             shrinking: |-
               kiçilmək
               (ölçüdə və ya miqdarda kiçik olmaq)
+            spinning_left: sola fırlanır
+            spinning_right: sağa fırlanır
             swimming_left_and_right: üzmə
             wandering: gəzən
             wobbling: titrəmə(titrəmək)
