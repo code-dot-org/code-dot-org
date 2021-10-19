@@ -125,9 +125,9 @@ class LevelDetailsDialog extends Component {
       level.shortInstructions
     ) {
       let exampleSolutions = [];
-      if (this.state.scriptLevel.exampleSolutions.length > 0) {
+      if (this.state.scriptLevel.exampleSolutions?.length > 0) {
         exampleSolutions = this.state.scriptLevel.exampleSolutions;
-      } else if (level.exampleSolutions.length > 0) {
+      } else if (level.exampleSolutions?.length > 0) {
         exampleSolutions = level.exampleSolutions;
       }
 
