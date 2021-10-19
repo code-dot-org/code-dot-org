@@ -4,6 +4,16 @@
   "logoPosition": "right",
   "pages": [
     {
+      "name": "preamble_page",
+      "elements": [
+        {
+          "type": "html",
+          "name": "consent_language",
+          "html": "<h1>Code.org Administratator Baseline Surevey</h1><span style='color: red'><strong>Warning</strong></span>: This survey is under construction. Please do not use at this time."
+        }
+      ]
+    },
+    {
       "name": "page1",
       "elements": [
         {
