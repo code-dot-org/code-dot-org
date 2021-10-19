@@ -6,7 +6,12 @@ import {
   TextFields
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup, Row, Col} from 'react-bootstrap';
-import {PROGRAM_CSD, PROGRAM_CSP, YEAR} from './TeacherApplicationConstants';
+import {
+  PROGRAM_CSD,
+  PROGRAM_CSP,
+  PROGRAM_CSA,
+  YEAR
+} from './TeacherApplicationConstants';
 import color from '@cdo/apps/util/color';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
@@ -17,23 +22,43 @@ import {
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {FormContext} from '../../form_components_func/FormComponent';
 
-const MIN_CSD_HOURS = 50;
-const MIN_CSP_HOURS = 100;
+const getMinCourseHours = program => {
+  switch (program) {
+    case PROGRAM_CSD:
+      return 50;
+    case PROGRAM_CSP:
+      return 100;
+    case PROGRAM_CSA:
+      return 140;
+    default:
+      return 0;
+  }
+};
 
 const ChooseYourProgram = props => {
   const {data} = props;
 
+  const regionalPartner = null; // TODO useRegionalPartner
+
+  const isOffered = program => {
+    return true; // TODO look up regional partner
+  };
+
   const getNameForSelectedProgram = () => {
-    if (data.program === PROGRAM_CSD) {
-      return 'Discoveries';
-    } else if (data.program === PROGRAM_CSP) {
-      return 'Principles';
-    } else {
-      return 'Program';
+    switch (data.program) {
+      case PROGRAM_CSD:
+        return 'CS Discoveries';
+      case PROGRAM_CSP:
+        return 'CS Principles';
+      case PROGRAM_CSA:
+        return 'CSA';
+      default:
+        return 'CS Program';
     }
   };
+
   // This should be kept consistent with the calculation logic in
-  // dashboard/app/models/pd/application/teacher2122_application.rb.
+  // dashboard/app/models/pd/application/teacher_application.rb.
   const csHowManyMinutes = parseInt(data.csHowManyMinutes, 10);
   const csHowManyDaysPerWeek = parseInt(data.csHowManyDaysPerWeek, 10);
   const csHowManyWeeksPerYear = parseInt(data.csHowManyWeeksPerYear, 10);
@@ -49,20 +74,9 @@ const ChooseYourProgram = props => {
 
   let belowMinCourseHours = false;
   let program = data.program;
-  let minCourseHours =
-    program && program.includes('Discoveries') ? MIN_CSD_HOURS : MIN_CSP_HOURS;
-  if (program) {
-    if (program.includes('Discoveries')) {
-      minCourseHours = MIN_CSD_HOURS;
-    }
-    if (
-      (program.includes('Discoveries') || program.includes('Principles')) &&
-      courseHours !== null
-    ) {
-      if (courseHours < minCourseHours) {
-        belowMinCourseHours = true;
-      }
-    }
+  let minCourseHours = getMinCourseHours(program);
+  if (courseHours !== null && courseHours < minCourseHours) {
+    belowMinCourseHours = true;
   }
 
   let showTeachingPlansNote = false;
@@ -77,31 +91,72 @@ const ChooseYourProgram = props => {
     <FormContext.Provider value={props}>
       <LabelsContext.Provider value={PageLabels.chooseYourProgram}>
         <FormGroup>
-          <h3>Section 3: {SectionHeaders.chooseYourProgram}</h3>
+          <h3>Section 2: {SectionHeaders.chooseYourProgram}</h3>
           <LabeledRadioButtons name="program" />
           {data.program === PROGRAM_CSD && (
             <LabeledCheckBoxes name="csdWhichGrades" />
           )}
 
           {data.program === PROGRAM_CSP && (
-            <div>
+            <>
               <LabeledCheckBoxes name="cspWhichGrades" />
               <LabeledRadioButtons name="cspHowOffer" />
-            </div>
+            </>
           )}
+
+          {data.program === PROGRAM_CSA && (
+            <>
+              <LabeledRadioButtons name="csaAlreadyKnow" required={false} />
+              {data.csaAlreadyKnow === 'No' && (
+                <p style={{color: 'red'}}>
+                  We don’t recommend this program for teachers completely new to
+                  CS. Consider starting with CS Principles Professional Learning
+                  or plan for additional onboarding in preparation for this
+                  program.
+                </p>
+              )}
+              <LabeledRadioButtons name="csaPhoneScreen" required={false} />
+              {data.csaPhoneScreen === 'No' && (
+                <p style={{color: 'red'}}>
+                  We recommend deepening your content knowledge prior to
+                  starting this program. This can be accomplished by completing
+                  some additional onboarding that will be shared with you once
+                  accepted to the program.
+                </p>
+              )}
+              <LabeledCheckBoxes name="csaWhichGrades" />
+              <LabeledRadioButtons name="csaHowOffer" />
+            </>
+          )}
+
+          {data.program === PROGRAM_CSA && !isOffered(data.program) && (
+            <p>
+              The Computer Science A Professional Learning Program is not yet
+              offered in your region for the {YEAR} academic year. We are
+              working with our national network of Regional Partners to expand
+              the program to all regions by 2023-24.{' '}
+              {regionalPartner &&
+                `Consider applying for an
+              alternative program or reach out to ${regionalPartner.name} to let
+              them know you’re interested in joining the program next year!`}
+            </p>
+          )}
+
           <p>
             <strong>Course hours =</strong> (number of minutes of one class){' '}
             <strong> X </strong> (number of days per week the class will be
             offered) <strong> X </strong> (number of weeks with the class)
           </p>
-          <br />
+          <p>
+            Please provide information about your course implementation plans.
+          </p>
           <LabeledNumberInput
             name="csHowManyMinutes"
             style={{
               width: '100px'
             }}
             label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
-              'program',
+              'CS program',
               getNameForSelectedProgram()
             )}
             labelWidth={{md: 8}}
@@ -114,7 +169,7 @@ const ChooseYourProgram = props => {
               width: '100px'
             }}
             label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
-              'program',
+              'CS program',
               getNameForSelectedProgram()
             )}
             labelWidth={{md: 8}}
@@ -127,7 +182,7 @@ const ChooseYourProgram = props => {
               width: '100px'
             }}
             label={PageLabels.chooseYourProgram.csHowManyWeeksPerYear.replace(
-              'program',
+              'CS program',
               getNameForSelectedProgram()
             )}
             labelWidth={{md: 8}}
@@ -150,26 +205,19 @@ const ChooseYourProgram = props => {
           )}
           {belowMinCourseHours && (
             <p style={{color: 'red'}}>
-              Note: {minCourseHours} or more hours of instruction per CS{' '}
+              Note: {minCourseHours} or more hours of instruction per{' '}
               {getNameForSelectedProgram()} section are strongly recommended. We
               suggest checking with your school administration to see if
               additional time can be allotted for this course in {YEAR}.
             </p>
           )}
 
-          {data.program === PROGRAM_CSD && (
-            <LabeledCheckBoxes name="csdWhichUnits" />
-          )}
-          {data.program === PROGRAM_CSP && (
-            <LabeledCheckBoxes name="cspWhichUnits" />
-          )}
           <LabeledRadioButtonsWithAdditionalTextFields
             name="planToTeach"
             textFieldMap={{
               [TextFields.dontKnowIfIWillTeachExplain]: 'other'
             }}
           />
-
           {showTeachingPlansNote && (
             <p style={styles.error}>
               Note: This program is designed to work best for teachers who are
@@ -178,6 +226,7 @@ const ChooseYourProgram = props => {
               the course during the {YEAR} school year.
             </p>
           )}
+
           <LabeledRadioButtonsWithAdditionalTextFields
             name="replaceExisting"
             textFieldMap={{
@@ -187,6 +236,10 @@ const ChooseYourProgram = props => {
           {data.replaceExisting === 'Yes' && (
             <LabeledRadioButtonsWithAdditionalTextFields
               name="replaceWhichCourse"
+              label={PageLabels.chooseYourProgram.replaceWhichCourse.replace(
+                'CS program',
+                getNameForSelectedProgram()
+              )}
               textFieldMap={{
                 [TextFields.iDontKnowExplain]: 'other'
               }}
@@ -209,15 +262,17 @@ ChooseYourProgram.associatedFields = [
   ...Object.keys(PageLabels.chooseYourProgram)
 ];
 
+const uniqueRequiredFields = {
+  [PROGRAM_CSD]: ['csdWhichGrades'],
+  [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer'],
+  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer']
+};
+
 ChooseYourProgram.getDynamicallyRequiredFields = data => {
   const requiredFields = [];
 
-  if (data.program === PROGRAM_CSD) {
-    requiredFields.push('csdWhichGrades', 'csdWhichUnits');
-  }
-
-  if (data.program === PROGRAM_CSP) {
-    requiredFields.push('cspWhichGrades', 'cspWhichUnits', 'cspHowOffer');
+  if (data.program) {
+    requiredFields.push(...uniqueRequiredFields[data.program]);
   }
 
   if (data.replaceExisting === 'Yes') {
@@ -230,15 +285,17 @@ ChooseYourProgram.getDynamicallyRequiredFields = data => {
 ChooseYourProgram.processPageData = data => {
   const changes = {};
 
-  if (data.program === PROGRAM_CSD) {
-    changes.cspWhichGrades = undefined;
-    changes.cspWhichUnits = undefined;
-    changes.cspHowOffer = undefined;
+  if (data.program) {
+    uniqueRequiredFields
+      .filter(program => program !== data.program)
+      .forEach(field => {
+        changes[field] = undefined;
+      });
   }
-
-  if (data.program === PROGRAM_CSP) {
-    changes.csdWhichGrades = undefined;
-    changes.csdWhichUnits = undefined;
+  // the follow are unique to csa but not required
+  if (data.program && data.program !== PROGRAM_CSA) {
+    changes.csaAlreadyKnow = undefined;
+    changes.csaPhoneScreen = undefined;
   }
 
   if (data.replaceExisting !== 'Yes') {
