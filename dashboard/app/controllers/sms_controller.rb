@@ -11,7 +11,7 @@ class SmsController < ApplicationController
         if params[:type] == 'weblab'
           "https://codeprojects.org/#{params[:channel_id]}"
         else
-          polymorphic_url(["#{params[:type]}_project_share", 'projects'], channel_id: params[:channel_id])
+          polymorphic_url(["#{params[:type]}_project_share".to_sym, :projects], channel_id: params[:channel_id])
         end
       send_sms_link(url, params[:phone])
     else
