@@ -16,8 +16,11 @@
 #
 
 require 'cdo/script_constants'
+require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
+  include SharedCourseConstants
+
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
@@ -48,7 +51,7 @@ class UnitGroup < ApplicationRecord
     self.class.get_from_cache(id)
   end
 
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
 
   def skip_name_format_validation
     !!plc_course
@@ -86,11 +89,11 @@ class UnitGroup < ApplicationRecord
   # Any course with a plc_course is considered stable.
   # All other courses must specify a published_state.
   def stable?
-    plc_course || (published_state == SharedConstants::PUBLISHED_STATE.stable)
+    plc_course || (published_state == SharedCourseConstants::PUBLISHED_STATE.stable)
   end
 
   def in_development?
-    published_state == SharedConstants::PUBLISHED_STATE.in_development
+    published_state == SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   def self.file_path(name)
@@ -116,7 +119,7 @@ class UnitGroup < ApplicationRecord
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
     unit_group.update_scripts(hash['script_names'], hash['alternate_units'])
     unit_group.properties = hash['properties']
-    unit_group.published_state = hash['published_state'] || SharedConstants::PUBLISHED_STATE.in_development
+    unit_group.published_state = hash['published_state'] || SharedCourseConstants::PUBLISHED_STATE.in_development
 
     # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
@@ -330,7 +333,7 @@ class UnitGroup < ApplicationRecord
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(published_state)
+    [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
   def summarize(user = nil, for_edit: false)
@@ -525,7 +528,7 @@ class UnitGroup < ApplicationRecord
 
     all_courses.select do |course|
       course.family_name == family_name &&
-        course.published_state == SharedConstants::PUBLISHED_STATE.stable
+        course.published_state == SharedCourseConstants::PUBLISHED_STATE.stable
     end.sort_by(&:version_year).last
   end
 
