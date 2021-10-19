@@ -2,25 +2,27 @@
 #
 # Table name: scripts
 #
-#  id              :integer          not null, primary key
-#  name            :string(255)      not null
-#  created_at      :datetime
-#  updated_at      :datetime
-#  wrapup_video_id :integer
-#  user_id         :integer
-#  login_required  :boolean          default(FALSE), not null
-#  properties      :text(65535)
-#  new_name        :string(255)
-#  family_name     :string(255)
-#  published_state :string(255)      default("in_development")
+#  id               :integer          not null, primary key
+#  name             :string(255)      not null
+#  created_at       :datetime
+#  updated_at       :datetime
+#  wrapup_video_id  :integer
+#  user_id          :integer
+#  login_required   :boolean          default(FALSE), not null
+#  properties       :text(65535)
+#  new_name         :string(255)
+#  family_name      :string(255)
+#  published_state  :string(255)      default("in_development")
+#  instruction_type :string(255)
 #
 # Indexes
 #
-#  index_scripts_on_family_name      (family_name)
-#  index_scripts_on_name             (name) UNIQUE
-#  index_scripts_on_new_name         (new_name) UNIQUE
-#  index_scripts_on_published_state  (published_state)
-#  index_scripts_on_wrapup_video_id  (wrapup_video_id)
+#  index_scripts_on_family_name       (family_name)
+#  index_scripts_on_instruction_type  (instruction_type)
+#  index_scripts_on_name              (name) UNIQUE
+#  index_scripts_on_new_name          (new_name) UNIQUE
+#  index_scripts_on_published_state   (published_state)
+#  index_scripts_on_wrapup_video_id   (wrapup_video_id)
 #
 
 require 'cdo/script_constants'
@@ -147,6 +149,7 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be teacher_led or self_paced'}
 
   def prevent_duplicate_levels
     reload
