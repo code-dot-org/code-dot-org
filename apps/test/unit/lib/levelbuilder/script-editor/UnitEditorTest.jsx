@@ -20,7 +20,10 @@ import createResourcesReducer, {
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  PublishedState,
+  InstructionType
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 describe('UnitEditor', () => {
   let defaultProps, store;
@@ -76,6 +79,7 @@ describe('UnitEditor', () => {
       initialLocales: [],
       isMigrated: false,
       initialPublishedState: PublishedState.beta,
+      initialInstructionType: InstructionType.teacher_led,
       hasCourse: false,
       scriptPath: '/s/test-unit',
       initialLessonLevelData:
@@ -114,7 +118,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input').length).to.equal(22);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(3);
-      expect(wrapper.find('select').length).to.equal(4);
+      expect(wrapper.find('select').length).to.equal(5);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
@@ -131,7 +135,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input').length).to.equal(26);
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(13);
       expect(wrapper.find('textarea').length).to.equal(4);
-      expect(wrapper.find('select').length).to.equal(3);
+      expect(wrapper.find('select').length).to.equal(4);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
