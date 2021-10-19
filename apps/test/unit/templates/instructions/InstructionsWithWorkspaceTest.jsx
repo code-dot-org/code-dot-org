@@ -59,7 +59,9 @@ describe('InstructionsWithWorkspace', () => {
 
       // Fake ref to inner object, since we're shallow rendering.
       wrapper.instance().codeWorkspaceContainer = {
-        getRenderedHeight: () => codeWorkspaceHeight
+        getWrappedInstance: () => ({
+          getRenderedHeight: () => codeWorkspaceHeight
+        })
       };
 
       return wrapper;
