@@ -3,30 +3,42 @@ import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
 import CodeReviewGroup from './CodeReviewGroup';
 
+// Provides "drag and drop context" that allows us to drag
+// code review group members between groups as teachers arrange their students into code review groups.
+// More information on the package we're using here (React Beautiful DnD)
+// can be found here:
+// https://github.com/atlassian/react-beautiful-dnd
 export default function CodeReviewGroups({groups}) {
   const [state, setState] = useState(groups);
 
   function onDragEnd(result) {
     const {source, destination} = result;
-    const sInd = +source.droppableId;
+    const sourceId = +source.droppableId;
 
     // dropped outside the group
     if (!destination) {
       return;
     }
 
-    const dInd = +destination.droppableId;
+    const destinationId = +destination.droppableId;
 
-    if (sInd === dInd) {
-      const items = reorder(state[sInd], source.index, destination.index);
+    if (sourceId === destinationId) {
+      // If an item was dropped in its current group.
+      const items = reorder(state[sourceId], source.index, destination.index);
       const newState = [...state];
-      newState[sInd] = items;
+      newState[sourceId] = items;
       setState(newState);
     } else {
-      const result = move(state[sInd], state[dInd], source, destination);
+      // If an item was dropped in a different group.
+      const result = move(
+        state[sourceId],
+        state[destinationId],
+        source,
+        destination
+      );
       const newState = [...state];
-      newState[sInd] = result[sInd];
-      newState[dInd] = result[dInd];
+      newState[sourceId] = result[sourceId];
+      newState[destinationId] = result[destinationId];
 
       setState(newState.filter(group => group.length));
     }
