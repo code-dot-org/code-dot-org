@@ -4,7 +4,7 @@ import {mount} from 'enzyme';
 import sinon from 'sinon';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationFunc';
+import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 
 describe('Teacher Application Component', () => {
   const fakeOptionKeys = Object.values(PageLabels).reduce(
