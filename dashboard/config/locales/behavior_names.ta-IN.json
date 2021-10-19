@@ -179,6 +179,9 @@
         },
         "helloworld_food_behaviors": {
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
         }
       }
     }

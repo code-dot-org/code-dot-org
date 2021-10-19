@@ -2787,3 +2787,8 @@ kk:
           lessons:
             lesson-1:
               name: Сөз жазушы Ара
+          title: Сөз жазушы Ара
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент

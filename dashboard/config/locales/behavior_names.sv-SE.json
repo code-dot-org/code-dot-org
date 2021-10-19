@@ -179,6 +179,9 @@
         },
         "helloworld_food_behaviors": {
           "moving with arrow keys": "flytta med piltangenter"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "flytta med piltangenter"
         }
       }
     }

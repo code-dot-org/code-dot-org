@@ -577,28 +577,36 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Actividad de cierre"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Reflexión"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introducción"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Epidemia",
+          "progression_name": "Epidemia"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "**Haz esto:** Lean el módulo _Bienvenidos a la Ciudad de Monstruos_ en clase.",
           "progression_name": "Bienvenido a la Ciudad de Monstruos"
         },
-        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+        "df13fa93-37df-4188-837d-462c48179625": {
           "progression_name": "Desarrollo de habilidades"
         },
-        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "progression_name": "Miniproyecto: Simulador de Brotes"
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Juego libre",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Juego libre"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflexión"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -1601,18 +1609,28 @@
           "description": "### Supervivencia en el Zoo - Eventos (30-45 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informática + Lengua Inglesa + Matemáticas + Ciencias**\n\n[Supervivencia en el Zoo - Eventos](https://docs.google.com/document/d/1lUm35kMp--BDeTeXw0ZBLx11E45gwJliK1zL1_tHUqM/edit) es una actividad opcional alineada con los Estándares Básicos Comunes de ELA, Matemáticas y Ciencias de la Próxima Generación, escrita por nuestra comunidad de profesores. Los estudiantes examinarán cómo la causa y el efecto pueden ser vistos en los animales al ver los patrones de comportamiento de las crías (la causa) para determinar cómo aumentar la supervivencia de las crías (el efecto).\n\n_Estándares abordados:_\n\n-   **CSCS.ELA-LITERACY.SL.1.1:** Participar en conversaciones colaborativas con diversos compañeros sobre temas y textos de primer grado con compañeros y adultos en grupos pequeños y grandes.\n\n-   **CSCS.ELA-LITERACY.SL.1.4:** Describir personas, lugares, cosas y eventos con detalles relevantes, expresando ideas y sentimientos con claridad.\n\n-   **CCSS.MATH.CONTENT.1.G.A.1:** Distinguir entre los atributos definitorios (por ejemplo, los triángulos son cerrados y de tres lados) frente a los atributos no definitorios (por ejemplo, color, orientación, tamaño total); construir y dibujar formas que posean atributos definitorios.\n\n-   **NGSS.1-LS1-2:** Leer textos y utilizar los medios de comunicación para determinar los patrones de comportamiento de los padres y de la descendencia que ayudan a la descendencia a sobrevivir. [Declaración Aclaratoria: Los ejemplos de patrones de comportamiento podrían incluir las señales que hacen las crías (como el llanto, los gritos y otras vocalizaciones) y las respuestas de los padres (como alimentar, consolar y proteger a las crías)]."
         },
         "3506957f-7430-4cc9-8e53-36f1d67496a7": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Repasa la actividad \"El gran evento\" con los alumnos:\n\n-   \\_¿Qué hemos \"programado\" que hagan los eventos de los botones?\n\nAhora vamos a añadir eventos a nuestro código. Específicamente, vamos a tener un evento para cuando dos personajes se toquen.\n\n-   ¿Cuándo has visto que dos personajes se toquen como evento en los juegos?"
+        },
+        "fb42b64a-9f49-441b-95d8-2bdb596c93a9": {
+          "description": "Estas actividades ayudarán a trasladar los conceptos desconectados de \"El Gran Evento\" al mundo online en el que se mueven los alumnos. Escoge _una_ de las siguientes para hacer con tu clase:"
         },
         "505b9963-28e4-43cc-81b2-51cd954beb7f": {
           "tips": [
-            null
+            "Los estudiantes tendrán la oportunidad de compartir su producto final con un enlace. Esta es una gran oportunidad para mostrar a tu comunidad escolar las grandes cosas que tus estudiantes están haciendo. Recoge todos los enlaces y guárdalos en la página web de tu clase para que todos los vean.\n\nRecuerda a los alumnos que sólo deben compartir sus trabajos con sus amigos o familiares cercanos. Para más información, mira o muestra a la clase el **\\*Vídeo - Pausa y Piensa en Línea**."
           ]
         },
+        "a1d91fb3-f7e1-49e4-a901-9316fa8a8327": {
+          "name": "Actividad Desconectada Utilizando Bloques de Papel",
+          "description": "Utilizando el mando de la **\\*Hoja de Trabajo** y los **\\*manipulativos**, reúne a tu clase para repetir la actividad de la lección anterior. Pregunta a la clase: \"Cuando se pulsa el botón verde, ¿Qué hacemos?\" y, a continuación, rellena uno de los bloques de eventos \"cuando\" y uno de los bloques de acción azules.  Asegúrate de que los alumnos entienden que los bloques \"cuando\" tienen que estar encima del bloque azul y que tienen que tocarse para que el programa se ejecute.\n\n### -O-"
+        },
         "182167a6-e7b1-425e-88d6-5f08d4b98a8b": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Previsualizar desafíos online como clase",
+          "description": "Selecciona un rompecabezas de los disponibles en línea. Recomendamos el rompecabezas 4 de esta etapa. Pide a diferentes alumnos que pongan una cara divertida que represente un estado de ánimo cuando hagas clic en _Daisy_. Explica que se trata de un evento al que están reaccionando y que _Daisy_ puede ser codificada para cambiar de estado de ánimo cuando se hace clic sobre ella."
         },
         "707682de-e28a-4f30-8033-e5568bc30572": {
-          "name": "Una batalla real con eventos"
+          "name": "Una batalla real con eventos",
+          "description": "Esta es la actividad más libre del curso. En la fase final, los alumnos tienen libertad para crear su propia historia. Es posible que quieras darles pautas estructuradas sobre el tipo de historia que deben escribir, sobre todo a los alumnos que se sientan abrumados por el exceso de opciones."
         },
         "dd9fba95-8daa-47d3-8c05-3429f3f25b77": {
           "progression_name": "Vídeo: Introducción al Laboratorio de Juegos"
@@ -1630,32 +1648,46 @@
           "progression_name": "Lecciones adicionales"
         },
         "f7fafab8-5c1c-473a-901b-893eb23c491b": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Pedir a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto puede ayudar a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso que les sirva para el futuro.\n\n\\*\\*Sugerencias: \\*\\*\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una de las **\\*Caras de Emoción** que muestre cómo te has sentido con la lección de hoy.\n-   Dibuja un evento que hayas utilizado en tu programa de hoy.\n-   Imagina que tienes un robot con mando a distancia. ¿Qué aspecto tendría el mando a distancia? Haz un dibujo de lo que crees que podrías hacer con el robot."
         },
         "c6ce4e8a-c92c-4f12-8756-bc39b0047366": {
           "description": "Use estas actividades para mejorar el aprendizaje del alumno. Se pueden usar como actividades al aire libre u otro tipo de enriquecimiento. \n\n**Mirar Bajo la Capucha**\n\nCuando comparte un enlace a su historia, también comparte todo el código que va de fondo. Esta es una buena forma para que los alumnos aprendan de los otros. \n\n Postée enlaces para historias terminadas en línea. \n    \\-   ¡También invente una historia para compartir! \n\n-   Cuando los alumnos suban un enlace, pídales que hagan clic en el botón \"Cómo Funciona\" para ver el código  para ver el código que está detrás de la historia.\n-   Discutan como grupo las formas diferentes en que sus compañeros codificaron sus historias. \n    -   ¿Qué te sorprendió?\n    -   ¿Que te gustaría intentar?\n-   Escoge la historia de alguien más y haz clic en `Remix` para construir desde ahí. (No te preocupes, la historia original estará  segura)"
         },
         "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
           "name": "Revisión",
+          "description": "**Haz esto:**\n\n\\*Prepara a los alumnos para la actividad de hoy. Comienza pidiendo a los alumnos que recuerden lo que ya han hecho en lecciones anteriores utilizando el Laboratorio de Juegos.\n\\*Repasa la palabra de vocabulario \"evento\".\n\\*Si has creado tu propio ejemplo de proyecto, compártelo ahora.",
           "progression_name": "Proyecto"
         },
         "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c": {
+          "name": "Planificación de un Proyecto de Laboratorio de Juegos",
+          "description": "**Hazlo:** Sube el nivel de esta lección en el proyector.",
           "progression_name": "Proyecto"
+        },
+        "0932ce4f-5756-4fd5-b1ec-e1c939906049": {
+          "description": "Hoy celebraremos lo mucho que habéis aprendido creando nuestros propios proyectos de Laboratorio de Juegos. Podréis hacer un cuento o un juego. Podrás elegir los actores que incluirás en tu proyecto.  Hoy tendremos que planificar un poco antes de empezar. La planificación es una parte muy importante de la codificación de un gran proyecto."
         },
         "3ee111dc-4361-4c19-a350-9690c819f49a": {
           "name": "Planificación",
+          "description": "**Haz esto:** Distribuye la **guía de planificación** y repásala con los alumnos. Los alumnos deben elegir un grupo de personajes y luego marcar con un círculo los que realmente quieren incluir. Junto a la imagen, los alumnos deben describir cómo funcionará su proyecto.",
           "tips": [
-            null
+            "Si los alumnos no están seguros de qué escribir, anímalos a pensar en cómo se moverán los personajes o qué dirán. También puedes hacer que los alumnos creen un guion gráfico en lugar de escribir frases."
           ]
         },
         "8156ceb4-111d-46a8-b3e6-60c27f4cd2d8": {
           "name": "Proyecto",
+          "description": "Cuando llegues a la actividad en tu ordenador, haz clic en cualquiera de las opciones. Empieza con tu plan, ¡pero puedes crear lo que quieras! Al final de la clase, compartiremos nuestros proyectos con la clase.",
           "progression_name": "Proyecto"
         },
         "ec336597-2c69-4bfa-b542-abe5ccf06d5c": {
+          "description": "A medida que los alumnos trabajan, ayúdales respondiendo a sus preguntas y aportando ideas. Anímales a compartir ideas entre ellos para que la actividad sea más colaborativa.",
           "tips": [
-            null
+            "Todas las opciones de esta lección se consideran \"Juego Libre\", lo que significa que no hay una única respuesta correcta. Si un alumno pulsa \"Terminar\", volverá a la lista de opciones. Puedes hacer que los alumnos completen sólo una opción o todas las que les interesen según el tiempo disponible."
           ]
+        },
+        "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
+          "name": "Escaparate",
+          "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que comenten cómo ha sido para ellos la experiencia de planificar y codificar, incluyendo las ideas que todavía les gustaría poner en práctica. \n-   **Prueba de juego por parejas**: Haz que los estudiantes o los grupos se pongan en parejas y prueben los proyectos de los demás. Mientras lo hacen, pídeles que se hagan comentarios positivos y constructivos entre ellos. La ventaja es que los estudiantes tendrán la oportunidad de proporcionar y responder a los comentarios en un entorno más pequeño. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Pide a los alumnos que se muevan al estilo de las \"sillas musicales\" a otro ordenador y que prueben el proyecto allí durante unos minutos, hasta que reciban una señal tuya para que se muevan a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan probar el mayor número posible de proyectos de sus compañeros."
         },
         "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
           "progression_name": "Mi barrio en línea"
@@ -2161,28 +2193,69 @@
           "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos y cuenten su historia delante de la clase. Mientras lo hacen, pídeles que hablen de cómo fue para ellos la experiencia de planificar y codificar. \n-   **Cuentacuentos en pareja**: Si la clase es muy numerosa o tiene poco tiempo, haz que los alumnos o los grupos se pongan en parejas y hagan una demostración de sus proyectos de esta manera. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Haz que los estudiantes se muevan al estilo \"sillas musicales\" a otro ordenador y ejecuten el proyecto allí y lean la historia. Cuando reciban una señal tuya, deben trasladarse a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan hacer una demostración del mayor número posible de proyectos de sus compañeros."
         },
         "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
-          "name": "Vocabulario Clave"
+          "name": "Vocabulario Clave",
+          "description": "-   **online**: utilizar un ordenador, un teléfono o una tableta para visitar un sitio web o una aplicación\n\n**Pregunta**: _¿Cómo es el comportamiento mezquino?_ ([Diapositiva 3](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g590d551e23_0_56))\n\nLas respuestas de los alumnos variarán, pero destacan las siguientes: burlarse de la apariencia de alguien, difundir mentiras sobre alguien y decirle cosas groseras.\n\n**Pregunta**: _¿Cómo hace sentir a la gente el comportamiento mezquino?_\n\nInvita a los alumnos a responder. Las respuestas pueden ser variadas, pero las posibles son: sentirse herido, enfadado, molesto y asustado.\n\n\\*\\*Pregunta: _¿Qué deberías hacer si alguna vez alguien es malo contigo o si ves que alguien es malo con otra persona?_\n\nInvita a los alumnos a responder y haz hincapié en que siempre deben informar a un adulto de confianza si experimentan o son testigos de cualquier forma de maldad.\n\n**Comenta**: _Internet está lleno de cosas divertidas e interesantes, pero a veces la gente puede ser mala con los demás en línea._\n\nAclarar que **en línea** significa _usar un ordenador, teléfono o tableta para visitar un sitio web o una aplicación._ ([Diapositiva 4](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5bf47fcc31_0_2))\n\nExplica a los alumnos que algunos ejemplos de maldad en línea son: \n\n-   Enviar un mensaje mezquino a alguien\n-   Publicar cosas desagradables sobre alguien en un sitio web\n-   Burlarse de alguien en Internet\n-   Hacer cosas malas al personaje de alguien en un juego en línea\n\nSi los alumnos están familiarizados con el término **acoso cibernético**, _utilizar dispositivos digitales, sitios y aplicaciones para intimidar, dañar y molestar a alguien_, puede utilizar ese término en su lugar.\n\n\\*\\*Pregunta: _¿Has visto alguna vez a alguien hacer sentir mal a otra persona en Internet?_\n\nInvita a los alumnos a compartir en parejas, pero haz hincapié en que pueden explicar lo sucedido pero sin utilizar nombres reales. \n\nExplica que van a aprender más sobre cómo puede ocurrir la maldad en Internet y qué hacer cuando les ocurre a ellos o a alguien que conocen."
+        },
+        "b05af723-adce-4036-a645-7b9519b86a1c": {
+          "description": "**Pregunta**: _¿Por qué crees que alguien sería malo con otra persona en Internet?_ ([Diapositiva 5](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5bfb202a4d_0_4))\nLas respuestas pueden variar, pero entre las posibles razones se encuentran las siguientes: estaban tratando de bromear, o se sienten mal con ellos mismos y se desquitan con alguien. Los alumnos también pueden observar que la gente puede decir cosas en línea que no diría cara a cara.\n\n**Diles**: _A veces puede ser más fácil para la gente ser mala en línea que en persona, porque no tienen que ver a la persona cara a cara y ver las emociones de la otra persona._\n\n**Explica** a los alumnos que van a fingir que el animal de peluche es realmente alguien que tú conoces. Mientras se enfrenta al animal de peluche, diles (en tono de maldad): _No puedo creer que te gusten los programas de superhéroes. ¡Eso es algo que vería mi hermano pequeño!_ \n\nA continuación, proyecta la [Diapositiva 6](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5c0ff197bf_0_0) y pide a los alumnos que lean en silencio la conversación del chat.\n\n**Pregunta**: _¿Cuál fue la diferencia entre escribir algo malo y decírselo a la persona?_ \nProyecta la [Diapositiva 7](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5c0ff197bf_0_67) y recoge las respuestas de los alumnos en la tabla T. \n\nHaz hincapié en que ambas cosas fueron malas (decirlo cara a cara y en línea), pero que probablemente fue más fácil escribirlo que decírselo a la persona, porque no tienes que ver la reacción de la persona y no puede oír el tono de tu voz.\n\n**Diles**: Recuerda que si no dirías algo a otra persona en la cara, definitivamente no está bien decirlo en línea."
+        },
+        "e9890d5b-6eb0-4a1c-b0b2-dc9924e7f7a0": {
+          "description": "**Distribuye** la [El Folleto del Alumno - STOP a la Maldad en Línea](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit). Pide a un alumno que lea el escenario de la [Diapositiva 8](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5bfb202a4d_0_27) en voz alta. Concede a las parejas cinco minutos para completar las dos primeras preguntas.\n\n**Invita** a los alumnos a compartir sus respuestas con la clase.\n\n**Diles**: _¡Si alguna vez experimentas maldad en línea, recuerda que debes PARAR!_\n\n**Proyecta** [Diapositiva 9](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5bfb202a4d_0_12) y repasar las cuatro reglas para hacer frente a la maldad en línea. Al repasar cada regla, formula las siguientes preguntas de seguimiento para guiar el debate.\n\n**S**: Aléjate\n\n-   ¿Por qué crees que deberías dejar de usar tu dispositivo y alejarte?\n\n**T**: Díselo a un adulto de confianza\n\n-   Si alguien te hace sentir enfadado, triste o asustado en Internet, ¿a qué adultos puedes decírselo y pedirle ayuda?\n\n**O**: OK sólo a los sitios que están bien\n\n-   ¿Por qué es importante conectarse a Internet sólo con un adulto, o cuando un adulto dice que está bien?\n\nHaz hincapié en que algunos sitios no están hechos para niños y permiten que éstos se comuniquen con otros. Esto abre oportunidades para que se produzcan maldades en línea.\n\n**P**: Haz una pausa y piensa\n\n-   ¿Sería útil hablar con la persona que está actuando con maldad?\n\n**Pregunta**: _¿Qué consejo le darías a Jada para responder a esta situación? ¡Recuerda S-T-O-P!_\n\nCon un compañero, pide a los alumnos que completen la pregunta 3 del [Folleto del alumno STOP a la maldad en línea](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit) y luego invita a los alumnos a compartir sus respuestas con la clase. \n\n-   **S**: Jada debería alejarse del ordenador.\n-   **T**: Jada debe contar lo sucedido a un adulto de su confianza. \n-   **O**: Jada no debe volver a conectarse a Internet ni a la página web de los ponis hasta que un adulto le diga que puede hacerlo.\n-   **P**: Jada debe tomarse un momento para reflexionar sobre la situación. Si Jada y Michael son buenos amigos, es posible que Jada quiera decirle a Michael cómo la hicieron sentir sus acciones, después de recibir el consejo de un adulto. Si Michael sigue siendo malo con ella, debería decírselo inmediatamente a un adulto.\n\n\\*\\*Pregunta: _¿Cuál de las 4 reglas de S-T-O-P crees que es la más importante? ¿Por qué?_\n\nPermite a los alumnos que piensen un momento y luego haz una encuesta informal a la clase. Asegúrate de hacer hincapié en que contárselo a un adulto de confianza (T) es lo más importante que deben hacer si alguna vez experimentan maldades en Internet."
+        },
+        "822262f9-4afc-493a-a3d7-0c4d40334547": {
+          "description": "**Diles**: \\_Entramos en Internet para ver vídeos, enviar mensajes a personas conocidas, jugar y hacer los deberes. A veces la gente dice cosas malas o que dan miedo. ¡Si alguna vez te encuentras con alguien que es malvado en Internet, recuerda S-T-O-P!\n\n**Dirige** a los alumnos al Momento de Pausa y Reflexión de la página 2 del [Folleto del alumno STOP a la maldad en Internet](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit). Lee las instrucciones en voz alta y deja que los alumnos completen la reflexión de forma independiente. ([Diapositiva 10](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g590d551e23_0_356))\n\n**Invita** a los alumnos a compartir sus reflexiones con la clase. Recoge los folletos para evaluar el aprendizaje de los alumnos."
         },
         "69edb680-3657-4056-82ba-59c74c6a0e96": {
           "description": "A continuación se presentan recursos adicionales que puedes proporcionar a los alumnos para mejorar su aprendizaje:\n\n-   [Actividad Familiar](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8) \n-   [Consejos Familiares](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
+        },
+        "4e234f90-8457-4749-866d-cdd800ccaeac": {
+          "name": "Hablando con Robots",
+          "description": "**Visualiza:** Uno de los siguientes vídeos para que los alumnos conozcan el tipo de cosas que pueden hacer los robots:\n\n-   [Asimo de Honda](https://youtu.be/QdQL11uWWcI) (3:58)\n-   [Robot que Dibuja Huevos](https://youtu.be/slh5vMIc33I) (3:15)\n-   [Robot Lego Bailarín](https://youtu.be/NPIq5qldbio) (1:35)"
+        },
+        "49bc6fdd-0a8e-422b-a5bc-b2a97cecb7b7": {
+          "description": "**Comenta:** Remítete al vídeo que has elegido y pregunta a los alumnos cómo creen que el robot sabía lo que tenía que hacer. ¿Un robot \"entiende\" realmente lo que se le dice? ¿Le preocupa meterse en problemas si no hace lo que se le dice?\n\n\\*\\*Objetivo de la actividad: \\*\\* El objetivo de este rápido debate es señalar que, aunque los robots parezcan comportarse como personas, en realidad sólo responden a su programación. Es probable que los alumnos se refieran a los robots de las películas y la televisión que se comportan más como humanos. Pídeles que piensen en los robots que han visto u oído en la vida real, como los _Roombas_, o incluso los asistentes digitales como _Amazon Alexa_."
+        },
+        "90fd2377-1975-4ab7-9cd1-4368746230d0": {
+          "description": "**Diles:** _Los robots sólo pueden hacer lo que se les ha dicho que hagan, pero no se lo decimos sólo con palabras. Para hacer algo, un robot necesita tener una lista de pasos que pueda leer. Hoy vamos a aprender lo que hace falta para que eso ocurra._"
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
           "name": "Mis amigos robóticos",
           "progression_name": "Mis Amigos Robóticos - Actividad Desconectada"
         },
+        "f6e2fcac-b5ae-407b-8b07-029ff0bc7b8f": {
+          "description": "<img alt=\"Robot Symbols\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"float: left; max-width: 200px; margin: 10px;\">"
+        },
         "92835cd7-aad8-4ff9-8fbb-cdd1ffb21c96": {
+          "description": "#### Introducción y Modelado\n\n**Prepara:** El grupo con pilas de vasos o trapecios de papel cortados.",
           "tips": [
-            null
+            "### Reglas Prácticas:\n\n-   **Arriba** significa que la copa sube automáticamente todo lo que necesita.\n-   **Abajo** significa que baja automáticamente hasta que se posa sobre algo.\n    -   La mano vuelve automáticamente a la pila de vasos después de dejar un vaso.\n-   **Adelante** significa que el robot se mueve un paso (1/2 ancho de taza) hacia adelante.\n-   **Atrás** significa que el robot se mueve un paso (1/2 ancho de taza) hacia atrás.\n    -   Nota: Los estudiantes no pueden usar el retroceso a esta edad a menos que quieran construir las pilas de vasos en reversa (lo cual también está bien).\n-   Los programadores no pueden hablar cuando el robot está funcionando. Esto incluye soltar respuestas o señalar cuando el robot ha hecho algo mal.\n-   Los programadores deben levantar la mano si ven un error.\n\n* * *\n\n### Opciones de Diferenciación:\n\n**Simplificar:** ¿Todo esto parece un poco complicado para tus alumnos?  \n\nNo olvides modelar esto delante de la clase hasta que los alumnos entiendan todas las reglas. ¡Si sigue siendo confuso, intenta llevar a cabo toda la actividad juntos en el aula utilizando voluntarios como robots, en lugar de dividirlos en grupos!\n\n**Intensificar:** ¿Tus alumnos son más avanzados? ¿Quieres que esta lección se relacione más con los rompecabezas en línea? Aquí tienes algunas modificaciones que puedes hacer:\n\n-   Una flecha corresponde a un movimiento:\n    -   Cuando se retira un vaso de la pila, vuelve al nivel de la mesa antes de moverse.\n    -   Los alumnos deben utilizar varias flechas \"arriba\" para elevar la taza varios niveles.\n    -   Los alumnos tienen que utilizar varias flechas de \"abajo\" para bajar las tazas varios niveles.\n    -   Los alumnos tienen que utilizar las flechas de \"atrás\" para volver a la pila de vasos."
           ]
+        },
+        "18c817e9-4ffc-43c1-b470-4ae4fb703372": {
+          "description": "**Muestra:** **\\*Clave de símbolos** o escribe las acciones permitidas en la pizarra - asegúrate de que están en un lugar donde se puedan ver durante toda la actividad. Explica a la clase que éstas serán las únicas cuatro acciones que podrán utilizar en este ejercicio. Para esta tarea, darán instrucciones a su amigo \"robot\" para que construya una pila de tazas específica utilizando únicamente los comandos que aparecen en la clave.\n\n**Modelo:** Para explicar cómo deben funcionar las instrucciones, modele para la clase cómo crear y seguir un algoritmo para replicar un patrón simple. Coloca una sola pila de vasos delante de ti para empezar.\n\n**Muestra:** Sostén el patrón que piensas modelar. Un patrón simple de tres tazas es un buen punto de partida.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; margin: 10px;\">\n\n**Sugerencia:** Pregunta a la clase cuál debe ser la primera instrucción, utilizando _sólo las cuatro instrucciones permitidas_. El primer movimiento debe ser \"recoger la taza\". Si los alumnos sugieren otra cosa de la lista, realiza esa acción y permite que vean su error.  Si sugieren algo que no sea de la lista, haz una reacción clara de mal funcionamiento y hazles saber que la orden no se ha entendido.\n\nCon la taza en la mano, pide a la clase que continúe dándole instrucciones hasta que coloque la primera taza. Este es un buen momento para aclarar que \"paso adelante\" y \"paso atrás\" implican cada uno el movimiento de media anchura de la taza. Consulta la siguiente imagen como referencia.\n\n![Patrón de 3 tazas](https://curriculum.code.org/media/uploads/image_d0bGRBl.png)\n\nContinúa pidiendo instrucciones a la clase hasta que hayas completado todo el diseño.\n\nUna vez que tu pila esté completa, señala que te acaban de dar una lista de pasos para completar una tarea. Eso es un algoritmo.  Los algoritmos son estupendos para compartir ideas, pero deletrearlos palabra por palabra puede llevar mucho tiempo. Para eso están los símbolos.  Cuando conviertes un algoritmo en símbolos que un robot (o un ordenador) entiende, eso se llama programación.\n\nPide a la clase que te ayude a escribir el \"programa\" de ese primer movimiento cambiando el texto por una flecha. A continuación, trabaja con ellos para escribir el resto de movimientos necesarios para completar el patrón. Dependiendo de la confianza de tus alumnos, puedes alternar con frecuencia entre actuar como \"robot\" y escribir el código, o puedes empujarles a escribir todo el programa antes de ponerlo en práctica. Una posible solución es la siguiente:\n\n![Solución de 3 tazas](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Voluntario:** Una vez que la clase haya completado el programa modelo, pide a uno de los alumnos que se acerque y actúe como \"robot\" para asegurarse de que el programa realmente funciona. Anímale a decir las instrucciones en voz alta mientras \"ejecuta\" el código."
+        },
+        "81f309fd-bac6-4eb6-9056-b469ccdf98b7": {
+          "description": "#### Programando tus Robots\n\n**Agrupar:** Coloca a los estudiantes en grupos de 4. Cada grupo debe dividirse a su vez en dos parejas - cada pareja desarrollará su propio programa que será \"ejecutado\" por la otra pareja.\n\n**Distribuir:** Dale a cada grupo una pila de vasos o recortes de papel.\n\n**Mostrar: \\*\\* \\*_\\\\_Ideas para Apilar Tazas** a la clase o reparte copias individuales para que las usen los grupos. Haz que cada pareja (no grupo) elija el diseño que quiere que hagan sus robots. Intenta que la primera vez elijan un diseño más fácil y que más adelante elijan un diseño más complejo. Anima a las parejas a mantener su elección en secreto para la otra mitad de su grupo.\n\n**Debatir:** Dale tiempo a cada pareja para deliberar sobre cómo debe construirse la pila, utilizando únicamente los símbolos proporcionados. Asegúrate de que cada grupo escriba el \"programa\" en algún lugar para que el \"robot\" lo lea más tarde.\n\n**Hacer:** Una vez que las dos parejas del grupo hayan completado sus programas, pueden turnarse para ser \"robots\" del otro siguiendo las instrucciones que la otra pareja escribió. Anima a los alumnos a que observen atentamente a su \"robot\" para asegurarse de que siguen las instrucciones. Si un alumno ve un error y levanta la mano, haz que el robot termine las instrucciones lo mejor posible. A continuación, pida a los alumnos que discutan el posible fallo y propongan soluciones. Continúa repitiendo hasta que la pila esté construida correctamente.\n\n**Circular:** Busca grupos que estén intentando tomar atajos añadiendo cosas extra (como números) a su código.  Elógialos por su ingenio, pero recuérdales que en este ejercicio los robots no entienden nada más que los símbolos proporcionados.  Si quieres, puedes sugerirles que guarden su brillante solución para la próxima vez que jueguen a este juego, ya que podrían tener la oportunidad de utilizar su invento pronto.\n\n**Repetir:** Dependiendo del tiempo disponible, mezcla las parejas y dales la oportunidad de hacer un patrón diferente. Cada vez que los grupos repitan el proceso, anímales a elegir un patrón más desafiante."
+        },
+        "d540dc8b-96d7-4d9e-9e16-b9c31aae8e4e": {
+          "description": "**Debate:** Después de que todos hayan tenido la oportunidad de ser el robot, vuelve a reunir a la clase para comentar su experiencia.  El objetivo de este debate es dar a los estudiantes un espacio para que den sentido a su experiencia como robot y como programador. Las preguntas son intencionadamente amplias, pero están diseñadas para que los alumnos reflexionen sobre los retos de escribir un programa claro y las limitaciones de un robot u ordenador a la hora de interpretar sus instrucciones. En particular, debate en clase:"
+        },
+        "0faa4b5a-9049-426f-986b-b1aaf242c6b3": {
+          "description": "-   _¿Qué fue lo más difícil a la hora de elaborar las instrucciones?_\n-   _¿Alguien encontró un error en las instrucciones una vez que el robot empezó a seguirlas?_\n    -   _¿Cuál fue el error?_\n    -   _¿Por qué crees que no te diste cuenta al escribir el programa?_\n-   _Cuando eras el robot, ¿Qué fue lo más difícil de seguir las instrucciones que te dieron?_"
         },
         "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
           "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   Dibuja tu propia pila de tazas que te gustaría que construyera un robot.\n-   ¿Puedes crear un programa para esa pila de tazas?",
           "tips": [
             "Este tipo de reflexiones se pueden llevar a cabo de diferentes maneras. ¡La redacción de un diario o el debate (en grupo o en pareja) son buenas opciones!"
           ]
         },
         "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Esta lección se basa en muchas de las ideas desconectadas que los alumnos han aprendido en las semanas previas a esta primera actividad en línea.  Es importante que traigas esos conceptos (como la persistencia, la depuración, los algoritmos y los programas) en un círculo completo para que tu clase pueda beneficiarse de ellos en su trabajo en línea también.\n\n**Mostrar:** Enseña a los alumnos una pila de tazas del ejercicio \"Mis Amigos Robóticos\" que completaron en las lecciones anteriores a ésta. \n\n**Debatir:** Pide a los alumnos que recuerden los símbolos utilizados en \"Mis amigos robóticos\".    \n\n-   ¿Qué sucede cuando el robot lee las diferentes flechas?\n\nAnima a los alumnos a pensar en los consejos de depuración:\n\n-   _¿Estaba todo bien en el primer paso?_\n-   _¿Qué pasa con el segundo?_\n-   _¿Dónde ha ido mal?_\n\n**Transición:** Una vez que estés satisfecho de que tus alumnos recuerden \"Mis amigos robóticos\", puedes pasar a la Actividad de Transición."
+        },
+        "ccbf325b-05d5-4e4a-b009-1576cdfce4a4": {
+          "name": "La Transición de Desconectado a En Línea"
         },
         "bb044fed-a18b-42b3-b8bd-fb3bfb538eb2": {
           "tips": [
@@ -2445,6 +2518,9 @@
         "6cc5d299-00fd-477a-a654-60dc83031733": {
           "name": "Introducción"
         },
+        "c83b9630-0560-4bd5-8574-6e4a25d4de4e": {
+          "description": "Estas actividades ayudarán a trasladar los conceptos desconectados de \"El Gran Evento\" al mundo online en el que se mueven los alumnos. Escoge _una_ de las siguientes para hacer con tu clase:"
+        },
         "64988ef3-1287-4486-9d41-cd475637575b": {
           "name": "Construye un juego Flappy",
           "progression_name": "Vídeo: Codifica Tu Propio Juego Flappy"
@@ -2549,6 +2625,9 @@
         },
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "Proyecto"
+        },
+        "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
+          "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que comenten cómo ha sido para ellos la experiencia de planificar y codificar, incluyendo las ideas que todavía les gustaría poner en práctica. \n-   **Prueba de juego por parejas**: Haz que los estudiantes o los grupos se pongan en parejas y prueben los proyectos de los demás. Mientras lo hacen, pídeles que se hagan comentarios positivos y constructivos entre ellos. La ventaja es que los estudiantes tendrán la oportunidad de proporcionar y responder a los comentarios en un entorno más pequeño. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Pide a los alumnos que se muevan al estilo de las \"sillas musicales\" a otro ordenador y que prueben el proyecto allí durante unos minutos, hasta que reciban una señal tuya para que se muevan a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan probar el mayor número posible de proyectos de sus compañeros."
         },
         "b8f03681-d01e-4384-b88f-5e562eab172f": {
           "name": "Vocabulario Clave"
@@ -3803,6 +3882,9 @@
           "name": "Crear tu proyecto",
           "progression_name": "Crear tu proyecto"
         },
+        "d99249e4-021e-4a39-9462-045e0306c00a": {
+          "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que comenten cómo ha sido para ellos la experiencia de planificar y codificar, incluyendo las ideas que todavía les gustaría poner en práctica. \n-   **Prueba de juego por parejas**: Haz que los estudiantes o los grupos se pongan en parejas y prueben los proyectos de los demás. Mientras lo hacen, pídeles que se hagan comentarios positivos y constructivos entre ellos. La ventaja es que los estudiantes tendrán la oportunidad de proporcionar y responder a los comentarios en un entorno más pequeño. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Pide a los alumnos que se muevan al estilo de las \"sillas musicales\" a otro ordenador y que prueben el proyecto allí durante unos minutos, hasta que reciban una señal tuya para que se muevan a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan probar el mayor número posible de proyectos de sus compañeros."
+        },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "Introducción",
           "description": "### Comportamiento en el Laboratorio de Informática\n\n**Objetivo:** Esta presentación enseñará a los estudiantes qué esperar y cómo comportarse cuando entren en el laboratorio de informática.",
@@ -4201,7 +4283,8 @@
           "progression_name": "Lecciones adicionales"
         },
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "Pedir a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto puede ayudar a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso que les sirva para el futuro.\n\n\\*\\*Sugerencias: \\*\\*\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una de las **\\*Caras de Emoción** que muestre cómo te has sentido con la lección de hoy.\n-   Dibuja un evento que hayas utilizado en tu programa de hoy.\n-   Imagina que tienes un robot con mando a distancia. ¿Qué aspecto tendría el mando a distancia? Haz un dibujo de lo que crees que podrías hacer con el robot."
         },
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Use estas actividades para mejorar el aprendizaje del alumno. Se pueden usar como actividades al aire libre u otro tipo de enriquecimiento. \n\n**Mirar Bajo la Capucha**\n\nCuando comparte un enlace a su historia, también comparte todo el código que va de fondo. Esta es una buena forma para que los alumnos aprendan de los otros. \n\n Postée enlaces para historias terminadas en línea. \n    \\-   ¡También invente una historia para compartir! \n\n-   Cuando los alumnos suban un enlace, pídales que hagan clic en el botón \"Cómo Funciona\" para ver el código  para ver el código que está detrás de la historia.\n-   Discutan como grupo las formas diferentes en que sus compañeros codificaron sus historias. \n    -   ¿Qué te sorprendió?\n    -   ¿Que te gustaría intentar?\n-   Escoge la historia de alguien más y haz clic en `Remix` para construir desde ahí. (No te preocupes, la historia original estará  segura)"

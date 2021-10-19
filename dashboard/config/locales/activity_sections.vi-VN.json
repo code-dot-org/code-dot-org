@@ -530,25 +530,36 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Tổng kết"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Phản ánh"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Giới thiệu"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Dịch bệnh bùng phát",
+          "description": "_Trong bài học hôm nay, các bạn sẽ đến với “Thị Trấn Quái Vật”, nơi sắp xảy ra một đợt lây lan vi rút. Tiến sĩ Quái Vật cần sự giúp đỡ của bạn để làm chậm sự lây lan của vi-rút._\n\n_Bạn sẽ tạo một trình mô phỏng dịch bệnh trong Sprite Lab, rồi sử dụng trình mô phỏng đó để hiểu cách lây lan của vi rút. Bạn cũng sẽ giúp tất cả quái vật hồi phục sức khỏe đấy!_",
+          "progression_name": "Dịch bệnh bùng phát"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Chào mừng đến với Thị Trấn Quái Vật"
         },
-        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "progression_name": "Dự án nhỏ: Trình mô phỏng dịch bệnh bùng phát"
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "chơi miễn phí",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "chơi miễn phí"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Bản mô phỏng là phương pháp tuyệt vời để học những điều khó có thể quan sát được trong thế giới thực. Chúng giúp các nhà khoa học giải quyết vấn đề, dự đoán cách giải quyết vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là cách thể hiện diễn biến của một đợt lây lan vi rút ở Thị Trấn Quái Vật._"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Phản ánh"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -567,180 +578,372 @@
           "name": "Phản ánh"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "Trong khóa học này, chúng ta sẽ học cách lập trình. Mã lệnh được sử dụng để tạo ra ứng dụng, game, trang web, bản mô phỏng và tất cả mọi thứ chúng ta dùng trên máy tính."
+        },
+        "ae9c68f5-dc04-4e99-917b-e2ba8424692f": {
+          "description": "**Làm như sau:** Sử dụng slide bài học hoặc bảng trắng, cho học sinh xem biểu đồ chữ T có tên “Ứng dụng và trò chơi yêu thích” ở bên trái và “Tại sao chúng ta thích chúng” ở bên phải. Sau khi làm mẫu bằng một ví dụ, hãy yêu cầu học sinh đề xuất ý kiến đóng góp của chính mình vào danh sách. Khi học sinh giải thích lý do tại sao họ thích một ứng dụng cụ thể, hãy trình bày lại các ý tưởng của họ và tập trung vào _lựa chọn_ và thời điểm người dùng được quyền _chọn_ cách họ chơi hoặc sử dụng ứng dụng đó. Hãy tiếp tục khi học sinh nhận ra mối liên hệ khi mọi người muốn có quyền đưa ra lựa chọn."
+        },
+        "bee82cce-d1ce-452a-b733-b9e750e54b90": {
+          "description": "Khi ứng dụng và trò chơi được tạo ra, chúng được thiết kế để hướng đến người dùng. Người dùng là bạn hoặc bất kỳ ai sẽ sử dụng và chơi với ứng dụng đó. Người sáng tạo có ý tưởng về cách sử dụng ứng dụng của mình, nhưng người dùng mới là người đưa ra lựa chọn!\nHôm nay chúng ta sẽ khám phá cách (và lý do) các nhà sản xuất ứng dụng và trò chơi để chúng ta lựa chọn."
         },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
+          "description": "**Làm như sau:** Chiếu slide Lựa chọn của người dùng, có trong phần Tài liệu ở trên.\n\n**Thảo luận:** Với mỗi ứng dụng hoặc trò chơi bạn thấy, theo bạn nhà sản xuất ứng dụng đưa ra lựa chọn nào cho người dùng?\n\n**Mục tiêu:** Học sinh nên tham gia để thảo luận về các ý tưởng, không chỉ về nội dung của ứng dụng mà còn về các lựa chọn cụ thể mà người dùng có thể thực hiện. Ví dụ: Ứng dụng Hộp thoại cho phép người dùng chọn hình đại diện hoặc hình đại diện ảo của mình. Lựa chọn này có ích vì giúp người dùng cảm thấy như ứng dụng thực sự dành cho họ.",
           "tips": [
-            null
+            "Bài học này bao gồm một trang thuyết trình cùng một số ứng dụng giả để sử dụng cho mục đích thảo luận. Bạn có thể bổ sung hoặc thay thế những ví dụ này bằng những ví dụ khác dựa trên sở thích của học sinh."
           ]
+        },
+        "75264b2e-950d-4494-9313-aa20451bfd50": {
+          "description": "Chúng ta có thể thấy rằng trong tất cả các ứng dụng này, người dùng có thể lựa chọn cách sử dụng. Những lựa chọn này có thể là động lực để nhiều người muốn sử dụng ứng dụng hơn."
+        },
+        "85dd5032-f0e5-446e-a687-45d34b5229c5": {
+          "description": "**Suy nghĩ:** Trò chơi hoặc ứng dụng yêu thích của bạn là gì? Bạn có thể thực hiện lựa chọn nào khi dùng ứng dụng đó?"
+        },
+        "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
+          "description": "**Làm như sau:** Phát video **\\*Giới thiệu Sprite Lab**."
+        },
+        "24a7b06d-f1c9-47fb-b723-8e7894957e27": {
+          "description": "Chẳng bao lâu nữa, chúng ta sẽ học lập trình và thực hiện các dự án Sprite Lab của riêng mình. Chúng ta sẽ bắt đầu bằng cách khám phá tiềm năng của chúng. Hôm nay bạn chính là người dùng! Nhiệm vụ của bạn là chơi và sử dụng các chương trình mẫu có trên trang web Code.org. Đối với mỗi ứng dụng mà bạn thử, bạn sẽ mô tả trang phục nhân vật mà bạn thấy và bất kỳ lựa chọn nào bạn có thể thực hiện với tư cách là người dùng."
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "name": "Khám phá ứng dụng",
+          "description": "_Khám phá ít nhất 3 chương trình Sprite Lab trên Code.org. Đối với mỗi chương trình, bạn sẽ liệt kê các nhân vật bạn nhìn thấy và mô tả các lựa chọn bạn đã thực hiện với tư cách là người dùng._\n\n**Làm như sau:**\n\n-   Phát cho mỗi cá nhân (hoặc nhóm) bản cứng hoặc bản mềm của bảng **\\*Khám phá ứng dụng**.\n\n-   Hướng dẫn học sinh sang cấp độ 2 trên Code Studio (Khám phá: Ứng dụng mẫu).\n\n-   Cân nhắc làm mẫu một ứng dụng trước cả lớp rồi mới cho học sinh tự hoàn thành bài tập.",
           "tips": [
-            null
+            "Nếu đây là lần đầu tiên học sinh sử dụng Code.org, hãy dành thêm thời gian để giúp học sinh hiểu cách truy cập trang web và đăng nhập vào tài khoản của mình."
           ]
         },
+        "f321b39c-8051-4fc9-9e40-24f25216f88c": {
+          "name": "Chia sẻ rộng rãi",
+          "description": "**Thảo luận:** Lựa chọn thú vị nhất mà bạn có thể thực hiện với các ứng dụng này là gì? Đã bao giờ bạn mong muốn thay đổi điều gì đó trong ứng dụng, nhưng không có quyền lựa chọn chưa?\n\n**Mục tiêu:** Học sinh có thể nêu các lựa chọn cụ thể mà họ đã thực hiện, nhưng cũng nên thảo luận về lý do họ nghĩ rằng người sáng tạo đã cho chúng ta lựa chọn đó. Các lựa chọn cần nhấn mạnh bao gồm các từ mà bạn nhập (ví dụ Chat Bot), loại nhân vật được sử dụng (ví dụ: Trò chơi nhà sưu tầm) hoặc cách tương tác với yếu tố nào đó."
+        },
+        "efa336e3-b101-4300-9bce-45771a6e114d": {
+          "name": "Đề xuất cải tiến",
+          "description": "**Lời nhắc:** Hãy nhớ lại một ứng dụng bạn đã dùng và tìm cách cải thiện ứng dụng đó bằng cách cho người dùng nhiều lựa chọn hơn.\n\nNếu có thời gian, hãy yêu cầu học sinh xem xét lời nhắc trên thông qua một hoặc nhiều phương pháp sau đây:\n\n-   Mời học sinh giơ tay phát biểu ý kiến khi thảo luận cả nhóm.\n-   Tham gia thảo luận theo cặp hoặc nhóm nhỏ.\n-   Cho học sinh vẽ một bản phác thảo hoặc poster bằng ý tưởng của mình."
+        },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Hôm nay, chúng ta đã tìm hiểu về một số cách thức mà người tạo ứng dụng cho chúng ta lựa chọn với tư cách là người dùng. Chúng ta cũng đã tìm hiểu về Nhân vật. Nhân vật là các yếu tố đồ họa trên màn hình với các thuộc tính khác nhau, như kích thước, hướng xoay và vị trí. Nhân vật còn có một trang phục quyết định ngoại hình của họ."
         },
         "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
+          "description": "**Lời nhắc: (Chọn một)**\n\n-   Bạn có thể nêu ví dụ về lựa chọn bạn muốn thực hiện được trong các trò chơi hoặc ứng dụng bạn sử dụng không?\n-   Bạn muốn tạo loại ứng dụng hoặc trò chơi nào?",
           "tips": [
-            null
+            "Những lời nhắc suy nghĩ như vậy có thể tiến hành theo nhiều hình thức khác nhau. Viết nhật ký hoặc thảo luận (theo nhóm hoặc với bạn học) là những lựa chọn tuyệt vời!"
           ]
         },
         "6409ca44-ee4a-45b7-9b07-f46e4d8983ba": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "#### Hướng dẫn tạo cảnh"
+        },
+        "a7ddf80c-6efc-4650-bc93-fb329d06bca1": {
+          "description": "Lần trước, chúng ta đã khám phá các ứng dụng và trò chơi được tạo bằng Sprite Lab. Hôm nay chúng ta sẽ bắt đầu tự lập trình để tạo chuyển động nhân vật đơn giản."
+        },
+        "dc4cc0f9-6fee-47a9-8bea-502e9ec777c5": {
+          "description": "**Làm như sau:** Sử dụng các slide khởi động của bài học hoặc [dự án mẫu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) này, cho học sinh xem hình chuyển động của kiến và chuồn chuồn.\n\n**Thảo luận:** _Bạn mô tả cảnh này như thế nào?\nNếu bạn muốn ai đó tạo cảnh này cho bạn trên máy tính, họ sẽ cần hướng dẫn nào?_\n\n**Mục tiêu thảo luận:** Học sinh phải xác định được cả hai nhân vật trong dự án này, mô tả hành vi (chuyển động) của nhân vật và để ý cả phông nền.\nCho học sinh thời gian để suy nghĩ về các ý tưởng. Nếu họ không biết phải nói gì, hãy giải thích rằng bạn chỉ yêu cầu họ nêu những gì họ quan sát được.\n\nTiếp theo, cho học sinh xem mã lệnh thực tế được sử dụng trong dự án này và mời học sinh thử đọc mã lệnh đó.\n\n**Suy nghĩ:** Hướng dẫn của chúng ta và mã lệnh này có điểm nào giống và khác nhau?"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
           "name": "Tạo nhân vật",
+          "description": "#### Dự đoán (3 phút)\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán điều gì sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian suy nghĩ về bất cứ điều gì họ thấy thú vị hoặc khiến họ ngạc nhiên.",
           "tips": [
-            null
+            "Trong các bài tập dự đoán, học sinh được yêu cầu đọc một chương trình cho sẵn và trả lời câu hỏi về chương trình đó. Học sinh phải trả lời câu hỏi trước khi nhấn nút “Run” (chạy). Mặc dù bạn có thể dùng những câu hỏi này như một hình thức đánh giá, nhưng hãy nhớ rằng câu hỏi thường bố trí ở đầu bài học như một phương pháp giúp học sinh khơi dậy sự tò mò trước khi chính thức được truyền đạt một kiến thức mới."
           ]
         },
+        "3eb6f356-a55c-4c86-a056-e8af46058092": {
+          "description": "**Làm như sau:** Phát video “Cách tạo nhân vật” "
+        },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
+          "description": "#### Phát triển kỹ năng và thực hành (20 phút)\n\n**Chuyển tiếp:** Yêu cầu học sinh di chuyển đến chỗ máy tính và đăng nhập.\n\nCác hoạt động này phù hợp để tự học hoặc lập trình theo cặp.\n\nHọc sinh nên hoàn thành các cấp độ Phát triển kỹ năng rồi dành thời gian còn lại để chọn trong số các hoạt động Thực hành khác nhau.",
           "tips": [
-            null
+            "Nhiều bài học trong khóa học này bao gồm cả cấp độ “Phát triển kỹ năng” và “Thực hành”. Để đánh giá, tất cả học sinh cần hoàn thành phần phát triển kỹ năng. Các cấp độ thực hành có thể dùng để phân biệt hoặc cho học sinh nhiều lựa chọn hơn."
           ]
         },
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
+          "description": "#### Chơi tự do (10 phút)\n\n**Chuyển tiếp:** Lúc này, học sinh nên chuyển sang cấp độ cuối cùng của bài học để có thể thực hiện dự án của riêng mình.",
           "tips": [
-            null
+            "Các cấp độ Chơi tự do được thiết kế như một cơ hội cho học sinh nhanh chóng áp dụng những kiến thức đã học một cách sáng tạo. Học sinh nên thử nghiệm những ý tưởng của riêng mình cũng như nên chia sẻ và hợp tác với nhau."
           ]
         },
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Hôm nay, bạn đã học cách lập trình để tạo chương trình trong Sprite Lab. \n\n**Chương trình** - Thuật toán được mã hóa thành nội dung mà máy có thể chạy được.\n\n**Thuật toán** - Danh sách các bước để hoàn thành một nhiệm vụ."
+        },
+        "84a55315-a3fb-4f8c-a451-b167ff8700cb": {
+          "description": "#### Viết nhật ký\n\nCho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\nBạn có lời khuyên nào cho một người bạn quan tâm đến hoạt động sáng tạo các chương trình của riêng họ trong Sprite Lab không?"
+        },
+        "18cec2c2-3023-4456-b199-32f93d8b5287": {
+          "description": "**Làm như sau:** Ôn tập hoặc giới thiệu từ **thuật toán**: danh sách các bước để hoàn thành một nhiệm vụ."
         },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
           "name": "Làm theo thuật toán",
+          "description": "Hôm nay chúng ta sẽ bắt đầu với một trò chơi ngắn. Trong trò chơi này, tôi sẽ đưa cho bạn tất cả các lệnh để bạn làm theo và công việc của bạn là làm theo **thuật toán** này. Lệnh sẽ luôn bắt đầu bằng từ “bắt đầu” hoặc “dừng”. Nếu tôi bảo bạn bắt đầu làm việc gì đó, bạn cần bắt đầu hành vi đó và tiếp tục cho đến khi tôi bảo bạn dừng lại. Tôi cũng có thể yêu cầu bạn “dừng mọi hành động”, nghĩa là bạn có thể dừng tất cả hành vi mà tôi đã đưa ra cho bạn cho đến thời điểm đó. Chúng ta sẽ chơi 3 hiệp và sau mỗi hiệp, tôi sẽ hỏi tất cả các bạn một vài câu hỏi.",
           "tips": [
-            null
+            "Đừng quên tạo khoảng cách giữa các lệnh. Đối với mỗi phần trong mục này, hãy cân nhắc chạy toàn bộ trình tự mà không thảo luận gì rồi lặp lại một lần nữa sau khi mọi người có cơ hội thảo luận và xử lý bất kỳ sự nhầm lẫn nào."
           ]
         },
+        "294a81ac-fc2a-417c-b3c5-e9330376b5a8": {
+          "description": "#### Vòng 1 (Sơ cấp):\n\n-   Bắt đầu giậm chân tại chỗ.\n-   Dừng giậm chân tại chỗ.\n-   Bắt đầu vỗ tay.\n-   Dừng vỗ tay.\n-   Bắt đầu giậm chân tại chỗ.\n-   Bắt đầu vỗ tay.\n-   Dừng mọi hành động.\n\n**Thảo luận:** _Điều gì xảy ra khi bạn được yêu cầu vỗ tay trong lúc đang giậm chân tại chỗ? Điều gì xảy ra nếu bạn được yêu cầu bắt đầu hai hành vi khác nhau cùng một lúc?_\n\nHọc sinh nên hiểu rằng nhiều hành vi có thể xảy ra đồng thời.\n\\|\n\n#### Vòng 2 (Trung cấp):\n\n-   Bắt đầu vẫy tay trên không.\n-   Bắt đầu lắc lư đầu.\n-   Dừng vẫy tay trên không.\n-   Dừng lắc lư đầu.\n-   Bắt đầu lắc đầu gối.\n-   Bắt đầu đập cánh tay như chim.\n-   Dừng lắc đầu gối.\n-   Bắt đầu lắc lư đầu.\n-   Bắt đầu giậm chân tại chỗ.\n-   Dừng đập cánh tay như chim.\n-   Dừng mọi hành động.\n\n**Thảo luận:**\n\n_Những loại hướng dẫn nào khiến mọi người mắc lỗi? Bạn nghĩ chiến lược nào là hữu ích để đảm bảo bạn làm theo đúng hướng dẫn? Tại sao phải theo dõi từng hành vi riêng biệt?_\n\nHọc sinh nên hiểu rằng mỗi hành vi cần dừng lại riêng lẻ. Họ cần theo dõi riêng từng hành vi.\n\n#### Thử thách\n\n-   Bắt đầu ngồi xổm.\n-   Bắt đầu gõ vào đầu.\n-   Dừng ngồi xổm.\n-   Dừng gõ vào đầu.\n-   Bắt đầu nhảy lên xuống.\n-   Bắt đầu gõ vào đầu.\n-   Dừng mọi hành động.\n-   Bắt đầu vỗ tay.\n-   Bắt đầu vỗ cánh tay như chim.\n-   Dừng mọi hành động.\n-   Bắt đầu ngồi xổm.\n-   Bắt đầu nhảy lên xuống.\n-   Dừng mọi hành động.\n-   Bắt đầu gõ vào đầu gối.\n-   Bắt đầu gõ vào đầu.\n-   Dừng mọi hành động.\n-   Bắt đầu xoay trái.\n-   Bắt đầu xoay phải.\n-   Dừng xoay trái.\n-   Dừng xoay phải.\n\n**Thảo luận:** _Điều gì sẽ xảy ra nếu hai hành vi có vẻ xung đột với nhau?_\n\n_Bạn nên làm gì khi được yêu cầu vỗ tay và đập cánh tay cùng lúc?_\n\n_Làm cách nào để nhảy lên và xuống trong khi đang ngồi xổm?_\n\n_Điều gì sẽ xảy ra nếu bạn cần gõ đầu gối và đầu cùng một lúc?_\n\n_Khi bạn được yêu cầu xoay theo hai hướng ngược nhau, bạn thấy mọi người làm gì?_\n\n_Điều gì sẽ xảy ra nếu bạn được yêu cầu xoay trái và phải cùng một lúc_\n\nHọc sinh nên hiểu rằng một số hành vi xung đột với nhau có thể dẫn đến kết quả không mong muốn. Hai hành vi trái ngược nhau có thể triệt tiêu lẫn nhau."
+        },
+        "34bd73dd-0031-4051-86a2-8f6a86735b34": {
+          "description": "#### Dự đoán (2 phút)\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán điều gì sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian suy nghĩ về bất cứ điều gì họ thấy thú vị hoặc khiến họ ngạc nhiên."
+        },
+        "275316f1-8a17-411e-881a-0841ede9cd01": {
+          "description": "#### Video: Nhân vật hành động (3 phút)\n\n**Làm như sau:** Phát video “Nhân vật hành động”"
+        },
+        "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
+          "description": "#### Phát triển kỹ năng và thực hành (20 phút)\n\n**Chuyển tiếp:** Yêu cầu học sinh di chuyển đến chỗ máy tính và đăng nhập. Các hoạt động này phù hợp để tự học hoặc lập trình theo cặp.\n\nHọc sinh nên hoàn thành các cấp độ Phát triển kỹ năng rồi dành thời gian còn lại để chọn trong số các hoạt động Thực hành khác nhau."
+        },
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
+          "description": "#### Chơi tự do (10 phút)\n\n**Chuyển tiếp:** Bây giờ, học sinh nên chuyển sang cấp độ cuối cùng của bài học để xem các lựa chọn chơi tự do giống như các bài học trước. Hãy khuyến khích học sinh thêm các sự kiện vào dự án trước của họ hoặc bắt đầu một dự án mới.",
           "tips": [
-            null
+            "Các lựa chọn chơi tự do trong bài học này giống với những lựa chọn từ bài học trước. Trên thực tế, bất kỳ mã lệnh nào của học sinh trong bài học trước sẽ được chuyển sang bài học hôm nay. Sự khác biệt chính là bây giờ học sinh có thêm khối trong hộp công cụ và họ nên sử dụng để làm cho chương trình thú vị hơn hoặc phức tạp hơn."
           ]
         },
         "47bca048-39fb-4014-a480-e21d163469db": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Hôm nay, bạn đã học cách tạo các chương trình thay đổi theo thời gian bằng cách sử dụng sự kiện.\n\n**Sự kiện** - _Hành động khiến hiện tượng nào đó xảy ra._"
+        },
+        "663232b3-1a0c-4d35-a039-f6219180dd04": {
+          "description": "#### Viết nhật ký\n\nCho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\nPhím mũi tên là một cách để khiến chương trình tăng tính tương tác. Chúng ta có thể dùng những cách nào khác để cho người dùng quyền điều khiển những gì xảy ra trong ứng dụng hoặc game?"
         },
         "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "Hãy ôn lại khái niệm _sự kiện_ và _hành vi_ trong lập trình. Ngoài ra, hãy giới thiệu công cụ “Trang phục” của Sprite Lab giúp học sinh vẽ trang phục của riêng mình.\n\n**Ôn tập:** Đặt câu hỏi cho học sinh về các sự kiện và hành vi.\n\n-   Bạn có nhớ sự kiện là gì không?\n\n-   Bạn có nhớ hành vi là gì không?\n\n-   Bạn có nhớ một số hành vi mà bạn đã sử dụng không? Các hành vi đó là gì?\n    -   “tuần tra”\n    -   “rung rinh”\n    -   “xoay phải/trái”\n\n**Cho xem:** Hãy bắt đầu bằng cách cho học sinh xem Cấp độ 1 của bài học hôm nay.\n\n**Suy nghĩ/Ghép cặp:** Yêu cầu học sinh dự đoán điều gì sẽ xảy ra khi chạy mã lệnh và thảo luận với những bạn xung quanh. Hãy chạy mã lệnh và thảo luận về kết quả.\n\n**Cho xem:** Hãy cho học sinh xem Cấp độ 2. Trình bày ngắn gọn cách thực hiện như sau:\n\n-   Điều hướng giữa các tab _Mã lệnh_ và _Trang phục_.\n-   Vẽ trang phục.\n-   Chọn trang phục từ thư viện trang phục.\n-   Thay đổi trang phục của thú cưng ảo thành trang phục tùy chỉnh."
         },
         "8093d6bd-6d62-46dc-9fe1-1a4999a1dcf8": {
-          "name": "Thú cưng ảo với Sprite Lab"
+          "name": "Thú cưng ảo với Sprite Lab",
+          "description": "**Mục tiêu:** Hôm nay, học sinh sẽ tạo thú cưng ảo của riêng mình! Họ sẽ bắt đầu bằng cách vẽ hoặc chọn trang phục mới cho nhân vật. Sau đó, họ sẽ tạo sự kiện kích hoạt các hành động và hành vi khi tương tác."
         },
         "eabbaa23-0f57-46ed-84bc-8bff04cefaf3": {
+          "description": "#### Bài tập trực tuyến\n\n**Chuyển tiếp:** Cho học sinh di chuyển đến vị trí máy tính. Hãy khuyến khích học sinh làm theo hướng dẫn trong mỗi bài tập. Giúp họ nhận ra rằng đây là một hoạt động sáng tạo, nhằm mục đích giúp họ tìm hiểu Sprite Lab. ",
           "tips": [
-            null
+            "Hãy khuyến khích học sinh bằng câu hỏi/thử thách, bắt đầu bằng việc hỏi bạn cùng nhóm. Câu hỏi chưa được trả lời có thể chuyển cho một nhóm gần đó có thể đã biết lời giải. Hãy cho học sinh mô tả vấn đề mà các bạn đang gặp phải:\n\n-   Như thế nào mới là đúng?\n-   Chương trình chạy như thế nào?\n-   Bạn rút ra được kết luận gì?"
           ]
+        },
+        "7a70ca98-817b-49cf-87dd-37c1e69d6d8c": {
+          "description": "**Lời nhắc:** Nếu có thể chia sẻ các bài tập, hãy nhắc học sinh chỉ chia sẻ tác phẩm của mình với bạn bè thân thiết hoặc gia đình."
         },
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "chơi miễn phí"
         },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "**Lời nhắc:**\n\n-   Bài học hôm nay là về kiến thức gì?\n-   Bạn cảm thấy thế nào về bài học hôm nay?\n-   Bạn có muốn thú cưng của mình làm những hành động nào khác không?"
+        },
+        "fcaf009c-58ce-43f6-bb24-dfdae991fdd2": {
+          "description": "### Nạp năng lượng cho thú cưng ảo (60-90 phút)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Khoa học máy tính + Anh văn + Khoa học**\n\n[Nạp năng lượng cho thú cưng ảo](https://docs.google.com/document/d/1SV51NrXzinuXHLToGarIDnVMd6GA8ZaD2LfWMDqTg0M/edit?usp=sharing) là hoạt động tùy chọn phù hợp với hệ thống Common Core ELA (Tiêu chuẩn chung cho Anh văn căn bản) và Next Generation Science Standards (Tiêu chuẩn khoa học thế hệ mới) do cộng đồng giáo viên thiết lập. Học sinh sẽ thiết kế mô hình khoa học thể hiện cách thú cưng ảo được nạp năng lượng cần thiết để tồn tại.\n\n_Các tiêu chuẩn áp dụng:_\n\n-   **CCSS.ELA.RI.5.7:** Lấy thông tin từ nhiều nguồn in ấn hoặc kỹ thuật số, thể hiện khả năng nhanh chóng xác định câu trả lời cho một câu hỏi hoặc khả năng giải quyết một vấn đề một cách hiệu quả. \n\n-   **CCSS.ELA.RI.5.9:** Tích hợp thông tin từ một số văn bản về cùng một chủ đề để viết hoặc nói về chủ đề một cách thông thạo.\n\n-   **5- PS3-1:** Sử dụng mô hình để mô tả rằng năng lượng trong thức ăn của động vật (dùng để hồi phục cơ thể, tăng trưởng, chuyển động và duy trì thân nhiệt) vốn xuất phát năng lượng từ mặt trời.\n\n-   **5-LS2-1:** Phát triển mô hình mô tả chu trình của vật chất trong hệ thống thực vật, động vật, sinh vật phân giải và môi trường\n\n-   **SL.5.5:** Tích hợp các yếu tố đa phương tiện (Ví dụ: đồ họa, âm thanh) và minh họa trực quan trong các bài thuyết trình khi thích hợp để củng cố quá trình phát triển ý tưởng hoặc chủ đề chính."
+        },
+        "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
+          "name": "Từ khóa",
+          "description": "-   **đồng cảm**: tưởng tượng ra cảm giác mà người khác đang trải qua\n-   **diễn giải**: hiểu điều gì đó dựa trên quan điểm của bản thân\n\n**Trước buổi học**: Là một hoạt động không bắt buộc trước khi học, học sinh chơi trò chơi [E-volve](https://www.digitalpassport.org/evolve.html) trong Digital Passport™ (Hộ chiếu số) của Common Sense Education. Hoạt động này sẽ giúp giới thiệu các khái niệm chính của bài học này. Để tìm hiểu thêm, hãy xem [Hướng dẫn cho giáo viên về Hộ chiếu số](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Chiếu** [Slide 4](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_1_0) và hỏi học sinh: _Hãy tưởng tượng khi bạn bước vào, tôi nói với bạn_ [bằng giọng nói thân thiện, với một nụ cười thật tươi] _“Xin chào!” Biểu tượng cảm xúc nào phù hợp?_\n\nCho học sinh đưa ra câu trả lời bằng cách giơ các ngón tay (1, 2, 3 hoặc 4). Nếu có người đưa ra con số khác 1, hãy yêu cầu họ chia sẻ lý do tại sao.\n\n**Lặp lại** hoạt động này hai lần nữa, mỗi lần nói câu _Xin chào_ theo các cách khác nhau: một lần với giọng tức giận và cau có, một lần với giọng lo lắng hoặc sợ hãi.\n\n**Chiếu** [Slide 5](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_2_13) và hỏi: \\_ Nếu bạn chỉ đọc câu đó thôi thì sao? Bây giờ bạn cảm thấy thế nào?\\_\n\nHãy chỉ ra rằng khi một câu nói chỉ ở dạng văn bản, thậm chí việc diễn giải ý đồ của một người còn khó hơn. Hãy giải thích rằng phản ứng có thể khác nhau tùy thuộc vào người đó là ai bởi vì mỗi người chúng ta có cách hiểu thế giới khác nhau một chút. Hãy làm rõ rằng diễn diễn giải là \\_ hiểu điều gì đó dựa trên quan điểm của bản thân.\\_ ([Slide 6](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_4))\n\n**Nói**: \\_Vì những từ ngữ khác nhau có thể hiểu theo cách khác nhau, điều quan trọng là phải suy ngẫm về những từ chúng ta sử dụng và tác động của chúng với mọi ngườ. Có thể chúng ta chỉ nói đùa, nhưng người khác coi là nghiêm trọng và câu nói làm tổn thương cảm xúc của họ. Hiện tượng này có thể xảy ra trực tiếp và cũng có thể xảy ra trên mạng. Thậm chí hiện tượng này có thể xảy ra trên mạng nhiều hơn, bởi vì các từ ngữ chỉ ở dạng văn bản – khi chúng ta không thực sự đối mặt với người kia."
+        },
+        "d9d67048-27b2-49cf-9f30-26daf2aa25d1": {
+          "description": "**Hỏi**: _Có bạn từng nghe đến câu nói “Gậy, đá có thể làm tôi gãy xương chứ lời nói làm sao làm tôi tổn thương được” chưa?_\n\nHãy mời học sinh trả lời. Các câu trả lời sẽ khác nhau. Tiếp tục bằng cách hỏi học sinh xem câu nói đó có đúng không.\n\n**Dự án** [Slide 7](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_117) và nói: _Chúng ta sẽ xem một video có tên “Sức mạnh của ngôn từ”. Trong lúc xem, hãy tiếp tục suy nghĩ xem mệnh đề đó có đúng hay không._\n\nChiếu video [Sức mạnh của ngôn từ](https://www.commonsense.org/education/videos/the-power-of-words) và sau đó gọi học sinh đứng lên chia sẻ về nội dung của video xem mệnh đề trên có đúng hay không. Hãy nhấn mạnh rằng đôi khi không dễ để lờ đi khi người đó gọi bạn bằng biệt danh xúc phạm. Biệt danh CÓ THỂ khiến bạn cảm thấy buồn hoặc bị tổn thương.\n\n**Hỏi**: _Bạn nghĩ tại sao những người chơi khác lại nói những lời đó với Guts?_ ([Slide 8](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_0))\n\nMời học sinh trả lời. Các câu trả lời sẽ khác nhau, nhưng các lý do có thể bao gồm _họ đang cố đùa giỡn_ hoặc _bản thân họ không vui và đang trút lên đầu người khác_.\n\n**Hỏi**: \\_ Guts làm gì để đáp lại những lời ác ý? \\_\n\nMời học sinh trả lời và làm rõ rằng Guts đã nói chuyện với một người mà bạn ấy tin tưởng, người có thể đồng cảm với bạn ấy và cho bạn ấy một số lời khuyên bổ ích. Định nghĩa sự đồng cảm là _tưởng tượng ra cảm giác mà người khác đang trải qua_. ([Slide 9](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_109))\n\n**Chiếu** [Slide 10](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_157) và xem lại từ viết tắt STOP để phản ứng trước những lời ác ý trên mạng."
+        },
+        "7bfc56d1-5690-49a4-ace0-86491f84e4a7": {
+          "description": "**Phát** [Tài liệu cho học sinh Ngôn từ có thể làm tổn thương](https://drive.google.com/open?id=1G7urBAgM9G3D4zI4KVRgN-yX-Q4qAyb_HWEHsnREl3M) và đọc to hướng dẫn. Hãy cho các cặp đôi năm phút để hoàn thành hoạt động.\n\n**Mời** các cặp đôi chia sẻ câu trả lời của họ. Tham khảo [Phiên bản dành cho giáo viên](https://drive.google.com/open?id=1kAcaaYor5vegqj2cncK5FOgFOeg2PtKUXWw-muodELE) để biết các câu trả lời có thể xuất hiện."
+        },
+        "06057973-b621-4a48-a991-4f99aafdedca": {
+          "description": "**Đặt** một sợi dây dọc theo chiều dài của lớp học. Đánh dấu một nửa của căn phòng là “Được”. Đánh dấu nửa còn lại là “Không được”. Yêu cầu tất cả học sinh đứng về phía Được của vạch chia.\n\n**Chiếu** [Slide 11](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_106) và đọc to hướng dẫn.\n\n**Yêu cầu** học sinh đọc các câu trên [Slide 12-15](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_14). Sau mỗi câu, hãy cho học sinh thời gian di chuyển hoặc đứng yên. Cho học sinh phát biểu suy nghĩ của mình. Nếu có thể, hãy chọn học sinh của mỗi bên để tranh luận về lý do tại sao câu đó là Được hoặc Không được.\n\nĐối với những ví dụ mà học sinh nói rằng Không được, hãy tiếp tục hỏi họ những gì họ có thể làm nếu nhận được câu nói đó từ người khác.\n\n**Nhắc lại** rằng trẻ em thích lên mạng để trò chuyện, xem video, gửi tin nhắn, chơi game và làm bài tập về nhà. Đôi khi người ta nói những điều ác ý hoặc đáng sợ. Những lời tổn thương người khác là vượt qua ranh giới.\n\n**Yêu cầu** học sinh hoàn thành [Bài kiểm tra](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy)."
+        },
+        "58780696-9fe3-4a71-815e-a8d008e5bed6": {
+          "description": "Dưới đây là các tài liệu bổ sung mà bạn có thể phát cho học sinh để nâng cao khả năng học tập của họ:\n\n-   [Hoạt động gia đình](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw)\n-   [Lời khuyên cho gia đình](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n-   **Chuẩn bị** vài mẩu giấy có những bình luận ác ý như sau:\n\n    -   Không thể tin rằng mày lại thích mấy phim siêu anh hùng. Chỉ học sinh lớp một mới thích mấy cái đó.\n    -   Mày đúng là đồ kỳ quái.\n    -   Sao lại mặc cái áo NHƯ THẾ được nhỉ?\n\n    <br>\n\n    Hãy phát cho mỗi học sinh một mẩu giấy và ghép cặp với nhau. Cho học sinh đổi mẩu giấy và đọc thầm. Sau đó, yêu cầu họ trao đổi với nhau và lần lượt đọc to bình luận đó cho người kia. Hãy hỏi họ sự khác biệt giữa việc viết những lời ác ý và việc phải chịu trách nhiệm về lời nói của mình trước mặt ai đó. Hãy nhấn mạnh rằng đôi khi người ta nấp sau màn hình vì hoạt động trực tuyến có tính ẩn danh. Hãy nhắc nhở học sinh rằng nếu các bạn không muốn nói điều gì đó trước mặt người khác thì cũng không nên nói điều đó trên mạng."
+        },
+        "863c44e5-dca9-4b0e-b8e0-c9a66c03c3a1": {
+          "description": "**Làm như sau:** Mở slide bài học cho cả lớp.\n\nYêu cầu học sinh suy nghĩ về việc chúng ta sắp xếp và lưu trữ đồ vật. Học sinh có bao giờ cất đồ trong hộp không? Những hộp đó có được dán nhãn không? Tại sao? Nếu học sinh chưa có kinh nghiệm, hãy yêu cầu họ tưởng tượng hoạt động giúp bạn dọn dẹp lớp học trong mùa hè.\n\nHãy thông báo cho học sinh rằng hôm nay chúng ta sẽ chơi trò chơi với từ ngữ, tương tự như trò chơi Mad Libs®, trong đó bạn sẽ nhận được lời nhắc từ ngữ và sau đó sẽ điền vào một câu chuyện nhảm nhí."
+        },
+        "c03754de-e580-4e9f-b58e-af136a073898": {
+          "name": "Bữa ăn yêu thích",
+          "description": "**Làm như sau:** Cho học sinh xem câu chuyện khoảng trống đầu tiên (Bữa ăn yêu thích) trên bảng bằng cách sử dụng slide bài học.\n\n**Lời nhắc:** _Bạn nghĩ câu chuyện khoảng trống này hoạt động như thế nào? Bạn nhận thấy điều gì ở phần nhãn của mỗi khoảng trống?_\n\nHọc sinh phải hiểu rằng mỗi người cần đưa ra các từ theo chỉ định của từng nhãn mà không cần xem trước câu chuyện. Học sinh có thể nhận thấy rằng mỗi khoảng trống có một nhãn duy nhất.\n\n#### Bữa ăn yêu thích\n\n**Làm như sau:** Chuẩn bị ba phong bì đầu tiên để làm mẫu. Nếu sử dụng slide, hãy tiếp tục chiếu hình chuyển động để hiển thị ba hộp màu tím."
+        },
+        "7a4a67f6-dfb0-42ee-a28c-b6604100abde": {
+          "description": "Lát nữa, tôi sẽ mời các bạn xung phong giúp chúng ta điền vào chỗ trống. Chúng ta sẽ sử dụng phong bì để theo dõi thông tin mà họ cung cấp. Mỗi phong bì có dán một nhãn tương ứng với một trong các khoảng trống. Khi tôi đưa cho bạn một phong bì, hãy viết một từ tương ứng với nhãn đó và đặt vào bên trong, rồi đưa lại cho tôi nhé."
+        },
+        "ffa7ea29-3325-4d95-8766-4411729f47d9": {
+          "description": "**Làm như sau:** Tiến hành phát và thu lại phong bì được đánh dấu “đồ vật”, “chất lỏng” và “số”. Sau khi thu xong, hãy đóng phong bì lại và bắt đầu đọc câu chuyện. Chỉ khi bạn đọc đến từng ô trống, hãy mở phong bì và đọc thông tin có trong đó."
         },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
-          "name": "Trò chơi tiệc tùng"
+          "name": "Trò chơi tiệc tùng",
+          "description": "**Làm như sau:**\n\n-   Chuẩn bị các phong bì có đánh dấu “tính từ”, “đồ vật”, “bộ phận cơ thể” và “số”.\n-   Lặp lại trò chơi trên với câu chuyện thứ hai. Lần này, bạn có thể bắt đầu với các nhãn trước khi cho học sinh xem câu chuyện để thêm phần hứng thú. Hình chuyển động trong các slide bài học đã được thiết lập để giúp hoạt động này thuận lợi hơn.\n\n#### (Tùy chọn) Phần mở rộng Nhập vai\n\nCác bạn học sinh xung phong có thể liên hệ với ý tưởng về một ứng dụng có “người dùng”. Trong phép so sánh này, vai trò của bạn với tư cách là giáo viên giống như một chiếc máy tính. Bạn sẽ yêu cầu và lưu trữ thông tin từ “người dùng”, rồi tìm cách kết hợp lại thành một câu chuyện. Để thu hút nhiều học sinh hơn và yêu cầu họ triển khai mô hình này, hãy phân công các vai trò :\n\n_Máy tính:_ Phát và thu lại phong bì. Mở từng phong bì khi đọc câu chuyện để kiểm tra các giá trị lưu trữ.\n\n_Người dùng:_ Gửi các từ cần thiết để hoàn thành câu chuyện.\n\n\\_Người đọc: \\_Đọc to câu chuyện hoàn chỉnh.\n\n#### Hỏi đáp\n\n**Thảo luận:** Viết một câu chuyện khoảng trống khác với viết một câu chuyện bình thường như thế nào?"
+        },
+        "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
+          "name": "Viết câu chuyện của riêng bạn (20 phút)",
+          "description": "Trong hoạt động hôm nay, bạn sẽ làm việc theo nhóm để viết câu chuyện khoảng trống của riêng mình."
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
+          "description": "**Làm như sau:** Phát **\\*bảng cho học sinh** và đọc hướng dẫn.",
           "tips": [
-            null
+            "Viết một câu chuyện khoảng trống có thể không dễ dàng. Bạn có thể giúp học sinh bằng cách đưa ra đề xuất chủ đề để tạo cảm hứng và tập trung cho tác phẩm của họ. Hãy cân nhắc để học sinh làm nhiệm vụ này theo nhóm để họ có thể hợp tác với nhau.\n\n**Đề xuất chủ đề:**\n\n-   chuyến đi thực tế trong lớp học tưởng tượng\n-   kỳ nghỉ bất thường\n-   đánh giá phim\n-   thói quen buổi sáng\n-   một ngày ở bãi biển\n-   cách thả diều"
           ]
         },
         "964a07f1-99da-434f-ae2c-26a3aa6b8d7a": {
+          "description": "#### Chia sẻ câu chuyện của bạn (10 phút)\n\n**Làm như sau:** Ghép cặp hai nhóm và để họ thay phiên nhau chia sẻ câu chuyện của mình.\n\nNếu bạn có đủ thời gian và tài liệu, hãy đưa cho học sinh phong bì của chính họ để dán nhãn và trao đổi. Điều này sẽ giúp học sinh xây dựng mô hình tư duy phù hợp về hoạt động trao đổi này khi họ trở lại với lập trình.",
           "tips": [
-            null
+            "**Hãy lưu lại câu chuyện của học sinh!**\n\nTrong một vài bài học, học sinh sẽ áp dụng những kiến thức đã học để tạo dự án Sprite Lab khác. Có một số lựa chọn cho dự án này, nhưng một trong số đó là tạo ra một câu chuyện khoảng trống bản mềm.\n\nVí dụ: [đây](https://studio.code.org/levels/27026) là phiên bản Sprite Lab của câu chuyện _Trò chơi tiệc tùng_ từ bài học này."
           ]
         },
+        "220a9c31-c877-4fe2-83ef-722e93bed0a5": {
+          "name": "Giới thiệu về biến",
+          "description": "**Làm như sau:** Tóm tắt lại các quy tắc của câu chuyện khoảng trống với cả lớp.\n\n_Khoảng trống trong các câu chuyện này hoạt động giống như các trình lưu trữ thông tin. Mỗi trình lưu trữ cũng có một nhãn. Trong khi bạn tạo nhãn cho phần thông tin trong chương trình của mình, yếu tố đó được gọi là \\*\\*_biến\\_\\*\\*.\n\n**Làm như sau:** Chiếu slide bài học có ba hình ứng dụng mẫu."
+        },
+        "a76c58bc-57ad-45c4-b179-bdb68ce8d392": {
+          "description": "_Các ứng dụng này đều yêu cầu người dùng cung cấp một số thông tin. Điều này có liên quan như thế nào đến hoạt động hôm nay?_\n\n_Thông tin được lưu trữ trong bộ nhớ của máy tính cùng biến. Mỗi biến có một nhãn cho chúng ta biết loại thông tin kỳ vọng. Sau này, khi máy tính cần thông tin, máy tính sẽ tìm nhãn của biến đó._\n\n_Cho dù bạn đang cất đồ vật vào hộp, bỏ từ ngữ vào phong bì hay lưu thông tin vào biến, bạn phải sử dụng nhãn hợp lý để không gây nhầm lẫn sau này._\n\n_Người dùng nhập vào lời nhắc cũng giống như máy tính lưu trữ thông tin trong một trình lưu trữ. Nhãn của biến cho chúng ta biết loại thông tin kỳ vọng._"
+        },
         "035f92b6-2d03-4fec-adc4-a15a1b620f08": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "**Lời nhắc:**\n\n-   Bạn nghĩ câu chuyện khoảng trống có liên quan gì đến việc học môn khoa học máy tính?"
+        },
+        "c242beca-92da-4ddf-bbf3-42747e4d40ab": {
+          "description": "### Biến chuỗi thức ăn (45-60 phút)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Khoa học máy tính + Anh văn + Toán + Khoa học**\n\n[\\*\\*Biến chuỗi thức ăn\\*\\*](https://docs.google.com/document/d/1td4o1Oj1Syw_WwVAJ2CMDdWhvwp9DwMdbwv0gV0azOs/edit?usp=sharing) là hoạt động tùy chọn phù hợp với hệ thống Common Core ELA (Tiêu chuẩn chung cho Anh văn căn bản), Common Core Math (Tiêu chuẩn chung cho Toán căn bản) và Next Generation Science Standards (Tiêu chuẩn khoa học thế hệ mới) do cộng đồng giáo viên thiết lập. Học sinh sẽ xác định các giá trị khác nhau cho các biến có trong chuỗi thức ăn (Ví dụ: thực vật, động vật, sinh vật phân hủy, v.v.) trong quá trình ghi lại các giá trị này trên giấy ghi chú và minh họa chu trình của vật chất trong môi trường. Học sinh cũng sẽ tìm hiểu Quy tắc 10% và mô tả thêm về dòng năng lượng với lời nhắc viết bài.\n\n_Các tiêu chuẩn áp dụng:_\n\n-   **CCSS.ELA-LITERACY.W.5.2.B:** Phát triển chủ đề với các dữ kiện, định nghĩa, chi tiết cụ thể, trích dẫn hoặc thông tin và ví dụ khác liên quan đến chủ đề.\n\n-   **CCSS.MATH.CONTENT.5.NF.B.7.C:** Giải các bài toán trong thế giới thực liên quan đến phép chia các phân số đơn vị cho các số nguyên khác không và chia các số nguyên cho các phân số đơn vị, ví dụ: bằng cách sử dụng mô hình phân số và phương trình dưới dạng hình ảnh để biểu diễn bài toán.\n\n-   **NGSS.5-LS2-1:** Phát triển mô hình mô tả chu trình của vật chất trong hệ thống thực vật, động vật, sinh vật phân hủy và môi trường."
+        },
+        "d2b97c32-0187-432e-9fa2-979e9f34280a": {
+          "description": "**Làm như sau:** Gợi cho học sinh nhớ lại những hoạt động trong bài học trước hoặc yêu cầu họ chia sẻ.\n\n**Thảo luận:** Các chương trình máy tính yêu cầu chúng ta cung cấp thông tin như thế nào?\n\n**Mục tiêu thảo luận:** Học sinh nên suy nghĩ về trải nghiệm của bản thân với tư cách là người dùng và thời điểm máy tính yêu cầu họ cung cấp thông tin. Có rất nhiều cách để nhập thông tin vào máy tính, nhưng hãy tập trung vào những ý tưởng nhập một thông tin vào lời nhắc ngay bây giờ."
+        },
+        "938a01cc-fcbd-4adf-a7ef-ab00d8f8950d": {
+          "description": "Vào cuối bài học trước, chúng ta đã xem xét những điểm tương đồng giữa các câu chuyện khoảng trống và các ứng dụng yêu cầu người dùng nhập liệu.\nKhi thông báo trên màn hình máy tính đang chờ bạn nhập, chúng ta gọi đó là lời nhắc.\nKhi một người dùng nhập vào lời nhắc, việc đó giống như máy tính đang lưu trữ thông tin trong trình lưu trữ.\nNhãn của biến cho chúng ta biết loại thông tin kỳ vọng.\nHôm nay, chúng ta sẽ tìm hiểu mã lệnh tạo lời nhắc trong Sprite Lab."
+        },
+        "05818b32-90cc-466a-b952-8fcf048e4e5c": {
+          "name": "Văn bản và Lời nhắc",
+          "description": "#### Dự đoán (5 phút)\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán điều gì sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian suy nghĩ về bất cứ điều gì họ thấy thú vị hoặc khiến họ ngạc nhiên."
         },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
+          "description": "#### Video (5 phút)\n\nChiếu video cho cả lớp.",
           "tips": [
-            null
+            "Cũng giống như khi học sinh đang viết hoặc giao tiếp bằng lời nói, điều quan trọng là phải đặt kỳ vọng vào việc sử dụng các từ một cách thích hợp trong hoạt động này. Học sinh nên hiểu rằng họ chịu trách nhiệm về mã lệnh mà họ viết, bao gồm bất kỳ văn bản nào hiển thị trên màn hình. Văn bản phải tôn trọng người đọc, đồng thời phải an toàn. Học sinh có thể thực hành không chia sẻ thông tin cá nhân trong các chương trình của mình, đặc biệt nếu họ muốn chia sẻ với người khác.\nLưu ý rằng bất kỳ thông tin nào nhập vào lời nhắc Sprite Lab sẽ không được lưu lâu dài. Các từ và thông điệp do người dùng các ứng dụng này nhập sẽ biến mất sau khi ứng dụng được đặt lại."
           ]
         },
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
+          "description": "#### Phát triển kỹ năng và thực hành (20 phút)\n\n**Chuyển tiếp:** Yêu cầu học sinh di chuyển đến chỗ máy tính và đăng nhập. Các hoạt động này phù hợp để tự học hoặc lập trình theo cặp.\n\nHọc sinh nên hoàn thành các cấp độ Phát triển kỹ năng rồi dành thời gian còn lại để chọn trong số các hoạt động Thực hành khác nhau.",
           "tips": [
-            null
+            "Bài học này có nhiều mức độ xây dựng và thực hành kỹ năng hơn các bài học trước vì học sinh đang học nhiều kỹ năng mới cùng một lúc. Do đó, không có cấp độ “chơi tự do” riêng cho bài học này. Tuy nhiên, những học sinh cảm thấy tự tin với các kỹ năng mới của mình có thể chọn tùy chọn thực hành cuối cùng để bắt đầu lại từ đầu với một dự án trống. Trong bài học tiếp theo, học sinh cũng sẽ làm việc hoàn toàn trên dự án mà chính họ tự lên kế hoạch và thiết kế trước."
           ]
         },
+        "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
+          "description": "**Làm như sau:** Sử dụng các slide bài học để xem lại từ vựng cho bài học này. Hãy chắc chắn rằng học sinh có thể nhớ lại bài học mà họ đã tiếp xúc với từng khái niệm trong số này."
+        },
+        "75769a9e-4f2f-41af-b9b0-cb51cfadab11": {
+          "description": "Khi người dùng nhập thông tin vào lời nhắc, máy tính sẽ lưu trữ thông tin đó trong một biến. lời nhắc cũng có thể kích hoạt một sự kiện. Nếu mã lệnh sử dụng biến, máy tính sẽ tìm nhãn phù hợp để tìm thông tin đã lưu trữ."
+        },
         "d9171886-0618-4e77-a38b-4543fd46893e": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Chọn một (hoặc cả hai) lời nhắc suy nghĩ bên dưới để cung cấp cho học sinh. Họ có thể ghi nhật ký cá nhân hoặc thảo luận các câu trả lời trong nhóm hoặc cả lớp.\n\n**Lời nhắc:**\n\n-   Biến và chiếc hộp có điểm gì giống nhau? Có điểm gì khác nhau?\n-   Tại sao người lập trình cần biến?"
         },
         "20919642-5201-4796-9e45-ee76e368614d": {
+          "description": "**Làm như sau:** Sử dụng slide bài học, xem lại các khái niệm mà học sinh đã khám phá cho đến thời điểm hiện tại trong khóa học: nhân vật, hành vi, sự kiện và văn bản. Cuối cùng, hãy ôn lại cách hoạt động của lời nhắc và biến.\n\n#### Dự đoán\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán hiện tượng sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian để suy ngẫm về những chi tiết mà họ thấy thú vị hoặc khiến họ ngạc nhiên.",
           "tips": [
-            null
+            "Một trong những phần khó nhất khi tìm hiểu về biến là đảm bảo rằng nhãn của biến luôn phù hợp. Trong cấp độ này, hãy đảm bảo rằng học sinh nhận thấy sự khác biệt giữa biến **bữa ăn** và biến **thức ăn**. Học sinh nên hiểu rằng cách tốt nhất để giải quyết vấn đề này là chỉ sử dụng một biến, đảm bảo rằng nhãn luôn phù hợp.\n\nBạn cũng có thể hướng dẫn cả lớp sửa lỗi trong chương trình bằng cấp độ [Hộp cát dành cho giáo viên](https://studio.code.org/levels/27300) này với máy chiếu của bạn."
           ]
         },
         "10bfa1b7-62ca-4bb1-93e8-05d661819ca2": {
+          "description": "### Khám phá\n\n**Làm như sau:** Yêu cầu học sinh khám phá các chương trình mẫu ở cấp độ 1. Hoạt động này có thể tiến hành thảo luận cùng cả lớp, trong đó mỗi cặp học sinh dùng chung thiết bị hoặc thậm chí là dùng riêng. Đối với mỗi chương trình, hãy yêu cầu học sinh suy nghĩ về cách hoạt động, đối tượng sử dụng và mọi ý tưởng sáng tạo từ chương trình. Một chiến lược tốt ở đây là yêu cầu học sinh đọc to từng dòng mã lệnh của chương trình, sau đó nói về chức năng của mã lệnh đó.",
           "tips": [
-            null
+            "Nếu bạn thiếu thời gian hoặc muốn rút gọn quá trình chuyển đổi, hãy hoàn thành phần này của bài học dưới dạng thảo luận trong cả nhóm. Bạn có thể nhắc học sinh rằng sau này họ có thể truy cập lại các chương trình nếu có thắc mắc về cách hoạt động.\n\nNếu bạn đã tự thực hiện toàn bộ bài học, bạn cũng có thể cho họ xem chương trình đã hoàn thành của riêng bạn để lấy cảm hứng!"
           ]
         },
         "fc1dcb70-576f-4a5e-8407-856ffa7d43a5": {
+          "name": "Chương trình nhập liệu của người dùng",
+          "description": "### Lập kế hoạch (10 phút)\n\nChúng ta đã có cơ hội xây dựng nhiều chương trình khác nhau trong Sprite Lab. Hôm nay, trải nghiệm này sẽ có kết thúc mở hơn nhiều, do đó bạn cần lên kế hoạch từ trước! Lập kế hoạch là một phần rất quan trọng của hoạt động lập trình game hoặc bất kỳ loại phần mềm nào khác.",
           "tips": [
-            null
+            "Nếu bạn thiếu thời gian, hãy để học sinh chỉ tập trung vào trang đầu tiên của hướng dẫn lập kế hoạch. Học sinh cũng có thể sử dụng lại chính những câu chuyện mà họ đã hoàn thành trong bài học “Câu chuyện khoảng trống”."
           ],
           "progression_name": "Lên kế hoạch"
         },
         "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea": {
+          "description": "### Dự án nhỏ (20 phút)\n\nSau khi nhận được hướng dẫn lập kế hoạch hoàn chỉnh, giờ đây học sinh đã sẵn sàng triển khai các dự án của mình. Hãy cho học sinh chuyển sang máy tính của họ và yêu cầu họ bắt đầu “Phần 1” của dự án đã chọn.",
           "tips": [
-            null
+            "Cấp độ này đưa ra danh mục các lựa chọn có liên quan đến loại dự án chính mà họ chọn. Điểm khác biệt chính giữa các cấp độ phụ này là hướng dẫn và trang phục nhân vật mặc định. Học sinh có thể cần được hướng dẫn thực sự rõ ràng để hiểu cách thay đổi các lựa chọn ở đây. Mỗi lựa chọn dự án có hai cấp độ phụ. Ban đầu, học sinh nên chọn một trong các cấp độ được đánh dấu “Phần 1”. Sau khi hoàn thành cấp độ đó, họ sẽ trở lại phần này và chọn “Phần 2” của cùng một dự án đó. Cấp độ đầu tiên của mỗi lựa chọn sẽ cho học sinh phản hồi khi họ ghép các thành phần cơ bản của dự án với nhau. Cấp độ thứ hai là “chơi tự do” nhằm giúp học sinh thay đổi mã lệnh theo sở thích."
           ]
         },
+        "d5bf3b23-128d-4078-bdb2-a806a59a2db1": {
+          "name": "Biểu diễn",
+          "description": "**Làm như sau:** Để ăn mừng tác phẩm của học sinh, hãy dành khoảng 10 phút cuối cùng để cho họ giới thiệu dự án của mình. Bạn có thể thực hiện hoạt động này theo nhiều cách, nhưng sau đây là một số cách:\n\n-   **Demo công khai:** Chọn một vài tình nguyện viên làm mẫu biểu diễn nhanh dự án của họ trước lớp. Trong lúc đó, hãy yêu cầu họ nêu ý kiến về trải nghiệm của bản thân từ khâu lập kế hoạch đến khâu lập trình, bao gồm cả những ý tưởng mà họ vẫn muốn thực hiện.\n-   **Chơi thử theo cặp:** Cho học sinh hoặc các nhóm bắt cặp và chơi thử các dự án của nhau. Trong lúc đó, hãy yêu cầu họ đưa ra phản hồi tích cực và mang tính xây dựng cho nhau. Lợi ích của việc này là học sinh sẽ có cơ hội đưa ra và trả lời phản hồi trong một môi trường nhỏ hơn.\n-   **Đi vòng quanh chơi thử:** Hãy đảm bảo tất cả học sinh đã chuẩn bị dự án để thử nghiệm. Yêu cầu học sinh di chuyển theo kiểu trò chơi “giành ghế theo nhạc” sang một máy tính khác và chơi/thử nghiệm dự án ở máy tính đó trong một phút, cho đến khi họ nhận được tín hiệu từ bạn để chuyển sang máy tính khác. Hãy lặp lại hoạt động này vài phút một lần. Mặc dù học sinh có ít cơ hội để giao tiếp có cấu trúc, nhưng hoạt động này đảm bảo học sinh có thể demo càng nhiều dự án của bạn cùng lớp càng tốt."
+        },
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "Học sinh có thể có các mức độ kinh nghiệm khác nhau với cả công cụ Họa sĩ và khái niệm về vòng lặp. Dựa trên những lợi ích mà bạn nghĩ rằng lớp học của bạn có thể nhận được, chúng tôi khuyên bạn nên tìm một hoặc hai bài tập để xem trước với cả lớp. Cho dù bài học này là phần giới thiệu hay phần đánh giá, bạn phải cho học sinh chuẩn bị trước!"
         },
         "1744b867-c4fe-43e6-9707-050abe0791c5": {
-          "name": "Vẽ bằng vòng lặp"
+          "name": "Vẽ bằng vòng lặp",
+          "description": "Một số học sinh có thể phát hiện ra vị trí thêm các vòng lặp `repeat` (lặp lại) bằng cách viết ra chương trình không có vòng lặp, sau đó khoanh tròn các phần lặp lại. Nếu cách làm này có lợi cho học sinh trong lớp của bạn, hãy để họ đặt giấy và bút chì bên cạnh máy tính. Học sinh cũng có thể muốn vẽ một số hình khối và hình dạng trên giấy trước khi lập trình trực tuyến."
         },
         "684dcdb5-2ce6-4481-85c2-aec19cf71f8e": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "**Lời nhắc:**\n\n-   Hình khối hoặc hình dạng thú vị nhất mà bạn đã lập trình hôm nay là gì? Hãy vẽ ra nào!\n-   Hình khối hoặc hình dạng mà bạn muốn lập trình là gì? Bạn có thể nghĩ ra mã lệnh để vẽ hình đó không?"
+        },
+        "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf": {
+          "description": "Bạn nên giúp học sinh nhớ lại những kiến thức đã biết về biến cho đến thời điểm hiện tại.\n\n-   Biến có đặc điểm nào giống như một chiếc hộp hoặc một thùng chứa?\n-   Khi thông tin được lưu trữ trong biến, sau này chúng ta sẽ sử dụng thông tin như thế nào trong chương trình?"
+        },
+        "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
+          "name": "Sử dụng biến với Họa sĩ",
+          "description": "Hãy cân nhắc xem lại cấp độ Dự đoán và video với cả lớp trước khi cho học sinh chuyển sang phần Phát triển kỹ năng."
         },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "chơi miễn phí"
         },
         "910b513b-27b0-40c5-9793-782805d1da8e": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Cho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\n\n-   Bài học hôm nay là về kiến thức gì?\n-   Bạn cảm thấy thế nào về bài học hôm nay?\n-   Bạn đã thử kết hợp nhiều biến vào một chương trình chưa? Chương trình đó có thể như thế nào? Phương pháp đó có ích trong tình huống nào?"
         },
         "92794e43-3dbb-4bf1-8326-f9ed17ef86b7": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "Cùng cả lớp xem lại thật nhanh về khái niệm vòng lặp và lý do chúng ta sử dụng vòng lặp.\n\n-   _Vòng lặp có chức năng gì?_\n    -   Vòng lặp lặp lại một tập hợp các lệnh.\n-   _Chúng ta sử dụng vòng lặp như thế nào?_\n    -   Chúng ta sử dụng vòng lặp để tạo ra mẫu bao gồm các hành động lặp đi lặp lại.\n\nHãy nói với cả lớp rằng bây giờ họ sẽ thực hiện một hoạt động cực kỳ thú vị: sử dụng vòng lặp bên trong vòng lặp. Hãy cho cả lớp dự đoán xem chúng ta sẽ sử dụng vòng lặp nào bên trong vòng lặp for (với).\n\n_Nếu một vòng lặp có thể lặp lại một mẫu, thì lặp lại một vòng lặp sẽ lặp lại một mẫu gồm các mẫu khác!_\n\nHọc sinh không cần phải hiểu ngay lập tức, vì vậy hãy thoải mái chuyển sang các bài tập trực tuyến dù học sinh vẫn còn hơi bối rối."
+        },
+        "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
+          "name": "Lập trình với Chú ong"
         },
         "6cef858a-437c-47a3-9c8a-1229f634948a": {
           "tips": [
-            null
+            "Bài học này có thể rất khó. Hãy cân nhắc sử dụng “lập trình theo cặp” để học sinh có thể hợp tác và hỗ trợ lẫn nhau."
           ]
         },
         "1e7ed1a3-de4a-4a92-9732-80d71572719d": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Cho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\n\n-   Bài học hôm nay là về kiến thức gì?\n-   Bạn cảm thấy thế nào về bài học hôm nay?\n-   Vòng lặp lồng nhau là gì?\n-   Bạn có thể thiết kế bài tập cần sử dụng vòng lặp lồng nhau không? Hãy thử lập trình lời giải cho bài tập của chính mình nhé."
         },
         "3d33fa77-1fa9-4e46-921f-fd661884b23f": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "Loạt bài học này hơi khác so với những bài học trước đây. Bây giờ, thay vì chỉ cần gán một giá trị cho một biến và chạy mã lệnh thì bạn cần giúp học sinh biết cách sửa biến trong quá trình chạy chương trình.\n\n**Mở** Cho học sinh xem không gian chơi của một trong các bài tập sau.\n\n![](https://images.code.org/ae28833eda4cf32f7ef284c9b27e41d3-image-1615819139100.png)\n\nCó một số điều cần khám phá ở đây, do đó bạn nên cho học sinh cơ hội nghiên cứu một cách nghiêm túc trước khi kỳ vọng họ tiến hành hoạt động.\n\n**Suy nghĩ/Ghép cặp:** _Bạn nhận ra mẫu nào trong bài tập này? Các mảng tổ ong và hoa ở đầu, giữa và cuối đường đi của ong có gì khác nhau?_\n\n**Chia sẻ:** Cho học sinh chia sẻ ý kiến.\n\n**Thảo luận:** _Có những cách nào để lập trình lời giải cho bài tập này? Làm thế nào để sử dụng biến và tạo vòng lặp giúp chúng ta giải bài tập?_"
+        },
+        "aa24a7a8-7cec-408b-b980-89e9c457605a": {
+          "name": "Biến với Chú ong",
+          "description": "Bộ bài tập này cần một số kỹ năng tư duy máy tính nghiêm túc. Nếu bạn thấy rằng học sinh đang gặp khó khăn, hãy giúp họ chia nhỏ các bài tập thành từng phần:\n\n-   Nếu các bông hoa/tổ ong đều có cùng một lượng mật hoa/mật ong thì sao?\n-   Bây giờ, làm cách nào để bạn có thể dùng biến và lấy được số lượng theo ý muốn?"
         },
         "a3b35da9-5d20-4f58-998a-e5395fc7e23f": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "**Lời nhắc:**\n\n-   Bài học hôm nay nói về điều gì?\n-   Bạn cảm thấy thế nào trong bài học hôm nay?\n-   Cho tới thời điểm hiện tại, bạn đã dùng biến theo những cách nào?\n-   Bạn nghĩ rằng mình có thể làm điều khác với biến không?"
+        },
+        "5cecb186-d4c0-4846-81f4-d2ca2b02ecb1": {
+          "description": "#### Từ vựng\n\nBài học này có một từ mới khá quan trọng:\n\n-   **Vòng lặp for** - _Hãy đọc cùng tôi nào: Vòng-lặp-for_. \n\nVòng lặp có giá trị bắt đầu, kết thúc và bước được xác định trước."
+        },
+        "761bf8e6-2303-4c05-a1c3-59046f829e91": {
+          "description": "#### Với một và toàn bộ\n\n-   Chỉ ra rằng có một số vòng lặp mà chúng ta rất hay gặp, ví dụ: vòng lặp để theo dõi số lần đi qua\n-   Đôi khi, bạn không muốn bắt đầu từ một\n-   Đôi khi, bạn không muốn đếm theo từng đơn vị\n-   “Vòng lặp for” cho bạn một phương pháp hiệu quả để sử dụng bộ đếm bắt đầu ở con số mà bạn muốn, kết thúc ở con số mà bạn muốn và tăng theo bất kỳ gia số nào mà bạn muốn.\n\nỞ đây, bạn có thể vận dụng ngày vào game mẫu.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
         },
         "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210": {
           "name": "Cho vòng lặp vui vẻ"
         },
+        "95417529-72b3-4c15-95d1-7bd479743269": {
+          "description": "Đôi khi chúng ta muốn lặp lại một số lần nhất định, nhưng chúng ta muốn theo dõi các giá trị trong quá trình đó. Đây là lúc mà vòng lặp “for” (với) phát huy tác dụng. Khi sử dụng vòng lặp “for” (với), ngay từ thời điểm bắt đầu bạn đã biết giá trị ban đầu, giá trị kết thúc và giá trị thay đổi sau mỗi vòng lặp.\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)"
+        },
         "404887ef-1401-41a7-b88d-c07ab2d119cf": {
           "tips": [
-            null
+            "Chơi game này giống như thể bạn đang chạy qua một vòng lặp như sau\n\nfor (x=startValue; x \\<= stopValue; x = x + step){<br/>\ncircle currentXvalue;<br/>\nadd currentXvalue to roundScore;<br/>\n}"
           ]
         },
         "ee31c01d-2e03-4267-bbd4-6179df138e90": {
+          "description": "### **Hướng dẫn:**\n\nHọc sinh nhỏ tuổi có thể khó mà hiểu được bài học khi viết bằng mã giả, nhưng bạn có thể giải thích bằng lời (và có thể kèm theo sơ đồ) những gì họ sẽ sử dụng làm nội dung của vòng lặp “for” (với).\n\n-   Chia học sinh thành từng cặp\n-   Để bắt đầu vòng chơi, mỗi học sinh tung xúc xắc ba lần:\n    -   Một xúc xắc để xác định giá trị ban đầu của X\n    -   Ba xúc xắc để xác định giá trị kết thúc của X\n    -   Một xúc xắc để xác định gia số của X mỗi lượt đi\n-   Sử dụng một trong các dãy số đã cho để theo dõi vòng lặp “for” tạo ra\n    -   Bắt đầu từ giá trị bắt đầu của X\n    -   Đếm theo dãy số, khoanh tròn các số ở vị trí gia số đã tung xúc xắc\n    -   Dừng lại khi bạn đạt đến giá trị dừng xác định trước\n-   Cộng tất cả các giá trị khoanh tròn vào điểm số của bạn, sau đó tới lượt người chơi khác thực hiện\n-   Điểm cao hơn ở 2/3 vòng thì thắng",
           "tips": [
-            null
+            "Nếu bất kỳ giá trị xúc xắc nào nằm ngoài giới hạn của lượt chơi (như tung được giá trị bắt đầu là 6 nhưng sau đó tung được 2, 1, 2 cho giá trị kết thúc), hãy yêu cầu học sinh tung xúc xắc lại từ đầu."
           ]
         },
         "2b2aff9f-1682-4071-a395-c38394654e47": {
           "name": "Phản ánh",
           "tips": [
-            null
+            "Các câu hỏi Thảo luận nhanh nhằm khơi dậy tư duy toàn cảnh về cách liên hệ bài học với thế giới bên ngoài và tương lai rộng mở của học sinh. Hãy sử dụng hiểu biết về lớp học của mình để quyết định xem bạn muốn thảo luận trước lớp, trong nhóm hay với bạn ngồi kế bên."
           ]
+        },
+        "6e2f6427-e48e-4a85-bf0a-d218df0381c0": {
+          "description": "#### Thảo luận nhanh: Chúng ta đã học được gì?\n\n-   Gia số bạn cần là bao nhiêu nếu bạn muốn đếm từ 4 đến 13 với gia số 3?\n-   Bạn nghĩ mình có thể làm những việc gì với vòng lặp “for”?\n-   Bạn có thể dùng vòng lặp “for” để tạo lại vòng lặp bình thường không?\n-   Bạn cần làm gì?"
+        },
+        "e4880f32-ec01-4be0-a4c3-3b8762d73daa": {
+          "description": "#### Viết nhật ký\n\nCho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\n\n-   Bài học hôm nay là về kiến thức gì?\n-   Bạn cảm thấy thế nào về bài học hôm nay?\n-   Vòng lặp “for” là gì?\n-   Tại sao bạn sử dụng vòng lặp “for” thay vì vòng lặp “repeat” hay vòng lặp “while”?"
         },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Giới thiệu"
@@ -1037,6 +1240,9 @@
             null
           ]
         },
+        "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
+          "name": "Biểu diễn"
+        },
         "5cd698e0-d82e-4e9d-af4f-1923b453d12b": {
           "name": "Giới thiệu"
         },
@@ -1220,6 +1426,12 @@
           "tips": [
             null
           ]
+        },
+        "adc355f7-34d5-450e-aa57-e001b2a7973c": {
+          "name": "Biểu diễn"
+        },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "Từ khóa"
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
           "name": "Bạn bè robot của tôi"
@@ -1433,6 +1645,12 @@
             null
           ]
         },
+        "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
+          "name": "Biểu diễn"
+        },
+        "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "Từ khóa"
+        },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Giới thiệu"
         },
@@ -1557,6 +1775,9 @@
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
           "name": "Đánh giá"
         },
+        "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Giới thiệu về vòng lặp"
         },
@@ -1654,6 +1875,9 @@
             null
           ]
         },
+        "bfb31158-7c6c-4e30-9e86-141b77445111": {
+          "name": "Biểu diễn"
+        },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "Giới thiệu",
           "tips": [
@@ -1718,7 +1942,7 @@
         },
         "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21": {
           "tips": [
-            null
+            "Hãy khuyến khích học sinh bằng câu hỏi/thử thách, bắt đầu bằng việc hỏi bạn cùng nhóm. Câu hỏi chưa được trả lời có thể chuyển cho một nhóm gần đó có thể đã biết lời giải. Hãy cho học sinh mô tả vấn đề mà các bạn đang gặp phải:\n\n-   Như thế nào mới là đúng?\n-   Chương trình chạy như thế nào?\n-   Bạn rút ra được kết luận gì?"
           ]
         },
         "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
@@ -1728,35 +1952,76 @@
           "name": "Phản ánh"
         },
         "9b131ffd-535f-4044-b7f7-d8aa2ba715ae": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "#### Hướng dẫn tạo cảnh"
+        },
+        "5a8f455d-1681-4101-b70c-73117d7172a4": {
+          "description": "Lần trước, chúng ta đã khám phá các ứng dụng và trò chơi được tạo bằng Sprite Lab. Hôm nay chúng ta sẽ bắt đầu tự lập trình để tạo chuyển động nhân vật đơn giản."
+        },
+        "d3c5cb2c-aa26-41cb-9e54-dd8e8ae43402": {
+          "description": "**Làm như sau:** Sử dụng các slide khởi động của bài học hoặc [dự án mẫu](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view) này, cho học sinh xem hình chuyển động của kiến và chuồn chuồn.\n\n**Thảo luận:** _Bạn mô tả cảnh này như thế nào?\nNếu bạn muốn ai đó tạo cảnh này cho bạn trên máy tính, họ sẽ cần hướng dẫn nào?_\n\n**Mục tiêu thảo luận:** Học sinh phải xác định được cả hai nhân vật trong dự án này, mô tả hành vi (chuyển động) của nhân vật và để ý cả phông nền.\nCho học sinh thời gian để suy nghĩ về các ý tưởng. Nếu họ không biết phải nói gì, hãy giải thích rằng bạn chỉ yêu cầu họ nêu những gì họ quan sát được.\n\nTiếp theo, cho học sinh xem mã lệnh thực tế được sử dụng trong dự án này và mời học sinh thử đọc mã lệnh đó.\n\n**Suy nghĩ:** Hướng dẫn của chúng ta và mã lệnh này có điểm nào giống và khác nhau?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
           "name": "Tạo nhân vật",
+          "description": "#### Dự đoán (3 phút)\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán điều gì sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian suy nghĩ về bất cứ điều gì họ thấy thú vị hoặc khiến họ ngạc nhiên.",
           "tips": [
-            null
+            "Trong các bài tập dự đoán, học sinh được yêu cầu đọc một chương trình cho sẵn và trả lời câu hỏi về chương trình đó. Học sinh phải trả lời câu hỏi trước khi nhấn nút “Run” (chạy). Mặc dù bạn có thể dùng những câu hỏi này như một hình thức đánh giá, nhưng hãy nhớ rằng câu hỏi thường bố trí ở đầu bài học như một phương pháp giúp học sinh khơi dậy sự tò mò trước khi chính thức được truyền đạt một kiến thức mới."
           ]
         },
+        "60d05bd8-d452-4ff7-8d42-afc78df62133": {
+          "description": "**Làm như sau:** Phát video “Cách tạo nhân vật” "
+        },
+        "924d0fc2-b5b6-4176-b3fd-391937e4d187": {
+          "description": "#### Phát triển kỹ năng và thực hành (20 phút)\n\n**Chuyển tiếp:** Yêu cầu học sinh di chuyển đến chỗ máy tính và đăng nhập.\n\nCác hoạt động này phù hợp để tự học hoặc lập trình theo cặp.\n\nHọc sinh nên hoàn thành các cấp độ Phát triển kỹ năng rồi dành thời gian còn lại để chọn trong số các hoạt động Thực hành khác nhau."
+        },
+        "676dfae2-cb99-4395-a262-f61ed61a3d28": {
+          "description": "#### Chơi tự do (10 phút)\n\n**Chuyển tiếp:** Lúc này, học sinh nên chuyển sang cấp độ cuối cùng của bài học để có thể thực hiện dự án của riêng mình."
+        },
         "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Hôm nay, bạn đã học cách lập trình để tạo chương trình trong Sprite Lab. \n\n**Chương trình** - Thuật toán được mã hóa thành nội dung mà máy có thể chạy được.\n\n**Thuật toán** - Danh sách các bước để hoàn thành một nhiệm vụ."
+        },
+        "e80dde92-1c60-43ad-86ab-8688fbc0b52b": {
+          "description": "#### Viết nhật ký\n\nCho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\nBạn có lời khuyên nào cho một người bạn quan tâm đến hoạt động sáng tạo các chương trình của riêng họ trong Sprite Lab không?"
         },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
           "name": "Làm theo thuật toán",
           "tips": [
-            null
+            "Đừng quên tạo khoảng cách giữa các lệnh. Đối với mỗi phần trong mục này, hãy cân nhắc chạy toàn bộ trình tự mà không thảo luận gì rồi lặp lại một lần nữa sau khi mọi người có cơ hội thảo luận và xử lý bất kỳ sự nhầm lẫn nào."
           ]
         },
+        "5c75924f-ef1f-4b61-9850-820fb68c0972": {
+          "description": "#### Vòng 1 (Sơ cấp):\n\n-   Bắt đầu giậm chân tại chỗ.\n-   Dừng giậm chân tại chỗ.\n-   Bắt đầu vỗ tay.\n-   Dừng vỗ tay.\n-   Bắt đầu giậm chân tại chỗ.\n-   Bắt đầu vỗ tay.\n-   Dừng mọi hành động.\n\n**Thảo luận:** _Điều gì xảy ra khi bạn được yêu cầu vỗ tay trong lúc đang giậm chân tại chỗ? Điều gì xảy ra nếu bạn được yêu cầu bắt đầu hai hành vi khác nhau cùng một lúc?_\n\nHọc sinh nên hiểu rằng nhiều hành vi có thể xảy ra đồng thời.\n\\|\n\n#### Vòng 2 (Trung cấp):\n\n-   Bắt đầu vẫy tay trên không.\n-   Bắt đầu lắc lư đầu.\n-   Dừng vẫy tay trên không.\n-   Dừng lắc lư đầu.\n-   Bắt đầu lắc đầu gối.\n-   Bắt đầu đập cánh tay như chim.\n-   Dừng lắc đầu gối.\n-   Bắt đầu lắc lư đầu.\n-   Bắt đầu giậm chân tại chỗ.\n-   Dừng đập cánh tay như chim.\n-   Dừng mọi hành động.\n\n**Thảo luận:**\n\n_Những loại hướng dẫn nào khiến mọi người mắc lỗi? Bạn nghĩ chiến lược nào là hữu ích để đảm bảo bạn làm theo đúng hướng dẫn? Tại sao phải theo dõi từng hành vi riêng biệt?_\n\nHọc sinh nên hiểu rằng mỗi hành vi cần dừng lại riêng lẻ. Họ cần theo dõi riêng từng hành vi.\n\n#### Thử thách\n\n-   Bắt đầu ngồi xổm.\n-   Bắt đầu gõ vào đầu.\n-   Dừng ngồi xổm.\n-   Dừng gõ vào đầu.\n-   Bắt đầu nhảy lên xuống.\n-   Bắt đầu gõ vào đầu.\n-   Dừng mọi hành động.\n-   Bắt đầu vỗ tay.\n-   Bắt đầu vỗ cánh tay như chim.\n-   Dừng mọi hành động.\n-   Bắt đầu ngồi xổm.\n-   Bắt đầu nhảy lên xuống.\n-   Dừng mọi hành động.\n-   Bắt đầu gõ vào đầu gối.\n-   Bắt đầu gõ vào đầu.\n-   Dừng mọi hành động.\n-   Bắt đầu xoay trái.\n-   Bắt đầu xoay phải.\n-   Dừng xoay trái.\n-   Dừng xoay phải.\n\n**Thảo luận:** _Điều gì sẽ xảy ra nếu hai hành vi có vẻ xung đột với nhau?_\n\n_Bạn nên làm gì khi được yêu cầu vỗ tay và đập cánh tay cùng lúc?_\n\n_Làm cách nào để nhảy lên và xuống trong khi đang ngồi xổm?_\n\n_Điều gì sẽ xảy ra nếu bạn cần gõ đầu gối và đầu cùng một lúc?_\n\n_Khi bạn được yêu cầu xoay theo hai hướng ngược nhau, bạn thấy mọi người làm gì?_\n\n_Điều gì sẽ xảy ra nếu bạn được yêu cầu xoay trái và phải cùng một lúc_\n\nHọc sinh nên hiểu rằng một số hành vi xung đột với nhau có thể dẫn đến kết quả không mong muốn. Hai hành vi trái ngược nhau có thể triệt tiêu lẫn nhau."
+        },
+        "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
+          "description": "#### Dự đoán (2 phút)\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán điều gì sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian suy nghĩ về bất cứ điều gì họ thấy thú vị hoặc khiến họ ngạc nhiên."
+        },
+        "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
+          "description": "#### Video: Nhân vật hành động (3 phút)\n\n**Làm như sau:** Phát video “Nhân vật hành động”"
+        },
+        "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
+          "description": "#### Phát triển kỹ năng và thực hành (20 phút)\n\n**Chuyển tiếp:** Yêu cầu học sinh di chuyển đến chỗ máy tính và đăng nhập. Các hoạt động này phù hợp để tự học hoặc lập trình theo cặp.\n\nHọc sinh nên hoàn thành các cấp độ Phát triển kỹ năng rồi dành thời gian còn lại để chọn trong số các hoạt động Thực hành khác nhau."
+        },
+        "482633ae-1c8c-4ca2-b44b-ba150352c610": {
+          "description": "#### Chơi tự do (10 phút)\n\n**Chuyển tiếp:** Bây giờ, học sinh nên chuyển sang cấp độ cuối cùng của bài học để xem các lựa chọn chơi tự do giống như các bài học trước. Hãy khuyến khích học sinh thêm các sự kiện vào dự án trước của họ hoặc bắt đầu một dự án mới."
+        },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Hôm nay, bạn đã học cách tạo các chương trình thay đổi theo thời gian bằng cách sử dụng sự kiện.\n\n**Sự kiện** - _Hành động khiến hiện tượng nào đó xảy ra._"
+        },
+        "c2c39f4c-ffb6-483d-931a-222e52751d81": {
+          "description": "#### Viết nhật ký\n\nCho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\nPhím mũi tên là một cách để khiến chương trình tăng tính tương tác. Chúng ta có thể dùng những cách nào khác để cho người dùng quyền điều khiển những gì xảy ra trong ứng dụng hoặc game?"
         },
         "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
           "name": "Giới thiệu"
         },
         "660e66d6-d582-4568-9274-8971b0f5b344": {
-          "name": "Thú cưng ảo với Sprite Lab"
+          "name": "Thú cưng ảo với Sprite Lab",
+          "description": "**Mục tiêu:** Hôm nay, học sinh sẽ tạo thú cưng ảo của riêng mình! Họ sẽ bắt đầu bằng cách vẽ hoặc chọn trang phục mới cho nhân vật. Sau đó, họ sẽ tạo sự kiện kích hoạt các hành động và hành vi khi tương tác."
         },
         "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
           "tips": [
-            null
+            "Hãy khuyến khích học sinh bằng câu hỏi/thử thách, bắt đầu bằng việc hỏi bạn cùng nhóm. Câu hỏi chưa được trả lời có thể chuyển cho một nhóm gần đó có thể đã biết lời giải. Hãy cho học sinh mô tả vấn đề mà các bạn đang gặp phải:\n\n-   Như thế nào mới là đúng?\n-   Chương trình chạy như thế nào?\n-   Bạn rút ra được kết luận gì?"
           ]
         },
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
@@ -1785,6 +2050,9 @@
         },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
           "name": "Phản ánh"
+        },
+        "163a2d46-638a-490a-81b4-f34a3d78a096": {
+          "name": "Cơ hội kết hợp các khóa học"
         },
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
           "name": "Giới thiệu"
@@ -1822,7 +2090,8 @@
           "progression_name": "Bài học mở rộng"
         },
         "fc83d25f-9089-4795-9933-52f7372e3ae7": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Cho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\n\n-   Bài học hôm nay là về kiến thức gì?\n-   Bạn cảm thấy thế nào về bài học hôm nay?\n-   Vòng lặp lồng nhau là gì?\n-   Bạn có thể thiết kế bài tập cần sử dụng vòng lặp lồng nhau không? Hãy thử lập trình lời giải cho bài tập của chính mình nhé."
         },
         "219bed13-d21f-4886-ac11-47ae6eb56005": {
           "name": "Giới thiệu"
@@ -1935,27 +2204,53 @@
         "3c8c44ae-c181-41c0-9574-54a236e706f9": {
           "name": "Phản ánh"
         },
+        "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "Văn bản và Lời nhắc",
+          "description": "#### Dự đoán (5 phút)\n\n**Làm như sau:** Yêu cầu học sinh đọc mã lệnh đã cho và dự đoán điều gì sẽ xảy ra. Sau khi nhấn “Run” (chạy), hãy cho học sinh thời gian suy nghĩ về bất cứ điều gì họ thấy thú vị hoặc khiến họ ngạc nhiên."
+        },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
+          "description": "#### Video (5 phút)\n\nChiếu video cho cả lớp.",
           "tips": [
-            null
+            "Cũng giống như khi học sinh đang viết hoặc giao tiếp bằng lời nói, điều quan trọng là phải đặt kỳ vọng vào việc sử dụng các từ một cách thích hợp trong hoạt động này. Học sinh nên hiểu rằng họ chịu trách nhiệm về mã lệnh mà họ viết, bao gồm bất kỳ văn bản nào hiển thị trên màn hình. Văn bản phải tôn trọng người đọc, đồng thời phải an toàn. Học sinh có thể thực hành không chia sẻ thông tin cá nhân trong các chương trình của mình, đặc biệt nếu họ muốn chia sẻ với người khác.\nLưu ý rằng bất kỳ thông tin nào nhập vào lời nhắc Sprite Lab sẽ không được lưu lâu dài. Các từ và thông điệp do người dùng các ứng dụng này nhập sẽ biến mất sau khi ứng dụng được đặt lại."
           ]
         },
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
+          "description": "#### Phát triển kỹ năng và thực hành (20 phút)\n\n**Chuyển tiếp:** Yêu cầu học sinh di chuyển đến chỗ máy tính và đăng nhập. Các hoạt động này phù hợp để tự học hoặc lập trình theo cặp.\n\nHọc sinh nên hoàn thành các cấp độ Phát triển kỹ năng rồi dành thời gian còn lại để chọn trong số các hoạt động Thực hành khác nhau.",
           "tips": [
-            null
+            "Bài học này có nhiều mức độ xây dựng và thực hành kỹ năng hơn các bài học trước vì học sinh đang học nhiều kỹ năng mới cùng một lúc. Do đó, không có cấp độ “chơi tự do” riêng cho bài học này. Tuy nhiên, những học sinh cảm thấy tự tin với các kỹ năng mới của mình có thể chọn tùy chọn thực hành cuối cùng để bắt đầu lại từ đầu với một dự án trống. Trong bài học tiếp theo, học sinh cũng sẽ làm việc hoàn toàn trên dự án mà chính họ tự lên kế hoạch và thiết kế trước."
           ]
         },
+        "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
+          "description": "**Làm như sau:** Sử dụng các slide bài học để xem lại từ vựng cho bài học này. Hãy chắc chắn rằng học sinh có thể nhớ lại bài học mà họ đã tiếp xúc với từng khái niệm trong số này."
+        },
+        "e852c6f5-b85a-4e1c-abe5-c5ec5b111f83": {
+          "description": "Khi người dùng nhập thông tin vào lời nhắc, máy tính sẽ lưu trữ thông tin đó trong một biến. lời nhắc cũng có thể kích hoạt một sự kiện. Nếu mã lệnh sử dụng biến, máy tính sẽ tìm nhãn phù hợp để tìm thông tin đã lưu trữ."
+        },
         "ba16d75f-cd57-4bf6-9c71-78f6bbe31603": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Chọn một (hoặc cả hai) lời nhắc suy nghĩ bên dưới để cung cấp cho học sinh. Họ có thể ghi nhật ký cá nhân hoặc thảo luận các câu trả lời trong nhóm hoặc cả lớp.\n\n**Lời nhắc:**\n\n-   Biến và chiếc hộp có điểm gì giống nhau? Có điểm gì khác nhau?\n-   Tại sao người lập trình cần biến?"
+        },
+        "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0": {
+          "description": "Bạn nên giúp học sinh nhớ lại những kiến thức đã biết về biến cho đến thời điểm hiện tại.\n\n-   Biến có đặc điểm nào giống như một chiếc hộp hoặc một thùng chứa?\n-   Khi thông tin được lưu trữ trong biến, sau này chúng ta sẽ sử dụng thông tin như thế nào trong chương trình?"
+        },
+        "b270733d-2d48-4470-a0e4-7a805255d765": {
+          "name": "Sử dụng biến với Họa sĩ",
+          "description": "Hãy cân nhắc xem lại cấp độ Dự đoán và video với cả lớp trước khi cho học sinh chuyển sang phần Phát triển kỹ năng."
         },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "chơi miễn phí"
         },
         "e1938d70-43cf-4038-8782-51509d171b00": {
-          "name": "Phản ánh"
+          "name": "Phản ánh",
+          "description": "Cho học sinh viết về những kiến thức đã học, lý do kiến thức đó hữu ích và cảm nhận của họ về kiến thức đó có thể giúp củng cố bất kỳ kiến thức nào họ tiếp thu trong hôm nay và lập bảng ôn tập để xem lại trong tương lai.\n\n**Lời nhắc:**\n\n-   Bài học hôm nay là về kiến thức gì?\n-   Bạn cảm thấy thế nào về bài học hôm nay?\n-   Bạn đã thử kết hợp nhiều biến vào một chương trình chưa? Chương trình đó có thể như thế nào? Phương pháp đó có ích trong tình huống nào?"
         },
         "6ab692c9-eee1-4966-91fa-3bda39450263": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "Loạt bài học này hơi khác so với những bài học trước đây. Bây giờ, thay vì chỉ cần gán một giá trị cho một biến và chạy mã lệnh thì bạn cần giúp học sinh biết cách sửa biến trong quá trình chạy chương trình.\n\n**Mở** Cho học sinh xem không gian chơi của một trong các bài tập sau.\n\n![](https://images.code.org/a79f4f074b2018d6e17e38c99539cd69-mapcopy.png)\n\nCó một số điều cần khám phá ở đây, do đó bạn nên cho học sinh cơ hội nghiên cứu một cách nghiêm túc trước khi kỳ vọng họ tiến hành hoạt động.\n\n**Suy nghĩ/Ghép cặp:** _Bạn nhận ra mẫu nào trong bài tập này? Các mảng tổ ong và hoa ở đầu, giữa và cuối đường đi của ong có gì khác nhau?_\n\n**Chia sẻ:** Cho học sinh chia sẻ ý kiến.\n\n**Thảo luận:** _Có những cách nào để lập trình lời giải cho bài tập này? Làm thế nào để sử dụng biến và tạo vòng lặp giúp chúng ta giải bài tập?_"
+        },
+        "60fb6e02-bbf3-49df-ab58-79496259ada1": {
+          "name": "Biến với Chú ong",
+          "description": "Bộ bài tập này cần một số kỹ năng tư duy máy tính nghiêm túc. Nếu bạn thấy rằng học sinh đang gặp khó khăn, hãy giúp họ chia nhỏ các bài tập thành từng phần:\n\n-   Nếu các bông hoa/tổ ong đều có cùng một lượng mật hoa/mật ong thì sao?\n-   Bây giờ, làm cách nào để bạn có thể dùng biến và lấy được số lượng theo ý muốn?"
         },
         "40a52b8d-4101-4d39-a124-460b6553eea6": {
           "name": "Phản ánh"
@@ -1998,6 +2293,9 @@
           "tips": [
             null
           ]
+        },
+        "d99249e4-021e-4a39-9462-045e0306c00a": {
+          "name": "Biểu diễn"
         },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "Giới thiệu",
@@ -2189,7 +2487,7 @@
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Phản ánh",
           "tips": [
-            null
+            "Những lời nhắc suy nghĩ như vậy có thể tiến hành theo nhiều hình thức khác nhau. Viết nhật ký hoặc thảo luận (theo nhóm hoặc với bạn học) là những lựa chọn tuyệt vời!"
           ]
         },
         "b75bc492-bca4-410c-8c94-8d1c919597c3": {
@@ -2205,7 +2503,7 @@
         },
         "65fd5465-cd74-4e68-a4de-c174e2cbd8f6": {
           "tips": [
-            null
+            "Hãy khuyến khích học sinh bằng câu hỏi/thử thách, bắt đầu bằng việc hỏi bạn cùng nhóm. Câu hỏi chưa được trả lời có thể chuyển cho một nhóm gần đó có thể đã biết lời giải. Hãy cho học sinh mô tả vấn đề mà các bạn đang gặp phải:\n\n-   Như thế nào mới là đúng?\n-   Chương trình chạy như thế nào?\n-   Bạn rút ra được kết luận gì?"
           ]
         },
         "83778d93-2959-4776-94d0-e82985346914": {
@@ -2220,7 +2518,7 @@
         "9f5b1627-f04c-42a1-8955-17c994ad2b18": {
           "name": "Bữa tiệc khiêu vũ của người ngoài hành tinh với Sprite Lab",
           "tips": [
-            null
+            "Hãy khuyến khích học sinh bằng câu hỏi/thử thách, bắt đầu bằng việc hỏi bạn cùng nhóm. Câu hỏi chưa được trả lời có thể chuyển cho một nhóm gần đó có thể đã biết lời giải. Hãy cho học sinh mô tả vấn đề mà các bạn đang gặp phải:\n\n-   Như thế nào mới là đúng?\n-   Chương trình chạy như thế nào?\n-   Bạn rút ra được kết luận gì?"
           ]
         },
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
@@ -2229,13 +2527,26 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "Phản ánh"
         },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Từ khóa"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Từ khóa"
+        },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Giới thiệu"
         },
+        "b796d56d-673e-4011-ad44-54ddb101224b": {
+          "description": "### Ôn tập “Thông tin cá nhân và riêng tư”\n\nNhắc học sinh về thông tin an toàn để chia sẻ trực tuyến và thông tin tuyệt đối riêng tư.\n\n| AN TOÀN - Thông tin cá nhân                                                                                               | KHÔNG AN TOÀN - Thông tin riêng tư                                                                                        |\n| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |\n| Món ăn yêu thích<br/>Ý kiến <br/><i>(mặc dù ý kiến đó phải tôn trọng người khác)</i><br/>Tên <br/><i>(có sự cho phép)</i> | Tên thời con gái của mẹ<br/>Mã số an sinh xã hội<br/>Ngày sinh<br/>Thông tin thẻ tín dụng của phụ huynh<br/>Số điện thoại |\n\n<br/>\n\nThảo luận về các ví dụ khác của hai hạng mục trên."
+        },
         "5e38bf1e-5af2-48b6-bfc1-42da7ce1b926": {
+          "name": "Áp phích tương tác giới thiệu bản thân",
           "tips": [
             null
           ]
+        },
+        "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
+          "name": "Chia sẻ rộng rãi"
         },
         "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {
           "name": "Phản ánh"
@@ -2254,7 +2565,8 @@
           "name": "Phản ánh"
         },
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
-          "name": "Giới thiệu"
+          "name": "Giới thiệu",
+          "description": "Học sinh có thể có các mức độ kinh nghiệm khác nhau với cả công cụ Họa sĩ và khái niệm về vòng lặp. Dựa trên những lợi ích mà bạn nghĩ rằng lớp học của bạn có thể nhận được, chúng tôi khuyên bạn nên tìm một hoặc hai bài tập để xem trước với cả lớp. Cho dù bài học này là phần giới thiệu hay phần đánh giá, bạn phải cho học sinh chuẩn bị trước!"
         },
         "c0191294-55c5-47ec-a80d-76f9023bd84e": {
           "name": "Vẽ bằng vòng lặp"

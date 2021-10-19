@@ -29,6 +29,11 @@
         "oceans/Oceans": {
           "student_overview": "Resumen de la tutoría: En primer lugar, los alumnos clasifican los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, los alumnos deberán ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias etiquetas para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de etiquetar nuevas imágenes por sí mismo."
         },
+        "outbreak/Outbreak": {
+          "overview": "En esta lección, los alumnos crearán un simulador de brote epidémico utilizando sucesos. Los alumnos estudiarán la simulación para comprender la rapidez con la que puede propagarse un virus y lo que se puede hacer para frenar el contagio. ",
+          "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada estudiante tenga un diario de reflexión.",
+          "student_overview": "¡Un virus ha llegado a Monster Town! Aprende a crear un simulador de virus y ayuda a los monstruos a volver a estar sanos."
+        },
         "jigsaw/Jigsaw": {
           "overview": "Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.",
           "student_overview": "Haz clic y arrastra para terminar los desafíos."
@@ -199,11 +204,14 @@
         },
         "courseb-2021/Events in Play Lab": {
           "overview": "En esta actividad en línea, los estudiantes tendrán la oportunidad de aprender a usar los eventos en el Laboratorio de juegos y aplicar todas las habilidades de programación que aprendieron para crear un juego animado. ¡Es el momento de ser creativos y crear un juego en el Laboratorio de juegos!",
+          "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática en tu clase.\n-   (Opcional) Elige un par de rompecabezas para hacerlos en grupo con tu clase.\n-   Repasa **\\*Consejos de la Actividad Principal de Fundamentos CS - Recomendaciones de la Lección**.\n-   Asegúrate de que todos los alumnos tengan un diario de reflexión.",
           "purpose": "En esta actividad online, los/as estudiantes aprenderán cómo usar los eventos en el Play Lab. Comenzarán por entrenar al caballero para moverse cuando una tecla de flecha sea presionada, para luego terminar con la posibilidad de mostrar el resto de las habilidades que han aprendido en el curso, incluyendo secuencias y aplicar loops, como parte del desafío final de juego libre.",
           "student_overview": "Usa los eventos para crear una historia o un juego interactivo."
         },
         "courseb-2021/lesson-1": {
           "overview": "En esta lección de **proyecto**, los alumnos aplican lo que han aprendido sobre secuenciación y sucesos en un proyecto abierto con el Laboratorio de Juegos.",
+          "preparation": "-   ¡Codifica tus propios proyectos de Laboratorio de Juegos por adelantado para inspirar a los estudiantes!",
+          "purpose": "Esta lección ofrece a los alumnos una última oportunidad de utilizar de forma creativa sus nuevos conocimientos informáticos.",
           "student_overview": "Crea tu propia historia o juego."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
@@ -285,15 +293,20 @@
           "student_overview": "¡Cuenta una historia con el Artista!"
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
+          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.][2]\n\nInternet está lleno de todo tipo de personas interesantes, pero a veces, algunas de ellas pueden ser malintencionadas. Con este juego de rol, ayuda a tus alumnos a entender por qué a menudo es más fácil ser mezquino en línea que en persona, y cómo lidiar con la mezquindad en línea cuando la ven.",
+          "preparation": "-   Revisa el material didáctico.\n-   Imprime los folletos para cada alumno.\n-   Lleva un animal de peluche o un juguete a la clase.",
+          "purpose": "Common Sense Education creó esta lección para enseñar a los estudiantes sobre la maldad y lo que deben hacer si la encuentran en línea.",
           "student_overview": "En esta lección, aprenderás sobre la delincuencia y qué hacer si te encuentras con ella en Internet."
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "overview": "Mediante un conjunto de símbolos en lugar de código, los estudiantes diseñarán algoritmos para indicar a un \"robot\" que apile tazas en diferentes patrones. Los estudiantes se turnarán para cumplir el rol del robot y responderán únicamente al algoritmo definido por sus compañeros. Este segmento enseña a los estudiantes la conexión entre los símbolos y las acciones, la diferencia entre un algoritmo y un programa, y lo valiosa que es la depuración.",
+          "preparation": "-   Prepara una pila de 20 vasos de papel (o trapecios de papel) para cada grupo de 2-3 alumnos.\n-   Muestra los símbolos de la **\\*Clave de símbolos** donde los alumnos puedan consultarlos a lo largo de la lección.\n-   (Opcional) Imprime un **\\*Ideas para apilar vasos** por grupo de 2-3 alumnos.\n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
           "purpose": "Esta lección sin conexión une a la clase como equipo con la tarea simple de completar: hacer que un “robot” apile unos vasos de una forma específica. Esta actividad sienta las bases para la programación que los/as estudiantes harán a lo largo del curso mientras aprenden la importancia de definir un algoritmo claramente comunicado.",
           "student_overview": "En esta lección, harás de cuenta que tus compañeros de clase son robots y los programarás para crear patrones de tazas apiladas."
         },
         "coursec-2021/Programming in Maze": {
           "overview": "A partir de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales que les permitirán mover al pájaro desde un lado del laberinto hacia el cerdo que se encuentra al otro lado. Para ello, apilarán bloques de código en una secuencia lineal, lo que hará que el pájaro se mueva derecho, y luego gire a la izquierda o a la derecha.",
+          "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Elige un par de rompecabezas para hacerlos en grupo con tu clase. \n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
           "purpose": "En esta lección, los/as estudiantes desarrollarán las habilidades de programación y debugging en una plataforma computacional. El formato basado en bloques de estos desafíos ayuda a los /as estudiantes a aprender sobre la secuencia y los conceptos, sin tener que preocuparse de una sintaxis perfecta.",
           "student_overview": "Aprende acerca de las secuencias y los algoritmos con Angry Birds."
         },
@@ -435,6 +448,7 @@
         },
         "express-2021/Programming with Angry Birds": {
           "overview": "A partir de los personajes del juego Angry Birds, los estudiantes desarrollarán algoritmos secuenciales que les permitirán mover al pájaro desde un lado del laberinto hacia el cerdo que se encuentra al otro lado. Para ello, apilarán bloques de código en una secuencia lineal, lo que hará que el pájaro se mueva derecho, y luego gire a la izquierda o a la derecha.",
+          "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   (Opcional) Elige un par de rompecabezas para hacerlos en grupo con tu clase. \n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
           "purpose": "En esta lección, los alumnos desarrollarán habilidades de programación en una plataforma informática. El formato basado en bloques de estos rompecabezas ayuda a los estudiantes a aprender sobre la secuencia y los conceptos, sin tener que preocuparse por perfeccionar la sintaxis.",
           "student_overview": "Aprende acerca de las secuencias y los algoritmos con Angry Birds."
         },
@@ -573,6 +587,7 @@
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "overview": "En esta lección, los estudiantes usarán sus nuevas habilidades de programación de formas más complejas para recorrer un camino difícil con BB-8.",
+          "preparation": "-   Repasa la lección para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que todos los alumnos tengan un Diario de Reflexión.",
           "purpose": "Teniendo en cuenta la transferencia de conocimientos, esta lección ofrece a los alumnos un nuevo entorno para practicar las habilidades que han estado cultivando. Los fans de Star Wars saltarán de alegría cuando vean estos puzles. Cada rompecabezas de esta serie se ha añadido para proporcionar una comprensión más profunda de los conceptos básicos que utilizarán durante el resto de este curso."
         },
         "pre-express-2021/Programming in Harvester": {

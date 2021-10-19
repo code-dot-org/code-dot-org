@@ -134,18 +134,33 @@
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "แผนที่แห่งความสุข",
+          "name": "แผนที่สุดหรรษา",
           "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "happy-map-cards/coursea/2021": {
+          "name": "การ์ดแผนที่สุดหรรษา",
           "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
         },
         "activity-answer-happy-maps/coursea/2021": {
+          "name": "การ์ดแผนที่สุดหรรษา",
           "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "กฎ 20/20/20"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "การดีบักด้วยปุ่มขั้น",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+        },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "อีเวนท์ใหญ่"

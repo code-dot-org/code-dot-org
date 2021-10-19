@@ -256,6 +256,7 @@ az:
             'Maze: Sequence':
               name: 'Labirint: Ardıcıllıq'
         usability:
+          title: İstifadəyə Yararlılıq Testi
           lessons:
             Binary:
               name: İkilik
@@ -389,6 +390,7 @@ az:
           lessons:
             Jigsaw:
               name: Mozaika
+              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
         step:
           title: addım
           lessons:
@@ -924,6 +926,10 @@ az:
           lessons:
             Unit 1 Overview:
               name: 1cü Hissə Baxış
+        CSDU4-Draft:
+          lessons:
+            Design Mode:
+              name: Dizayn Rejimi
         CSDU1-Draft:
           lessons:
             Exploring Apps:
@@ -1178,6 +1184,13 @@ az:
           lessons:
             Unit 2 Overview:
               name: 2cü Hissə Baxış
+        minecraft:
+          description_short: Öz Minecraft versiyanızda heyvanları və başqa Minecraft
+            varlıqlarını proqramlaşdırın.
+          description: Öz Minecraft versiyanızda heyvanları və başqa Minecraft varlıqlarını
+            proqramlaşdırın.
+          student_description: Öz Minecraft versiyanızda heyvanları və başqa Minecraft
+            varlıqlarını proqramlaşdırın.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1351,6 +1364,8 @@ az:
               name: Siyahılar
             Map:
               name: Xəritə
+            Designing Screens with Code:
+              name: Kod ilə ekran dizaynı
             Arrays:
               name: Massivlər
             Functions with Parameters:
@@ -1385,10 +1400,14 @@ az:
           lessons:
             Lists:
               name: Siyahılar
+            Designing Screens with Code:
+              name: Kod ilə ekran dizaynı
             Arrays:
               name: Massivlər
             Functions with Parameters:
               name: Parametrli funksiyalar
+            Designing Screens with Code_:
+              name: Kod ilə ekran dizaynı
             Functions with Parameters_:
               name: Parametrli funksiyalar
         csd3-draft:
@@ -1490,6 +1509,14 @@ az:
         coursed-2017:
           title: D Kursu
           assignment_family_title: D Kursu
+          lessons:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: "Bir-birilərini şəkil çəkmək üçün proqramlayaraq
+                şagirdlər proqramlaşdırmanın əslində nə barədə olduğunu anlamağa başlayacaqlar.
+                Sinif mövcud olan şəkli yenidən yaratmaq məqsədilə şagirdlərin bir-birinə
+                qrafik kağızı üzərindəki kvadratları rəngləmələrini təlimat verməklə
+                başlayacaq. Əgər vaxt qalsa, dərs \nşagirdlərin özləri yaratdığı şəkillərlə
+                sonlandırıla bilər."
         coursee-2017:
           title: E Kursu
           assignment_family_title: E Kursu
@@ -1842,6 +1869,8 @@ az:
           lessons:
             Functions with Parameters_:
               name: Parametrli funksiyalar\_
+            Designing Screens with Code:
+              name: Kod ilə ekran dizaynı
             Functions with Parameters:
               name: Parametrli funksiyalar
         coursee-2018:
@@ -2177,6 +2206,12 @@ az:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
+              description_teacher: "Bir-birilərini şəkil çəkmək üçün proqramlayaraq
+                şagirdlər proqramlaşdırmanın əslində nə barədə olduğunu anlamağa başlayacaqlar.
+                Sinif mövcud olan şəkli yenidən yaratmaq məqsədilə şagirdlərin bir-birinə
+                qrafik kağızı üzərindəki kvadratları rəngləmələrini təlimat verməklə
+                başlayacaq. Əgər vaxt qalsa, dərs \nşagirdlərin özləri yaratdığı şəkillərlə
+                sonlandırıla bilər."
             Relay Programming:
               name: Estafet proqramlaşdırması
             Digital Citizenship:
@@ -2288,6 +2323,8 @@ az:
           lessons:
             'Programming: Happy Maps':
               name: Şən xəritələr
+            Learn to Drag and Drop:
+              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
         courseb-2019:
           title: B Kursu (2019)
           description_audience: 'Yaşlar: 5-8'
@@ -2353,6 +2390,8 @@ az:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Designing Screens with Code:
+              name: Kod ilə ekran dizaynı
             Functions with Parameters:
               name: Parametrli funksiyalar
         csp4-pilot:
@@ -2839,6 +2878,8 @@ az:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Designing Screens with Code:
+              name: Kod ilə ekran dizaynı
             Functions with Parameters:
               name: Parametrli funksiyalar
         csd3-2020:
@@ -2865,6 +2906,8 @@ az:
             csf_events:
               display_name: Hadisələr
           lessons:
+            Learn to Drag and Drop:
+              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             'Programming: Happy Maps':
               name: Şən xəritələr
             Safety in My Online Neighborhood:
@@ -2912,6 +2955,12 @@ az:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
+              description_teacher: "Bir-birilərini şəkil çəkmək üçün proqramlayaraq
+                şagirdlər proqramlaşdırmanın əslində nə barədə olduğunu anlamağa başlayacaqlar.
+                Sinif mövcud olan şəkli yenidən yaratmaq məqsədilə şagirdlərin bir-birinə
+                qrafik kağızı üzərindəki kvadratları rəngləmələrini təlimat verməklə
+                başlayacaq. Əgər vaxt qalsa, dərs \nşagirdlərin özləri yaratdığı şəkillərlə
+                sonlandırıla bilər."
             Relay Programming:
               name: Estafet proqramlaşdırması
             Build a Star Wars Game:
@@ -3179,6 +3228,9 @@ az:
               display_name: Sorğu
         csd6-2021:
           lessons:
+            Designing Screens with Code:
+              key: Kod ilə ekran dizaynı
+              name: Kod ilə ekran dizaynı
             Functions with Parameters:
               key: Parametrli funksiyalar
               name: Parametrli funksiyalar
@@ -3221,6 +3273,8 @@ az:
           lessons:
             Safety in My Online Neighborhood:
               description_student: Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin.
+            Learn to Drag and Drop:
+              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             'Programming: Happy Maps':
               name: Şən xəritələr
           lesson_groups:
@@ -3340,6 +3394,9 @@ az:
               display_name: Hadisələr
         pre-express-2021:
           description_audience: 'Yaşlar: 4-8'
+          lessons:
+            Learn to Drag and Drop:
+              description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
           lesson_groups:
             csf_loops:
               display_name: dövrlər
@@ -3483,6 +3540,8 @@ az:
           lessons:
             lesson-12:
               name: Alətlər
+            lesson-17:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Dərslər
@@ -3531,3 +3590,7 @@ az:
           lessons:
             lesson-3:
               name: dəyişənlər
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun

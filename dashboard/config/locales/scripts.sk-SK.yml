@@ -6407,6 +6407,8 @@ sk:
                 prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
                 práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
                 občana.
+            Running Simulations:
+              name: Vytváranie simulácií
             Simulating Experiments:
               name: Simulácia experimentov
               description_student: Spusti simulácie na počítači a experimentuj zmenou
@@ -10834,6 +10836,8 @@ sk:
           lessons:
             Virus Simulation for Code Bytes:
               name: Kódovanie nákazy
+            Outbreak:
+              name: Kódovanie nákazy
           lesson_groups:
             outbreak:
               display_name: Simulácia napadnutia
@@ -10857,6 +10861,8 @@ sk:
               name: Vytváranie postáv
             Sprites in Action:
               name: Postavy v akcii
+            blank space stories:
+              name: Príbehy na doplnenie
             End of Course Project:
               name: Záverečný projekt
           lesson_groups:
@@ -11836,6 +11842,8 @@ sk:
                 si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
                 končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
                 programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+            lesson-9:
+              name: Príbehy na doplnenie
             lesson-10:
               name: Text a výzvy
               description_student: V tejto lekcii si precvičíš používanie premenných
@@ -12177,10 +12185,14 @@ sk:
               name: Vytváranie postáv
             Sprites in Action:
               name: Postavy v akcii
+            blank space stories:
+              name: Príbehy na doplnenie
             texts-and-prompts:
               name: Text a výzvy
             introducing-spritelab:
               name: Predstavenie Sprite Labu
+            blank-space-stories:
+              name: Príbehy na doplnenie
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -12473,3 +12485,8 @@ sk:
           lessons:
             lesson-1:
               name: Včela Hláskovanie
+          title: Včela Hláskovanie
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah

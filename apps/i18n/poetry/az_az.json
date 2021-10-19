@@ -1,8 +1,10 @@
 {
   "author": "Müəllif",
-  "backgroundOrTextEffect": "Arxa fon və ya tekst effekti əlavə etməlisiniz.",
+  "backgroundOrTextEffect": "Arxa fon və ya mətn effekti əlavə etməlisiniz.",
   "deletedSprite": "Siz sprite silmisiniz kimi görünür. Siz onu **Sprites** alətlər qutusundan geri əlavə edə bilərsiniz.",
+  "genericBonusSuccess": "Afərin! Əlavə problem də daxil olmaqla səviyəni başa vurdunuz! ",
   "makeBackground": "Arxa fon effekti əlavə etməlisiniz.",
+  "noSprites": "Bir sprite hazırlamalısan.",
   "poem": "Şeir",
   "reinfFeedbackMsg": "Bitirdin! Növbəti səviyyəyə keçmək üçün \"Continue\" düyməsini basın.",
   "removedSprite": "Siz sprite silmisiniz kimi görünür. Siz onu **Sprites** alətlər qutusundan geri əlavə edə bilərsiniz.",
@@ -12,6 +14,7 @@
   "successEffectWithEvent": "Tebrik edirik, kodunuza bir effekt əlavə etdiniz! Daha çox effekt əlavə etmək üçün 'Oynamağa davam et' düyməsini vura bilərsiniz.",
   "successForegroundEvent": "Bir hadisə ilə ön planınızı dəyişdirmək əla işdir! Arxa fon effektini dəyişdirmək üçün \"Oynamağa davam et\" düyməsini basın.",
   "successLevel1": "Təbrik edirik! Səviyyə 1 -i bitirdiniz.",
+  "successLevel10": "Təbrik edirik! Səviyyə 10 -u bitirdiniz.",
   "successLevel2": "Təbrik edirik! Səviyyə 2 -i bitirdiniz.",
   "successLevel3": "Təbrik edirik! Səviyyə 3 -ü bitirdiniz.",
   "successLevel4": "Təbrik edirik! Səviyyə 4 -ü bitirdiniz.",
@@ -20,7 +23,6 @@
   "successLevel7": "Təbrik edirik! Səviyyə 7 -i bitirdiniz.",
   "successLevel8": "Təbrik edirik! Səviyyə 8 -i bitirdiniz.",
   "successLevel9": "Təbrik edirik! Səviyyə 9 -u bitirdiniz.",
-  "successLevel10": "Təbrik edirik! Səviyyə 10 -u bitirdiniz.",
   "successTextEvent": "Mətn effektinizi bir hadisə ilə dəyişdirmək əla işdir! Ön plan və ya fon effektini dəyişdirmək üçün 'Oynamağa davam et' düyməsini basın.",
   "title": "Başlıq"
 }

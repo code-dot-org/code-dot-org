@@ -25809,6 +25809,14 @@ pl:
           lessons:
             Virus Simulation for Code Bytes:
               name: Symulowanie symulacji
+            Outbreak:
+              name: Symulowanie symulacji
+              description_student: W Mieście Potworów pojawił się wirus! Naucz się
+                tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia.
+              description_teacher: 'Na tej lekcji uczniowie utworzą symulator epidemii
+                przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak
+                szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić
+                zarażanie. '
           lesson_groups:
             outbreak:
               display_name: Symulowanie przerwania
@@ -32675,6 +32683,7 @@ pl:
             lesson-1:
               name: Literująca Pszczółka
           name: spelling-bee
+          title: CSC - Literująca pszczółka
         outbreak-csc:
           lessons:
             lesson-1:
@@ -32684,10 +32693,51 @@ pl:
           name: outbreak-csc
           title: Epidemia
         explore-data-1:
+          lessons:
+            lesson-1:
+              name: Eksploracja wykresów pudełkowych i histogramów
           name: explore-data-1
+          title: Eksploracja wykresów pudełkowych i histogramów
         counting-csc:
           lessons:
             lesson-1:
               name: Liczenie z Laurel
           name: counting-csc
           title: Liczenie z Laurel
+        csa5-exemplars:
+          lessons:
+            lesson-1:
+              name: Tworzenie tablic z danymi
+            lesson-2:
+              name: Trawersowanie tablicy 2D wierszami
+            lesson-3:
+              name: Trawersowanie tablicy 2D kolumnami
+            lesson-4:
+              name: Stosowanie ulepszonych pętli
+            lesson-5:
+              name: Ocena tablic 2D
+            lesson-6:
+              name: Stosowanie standardowych algorytmów
+            lesson-7:
+              name: Przesuwanie elementów
+            lesson-8:
+              name: Znajdowanie duplikatów
+            lesson-9:
+              name: Poszukiwanie elementów
+            lesson-10:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 1
+            lesson-11:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 2
+            lesson-12:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 3
+            lesson-13:
+              name: Dzień FRQ
+            lesson-14:
+              name: Dzień sprawdzianu
+            lesson-15:
+              name: Odwracanie elementów
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz

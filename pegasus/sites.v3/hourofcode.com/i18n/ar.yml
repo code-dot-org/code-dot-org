@@ -61,7 +61,7 @@ ar:
     أساسية ليتعلمها كل طالب.
   social_hoc2019_dance: يضم Katy Perry، Jonas Brothers، Lil Nas X، Panic at the Disco،
     وmany more!
-  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: 'استخدام الذكاء الاصنطاعي في المحيطات '
   oceans_landing_description: تعرف على التعلم الآلي والاستخدام الأخلاقي للذكاء الاصطناعي.
   cs_for_good_hashtag: "#CSforGood"
@@ -148,6 +148,12 @@ ar:
   hoc_overview_oceans_tutorial_desc: 'تعرف على الذكاء الاصطناعي، وتعلم الآلة، وبيانات
     التدريب، والانحياز، أثناء استكشاف المسائل الأخلاقية وكيف يمكن استخدام الذكاء الاصطناعي
     لمعالجة المشكلات العالمية. '
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: ما هو الذكاء الاصطناعي؟
   ai_video_title_algorithm_bias: حل مشكلة الانحياز في الخوارزميات
   ai_video_title_phone_knows_dog: كيف يعرف هاتفك أن هذا كلب؟
@@ -213,6 +219,8 @@ ar:
   hourofcode_homepage_hoc2018_header_line2: للأعمار من 4 إلى 104 سنة.
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
   codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: عادت لعبة "ماين كرافت" إلى ساعة من البرمجة مع
     نشاط جديد تمامًا! رحلة عبر "ماين كرافت" مع البرمجة.
   codeorg_homepage_hoc2019_dance_heading: جرِّب <span class="highlight-word">حفلة&nbsp;الرقص!</span>
@@ -1544,7 +1552,7 @@ ar:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -5016,8 +5024,9 @@ ar:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -6092,8 +6101,7 @@ ar:
   tutorial_codespeakhappy_language: الإنجليزية
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: الإنجليزية
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: الإنجليزية
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -7706,7 +7714,8 @@ ar:
   tutorial_grokimage_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد
   tutorial_icomputelearn_string_platforms: جميع المتصفحات الحديثة
-  tutorial_rpstress_string_platforms: متصفح كروم، متصفح فايرفوكس
+  tutorial_rpstress_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
+    أجهزة آيباد
   tutorial_bsdcause_string_platforms: متصفح كروم (Chrome)
   tutorial_vidcodeanimoji_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد
     اللوحية، أجهزة آيباد

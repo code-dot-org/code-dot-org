@@ -1,5 +1,7 @@
 {
+  "genericBonusSuccess": "Dobrá práca! Podarilo sa ti dokončiť úroveň vrátane úlohy navyše.",
   "makeBackground": "Potrebuješ pridať efekt v pozadí.",
+  "noSprites": "Musíš si vytvoriť postavičku.",
   "reinfFeedbackMsg": "Hotovo! Stlač Pokračovať a prejdi na ďalšiu úlohu.",
   "save": "Uložiť",
   "shareGame": "Zdieľaj svoju hru:"
