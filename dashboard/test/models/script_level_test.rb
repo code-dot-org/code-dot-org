@@ -71,7 +71,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       sl = create :script_level, levels: [bubble_choice]
 
       assert_equal sl.get_example_solutions(sublevel1, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
-      assert_equal sl.get_example_solutions(sublevel2, @authorized_teacher), ["https://studio.code.org/projects/dance/example-1/view", "https://studio.code.org/projects/dance/example-2/view"]
+      assert_equal sl.get_example_solutions(sublevel2, @authorized_teacher), ["https://studio.code.org/projects/spritelab/example-1/view", "https://studio.code.org/projects/spritelab/example-2/view"]
     end
 
     test 'get_example_solutions for dance level' do
