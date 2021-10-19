@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import {Draggable} from 'react-beautiful-dnd';
 import {grid} from './CodeReviewGroup';
 
+// A CodeReviewGroupMember is a component that
+// can be dragged between CodeReviewGroups
+// as teachers arrange students in their section into groups.
+// These are called "Draggables" in the package we're using (React Beautiful DnD).
+// More information on React Beautiful DnD can be found here:
+// https://github.com/atlassian/react-beautiful-dnd
 export default function CodeReviewGroupMember({member, index}) {
   return (
     <Draggable
