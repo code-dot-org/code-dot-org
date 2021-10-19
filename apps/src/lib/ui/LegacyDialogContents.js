@@ -1,6 +1,6 @@
 /**
- * This file contains a set of dialogs used by showDialog in dialogHelper.js to
- * create LegacyDialogs. LegacyDialog expects a semi-specific format.
+ * This file contains a set of dialogs used to create LegacyDialogs.
+ * LegacyDialog expects a semi-specific format.
  */
 
 import PropTypes from 'prop-types';
