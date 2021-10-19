@@ -1513,6 +1513,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_getNext:
         text: 次のオブジェクトを取得する
       Mikelab_getProp:
@@ -1554,6 +1555,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_groupDestroy:
         text: 削除 {SELECT} {COSTUME}
         options:
@@ -1770,6 +1772,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_whenClickedOn:
         text: いつ {SPRITE} クリック
       Mikelab_whenKeyPressed:
@@ -1843,8 +1846,12 @@ ja:
         text: モンスターが動くのをやめる
       Poetry_addLine:
         text: 線 {LINE} を追加する
+      Poetry_animateText:
+        text: テキストアニメーションにする
       Poetry_destroy:
         text: "{ANIMATION_NAME} を削除する"
+      Poetry_hideText:
+        text: テキストを非表示にする
       Poetry_makeBurst:
         text: "{NUM} 個の {ANIMATION_NAME} スプライトで {EFFECT} エフェクトを作成する"
         options:
@@ -1970,6 +1977,8 @@ ja:
             '"flyBottom"': 下から飛ぶ
       Poetry_setTitle:
         text: 詩のタイトルを {TITLE} にセット
+      Poetry_showText:
+        text: テキストを表示
       Poetry_startBehavior:
         text: スプライト {ANIMATION_NAME} が {BEHAVIOR} を始めます
         options:

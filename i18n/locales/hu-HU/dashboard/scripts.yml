@@ -4035,3 +4035,8 @@ hu:
           lessons:
             lesson-1:
               name: Betüző méh
+          title: Betüző méh
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom

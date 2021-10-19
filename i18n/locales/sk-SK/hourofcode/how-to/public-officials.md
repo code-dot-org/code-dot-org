@@ -4,7 +4,7 @@ title: Návod pre verejných činiteľov
 
 {{ signup_button }}
 
-# How to involve your entire community
+# Ako zapojiť celú komunitu
 
 ### Show your state, district, or city your commitment to computer science
 
@@ -12,7 +12,7 @@ title: Návod pre verejných činiteľov
 
 </br>
 
-## Are you hosting an elected official at your Hour of Code?
+## Pozvali ste na svoju Hodinu kódu verejného činiteľa?
 
 [View our toolkit](/files/elected-official.pdf) with all the information you need to make their visit and your event great!
 

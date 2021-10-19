@@ -123,10 +123,12 @@ az:
         turtle_1_9: Çevrə çəkmək üçün sual işarəsini hansı rəqəmlə əvəz etmək lazım
           olduğunu tapa bilərsinizmi?
         turtle_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir
-          neçə maraqlı ideya: çubuq adam, qar dənəciyi ve ya spiral. Həm də yeni "enini
+          neçə maraqlı ideya: çubuq adam, qar dənəciyi və ya spiral. Həm də yeni "enini
           təyin et" blokunu sınaqdan keçirin. Əylənin!'
         turtle_4_1: '3 blokdan istifadə edərək tərəfləri 100 piksel olan üçbucaq çəkə
           bilərsiniz? İpucu: "təkrarla" blokundan istifadə edin.'
+        turtle_4_2: Bu üçbucaqları çəkmək üçün proqramın ortasına "90 dərəcə sağa
+          dön" blokunu əlavə edin.
         turtle_4_3: Ok, bu bir üçbucaq çəkmək üçün yazdığınız koddur. "Təkrar et"
           və "dönmə" bloklarını əlavə etməklə gözəl bir gül düzəldə bilərsiniz mi?
         turtle_4_4: 'Burada keçən tapmacadaki kod ilə eyni olan koddur, lakin burada
@@ -418,7 +420,7 @@ az:
         turtle_ec_1_2: 'İndi bir kvadrat çəkin. QEYD: yeni "rəng seç" blokundan götürməklə
           öz sevimli rənginizdən istifadə edin.'
         turtle_ec_1_10: 'Siz bunu bacardınız! İndi nə istəsəniz çəkə bilərsiniz. Bir
-          neçə maraqlı ideya: çubuq adam, qar dənəciyi ve ya spiral. Həm də yeni "enini
+          neçə maraqlı ideya: çubuq adam, qar dənəciyi və ya spiral. Həm də yeni "enini
           təyin et" blokunu sınaqdan keçirin. Əylənin!'
     video:
       name:

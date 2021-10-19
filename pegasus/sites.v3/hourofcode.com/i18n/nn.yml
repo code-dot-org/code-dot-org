@@ -64,7 +64,7 @@ nn:
     er eit fundament kvar elev kan lære.
   social_hoc2019_dance: Med Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj og 34 andre!
-  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: AI for hav
   oceans_landing_description: 'Utforsk maskinlæring ved å lære "A.I." til å kjenne
     att fisk. #CSforGood'
@@ -153,6 +153,12 @@ nn:
   hoc_overview_oceans_tutorial_header: AI for hav
   hoc_overview_oceans_tutorial_desc: Lær om AI, maskinlæring, treningsdata og bias
     medan ein utforskar etiske problem og korleis AI kan brukast for å løyse verdsproblem.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: Kva er AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: Korleis veit telefonen din at dette er ein hund?
@@ -219,6 +225,8 @@ nn:
   hourofcode_homepage_hoc2018_header_line2: I alderen 4 til 104 år.
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
   codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Minecraft er tilbake i Kodetimen med ei heilt
     ny oppgåve! Reis gjennom Minecraft med kode.
   codeorg_homepage_hoc2019_dance_heading: Prøv den nye <span class="highlight-word">Dansefesten!</span>
@@ -1540,7 +1548,7 @@ nn:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -5240,8 +5248,9 @@ nn:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -6302,8 +6311,7 @@ nn:
   tutorial_codespeakhappy_language: Norsk Nynorsk
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: Norsk Nynorsk
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: Norsk Nynorsk
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -7856,7 +7864,8 @@ nn:
   tutorial_grokimage_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
     iPad
   tutorial_icomputelearn_string_platforms: All modern browsers
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: Datamaskiner (Windows PC, Mac), Android (Chromebook),
+    iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Datamaskiner (Windows PC, Mac), Android
     (Chromebook), iPad

@@ -17,6 +17,9 @@
         "oceans/Oceans": {
           "student_overview": "Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır."
         },
+        "outbreak/Outbreak": {
+          "purpose": "Bir önceki derste öğrenciler basit bir simülasyondan veri toplayıp yorumladılar. Bu derste öğrenciler kendi simülasyon modellerini kodlamak için yönergeleri takip edecekler. Öğrencilerin gerçek dünyadaki virüs salgınları hakkındaki ön bilgileri hayali bir senaryoya uygulanacaktır."
+        },
         "jigsaw/Jigsaw": {
           "overview": "Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.",
           "student_overview": "Bulmacaları tamamlamak için tıklayıp sürükleyin."

@@ -265,6 +265,10 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
         "sprite/coursef/2021": {
           "word": "Sprite"
         },
