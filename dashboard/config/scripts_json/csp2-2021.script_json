@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-14 22:58:51 UTC",
+    "serialized_at": "2021-10-18 21:41:46 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2021"
@@ -3138,7 +3138,7 @@
       "properties": {
         "type": "Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4"
+        "download_url": "https://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4"
       },
       "seeding_key": {
         "resource.key": "the-internet-packets-routing-and-reliability-1"
