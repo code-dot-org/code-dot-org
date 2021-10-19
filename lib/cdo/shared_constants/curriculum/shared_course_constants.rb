@@ -9,4 +9,12 @@ module SharedCourseConstants
       stable: "stable"
     }
   ).freeze
+
+  # Used to determine style a course is taught in
+  INSTRUCTION_TYPE = OpenStruct.new(
+    {
+      teacher_led: "teacher_led",
+      self_paced: "self_paced"
+    }
+  ).freeze
 end
