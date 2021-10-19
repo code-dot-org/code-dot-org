@@ -6,7 +6,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
+import {orderBy, sortBy} from 'lodash';
 import {getSectionRows} from './teacherSectionsRedux';
 import {sortableSectionShape} from './shapes';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
@@ -75,32 +75,6 @@ export const courseLinkFormatter = function(course, {rowData}) {
 
 export const gradeFormatter = function(grade, {rowData}) {
   return <div>{rowData.grade}</div>;
-};
-
-export const gradeComparator = (valueA, valueB, nodeA, nodeB, isInverted) => {
-  console.log('comparing grades now');
-  let weights = {
-    K: 0,
-    '1': 1,
-    '2': 2,
-    '3': 3,
-    '4': 4,
-    '5': 5,
-    '6': 6,
-    '7': 7,
-    '8': 8,
-    '9': 9,
-    '10': 10,
-    '11': 11,
-    '12': 12,
-    'Mixed/Other': 13,
-    '': 14
-  };
-
-  if (weights[valueA] === weights[valueB]) {
-    return 0;
-  }
-  return weights[valueA] > weights[valueB] ? 1 : -1;
 };
 
 export const loginInfoFormatter = function(loginType, {rowData}) {
@@ -178,6 +152,39 @@ class OwnedSectionsTable extends Component {
     }
   };
 
+  determineSorter = (data, activeColumn, directionArray) => {
+    let gradesArray = [
+      'K',
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12',
+      'Other',
+      null
+    ];
+    if (this.state.sortingColumns['2']) {
+      if (directionArray[0] === 'asc') {
+        return sortBy(data, function(obj) {
+          return gradesArray.indexOf(obj.grade);
+        });
+      } else {
+        return sortBy(data, function(obj) {
+          return -1 * gradesArray.indexOf(obj.grade);
+        });
+      }
+    } else {
+      return orderBy(data, activeColumn, directionArray);
+    }
+  };
+
   actionCellFormatter = (temp, {rowData}) => {
     return (
       <SectionActionDropdown
@@ -239,7 +246,6 @@ class OwnedSectionsTable extends Component {
       },
       {
         property: 'grade',
-        comparator: [gradeComparator],
         header: {
           label: i18n.grade(),
           props: {style: tableLayoutStyles.headerCell},
@@ -313,7 +319,9 @@ class OwnedSectionsTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: (x, y, z) => {
+        return this.determineSorter(x, y, z);
+      }
     })(this.props.sectionRows);
 
     return (
