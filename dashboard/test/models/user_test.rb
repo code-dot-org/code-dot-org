@@ -3224,13 +3224,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.any_visible_assigned_scripts?
     end
 
     test "it checks for assigned scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.stable
+      visible_script = create :script, name: 'visible-script', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       @student.assign_script(visible_script)
       assert @student.any_visible_assigned_scripts?
     end
@@ -3240,13 +3240,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.assigned_course_or_script?
     end
 
     test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.preview
+      visible_script = create :script, name: 'visible-script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview
       @student.assign_script(visible_script)
       assert @student.assigned_course_or_script?
     end
@@ -3338,12 +3338,12 @@ class UserTest < ActiveSupport::TestCase
       student = create :student
       teacher = create :teacher
 
-      unit_group = create :unit_group, name: 'testcourse', published_state: SharedConstants::PUBLISHED_STATE.stable
-      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: SharedConstants::PUBLISHED_STATE.stable), position: 1
-      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: SharedConstants::PUBLISHED_STATE.stable), position: 2
+      unit_group = create :unit_group, name: 'testcourse', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: SharedCourseConstants::PUBLISHED_STATE.stable), position: 2
       create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
-      other_script = create :script, name: 'otherscript', published_state: SharedConstants::PUBLISHED_STATE.stable
+      other_script = create :script, name: 'otherscript', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
 
       section = create :section, user_id: teacher.id, unit_group: unit_group

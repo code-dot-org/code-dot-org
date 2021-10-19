@@ -11,6 +11,7 @@ require 'fileutils'
 require 'require_all'
 
 require_relative '../../lib/cdo/shared_constants'
+require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
 autoload_all File.expand_path('../../lib/cdo/shared_constants/pd', File.dirname(__FILE__))
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
@@ -73,7 +74,6 @@ def main
     LEVEL_STATUS
     SECTION_LOGIN_TYPE
     POST_MILESTONE_MODE
-    PUBLISHED_STATE
     ALWAYS_PUBLISHABLE_PROJECT_TYPES
     ALL_PUBLISHABLE_PROJECT_TYPES
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
@@ -85,6 +85,17 @@ def main
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabGoalBlocks.js")
   generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/p5lab/gamelab/sharedGamelabBlocks.js")
+
+  generate_shared_js_file(
+    generate_multiple_constants(
+        %w(
+      PUBLISHED_STATE
+      INSTRUCTION_TYPE
+    ),
+      source_module: SharedCourseConstants, transform_keys: false
+    ),
+    "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
+  )
 
   generate_shared_js_file(
     generate_multiple_constants(
