@@ -49,7 +49,6 @@ export const SelectFieldGroup = props => {
   );
 };
 SelectFieldGroup.propTypes = {
-  ...FieldGroupComponent.propTypes,
   // the name of the input. Should match a key in options
   name: PropTypes.string.isRequired,
   // can be specified as either an array (of either Answers or SimpleAnswers, as defined in
@@ -71,7 +70,6 @@ export const SelectFieldGroupFromOptions = props => {
   return <SelectFieldGroup options={componentOptions} {...props} />;
 };
 SelectFieldGroupFromOptions.propTypes = {
-  ...SelectFieldGroup.propTypes,
   // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired
 };

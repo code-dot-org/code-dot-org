@@ -22,7 +22,6 @@ export const SingleCheckbox = props => {
   );
 };
 SingleCheckbox.propTypes = {
-  ...SingleCheckboxComponent.propTypes,
   // the name of the input. Should match a key in FormContext options
   name: PropTypes.string.isRequired,
   required: PropTypes.bool

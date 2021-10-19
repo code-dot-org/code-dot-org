@@ -31,13 +31,16 @@ export default storybook => {
     onChange: action('onChange')
   };
 
-  const Context = ({name, label, children, ...props}) => (
-    <FormContext.Provider value={{...defaultProps, ...props}}>
-      <LabelsContext.Provider value={{[name]: label}}>
-        {children}
-      </LabelsContext.Provider>
-    </FormContext.Provider>
-  );
+  const Context = ({children, ...props}) => {
+    const {name, label} = props;
+    return (
+      <FormContext.Provider value={{...defaultProps, ...props}}>
+        <LabelsContext.Provider value={{[name]: label}}>
+          {children}
+        </LabelsContext.Provider>
+      </FormContext.Provider>
+    );
+  };
   Context.propTypes = {
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
