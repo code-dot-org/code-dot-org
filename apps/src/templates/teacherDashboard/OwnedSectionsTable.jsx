@@ -27,6 +27,24 @@ export const COLUMNS = {
   EDIT_DELETE: 6
 };
 
+export const GRADES = [
+  'K',
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  '12',
+  'Other',
+  null
+];
+
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function(name, {rowData}) {
   return (
@@ -153,33 +171,15 @@ class OwnedSectionsTable extends Component {
   };
 
   determineSorter = (data, activeColumn, directionArray) => {
-    let gradesArray = [
-      'K',
-      '1',
-      '2',
-      '3',
-      '4',
-      '5',
-      '6',
-      '7',
-      '8',
-      '9',
-      '10',
-      '11',
-      '12',
-      'Other',
-      null
-    ];
+    // If we are sorting on grade
     if (this.state.sortingColumns['2']) {
-      if (directionArray[0] === 'asc') {
-        return sortBy(data, function(obj) {
-          return gradesArray.indexOf(obj.grade);
-        });
-      } else {
-        return sortBy(data, function(obj) {
-          return -1 * gradesArray.indexOf(obj.grade);
-        });
+      let mult = 1;
+      if (directionArray[0] !== 'asc') {
+        mult = -1;
       }
+      return sortBy(data, function(obj) {
+        return mult * GRADES.indexOf(obj.grade);
+      });
     } else {
       return orderBy(data, activeColumn, directionArray);
     }
