@@ -59,7 +59,6 @@ class AnimationTab extends React.Component {
         {this.props.channelId && (
           <AnimationPicker
             channelId={this.props.channelId}
-            allowedExtensions=".png,.jpg,.jpeg"
             libraryManifest={this.props.libraryManifest}
             hideUploadOption={this.props.hideUploadOption}
             hideAnimationNames={this.props.hideAnimationNames}
