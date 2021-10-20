@@ -139,9 +139,17 @@ class DSLDefined < Level
 
   def filename
     return nil if name.blank?
+    existing_filename.presence || canonical_filename
+  end
+
+  def existing_filename
     # Find a file in config/scripts/**/*.[class]* containing the string "name '[name]'"
     grep_string = "grep -lir \"name '#{name}'\" --include=*.#{self.class.to_s.underscore}* config/scripts --color=never"
-    `#{grep_string}`.chomp.presence || "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
+    `#{grep_string}`.chomp
+  end
+
+  def canonical_filename
+    "config/scripts/#{name.parameterize.underscore}.#{self.class.to_s.underscore}"
   end
 
   def file_path
