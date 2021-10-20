@@ -31,11 +31,11 @@ class StudioAppIdleTimer extends React.Component {
 export default connect(
   null,
   dispatch => ({
-    setStartIdle(ms) {
-      dispatch(setStartIdle(ms));
+    setStartIdle() {
+      dispatch(setStartIdle());
     },
-    setEndIdle(ms) {
-      dispatch(setEndIdle(ms));
+    setEndIdle() {
+      dispatch(setEndIdle());
     }
   })
 )(StudioAppIdleTimer);
