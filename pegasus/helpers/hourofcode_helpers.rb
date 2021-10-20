@@ -1,5 +1,3 @@
-require 'pry'
-
 def hoc_dir(*dirs)
   pegasus_dir('sites.v3', 'hourofcode.com', *dirs)
 end
