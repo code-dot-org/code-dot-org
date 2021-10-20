@@ -4844,6 +4844,8 @@ uk:
           lessons:
             Virus Simulation for Code Bytes:
               name: Моделювання симуляції
+            Outbreak:
+              name: Моделювання симуляції
           lesson_groups:
             outbreak:
               display_name: Симуляція спалаху
@@ -5657,3 +5659,8 @@ uk:
           lessons:
             lesson-1:
               name: Грамотна Бджілка
+          title: Грамотна Бджілка
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст

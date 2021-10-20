@@ -6077,6 +6077,8 @@ ru:
           lessons:
             Virus Simulation for Code Bytes:
               name: Программирование симулятора
+            Outbreak:
+              name: Программирование симулятора
           lesson_groups:
             outbreak:
               display_name: Симуляция эпидемии
@@ -6964,3 +6966,8 @@ ru:
           lessons:
             lesson-1:
               name: Пчела
+          title: Пчела
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
