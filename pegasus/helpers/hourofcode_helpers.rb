@@ -1,3 +1,5 @@
+require 'pry'
+
 def hoc_dir(*dirs)
   pegasus_dir('sites.v3', 'hourofcode.com', *dirs)
 end
@@ -117,6 +119,21 @@ end
 # in @language) into an XX-XX locale code as used by code.org/csedweek.org/apps.
 def hoc_get_locale_code
   Languages.get_hoc_locale_by_unique_language(@language)
+end
+
+# hourofcode.com calls this to translate tutorial's languages attribute
+def hoc_language(lang_codes_str)
+  return '' unless lang_codes_str
+
+  # Convert language codes to array and get the translated string
+  language_codes = lang_codes_str.split(',')
+  language_codes.map! {|code| hoc_s(code.downcase)}
+
+  # Account for list of more than 26
+  languages = language_codes.select {|code| code}.first(26).join(', ')
+  languages += ' and more!' if language_codes.length > 26
+
+  languages
 end
 
 def hoc_uri(uri)
