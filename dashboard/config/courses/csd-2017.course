@@ -9,6 +9,7 @@
     "csd6-2017"
   ],
   "published_state": "stable",
+  "instruction_type": "teacher_led",
   "properties": {
     "family_name": "csd",
     "has_verified_resources": true,
