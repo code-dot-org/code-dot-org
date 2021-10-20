@@ -1,18 +1,25 @@
-# Centralized social metadata for a few key pages:
+# Centralized social metadata for some key pages:
+#
 #   code.org/
-#   csedweek.org/
-#   hourofcode.com/
 #   code.org/challenge
 #   code.org/dance
+#   code.org/minecraft
+#   code.org/oceans
+#   code.org/hourofcode/overview
+#
+#   hourofcode.com/
+#   hourofcode.com/learn
 #   hourofcode.com/thanks
 
 def get_social_metadata_for_page(request)
+  # rubocop:disable Lint/UselessAssignment
   videos = {
     what_most_schools_dont_teach: {youtube_key: "nKIu9yen5nc", width: 640, height: 360},
     computer_science_is_changing_everything: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360},
     hour_of_code_worldwide: {youtube_key: "KsOIlDT145A", width: 640, height: 360},
     creativity_is: {youtube_key: "VYqHGIR7a_k", width: 640, height: 640}
   }
+  # rubocop:enable Lint/UselessAssignment
 
   images = {
     kids_with_ipads: {path: "/images/default-og-image.png", width: 1220, height: 640},
@@ -68,26 +75,6 @@ def get_social_metadata_for_page(request)
         title: hoc_s(:hoc2020_header),
         description: hoc_s(:social_hoc2020_cs_important),
         image: images[:codeorg2020_social]
-      }
-    },
-    "csedweek.org" => {
-      "soon-hoc" => {
-        title: I18n.t(:csedweek_og_title),
-        description: hoc_s(:social_hoc2020_coming_dates),
-        image: images[:cs_is_everything_thumbnail],
-        video: videos[:computer_science_is_changing_everything]
-      },
-      "actual-hoc" => {
-        title: I18n.t(:og_title_here),
-        description: I18n.t(:csedweek_og_description_here),
-        image: images[:cs_is_everything_thumbnail],
-        video: videos[:computer_science_is_changing_everything]
-      },
-      "default" => {
-        title: I18n.t(:csedweek_og_title),
-        description: I18n.t(:csedweek_og_description),
-        image: images[:cs_is_everything_thumbnail],
-        video: videos[:computer_science_is_changing_everything]
       }
     },
     "hourofcode.com" => {
@@ -201,7 +188,7 @@ def get_social_metadata_for_page(request)
     page = "dance"
   elsif request.path == "/oceans" && request.site == "code.org"
     page = "oceans"
-  elsif request.path == "/" && ["code.org", "csedweek.org", "hourofcode.com"].include?(request.site)
+  elsif request.path == "/" && ["code.org", "hourofcode.com"].include?(request.site)
     page = request.site
   elsif request.path == "/thanks" && request.site == "hourofcode.com"
     page = "thanks"
