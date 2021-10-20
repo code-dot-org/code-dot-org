@@ -5245,6 +5245,8 @@ th:
           lessons:
             Virus Simulation for Code Bytes:
               name: การเข้ารหัสการจำลอง
+            Outbreak:
+              name: การเข้ารหัสการจำลอง
           lesson_groups:
             outbreak:
               display_name: การจำลองการระบาด
@@ -5386,6 +5388,7 @@ th:
               key: การเขียนโปรแกรมกับเรย์และบีบี-8
               name: การเขียนโปรแกรมกับเรย์และบีบี-8
               description_student: ช่วย BB-8 เก็บรวบรวมเศษโลหะ
+              description_teacher: ในบทเรียน **สร้างทักษะ** นี้ นักเรียนจะได้ใช้ทักษะการเขียนโปรแกรมที่เพิ่งเรียนมาในระดับที่สลับซับซ้อนขึ้นเพื่อสำรวจเส้นทางแสนกลด้วย_BB-8_
             'Loops: Happy Loops':
               key: 'ลูป: ลูปแสนสนุก'
               name: ลูปแสนสนุก
@@ -6216,3 +6219,4 @@ th:
           lessons:
             lesson-1:
               name: ผึ้งนักสะกดคำ
+          title: ผึ้งนักสะกดคำ

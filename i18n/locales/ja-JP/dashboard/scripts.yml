@@ -15375,6 +15375,11 @@ ja:
               name: 最終プロジェクト
             Project:
               name: 最終プロジェクト
+        outbreak:
+          lessons:
+            Outbreak:
+              description_student: モンスタータウンにウイルスが広がっています！ ウイルスシミュレーターを作成し、モンスターが健康を取り戻す手助けをする方法を学びます。
+              description_teacher: このレッスンでは、イベントに関する**スキル構築**と**ミニプロジェクト**を組み合わせて、スプライトラボで独自のコンピュータシミュレーションを作成します。生徒にシミュレーションをじっくり調べてもらい、ウイルスがどれだけ早く広がるか、スピードを弱めるには何ができるかを理解してもらいます。
         2021drafting:
           lessons:
             Course F Introduction:
@@ -17752,5 +17757,13 @@ ja:
           lessons:
             lesson-1:
               name: つづりみつばち
+          title: つづりみつばち
         outbreak-csc:
           title: 大流行
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 評価日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容

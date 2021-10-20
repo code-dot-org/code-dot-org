@@ -4827,3 +4827,8 @@ nn:
           lessons:
             lesson-1:
               name: Stavekonkurranse
+          title: Stavekonkurranse
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald

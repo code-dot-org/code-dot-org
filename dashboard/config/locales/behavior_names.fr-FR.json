@@ -1634,6 +1634,9 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "se déplacer avec les touches de direction"
         }
       }
     }

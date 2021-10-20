@@ -2,6 +2,7 @@
 az:
   data:
     shared_functions:
+      growing: böyüyən
       jittering: |-
         titrəmək
         (hər hansı cihazın titrəməsi)
@@ -16,5 +17,7 @@ az:
       shrinking: |-
         kiçilmək
         (ölçüdə və ya miqdarda kiçik olmaq)
+      spinning left: sola fırlanır
+      spinning right: sağa fırlanır
       wandering: gəzən
       wobbling: titrəmə(titrəmək)
