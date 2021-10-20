@@ -10813,15 +10813,6 @@
       }
     },
     {
-      "key": "88fe1860-9696-445b-b15d-ea9f5b71352d",
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "88fe1860-9696-445b-b15d-ea9f5b71352d"
-      }
-    },
-    {
       "key": "ea9adc1d-dc64-4a08-a97f-19eec1e448e6",
       "properties": {
         "description": "Practice creating a memorable and strong password."
