@@ -24044,10 +24044,11 @@ en:
             lessonGroup-9:
               display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: 'Module 5: Preparing to Teach CS Discoveries'
+          title: 'Module 5: Preparing to Teach Unit7- AI and Machine Learning'
           description_audience: ''
           description_short: ''
           description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
+          student_description: ''
         self-paced-pl-csd6-2021:
           lessons:
             lesson-1:
@@ -26546,7 +26547,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-3:
-              name: Variables
+              name: User Input
               description_student: 
               description_teacher: 
             lesson-4:
