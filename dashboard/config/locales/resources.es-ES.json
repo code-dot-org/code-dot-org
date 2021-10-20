@@ -295,9 +295,11 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "play_lab_project_planning_guide/courseb/2021": {
+          "name": "Proyecto de Laboratorio de Juegos - Guía de Planificación",
           "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
+          "name": "Proyecto de Laboratorio de Juegos - Guía de Planificación",
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
         },
         "csta_standards_mapping/courseb/2021": {
@@ -531,20 +533,33 @@
         "virtual_lesson_modifications/coursea/2021": {
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": "Poner un STOP a la Maldad en Línea: Diapositivas de la Lección",
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+        },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "name": "Poner un STOP a la Maldad en Línea: STOP a la Maldad en Línea",
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "Mis amigos robóticos"
+          "name": "Mis amigos robóticos",
+          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "Mis amigos robóticos"
+          "name": "Mis amigos robóticos",
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "Mis amigos robóticos"
+          "name": "Mis amigos robóticos",
+          "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "Mis amigos robóticos"
+          "name": "Mis amigos robóticos",
+          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "Mis amigos robóticos"
+          "name": "Mis amigos robóticos",
+          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "unplugged-maze-blocks/coursec/2021": {
           "name": "Bloques Sin conexión para Laberinto/Granjera/Abeja - Cursos 2-5"
@@ -611,6 +626,9 @@
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Pulseras Binarias"
+        },
+        "play-lab-project-guide/coursec/2021": {
+          "name": "Proyecto de Laboratorio de Juegos - Guía de Planificación"
         },
         "csta_standards_mapping/coursec/2021": {
           "name": "Normas de la CSTA",
@@ -888,7 +906,8 @@
           "url": "https://studio.code.org/s/pre-express-2021/standards"
         },
         "course_vocabulary/pre-express/2021": {
-          "name": "Vocabulario del curso\t"
+          "name": "Vocabulario del curso\t",
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "Foro de profesores"

@@ -430,6 +430,10 @@ ta:
           lesson_groups:
             required:
               display_name: கண்ணோட்டம்
+        basketball:
+          lessons:
+            Bounce:
+              description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும் என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே உருவாக்குவீர்கள்!
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -487,6 +491,8 @@ ta:
               name: கலைஞரில் உள்ளமை சுழல்கள் திட்டம்
         coursee-draft:
           lessons:
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
             Conditionals:
@@ -511,6 +517,10 @@ ta:
           lessons:
             Hour of Code 2013:
               name: Hour of Code 2013
+        sports:
+          lessons:
+            Sports:
+              description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும் என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே உருவாக்குவீர்கள்!
         csp3-support:
           lesson_groups:
             required:
@@ -600,6 +610,8 @@ ta:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Loops with Rey and BB-8:
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
         coursed-2017:
           title: பாடநெறி ஈ
           assignment_family_title: பாடநெறி ஈ
@@ -609,14 +621,22 @@ ta:
               description_student: இந்த பாடத்திற்கு உங்களுக்கு தேவையான திறன்களில் இந்த பாடம் பயிற்சி அளிக்கும்.
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
+              description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும் என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே உருவாக்குவீர்கள்!
             Nested Loops:
               name: உள்ளமை சுழல்கள்
             Nested Loops in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள்
+            'Algorithms: Relay Programming':
+              description_student: பாடநெறியின் தொடக்கத்தில் நீங்கள் குறியீட்டைக் கொண்டு வரைபடங்களை உருவாக்கியதை நினைவில் கொள்கிறீர்களா? இந்த பாடத்தில், நீங்கள் மிகவும் ஒத்த ஒன்றை செய்ய ஒரு குழுவுடன் இணைந்து செயல்படுவீர்கள்!
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
+              description_student: 'குறியீட்டில் சுழல்கள் மிகவும் பயனுள்ளதாக இருக்கும். இந்த பாடம் ஒரு புதிய வகையான வளையத்தைப் பற்றி உங்களுக்குக் கற்பிக்கும்: சுழல்கள் இருக்கும் போது!'
             Conditionals with Cards:
               description_student: சில நிபந்தனைகளின் கீழ் நீங்கள் புள்ளிகளைப் பெறும் ஒரு விளையாட்டை விளையாட வேண்டிய நேரம் இது!
+            Conditionals in Bee:
+              description_student: இப்போது நீங்கள் நிபந்தனைகளை புரிந்துகொண்டுள்ளீர்கள், தேன் மற்றும் தேன் சேகரிக்கும் போது அவற்றைப் பயன்படுத்த பீ திட்டமிட வேண்டிய நேரம் இது.
+            Conditionals & Loops in Farmer:
+              description_student: ஒவ்வொரு நிபந்தனையையும் எப்போது பயன்படுத்துவது என்பது எப்போதும் தெளிவாக இல்லை. என்ன செய்வது என்று முடிவெடுக்க பயிற்சி பெற இந்த பாடம் உதவும்.
             Artist Binary:
               name: கலைஞரில் பைனரி
         coursee-2017:
@@ -632,6 +652,9 @@ ta:
               name: பாடல் எழுதுதல்
             Functions with Parameters in Artist:
               name: கலைஞரின் அளவுருக்கள் கொண்ட செயல்பாடுகள்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+              description_student: இந்த பாடத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கும்போது சக்தியை உணருங்கள்.
             'Functions: Songwriting':
               description_student: ராக்ஸ்டார்களுக்கு கூட நிரலாக்க திறன்கள் தேவை. பாடங்களிலிருந்து வரிகளைப் பயன்படுத்தி செயல்பாடுகள் பற்றி இந்தப் பாடம் உங்களுக்குக் கற்பிக்கும்.
             Functions in Artist:
@@ -645,6 +668,8 @@ ta:
               name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
         coursef-2017:
@@ -652,6 +677,8 @@ ta:
           assignment_family_title: பாடநெறி ஊ
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
           lessons:
+            The Power of Words:
+              description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம் ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக் கற்பிக்கும்.
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
             For Loops in Artist:
@@ -664,6 +691,8 @@ ta:
               name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
         csdnovice:
           lessons:
             Wrap Up:
@@ -725,6 +754,8 @@ ta:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops Project in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள் திட்டம்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
             Build a Flappy Game:
@@ -762,8 +793,12 @@ ta:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Conditionals:
               name: நிபந்தனைகள்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
         new-d:
@@ -816,8 +851,12 @@ ta:
               name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Conditionals:
               name: நிபந்தனைகள்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
         new-f:
@@ -828,6 +867,8 @@ ta:
               name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
             For Loops in Artist:
@@ -865,10 +906,14 @@ ta:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Conditionals:
               name: நிபந்தனைகள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
         course-f-2018:
           lessons:
             Debugging with Scrat:
@@ -877,6 +922,8 @@ ta:
               name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
             For Loops in Artist:
@@ -923,6 +970,10 @@ ta:
               name: லாரலுடன் சுழல்கள்
             Loops in Artist:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
+            Events in Play Lab:
+              name: நிகழ்வுகளுடன் நகர்வில்
+            Programming in Harvester:
+              name: ஹார்வெஸ்டருடன் நிரலாக்கம்
             Loops in Harvester:
               name: ஹார்வெஸ்டருடன் சுழல்கள்
             Sequencing in Maze:
@@ -931,6 +982,8 @@ ta:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+            Loops in Artist:
+              name: சுழல்களுடன் ஸ்டிக்கர் கலை
             Nested Loops:
               name: உள்ளமை சுழல்கள்
             Nested Loops Project in Frozen:
@@ -951,6 +1004,10 @@ ta:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Collector:
               name: லாரலுடன் புதையல் சேகரித்தல்
+            Programming in Artist:
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            Loops with Rey and BB-8:
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
             'Concept Practice with Minecraft ':
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
             Nested Loops in Frozen:
@@ -980,6 +1037,10 @@ ta:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
+            Loops in Artist:
+              name: சுழல்களுடன் தோட்டங்களை வரைதல்
+            Events in Play Lab:
+              name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
         coursed-2018:
@@ -991,6 +1052,8 @@ ta:
               name: லாரல் உடன் பிழைத்திருத்தம்
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
+            Loops in Artist:
+              name: சுழல்களுடன் வடிவங்களை வரைதல்
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
             While Loops in Farmer:
@@ -1018,10 +1081,18 @@ ta:
               name: பிரமை பிழைத்திருத்தம்
             Programming in Collector:
               name: லாரலுடன் புதையல் சேகரித்தல்
+            Programming in Artist:
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            Loops with Rey and BB-8:
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
+            Loops in Artist:
+              name: சுழல்களுடன் ஸ்டிக்கர் கலை
             Loops in Harvester:
               name: வளையங்களுடன் பயிர்களை அறுவடை செய்தல்
             Build a Flappy Game:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
+            Events in Play Lab:
+              name: நிகழ்வுகளுடன் சேஸ் கேம்
             Looking Ahead:
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
         coursee-2018:
@@ -1029,28 +1100,49 @@ ta:
           lessons:
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
+            Programming in Artist:
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            Loops in Artist:
+              name: சுழல்களுடன் வடிவங்களை வரைதல்
             Nested Loops:
               name: பிரமை உள்ள கூடுகள்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Conditionals:
               name: விவசாயியுடன் நிபந்தனைகள்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+              description_student: இந்த பாடத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கும்போது சக்தியை உணருங்கள்.
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
               description_student: ராக்ஸ்டார்களுக்கு கூட நிரலாக்க திறன்கள் தேவை. பாடங்களிலிருந்து வரிகளைப் பயன்படுத்தி செயல்பாடுகள் பற்றி இந்தப் பாடம் உங்களுக்குக் கற்பிக்கும்.
             Functions in Artist:
               name: கலைஞருடன் செயல்பாடுகள்
               description_student: செயல்பாடுகளுடன் மிகவும் சிக்கலான வரைபடங்களை உருவாக்கவும்!
+            Functions in Harvester:
+              name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
             Internet:
               name: இணையம்
             Minecraft Hour of Code:
               name: Minecraft Hour of Code
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
         coursef-2018:
           assignment_family_title: பாடநெறி ஊ
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
           lessons:
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
+            Programming in Artist:
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            Loops in Artist:
+              name: சுழல்களுடன் வடிவங்களை வரைதல்
             Nested Loops in Bee/Zombie:
               name: பிரமை உள்ள கூடுகள்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            The Power of Words:
+              description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம் ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக் கற்பிக்கும்.
             Variables in Artist:
               name: கலைஞரின் மாறுபாடுகள்
             For Loops in Artist:
@@ -1165,6 +1257,10 @@ ta:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
+            Loops in Artist:
+              name: சுழல்களுடன் தோட்டங்களை வரைதல்
+            Events in Play Lab:
+              name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
         fit-test:
@@ -1227,8 +1323,17 @@ ta:
               name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
+              description_student: மிகவும் திறமையான குறியீட்டிற்கான செயல்பாடுகளை எவ்வாறு பயன்படுத்துவது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?
+            The Power of Words:
+              description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம் ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக் கற்பிக்கும்.
             Variables as Constant in Artist:
               name: கலைஞருடன் மாறுபாடுகள்
+            Variables that Change in Bee:
+              description_student: இந்த தேனீ மாறிகளை விரும்புகிறது!
             Variables that Change in Artist:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
             For Loops in Artist:
@@ -1244,15 +1349,22 @@ ta:
               name: பிரமை உள்ள கூடுகள்
             Events with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+              description_student: வகுப்பு தோழர்களுடன் பகிரக்கூடிய ஒரு ஊடாடும் திட்டத்தை உருவாக்கவும்.
             Loops with the Artist:
               name: சுழல்களால் வரைதல்
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
             Virtual Pet:
               name: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
+            End of Course Project:
+              description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும் தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள் படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
             Internet:
               name: இணையம்
+            Digital Sharing:
+              description_student: இந்த பாடத்தில், உரிமை மற்றும் பதிப்புரிமை ஆகியவற்றின் சவால்கள் மற்றும் நன்மைகள் பற்றி நீங்கள் அறிந்து கொள்வீர்கள்.
             Running Simulations:
               name: இயங்கும் உருவகப்படுத்துதல்கள்
+            Simulating Experiments:
+              description_student: கணினியில் உருவகப்படுத்துதல்களை இயக்கவும் மற்றும் மாறிகளை மாற்றுவதன் மூலம் பரிசோதனை செய்யவும்.
         dance-low:
           description_short: உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ள உங்கள் சொந்த நடன விருந்தைக் குறிக்கவும்! (இந்த பதிப்பு மெதுவான இணைப்புகளுக்கானது)
           lessons:
@@ -1272,32 +1384,44 @@ ta:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+              description_student: இந்த பாடத்தில், உங்கள் வகுப்புத் தோழரை படங்களை வரைய நிரல் செய்வீர்கள்!
             Introduction to Online Puzzles:
               description_student: இந்த பாடத்திற்கு உங்களுக்கு தேவையான திறன்களில் இந்த பாடம் பயிற்சி அளிக்கும்.
+            Relay Programming:
+              description_student: பாடநெறியின் தொடக்கத்தில் நீங்கள் குறியீட்டைக் கொண்டு வரைபடங்களை உருவாக்கியதை நினைவில் கொள்கிறீர்களா? இந்த பாடத்தில், நீங்கள் மிகவும் ஒத்த ஒன்றை செய்ய ஒரு குழுவுடன் இணைந்து செயல்படுவீர்கள்!
             Debugging in Collector:
               name: லாரல் உடன் பிழைத்திருத்தம்
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
+              description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும் என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே உருவாக்குவீர்கள்!
             Loops in Ice Age:
               description_student: இந்த பாடத்தில் ஸ்க்ராட் ஏகோர்னை முடிந்தவரை திறமையாக அடைய உதவும் வகையில் மீண்டும் மீண்டும் பயன்படுத்துவீர்கள்.
             Loops in Artist:
+              name: சுழல்களுடன் வடிவங்களை வரைதல்
               description_student: இந்த பாடத்தில், லூப்ஸ் கலைஞருடன் சிறந்த படங்களை உருவாக்குவதை எளிதாக்குகிறது!
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
+              description_student: சுழல்கள் உள்ளே சுழல்கள் உள்ளே சுழல்கள். இதற்கு என்ன அர்த்தம்? நீங்கள் ஒரு கூட்டை உருவாக்கும்போது என்ன நடக்கும் என்பதை இந்த பாடம் உங்களுக்குக் கற்பிக்கும்.
             Nested Loops in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள்
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
+              description_student: 'குறியீட்டில் சுழல்கள் மிகவும் பயனுள்ளதாக இருக்கும். இந்த பாடம் ஒரு புதிய வகையான வளையத்தைப் பற்றி உங்களுக்குக் கற்பிக்கும்: சுழல்கள் இருக்கும் போது!'
             Until Loops in Maze:
               name: பிரமை உள்ள சுழல்கள் வரை
             Conditionals with Cards:
               description_student: சில நிபந்தனைகளின் கீழ் நீங்கள் புள்ளிகளைப் பெறும் ஒரு விளையாட்டை விளையாட வேண்டிய நேரம் இது!
             Conditionals in Bee:
               name: தேனீவுடன் இருந்தால்/வேறு
+              description_student: இப்போது நீங்கள் நிபந்தனைகளை புரிந்துகொண்டுள்ளீர்கள், தேன் மற்றும் தேன் சேகரிக்கும் போது அவற்றைப் பயன்படுத்த பீ திட்டமிட வேண்டிய நேரம் இது.
             Conditionals & Loops in Harvester:
               name: நிபந்தனைகளுடன் அறுவடை
+              description_student: ஒவ்வொரு நிபந்தனையையும் எப்போது பயன்படுத்துவது என்பது எப்போதும் தெளிவாக இல்லை. என்ன செய்வது என்று முடிவெடுக்க பயிற்சி பெற இந்த பாடம் உதவும்.
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+              description_student: இந்த பாடத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கும்போது சக்தியை உணருங்கள்.
             Dance Party:
               name: நடன விருந்து
         coursee-2019:
@@ -1316,12 +1440,21 @@ ta:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Nested Loops:
               name: உள்ளமை சுழல்கள்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Conditionals:
               name: விவசாயியுடன் நிபந்தனைகள்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+              description_student: இந்த பாடத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கும்போது சக்தியை உணருங்கள்.
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
               description_student: ராக்ஸ்டார்களுக்கு கூட நிரலாக்க திறன்கள் தேவை. பாடங்களிலிருந்து வரிகளைப் பயன்படுத்தி செயல்பாடுகள் பற்றி இந்தப் பாடம் உங்களுக்குக் கற்பிக்கும்.
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
+              description_student: மிகவும் திறமையான குறியீட்டிற்கான செயல்பாடுகளை எவ்வாறு பயன்படுத்துவது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?
             Functions in Harvester:
+              name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
               description_student: விவசாயியின் அறுவடைக்கு நீங்கள் உதவுவதால் செயல்பாடுகள் உங்களுக்கு நிறைய வேலைகளைச் சேமிக்கும்!
             Functions in Artist:
               name: கலைஞருடன் செயல்பாடுகள்
@@ -1331,13 +1464,20 @@ ta:
               description_student: உருவங்களை உருவாக்குவது மற்றும் திருத்துவது எப்படி என்பதை அறிக.
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+              description_student: வகுப்பு தோழர்களுடன் பகிரக்கூடிய ஒரு ஊடாடும் திட்டத்தை உருவாக்கவும்.
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
+            Nested Loops in Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Programming and Loops with the Artist:
               name: சுழல்களால் வரைதல்
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
+            End of Course Project:
+              description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும் தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள் படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
             Simon Says:
               description_student: ஒரு விளையாட்டை விளையாடுங்கள் மற்றும் சரியான முடிவைப் பெற என்ன கட்டளைகள் தேவை என்று சிந்தியுங்கள்.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Swimming Fish with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
             Songwriting:
@@ -1363,6 +1503,12 @@ ta:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Programming in Collector:
               name: லாரலுடன் புதையல் சேகரித்தல்
+            Programming in Artist:
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            Loops with Rey and BB-8:
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
+            Loops in Artist:
+              name: சுழல்களுடன் ஸ்டிக்கர் கலை
             'Concept Practice with Minecraft ':
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
             Nested Loops in Bee:
@@ -1375,6 +1521,10 @@ ta:
               name: தேனீவுடன் இருந்தால்/வேறு
             Conditionals & Loops in Harvester:
               name: நிபந்தனைகளுடன் அறுவடை
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
+            Functions in Harvester:
+              name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞருடன் செயல்பாடுகள்
             Build a Flappy Game:
@@ -1391,6 +1541,8 @@ ta:
               name: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
             Dance Party:
               name: நடன விருந்து
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
         andrea-test:
           lesson_groups:
             required:
@@ -1421,17 +1573,24 @@ ta:
               description_student: புதிர்களில் சிக்கல்களைக் கண்டறிந்து உங்கள் பிழைத்திருத்தத் திறனைப் பயிற்சி செய்யுங்கள்.
             Programming in Collector:
               name: லாரலுடன் புதையல் சேகரித்தல்
+              description_student: லாரல் சாகசக்காரர் நிறைய ரத்தினங்களை சேகரிக்க உதவும் வழிமுறைகளை எழுதுங்கள்!
             Programming in Artist:
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
               description_student: கலைஞரை நிரலாக்குவதன் மூலம் அழகான படங்களை உருவாக்கவும்.
+            Loops with Rey and BB-8:
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             Loops in Harvester:
               name: வளையங்களுடன் பயிர்களை அறுவடை செய்தல்
               description_student: அறுவடை இயந்திரம் சில காய்கறிகளைச் சேகரிக்க உதவும் சுழல்களைப் பயன்படுத்துவோம்!
+            'Events: The Big Event':
+              description_student: நிகழ்வுகளைப் பற்றி அறிய ஒரு வேடிக்கையான விளையாட்டை விளையாடுங்கள்.
             Build a Flappy Game:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
               description_student: உங்களுக்கு விருப்பமான Flappy Bird விளையாட்டை உருவாக்குங்கள், பின்னர் அதை உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளுங்கள்!
             Events in Play Lab:
+              name: நிகழ்வுகளுடன் சேஸ் கேம்
               description_student: பிளே லேபில் ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம் இது!
             Looking Ahead:
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
@@ -1444,6 +1603,7 @@ ta:
             Powerful Passwords:
               description_student: இந்த பாடத்தில், கடவுச்சொற்கள் உங்கள் தகவலை எவ்வாறு பாதுகாக்கின்றன, எப்படி ஒரு நல்ல கடவுச்சொல்லை உருவாக்குவது என்பது பற்றி அறிந்து கொள்வீர்கள்.
             Sticker Art with Loops:
+              name: சுழல்களுடன் ஸ்டிக்கர் கலை
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
         coursea-2019:
           title: பாடநெறி அ (2019)
@@ -1466,15 +1626,22 @@ ta:
               description_student: புதையலை நிலத்தடியில் சேகரிக்க சாகசக்காரர் லாரலுக்கு உதவுங்கள்.
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            'Events: The Big Event':
+              description_student: உங்கள் ஆசிரியர்கள் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை அழுத்தும்போது நகர்ந்து கத்துங்கள்.
             Events in Play Lab:
+              name: நிகழ்வுகளுடன் நகர்வில்
               description_student: உங்கள் சொந்த விளையாட்டு அல்லது கதையை உருவாக்கவும்.
             Ocean Scene with Loops:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
+              description_student: படங்களை முடிக்க சுழல்கள் மற்றும் வடிவங்களைப் பயன்படுத்தவும்.
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
               description_student: புதிர்களை முடிக்க கிளிக் செய்து இழுக்கவும்.
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
+              description_student: சுழல்களைப் பயன்படுத்தி அதிக நிலத்தை மறைக்க ஸ்க்ராட்டுக்கு உதவுங்கள்.
+            Programming in Ice Age:
+              description_student: ஸ்க்ராட் ஏகோர்னை அடைய உதவும் நிரல்களை எழுதுங்கள்.
             Programming with Rey and BB-8:
               description_student: ஸ்கிராப் உலோகத்தை சேகரிக்க BB -8 க்கு உதவுங்கள்.
             Sequencing with Scrat:
@@ -1494,8 +1661,15 @@ ta:
               description_student: உங்கள் டிஜிட்டல் தடம் மற்றும் வலைத்தளங்களைப் பார்வையிடும்போது பாதுகாப்பாக இருப்பது எப்படி என்பதை அறியவும்.
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
+              description_student: திறந்த குகையில் புதையலைச் சேகரிக்க சாகசக்காரர் லாரல் திட்டம்.
               description_teacher: இந்த பாடத்தில், மாணவர்கள் சுழல்களின் கருத்தை தொடர்ந்து கற்றுக் கொள்கிறார்கள். இங்கே, லாரல் சாகசக்காரர் திறந்த குகை இடங்களில் புதையலைச் சேகரிக்க சுழல்களைப் பயன்படுத்துகிறார். அவளுடைய பயணத்திற்கு உதவ ஒரு புதிய `புதையலைப் பெறு` தொகுதி அறிமுகப்படுத்தப்பட்டது.
+            Loops in Artist:
+              name: சுழல்களுடன் தோட்டங்களை வரைதல்
+              description_student: படங்களை முடிக்க வடிவங்கள் மற்றும் சுழல்களைப் பயன்படுத்தவும்.
+            'Events: The Big Event':
+              description_student: உங்கள் ஆசிரியர் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை அழுத்தும்போது நகர்த்தவும் அல்லது கத்தவும்.
             Events in Play Lab:
+              name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
               description_student: ஒரு கதையை உருவாக்க அல்லது ஒரு ஊடாடும் விளையாட்டை உருவாக்க நிகழ்வுகளைப் பயன்படுத்தவும்.
             'Loops: Getting Loopy':
               description_student: இந்த பாடத்தில், நாங்கள் மீண்டும் மீண்டும் சுழல்களைப் பயன்படுத்தி ஒரு நடன விருந்து நடத்துவோம்!
@@ -1507,6 +1681,7 @@ ta:
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
             Programming in Harvester:
+              name: ஹார்வெஸ்டருடன் நிரலாக்கம்
               description_student: ஒரு பாதையில் காய்கறிகளை சேகரிக்க ஹார்வெஸ்டருக்கு உதவுங்கள்.
             Sequencing in Maze:
               name: கோபம் பறவைகளுடன் வரிசைப்படுத்துதல்
@@ -1524,10 +1699,18 @@ ta:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
+            Loops in Artist:
+              name: சுழல்களுடன் தோட்டங்களை வரைதல்
             Learn to Drag and Drop:
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
+            Programming in Harvester:
+              name: ஹார்வெஸ்டருடன் நிரலாக்கம்
+            Tell a Story in Play Lab:
+              name: நிகழ்வுகளுடன் நகர்வில்
+            Make a Game in Play Lab:
+              name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
             Ocean Scene with Loops:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
         csd2-2019:
@@ -1576,10 +1759,16 @@ ta:
               name: கலைஞரில் நிரலாக்க
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
             Build a Flappy Game:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
         csp1-pilot-staging:
@@ -1648,6 +1837,8 @@ ta:
           lessons:
             Graph Paper Programming:
               name: வரைதாள் செய்நிரல்
+            Loops with Rey and BB-8:
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
         csp5-pilot:
           lesson_groups:
             csp_lists:
@@ -1804,6 +1995,8 @@ ta:
               display_name: செயல்பாடுகள்
         time4cs-original-unit-1:
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Conditionals:
               name: நிபந்தனைகள்
             Alien Dance Party with Sprite Lab:
@@ -1821,12 +2014,20 @@ ta:
           lessons:
             Nested Loops in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள்
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
               name: பிரமை உள்ள கூடுகள்
+            Nested Loops with Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
+            Functions with Harvester:
+              name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
             Functions with Artist:
               name: கலைஞருடன் செயல்பாடுகள்
         time4cs-control-unit-1:
@@ -1840,6 +2041,8 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Conditionals:
               name: நிபந்தனைகள்
             Alien Dance Party with Sprite Lab:
@@ -1855,6 +2058,8 @@ ta:
             csf_events:
               display_name: நிகழ்வுகள்
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Conditionals:
               name: நிபந்தனைகள்
             Alien Dance Party with Sprite Lab:
@@ -1905,6 +2110,8 @@ ta:
               description_student: பழத்திற்கு ஃப்ளர்பைப் பெறுவதற்கான வழிமுறைகளை எழுதுங்கள்.
             Sequencing with Scrat:
               description_student: ஏகார்னை அடைய ஸ்க்ராட் திட்டம்.
+            Programming in Ice Age:
+              description_student: ஸ்க்ராட் ஏகோர்னை அடைய உதவும் நிரல்களை எழுதுங்கள்.
             Programming with Rey and BB-8:
               description_student: ஸ்கிராப் உலோகத்தை சேகரிக்க BB -8 க்கு உதவுங்கள்.
             'Loops: Happy Loops':
@@ -1912,12 +2119,17 @@ ta:
               description_student: சுழல்களைப் பயன்படுத்தி பெரிய சிக்கல்களைத் தீர்க்க ஃப்ளர்பிற்கு உதவுங்கள்.
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
+              description_student: சுழல்களைப் பயன்படுத்தி அதிக நிலத்தை மறைக்க ஸ்க்ராட்டுக்கு உதவுங்கள்.
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
               description_student: புதையலை நிலத்தடியில் சேகரிக்க சாகசக்காரர் லாரலுக்கு உதவுங்கள்.
             Ocean Scene with Loops:
               name: சுழல்களுடன் கூடிய கடல் காட்சி
+              description_student: படங்களை முடிக்க சுழல்கள் மற்றும் வடிவங்களைப் பயன்படுத்தவும்.
+            'Events: The Big Event':
+              description_student: உங்கள் ஆசிரியர்கள் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை அழுத்தும்போது நகர்ந்து கத்துங்கள்.
             Events in Play Lab:
+              name: நிகழ்வுகளுடன் நகர்வில்
               description_student: உங்கள் சொந்த விளையாட்டு அல்லது கதையை உருவாக்கவும்.
             Safety in My Online Neighborhood:
               description_student: ஆன்லைனில் பாதுகாப்பாக இடங்களுக்குச் செல்வது எப்படி என்பதை அறிக.
@@ -1940,6 +2152,7 @@ ta:
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
             Programming in Harvester:
+              name: ஹார்வெஸ்டருடன் நிரலாக்கம்
               description_student: ஒரு பாதையில் காய்கறிகளை சேகரிக்க ஹார்வெஸ்டருக்கு உதவுங்கள்.
             'Loops: Getting Loopy':
               description_student: இந்த பாடத்தில், நாங்கள் மீண்டும் மீண்டும் சுழல்களைப் பயன்படுத்தி ஒரு நடன விருந்து நடத்துவோம்!
@@ -1948,10 +2161,17 @@ ta:
               description_student: வளையங்களைப் பயன்படுத்தி ஹார்வெஸ்டர் இன்னும் அதிகமாக சேகரிக்க உதவுங்கள்!
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
+              description_student: திறந்த குகையில் புதையலைச் சேகரிக்க சாகசக்காரர் லாரல் திட்டம்.
               description_teacher: இந்த பாடத்தில், மாணவர்கள் சுழல்களின் கருத்தை தொடர்ந்து கற்றுக் கொள்கிறார்கள். இங்கே, லாரல் சாகசக்காரர் திறந்த குகை இடங்களில் புதையலைச் சேகரிக்க சுழல்களைப் பயன்படுத்துகிறார். அவளுடைய பயணத்திற்கு உதவ ஒரு புதிய `புதையலைப் பெறு` தொகுதி அறிமுகப்படுத்தப்பட்டது.
+            Loops in Artist:
+              name: சுழல்களுடன் தோட்டங்களை வரைதல்
+              description_student: படங்களை முடிக்க வடிவங்கள் மற்றும் சுழல்களைப் பயன்படுத்தவும்.
             The Right App:
               description_student: உங்கள் சொந்த ஸ்மார்ட்போன் பயன்பாட்டை வரையவும்.
+            'Events: The Big Event':
+              description_student: உங்கள் ஆசிரியர் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை அழுத்தும்போது நகர்த்தவும் அல்லது கத்தவும்.
             Events in Play Lab:
+              name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
               description_student: ஒரு கதையை உருவாக்க அல்லது ஒரு ஊடாடும் விளையாட்டை உருவாக்க நிகழ்வுகளைப் பயன்படுத்தவும்.
             Digital Trails:
               description_student: உங்கள் டிஜிட்டல் தடம் மற்றும் வலைத்தளங்களைப் பார்வையிடும்போது பாதுகாப்பாக இருப்பது எப்படி என்பதை அறியவும்.
@@ -1978,23 +2198,31 @@ ta:
               description_student: புதிர்களில் சிக்கல்களைக் கண்டறிந்து உங்கள் பிழைத்திருத்தத் திறனைப் பயிற்சி செய்யுங்கள்.
             Programming in Collector:
               name: லாரலுடன் புதையல் சேகரித்தல்
+              description_student: லாரல் சாகசக்காரர் நிறைய ரத்தினங்களை சேகரிக்க உதவும் வழிமுறைகளை எழுதுங்கள்!
             Programming in Artist:
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
               description_student: கலைஞரை நிரலாக்குவதன் மூலம் அழகான படங்களை உருவாக்கவும்.
             Binary Bracelets:
               description_student: உங்கள் சொந்த பைனரி வளையலை உருவாக்கி, கணினிகள் தகவல்களை எவ்வாறு நினைவில் கொள்கின்றன என்பதை அறியவும்!
             'Loops: My Loopy Robotic Friends':
               description_student: இந்த பாடத்தில், நீங்கள் உங்கள் வகுப்பு தோழர்களை மீண்டும் திட்டமிடலாம், ஆனால் சுழல்களைப் பயன்படுத்தி நீங்கள் பெரிய மற்றும் சிக்கலான சிக்கல்களை தீர்க்க முடியும்.
+            Loops with Rey and BB-8:
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
             Loops in Harvester:
               name: வளையங்களுடன் பயிர்களை அறுவடை செய்தல்
               description_student: அறுவடை இயந்திரம் சில காய்கறிகளைச் சேகரிக்க உதவும் சுழல்களைப் பயன்படுத்துவோம்!
             Looking Ahead:
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
             Sticker Art with Loops:
+              name: சுழல்களுடன் ஸ்டிக்கர் கலை
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
+            'Events: The Big Event':
+              description_student: நிகழ்வுகளைப் பற்றி அறிய ஒரு வேடிக்கையான விளையாட்டை விளையாடுங்கள்.
             Build a Flappy Game:
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
               description_student: உங்களுக்கு விருப்பமான Flappy Bird விளையாட்டை உருவாக்குங்கள், பின்னர் அதை உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளுங்கள்!
             Events in Play Lab:
+              name: நிகழ்வுகளுடன் சேஸ் கேம்
               description_student: பிளே லேபில் ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம் இது!
             Password Power-Up:
               description_student: இந்த பாடத்தில், கடவுச்சொற்கள் உங்கள் தகவலை எவ்வாறு பாதுகாக்கின்றன, எப்படி ஒரு நல்ல கடவுச்சொல்லை உருவாக்குவது என்பது பற்றி அறிந்து கொள்வீர்கள்.
@@ -2012,28 +2240,40 @@ ta:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+              description_student: இந்த பாடத்தில், உங்கள் வகுப்புத் தோழரை படங்களை வரைய நிரல் செய்வீர்கள்!
             Introduction to Online Puzzles:
               description_student: இந்த பாடத்திற்கு உங்களுக்கு தேவையான திறன்களில் இந்த பாடம் பயிற்சி அளிக்கும்.
+            Relay Programming:
+              description_student: பாடநெறியின் தொடக்கத்தில் நீங்கள் குறியீட்டைக் கொண்டு வரைபடங்களை உருவாக்கியதை நினைவில் கொள்கிறீர்களா? இந்த பாடத்தில், நீங்கள் மிகவும் ஒத்த ஒன்றை செய்ய ஒரு குழுவுடன் இணைந்து செயல்படுவீர்கள்!
             Debugging in Collector:
               name: லாரல் உடன் பிழைத்திருத்தம்
             Events in Bounce:
               name: Bounce இல் நிகழ்வுகள்
+              description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும் என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே உருவாக்குவீர்கள்!
+            Build a Star Wars Game:
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+              description_student: இந்த பாடத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கும்போது சக்தியை உணருங்கள்.
             Loops in Ice Age:
               description_student: இந்த பாடத்தில் ஸ்க்ராட் ஏகோர்னை முடிந்தவரை திறமையாக அடைய உதவும் வகையில் மீண்டும் மீண்டும் பயன்படுத்துவீர்கள்.
             Loops in Artist:
+              name: சுழல்களுடன் வடிவங்களை வரைதல்
               description_student: இந்த பாடத்தில், லூப்ஸ் கலைஞருடன் சிறந்த படங்களை உருவாக்குவதை எளிதாக்குகிறது!
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
+              description_student: சுழல்கள் உள்ளே சுழல்கள் உள்ளே சுழல்கள். இதற்கு என்ன அர்த்தம்? நீங்கள் ஒரு கூட்டை உருவாக்கும்போது என்ன நடக்கும் என்பதை இந்த பாடம் உங்களுக்குக் கற்பிக்கும்.
             Conditionals with Cards:
               description_student: சில நிபந்தனைகளின் கீழ் நீங்கள் புள்ளிகளைப் பெறும் ஒரு விளையாட்டை விளையாட வேண்டிய நேரம் இது!
             Conditionals in Bee:
               name: தேனீவுடன் இருந்தால்/வேறு
+              description_student: இப்போது நீங்கள் நிபந்தனைகளை புரிந்துகொண்டுள்ளீர்கள், தேன் மற்றும் தேன் சேகரிக்கும் போது அவற்றைப் பயன்படுத்த பீ திட்டமிட வேண்டிய நேரம் இது.
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
+              description_student: 'குறியீட்டில் சுழல்கள் மிகவும் பயனுள்ளதாக இருக்கும். இந்த பாடம் ஒரு புதிய வகையான வளையத்தைப் பற்றி உங்களுக்குக் கற்பிக்கும்: சுழல்கள் இருக்கும் போது!'
             Until Loops in Maze:
               name: பிரமை உள்ள சுழல்கள் வரை
             Conditionals & Loops in Harvester:
               name: நிபந்தனைகளுடன் அறுவடை
+              description_student: ஒவ்வொரு நிபந்தனையையும் எப்போது பயன்படுத்துவது என்பது எப்போதும் தெளிவாக இல்லை. என்ன செய்வது என்று முடிவெடுக்க பயிற்சி பெற இந்த பாடம் உதவும்.
             Artist Binary:
               name: கலைஞருடன் பைனரி படங்கள்
             Dance Party:
@@ -2051,6 +2291,8 @@ ta:
             Programming and Loops with the Artist:
               name: சுழல்களால் வரைதல்
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Conditionals:
               name: விவசாயியுடன் நிபந்தனைகள்
             Simon Says:
@@ -2060,16 +2302,27 @@ ta:
               description_student: உருவங்களை உருவாக்குவது மற்றும் திருத்துவது எப்படி என்பதை அறிக.
             Alien Dance Party with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+              description_student: வகுப்பு தோழர்களுடன் பகிரக்கூடிய ஒரு ஊடாடும் திட்டத்தை உருவாக்கவும்.
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
+            Nested Loops in Frozen:
+              name: உறைந்த உடன் நெஸ்டட் சுழல்கள்
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
               description_student: ராக்ஸ்டார்களுக்கு கூட நிரலாக்க திறன்கள் தேவை. பாடங்களிலிருந்து வரிகளைப் பயன்படுத்தி செயல்பாடுகள் பற்றி இந்தப் பாடம் உங்களுக்குக் கற்பிக்கும்.
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
+              description_student: மிகவும் திறமையான குறியீட்டிற்கான செயல்பாடுகளை எவ்வாறு பயன்படுத்துவது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?
             Functions in Harvester:
+              name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
               description_student: விவசாயியின் அறுவடைக்கு நீங்கள் உதவுவதால் செயல்பாடுகள் உங்களுக்கு நிறைய வேலைகளைச் சேமிக்கும்!
             Functions in Artist:
               name: கலைஞருடன் செயல்பாடுகள்
               description_student: செயல்பாடுகளுடன் மிகவும் சிக்கலான வரைபடங்களை உருவாக்கவும்!
+            End of Course Project:
+              description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும் தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள் படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
+            Digital Sharing:
+              description_student: இந்த பாடத்தில், உரிமை மற்றும் பதிப்புரிமை ஆகியவற்றின் சவால்கள் மற்றும் நன்மைகள் பற்றி நீங்கள் அறிந்து கொள்வீர்கள்.
         coursef-2020:
           title: பாடநெறி ஊ (2020)
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
@@ -2079,11 +2332,15 @@ ta:
             csf_data:
               display_name: தகவல்கள்
           lessons:
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
+              description_student: மிகவும் திறமையான குறியீட்டிற்கான செயல்பாடுகளை எவ்வாறு பயன்படுத்துவது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?
             Learning Sprites with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
               description_student: உருவங்களை உருவாக்குவது மற்றும் திருத்துவது எப்படி என்பதை அறிக.
             Events with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+              description_student: வகுப்பு தோழர்களுடன் பகிரக்கூடிய ஒரு ஊடாடும் திட்டத்தை உருவாக்கவும்.
             Loops with the Artist:
               name: சுழல்களால் வரைதல்
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
@@ -2091,14 +2348,24 @@ ta:
               name: பிரமை உள்ள கூடுகள்
             Variables as Constant in Artist:
               name: கலைஞருடன் மாறுபாடுகள்
+            Variables that Change in Bee:
+              description_student: இந்த தேனீ மாறிகளை விரும்புகிறது!
             Variables that Change in Artist:
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            Simulating Experiments:
+              description_student: கணினியில் உருவகப்படுத்துதல்களை இயக்கவும் மற்றும் மாறிகளை மாற்றுவதன் மூலம் பரிசோதனை செய்யவும்.
             For Loops in Artist:
               name: கலைஞருடன் சுழல்களுக்கு
             Internet:
               name: இணையம்
             Virtual Pet:
               name: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
+            The Power of Words:
+              description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம் ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக் கற்பிக்கும்.
+            Digital Sharing:
+              description_student: இந்த பாடத்தில், உரிமை மற்றும் பதிப்புரிமை ஆகியவற்றின் சவால்கள் மற்றும் நன்மைகள் பற்றி நீங்கள் அறிந்து கொள்வீர்கள்.
+            End of Course Project:
+              description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும் தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள் படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
             AI for Oceans:
               name: பெருங்கடல்களுக்கான AI
         express-2020:
@@ -2122,12 +2389,18 @@ ta:
               name: பிரமை பிழைத்திருத்தம்
             Programming in Artist:
               name: கலைஞரில் நிரலாக்க
+            Loops with Rey and BB-8:
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
             While Loops in Farmer:
               name: வேளாண்மையில் சுழல்கள்
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
             Until Loops in Maze:
               name: பிரமை உள்ள சுழல்கள் வரை
+            Functions in Minecraft:
+              name: Minecraft இல் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
             For Loops in Artist:
@@ -2144,6 +2417,10 @@ ta:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
             Collecting Treasure with Laurel:
               name: லாரலுடன் புதையல் சேகரித்தல்
+            Creating Art with Code:
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
+            Sticker Art with Loops:
+              name: சுழல்களுடன் ஸ்டிக்கர் கலை
             Nested Loops in Maze:
               name: பிரமை உள்ள கூடுகள்
             Snowflakes with Anna and Elsa:
@@ -2152,6 +2429,8 @@ ta:
               name: தேனீவுடன் இருந்தால்/வேறு
             Harvesting with Conditionals:
               name: நிபந்தனைகளுடன் அறுவடை
+            Functions with Harvester:
+              name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
             Functions with Artist:
               name: கலைஞருடன் செயல்பாடுகள்
             Variables with Artist:
@@ -2181,6 +2460,12 @@ ta:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
             Loops with Laurel:
               name: லாரலுடன் சுழல்கள்
+            Drawing Gardens with Loops:
+              name: சுழல்களுடன் தோட்டங்களை வரைதல்
+            On the Move with Events:
+              name: நிகழ்வுகளுடன் நகர்வில்
+            A Royal Battle with Events:
+              name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
         csp2-2020:
           lessons:
             Packets:
@@ -2291,6 +2576,9 @@ ta:
           lessons:
             Virus Simulation for Code Bytes:
               name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
+            Outbreak:
+              name: ஒரு உருவகப்படுத்துதலைக் குறியிடுகிறது
+              description_student: மான்ஸ்டர் டவுனுக்கு ஒரு வைரஸ் வந்துவிட்டது! ஒரு வைரஸ் சிமுலேட்டரை உருவாக்க கற்றுக்கொள்ளுங்கள் மற்றும் அரக்கர்கள் மீண்டும் ஆரோக்கியமாக இருக்க உதவுங்கள்.
           lesson_groups:
             outbreak:
               display_name: தீவிர நோய் பரவலை உருவகப்படுத்துதல்
@@ -2367,26 +2655,38 @@ ta:
               key: இழுத்து விட கற்றுக்கொள்ளுங்கள்
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
               description_student: புதிர்களை முடிக்க கிளிக் செய்து இழுக்கவும்.
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடம் மாணவர்களுக்கு கணினி ஆய்வகத்திற்குச் செல்லும்போது என்ன எதிர்பார்க்கலாம் என்ற யோசனையை அளிக்கும். கணினி ஆய்வக பழக்கவழக்கங்களை அவர்களுக்கு அறிமுகப்படுத்தும் ஒரு சுருக்கமான விவாதத்துடன் இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன் புதிர்களை முடிக்க ஒரு கணினியைப் பயன்படுத்துவதில் முன்னேறுவார்கள்.
             'Programming: Happy Maps':
               description_student: பழத்திற்கு ஃப்ளர்பைப் பெறுவதற்கான வழிமுறைகளை எழுதுங்கள்.
+              description_teacher: 'இந்த \*\* சூழல் அமைப்பு \*\* பாடம் ஒரு எளிய பணியுடன் குழுக்களை ஒன்றிணைக்கிறது: பழத்திற்கு "ஃப்ளர்ப்" கிடைக்கும். கொடுக்கப்பட்ட குறியீடுகளில் அறிவுறுத்தல்களை மொழிபெயர்க்க அவர்கள் வேலை செய்வதால் மாணவர்கள் துல்லியமான வழிமுறைகளை எழுதப் பயிற்சி செய்வார்கள்.'
             Sequencing with Scrat:
               description_student: ஏகார்னை அடைய ஸ்க்ராட் திட்டம்.
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள் ஒரு பிரமை ஒரு பக்கத்திலிருந்து மற்றொரு பக்கத்தில் உள்ள ஏகோர்னுக்கு ஒரு அணில் பாத்திரத்தை நகர்த்துவதற்கான தொடர்ச்சியான வழிமுறைகளை உருவாக்கும். இதைச் செய்ய அவர்கள் குறியீட்டுத் தொகுதிகளை ஒரு நேரியல் வரிசையில் ஒன்றாக அடுக்கி வைப்பார்கள்.
+            Programming in Ice Age:
+              description_student: ஸ்க்ராட் ஏகோர்னை அடைய உதவும் நிரல்களை எழுதுங்கள்.
+              description_teacher: இந்த \*\* திறனை வளர்த்தல் \*\* பாடத்தில், மாணவர்கள் தொடர்ச்சியான வழிமுறைகளை உருவாக்கிக்கொண்டே இருப்பார்கள்.
             Programming with Rey and BB-8:
               description_student: ஸ்கிராப் உலோகத்தை சேகரிக்க BB -8 க்கு உதவுங்கள்.
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள் _BB-8_ உடன் ஒரு தந்திரமான பாடத்திட்டத்திற்கு செல்ல மிகவும் சிக்கலான வழிகளில் தங்கள் புதிய நிரலாக்க திறன்களைப் பயன்படுத்துவார்கள்.
             'Loops: Happy Loops':
               name: மகிழ்ச்சியான சுழல்கள்
               description_student: சுழல்களைப் பயன்படுத்தி பெரிய சிக்கல்களைத் தீர்க்க ஃப்ளர்பிற்கு உதவுங்கள்.
               description_teacher: இந்த \*\* சூழல் அமைப்பு \*\* பாடம் இனிய வரைபடத்தை மறுபரிசீலனை செய்கிறது. இந்த நேரத்தில், மாணவர்கள் தங்கள் குறியீட்டைக் கொண்டு பெரிய, நீண்ட புதிர்களைத் தீர்க்க சுழல்களைப் பயன்படுத்துவார்கள்.
             Loops in Ice Age:
               name: ஸ்க்ராட்டுடன் சுழல்கள்
+              description_student: சுழல்களைப் பயன்படுத்தி அதிக நிலத்தை மறைக்க ஸ்க்ராட்டுக்கு உதவுங்கள்.
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், அணில் ஏகோர்னை அடைய உதவுவதே குறிக்கோளாக இருக்கும் புரோகிராமிங் புதிர்களில் மாணவர்கள் சுழல்களைப் பயிற்சி செய்வார்கள்.
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
               description_student: புதையலை நிலத்தடியில் சேகரிக்க சாகசக்காரர் லாரலுக்கு உதவுங்கள்.
+              description_teacher: இந்த \*\* திறனை வளர்த்துக் கொள்ளும் \*\* பாடத்தில், மாணவர்கள் சுழல்களின் கருத்தை தொடர்ந்து கற்றுக் கொள்கிறார்கள். இங்கே, மாணவர்கள் திறந்த குகை இடங்களில் புதையலை சேகரிக்க சுழல்களை பயன்படுத்துகின்றனர்.
             Ocean Scene with Loops:
               key: சுழல்களுடன் கூடிய கடல் காட்சி
               name: சுழல்களுடன் கூடிய கடல் காட்சி
+              description_student: படங்களை முடிக்க சுழல்கள் மற்றும் வடிவங்களைப் பயன்படுத்தவும்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பதற்கான \*\* பாடத்தில், மாணவர்கள் அறிவுறுத்தல்களின் எளிய வரிசைகளை சுழற்றுவதன் மூலம் படங்களை வரைய கற்றுக்கொள்கிறார்கள். இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன. இந்த பாடத்தின் முடிவில், மாணவர்கள் தங்கள் சொந்த படங்களை உருவாக்குவார்கள்.
             'Events: The Big Event':
+              description_student: உங்கள் ஆசிரியர்கள் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை அழுத்தும்போது நகர்ந்து கத்துங்கள்.
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், ஒரு மாபெரும் ரிமோட்டில் பொத்தான்களை அழுத்தும்போது அவை நகரும் அல்லது கத்தும் ஒரு விளையாட்டின் மூலம் நிகழ்வுகளின் கருத்தை வகுப்பு அனுபவிக்கும்.
             Events in Play Lab:
               description_student: உங்கள் சொந்த விளையாட்டு அல்லது கதையை உருவாக்கவும்.
@@ -2414,23 +2714,32 @@ ta:
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
               description_student: கோபம் பறவை\_ பிரமை வழியாக செல்ல உதவும் திட்டங்களை உருவாக்கவும்.
+              description_teacher: இந்த \*\* திறனை வளர்த்தல் \*\* பாடத்தில், மாணவர்கள் தொடர்ச்சியான வழிமுறைகளை உருவாக்கிக்கொண்டே இருப்பார்கள்.
             Programming in Harvester:
+              name: ஹார்வெஸ்டருடன் நிரலாக்கம்
               description_student: ஒரு பாதையில் காய்கறிகளை சேகரிக்க ஹார்வெஸ்டருக்கு உதவுங்கள்.
+              description_teacher: மாணவர்கள் தாங்கள் கற்றுக்கொண்ட நிரலாக்கக் கருத்துகளை இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில் ஹார்வெஸ்டர் சூழலுக்குப் பயன்படுத்துவார்கள். மாணவர்கள் தொடர்ச்சியான அல்காரிதம் திறன்களை வளர்த்து, பிழைத்திருத்த செயல்முறையைப் பயன்படுத்தத் தொடங்குவார்கள்.
             'Loops: Getting Loopy':
               description_student: இந்த பாடத்தில், நாங்கள் மீண்டும் மீண்டும் சுழல்களைப் பயன்படுத்தி ஒரு நடன விருந்து நடத்துவோம்!
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், மாணவர்கள் ஒரு நடனத்தின் தொடர்ச்சியான வடிவங்களைப் பார்த்து எளிதாக அறிவுறுத்தல்களைத் தெரிவிக்க சுழல்களைப் பயன்படுத்த கற்றுக்கொள்வார்கள்.
             Loops in Harvester:
               name: ஹார்வெஸ்டருடன் சுழல்கள்
               description_student: வளையங்களைப் பயன்படுத்தி ஹார்வெஸ்டர் இன்னும் அதிகமாக சேகரிக்க உதவுங்கள்!
+              description_teacher: இந்த \*\* திறன் வளர்ப்பு \*\* பாடத்தில், மாணவர்கள் அறுவடை செய்பவர் வளையங்களைப் பயன்படுத்தி பயிர்களை சேகரிக்க உதவுவார்கள்.
             Loops in Collector:
               name: லாரலுடன் சுழல்கள்
+              description_student: திறந்த குகையில் புதையலைச் சேகரிக்க சாகசக்காரர் லாரல் திட்டம்.
               description_teacher: இந்த \*\* திறனை வளர்த்துக் கொள்ளும் \*\* பாடத்தில், மாணவர்கள் சுழல்களின் கருத்தை தொடர்ந்து கற்றுக் கொள்கிறார்கள். இங்கே, லாரல் சாகசக்காரர் திறந்த குகை இடங்களில் புதையலைச் சேகரிக்க சுழல்களைப் பயன்படுத்துகிறார்.
             Loops in Artist:
               key: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+              name: சுழல்களுடன் தோட்டங்களை வரைதல்
+              description_student: படங்களை முடிக்க வடிவங்கள் மற்றும் சுழல்களைப் பயன்படுத்தவும்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பதற்கான \*\* பாடத்தில், மாணவர்கள் அறிவுறுத்தல்களின் எளிய வரிசைகளை சுழற்றுவதன் மூலம் படங்களை வரைய கற்றுக்கொள்கிறார்கள். இங்கே, மாணவர்கள் வடிவங்களை உருவாக்க சுழல்களைப் பயன்படுத்துகின்றனர்.
             The Right App:
               description_student: உங்கள் சொந்த ஸ்மார்ட்போன் பயன்பாட்டை வரையவும்.
+              description_teacher: இந்த \*\* ஆய்வு \*\* பாடத்தில், மாணவர்கள் பல கற்பனையான ஸ்மார்ட்ஃபோன் பயனர்களுடன் பச்சாதாபம் கொள்கிறார்கள்.
             'Events: The Big Event':
+              description_student: உங்கள் ஆசிரியர் ஒரு பெரிய ரிமோட்டில் பொத்தான்களை அழுத்தும்போது நகர்த்தவும் அல்லது கத்தவும்.
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், ஒரு மாபெரும் ரிமோட்டில் பொத்தான்களை அழுத்தும்போது அவை நகரும் அல்லது கத்தும் ஒரு விளையாட்டின் மூலம் நிகழ்வுகளின் கருத்தை வகுப்பு அனுபவிக்கும்.
             Events in Play Lab:
               description_student: ஒரு கதையை உருவாக்க அல்லது ஒரு ஊடாடும் விளையாட்டை உருவாக்க நிகழ்வுகளைப் பயன்படுத்தவும்.
@@ -2448,6 +2757,7 @@ ta:
           lessons:
             'Programming: My Robotic Friends':
               description_student: இந்த பாடத்தில், உங்கள் வகுப்பு தோழர்கள் ரோபோக்கள் போல் நடித்து, அடுக்கப்பட்ட கோப்பைகளின் வடிவங்களை உருவாக்க அவற்றை நிரல் செய்வீர்கள்.
+              description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடங்களில், மாணவர்கள் பல்வேறு வடிவங்களில் கோப்பைகளை அடுக்கி வைக்க "ரோபோ" க்கு அறிவுறுத்துவதற்கு ஒரு சின்னங்களின் தொகுப்பைப் பயன்படுத்துவார்கள். மாணவர்கள் மாறி மாறி ரோபோவாக பங்கேற்பார்கள், தங்கள் சகாக்களால் வரையறுக்கப்பட்ட வழிமுறைகளுக்கு மட்டுமே பதிலளிப்பார்கள்.
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
               description_student: கோபம் பறவைகள்\_ மூலம் வரிசைகள் மற்றும் வழிமுறைகளைப் பற்றி அறியவும்.
@@ -2458,14 +2768,23 @@ ta:
               description_teacher: இந்த \*\* திறமையை வளர்க்கும் \*\* பாடத்தில், மாணவர்கள் தவறுகள் அடங்கிய முன்பே எழுதப்பட்ட குறியீட்டை சந்திப்பார்கள். பிழைகளை அடையாளம் காண அவர்கள் ஏற்கனவே உள்ள குறியீட்டைப் பின்பற்ற வேண்டும்.
             Programming in Collector:
               name: லாரலுடன் புதையல் சேகரித்தல்
+              description_student: லாரல் சாகசக்காரர் நிறைய ரத்தினங்களை சேகரிக்க உதவும் வழிமுறைகளை எழுதுங்கள்!
             Programming in Artist:
               key: கலைஞரில் நிரலாக்க
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
               description_student: கலைஞரை நிரலாக்குவதன் மூலம் அழகான படங்களை உருவாக்கவும்.
+              description_teacher: இந்த \*\* திறமையை வளர்க்கும் \*\* பாடத்தில், மாணவர்கள் திரையில் வரைபடங்களை முடிக்க கலைஞரின் கட்டுப்பாட்டை எடுத்துக்கொள்வார்கள்.
             Binary Bracelets:
               description_student: உங்கள் சொந்த பைனரி வளையலை உருவாக்கி, கணினிகள் தகவல்களை எவ்வாறு நினைவில் கொள்கின்றன என்பதை அறியவும்!
+              description_teacher: இந்த \*\* ஆய்வு \*\* பாடம் பைனரி என்ற கருத்தை அறிமுகப்படுத்துகிறது, இது கணினிகள் இன்று அனைத்து வகையான தகவல்களையும் சேமித்து வைக்கிறது.
             'Loops: My Loopy Robotic Friends':
               description_student: இந்த பாடத்தில், நீங்கள் உங்கள் வகுப்பு தோழர்களை மீண்டும் திட்டமிடலாம், ஆனால் சுழல்களைப் பயன்படுத்தி நீங்கள் பெரிய மற்றும் சிக்கலான சிக்கல்களை தீர்க்க முடியும்.
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடம் பெரிய மற்றும் சிக்கலான வடிவமைப்புகளைக் கொண்ட ஆரம்ப "மை ரோபோடிக் நண்பர்கள்" செயல்பாட்டை உருவாக்குகிறது.
+            Loops with Rey and BB-8:
+              key: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
+              description_student: சுழல்களைப் பயன்படுத்தி பிரமை மூலம் _BB-8_ க்கு உதவுங்கள்!
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடம் BB-8 திறம்பட ஒரு பிரமைக்கு உதவ மாணவர்கள் சுழல்களைப் பயன்படுத்துகிறது.
             Loops in Harvester:
               name: வளையங்களுடன் பயிர்களை அறுவடை செய்தல்
               description_student: அறுவடை இயந்திரம் சில காய்கறிகளைச் சேகரிக்க உதவும் சுழல்களைப் பயன்படுத்துவோம்!
@@ -2473,18 +2792,22 @@ ta:
             Looking Ahead:
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
             Sticker Art with Loops:
+              key: சுழல்களுடன் ஸ்டிக்கர் கலை
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
             'Events: The Big Event':
+              description_student: நிகழ்வுகளைப் பற்றி அறிய ஒரு வேடிக்கையான விளையாட்டை விளையாடுங்கள்.
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், முன்பே எழுதப்பட்ட வழிமுறையில் நெகிழ்வுத்தன்மையைச் சேர்க்க நிகழ்வுகள் சிறந்த வழியாகும் என்பதை மாணவர்கள் கற்றுக்கொள்வார்கள்.
             Build a Flappy Game:
               key: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
               name: ஒரு தட்டையான விளையாட்டை உருவாக்குங்கள்
               description_student: உங்களுக்கு விருப்பமான Flappy Bird விளையாட்டை உருவாக்குங்கள், பின்னர் அதை உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளுங்கள்!
+              description_teacher: இந்த பாடம் \*\* திறனை வளர்ப்பது \*\* நிகழ்வுகளைச் சுற்றி \*\* சிறு திட்டத்துடன் \*\* ஒருங்கிணைக்கிறது, அங்கு மாணவர்கள் தங்கள் சொந்த Flappy Bird விளையாட்டை உருவாக்க முடியும். பாடத்தின் முடிவில், மாணவர்கள் காட்சிகள் அல்லது விதிகளை மாற்றுவதன் மூலம் தங்கள் விளையாட்டைத் தனிப்பயனாக்க முடியும்.
             Events in Play Lab:
               description_student: பிளே லேபில் ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம் இது!
               description_teacher: இந்த பாடம் \*\* திறனை வளர்ப்பது \*\* நிகழ்வுகளைச் சுற்றி \*\* சிறு திட்டத்துடன் \*\* ஒருங்கிணைக்கிறது, அங்கு மாணவர்கள் தங்கள் சொந்த அனிமேஷன் விளையாட்டை உருவாக்க முடியும்.
             Picturing Data:
               description_student: நம் உலகத்தைப் புரிந்துகொள்ளவும் சுவாரஸ்யமான கேள்விகளுக்குப் பதிலளிக்கவும் தரவு பயன்படுத்தப்படலாம்.
+              description_teacher: மாணவர்கள் ஒரு ப்ளே லேப் திட்டத்திலிருந்து தரவுகளைச் சேகரித்து, இந்த \*\* ஆய்வு \*\* பாடத்தில் வெவ்வேறு வரைபடங்களைப் பயன்படுத்தி காட்சிப்படுத்துவார்கள்.
             'End of Course Project: Create a Play Lab Game':
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய பிளே லேப் திட்டங்களை வடிவமைத்தல், மேம்படுத்துதல் மற்றும் காண்பிப்பதன் மூலம் மாணவர்களை அழைத்துச் செல்கிறது.
           lesson_groups:
@@ -2501,16 +2824,25 @@ ta:
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
+              description_student: இந்த பாடத்தில், உங்கள் வகுப்புத் தோழரை படங்களை வரைய நிரல் செய்வீர்கள்!
             Introduction to Online Puzzles:
               description_student: இந்த பாடத்திற்கு உங்களுக்கு தேவையான திறன்களில் இந்த பாடம் பயிற்சி அளிக்கும்.
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பதற்கான \*\* பாடத்தில், மாணவர்கள் தங்கள் \_ அடுத்தடுத்த\_பிரச்சனை புதிர் களில் பிழைதிருத்தும் திறன்களை பயிற்சி செய்வார்கள்.
+            Relay Programming:
+              description_student: பாடநெறியின் தொடக்கத்தில் நீங்கள் குறியீட்டைக் கொண்டு வரைபடங்களை உருவாக்கியதை நினைவில் கொள்கிறீர்களா? இந்த பாடத்தில், நீங்கள் மிகவும் ஒத்த ஒன்றை செய்ய ஒரு குழுவுடன் இணைந்து செயல்படுவீர்கள்!
+              description_teacher: இந்த \*\* சூழல் அமைத்தல் \*\* பாடம் பிழைத்திருத்தம் மற்றும் விடாமுயற்சி பற்றிய ஒரு சிறு பாடத்துடன் தொடங்கும், பின்னர் மாணவர்கள் குழுக்களாக உடைந்து ஒரு நேரத்தில் ஒரு அறிவுறுத்தலை எழுத ஒன்றாக வேலை செய்வதால் கடிகாரத்திற்கு எதிரான பந்தயத்திற்கு விரைவாக நகரும்.
             Debugging in Collector:
               name: லாரல் உடன் பிழைத்திருத்தம்
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், மாணவர்கள் "கலெக்டர்" சூழலில் பிழைத்திருத்தத்தை பயிற்சி செய்வார்கள். எளிய வழிமுறைகள், சுழல்கள் மற்றும் உள்ளமைக்கப்பட்ட சுழல்கள் மூலம் புதிர்களை சரிசெய்ய மாணவர்கள் படிக்க மற்றும் திருத்தும் குறியீட்டைப் பயிற்சி செய்வார்கள்.
             Events in Bounce:
               key: Bounce இல் நிகழ்வுகள்
               name: Bounce இல் நிகழ்வுகள்
+              description_student: நீங்கள் பள்ளியில் வீடியோ கேம்களை விளையாட வேண்டும் என்று எப்போதாவது விரும்புகிறீர்களா? இந்த பாடத்தில், நீங்கள் அதை நீங்களே உருவாக்குவீர்கள்!
               description_teacher: இந்த \*\* சூழல் அமைப்பில் **/** திறனை வளர்ப்பதற்கான \*\* பாடத்தில், மாணவர்கள் என்ன நிகழ்வுகள் மற்றும் புரோகிராமர்கள் அவற்றை வீடியோ கேம்களில் எவ்வாறு பயன்படுத்துகிறார்கள் என்பதை கற்றுக்கொள்வார்கள். மாணவர்கள் வெவ்வேறு வேகம் மற்றும் ஒலியுடன் தனிப்பயனாக்கக்கூடிய ஒரு விளையாட்டை உருவாக்குவார்கள்.
             Build a Star Wars Game:
+              key: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+              name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
+              description_student: இந்த பாடத்தில் உங்கள் சொந்த ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்கும்போது சக்தியை உணருங்கள்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், மாணவர்கள் அவர்கள் பகிர்ந்து கொள்ளக்கூடிய ஒரு விளையாட்டை உருவாக்க நிகழ்வுகளை பயன்படுத்தி பயிற்சி செய்வார்கள்.
             Dance Party:
               key: நடன விருந்து
@@ -2520,6 +2852,7 @@ ta:
               description_teacher: இந்த \*\* சூழல்-அமைப்பு/திறமை-கட்டமைப்பு \*\* பாடம் மாணவர்களை விரைவாக சுழல்களுக்கு அறிமுகப்படுத்தும்.
             Loops in Artist:
               key: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
+              name: சுழல்களுடன் வடிவங்களை வரைதல்
               description_student: இந்த பாடத்தில், லூப்ஸ் கலைஞருடன் சிறந்த படங்களை உருவாக்குவதை எளிதாக்குகிறது!
               description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடம் முந்தைய பாடத்திலிருந்து சுழல்களைப் புரிந்துகொள்வதை உருவாக்குகிறது மற்றும் கூடுதல் சிக்கல் தீர்க்கும் பயிற்சிக்கான பிழைத்திருத்தப் பயிற்சியாக இரட்டிப்பாகிறது.
             Nested Loops in Bee:
@@ -2529,25 +2862,34 @@ ta:
               description_student: சில நிபந்தனைகளின் கீழ் நீங்கள் புள்ளிகளைப் பெறும் ஒரு விளையாட்டை விளையாட வேண்டிய நேரம் இது!
             Conditionals in Bee:
               name: தேனீவுடன் இருந்தால்/வேறு
+              description_student: இப்போது நீங்கள் நிபந்தனைகளை புரிந்துகொண்டுள்ளீர்கள், தேன் மற்றும் தேன் சேகரிக்கும் போது அவற்றைப் பயன்படுத்த பீ திட்டமிட வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், உங்கள் வகுப்பு நிபந்தனைகளுடன் குறியீட்டைத் தொடரும், நிரல் எதிர்கொள்ளும் குறிப்பிட்ட நிலைமைகளைப் பொறுத்து வித்தியாசமாக செயல்படும் குறியீட்டை எழுத அனுமதிக்கிறது.
             While Loops in Farmer:
               key: வேளாண்மையில் சுழல்கள்
               name: வேளாண்மையில் சுழல்கள்
+              description_student: 'குறியீட்டில் சுழல்கள் மிகவும் பயனுள்ளதாக இருக்கும். இந்த பாடம் ஒரு புதிய வகையான வளையத்தைப் பற்றி உங்களுக்குக் கற்பிக்கும்: சுழல்கள் இருக்கும் போது!'
               description_teacher: இந்த \*\* திறமையை வளர்க்கும் \*\* பாடத்தில், மாணவர்கள் விவசாயிக்குள் துளைகளை நிரப்பவும் மற்றும் அழுக்கைத் தோண்டவும் வேலை செய்வார்கள், ஆனால் துளைகளின் அளவு அல்லது மண் மேடுகளின் உயரம் அவர்களுக்கு தெரியாது. இந்தப் புதிர்களைத் தீர்க்க, மாணவர்கள் ஒரு புதிய வகையான வளையத்தைப் பயன்படுத்துவார்கள்.
             Until Loops in Maze:
               key: பிரமை உள்ள சுழல்கள் வரை
               name: பிரமை உள்ள சுழல்கள் வரை
               description_student: நீங்கள் "வரை" சுழல்களைப் பயன்படுத்தும் போது சில அற்புதமான விஷயங்களைச் செய்யலாம்!
+            Conditionals & Loops in Harvester:
+              description_student: ஒவ்வொரு நிபந்தனையையும் எப்போது பயன்படுத்துவது என்பது எப்போதும் தெளிவாக இல்லை. என்ன செய்வது என்று முடிவெடுக்க பயிற்சி பெற இந்த பாடம் உதவும்.
             Artist Binary:
               key: கலைஞர் பைனரி
               name: கலைஞருடன் பைனரி படங்கள்
             Be A Super Digital Citizen:
               description_student: நீங்கள் சைபர் மிரட்டலைக் காணும்போது நீங்கள் எவ்வாறு ஒரு சிறந்தவராக இருக்க முடியும் என்பதை அறியுங்கள்.
+            End of Course Project:
+              description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல், மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை அழைத்துச் செல்கிறது!
             lesson-6:
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
+              description_student: எரிமலைக்குழாயைத் தவிர்க்கவும்! இங்கே நீங்கள் _Minecraft_ உலகில் உள்ள நிபந்தனைகள் பற்றி அறியத் தொடங்குவீர்கள்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடம் மாணவர்களுக்கு இது வரை கற்றுக்கொண்ட கருத்துக்களைப் பயிற்சி செய்து, நிபந்தனைகளுடன் முதல் அனுபவத்தைப் பெற வாய்ப்பளிக்கிறது!
             lesson-5:
               description_student: இந்த பாடத்தில், கடவுச்சொற்கள் உங்கள் தகவலை எவ்வாறு பாதுகாக்கின்றன, எப்படி ஒரு நல்ல கடவுச்சொல்லை உருவாக்குவது என்பது பற்றி அறிந்து கொள்வீர்கள்.
+            lesson-1:
+              description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம் ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக் கற்பிக்கும்.
           lesson_groups:
             csf_sequencing:
               display_name: வரிசைப்படுத்துதல்
@@ -2564,42 +2906,61 @@ ta:
               description_student: இந்த பாடத்தில், \*\* சுழல்கள் \*\* கலைஞருடன் கூடிய குளிர் படங்களை உருவாக்குவதை எளிதாக்குகிறது!
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடம் ஸ்ப்ரைட் ஆய்வகத்திலிருந்து கலைஞருக்கு கவனம் செலுத்துகிறது, இது பாடத்தின் எஞ்சிய முழுவதும் மாணவர்கள் ஆராயும் ஒரு புதிய கருவி.
             'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
+              description_student: _Minecraft_ உலகில் உள்ள நிபந்தனைகள் பற்றி இங்கே நீங்கள் அறிந்து கொள்வீர்கள்.
               description_teacher: இந்த \*\* சூழல் அமைத்தல் \*\* பாடத்தில், மாணவர்கள் இது வரை கற்றுக்கொண்ட உள்ளடக்கத்தைப் பயிற்சி செய்வதற்கான வாய்ப்பைப் பெறுவார்கள், அதே போல் நிபந்தனைகளில் ஒரு பின்தொடர்வைப் பெறுவார்கள்!
             Conditionals:
               key: நிபந்தனைகள்
               name: விவசாயியுடன் நிபந்தனைகள்
               description_student: பயிர்களை நடவு செய்வதற்கு விவசாயி தனது வயல்களை தயார் செய்து நிபந்தனைகள் பற்றி மேலும் அறிய உதவுங்கள்!
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடம் ஒரு புதிய வகை நிரலாக்க புதிர் மீது கவனம் செலுத்துகிறது, இதில் பயிர்களை நடவு செய்வதற்கு ஒரு விவசாயி தனது வயல்களை தயார் செய்ய வேண்டும்.
             Simon Says:
               name: அல்காரிதம் பின்பற்றவும்
               description_student: ஒரு விளையாட்டை விளையாடுங்கள் மற்றும் சரியான முடிவைப் பெற என்ன கட்டளைகள் தேவை என்று சிந்தியுங்கள்.
+              description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடத்தில், மாணவர்கள் தொடர்ச்சியான வழிமுறைகளைப் பற்றி சிந்திக்க வைக்கும் ஒரு விளையாட்டை விளையாடுவார்கள்.
             Learning Sprites with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
               description_student: உருவங்களை உருவாக்குவது மற்றும் திருத்துவது எப்படி என்பதை அறிக.
+              description_teacher: மாணவர்கள் இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில் ஒரு எளிய அனிமேஷன் நீருக்கடியில் காட்சியை நிரல் செய்வார்கள்.
             Alien Dance Party with Sprite Lab:
               key: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+              description_student: வகுப்பு தோழர்களுடன் பகிரக்கூடிய ஒரு ஊடாடும் திட்டத்தை உருவாக்கவும்.
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில் பயனர் உள்ளீட்டின் அடிப்படையில் மாணவர்கள் திரையை சுற்றி திரிவதற்கு நிகழ்வுகளை பயன்படுத்துவார்கள்.
             About Me:
               description_student: ஒரு ஊடாடும் சுவரொட்டியை உருவாக்குதல், ஆனால் ஆன்லைனில் பகிர என்ன தகவல் பாதுகாப்பானது என்பதை கவனமாக சிந்தியுங்கள்.
             Digital Sharing:
+              description_student: இந்த பாடத்தில், உரிமை மற்றும் பதிப்புரிமை ஆகியவற்றின் சவால்கள் மற்றும் நன்மைகள் பற்றி நீங்கள் அறிந்து கொள்வீர்கள்.
               description_teacher: இந்த \*\* ஆய்வு \*\* பாடம், குறிப்பாக டிஜிட்டல் சூழல்களில், உரிமை மற்றும் பதிப்புரிமையை மதிப்பதன் சவால்கள் மற்றும் நன்மைகளை மாணவர்கள் புரிந்துகொள்ள உதவுகிறது.
             Nested Loops in Bee:
               name: பிரமை உள்ள கூடுகள்
             Nested Loops in Artist:
               key: கலைஞரில் உள்ளமை சுழல்கள்
               description_teacher: இந்த \*\* திறமையை வளர்க்கும் \*\* பாடத்தில், மாணவர்கள் கலைஞரைப் பயன்படுத்தி சிக்கலான வடிவமைப்புகளை உருவாக்குவார்கள். மாணவர்கள் தங்கள் சொந்த வடிவமைப்புகளை உருவாக்கும் வாய்ப்போடு பாடம் முடிகிறது.
+            Nested Loops in Frozen:
+              description_student: "*அன்னா மற்றும் \\_ எல்சா* சிறந்த ஐஸ்-ஸ்கேட்டிங் திறன்களைக் கொண்டுள்ளனர், ஆனால் பனியில் வடிவங்களை உருவாக்க உங்கள் உதவி தேவை. சூப்பர் கூல் ஒன்றை உருவாக்க கூடு கட்டப்பட்ட சுழல்களைப் பயன்படுத்தவும்."
             'Functions: Songwriting':
               name: பாடல் எழுதுதல்
               description_student: ராக்ஸ்டார்களுக்கு கூட நிரலாக்க திறன்கள் தேவை. பாடங்களிலிருந்து வரிகளைப் பயன்படுத்தி செயல்பாடுகள் பற்றி இந்தப் பாடம் உங்களுக்குக் கற்பிக்கும்.
               description_teacher: இந்த \*\* சூழல்-அமைப்பு \*\* பாடம் மாணவர்களுக்கு குறியீட்டின் பகுதிகளை ஏன் செயல்பாடுகளாக இணைப்பது ஒரு பயனுள்ள பயிற்சியாக இருக்கும் என்பதைப் புரிந்துகொள்ள உதவும்.
             Functions in Minecraft:
+              key: Minecraft இல் செயல்பாடுகள்
+              name: Minecraft இல் செயல்பாடுகள்
+              description_student: மிகவும் திறமையான குறியீட்டிற்கான செயல்பாடுகளை எவ்வாறு பயன்படுத்துவது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், செயல்பாடுகள் எவ்வாறு உதவிகரமாக இருக்கும் என்பதை மாணவர்கள் புரிந்து கொள்ளத் தொடங்குவார்கள்!
             Functions in Harvester:
+              name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
               description_student: விவசாயியின் அறுவடைக்கு நீங்கள் உதவுவதால் செயல்பாடுகள் உங்களுக்கு நிறைய வேலைகளைச் சேமிக்கும்!
+              description_teacher: இந்த \*\* திறன் வளர்ப்பு \*\* பாடத்தில், மாணவர்கள் ஹார்வேஸ்டரில் பயிர்களை அறுவடை செய்வதற்கான செயல்பாடுகளுடன் நிபந்தனைகளை பயன்படுத்துவார்கள்.
             Functions in Artist:
               key: கலைஞரின் செயல்பாடுகள்
               name: கலைஞருடன் செயல்பாடுகள்
               description_student: செயல்பாடுகளுடன் மிகவும் சிக்கலான வரைபடங்களை உருவாக்கவும்!
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், மாணவர்கள் கலைஞருடன் செயல்பாடுகளை பயன்படுத்துவார்கள்.
+            End of Course Project:
+              description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும் தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள் படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
+              description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல், மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை அழைத்துச் செல்கிறது!
             lesson-4:
               description_student: நீங்கள் சைபர் மிரட்டலைக் காணும்போது நீங்கள் எவ்வாறு ஒரு சிறந்தவராக இருக்க முடியும் என்பதை அறியுங்கள்.
             lesson-1:
@@ -2614,38 +2975,60 @@ ta:
         coursef-2021:
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும் கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
           lessons:
+            Functions in Minecraft:
+              key: Minecraft இல் செயல்பாடுகள்
+              name: Minecraft இல் செயல்பாடுகள்
+              description_student: மிகவும் திறமையான குறியீட்டிற்கான செயல்பாடுகளை எவ்வாறு பயன்படுத்துவது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?
             Learning Sprites with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
               description_student: உருவங்களை உருவாக்குவது மற்றும் திருத்துவது எப்படி என்பதை அறிக.
             Events with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் ஏலியன் டான்ஸ் பார்ட்டி
+              description_student: வகுப்பு தோழர்களுடன் பகிரக்கூடிய ஒரு ஊடாடும் திட்டத்தை உருவாக்கவும்.
             Loops with the Artist:
               name: சுழல்களால் வரைதல்
               description_student: இந்த பாடத்தில், \*\* சுழல்கள் \*\* கலைஞருடன் கூடிய குளிர் படங்களை உருவாக்குவதை எளிதாக்குகிறது!
               description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடம் ஸ்ப்ரைட் ஆய்வகத்திலிருந்து கலைஞருக்கு கவனம் செலுத்துகிறது, இது பாடத்தின் எஞ்சிய முழுவதும் மாணவர்கள் ஆராயும் ஒரு புதிய கருவி.
             Nested Loops in the Maze:
+              name: தேனீயுடன் நிரலாக்கம்
               description_student: நீங்கள் மற்றொரு வளையத்திற்குள் ஒரு வளையத்தை வைக்கும்போது என்ன நடக்கும் என்பதை இந்தப் பாடம் உங்களுக்குக் கற்பிக்கும்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பதற்கான \*\* பாட, சுழல்களில் ஏற்படும் சிறு மாற்றங்கள் எவ்வாறு தங்கள் திட்டத்தை பாதிக்கும் என்பதைக் கண்டறிய மாணவர்கள் ஊக்குவிக்கப்படுவார்கள்.
+            The Power of Words:
+              description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம் ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக் கற்பிக்கும்.
             Variables as Constant in Artist:
               name: கலைஞருடன் மாறுபாடுகள்
             Variables that Change in Bee:
               name: தேனீயுடன் மாறிகள்
+              description_student: இந்த தேனீ மாறிகளை விரும்புகிறது!
+              description_teacher: குறியீடு இயங்கும்போது மதிப்புகளை மாற்றுவதன் மூலம் மாறிகள் நிரல்களை எவ்வாறு அதிக ஆற்றல்மிக்கதாக மாற்ற முடியும் என்பதை விளக்க இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடம் உதவும்.
+            Simulating Experiments:
+              description_student: கணினியில் உருவகப்படுத்துதல்களை இயக்கவும் மற்றும் மாறிகளை மாற்றுவதன் மூலம் பரிசோதனை செய்யவும்.
             AI for Oceans:
               key: பெருங்கடல்களுக்கான AI
               name: கடல்களுக்கான AI
+              description_teacher: இந்த \*\* ஆய்வு \*\* பாடத்தில், மாணவர்கள் மீன் மற்றும் பிற பொருள்களை வகைப்படுத்தி இயந்திர கற்றல் மாதிரிக்கு பயிற்சி அளிப்பார்கள்.
             Internet:
               name: இணையம்
               description_student: இணையத்தில் தகவல் எவ்வாறு பயணிக்கிறது என்று எப்போதாவது யோசித்திருக்கிறீர்களா? இது மந்திரம் அல்ல! இணையம் எவ்வாறு செயல்படுகிறது என்பதற்கான அடிப்படைகளை இந்த பாடம் உங்களுக்குக் கற்பிக்கும்.
+              description_teacher: இந்த \*\* ஆய்வு \*\* பாடத்தில் இணைப்புகள், URL கள், ஐபி முகவரிகள் மற்றும் டிஎன்எஸ் பற்றி கற்றுக் கொள்ளும் போது மாணவர்கள் இணையம் வழியாக பாய்வது போல் நடிப்பார்கள்.
             For Loop Fun:
               description_student: '"ஃபார்" லூப்ஸ் பற்றி கற்றுக்கொள்வதில் நீங்கள் நிறைய வேடிக்கைகளைப் பெறப் போகிறீர்கள்!'
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள் சக்திவாய்ந்த, புதிய கட்டமைப்பைக் கொண்ட சுழல்களைப் பயன்படுத்துவார்கள்.
             For Loops in Bee:
               description_student: இந்த புதிர்களில் நீங்கள் ஒரு தேனியை தேன் மற்றும் தேனுக்கு வழிநடத்துவீர்கள் சுழல்களுக்குப் பயன்படுத்துவதற்க்கு
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடம் சுழல்களுக்கு கவனம் செலுத்துகிறது மற்றும் அதிக சிக்கலான புதிர்களைத் தீர்க்க ஒரு அதிகரிக்கும் மாறியைப் பயன்படுத்துகிறது.
             For Loops in Artist:
               key: கலைஞரின் சுழல்களுக்கு
               name: கலைஞருடன் சுழல்களுக்கு
               description_student: உங்கள் அடுத்த தலைசிறந்த படைப்பை உருவாக்க தயாராகுங்கள். இங்கே நீங்கள் சில தாடை-கைவிடும் படங்களை உருவாக்க சுழல்களுக்குப் பயன்படுத்துவீர்கள்.
+              description_teacher: இந்த \*\* திறமையை வளர்த்துக் கொள்ளும் \*\* பாடத்தில், மாணவர்கள் கலைஞருக்காக "ஃபார்" லூப்ஸ் பயிற்சி செய்கிறார்கள். சிக்கலான வடிவமைப்புகள் மற்றும் தனித்துவமான கலைகளை உருவாக்க மாணவர்கள் புதிர்களை முடிப்பார்கள்.
             Virtual Pet:
               description_student: நீங்கள் விரும்பும் விதத்தில் நடந்து கொள்ளும் ஒரு ஊடாடும் மெய்நிகர் செல்லப்பிராணியை உருவாக்கவும்! உங்கள் செல்லப்பிராணிக்கு அதன் சொந்த வாழ்க்கையை கொடுங்கள்!
+            End of Course Project:
+              description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும் தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள் படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
+              description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல், மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை அழைத்துச் செல்கிறது!
+            lesson-6:
+              description_student: உங்கள் வாழ்க்கையில் கணினிகள் மற்றும் தொழில்நுட்பத்தின் பங்கு பற்றி விவாதிப்பீர்கள், பயன்பாடுகள் மற்றும் கருவிகள் பயனர்களுக்கு அவற்றை எவ்வாறு பயன்படுத்துவது என்பதை எவ்வாறு தேர்வு செய்கின்றன என்பதில் கவனம் செலுத்துவீர்கள்.
             lesson-8:
               description_student: நீங்கள் நிரலாக்க நிலைகளின் மூலம் வேலை செய்வீர்கள் மற்றும் திறந்த-இலவச "இலவச நாடகம்" பணியை முடிப்பீர்கள், அங்கு நீங்கள் விரும்பியதை உருவாக்க முடியும்.
             lesson-9:
@@ -2654,8 +3037,12 @@ ta:
             lesson-10:
               name: உரை மற்றும் அறிவுறுத்தல்கள்
               description_student: இந்த பாடத்தில் நீங்கள் ஸ்பிரைட் ஆய்வகத்தில் மாறிகள் பயிற்சி செய்வீர்கள்.
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், மாணவர்கள் ஸ்ப்ரைட் ஆய்வகத்தில் மாறிகளுடன் பயிற்சி பெறுவார்கள்.
             lesson-5:
               name: தீவிர நோய் பரவல்
+              description_student: மான்ஸ்டர் டவுனுக்கு ஒரு வைரஸ் வந்துவிட்டது! ஒரு வைரஸ் சிமுலேட்டரை உருவாக்க கற்றுக்கொள்ளுங்கள் மற்றும் அரக்கர்கள் மீண்டும் ஆரோக்கியமாக இருக்க உதவுங்கள்.
+            lesson-2:
+              description_student: கொடுமைப்படுத்துவது ஒருபோதும் சரியல்ல. இந்த பாடம் ஆன்லைனில் சொல்வது மற்றும் எது சரியில்லை என்பதைப் பற்றி உங்களுக்குக் கற்பிக்கும்.
             lesson-11:
               description_student: உங்கள் புதிய திறன்களை மூன்று திறந்த-திட்ட திட்டங்களில் ஒன்றிற்கு மாறிகளுடன் பயன்படுத்துங்கள்.
               description_teacher: மாணவர்கள் தங்கள் புதிய திறன்களை மாறிகள் கொண்ட மூன்று திறந்த-\*\*சிறு திட்டங்கள் \*\* ஒன்றிற்குப் பயன்படுத்துவார்கள். மாணவர்கள் மாதிரி திட்டங்களை ஆராய்ந்து, தங்கள் சொந்த திட்டத்திற்கான திட்டத்தை உருவாக்கி, அதை புதிதாக நிரல் செய்வார்கள்.
@@ -2682,27 +3069,44 @@ ta:
               key: லாரலுடன் புதையல் சேகரித்தல்
               name: லாரலுடன் புதையல் சேகரித்தல்
             Creating Art with Code:
+              key: குறியீட்டுடன் கலையை உருவாக்குதல்
+              name: குறியீட்டுடன் கலையை உருவாக்குதல்
               description_student: கலைஞரை நிரலாக்குவதன் மூலம் அழகான படங்களை உருவாக்கவும்.
+              description_teacher: இந்த \*\* திறமையை வளர்க்கும் \*\* பாடத்தில், மாணவர்கள் திரையில் வரைபடங்களை முடிக்க கலைஞரின் கட்டுப்பாட்டை எடுத்துக்கொள்வார்கள்.
+            Loops with Rey and BB-8:
+              key: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
+              name: ரே மற்றும் பிபி -8 உடன் சுழல்கள்
+              description_student: சுழல்களைப் பயன்படுத்தி பிரமை மூலம் _BB-8_ க்கு உதவுங்கள்!
             Sticker Art with Loops:
+              key: சுழல்களுடன் ஸ்டிக்கர் கலை
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
+              description_teacher: இந்த \*\* சிறு திட்டம் \*\* பாடம் சுழல்களைப் புரிந்துகொள்வதை அடிப்படையாகக் கொண்டது. மாணவர்கள் கலைஞருடன் தனித்துவமான கலைப்படைப்புகளை உருவாக்குவார்கள்.
             Nested Loops in Maze:
               key: பிரமை உள்ள கூடுகள்
               name: பிரமை உள்ள கூடுகள்
+              description_student: சுழல்கள் உள்ளே சுழல்கள் உள்ளே சுழல்கள். இதற்கு என்ன அர்த்தம்? நீங்கள் ஒரு கூட்டை உருவாக்கும்போது என்ன நடக்கும் என்பதை இந்த பாடம் உங்களுக்குக் கற்பிக்கும்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், மாணவர்கள் மற்றொரு வளையத்திற்குள் ஒரு வளையத்தை எவ்வாறு நிரல் செய்வது என்று கற்றுக்கொள்வார்கள்.
             Snowflakes with Anna and Elsa:
               key: அண்ணா மற்றும் எல்சாவுடன் ஸ்னோஃப்ளேக்ஸ்
               name: அண்ணா மற்றும் எல்சாவுடன் ஸ்னோஃப்ளேக்ஸ்
+              description_student: "*அன்னா மற்றும் \\_ எல்சா* சிறந்த ஐஸ்-ஸ்கேட்டிங் திறன்களைக் கொண்டுள்ளனர், ஆனால் பனியில் வடிவங்களை உருவாக்க உங்கள் உதவி தேவை. சூப்பர் கூல் ஒன்றை உருவாக்க கூடு கட்டப்பட்ட சுழல்களைப் பயன்படுத்தவும்."
+              description_teacher: இந்த \*\* சிறு திட்டம் \*\* பாடம் _Frozen_ திரைப்படங்களின் கதாபாத்திரங்களைப் பயன்படுத்தி ஸ்னோஃப்ளேக் படங்களை உருவாக்க தொடர்ச்சியான பயிற்சிகள் மூலம் மாணவர்களை அழைத்துச் செல்கிறது.
             'Looking Ahead with Minecraft ':
               name: Minecraft உடன் முன்னோக்கிப் பாருங்கள்
+              description_student: எரிமலைக்குழாயைத் தவிர்க்கவும்! இங்கே நீங்கள் _Minecraft_ உலகில் உள்ள நிபந்தனைகள் பற்றி அறியத் தொடங்குவீர்கள்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடம் மாணவர்களுக்கு இது வரை கற்றுக்கொண்ட கருத்துக்களைப் பயிற்சி செய்து, நிபந்தனைகளுடன் முதல் அனுபவத்தைப் பெற வாய்ப்பளிக்கிறது!
             If/Else with Bee:
               key: தேனீவுடன் இருந்தால்/வேறு
               name: தேனீவுடன் இருந்தால்/வேறு
+              description_student: இப்போது நீங்கள் நிபந்தனைகளை புரிந்துகொண்டுள்ளீர்கள், தேன் மற்றும் தேன் சேகரிக்கும் போது அவற்றைப் பயன்படுத்த பீ திட்டமிட வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், உங்கள் வகுப்பு நிபந்தனைகளுடன் குறியீட்டைத் தொடரும், நிரல் எதிர்கொள்ளும் குறிப்பிட்ட நிலைமைகளைப் பொறுத்து வித்தியாசமாக செயல்படும் குறியீட்டை எழுத அனுமதிக்கிறது.
             While Loops with the Farmer:
               name: வேளாண்மையில் சுழல்கள்
+              description_student: 'குறியீட்டில் சுழல்கள் மிகவும் பயனுள்ளதாக இருக்கும். இந்த பாடம் ஒரு புதிய வகையான வளையத்தைப் பற்றி உங்களுக்குக் கற்பிக்கும்: சுழல்கள் இருக்கும் போது!'
               description_teacher: இந்த \*\* திறமையை வளர்க்கும் \*\* பாடத்தில், மாணவர்கள் விவசாயிக்குள் துளைகளை நிரப்பவும் மற்றும் அழுக்கைத் தோண்டவும் வேலை செய்வார்கள், ஆனால் துளைகளின் அளவு அல்லது மண் மேடுகளின் உயரம் அவர்களுக்கு தெரியாது. இந்தப் புதிர்களைத் தீர்க்க, மாணவர்கள் ஒரு புதிய வகையான வளையத்தைப் பயன்படுத்துவார்கள்.
             'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
+              name: 'Minecraft இல் நிபந்தனைகள்: கடல் நீர்'
               description_student: இங்கே நீங்கள் Minecraft உலகில் நிபந்தனைகளை பயன்படுத்துவீர்கள்.
               description_teacher: இந்த \*\* சூழல் அமைத்தல் \*\* பாடத்தில், மாணவர்கள் இது வரை கற்றுக்கொண்ட உள்ளடக்கத்தைப் பயிற்சி செய்வதற்கான வாய்ப்பைப் பெறுவார்கள், அதே போல் நிபந்தனைகளில் ஒரு பின்தொடர்வைப் பெறுவார்கள்!
             Until Loops in Maze:
@@ -2712,10 +3116,17 @@ ta:
             Harvesting with Conditionals:
               key: நிபந்தனைகளுடன் அறுவடை
               name: நிபந்தனைகளுடன் அறுவடை
+              description_student: ஒவ்வொரு நிபந்தனையையும் எப்போது பயன்படுத்துவது என்பது எப்போதும் தெளிவாக இல்லை. என்ன செய்வது என்று முடிவெடுக்க பயிற்சி பெற இந்த பாடம் உதவும்.
             Functions in Minecraft:
+              key: Minecraft இல் செயல்பாடுகள்
+              name: Minecraft இல் செயல்பாடுகள்
+              description_student: மிகவும் திறமையான குறியீட்டிற்கான செயல்பாடுகளை எவ்வாறு பயன்படுத்துவது என்பதை உங்களால் கண்டுபிடிக்க முடியுமா?
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், செயல்பாடுகள் எவ்வாறு உதவிகரமாக இருக்கும் என்பதை மாணவர்கள் புரிந்து கொள்ளத் தொடங்குவார்கள்!
             Functions with Harvester:
+              key: ஹார்வெஸ்டருடன் செயல்பாடுகள்
+              name: ஹார்வெஸ்டருடன் செயல்பாடுகள்
               description_student: விவசாயியின் அறுவடைக்கு நீங்கள் உதவுவதால் செயல்பாடுகள் உங்களுக்கு நிறைய வேலைகளைச் சேமிக்கும்!
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள் ஹார்வெஸ்டரில் பயிர்களை அறுவடை செய்வதற்கான செயல்பாடுகளுடன் நிபந்தனைகளை பயன்படுத்துவார்கள்.
             Functions with Artist:
               key: கலைஞருடன் செயல்பாடுகள்
               name: கலைஞருடன் செயல்பாடுகள்
@@ -2725,19 +3136,31 @@ ta:
               key: கலைஞருடன் மாறுபாடுகள்
             Changing Variables with Bee:
               name: தேனீயுடன் மாறிகள்
+              description_student: இந்த தேனீ மாறிகளை விரும்புகிறது!
+              description_teacher: குறியீடு இயங்கும்போது மதிப்புகளை மாற்றுவதன் மூலம் மாறிகள் நிரல்களை எவ்வாறு அதிக ஆற்றல்மிக்கதாக மாற்ற முடியும் என்பதை விளக்க இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடம் உதவும்.
             Changing Variables with Artist:
               key: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
               name: கலைஞருடன் மாறுபாடுகளை மாற்றுதல்
+            For Loops with Bee:
+              description_student: Buzz buzz. இந்த புதிர்களில் நீங்கள் தேனீ மற்றும் தேன் ஆகியவற்றிற்கு தேனீக்கு வழிகாட்டி இருப்பீர்கள்.
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடம் சுழல்களுக்கு கவனம் செலுத்துகிறது மற்றும் அதிக சிக்கலான புதிர்களைத் தீர்க்க ஒரு அதிகரிக்கும் மாறியைப் பயன்படுத்துகிறது.
             For Loops with Artist:
               key: கலைஞருடன் சுழல்களுக்கு
               name: கலைஞருடன் சுழல்களுக்கு
               description_student: உங்கள் அடுத்த தலைசிறந்த படைப்பை உருவாக்க தயாராகுங்கள். இங்கே நீங்கள் சில தாடை-கைவிடும் படங்களை உருவாக்க சுழல்களுக்குப் பயன்படுத்துவீர்கள்.
+              description_teacher: இந்த \*\* திறமையை வளர்த்துக் கொள்ளும் \*\* பாடத்தில், மாணவர்கள் கலைஞருக்காக "ஃபார்" லூப்ஸ் பயிற்சி செய்கிறார்கள். சிக்கலான வடிவமைப்புகள் மற்றும் தனித்துவமான கலைகளை உருவாக்க மாணவர்கள் புதிர்களை முடிப்பார்கள்.
             Swimming Fish in Sprite Lab:
               description_student: உருவங்களை உருவாக்குவது மற்றும் திருத்துவது எப்படி என்பதை அறிக.
+              description_teacher: இந்த \*\* திறனை வளர்க்கும் பாடத்தில் \*\* எளிய அனிமேஷன் செய்யப்பட்ட நீருக்கடியில் காட்சியை மாணவர்கள் நிரல் செய்வார்கள்.
+            Alien Dance Party:
+              description_student: வகுப்பு தோழர்களுடன் பகிரக்கூடிய ஒரு ஊடாடும் திட்டத்தை உருவாக்கவும்.
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில் பயனர் உள்ளீட்டின் அடிப்படையில் மாணவர்கள் திரையை சுற்றி திரிவதற்கு நிகழ்வுகளை பயன்படுத்துவார்கள்.
             Virtual Pet with Sprite Lab:
               key: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
               name: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
               description_student: நீங்கள் விரும்பும் விதத்தில் நடந்து கொள்ளும் ஒரு ஊடாடும் மெய்நிகர் செல்லப்பிராணியை உருவாக்கவும்! உங்கள் செல்லப்பிராணிக்கு அதன் சொந்த வாழ்க்கையை கொடுங்கள்!
+            End of Course Project:
+              description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல், மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை அழைத்துச் செல்கிறது!
             lesson-1:
               name: நடன விருந்து
             lesson-2:
@@ -2747,6 +3170,7 @@ ta:
             lesson-4:
               name: உரை மற்றும் அறிவுறுத்தல்கள்
               description_student: இந்த பாடத்தில் நீங்கள் ஸ்பிரைட் ஆய்வகத்தில் மாறிகள் பயிற்சி செய்வீர்கள்.
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், மாணவர்கள் ஸ்ப்ரைட் ஆய்வகத்தில் மாறிகளுடன் பயிற்சி பெறுவார்கள்.
           lesson_groups:
             csf_sequencing:
               display_name: வரிசைப்படுத்துதல்
@@ -2766,15 +3190,23 @@ ta:
               key: இழுத்து விட கற்றுக்கொள்ளுங்கள்
               name: இழுத்து விட கற்றுக்கொள்ளுங்கள்
               description_student: புதிர்களை முடிக்க கிளிக் செய்து இழுக்கவும்.
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடம் மாணவர்களுக்கு கணினி ஆய்வகத்திற்குச் செல்லும்போது என்ன எதிர்பார்க்கலாம் என்ற யோசனையை அளிக்கும். கணினி ஆய்வக பழக்கவழக்கங்களை அவர்களுக்கு அறிமுகப்படுத்தும் ஒரு சுருக்கமான விவாதத்துடன் இது தொடங்குகிறது, பின்னர் அவர்கள் ஆன்லைன் புதிர்களை முடிக்க ஒரு கணினியைப் பயன்படுத்துவதில் முன்னேறுவார்கள்.
             Sequencing with Scrat:
               description_student: ஏகார்னை அடைய ஸ்க்ராட் திட்டம்.
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள் ஒரு பிரமை ஒரு பக்கத்திலிருந்து மற்றொரு பக்கத்தில் உள்ள ஏகோர்னுக்கு ஒரு அணில் பாத்திரத்தை நகர்த்துவதற்கான தொடர்ச்சியான வழிமுறைகளை உருவாக்கும். இதைச் செய்ய அவர்கள் குறியீட்டுத் தொகுதிகளை ஒரு நேரியல் வரிசையில் ஒன்றாக அடுக்கி வைப்பார்கள்.
             Programming in with Angry Birds:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
+              description_teacher: இந்த \*\* திறனை வளர்த்தல் \*\* பாடத்தில், மாணவர்கள் தொடர்ச்சியான வழிமுறைகளை உருவாக்கிக்கொண்டே இருப்பார்கள்.
+            Programming with Rey and BB-8:
+              description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், மாணவர்கள் BB-8 உடன் ஒரு தந்திரமான பாடத்திட்டத்திற்கு செல்ல மிகவும் சிக்கலான வழிகளில் தங்கள் புதிய நிரலாக்க திறன்களைப் பயன்படுத்துவார்கள்.
             Programming in Harvester:
+              name: ஹார்வெஸ்டருடன் நிரலாக்கம்
               description_student: ஒரு பாதையில் காய்கறிகளை சேகரிக்க ஹார்வெஸ்டருக்கு உதவுங்கள்.
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், மாணவர்கள் தாங்கள் கற்றுக்கொண்ட நிரலாக்கக் கருத்துகளை ஹார்வெஸ்டர் சூழலுக்குப் பயன்படுத்துவார்கள். மாணவர்கள் தொடர்ச்சியான அல்காரிதம் திறன்களை வளர்த்து, பிழைத்திருத்த செயல்முறையைப் பயன்படுத்தத் தொடங்குவார்கள்.
             Loops with Scrat:
               key: ஸ்க்ராட்டுடன் சுழல்கள்
               name: ஸ்க்ராட்டுடன் சுழல்கள்
+              description_student: சுழல்களைப் பயன்படுத்தி அதிக நிலத்தை மறைக்க ஸ்க்ராட்டுக்கு உதவுங்கள்.
               description_teacher: இந்த \*\* திறமை-கட்டமைப்பு \*\* பாடத்தில், அணில் ஏகோர்னை அடைய உதவுவதே குறிக்கோளாக இருக்கும் புரோகிராமிங் புதிர்களில் மாணவர்கள் சுழல்கள் என்ற கருத்தை பயிற்சி செய்வார்கள்.
             Loops with Laurel:
               key: லாரலுடன் சுழல்கள்
@@ -2783,12 +3215,21 @@ ta:
             Ocean Scene with Loops:
               key: சுழல்களுடன் கூடிய கடல் காட்சி
               name: சுழல்களுடன் கூடிய கடல் காட்சி
+              description_student: படங்களை முடிக்க சுழல்கள் மற்றும் வடிவங்களைப் பயன்படுத்தவும்.
+              description_teacher: இந்த \*\* திறமையை வளர்ப்பதற்கான \*\* பாடத்தில், மாணவர்கள் அறிவுறுத்தல்களின் எளிய வரிசைகளை சுழற்றுவதன் மூலம் படங்களை வரைய கற்றுக்கொள்கிறார்கள். இங்கே, சுழல்கள் வடிவங்களை உருவாக்குகின்றன. இந்த பாடத்தின் முடிவில், மாணவர்கள் தங்கள் சொந்த படங்களை உருவாக்க வாய்ப்பு வழங்கப்படும்.
             Drawing Gardens with Loops:
+              key: சுழல்களுடன் தோட்டங்களை வரைதல்
+              name: சுழல்களுடன் தோட்டங்களை வரைதல்
+              description_student: படங்களை முடிக்க வடிவங்கள் மற்றும் சுழல்களைப் பயன்படுத்தவும்.
               description_teacher: இந்த \*\* திறமையை வளர்ப்பதற்கான \*\* பாடத்தில், மாணவர்கள் அறிவுறுத்தல்களின் எளிய வரிசைகளை சுழற்றுவதன் மூலம் படங்களை வரைய கற்றுக்கொள்கிறார்கள். இங்கே, மாணவர்கள் வடிவங்களை உருவாக்க சுழல்களைப் பயன்படுத்துகின்றனர். இந்த பாடத்தின் முடிவில், மாணவர்கள் தங்கள் சொந்த படங்களை உருவாக்க வாய்ப்பு வழங்கப்படும்.
             On the Move with Events:
+              key: நிகழ்வுகளுடன் நகர்வில்
+              name: நிகழ்வுகளுடன் நகர்வில்
               description_student: உங்கள் சொந்த விளையாட்டு அல்லது கதையை உருவாக்கவும்.
               description_teacher: இந்த \*\* மினி-ப்ராஜெக்ட் \*\* இல், மாணவர்களுக்கு பிளே லேப்பில் நிகழ்வுகளை எப்படிப் பயன்படுத்துவது மற்றும் அனிமேஷன் விளையாட்டை உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டுத் திறன்களையும் பயன்படுத்துவதற்கான வாய்ப்பு கிடைக்கும். பிளே லேபில் படைப்பாற்றல் மற்றும் கதையை உருவாக்கும் நேரம் இது!
             A Royal Battle with Events:
+              key: நிகழ்வுகளுடன் ஒரு ராயல் போர்
+              name: நிகழ்வுகளுடன் ஒரு ராயல் போர்
               description_student: ஒரு கதையை உருவாக்க அல்லது ஒரு ஊடாடும் விளையாட்டை உருவாக்க நிகழ்வுகளைப் பயன்படுத்தவும்.
           lesson_groups:
             csf_sequencing:
@@ -3085,6 +3526,10 @@ ta:
           lesson_groups:
             lessonGroup-2:
               display_name: பாடங்கள்
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'டான்ஸ் பார்ட்டி: இணைக்கப்பட்டது'
         csa-u8-dev:
           lessons:
             lesson-2:

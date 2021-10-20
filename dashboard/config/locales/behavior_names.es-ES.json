@@ -3161,6 +3161,26 @@
           "wobbling": "tambaleándose",
           "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
           "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "vagando",
+          "moving east": "avanzando al este",
+          "spinning left": "girando a la izquierda",
+          "spinning right": "girando a la derecha",
+          "shrinking": "reducción",
+          "growing": "creciente",
+          "moving south": "avanzando hacia el sur",
+          "swimming left and right": "nadando a izquierda y derecha",
+          "moving north": "avanzando hacia el norte",
+          "jittering": "nerviosismo",
+          "moving west": "avanzando hacia el oeste",
+          "patrolling": "patrullando",
+          "moving with arrow keys": "moverse con las flechas del teclado",
+          "driving with arrow keys": "conducir con las teclas de flecha",
+          "fluttering": "revoloteando",
+          "wobbling": "tambaleándose",
+          "moving west and looping": "moviéndose hacia el oeste y haciendo un bucle",
+          "moving east and looping": "moviéndose hacia el este y haciendo un bucle"
         }
       }
     }

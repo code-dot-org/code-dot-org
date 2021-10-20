@@ -181,6 +181,13 @@
         "machine_learning/oceans/unversioned": {
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
+        "event/outbreak/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Model dan Simulasi"
+        },
         "sprite/coursef/2021": {
           "word": "Peperi",
           "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."

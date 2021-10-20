@@ -3,11 +3,12 @@
     "data": {
       "activity_sections": {
         "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
-          "name": "Wstęp"
+          "name": "Wstęp",
+          "description": "#### Ustawianie sceny\n\nPowitaj uczniów na zajęciach i krótko przedstaw plan dnia. Pamiętaj, aby powiedzieć uczniom, by nie spieszyli się i eksperymentowali."
         },
         "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
-            null
+            "Jeśli masz czas i chciałbyś przygotować swoich uczniów do zajęć bez komputerów, rozważ wykorzystanie [„Potańcówka: bez komputera”](https://studio.code.org/s/dance-unplugged/lessons/1) przed Godziną Kodowania. Ta krótka lekcja wprowadza uczniów w ideę zdarzeń wyzwalających różne ruchy taneczne."
           ]
         },
         "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
@@ -274,7 +275,7 @@
         },
         "acc2ced5-83ed-4926-9830-f5bd846136a1": {
           "tips": [
-            null
+            "Jeśli masz czas i chciałbyś przygotować swoich uczniów do zajęć bez komputerów, rozważ wykorzystanie [„Potańcówka: bez komputera”](https://studio.code.org/s/dance-unplugged/lessons/1) przed Godziną Kodowania. Ta krótka lekcja wprowadza uczniów w ideę zdarzeń wyzwalających różne ruchy taneczne."
           ]
         },
         "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
@@ -347,10 +348,16 @@
             null
           ]
         },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "Część 1 - Złam szyfr Cezara"
+        },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
             null
           ]
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "Część 2 - Złam szyfr losowego podstawienia"
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
@@ -380,6 +387,9 @@
           "tips": [
             null
           ]
+        },
+        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
+          "name": "Film: Szyfrowanie i klucze publiczne"
         },
         "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
           "name": "Dyskusja"
@@ -605,6 +615,9 @@
             null
           ]
         },
+        "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
+          "description": "Jaki jest twój ulubiony sposób na bycie kreatywnym?"
+        },
         "faf90391-c01a-42d3-b79c-0becac0a50d2": {
           "name": "Ogólne wsparcie"
         },
@@ -644,14 +657,18 @@
           "name": "Świętuj"
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
-          "name": "Następne Kroki"
+          "name": "Następne Kroki",
+          "description": "Poinformuj uczniów, że jeśli podobała im się dzisiejsza aktywność, mają wiele możliwości kontynuowania programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn](http://code.org/learn) w celu uzyskania listy opcji lub, jeśli planujesz inne dodatkowe ćwiczenia, które nastąpią, powiedz uczniom, co będzie dalej w Twojej klasie."
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
         },
+        "4587cdae-c2ce-4d5f-9540-063b6383388d": {
+          "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny Kodowania istnieje wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów:\n\n-   Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n-   Odwiedź stronę [Możesz uczyć informatyki](https://studio.code.org/courses?view=teacher), aby uzyskać więcej propozycji kursów.\n-   Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
+        },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
-            null
+            "Jeśli masz czas i chciałbyś przygotować swoich uczniów do zajęć bez komputerów, rozważ wykorzystanie [„Potańcówka: bez komputera”](https://curriculum.code.org/hoc/unplugged/4/) przed Godziną Kodowania. Ta krótka lekcja wprowadza uczniów w ideę zdarzeń wyzwalających różne ruchy taneczne."
           ]
         },
         "e1243ccf-be45-4f8e-a138-54953ea12f92": {
@@ -661,6 +678,9 @@
         },
         "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
           "name": "Ogólne wsparcie"
+        },
+        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
+          "name": "Poziom po poziomie"
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
@@ -691,6 +711,9 @@
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "AI: dane treningowe i stronniczość — Film"
         },
+        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
+          "description": "#### Poziom 6 - Stosując dane treningowe"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
@@ -702,6 +725,15 @@
         },
         "a47af864-6d0d-441c-98ea-6e50d036c415": {
           "progression_name": "Naucz AI nowego słowa"
+        },
+        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
+          "description": "Na ekranie wyników końcowych można wyświetlić wizualizację modelu uczenia maszynowego sztucznej inteligencji, klikając ![](https://curriculum.code.org/media/uploads/info.png)."
+        },
+        "be0995b2-b12f-45ee-9047-8261719fcd56": {
+          "name": "Przykład 1: Trening oparty na jednej cesze (kształt ciała)"
+        },
+        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
+          "name": "Przykład 2: Używanie widoku Informacji do ulepszania modelu"
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Rozgrzewka"
@@ -715,38 +747,44 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zakończenie"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             "Będziesz chciał poświęcić bardzo mało czasu na wstępne ładowanie lub wprowadzenie do swojej Godziny Kodowania. Zwłaszcza w przypadku młodych uczniów najlepiej jest zacząć tak szybko, jak to możliwe. Zbyt wiele wyjaśnień lub wykładów na początku psuje zabawę, a zabawa jest najważniejsza!"
           ]
         },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Witaj świecie",
-          "description": " W tym ćwiczeniu uczniowie będą postępować zgodnie z instrukcjami wyświetlanymi na ekranie, aby zaprogramować proste animacje za pomocą duszków. Będą mogli sprawić, że różne duszki będą „mówić” za pomocą dymków i stworzyć interaktywną scenę. Filmy są prezentowane w 3 różnych punktach postępów. Możesz chcieć, aby klasa obejrzała pierwszy film (lub wszystkie trzy) razem jako klasa."
-        },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
           "name": "Ogólne wsparcie"
         },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](<>)."
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Witaj świecie"
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](https://code.org/learn)."
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Refleksja"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Wstęp"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Epidemia",
+          "progression_name": "Epidemia"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Witamy w mieście potworów"
         },
-        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+        "df13fa93-37df-4188-837d-462c48179625": {
           "progression_name": "Budowanie umiejętności"
         },
-        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "progression_name": "Mini-projekt: Symulator pandemii "
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Czas na zabawę",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Czas na zabawę"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Refleksja"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -766,6 +804,9 @@
         },
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Refleksja"
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny kodowania, jest wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n\n-   Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Wstęp"

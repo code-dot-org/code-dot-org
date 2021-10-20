@@ -90,8 +90,12 @@ module Pd::Foorm
             reshaped_matrix_item_submission.merge! additional_attributes
             reshaped_submission_answers << reshaped_matrix_item_submission
           end
-        when ANSWER_RATING, ANSWER_TEXT
+        when ANSWER_TEXT
           reshaped_submission_answer[:response_text] = answer
+          reshaped_submission_answers << reshaped_submission_answer
+        when ANSWER_RATING
+          reshaped_submission_answer[:response_text] = answer
+          reshaped_submission_answer[:response_value] = answer
           reshaped_submission_answers << reshaped_submission_answer
         when ANSWER_SINGLE_SELECT
           choices = question_details[:choices]

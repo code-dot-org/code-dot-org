@@ -552,28 +552,39 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Özet"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Yansıma"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Giriş"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Salgın",
+          "description": "_Bugünkü derste, bir virüs salgınının gerçekleşmek üzere olduğu “Canavar Şehri”ne gidiyorsunuz. Dr. Canavar'ın virüsün yayılmasını yavaşlatmak için yardımınıza ihtiyacı var._\n\n_Hareketli Nesne Laboratuvarında bir salgın simülatörü oluşturacak ve ardından bunu bir virüsün nasıl yayılabileceğini anlamak için kullanacaksınız. Ayrıca tüm canavarların tekrar sağlıklarına kavuşmalarına yardım edeceksiniz!_",
+          "progression_name": "Salgın"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Canavar Şehri'ne Hoş Geldiniz"
         },
-        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+        "df13fa93-37df-4188-837d-462c48179625": {
           "progression_name": "Beceri Oluşturma"
         },
-        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "progression_name": "Mini Proje: Salgın Simülatörü"
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Ücretsiz Oyna",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Ücretsiz Oyna"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Simülasyonlar, gerçek dünyada gözlemlenmesi zor olabilecek şeyleri öğrenmenin harika bir yoludur. Bilim adamlarının sorunları çözmelerine, sorunun nasıl çözüleceğini tahmin etmelerine, yeni fikirleri güvenli ve verimli bir şekilde test etmelerine yardımcı olurlar. Simülasyonunuz, Canavar Şehri'ndeki bir virüs salgınının nasıl görünebileceğini göstermenin bir yoludur._"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Yansıma"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
