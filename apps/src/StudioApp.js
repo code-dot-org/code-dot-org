@@ -56,6 +56,10 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
+import {
+  getIdleTimeSinceLastReport,
+  resetIdleTime
+} from './redux/studioAppActivity';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
@@ -182,13 +186,6 @@ class StudioApp extends EventEmitter {
      * @type {?number}
      */
     this.milestoneStartTime = undefined;
-
-    /**
-     * The amount of idle time when the last milestone was recorded. Used for
-     * recording the time a student has spent on a level.
-     * @type {?number}
-     */
-    this.milestoneStartTotalIdleTime = undefined;
 
     /**
      * Whether we've reported a milestone yet for this run/reset cycle
@@ -702,7 +699,6 @@ StudioApp.prototype.getVersionHistoryHandler = function(config) {
 
 StudioApp.prototype.initTimeSpent = function() {
   this.milestoneStartTime = new Date().getTime();
-  this.milestoneStartTotalIdleTime = 0;
   this.debouncedSilentlyReport = _.debounce(
     this.silentlyReport.bind(this),
     1000
@@ -1734,16 +1730,16 @@ StudioApp.prototype.report = function(options) {
   this.hasReported = true;
   const currentTime = new Date().getTime();
 
-  const totalIdleTime = getStore().getState().studioAppActivity.idleTimeMs;
-  const idleTimeSinceLastMilestone =
-    totalIdleTime - this.milestoneStartTotalIdleTime;
+  const idleTimeSinceLastReport = getIdleTimeSinceLastReport(
+    getStore().getState().studioAppActivity
+  );
 
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
     time: currentTime - this.initTime,
     timeSinceLastMilestone:
-      currentTime - this.milestoneStartTime - idleTimeSinceLastMilestone,
+      currentTime - this.milestoneStartTime - idleTimeSinceLastReport,
     attempt: this.attempts,
     lines: this.feedback_.getNumBlocksUsed()
   });
@@ -1752,7 +1748,7 @@ StudioApp.prototype.report = function(options) {
   // otherwise if we don't leave the page we are compounding the total time
   this.milestoneStartTime = currentTime;
 
-  this.milestoneStartTotalIdleTime = totalIdleTime;
+  getStore().dispatch(resetIdleTime());
 
   this.lastTestResult = options.testResult;
 

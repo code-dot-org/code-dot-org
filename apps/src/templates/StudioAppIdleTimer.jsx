@@ -2,8 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import IdleTimer from 'react-idle-timer';
-import {setIdleTimeMs} from '@cdo/apps/redux/studioAppActivity';
+import {setStartIdle, setEndIdle} from '@cdo/apps/redux/studioAppActivity';
 
+// Idle time doesn't start tracking until after IDLE_AFTER milliseconds of idling
 const IDLE_AFTER = 1000 * 60 * 2;
 
 /**
@@ -12,51 +13,29 @@ const IDLE_AFTER = 1000 * 60 * 2;
  */
 class StudioAppIdleTimer extends React.Component {
   static propTypes = {
-    totalIdleTime: PropTypes.number.isRequired,
-    setIdleTime: PropTypes.func.isRequired
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      idleStart: null
-    };
-  }
-
-  // This method isn't called until user has been idle for IDLE_AFTER ms,
-  // which is when we start actually tracking idle time
-  onIdle = () => {
-    this.setState({idleStart: new Date().getTime()});
-  };
-
-  onActive = () => {
-    if (this.state.idleStart) {
-      const now = new Date().getTime();
-      const timeSpentIdle = now - this.state.idleStart;
-      this.props.setIdleTime(this.props.totalIdleTime + timeSpentIdle);
-    }
+    setStartIdle: PropTypes.func.isRequired,
+    setEndIdle: PropTypes.func.isRequired
   };
 
   render() {
     return (
       <IdleTimer
         timeout={IDLE_AFTER}
-        onIdle={this.onIdle}
-        onActive={this.onActive}
-        debounce={250}
+        onIdle={this.props.setStartIdle}
+        onActive={this.props.setEndIdle}
       />
     );
   }
 }
 
 export default connect(
-  state => ({
-    totalIdleTime: state.studioAppActivity.idleTimeMs
-  }),
+  null,
   dispatch => ({
-    setIdleTime(ms) {
-      dispatch(setIdleTimeMs(ms));
+    setStartIdle(ms) {
+      dispatch(setStartIdle(ms));
+    },
+    setEndIdle(ms) {
+      dispatch(setEndIdle(ms));
     }
   })
 )(StudioAppIdleTimer);
