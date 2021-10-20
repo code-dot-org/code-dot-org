@@ -111,7 +111,7 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_summary_of_levels, lesson.summary_for_lesson_plans[:levels]
   end
 
-  test 'summary of lesson plan with vocab, resources, objectives and standards' do
+  test 'summary of lesson plan with vocab, resources, objectives, programming expressions and standards' do
     student = create :student
     teacher = create :teacher
 
@@ -128,6 +128,8 @@ class LessonTest < ActiveSupport::TestCase
     lesson.standards.push(create(:standard))
     lesson.opportunity_standards.push(create(:standard))
     lesson.opportunity_standards.push(create(:standard))
+    lesson.programming_expressions.push(create(:programming_expression, syntax: 'xyz'))
+    lesson.programming_expressions.push(create(:programming_expression, syntax: nil))
 
     # just make sure there are no errors
     lesson.summarize_for_lesson_edit
@@ -135,6 +137,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson.summarize_for_lesson_show(teacher, false)
     lesson.summarize_for_rollup(student)
     lesson.summarize_for_rollup(teacher)
+    lesson.summarize_for_student_lesson_plan
   end
 
   test "last_progression_script_level" do
