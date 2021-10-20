@@ -1,113 +1,42 @@
-import React from 'react';
-import $ from 'jquery';
-import LabeledFormComponent from '../../form_components/LabeledFormComponent';
+import React, {useEffect} from 'react';
+import PropTypes from 'prop-types';
 import {
   PageLabels,
   SectionHeaders,
   TextFields
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {FormGroup} from 'react-bootstrap';
-import {
-  styles as defaultStyles,
-  PROGRAM_CSD,
-  PROGRAM_CSP
-} from './TeacherApplicationConstants';
+import {styles as defaultStyles} from './TeacherApplicationConstants';
 import Spinner from '../../components/spinner';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import {LabeledLargeInput} from '../../form_components_func/labeled/LabeledInput';
+import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
+import {
+  LabeledRadioButtons,
+  LabeledRadioButtonsWithAdditionalTextFields
+} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
+import {FormContext} from '../../form_components_func/FormComponent';
 
-export default class SummerWorkshop extends LabeledFormComponent {
-  static labels = PageLabels.professionalLearningProgramRequirements;
+const ProfessionalLearning = props => {
+  const {data, onChange} = props;
+  const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
 
-  static associatedFields = [
-    ...Object.keys(PageLabels.professionalLearningProgramRequirements),
-    'regionalPartnerId',
-    'regionalPartnerGroup',
-    'regionalPartnerWorkshopIds'
-  ];
+  useEffect(() => {
+    onChange({
+      regionalPartnerId: regionalPartner?.id,
+      regionalPartnerGroup: regionalPartner?.group,
+      regionalPartnerWorkshopIds: (regionalPartner?.workshops || []).map(
+        workshop => workshop.id
+      )
+    });
+  }, [regionalPartner]);
 
-  state = {
-    loadingPartner: true,
-    partner: null,
-    loadError: false
-  };
-
-  componentDidMount() {
-    this.loadPartnerRequest = null;
-
-    this.loadPartnerWorkshops();
-  }
-
-  componentWillUnmount() {
-    if (this.loadPartnerRequest) {
-      this.loadPartnerRequest.abort();
-    }
-  }
-
-  loadPartnerWorkshops() {
-    const locationParams = this.getWorkshopParams();
-    if (this.props.data.school === '-1') {
-      locationParams.zip_code = this.props.data.schoolZipCode;
-      locationParams.state = this.props.data.schoolState;
-    } else if (this.props.data.school) {
-      locationParams.school = this.props.data.school;
-    } else {
-      this.setState({
-        loadingPartner: false,
-        loadError: true
-      });
-      return;
-    }
-
-    const url = `/api/v1/pd/regional_partner_workshops/find?${$.param(
-      locationParams
-    )}`;
-    this.loadPartnerRequest = $.ajax({
-      method: 'GET',
-      url: url,
-      dataType: 'json'
-    })
-      .done(data => {
-        this.loadPartnerRequest = null;
-
-        this.handleChange({
-          regionalPartnerId: data.id,
-          regionalPartnerGroup: data.group,
-          regionalPartnerWorkshopIds: (data.workshops || []).map(
-            workshop => workshop.id
-          )
-        });
-
-        // Update state with all the partner workshop data to display
-        this.setState({
-          loadingPartner: false,
-          partnerWorkshops: data.workshops,
-          regionalPartnerName: data.name
-        });
-      })
-      .error(() => {
-        this.setState({
-          loadingPartner: false,
-          loadError: true
-        });
-      });
-  }
-
-  getWorkshopParams() {
-    const course = {
-      [PROGRAM_CSD]: 'CS Discoveries',
-      [PROGRAM_CSP]: 'CS Principles'
-    }[this.props.data.program];
-
-    return {
-      course,
-      subject: SubjectNames.SUBJECT_SUMMER_WORKSHOP
-    };
-  }
-
-  renderRegionalPartnerName() {
-    if (!this.state.regionalPartnerName) {
+  const renderRegionalPartnerName = () => {
+    if (!regionalPartner?.name) {
       return (
         <div>
           <p>
@@ -128,16 +57,14 @@ export default class SummerWorkshop extends LabeledFormComponent {
     } else {
       return (
         <p>
-          <strong>
-            Your Regional Partner is: {this.state.regionalPartnerName}
-          </strong>
+          <strong>Your Regional Partner is: {regionalPartner.name}</strong>
         </p>
       );
     }
-  }
+  };
 
-  renderAssignedWorkshopList() {
-    if (this.state.partnerWorkshops.length === 0) {
+  const renderAssignedWorkshopList = () => {
+    if (regionalPartner?.workshops?.length === 0) {
       return (
         <p style={styles.marginBottom}>
           <strong>
@@ -148,7 +75,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
         </p>
       );
     } else {
-      const options = this.state.partnerWorkshops.map(
+      const options = regionalPartner.workshops.map(
         workshop => `${workshop.dates} (${workshop.location})`
       );
       options.push(TextFields.notSureExplain);
@@ -160,18 +87,18 @@ export default class SummerWorkshop extends LabeledFormComponent {
 
       return (
         <div>
-          {this.dynamicCheckBoxesWithAdditionalTextFieldsFor(
-            'ableToAttendMultiple',
-            options,
-            textFieldMap
-          )}
+          <LabeledDynamicCheckBoxesWithAdditionalTextFields
+            name="ableToAttendMultiple"
+            options={options}
+            textFieldMap={textFieldMap}
+          />
         </div>
       );
     }
-  }
+  };
 
-  renderContents() {
-    if (this.props.data.program === undefined) {
+  const renderContents = () => {
+    if (data.program === undefined) {
       return (
         <div style={styles.error}>
           <p>
@@ -180,7 +107,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
           </p>
         </div>
       );
-    } else if (!this.props.data.school) {
+    } else if (!data.school) {
       return (
         <div style={styles.error}>
           <p>
@@ -189,9 +116,9 @@ export default class SummerWorkshop extends LabeledFormComponent {
           </p>
         </div>
       );
-    } else if (this.state.loadingPartner) {
+    } else if (regionalPartner === null) {
       return <Spinner />;
-    } else if (this.state.loadError) {
+    } else if (regionalPartnerError) {
       return (
         <div style={styles.error} id="partner-workshops-error">
           <p>
@@ -209,8 +136,8 @@ export default class SummerWorkshop extends LabeledFormComponent {
     } else {
       return (
         <div>
-          <div id="regionalPartnerName">{this.renderRegionalPartnerName()}</div>
-          {this.state.regionalPartnerName && (
+          <div id="regionalPartnerName">{renderRegionalPartnerName()}</div>
+          {regionalPartner.name && (
             <p>
               Code.org’s Professional Learning Program is a yearlong program
               starting in the summer and concluding in the spring. Workshops can
@@ -220,10 +147,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
                 href={
                   pegasus(
                     '/educate/professional-learning/program-information'
-                  ) +
-                  (!!this.props.data.schoolZipCode
-                    ? '?zip=' + this.props.data.schoolZipCode
-                    : '')
+                  ) + (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
                 }
                 target="_blank"
                 rel="noopener noreferrer"
@@ -233,20 +157,22 @@ export default class SummerWorkshop extends LabeledFormComponent {
               for more information about the schedule and delivery model.
             </p>
           )}
-          {this.radioButtonsWithAdditionalTextFieldsFor('committed', {
-            [TextFields.noExplain]: 'other'
-          })}
+          <LabeledRadioButtonsWithAdditionalTextFields
+            name="committed"
+            textFieldMap={{
+              [TextFields.noExplain]: 'other'
+            }}
+          />
           <div id="assignedWorkshops">
-            {this.props.data.regionalPartnerId &&
-              this.renderAssignedWorkshopList()}
+            {data.regionalPartnerId && renderAssignedWorkshopList()}
           </div>
           Code.org <em>may</em> offer a national series of virtual academic year
           workshops to support teachers who need to join a virtual academic year
           cohort in order to engage in the full Professional Learning Program
           because a virtual option is not offered in their region or is offered
           on a schedule that doesn’t work for them.
-          {this.radioButtonsFor('interestedInOnlineProgram')}
-          {this.props.data.regionalPartnerId && (
+          <LabeledRadioButtons name="interestedInOnlineProgram" />
+          {data.regionalPartnerId && (
             <div>
               <label>
                 There may be scholarships available in your region to cover the
@@ -256,9 +182,7 @@ export default class SummerWorkshop extends LabeledFormComponent {
                     pegasus(
                       '/educate/professional-learning/program-information'
                     ) +
-                    (!!this.props.data.schoolZipCode
-                      ? '?zip=' + this.props.data.schoolZipCode
-                      : '')
+                    (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
                   }
                   target="_blank"
                   rel="noopener noreferrer"
@@ -268,71 +192,89 @@ export default class SummerWorkshop extends LabeledFormComponent {
                 . Let us know if your school or district would be able to pay
                 the fee or if you need to be considered for a scholarship.
               </label>
-              {this.singleCheckboxFor('understandFee')}
-              {this.radioButtonsFor('payFee')}
-              {this.props.data.payFee === TextFields.noPayFee &&
-                this.largeInputFor('scholarshipReasons')}
+              <LabeledSingleCheckbox name="understandFee" />
+              <LabeledRadioButtons name="payFee" />
+              {data.payFee === TextFields.noPayFee && (
+                <LabeledLargeInput name="scholarshipReasons" />
+              )}
             </div>
           )}
         </div>
       );
     }
+  };
+
+  return (
+    <FormContext.Provider value={props}>
+      <LabelsContext.Provider
+        value={PageLabels.professionalLearningProgramRequirements}
+      >
+        <FormGroup>
+          <h3>
+            Section 3: {SectionHeaders.professionalLearningProgramRequirements}
+          </h3>
+
+          <p>
+            Participants are assigned to a program hosted by one of our Regional
+            Partners based on their school's geographic location.
+          </p>
+
+          {renderContents()}
+        </FormGroup>
+      </LabelsContext.Provider>
+    </FormContext.Provider>
+  );
+};
+
+ProfessionalLearning.getDynamicallyRequiredFields = data => {
+  const requiredFields = [];
+
+  if (
+    data.regionalPartnerWorkshopIds &&
+    data.regionalPartnerWorkshopIds.length > 0
+  ) {
+    requiredFields.push('ableToAttendMultiple', 'committed');
   }
 
-  render() {
-    return (
-      <FormGroup>
-        <h3>
-          Section 4: {SectionHeaders.professionalLearningProgramRequirements}
-        </h3>
-
-        <p>
-          Participants are assigned to a program hosted by one of our Regional
-          Partners based on their school's geographic location.
-        </p>
-
-        {this.renderContents()}
-      </FormGroup>
-    );
+  if (data.regionalPartnerId) {
+    requiredFields.push('payFee', 'understandFee');
   }
 
-  /**
-   * @override
-   */
-  static getDynamicallyRequiredFields(data) {
-    const requiredFields = [];
-
-    if (
-      data.regionalPartnerWorkshopIds &&
-      data.regionalPartnerWorkshopIds.length > 0
-    ) {
-      requiredFields.push('ableToAttendMultiple', 'committed');
-    }
-
-    if (data.regionalPartnerId) {
-      requiredFields.push('payFee', 'understandFee');
-    }
-
-    if (data.regionalPartnerId && data.payFee === TextFields.noPayFee) {
-      requiredFields.push('scholarshipReasons');
-    }
-
-    return requiredFields;
+  if (data.regionalPartnerId && data.payFee === TextFields.noPayFee) {
+    requiredFields.push('scholarshipReasons');
   }
 
-  /**
-   * @override
-   */
-  static processPageData(data) {
-    const changes = {};
+  return requiredFields;
+};
 
-    if (data.payFee !== TextFields.noPayFee) {
-      changes.scholarshipReasons = undefined;
-    }
+/**
+ * @override
+ */
+ProfessionalLearning.processPageData = data => {
+  const changes = {};
 
-    return changes;
+  if (data.payFee !== TextFields.noPayFee) {
+    changes.scholarshipReasons = undefined;
   }
-}
+
+  return changes;
+};
+ProfessionalLearning.associatedFields = [
+  ...Object.keys(PageLabels.professionalLearningProgramRequirements),
+  'regionalPartnerId',
+  'regionalPartnerGroup',
+  'regionalPartnerWorkshopIds'
+];
+ProfessionalLearning.propTypes = {
+  options: PropTypes.object.isRequired,
+  errors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  errorMessages: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  accountEmail: PropTypes.string.isRequired
+};
+
+export default ProfessionalLearning;
 
 const styles = {
   ...defaultStyles,
