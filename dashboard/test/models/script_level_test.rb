@@ -54,7 +54,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   class ExampleSolutionsTests < ActiveSupport::TestCase
-    setup_all do
+    setup do
       @authorized_teacher = create :authorized_teacher
       @not_authorized_teacher = create :teacher
       @student = create :student
