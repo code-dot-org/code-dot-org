@@ -449,7 +449,7 @@ class ScriptLevel < ApplicationRecord
     summary = summarize(user_id: current_user&.id)
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
-    summary[:exampleSolutions] = get_example_solutions(levels.first, current_user)
+    summary[:exampleSolutions] = get_example_solutions(oldest_active_level, current_user)
     summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
@@ -722,7 +722,7 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !current_user&.teacher? || CDO.properties_encryption_key.blank?
 
-    if level.try(:examples).present? && (current_user.authorized_teacher? || script.csf?) # 'solutions' for applab-type levels
+    if level.try(:examples).present? && (current_user&.authorized_teacher? || script.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
         # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
