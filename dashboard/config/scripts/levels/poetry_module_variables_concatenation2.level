@@ -15,9 +15,9 @@
     "show_type_hints": true,
     "use_modal_function_editor": "true",
     "embed": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_burst\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[]",
     "instructions_important": "false",
-    "long_instructions": "*Let's practice adding a variable to a program!*\r\n\r\nText can be stored in a variable and then used later on.\r\n\r\n* Connect a variable block to the `prompt user` block and the `set title` block.\r\n* Make sure both variables have the *same* label.",
+    "long_instructions": "*Change the `???` variable labels to others used in the program.*",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -44,10 +44,10 @@
   },
   "game_id": 69,
   "published": true,
-  "created_at": "2021-10-19T16:01:04.000Z",
+  "created_at": "2021-10-20T16:03:28.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-19T16:01:04.722+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_freeplay\\\"\"],\"cloned_from\":\"poetry_module_generator_freeplay\"},{\"changed_at\":\"2021-10-19 16:06:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"project_template_level_name\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:07:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:10:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:18:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:18:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:20:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:23:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:29:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:58 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:59 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:39:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:47:34 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:50:05 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-20T16:03:28.611+00:00\",\"changed\":[\"cloned from \\\"poetry_module_variables_concatenation1\\\"\"],\"cloned_from\":\"poetry_module_variables_concatenation1\"},{\"changed_at\":\"2021-10-20 16:05:28 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 16:43:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 16:43:21 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 16:47:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 16:49:26 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:08:10 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -58,74 +58,192 @@
           <next>
             <block type="gamelab_setPrompt">
               <value name="QUESTION">
-                <block type="Poetry_stringValue">
-                  <title name="TEXT">Choose a title for the poem:</title>
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                  <title name="TEXT">Name an animal:</title>
                 </block>
               </value>
+              <value name="VAR">
+                <block type="variables_get">
+                  <title name="VAR">animal1</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_setPrompt">
+                  <value name="QUESTION">
+                    <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                      <title name="TEXT">Name another animal:</title>
+                    </block>
+                  </value>
+                  <value name="VAR">
+                    <block type="variables_get">
+                      <title name="VAR">animal2</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
             </block>
           </next>
         </block>
         <block type="gamelab_whenAllPromptsAnswered" deletable="false">
           <next>
             <block type="Poetry_setTitle">
+              <value name="TITLE">
+                <block type="gamelab_textJoin">
+                  <title name="TEXT1">The </title>
+                  <value name="TEXT2">
+                    <block type="Poetry_textVariableJoin">
+                      <title name="VAR">???</title>
+                      <value name="TEXT2">
+                        <block type="gamelab_textJoin">
+                          <title name="TEXT1"> and the </title>
+                          <value name="TEXT2">
+                            <block type="variables_get">
+                              <title name="VAR">???</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </value>
               <next>
                 <block type="Poetry_addLine">
                   <value name="LINE">
-                    <block type="Poetry_stringValue">
-                      <title name="TEXT">First I saw the white bear, </title>
+                    <block type="gamelab_textJoin">
+                      <title name="TEXT1">The </title>
+                      <value name="TEXT2">
+                        <block type="Poetry_textVariableJoin">
+                          <title name="VAR">???</title>
+                          <value name="TEXT2">
+                            <block type="gamelab_textJoin">
+                              <title name="TEXT1"> and the </title>
+                              <value name="TEXT2">
+                                <block type="Poetry_textVariableJoin">
+                                  <title name="VAR">???</title>
+                                  <value name="TEXT2">
+                                    <block type="Poetry_stringValue">
+                                      <title name="TEXT"> went to sea</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
                     </block>
                   </value>
                   <next>
                     <block type="Poetry_addLine">
                       <value name="LINE">
                         <block type="Poetry_stringValue">
-                          <title name="TEXT">then I saw the black;</title>
+                          <title name="TEXT">In a beautiful pea-green boat,</title>
                         </block>
                       </value>
                       <next>
                         <block type="Poetry_addLine">
                           <value name="LINE">
                             <block type="Poetry_stringValue">
-                              <title name="TEXT">Then I saw the camel </title>
+                              <title name="TEXT">They took some honey, and plenty of money,</title>
                             </block>
                           </value>
                           <next>
                             <block type="Poetry_addLine">
                               <value name="LINE">
                                 <block type="Poetry_stringValue">
-                                  <title name="TEXT">with a hump upon his back;</title>
+                                  <title name="TEXT">Wrapped in a five-pound note.</title>
                                 </block>
                               </value>
                               <next>
                                 <block type="Poetry_addLine">
                                   <value name="LINE">
-                                    <block type="Poetry_stringValue">
-                                      <title name="TEXT">Then I saw the elephant </title>
+                                    <block type="gamelab_textJoin">
+                                      <title name="TEXT1">The </title>
+                                      <value name="TEXT2">
+                                        <block type="Poetry_textVariableJoin">
+                                          <title name="VAR">???</title>
+                                          <value name="TEXT2">
+                                            <block type="Poetry_stringValue">
+                                              <title name="TEXT"> looked up to the stars above,</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </value>
                                     </block>
                                   </value>
                                   <next>
                                     <block type="Poetry_addLine">
                                       <value name="LINE">
                                         <block type="Poetry_stringValue">
-                                          <title name="TEXT">a-waving of his trunk;</title>
+                                          <title name="TEXT">And sang to a small guitar,</title>
                                         </block>
                                       </value>
                                       <next>
                                         <block type="Poetry_addLine">
                                           <value name="LINE">
-                                            <block type="Poetry_stringValue">
-                                              <title name="TEXT">Then I saw the monkeys&#x2014;</title>
+                                            <block type="gamelab_textJoin">
+                                              <title name="TEXT1">O lovely  </title>
+                                              <value name="TEXT2">
+                                                <block type="Poetry_textVariableJoin">
+                                                  <title name="VAR">???</title>
+                                                  <value name="TEXT2">
+                                                    <block type="gamelab_textJoin">
+                                                      <title name="TEXT1">! O </title>
+                                                      <value name="TEXT2">
+                                                        <block type="Poetry_textVariableJoin">
+                                                          <title name="VAR">???</title>
+                                                          <value name="TEXT2">
+                                                            <block type="Poetry_stringValue">
+                                                            <title name="TEXT">, my love,</title>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                </block>
+                                              </value>
                                             </block>
                                           </value>
                                           <next>
                                             <block type="Poetry_addLine">
                                               <value name="LINE">
-                                                <block type="Poetry_stringValue">
-                                                  <title name="TEXT">mercy, how unpleasantly they smelt!</title>
+                                                <block type="gamelab_textJoin">
+                                                  <title name="TEXT1">What a beautiful </title>
+                                                  <value name="TEXT2">
+                                                    <block type="Poetry_textVariableJoin">
+                                                      <title name="VAR">???</title>
+                                                      <value name="TEXT2">
+                                                        <block type="Poetry_stringValue">
+                                                          <title name="TEXT"> you are, you are, you are,</title>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
                                                 </block>
                                               </value>
                                               <next>
-                                                <block type="Poetry_animateText" deletable="false"/>
+                                                <block type="Poetry_addLine">
+                                                  <value name="LINE">
+                                                    <block type="gamelab_textJoin">
+                                                      <title name="TEXT1">What a beautiful </title>
+                                                      <value name="TEXT2">
+                                                        <block type="Poetry_textVariableJoin">
+                                                          <title name="VAR">???</title>
+                                                          <value name="TEXT2">
+                                                            <block type="Poetry_stringValue">
+                                                            <title name="TEXT"> you are.</title>
+                                                            </block>
+                                                          </value>
+                                                        </block>
+                                                      </value>
+                                                    </block>
+                                                  </value>
+                                                  <next>
+                                                    <block type="Poetry_animateText"/>
+                                                  </next>
+                                                </block>
                                               </next>
                                             </block>
                                           </next>
@@ -146,14 +264,45 @@
             </block>
           </next>
         </block>
+        <block type="Poetry_whenLineShows">
+          <title name="N">1</title>
+          <next>
+            <block type="Poetry_setBackgroundEffect">
+              <title name="EFFECT">"squiggles"</title>
+              <title name="PALETTE">"ocean"</title>
+              <next>
+                <block type="Poetry_setFontColor">
+                  <value name="FILL">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ffffff</title>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="Poetry_whenLineShows">
+          <title name="N">5</title>
+          <next>
+            <block type="Poetry_setBackgroundEffect">
+              <title name="EFFECT">"stars"</title>
+              <title name="PALETTE">"sky"</title>
+            </block>
+          </next>
+        </block>
+        <block type="Poetry_whenLineShows">
+          <title name="N">7</title>
+          <next>
+            <block type="Poetry_setForegroundEffect">
+              <title name="EFFECT">"hearts"</title>
+            </block>
+          </next>
+        </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
-      <xml>
-        <block type="variables_get" limit="2">
-          <title name="VAR">title</title>
-        </block>
-      </xml>
+      <xml/>
     </toolbox_blocks>
   </blocks>
 </Poetry>
