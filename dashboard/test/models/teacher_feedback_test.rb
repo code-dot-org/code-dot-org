@@ -215,6 +215,18 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal(feedback.awaiting_teacher_review?(true), true)
   end
 
+  test 'keep_working? returns true if review_state is keep working' do
+    feedback = create :teacher_feedback, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    assert_equal(feedback.keep_working?, true)
+  end
+
+  test 'keep_working? returns false if review_state is not keep working' do
+    feedback = create :teacher_feedback, review_state: TeacherFeedback::REVIEW_STATES.completed
+
+    assert_equal(feedback.keep_working?, false)
+  end
+
   test 'destroys when teacher is destroyed' do
     teacher = create :teacher
     first_feedback = create :teacher_feedback, teacher: teacher
