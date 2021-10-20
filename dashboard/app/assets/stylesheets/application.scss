@@ -1471,7 +1471,7 @@ html[dir=rtl] .qtip-content {
 }
 
 .cdo-qtips {
-  z-index: 1;
+  z-index: 2000 !important;
 }
 
 .tooltip-x-close.qtip-icon {
