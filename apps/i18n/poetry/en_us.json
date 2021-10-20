@@ -38,7 +38,7 @@
   "poLines": "The birds have vanished into the sky,\nAnd now the last cloud drains away.\nWe sit together, the mountain and me,\nUntil only the mountain remains.",
   "poTitle": "Mountain",
   "poem": "Poem:",
-  "profanityFoundError": "Your poem text contains inappropriate language so it will not be saved. Please update your poem to remove the {wordCount, plural, one {word} other {words}} \"{words}\".",
+  "profanityFoundError": "Your poem contains inappropriate language so it will not be saved. Please update your poem to remove the {wordCount, plural, one {word} other {words}} \"{words}\".",
   "reinfFeedbackMsg": "You're finished! Click \"Continue\" to move on to the next level.",
   "removedSprite": "It looks like you removed a sprite. You can add it back from the **Sprites** toolbox.",
   "riosLines": "The library is the book of books,\nIts concrete and wood and glass covers\n\nKeeping within them the very big,\nVery long story of everything.\n\nThe library is dangerous, full\nOf answers. If you go inside,\n\nYou may not come out\nThe same person who went in.",
