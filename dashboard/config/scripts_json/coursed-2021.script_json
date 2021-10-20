@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-10-20 16:21:20 UTC",
+    "serialized_at": "2021-09-03 20:42:51 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "coursed-2021"
@@ -10810,6 +10810,15 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "e546a87d-131a-4d75-b2c6-d5942ee4a0c0"
+      }
+    },
+    {
+      "key": "88fe1860-9696-445b-b15d-ea9f5b71352d",
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "88fe1860-9696-445b-b15d-ea9f5b71352d"
       }
     },
     {
