@@ -720,7 +720,7 @@ class ScriptLevel < ApplicationRecord
   def get_example_solutions(level, current_user, section=nil)
     level_example_links = []
 
-    return [] unless current_user&.teacher?
+    return [] if !current_user&.teacher? || CDO.properties_encryption_key.blank?
 
     if level.try(:examples).present? && (current_user.authorized_teacher? || script.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
