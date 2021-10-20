@@ -29,7 +29,7 @@ LegacySingleLevelGroupDialog.propTypes = {
   body: PropTypes.string.isRequired
 };
 
-export const UnsubmitDialog = (
+export const LegacyUnsubmitDialog = (
   <LegacySingleLevelGroupDialog
     id="unsubmit-dialogcontent"
     title={i18n.unsubmitAssessment()}
