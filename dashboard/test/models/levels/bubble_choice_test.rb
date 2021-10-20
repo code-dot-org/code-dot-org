@@ -275,6 +275,47 @@ DSL
     assert_nil @bubble_choice.get_sublevel_for_progress(student, @script_level.script)
   end
 
+  test 'get_sublevel_for_progress_from_data returns sublevel with highest best_result for user when there is no teacher feedback' do
+    student = create :student
+    script = @script_level.script
+    ul_1 = create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
+    ul_2 = create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
+
+    user_levels_by_level = {
+      @sublevel1.id => ul_1,
+      @sublevel2.id => ul_2
+    }
+
+    assert_equal @sublevel2, @bubble_choice.get_sublevel_for_progress_from_data(user_levels_by_level, {})
+  end
+
+  test 'get_sublevel_for_progress_from_data returns sublevel where the latest feedback has keepWorking review state' do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
+    script = @script_level.script
+    ul_1 = create :user_level, user: student, level: @sublevel1, script: script, best_result: 20
+    ul_2 = create :user_level, user: student, level: @sublevel2, script: script, best_result: 100
+    feedback = create :teacher_feedback, student: student, teacher: teacher, level: @sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    user_levels_by_level = {
+      @sublevel1.id => ul_1,
+      @sublevel2.id => ul_2
+    }
+
+    teacher_feedback_by_level = {
+      @sublevel1.id => feedback
+    }
+
+    assert_equal @sublevel1, @bubble_choice.get_sublevel_for_progress_from_data(user_levels_by_level, teacher_feedback_by_level)
+  end
+
+  test 'get_sublevel_for_progress_from_data returns nil if no sublevels have progress or feedback' do
+    assert_nil @bubble_choice.get_sublevel_for_progress_from_data({}, {})
+  end
+
   test 'self.parent_levels returns BubbleChoice parent levels for given sublevel name' do
     sublevel1 = create :level, name: 'sublevel_1'
     sublevel2 = create :level, name: 'sublevel_2'

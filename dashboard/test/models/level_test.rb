@@ -1142,6 +1142,29 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal sublevel2, level_for_progress
   end
 
+  test "get_level_for_progress returns the sublevel with the best result if no sublevels have keepWorking feedback and data is provided" do
+    student = create :student
+
+    sublevel1 = create :level
+    sublevel2 = create :level
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    ul_1 = create :user_level, user: student, level: sublevel1, script: script, best_result: 20
+    ul_2 = create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+
+    user_levels_by_level = {
+      sublevel1.id => ul_1,
+      sublevel2.id => ul_2
+    }
+
+    teacher_feedback_by_level = {}
+
+    level_for_progress = bubble_choice.get_level_for_progress(student, script, user_levels_by_level, teacher_feedback_by_level)
+    assert_equal sublevel2, level_for_progress
+  end
+
   test "get_level_for_progress returns the sublevel with keepWorking feedback if one has keepWorking feedback" do
     teacher = create :teacher
     student = create :student
@@ -1159,6 +1182,35 @@ class LevelTest < ActiveSupport::TestCase
     create :teacher_feedback, student: student, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 
     level_for_progress = bubble_choice.get_level_for_progress(student, script)
+    assert_equal sublevel1, level_for_progress
+  end
+
+  test "get_level_for_progress returns the sublevel with keepWorking feedback if one has keepWorking feedback and data is provided" do
+    teacher = create :teacher
+    student = create :student
+    section = create :section, teacher: teacher
+    section.students << student # we query for feedback where student is currently in section
+
+    sublevel1 = create :level
+    sublevel2 = create :level
+    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', sublevels: [sublevel1, sublevel2]
+    script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
+
+    ul_1 = create :user_level, user: student, level: sublevel1, script: script, best_result: 20
+    ul_2 = create :user_level, user: student, level: sublevel2, script: script, best_result: 100
+    feedback = create :teacher_feedback, student: student, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
+
+    user_levels_by_level = {
+      sublevel1.id => ul_1,
+      sublevel2.id => ul_2
+    }
+
+    teacher_feedback_by_level = {
+      sublevel1.id => feedback
+    }
+
+    level_for_progress = bubble_choice.get_level_for_progress(student, script, user_levels_by_level, teacher_feedback_by_level)
     assert_equal sublevel1, level_for_progress
   end
 
