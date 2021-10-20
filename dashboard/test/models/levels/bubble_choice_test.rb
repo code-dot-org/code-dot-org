@@ -10,7 +10,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     create :game, name: 'BubbleChoice'
 
     @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    @sublevel2 = create :level, name: 'choice_2', short_instructions: 'A short instruction'
+    @sublevel2 = create :dance, :with_example_solutions, name: 'choice_2', short_instructions: 'A short instruction'
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
     @script_level = create :script_level, levels: [@bubble_choice]
@@ -204,6 +204,13 @@ DSL
     ]
 
     assert_equal expected_summary, sublevel_summary
+  end
+
+  test 'summarize_sublevels includes exampleSolutions' do
+    teacher = create :authorized_teacher
+    sublevel_summary = @bubble_choice.summarize_sublevels(script_level: @script_level, user_id: teacher.id)
+
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevel_summary[1][:exampleSolutions]
   end
 
   test 'summarize_sublevels with script_level' do
