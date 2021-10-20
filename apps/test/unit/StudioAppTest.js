@@ -21,6 +21,7 @@ import {
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import * as utils from '@cdo/apps/utils';
+import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
@@ -254,23 +255,23 @@ describe('StudioApp', () => {
         expect(studio.milestoneStartTime).to.equal(2000);
       });
 
-      it('sets the milestoneStartTotalIdleTime to the total idle time in redux', () => {
+      it('dispatches resetIdleTime', () => {
+        const stubbedDispatch = sinon.stub();
         sinon.stub(redux, 'getStore').returns({
           getState: () => ({
             studioAppActivity: {
-              idleTimeMs: 3000
+              idleTimeSinceLastReport: 3000
             },
             pageConstants: {
               isReadOnlyWorkspace: false
             }
-          })
+          }),
+          dispatch: stubbedDispatch
         });
-
-        studio.milestoneStartTotalIdleTime = 0;
 
         studio.report({});
 
-        expect(studio.milestoneStartTotalIdleTime).to.equal(3000);
+        expect(stubbedDispatch).to.have.been.calledWith(resetIdleTime());
 
         redux.getStore.restore();
       });
@@ -285,23 +286,21 @@ describe('StudioApp', () => {
         sinon.stub(redux, 'getStore').returns({
           getState: () => ({
             studioAppActivity: {
-              idleTimeMs: 2500
+              idleTimeSinceLastReport: 1000
             },
             pageConstants: {
               isReadOnlyWorkspace: false
             }
-          })
+          }),
+          dispatch: sinon.stub()
         });
 
-        studio.milestoneStartTotalIdleTime = 1500;
         studio.milestoneStartTime = 1000;
         studio.initTime = 1000;
         clock.tick(3000);
 
         studio.report({});
 
-        // time since last milestone = 3000 - 1000 = 2000
-        // idle time since last milestone = 2500 - 1500 = 1000
         // time spent = 2000 - 1000 = 1000
         expect(onAttemptSpy).to.have.been.calledWith({
           pass: undefined,
