@@ -5,6 +5,7 @@ import {POEMS} from './constants';
 import * as utils from './commands/utils';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
+import spritelabCommands from '../spritelab/commands/index';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
@@ -74,6 +75,10 @@ export default class PoetryLibrary extends CoreLibrary {
         if (!this.isPreviewFrame()) {
           this.foregroundEffects.forEach(effect => effect.func());
         }
+      },
+
+      destroy(costume) {
+        spritelabCommands.destroy.call(this, {costume});
       },
 
       // And add custom Poem Bot commands
