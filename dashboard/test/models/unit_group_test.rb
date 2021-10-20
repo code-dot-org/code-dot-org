@@ -72,7 +72,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', obj['name']
     assert_equal ['unit1', 'unit2', 'unit3'], obj['script_names']
     assert_equal obj['published_state'], SharedCourseConstants::PUBLISHED_STATE.stable
-    assert_equal obj['instruction_type'], SharedCourseConstants::PUBLISHED_STATE.teacher_led
+    assert_equal obj['instruction_type'], SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
   end
 
   test "should serialize resources to json" do
@@ -90,7 +90,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', obj['name']
     assert_equal ['unit1', 'unit2', 'unit3'], obj['script_names']
     assert_equal obj['published_state'], SharedCourseConstants::PUBLISHED_STATE.stable
-    assert_equal obj['instruction_type'], SharedCourseConstants::PUBLISHED_STATE.teacher_led
+    assert_equal obj['instruction_type'], SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
     assert_equal 2, obj['resources'].length
     assert_equal 1, obj['student_resources'].length
   end
