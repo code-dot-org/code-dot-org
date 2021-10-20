@@ -123,7 +123,7 @@ class DSLDefined < Level
 
       level = setup data
 
-      if level.existing_filename.blank? && File.exist?(level.canonical_filename)
+      if level.existing_filename.blank? && File.exist?(Rails.root.join(level.canonical_filename))
         raise "Cannot create level named #{level.name.dump} because file #{level.canonical_filename.dump} already exists"
       end
 
