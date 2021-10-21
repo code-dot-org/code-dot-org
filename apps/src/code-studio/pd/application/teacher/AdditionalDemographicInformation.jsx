@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import {
   PageLabels,
   SectionHeaders,
@@ -18,9 +19,12 @@ import {
   LabeledCheckBoxesWithAdditionalTextFields
 } from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 
 const AdditionalDemographicInformation = props => {
+  const {data} = props;
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
+  const [regionalPartner] = useRegionalPartner(data);
 
   const openPrivacyDialog = event => {
     // preventDefault so clicking this link inside the label doesn't
@@ -54,7 +58,12 @@ const AdditionalDemographicInformation = props => {
             name="agree"
             label={
               <span>
-                {labelFor('agree')}{' '}
+                {labelFor('agree').replace(
+                  'my local Code.org Regional Partner',
+                  regionalPartner
+                    ? regionalPartner.name
+                    : 'my local Code.org Regional Partner'
+                )}{' '}
                 <a onClick={openPrivacyDialog}>Learn more.</a>
               </span>
             }
@@ -68,6 +77,13 @@ const AdditionalDemographicInformation = props => {
       </LabelsContext.Provider>
     </FormContext.Provider>
   );
+};
+AdditionalDemographicInformation.propTypes = {
+  options: PropTypes.object.isRequired,
+  errors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  errorMessages: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 AdditionalDemographicInformation.associatedFields = [
