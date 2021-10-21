@@ -177,7 +177,7 @@
                                   <value name="BEHAVIOR">
                                     <block type="gamelab_behavior_get">
                                       <mutation/>
-                                      <title name="VAR">moving</title>
+                                      <title name="VAR" id="moving">moving</title>
                                     </block>
                                   </value>
                                   <next>
@@ -190,7 +190,7 @@
                                       <value name="BEHAVIOR">
                                         <block type="gamelab_behavior_get">
                                           <mutation/>
-                                          <title name="VAR">wandering</title>
+                                          <title name="VAR" id="wandering">wandering</title>
                                         </block>
                                       </value>
                                     </block>
@@ -741,7 +741,7 @@
             <title name="VAR">getting smaller</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">moving</title>
+            <title name="VAR" id="moving">moving</title>
           </block>
           <block type="gamelab_behavior_get">
             <title name="VAR">moving north</title>
@@ -756,7 +756,7 @@
             <title name="VAR">moving west</title>
           </block>
           <block type="gamelab_behavior_get">
-            <title name="VAR">wandering</title>
+            <title name="VAR" id="wandering">wandering</title>
           </block>
         </category>
         <category name="Events">
