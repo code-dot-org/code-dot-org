@@ -1,29 +1,34 @@
 <div class="col-50" style="padding: 10px">
   <a href="<%= url %>" style="font-family: 'Gotham 4r', sans-serif; color: black; text-decoration: none">
-    <div style=" padding: 20px; border-radius: 10px; color: black; border: solid grey 1px">
-      <div style="font-size: 24px; line-height: 1.5;">
-        %title%
+    <div style=" padding: 0px; border-radius: 10px; color: black; border: solid grey 1px; overflow: hidden">
+      <div style="width: 100%">
+        <img src="%image%" style="width: 100%"/>
       </div>
-      <div>
-        Grades:
-        %grades%
+      <div style="padding: 20px">
+        <div style="font-size: 24px; line-height: 1.5;">
+          %title%
+        </div>
+        <div style="padding-bottom: 20px">
+          <i class="fa fa-fw fa-flag"/>
+          %grades%
+          &nbsp;
+          &nbsp;
+          <i class="fa fa-fw fa-book"/>
+          %subject%
+          &nbsp;
+          &nbsp;
+          <i class="fa fa-fw fa-clock-o"/>
+          %duration%
+        </div>
+        <div>
+          %description%
+        </div>
+        <a href="%url%">
+          <button>
+            %button_text%
+          </button>
+        </a>
       </div>
-      <div>
-        Subject:
-        %subject%
-      </div>
-      <div>
-        Duration:
-        %duration%
-      </div>
-      <div>
-        %description%
-      </div>
-      <a href="%url%">
-        <button>
-          %button_text%
-        </button>
-      </a>
     </div>
   </a>
 </div>
