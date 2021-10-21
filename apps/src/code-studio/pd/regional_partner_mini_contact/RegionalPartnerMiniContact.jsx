@@ -7,6 +7,7 @@ import {SelectStyleProps} from '../constants';
 import FieldGroup from '../form_components/FieldGroup';
 import ButtonList from '../form_components/ButtonList';
 import color from '@cdo/apps/util/color';
+import $ from 'jquery';
 
 const ROLES = [
   'Teacher',
