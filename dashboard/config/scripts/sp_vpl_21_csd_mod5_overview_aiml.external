@@ -1,0 +1,28 @@
+name 'SP-VPL-21-CSD-mod5-Overview-AIML'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Preparing to teach Unit 7: AI and Machine Learning
+
+#### Welcome to Module 5! This module is designed help you preparer to teach Unit 7 of CS Discoveries. 
+
+##
+
+
+<img src="https://images.code.org/bfc6d14e54eaeeb369a70edb436bf14f-image-1634826613607.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 0;">
+
+
+## You will:
+
+* ##### Practice key concepts included in the unit.
+* ##### Explore end of chapter projects. 
+* ##### Make a plan for implementing the unit with your students. 
+
+### **Suggested time:** 60 minutes
+
+<div style="clear:both"/>
+
+## Let's get started!
+
+MARKDOWN
