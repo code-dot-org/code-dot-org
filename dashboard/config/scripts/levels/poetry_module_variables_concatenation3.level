@@ -42,12 +42,12 @@
     "preload_asset_list": null,
     "default_poem": null
   },
+  "user_id": 13468,
   "game_id": 69,
-  "published": true,
   "created_at": "2021-10-20T16:49:59.000Z",
   "level_num": "custom",
-  "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-20T16:49:59.476+00:00\",\"changed\":[\"cloned from \\\"poetry_module_variables_concatenation2\\\"\"],\"cloned_from\":\"poetry_module_variables_concatenation2\"},{\"changed_at\":\"2021-10-20 16:50:43 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 16:59:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:01:22 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:01:22 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:02:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:02:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:05:04 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-10-20T16:49:59.476+00:00\",\"changed\":[\"cloned from \\\"poetry_module_variables_concatenation2\\\"\"],\"cloned_from\":\"poetry_module_variables_concatenation2\"},{\"changed_at\":\"2021-10-20 16:50:43 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 16:59:31 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:01:22 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:01:22 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:02:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:02:55 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 17:05:04 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-21 16:59:00 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -136,28 +136,30 @@
         <category name="Text">
           <block type="Poetry_setTitle">
             <value name="TITLE">
-              <block type="Poetry_stringValue">
-                <title name="TEXT"/>
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
               </block>
             </value>
           </block>
           <block type="Poetry_setAuthor">
             <value name="AUTHOR">
-              <block type="Poetry_stringValue">
-                <title name="TEXT"/>
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
               </block>
             </value>
           </block>
-          <block type="Poetry_addLine"/>
+          <block type="Poetry_addLine">
+            <value name="LINE">
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
           <block type="Poetry_animateText"/>
           <block type="Poetry_hideText"/>
-          <block type="Poetry_stringValue">
-            <title name="TEXT"/>
-          </block>
           <block type="gamelab_textJoin">
             <title name="TEXT1"/>
           </block>
-          <block type="Poetry_textConcat"/>
         </category>
         <category name="Variables" custom="VARIABLE">
           <block type="gamelab_setPrompt">
@@ -171,9 +173,6 @@
                 <title name="VAR">???</title>
               </block>
             </value>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">???</title>
           </block>
           <block type="gamelab_textVariableJoin">
             <title name="VAR">???</title>
