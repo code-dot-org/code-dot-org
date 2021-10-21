@@ -27,7 +27,8 @@ class HttpCache
     '/s/hello-world-food/lessons/1/levels/11',
     '/s/hello-world-animals/lessons/1/levels/11',
     '/s/hello-world-retro/lessons/1/levels/11',
-    '/s/hello-world-emoji/lessons/1/levels/11'
+    '/s/hello-world-emoji/lessons/1/levels/11',
+    '/s/outbreak/lessons/1/levels/10'
   ]
 
   # A map from script name to script level URL pattern.
@@ -50,6 +51,7 @@ class HttpCache
     hello-world-animals
     hello-world-retro
     hello-world-emoji
+    outbreak
   ).map do |script_name|
     # Most scripts use the default route pattern.
     [script_name, "/s/#{script_name}/lessons/*"]
