@@ -425,7 +425,7 @@ module Pd
       unable_to_attend: 'I’m not able to attend any of the above workshop dates. (Please Explain):',
       able_to_attend_single: "Yes, I'm able to attend".freeze,
       no_explain: "No (Please Explain):".freeze,
-      no_pay_fee: 'No, my school/district will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      no_pay_fee: 'No, my school/district would not be able to pay the program fee and I would like to be considered for a scholarship.',
       i_dont_know_explain: "I don't know (Please Explain):",
       not_sure_explain: 'Not sure (Please Explain):'
     }.freeze
