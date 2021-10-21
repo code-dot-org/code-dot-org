@@ -1,3 +1,8 @@
+export const PoetryStandaloneApp = {
+  Poetry: 'poetry',
+  PoetryHoc: 'poetry_hoc'
+};
+
 export const PALETTES = {
   grayscale: [
     '#000000',

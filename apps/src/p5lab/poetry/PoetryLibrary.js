@@ -1,3 +1,4 @@
+/* global appOptions */
 import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
@@ -5,6 +6,7 @@ import {POEMS} from './constants';
 import * as utils from './commands/utils';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
+import spritelabCommands from '../spritelab/commands/index';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
@@ -32,7 +34,8 @@ export default class PoetryLibrary extends CoreLibrary {
       // The animation can be restarted with the animatePoem() block, which
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
-      animationStartFrame: 1
+      animationStartFrame:
+        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -74,6 +77,10 @@ export default class PoetryLibrary extends CoreLibrary {
         if (!this.isPreviewFrame()) {
           this.foregroundEffects.forEach(effect => effect.func());
         }
+      },
+
+      destroy(costume) {
+        spritelabCommands.destroy.call(this, {costume});
       },
 
       // And add custom Poem Bot commands
@@ -297,6 +304,10 @@ export default class PoetryLibrary extends CoreLibrary {
   }
 
   applyGlobalLineAnimation(renderInfo, frameCount) {
+    if (this.poemState.animationStartFrame === null) {
+      return renderInfo;
+    }
+
     // Add 2 so there's time before the first line and after the last line
     const framesPerLine = POEM_DURATION / (renderInfo.lines.length + 2);
 

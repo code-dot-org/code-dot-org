@@ -22,7 +22,7 @@ function setSuccessTime(criteria){
   if (!validationProps.successTime) {
     var success = true;
     for (var criterion in criteria) {
-      if (!criteria[criterion]) { //was just (!criterion)
+      if ((!criteria[criterion])) {
         success = false;
         break;
       }
@@ -287,8 +287,7 @@ function getClickedSpriteId(eventLog, prevEventLogLength){
   if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
-    if ((currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) &&
-        clickedSpriteId) {
+    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       return clickedSpriteId;
     }
   }
@@ -448,9 +447,38 @@ function drawProgressBar(status){
       fill(PASS_COLOR);
       rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.successTime)*PLAYSPACE_SIZE/WAIT_TIME),10);
       break;
+    case "newEventFail":
+      fill(FAIL_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.vars.delay)*PLAYSPACE_SIZE/WAIT_TIME),10);
+      break;
+    case "newEventPass":
+      fill(PASS_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.vars.delay)*PLAYSPACE_SIZE/WAIT_TIME),10);
+      break;
     case "challengePass":
     //Do something for challengePass
   }
 
   pop();
+}
+
+/**
+ * Uses delay variable logic to determine which progress bar to draw
+ * in the playspace.
+ */
+function determineAndDrawProgressBar(successTime, delay){
+  console.log("delay: " + delay);
+  if (!successTime) {
+    if (delay && delay > 0) {
+      drawProgressBar("newEventFail");
+    } else {
+      drawProgressBar("fail");
+    }
+  } else {
+    if (delay && delay > 0) {
+      drawProgressBar("newEventPass");
+    } else {
+      drawProgressBar("pass");
+    }
+  }
 }
