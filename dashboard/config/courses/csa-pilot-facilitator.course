@@ -8,6 +8,7 @@
     "csa5-pilot-facilitator"
   ],
   "published_state": "pilot",
+  "instruction_type": "teacher_led",
   "properties": {
     "family_name": "csa-pilot-facilitator",
     "has_numbered_units": true,
