@@ -129,7 +129,7 @@ def hoc_language(lang_codes_str)
 
   # Account for list of more than 26
   languages = language_codes.select {|code| code}.first(26).join(', ')
-  languages += ' and more!' if language_codes.length > 26
+  languages += ', and more!' if language_codes.length > 26
 
   languages
 end
