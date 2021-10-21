@@ -472,7 +472,7 @@ XML
   end
 
   test 'localizes authored hints' do
-    test_locale = :"te-ST"
+    test_locale = :"es-MX"
     level_name = 'test_localize_authored_hints'
 
     I18n.locale = test_locale
@@ -504,10 +504,10 @@ XML
     localized_hints = JSON.parse(level.localized_authored_hints)
 
     assert_equal localized_hints[0]["hint_markdown"], "first test markdown"
-    assert_equal localized_hints[0]["tts_url"], "https://tts.code.org/sharon22k/180/100/1889ea7b2140fc1aef28a2145df32fbb/test_localize_authored_hints.mp3"
+    assert_equal localized_hints[0]["tts_url"], "https://tts.code.org/rosa22k/180/100/1889ea7b2140fc1aef28a2145df32fbb/test_localize_authored_hints.mp3"
 
     assert_equal localized_hints[1]["hint_markdown"], "second test markdown"
-    assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/sharon22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
+    assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/rosa22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
   end
 
   test 'localized_blocks_with_placeholder_texts' do
