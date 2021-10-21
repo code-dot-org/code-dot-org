@@ -867,6 +867,44 @@ class ApiControllerTest < ActionController::TestCase
 
     body = JSON.parse(response.body)
     assert_nil body['channel']
+    assert_nil body['reduceChannelUpdates']
+  end
+
+  test "user_progress_for_lesson should normally return reduceChannelUpdates false" do
+    script = create(:script, :with_levels, levels_count: 1)
+
+    user = create :user
+    sign_in user
+
+    get :user_progress_for_lesson, params: {
+      script: script.name,
+      lesson_position: 1,
+      level_position: 1,
+      get_channel_id: true
+    }
+
+    body = JSON.parse(response.body)
+    assert_equal false, body['reduceChannelUpdates']
+  end
+
+  test "user_progress_for_lesson should return reduceChannelUpdates true in emergency mode" do
+    script = create(:script, :with_levels, levels_count: 1)
+
+    user = create :user
+    sign_in user
+
+    # Mimic Gatekeeper setting that's set in emergency mode
+    Gatekeeper.set('updateChannelOnSave', where: {script_name: script.name}, value: false)
+
+    get :user_progress_for_lesson, params: {
+      script: script.name,
+      lesson_position: 1,
+      level_position: 1,
+      get_channel_id: true
+    }
+
+    body = JSON.parse(response.body)
+    assert_equal true, body['reduceChannelUpdates']
   end
 
   test "should slog the contained level id when present" do

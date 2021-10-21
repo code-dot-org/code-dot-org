@@ -65,6 +65,7 @@
  * @property {?Object} azureSpeechServiceVoices
  * @property {?string} authenticityToken
  * @property {boolean} levelRequiresChannel
+ * @property {boolean} reduceChannelUpdates
  */
 
 /**
