@@ -19,14 +19,14 @@ class CommentOptions extends Component {
   commentOptionTypes = {
     resolve: {
       onClick: this.props.onResolveStateToggle,
-      iconClass: 'fa fa-fw fa-check',
-      text: javalabMsg.resolve(),
+      iconClass: 'fa fa-fw fa-check-circle',
+      text: javalabMsg.markComplete(),
       key: 'Resolve'
     },
     reOpen: {
       onClick: this.props.onResolveStateToggle,
-      iconClass: 'fa fa-fw fa-undo',
-      text: javalabMsg.reOpen(),
+      iconClass: 'fa fa-fw fa-circle-o',
+      text: javalabMsg.markIncomplete(),
       key: 'Re-open'
     },
     delete: {
