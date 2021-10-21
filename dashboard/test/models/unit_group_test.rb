@@ -423,11 +423,11 @@ class UnitGroupTest < ActiveSupport::TestCase
     summary = unit_group.summarize
 
     assert_equal [:name, :id, :title, :assignment_family_title,
-                  :family_name, :version_year, :published_state,
+                  :family_name, :version_year, :published_state, :instruction_type,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,
-                  :announcements, :course_version_id, :prevent_course_version_change, :course_path, :instruction_type], summary.keys
+                  :announcements, :course_version_id, :prevent_course_version_change, :course_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
