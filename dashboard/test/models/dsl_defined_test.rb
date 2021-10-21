@@ -70,7 +70,8 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
   end
 
   test 'can create level without existing canonical filename' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write)
 
     # stub out system call looking for existing files in existing_filename method
     DSLDefined.any_instance.stubs(:`).returns('')
@@ -83,7 +84,8 @@ class DSLDefinedLevelTest < ActiveSupport::TestCase
   end
 
   test 'cannot create level with existing canonical filename' do
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    File.stubs(:write).raises('must not modify filesystem')
 
     # stub out system call looking for existing files in existing_filename method
     DSLDefined.any_instance.stubs(:`).returns('')
