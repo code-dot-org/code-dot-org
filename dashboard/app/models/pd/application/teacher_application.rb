@@ -827,13 +827,17 @@ module Pd::Application
           :csp_how_offer,
           :csp_ap_exam,
           :csa_which_grades,
-          :csa_how_offer
+          :csa_how_offer,
+          :csa_already_know,
+          :csa_phone_screen
         ]
       elsif key == 'csp'
         [
           :csd_which_grades,
           :csa_which_grades,
-          :csa_how_offer
+          :csa_how_offer,
+          :csa_already_know,
+          :csa_phone_screen
         ]
       elsif key == 'csa'
         [
@@ -868,7 +872,9 @@ module Pd::Application
             :csp_which_grades,
             :csp_how_offer,
             :csa_which_grades,
-            :csa_how_offer
+            :csa_how_offer,
+            :csa_already_know,
+            :csa_phone_screen
           ],
           principal: [
             :share_ap_scores,
@@ -881,7 +887,9 @@ module Pd::Application
           teacher: [
             :csd_which_grades,
             :csa_which_grades,
-            :csa_how_offer
+            :csa_how_offer,
+            :csa_already_know,
+            :csa_phone_screen
           ],
           principal: [
             :replace_which_course_csd,

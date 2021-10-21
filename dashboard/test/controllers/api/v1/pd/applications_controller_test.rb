@@ -981,7 +981,7 @@ module Api::V1::Pd
         "Total course hours",
         "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "Which existing course or curriculum will it replace? Mark all that apply.",
+        "Which existing course or curriculum will CS program replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
