@@ -2,6 +2,8 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
 import StylizedBaseDialog, {
   FooterButton
@@ -133,7 +135,7 @@ function PoemSelector(props) {
   };
 
   const onChange = e => {
-    const poemKey = e.target.value;
+    const poemKey = e.value;
     const poem = getPoem(poemKey);
 
     if (poemKey === msg.enterMyOwn()) {
@@ -154,9 +156,12 @@ function PoemSelector(props) {
   };
 
   const getPoemOptions = () => {
-    return Object.keys(POEMS)
+    const options = Object.keys(POEMS)
       .map(poemKey => getPoem(poemKey))
-      .sort((a, b) => (a.title > b.title ? 1 : -1));
+      .sort((a, b) => (a.title > b.title ? 1 : -1))
+      .map(poem => ({value: poem.key, label: poem.title}));
+    options.push({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
+    return options;
   };
 
   return (
@@ -165,21 +170,15 @@ function PoemSelector(props) {
       <label>
         <b>{msg.selectPoem()}</b>
       </label>
-      <select
-        value={getDropdownValue()}
-        style={styles.selector}
-        onChange={onChange}
-      >
-        {getPoemOptions().map(poem => (
-          // Using poem.key because that remains untranslated
-          <option key={poem.key} value={poem.key}>
-            {poem.title}
-          </option>
-        ))}
-        <option key={msg.enterMyOwn()} value={msg.enterMyOwn()}>
-          {msg.enterMyOwn()}
-        </option>
-      </select>
+      <div style={styles.selector}>
+        <Select
+          value={getDropdownValue()}
+          clearable={false}
+          searchable={false}
+          onChange={onChange}
+          options={getPoemOptions()}
+        />
+      </div>
     </div>
   );
 }
@@ -195,7 +194,8 @@ const styles = {
     maxWidth: APP_WIDTH
   },
   selector: {
-    width: '100%'
+    width: '100%',
+    marginBottom: 10
   },
   label: {
     flex: 1
