@@ -610,7 +610,7 @@ module Pd::Application
         ],
 
         pay_fee: [
-          'Yes, my school/district will be able to pay the full program fee.',
+          'Yes, my school/district would be able to pay the full program fee.',
           TEXT_FIELDS[:no_pay_fee],
           "I don't know."
         ],

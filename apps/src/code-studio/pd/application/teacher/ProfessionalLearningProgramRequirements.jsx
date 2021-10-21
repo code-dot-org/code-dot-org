@@ -21,7 +21,7 @@ import {LabeledDynamicCheckBoxesWithAdditionalTextFields} from '../../form_compo
 import {useRegionalPartner} from '../../components/useRegionalPartner';
 import {FormContext} from '../../form_components_func/FormComponent';
 
-const ProfessionalLearning = props => {
+const ProfessionalLearningProgramRequirements = props => {
   const {data, onChange} = props;
   const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
 
@@ -35,41 +35,13 @@ const ProfessionalLearning = props => {
     });
   }, [regionalPartner]);
 
-  const renderRegionalPartnerName = () => {
-    if (!regionalPartner?.name) {
-      return (
-        <div>
-          <p>
-            <strong>
-              There is no Regional Partner in your region at this time
-            </strong>
-          </p>
-          <p>
-            Code.org will review your application and contact you with options
-            for joining the program hosted by an available Regional Partner.
-            Please note that we are not able to guarantee a space for you with a
-            Regional Partner in another region, and you will be responsible for
-            the costs related to traveling to that location if a virtual option
-            is not available.
-          </p>
-        </div>
-      );
-    } else {
-      return (
-        <p>
-          <strong>Your Regional Partner is: {regionalPartner.name}</strong>
-        </p>
-      );
-    }
-  };
-
   const renderAssignedWorkshopList = () => {
-    if (regionalPartner?.workshops?.length === 0) {
+    if (regionalPartner.workshops.length === 0) {
       return (
         <p style={styles.marginBottom}>
           <strong>
             Summer Workshop dates have not yet been finalized for your region.
-            Your Regional Partner will be in touch once workshop details are
+            {regionalPartner.name} will be in touch once workshop details are
             known.
           </strong>
         </p>
@@ -89,6 +61,10 @@ const ProfessionalLearning = props => {
         <div>
           <LabeledDynamicCheckBoxesWithAdditionalTextFields
             name="ableToAttendMultiple"
+            label={PageLabels.professionalLearningProgramRequirements.ableToAttendMultiple.replace(
+              'Your Regional Partner',
+              regionalPartner.name
+            )}
             options={options}
             textFieldMap={textFieldMap}
           />
@@ -102,7 +78,7 @@ const ProfessionalLearning = props => {
       return (
         <div style={styles.error}>
           <p>
-            Please fill out Section 3 and select your program before completing
+            Please fill out Section 2 and select your program before completing
             this section.
           </p>
         </div>
@@ -111,7 +87,7 @@ const ProfessionalLearning = props => {
       return (
         <div style={styles.error}>
           <p>
-            Please fill out Section 2 and select your school before completing
+            Please fill out Section 1 and select your school before completing
             this section.
           </p>
         </div>
@@ -134,15 +110,37 @@ const ProfessionalLearning = props => {
         </div>
       );
     } else {
+      // regional partner exists and is not errored
       return (
         <div>
-          <div id="regionalPartnerName">{renderRegionalPartnerName()}</div>
-          {regionalPartner.name && (
-            <p>
-              Code.org’s Professional Learning Program is a yearlong program
-              starting in the summer and concluding in the spring. Workshops can
-              be held in-person, virtually, or as a combination of both
-              throughout the year. Refer to the Regional Partner’s{' '}
+          <p>
+            Code.org’s Professional Learning Program is a yearlong program
+            starting in the summer and concluding in the spring. Workshops can
+            be held in-person, virtually, or as a combination of both throughout
+            the year. Refer to {`${regionalPartner.name}'s `}
+            <a
+              href={
+                pegasus('/educate/professional-learning/program-information') +
+                (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              landing page
+            </a>{' '}
+            for more information about the schedule and delivery model.
+          </p>
+          <LabeledRadioButtonsWithAdditionalTextFields
+            name="committed"
+            textFieldMap={{
+              [TextFields.noExplain]: 'other'
+            }}
+          />
+          {renderAssignedWorkshopList()}
+          <div>
+            <label>
+              {regionalPartner.name} may have scholarships available to cover
+              the cost of the program.{' '}
               <a
                 href={
                   pegasus(
@@ -152,53 +150,17 @@ const ProfessionalLearning = props => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                landing page
-              </a>{' '}
-              for more information about the schedule and delivery model.
-            </p>
-          )}
-          <LabeledRadioButtonsWithAdditionalTextFields
-            name="committed"
-            textFieldMap={{
-              [TextFields.noExplain]: 'other'
-            }}
-          />
-          <div id="assignedWorkshops">
-            {data.regionalPartnerId && renderAssignedWorkshopList()}
+                Click here to check the fees and discounts for your program
+              </a>
+              . Let us know if your school or district would be able to pay the
+              fee or if you need to be considered for a scholarship.
+            </label>
+            <LabeledSingleCheckbox name="understandFee" />
+            <LabeledRadioButtons name="payFee" />
+            {data.payFee === TextFields.noPayFee && (
+              <LabeledLargeInput name="scholarshipReasons" />
+            )}
           </div>
-          Code.org <em>may</em> offer a national series of virtual academic year
-          workshops to support teachers who need to join a virtual academic year
-          cohort in order to engage in the full Professional Learning Program
-          because a virtual option is not offered in their region or is offered
-          on a schedule that doesn’t work for them.
-          <LabeledRadioButtons name="interestedInOnlineProgram" />
-          {data.regionalPartnerId && (
-            <div>
-              <label>
-                There may be scholarships available in your region to cover the
-                cost of the program.{' '}
-                <a
-                  href={
-                    pegasus(
-                      '/educate/professional-learning/program-information'
-                    ) +
-                    (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Click here to check the fees and discounts for your program
-                </a>
-                . Let us know if your school or district would be able to pay
-                the fee or if you need to be considered for a scholarship.
-              </label>
-              <LabeledSingleCheckbox name="understandFee" />
-              <LabeledRadioButtons name="payFee" />
-              {data.payFee === TextFields.noPayFee && (
-                <LabeledLargeInput name="scholarshipReasons" />
-              )}
-            </div>
-          )}
         </div>
       );
     }
@@ -214,11 +176,6 @@ const ProfessionalLearning = props => {
             Section 3: {SectionHeaders.professionalLearningProgramRequirements}
           </h3>
 
-          <p>
-            Participants are assigned to a program hosted by one of our Regional
-            Partners based on their school's geographic location.
-          </p>
-
           {renderContents()}
         </FormGroup>
       </LabelsContext.Provider>
@@ -226,7 +183,7 @@ const ProfessionalLearning = props => {
   );
 };
 
-ProfessionalLearning.getDynamicallyRequiredFields = data => {
+ProfessionalLearningProgramRequirements.getDynamicallyRequiredFields = data => {
   const requiredFields = [];
 
   if (
@@ -250,7 +207,7 @@ ProfessionalLearning.getDynamicallyRequiredFields = data => {
 /**
  * @override
  */
-ProfessionalLearning.processPageData = data => {
+ProfessionalLearningProgramRequirements.processPageData = data => {
   const changes = {};
 
   if (data.payFee !== TextFields.noPayFee) {
@@ -259,22 +216,21 @@ ProfessionalLearning.processPageData = data => {
 
   return changes;
 };
-ProfessionalLearning.associatedFields = [
+ProfessionalLearningProgramRequirements.associatedFields = [
   ...Object.keys(PageLabels.professionalLearningProgramRequirements),
   'regionalPartnerId',
   'regionalPartnerGroup',
   'regionalPartnerWorkshopIds'
 ];
-ProfessionalLearning.propTypes = {
+ProfessionalLearningProgramRequirements.propTypes = {
   options: PropTypes.object.isRequired,
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
   errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired,
-  accountEmail: PropTypes.string.isRequired
+  onChange: PropTypes.func.isRequired
 };
 
-export default ProfessionalLearning;
+export default ProfessionalLearningProgramRequirements;
 
 const styles = {
   ...defaultStyles,
