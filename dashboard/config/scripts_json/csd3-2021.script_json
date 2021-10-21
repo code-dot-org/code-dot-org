@@ -23,12 +23,19 @@
           "link": "https://code.org/educate/professional-development-online",
           "type": "information",
           "visibility": "Teacher-only"
+        },
+        {
+          "notice": "Virtual Modifications",
+          "details": "If you are teaching in a virtual, hybrid, or socially distanced setting, then you can view recommended modifications to our curricula that can be used in these settings.",
+          "link": "https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit",
+          "type": "information",
+          "visibility": "Teacher-only"
         }
       ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-14 21:48:08 UTC",
+    "serialized_at": "2021-10-18 22:12:04 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csd3-2021"
@@ -662,8 +669,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "9ca8c23c-8a83-49ad-8730-a9dbf170d403",
+      "key": "5faf4484-24e1-457d-8aaa-936904fec0c6",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5faf4484-24e1-457d-8aaa-936904fec0c6",
+        "lesson.key": "Programming for Entertainment",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "9ca8c23c-8a83-49ad-8730-a9dbf170d403",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -677,7 +697,7 @@
     },
     {
       "key": "ab1c7be9-2338-4d6e-9e1e-bc8bf3588309",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -691,7 +711,7 @@
     },
     {
       "key": "9df9685e-8a25-4529-a130-ccacacc23186",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -704,8 +724,21 @@
       }
     },
     {
-      "key": "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21",
+      "key": "d3975f3d-44de-46c8-a995-423cd29d2b0e",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d3975f3d-44de-46c8-a995-423cd29d2b0e",
+        "lesson.key": "Plotting Shapes",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -719,7 +752,7 @@
     },
     {
       "key": "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -733,7 +766,7 @@
     },
     {
       "key": "7e1b94ab-eb54-41ae-a003-fcbdc79f109c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -746,8 +779,21 @@
       }
     },
     {
-      "key": "fa7bb816-68d0-4964-a4c9-acf09377edc3",
+      "key": "0cf5933c-75fd-49c6-9f63-1afdeb99892b",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0cf5933c-75fd-49c6-9f63-1afdeb99892b",
+        "lesson.key": "Drawing in Game Lab",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "fa7bb816-68d0-4964-a4c9-acf09377edc3",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -761,7 +807,7 @@
     },
     {
       "key": "d72bfe99-62ed-4a91-87e0-27d873cc3aa8",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -775,7 +821,7 @@
     },
     {
       "key": "71aa25b3-9d43-4c6a-b01c-c0dca65cf932",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -788,8 +834,21 @@
       }
     },
     {
-      "key": "7e77a0b3-3a58-4d8d-9efa-b796c1496bde",
+      "key": "57247884-1eca-40ac-abb4-36cf446a6ae4",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "57247884-1eca-40ac-abb4-36cf446a6ae4",
+        "lesson.key": "Shapes and Parameters",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "7e77a0b3-3a58-4d8d-9efa-b796c1496bde",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -803,7 +862,7 @@
     },
     {
       "key": "20458bdc-a944-45dd-b4a5-ddc0acf2a104",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -817,7 +876,7 @@
     },
     {
       "key": "0e14ff41-9ad6-4802-a118-4b50a607b384",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -830,8 +889,21 @@
       }
     },
     {
-      "key": "fa1d9228-1d94-46f9-8a49-d075d82546d9",
+      "key": "92c95b0a-5909-4de6-9501-c206eb277d18",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "92c95b0a-5909-4de6-9501-c206eb277d18",
+        "lesson.key": "Variables",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "fa1d9228-1d94-46f9-8a49-d075d82546d9",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -845,7 +917,7 @@
     },
     {
       "key": "b2692599-66de-4bb5-aeb5-c63a06dd7040",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -859,7 +931,7 @@
     },
     {
       "key": "ca4d5d58-a1a8-4574-8413-b8e79a0a06d7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -872,8 +944,21 @@
       }
     },
     {
-      "key": "3cca2572-607f-4925-8b36-6cf02506c1b6",
+      "key": "dad741db-e1fa-4efc-a1a5-9189172fd079",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dad741db-e1fa-4efc-a1a5-9189172fd079",
+        "lesson.key": "Random Numbers",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "3cca2572-607f-4925-8b36-6cf02506c1b6",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -887,7 +972,7 @@
     },
     {
       "key": "752eddc2-eb93-48e1-90f0-19932c4f53cd",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -901,7 +986,7 @@
     },
     {
       "key": "1ba97808-b668-42ed-9ba3-5f2da7b8912b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -914,8 +999,21 @@
       }
     },
     {
-      "key": "936100bf-97fb-4931-84be-dda8766c0ec4",
+      "key": "e8906779-7748-4fae-9495-4140c38daffe",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8906779-7748-4fae-9495-4140c38daffe",
+        "lesson.key": "Sprites",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "936100bf-97fb-4931-84be-dda8766c0ec4",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -929,7 +1027,7 @@
     },
     {
       "key": "9a78dce2-0812-414f-8c20-1728b4ff1de2",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -943,7 +1041,7 @@
     },
     {
       "key": "207bc633-dfe5-4c4d-b366-c1f5081676c1",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -956,8 +1054,21 @@
       }
     },
     {
-      "key": "c1ba8c1a-11db-4139-8f1c-dfebadfdb0df",
+      "key": "18b942a4-0349-4392-923f-170a70cb6c8b",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18b942a4-0349-4392-923f-170a70cb6c8b",
+        "lesson.key": "Sprite Properties",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "c1ba8c1a-11db-4139-8f1c-dfebadfdb0df",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -971,7 +1082,7 @@
     },
     {
       "key": "a2816f13-47a2-43e5-bbfa-0e7d57301037",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -985,7 +1096,7 @@
     },
     {
       "key": "bf836bc8-4853-4f43-b055-a8aa18ddfa9a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -998,8 +1109,21 @@
       }
     },
     {
-      "key": "5fdd8ca9-e42d-49ff-9edf-d9cc7c935d9e",
+      "key": "9c63c110-299c-465c-b6ac-456d561ff1c0",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c63c110-299c-465c-b6ac-456d561ff1c0",
+        "lesson.key": "Text",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "5fdd8ca9-e42d-49ff-9edf-d9cc7c935d9e",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1013,7 +1137,7 @@
     },
     {
       "key": "2e5b6973-dcd9-405c-958d-2366095f4375",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1027,7 +1151,7 @@
     },
     {
       "key": "3e93f640-d708-4ed5-a00a-4205f6dcd4fb",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap up"
@@ -1040,8 +1164,21 @@
       }
     },
     {
-      "key": "6dfd29b9-13c7-4603-989a-bbeecf4800ff",
+      "key": "9368b7ab-08ee-4900-b007-3a008552079f",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9368b7ab-08ee-4900-b007-3a008552079f",
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "6dfd29b9-13c7-4603-989a-bbeecf4800ff",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1055,7 +1192,7 @@
     },
     {
       "key": "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1069,7 +1206,7 @@
     },
     {
       "key": "e7216a36-908d-4036-8dc3-e7b6a49c1b78",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap up"
@@ -1082,8 +1219,21 @@
       }
     },
     {
-      "key": "e0b108a8-9649-4dbe-81b2-18f26ef90572",
+      "key": "5346ecf1-b80b-44cb-ad37-ea10eb8561c2",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5346ecf1-b80b-44cb-ad37-ea10eb8561c2",
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "e0b108a8-9649-4dbe-81b2-18f26ef90572",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1097,7 +1247,7 @@
     },
     {
       "key": "c4cdf9ba-b683-4025-bc79-a6e72c0d4cf3",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1111,7 +1261,7 @@
     },
     {
       "key": "6b3615be-6022-43a7-b634-56545dd94ace",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1124,8 +1274,21 @@
       }
     },
     {
-      "key": "434c6d86-9182-4098-bdf9-a778a50a078a",
+      "key": "0fa9a305-278c-4646-8533-02397317bb18",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0fa9a305-278c-4646-8533-02397317bb18",
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "434c6d86-9182-4098-bdf9-a778a50a078a",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1139,7 +1302,7 @@
     },
     {
       "key": "81d5093b-fe94-4257-bc54-ca5311532cdc",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1153,7 +1316,7 @@
     },
     {
       "key": "8cc7e493-e930-4f8a-9f43-38e3d9ea0995",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1166,8 +1329,21 @@
       }
     },
     {
-      "key": "f34a570f-40d4-4d59-a68b-73775272bd4c",
+      "key": "30b9ca8a-86a0-4058-b2f5-e24d9f636c10",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30b9ca8a-86a0-4058-b2f5-e24d9f636c10",
+        "lesson.key": "Mini-Project: Animation",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "f34a570f-40d4-4d59-a68b-73775272bd4c",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1181,7 +1357,7 @@
     },
     {
       "key": "e22dd0d5-97b3-4829-9d90-3a213360c254",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1195,7 +1371,7 @@
     },
     {
       "key": "7867053c-45a1-4d10-a159-8dc70ab53a0b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap up"
@@ -1208,8 +1384,21 @@
       }
     },
     {
-      "key": "bec6d0f0-443d-4368-aa3e-6ff205f0524d",
+      "key": "42b55089-127b-435f-be68-691d07bd60f2",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42b55089-127b-435f-be68-691d07bd60f2",
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "bec6d0f0-443d-4368-aa3e-6ff205f0524d",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1223,7 +1412,7 @@
     },
     {
       "key": "f664c4cd-edcd-4afe-b5e6-5e2902ae866f",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1237,7 +1426,7 @@
     },
     {
       "key": "80d10416-519e-40e1-b040-0ab3e3b8a4c3",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1250,8 +1439,21 @@
       }
     },
     {
-      "key": "e9f7c2c0-864d-48ee-b321-8d5f9be28800",
+      "key": "87db84f0-e19c-4e75-a1ae-c66dbac3bad5",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "87db84f0-e19c-4e75-a1ae-c66dbac3bad5",
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "e9f7c2c0-864d-48ee-b321-8d5f9be28800",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1265,7 +1467,7 @@
     },
     {
       "key": "d7b339c7-1053-4301-bba3-6c5befbc61fe",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1279,7 +1481,7 @@
     },
     {
       "key": "9e5054c4-f57d-41fd-aa15-6eedcc5041a1",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1292,8 +1494,21 @@
       }
     },
     {
-      "key": "7d4b68b8-c0ed-439b-996f-a3f992dc9824",
+      "key": "bae868db-d958-4188-819b-7d9975721b16",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bae868db-d958-4188-819b-7d9975721b16",
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "7d4b68b8-c0ed-439b-996f-a3f992dc9824",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1307,7 +1522,7 @@
     },
     {
       "key": "06f944ce-4a81-48b5-a87d-96072d1bfa7b",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1321,7 +1536,7 @@
     },
     {
       "key": "7f760e13-4b60-497a-ae95-c9d54292a9f7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1334,8 +1549,21 @@
       }
     },
     {
-      "key": "b73c5968-42c4-4b4c-ac51-a6694f99c29b",
+      "key": "75823632-be81-4248-bd63-e69a3658941b",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75823632-be81-4248-bd63-e69a3658941b",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "csd3_1",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "b73c5968-42c4-4b4c-ac51-a6694f99c29b",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1349,7 +1577,7 @@
     },
     {
       "key": "ee232401-7aef-488e-b0f1-4b169a7a854e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 215,
         "name": "Activity"
@@ -1363,7 +1591,7 @@
     },
     {
       "key": "6ad1cd24-169f-4b80-b9a4-8cc111becfd1",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1376,8 +1604,21 @@
       }
     },
     {
-      "key": "177ca896-863b-456d-8703-29c35534f2d5",
+      "key": "6726d5e9-166b-4785-926b-549a92cf1ee5",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6726d5e9-166b-4785-926b-549a92cf1ee5",
+        "lesson.key": "Velocity",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "177ca896-863b-456d-8703-29c35534f2d5",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1391,7 +1632,7 @@
     },
     {
       "key": "c56d186e-9346-4a55-b871-3547db946cb0",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1405,7 +1646,7 @@
     },
     {
       "key": "639761f1-fc44-4250-ab0d-0e4b0565f95e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1418,8 +1659,21 @@
       }
     },
     {
-      "key": "bd0c46dd-1416-4ca4-9882-cc070c732bcb",
+      "key": "f3ca30bb-b17a-46fb-83d1-b49c20b2ba20",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3ca30bb-b17a-46fb-83d1-b49c20b2ba20",
+        "lesson.key": "Collision Detection",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "bd0c46dd-1416-4ca4-9882-cc070c732bcb",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1433,7 +1687,7 @@
     },
     {
       "key": "22daa03a-31f9-4048-98d6-180a94b49a68",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1447,7 +1701,7 @@
     },
     {
       "key": "c6e39bf8-d155-4322-af89-d5f58cd9b3c0",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1460,8 +1714,21 @@
       }
     },
     {
-      "key": "78332cff-112e-4d7a-b0d5-dc027283de09",
+      "key": "3cc0dc1b-7e13-4bdb-9d40-a075b7c9597e",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3cc0dc1b-7e13-4bdb-9d40-a075b7c9597e",
+        "lesson.key": "Mini-Project: Side Scroller",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "78332cff-112e-4d7a-b0d5-dc027283de09",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1475,7 +1742,7 @@
     },
     {
       "key": "d469a158-6f03-4bb2-a6bb-2fb04adc68bd",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1489,7 +1756,7 @@
     },
     {
       "key": "20be7e0b-da27-4cf7-b721-de78b253d8ab",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap up"
@@ -1502,8 +1769,21 @@
       }
     },
     {
-      "key": "91e4043a-b85e-4965-bb48-7dba5ae5b20d",
+      "key": "055947d6-e6ec-4356-9343-4a1b2a5fe229",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "055947d6-e6ec-4356-9343-4a1b2a5fe229",
+        "lesson.key": "Complex Sprite Movement",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "91e4043a-b85e-4965-bb48-7dba5ae5b20d",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1517,7 +1797,7 @@
     },
     {
       "key": "ec2b845c-4b81-4798-848a-37dd04f0ab69",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1531,7 +1811,7 @@
     },
     {
       "key": "1b7d7bd8-edb9-4d7e-b267-fb05ddf8073b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1544,8 +1824,21 @@
       }
     },
     {
-      "key": "4500c96e-1367-4b79-867f-061dfdb75d5c",
+      "key": "e6a3f6b5-8159-4012-acbd-273af0e5e707",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6a3f6b5-8159-4012-acbd-273af0e5e707",
+        "lesson.key": "Collisions",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "4500c96e-1367-4b79-867f-061dfdb75d5c",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1559,7 +1852,7 @@
     },
     {
       "key": "ac036a2c-ddfd-4afa-8990-2c0488a6cac5",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1573,7 +1866,7 @@
     },
     {
       "key": "125cb229-4471-49d1-b3a4-c331c9307b78",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1586,8 +1879,21 @@
       }
     },
     {
-      "key": "82bb121e-9ad5-4b29-bf75-30eb4170b1dd",
+      "key": "68968d00-b2cb-436f-8b21-fa47c41e6c13",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "68968d00-b2cb-436f-8b21-fa47c41e6c13",
+        "lesson.key": "Mini-Project: Flyer Game",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "82bb121e-9ad5-4b29-bf75-30eb4170b1dd",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1601,7 +1907,7 @@
     },
     {
       "key": "2f663cbe-39d3-44bc-b3d0-3847de8616ed",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1615,7 +1921,7 @@
     },
     {
       "key": "c611b357-4152-4524-ba71-e3531cc97d9d",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap up"
@@ -1628,8 +1934,21 @@
       }
     },
     {
-      "key": "28cdb81b-9ed2-4623-8c97-76a04c4b296f",
+      "key": "d5f8482f-a875-457a-83a0-8fe8c8697621",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d5f8482f-a875-457a-83a0-8fe8c8697621",
+        "lesson.key": "Functions",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "28cdb81b-9ed2-4623-8c97-76a04c4b296f",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1643,7 +1962,7 @@
     },
     {
       "key": "e44e0ad1-b586-42a4-9be2-75e0eee0cccc",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1657,7 +1976,7 @@
     },
     {
       "key": "e7c14a3d-ad5f-429b-9ad3-a851e1247e58",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1670,8 +1989,21 @@
       }
     },
     {
-      "key": "5057296f-03f5-4ac1-b9b7-4b1e170c1224",
+      "key": "a3891ced-312c-4f1f-9823-28cdaf9a131f",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a3891ced-312c-4f1f-9823-28cdaf9a131f",
+        "lesson.key": "The Game Design Process",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "5057296f-03f5-4ac1-b9b7-4b1e170c1224",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1685,7 +2017,7 @@
     },
     {
       "key": "ee6441ac-3fe1-451b-846f-24a977986f9c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1699,7 +2031,7 @@
     },
     {
       "key": "165ce06e-00dc-48c5-ac86-7b2ca67f7484",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1712,8 +2044,21 @@
       }
     },
     {
-      "key": "69970ef2-e960-449e-8650-84b53151315d",
+      "key": "42d4a6d3-fc40-44cd-ab78-799ce99a9ddb",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "42d4a6d3-fc40-44cd-ab78-799ce99a9ddb",
+        "lesson.key": "Using the Game Design Process",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "69970ef2-e960-449e-8650-84b53151315d",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1727,7 +2072,7 @@
     },
     {
       "key": "06cc83f5-66b2-401e-850a-466b164ef104",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1741,7 +2086,7 @@
     },
     {
       "key": "928bd72d-482c-4234-8e05-57b235528194",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1754,8 +2099,21 @@
       }
     },
     {
-      "key": "d318c194-f178-4185-be90-b70771605b6d",
+      "key": "acdadc8a-d94d-4ee3-bdcb-67a234ee4130",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "acdadc8a-d94d-4ee3-bdcb-67a234ee4130",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "csd3_2",
+        "script.name": "csd3-2021"
+      }
+    },
+    {
+      "key": "d318c194-f178-4185-be90-b70771605b6d",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1769,7 +2127,7 @@
     },
     {
       "key": "064fad66-35a6-480e-ad60-dff751b5230c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 215,
         "name": "Activity"
@@ -1783,7 +2141,7 @@
     },
     {
       "key": "06f4dccb-71cc-4afb-907e-2ee69be55359",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1797,7 +2155,7 @@
     },
     {
       "key": "163efba3-af62-4989-8fab-c173dfbc4ed6",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Post-Project Test"
       },
@@ -1836,6 +2194,17 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "e0edb51a-713c-4007-a296-26e1876af1db",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "e0edb51a-713c-4007-a296-26e1876af1db",
+        "lesson_activity.key": "5faf4484-24e1-457d-8aaa-936904fec0c6"
+      }
+    },
     {
       "key": "917f496c-ae62-41a0-a8fe-a50df90ff2ff",
       "position": 1,
@@ -1981,6 +2350,17 @@
       "seeding_key": {
         "activity_section.key": "88943583-e1bd-4692-bfda-ac470e102014",
         "lesson_activity.key": "9df9685e-8a25-4529-a130-ccacacc23186"
+      }
+    },
+    {
+      "key": "41038ed3-ea0a-4cb1-b1d0-57661d3258de",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "41038ed3-ea0a-4cb1-b1d0-57661d3258de",
+        "lesson_activity.key": "d3975f3d-44de-46c8-a995-423cd29d2b0e"
       }
     },
     {
@@ -2227,6 +2607,17 @@
       "seeding_key": {
         "activity_section.key": "8009f49a-0d57-45d6-a1aa-03d95ae77fdf",
         "lesson_activity.key": "7e1b94ab-eb54-41ae-a003-fcbdc79f109c"
+      }
+    },
+    {
+      "key": "396c0e7f-8bdb-4859-9f67-58be83de7eaa",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "396c0e7f-8bdb-4859-9f67-58be83de7eaa",
+        "lesson_activity.key": "0cf5933c-75fd-49c6-9f63-1afdeb99892b"
       }
     },
     {
@@ -2477,6 +2868,17 @@
       }
     },
     {
+      "key": "4bb7d3f2-8c65-4468-8bce-21fbfcde4619",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson. "
+      },
+      "seeding_key": {
+        "activity_section.key": "4bb7d3f2-8c65-4468-8bce-21fbfcde4619",
+        "lesson_activity.key": "57247884-1eca-40ac-abb4-36cf446a6ae4"
+      }
+    },
+    {
       "key": "267a9bc0-eca4-43ff-9a91-64c0b389089c",
       "position": 1,
       "properties": {
@@ -2634,6 +3036,17 @@
       "seeding_key": {
         "activity_section.key": "5485407f-b2b9-433e-86a4-6da5afa523f5",
         "lesson_activity.key": "0e14ff41-9ad6-4802-a118-4b50a607b384"
+      }
+    },
+    {
+      "key": "2ad71a3b-2f4a-44bc-9c33-ce2ba2213228",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ad71a3b-2f4a-44bc-9c33-ce2ba2213228",
+        "lesson_activity.key": "92c95b0a-5909-4de6-9501-c206eb277d18"
       }
     },
     {
@@ -2826,6 +3239,17 @@
       }
     },
     {
+      "key": "88d8f326-ac0a-412b-bf9e-10c3b9b5d9f0",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "88d8f326-ac0a-412b-bf9e-10c3b9b5d9f0",
+        "lesson_activity.key": "dad741db-e1fa-4efc-a1a5-9189172fd079"
+      }
+    },
+    {
       "key": "19eef11a-5297-4a77-9755-489d2b08c85d",
       "position": 1,
       "properties": {
@@ -2997,6 +3421,17 @@
       "seeding_key": {
         "activity_section.key": "e3a151f2-e5d3-4a66-9eed-6bc74f6adecb",
         "lesson_activity.key": "1ba97808-b668-42ed-9ba3-5f2da7b8912b"
+      }
+    },
+    {
+      "key": "2593e81b-4225-4adf-8957-5dcd192fabfc",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "2593e81b-4225-4adf-8957-5dcd192fabfc",
+        "lesson_activity.key": "e8906779-7748-4fae-9495-4140c38daffe"
       }
     },
     {
@@ -3222,6 +3657,17 @@
       }
     },
     {
+      "key": "b6e69712-d43e-4ca8-8802-741420948bef",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "b6e69712-d43e-4ca8-8802-741420948bef",
+        "lesson_activity.key": "18b942a4-0349-4392-923f-170a70cb6c8b"
+      }
+    },
+    {
       "key": "4d7800ef-fda9-4e2f-9094-742ad082214e",
       "position": 1,
       "properties": {
@@ -3353,6 +3799,17 @@
       "seeding_key": {
         "activity_section.key": "f455bf72-f2c8-4bf2-970f-af533ef80342",
         "lesson_activity.key": "bf836bc8-4853-4f43-b055-a8aa18ddfa9a"
+      }
+    },
+    {
+      "key": "44fd5b1c-5d9e-40b5-8eca-a817778563f9",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "44fd5b1c-5d9e-40b5-8eca-a817778563f9",
+        "lesson_activity.key": "9c63c110-299c-465c-b6ac-456d561ff1c0"
       }
     },
     {
@@ -3489,6 +3946,17 @@
       "seeding_key": {
         "activity_section.key": "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169",
         "lesson_activity.key": "3e93f640-d708-4ed5-a00a-4205f6dcd4fb"
+      }
+    },
+    {
+      "key": "dca1c201-75a3-4b5f-9100-9e7da42aeec2",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "dca1c201-75a3-4b5f-9100-9e7da42aeec2",
+        "lesson_activity.key": "9368b7ab-08ee-4900-b007-3a008552079f"
       }
     },
     {
@@ -3654,6 +4122,17 @@
       "seeding_key": {
         "activity_section.key": "760b0216-8c5d-4954-ac35-fd42c527ac66",
         "lesson_activity.key": "e7216a36-908d-4036-8dc3-e7b6a49c1b78"
+      }
+    },
+    {
+      "key": "b7a6c643-6f1d-48c2-8a04-ec02e409ab09",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "b7a6c643-6f1d-48c2-8a04-ec02e409ab09",
+        "lesson_activity.key": "5346ecf1-b80b-44cb-ad37-ea10eb8561c2"
       }
     },
     {
@@ -3888,6 +4367,17 @@
       }
     },
     {
+      "key": "b8c807cd-1cbc-45d4-8687-a083ae4aa65a",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "b8c807cd-1cbc-45d4-8687-a083ae4aa65a",
+        "lesson_activity.key": "0fa9a305-278c-4646-8533-02397317bb18"
+      }
+    },
+    {
       "key": "153ee481-0b64-4a7a-948a-a016f9133783",
       "position": 1,
       "properties": {
@@ -4039,6 +4529,17 @@
       "seeding_key": {
         "activity_section.key": "06cad4ef-4d60-42e4-829c-02fd3364c31e",
         "lesson_activity.key": "8cc7e493-e930-4f8a-9f43-38e3d9ea0995"
+      }
+    },
+    {
+      "key": "814e725b-8ddc-466b-808a-1ea5687fbf6a",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "814e725b-8ddc-466b-808a-1ea5687fbf6a",
+        "lesson_activity.key": "30b9ca8a-86a0-4058-b2f5-e24d9f636c10"
       }
     },
     {
@@ -4226,6 +4727,17 @@
       "seeding_key": {
         "activity_section.key": "f54152bb-4d02-459d-beea-ceeb422be02a",
         "lesson_activity.key": "7867053c-45a1-4d10-a159-8dc70ab53a0b"
+      }
+    },
+    {
+      "key": "75ec8386-e5c1-480b-b5bf-999312f069b9",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "75ec8386-e5c1-480b-b5bf-999312f069b9",
+        "lesson_activity.key": "42b55089-127b-435f-be68-691d07bd60f2"
       }
     },
     {
@@ -4475,6 +4987,17 @@
       }
     },
     {
+      "key": "9a0645a5-b561-4520-8ea8-353a9bce8812",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "9a0645a5-b561-4520-8ea8-353a9bce8812",
+        "lesson_activity.key": "87db84f0-e19c-4e75-a1ae-c66dbac3bad5"
+      }
+    },
+    {
       "key": "0ee8704d-9ad3-4a31-816f-555813322a78",
       "position": 1,
       "properties": {
@@ -4586,6 +5109,17 @@
       "seeding_key": {
         "activity_section.key": "3bb656e1-9394-4bd4-a11c-2a695a93850d",
         "lesson_activity.key": "9e5054c4-f57d-41fd-aa15-6eedcc5041a1"
+      }
+    },
+    {
+      "key": "038f368d-96fb-4780-9ac5-1e625c66e42d",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "038f368d-96fb-4780-9ac5-1e625c66e42d",
+        "lesson_activity.key": "bae868db-d958-4188-819b-7d9975721b16"
       }
     },
     {
@@ -4764,6 +5298,17 @@
       "seeding_key": {
         "activity_section.key": "b9716428-aedc-4578-8328-379b70cb0d50",
         "lesson_activity.key": "7f760e13-4b60-497a-ae95-c9d54292a9f7"
+      }
+    },
+    {
+      "key": "7dd21653-fbb9-4d8f-97d5-aa4879f9c1c8",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "7dd21653-fbb9-4d8f-97d5-aa4879f9c1c8",
+        "lesson_activity.key": "75823632-be81-4248-bd63-e69a3658941b"
       }
     },
     {
@@ -4957,6 +5502,17 @@
       "seeding_key": {
         "activity_section.key": "360d3353-5639-4dfb-a66d-784a152e1794",
         "lesson_activity.key": "6ad1cd24-169f-4b80-b9a4-8cc111becfd1"
+      }
+    },
+    {
+      "key": "aef8a30c-a6a5-4aeb-b36a-d3b66ef87a81",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "aef8a30c-a6a5-4aeb-b36a-d3b66ef87a81",
+        "lesson_activity.key": "6726d5e9-166b-4785-926b-549a92cf1ee5"
       }
     },
     {
@@ -5157,6 +5713,17 @@
       "seeding_key": {
         "activity_section.key": "ea1596ff-227e-4616-bc38-1c6bb5a9c6d6",
         "lesson_activity.key": "639761f1-fc44-4250-ab0d-0e4b0565f95e"
+      }
+    },
+    {
+      "key": "4b924f47-109d-4f86-a0bf-84a5c9b84cd2",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "4b924f47-109d-4f86-a0bf-84a5c9b84cd2",
+        "lesson_activity.key": "f3ca30bb-b17a-46fb-83d1-b49c20b2ba20"
       }
     },
     {
@@ -5406,6 +5973,17 @@
       }
     },
     {
+      "key": "0cc3d97f-9a2f-411c-8821-147c1e24a0c0",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "0cc3d97f-9a2f-411c-8821-147c1e24a0c0",
+        "lesson_activity.key": "3cc0dc1b-7e13-4bdb-9d40-a075b7c9597e"
+      }
+    },
+    {
       "key": "b8cd00d2-c063-4c23-b515-12c5d5a5c89b",
       "position": 1,
       "properties": {
@@ -5547,6 +6125,17 @@
       "seeding_key": {
         "activity_section.key": "f8340a52-501b-4c4b-a3e5-227c22655447",
         "lesson_activity.key": "20be7e0b-da27-4cf7-b721-de78b253d8ab"
+      }
+    },
+    {
+      "key": "768b3d78-4f96-4e9d-bb05-bcb9b3b7bff7",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "768b3d78-4f96-4e9d-bb05-bcb9b3b7bff7",
+        "lesson_activity.key": "055947d6-e6ec-4356-9343-4a1b2a5fe229"
       }
     },
     {
@@ -5769,6 +6358,17 @@
       }
     },
     {
+      "key": "4225cb9b-8e55-43c7-918e-1693bf239840",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "4225cb9b-8e55-43c7-918e-1693bf239840",
+        "lesson_activity.key": "e6a3f6b5-8159-4012-acbd-273af0e5e707"
+      }
+    },
+    {
       "key": "da390762-bcc9-47c8-ab06-9bac895ebd00",
       "position": 1,
       "properties": {
@@ -5944,6 +6544,17 @@
       }
     },
     {
+      "key": "8999374a-d5b5-44c6-9df7-766edef29ef4",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "8999374a-d5b5-44c6-9df7-766edef29ef4",
+        "lesson_activity.key": "68968d00-b2cb-436f-8b21-fa47c41e6c13"
+      }
+    },
+    {
       "key": "373fd729-b7fb-4a97-a247-9932f91115b8",
       "position": 1,
       "properties": {
@@ -6064,6 +6675,17 @@
       "seeding_key": {
         "activity_section.key": "136931c2-5be0-4503-904e-d498bfdd72e2",
         "lesson_activity.key": "c611b357-4152-4524-ba71-e3531cc97d9d"
+      }
+    },
+    {
+      "key": "b5208602-6e96-4de5-8eb0-bd174781ade8",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "b5208602-6e96-4de5-8eb0-bd174781ade8",
+        "lesson_activity.key": "d5f8482f-a875-457a-83a0-8fe8c8697621"
       }
     },
     {
@@ -6283,6 +6905,17 @@
       }
     },
     {
+      "key": "924cad07-d581-4fd3-b43e-bb1e8061a72a",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "924cad07-d581-4fd3-b43e-bb1e8061a72a",
+        "lesson_activity.key": "a3891ced-312c-4f1f-9823-28cdaf9a131f"
+      }
+    },
+    {
       "key": "558eccfc-5a53-4d89-a0d1-ba9f57e5fe0e",
       "position": 1,
       "properties": {
@@ -6474,6 +7107,17 @@
       "seeding_key": {
         "activity_section.key": "574f299a-126b-436d-9142-52cf1d1f8079",
         "lesson_activity.key": "165ce06e-00dc-48c5-ac86-7b2ca67f7484"
+      }
+    },
+    {
+      "key": "bf992976-9e21-46a8-8a2e-c41dd447d301",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "bf992976-9e21-46a8-8a2e-c41dd447d301",
+        "lesson_activity.key": "42d4a6d3-fc40-44cd-ab78-799ce99a9ddb"
       }
     },
     {
@@ -6706,6 +7350,17 @@
       "seeding_key": {
         "activity_section.key": "193dc0bf-c474-4454-bb43-8a430a12634d",
         "lesson_activity.key": "928bd72d-482c-4234-8e05-57b235528194"
+      }
+    },
+    {
+      "key": "a22e920a-3ad4-4eb0-b23f-103e34360b9a",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please [click here](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) to access modifications that can be used during this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "a22e920a-3ad4-4eb0-b23f-103e34360b9a",
+        "lesson_activity.key": "acdadc8a-d94d-4ee3-bdcb-67a234ee4130"
       }
     },
     {
