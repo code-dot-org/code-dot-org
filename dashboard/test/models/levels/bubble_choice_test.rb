@@ -9,11 +9,17 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     create :game, name: 'BubbleChoice'
 
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, lesson_group: lesson_group, script: script)
     @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
     @sublevel2 = create :dance, :with_example_solutions, name: 'choice_2', short_instructions: 'A short instruction'
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
-    @script_level = create :script_level, levels: [@bubble_choice]
+    @script_level = create :script_level, levels: [@bubble_choice], script: script, lesson: lesson
   end
 
   test 'create_from_level_builder creates level from DSL input' do
