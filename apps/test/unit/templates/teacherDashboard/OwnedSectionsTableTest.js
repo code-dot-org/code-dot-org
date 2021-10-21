@@ -1,16 +1,32 @@
 import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import * as Table from 'reactabular-table';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import {Provider} from 'react-redux';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
   courseLinkFormatter,
   gradeFormatter,
   loginInfoFormatter,
-  studentsFormatter
+  studentsFormatter,
+  GRADES
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
+import {
+  setRosterProvider,
+  removeSection,
+  toggleSectionHidden,
+  importOrUpdateRoster,
+  sectionCode,
+  sectionName
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const sectionRowData = [
   {
@@ -65,6 +81,147 @@ const sectionRowData = [
     assignmentPaths: []
   }
 ];
+
+const sectionGradesRowData = [
+  {
+    id: 1,
+    name: 'sectionA',
+    studentCount: 3,
+    code: 'ABC',
+    courseId: 29,
+    grade: '12',
+    loginType: 'google_classroom',
+    providerManaged: true,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 2,
+    name: 'sectionB',
+    studentCount: 4,
+    code: 'DEF',
+    courseId: 29,
+    grade: '4',
+    loginType: 'google_classroom',
+    providerManaged: true,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 3,
+    name: 'sectionC',
+    studentCount: 0,
+    code: 'GHI',
+    courseId: 29,
+    scriptId: 168,
+    grade: 'K',
+    loginType: 'google_classroom',
+    providerManaged: false,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 4,
+    name: 'sectionD',
+    studentCount: 0,
+    code: 'JKL',
+    grade: '1',
+    loginType: 'google_classroom',
+    providerManaged: false,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 5,
+    name: 'sectionE',
+    studentCount: 0,
+    code: 'MNO',
+    courseId: 29,
+    scriptId: 168,
+    grade: '10',
+    providerManaged: false,
+    hidden: false,
+    loginType: 'google_classroom',
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 6,
+    name: 'sectionF',
+    studentCount: 0,
+    code: 'PQR',
+    grade: null,
+    providerManaged: false,
+    hidden: false,
+    loginType: 'google_classroom',
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 7,
+    name: 'sectionG',
+    studentCount: 0,
+    code: 'STU',
+    grade: 'Other',
+    providerManaged: false,
+    hidden: false,
+    loginType: 'google_classroom',
+    assignmentNames: [],
+    assignmentPaths: []
+  }
+];
+
+describe('OwnedSectionsTable Sorting', () => {
+  stubRedux();
+  registerReducers({
+    removeSection,
+    toggleSectionHidden,
+    updateRoster: importOrUpdateRoster,
+    setRosterProvider,
+    sectionCode: sectionCode({}, 1),
+    sectionName: sectionName({}, 1)
+  });
+
+  it('can be sorted correctly by grade', () => {
+    const wrapper = mount(
+      <Provider store={getStore()}>
+        <OwnedSectionsTable
+          sectionIds={[1, 2, 3, 4, 5, 6, 7]}
+          sectionRows={sectionGradesRowData}
+          onEdit={() => {}}
+        />
+      </Provider>
+    );
+    wrapper.setState({sections: []});
+    const store = getStore();
+    store.dispatch(sectionCode(wrapper.getState(), 1));
+    store.dispatch(sectionName(wrapper.getState(), 1));
+
+    // first click should sort sections K-12
+    wrapper.find('.uitest-grade-header').simulate('click');
+    const rows = wrapper.find('.uitest-sorted-rows');
+    console.log(rows);
+    expect(rows.rows[0].grade).to.equal('K');
+    expect(rows.rows[1].grade).to.equal('1');
+    expect(rows.rows[2].grade).to.equal('4');
+    expect(rows.rows[3].grade).to.equal('10');
+    expect(GRADES.length).to.equal(15);
+
+    // second click should sort sections 12-K
+    wrapper.find('.uitest-grade-header').simulate('click');
+    const reverseRows = wrapper.find('.uitest-sorted-rows');
+    console.log(reverseRows);
+    expect(reverseRows.rows[0].grade).to.equal(null);
+    expect(reverseRows.rows[1].grade).to.equal('Other');
+    expect(reverseRows.rows[2].grade).to.equal('12');
+    expect(reverseRows.rows[3].grade).to.equal('10');
+    restoreRedux();
+  });
+});
 
 describe('OwnedSectionsTable', () => {
   it('has a header and a body', () => {
