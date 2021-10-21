@@ -123,6 +123,7 @@ class UnitGroup < ApplicationRecord
     unit_group.update_scripts(hash['script_names'], hash['alternate_units'])
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || SharedCourseConstants::PUBLISHED_STATE.in_development
+    unit_group.instruction_type = hash['instruction_type'] || SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
 
     # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
@@ -160,6 +161,7 @@ class UnitGroup < ApplicationRecord
         script_names: default_unit_group_units.map(&:script).map(&:name),
         alternate_units: summarize_alternate_units,
         published_state: published_state,
+        instruction_type: instruction_type,
         properties: properties.sort.to_h,
         resources: resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
         student_resources: student_resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
@@ -228,7 +230,7 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil)
+        unit.update!(published_state: nil, instruction_type: nil)
       end
       unit_group_unit.update!(position: index + 1)
     end
