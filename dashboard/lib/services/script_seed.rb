@@ -678,6 +678,7 @@ module Services
         :family_name,
         :serialized_at,
         :published_state,
+        :instruction_type,
         :seeding_key
       )
 
