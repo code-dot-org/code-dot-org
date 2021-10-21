@@ -9,7 +9,7 @@
         {
           "type": "html",
           "name": "consent_language",
-          "html": "<h1>Code.org Administratator Baseline Surevey</h1><span style='color: red'><strong>Warning</strong></span>: This survey is under construction. Please do not use at this time."
+          "html": "<h1>Code.org Administrator Baseline Survey</h1><span style='color: red'><strong>Warning</strong></span>: This survey is under construction. Please do not use at this time."
         }
       ]
     },
