@@ -74,7 +74,7 @@ class P5LabView extends React.Component {
     });
   }
 
-  hideAnimationUpload() {
+  shouldHideAnimationUpload() {
     // Teachers should always be allowed to upload animations.
     if (this.props.currentUserType === 'teacher') {
       return false;
@@ -138,7 +138,7 @@ class P5LabView extends React.Component {
             <AnimationPicker
               channelId={this.getChannelId()}
               libraryManifest={this.state.libraryManifest}
-              hideUploadOption={this.hideAnimationUpload()}
+              hideUploadOption={this.shouldHideAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
@@ -170,7 +170,7 @@ class P5LabView extends React.Component {
       <AnimationTab
         channelId={this.getChannelId()}
         libraryManifest={this.state.libraryManifest}
-        hideUploadOption={this.hideAnimationUpload()}
+        hideUploadOption={this.shouldHideAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={this.props.isBlockly}
         labType={this.props.labType}
