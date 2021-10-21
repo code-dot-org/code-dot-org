@@ -231,7 +231,6 @@ class OwnedSectionsTable extends Component {
           props: {style: styles.hiddenCol}
         }
       },
-
       {
         property: 'name',
         header: {
@@ -248,7 +247,10 @@ class OwnedSectionsTable extends Component {
         property: 'grade',
         header: {
           label: i18n.grade(),
-          props: {style: tableLayoutStyles.headerCell},
+          props: {
+            className: 'uitest-grade-header',
+            style: tableLayoutStyles.headerCell
+          },
           transforms: [sortable]
         },
         cell: {
@@ -327,7 +329,11 @@ class OwnedSectionsTable extends Component {
     return (
       <Table.Provider columns={columns} style={tableLayoutStyles.table}>
         <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="id" />
+        <Table.Body
+          className="uitest-sorted-rows"
+          rows={sortedRows}
+          rowKey="id"
+        />
       </Table.Provider>
     );
   }
