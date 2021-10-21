@@ -10,10 +10,10 @@ function level1(){
   }
 
   // Logic
-  setSuccessTime(validationProps.successCriteria);
+  setSuccessTime(validationPropsle.successCriteria);
 
   if (!validationProps.successCriteria.starterSprite ||
-    !validationProps.successCriteria.usedSpeech) {
+    !validationProps.successCriterila.usedSpeech) {
     drawProgressBar("earlyFail");
   } else {
     drawProgressBar("pass");
@@ -107,7 +107,7 @@ function level3(){
     !validationProps.successCriteria.differentCostumes) {
     drawProgressBar("earlyFail");
   } else {
-    determineAndDrawProgressBar(validationProps.successTime, validationProps.vars.delay);
+    determineAndDrawProgressBar(validationProps.successTime, false);
   }
 
   if (World.frameCount > EARLY_FAIL_TIME) {
@@ -156,10 +156,11 @@ function level4(){
     validationProps.clickedSprites=[];
   }
 
-  if(!validationProps.prev){
-    validationProps.prev = {
+  if(!validationProps.vars){
+    validationProps.vars = {
       eventLogLength: 0,
-      clickedSprite: 0
+      clickedSprite: 0,
+      delay: 0
     };
   }
 
@@ -168,10 +169,13 @@ function level4(){
     checkForUnclickedSprites(spriteIds, eventLog);
   }
 
-  var newClickedSprite = getClickedSpriteIdCausedSpeech(eventLog, validationProps.prev.eventLogLength);
+  var newClickedSprite = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);
+  console.log("newClickedSprite: " + newClickedSprite);
   if (newClickedSprite >= 0){
     if (validationProps.clickedSprites.indexOf(newClickedSprite) != -1) {
+      console.log("IN PUSH");
       validationProps.clickedSprites.push(newClickedSprite);
+      validationProps.vars.delay = World.frameCount;
     }
   }
 
@@ -182,10 +186,12 @@ function level4(){
 
   determineAndDrawProgressBar(validationProps.successTime, validationProps.vars.delay);
 
-  if (World.frameCount - validationProps.successTime >= WAIT_TIME) {
-    levelFailure(0, "genericSuccess");
-  } else if (World.frameCount > WAIT_TIME && !validationProps.successTime) {
-    levelFailure(3, "clickAllSprites");
+  if (World.frameCount-validationProps.vars.delay > WAIT_TIME) {
+    if (!validationProps.successTime) {
+      levelFailure(3, "clickAllSprites");
+    } else {
+      levelFailure(0, "genericSuccess");
+    }
   }
 
 }
