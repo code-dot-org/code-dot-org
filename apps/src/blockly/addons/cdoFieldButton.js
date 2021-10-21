@@ -1,7 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 
 const CORNER_RADIUS = 3;
-const INNER_HEIGHT = 17;
+const INNER_HEIGHT = 16;
 
 export default class FieldButton extends GoogleBlockly.Field {
   constructor(title, opt_buttonHandler, opt_color, opt_changeHandler) {
@@ -16,17 +16,15 @@ export default class FieldButton extends GoogleBlockly.Field {
   init() {
     super.init();
 
-    this.borderRect_.setAttribute('height', INNER_HEIGHT + 2);
-    this.borderRect_.setAttribute('y', 0);
-
     this.buttonElement_ = Blockly.utils.dom.createSvgElement(
       'rect',
       {
         rx: CORNER_RADIUS,
         ry: CORNER_RADIUS,
-        x: 0,
-        y: 0,
-        height: INNER_HEIGHT
+        x: 1,
+        y: 1,
+        height: INNER_HEIGHT,
+        width: INNER_HEIGHT
       },
       this.fieldGroup_
     );
