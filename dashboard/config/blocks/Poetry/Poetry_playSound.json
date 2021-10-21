@@ -2,7 +2,7 @@
   "category": "Poetry - Effects",
   "config": {
     "func": "playSound",
-    "blockText": "play sound {SOUND}",
+    "blockText": "play music {SOUND}",
     "color": [
       240,
       0.45,
@@ -12,10 +12,6 @@
       {
         "name": "SOUND",
         "options": [
-          [
-            "Bell",
-            "\"sound://category_bell/bells_win_low.mp3\""
-          ],
           [
             "Bright",
             "\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\""

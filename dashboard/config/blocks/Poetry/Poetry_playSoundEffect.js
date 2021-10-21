@@ -1,0 +1,5 @@
+function playSoundEffect() {
+    playSound();
+}
+
+playSound();
