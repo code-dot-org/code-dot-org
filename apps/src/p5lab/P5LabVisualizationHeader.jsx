@@ -57,15 +57,20 @@ class P5LabVisualizationHeader extends React.Component {
     this.props.onInterfaceModeChange(mode);
   };
 
+  shouldShowPoemSelector() {
+    return (
+      this.props.labType === P5LabType.POETRY &&
+      this.props.interfaceMode === P5LabInterfaceMode.CODE &&
+      !this.props.isShareView &&
+      !this.props.isReadOnlyWorkspace
+    );
+  }
+
   render() {
     const {interfaceMode, allowAnimationMode} = this.props;
-    const shouldShowPoemSelector =
-      this.props.labType === P5LabType.POETRY &&
-      !this.props.isShareView &&
-      !this.props.isReadOnlyWorkspace;
     return (
       <div>
-        {shouldShowPoemSelector && <PoemSelector />}
+        {this.shouldShowPoemSelector() && <PoemSelector />}
         {this.props.numAllowedModes > 1 && (
           <div style={styles.main} id="playSpaceHeader">
             <ToggleGroup
