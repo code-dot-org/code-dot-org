@@ -9,17 +9,11 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     create :game, name: 'BubbleChoice'
 
-    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
-    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
-
-    script = create(:script)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, lesson_group: lesson_group, script: script)
     @sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    @sublevel2 = create :dance, :with_example_solutions, name: 'choice_2', short_instructions: 'A short instruction'
+    @sublevel2 = create :level, name: 'choice_2', short_instructions: 'A short instruction'
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
-    @script_level = create :script_level, levels: [@bubble_choice], script: script, lesson: lesson
+    @script_level = create :script_level, levels: [@bubble_choice]
   end
 
   test 'create_from_level_builder creates level from DSL input' do
@@ -213,10 +207,23 @@ DSL
   end
 
   test 'summarize_sublevels includes exampleSolutions' do
-    teacher = create :authorized_teacher
-    sublevel_summary = @bubble_choice.summarize_sublevels(script_level: @script_level, user_id: teacher.id)
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
-    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevel_summary[1][:exampleSolutions]
+    script_with_examples = create(:script)
+    lesson_group_with_examples = create(:lesson_group, script: script_with_examples)
+    lesson_with_examples = create(:lesson, lesson_group: lesson_group_with_examples, script: script_with_examples)
+    sublevel1_with_examples = create :dance, :with_example_solutions
+    sublevel2_with_examples = create :dance, :with_example_solutions
+    sublevels_with_examples = [sublevel1_with_examples, sublevel2_with_examples]
+    bubble_choice_with_examples = create :bubble_choice_level, name: 'bubble_choices_with_examples', display_name: 'Bubble Choices With Examples', description: 'Choose one or more!', sublevels: sublevels_with_examples
+    script_level_with_examples = create :script_level, levels: [bubble_choice_with_examples], script: script_with_examples, lesson: lesson_with_examples
+
+    authorized_teacher = create :authorized_teacher
+    sublevels_summary = bubble_choice_with_examples.summarize_sublevels(script_level: script_level_with_examples, user_id: authorized_teacher.id)
+
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevels_summary[0][:exampleSolutions]
+    assert_equal ['https://studio.code.org/projects/dance/example-1/view', 'https://studio.code.org/projects/dance/example-2/view'], sublevels_summary[1][:exampleSolutions]
   end
 
   test 'summarize_sublevels with script_level' do
