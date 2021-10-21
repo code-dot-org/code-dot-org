@@ -195,7 +195,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   };
 
   blocklyWrapper.Input.prototype.getFieldRow = function() {
-    console.log('here');
     return this.titleRow;
   };
 
