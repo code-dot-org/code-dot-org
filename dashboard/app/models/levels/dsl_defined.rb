@@ -123,12 +123,11 @@ class DSLDefined < Level
 
       level = setup data
 
-      if level.existing_filename.blank? && File.exist?(Rails.root.join(level.canonical_filename))
-        raise "Cannot create level named #{level.name.dump} because file #{level.canonical_filename.dump} already exists"
-      end
-
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
+        if level.existing_filename.blank? && File.exist?(Rails.root.join(level.canonical_filename))
+          raise "Cannot create level named #{level.name.dump} because file #{level.canonical_filename.dump} already exists"
+        end
         level.rewrite_dsl_file(text)
       end
 
