@@ -98,7 +98,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       is_course: true,
       family_name: 'hoc-family',
       version_year: 'unversioned',
-      published_state: SharedConstants::PUBLISHED_STATE.stable
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(script)
 
@@ -136,7 +136,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       is_course: true,
       family_name: 'hoc-family',
       version_year: 'unversioned',
-      published_state: SharedConstants::PUBLISHED_STATE.stable
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(unit)
     level = unit.levels.first

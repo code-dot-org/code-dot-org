@@ -865,6 +865,16 @@
           "wandering": "เคลื่อนที่",
           "moving north": "เคลื่อนที่ไปทางเหนือ",
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         }
       }
     }

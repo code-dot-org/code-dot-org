@@ -7195,3 +7195,20 @@ is:
               display_name: Innihald
             lessonGroup-2:
               display_name: Innihald
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Græjur
+        poetry:
+          lessons:
+            lesson-3:
+              name: Breytur
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stafsetning
+          title: Stafsetning
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald

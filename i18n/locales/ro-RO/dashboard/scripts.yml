@@ -503,6 +503,8 @@ ro:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_student: Fă clic și glisează obiecte pentru a rezolva puzzle-urile.
+              description_teacher: În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.
         step:
           title: Pas
           lessons:
@@ -7345,6 +7347,8 @@ ro:
           lessons:
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
+            Outbreak:
+              name: Cum se Codifică o Simulare
           lesson_groups:
             outbreak:
               display_name: Simulare Epidemie
@@ -8374,10 +8378,16 @@ ro:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
+            lesson-20: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         csa5-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8775,6 +8785,7 @@ ro:
             lesson-1: {}
             lesson-3: {}
             lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -8785,15 +8796,6 @@ ro:
               display_name: Conţinut
         csa5-pilot-facilitator:
           lessons:
-            Reversing Elements: {}
-            Shifting Elements: {}
-            Finding Duplicates: {}
-            Searching for Elements: {}
-            A Sustainable Neighborhood Project - Day 1: {}
-            A Sustainable Neighborhood Project - Day 2: {}
-            A Sustainable Neighborhood Project - Day 3: {}
-            FRQ Day: {}
-            Assessment Day: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -8803,6 +8805,10 @@ ro:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8905,3 +8911,43 @@ ro:
         spritelab-effects-challenge:
           lessons:
             lesson-1: {}
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widget-uri
+            lesson-2:
+              name: Instrumente
+            lesson-3: {}
+        poem-art: {}
+        poetry:
+          lessons:
+            lesson-2: {}
+            lesson-3:
+              name: Variabile
+            lesson-4: {}
+            lesson-5: {}
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Albina de Ortografie
+          title: Albina de Ortografie
+        outbreak-csc: {}
+        explore-data-1: {}
+        counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut

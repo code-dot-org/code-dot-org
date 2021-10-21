@@ -521,6 +521,8 @@ pt:
           lessons:
             Jigsaw:
               name: Quebra-cabeça
+              description_student: Clique e arraste para finalizar os quebra-cabeças.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.
           student_description: Experimente nosso tutorial sobre quebra-cabeça
         step:
           title: Passo
@@ -15426,6 +15428,8 @@ pt:
           lessons:
             Virus Simulation for Code Bytes:
               name: Codificação da simulação
+            Outbreak:
+              name: Codificação da simulação
           lesson_groups:
             outbreak:
               display_name: Simulação de Epidemia
@@ -17633,3 +17637,27 @@ pt:
           lessons:
             lesson-1:
               name: 'Festa: Desconectada'
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Ferramentas
+            lesson-3:
+              name: Exemplos
+        poetry:
+          lessons:
+            lesson-3:
+              name: variáveis
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Soletrando
+          title: Soletrando
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo

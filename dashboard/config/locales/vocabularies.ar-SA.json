@@ -2,6 +2,272 @@
   "ar-SA": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "event/dance-extras/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/minecraft/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/minecraft/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "event/minecraft/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "الحلقة",
+          "definition": "عملية فعل شيء مرارًا وتكرارًا."
+        },
+        "code/hero/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/hero/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/hero/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "function/hero/unversioned": {
+          "word": "وظيفة ",
+          "definition": "جزء من التعليمات البرمجية يمكنك استدعاؤها بسهولة مرارًا وتكرارًا."
+        },
+        "code/flappy/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/flappy/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/frozen/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/frozen/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/iceage/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/iceage/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/artist/unversioned": {
+          "word": "البرمجة",
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/artist/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/artist/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/gumball/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/gumball/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "event/dance/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "program/dance/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/dance/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "code/aquatic/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/aquatic/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "الشرط",
+          "definition": "شيء ما يتحقق البرنامج منه لمعرفة ما إذا كان صحيحًا قبل السماح بإجراء ما."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "الجمل الشرطية"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "الحلقات",
+          "definition": "عملية فعل شيء مرارًا وتكرارًا."
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "التشفير"
+        },
+        "code/starwars/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/starwars/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/mc/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/mc/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/mc/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/playlab/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/playlab/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "الضغط بدون فقدان البيانات"
+        },
+        "event/sports/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "code/sports/unversioned": {
+          "word": "البرمجة"
+        },
+        "debugging/sports/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/sports/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/infinity/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/infinity/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "event/basketball/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "code/basketball/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "تصحيح الأخطاء",
+          "definition": "إيجاد المشكلات وإصلاحها في خوارزمية أو برنامج."
+        },
+        "program/basketball/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "البرنامج",
+          "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "التعلم الآلي",
+          "definition": "كيف تتعرف أجهزة الكمبيوتر على الأنماط وتتخذ القرارات دون أن تتم برمجتها بشكل صريح"
+        },
+        "event/outbreak/unversioned": {
+          "word": "الحدث",
+          "definition": "إجراء يتسبب في حدوث شيء ما."
+        },
         "sprite/coursef/2021": {
           "word": "شبح"
         },

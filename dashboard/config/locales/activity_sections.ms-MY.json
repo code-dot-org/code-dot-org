@@ -2,21 +2,453 @@
   "ms-MY": {
     "data": {
       "activity_sections": {
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Penggulungan"
-        },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+        "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
             null
           ]
+        },
+        "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
+          "progression_name": "Berada dalam Formasi"
+        },
+        "d6973268-2630-4056-8169-81c3d5a34041": {
+          "progression_name": "Ke Manakah Mereka Akan Pergi?"
+        },
+        "67bbe0f1-5e68-4669-a12b-d1ab6f3a527c": {
+          "progression_name": "Kru Tarian"
+        },
+        "4ff44f8e-3e97-47b2-9a6e-25e7e5836896": {
+          "progression_name": "Not Perempat"
+        },
+        "2ab803d8-6973-49d0-b987-e023b6780b6b": {
+          "progression_name": "Bes, Julat Tengah dan Trebel"
+        },
+        "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
+          "progression_name": "Percepatkannya, Perlahankannya"
+        },
+        "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
+          "tips": [
+            null
+          ]
+        },
+        "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
+          "tips": [
+            null
+          ]
+        },
+        "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
+          "tips": [
+            null
+          ]
+        },
+        "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
+          "tips": [
+            null
+          ]
+        },
+        "4fd098be-b798-4e23-b091-e90c95344d97": {
+          "tips": [
+            null
+          ]
+        },
+        "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
+          "tips": [
+            null
+          ]
+        },
+        "147a2b22-0cba-4505-81ef-770b81eee73e": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "aced2726-6ed1-4645-9fd2-eccfe982584f": {
+          "tips": [
+            null
+          ]
+        },
+        "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
+          "name": "Kod Flappy"
+        },
+        "47fe47af-9de3-4ba5-8193-1f489bef9544": {
+          "tips": [
+            null
+          ]
+        },
+        "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
+          "tips": [
+            null
+          ]
+        },
+        "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "9aba0e85-a709-43f5-8cfb-251671159b3a": {
+          "name": "Maze"
+        },
+        "524f2e35-6286-4585-879e-96e7286e8a6d": {
+          "tips": [
+            null
+          ]
+        },
+        "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
+          "tips": [
+            null
+          ]
+        },
+        "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
+          "tips": [
+            null
+          ]
+        },
+        "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
+          "name": "Kod dengan Anna dan Elsa"
+        },
+        "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
+          "tips": [
+            null
+          ]
+        },
+        "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "fc04ef5f-0d78-418b-9311-e12201106453": {
+          "tips": [
+            null
+          ]
+        },
+        "548dc37b-f338-4a52-a77e-7380794c64f2": {
+          "tips": [
+            null
+          ]
+        },
+        "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "tips": [
+            null
+          ]
+        },
+        "dd7bde99-d360-4587-8d30-75383b930808": {
+          "tips": [
+            null
+          ]
+        },
+        "75db60fb-671b-4740-80ae-0b13f4c09897": {
+          "name": "Artis"
+        },
+        "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
+          "tips": [
+            null
+          ]
+        },
+        "eea63453-59c2-4c48-8d04-d6612d379584": {
+          "tips": [
+            null
+          ]
+        },
+        "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "acc2ced5-83ed-4926-9830-f5bd846136a1": {
+          "tips": [
+            null
+          ]
+        },
+        "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
+          "tips": [
+            null
+          ]
+        },
+        "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "tips": [
+            null
+          ]
+        },
+        "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
+          "tips": [
+            null
+          ]
+        },
+        "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
+          "tips": [
+            null
+          ]
+        },
+        "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
+          "tips": [
+            null
+          ]
+        },
+        "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
+          "tips": [
+            null
+          ]
+        },
+        "b4a270c7-538c-4278-a88e-d074a04fafb4": {
+          "tips": [
+            null
+          ]
+        },
+        "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
+          "tips": [
+            null
+          ]
+        },
+        "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
+          "tips": [
+            null
+          ]
+        },
+        "7219d891-31ac-454e-8060-eb84a3a0d1df": {
+          "tips": [
+            null
+          ]
+        },
+        "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
+          "tips": [
+            null
+          ]
+        },
+        "c694a6e6-b265-4802-bfca-bbc9180c8407": {
+          "tips": [
+            null
+          ]
+        },
+        "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
+          "tips": [
+            null
+          ]
+        },
+        "a69a3310-4b81-4e04-8313-51044489351a": {
+          "name": "Star Wars: Membina Galaksi dengan Kod"
+        },
+        "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
+          "tips": [
+            null
+          ]
+        },
+        "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
+          "tips": [
+            null
+          ]
+        },
+        "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
+          "tips": [
+            null
+          ]
+        },
+        "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
+          "tips": [
+            null
+          ]
+        },
+        "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "d430e170-dccc-4c02-bcfe-5084169a154b": {
+          "tips": [
+            null
+          ]
+        },
+        "8531cf05-6363-4654-b20a-455e85fa16a0": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "430134f0-2f85-4888-abd3-f55fbf0753da": {
+          "name": "Pengenalan kepada Makmal Aplikasi"
+        },
+        "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "tips": [
+            null
+          ]
+        },
+        "88f6ccc1-0efa-4c60-985c-971a235d5645": {
+          "tips": [
+            null
+          ]
+        },
+        "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
+          "tips": [
+            null
+          ]
+        },
+        "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "f5f6ef34-367d-424d-af63-a8a04c146c34": {
+          "tips": [
+            null
+          ]
+        },
+        "540e3c12-987d-44de-8efc-5e6e12fed295": {
+          "tips": [
+            null
+          ]
+        },
+        "9e4304e5-944c-4b21-88eb-708558b2b82f": {
+          "progression_name": "Pemampatan Teks"
+        },
+        "21f43e64-dea3-4abc-8284-e055480370ce": {
+          "tips": [
+            null
+          ]
+        },
+        "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "tips": [
+            null
+          ]
+        },
+        "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "tips": [
+            null
+          ]
+        },
+        "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "tips": [
+            null
+          ]
+        },
+        "6874de98-8778-447b-8453-0138809b2c7e": {
+          "tips": [
+            null
+          ]
+        },
+        "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
+          "tips": [
+            null
+          ]
+        },
+        "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
+          "name": "Di sebalik Hour of Code"
+        },
+        "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
+          "tips": [
+            null
+          ]
+        },
+        "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "tips": [
+            null
+          ]
+        },
+        "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "tips": [
+            null
+          ]
+        },
+        "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
+          "tips": [
+            null
+          ]
+        },
+        "ef068b27-a180-4c77-8254-b150c8499acb": {
+          "progression_name": "Pergi ke depan dan ke belakang"
+        },
+        "efd37169-ddb7-4ef6-8049-36da981ea0f6": {
+          "progression_name": "Lebih banyak butang"
+        },
+        "72e0b520-4c05-4c32-84c3-1a51fd86daad": {
+          "progression_name": "Berada dalam Formasi"
+        },
+        "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
+          "progression_name": "Ke Manakah Mereka Akan Pergi?"
+        },
+        "221fbe2a-57a8-43d4-9674-5815273512dc": {
+          "progression_name": "Kru Tarian"
+        },
+        "7c943749-994a-44b2-a116-f33f70d2df95": {
+          "progression_name": "Not Perempat"
+        },
+        "d4e671fd-e312-4461-b97b-50e6e05c9cf1": {
+          "progression_name": "Bes, Julat Tengah dan Trebel"
+        },
+        "501df195-7991-40ad-bad9-df715484240b": {
+          "progression_name": "Percepatkannya, Perlahankannya"
+        },
+        "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
+          "tips": [
+            null
+          ]
+        },
+        "e1243ccf-be45-4f8e-a138-54953ea12f92": {
+          "tips": [
+            null
+          ]
+        },
+        "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
+          "tips": [
+            null
+          ]
+        },
+        "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "name": "Membangkitkan Keseronokan!",
+          "tips": [
+            null
+          ]
+        },
+        "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "name": "Kecerdasan Buatan (AI) Untuk Lautan",
+          "tips": [
+            null
+          ]
+        },
+        "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "tips": [
+            null
+          ]
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Penggulungan"
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Wabak",
+          "progression_name": "Wabak"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Inilah Bandar Raksasa"
+        },
+        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
+          "tips": [
+            null
+          ]
+        },
+        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa teka-teki dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Teka-teki dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah:",
+          "tips": [
+            null
+          ]
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Pengenalan",
@@ -150,7 +582,7 @@
           "progression_name": "Latihan"
         },
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
-          "description": "#### Permainan Bebas (10 minit)\n\n**Peralihan:** Sekarang, pelajar sepatutnya sudah melangkau kepada tahap akhir dalam pelajaran apabila mereka akan melihat pilihan permainan bebas yang sama seperti pelajaran sebelumnya. Sila galakkan pelajar menambah peristiwa kepada projek mereka dari masa lalu, atau mulakan projek baharu.",
+          "description": "#### Permainan Bebas (10 minit)\n\n**Peralihan:** Sekarang, pelajar sepatutnya sudah melangkau kepada tahap akhir dalam pelajaran apabila mereka akan melihat pilihan permainan bebas yang sama seperti pelajaran sebelumnya. Sila galakkan pelajar memasukkan peristiwa kepada projek mereka dari masa lalu, atau mulakan projek baharu.",
           "tips": [
             "Pilihan permainan bebas dalam pelajaran ini mencerminkan pilihan daripada pelajaran terdahulu. Sebenarnya, mana-mana kod pelajar daripada pelajaran yang lalu akan dibawa ke hari ini. Perbezaan utama ialah, pada masa sekarang pelajar mempunyai blok tambahan di dalam kotak alatan mereka yang perlu diguna untuk menjadikan atur cara mereka lebih menarik atau kompleks."
           ],
@@ -164,15 +596,21 @@
           "description": "#### Jurnal\n\nMeminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\nKekunci anak panah ialah satu cara untuk menjadikan program lebih berinteraktif. Apakah cara lain yang boleh kita berikan kepada pengguna untuk mengawal perkara yang berlaku dalam aplikasi atau permainan?"
         },
         "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
-          "name": "Pengenalan"
+          "name": "Pengenalan",
+          "description": "Kunjungi semula *peristiwa \\_tingkah laku* dalam pengaturcaraan. Di samping itu, perkenalkan alat \"Kostum\" Makmal Peperi yang membolehkan pelajar melukis kostum mereka sendiri.\n\n**Semak:** Tanya soalan kepada pelajar tentang peristiwa dan tingkah laku. \n\n-   Adakah anda ingat apa peristiwa itu?\n\n-   Adakah anda ingat apakah tingkah laku itu?\n\n-   Bolehkah anda mengingati beberapa tingkah laku yang telah anda gunakan? Apakah yang dilakukan oleh kesemuanya?\n    -   \"meronda\"\n    -   \"bergetar\"\n    -   \"berpusing ke kanan/kiri\" \n\n**Paparan:** Mulakan dengan menunjukkan Tahap 1 pelajaran hari ini kepada pelajar anda. \n\n**Fikir/Pasangan:** Minta pelajar meramalkan perkara yang akan berlaku apabila kod dijalankan dan berbincang dengan jiran mereka. Jalankan kod dan bincangkan hasilnya.\n\n**Paparan:** Tunjukkan Tahap 2. Pamerkan secara ringkas cara melakukan perkara berikut: \n\n-   Navigasi antara *tab \\_Kod* dan \\_Kostum. \n-   Lukiskan kostum. \n-   Pilih kostum daripada perpustakaan kostum.\n-   Tukar kostum peperi haiwan peliharaan maya kepada pakaian tersuai."
         },
         "8093d6bd-6d62-46dc-9fe1-1a4999a1dcf8": {
-          "name": "Haiwan Peliharaan Maya dengan Makmal Peperi"
+          "name": "Haiwan Peliharaan Maya dengan Makmal Peperi",
+          "description": "**Matlamat:** Hari ini, pelajar akan mencipta haiwan kesayangan maya mereka sendiri! Mereka akan mulakan dengan melukis atau memilih kostum baharu untuk peperi. Kemudian mereka akan mencipta peristiwa yang menyebabkan tindakan dan tingkah laku semasa interaksi."
         },
         "eabbaa23-0f57-46ed-84bc-8bff04cefaf3": {
+          "description": "#### Teka-teki Dalam Talian\n\n**Peralihan:** Gerakkan pelajar kepada mesin mereka. Galakkan pelajar mengikuti arahan untuk setiap teka-teki. Bantu mereka menyedari bahawa ini ialah aktiviti kreatif, bertujuan membantu mereka mempelajari Makmal Peperi. ",
           "tips": [
-            null
+            "Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka. Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya. Minta pelajar menghuraikan masalah yang mereka lihat:  \n\n-   Apakah yang perlu dilakukan? \n-   Apakah yang dilakukannya? \n-   Apakah yang diberitahu oleh perkara tersebut kepada anda?"
           ]
+        },
+        "7a70ca98-817b-49cf-87dd-37c1e69d6d8c": {
+          "description": "**Peringatan:** Jika teka-teki boleh dikongsi, ingatkan pelajar supaya berkongsi kerja mereka dengan rakan atau keluarga terdekat sahaja. "
         },
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "Penerokaan"
@@ -184,42 +622,83 @@
           "progression_name": "Permainan Bebas"
         },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah pilihan lain yang anda ingin dapatkan untuk haiwan peliharaan anda?"
+        },
+        "fcaf009c-58ce-43f6-bb24-dfdae991fdd2": {
+          "description": "### Memberikan Tenaga kepada Haiwan Peliharaan Maya anda (60-90 minit)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Sains Komputer + Seni Bahasa Inggeris + Sains**\n\n[Providing Energy for your Virtual Pet](https://docs.google.com/document/d/1SV51NrXzinuXHLToGarIDnVMd6GA8ZaD2LfWMDqTg0M/edit?usp=sharing) ialah aktiviti pilihan yang dijajarkan mengikut Standard Kesenian Bahasa Inggeris Teras Umum dan Standard Sains Generasi Akan Datang, ditulis oleh komuniti guru kita. Pelajar akan mencipta model saintifik yang menunjukkan cara haiwan peliharaan maya mereka akan menerima tenaga yang diperlukannya untuk terus hidup. \n\n_Standards yang Dikemukakan:_\n\n-   **CCSS.ELA.RI.5.7:** Mendapatkan maklumat daripada berbilang sumber cetakan atau digital, mempamerkan kebolehan mencari jawapan kepada soalan dengan pantas atau menyelesaikan masalah dengan cekap. \n\n-   **CCSS.ELA.RI.5.9:** Mengintegrasikan maklumat daripada beberapa teks mengenai topik yang sama untuk menulis atau bercakap tentang subjek dengan berpengetahuan. \n\n-   **5- PS3-1:** Menggunakan model untuk menghuraikan bahawa tenaga dalam makanan haiwan (digunakan untuk penyembuhan, pertumbuhan, pergerakan anggota badan dan menjaga haba badan) yang datang daripada tenaga matahari. \n\n-   **5-LS2-1:** Membangunkan model untuk menghuraikan pergerakan jirim dalam kalangan tumbuhan, haiwan, pengurai dan alam sekitar \n\n-   **SL.5.5:** Memasukkan komponen multimedia (misalnya, grafik, bunyi) dan paparan visual dalam pembentangan apabila perlu bagi meningkatkan pembangunan idea atau tema utama. "
         },
         "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
-          "name": "Perbendaharaan Kata Utama"
+          "name": "Perbendaharaan Kata Utama",
+          "description": "-   **empati**: untuk membayangkan perasaan yang dialami oleh individu lain\n-   **tafsiran**: untuk memahami sesuatu berdasarkan sudut pandangan kita\n\n**Sebelum memulakan pelajaran**: Sebagai aktiviti pilihan sebelum memulakan pelajaran, minta pelajar memainkan permainan [E-volve](https://www.digitalpassport.org/evolve.html) dalam Digital Passport™ oleh Pendidikan yang Munasabah. Ini akan membantu memperkenalkan konsep utama pelajaran ini. Untuk mengetahui lebih lanjut, sila lihat [Digital Passport Educator Guide](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Tayangkan** [Slide 4](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_1_0) dan tanya kepada pelajar: _Bayangkan apabila anda masuk, saya berkata kepada anda_ [in a friendly tone, with a big smile] _\"Helo!\" Emoji mana yang sesuai?_\n\nMinta pelajar menunjukkan jawapan mereka dengan mengangkat jari (1, 2, 3, atau 4). Jika ada sesiapa yang mengangkat bilangan jari selain 1, minta mereka berkongsi sebabnya.\n\n**Ulangi** ini sebanyak dua kali lagi, dengan mengatakan _Helo_ setiap kali secara berbeza: sekali dengan nada marah dan mengerutkan muka dan sekali lagi dengan nada gementar atau takut.\n\n**Tayangkan** [Slide 5](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3da8846a99_2_13) dan tanya: _Bagaimanakah jika anda hanya membacanya? Apakah perasaan anda sekarang?_\n\nTunjukkan bahawa apabila sesuatu disampaikan dalam bentuk teks, ia akan menjadi lebih sukar mentafsirkan maksud seseorang. Jelaskan bahawa respons mereka mungkin berbeza bergantung pada diri mereka kerana kita semua mentafsirkan dunia dengan perbezaaan yang sedikit. Jelaskan bahawa tafsiran bermaksud _untuk memahami sesuatu berdasarkan sudut pandangan kita._ ([Slide 6](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_4))\n\n**Katakan**: _Ini kerana kata-kata boleh ditafsirkan secara berbeza oleh individu yang berlainan, ia penting untuk berfikir tentang kata-kata yang kita gunakan dan sejauh mana ia memberi kesan kepada individu. Kita mungkin mengatakan sesuatu yang dianggap melucukan, tetapi seseorang mungkin memandang serius mengenainya dan ia mungkin melukakan perasaan mereka. Ini boleh berlaku secara bersemuka dan juga dalam talian. Kejadian ini boleh berlaku dengan lebih banyak dalam talian, kerana kata-kata hanya teks -- kita sebenarnya tidak bersemuka dengan individu lain._"
+        },
+        "d9d67048-27b2-49cf-9f30-26daf2aa25d1": {
+          "description": "**Tanya**: _Siapakah yang pernah mendengar pepatah \"Tongkat dan batu boleh mematahkan tulangku, tetapi kata-kata tidak akan pernah menyakiti hatiku\"?_\n\nJemput pelajar untuk memberikan respons. Jawapan akan berbeza. Lakukan tindakan susulan dengan bertanya kepada pelajar jika mereka berpendapat pepatah itu benar.\n\n**Tayangkan** [Slide 7](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_117) dan berkata: _Kini, kita akan menonton video yang dipanggil sebagai \"Kuasa Kata-kata.\" Semasa kita menonton, teruskan berfikir tentang sama ada pernyataan itu benar atau tidak._\n\nTunjukkan video [The Power of Words](https://www.commonsense.org/education/videos/the-power-of-words) dan kemudian minta pelajar berkongsi perkara yang dikatakan tentang sama ada pernyataan itu benar atau tidak. Tegaskan bahawa kadang-kadang ia sukar untuk mengabaikan perkara yang dikatakan oleh seseorang ketika itu ialah nama yang jahat. Nama BOLEH membuatkan anda berasa sedih atau sakit hati.\n\n**Tanya**: _Pada pendapat anda, mengapakah pemain lain mengatakan perkara itu kepada Guts?_ ([Slide 8](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_0))\n\nJemput pelajar untuk memberikan respons. Jawapan akan berbeza, tetapi sebab yang mungkin termasuk _mereka cuba bergurau senda_ atau _mereka berasa tidak selesa dengan diri mereka sendiri lalu meluahkan perasaan mereka kepada seseorang_.\n\n**Tanya**: _Apakah yang dilakukan oleh Guts sebagai tindakan balas terhadap kata-kata jahat itu?_\n\nJemput pelajar memberikan respons dan menjelaskan bahawa Guts bercakap dengan seseorang yang dia percayai, serta mempunyai empati terhadapnya dan memberi nasihat yang baik kepadanya. Takrifkan empati sebagai \\_ membayangkan perasaan yang dialami oleh individu lain\\_. ([Slide 9](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_109))\n\n**Tayangkan** [Slide 10](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_157) dan semak akronim S-T-O-P supaya memberikan respons terhadap kata-kata yang jahat dalam talian."
+        },
+        "7bfc56d1-5690-49a4-ace0-86491f84e4a7": {
+          "description": "**Edarkan** [Words Can Hurt Student Handout](https://drive.google.com/open?id=1G7urBAgM9G3D4zI4KVRgN-yX-Q4qAyb_HWEHsnREl3M) dan baca arahan dengan kuat. Benarkan pasangan menyelesaikan aktiviti itu dalam masa lima minit.\n\n**Jemput** pasangan untuk berkongsi jawapan mereka. Rujuk kepada [Teacher Version](https://drive.google.com/open?id=1kAcaaYor5vegqj2cncK5FOgFOeg2PtKUXWw-muodELE) untuk respons yang mungkin diterima."
         },
         "06057973-b621-4a48-a991-4f99aafdedca": {
+          "description": "**Letakkan** untaian merentasi sepanjang kawasan kelas. Tandakan separuh kawasan kelas sebagai \"OK.\" Tandakan separuh lagi sebagai \"Tidak OK.\" Minta pelajar semua berdiri di bahagian garisan bertanda OK.\n\n**Tayangkan** [Slide 11](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_106) dan baca arahan dengan kuat.\n\n**Minta** pelajar membaca pernyataan pada [Slides 12-15](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_14). Selepas setiap pernyataan, beri masa untuk pelajar bergerak atau kekal pada kedudukan. Panggil pelajar untuk menjelaskan pemikiran mereka. Jika boleh, pilih pelajar dari setiap bahagian membahaskan sebab pernyataan itu OK atau Tidak OK.\n\nUntuk contoh yang pelajarnya mengatakan ia Tidak OK, lakukan tindakan susulan dengan bertanya mereka perkara yang boleh mereka lakukan sekiranya mereka menerima mesej tersebut daripada seseorang individu.\n\n**Semak** bahawa kanak-kanak suka berada dalam talian untuk bersembang, menonton video, menghantar mesej, bermain permainan dan melakukan kerja sekolah. Kadang-kadang individu mengatakan perkara yang jahat atau menakutkan. Mesej yang membuatkan ramai individu berasa tidak senang kerana ia sudah melampaui batas.\n\n**Minta** pelajar lengkapkan [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy).",
           "progression_name": "Kuasa Kata-kata - Aktiviti Nirplag"
         },
+        "58780696-9fe3-4a71-815e-a8d008e5bed6": {
+          "description": "Berikut ialah sumber tambahan yang boleh anda berikan kepada pelajar bertujuan meningkatkan pembelajaran mereka:\n\n-   [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw) \n-   [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n-   **Sediakan** kepingan kertas dengan komen yang mengatakan perkara yang agak kurang baik, seperti:\n\n    -   Saya tidak percaya yang anda suka rancangan adiwira. Hanya pelajar gred rendah yang meminatinya.\n    -   Anda pelik.\n    -   Mengapakah anda memakai kemeja TERSEBUT?\n\n    <br>\n\n    Edarkan satu keping kertas kepada setiap pelajar dan jadikan mereka berpasangan. Minta pelajar menukar kepingan kertas dan membacanya dengan senyap. Kemudian minta mereka tukarkan semula dan secara bergilir-gilir sebutkan komen dengan kuat kepada individu lain. Tanya mereka mengenai perbezaan antara menulis sesuatu yang tidak begitu baik dan bertanggungjawab terhadap perkara yang mereka katakan pada seseorang individu. Tegaskan bahawa kadang-kadang individu bersembunyi di sebalik awanama aktiviti dalam talian mereka. Ingatkan pelajar bahawa sekiranya mereka tidak mengatakan sesuatu pada seseorang individu yang lain, maka Tidak OK untuk mengatakannya semasa melakukan aktiviti dalam talian mereka."
+        },
+        "863c44e5-dca9-4b0e-b8e0-c9a66c03c3a1": {
+          "description": "**Lakukan ini:** Paparkan slaid pelajaran untuk kelas.\n\nMinta pelajar memikirkan tentang cara kita mengatur dan menyimpan barangan. Adakah pelajar pernah menyimpan barangan di dalam kotak? Adakah kotak tersebut dilabelkan? Mengapa? Jika pelajar tidak mempunyai pengalaman ini, minta mereka bayangkan membantu anda mengemas kelas untuk musim panas.\n\nBeritahu pelajar bahawa hari ini kita akan bermain permainan kata, yang serupa dengan Mad Libs®, iaitu anda akan digesa mendapatkan perkataan yang kemudiannya akan diletakkan ke dalam cerita yang mengarut."
+        },
         "c03754de-e580-4e9f-b58e-af136a073898": {
-          "name": "Makanan Kegemaran"
+          "name": "Makanan Kegemaran",
+          "description": "**Lakukan ini:** Tunjukkan cerita ruang kosong yang pertama (Makanan Kegemaran) pada papan tulis dengan menggunakan slaid pelajaran. \n\n**Prom:** _Pada pendapat anda, bagaimanakah cerita ruang kosong ini berfungsi? Apakah yang anda perasan tentang label untuk setiap ruang kosong?_\n\nPenting bagi pelajar untuk memahami bahawa seseorang kebiasaannya memberikan kata-kata yang ditetapkan oleh setiap label tanpa melihat ceritanya terlebih dahulu. Pelajar mungkin perasan bahawa setiap ruang mempunyai label yang unik.\n\n#### Makanan Kegemaran\n\n**Lakukan Ini:** Sediakan tiga sampul surat pertama untuk demonstrasi. Jika menggunakan slaid, dahulukan animasi untuk menunjukkan tiga kotak ungu."
+        },
+        "7a4a67f6-dfb0-42ee-a28c-b6604100abde": {
+          "description": "Sebentar lagi, saya akan meminta sukarelawan membantu kita mengisi tempat kosong. Kita akan menggunakan sampul surat untuk menjejaki maklumat yang mereka berikan. Setiap sampul surat mempunyai label yang sepadan dengan satu daripada ruang kosong. Jika saya memberikan sampul surat kepada anda, sila tulis perkataan yang sepadan dengan label itu dan letakkannya di dalam, kemudian serahkannya semula kepada saya."
+        },
+        "ffa7ea29-3325-4d95-8766-4411729f47d9": {
+          "description": "**Lakukan Ini:** Memudahkan pengedaran dan pengumpulan sampul surat yang bertanda “objek”, “cecair” dan “nombor”. Sebaik sahaja dikumpulkan, pastikan sampul surat ditutup dan mula membaca cerita. Hanya apabila anda sampai di tempat kosong, sila buka sampul surat dan baca nilai yang disimpan."
         },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
-          "name": "Permainan Majlis"
+          "name": "Permainan Majlis",
+          "description": "**Lakukan Ini:**\n\n-   Sediakan sampul surat yang bertanda “kata sifat”, “objek”, “bahagian badan” dan “nombor”. \n-   Ulangi permainan di atas dengan cerita kedua. Kali ini anda boleh memulakan dengan label sebelum menunjukkan cerita bertujuan membangkitkan keadaan yang lebih tegang. Animasi dalam slaid pelajaran sudah disediakan bagi membantu memudahkan aktiviti ini.\n\n#### (Pilihan) Lanjutan Main Peranan\n\nHubungan boleh dibuat antara sukarelawan dan idea aplikasi mempunyai “pengguna”. Dalam analogi ini, peranan anda sebagai guru ialah seperti komputer. Anda akan meminta dan menyimpan maklumat daripada “pengguna” dan kemudian berusaha mencari jalan menggabungkan cerita. Bagi melibatkan lebih ramai pelajar dan meminta mereka melakonkan model ini, berikan peranan:\n\n_Komputer:_ Edar dan kumpulkan sampul surat. Buka setiap sampul surat semasa cerita sedang dibacakan bertujuan menyemak nilai yang disimpan.\n\n_Pengguna:_ Hantar perkataan yang diperlukan untuk melengkapkan cerita.\n\n_Pembaca:_ Baca kisah yang diselesaikan dengan kuat.\n\n#### Soal Jawab\n\n**Bincangkan:** Bagaimanakah menulis cerita ruang kosong berbeza jika dibandingkan dengan menulis cerita biasa?"
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
-          "name": "Cipta Cerita Anda Sendiri (20 minit)"
+          "name": "Cipta Cerita Anda Sendiri (20 minit)",
+          "description": "Dalam aktiviti pada hari ini, anda akan bekerjasama dengan kumpulan untuk mencipta cerita ruang kosong anda sendiri. ",
+          "progression_name": "Video: Pemboleh Ubah Nirplag dalam Sampul Surat"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
+          "description": "**Lakukan Ini:** Edarkan **\\*lembaran kerja pelajar** dan baca arahan. ",
           "tips": [
-            null
+            "Adalah cukup berguna sekiranya boleh memberikan cadangan kepada pelajar mengenai tema cerita supaya dapat menginspirasi dan menumpukan perhatian mereka kepada penulisan. Pertimbangkan agar pelajar boleh melaksanakan tugas ini secara berkumpulan supaya mereka dapat bekerjasama.\n\n**Cadangan topik:**\n\n-   lawatan lapangan kelas rekaan\n\n-   percutian luar biasa\n\n-   ulasan filem\n\n-   rutin waktu pagi\n\n-   seharian di pantai\n\n-   cara menerbangkan layang-layang"
           ]
         },
         "964a07f1-99da-434f-ae2c-26a3aa6b8d7a": {
+          "description": "#### Kongsikan Cerita Anda (10 minit)\n\n**Lakukan Ini:** Gabungkan dua kumpulan secara berpasangan dan minta mereka bergilir-gilir berkongsi cerita. \n\nJika anda mempunyai masa dan bahan yang mencukupi, berikan sampul surat kepada pelajar untuk dilabelkan dan sebagai pertukaran. Ini akan membantu pelajar membina model mental yang betul untuk cara pertukaran ini berfungsi apabila mereka beralih semula kepada pengaturcaraan.",
           "tips": [
-            null
+            "**Simpan cerita pelajar!**\n\nDalam beberapa pelajaran, pelajar akan menggunakan perkara yang telah mereka pelajari untuk mencipta projek Makmal Peperi lain. Terdapat beberapa pilihan untuk projek ini, tetapi satu daripadanya ialah mencipta cerita ruang kosong digital.\n\nSebagai contoh, [here](https://studio.code.org/levels/27026) ialah versi Makmal Peperi _Pemainan Majlis_ cerita daripada pelajaran ini. "
           ]
         },
         "220a9c31-c877-4fe2-83ef-722e93bed0a5": {
-          "name": "Memperkenalkan Pemboleh Ubah"
+          "name": "Memperkenalkan Pemboleh Ubah",
+          "description": "**Lakukan ini:** Rumuskan peraturan cerita ruang kosong sekali lagi dengan kelas.\n\n_Ruang kosong dalam cerita ini berfungsi seperti bekas untuk mengisi maklumat. Setiap bekas juga mempunyai label. Dalam sains komputer, apabila anda mencipta label untuk maklumat dalam atur cara anda, ia dipanggil sebagai_ **_pemboleh ubah_**.\n\n**Lakukan ini:** Tunjukkan slaid pelajaran dengan tiga sampel imej aplikasi."
+        },
+        "a76c58bc-57ad-45c4-b179-bdb68ce8d392": {
+          "description": "_Semua aplikasi ini meminta pengguna memberikan beberapa maklumat. Bagaimanakah perkara ini boleh dikaitkan dengan aktiviti hari ini?_\n\n_Maklumat disimpan dalam memori komputer dengan pemboleh ubah. Setiap pemboleh ubah mempunyai label yang memberitahu kita jenis maklumat yang dijangkakan. Apabila komputer memerlukan maklumat tersebut nanti, ia akan mencari label pemboleh ubah._\n\n_Sama ada anda menyimpan objek di dalam kotak, perkataan di dalam sampul surat, atau maklumat dalam pemboleh ubah, adalah penting untuk menggunakan label yang baik, supaya anda tidak menjadi keliru nanti._\n\n_Apabila pengguna menaip ke dalam prom, ia seperti komputer menyimpan maklumat di dalam bekas. Label pemboleh ubah memberitahu kita jenis maklumat yang dijangkakan._"
         },
         "035f92b6-2d03-4fec-adc4-a15a1b620f08": {
           "name": "Renungan",
           "description": "**Prom:**\n\n-   Pada pendapat anda, bagaimanakah cerita ruang kosong berkaitan dengan pembelajaran sains komputer?"
         },
+        "c242beca-92da-4ddf-bbf3-42747e4d40ab": {
+          "description": "### Pemboleh Ubah Rantaian Makanan (45-60 minit)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Sains Komputer + Seni Bahasa Inggeris + Matematik + Sains**\n\n[\\*\\*Food Chain Variables\\*\\*](https://docs.google.com/document/d/1td4o1Oj1Syw_WwVAJ2CMDdWhvwp9DwMdbwv0gV0azOs/edit?usp=sharing) ialah aktiviti pilihan yang dijajarkan mengikut Standard Kesenian Bahasa Inggeris Teras Umum dan Standard Sains Generasi Akan Datang, ditulis oleh komuniti guru kita. Pelajar akan mengenal pasti pelbagai nilai untuk pemboleh ubah yang ditemui dalam rantaian makanan (Contoh: tumbuhan, haiwan, pengurai dan sebagainya) kerana mereka mendokumenkan nilai ini dalam kad nota dan menunjukkan pergerakan jirim melalui alam sekitar. Pelajar juga akan mempelajari tentang Peraturan 10% dan menghuraikan dengan lebih lanjut mengenai aliran tenaga dengan prom penulisan.\n\n_Standard yang Dikemukakan:_\n\n-   **CCSS.ELA-LITERACY.W.5.2.B:** Membangunkan topik dengan fakta, takrifan, perincian konkrit, petikan, atau maklumat dan contoh lain yang berkaitan dengan topik.\n\n-   **CCSS.MATH.CONTENT.5.NF.B.7.C:** Menyelesaikan masalah dunia yang sebenar, melibatkan pembahagian pecahan unit dengan nombor bulat bukan sifar dan pembahagian nombor bulat dengan pecahan unit, misalnya, dengan menggunakan model pecahan visual dan persamaan untuk mewakili masalah.\n\n-   **NGSS.5-LS2-1:** Membangunkan model untuk menghuraikan pergerakan jirim dalam kalangan tumbuhan, haiwan, pengurai dan alam sekitar. "
+        },
         "d2b97c32-0187-432e-9fa2-979e9f34280a": {
-          "name": "Semak"
+          "name": "Semak",
+          "description": "**Lakukan Ini:** Ingatkan pelajar perkara yang mereka lakukan semasa kelas terakhir atau minta mereka kongsikan. \n\n**Bincangkan:** Bagaimanakah atur cara komputer meminta maklumat daripada kita?\n\n**Matlamat Perbincangan:** Pelajar perlu berfikir tentang pengalaman mereka sendiri sebagai pengguna dan masa apabila komputer meminta maklumat daripada mereka. Terdapat banyak cara untuk memasukkan maklumat ke dalam komputer, tetapi tumpukan kepada idea yang sesuatu ditaip ke dalam prom untuk masa sekarang.  "
+        },
+        "938a01cc-fcbd-4adf-a7ef-ab00d8f8950d": {
+          "description": "Pada akhir pelajaran yang lalu, kita telah melihat pada persamaan antara cerita ruang kosong dan aplikasi yang meminta input daripada pengguna. \nApabila mesej pada skrin komputer menunggu input anda, kita memanggilnya sebagai prom. \nApabila pengguna menaip ke dalam prom, ia seperti komputer sedang menyimpan maklumat di dalam bekas.\nLabel pemboleh ubah memberitahu kita jenis maklumat yang dijangkakan.\nHari ini kita akan mempelajari kod untuk mencipta prom di dalam Makmal Peperi."
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
           "name": "Teks dan Prom",
@@ -227,8 +706,9 @@
           "progression_name": "Ramalan"
         },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
+          "description": "#### Video (5 minit)\n\nPaparkan video kepada seluruh kelas. ",
           "tips": [
-            null
+            "Sama seperti ketika pelajar menulis atau berkomunikasi secara lisan, adalah penting menetapkan jangkaan penggunaan perkataan dengan betul dalam aktiviti ini. Pelajar harus memahami bahawa mereka bertanggungjawab terhadap kod yang mereka tulis, termasuk apa-apa teks yang ditunjukkan pada skrin. Teks yang dipaparkan mesti penuh hormat, serta selamat. Pelajar boleh berlatih agar tidak berkongsi maklumat peribadi dalam atur cara mereka, terutamanya jika mereka mahu berkongsi dengan individu lain.\nAmbil perhatian bahawa apa-apa maklumat yang ditaip ke dalam prom Makmal Peperi tidak disimpan untuk jangka masa panjang. Perkataan dan mesej yang ditaip oleh pengguna aplikasi ini akan hilang sebaik sahaja aplikasi ditetapkan semula."
           ],
           "progression_name": "Video: Teks dan Prom"
         },
@@ -243,10 +723,15 @@
           "progression_name": "Latihan"
         },
         "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
-          "name": "Semak"
+          "name": "Semak",
+          "description": "**Lakukan Ini:** Gunakan slaid pelajaran untuk menyemak perbendaharaan kata pelajaran ini. Pastikan pelajar boleh mengingat kembali daripada pelajaran yang mereka melihat setiap konsep ini. "
+        },
+        "75769a9e-4f2f-41af-b9b0-cb51cfadab11": {
+          "description": "Apabila pengguna memasukkan maklumat ke dalam prom, komputer menyimpannya bersama pemboleh ubah. Prom juga boleh mencetuskan peristiwa. Jika kod menggunakan pemboleh ubah, komputer akan mencari label sepadan untuk mendapatkan maklumat yang disimpan."
         },
         "d9171886-0618-4e77-a38b-4543fd46893e": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Pilih satu (atau dua) prom renungan di bawah untuk diberikan kepada pelajar. Mereka boleh mencatatkan jurnal secara berasingan, atau membincangkan jawapannya secara berkumpulan atau seluruh kelas.\n\n**Prom:**\n\n-   Bagaimanakah pemboleh ubah seperti kotak? Sejauh mana ia berbeza?\n\n-   Mengapakah pengatur cara memerlukan pemboleh ubah?"
         },
         "20919642-5201-4796-9e45-ee76e368614d": {
           "name": "Semak",
@@ -284,8 +769,14 @@
         "1744b867-c4fe-43e6-9707-050abe0791c5": {
           "name": "Melukis dengan Gelung"
         },
+        "0b7773fb-83ae-4dce-abc3-5cf15ae03aeb": {
+          "progression_name": "Video: Pengenalan Artis dengan JR Hildebrande"
+        },
         "ef504f91-6fca-4859-a960-7e792de6223e": {
           "progression_name": "Membina Kemahiran"
+        },
+        "4754f929-7c05-4e91-a7e8-39c23f4a7449": {
+          "progression_name": "Video: Gelung dengan Artis"
         },
         "411a2b66-714e-40fe-9636-a184b62c44bf": {
           "progression_name": "Membina Kemahiran"
@@ -300,8 +791,12 @@
           "name": "Semak"
         },
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
+          "name": "Menggunakan Pemboleh Ubah dengan Artis",
           "description": "Sila pertimbangkan untuk menyemak tahap Ramalan dan video dengan seluruh kelas sebelum meneruskan bersama pelajar kepada bahagian Membina Kemahiran.",
           "progression_name": "Ramalan"
+        },
+        "114f0276-db5c-466e-ad8a-a6488a93f019": {
+          "progression_name": "Video: Pemboleh Ubah dalam Artis"
         },
         "88c99bab-0045-4d56-a8ae-a12f32e2866e": {
           "progression_name": "Membina Kemahiran"
@@ -316,6 +811,7 @@
           "name": "Pengenalan"
         },
         "f5e9f7d1-a504-4581-bf6a-a44a5a62cd20": {
+          "name": "Pengaturcaraan dengan Lebah",
           "progression_name": "Membina Kemahiran"
         },
         "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6": {
@@ -333,6 +829,7 @@
           "name": "Pengenalan"
         },
         "aa24a7a8-7cec-408b-b980-89e9c457605a": {
+          "name": "Pemboleh ubah dengan Lebah",
           "progression_name": "Membina Kemahiran"
         },
         "94f3b6b8-77fa-42ef-bee6-80a47bdd050e": {
@@ -366,6 +863,9 @@
         },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Pengenalan"
+        },
+        "30ee92f3-9378-4f76-acea-3c22d8df60dd": {
+          "name": "Untuk Gelung Dengan Lebah"
         },
         "1668a313-16da-49db-9713-13d7ad33889e": {
           "progression_name": "Semak"
@@ -421,11 +921,26 @@
         "6555bc01-7d35-4c5f-8934-eb8015426997": {
           "name": "Pengenalan"
         },
+        "2a282546-3943-4555-adae-45fe80b8207a": {
+          "name": "Eksperimen Simulasi",
+          "progression_name": "Jalankan simulasi"
+        },
+        "a9361037-3164-409e-a061-748c4929e168": {
+          "progression_name": "Ubah suai pemboleh ubah simulasi"
+        },
         "de52214d-6afd-4af7-90e5-3e85484e0877": {
           "name": "Renungan"
         },
+        "b69c8e63-7778-4a44-b127-e4c083af98c9": {
+          "name": "Menyesuaikan simulasi",
+          "progression_name": "Menyesuaikan"
+        },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Pengenalan"
+        },
+        "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
+          "name": "Wabak",
+          "progression_name": "Wabak"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
           "progression_name": "Inilah Bandar Raksasa"
@@ -433,7 +948,8 @@
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Banyak Peperi"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "progression_name": "Membina Kemahiran"
@@ -441,14 +957,21 @@
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
           "progression_name": "Belajar dari simulasi"
         },
+        "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
+          "progression_name": "Projek Mini: Simulator Wabak"
+        },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Renungan"
+        },
+        "2c7244e0-80ea-472a-9dbe-051909768cfc": {
+          "name": "Membangkitkan Keseronokan!"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
           "name": "Kecerdasan Buatan (AI) Untuk Lautan",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: AI: Apakah Pembelajaran Mesin?"
         },
         "fa4c81ae-8830-49d8-9de9-e5f80a38dac8": {
           "tips": [
@@ -460,13 +983,23 @@
             null
           ]
         },
+        "919543ed-3f8f-4a49-ba9e-c34d0d3cfaa3": {
+          "progression_name": "Video: Kesan ke atas Masyarakat"
+        },
+        "833ae7ce-6703-495b-b010-224f0d32134f": {
+          "progression_name": "Ajar A.I. perkataan baharu"
+        },
         "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
           "tips": [
             null
           ]
         },
         "f06209ef-3a44-433c-9f9f-78803376b321": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "**Soalan terbuka:** Bagaimanakah kecerdasan buatan boleh digunakan untuk menyelesaikan masalah di dalam dunia?"
+        },
+        "74a7f7a2-b95f-4879-96b2-b04fe09825d6": {
+          "name": "Bantu Mengklasifikasikan Haiwan di Taman Negara Zebra Gunung"
         },
         "3218da5f-4f6d-4679-bc7a-178c91cb9bb6": {
           "name": "A.I. dalam Peristiwa Semasa"
@@ -524,18 +1057,30 @@
         "556e548d-e34d-419a-8c67-85ccde21b96f": {
           "name": "Cuba"
         },
+        "63989a97-d3e6-437f-b08c-d3f0ec592f5e": {
+          "name": "Renungkan dan Cuba Lagi"
+        },
         "7b532b31-5253-47dd-b38a-f1d862451edc": {
           "tips": [
             null
           ]
+        },
+        "910ddad6-f546-4378-9991-170e0fa35093": {
+          "name": "Pembentangan - Hari 5"
         },
         "65182889-0109-4c77-bcdc-5fffb9016ca1": {
           "tips": [
             null
           ]
         },
+        "de8956c3-6f81-4290-9b7a-b90fd6f630d0": {
+          "name": "Pembentangan - Hari 6"
+        },
         "4c778537-489f-4c5c-913b-38cbf385737c": {
           "name": "Perbendaharaan Kata Utama: "
+        },
+        "2ec9f664-2513-4fd2-972a-32193c8ab3a8": {
+          "description": "**Jemput** setiap kumpulan melaporkan kepada seluruh kelas perkara yang mereka pelajari tentang setiap haiwan tersebut. Bagi keseluruhan kelas, sila lengkapkan carta pada [Slide 10](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g513c004c7f_0_180). \n\n|                                                                                | Mervin Seekor Tikus | Ellie Seekor Gajah |\n| ------------------------------------------------------------------------------ | ------------------- | ------------------ |\n| 1. Nama penuh siapakah yang anda ketahui?                                      | X                   | X                  |\n| 2. Rumah siapakah yang anda boleh temui?                                       |                     | X                  |\n| 3. Tarikh lahir siapakah yang anda ketahui?                                    |                     | X                  |\n| 4. Nama pengguna dan kata laluan siapakah yang anda ketahui?                   |                     | X                  |\n| 5. Siapakah yang membocorkan rahsia dalam internet?                            | X                   |                    |\n| 6. Haiwan yang manakah boleh anda huraikan dengan lebih baik daripada fotonya? |                     | X                  |\n\n<br />\n\n**Tanya**: _Siapakah yang perlu ditemui oleh detektif bagi mendapatkan lebih banyak maklumat dan mengapa?_\n\nJelaskan bahawa jawapannya adalah Ellie, kerana sekarang mereka tahu tempat dia tinggal, rupa parasnya dan banyak maklumat peribadi tentang kehidupannya. \n\n**Tanya**: _Adakah terdapat sesuatu yang disiarkan oleh Ellie atau Mervin boleh memberikan kepada mereka?_\n\nJemput pelajar untuk berkongsi. Jelaskan bahawa walaupun OK untuk berkongsi maklumat yang menyeronokkan dan menarik dalam talian, berkongsi maklumat peribadi seperti tempat tinggal atau nama penuh mereka adalah tidak selamat, kerana internet ialah ruang awam yang orang asing dapat melihat maklumat mengenai mereka. Lagipun, berkongsi rahsia dalam talian boleh melukakan perasaan individu lain.\n\n**Jelaskan** bahawa ia penting untuk memikirkan dengan teliti perkara yang kita kongsi dalam talian kerana maklumat tersebut kekal. Takrifkan kekal sebagai sesuatu yang bertahan selamanya. ([Slide 11](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_36))\n\n**Tayangkan** [Slide 12](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_44) dan minta pelajar merumuskan maklumat yang OK untuk dikongsi dalam talian dan yang tidak OK. Masukkan respons mereka kepada carta. Jawapan yang dicadangkan:\n\n| OK untuk Dikongsi | TIDAK OK untuk Dikongsi                    |\n| ----------------- | ------------------------------------------ |\n| Minat             | Nama penuh                                 |\n| Hobi              | Aamat                                      |\n| Nama samaran      | Tarikh lahir                               |\n|                   | Kata laluan                                |\n|                   | Nama sekolah                               |\n|                   | Maklumat yang akan melukakan individu lain |\n\n<br />\n\nTegaskan bahawa pelajar perlu mendapatkan kebenaran ibu bapa atau penjaga mereka sebelum berkongsi apa-apa maklumat tentang diri mereka dalam talian."
         },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
           "tips": [
@@ -546,6 +1091,12 @@
           "tips": [
             null
           ]
+        },
+        "b87acbf5-a0a2-4c86-a344-3fbf143431f6": {
+          "progression_name": "Video Cepat, Cepat  - Aktiviti Nirplag"
+        },
+        "0c64d280-12f6-4d9a-9329-dac1aa620ca5": {
+          "name": "Cepat, Cepat"
         },
         "93f8de74-6246-4227-8418-08d5c736633b": {
           "name": "Renungan",
@@ -787,10 +1338,10 @@
           "progression_name": "Kejiranan Dalam Talian Saya"
         },
         "66dc5fd4-eacf-41f8-9d21-196b81d35d7a": {
-          "description": "### Perbendaharaan Kata Utama\n\n-   **dalam talian**: menggunakan komputer, telefon, atau tablet untuk mengunjungi laman web atau aplikasi\n-   **laman web atau aplikasi**: tempat yang anda boleh kunjungi dalam internet\n\n**Tanya**: _Apakah yang perlu anda lakukan untuk kekal selamat apabila mengunjungi tempat baharu?_ ([Slide 3](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_54))\n\nJemput pelajar memberikan respons. Jawapan akan berbeza, tetapi mengukuhkan peraturan keselamatan berikut:\n\n-   Sentiasa pergi ke merata tempat dengan orang dewasa.\n-   Jangan berkeliaran secara bersendirian.\n-   Hanya bercakap dengan individu yang anda kenali.\n\n**Katakan**: _Hari ini kita akan bercakap tentang sejauh mana mengunjungi merata tempat dalam internet mempunyai banyak persamaan mengunjungi merata tempat dalam kehidupan sebenar. Sama sahaja seperti terdapat peraturan untuk menjaga keselamatan apabila anda mengunjungi tempat baharu di dalam dunia, ada caranya untuk memastikan keselamatan anda dalam talian._\n\n**Projek** [Slide 4](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g5c15fa078c_0_0) dan takrifkan **dalam talian** seperti _menggunakan komputer, telefon, atau tablet untuk mengunjungi laman web atau aplikasi_.\n\n**Tunjukkan** video [My Online Neighborhood](https://www.commonsense.org/education/videos/my-online-neighborhood) pada [Slide 5](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_93) dan kemudian tanya: _Apakah yang disukai oleh Arms tentang internet? Apakah jenis perkara yang boleh dia lakukan dalam internet?_\n\nJemput pelajar memberikan respons. Contoh respons:\n\n-   Dia suka mengunjungi tempat yang menyeronokkan.\n-   Dia boleh bercakap dengan keluarga dan rakannya. \n-   Dia boleh belajar banyak perkara baharu.\n-   Dia boleh mencipta sesuatu dalam internet.\n\n**Tanya**: _Apakah tiga peraturan yang dipatuhi oleh Arms apabila dia pergi ke merata tempat dalam talian?_\n\nJemput pelajar memberikan respons. Projek [Slide 6](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_141) dan mengukuhkan tiga peraturan utama:\n\n1.  Sentiasa bertanya ibu bapa anda (atau orang dewasa yang anda percayai) terlebih dahulu. \n2.  Hanya bercakap dengan individu yang anda kenali.\n3.  Hanya kekal dengan pilihan tempat yang sesuai dengan anda.\n\nJelaskan bahawa mengekalkan pilihan tempat yang \"sesuai\" bermaksud memastikan laman web atau aplikasi itu sesuai untuk kanak-kanak dan anda mempunyai kebenaran untuk berada di sana."
+          "description": "### Perbendaharaan Kata Utama\n\n-   **dalam talian**: menggunakan komputer, telefon, atau tablet untuk mengunjungi laman web atau aplikasi\n-   **laman web atau aplikasi**: tempat yang anda boleh kunjungi dalam internet\n\n**Tanya**: _Apakah yang perlu anda lakukan untuk kekal selamat apabila mengunjungi tempat baharu?_ ([Slide 3](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_54))\n\nJemput pelajar memberikan respons. Jawapan akan berbeza, tetapi mengukuhkan peraturan keselamatan berikut:\n\n-   Sentiasa pergi ke merata tempat dengan orang dewasa.\n-   Jangan berkeliaran secara bersendirian.\n-   Hanya bercakap dengan individu yang anda kenali.\n\n**Katakan**: _Hari ini kita akan bercakap tentang sejauh mana mengunjungi merata tempat dalam internet mempunyai banyak persamaan mengunjungi merata tempat dalam kehidupan sebenar. Sama sahaja seperti terdapat peraturan untuk menjaga keselamatan apabila anda mengunjungi tempat baharu di dalam dunia, ada caranya untuk memastikan keselamatan anda dalam talian._\n\n**Tayangkan** [Slide 4](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g5c15fa078c_0_0) dan takrifkan **dalam talian** seperti _menggunakan komputer, telefon, atau tablet untuk mengunjungi laman web atau aplikasi_.\n\n**Tunjukkan** video [My Online Neighborhood](https://www.commonsense.org/education/videos/my-online-neighborhood) pada [Slide 5](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_93) dan kemudian tanya: _Apakah yang disukai oleh Arms tentang internet? Apakah jenis perkara yang boleh dia lakukan dalam internet?_\n\nJemput pelajar memberikan respons. Contoh respons:\n\n-   Dia suka mengunjungi tempat yang menyeronokkan.\n-   Dia boleh bercakap dengan keluarga dan rakannya. \n-   Dia boleh belajar banyak perkara baharu.\n-   Dia boleh mencipta sesuatu dalam internet.\n\n**Tanya**: _Apakah tiga peraturan yang dipatuhi oleh Arms apabila dia pergi ke merata tempat dalam talian?_\n\nJemput pelajar memberikan respons. Projek [Slide 6](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_141) dan mengukuhkan tiga peraturan utama:\n\n1.  Sentiasa bertanya ibu bapa anda (atau orang dewasa yang anda percayai) terlebih dahulu. \n2.  Hanya bercakap dengan individu yang anda kenali.\n3.  Hanya kekal dengan pilihan tempat yang sesuai dengan anda.\n\nJelaskan bahawa mengekalkan pilihan tempat yang \"sesuai\" bermaksud memastikan laman web atau aplikasi itu sesuai untuk kanak-kanak dan anda mempunyai kebenaran untuk berada di sana."
         },
         "fc3baf69-3ed1-46de-af6c-bed50ffd6757": {
-          "description": "**Katakan**: _Sekarang ini, kita akan mempelajari puisi pendek bertujuan membantu kita mengingati peraturan untuk kekal selamat dalam talian. Mula-mula, saya akan membaca puisi ini dan kemudian kita akan membacanya bersama._\n\n**Projek** [Slide 7](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_196) dan lakonkan aksi berpuisi semasa anda membacanya dengan kuat. Ini ialah puisi panggilan dan respons bersama tindakan berbeza yang sepadan dengan setiap satu daripada tiga peraturan keselamatan.\n\n**Baca** puisi dengan kuat bersama pelajar anda. Semasa pelajar membacanya, mereka perlu mengikuti serentak dengan aksinya. Puisi ini juga berfungsi dengan baik sekiranya seorang daripada pelajar memainkan peranan sebagai guru dan meminta kelas memberi respons kepadanya.\n\n**Keselamatan, Ini Paling Utama!  Oleh Jenny Pritchett**\n\n_Kita perlu hidup dengan selamat_\n\n_Bila-bila masa kita berada dalam talian_\n\n_Oleh itu, kita mengikuti peraturan ini_\n\n_Untuk bersuka ria!_\n\n[Hold up 1 finger] \\*Sentiasa meminta keizinan ibu bapa anda terlebih dahulu! \\*\n\n[Hold up 2 fingers] \\*Bercakap dengan orang yang anda kenali sahaja! \\*\n\n[Hold up 3 fingers] _Hanya layari laman web yang sesuai untuk anda!_\n\n_Dan kita akan selamat_\n\n_Ke mana sahaja kita pergi!_\n\nNota: [Poem Poster](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) cukup bagus digunakan untuk puisi mingguan anda atau sebagai rutin yang konsisten untuk melancarkan mana-mana masa komputer atau peranti."
+          "description": "**Katakan**: _Sekarang ini, kita akan mempelajari puisi pendek bertujuan membantu kita mengingati peraturan untuk kekal selamat dalam talian. Mula-mula, saya akan membaca puisi ini dan kemudian kita akan membacanya bersama._\n\n\\*_Tayangkan_ [Slide 7](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_196) dan lakonkan aksi berpuisi semasa anda membacanya dengan kuat. Ini ialah puisi panggilan dan respons bersama tindakan berbeza yang sepadan dengan setiap satu daripada tiga peraturan keselamatan.\n\n**Baca** puisi dengan kuat bersama pelajar anda. Semasa pelajar membacanya, mereka perlu mengikuti serentak dengan aksinya. Puisi ini juga berfungsi dengan baik sekiranya seorang daripada pelajar memainkan peranan sebagai guru dan meminta kelas memberi respons kepadanya.\n\n**Keselamatan, Ini Paling Utama!  Oleh Jenny Pritchett**\n\n_Kita perlu hidup dengan selamat_\n\n_Bila-bila masa kita berada dalam talian_\n\n_Oleh itu, kita mengikuti peraturan ini_\n\n_Untuk bersuka ria!_\n\n[Hold up 1 finger] \\*Sentiasa meminta keizinan ibu bapa anda terlebih dahulu! \\*\n\n[Hold up 2 fingers] \\*Bercakap dengan orang yang anda kenali sahaja! \\*\n\n[Hold up 3 fingers] _Hanya layari laman web yang sesuai untuk anda!_\n\n_Dan kita akan selamat_\n\n_Ke mana sahaja kita pergi!_\n\nNota: [Poem Poster](https://docs.google.com/document/d/10SHj9Xh4JJPwJJrjzJ48mpLhm3PM8orzJbWCTHY6VUo/edit) cukup bagus digunakan untuk puisi mingguan anda atau sebagai rutin yang konsisten untuk melancarkan mana-mana masa komputer atau peranti."
         },
         "39a4de29-4980-411c-9999-90a2bb94b72b": {
           "description": "**Katakan**: _Komputer membolehkan anda mengunjungi tempat yang jauh tanpa perlu meninggalkan kelas._ \n\nTakrifkan **laman web** sebagai _tempat yang anda boleh kunjungi dalam internet._ ([Slide 8](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_245)) Terangkan kepada pelajar bahawa dalam internet, mereka boleh mengunjungi laman web atau aplikasi untuk tempat sebenar, seperti zoo dan muzium. Tempat ini mungkin jauh dari tempat mereka tinggal, tetapi mereka boleh mengunjunginya secara dalam talian.\n\n**Pilih** laman web untuk diterokai bersama kelas anda. Jika anda tidak pasti pilihan yang baik untuk diterokai, sila cuba satu daripada yang berikut:\n\n-   [The San Diego Zoo](http://kids.sandiegozoo.org/)\n-   [National Geographic Kids Explore the World](https://kids.nationalgeographic.com/explore/countries/)\n\n**Tanya**: _Apakah peraturan pertama sebelum menghidupkan peranti atau membuka laman web atau aplikasi?_\n\nJemput pelajar anda berkongsi pengalaman itu, tetapi mengingatkan mereka bahawa mereka mesti sentiasa mendapatkan keizinan orang dewasa sebelum menggunakan peranti atau mengunjungi laman web atau aplikasi.\n\n**Terokai** laman web yang anda pilih dengan kelas anda, membolehkan pelajar memilih halaman dan aktiviti yang paling menarik bagi mereka. Semasa anda melayari laman web tersebut, tunjukkan cara pelajar mengikuti dua peraturan keselamatan yang lain untuk berada dalam talian: bercakap dengan orang yang mereka kenali sahaja dan kekal berada di tempat yang sesuai untuk mereka.\n\nNota: Jika anda berada di dalam makmal komputer atau mempunyai peranti yang mencukupi di dalam kelas anda, minta pelajar melakukan penerokaan secara individu atau berpasangan.\n\n**Tanya** pelajar perkara yang mereka pelajari dalam lawatan lapangan internet mereka. Tanya juga: _Bagaimanakah anda mengikuti tiga peraturan keselamatan apabila anda mengunjungi laman web tersebut?_"
@@ -833,21 +1384,30 @@
           ]
         },
         "25da4eea-6dc0-40ad-88ee-365e7f1ce9aa": {
-          "description": "-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar untuk menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. _Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?_\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangku selepas semua ini, cuba tanyakan soalan utama untuk meminta pelajar mengesan ralat mereka sendiri."
+          "description": "-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar untuk menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. _Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?_\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanyakan soalan utama untuk meminta pelajar mengesan ralat mereka sendiri."
         },
         "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
           "progression_name": "Membina Kemahiran"
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Bolehkah anda melukis jujukan untuk bersiap sedia pergi ke makmal komputer?\n-   Lukiskan perkara yang  \"Boleh\" dan \"Tidak Boleh\" dilakukan di makmal komputer\n-   Lukis dan labelkan nama bahagian komputer yang anda gunakan apabila mengklik dan menyeret semasa menyelesaikan teka-teki. (butang tetikus, skrin sentuh, pad jejak)",
           "tips": [
             "Prom renungan seperti ini boleh diselesaikan dalam pelbagai gaya. Jurnal atau perbincangan (dengan kumpulan atau rakan kongsi) ialah pilihan hebat!"
           ]
         },
+        "902cde98-a6eb-4a14-b992-43ba04b6c522": {
+          "description": "Gunakan aktiviti ini untuk meningkatkan pembelajaran pelajar. Ini juga boleh digunakan sebagai aktiviti luar kelas atau rancangan pengayaan lain.\n\n-   Jika pelajar menyelesaikan teka-teki awal, minta mereka luangkan masa mencipta teka-teki mereka sendiri dalam jurnal mereka."
+        },
+        "e2b3e229-08fd-47a4-9f9b-6c32f6c6406c": {
+          "description": "### Rima Dengannya - (20-30 minit)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png)  **Sains Komputer + Seni Bahasa Inggeris + Matematik**\n\n[\\*\\*Rhyme With That\\*\\*](https://docs.google.com/document/d/1abRo0DBkRiB1gIPWjdxv70TwO28N5_QGpmtMQ-oyYd0/edit#). Rima Dengannya ialah aktiviti pilihan yang dijajarkan mengikut Standard Kesenian Bahasa Inggeris Teras Umum dan Matematik, ditulis oleh komuniti guru kita. Pelajar akan menggunakan tetikus komputer untuk menyeret dan melepaskan huruf bagi membentuk perkataan CVC, memadankan perkataan berima dan kiraan.\n\n**Standard yang Diberikan Perhatian:** \n\n-   **CCSS.ELA-LITERACY.RF.K.2.A:** Mengenali dan menghasilkan perkataan berima.\n-   **CCSS.ELA-LITERACY.RF.K.2.D:** Mengasingkan dan menyebut bunyi awal, vokal tengah dan bunyi akhir (fonem) dalam tiga perkataan fonem (konsonan-vokal-konsonan, atau CVC).1 (Ini tidak termasuk CVC yang berakhir dengan /l/, /r/, atau /x/.)\n-   **CCSS.MATH.CONTENT.K.CC.B.5:** Kira untuk menjawab soalan \"berapa banyak?\" tentang sebanyak 20 perkara yang disusun dalam garisan, tatasusunan segi empat tepat, atau bulatan, atau sebanyak 10 perkara dalam konfigurasi berserak; diberi nombor daripada 1-20, mengira banyak objek."
+        },
         "1a3b430e-95cd-4425-b5d7-953dfae5e5d2": {
-          "name": "Pengenalan"
+          "name": "Pengenalan",
+          "description": "Aktiviti mula memanas ini bertujuan membuatkan kelas berfikir tentang cara memecahkan masalah besar kepada senarai langkah berasingan.\n\n**Model:** Mulakan dengan bertanya kepada kelas mengenai arahan langkah demi langkah cara menuju ke papan tulis. Pastikan anda meminta pelajar memecahkan apa-apa arahan yang besar, seperti \"Berjalan ke papan tulis,\" kepada arahan yang lebih kecil seperti \"Melangkah ke hadapan.\"\n\nApabila anda sampai di papan tulis, minta arahan melukis wajah yang tersenyum dan cuba pastikan mereka boleh mengekalkan saiz arahan sama kecil."
         },
         "d62f31be-e1c0-4384-a410-e8a8f1b84d7b": {
+          "description": "**Katakan:** _Syabas! Anda baru sahaja memberikan saya senarai langkah untuk menyelesaikan tugas. Dalam sains komputer, itu dipanggil sebagai **Algoritma**!_\n(Lakukan tindakan susulan dengan cara biasa anda memperkenalkan perbendaharaan kata: dinding perkataan, ulang ikut saya dan sebagainya.)",
           "tips": [
             "Jika kelas mula menjerit secara serentak, terangkan bahawa anda hanya boleh mendengar satu arahan pada satu masa. Panggil pelajar secara individu jika ia membantu."
           ]
@@ -856,21 +1416,58 @@
           "name": "Pengaturcaraan Peta Bahagia",
           "progression_name": "Video: Peta Bahagia - Aktiviti Nirplag"
         },
+        "7beae8bf-6b0e-41da-9397-06b0c9fb0b52": {
+          "description": "Dalam latihan ini, kelas akan mendapat kad peta yang mempunyai ruang mula (flurb) dan ruang hujung (buah) pratakrif. Pelajar perlu membawa flurb kepada buah pada setiap kad, dengan menggunakan anak panah yang disediakan.\n\n**Model:**  Pilih satu daripada peta perantaraan daripada lembaran kerja Kad Peta Bahagia (misalnya, #3). Paparkannya kepada kelas dan selesaikan teka-teki bersama-sama.\n\nMinta pelajar melihat teka-teki tersebut, kemudian fikir dan kongsikan penyelesaian berpasangan cara mereka akan membawa flurb kepada buah.\n\n**Fikirkan:**  Flurb ini perlu mengambil dua langkah untuk sampai kepada buah. Sila bekerjasama dengan pasangan siku anda untuk memutuskan mengenai dua langkah yang perlu diambil itu.\n\n**Berpasangan:**  Minta pelajar berbincang dengan jiran selama kira-kira 90 saat.\n\n**Kongsi:** Minta beberapa pelajar menghuraikan algoritma mereka kepada kelas. Gerakkan jari anda sepanjang peta yang dipaparkan semasa pelajar membaca langkah mereka. Sebaik sahaja anda mempunyai penyelesaian, sila tanya sekiranya ada sesiapa mempunyai idea bernas yang berbeza. \n\nSekarang, kongsi dengan pelajar bahawa langkah ajaib menukar algoritma kepada atur cara berlaku apabila kod tersebut ditulis dengan menggunakan simbol. Adakah pelajar dapat melihat simbol pada paparan?\n\n**Fikirkan:** Cabar pelajar mengekod algoritma yang mereka buat sebelum ini kepada simbol dan tuliskan simbol tersebut dalam jurnal mereka (atau pada sehelai kertas.)\n\n**Berpasangan:** Sebaik sahaja pelajar menulis simbol mereka, minta mereka bertukar dengan pasangan bertujuan melihat jika mereka boleh mengikuti arahan masing-masing.\n\n**Kongsi:** Minta sukarelawan datang mencabut anak panah mereka pada papan tulis. Jika kod asal tidak berfungsi, luangkan sedikit masa untuk melakukan penyahpepijatan seluruh kelas. Pelajar sepatutnya sudah membiasakan diri dengan idea \"penyahpepijatan\" daripada pelajaran sebelumnya, oleh itu pastikan anda menggunakan perbendaharaan kata tersebut untuk membuatkan mereka selesa dengannya.\n\nSebaik sahaja kod berjaya ditulis pada papan tulis, ucapkan tahniah kepada seluruh kelas kerana menulis atur cara pertama mereka bersama-sama!"
+        },
+        "84f50800-a9f3-4ae6-b023-f63cc376e061": {
+          "description": "### Giliran Pelajar\n\n**Kumpulan:** Jika kelas anda selesa, tempatkan pelajar dalam kumpulan kecil yang terdiri daripada 2-3 ahli. Jika tidak, anda boleh terus menyelesaikan masalah ini seluruh kelas dan minta mereka fikir dan kongsikan secara berpasangan kaedah menulis atur cara. \n\n**Edarkan:** Edarkan satu daripada imej daripada **\\*Lembaran Kerja** kepada setiap kumpulan mengikut keperluan.\\\n_(Pilihan)_ Jika anda mula perasan bahawa pelajar sudah bersiap sedia menerima lebih banyak lagi, gunakan **\\*Manipulatif** yang disediakan dan biarkan pelajar memilih destinasi mula dan akhir mereka sendiri pada peta yang kosong.\n\nGalakkan pelajar untuk mengikuti langkah berikut:\n\n-   Bincangkan algoritma untuk membawa flurb kepada buah.\n-   Kodkan algoritma kepada anak panah dalam jurnal mereka.\n-   Cuba gunakan kod mereka untuk melihat jika semuanya berfungsi seperti yang dijangkakan.\n-   Nyahpepijat apa-apa isu dan baiki kod mereka sehingga ia berfungsi dengan betul.\n\n**Kongsi:** Apabila pelajaran selesai, tawarkan agar kumpulan boleh berkongsi peta paling sukar yang mereka selesaikan. Jika anda mempunyai masa terluang, minta mereka kongsikan penyelesaiannya juga."
+        },
+        "a6b03761-2c05-45cd-be08-78c966e2f444": {
+          "description": "#### Sembang Bebas\n\n**Bincangkan:** Apabila tiba masanya untuk merehatkan diri, tanya kepada pelajar jika mereka boleh memberitahu perbezaan antara algoritma dan atur cara. Kedua-duanya merupakan senarai langkah, tetapi atur cara (_kod_) telah dikodkan dengan cara yang boleh dijalankan oleh mesin (atau kanak-kanak tadika!)\n\n-   _Adakah anda berpendapat bahawa seseorang yang bercakap dalam bahasa lain mampu menjalankan atur cara anda?_ \n-   _Mengapa atau mengapa tidak?_\n\n#### Renungan\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi**\n    yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Bolehkah anda lukiskan peta flurb anda sendiri?  \n-   Apakah kod yang perlu untuk menyelesaikan peta anda?"
+        },
+        "c3cfdbc4-82d5-4717-bf83-22860936a687": {
+          "description": "Gunakan aktiviti ini untuk meningkatkan pembelajaran pelajar. Ini juga boleh digunakan sebagai aktiviti luar kelas atau rancangan pengayaan lain.\n\n**Peta Patung Mainan Lembut**\n\n-   Cipta grid saiz sebenar menggunakan ambal dengan pita dan minta murid membawa patung haiwan mainan lembut itu ke sekolah.\n-   Sekarang, pelajar boleh mengatur cara rakan mereka menggerakkan patung mainan lembut sebenar mereka seperti yang diarahkan dalam atur cara.\n\n**Cipta Sendiri**\n\n-   Minta pelajar mencipta peta mereka sendiri.\n-   Minta pelajar lain menyelesaikannya dengan menggunakan atur cara."
+        },
+        "239ba3e6-f30a-4f56-8325-0058e708421a": {
+          "name": "Berkelakuan baik di dalam Makmal Komputer",
+          "description": "Semak jangkaan dan cara berkelakuan apabila mereka memasuki makmal komputer."
+        },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
+          "description": "**Bincangkan:** Adakan perbincangan yang baik mengenai jangkaan makmal komputer untuk memastikan bahawa pelajar memahami peraturan. Beberapa topik perbincangan mungkin termasuk:\n\n-   _Adakah pengendalian makmal komputer baik?_\n-   _Berapa kuat bunyi kita berjalan dibenarkan ketika berada di dalam makmal komputer?_\n-   _Apakah yang perlu anda lakukan jika anda tersangkut dengan teka-teki?_\n-   _Jika anda berasa kecewa, adakah ia akan membantu dengan memukul komputer?_\n-   \\_Apabila kita hendak pergi ke makmal komputer, bagaimanakah kita perlu bersiap sedia?",
           "tips": [
-            null
+            "**Beberapa perkara yang mungkin perlu dilakukan:**\n\n-   Berada dalam keadaan tenang di makmal\n-   Diingatkan jangan mengunyah gula-gula getah atau kandi\n-   Sanitasikan tangan anda\n-   Duduk bersama pasangan anda berkongsi satu komputer\n-   Pastikan \"pemandu\" pertama boleh mencapai tetikus\n-   Apabila anda berasa kecewa, jangan pukul atau goncang komputer atau monitor\n-   Ikuti **\\*Peraturan 20/20/20**\n-   Cara menangani **\\*Bergoyang-goyang** setiap 20-30 minit (memerlukan log masuk percuma ke dalam GoNoodle). \n-   Tanya pasangan anda terlebih dahulu, sebelum anda bertanya guru\n-   Pastikan kelantangannya rendah supaya semua individu lain boleh mendengar pasangan mereka\n-   Gunakan jurnal anda untuk menjejaki perasaan dan penyelesaian"
           ]
         },
+        "32b45f59-1f1f-4ef8-8bf9-26927003d960": {
+          "description": "Aktiviti ini akan membantu membawa konsep nirplag daripada Peta Bahagia memasuki dunia dalam talian yang menjadi pilihan pelajar. Pilih _satu_ daripada berikut untuk dilakukan bersama kelas anda:\n\nPilih _satu_ daripada berikut untuk dilakukan bersama kelas anda:"
+        },
+        "d3d96ea6-986d-49e8-b48a-521536592847": {
+          "name": "Algoritma Menyeret dan Melepaskan",
+          "description": "Tayangkan satu daripada peta aktiviti \"Peta Bahagia\" dan paparkannya untuk dilihat oleh pelajar. Pada projektor atau di hadapan kelas, letakkan beberapa blok arah daripada **\\*Manipulatif** secara rawak dan berlatih \"menyeret dan melepaskan\" dengan menekan jari pada satu daripada helaian kertas dan menggerakkannya merentasi skrin. Terangkan bahawa anda boleh \"klik\" untuk memilih blok ini dengan mengetik jari anda padanya, atau anda boleh \"seret\" blok tersebut dengan menekan jari anda padanya dan menggerakkannya. Untuk \"lepaskan\" blok, lepaskan jari anda.\n\nSelepas menunjukkan ini kepada kelas, minta sukarelawan mencipta algoritma untuk Peta Bahagia dengan \"menyeret dan melepaskan\" blok yang diperlukan.\n\n#### -atau-"
+        },
+        "382f7ddc-c4e7-4674-80b2-e8b7dac7dcf6": {
+          "name": "Pratonton Teka-teki Dalam Talian oleh Seluruh Kelas",
+          "description": "Tayangkan teka-teki daripada pelajaran. Tunjukkan kepada kelas cara mengklik pada blok dan letakkannya di tempat yang betul dengan menyeret dan melepaskan. Cuba lakukan kesalahan dengan sengaja seperti mengklik latar belakang atau melepaskan imej di hadapan tempatnya yang betul. Minta bantuan sukarelawan di dalam kelas apabila anda menghadapi masalah ini dan bantu mereka menggunakan kemahiran yang mereka bangunkan dalam pelajaran nirplag terakhir untuk melakukannya dengan betul."
+        },
+        "d639c3c7-2708-41eb-afae-cf5a65464fd8": {
+          "name": "Pengaturcaraan dengan Blok",
+          "progression_name": "Video: Pengaturcaraan dengan Blok"
+        },
         "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
+          "description": "### Teka-teki Dalam Talian\n\nIni akan mengajar pelajar cara menggunakan Code.org untuk menyelesaikan teka-teki dalam talian.\n\nTonton video **\\*Pengaturcaraan Berpasangan** bersama pelajar anda, kemudian tetapkan mereka secara berpasangan. Ini akan membantu pelajar memulakannya dengan arah yang betul.\n\nGuru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa teka-teki dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Teka-teki dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah: \n\n-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar untuk menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanyakan soalan utama untuk meminta pelajar mengesan ralat mereka sendiri.",
           "tips": [
-            null
+            "**Tunjukkan kepada pelajar cara yang betul untuk membantu rakan sekelas:**\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi."
           ]
         },
         "88c2697f-a9ba-483a-8091-cc2a1b7bf027": {
           "progression_name": "Membina Kemahiran"
         },
         "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "**Prom:**\n\n-   Bolehkah anda melukis jujukan untuk bersiap sedia pergi ke makmal komputer? \n-   Lukiskan perkara yang \"Boleh\" dan \"Tidak Boleh\" dilakukan di makmal komputer.\n-   Lukiskan wajah yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda."
+        },
+        "2e0974bb-0444-4738-84dc-e49bf6f27770": {
+          "description": "Gunakan aktiviti ini untuk meningkatkan pembelajaran pelajar. Ini juga boleh digunakan sebagai aktiviti luar kelas atau rancangan pengayaan lain.\n\nJika pelajar menyelesaikan teka-teki awal, minta mereka luangkan masa mencipta teka-teki mereka sendiri dalam jurnal mereka."
         },
         "7119f518-386e-44e7-893d-eff0fbc5a87d": {
           "tips": [
@@ -1644,7 +2241,7 @@
           ]
         },
         "810f850f-370f-4cf5-beb4-3caca272ec00": {
-          "description": "#### Sembang Bebas: Apakah yang kita pelajari?\n\n-   Jika anda mahu mengekod ini dalam Blocky, apakah yang perlu anda tambahkan di sekitar bersyarat anda bagi membolehkan kod berjalan lebih daripada sekali? (Gelung)\n-   Apakah perkara lain yang anda lakukan semasa waktu siang di bawah syarat tertentu?\n-   Jika anda sepatutnya melakukan sesuatu apabila nilai kad melebihi daripada 5 dan anda mencabut 5, adakah anda memenuhi syarat itu?\n-   Perhatikan bahawa syaratnya sama ada \"Benar\" atau \"Palsu.\" Tidak ada penilaian syarat yang menilai \"Pisang.\"\n-   Apabila anda perlu memenuhi beberapa kombinasi syarat, kita boleh menggunakan sesuatu yang panggil sebagai \"bersyarat bersarang.\"\n    -   Apakah yang anda fikir maksudnya?\n    -   Bolehkah anda berikan contoh di manakah kita melihatnya semasa dalam permainan?\n-   Apakah bahagian permainan yang paling anda gemari?"
+          "description": "#### Sembang Bebas: Apakah yang kita pelajari?\n\n-   Jika anda mahu mengekod ini dalam Blocky, apakah yang perlu anda masukkan di sekitar bersyarat anda bagi membolehkan kod berjalan lebih daripada sekali? (Gelung)\n-   Apakah perkara lain yang anda lakukan semasa waktu siang di bawah syarat tertentu?\n-   Jika anda sepatutnya melakukan sesuatu apabila nilai kad melebihi daripada 5 dan anda mencabut 5, adakah anda memenuhi syarat itu?\n-   Perhatikan bahawa syaratnya sama ada \"Benar\" atau \"Palsu.\" Tidak ada penilaian syarat yang menilai \"Pisang.\"\n-   Apabila anda perlu memenuhi beberapa kombinasi syarat, kita boleh menggunakan sesuatu yang panggil sebagai \"bersyarat bersarang.\"\n    -   Apakah yang anda fikir maksudnya?\n    -   Bolehkah anda berikan contoh di manakah kita melihatnya semasa dalam permainan?\n-   Apakah bahagian permainan yang paling anda gemari?"
         },
         "95951ba3-d513-4635-a484-1d1819906049": {
           "name": "Renungan"
@@ -1867,7 +2464,7 @@
         "b64e8b68-fcfb-4aa3-9769-2c23d35a9b21": {
           "description": "**Peralihan:** Gerakkan pelajar kepada komputer mereka. Galakkan pelajar mengikuti arahan untuk setiap teka-teki. Bantu mereka menyedari bahawa ini ialah aktiviti kreatif, bertujuan membantu mereka mempelajari Makmal Peperi. Ini bukan aktiviti penilaian dalam apa jua bentuk.",
           "tips": [
-            null
+            "Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka. Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya. Minta pelajar menghuraikan masalah yang mereka lihat:  \n\n-   Apakah yang perlu dilakukan? \n-   Apakah yang dilakukannya? \n-   Apakah yang diberitahu oleh perkara tersebut kepada anda?"
           ]
         },
         "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
@@ -1949,7 +2546,7 @@
           "progression_name": "Latihan"
         },
         "482633ae-1c8c-4ca2-b44b-ba150352c610": {
-          "description": "#### Permainan Bebas (10 minit)\n\n**Peralihan:** Sekarang, pelajar sepatutnya sudah melangkau kepada tahap akhir dalam pelajaran apabila mereka akan melihat pilihan permainan bebas yang sama seperti pelajaran sebelumnya. Sila galakkan pelajar menambah peristiwa kepada projek mereka dari masa lalu, atau mulakan projek baharu.",
+          "description": "#### Permainan Bebas (10 minit)\n\n**Peralihan:** Sekarang, pelajar sepatutnya sudah melangkau kepada tahap akhir dalam pelajaran apabila mereka akan melihat pilihan permainan bebas yang sama seperti pelajaran sebelumnya. Sila galakkan pelajar memasukkan peristiwa kepada projek mereka dari masa lalu, atau mulakan projek baharu.",
           "progression_name": "Permainan Bebas: Membuat Adegan yang Berinteraktif"
         },
         "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
@@ -1962,11 +2559,12 @@
           "name": "Pengenalan"
         },
         "660e66d6-d582-4568-9274-8971b0f5b344": {
-          "name": "Haiwan Peliharaan Maya dengan Makmal Peperi"
+          "name": "Haiwan Peliharaan Maya dengan Makmal Peperi",
+          "description": "**Matlamat:** Hari ini, pelajar akan mencipta haiwan kesayangan maya mereka sendiri! Mereka akan mulakan dengan melukis atau memilih kostum baharu untuk peperi. Kemudian mereka akan mencipta peristiwa yang menyebabkan tindakan dan tingkah laku semasa interaksi."
         },
         "1dbfd53a-9ab8-45e6-85fd-c35f5fd99997": {
           "tips": [
-            null
+            "Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka. Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya. Minta pelajar menghuraikan masalah yang mereka lihat:  \n\n-   Apakah yang perlu dilakukan? \n-   Apakah yang dilakukannya? \n-   Apakah yang diberitahu oleh perkara tersebut kepada anda?"
           ]
         },
         "6e424d72-bab8-46a2-8a4c-8e9b9bfa8e85": {
@@ -2309,8 +2907,9 @@
           "progression_name": "Ramalan"
         },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
+          "description": "#### Video (5 minit)\n\nPaparkan video kepada seluruh kelas. ",
           "tips": [
-            null
+            "Sama seperti ketika pelajar menulis atau berkomunikasi secara lisan, adalah penting menetapkan jangkaan penggunaan perkataan dengan betul dalam aktiviti ini. Pelajar harus memahami bahawa mereka bertanggungjawab terhadap kod yang mereka tulis, termasuk apa-apa teks yang ditunjukkan pada skrin. Teks yang dipaparkan mesti penuh hormat, serta selamat. Pelajar boleh berlatih agar tidak berkongsi maklumat peribadi dalam atur cara mereka, terutamanya jika mereka mahu berkongsi dengan individu lain.\nAmbil perhatian bahawa apa-apa maklumat yang ditaip ke dalam prom Makmal Peperi tidak disimpan untuk jangka masa panjang. Perkataan dan mesej yang ditaip oleh pengguna aplikasi ini akan hilang sebaik sahaja aplikasi ditetapkan semula."
           ],
           "progression_name": "Video: Teks dan Prom"
         },
@@ -2324,15 +2923,21 @@
           "progression_name": "Latihan"
         },
         "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
-          "name": "Semak"
+          "name": "Semak",
+          "description": "**Lakukan Ini:** Gunakan slaid pelajaran untuk menyemak perbendaharaan kata pelajaran ini. Pastikan pelajar boleh mengingat kembali daripada pelajaran yang mereka melihat setiap konsep ini. "
+        },
+        "e852c6f5-b85a-4e1c-abe5-c5ec5b111f83": {
+          "description": "Apabila pengguna memasukkan maklumat ke dalam prom, komputer menyimpannya bersama pemboleh ubah. Prom juga boleh mencetuskan peristiwa. Jika kod menggunakan pemboleh ubah, komputer akan mencari label sepadan untuk mendapatkan maklumat yang disimpan."
         },
         "ba16d75f-cd57-4bf6-9c71-78f6bbe31603": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Pilih satu (atau dua) prom renungan di bawah untuk diberikan kepada pelajar. Mereka boleh mencatatkan jurnal secara berasingan, atau membincangkan jawapannya secara berkumpulan atau seluruh kelas.\n\n**Prom:**\n\n-   Bagaimanakah pemboleh ubah seperti kotak? Sejauh mana ia berbeza?\n\n-   Mengapakah pengatur cara memerlukan pemboleh ubah?"
         },
         "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0": {
           "name": "Semak"
         },
         "b270733d-2d48-4470-a0e4-7a805255d765": {
+          "name": "Menggunakan Pemboleh Ubah dengan Artis",
           "description": "Sila pertimbangkan untuk menyemak tahap Ramalan dan video dengan seluruh kelas sebelum meneruskan bersama pelajar kepada bahagian Membina Kemahiran.",
           "progression_name": "Ramalan"
         },
@@ -2344,6 +2949,9 @@
         },
         "6ab692c9-eee1-4966-91fa-3bda39450263": {
           "name": "Pengenalan"
+        },
+        "60fb6e02-bbf3-49df-ab58-79496259ada1": {
+          "name": "Pemboleh ubah dengan Lebah"
         },
         "66e1664f-4e5a-4df9-a902-d0eb19537997": {
           "progression_name": "Latihan"
@@ -2449,11 +3057,13 @@
           ]
         },
         "e3728ba7-a25a-431b-8a91-f1aee34cc177": {
+          "description": "Tayangkan teka-teki daripada pelajaran. Tunjukkan kepada kelas cara mengklik pada blok dan letakkannya di tempat yang betul dengan menyeret dan melepaskan. Cuba lakukan kesalahan dengan sengaja seperti mengklik latar belakang atau melepaskan imej di hadapan tempatnya yang betul. Minta bantuan sukarelawan di dalam kelas apabila anda menghadapi masalah ini dan bantu mereka menggunakan kemahiran yang mereka bangunkan dalam pelajaran nirplag terakhir untuk melakukannya dengan betul.",
           "tips": [
             null
           ]
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
+          "name": "Pengaturcaraan dengan Blok",
           "tips": [
             null
           ]
@@ -2700,7 +3310,7 @@
         "65fd5465-cd74-4e68-a4de-c174e2cbd8f6": {
           "description": "**Peralihan:** Gerakkan pelajar kepada komputer mereka. Galakkan pelajar mengikuti arahan untuk setiap teka-teki. Bantu mereka menyedari bahawa ini ialah aktiviti kreatif, bertujuan membantu mereka mempelajari Makmal Peperi. Ini bukan aktiviti penilaian dalam apa jua bentuk.",
           "tips": [
-            null
+            "Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka. Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya. Minta pelajar menghuraikan masalah yang mereka lihat:  \n\n-   Apakah yang perlu dilakukan? \n-   Apakah yang dilakukannya? \n-   Apakah yang diberitahu oleh perkara tersebut kepada anda?"
           ]
         },
         "331e6451-5472-4491-bf96-d630d7f902a4": {
@@ -2724,7 +3334,7 @@
         "9f5b1627-f04c-42a1-8955-17c994ad2b18": {
           "name": "Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi",
           "tips": [
-            null
+            "Galakkan pelajar dengan soalan/cabaran untuk memulakan dengan bertanya pasangan mereka. Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya. Minta pelajar menghuraikan masalah yang mereka lihat:  \n\n-   Apakah yang perlu dilakukan? \n-   Apakah yang dilakukannya? \n-   Apakah yang diberitahu oleh perkara tersebut kepada anda?"
           ]
         },
         "e6231ccd-be57-4480-b049-ef0dda99d28c": {
@@ -2976,6 +3586,9 @@
           "tips": [
             null
           ]
+        },
+        "6a4f65e2-5864-40c5-84bb-d1f70643e914": {
+          "name": "Pembentangan - Hari 5"
         },
         "91a938ed-5c11-4efb-be88-9d4875f227c6": {
           "tips": [

@@ -1021,6 +1021,7 @@ bg:
   pd:
     form_labels:
       email: Имейл
+      school: Училище
       school_name: Име на училището
       school_country: Училищен район
       colombian_chilean_school_name: Име на училището

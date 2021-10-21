@@ -127,6 +127,7 @@ pl:
       Get In Formation: Twórzmy formację
       Getters and Setters: Gettery I settery
       Getting Properties: Właściwości getterów
+      Graph Paper Programming - Unplugged Activity: Programowanie na papierze milimetrowym — Aktywność bez komputera
       Guess The Number: Zgadnij liczbę
       HTML Tags: Tagi HTML
       Headings: Nagłówki
@@ -157,6 +158,7 @@ pl:
       Lesson Extras: Dodatki do Lekcji
       Lesson Overview: Przegląd lekcji
       Level Overview: Przegląd poziomów
+      Levels: Poziomy
       Light Show: Pokaz świateł
       Linking Pages: Łączenie stron 
       Linking Screens: Łączenie ekranów
@@ -195,10 +197,13 @@ pl:
       More Input: Więcej danych
       More Parameters: Więcej Parametrów
       Motorcycle: Motocykl
+      Move It Move it Video  - Unplugged Activity: Film o przesuwaniu — Aktywność bez komputera
       Movement with the Counter Pattern: Poruszanie się ze Wzorcem Licznika
       Multiframe Animations: Animacje wieloramkowe
       Musical Arrays: Muzyczne tablice
+      My Loopy Robotic Friends - Unplugged Activity: Moi robotycznie zapętleni przyjaciele - Aktywność bez komputera
       My Online Neighborhood: Moje internetowe sąsiedztwo
+      My Robotic Friends - Unplugged Activity: Moi robotyczni przyjaciele — Aktywność bez komputera
       Nested Loops with the Bee: Zagnieżdżone pętle z Pszczółką
       New Challenge Introduction: Nowe wyzwanie Wprowadzenie
       New Shapes: Nowe kształty
@@ -326,6 +331,7 @@ pl:
       'Video: Debugging with the Step Button': 'Film: Debugowanie za pomocą przycisku Krok '
       'Video: Events': 'Film: Zdarzenia'
       'Video: Functions': 'Film: Funkcje'
+      'Video: How to Make a Sprite': 'Film: jak utworzyć duszka'
       'Video: Impacts on Society': 'Film: Wpływy na społeczeństwo'
       'Video: Intro to CSS': 'Wideo: Wstęp do CSS'
       'Video: Intro to Web Lab - Part 1': 'Wideo: Wprowadzenie do Web Lab - Część 1'
@@ -335,11 +341,16 @@ pl:
       'Video: Loops in Artist': 'Film: Pętle z Artystą'
       'Video: Loops with the Artist': 'Film: Pętle z Artystą'
       'Video: Lots of Sprites': 'Film: Wiele Duszków'
+      'Video: Maze Intro - Programming with Blocks': 'Film: Wprowadzenie do labiryntu: Programowanie za pomocą bloków'
+      'Video: Maze Intro - Programming with Blocks ': 'Film: Wprowadzenie do labiryntu: Programowanie za pomocą bloków'
+      'Video: Maze Intro: Programming with Blocks': 'Film: Wprowadzenie do labiryntu: Programowanie za pomocą bloków'
       'Video: Measures': 'Film: Takty'
       'Video: Minecraft - Congratulations': 'Film: Minecraft - Gratulacje'
       'Video: Minecraft - Functions': 'Film: Minecraft - Funkcja'
       'Video: Minecraft - Repeat Loops': 'Film: Minecraft - Pętle powtarzania'
       'Video: Minecraft - The Agent': 'Film: Minecraft - Agent'
+      'Video: Nested Loops': 'Film: zagnieżdżone pętle'
+      'Video: Nested Loops with the Bee': 'Film: zagnieżdżone pętle z pszczółką '
       'Video: Pair Programming': 'Film: Programowanie parami'
       'Video: Pair Programming ': 'Film: Programowanie parami '
       'Video: Problem Solving Process': 'Nagranie: Proces Rozwiązywania Problemów'

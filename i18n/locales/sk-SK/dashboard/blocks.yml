@@ -4,7 +4,7 @@ sk:
     blocks:
       Dancelab_alternateMoves:
         text: |-
-          {GROUP} striedať každé {N} merania
+          {GROUP} striedať každé {N} takty
           medzi {MOVE1} a {MOVE2}
         options:
           GROUP:
@@ -49,7 +49,7 @@ sk:
         text: po {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': merania
+            '"measures"': takty
             '"seconds"': sekundy
       Dancelab_changeColorBy:
         text: zmeň {COLOR} {METHOD} o {AMOUNT}
@@ -213,12 +213,12 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Dancelab_everyMeasuresRange:
-        text: 'opakuj každé {N} merania po {START} '
+        text: 'opakuj každé {N} takty po {START} '
       Dancelab_everySeconds:
         text: 'opakuj každé {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': merania
+            '"measures"': takty
             '"seconds"': sekundy
       Dancelab_everySecondsRange:
         text: 'každé {N} {UNIT} od {START} do {STOP} '
@@ -254,7 +254,7 @@ sk:
         text: aktuálny čas v {UNIT}
         options:
           UNIT:
-            '"measures"': merania
+            '"measures"': takty
             '"seconds"': sekundy
       Dancelab_ifDanceIs:
         text: |-
@@ -279,7 +279,7 @@ sk:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': merania
+            '"measures"': takty
             '"seconds"': sekundy
           OP:
             '">"': ">"
@@ -970,7 +970,7 @@ sk:
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
-        text: na {N} {UNIT}
+        text: po {N} {UNIT}
         options:
           UNIT:
             '"seconds"': sekundy
@@ -1156,6 +1156,7 @@ sk:
           EFFECT:
             '"burst"': prasknutie
             '"rain"': dážď
+            '"spiral"': špirála
       gamelab_makeNewSpriteAnon:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:
@@ -1340,8 +1341,6 @@ sk:
             '"when"': keď
             '"while"': pokiaľ
       gamelab_spriteSay:
-        text: "{SPRITE} povedz {SPEECH}"
-      gamelab_spriteSayChoices:
         text: "{SPRITE} povedz {SPEECH}"
       gamelab_stopCollectingData:
         text: prestaň zbierať údaje
@@ -1764,7 +1763,7 @@ sk:
             growing: rásť
             jittering: chvieť sa
             shrinking: zmenšovať sa
-            spinning_left: rýchlo sa otočiť vľavo
+            spinning_left: točenie vľavo
             spinning_right: točenie vpravo
             swimming_left_and_right: plávanie
             wandering: túlať sa
@@ -1776,7 +1775,7 @@ sk:
             growing: rásť
             jittering: chvieť sa
             shrinking: zmenšovať sa
-            spinning_left: rýchlo sa otočiť vľavo
+            spinning_left: točenie vľavo
             spinning_right: točenie vpravo
             swimming_left_and_right: plávanie
             wandering: túlať sa

@@ -2,47 +2,362 @@
   "sk-SK": {
     "data": {
       "vocabularies": {
+        "event/dance-extras/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/hero/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "function/hero/unversioned": {
+          "word": "Funkcia",
+          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/flappy/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/frozen/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/iceage/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/artist/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/artist/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/gumball/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "event/dance/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Podmienky"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Cykly",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/starwars/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/mc/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/playlab/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "event/sports/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "code/sports/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/sports/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/infinity/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "event/basketball/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Hľadanie a odstraňovanie chýb"
+        },
+        "program/basketball/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Strojové učenie"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "sprite/coursef/2021": {
+          "word": "Sprajt (postavička)",
+          "definition": "Grafický objekt na obrazovke, ktorý má svoju polohu, veľkosť a vzhľad."
+        },
+        "user/coursef/2021": {
+          "word": "Používateľ",
+          "definition": "Niekto, kto používa objekt vrátane softvéru a hardvéru."
+        },
         "behavior/coursef/2021": {
-          "word": "Správanie"
+          "word": "Správanie",
+          "definition": "Akcia, ktorú postavička neustále vykonáva, kým nedostane príkaz, aby prestala. "
+        },
+        "program/coursef/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algoritmus",
+          "definition": "Zoznam krokov na dokončenie úlohy."
+        },
+        "event/coursef/2021": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "variable/coursef/2021": {
-          "word": "Premenná"
+          "word": "Premenná",
+          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
+        },
+        "prompt/coursef/2021": {
+          "word": "Výzva",
+          "definition": "Správa na obrazovke počítača, ktorá čaká, kým používateľ zadá nejaké údaje."
         },
         "input/coursef/2021": {
-          "word": "Vstup"
+          "word": "Vstup",
+          "definition": "Informácie, ktoré počítač dostane od používateľov."
+        },
+        "loop/coursef/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursef/2021": {
+          "word": "Opakuj",
+          "definition": "Urobiť niečo znova."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Cyklus „for“",
+          "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
         },
         "machine_learning/coursef/2021": {
           "word": "Strojové učenie"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS"
         },
         "internet/coursef/2021": {
           "word": "Internet"
         },
         "define/coursef/2021": {
-          "word": "Definuj"
+          "word": "Definuj",
+          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
+        },
+        "prepare/coursef/2021": {
+          "word": "Pripraviť",
+          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
+        },
+        "reflect/coursef/2021": {
+          "word": "Reflektovať",
+          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
+        },
+        "try/coursef/2021": {
+          "word": "Pokus",
+          "definition": "Pokus urobiť niečo"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Algoritmus"
         },
         "debugging/courseb/2021": {
-          "word": "Hľadanie a odstraňovanie chýb"
+          "word": "Ladenie"
         },
         "drop/courseb/2021": {
           "word": "Špagát"
         },
+        "program/courseb/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "loop/courseb/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/courseb/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/courseb/2021": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "algorithm/coursea/2021": {
+          "word": "Algoritmus"
+        },
         "debugging/coursea/2021": {
-          "word": "Hľadanie a odstraňovanie chýb"
+          "word": "Ladenie"
+        },
+        "program/coursea/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
         "drop/coursea/2021": {
           "word": "Špagát"
         },
+        "loop/coursea/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursea/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/coursea/2021": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "algorithm/coursec/2021": {
+          "word": "Algoritmus"
+        },
         "debugging/coursec/2021": {
-          "word": "Hľadanie a odstraňovanie chýb"
+          "word": "Ladenie"
+        },
+        "program/coursec/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
         "sequencing/coursec/2021": {
           "word": "Postupnosť"
         },
+        "loop/coursec/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursec/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
+        },
+        "event/coursec/2021": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
         "binary/coursec/2021": {
           "word": "Binárny"
         },
+        "algorithm/coursed/2021": {
+          "word": "Algoritmus"
+        },
+        "program/coursed/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
         "debugging/coursed/2021": {
-          "word": "Hľadanie a odstraňovanie chýb"
+          "word": "Ladenie"
+        },
+        "loop/coursed/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "event/coursed/2021": {
+          "word": "Event",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
+        "repeat/coursed/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
         },
         "conditionals/coursed/2021": {
           "word": "Podmienky"
@@ -56,7 +371,7 @@
           "definition": "Časť programu, ktorá nefunguje správne."
         },
         "debugging/express/2021": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "sequencing/express/2021": {
@@ -84,50 +399,64 @@
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "code/express/2021": {
-          "word": "kód"
+          "word": "kód",
+          "definition": "písanie kódu/písanie inštrukcií pre počítač."
         },
         "loop/express/2021": {
-          "word": "Cyklus"
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
         },
         "repeat/express/2021": {
           "word": "Opakovať",
           "definition": "Urobiť niečo znova."
         },
         "command/express/2021": {
-          "word": "Príkaz"
+          "word": "Príkaz",
+          "definition": "Pokyn pre počítač. Veľké množstvo príkazov spolu tvorí algoritmy a počítačové programy."
         },
         "condition/express/2021": {
-          "word": "Podmienka"
+          "word": "Podmienka",
+          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
         },
         "conditionals/express/2021": {
-          "word": "Podmienky"
+          "word": "Podmienené príkazy",
+          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
         },
         "while_loop/express/2021": {
-          "word": "Cyklus „pokiaľ“"
+          "word": "Cyklus „pokiaľ“",
+          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
         },
         "until/express/2021": {
-          "word": "Pokiaľ"
+          "word": "Až kým",
+          "definition": "Príkaz, ktorý niečo vykonáva až dovtedy, kým sa nesplní nejaká podmienka."
         },
         "function/express/2021": {
-          "word": "Funkcia"
+          "word": "Funkcia",
+          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
         },
         "variable/express/2021": {
-          "word": "Premenná"
+          "word": "Premenná",
+          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
         },
         "prompt/express/2021": {
-          "word": "výzva"
+          "word": "výzva",
+          "definition": "Správa na obrazovke počítača, ktorá čaká, kým používateľ zadá nejaké údaje."
         },
         "for_loop/express/2021": {
-          "word": "Cyklus „for“"
+          "word": "Cyklus „for“",
+          "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
         },
         "define/express/2021": {
-          "word": "Definuj"
+          "word": "Zadefinovať",
+          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
         },
         "prepare/express/2021": {
-          "word": "Pripraviť"
+          "word": "Pripraviť",
+          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
         },
         "reflect/express/2021": {
-          "word": "Reflektovať"
+          "word": "Reflektovať",
+          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
         },
         "try/express/2021": {
           "word": "Pokus",
@@ -202,16 +531,48 @@
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "copyright/coursee/2021": {
-          "word": "Autorské práva"
+          "word": "Autorské právo",
+          "definition": "výlučné právo vytlačiť, publikovať, prezentovať, nakrútiť alebo zaznamenať literárne, umelecké alebo hudobné materiály a povoliť iným robiť to isté"
+        },
+        "loop/coursee/2021": {
+          "word": "Cyklus",
+          "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
+        },
+        "repeat/coursee/2021": {
+          "word": "Opakovať",
+          "definition": "Urobiť niečo znova."
         },
         "function/coursee/2021": {
-          "word": "Funkcia"
+          "word": "Funkcia",
+          "definition": "Sled príkazov, ktorý sa dá ľahko využívať opakovane."
+        },
+        "condition/coursee/2021": {
+          "word": "Podmienka",
+          "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
         },
         "conditionals/coursee/2021": {
-          "word": "Podmienky"
+          "word": "Podmienky",
+          "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
+        },
+        "while_loop/coursee/2021": {
+          "word": "Cyklus „pokiaľ“",
+          "definition": "Cyklus, ktorý sa opakuje, kým je splnená podmienka."
         },
         "define/coursee/2021": {
-          "word": "Definuj"
+          "word": "Definuj",
+          "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."
+        },
+        "prepare/coursee/2021": {
+          "word": "Pripraviť",
+          "definition": "Preskúmať nasledujúcu aktivitu, naplánovať ju a zhromaždiť potrebné materiály."
+        },
+        "reflect/coursee/2021": {
+          "word": "Reflektovať",
+          "definition": "Dôkladne sa nad niečím spätne zamyslieť s cieľom dosiahnuť v budúcnosti lepší výsledok."
+        },
+        "try/coursee/2021": {
+          "word": "Pokus",
+          "definition": "Pokus urobiť niečo"
         }
       }
     }

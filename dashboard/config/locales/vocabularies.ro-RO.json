@@ -2,6 +2,72 @@
   "ro-RO": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Corectare erori"
+        },
+        "function/hero/unversioned": {
+          "word": "Funcţie"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Corectare erori"
+        },
+        "code/artist/unversioned": {
+          "word": "Cod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Corectare erori"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Condiţionale"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Bucle"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Corectare erori"
+        },
+        "code/sports/unversioned": {
+          "word": "Cod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Corectare erori"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Corectare erori"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Învățare Automată"
+        },
         "behavior/coursef/2021": {
           "word": "Comportament"
         },

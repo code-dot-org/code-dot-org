@@ -490,6 +490,10 @@ bs:
           lessons:
             Jigsaw:
               name: Slagalica
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta
+                da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje
+                sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija,
+                onda će nastaviti korištenjem računala da završe online zagonetke.
           student_description: Probaj naše Jigsaw upute.
         step:
           title: Korak
@@ -3395,3 +3399,12 @@ bs:
           lessons:
             lesson-1:
               name: Pregled
+        poetry:
+          lessons:
+            lesson-3:
+              name: Varijable
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelovanje
+          title: Spelovanje

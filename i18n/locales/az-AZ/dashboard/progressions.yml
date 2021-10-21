@@ -10,8 +10,10 @@ az:
       Artist Project: Sənətçi Layihəsi
       'Artist: Variables': 'Rəssam: Dəyişənlər'
       Attribution: Atributlar
+      Begin planning your project: Layihənizi planlaşdırmağa başlayın
       Binary Numbers: İkilik rəqəmlər
       Binary and Data: İkili və məlumat
+      Build a Screen: Ekran qur
       Building an App: Bir App qurmaq
       Button Circuits: düymə dövrələri
       CSS Text Properties: CSS Mətn Xüsusiyyətləri
@@ -24,20 +26,29 @@ az:
       Changing Screens: Ekranların dəyişdirilməsi
       Checking for a Winner: Qazananı yoxlamaq
       Collector Game: Kolleksiyaçı oyunu
+      'Course F: Play Lab Project': 'Kurs F: Laboratoriya Layihəsin Oyna'
       Create a Story: Hekayə yarat
       Create your project: Layihə yarat
       Customize: Özəlləşdir
       Debugging: Sazlama
       Demo Apps: Demo applikasiyalar
+      Design Mode: Dizayn Rejimi
       Design Mode Elements: Dizayn rejimi elementləri
+      Designing Screens with Code: Kod ilə ekran dizaynı 
       Drawing Shapes: Rəsm Şekilləri
       End of Course Projects: Kurs Layihələri
+      Escape Room Example: Qaçış Otağı Nümunəsi
       Events: Hadisələr
       Events and Properties: Hadisələr və xüsusiyyətlər
+      Example App Types: Nümunə Tətbiq Növləri
       Example projects: " nümunə layihələr\n"
       Exploration: Kəşf
       'Exploration: Adding Style': 'Kəşfiyyat: Stil əlavə etmək'
       Explore HTML: HTML kəşf edin
+      Finish a Screen: Ekranı Bitirmək
+      Finish the Prototype: Prototipi Bitirin
+      Finishing Functions: Bitirmə Funksiyaları
+      FoodFight: YeməkMübarizəsi
       Formatting HTML: HTML formatı
       Free Play: Azad Oyna
       Functions: Funksiyalar
@@ -51,6 +62,7 @@ az:
       Keeping Data Secret: Məlumatlar Gizli Saxlanır
       Layout Properties: Düzən Xüsusiyyətləri
       Lesson Extras: Dərsə əlavələr
+      Levels: Səviyyələr
       Lists: Siyahılar
       Lists in HTML: HTML siyahıları
       Measures: Ölçülər

@@ -2,6 +2,256 @@
   "th-TH": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "event/dance-extras/unversioned": {
+          "word": "เหตุการณ์",
+          "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
+        "program/dance-extras/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/minecraft/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "event/minecraft/unversioned": {
+          "word": "เหตุการณ์",
+          "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
+        "code/hero/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/hero/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/hero/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "function/hero/unversioned": {
+          "word": "ฟังก์ชัน"
+        },
+        "code/flappy/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/flappy/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/frozen/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/frozen/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/iceage/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/iceage/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/artist/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/artist/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/artist/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/gumball/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/gumball/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "event/dance/unversioned": {
+          "word": "เหตุการณ์",
+          "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
+        "program/dance/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/dance/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/aquatic/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "เงื่อนไข "
+        },
+        "loops/aquatic/unversioned": {
+          "word": "ลูป"
+        },
+        "code/starwars/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/starwars/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/mc/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/mc/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/mc/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/playlab/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/playlab/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "event/sports/unversioned": {
+          "word": "เหตุการณ์",
+          "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
+        "code/sports/unversioned": {
+          "word": "โปรแกรม"
+        },
+        "debugging/sports/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/sports/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/infinity/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/infinity/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "event/basketball/unversioned": {
+          "word": "เหตุการณ์",
+          "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
+        "code/basketball/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "การแก้ไขจุดบกพร่อง",
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+        },
+        "program/basketball/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "เหตุการณ์",
+          "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(คำกริยา) เขียนโค้ดหรือเขียนคำสั่งให้กับคอมพิวเตอร์"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "เหตุการณ์",
+          "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "โปรแกรม",
+          "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "การเรียนรู้ของระบบ",
+          "definition": "คอมพิวเตอร์จดจำรูปแบบและตัดสินใจโดยที่ยังไม่ได้เขียนโปรแกรมที่ชัดเจนให้ได้อย่างไร"
+        },
+        "event/outbreak/unversioned": {
+          "word": "เหตุการณ์",
+          "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
+        },
         "program/coursef/2021": {
           "word": "โปรแกรม",
           "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
@@ -44,16 +294,40 @@
           "word": "เหตุการณ์",
           "definition": "การกระทำที่เป็นสาเหตุให้บางสิ่งบางอย่างเกิดขึ้น"
         },
+        "algorithm/coursea/2021": {
+          "word": "อัลกอริธึม",
+          "definition": "รายการขั้นตอนเพื่อใช้ทำงานให้เสร็จ "
+        },
         "debugging/coursea/2021": {
           "word": "การแก้ไขจุดบกพร่อง",
-          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริทึมหรือโปรแกรม"
+          "definition": "การค้นหาปัญหาก่อนลงมือแก้ไขในอัลกอริธึมหรือโปรแกรม"
         },
         "program/coursea/2021": {
           "word": "โปรแกรม",
           "definition": "อัลกอริทึมที่ถูกเขียนโค้ดให้เป็นบางอย่างที่คอมพิวเตอร์สั่งให้ทำงานได้"
         },
+        "click/coursea/2021": {
+          "word": "คลิก",
+          "definition": "กดปุ่มเมาส์"
+        },
+        "drag/coursea/2021": {
+          "word": "ลาก",
+          "definition": "คลิกที่เมาส์และกดค้างไว้ขณะที่ลากตัวชี้เมาส์ไปที่ตำแหน่งใหม่"
+        },
         "drop/coursea/2021": {
-          "word": "ทิ้งตัว"
+          "word": "วาง",
+          "definition": "ปล่อยปุ่มเมาส์ที่กดไว้เพื่อ \"วาง\" ไอเท็มที่คุณกำลังลาก"
+        },
+        "double_click/coursea/2021": {
+          "word": "คลิกสองครั้ง",
+          "definition": "กดปุ่มเมาส์ให้เร็วมาก ๆ"
+        },
+        "bug/coursea/2021": {
+          "definition": "ส่วนของโปรแกรมที่ทำงานไม่ถูกต้อง"
+        },
+        "programming/coursea/2021": {
+          "word": "การเขียนโปรแกรม",
+          "definition": "ศิลปะของการสร้างโปรแกรม"
         },
         "event/coursea/2021": {
           "word": "เหตุการณ์",

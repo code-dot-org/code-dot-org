@@ -469,6 +469,20 @@
           "wobbling": "kalimpálva",
           "moving west and looping": "nyugat felé menni és ismételgetni",
           "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "helloworld_food_behaviors": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
+        },
+        "poetry_hoc_spriteSizes": {
+          "driving with arrow keys": "irányítás nyilakkal",
+          "fluttering": "csapkodva",
+          "wobbling": "kalimpálva",
+          "moving west and looping": "nyugat felé menni és ismételgetni",
+          "moving east and looping": "kelet felé menni és ismételgetni"
         }
       }
     }

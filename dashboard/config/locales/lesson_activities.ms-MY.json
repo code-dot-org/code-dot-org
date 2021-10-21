@@ -2,11 +2,164 @@
   "ms-MY": {
     "data": {
       "lesson_activities": {
+        "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
+          "name": "Penggulungan"
+        },
+        "ab15beb1-d005-41c6-a156-e4c110c423b8": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
+          "name": "Penggulungan"
+        },
+        "e4041676-353d-409e-a7aa-bcfcc62bab09": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
+          "name": "Penggulungan"
+        },
+        "ce329650-3549-4f96-8da9-8bc77c162411": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
+          "name": "Penggulungan"
+        },
+        "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
+          "name": "Penggulungan"
+        },
+        "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "633ec4e2-ea0b-496f-8878-d4178882a69e": {
+          "name": "Penggulungan"
+        },
+        "f49ce667-e4b7-4a66-88a4-16848365e63a": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
+          "name": "Penggulungan"
+        },
+        "d091559f-3ec9-46c5-9e79-a245aadfb146": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "12a90414-dae4-4f2b-8598-0b3b9fd6a767": {
+          "name": "Aktiviti Utama"
+        },
+        "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d": {
+          "name": "Penggulungan"
+        },
+        "777be184-c917-4732-ad47-bb1fad0a30e4": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
+          "name": "Penggulungan"
+        },
+        "6e0020c2-9d9e-488e-bb8d-126ac1760e8b": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
+          "name": "Penggulungan"
+        },
+        "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Aktiviti"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Wrap-up"
+        },
+        "10b66543-86a4-459e-bc67-a31d688547ce": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
+          "name": "Penggulungan"
+        },
+        "262ad475-1b09-4834-8401-0cf39d3955c5": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "4e2ce993-660e-4574-9264-448e234c4bac": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "308d7e22-610e-46cb-be15-54fab1e436bb": {
+          "name": "Penggulungan"
+        },
+        "aad5bc18-7988-4acf-be28-9e125e9d930e": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Aktiviti"
+        },
+        "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Penggulungan"
+        },
+        "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Aktiviti"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Wrap-up"
+        },
+        "ddc8f987-c000-409d-aaf7-8546464a70d9": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "6a240b51-f019-4729-a5df-cbe901844a7e": {
+          "name": "Aktiviti Utama"
+        },
+        "4abbf2ec-b39e-4740-a51a-635072063171": {
+          "name": "Penggulungan"
+        },
+        "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "dca1904a-ae71-49d2-b77f-708aa02d2707": {
+          "name": "Aktiviti Utama"
+        },
+        "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b": {
+          "name": "Penggulungan"
+        },
+        "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "42552407-b313-4fc4-9163-e6a8e4a6029d": {
+          "name": "Pembelajaran Lanjutan"
+        },
+        "239ba7ce-544c-4508-9e5c-e956de964002": {
+          "name": "Penggulungan"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Aktiviti"
+        },
+        "04400eef-5989-4325-a801-ab4ad451f130": {
+          "name": "Pembelajaran Lanjutan"
+        },
         "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
           "name": "Aktiviti Utama"
         },
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": "Penggulungan"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Aktiviti Utama"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Penggulungan"
+        },
+        "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2": {
+          "name": "Aktiviti Utama"
+        },
+        "4286b9b3-8562-4acf-8967-f6b6b1b18f9e": {
+          "name": "Penggulungan"
+        },
+        "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
+          "name": "Pembelajaran Lanjutan"
         },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Mula Memanas"
@@ -218,6 +371,12 @@
         "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
           "name": "Hari 3 - Bina Projek Anda"
         },
+        "459d00f2-e296-4205-bca6-eab8d4599354": {
+          "name": "Hari 4 - Semak Semula Projek Anda"
+        },
+        "25d5e16a-9db1-441d-a4c4-916612df574b": {
+          "name": "Hari 5 & 6 - Pembentangan Projek Anda"
+        },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Pembelajaran Lanjutan"
         },
@@ -421,6 +580,9 @@
         },
         "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
           "name": "Mula Memanas"
+        },
+        "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
+          "name": "Aktiviti Gabungan - Pilih Satu"
         },
         "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
           "name": "Aktiviti Utama"

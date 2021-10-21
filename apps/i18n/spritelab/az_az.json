@@ -1,9 +1,14 @@
 {
+  "addAdditionalPrompts": "Proqramınız kifayət qədər istək yaratmadı.",
+  "addJoinBlocks": "Daxil etdiyiniz dəqiq mətni çap edirsiniz. Qoşulma bloklarından istifadə edərək başqa mətn əlavə etməyə çalışın.",
   "addPrintBlock": "Kodunuza bir çap bloku əlavə etməlisiniz:\n <xml><block type=\"gamelab_printText\"><value name=\"TEXT\"><block type=\"text\"><title name=\"TEXT\"></title></block></value></block></xml>",
   "addPrompt": "Kodunuza təklif blokunu əlavə etməlisiniz:",
+  "addPromptWithChoices": "Kodunuza istək blokunu əlavə etməlisiniz:  \n <xml><block type=\"gamelab_setPromptWithChoices\"></block></xml>",
+  "addSpaces": "Çap olunan mesajda bəzi boşluqlar yoxdur. Onları hara əlavə edəcəyinizi anlaya bilərsinizmi?",
   "addTitleScreen": "Layihənizə bir başlıq ekranı əlavə etməlisiniz.",
   "allBehaviors": "Bütün spritlərin davranışlarından əmin olun.",
   "answerPrompt": "İstəyinizə bir şey yazmağı unutmayın!",
+  "answerPromptWithChoices": "İstəyiniz istifadəçiyə üç seçim verməlidir. Proqramı işə saldıqdan sonra istəklərinizə cavab verməyi unutmayın!",
   "butterflyDidntMove": "Kəpənək sprite yerindən tərpənmədi. Fərqli bir davranış yoxlayın.",
   "changeLocation": "Qrafik obyekti hərəkət etdirmək üçün yer blokundakı sancağı istifadə edin.",
   "clicked": "klikləndi",
@@ -68,7 +73,7 @@
   "spritelabFeedbackUseSpinningBehavior": "Qrafik obyektin fırlanmağa başlaması lazımdır. Davranışını dəyişdirməyə çalışın.",
   "spritelabFeedbackYellowAlienBehavior": "Sarı yadplanetliniz hərəkətə başlamadı.",
   "subject": "mövzu",
-  "subjectSprite": "mövzu Sprite",
+  "subjectSprite": "mövzu sprite",
   "sunDidntRotate": "Günəş sprite fırlanmadı. Fərqli bir davranış yoxlayın.",
   "titleVariable": "Başlıq ekranınızda ismarıcdan mətn daxil deyildi.",
   "tooManySprites": "Çox qrafik obyektiniz var. Yalnız yuxarıdakı təlimatlara uyğun olaraq sizə lazım olan qrafik obyekti yaradın."

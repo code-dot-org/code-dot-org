@@ -4815,3 +4815,20 @@ nn:
               display_name: Innhald
             lessonGroup-2:
               display_name: Innhald
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Moduler
+        poetry:
+          lessons:
+            lesson-3:
+              name: Variablar
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stavekonkurranse
+          title: Stavekonkurranse
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald

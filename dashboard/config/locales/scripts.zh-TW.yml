@@ -526,6 +526,8 @@ zh-TW:
           lessons:
             Jigsaw:
               name: 拼圖
+              description_student: 以點擊與拖放的方式完成謎題。
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
           student_description: 試試我們的拼圖教程。
         step:
           title: 步進
@@ -16693,6 +16695,8 @@ zh-TW:
           lessons:
             Virus Simulation for Code Bytes:
               name: 編碼一個模擬
+            Outbreak:
+              name: 編碼一個模擬
           lesson_groups:
             outbreak:
               display_name: 疫情爆發模擬
@@ -18699,6 +18703,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            Java Lab:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -19065,6 +19071,8 @@ zh-TW:
               name: 評估日
             lesson-15:
               name: 評估日
+            Java Lab:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -19100,5 +19108,29 @@ zh-TW:
               display_name: 內容
             lesson_group:
               display_name: 內容
+            lessonGroup-2:
+              display_name: 內容
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: 視窗元件
+            lesson-2:
+              name: 工具
+        poetry:
+          lessons:
+            lesson-3:
+              name: 變數
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: 拼字蜜蜂
+          title: 拼字蜜蜂
+        outbreak-csc:
+          title: 疫情爆發
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 評估日
+          lesson_groups:
             lessonGroup-2:
               display_name: 內容

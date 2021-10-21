@@ -178,6 +178,16 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
   const state = getState();
   const currentlyHidden = getRoot(state).sections[sectionId].hidden;
   dispatch(editSectionProperties({hidden: !currentlyHidden}));
+
+  // Track archive/restore section action
+  firehoseClient.putRecord({
+    study: 'teacher_dashboard_actions',
+    study_group: 'toggleSectionHidden',
+    event: currentlyHidden ? 'restoreSection' : 'archiveSection',
+    data_json: JSON.stringify({
+      section_id: sectionId
+    })
+  });
   return dispatch(finishEditingSection());
 };
 
@@ -232,7 +242,10 @@ export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
  * the server
  * @param {number} sectionId
  */
-export const unassignSection = sectionId => (dispatch, getState) => {
+export const unassignSection = (sectionId, location) => (
+  dispatch,
+  getState
+) => {
   dispatch(beginEditingSection(sectionId, true));
   const {initialCourseId, initialUnitId} = getState().teacherSections;
   dispatch(editSectionProperties({courseId: '', scriptId: ''}));
@@ -245,6 +258,7 @@ export const unassignSection = sectionId => (dispatch, getState) => {
           sectionId,
           scriptId: initialUnitId,
           courseId: initialCourseId,
+          location: location,
           date: new Date()
         },
         removeNullValues
@@ -540,7 +554,6 @@ const initialState = {
   loadError: null,
   // The page where the action is occurring
   pageType: '',
-
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null
 };

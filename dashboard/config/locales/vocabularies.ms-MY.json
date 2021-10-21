@@ -2,6 +2,192 @@
   "ms-MY": {
     "data": {
       "vocabularies": {
+        "event/dance-extras/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/minecraft/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/hero/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "function/hero/unversioned": {
+          "word": "Fungsi"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/flappy/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/frozen/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/iceage/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/artist/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/gumball/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "event/dance/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "program/dance/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Bersyarat"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Gelung",
+          "definition": "Tindakan melakukan sesuatu secara berulang kali."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/starwars/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/mc/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/playlab/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "event/sports/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/sports/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/infinity/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "event/basketball/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Penyahpepijatan"
+        },
+        "program/basketball/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "machine_learning/oceans/unversioned": {
+          "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Peristiwa",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Model dan Simulasi"
+        },
         "sprite/coursef/2021": {
           "word": "Peperi",
           "definition": "Grafik pada skrin dengan lokasi, saiz dan penampilan."
@@ -31,10 +217,12 @@
           "definition": "Label untuk maklumat yang digunakan dalam atur cara."
         },
         "prompt/coursef/2021": {
-          "word": "Prom"
+          "word": "Prom",
+          "definition": "Mesej pada skrin komputer yang menunggu input daripada pengguna."
         },
         "input/coursef/2021": {
-          "word": "Input"
+          "word": "Input",
+          "definition": "Maklumat yang berjaya dikumpulkan oleh komputer daripada pengguna."
         },
         "loop/coursef/2021": {
           "word": "Gelung",
@@ -48,12 +236,24 @@
           "word": "Gelung Untuk",
           "definition": "Gelung yang mempunyai permulaan, akhir dan kenaikan yang telah ditentukan terlebih dahulu (selang langkah)."
         },
+        "models_and_simulations/coursef/2021": {
+          "word": "Model dan Simulasi"
+        },
         "machine_learning/coursef/2021": {
           "word": "Pembelajaran Mesin",
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
+        "dns/coursef/2021": {
+          "word": "DNS"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
+        },
+        "packets/coursef/2021": {
+          "word": "Bingkisan"
+        },
+        "servers/coursef/2021": {
+          "word": "Pelayan"
         },
         "ip_address/coursef/2021": {
           "word": "Alamat IP",
@@ -65,6 +265,9 @@
         },
         "define/coursef/2021": {
           "word": "Takrifkan"
+        },
+        "prepare/coursef/2021": {
+          "word": "Sedia"
         },
         "try/coursef/2021": {
           "word": "Cuba"
@@ -113,7 +316,8 @@
           "definition": "Senarai langkah untuk menyelesaikan tugas. "
         },
         "debugging/coursea/2021": {
-          "word": "Penyahpepijatan"
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah di dalam algoritma atau atur cara."
         },
         "program/coursea/2021": {
           "word": "Atur Cara",
@@ -266,12 +470,18 @@
           "word": "Pemboleh ubah",
           "definition": "Label untuk maklumat yang digunakan dalam atur cara."
         },
+        "prompt/express/2021": {
+          "definition": "Mesej pada skrin komputer yang menunggu input daripada pengguna."
+        },
         "for_loop/express/2021": {
           "word": "Gelung Untuk",
           "definition": "Gelung yang mempunyai permulaan, akhir dan kenaikan yang telah ditentukan terlebih dahulu (selang langkah)."
         },
         "define/express/2021": {
           "word": "Takrifkan"
+        },
+        "prepare/express/2021": {
+          "word": "Sedia"
         },
         "try/express/2021": {
           "word": "Cuba"
@@ -349,6 +559,9 @@
         },
         "define/coursee/2021": {
           "word": "Takrifkan"
+        },
+        "prepare/coursee/2021": {
+          "word": "Sedia"
         },
         "try/coursee/2021": {
           "word": "Cuba"

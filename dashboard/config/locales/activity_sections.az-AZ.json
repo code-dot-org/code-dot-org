@@ -2,22 +2,568 @@
   "az-AZ": {
     "data": {
       "activity_sections": {
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Yekun"
+        "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
+          "name": "Giriş"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+        "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
             null
           ]
+        },
+        "42ec95b6-80f4-4012-8869-6850c7497008": {
+          "name": "Xülasə"
+        },
+        "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
+          "name": "Qeyd etmək"
+        },
+        "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "563d9088-3ce6-48c1-aa79-6f673e089247": {
+          "name": "Giriş"
+        },
+        "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
+          "tips": [
+            null
+          ]
+        },
+        "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
+          "tips": [
+            null
+          ]
+        },
+        "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
+          "tips": [
+            null
+          ]
+        },
+        "70935a98-82e9-4553-94f7-90a4e615dd34": {
+          "name": "Xülasə"
+        },
+        "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
+          "name": "Qeyd etmək"
+        },
+        "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
+          "tips": [
+            null
+          ]
+        },
+        "4fd098be-b798-4e23-b091-e90c95344d97": {
+          "tips": [
+            null
+          ]
+        },
+        "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
+          "tips": [
+            null
+          ]
+        },
+        "ae17edd9-ad82-47dc-95f5-368b58084998": {
+          "name": "Xülasə"
+        },
+        "145782a9-a436-4615-9827-0f75d7e4b3a0": {
+          "name": "Qeyd etmək"
+        },
+        "147a2b22-0cba-4505-81ef-770b81eee73e": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "aced2726-6ed1-4645-9fd2-eccfe982584f": {
+          "tips": [
+            null
+          ]
+        },
+        "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
+          "name": "Qanadlı Kod"
+        },
+        "47fe47af-9de3-4ba5-8193-1f489bef9544": {
+          "tips": [
+            null
+          ]
+        },
+        "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
+          "name": "Xülasə"
+        },
+        "ca7d5e61-0396-4885-934c-0d70ab63b072": {
+          "name": "Qeyd etmək"
+        },
+        "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
+          "tips": [
+            null
+          ]
+        },
+        "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "9aba0e85-a709-43f5-8cfb-251671159b3a": {
+          "name": "Labirint"
+        },
+        "524f2e35-6286-4585-879e-96e7286e8a6d": {
+          "tips": [
+            null
+          ]
+        },
+        "50db3674-3387-4932-ba7e-c9f176ebd976": {
+          "name": "Xülasə"
+        },
+        "46f387e2-c275-4c57-acec-c9709e7f44fc": {
+          "name": "Qeyd etmək"
+        },
+        "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
+          "tips": [
+            null
+          ]
+        },
+        "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
+          "tips": [
+            null
+          ]
+        },
+        "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
+          "name": "Anna və Elza ilə proqramlaşdır"
+        },
+        "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
+          "tips": [
+            null
+          ]
+        },
+        "38799019-2b81-4c28-a239-762b90e0f5e3": {
+          "name": "Xülasə"
+        },
+        "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
+          "name": "Qeyd etmək"
+        },
+        "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "fc04ef5f-0d78-418b-9311-e12201106453": {
+          "tips": [
+            null
+          ]
+        },
+        "548dc37b-f338-4a52-a77e-7380794c64f2": {
+          "tips": [
+            null
+          ]
+        },
+        "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
+          "name": "Xülasə"
+        },
+        "3d63393a-9146-4027-8783-247e19637d25": {
+          "name": "Qeyd etmək"
+        },
+        "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "tips": [
+            null
+          ]
+        },
+        "dd7bde99-d360-4587-8d30-75383b930808": {
+          "tips": [
+            null
+          ]
+        },
+        "88489303-1952-49c3-914a-2cfa7a138778": {
+          "name": "Giriş"
+        },
+        "75db60fb-671b-4740-80ae-0b13f4c09897": {
+          "name": "Rəssam"
+        },
+        "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
+          "tips": [
+            null
+          ]
+        },
+        "eea63453-59c2-4c48-8d04-d6612d379584": {
+          "tips": [
+            null
+          ]
+        },
+        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
+          "name": "Xülasə"
+        },
+        "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
+          "name": "Qeyd etmək"
+        },
+        "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
+          "name": "Giriş"
+        },
+        "acc2ced5-83ed-4926-9830-f5bd846136a1": {
+          "tips": [
+            null
+          ]
+        },
+        "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
+          "tips": [
+            null
+          ]
+        },
+        "ddf59331-16dc-488f-8170-6d12869fbb9f": {
+          "name": "Ümumi Dəstək"
+        },
+        "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "tips": [
+            null
+          ]
+        },
+        "f78380b1-0666-40a6-ac50-7adf09cda880": {
+          "name": "Xülasə"
+        },
+        "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
+          "name": "Qeyd etmək"
+        },
+        "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
+          "name": "Giriş"
+        },
+        "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
+          "tips": [
+            null
+          ]
+        },
+        "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
+          "tips": [
+            null
+          ]
+        },
+        "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
+          "tips": [
+            null
+          ]
+        },
+        "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
+          "name": "Xülasə"
+        },
+        "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
+          "name": "Qeyd etmək"
+        },
+        "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
+          "tips": [
+            null
+          ]
+        },
+        "b4a270c7-538c-4278-a88e-d074a04fafb4": {
+          "tips": [
+            null
+          ]
+        },
+        "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
+          "tips": [
+            null
+          ]
+        },
+        "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
+          "tips": [
+            null
+          ]
+        },
+        "7219d891-31ac-454e-8060-eb84a3a0d1df": {
+          "tips": [
+            null
+          ]
+        },
+        "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
+          "tips": [
+            null
+          ]
+        },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "Müzakirə"
+        },
+        "c694a6e6-b265-4802-bfca-bbc9180c8407": {
+          "tips": [
+            null
+          ]
+        },
+        "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
+          "tips": [
+            null
+          ]
+        },
+        "a69a3310-4b81-4e04-8313-51044489351a": {
+          "name": "Ulduz Müharibələri: Qalaktikanı proqramlaşdırın"
+        },
+        "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
+          "tips": [
+            null
+          ]
+        },
+        "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
+          "name": "Xülasə"
+        },
+        "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
+          "name": "Qeyd etmək"
+        },
+        "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
+          "name": "Giriş"
+        },
+        "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
+          "tips": [
+            null
+          ]
+        },
+        "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
+          "tips": [
+            null
+          ]
+        },
+        "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
+          "name": "Minecraft Macəraçısı",
+          "tips": [
+            null
+          ]
+        },
+        "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
+          "name": "Xülasə"
+        },
+        "6b574c8b-2319-4244-acc8-fb8405fa5737": {
+          "name": "Qeyd etmək"
+        },
+        "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
+          "name": "Oyun labı"
+        },
+        "d430e170-dccc-4c02-bcfe-5084169a154b": {
+          "tips": [
+            null
+          ]
+        },
+        "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
+          "name": "Xülasə"
+        },
+        "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
+          "name": "Qeyd etmək"
+        },
+        "8531cf05-6363-4654-b20a-455e85fa16a0": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
+          "name": "Giriş"
+        },
+        "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "tips": [
+            null
+          ]
+        },
+        "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
+          "progression_name": "Dizayn Rejimi"
+        },
+        "1fd99689-e90c-478b-8ae2-ce8b5d489906": {
+          "name": "Qeyd et və sükanı belə saxla"
+        },
+        "88f6ccc1-0efa-4c60-985c-971a235d5645": {
+          "tips": [
+            null
+          ]
+        },
+        "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
+          "tips": [
+            null
+          ]
+        },
+        "afb5ecc7-af66-492d-96bb-2412754005e0": {
+          "name": "Xülasə"
+        },
+        "16a6a4db-d853-478e-9945-3f0d17865e80": {
+          "name": "Qeyd etmək"
+        },
+        "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "f5f6ef34-367d-424d-af63-a8a04c146c34": {
+          "tips": [
+            null
+          ]
+        },
+        "540e3c12-987d-44de-8efc-5e6e12fed295": {
+          "tips": [
+            null
+          ]
+        },
+        "21f43e64-dea3-4abc-8284-e055480370ce": {
+          "name": "Giriş",
+          "tips": [
+            null
+          ]
+        },
+        "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "tips": [
+            null
+          ]
+        },
+        "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "tips": [
+            null
+          ]
+        },
+        "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "name": "Yoxlama",
+          "tips": [
+            null
+          ]
+        },
+        "95cc8163-fcee-44bd-95c8-606999d2c378": {
+          "description": "**Düzgün ardıcıllıq: D, B, A, C**"
+        },
+        "6874de98-8778-447b-8453-0138809b2c7e": {
+          "tips": [
+            null
+          ]
+        },
+        "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a0530acf-3bce-4de9-b392-fe8725044086": {
+          "name": "Xülasə"
+        },
+        "ceaf9d96-e806-48e1-9a95-30566999264e": {
+          "name": "Qeyd etmək"
+        },
+        "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
+          "name": "Kod Saatı bitəndən sonra"
+        },
+        "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
+          "name": "Giriş",
+          "tips": [
+            null
+          ]
+        },
+        "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "tips": [
+            null
+          ]
+        },
+        "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "name": "Yoxlama",
+          "tips": [
+            null
+          ]
+        },
+        "2754bec9-70a7-46db-8991-16bbf01adbe7": {
+          "description": "**Düzgün ardıcıllıq: D, B, A, C**"
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "Ümumi Dəstək"
+        },
+        "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
+          "tips": [
+            null
+          ]
+        },
+        "efd37169-ddb7-4ef6-8049-36da981ea0f6": {
+          "progression_name": "Daha çox Düymələr"
+        },
+        "820a64ef-d544-460f-ab3f-0f19442b9129": {
+          "name": "Xülasə"
+        },
+        "2458fd7f-011d-4251-8877-2e90d5d55684": {
+          "name": "Qeyd etmək"
+        },
+        "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
+          "tips": [
+            null
+          ]
+        },
+        "e1243ccf-be45-4f8e-a138-54953ea12f92": {
+          "tips": [
+            null
+          ]
+        },
+        "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
+          "name": "Ümumi Dəstək"
+        },
+        "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
+          "tips": [
+            null
+          ]
+        },
+        "8653a0a0-b67c-4237-b8c1-111e0d11b4fe": {
+          "name": "Xülasə"
+        },
+        "f6bcac9d-cd44-435f-8565-57a5926542f8": {
+          "name": "Qeyd etmək"
+        },
+        "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "tips": [
+            null
+          ]
+        },
+        "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "tips": [
+            null
+          ]
+        },
+        "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "tips": [
+            null
+          ]
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Yekun"
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Azad Oyna",
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "Ümumi Dəstək"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Giriş"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Azad Oyna"
+        },
+        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
+          "name": "Mozaika"
+        },
+        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "tips": [
+            null
+          ]
+        },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Səviyyələr"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Giriş"
@@ -28,9 +574,13 @@
           ]
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
+          "name": "Tətbiqləri araşdırmaq",
           "tips": [
             null
           ]
+        },
+        "1fa1e4c0-3147-4057-8131-07b03520b95e": {
+          "name": "Əksetmə"
         },
         "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
           "tips": [
@@ -286,7 +836,11 @@
             null
           ]
         },
+        "4c778537-489f-4c5c-913b-38cbf385737c": {
+          "name": "Əsas lüğət:"
+        },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "name": "Mən harada səhvə yol verdim?",
           "tips": [
             null
           ]
@@ -300,6 +854,7 @@
           "name": "Hərəkət et"
         },
         "93f8de74-6246-4227-8418-08d5c736633b": {
+          "name": "Əksetmə",
           "tips": [
             null
           ]
@@ -417,6 +972,9 @@
             null
           ]
         },
+        "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
+          "progression_name": "Onlayn Məhəlləm"
+        },
         "5cd698e0-d82e-4e9d-af4f-1923b453d12b": {
           "name": "Giriş"
         },
@@ -436,6 +994,7 @@
           ]
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
+          "name": "Əksetmə",
           "tips": [
             null
           ]
@@ -586,6 +1145,7 @@
           ]
         },
         "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
+          "name": "Əksetmə",
           "tips": [
             null
           ]
@@ -762,6 +1322,7 @@
           ]
         },
         "47c800d4-0c46-42ae-bc19-d837d28fd912": {
+          "name": "Əksetmə",
           "tips": [
             null
           ]
@@ -776,6 +1337,9 @@
         },
         "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
           "progression_name": "meydan oxumaq"
+        },
+        "67688952-e1da-43b1-a7d0-f2889dec7e48": {
+          "name": "Mən harada səhvə yol verdim?"
         },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
           "tips": [
@@ -955,8 +1519,20 @@
         "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
           "progression_name": "meydan oxumaq"
         },
+        "5c2218aa-1499-47a7-a606-11c067735cc6": {
+          "progression_name": "Praktika"
+        },
+        "6ae01f75-c26d-432f-9775-8a1743d620d7": {
+          "progression_name": "Proqnoz"
+        },
+        "02d18e9f-46ac-4658-8397-3896b78baea0": {
+          "progression_name": "Praktika"
+        },
         "19367182-a8f0-442e-9a7d-e7852546f961": {
           "progression_name": "meydan oxumaq"
+        },
+        "0cf25b1a-ce7f-42e1-9460-f17762284ea3": {
+          "name": "Əksetmə"
         },
         "defc5a97-b60a-4a6b-8617-e05be08dab35": {
           "name": "Giriş"
@@ -967,8 +1543,14 @@
         "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
           "progression_name": "meydan oxumaq"
         },
+        "142926ac-9a7f-484f-975c-c0eceba04aa9": {
+          "progression_name": "Praktika"
+        },
         "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
           "progression_name": "Dərsə əlavələr"
+        },
+        "0406b536-ef27-4e66-aebd-6163d05bcc36": {
+          "name": "Əksetmə"
         },
         "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
           "name": "Giriş"
@@ -976,8 +1558,17 @@
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
           "progression_name": "meydan oxumaq"
         },
+        "c88b15d4-5935-4d02-b036-bd3107c97185": {
+          "progression_name": "Praktika"
+        },
+        "c2b48d91-12cf-4c18-a151-031c08eb35ff": {
+          "progression_name": "Praktika"
+        },
         "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
           "progression_name": "Dərsə əlavələr"
+        },
+        "c1db98cf-ca82-4092-a167-fc450bf6fd0f": {
+          "name": "Əksetmə"
         },
         "493408f8-a48b-457f-924d-0c99519b55e2": {
           "name": "Giriş"
@@ -988,8 +1579,14 @@
           ],
           "progression_name": "meydan oxumaq"
         },
+        "47788922-c2b4-4cc7-8d02-73cc2fef49a4": {
+          "progression_name": "Praktika"
+        },
         "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
           "progression_name": "Dərsə əlavələr"
+        },
+        "6e2ecb9e-09e6-4af0-b1b4-7b704334ba6c": {
+          "name": "Əksetmə"
         },
         "0d4256d9-a4f5-4fed-9958-f515dd431f6e": {
           "name": "Giriş",
@@ -1255,6 +1852,9 @@
             null
           ]
         },
+        "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
+          "name": "Əksetmə"
+        },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
           "tips": [
             null
@@ -1266,9 +1866,16 @@
           ]
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
+          "name": "Bloklar ilə proqramlaşdırma",
           "tips": [
             null
           ]
+        },
+        "1ed021eb-9033-4d39-98d7-e9e245a7f785": {
+          "progression_name": "Video: Bloklar ilə proqramlaşdırma"
+        },
+        "51b1c494-c02c-43d8-bf3d-543f6634f474": {
+          "name": "Əksetmə"
         },
         "58491b40-8a56-4299-9f91-d96bd0af3ab0": {
           "progression_name": "meydan oxumaq"
@@ -1381,7 +1988,11 @@
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Giriş"
         },
+        "8a86be08-902a-47c7-8ed7-4aa78767ce45": {
+          "name": "Nə öyrəndik?"
+        },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
+          "name": "Əksetmə",
           "tips": [
             null
           ]
@@ -1399,8 +2010,14 @@
             null
           ]
         },
+        "30997374-8929-4152-b55b-94e459e3ee58": {
+          "progression_name": "Praktika"
+        },
         "83778d93-2959-4776-94d0-e82985346914": {
           "progression_name": "Azad Oyna"
+        },
+        "c925e7be-2487-4ebe-892b-bfe452625d91": {
+          "name": "Əksetmə"
         },
         "aad9aa38-56b3-42ef-b751-03065c308d0e": {
           "name": "Giriş"

@@ -484,6 +484,10 @@ ja:
           lessons:
             Bounce:
               name: バウンド
+            Calc:
+              name: 計算
+            Eval:
+              name: 評価
             Studio:
               name: スタジオ
           student_description: イベント
@@ -502,6 +506,8 @@ ja:
           lessons:
             Jigsaw:
               name: ジグソーパズル
+              description_student: クリックしてドラッグし、パズルを完成させましょう。
+              description_teacher: このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。
           student_description: ジグソーチュートリアルをお試しください。
         step:
           title: ステップ
@@ -946,6 +952,8 @@ ja:
               name: 変数の定義
             Evaluation Blocks:
               name: 評価ブロック
+            Free Play:
+              name: じゆうあそび
             Luigi's Pizza:
               name: ルイージのピザ
             Rocket-Height:
@@ -1042,6 +1050,8 @@ ja:
               name: 含まれるレベル
             ML Fish:
               name: MLフィッシュ
+            Java Lab:
+              name: Javaラボ
         algebraPD2b:
           lessons:
             Best Practices for Teaching Computer Science:
@@ -2494,6 +2504,7 @@ ja:
             App Presentation:
               name: アプリのプレゼンテーション
         CSDU1-Draft:
+          description_short: 問題解決
           lessons:
             Exploring Apps:
               name: アプリを探索
@@ -4175,6 +4186,8 @@ ja:
               name: センサーアプリケーション
             'Project: Prototype an Innovation':
               name: 'プロジェクト: イノベーションのプロトタイプ'
+            Map:
+              name: マップ
             Board Events:
               name: ボードイベント
             'Project: Make a Game':
@@ -15362,12 +15375,19 @@ ja:
               name: 最終プロジェクト
             Project:
               name: 最終プロジェクト
+        outbreak:
+          lessons:
+            Outbreak:
+              description_student: モンスタータウンにウイルスが広がっています！ ウイルスシミュレーターを作成し、モンスターが健康を取り戻す手助けをする方法を学びます。
+              description_teacher: このレッスンでは、イベントに関する**スキル構築**と**ミニプロジェクト**を組み合わせて、スプライトラボで独自のコンピュータシミュレーションを作成します。生徒にシミュレーションをじっくり調べてもらい、ウイルスがどれだけ早く広がるか、スピードを弱めるには何ができるかを理解してもらいます。
         2021drafting:
           lessons:
             Course F Introduction:
               name: スプライトラボの紹介
             lesson-2:
               name: テキストとプロンプト
+            lesson-3:
+              name: ミニプロジェクト：ユーザーインプットプログラム
             Making Sprites:
               name: スプライトを作る
             Sprites in Action:
@@ -16701,6 +16721,7 @@ ja:
               description_student: クラスメートと共有できるインタラクティブなプロジェクトを作成しましょう。
               description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
             Loops with the Artist:
+              key: アーティストで学ぶループ
               name: ループを使った描画
               description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: この**スキル構築**レッスンは、焦点をブライトラボからアーティストに移します。これは、生徒がコースの残りの部分で探索する新しいツールとなります。
@@ -16807,6 +16828,7 @@ ja:
               name: 言葉の力
               description_student: いじめは決して許されません。このレッスンでは、オンラインで何を言ってよいか、何を言ってはいけないかについて説明します。
             lesson-11:
+              name: ミニプロジェクト：ユーザーインプットプログラム
               description_student: 変数を使用した新しいスキルを、3つのオープンエンドプロジェクトの1つに適用します。
               description_teacher: 生徒は、変数を使用して新しいスキルを3つのオープンエンドの**ミニプロジェクト**の1つに適用します。サンプルプログラムを探索して、自分のプロジェクトの計画を作成し、それをゼロからプログラムします。
           lesson_groups:
@@ -17088,6 +17110,8 @@ ja:
               name: スプライトラボの紹介
             blank-space-stories:
               name: ブランクスペースストーリー
+            user-input-programs:
+              name: ミニプロジェクト：ユーザーインプットプログラム
           lesson_groups:
             ramp_up:
               display_name: はじめに
@@ -17296,6 +17320,8 @@ ja:
           lessons:
             lesson-20:
               name: 評価日
+            lesson-24:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17303,6 +17329,8 @@ ja:
           lessons:
             lesson-15:
               name: 評価日
+            lesson-16:
+              name: Javaラボ
           lesson_groups:
             lesson group:
               display_name: 内容
@@ -17310,6 +17338,8 @@ ja:
           lessons:
             lesson-15:
               name: 評価日
+            lesson-17:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17317,6 +17347,8 @@ ja:
           lessons:
             lesson-15:
               name: 評価日
+            lesson-16:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17324,6 +17356,8 @@ ja:
           lessons:
             lesson-15:
               name: 評価日
+            Java Lab:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17620,6 +17654,8 @@ ja:
           lessons:
             Assessment Day:
               name: 評価日
+            lesson-1:
+              name: Javaラボ
             lesson-20:
               name: 評価日
           lesson_groups:
@@ -17631,6 +17667,8 @@ ja:
               name: 評価日
             lesson-15:
               name: 評価日
+            lesson-1:
+              name: Javaラボ
           lesson_groups:
             lesson group:
               display_name: 内容
@@ -17638,6 +17676,8 @@ ja:
           lessons:
             Assessment Day:
               name: 評価日
+            lesson-1:
+              name: Javaラボ
             lesson-15:
               name: 評価日
           lesson_groups:
@@ -17647,6 +17687,8 @@ ja:
           lessons:
             Assessment Day:
               name: 評価日
+            lesson-1:
+              name: Javaラボ
             lesson-15:
               name: 評価日
           lesson_groups:
@@ -17658,6 +17700,8 @@ ja:
               name: 評価日
             lesson-15:
               name: 評価日
+            Java Lab:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17665,6 +17709,8 @@ ja:
           lessons:
             lesson-2:
               name: コンピューティングにおける革新
+            lesson-9:
+              name: カラーLED
             lesson-13:
               name: 加速度計
             lesson-19:
@@ -17697,3 +17743,27 @@ ja:
           lessons:
             lesson-1:
               name: ダンスパーティー：アンプラグド
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: ウィジェット
+            lesson-2:
+              name: ツール
+        poetry:
+          lessons:
+            lesson-3:
+              name: 変数（へんすう）
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: つづりみつばち
+          title: つづりみつばち
+        outbreak-csc:
+          title: 大流行
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 評価日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容

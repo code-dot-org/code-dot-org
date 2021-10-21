@@ -29,6 +29,8 @@ uk:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: Вчіться сьогодні, будуйте світле майбутнє.
   hoc2020_header_with_line_break_markdown: "Вчіться сьогодні, \n\nбудуйте світле майбутнє."
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -60,6 +62,7 @@ uk:
     Знання з інформатики важливі для кожного учня.'
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: Штучний інтелект для океанів
   oceans_landing_description: Дізнайтеся про Машинне навчання та етичне використання
     AI.
@@ -153,6 +156,12 @@ uk:
   hoc_overview_oceans_tutorial_desc: Дізнайтеся про штучний інтелект (AI), машинне
     навчання, дані про навчання та упередженість, вивчаючи етичні питання та способи
     використання AI для вирішення світових проблем.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -218,6 +227,10 @@ uk:
   hourofcode_homepage_hoc2018_header_line1: Кожен, будь-де може організувати подію
     Години коду. Одно-годинні заняття на 45+ мовах. Попереднього досвіду не потрібно.
   hourofcode_homepage_hoc2018_header_line2: Ages 4 to 104.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Використовуй блоки коду, щоб провести Алекса
     чи Стіва через пригоди в цьому світі Майнкрафт.
   codeorg_homepage_hoc2019_dance_heading: Спробуйте новий урок <span class="highlight-word">Танцювальна
@@ -1533,7 +1546,7 @@ uk:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -5239,8 +5252,9 @@ uk:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -7836,7 +7850,7 @@ uk:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_icomputelearn_string_platforms: Усі сучасні браузери
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Всі сучасні браузери, планшет Android,
     iPad

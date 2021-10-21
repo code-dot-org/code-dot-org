@@ -1179,6 +1179,7 @@ pl:
             '"burst"': wybuch
             '"pop"': popularny
             '"rain"': deszcz
+            '"spiral"': spirala
             '"zigzag"': zigzag
       gamelab_makeNewSpriteAnon:
         text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
@@ -1399,19 +1400,6 @@ pl:
             '"while"': dopóki
       gamelab_spriteSay:
         text: "{SPRITE} powiedz {SPEECH}"
-      gamelab_spriteSayChoices:
-        text: "{SPRITE} powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Batman!"': Jestem Batmanem!
-            '"Being kind is never wasted."': Bycie miłym nigdy nie jest stratą.
-            '"When you know better, you do better."': Gdy wiesz lepiej, robisz lepiej.
-            '"You always pass failure on the way to success."': Zawsze mijasz porażkę
-              na drodze do sukcesu.
-            '"Make each day your masterpiece."': Uczyń każdy dzień swoim arcydziełem.
-            '"I am Catwoman!"': Jestem Kobietą Kotem!
-            '"Never quit!"': Nigdy nie rezygnuj!
-            '"Live Fast."': Żyj szybko.
       gamelab_spriteSayTime:
         text: "{SPRITE}mówi{TEXT1}przez{NUM}sekundy"
       gamelab_startAvoiding:
@@ -1883,12 +1871,12 @@ pl:
         text: potwory zatrzymują się
       Poetry_addLine:
         text: dodaj linię {LINE}
-      Poetry_animatePoem:
-        text: animuj wiersz
+      Poetry_animateText:
+        text: animowany tekst
       Poetry_destroy:
         text: usuń {ANIMATION_NAME}
-      Poetry_hidePoem:
-        text: ukryj wiersz
+      Poetry_hideText:
+        text: ukryj tekst
       Poetry_makeBurst:
         text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
         options:
@@ -1957,13 +1945,10 @@ pl:
           FONT:
             '"Arial"': Arial
             '"Georgia"': Georgia
-            '"Palatino"': Palatino
             '"Times"': Times
             '"Courier"': Courier
             '"Arial Black"': Arial Black
             '"Impact"': Impact
-            '"Tahoma"': Tahoma
-            '"Verdana"': Verdana
       Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
       Poetry_setForegroundEffect:
@@ -2018,8 +2003,8 @@ pl:
             '"flyBottom"': lecieć z dołu
       Poetry_setTitle:
         text: ustaw tytuł wiersza {TITLE}
-      Poetry_showPoem:
-        text: pokaż wiersz
+      Poetry_showText:
+        text: pokaż tekst
       Poetry_startBehavior:
         text: 'duszek {ANIMATION_NAME} rozpoczyna {BEHAVIOR} '
         options:

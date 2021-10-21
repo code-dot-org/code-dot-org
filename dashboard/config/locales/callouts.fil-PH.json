@@ -1150,7 +1150,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Bagong block!",
-          "poetry_multiple_sprites": "Bagong block!"
+          "poetry_multiple_sprites": "Bagong block!",
+          "poetry_new_block": "Bagong block!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Bagong block!"

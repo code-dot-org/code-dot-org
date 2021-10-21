@@ -176,6 +176,12 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
         }
       }
     }

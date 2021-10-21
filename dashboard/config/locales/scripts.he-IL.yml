@@ -3412,6 +3412,8 @@ he:
           lessons:
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
+            Outbreak:
+              name: קידוד של סימולציה
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
@@ -3904,3 +3906,18 @@ he:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: ווידג'טים
+            lesson-2:
+              name: כלים
+        poetry:
+          lessons:
+            lesson-3:
+              name: משתנים
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: תחרות איות
+          title: תחרות איות

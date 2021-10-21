@@ -265,6 +265,12 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         }
       }
     }

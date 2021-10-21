@@ -4311,6 +4311,8 @@ bg:
           lessons:
             lesson-13:
               name: Примери
+            lesson-17:
+              name: Конзола
             lesson-18:
               name: Джаджи
         csa1-pilot-facilitator:
@@ -4347,5 +4349,24 @@ bg:
               display_name: Съдържание
             lesson_group:
               display_name: Съдържание
+            lessonGroup-2:
+              display_name: Съдържание
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Джаджи
+            lesson-3:
+              name: Примери
+        poetry:
+          lessons:
+            lesson-3:
+              name: Променливи
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Правопис
+          title: Правопис
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Съдържание

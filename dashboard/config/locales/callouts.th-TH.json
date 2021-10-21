@@ -471,7 +471,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "บล็อกใหม่!",
-          "poetry_multiple_sprites": "บล็อกใหม่!"
+          "poetry_multiple_sprites": "บล็อกใหม่!",
+          "poetry_new_block": "บล็อกใหม่!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "บล็อกใหม่!"

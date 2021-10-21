@@ -2,14 +2,164 @@
   "tr-TR": {
     "data": {
       "lesson_activities": {
+        "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
+          "name": "Özet"
+        },
+        "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
+          "name": "İlk adım"
+        },
+        "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
+          "name": "Özet"
+        },
+        "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
+          "name": "Özet"
+        },
+        "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
+          "name": "İlk adım"
+        },
+        "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
+          "name": "Özet"
+        },
+        "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
+          "name": "Değerlendirme"
+        },
+        "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
+          "name": "İlk adım"
+        },
+        "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
+          "name": "Özet"
+        },
+        "5408728c-7b75-4da5-b4bb-b42cb3c2984b": {
+          "name": "Değerlendirme"
+        },
+        "633ec4e2-ea0b-496f-8878-d4178882a69e": {
+          "name": "Özet"
+        },
+        "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
+          "name": "İlk adım"
+        },
+        "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
+          "name": "Özet"
+        },
+        "a1d9b125-849a-4eb9-bd45-7b387ec2cc44": {
+          "name": "Değerlendirme"
+        },
+        "c53a1348-2816-4c38-9417-92561d0bca19": {
+          "name": "Isınmak"
+        },
+        "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d": {
+          "name": "Özet"
+        },
+        "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
+          "name": "İlk adım"
+        },
+        "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
+          "name": "Özet"
+        },
+        "0e9caf95-fa34-4ffc-b218-0859134ee293": {
+          "name": "Değerlendirme"
+        },
+        "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f": {
+          "name": "İlk adım"
+        },
+        "0f404bbf-d9f1-45c9-a496-271179254aed": {
+          "name": "Seviyeler"
+        },
+        "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
+          "name": "Özet"
+        },
+        "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
+          "name": "İlk adım"
+        },
+        "d42497ec-48f5-404c-90b9-2133dd4759cc": {
+          "name": "İlk adım"
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Etkinlik"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Özet"
+        },
+        "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
+          "name": "Özet"
+        },
+        "37f266a7-4b80-449e-805a-4a06aad37292": {
+          "name": "İlk adım"
+        },
+        "f266050e-62e6-415d-8735-b80cb922587d": {
+          "name": "İlk adım"
+        },
+        "308d7e22-610e-46cb-be15-54fab1e436bb": {
+          "name": "Özet"
+        },
+        "408e3cc9-9733-4518-93f3-0a3bb6b6f62d": {
+          "name": "Değerlendirme"
+        },
+        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
+          "name": "Isınmak"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Etkinlik"
+        },
+        "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Özet"
+        },
+        "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
+          "name": "İlk adım"
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Etkinlik"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Özet"
+        },
+        "05180d31-d1ff-422e-8227-69f7d07884a6": {
+          "name": "Isınmak"
+        },
+        "4abbf2ec-b39e-4740-a51a-635072063171": {
+          "name": "Özet"
+        },
+        "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
+          "name": "Isınmak"
+        },
+        "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b": {
+          "name": "Özet"
+        },
+        "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
+          "name": "Seviyeler"
+        },
+        "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
+          "name": "Seviyeler"
+        },
+        "239ba7ce-544c-4508-9e5c-e956de964002": {
+          "name": "Özet"
+        },
+        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
+          "name": "Isınmak"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Etkinlik"
+        },
         "f0e43cbc-520d-42b7-8de2-0572d569695e": {
           "name": "Isınmak"
         },
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": "Özet"
         },
-        "06dfaf3b-e495-4577-baa6-883a782e198f": {
-          "name": "Seviyeler"
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Isınmak"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Özet"
+        },
+        "f652e4d2-c712-4cff-a011-f1dcea192263": {
+          "name": "Isınmak"
+        },
+        "4286b9b3-8562-4acf-8967-f6b6b1b18f9e": {
+          "name": "Özet"
+        },
+        "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
+          "name": "Değerlendirme"
         },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Isınmak"

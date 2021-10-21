@@ -605,6 +605,11 @@ it:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
           student_description: Esercitazione introduttiva per imparare come "trascinare
             e rilasciare" (drag and drop)
         step:
@@ -9983,6 +9988,8 @@ it:
           lessons:
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
+            Outbreak:
+              name: Codifica di una simulazione
           lesson_groups:
             outbreak:
               display_name: Simulazione di epidemia
@@ -11464,3 +11471,24 @@ it:
           lessons:
             lesson-1:
               name: Festa di ballo
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Componenti
+            lesson-2:
+              name: Strumenti
+        poetry:
+          lessons:
+            lesson-3:
+              name: Variabili
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Ape Sapiente
+          title: Ape Sapiente
+        outbreak-csc:
+          title: Epidemia
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto

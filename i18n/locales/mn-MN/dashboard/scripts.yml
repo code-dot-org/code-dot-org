@@ -499,6 +499,8 @@ mn:
           lessons:
             Jigsaw:
               name: Хөрөө
+              description_student: Тааваруудыг дуусгахын тулд товшоод чирнэ үү.
+              description_teacher: Энэ хичээл нь сурагчдад компьютерын лабораторид очиход юу хүлээж болох талаархи ойлголтыг өгөх болно. Энэ нь тэднийг компьютерын лабораторийн ажлын талаар танилцуулах товч хэлэлцүүлгээс эхэлж, дараа нь онлайнаар таавраа бөглөхөд компьютер ашиглана.
           student_description: Манай Jigsaw зааврыг туршиж үзээрэй.
         step:
           title: Алхам
@@ -16606,3 +16608,16 @@ mn:
               display_name: Хичээлүүд
             lessonGroup-3:
               display_name: Төсөл
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Виджетүүд
+        poetry:
+          lessons:
+            lesson-3:
+              name: Хувьсагчууд
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Зөв бичих дүрэм заах зөгий
+          title: Зөв бичих дүрэм заах зөгий

@@ -235,7 +235,7 @@ fr:
             qu’elles explorent la magie et la beauté de la glace.
           lessons:
             Artist:
-              name: Artiste
+              name: Code avec Anna et Elsa
           student_description: Utilisons le code pour rejoindre Anna et Elsa dans
             leur exploration de la magie et de la beauté de la glace. Tu vas créer
             des flocons de neige et des motifs en patinant sur la glace et faire un
@@ -398,7 +398,7 @@ fr:
             jeu mettant en vedette les personnages de Disney Infinity.
           lessons:
             Infinity:
-              name: Infini
+              name: Labo de Jeux de Disney Infinity
           student_description: Utilise le Labo de jeux pour créer une histoire ou
             un jeu mettant en vedette les personnages de Disney Infinity.
         algebrademo:
@@ -588,6 +588,12 @@ fr:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_student: Clique et fais glisser pour terminer les énigmes.
+              description_teacher: Cette leçon donnera aux élèves une idée de ce à
+                quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique.
+                Elle commence par une brève discussion les initiant aux manières,
+                dans le laboratoire informatique, puis ils progresseront dans l'utilisation
+                d'un ordinateur pour résoudre des énigmes en ligne.
           student_description: Essaie notre tutoriel pour les pièces de puzzle
         step:
           title: Étape
@@ -1779,9 +1785,6 @@ fr:
             Wars dans une galaxie lointaine, très lointaine.
           description_short: Apprends à programmer des droïdes et crée ton propre
             jeu Star Wars dans une galaxie lointaine, très lointaine.
-          lessons:
-            Hour of Code 2015:
-              name: Heure de Code 2015
           student_description: Apprends à programmer des droïdes et crée ton propre
             jeu Star Wars dans une galaxie lointaine, très lointaine.
         mc:
@@ -4064,7 +4067,6 @@ fr:
           description: Choisir une équipe et faite un match de basket
           lessons:
             Bounce:
-              name: Rebond
               description_student: Tu souhaites jouer à des jeux vidéo à l'école ?
                 Dans cette leçon, tu apprendras à créer le tien !
               description_teacher: Dans cette activité en ligne, les élèves apprendront
@@ -5135,7 +5137,6 @@ fr:
           description: Coder votre propre sport
           lessons:
             Sports:
-              name: Sports
               description_student: Tu souhaites jouer à des jeux vidéo à l'école ?
                 Dans cette leçon, tu apprendras à créer le tien !
               description_teacher: Dans cette activité en ligne, les élèves apprendront
@@ -9352,7 +9353,7 @@ fr:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: le voyage du héros dans l''Heure de Code'
             Minecraft Hour of Code:
-              name: Hour of Code Minecraft
+              name: 'Minecraft: Le voyage du héros'
           student_description: Minecraft est de retour pour l’Heure de code avec une
             toute nouvelle activité\_! Exploration de Minecraft avec le code.
         applab-intro-staging:
@@ -13622,7 +13623,7 @@ fr:
             explorer et construire des mondes sous-marins avec du code.
           lessons:
             Aquatic:
-              name: Aquatique
+              name: 'Minecraft : Voyage Aquatique'
           student_description: Minecraft est de retour avec une toute nouvelle activité
             ! Utilise ta créativité et tes compétences en résolution de problèmes
             pour explorer et construire des mondes sous-marins avec du code.
@@ -21668,6 +21669,8 @@ fr:
                 et d'appliquer toutes les compétences de codage qu'ils ont apprises
                 pour créer un jeu animé. Il est temps de faire preuve de créativité
                 et de créer une histoire dans le Labo du Jeu !
+            Safety in My Online Neighborhood:
+              description_student: Apprenez à vous déplacer en ligne en toute sécurité.
           student_description: Apprends les bases de l'informatique et de la sécurité
             sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire
             que tu peux partager.
@@ -22001,6 +22004,9 @@ fr:
                 par étape, à suivre, de la planification sur papier au codage sur
                 notre site web. De plus, nous offrons des idées pour aider les enseignants
                 à animer un show de clôture ! '
+            Putting a STOP to Online Meanness:
+              description_student: Dans cette leçon, vous découvrirez la méchanceté
+                et ce qu'il faut faire si vous la rencontrez en ligne.
             Password Power-Up:
               description_student: Dans cette leçon, tu apprendras comment les mots
                 de passe protègent vos informations et comment créer un bon mot de
@@ -23656,6 +23662,15 @@ fr:
           lessons:
             Virus Simulation for Code Bytes:
               name: Codage d'une simulation
+            Outbreak:
+              name: Codage d'une simulation
+              description_student: Un virus est arrivé à Monster Town ! Apprenez à
+                créer un simulateur de virus et aidez les monstres à guérir.
+              description_teacher: 'Cette leçon combine le **renforcement des compétences**
+                autour d''événements avec un **mini-projet** où les élèves peuvent
+                créer leur propre simulation informatique dans Sprite Lab. Ils étudieront
+                la simulation pour comprendre à quelle vitesse un virus peut se propager
+                et ce qui peut être fait pour le ralentir. '
           lesson_groups:
             outbreak:
               display_name: Simulation de l'épidémie
@@ -24545,6 +24560,8 @@ fr:
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
           lessons:
+            Safety in My Online Neighborhood:
+              description_student: Apprenez à vous déplacer en ligne en toute sécurité.
             Learn to Drag and Drop:
               key: Apprends à Faire Glisser et Déposer
               name: Apprends à Faire Glisser et Déposer
@@ -24649,6 +24666,9 @@ fr:
                 et de créer une histoire dans le Labo du Jeu !
             lesson-1:
               name: Fin du projet.
+              description_student: Racontez une histoire avec l'Artiste !
+              description_teacher: Dans cette leçon **projet**, les élèves appliquent
+                ce qu'ils ont appris sur le séquençage et les boucles avec l'Artiste.
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -24785,6 +24805,10 @@ fr:
                 et de créer une histoire dans le Labo du Jeu !
             lesson-1:
               name: Fin du projet.
+              description_student: Crée ton propre jeu ou ta propre histoire !
+              description_teacher: Dans cette leçon **projet**, les élèves appliquent
+                ce qu'ils ont appris sur le séquençage et des événements dans un projet
+                ouvert avec Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -24806,6 +24830,9 @@ fr:
             vos propres œuvres d’art, vos histoires et vos jeux.
           description_audience: 'Âges: 6 à 10 ans'
           lessons:
+            Putting a STOP to Online Meanness:
+              description_student: Dans cette leçon, vous découvrirez la méchanceté
+                et ce qu'il faut faire si vous la rencontrez en ligne.
             'Programming: My Robotic Friends':
               key: 'Programmation : Mes Amis Robotiques'
               name: Mes Amis Robotiques Jr.
@@ -24895,6 +24922,9 @@ fr:
               name: Récolter des Cultures avec des Boucles
               description_student: Utilisons des boucles pour aider la Moissonneuse
                 à ramasser des légumes !
+              description_teacher: Les élèves font de nouvelles boucles pour que la
+                moissonneuse récolte plusieurs légumes poussant en gros bouquets dans
+                cette leçon de **renforcement des compétences**.
             Looking Ahead:
               key: Regarder en avant
               name: Regarder vers l'Avenir avec Minecraft
@@ -25019,6 +25049,11 @@ fr:
               description_student: Te rappelles-tu, au début du cours, lorsque tu
                 as fait des dessins avec du code ? Dans cette leçon, tu vas travailler
                 avec une équipe pour faire quelque chose de très similaire !
+              description_teacher: Cette leçon de **mise en contexte** commencera
+                par une brève leçon sur le débogage et la persévérance, puis passera
+                rapidement à une course contre la montre, pendant laquelle les élèves
+                formeront des équipes et travailleront ensemble à la rédaction d'un
+                programme, instruction par instruction.
             Debugging in Collector:
               key: Déboguer dans le Collecteur
               name: Déboguer avec Laurel
@@ -25154,6 +25189,9 @@ fr:
               name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il
                 est temps de commencer à construire ton projet.
+              description_teacher: Cette leçon **projet** guide les élèves dans le
+                processus de conception, de développement et de présentation de nouveaux
+                projets !
             lesson-6:
               name: Regarder vers l'Avenir avec Minecraft
               description_student: Évite la lave! Ici, tu vas commencer à apprendre
@@ -25247,12 +25285,13 @@ fr:
                 chose.
             Simon Says:
               key: Jacques A Dit
+              name: Suivez l'algorithme
               description_student: Joue à un jeu et réfléchis aux commandes nécessaires
                 pour obtenir le bon résultat.
               description_teacher: Dans cette leçon, les élèves joueront à un jeu
                 destiné à les faire réfléchir à la façon dont les commandes doivent
                 être données pour produire le bon résultat. Cela les aidera à transporter,
-                plus facilement, au Labo des Lutins, dans les leçons à venir.
+                plus facilement, au Labo des Sprites, dans les leçons à venir.
             Learning Sprites with Sprite Lab:
               key: Découvrir les Lutins avec le Labo des Lutins
               name: Des Poissons qui Nagent, avec le Labo des Lutins
@@ -25268,7 +25307,7 @@ fr:
               name: Soirée Dansante Extraterrestre avec le Labo des Lutins
               description_student: Crée un projet interactif qui peut être partagé
                 avec tes camarades de classe.
-              description_teacher: Cette leçon présente le Labo des Lutins, une plate-forme
+              description_teacher: Cette leçon présente le Labo des Sprites, une plate-forme
                 où les élèves peuvent créer leurs propres animations et jeux interactifs.
                 Aujourd'hui, en plus des comportements, les étudiants intégreront
                 les entrées de l'utilisateur en tant qu'événements pour créer une
@@ -25522,7 +25561,7 @@ fr:
               description_student: Exécute des simulations sur l'ordinateur et expérimente
                 en changeant les variables.
               description_teacher: En exécutant une simulation simple dans le Labo
-                des Lutins, les étudiants découvriront comment l'informatique peut
+                des Sprites, les étudiants découvriront comment l'informatique peut
                 être utilisée pour collecter des données qui identifient des tendances
                 ou des modèles. Après avoir exécuté la simulation de nombreuses fois,
                 les élèves auront l'occasion de faire une prédiction sur la façon
@@ -25599,7 +25638,7 @@ fr:
               description_teacher: Dans cette leçon, les élèves créeront un Animal
                 de Compagnie Virtuel interactif dont l'apparence et le comportements
                 correspondront à leurs souhaits. Les élèves utiliseront l'outil «
-                Costumes » du Labo des Lutins pour personnaliser l'apparence de leur
+                Costumes » du Labo des Sprites pour personnaliser l'apparence de leur
                 animal de compagnie. Ils utiliseront ensuite des événements, des comportements
                 et d'autres concepts qu'ils ont appris afin de donner vie à leur animal
                 !
@@ -25609,6 +25648,9 @@ fr:
               description_student: Des projets aussi importants prennent du temps
                 et beaucoup de planification. Trouve ton inspiration, développe un
                 plan et libère ta créativité !
+              description_teacher: Cette leçon **projet** guide les élèves dans le
+                processus de conception, de développement et de présentation de nouveaux
+                projets !
             lesson-1:
               name: Concevoir pour l'Accessibilité
               description_student: 'Dans cette leçon, les élèves en apprendront davantage
@@ -25635,6 +25677,15 @@ fr:
                 Lab : les sprites et les comportements. '
             lesson-8:
               name: Les Sprites en Action
+              description_student: Vous travaillerez à travers les niveaux de programmation
+                et terminerez avec une tâche de « jeu libre » ouverte où vous pourrez
+                créer ce que vous voulez.
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**,
+                les élèves passeront par une série de niveaux de programmation sur
+                ordinateur, en terminant par une tâche de « jeu libre » ouverte où
+                ils pourront construire ce qu''ils veulent. Les étudiants écriront
+                des programmes qui répondent à des événements chronométrés et à des
+                entrées utilisateur. '
             lesson-9:
               name: Histoires d'espace vide
               description_student: 'Dans cette activité, vous utiliserez des histoires
@@ -25665,6 +25716,13 @@ fr:
               name: Le Pouvoir des Mots
               description_student: Le harcèlement n'est jamais acceptable. Cette leçon
                 vous apprendra ce qui est et n'est pas acceptable de dire en ligne.
+            lesson-11:
+              description_student: Appliquez vos nouvelles compétences avec des variables
+                à l'un des trois projets ouverts.
+              description_teacher: Les étudiants appliqueront leurs nouvelles compétences
+                avec des variables à l'un des trois **mini-projets** ouverts. Ils
+                exploreront des exemples de programmes, créeront un plan pour leur
+                propre projet et le programmeront entièrement depuis le début.
           lesson_groups:
             ramp_up:
               display_name: Les Lutins
@@ -25911,7 +25969,7 @@ fr:
               name: Soirée Dansante des Extraterrestres
               description_student: Crée un projet interactif qui peut être partagé
                 avec tes camarades de classe.
-              description_teacher: Cette leçon présente le Labo des Lutins, une plate-forme
+              description_teacher: Cette leçon présente le Labo des Sprites, une plate-forme
                 où les élèves peuvent créer leurs propres animations et jeux interactifs.
                 Aujourd'hui, en plus des comportements, les étudiants intégreront
                 les entrées de l'utilisateur en tant qu'événements pour créer une
@@ -25936,7 +25994,7 @@ fr:
               description_teacher: Dans cette leçon, les élèves créeront un Animal
                 de Compagnie Virtuel interactif dont l'apparence et le comportements
                 correspondront à leurs souhaits. Les élèves utiliseront l'outil «
-                Costumes » du Labo des Lutins pour personnaliser l'apparence de leur
+                Costumes » du Labo des Sprites pour personnaliser l'apparence de leur
                 animal de compagnie. Ils utiliseront ensuite des événements, des comportements
                 et d'autres concepts qu'ils ont appris afin de donner vie à leur animal
                 !
@@ -25945,6 +26003,9 @@ fr:
               name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il
                 est temps de commencer à construire ton projet.
+              description_teacher: Cette leçon **projet** guide les élèves dans le
+                processus de conception, de développement et de présentation de nouveaux
+                projets !
             lesson-1:
               name: Soirée Dansante
               description_student: Il est temps de célébrer ! Dans cette leçon, tu
@@ -25964,6 +26025,15 @@ fr:
                 Lab : les sprites et les comportements. '
             lesson-3:
               name: Les Sprites en Action
+              description_student: Vous travaillerez à travers les niveaux de programmation
+                et terminerez avec une tâche de « jeu libre » ouverte où vous pourrez
+                créer ce que vous voulez.
+              description_teacher: 'Dans cette leçon de **renforcement des compétences**,
+                les élèves passeront par une série de niveaux de programmation sur
+                ordinateur, en terminant par une tâche de « jeu libre » ouverte où
+                ils pourront construire ce qu''ils veulent. Les étudiants écriront
+                des programmes qui répondent à des événements chronométrés et à des
+                entrées utilisateur. '
             lesson-4:
               name: Texte et invites
               description_student: Dans ce cours, vous vous entraînerez avec des variables
@@ -27266,3 +27336,27 @@ fr:
           lessons:
             lesson-1:
               name: " Débranché"
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Outils
+        poetry:
+          lessons:
+            lesson-3:
+              name: variables
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Concours d'orthographe
+          title: Concours d'orthographe
+        outbreak-csc:
+          title: Épidémie
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu

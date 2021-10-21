@@ -2,6 +2,75 @@
   "ga-IE": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "function/hero/unversioned": {
+          "word": "Feidhm"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "code/artist/unversioned": {
+          "word": "Cód"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Coinníollacha"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Lúba"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Criptiú"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "code/sports/unversioned": {
+          "word": "Cód"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Dífhabhtú"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Meaisínfhoghlaim"
+        },
         "behavior/coursef/2021": {
           "word": "Iompar"
         },

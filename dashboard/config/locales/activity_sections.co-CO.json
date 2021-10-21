@@ -2,12 +2,332 @@
   "co-CO": {
     "data": {
       "activity_sections": {
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+        "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
+          "tips": [
+            null
+          ]
+        },
+        "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
+          "tips": [
+            null
+          ]
+        },
+        "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
+          "tips": [
+            null
+          ]
+        },
+        "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
+          "tips": [
+            null
+          ]
+        },
+        "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
+          "tips": [
+            null
+          ]
+        },
+        "4fd098be-b798-4e23-b091-e90c95344d97": {
+          "tips": [
+            null
+          ]
+        },
+        "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
+          "tips": [
+            null
+          ]
+        },
+        "aced2726-6ed1-4645-9fd2-eccfe982584f": {
+          "tips": [
+            null
+          ]
+        },
+        "47fe47af-9de3-4ba5-8193-1f489bef9544": {
+          "tips": [
+            null
+          ]
+        },
+        "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
+          "tips": [
+            null
+          ]
+        },
+        "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "524f2e35-6286-4585-879e-96e7286e8a6d": {
+          "tips": [
+            null
+          ]
+        },
+        "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
+          "tips": [
+            null
+          ]
+        },
+        "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
+          "tips": [
+            null
+          ]
+        },
+        "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
+          "tips": [
+            null
+          ]
+        },
+        "fc04ef5f-0d78-418b-9311-e12201106453": {
+          "tips": [
+            null
+          ]
+        },
+        "548dc37b-f338-4a52-a77e-7380794c64f2": {
+          "tips": [
+            null
+          ]
+        },
+        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "tips": [
+            null
+          ]
+        },
+        "dd7bde99-d360-4587-8d30-75383b930808": {
+          "tips": [
+            null
+          ]
+        },
+        "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
+          "tips": [
+            null
+          ]
+        },
+        "eea63453-59c2-4c48-8d04-d6612d379584": {
+          "tips": [
+            null
+          ]
+        },
+        "acc2ced5-83ed-4926-9830-f5bd846136a1": {
+          "tips": [
+            null
+          ]
+        },
+        "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
+          "tips": [
+            null
+          ]
+        },
+        "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "tips": [
+            null
+          ]
+        },
+        "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
+          "tips": [
+            null
+          ]
+        },
+        "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
+          "tips": [
+            null
+          ]
+        },
+        "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
+          "tips": [
+            null
+          ]
+        },
+        "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
+          "tips": [
+            null
+          ]
+        },
+        "b4a270c7-538c-4278-a88e-d074a04fafb4": {
+          "tips": [
+            null
+          ]
+        },
+        "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
+          "tips": [
+            null
+          ]
+        },
+        "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
+          "tips": [
+            null
+          ]
+        },
+        "7219d891-31ac-454e-8060-eb84a3a0d1df": {
+          "tips": [
+            null
+          ]
+        },
+        "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
+          "tips": [
+            null
+          ]
+        },
+        "c694a6e6-b265-4802-bfca-bbc9180c8407": {
+          "tips": [
+            null
+          ]
+        },
+        "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
+          "tips": [
+            null
+          ]
+        },
+        "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
+          "tips": [
+            null
+          ]
+        },
+        "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
+          "tips": [
+            null
+          ]
+        },
+        "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
+          "tips": [
+            null
+          ]
+        },
+        "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
+          "tips": [
+            null
+          ]
+        },
+        "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "d430e170-dccc-4c02-bcfe-5084169a154b": {
+          "tips": [
+            null
+          ]
+        },
+        "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "tips": [
+            null
+          ]
+        },
+        "88f6ccc1-0efa-4c60-985c-971a235d5645": {
+          "tips": [
+            null
+          ]
+        },
+        "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
+          "tips": [
+            null
+          ]
+        },
+        "f5f6ef34-367d-424d-af63-a8a04c146c34": {
+          "tips": [
+            null
+          ]
+        },
+        "540e3c12-987d-44de-8efc-5e6e12fed295": {
+          "tips": [
+            null
+          ]
+        },
+        "21f43e64-dea3-4abc-8284-e055480370ce": {
+          "tips": [
+            null
+          ]
+        },
+        "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "tips": [
+            null
+          ]
+        },
+        "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "tips": [
+            null
+          ]
+        },
+        "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "tips": [
+            null
+          ]
+        },
+        "6874de98-8778-447b-8453-0138809b2c7e": {
+          "tips": [
+            null
+          ]
+        },
+        "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
+          "tips": [
+            null
+          ]
+        },
+        "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
+          "tips": [
+            null
+          ]
+        },
+        "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "tips": [
+            null
+          ]
+        },
+        "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "tips": [
+            null
+          ]
+        },
+        "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
+          "tips": [
+            null
+          ]
+        },
+        "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
+          "tips": [
+            null
+          ]
+        },
+        "e1243ccf-be45-4f8e-a138-54953ea12f92": {
+          "tips": [
+            null
+          ]
+        },
+        "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
+          "tips": [
+            null
+          ]
+        },
+        "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "tips": [
+            null
+          ]
+        },
+        "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "tips": [
+            null
+          ]
+        },
+        "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
           ]
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "tips": [
+            null
+          ]
+        },
+        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
+          "tips": [
+            null
+          ]
+        },
+        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
           "tips": [
             null
           ]

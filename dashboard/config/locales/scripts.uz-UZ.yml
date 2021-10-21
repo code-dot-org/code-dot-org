@@ -561,6 +561,12 @@ uz:
           lessons:
             Jigsaw:
               name: Topishmoq
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga
+                kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya
+                qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi,
+                shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda
+                o‘sish kuzatiladi.
           student_description: Puzl qo‘llanmasini sinab ko‘ring.
         step:
           title: qadam
@@ -23938,6 +23944,8 @@ uz:
           lessons:
             Virus Simulation for Code Bytes:
               name: Simulyatsiyani kodlash
+            Outbreak:
+              name: Simulyatsiyani kodlash
         apps-for-good:
           title: Foydali ilovalar
         2021drafting:
@@ -27724,3 +27732,25 @@ uz:
           lessons:
             lesson-1:
               name: 'Raqs Bazmi: Tarmoqsiz'
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Vidjetlar
+            lesson-2:
+              name: Asboblar
+        poetry:
+          lessons:
+            lesson-3:
+              name: O‘zgaruvchilar
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Bilimdon Asalari
+          title: Bilimdon Asalari
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent

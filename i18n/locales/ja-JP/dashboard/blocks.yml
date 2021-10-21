@@ -1162,6 +1162,7 @@ ja:
             '"burst"': 爆発
             '"pop"': ポップ
             '"rain"': 雨
+            '"spiral"': スパイラル
             '"zigzag"': ジグザグ
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
@@ -1218,6 +1219,7 @@ ja:
             "'sound://category_swish/quick_swing.mp3'": 回転する
             "'sound://category_nature/summer_night_loop.mp3'": 夏の夜
             "'sound://category_background/ocean_waves.mp3'": 海の波
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": ビーチの波
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": 泡
             "'sound://category_animals/bear.mp3'": クマ
             "'sound://category_animals/cat.mp3'": ねこ
@@ -1226,7 +1228,7 @@ ja:
             "'sound://category_animals/sheep.mp3'": 羊
             "'sound://category_animals/goat.mp3'": ヤギ
             "'sound://category_animals/chicken.mp3'": ニワトリ
-            "'sound://category_animals/rooster.mp3'": 雄鶏
+            "'sound://category_animals/rooster.mp3'": おんどり
             "'sound://category_animals/elephant.mp3'": ゾウ
             "'sound://category_animals/dolphin.mp3'": イルカの声
             "'sound://category_nature/thunderstorm_1.mp3'": 雷雨
@@ -1370,18 +1372,6 @@ ja:
             '"while"': 以下の間
       gamelab_spriteSay:
         text: "{SPRITE} が {SPEECH} と言う"
-      gamelab_spriteSayChoices:
-        text: "{SPRITE} が {SPEECH} と言う"
-        options:
-          SPEECH:
-            '"I am Batman!"': 私はバットマン！
-            '"Being kind is never wasted."': 情けは人のためならず。
-            '"When you know better, you do better."': より知識があれば、より良い行動ができる。
-            '"You always pass failure on the way to success."': 成功には常に失敗がともなう。
-            '"Make each day your masterpiece."': 毎日を人生の最高傑作にしよう。
-            '"I am Catwoman!"': 私はキャットウーマン！
-            '"Never quit!"': 絶対にあきらめないで！
-            '"Live Fast."': 気ままに生きよう。
       gamelab_spriteSayTime:
         text: "{SPRITE}が{NUM}秒間、{TEXT1}と言います"
       gamelab_startAvoiding:
@@ -1522,6 +1512,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_getNext:
         text: 次のオブジェクトを取得する
       Mikelab_getProp:
@@ -1563,6 +1554,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_groupDestroy:
         text: 削除 {SELECT} {COSTUME}
         options:
@@ -1779,6 +1771,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_whenClickedOn:
         text: いつ {SPRITE} クリック
       Mikelab_whenKeyPressed:
@@ -1852,10 +1845,12 @@ ja:
         text: モンスターが動くのをやめる
       Poetry_addLine:
         text: 線 {LINE} を追加する
+      Poetry_animateText:
+        text: テキストアニメーションにする
       Poetry_destroy:
         text: "{ANIMATION_NAME} を削除する"
-      Poetry_hidePoem:
-        text: 詩を非表示にする
+      Poetry_hideText:
+        text: テキストを非表示にする
       Poetry_makeBurst:
         text: "{NUM} 個の {ANIMATION_NAME} スプライトで {EFFECT} エフェクトを作成する"
         options:
@@ -1923,13 +1918,10 @@ ja:
           FONT:
             '"Arial"': エイリアル
             '"Georgia"': ジョージア
-            '"Palatino"': パラティーノ
             '"Times"': タイムズ
             '"Courier"': クーリエ
             '"Arial Black"': エイリアルブラック
             '"Impact"': インパクト
-            '"Tahoma"': タホマ
-            '"Verdana"': ヴァーダナ
       Poetry_setFontColor:
         text: フォントの色を {FILL} にセットする
       Poetry_setForegroundEffect:
@@ -1982,26 +1974,42 @@ ja:
             '"flyBottom"': 下から飛ぶ
       Poetry_setTitle:
         text: 詩のタイトルを {TITLE} にセット
-      Poetry_showPoem:
-        text: 詩を表示
+      Poetry_showText:
+        text: テキストを表示
       Poetry_startBehavior:
         text: スプライト {ANIMATION_NAME} が {BEHAVIOR} を始めます
         options:
           BEHAVIOR:
+            fluttering: パタパタさせる
+            growing: 大きくする
+            jittering: ブルブルさせる
             moving_north_and_looping: 北にループ
             moving_south_and_looping: 南にループ
             moving_east_and_looping: 東にループ
             moving_west_and_looping: 西にループ
+            shrinking: 小さくする
+            spinning_left: 左に回す
+            spinning_right: 右に回す
             swimming_left_and_right: 水泳
+            wandering: あちこちに動かす
+            wobbling: ぐらぐらさせる
       Poetry_stopBehavior:
         text: スプライト {ANIMATION_NAME} が {BEHAVIOR} をやめます
         options:
           BEHAVIOR:
+            fluttering: パタパタさせる
+            growing: 大きくする
+            jittering: ブルブルさせる
             moving_north_and_looping: 北にループ
             moving_south_and_looping: 南にループ
             moving_east_and_looping: 東にループ
             moving_west_and_looping: 西にループ
+            shrinking: 小さくする
+            spinning_left: 左に回す
+            spinning_right: 右に回す
             swimming_left_and_right: 水泳
+            wandering: あちこちに動かす
+            wobbling: ぐらぐらさせる
             '"all"': "--すべての行動--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

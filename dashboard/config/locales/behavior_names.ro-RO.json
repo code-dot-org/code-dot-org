@@ -176,6 +176,12 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
         }
       }
     }

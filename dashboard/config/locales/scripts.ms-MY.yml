@@ -232,6 +232,16 @@ ms:
               name: Kod Flappy
           student_description: Anda mahu menulis permainan anda sendiri dalam masa
             kurang daripada 10 minit? Cuba tutorial Kod Flappy kami!
+        jigsaw:
+          lessons:
+            Jigsaw:
+              description_student: Klik dan tarik untuk menyelesaikan teka-teki.
+              description_teacher: Pelajaran ini akan memberikan idea kepada pelajar
+                mengenai perkara yang dijangkakan apabila mereka menuju ke makmal
+                komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan
+                mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian
+                mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan
+                teka-teki dalam talian.
         Hour of Code:
           description: Cuba asas sains komputer dengan watak daripada Angry Birds
             dan Tumbuhan lwn. Zombi!
@@ -5084,6 +5094,9 @@ ms:
           lesson_groups:
             required:
               display_name: Gambaran Keseluruhan
+          lessons:
+            Packets:
+              name: Bingkisan
         peru-2019:
           lessons:
             Debugging in Collector:
@@ -6658,6 +6671,10 @@ ms:
             komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi
             cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan
             dengan rakan, keluarga dan guru.
+        csp2-2020:
+          lessons:
+            Packets:
+              name: Bingkisan
         csp3-2020:
           lessons:
             Debugging:
@@ -6746,6 +6763,8 @@ ms:
           lessons:
             Virus Simulation for Code Bytes:
               name: Mengekod Simulasi
+            Outbreak:
+              name: Mengekod Simulasi
           lesson_groups:
             outbreak:
               display_name: Simulasi Wabak
@@ -6795,6 +6814,11 @@ ms:
             Functions with Parameters:
               key: Fungsi-fungsi dengan parameter
               name: Fungsi-fungsi dengan parameter
+        csp2-2021:
+          lessons:
+            Packets:
+              key: Bingkisan
+              name: Bingkisan
         csp3-2021:
           lessons:
             Debugging:
@@ -6856,6 +6880,11 @@ ms:
               key: Penjujukan dengan Scrat
               name: Penjujukan dengan Scrat
               description_student: Atur cara Scrat mendapatkan buah oak.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan membangunkan algoritma berjujukan untuk menggerakkan watak tupai
+                dari satu bahagian pagar sesat ke bahagian lain tempat buah oak boleh
+                didapati. Untuk melakukan ini, mereka akan menyusun blok kod bersama
+                dalam jujukan linear.
             Programming in Ice Age:
               key: Pengaturcaraan dalam Ice Age
               name: Pengaturcaraan dengan Scrat
@@ -7310,6 +7339,8 @@ ms:
                 dan blok yang boleh digunakan."
             Programming and Loops with the Artist:
               name: Melukis dengan Gelung
+              description_student: Dalam pelajaran ini, **gelung** memudahkan imej
+                menarik dibuat dengan Artis!
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
               name: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
@@ -7463,10 +7494,13 @@ ms:
                 tari-menari untuk makhluk asing".
             Loops with the Artist:
               name: Melukis dengan Gelung
+              description_student: Dalam pelajaran ini, **gelung** memudahkan imej
+                menarik dibuat dengan Artis!
               description_teacher: Pelajaran **membina kemahiran** ini mengalihkan
                 tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan
                 diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini.
             Nested Loops in the Maze:
+              name: Pengaturcaraan dengan Lebah
               description_student: Pelajaran ini akan mengajar anda perkara yang berlaku
                 apabila anda menempatkan gelung di dalam gelung yang lain.
               description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
@@ -7509,6 +7543,7 @@ ms:
                 untuk menjadikan kod lebih mudah ditulis dan dibaca, walaupun nilainya
                 tidak berubah pada masa jalan.
             Variables that Change in Bee:
+              name: Pemboleh ubah dengan Lebah
               description_student: Lebah ini menyukai pemboleh ubah!
               description_teacher: Pelajaran **membina kemahiran** ini akan membantu
                 menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih
@@ -7618,8 +7653,12 @@ ms:
                 cara dijalankan.
             lesson-10:
               name: Teks dan Prom
+              description_student: Dalam pelajaran ini anda akan berlatih dengan pemboleh
+                ubah di dalam Makmal Peperi.
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
                 akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
+            lesson-5:
+              name: Wabak
             lesson-2:
               name: Kuasa Perkataan
               description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran
@@ -7631,6 +7670,13 @@ ms:
                 Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
                 Oleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.
+            lesson-11:
+              description_student: Gunakan kemahiran baharu anda dengan pemboleh ubah
+                kepada satu daripada tiga projek terbuka.
+              description_teacher: Pelajar akan menggunakan kemahiran baharu mereka
+                dengan pemboleh ubah kepada satu daripada tiga **projek mini** terbuka.
+                Pelajar akan meneroka atur cara sampel, mencipta rancangan untuk projek
+                mereka sendiri dan mengatur caranya tanpa apa-apa asas.
           lesson_groups:
             ramp_up:
               display_name: Jin
@@ -7746,6 +7792,7 @@ ms:
                 bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan
                 mencipta reka bentuk baharu.
             Changing Variables with Bee:
+              name: Pemboleh ubah dengan Lebah
               description_student: Lebah ini menyukai pemboleh ubah!
               description_teacher: Pelajaran **membina kemahiran** ini akan membantu
                 menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih
@@ -7818,6 +7865,8 @@ ms:
                 balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
             lesson-4:
               name: Teks dan Prom
+              description_student: Dalam pelajaran ini anda akan berlatih dengan pemboleh
+                ubah di dalam Makmal Peperi.
               description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar
                 akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
           lesson_groups:
@@ -7866,6 +7915,11 @@ ms:
               key: Penjujukan dengan Scrat
               name: Penjujukan dengan Scrat
               description_student: Atur cara Scrat mendapatkan buah oak.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan membangunkan algoritma berjujukan untuk menggerakkan watak tupai
+                dari satu bahagian pagar sesat ke bahagian lain tempat buah oak boleh
+                didapati. Untuk melakukan ini, mereka akan menyusun blok kod bersama
+                dalam jujukan linear.
             Programming in with Angry Birds:
               name: Pengaturcaraan dengan Angry Birds
             Programming with Rey and BB-8:
@@ -8060,6 +8114,8 @@ ms:
           lessons:
             lesson-4:
               name: Proses Reka Bentuk
+        outbreak-module:
+          title: Wabak
         csa2-exemplars:
           lessons:
             lesson-2:
@@ -8232,3 +8288,14 @@ ms:
               name: Projek Pengurusan Storan Kejiranan - Hari 2
             lesson-13:
               name: Projek Pengurusan Storan Kejiranan - Hari 3
+        poetry:
+          lessons:
+            lesson-3:
+              name: Pembolehubah
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Lebah Ejaan
+          title: Lebah Ejaan
+        outbreak-csc:
+          title: Wabak

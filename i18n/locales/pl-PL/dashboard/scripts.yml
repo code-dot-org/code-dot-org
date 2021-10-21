@@ -524,6 +524,8 @@ pl:
           lessons:
             Jigsaw:
               name: Układanka
+              description_student: Kliknij i przeciągnij, by ukończyć łamigłówki.
+              description_teacher: Ta lekcja da uczniom wyobrażenie, czego się spodziewać po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym, a następnie przechodzą oni do korzystania z komputera, aby ukończyć łamigłówki online.
           student_description: Wypróbuj nasz samouczek łamigłówek
         step:
           title: Krok
@@ -16463,6 +16465,10 @@ pl:
           lessons:
             Virus Simulation for Code Bytes:
               name: Symulowanie symulacji
+            Outbreak:
+              name: Symulowanie symulacji
+              description_student: W Mieście Potworów pojawił się wirus! Naucz się tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia.
+              description_teacher: 'Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. '
           lesson_groups:
             outbreak:
               display_name: Symulowanie przerwania
@@ -19002,11 +19008,17 @@ pl:
               name: Dzień FRQ
             lesson-15:
               name: Dzień sprawdzianu
+            Java Lab:
+              name: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Piaskownica
           name: csa5-pilotaż
         csa6-pilot:
           name: csa6-pilotaż
@@ -20504,11 +20516,17 @@ pl:
             lesson-15:
               key: lekcja 15
               name: Dzień sprawdzianu
+            Java Lab:
+              name: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+            lessonGroup-4:
+              display_name: Piaskownica
           name: csa5-pilot-facilitator
         poetry-hoc:
           lessons:
@@ -20746,3 +20764,100 @@ pl:
           title: Wyzwanie efektu duszka
           description_audience: Średnio zaawansowani/zaawansowani użytkownicy Sprite Lab
           description_short: Podejmij wyzwanie stworzenia własnego efektu duszka za pomocą Sprite Lab!
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widżety
+            lesson-2:
+              name: Narzędzia
+            lesson-3:
+              name: Badanie obiektów całkowitych i podwójnych
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Prezentacje i zasoby
+          name: csa-u8-dev
+          title: CSA Jednostka 8 Rozwój
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Sztuka poezji
+          name: poem-art
+        poetry:
+          lessons:
+            lesson-1:
+              name: Sztuka poezji
+            lesson-2:
+              name: Zakoduj swój własny wiersz
+            lesson-3:
+              name: Zmienne
+            lesson-4:
+              name: Zbuduj generator wierszy
+            lesson-5:
+              name: Dobór słów
+            lesson-6:
+              name: Koło poezji
+          name: poezja
+          title: Informatyka i Poezja
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Literująca Pszczółka
+          name: spelling-bee
+          title: CSC - Literująca pszczółka
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Dzień epidemii 1
+            lesson-2:
+              name: Dzień epidemii 2
+          name: outbreak-csc
+          title: Epidemia
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Eksploracja wykresów pudełkowych i histogramów
+          name: explore-data-1
+          title: Eksploracja wykresów pudełkowych i histogramów
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Liczenie z Laurel
+          name: counting-csc
+          title: Liczenie z Laurel
+        csa5-exemplars:
+          lessons:
+            lesson-1:
+              name: Tworzenie tablic z danymi
+            lesson-2:
+              name: Trawersowanie tablicy 2D wierszami
+            lesson-3:
+              name: Trawersowanie tablicy 2D kolumnami
+            lesson-4:
+              name: Stosowanie ulepszonych pętli
+            lesson-5:
+              name: Ocena tablic 2D
+            lesson-6:
+              name: Stosowanie standardowych algorytmów
+            lesson-7:
+              name: Przesuwanie elementów
+            lesson-8:
+              name: Znajdowanie duplikatów
+            lesson-9:
+              name: Poszukiwanie elementów
+            lesson-10:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 1
+            lesson-11:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 2
+            lesson-12:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 3
+            lesson-13:
+              name: Dzień FRQ
+            lesson-14:
+              name: Dzień sprawdzianu
+            lesson-15:
+              name: Odwracanie elementów
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz

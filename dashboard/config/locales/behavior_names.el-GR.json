@@ -176,6 +176,12 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
         }
       }
     }

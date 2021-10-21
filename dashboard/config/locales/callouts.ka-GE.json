@@ -235,15 +235,15 @@
           "craft_callout_preplaced_house": "ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "დააჭირეთ \"გაშვებას\" და გატესტეთ თქვენი პროგრამა",
+          "craft_run_button_callout": "დააჭირეთ „გაშვებას,“ რომ გატესტოთ თქვენი პროგრამა",
           "craft_drag_block_callout": "გადმოათრიეთ \"წინ გადაადგილების\" ბლოკი და განათავსეთ ის მეორე ბლოკის ქვემოთ"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "დააჭირეთ \"გაშვებას\" და გატესტეთ თქვენი პროგრამა",
+          "craft_run_button_callout": "დააჭირეთ „გაშვებას,“ რომ გატესტოთ თქვენი პროგრამა",
           "craft_drag_block_callout": "გადმოათრიეთ \"წინ გადაადგილების\" ბლოკი და განათავსეთ ის მეორე ბლოკის ქვემოთ"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "დააჭირეთ \"გაშვებას\" და გატესტეთ თქვენი პროგრამა",
+          "craft_run_button_callout": "დააჭირეთ „გაშვებას,“ რომ გატესტოთ თქვენი პროგრამა",
           "craft_drag_block_callout": "გადმოათრიეთ \"წინ გადაადგილების\" ბლოკი და განათავსეთ ის მეორე ბლოკის ქვემოთ"
         },
         "Overworld Place Wall": {
@@ -722,7 +722,7 @@
           "craft_callout_preplaced_house": "ეს კოდი თქვენი სახლის მშნებლობას დაიწყებს. შეგიძლიათ დაასრულოთ?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "დააჭირეთ \"გაშვებას\" და გატესტეთ თქვენი პროგრამა",
+          "craft_run_button_callout": "დააჭირეთ „გაშვებას,“ რომ გატესტოთ თქვენი პროგრამა",
           "craft_drag_block_callout": "გადმოათრიეთ \"წინ გადაადგილების\" ბლოკი და განათავსეთ ის მეორე ბლოკის ქვემოთ"
         },
         "Overworld Place Wall_2021": {
@@ -804,6 +804,27 @@
         },
         "courseE_farmer_functions1_2021": {
           "courseE_farmer_functions1_2": "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
         }
       }
     }

@@ -2,6 +2,157 @@
   "az-AZ": {
     "data": {
       "vocabularies": {
+        "event/dance-extras/unversioned": {
+          "word": "Hadisə"
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/minecraft/unversioned": {
+          "word": "Proqram"
+        },
+        "event/minecraft/unversioned": {
+          "word": "Hadisə"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/hero/unversioned": {
+          "word": "Proqram"
+        },
+        "function/hero/unversioned": {
+          "word": "Funksiya"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/flappy/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/frozen/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/iceage/unversioned": {
+          "word": "Proqram"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/artist/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/gumball/unversioned": {
+          "word": "Proqram"
+        },
+        "event/dance/unversioned": {
+          "word": "Hadisə"
+        },
+        "program/dance/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Proqram"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Şərti ifadələr"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "dövrlər"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "monoqram"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/starwars/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/mc/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/playlab/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Proqram"
+        },
+        "event/sports/unversioned": {
+          "word": "Hadisə"
+        },
+        "code/sports/unversioned": {
+          "word": "Kod",
+          "definition": "(v) kod yazmaq və ya kompüter üçün təlimat yazmaq."
+        },
+        "debugging/sports/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/sports/unversioned": {
+          "word": "Proqram"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/infinity/unversioned": {
+          "word": "Proqram"
+        },
+        "event/basketball/unversioned": {
+          "word": "Hadisə"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Sazlama"
+        },
+        "program/basketball/unversioned": {
+          "word": "Proqram"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Hadisə"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Proqram"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Hadisə"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Proqram"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Hadisə"
+        },
         "user/coursef/2021": {
           "word": "İstifadəçi"
         },
@@ -90,13 +241,20 @@
           "word": "Şərti ifadələr"
         },
         "algorithm/express/2021": {
-          "word": "Alqoritm"
+          "word": "Alqoritm",
+          "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
+        },
+        "bug/express/2021": {
+          "word": "Səhv"
         },
         "debugging/express/2021": {
           "word": "Sazlama"
         },
         "program/express/2021": {
           "word": "Proqram"
+        },
+        "programming/express/2021": {
+          "word": "Proqramlaşdırma"
         },
         "behavior/express/2021": {
           "word": "Davranış"
@@ -133,6 +291,10 @@
         },
         "behavior/coursee/2021": {
           "word": "Davranış"
+        },
+        "algorithm/coursee/2021": {
+          "word": "Alqroritm",
+          "definition": "Tapşırığı bitirmək üçün addımların siyahısı."
         },
         "event/coursee/2021": {
           "word": "Hadisə"

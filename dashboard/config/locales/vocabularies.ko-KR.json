@@ -2,6 +2,78 @@
   "ko-KR": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/hero/unversioned": {
+          "word": "디버깅"
+        },
+        "function/hero/unversioned": {
+          "word": "함수"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "디버깅"
+        },
+        "code/artist/unversioned": {
+          "word": "코드"
+        },
+        "debugging/artist/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "디버깅"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "조건"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "반복"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "암호화"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/mc/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "디버깅"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "무손실 압축"
+        },
+        "code/sports/unversioned": {
+          "word": "코드"
+        },
+        "debugging/sports/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "디버깅"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "디버깅"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "머신 러닝"
+        },
         "behavior/coursef/2021": {
           "word": "행동"
         },

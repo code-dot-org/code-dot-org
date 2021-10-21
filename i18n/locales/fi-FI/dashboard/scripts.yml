@@ -3188,3 +3188,16 @@ fi:
           lessons:
             lesson-2:
               name: Pienoisohjelmat
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Pienoisohjelmat
+        poetry:
+          lessons:
+            lesson-3:
+              name: Muuttujat
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Kirjurimehiläinen
+          title: Kirjurimehiläinen

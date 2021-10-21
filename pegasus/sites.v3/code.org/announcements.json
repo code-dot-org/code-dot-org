@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-showcase"
+    "/home": "irobot-classchat"
   },
 
   "banners": {
-    "nextsteps-showcase": {
-      "image": "/images/csjourneys/showcase-banner.png",
-      "title": "Learn how computer science is used in college",
-      "body": "Give high school students the opportunity to learn how CS is used at the college level to help with research and projects in different fields of study they may want to pursue. Recording will be available the day after the live session.",
+    "irobot-classchat": {
+      "image": "/images/csjourneys/irobot-classchat.png",
+      "title": "Building robots with iRobot",
+      "body": "Learn how two women are helping build software for robots and designing learning experiences that inspire the next generation of technologists. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-2",
-      "buttonId": "nextsteps-showcase-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat5",
+      "buttonId": "irobot-classchat-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

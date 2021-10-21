@@ -16,8 +16,9 @@ class JavabuilderSessionsController < ApplicationController
     project_url = params[:projectUrl]
     level_id = params[:levelId]
     options = params[:options]
+    execution_type = params[:executionType]
     options = options ? options.to_json : '{}'
-    if !channel_id || !project_version || !project_url
+    if !channel_id || !project_version || !project_url || !execution_type
       return render status: :bad_request, json: {}
     end
 
@@ -43,6 +44,7 @@ class JavabuilderSessionsController < ApplicationController
       project_version: project_version,
       project_url: project_url,
       level_id: level_id,
+      execution_type: execution_type,
       options: options
     }
 

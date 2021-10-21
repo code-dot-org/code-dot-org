@@ -2,56 +2,532 @@
   "mr-IN": {
     "data": {
       "vocabularies": {
+        "event/dance-extras/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "program/dance-extras/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/minecraft/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "event/minecraft/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "loop/minecraft/unversioned": {
+          "word": "लूप "
+        },
+        "debugging/hero/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/hero/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/flappy/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/frozen/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/iceage/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/artist/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/artist/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/gumball/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "event/dance/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "program/dance/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/aquatic/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "अट"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "कंडीशनल्स "
+        },
+        "debugging/starwars/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/starwars/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/mc/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/mc/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/playlab/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "event/sports/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "debugging/sports/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/sports/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/infinity/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "event/basketball/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "डीबगिंग"
+        },
+        "program/basketball/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "प्रोग्रॅम"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "मशीन लर्निंग"
+        },
+        "event/outbreak/unversioned": {
+          "word": "इव्हेंट"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "मॉडेल आणि सिम्युलेशन"
+        },
+        "sprite/coursef/2021": {
+          "word": "स्प्राईट"
+        },
+        "user/coursef/2021": {
+          "word": "वापरकर्ता"
+        },
+        "program/coursef/2021": {
+          "word": "प्रोग्रॅम"
+        },
+        "algorithm/coursef/2021": {
+          "word": "अल्गोरिदम"
+        },
+        "event/coursef/2021": {
+          "word": "इव्हेंट"
+        },
+        "prompt/coursef/2021": {
+          "word": "प्रॉम्प्ट"
+        },
+        "loop/coursef/2021": {
+          "word": "लूप "
+        },
+        "repeat/coursef/2021": {
+          "word": "पुन्हा करा",
+          "definition": "परत काहीतरी करा"
+        },
+        "for_loop/coursef/2021": {
+          "word": "लूप साठी"
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "मॉडेल आणि सिम्युलेशन"
+        },
         "machine_learning/coursef/2021": {
           "word": "मशीन लर्निंग"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS"
+        },
+        "packets/coursef/2021": {
+          "word": "पॅकेट्स"
+        },
+        "servers/coursef/2021": {
+          "word": "सर्व्हर"
+        },
+        "url/coursef/2021": {
+          "word": "यूआरएल"
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "डीएसएल/केबल"
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "फायबर ऑप्टिक केबल"
+        },
+        "ip_address/coursef/2021": {
+          "word": "आयपी पत्ता"
+        },
+        "wi_fi/coursef/2021": {
+          "word": "वाय-फाय "
         },
         "define/coursef/2021": {
           "word": "नेमुन द्या"
         },
+        "prepare/coursef/2021": {
+          "word": " तयारी "
+        },
+        "reflect/coursef/2021": {
+          "word": "प्रतिबिंबित करा"
+        },
+        "try/coursef/2021": {
+          "word": "प्रयत्न ",
+          "definition": "काहीतरी करण्याचा प्रयत्न करा "
+        },
+        "algorithm/courseb/2021": {
+          "word": "अल्गोरिदम"
+        },
+        "bug/courseb/2021": {
+          "word": "बग"
+        },
         "debugging/courseb/2021": {
           "word": "डीबगिंग"
+        },
+        "click/courseb/2021": {
+          "word": "क्लिक ",
+          "definition": "माउस चे बटण दाबा"
+        },
+        "drag/courseb/2021": {
+          "word": "ड्रॅग करा"
         },
         "drop/courseb/2021": {
           "word": "ड्रॉप"
         },
+        "double_click/courseb/2021": {
+          "word": "डबल क्लिक "
+        },
+        "program/courseb/2021": {
+          "word": "प्रोग्रॅम"
+        },
+        "programming/courseb/2021": {
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
+        },
+        "persistence/courseb/2021": {
+          "word": "चिकाटी"
+        },
+        "loop/courseb/2021": {
+          "word": "लूप "
+        },
+        "repeat/courseb/2021": {
+          "word": "पुन्हा करा",
+          "definition": "परत काहीतरी करा"
+        },
+        "event/courseb/2021": {
+          "word": "इव्हेंट"
+        },
+        "algorithm/coursea/2021": {
+          "word": "अल्गोरिदम"
+        },
         "debugging/coursea/2021": {
           "word": "डीबगिंग"
+        },
+        "program/coursea/2021": {
+          "word": "प्रोग्रॅम"
+        },
+        "click/coursea/2021": {
+          "word": "क्लिक ",
+          "definition": "माउस चे बटण दाबा"
+        },
+        "drag/coursea/2021": {
+          "word": "ड्रॅग करा"
         },
         "drop/coursea/2021": {
           "word": "ड्रॉप"
         },
+        "double_click/coursea/2021": {
+          "word": "डबल क्लिक "
+        },
+        "bug/coursea/2021": {
+          "word": "बग"
+        },
+        "programming/coursea/2021": {
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
+        },
+        "loop/coursea/2021": {
+          "word": "लूप "
+        },
+        "repeat/coursea/2021": {
+          "word": "पुन्हा करा",
+          "definition": "परत काहीतरी करा"
+        },
+        "event/coursea/2021": {
+          "word": "इव्हेंट"
+        },
+        "algorithm/coursec/2021": {
+          "word": "अल्गोरिदम"
+        },
+        "bug/coursec/2021": {
+          "word": "बग"
+        },
         "debugging/coursec/2021": {
           "word": "डीबगिंग"
+        },
+        "program/coursec/2021": {
+          "word": "प्रोग्रॅम"
+        },
+        "sequencing/coursec/2021": {
+          "word": "सिक्वेन्सिंग"
+        },
+        "programming/coursec/2021": {
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
+        },
+        "loop/coursec/2021": {
+          "word": "लूप "
+        },
+        "repeat/coursec/2021": {
+          "word": "पुन्हा करा",
+          "definition": "परत काहीतरी करा"
+        },
+        "event/coursec/2021": {
+          "word": "इव्हेंट"
+        },
+        "algorithm/coursed/2021": {
+          "word": "अल्गोरिदम"
+        },
+        "program/coursed/2021": {
+          "word": "प्रोग्रॅम"
+        },
+        "bug/coursed/2021": {
+          "word": "बग"
         },
         "debugging/coursed/2021": {
           "word": "डीबगिंग"
         },
+        "loop/coursed/2021": {
+          "word": "लूप "
+        },
+        "programming/coursed/2021": {
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
+        },
+        "frustrated/coursed/2021": {
+          "word": "निराश"
+        },
+        "persistence/coursed/2021": {
+          "word": "चिकाटी"
+        },
+        "event/coursed/2021": {
+          "word": "इव्हेंट"
+        },
+        "repeat/coursed/2021": {
+          "word": "पुन्हा करा",
+          "definition": "परत काहीतरी करा"
+        },
+        "command/coursed/2021": {
+          "word": "कमांड"
+        },
         "conditionals/coursed/2021": {
           "word": "कंडीशनल्स "
+        },
+        "pseudocode/coursed/2021": {
+          "word": "सूडोकोड "
+        },
+        "condition/coursed/2021": {
+          "word": "अट"
+        },
+        "while_loop/coursed/2021": {
+          "word": "लूप असतांना "
+        },
+        "until/coursed/2021": {
+          "word": "पर्यंत"
+        },
+        "algorithm/express/2021": {
+          "word": "अल्गोरिदम"
+        },
+        "bug/express/2021": {
+          "word": "बग"
         },
         "debugging/express/2021": {
           "word": "डीबगिंग"
         },
+        "sequencing/express/2021": {
+          "word": "सिक्वेन्सिंग"
+        },
+        "program/express/2021": {
+          "word": "प्रोग्रॅम"
+        },
+        "programming/express/2021": {
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
+        },
+        "sprite/express/2021": {
+          "word": "स्प्राईट"
+        },
+        "event/express/2021": {
+          "word": "इव्हेंट"
+        },
+        "loop/express/2021": {
+          "word": "लूप "
+        },
+        "repeat/express/2021": {
+          "word": "पुन्हा करा",
+          "definition": "परत काहीतरी करा"
+        },
+        "command/express/2021": {
+          "word": "कमांड"
+        },
+        "condition/express/2021": {
+          "word": "अट"
+        },
         "conditionals/express/2021": {
           "word": "कंडीशनल्स "
+        },
+        "while_loop/express/2021": {
+          "word": "लूप असतांना "
+        },
+        "until/express/2021": {
+          "word": "पर्यंत"
+        },
+        "prompt/express/2021": {
+          "word": "प्रॉम्प्ट"
+        },
+        "for_loop/express/2021": {
+          "word": "लूप साठी"
         },
         "define/express/2021": {
           "word": "नेमुन द्या"
         },
+        "prepare/express/2021": {
+          "word": " तयारी "
+        },
+        "reflect/express/2021": {
+          "word": "प्रतिबिंबित करा"
+        },
+        "try/express/2021": {
+          "word": "प्रयत्न ",
+          "definition": "काहीतरी करण्याचा प्रयत्न करा "
+        },
+        "click/pre-express/2021": {
+          "word": "क्लिक ",
+          "definition": "माउस चे बटण दाबा"
+        },
+        "drag/pre-express/2021": {
+          "word": "ड्रॅग करा"
+        },
         "drop/pre-express/2021": {
           "word": "ड्रॉप"
+        },
+        "double_click/pre-express/2021": {
+          "word": "डबल क्लिक "
+        },
+        "algorithm/pre-express/2021": {
+          "word": "अल्गोरिदम"
+        },
+        "bug/pre-express/2021": {
+          "word": "बग"
         },
         "debugging/pre-express/2021": {
           "word": "डीबगिंग"
         },
+        "program/pre-express/2021": {
+          "word": "प्रोग्रॅम"
+        },
+        "programming/pre-express/2021": {
+          "word": "प्रोग्रामिंग",
+          "definition": "प्रोग्राम तयार करण्याची कला"
+        },
+        "persistence/pre-express/2021": {
+          "word": "चिकाटी"
+        },
+        "loop/pre-express/2021": {
+          "word": "लूप "
+        },
+        "repeat/pre-express/2021": {
+          "word": "पुन्हा करा",
+          "definition": "परत काहीतरी करा"
+        },
+        "event/pre-express/2021": {
+          "word": "इव्हेंट"
+        },
+        "algorithm/coursee/2021": {
+          "word": "अल्गोरिदम"
+        },
+        "sprite/coursee/2021": {
+          "word": "स्प्राईट"
+        },
+        "event/coursee/2021": {
+          "word": "इव्हेंट"
+        },
         "copyright/coursee/2021": {
           "word": "कॉपीराइट"
+        },
+        "loop/coursee/2021": {
+          "word": "लूप "
+        },
+        "repeat/coursee/2021": {
+          "word": "पुन्हा करा",
+          "definition": "परत काहीतरी करा"
+        },
+        "condition/coursee/2021": {
+          "word": "अट"
         },
         "conditionals/coursee/2021": {
           "word": "कंडीशनल्स "
         },
+        "while_loop/coursee/2021": {
+          "word": "लूप असतांना "
+        },
         "define/coursee/2021": {
           "word": "नेमुन द्या"
+        },
+        "prepare/coursee/2021": {
+          "word": " तयारी "
+        },
+        "reflect/coursee/2021": {
+          "word": "प्रतिबिंबित करा"
+        },
+        "try/coursee/2021": {
+          "word": "प्रयत्न ",
+          "definition": "काहीतरी करण्याचा प्रयत्न करा "
         }
       }
     }

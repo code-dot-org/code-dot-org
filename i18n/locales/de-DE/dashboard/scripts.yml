@@ -511,6 +511,8 @@ de:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_student: Klicken und ziehen Sie, um die Aufgaben fertigzustellen.
+              description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.
           student_description: Testen Sie unser Puzzle-Tutorial.
         step:
           title: Schritt
@@ -15681,6 +15683,8 @@ de:
           lessons:
             Virus Simulation for Code Bytes:
               name: Programmierung einer Simulation
+            Outbreak:
+              name: Programmierung einer Simulation
           lesson_groups:
             outbreak:
               display_name: Ausbruchssimulation
@@ -17606,6 +17610,7 @@ de:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
+            lesson-20: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -17613,6 +17618,10 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -18161,6 +18170,7 @@ de:
             lesson-1: {}
             lesson-3: {}
             lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -18173,14 +18183,6 @@ de:
               display_name: Inhalt
         csa5-pilot-facilitator:
           lessons:
-            Reversing Elements: {}
-            Shifting Elements: {}
-            Finding Duplicates: {}
-            Searching for Elements: {}
-            A Sustainable Neighborhood Project - Day 1: {}
-            A Sustainable Neighborhood Project - Day 2: {}
-            A Sustainable Neighborhood Project - Day 3: {}
-            FRQ Day: {}
             Assessment Day:
               name: Prüfungstag
             lesson-7: {}
@@ -18193,6 +18195,10 @@ de:
             lesson-14: {}
             lesson-15:
               name: Prüfungstag
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -18301,3 +18307,45 @@ de:
         spritelab-effects-challenge:
           lessons:
             lesson-1: {}
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Werkzeuge
+            lesson-3: {}
+        poem-art: {}
+        poetry:
+          lessons:
+            lesson-2: {}
+            lesson-3:
+              name: Variablen
+            lesson-4: {}
+            lesson-5: {}
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Buchstabierwettbewerb
+          title: Buchstabierwettbewerb
+        outbreak-csc:
+          title: Ausbruch
+        explore-data-1: {}
+        counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14:
+              name: Prüfungstag
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt

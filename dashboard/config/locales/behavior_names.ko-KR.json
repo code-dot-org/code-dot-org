@@ -2742,6 +2742,34 @@
           "moving west": "서쪽으로 이동",
           "spinning right": "오른쪽으로 회전",
           "spinning left": "왼쪽으로 회전"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "배회",
+          "moving east": "동쪽으로 이동",
+          "spinning left": "왼쪽으로 회전",
+          "spinning right": "오른쪽으로 회전",
+          "shrinking": "감소",
+          "growing": "성장",
+          "moving south": "남쪽으로 이동",
+          "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
+          "moving north": "북쪽으로 이동",
+          "jittering": "지터링",
+          "moving west": "서쪽으로 이동",
+          "patrolling": "순찰"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "배회",
+          "moving east": "동쪽으로 이동",
+          "spinning left": "왼쪽으로 회전",
+          "spinning right": "오른쪽으로 회전",
+          "shrinking": "감소",
+          "growing": "성장",
+          "moving south": "남쪽으로 이동",
+          "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
+          "moving north": "북쪽으로 이동",
+          "jittering": "지터링",
+          "moving west": "서쪽으로 이동",
+          "patrolling": "순찰"
         }
       }
     }

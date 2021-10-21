@@ -2469,6 +2469,8 @@ da:
           lessons:
             Virus Simulation for Code Bytes:
               name: Kodning af en simulation
+            Outbreak:
+              name: Kodning af en simulation
           lesson_groups:
             outbreak:
               display_name: Udbrud Simulering
@@ -2767,3 +2769,16 @@ da:
           lessons:
             lesson-3:
               name: Værktøjer
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: Værktøjer
+        poetry:
+          lessons:
+            lesson-3:
+              name: Variabler
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stave-bien
+          title: Stave-bien
