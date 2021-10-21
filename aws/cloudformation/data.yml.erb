@@ -73,7 +73,7 @@ Resources:
       EngineVersion: 3.1.3
       MultiAZ: true
       PubliclyAccessible: false
-      ReplicationInstanceClass: dms.c4.4xlarge
+      ReplicationInstanceClass: dms.r4.4xlarge
       ReplicationInstanceIdentifier: !Ref AWS::StackName
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
