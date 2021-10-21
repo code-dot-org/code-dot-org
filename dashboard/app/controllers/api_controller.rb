@@ -471,6 +471,8 @@ class ApiController < ApplicationController
 
     if params[:get_channel_id] == "true"
       response[:channel] = get_channel_for(level, script.id, current_user)
+      response[:reduceChannelUpdates] =
+        !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script.name}, default: true)
     end
 
     render json: response
