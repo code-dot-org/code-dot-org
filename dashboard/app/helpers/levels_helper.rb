@@ -190,6 +190,9 @@ module LevelsHelper
     if level_requires_channel && !is_cached_level
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
+        reduce_channel_updates: @script ?
+          !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
+          false
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
