@@ -1,7 +1,7 @@
 {
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/1": {
     "short_instructions": "When you read this poem, what color comes to mind? Find a background effect that matches the feeling of this poem.",
-    "long_instructions": "_When you read this poem, what color comes to mind?_\n\n-   Connect blocks from the toolbox under `when run` to build your program. \n-   Find an **effect** and **color** that match the **mood** of this poem. \n-   Click \"Run\" to animate the poem.",
+    "long_instructions": "_When you read this poem, what feeling do you get? What is a color that matches that feeling?_\n\n-   Connect blocks from the toolbox under `when run` to build your program. \n-   Find a background and text **effect** that matches the **mood** of this poem.\n-   Change the **colors** of your effects or text. \n-   Click \"Run\" to animate the poem.",
     "authored_hints": {
       "add_background_effect": "Find this block:\n[blockly block][0]\n\nConnect this block under `when run` in your Workspace.",
       "add_more_effects": "Add in more colors or effects to help create the mood of this poem. \n\n[blockly block][0]"
@@ -27,7 +27,7 @@
   },
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/4": {
     "short_instructions": "Let's use events to change the animation when the poem mentions something new. ",
-    "long_instructions": "Let's use **events** to change your animation when the poem mentions something new. \n\n-   Find a line in the poem where the mood shifts or something new is introduced. \n-   Add colors or effects to match more lines in the poem. \n-   Make sure the effect changes when the line you want appears on the screen. ",
+    "long_instructions": "Use **events** to change your animation when the poem mentions something new. \n\n-   Find a **line** in the poem where the mood shifts or something new is introduced. \n-   Add **colors** or **effects** to match a new **line** in the poem. \n-   Make sure the effect changes when the line you want appears on the screen. ",
     "authored_hints": {
       "foreground_effect_hint": "This new `do foreground effect` block will add a new effect once. \n[blockly block][0]",
       "background_effect_hint": "You can also add a new background effect when a certain line shows in the poem with code that looks like this:\n[blockly block][0]",
@@ -44,7 +44,7 @@
   },
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/6": {
     "short_instructions": "Authors use imagery to paint a picture in the reader's mind. You can add sprites to illustrate your poem. ",
-    "long_instructions": "Authors use **imagery** to paint a picture in the reader's mind using words. You can add **sprites** to illustrate your poem. \n\n-   Connect a `make new sprite` block under the `when run` block.\n-   Choose a costume for your sprite.\n\n_Extra Challenge:_ Connect a `make new sprite` block to an event to make a new sprite appear when a new character is introduced in the poem. ",
+    "long_instructions": "Authors use **imagery** to paint a picture in the reader's mind using words. Add **sprites** to illustrate the images that come to your mind when you read the poem. \n\n-   Connect a `make new sprite` block under the `when run` block.\n-   Choose a costume for your sprite.\n\n_Extra Challenge:_ Connect a `make new sprite` block to an event to make a new sprite appear when a new character is introduced in the poem. ",
     "authored_hints": {
       "location_hint": "Each sprite has a **location**. You can set the location by clicking the pin on this block: \n\n[blockly block][0]\n\n-   Click the pin [][1] on the location block then choose a new position for your sprite on the screen.\n-   Press the \"Run\" button when your code is finished."
     },
@@ -72,13 +72,34 @@
     "callouts": {
       "poetry_set_sprite": "New block!",
       "poetry_remove_sprite": "New block!"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
     }
   },
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/9": {
     "long_instructions": "Let's get moody. Illustrate a poem however you'd like and share it with your friends!",
     "callouts": {
-      "poetry_burst": "New block!",
-      "poetry_multiple_sprites": "New block!"
+      "poetry_new_block": "New block!"
     }
   }
 }

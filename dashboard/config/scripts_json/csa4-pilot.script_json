@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-05 13:45:09 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-10-18 18:50:21 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csa4-pilot"
     }
@@ -46,9 +46,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Sandbox"
       },
@@ -327,12 +339,27 @@
       }
     },
     {
-      "key": "lesson-16",
-      "name": "Java Lab",
+      "key": "lesson-20",
+      "name": "Unit 4 Pilot Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -344,10 +371,10 @@
     {
       "key": "lesson-17",
       "name": "The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -359,10 +386,10 @@
     {
       "key": "lesson-18",
       "name": "The Theater",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -374,10 +401,10 @@
     {
       "key": "lesson-19",
       "name": "The Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -1003,6 +1030,18 @@
       }
     },
     {
+      "key": "6f89cdd9-27ca-40d3-8c82-9e6a98c4e947",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f89cdd9-27ca-40d3-8c82-9e6a98c4e947",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
       "key": "620c1e22-7f2a-41a6-8c66-6a9b8f31e07d",
       "position": 1,
       "properties": {
@@ -1180,19 +1219,8 @@
       }
     },
     {
-      "key": "e85403e7-23c3-4d65-abe0-42a9e5c9f745",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the APIs and Libraries video."
-      },
-      "seeding_key": {
-        "activity_section.key": "e85403e7-23c3-4d65-abe0-42a9e5c9f745",
-        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
-      }
-    },
-    {
       "key": "60dde12a-a8a5-4f61-8d59-c8a94e77868e",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "The `Scanner` and `String` classes are part of the Java API, which we use to write programs. That is why the package names start with `java`, such as `java.util` and `java.lang`.\n\nWe saw at the beginning of class that apps and websites often use functions from other apps. The software engineers of these programs can add functions and interact with other apps by using APIs.\n\nLet's look at some popular APIs used in many of the programs we use every day.",
         "duration": "15",
@@ -1206,7 +1234,7 @@
     },
     {
       "key": "f1707318-0d45-427b-bbea-868027a54956",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students explore example APIs such as Google Developers and Spotify for Developers.",
         "progression_name": "Exploring APIs"
@@ -1218,7 +1246,7 @@
     },
     {
       "key": "b1520cb5-7216-4563-9e1a-a4af9473d985",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What do you notice about these APIs?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students notice that the APIs define functionalities that software engineers can incorporate into their programs and include documentation explaining how to use them. Students may wonder if there are APIs for other apps they use or how to incorporate these into their programs."
       },
@@ -1229,7 +1257,7 @@
     },
     {
       "key": "45aaa9b2-6e4d-431f-a0d4-d5e6f4c4c218",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Neighborhood is hosting a block party, and you have been asked to develop a game to play at the block party. In this unit, you will implement the API for The Playground, which allows people in the community to gather to play games with their friends and family.\n\nThroughout this unit, you will develop a game called Pop the Balloon for The Neighborhood Block Party.",
         "remarks": true
@@ -1241,7 +1269,7 @@
     },
     {
       "key": "ef528e6f-b9ed-4472-ae60-eab09115b42f",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to review the API documentation for The Playground.",
         "progression_name": "Exploring The Playground"
@@ -1253,7 +1281,7 @@
     },
     {
       "key": "249b7a2c-b25b-49b7-832c-7d115907e9a7",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 5 on Code Studio. Students import The Playground and run the sample code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Playground.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
         "progression_name": "Creating the Dice and Roll Button"
@@ -1997,7 +2025,8 @@
       "key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
+        "progression_name": "Calculating the Score"
       },
       "seeding_key": {
         "activity_section.key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb",
@@ -2632,7 +2661,7 @@
       "key": "b3ba21bf-5f97-4ff9-894a-e75b496e92cd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditional Statements video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "b3ba21bf-5f97-4ff9-894a-e75b496e92cd",
@@ -2947,7 +2976,7 @@
       "key": "387f1149-8978-4eba-8e8f-9231eb32d639",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define truth table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Creating a Truth Table video. Direct students to follow along and complete the truth tables on their activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define truth table."
       },
       "seeding_key": {
         "activity_section.key": "387f1149-8978-4eba-8e8f-9231eb32d639",
@@ -3792,6 +3821,17 @@
       }
     },
     {
+      "key": "fe804b56-113c-43ca-a7e9-6458df7c2dfe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 4 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe804b56-113c-43ca-a7e9-6458df7c2dfe",
+        "lesson_activity.key": "6f89cdd9-27ca-40d3-8c82-9e6a98c4e947"
+      }
+    },
+    {
       "key": "2201b689-447b-4b31-b18a-d3869a5236c7",
       "position": 1,
       "properties": {
@@ -4594,7 +4634,8 @@
       "properties": {
         "level_keys": [
           "CSA U4L5-L6"
-        ]
+        ],
+        "progression": "Calculating the Score"
       },
       "bonus": false,
       "seeding_key": {
@@ -4618,7 +4659,8 @@
       "properties": {
         "level_keys": [
           "CSA U4L5-L7"
-        ]
+        ],
+        "progression": "Calculating the Score"
       },
       "bonus": false,
       "seeding_key": {
@@ -5416,6 +5458,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSA Pilot Survey Unit 4"
+        ],
+        "progression": "Unit 4 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 4"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "fe804b56-113c-43ca-a7e9-6458df7c2dfe"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 4"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSA Java Lab Sandbox"
         ],
         "progression": "Java Lab"
@@ -5435,7 +5502,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5460,7 +5527,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5485,7 +5552,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6269,6 +6336,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 4",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 4"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "fe804b56-113c-43ca-a7e9-6458df7c2dfe"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Java Lab Sandbox",
         "script_level.level_keys": [
           "CSA Java Lab Sandbox"
@@ -6522,6 +6601,18 @@
       }
     },
     {
+      "name": "Casting and Rounding",
+      "url": "https://youtu.be/DimjDSTb7T0",
+      "key": "casting_and_rounding",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_rounding"
+      }
+    },
+    {
       "name": "Casting Exploration",
       "url": "https://docs.google.com/document/d/1IPYgSjg3JmKCD33csEdikwi4-egwQGrWwciFeaHLFUA/edit#",
       "key": "casting_exploration",
@@ -6546,6 +6637,18 @@
       }
     },
     {
+      "name": "Equals and Aliasing",
+      "url": "https://youtu.be/o4UfB3r-TPI",
+      "key": "equals_and_aliasing",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "equals_and_aliasing"
+      }
+    },
+    {
       "name": "Exploring Operators",
       "url": "https://docs.google.com/document/d/1Oel7wKZ_3KAaDW_7R84z_AuhFixeYy6l8hgPU7R70SA/edit?usp=sharing",
       "key": "exploring_operators",
@@ -6555,6 +6658,18 @@
       },
       "seeding_key": {
         "resource.key": "exploring_operators"
+      }
+    },
+    {
+      "name": "Final Classes and Static Methods",
+      "url": "https://youtu.be/9cGeWGs0A4g",
+      "key": "final_classes_and_static_methods",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "final_classes_and_static_methods"
       }
     },
     {
@@ -6579,6 +6694,18 @@
       },
       "seeding_key": {
         "resource.key": "frq_writing_2"
+      }
+    },
+    {
+      "name": "if/else Statements",
+      "url": "https://youtu.be/A1zMZrt_0yA",
+      "key": "if_else_statements",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "if_else_statements"
       }
     },
     {
@@ -6630,6 +6757,18 @@
       }
     },
     {
+      "name": "Probability with Math.random()",
+      "url": "https://youtu.be/HiRJW3IhgX8",
+      "key": "probability_with_math_random_",
+      "properties": {
+        "type": "Slides",
+        "audience": "Verified Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "probability_with_math_random_"
+      }
+    },
+    {
       "name": "Quiz, Quiz Trade",
       "url": "https://docs.google.com/document/u/2/d/1c9smHGRY2DNFQupRe7GS3RlU7u4Dd2J-y8dfpukljc4/edit",
       "key": "quiz_quiz_trade_1",
@@ -6639,6 +6778,18 @@
       },
       "seeding_key": {
         "resource.key": "quiz_quiz_trade_1"
+      }
+    },
+    {
+      "name": "Random",
+      "url": "https://youtu.be/Lx5-YOnWm3M",
+      "key": "random",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "random"
       }
     },
     {
@@ -6994,6 +7145,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "final_classes_and_static_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "math_class_activity_guide"
       }
     },
@@ -7024,7 +7181,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "casting_and_rounding"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "casting_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "random"
       }
     },
     {
@@ -7078,6 +7247,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "probability_with_math_random_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "quiz_quiz_trade_1"
       }
     },
@@ -7114,6 +7289,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "equals_and_aliasing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "object_references_manipulatives"
       }
     },
@@ -7133,6 +7314,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u4l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "if_else_statements"
       }
     },
     {
