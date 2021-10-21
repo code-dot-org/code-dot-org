@@ -39,15 +39,16 @@
     "min_workspace_height": "0",
     "project_template_level_name": "poetry_module_template",
     "skip_autosave": true,
+    "standalone_app_name": "poetry",
     "preload_asset_list": null,
-    "standalone_app_name": "poetry"
+    "default_poem": null
   },
+  "user_id": 13468,
   "game_id": 69,
-  "published": true,
   "created_at": "2021-10-07T14:52:52.000Z",
   "level_num": "custom",
-  "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-07T14:52:52.563+00:00\",\"changed\":[\"cloned from \\\"poetry_module_freeplay\\\"\"],\"cloned_from\":\"poetry_module_freeplay\"},{\"changed_at\":\"2021-10-07 14:55:24 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:33:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:34:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:34:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-11 17:59:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 17:13:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 17:23:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 17:25:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 19:56:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-10-07T14:52:52.563+00:00\",\"changed\":[\"cloned from \\\"poetry_module_freeplay\\\"\"],\"cloned_from\":\"poetry_module_freeplay\"},{\"changed_at\":\"2021-10-07 14:55:24 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:33:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:34:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-08 20:34:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-11 17:59:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 17:13:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 17:23:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 17:25:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-14 19:56:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:05:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -67,36 +68,18 @@
           <block type="gamelab_whenAllPromptsAnswered"/>
         </category>
         <category name="Text">
-          <block type="Poetry_setTitle">
-            <value name="TITLE">
-              <block type="Poetry_stringValue">
-                <title name="TEXT"/>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_setAuthor">
-            <value name="AUTHOR">
-              <block type="Poetry_stringValue">
-                <title name="TEXT"/>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_addLine">
-            <value name="LINE">
-              <block type="Poetry_stringValue">
-                <title name="TEXT"/>
-              </block>
-            </value>
-          </block>
-          <block type="Poetry_animateText"/>
-          <block type="Poetry_hideText"/>
           <block type="gamelab_textJoin">
             <title name="TEXT1"/>
           </block>
-          <block type="Poetry_textConcat"/>
-          <block type="Poetry_randomWord"/>
+          <block type="Poetry_setTitle"/>
+          <block type="Poetry_setAuthor"/>
+          <block type="Poetry_addLine"/>
+          <block type="Poetry_animateText"/>
         </category>
         <category name="Variables" custom="VARIABLE">
+          <block type="gamelab_textVariableJoin">
+            <title name="VAR">word1</title>
+          </block>
           <block type="gamelab_setPrompt">
             <value name="QUESTION">
               <block type="text">
@@ -121,26 +104,20 @@
               </block>
             </value>
             <value name="A">
-              <block type="Poetry_stringValue">
+              <block type="text">
                 <title name="TEXT"/>
               </block>
             </value>
             <value name="B">
-              <block type="Poetry_stringValue">
+              <block type="text">
                 <title name="TEXT"/>
               </block>
             </value>
             <value name="C">
-              <block type="Poetry_stringValue">
+              <block type="text">
                 <title name="TEXT"/>
               </block>
             </value>
-          </block>
-          <block type="variables_get">
-            <title name="VAR">word1</title>
-          </block>
-          <block type="gamelab_textVariableJoin">
-            <title name="VAR">word2</title>
           </block>
           <block type="gamelab_ifVarEquals">
             <title name="NUM">word2</title>
@@ -179,7 +156,7 @@
             </value>
           </block>
           <block type="Poetry_setBackgroundImageAs">
-            <title name="IMG">"cave"</title>
+            <title name="IMG">"abstract"</title>
           </block>
           <block type="Poetry_setBackgroundEffect">
             <title name="EFFECT">"colors"</title>
@@ -188,32 +165,32 @@
         </category>
         <category name="Sprites">
           <block type="Poetry_makeNewSpriteAnon">
-            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="ANIMATION_NAME">"firework_blue"</title>
             <title name="LOCATION">{"x":75,"y":200}</title>
           </block>
           <block type="Poetry_setSize">
-            <title name="SPRITE">"bear"</title>
+            <title name="SPRITE">"firework_blue"</title>
             <title name="VAL">50</title>
           </block>
           <block type="Poetry_startBehavior">
-            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="ANIMATION_NAME">"firework_blue"</title>
             <title name="BEHAVIOR">fluttering</title>
           </block>
           <block type="Poetry_stopBehavior">
-            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="ANIMATION_NAME">"firework_blue"</title>
             <title name="BEHAVIOR">fluttering</title>
           </block>
           <block type="Poetry_destroy">
-            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="ANIMATION_NAME">"firework_blue"</title>
           </block>
           <block type="Poetry_makeBurst">
             <title name="EFFECT">"burst"</title>
             <title name="NUM">10</title>
-            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="ANIMATION_NAME">"firework_blue"</title>
           </block>
           <block type="Poetry_makeNumSprites">
             <title name="NUM">3</title>
-            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="ANIMATION_NAME">"firework_blue"</title>
           </block>
         </category>
       </xml>
