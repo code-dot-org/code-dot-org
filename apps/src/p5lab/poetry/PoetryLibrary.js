@@ -1,3 +1,4 @@
+/* global appOptions */
 import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
@@ -32,7 +33,8 @@ export default class PoetryLibrary extends CoreLibrary {
       // The animation can be restarted with the animatePoem() block, which
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
-      animationStartFrame: 1
+      animationStartFrame:
+        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -297,6 +299,10 @@ export default class PoetryLibrary extends CoreLibrary {
   }
 
   applyGlobalLineAnimation(renderInfo, frameCount) {
+    if (this.poemState.animationStartFrame === null) {
+      return renderInfo;
+    }
+
     // Add 2 so there's time before the first line and after the last line
     const framesPerLine = POEM_DURATION / (renderInfo.lines.length + 2);
 
