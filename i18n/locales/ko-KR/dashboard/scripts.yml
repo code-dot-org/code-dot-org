@@ -15908,6 +15908,8 @@ ko:
           lessons:
             Virus Simulation for Code Bytes:
               name: 시뮬레이션 코딩
+            Outbreak:
+              name: 시뮬레이션 코딩
           lesson_groups:
             outbreak:
               display_name: 발생 시뮬레이션
@@ -18511,3 +18513,11 @@ ko:
           lessons:
             lesson-1:
               name: 말하는 꿀벌
+          title: 말하는 꿀벌
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠

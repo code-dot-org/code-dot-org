@@ -552,25 +552,28 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zhrnutie"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Reflexia"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Úvod"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Vitajte v mestečku Monster Town"
         },
-        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+        "df13fa93-37df-4188-837d-462c48179625": {
           "progression_name": "Budovanie zručností"
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Voľná hra",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Voľná hra"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflexia"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -840,6 +843,7 @@
           "progression_name": "Objavovanie: Vzorové programy"
         },
         "fc1dcb70-576f-4a5e-8407-856ffa7d43a5": {
+          "name": "Programy reagujúce na vstupy používateľa",
           "tips": [
             null
           ],
@@ -848,7 +852,8 @@
         "b5b5f679-aed2-4e5e-9def-bf91c8cf87ea": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Miniprojekt: Programy reagujúce na vstupy používateľa"
         },
         "d5bf3b23-128d-4078-bdb2-a806a59a2db1": {
           "description": "**Spravte toto:** S cieľom poukázať na dobrú prácu, ktorú žiaci odviedli, venujte posledných 10 minút prehliadke ich projektov. Môžete ju spraviť rôznymi spôsobmi, napríklad:\n\n-   **Verejná prezentácia:** Vyberte niekoľko dobrovoľníkov, ktorí stručne predstavia svoje projekty pred celou triedou. Počas ich prezentácií sa ich spýtajte, ako sa im darilo pretaviť ich plány do kódu a ktoré časti svojich plánov by ešte radi doprogramovali. \n-   **Testovanie v pároch:** Vytvorte dvojice žiakov alebo skupín, ktoré si budú navzájom testovať projekty. Vysvetlite im, aby si počas testovania navzájom poskytovali pozitívnu a konštruktívnu spätnú väzbu. Výhodou takéhoto postupu je, že žiaci budú mať príležitosť poskytnúť si spätnú väzbu a reagovať na ňu v menších skupinách. \n-   **Prehliadka v galérii:** Uistite sa, či sú všetky žiacke projekty pripravené na testovanie. Žiaci sa budú postupne presúvať po triede a pri každom počítači budú mať možnosť niekoľko minút testovať daný projekt, až kým od vás nedostanú signál, aby sa presunuli k ďalšiemu počítaču. Tento postup opakujte každých pár minút. Hoci pri takejto prezentácii je menej príležitostí na štruktúrovanú komunikáciu, žiaci si budú môcť vyskúšať čo najviac projektov svojich spolužiakov."
@@ -1323,6 +1328,9 @@
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
           "name": "Reflexia"
+        },
+        "1fc19afb-445f-4df3-90c9-379c7a7ff7b2": {
+          "name": "Vhodná aplikácia – situácie (15 minút)"
         },
         "804a67da-450d-4514-8c2e-2c9ed196e7c1": {
           "name": "Reflexia"
@@ -2001,7 +2009,7 @@
           "name": "Úvod"
         },
         "0cafd30f-53e4-45fb-96c0-767858add851": {
-          "name": "Programovanie na štvorčekový papier"
+          "name": "Programovanie na štvorčekovom papieri"
         },
         "60f32afa-e8e8-44c3-87d0-2aff20a74a1c": {
           "tips": [
@@ -3910,7 +3918,7 @@
           "progression_name": "Preskúmanie: Rikkiin plagát"
         },
         "2e6aa365-ef8d-4f04-8a5e-fcc6bb53bc1d": {
-          "progression_name": "Mini projekt: O mne"
+          "progression_name": "Miniprojekt: O mne"
         },
         "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
           "name": "Zdieľanie s triedou",
@@ -4118,7 +4126,7 @@
           "description": "Rozdajte **\\*pracovný hárok hodnotenia pre písanie pesničiek** a po vysvetlení nechajte žiakov, nech túto aktivitu dokončia samostatne. Vďaka predchádzajúcim aktivitám by s tým nemali mať problém."
         },
         "c3c1225f-3e42-4af3-b63e-6e2fb0a9f62a": {
-          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n**Slnečné dekorácie**\nPozrite si tabuľku [Základy informatiky – aktivity bez počítača](https://code.org/curriculum/unplugged) alebo kliknite na odkaz [Slnečné dekorácie](https://studio.code.org/s/course3/stage/4/puzzle/1). Na túto aktivitu sú potrebné isté pomôcky z dielne, ale pomôže študentom pochopiť prínos volania viacerých funkcií.\n\n\\*\\*Napísanie vlastnej piesne \\*\\*\n\n-   Začnite tým, že spolu napíšete refrén. Potom ho opakujte medzi veršami, ktoré napíšete okolo tohto refrénu.\n-   Upravte refrén a potom sa zamyslite nad tým, o koľko jednoduchšie je ho zmeniť iba na jednom mieste.\n-   Znova zmeňte refrén tak, aby bol omnoho dlhší ako pôvodne.\n-   Pridajte druhý refrén a striedajte refrény medzi veršami.\n\n**Napísanie programu ako piesne**\n\n-   Čo keby sme piesne mali hrať  ako herci na javisku, nie ich spievať? Zrazu by sa z refrénu stala funkcia pozostávajúca z opakovaných akcií, nie len slov.\n-   Pomocou konceptov šípok z lekcie Programovanie na štvorčekový papier vytvorte program s množstvom opakovaných pokynov.\n    -   Zakrúžkujte tieto opakované akcie, aby žiaci videli, v ktorom kroku práve sú.\n    -   Definujte funkciu s názvom „Refrén“ nad programom.\n    -   Prečiarknite všetky časti s opakovanými akciami v programe a miesto nich napíšte „Refrén“.\n-   Opakujte, kým trieda nedokáže tento proces vykonať iba s drobnými usmerneniami."
+          "description": "Použite tieto aktivity na podporu výučby. Môžete ich využiť aj mimo vyučovania alebo ako súčasť inej hodiny.\n\n**Slnečné dekorácie**\nPozrite si tabuľku [Základy informatiky – aktivity bez počítača](https://code.org/curriculum/unplugged) alebo kliknite na odkaz [Slnečné dekorácie](https://studio.code.org/s/course3/stage/4/puzzle/1). Na túto aktivitu sú potrebné isté pomôcky z dielne, ale pomôže študentom pochopiť prínos volania viacerých funkcií.\n\n\\*\\*Napísanie vlastnej piesne \\*\\*\n\n-   Začnite tým, že spolu napíšete refrén. Potom ho opakujte medzi veršami, ktoré napíšete okolo tohto refrénu.\n-   Upravte refrén a potom sa zamyslite nad tým, o koľko jednoduchšie je ho zmeniť iba na jednom mieste.\n-   Znova zmeňte refrén tak, aby bol omnoho dlhší ako pôvodne.\n-   Pridajte druhý refrén a striedajte refrény medzi veršami.\n\n**Napísanie programu ako piesne**\n\n-   Čo keby sme piesne mali hrať  ako herci na javisku, nie ich spievať? Zrazu by sa z refrénu stala funkcia pozostávajúca z opakovaných akcií, nie len slov.\n-   Pomocou konceptov šípok z lekcie Programovanie na štvorčekovom papieri vytvorte program s množstvom opakovaných pokynov.\n    -   Zakrúžkujte tieto opakované akcie, aby žiaci videli, v ktorom kroku práve sú.\n    -   Definujte funkciu s názvom „Refrén“ nad programom.\n    -   Prečiarknite všetky časti s opakovanými akciami v programe a miesto nich napíšte „Refrén“.\n-   Opakujte, kým trieda nedokáže tento proces vykonať iba s drobnými usmerneniami."
         },
         "0b96a39e-810a-4444-89ff-3485fd7882ad": {
           "description": "### Rap o fosíliách (45 až 60 minút)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informatika + anglický jazyk + prírodné vedy**\n\n[Rap o fosíliách](https://docs.google.com/document/d/1WVISJLZToK70QxehPSo127FMSrKik2rK2AdPuaPPxmQ/edit#) je nepovinná aktivita v súlade s normami Common Core ELA a  Next Generation Science, ktorú vytvorila naša komunita učiteľov. Žiaci si rozšíria svoje poznatky o funkciách pri písaní rapovej piesne s odbornou terminológiou a poznatkov o fosíliách a vrstvách hornín. Naučia sa, ako „zavolať funkciu“ pomocou poskytnutej „definovanej funkcie“ alebo refrénu rapovej piesne.\n\n_Dotknuté normy:_\n\n-   **CCSS.ELA-LITERACY.W.4.2.D:** Používanie presných jazykových výrazov a odbornej slovnej zásoby na informovanie o téme alebo jej vysvetlenie.\n\n-   **CCSS.ELA-LITERACY.W.4.7:** Uskutočnenie krátkych výskumných projektov na budovanie poznatkov skúmaním rôznych aspektov témy.\n\n-   **CCSS.ELA-LITERACY.SL.4.5:** Pridanie vhodných zvukových záznamov a vizuálnych obrazov do prezentácií na rozvinutie najdôležitejších myšlienok alebo motívov.\n\n-   **NGSS.4-ESS1-1:** Identifikácia dôkazov na základe vzorov v horninách a fosílií vo vrstvách hornín na podporu vysvetlenia postupných zmien v krajine."

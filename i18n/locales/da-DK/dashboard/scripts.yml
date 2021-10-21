@@ -2394,6 +2394,8 @@ da:
           lessons:
             Virus Simulation for Code Bytes:
               name: Kodning af en simulation
+            Outbreak:
+              name: Kodning af en simulation
           lesson_groups:
             outbreak:
               display_name: Udbrud Simulering
@@ -2698,3 +2700,4 @@ da:
           lessons:
             lesson-1:
               name: Stave-bien
+          title: Stave-bien

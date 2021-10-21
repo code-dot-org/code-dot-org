@@ -306,6 +306,14 @@
           "word": "crwdns2698105:0crwdne2698105:0",
           "definition": "crwdns2698107:0crwdne2698107:0"
         },
+        "event/outbreak/unversioned": {
+          "word": "crwdns2698487:0crwdne2698487:0",
+          "definition": "crwdns2698489:0crwdne2698489:0"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "crwdns2698491:0crwdne2698491:0",
+          "definition": "crwdns2698493:0crwdne2698493:0"
+        },
         "sprite/coursef/2021": {
           "word": "crwdns2590910:0crwdne2590910:0",
           "definition": "crwdns2590912:0crwdne2590912:0"

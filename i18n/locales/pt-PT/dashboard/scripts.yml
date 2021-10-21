@@ -3956,3 +3956,8 @@ pt:
           lessons:
             lesson-1:
               name: Escrever com a abelha
+          title: Escrever com a abelha
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo

@@ -117,7 +117,8 @@
           "dance_callout_05": "Proqramına yeni hadisə əlavə et"
         },
         "CourseF_outbreak2": {
-          "pointerlocation": "Mövzu blokunu bura çəkin."
+          "pointerlocation": "Mövzu blokunu bura çəkin.",
+          "minitoolbox": "Bloku genişləndirmək üçün bura basın."
         },
         "Dance_2019_01": {
           "dance_callout_01": "Burada rəqqasın növünü seçin."
@@ -357,7 +358,8 @@
           "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz."
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz."
+          "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz.",
+          "stone_block_2": "Boz bloklar atıla bilməz. "
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
@@ -612,6 +614,34 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Yeni blok!",
           "poetry_remove_sprite": "Yeni blok!"
+        },
+        "CourseD_Dance_Party_06": {
+          "dance_callout_06": "Yeni rəqqasənizi bura əlavə edin"
+        },
+        "Dance_Party_06": {
+          "dance_callout_06": "Yeni rəqqasənizi bura əlavə edin"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Kodunun necə işlədiyini özünə və ya müəlliminizə qeyd etmək üçün bu blokdan istifadə et. "
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Bu kod evini tikməyə başlayacaq. Bitirə bilərsən? "
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Burada bloklar qoyaraq hərəkətləri təkrarla"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Bu kod lavanı yoxlayacaq, irəliləmək üçün bir əmr əlavə edə bilərsən mi? "
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları birləşdirəndən sonra, proqramı başlatmaq üçün 'icra et' düyməsinə basın."
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Bu ilk tapmacandır! Bunlar çətin olmaq üçündür və bir neçə cəhd tələb edə bilər.",
+          "courseC_maze_programming7_2": "Bu bloklar daşdan düzəlib və atıla bilməzlər."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Tapmacanı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer buradır."
         }
       }
     }

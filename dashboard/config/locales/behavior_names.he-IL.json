@@ -2668,6 +2668,21 @@
           "moving west": "לנוע מערבה",
           "patrolling": "לסייר",
           "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         }
       }
     }

@@ -290,8 +290,14 @@
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": "Actividad de cierre"
         },
-        "06dfaf3b-e495-4577-baa6-883a782e198f": {
-          "name": "Niveles"
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Actividad previa"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Actividad Principal"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Actividad de cierre"
         },
         "f652e4d2-c712-4cff-a011-f1dcea192263": {
           "name": "Actividad previa"
@@ -871,6 +877,15 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Actividad de cierre"
+        },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "Aprende: ¿Qué es la maldad?"
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Realiza: Online vs. Cara a Cara"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Explorar: STOP a la Maldad"
         },
         "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
           "name": "Recapitulación: Momento de Pausa y Reflexión"

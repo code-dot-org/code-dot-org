@@ -56,7 +56,7 @@ cn:
   social_hoc2019_coming_dates: 编程一小时将于 2019 年 12 月 9 日至 15 日举办。计算机科学对于每个学生而言都是重要的基础知识。
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: "  保护海洋的人工智能 (AI for Oceans)"
   oceans_landing_description: "  了解机器学习和 AI 的道德使用。"
   cs_for_good_hashtag: "#CSforGood"
@@ -110,6 +110,12 @@ cn:
   hoc_overview_oceans_tutorial_header: "  保护海洋的人工智能 (AI for Oceans)"
   hoc_overview_oceans_tutorial_desc: "  了解人工智能 (AI)、机器学习、训练数据和偏见，同时探索伦理问题以及如何利用 AI
     来解决世界问题。"
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -175,6 +181,8 @@ cn:
   hourofcode_homepage_hoc2018_header_line2: 4 至 104 岁均可参与。
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
   codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: 使用代码方块，带领艾莉克斯或史蒂夫踏上《我的世界》冒险旅程。
   codeorg_homepage_hoc2019_dance_heading: 尝试新版 <span class="highlight-word">Dance&nbsp;Party!</span>
   codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
@@ -1318,7 +1326,7 @@ cn:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -3499,8 +3507,9 @@ cn:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -4487,8 +4496,7 @@ cn:
   tutorial_codespeakhappy_language: 英文
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: 英文
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: 英文
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -5873,7 +5881,7 @@ cn:
   tutorial_codespeakhappy_string_platforms: Chrome、 火狐浏览器
   tutorial_grokimage_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_icomputelearn_string_platforms: 所有高版本浏览器
-  tutorial_rpstress_string_platforms: Chrome、 火狐浏览器
+  tutorial_rpstress_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_vidcodeanimojies_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad

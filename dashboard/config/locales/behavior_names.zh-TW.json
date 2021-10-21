@@ -3010,6 +3010,25 @@
           "wobbling": "搖晃",
           "moving west and looping": "向西移動並循環",
           "moving east and looping": "向東移動並循環"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "徘徊",
+          "moving east": "向東移動",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "shrinking": "縮小",
+          "growing": "放大",
+          "moving south": "向南移動",
+          "moving north": "向北移動",
+          "jittering": "抖動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "moving with arrow keys": "使用方向鍵移動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "wobbling": "搖晃",
+          "moving west and looping": "向西移動並循環",
+          "moving east and looping": "向東移動並循環"
         }
       }
     }

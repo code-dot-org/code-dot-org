@@ -14997,6 +14997,8 @@ uz:
           lessons:
             Virus Simulation for Code Bytes:
               name: Simulyatsiyani kodlash
+            Outbreak:
+              name: Simulyatsiyani kodlash
         apps-for-good:
           title: Foydali ilovalar
         2021drafting:
@@ -17220,3 +17222,11 @@ uz:
           lessons:
             lesson-1:
               name: Bilimdon Asalari
+          title: Bilimdon Asalari
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent

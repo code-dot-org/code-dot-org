@@ -1,0 +1,469 @@
+{
+  "script": {
+    "name": "csa-examples-21",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-10-18 13:58:24 UTC",
+    "published_state": "beta",
+    "seeding_key": {
+      "script.name": "csa-examples-21"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Unit 1 Projects",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Unit 2 Projects",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Unit 3 Projects",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Unit 4 Projects",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Unit 5 Projects",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Unit 6 Projects",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Unit 7 Projects",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Unit 8 Projects",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "7a0f7b73-4a4d-4ddb-8d1b-ed1a613c4a20",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a0f7b73-4a4d-4ddb-8d1b-ed1a613c4a20",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "20a024ff-bdd1-4509-85d9-9540cf74f150",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20a024ff-bdd1-4509-85d9-9540cf74f150",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "c8e771ad-f8fe-41c0-b665-b94dbde5b999",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8e771ad-f8fe-41c0-b665-b94dbde5b999",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "15b3888c-8d7d-4037-8f1a-616679dfdd1d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15b3888c-8d7d-4037-8f1a-616679dfdd1d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "4cff85b2-6112-4cc0-8615-ef6a318d9bbc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4cff85b2-6112-4cc0-8615-ef6a318d9bbc",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "f6d5bd54-920a-4415-a470-72f1272085a0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6d5bd54-920a-4415-a470-72f1272085a0",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "2c6c9067-c5c1-417c-a74e-e02d1646959a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c6c9067-c5c1-417c-a74e-e02d1646959a",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    },
+    {
+      "key": "1c82cedb-2d84-468b-8775-d0cbeb938e7f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c82cedb-2d84-468b-8775-d0cbeb938e7f",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "33bcabc2-1941-43aa-8c85-9e991432ec76",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asphalt Art Project [The Neighborhood]"
+      },
+      "seeding_key": {
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76",
+        "lesson_activity.key": "7a0f7b73-4a4d-4ddb-8d1b-ed1a613c4a20"
+      }
+    },
+    {
+      "key": "24df2ae0-84fd-484c-8228-cc421f264a71",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "24df2ae0-84fd-484c-8228-cc421f264a71",
+        "lesson_activity.key": "20a024ff-bdd1-4509-85d9-9540cf74f150"
+      }
+    },
+    {
+      "key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537",
+        "lesson_activity.key": "c8e771ad-f8fe-41c0-b665-b94dbde5b999"
+      }
+    },
+    {
+      "key": "a8ddeb84-4fbf-414e-8a9a-919c53edec35",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a8ddeb84-4fbf-414e-8a9a-919c53edec35",
+        "lesson_activity.key": "15b3888c-8d7d-4037-8f1a-616679dfdd1d"
+      }
+    },
+    {
+      "key": "9c799a63-f581-4b24-b45b-68771463e20d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9c799a63-f581-4b24-b45b-68771463e20d",
+        "lesson_activity.key": "4cff85b2-6112-4cc0-8615-ef6a318d9bbc"
+      }
+    },
+    {
+      "key": "13f99c8f-3afc-4728-82cb-aaa70b0dbaac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "13f99c8f-3afc-4728-82cb-aaa70b0dbaac",
+        "lesson_activity.key": "f6d5bd54-920a-4415-a470-72f1272085a0"
+      }
+    },
+    {
+      "key": "be85e2a9-f796-4f37-ad01-ea4c77c6f54e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "be85e2a9-f796-4f37-ad01-ea4c77c6f54e",
+        "lesson_activity.key": "2c6c9067-c5c1-417c-a74e-e02d1646959a"
+      }
+    },
+    {
+      "key": "9c29d439-6ae3-4136-adde-6fee20351eac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9c29d439-6ae3-4136-adde-6fee20351eac",
+        "lesson_activity.key": "1c82cedb-2d84-468b-8775-d0cbeb938e7f"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Asphalt Art Project [The Neighborhood]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Asphalt Art Project [The Neighborhood]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Asphalt Art Project [The Neighborhood]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 3"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 1",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 2",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 3",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}
