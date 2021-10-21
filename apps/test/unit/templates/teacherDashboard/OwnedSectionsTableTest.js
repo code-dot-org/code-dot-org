@@ -2,12 +2,8 @@ import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import * as Table from 'reactabular-table';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux
-} from '@cdo/apps/redux';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
@@ -19,14 +15,7 @@ import {
   GRADES
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
-import {
-  setRosterProvider,
-  removeSection,
-  toggleSectionHidden,
-  importOrUpdateRoster,
-  sectionCode,
-  sectionName
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const sectionRowData = [
   {
@@ -89,8 +78,8 @@ const sectionGradesRowData = [
     studentCount: 3,
     code: 'ABC',
     courseId: 29,
-    grade: '12',
-    loginType: 'google_classroom',
+    grade: 'K',
+    loginType: SectionLoginType.picture,
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
@@ -102,8 +91,8 @@ const sectionGradesRowData = [
     studentCount: 4,
     code: 'DEF',
     courseId: 29,
-    grade: '4',
-    loginType: 'google_classroom',
+    grade: '1',
+    loginType: SectionLoginType.picture,
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
@@ -116,8 +105,8 @@ const sectionGradesRowData = [
     code: 'GHI',
     courseId: 29,
     scriptId: 168,
-    grade: 'K',
-    loginType: 'google_classroom',
+    grade: '4',
+    loginType: SectionLoginType.picture,
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
@@ -128,8 +117,8 @@ const sectionGradesRowData = [
     name: 'sectionD',
     studentCount: 0,
     code: 'JKL',
-    grade: '1',
-    loginType: 'google_classroom',
+    grade: '10',
+    loginType: SectionLoginType.picture,
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
@@ -142,10 +131,10 @@ const sectionGradesRowData = [
     code: 'MNO',
     courseId: 29,
     scriptId: 168,
-    grade: '10',
+    grade: '12',
     providerManaged: false,
     hidden: false,
-    loginType: 'google_classroom',
+    loginType: SectionLoginType.picture,
     assignmentNames: [],
     assignmentPaths: []
   },
@@ -154,10 +143,10 @@ const sectionGradesRowData = [
     name: 'sectionF',
     studentCount: 0,
     code: 'PQR',
-    grade: null,
+    grade: 'Other',
     providerManaged: false,
     hidden: false,
-    loginType: 'google_classroom',
+    loginType: SectionLoginType.picture,
     assignmentNames: [],
     assignmentPaths: []
   },
@@ -166,29 +155,40 @@ const sectionGradesRowData = [
     name: 'sectionG',
     studentCount: 0,
     code: 'STU',
-    grade: 'Other',
+    grade: null,
     providerManaged: false,
     hidden: false,
-    loginType: 'google_classroom',
+    loginType: SectionLoginType.picture,
     assignmentNames: [],
     assignmentPaths: []
   }
 ];
 
+const initialState = {
+  teacherSections: {
+    sections: {
+      '1': sectionGradesRowData[0],
+      '2': sectionGradesRowData[1],
+      '3': sectionGradesRowData[2],
+      '4': sectionGradesRowData[3],
+      '5': sectionGradesRowData[4],
+      '6': sectionGradesRowData[5],
+      '7': sectionGradesRowData[6]
+    }
+  }
+};
+
 describe('OwnedSectionsTable Sorting', () => {
-  stubRedux();
-  registerReducers({
-    removeSection,
-    toggleSectionHidden,
-    updateRoster: importOrUpdateRoster,
-    setRosterProvider,
-    sectionCode: sectionCode({}, 1),
-    sectionName: sectionName({}, 1)
-  });
+  const store = createStore(
+    combineReducers({
+      teacherSections
+    }),
+    initialState
+  );
 
   it('can be sorted correctly by grade', () => {
     const wrapper = mount(
-      <Provider store={getStore()}>
+      <Provider store={store}>
         <OwnedSectionsTable
           sectionIds={[1, 2, 3, 4, 5, 6, 7]}
           sectionRows={sectionGradesRowData}
@@ -196,30 +196,44 @@ describe('OwnedSectionsTable Sorting', () => {
         />
       </Provider>
     );
-    wrapper.setState({sections: []});
-    const store = getStore();
-    store.dispatch(sectionCode(wrapper.getState(), 1));
-    store.dispatch(sectionName(wrapper.getState(), 1));
 
     // first click should sort sections K-12
     wrapper.find('.uitest-grade-header').simulate('click');
-    const rows = wrapper.find('.uitest-sorted-rows');
-    console.log(rows);
-    expect(rows.rows[0].grade).to.equal('K');
-    expect(rows.rows[1].grade).to.equal('1');
-    expect(rows.rows[2].grade).to.equal('4');
-    expect(rows.rows[3].grade).to.equal('10');
+    //const rows = wrapper.find('.uitest-sorted-rows');
+
+    const tbody = wrapper.find('tbody');
+    expect(tbody.length).to.equal(1);
+    const rows = tbody.find('tr');
+    expect(rows.length).to.equal(7);
+    // Check grades for each row match expected order
+    rows.forEach((tr, rowIndex) => {
+      const cells = tr.find('td');
+      // If looking at the null grade, expect empty string
+      if (rowIndex === 6) {
+        expect(cells.at(2).text()).to.equal('');
+      } else {
+        expect(cells.at(2).text()).to.equal(
+          sectionGradesRowData[rowIndex].grade
+        );
+      }
+    });
     expect(GRADES.length).to.equal(15);
 
-    // second click should sort sections 12-K
+    // second click should sort sections in reverse order
     wrapper.find('.uitest-grade-header').simulate('click');
-    const reverseRows = wrapper.find('.uitest-sorted-rows');
-    console.log(reverseRows);
-    expect(reverseRows.rows[0].grade).to.equal(null);
-    expect(reverseRows.rows[1].grade).to.equal('Other');
-    expect(reverseRows.rows[2].grade).to.equal('12');
-    expect(reverseRows.rows[3].grade).to.equal('10');
-    restoreRedux();
+    const body = wrapper.find('tbody');
+    const trows = body.find('tr');
+    trows.forEach((tr, rowIndex) => {
+      const cells = tr.find('td');
+      if (rowIndex === 0) {
+        expect(cells.at(2).text()).to.equal('');
+      } else {
+        expect(cells.at(2).text()).to.equal(
+          // subtract index from section count to check reverse order
+          sectionGradesRowData[6 - rowIndex].grade
+        );
+      }
+    });
   });
 });
 
