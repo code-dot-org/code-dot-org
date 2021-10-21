@@ -78,12 +78,13 @@ class AnimationPickerListItem extends React.Component {
     ];
 
     return (
-      <div
+      <button
         style={rootStyle}
         onClick={onClick}
         className="uitest-animation-picker-item"
-        onMouseEnter={() => this.setState({hover: true})}
-        onMouseLeave={() => this.setState({hover: false})}
+        type="button"
+        onFocus={() => this.setState({hover: true})}
+        onBlur={() => this.setState({hover: false})}
       >
         <div style={thumbnailStyleWithHover}>
           {animationProps && (
@@ -115,7 +116,7 @@ class AnimationPickerListItem extends React.Component {
               style={multiSelectIconStyle}
             />
           )}
-      </div>
+      </button>
     );
   }
 }
@@ -125,12 +126,17 @@ const styles = {
     float: 'left',
     width: THUMBNAIL_SIZE,
     textAlign: 'center',
-    marginRight: 10,
-    marginBottom: 10,
-    position: 'relative'
+    margin: '1px 10px 10px 1px',
+    position: 'relative',
+    background: 'none',
+    boxShadow: 'none',
+    border: 0,
+    padding: 2,
+    outline: 'none'
   },
   thumbnail: {
     height: THUMBNAIL_SIZE,
+    width: '100%',
     borderStyle: 'solid',
     borderColor: color.light_gray,
     borderWidth: THUMBNAIL_BORDER_WIDTH,
@@ -151,7 +157,7 @@ const styles = {
   },
   label: {
     marginTop: 3,
-    fontSize: '90%',
+    fontSize: 12,
     whiteSpace: 'nowrap',
     overflow: 'hidden'
   },
