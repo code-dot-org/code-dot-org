@@ -931,8 +931,10 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'should summarize migrated unit in unit group' do
     unit_group = create(:unit_group, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced)
-    unit = create(:script, name: 'single-lesson-script')
+    unit = create(:script, name: 'single-lesson-script', is_migrated: true)
     create(:unit_group_unit, position: 1, unit_group: unit_group, script: unit)
+
+    unit.reload
     summary = unit.summarize
 
     assert_equal 'self_paced', summary[:instructionType]
