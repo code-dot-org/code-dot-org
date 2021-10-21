@@ -4,9 +4,17 @@
 var gridSize = 18;
 var strokeWidth = 11;
 
-var step = 0;
+var leftBarSvgId = "#left-bars-svg";
+var rightBarSvgId = "#right-bars-svg";
+var leftBarImgId = "#left-bars-img";
+var rightBarImgId = "#right-bars-img";
 
-/* Randomize array in-place using Durstenfeld shuffle algorithm */
+var panelIds = [leftBarSvgId, rightBarSvgId];
+
+// Start the sequence in the lull between animated cycles.
+var step = 1;
+
+// Randomize array in-place using Durstenfeld shuffle algorithm.
 function shuffleArray(array) {
   for (var i = array.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
@@ -290,8 +298,6 @@ $(document).ready(function() {
     ]
   ];
 
-  var panelIds = ["#left-bars-svg", "#right-bars-svg"];
-
   // For each panel, shuffle the bars, then draw the initial content.
   var bars = [];
   for (var panel = 0; panel < barDefinitions.length; panel++) {
@@ -311,10 +317,10 @@ $(document).ready(function() {
   });
 
   // Hide the regular images and show the SVGs.
-  $("#left-bars-img").animate({ opacity: 0 }, 1000);
-  $("#right-bars-img").animate({ opacity: 0 }, 1000);
-  $("#left-bars-svg").animate({ opacity: 1 }, 1000);
-  $("#right-bars-svg").animate({ opacity: 1 }, 1000);
+  $(leftBarImgId).animate({ opacity: 0 }, 1000);
+  $(rightBarImgId).animate({ opacity: 0 }, 1000);
+  $(leftBarSvgId).animate({ opacity: 1 }, 1000);
+  $(rightBarSvgId).animate({ opacity: 1 }, 1000);
 
   // Start animating smoothly.
   setInterval(function() {
@@ -385,13 +391,11 @@ function handleResizePanel(panelIdImg, panelIdSvg, constrainToRight) {
 function updateBar(barDefinition, bar, barIndex, step) {
   for (var segment = 0; segment < barDefinition.length; segment++) {
     var offset;
-    var phase = 12 - ((step + barIndex + 0.1 * segment) % 12);
+    var phase = 8 - ((step + barIndex + 0.1 * segment) % 8);
     if (phase > 0 && phase <= 1) {
       offset = 1 + phase;
-    } else if (phase >= 11 && phase <= 12) {
-      offset = 2 + phase - 11;
-    } else if (phase > 12) {
-      offset = 1;
+    } else if (phase >= 7 && phase <= 8) {
+      offset = 2 + phase - 7;
     } else {
       offset = 2;
     }
