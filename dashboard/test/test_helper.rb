@@ -172,7 +172,7 @@ class ActiveSupport::TestCase
       # create a placeholder factory-provided Script if we don't already have a
       # fixture-provided one
       script = Script.find_by_name(script_name) ||
-        create(:script, :with_levels, levels_count: 5, name: script_name)
+        create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
 
       # make sure that all the Script's ScriptLevels have associated Levels.
       # This is expected during the interim period where we are no longer
