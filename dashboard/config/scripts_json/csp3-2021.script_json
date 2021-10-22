@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-14 23:17:31 UTC",
+    "serialized_at": "2021-10-22 16:39:08 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp3-2021"
@@ -4117,7 +4117,8 @@
       "key": "how_computers_work_-_what_makes_a_computer_a_computer",
       "properties": {
         "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "download_url": "https://videos.code.org/cs-discoveries/concept/02_WhatMakesAComputer_sm.mp4"
       },
       "seeding_key": {
         "resource.key": "how_computers_work_-_what_makes_a_computer_a_computer"
@@ -4129,7 +4130,8 @@
       "key": "how_to_debug",
       "properties": {
         "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4"
       },
       "seeding_key": {
         "resource.key": "how_to_debug"
