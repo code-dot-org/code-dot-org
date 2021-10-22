@@ -9038,7 +9038,8 @@ it-IT:
         - text: BB-8 si sposterà 5 volte e recupererà tutti i rottami metallici.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
+        - text: BB-8 si muoverà solo di 3 caselle.
+          feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         questions:
         - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
@@ -9074,7 +9075,8 @@ it-IT:
         - text: C
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
-        - feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
+        - text: Nessuno dei precedenti
+          feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         markdown: |+
           <table>
@@ -9362,7 +9364,7 @@ it-IT:
         - {}
         - {}
         - correct: true
-        - {}
+        - text: Il personaggio farà prima un giro e dopo si sposterà.
         questions:
         - {}
       courseF_labels_predict_multi:
@@ -9521,3 +9523,9 @@ it-IT:
         title: 'Design Centrato dell''Utente: Test Post-Progetto'
       CSD Web Development Post-Project Test:
         title: Testo Post-Progetto di Sviluppo Web
+      courseF_intro_apps:
+        display_name: App del Laboratorio di personaggi
+      courseF_sprites_freeplay:
+        display_name: 'Personaggi: gioco gratuito'
+      courseF_sprites_practice:
+        display_name: La pratica dei personaggi
