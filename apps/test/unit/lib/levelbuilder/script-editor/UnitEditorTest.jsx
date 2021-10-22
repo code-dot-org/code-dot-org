@@ -138,6 +138,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('select').length).to.equal(4);
       expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
+      expect(wrapper.find('InstructionTypeDropdown').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
       expect(wrapper.find('#script_text').length).to.equal(0);

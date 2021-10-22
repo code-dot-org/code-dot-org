@@ -142,6 +142,7 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('CollapsibleEditorSection').length, 4);
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
     assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+    assert.equal(wrapper.find('InstructionTypeDropdown').length, 1);
   });
 
   it('has correct markdown for preview of course teacher and student description', () => {
