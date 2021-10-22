@@ -11,6 +11,7 @@ import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 import CodeReviewDataApi from './codeReview/CodeReviewDataApi';
 import ReviewNavigator from './codeReview/ReviewNavigator';
+import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
@@ -30,6 +31,7 @@ class ReviewTab extends Component {
 
   state = {
     initialLoadCompleted: false,
+    loadingReviewData: true,
     reviewCheckboxEnabled: false,
     isReadyForReview: false,
     reviewableProjectId: '',
@@ -64,12 +66,22 @@ class ReviewTab extends Component {
     `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
 
   componentDidMount() {
-    const {channelId, serverLevelId, serverScriptId} = this.props;
+    this.loadReviewData();
+  }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.loadingReviewData && !this.state.loadingReviewData) {
+      this.props.onLoadComplete();
+    }
+  }
+
+  loadReviewData = () => {
+    this.setState({loadingReviewData: true});
+    const {channelId, serverLevelId, serverScriptId} = this.props;
     // If there's no channelId (happens when a teacher is viewing as a student who has not done any work on a level),
     // do not make API calls that require a channelId
     if (!channelId) {
-      this.setState({initialLoadCompleted: true});
+      this.setState({loadingReviewData: false});
       return;
     }
 
@@ -79,14 +91,14 @@ class ReviewTab extends Component {
       serverScriptId
     );
 
-    const initialLoadPromises = [];
+    const loadPromises = [];
 
     const setComments = data => this.setState({comments: data});
-    initialLoadPromises.push(
+    loadPromises.push(
       this.dataApi.getCodeReviewCommentsForProject(setComments)
     );
 
-    initialLoadPromises.push(
+    loadPromises.push(
       this.dataApi
         .getPeerReviewStatus()
         .done(data => {
@@ -106,16 +118,14 @@ class ReviewTab extends Component {
         })
     );
 
-    Promise.all(initialLoadPromises).finally(() => {
-      this.setState({initialLoadCompleted: true});
+    Promise.all(loadPromises).finally(() => {
+      this.setState({loadingReviewData: false});
     });
-  }
+  };
 
-  componentDidUpdate(prevProps, prevState) {
-    if (!prevState.initialLoadCompleted && this.state.initialLoadCompleted) {
-      this.props.onLoadComplete();
-    }
-  }
+  onClickRefresh = () => {
+    this.loadReviewData();
+  };
 
   loadPeers = (onSuccess, onFailure) => {
     this.dataApi
@@ -343,7 +353,7 @@ class ReviewTab extends Component {
       channelId
     } = this.props;
     const {
-      initialLoadCompleted,
+      loadingReviewData,
       comments,
       forceRecreateEditorKey,
       isReadyForReview,
@@ -362,7 +372,7 @@ class ReviewTab extends Component {
       );
     }
 
-    if (!initialLoadCompleted) {
+    if (loadingReviewData) {
       return (
         <div style={styles.loadingContainer}>
           <Spinner size="large" />
@@ -372,6 +382,14 @@ class ReviewTab extends Component {
 
     return (
       <div style={styles.reviewsContainer}>
+        <div>
+          <Button
+            key="refresh"
+            text="refresh"
+            onClick={this.onClickRefresh}
+            color="gray"
+          />
+        </div>
         <div style={styles.reviewHeader}>
           {codeReviewEnabled && !viewAsTeacher && (
             <>
