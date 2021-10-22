@@ -971,6 +971,210 @@
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "آپ 'دہرائیں' لوپ میں ایک سے زیادہ بلاک ڈال سکتے ہیں۔",
           "course_starWars_loops9_c": "اس پزل کو حل کرنے کے لیے آپ کو بائیں مڑنے کی ضرورت نہیں ہے۔ آپ کے تمام موڑ دائیں طرف ہو سکتے ہیں۔ \n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+        },
+        "HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "سیاہ کنکریٹ کے اردگرد **پریزمارین** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) کی ایک دیوار تعمیر کریں۔ یہ **کنڈیوٹ** [][1] کو فعال کرے گی اور آپ کا چیلنج مکمل کرے گی!"
+        },
+        "HOC 2018 Level_7a": {
+          "aquatic7": "خزانے تک پہنچنے کے لیے مرجان کو بطور راستے کے مقامات استعمال کریں۔"
+        },
+        "HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "اس بحری یادگار میں کہیں ایک **سکواڈ** [][0] چھپا ہوا ہے، کیا آپ اسے تلاش کر سکتے ہیں؟"
+        },
+        "courseB_starWars_prog1": {
+          "courseB_starWars_prog1_a": "ایک وقت میں ایک بلاک شامل کرنے کی کوشش کریں، پھر کیا ہوتا ہے دیکھنے کے لیے \"چلائیں\" پر کلک کریں۔",
+          "courseB_starWars_prog1_b": "آپ اس پزل کو حل کرنے کے لیے مشرق کی جانب بڑھنا چاہیں گے۔ آپ کو کتنی دور تک جانے کی ضرورت ہے؟\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog1_2018": {
+          "courseB_starWars_prog1_a": "ایک وقت میں ایک بلاک شامل کرنے کی کوشش کریں، پھر کیا ہوتا ہے دیکھنے کے لیے \"چلائیں\" پر کلک کریں۔",
+          "courseB_starWars_prog1_b": "آپ اس پزل کو حل کرنے کے لیے مشرق کی جانب بڑھنا چاہیں گے۔ آپ کو کتنی دور تک جانے کی ضرورت ہے؟\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog1_2019": {
+          "courseB_starWars_prog1_a": "ایک وقت میں ایک بلاک شامل کرنے کی کوشش کریں، پھر کیا ہوتا ہے دیکھنے کے لیے \"چلائیں\" پر کلک کریں۔",
+          "courseB_starWars_prog1_b": "آپ اس پزل کو حل کرنے کے لیے مشرق کی جانب بڑھنا چاہیں گے۔ آپ کو کتنی دور تک جانے کی ضرورت ہے؟\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog1_2020": {
+          "courseB_starWars_prog1_a": "ایک وقت میں ایک بلاک شامل کرنے کی کوشش کریں، پھر کیا ہوتا ہے دیکھنے کے لیے \"چلائیں\" پر کلک کریں۔",
+          "courseB_starWars_prog1_b": "آپ اس پزل کو حل کرنے کے لیے مشرق کی جانب بڑھنا چاہیں گے۔ آپ کو کتنی دور تک جانے کی ضرورت ہے؟\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog1_2021": {
+          "courseB_starWars_prog1_a": "ایک وقت میں ایک بلاک شامل کرنے کی کوشش کریں، پھر کیا ہوتا ہے دیکھنے کے لیے \"چلائیں\" پر کلک کریں۔",
+          "courseB_starWars_prog1_b": "آپ اس پزل کو حل کرنے کے لیے مشرق کی جانب بڑھنا چاہیں گے۔ آپ کو کتنی دور تک جانے کی ضرورت ہے؟\n\n<xml><block type=\"studio_moveEast\"/></xml>"
+        },
+        "courseB_starWars_prog2": {
+          "courseB_starWars_prog2_a": "اس مسئلے کو دو حصوں میں منقسم کریں۔ سکریپ میٹل کا ایک انبار حاصل کریں، پھر معلوم کریں کہ دوسرے والا کیسے حاصل کرنا ہے۔"
+        },
+        "courseB_starWars_prog2_2018": {
+          "courseB_starWars_prog2_a": "اس مسئلے کو دو حصوں میں منقسم کریں۔ سکریپ میٹل کا ایک انبار حاصل کریں، پھر معلوم کریں کہ دوسرے والا کیسے حاصل کرنا ہے۔"
+        },
+        "courseB_starWars_prog2_2019": {
+          "courseB_starWars_prog2_a": "اس مسئلے کو دو حصوں میں منقسم کریں۔ سکریپ میٹل کا ایک انبار حاصل کریں، پھر معلوم کریں کہ دوسرے والا کیسے حاصل کرنا ہے۔"
+        },
+        "courseB_starWars_prog2_2020": {
+          "courseB_starWars_prog2_a": "اس مسئلے کو دو حصوں میں منقسم کریں۔ سکریپ میٹل کا ایک انبار حاصل کریں، پھر معلوم کریں کہ دوسرے والا کیسے حاصل کرنا ہے۔"
+        },
+        "courseB_starWars_prog2_2021": {
+          "courseB_starWars_prog2_a": "اس مسئلے کو دو حصوں میں منقسم کریں۔ سکریپ میٹل کا ایک انبار حاصل کریں، پھر معلوم کریں کہ دوسرے والا کیسے حاصل کرنا ہے۔"
+        },
+        "courseB_starWars_prog3": {
+          "courseB_starWars_prog3_a": "اس پزل کو حل کرنے کے لیے آپ کو 3 راستوں پر جانے کی ضرورت ہوگی۔",
+          "courseB_starWars_prog3_b": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔"
+        },
+        "courseB_starWars_prog3_2018": {
+          "courseB_starWars_prog3_a": "اس پزل کو حل کرنے کے لیے آپ کو 3 راستوں پر جانے کی ضرورت ہوگی۔",
+          "courseB_starWars_prog3_b": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔"
+        },
+        "courseB_starWars_prog3_2019": {
+          "courseB_starWars_prog3_a": "اس پزل کو حل کرنے کے لیے آپ کو 3 راستوں پر جانے کی ضرورت ہوگی۔",
+          "courseB_starWars_prog3_b": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔"
+        },
+        "courseB_starWars_prog3_2020": {
+          "courseB_starWars_prog3_a": "اس پزل کو حل کرنے کے لیے آپ کو 3 راستوں پر جانے کی ضرورت ہوگی۔",
+          "courseB_starWars_prog3_b": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔"
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "اس پزل کو حل کرنے کے لیے آپ کو 3 راستوں پر جانے کی ضرورت ہوگی۔",
+          "courseB_starWars_prog3_b": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔"
+        },
+        "courseB_starWars_prog4": {
+          "courseB_starWars_prog4_a": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔",
+          "courseB_starWars_prog4_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog4_2018": {
+          "courseB_starWars_prog4_a": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔",
+          "courseB_starWars_prog4_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog4_2019": {
+          "courseB_starWars_prog4_a": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔",
+          "courseB_starWars_prog4_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog4_2020": {
+          "courseB_starWars_prog4_a": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔",
+          "courseB_starWars_prog4_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog4_2021": {
+          "courseB_starWars_prog4_a": "ایک وقت میں کوڈ کا ایک حصہ بنائیں۔ یہ جاننے کے لیے اسے چلائیں کہ وہاں سے کہاں جانا ہے۔",
+          "courseB_starWars_prog4_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog5": {
+          "courseB_starWars_prog5_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog5_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog5_c": "اپنی انگلی کے ساتھ اس پیٹرن کا سراغ لگائیں۔ جب آپ بڑھیں تو دھات کے ٹکڑوں کو گنیں۔",
+          "courseB_starWars_prog5_da": "دیکھیں کہ کیا ہوتا ہے اگر آپ سیڑھی-قدم پزل والا وہی حل استعمال کرتے ہیں:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog5_2018": {
+          "courseB_starWars_prog5_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog5_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog5_c": "اپنی انگلی کے ساتھ اس پیٹرن کا سراغ لگائیں۔ جب آپ بڑھیں تو دھات کے ٹکڑوں کو گنیں۔",
+          "courseB_starWars_prog5_da": "دیکھیں کہ کیا ہوتا ہے اگر آپ سیڑھی-قدم پزل والا وہی حل استعمال کرتے ہیں:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog5_2019": {
+          "courseB_starWars_prog5_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog5_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog5_c": "اپنی انگلی کے ساتھ اس پیٹرن کا سراغ لگائیں۔ جب آپ بڑھیں تو دھات کے ٹکڑوں کو گنیں۔",
+          "courseB_starWars_prog5_da": "دیکھیں کہ کیا ہوتا ہے اگر آپ سیڑھی-قدم پزل والا وہی حل استعمال کرتے ہیں:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog5_2020": {
+          "courseB_starWars_prog5_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog5_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog5_c": "اپنی انگلی کے ساتھ اس پیٹرن کا سراغ لگائیں۔ جب آپ بڑھیں تو دھات کے ٹکڑوں کو گنیں۔",
+          "courseB_starWars_prog5_da": "دیکھیں کہ کیا ہوتا ہے اگر آپ سیڑھی-قدم پزل والا وہی حل استعمال کرتے ہیں:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog5_2021": {
+          "courseB_starWars_prog5_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog5_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog5_c": "اپنی انگلی کے ساتھ اس پیٹرن کا سراغ لگائیں۔ جب آپ بڑھیں تو دھات کے ٹکڑوں کو گنیں۔",
+          "courseB_starWars_prog5_da": "دیکھیں کہ کیا ہوتا ہے اگر آپ سیڑھی-قدم پزل والا وہی حل استعمال کرتے ہیں:\n\n![](https://images.code.org/866b4121069423bf03d92dcb8f2276af-image-1503709785988.09.24.png)"
+        },
+        "courseB_starWars_prog6": {
+          "courseB_starWars_prog6_a": "یہ پیٹرن فی سمت دو حرکات کے ساتھ فقط ایک سیڑھی کا قدم ہے!",
+          "courseB_starWars_prog6_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog6_2018": {
+          "courseB_starWars_prog6_a": "یہ پیٹرن فی سمت دو حرکات کے ساتھ فقط ایک سیڑھی کا قدم ہے!",
+          "courseB_starWars_prog6_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog6_2019": {
+          "courseB_starWars_prog6_a": "یہ پیٹرن فی سمت دو حرکات کے ساتھ فقط ایک سیڑھی کا قدم ہے!",
+          "courseB_starWars_prog6_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog6_2020": {
+          "courseB_starWars_prog6_a": "یہ پیٹرن فی سمت دو حرکات کے ساتھ فقط ایک سیڑھی کا قدم ہے!",
+          "courseB_starWars_prog6_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog6_2021": {
+          "courseB_starWars_prog6_a": "یہ پیٹرن فی سمت دو حرکات کے ساتھ فقط ایک سیڑھی کا قدم ہے!",
+          "courseB_starWars_prog6_b": "مختصر کوڈ کے لیے 'دہرائیں' بلاک استعمال کرنے کی کوشش کریں۔ \n\n<xml>  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog7": {
+          "courseB_starWars_prog7_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog7_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog7_c": "اس پزل پر بڑا سیڑھی کا قدم پیٹرن بنانے کی کوشش کریں۔ کیا یہ تمام سکریپ دھات کا احاطہ کرتا ہے؟"
+        },
+        "courseB_starWars_prog7_2018": {
+          "courseB_starWars_prog7_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog7_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog7_c": "اس پزل پر بڑا سیڑھی کا قدم پیٹرن بنانے کی کوشش کریں۔ کیا یہ تمام سکریپ دھات کا احاطہ کرتا ہے؟"
+        },
+        "courseB_starWars_prog7_2019": {
+          "courseB_starWars_prog7_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog7_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog7_c": "اس پزل پر بڑا سیڑھی کا قدم پیٹرن بنانے کی کوشش کریں۔ کیا یہ تمام سکریپ دھات کا احاطہ کرتا ہے؟"
+        },
+        "courseB_starWars_prog7_2020": {
+          "courseB_starWars_prog7_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog7_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog7_c": "اس پزل پر بڑا سیڑھی کا قدم پیٹرن بنانے کی کوشش کریں۔ کیا یہ تمام سکریپ دھات کا احاطہ کرتا ہے؟"
+        },
+        "courseB_starWars_prog7_2021": {
+          "courseB_starWars_prog7_a": "کیا یہ پیٹرن تھوڑا آخری پزل کی طرح دکھائی نہیں دیتا ہے؟",
+          "courseB_starWars_prog7_b": "BB-8 اس پر لپکتے ہی سکریپ دھات کو پکڑ لے گا۔",
+          "courseB_starWars_prog7_c": "اس پزل پر بڑا سیڑھی کا قدم پیٹرن بنانے کی کوشش کریں۔ کیا یہ تمام سکریپ دھات کا احاطہ کرتا ہے؟"
+        },
+        "courseB_starWars_prog8": {
+          "courseB_starWars_prog8_a": "ان جگہوں کے ایک مجموعے پر واپس جانا ٹھیک ہے جہاں آپ پہلے ہی سفر کر چکے ہیں۔",
+          "courseB_starWars_prog8_b": "'دہرائیں'  بلاک کو استعمال کرنے کی کوشش کریں تاکہ دیکھیں کہ اس کوڈ کا کیا ہوتا ہے جو آپ نے اس کے اندر ڈالا ہے۔\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2018": {
+          "courseB_starWars_prog8_a": "ان جگہوں کے ایک مجموعے پر واپس جانا ٹھیک ہے جہاں آپ پہلے ہی سفر کر چکے ہیں۔",
+          "courseB_starWars_prog8_b": "'دہرائیں'  بلاک کو استعمال کرنے کی کوشش کریں تاکہ دیکھیں کہ اس کوڈ کا کیا ہوتا ہے جو آپ نے اس کے اندر ڈالا ہے۔\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2019": {
+          "courseB_starWars_prog8_a": "ان جگہوں کے ایک مجموعے پر واپس جانا ٹھیک ہے جہاں آپ پہلے ہی سفر کر چکے ہیں۔",
+          "courseB_starWars_prog8_b": "'دہرائیں'  بلاک کو استعمال کرنے کی کوشش کریں تاکہ دیکھیں کہ اس کوڈ کا کیا ہوتا ہے جو آپ نے اس کے اندر ڈالا ہے۔\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2020": {
+          "courseB_starWars_prog8_a": "ان جگہوں کے ایک مجموعے پر واپس جانا ٹھیک ہے جہاں آپ پہلے ہی سفر کر چکے ہیں۔",
+          "courseB_starWars_prog8_b": "'دہرائیں'  بلاک کو استعمال کرنے کی کوشش کریں تاکہ دیکھیں کہ اس کوڈ کا کیا ہوتا ہے جو آپ نے اس کے اندر ڈالا ہے۔\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog8_2021": {
+          "courseB_starWars_prog8_a": "ان جگہوں کے ایک مجموعے پر واپس جانا ٹھیک ہے جہاں آپ پہلے ہی سفر کر چکے ہیں۔",
+          "courseB_starWars_prog8_b": "'دہرائیں'  بلاک کو استعمال کرنے کی کوشش کریں تاکہ دیکھیں کہ اس کوڈ کا کیا ہوتا ہے جو آپ نے اس کے اندر ڈالا ہے۔\n\n<xml>\n  <block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block>\n</xml>"
+        },
+        "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "غلطی کرنے سے نہ گھبرائیں! یہ دیکھنے کے لئے کوڈ چلائیں کہ کیا ہوتا ہے، چاہے اگر آپ نے ابھی تک پزل کو حل نہیں کیا ہے۔",
+          "courseB_starWars_prog9_b": "اس پزل کو حل کرنے کے کئی طریقے ہیں۔",
+          "courseB_starWars_prog9_c": "کیا ایک 'دہرائیں' لوپ یہاں مدد کر سکتا ہے؟"
+        },
+        "courseB_starWars_prog9_2018": {
+          "courseB_starWars_prog9_a": "غلطی کرنے سے نہ گھبرائیں! یہ دیکھنے کے لئے کوڈ چلائیں کہ کیا ہوتا ہے، چاہے اگر آپ نے ابھی تک پزل کو حل نہیں کیا ہے۔",
+          "courseB_starWars_prog9_b": "اس پزل کو حل کرنے کے کئی طریقے ہیں۔",
+          "courseB_starWars_prog9_c": "کیا ایک 'دہرائیں' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> لوپ یہاں مدد کر سکتا ہے؟"
+        },
+        "courseB_starWars_prog9_2019": {
+          "courseB_starWars_prog9_a": "غلطی کرنے سے نہ گھبرائیں! یہ دیکھنے کے لئے کوڈ چلائیں کہ کیا ہوتا ہے، چاہے اگر آپ نے ابھی تک پزل کو حل نہیں کیا ہے۔",
+          "courseB_starWars_prog9_b": "اس پزل کو حل کرنے کے کئی طریقے ہیں۔",
+          "courseB_starWars_prog9_c": "کیا ایک 'دہرائیں' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> لوپ یہاں مدد کر سکتا ہے؟"
+        },
+        "courseB_starWars_prog9_2020": {
+          "courseB_starWars_prog9_a": "غلطی کرنے سے نہ گھبرائیں! یہ دیکھنے کے لئے کوڈ چلائیں کہ کیا ہوتا ہے، چاہے اگر آپ نے ابھی تک پزل کو حل نہیں کیا ہے۔",
+          "courseB_starWars_prog9_b": "اس پزل کو حل کرنے کے کئی طریقے ہیں۔",
+          "courseB_starWars_prog9_c": "کیا ایک 'دہرائیں' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> لوپ یہاں مدد کر سکتا ہے؟"
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "غلطی کرنے سے نہ گھبرائیں! یہ دیکھنے کے لئے کوڈ چلائیں کہ کیا ہوتا ہے، چاہے اگر آپ نے ابھی تک پزل حل نہیں کی ہے۔",
+          "courseB_starWars_prog9_b": "اس پزل کو حل کرنے کے کئی طریقے ہیں۔",
+          "courseB_starWars_prog9_c": "کیا ایک 'دہرائیں' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">3</title>\n  </block></xml> لوپ یہاں مدد کر سکتا ہے؟"
         }
       }
     }

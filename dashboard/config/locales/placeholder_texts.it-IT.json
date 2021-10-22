@@ -418,21 +418,119 @@
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "pesce",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "altro",
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "creatura"
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "creatura",
+          "f655df68ec33643278de7e69794e8d76": "Aquario virtuale",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Tu cosa aggiungerai?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Quali pesci?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Quale creatura?",
+          "78574118d153534fd0925a2f5ca25e79": "Quali oggetti?"
         },
         "courseF_apps_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "Quanti anni hai?",
-          "ae096fbf24d913754b01a1601672bf62": " io!"
+          "ae096fbf24d913754b01a1601672bf62": " io!",
+          "f0e5da70d264f312a1658d51c130b101": "Inserisci il tuo nome:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Inserisci la tua età:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ha gli stessi anni!",
+          "605f302ebc9f7fbacba60b15f551a633": "Qual è il tuo colore preferito?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Inserisci il tuo colore preferito",
+          "1f258d88a70309efc1435ef5daa277a0": "Grazie per aver chattato con me oggi!"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Hai vinto!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Hai vinto!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " secondi",
+          "490082498449bd20ff0199737dfa4916": "Seleziona il tipo di gioco:"
         },
         "courseF_editable_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "Quanti anni hai?",
-          "ae096fbf24d913754b01a1601672bf62": " io!"
+          "ae096fbf24d913754b01a1601672bf62": " io!",
+          "f0e5da70d264f312a1658d51c130b101": "Inserisci il tuo nome:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Inserisci la tua età:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ha gli stessi anni!",
+          "605f302ebc9f7fbacba60b15f551a633": "Qual è il tuo colore preferito?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Inserisci il tuo colore preferito",
+          "1f258d88a70309efc1435ef5daa277a0": "Grazie per aver chattato con me oggi!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Come ti chiami?"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi da festa",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una cronologia delle caselle vuote",
+          "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Inserisci una parte del corpo: ",
+          "e522ee28f39133b45497637539ff429b": "Inserisci un numero:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " giochi.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "corsa a -gambe!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Giochi da festa",
+          "bf08dd3d1961874f13e77c936aad27e5": "Una cronologia delle caselle vuote",
+          "514b8d5320196898a9ced3efe0d4c802": "Inserisci un aggettivo:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Inserisci un oggetto:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Inserisci una parte del corpo: ",
+          "e522ee28f39133b45497637539ff429b": "Inserisci un numero:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " giochi.",
+          "5306eed2fd2c43fe033efd6016c0c38b": "corsa a -gambe!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Di chi è il compleanno?",
+          "d1210f945885351b13feb9bbb868aeef": "Quanti anni compie?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "la mia domanda"
         }
       }
     }

@@ -2850,6 +2850,11 @@
               "binary": "2진"
             }
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "게임 재설정"
+          }
         }
       }
     }

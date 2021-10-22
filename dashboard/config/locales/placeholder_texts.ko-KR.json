@@ -364,21 +364,122 @@
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "물고기",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "괴물",
-          "795f3202b17cb6bc3d4b771d8c6c9eaf": "기타"
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "기타",
+          "f655df68ec33643278de7e69794e8d76": "가상 아쿠아리움",
+          "a1a2a07348784279a1e7a6f46dc7e353": "무엇을 추가하시겠어요?",
+          "0d3e73168beb875063ea0f0302fe32bd": "어느 물고기?",
+          "caaf8264ca397dba2d35ef902bbbd953": "어느 생명체?",
+          "78574118d153534fd0925a2f5ca25e79": "어 느 것?"
         },
         "courseF_apps_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "나이가 어떻게 되시나요?",
-          "ae096fbf24d913754b01a1601672bf62": " 마찬 가지예요!"
+          "ae096fbf24d913754b01a1601672bf62": " 마찬 가지예요!",
+          "a72e7c5c68af0546e963e510297f5233": "안녕하세요. 저는 X-9입니다! 이름이 뭐예요?",
+          "f0e5da70d264f312a1658d51c130b101": "이름 입력:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "나이 입력:",
+          "605f302ebc9f7fbacba60b15f551a633": "좋아하는 색상은 무엇입니까?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "좋아하는 색상 입력:",
+          "1f258d88a70309efc1435ef5daa277a0": "오늘 저와 채팅해 주셔서 감사합니다!"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "이겼습니다!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "이겼습니다!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " 초",
+          "490082498449bd20ff0199737dfa4916": "게임 유형 선택",
+          "41f2b2212de0105c2a942ebb4a44e449": "위대한 수집가 게임!"
         },
         "courseF_editable_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "나이가 어떻게 되시나요?",
-          "ae096fbf24d913754b01a1601672bf62": " 마찬 가지예요!"
+          "ae096fbf24d913754b01a1601672bf62": " 마찬 가지예요!",
+          "a72e7c5c68af0546e963e510297f5233": "안녕하세요. 저는 X-9입니다! 이름이 뭐예요?",
+          "f0e5da70d264f312a1658d51c130b101": "이름 입력:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "나이 입력:",
+          "605f302ebc9f7fbacba60b15f551a633": "좋아하는 색상은 무엇입니까?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "좋아하는 색상 입력:",
+          "1f258d88a70309efc1435ef5daa277a0": "오늘 저와 채팅해 주셔서 감사합니다!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "이름이 무엇인가요?"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "df8312187449c70820d7c58229a6b17e": "스페이스봇은 다른 생명체에게 겁을 줍니다. ",
+          "2a28483f9f4f9ee44cec653a445d4c82": "다른 생명체는 더 이상 두려워하지 않아요!"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "누구 생일입니까?",
+          "d1210f945885351b13feb9bbb868aeef": "몇 살이 됩니까?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "파티 게임",
+          "bf08dd3d1961874f13e77c936aad27e5": "블랭크 스페이스 스토리",
+          "514b8d5320196898a9ced3efe0d4c802": "형용사 입력:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "객체 입력:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "신체부위 입력:",
+          "e522ee28f39133b45497637539ff429b": "숫자 입력:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " 게임.",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "누구 생일입니까?",
+          "d1210f945885351b13feb9bbb868aeef": "몇 살이 됩니까?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "파티 게임",
+          "bf08dd3d1961874f13e77c936aad27e5": "블랭크 스페이스 스토리",
+          "514b8d5320196898a9ced3efe0d4c802": "형용사 입력:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "객체 입력:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "신체부위 입력:",
+          "e522ee28f39133b45497637539ff429b": "숫자 입력:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " 게임.",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "누구 생일입니까?",
+          "d1210f945885351b13feb9bbb868aeef": "몇 살이 됩니까?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
         }
       }
     }

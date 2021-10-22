@@ -2,6 +2,23 @@
   "az-AZ": {
     "data": {
       "resources": {
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "Fəaliyyət Bələdçisi - Mətnin kiçildilməsi",
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Bu mesajı deşifr et",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be"
+        },
         "exploring_apps/coursef/2021": {
           "name": "Tətbiqləri araşdırmaq"
         },
@@ -35,11 +52,29 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Hərəkət et"
         },
+        "jigsaw/courseb/2021": {
+          "name": "Çəkmək və Buraxmaq Praktikası"
+        },
         "pair-programming-vid/courseb/2021": {
           "name": "Estafet proqramlaşdırması"
         },
+        "20_20_20_rule/courseb/2021": {
+          "name": "20/20/20 Qaydası"
+        },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie və Böyük Layihə"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "name": "Gözədəyməz xətalar"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "name": "Böyük hadisə"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "name": "Böyük hadisə"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "name": "Böyük hadisə"
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "Kurikulum Bələdçisi"
@@ -59,14 +94,50 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Şən xəritələr"
         },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "20/20/20 Qaydası"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "name": "Böyük hadisə"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "name": "Böyük hadisə"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "name": "Böyük hadisə"
+        },
         "curriculum_guide_1/coursea/2021": {
           "name": "Kurikulum Bələdçisi"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Müəllim Forumu"
         },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "name": "Mənim robot dostlarım"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Estafet proqramlaşdırması"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "name": "Böyük hadisə"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "name": "Böyük hadisə"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "name": "Böyük hadisə"
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "Kurikulum Bələdçisi"
@@ -131,14 +202,29 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Estafet proqramlaşdırması"
         },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "Hiss üz ifadələri"
+        },
         "20_20_20_rule/pre-express/2021": {
           "name": "20/20/20 Qaydası"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "Kurs lüğəti"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "Müəllim Forumu"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Alqoritm ilə ilərlə"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "name": "Əlçatanlıq üçün dizayn"
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "Kurikulum Bələdçisi"

@@ -8753,6 +8753,7 @@ sk:
               key: Záverečný projekt
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt.
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom navrhovania, vytvárania a prezentácie nových projektov.
             lesson-6:
               name: Pohľad do budúcnosti s Minecraftom
               description_teacher: Túto lekciu pôvodne Minecraft tím vytvoril pre Hodinu kódu. Študenti dostanú príležitosť precvičiť si koncepty, ktoré sa naučili doteraz a vyskúšať si využitie podmienok!
@@ -8801,7 +8802,7 @@ sk:
               key: Simon vraví
               name: Sleduj algoritmus
               description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy sú potrebné na dosiahnutie správneho výsledku.
-              description_teacher: V tejto lekcii zameranej na **vytvorenie kontextu** si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými inštrukciami.
+              description_teacher: Na tejto lekcii zameranej na **vytvorenie kontextu** si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými inštrukciami.
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
               description_student: Nauč sa ako tvoriť a upravovať postavy.
@@ -8957,6 +8958,7 @@ sk:
               key: Záverečný projekt
               name: Záverečný projekt
               description_student: Na takéto veľké projekty treba veľa času a plánovania. Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť naplno!
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom navrhovania, vytvárania a prezentácie nových projektov.
             lesson-1:
               description_teacher: 'V rámci tejto **vysvetľujúcej** lekcie sa žiaci naučia o zjednodušení ovládania a význame empatie prostredníctvom brainstormingu a návrhu riešení zjednodušenia ovládania pre hypotetické aplikácie. '
             lesson-6:
@@ -8971,6 +8973,8 @@ sk:
               description_teacher: V tejto lekcii zameranej na **budovanie zručností** si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
             lesson-9:
               name: Príbehy na doplnenie
+              description_student: V rámci tejto aktivity budete používať dopĺňacie príbehy príbehy (podobné ako Mad Libs®) na uľahčenie pochopenia toho, ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich neskôr používajú počas vykonávania programu.
+              description_teacher: 'Na tejto lekcii zameranej na **vytvorenie kontextu** budú žiakom ako kontext na pochopenie toho, ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich neskôr používajú počas vykonávania programu, slúžiť dopĺňacie príbehy (podobné ako Mad Libs®). '
             lesson-10:
               name: Text a výzvy
               description_student: V tejto lekcii si precvičíš používanie premenných v Sprite Labe.
@@ -9113,6 +9117,7 @@ sk:
               key: Záverečný projekt
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt.
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom navrhovania, vytvárania a prezentácie nových projektov.
             lesson-1:
               name: Tanečná Párty
             lesson-2:
