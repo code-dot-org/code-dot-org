@@ -17,7 +17,7 @@ def set_course_audiences
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
                                  elsif [].include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
-                                 elsif [].include?(script.name)
+                                 elsif ['self-paced-pl-csd5-2021', 'self-paced-pl-csd6-2021', 'self-paced-pl-csd7-2021', 'self-paced-pl-csd8-2021'].include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_admin
                                  else
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
@@ -25,7 +25,7 @@ def set_course_audiences
 
     script.participant_audience = if [].include?(script.name)
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
-                                  elsif [].include?(script.name)
+                                  elsif ['self-paced-pl-csd5-2021', 'self-paced-pl-csd6-2021', 'self-paced-pl-csd7-2021', 'self-paced-pl-csd8-2021'].include?(script.name)
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
                                   else
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.student
@@ -36,19 +36,19 @@ def set_course_audiences
 
   UnitGroup.all.each do |course|
     # default is instructor_audience teacher and participant_audience student so only need to update unit groups we want something else
-    next unless [].include?(course.name)
+    next unless ['self-paced-pl-csp-2021', 'self-paced-pl-csd-2021'].include?(course.name)
 
     course.instructor_audience = if [].include?(course.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
                                  elsif [].include?(course.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
-                                 elsif [].include?(course.name)
+                                 elsif ['self-paced-pl-csp-2021', 'self-paced-pl-csd-2021'].include?(course.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_admin
                                  end
 
     course.participant_audience = if [].include?(course.name)
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
-                                  elsif [].include?(course.name)
+                                  elsif ['self-paced-pl-csp-2021', 'self-paced-pl-csd-2021'].include?(course.name)
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
                                   end
 
