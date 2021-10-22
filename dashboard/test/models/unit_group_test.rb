@@ -324,7 +324,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       unit1.reload
       unit2.reload
-      assert_nil unit1.instructor_audienceg
+      assert_nil unit1.instructor_audience
       assert_nil unit1.participant_audience
       assert_nil unit2.instructor_audience
       assert_nil unit2.participant_audience
