@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_16_222743) do
+ActiveRecord::Schema.define(version: 2021_10_16_020346) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1556,7 +1556,9 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.string "new_name"
     t.string "family_name"
     t.string "published_state", default: "in_development"
+    t.string "instruction_type"
     t.index ["family_name"], name: "index_scripts_on_family_name"
+    t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
     t.index ["published_state"], name: "index_scripts_on_published_state"
@@ -1780,6 +1782,8 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_state", default: "in_development", null: false
+    t.string "instruction_type", default: "teacher_led", null: false
+    t.index ["instruction_type"], name: "index_unit_groups_on_instruction_type"
     t.index ["name"], name: "index_unit_groups_on_name"
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end

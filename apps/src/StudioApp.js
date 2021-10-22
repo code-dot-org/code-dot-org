@@ -5,7 +5,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {EventEmitter} from 'events';
 import _ from 'lodash';
-import url from 'url';
 import {Provider} from 'react-redux';
 import trackEvent from './util/trackEvent';
 
@@ -1342,7 +1341,8 @@ function resizePinnedBelowVisualizationArea() {
     'spelling-table-wrapper',
     'gameButtons',
     'gameButtonExtras',
-    'song-selector-wrapper'
+    'song-selector-wrapper',
+    'poemSelector'
   ];
   possibleElementsAbove.forEach(id => {
     let element = document.getElementById(id);
@@ -1687,36 +1687,6 @@ StudioApp.prototype.getTestResults = function(levelComplete, options) {
   );
 };
 
-// Builds the dom to get more info from the user. After user enters info
-// and click "create level" onAttemptCallback is called to deliver the info
-// to the server.
-StudioApp.prototype.builderForm_ = function(onAttemptCallback) {
-  var builderDetails = document.createElement('div');
-  builderDetails.innerHTML = require('./templates/builder.html.ejs')();
-  var dialog = this.createModalDialog({
-    contentDiv: builderDetails,
-    icon: this.icon
-  });
-  var createLevelButton = document.getElementById('create-level-button');
-  dom.addClickTouchEvent(createLevelButton, function() {
-    var instructions = builderDetails.querySelector('[name="instructions"]')
-      .value;
-    var name = builderDetails.querySelector('[name="level_name"]').value;
-    var query = url.parse(window.location.href, true).query;
-    onAttemptCallback(
-      utils.extend(
-        {
-          instructions: instructions,
-          name: name
-        },
-        query
-      )
-    );
-  });
-
-  dialog.show({backdrop: 'static'});
-};
-
 /**
  * Report back to the server, if available.
  * @param {MilestoneReport} options
@@ -1746,24 +1716,8 @@ StudioApp.prototype.report = function(options) {
   // they cannot have modified. In that case, don't report it to the service
   // or call the onComplete() callback expected. The app will just sit
   // there with the Reset button as the only option.
-  var self = this;
   if (!(this.hideSource && this.share) && !readOnly) {
-    var onAttemptCallback = (function() {
-      return function(builderDetails) {
-        for (var option in builderDetails) {
-          report[option] = builderDetails[option];
-        }
-        self.onAttempt(report);
-      };
-    })();
-
-    // If this is the level builder, go to builderForm to get more info from
-    // the level builder.
-    if (options.builder) {
-      this.builderForm_(onAttemptCallback);
-    } else {
-      onAttemptCallback();
-    }
+    this.onAttempt(report);
   }
 };
 

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-14 17:48:37 UTC",
+    "serialized_at": "2021-10-18 18:50:39 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csa4-pilot-facilitator"
@@ -46,9 +46,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "Unit 4 Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Sandbox"
       },
@@ -327,12 +339,27 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Java Lab",
+      "key": "lesson-5",
+      "name": "Unit 4 Pilot Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -344,10 +371,10 @@
     {
       "key": "lesson-2",
       "name": "The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -359,10 +386,10 @@
     {
       "key": "lesson-3",
       "name": "The Theater",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -374,10 +401,10 @@
     {
       "key": "lesson-4",
       "name": "The Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -999,6 +1026,18 @@
         "lesson_activity.key": "8f372453-c157-460a-aa6d-17968e3da9df",
         "lesson.key": "Assessment Day",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "dcc209a8-99d6-4737-90a1-4edbdb1e9105",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dcc209a8-99d6-4737-90a1-4edbdb1e9105",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa4-pilot-facilitator"
       }
     },
@@ -1986,7 +2025,8 @@
       "key": "c5677a14-e4c6-4f25-90c8-8e4e825396c5",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
+        "progression_name": "Calculating the Score"
       },
       "seeding_key": {
         "activity_section.key": "c5677a14-e4c6-4f25-90c8-8e4e825396c5",
@@ -3781,6 +3821,17 @@
       }
     },
     {
+      "key": "0bc803b6-e420-466b-99c9-47fb0a62bbbf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 4 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0bc803b6-e420-466b-99c9-47fb0a62bbbf",
+        "lesson_activity.key": "dcc209a8-99d6-4737-90a1-4edbdb1e9105"
+      }
+    },
+    {
       "key": "6077f977-4867-4878-b714-8fd0e54ab410",
       "position": 1,
       "properties": {
@@ -4583,7 +4634,8 @@
       "properties": {
         "level_keys": [
           "CSA U4L5-L6"
-        ]
+        ],
+        "progression": "Calculating the Score"
       },
       "bonus": false,
       "seeding_key": {
@@ -4607,7 +4659,8 @@
       "properties": {
         "level_keys": [
           "CSA U4L5-L7"
-        ]
+        ],
+        "progression": "Calculating the Score"
       },
       "bonus": false,
       "seeding_key": {
@@ -5405,6 +5458,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSA Facilitator Survey Unit 4"
+        ],
+        "progression": "Unit 4 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Facilitator Survey Unit 4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator",
+        "activity_section.key": "0bc803b6-e420-466b-99c9-47fb0a62bbbf"
+      },
+      "level_keys": [
+        "CSA Facilitator Survey Unit 4"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSA Java Lab Sandbox"
         ],
         "progression": "Java Lab"
@@ -5424,7 +5502,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5449,7 +5527,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5474,7 +5552,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6258,6 +6336,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA Facilitator Survey Unit 4",
+        "script_level.level_keys": [
+          "CSA Facilitator Survey Unit 4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator",
+        "activity_section.key": "0bc803b6-e420-466b-99c9-47fb0a62bbbf"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Java Lab Sandbox",
         "script_level.level_keys": [
           "CSA Java Lab Sandbox"
@@ -6547,6 +6637,18 @@
       }
     },
     {
+      "name": "Equals and Aliasing",
+      "url": "https://youtu.be/o4UfB3r-TPI",
+      "key": "equals_and_aliasing",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "equals_and_aliasing"
+      }
+    },
+    {
       "name": "Exploring Operators",
       "url": "https://docs.google.com/document/d/1Oel7wKZ_3KAaDW_7R84z_AuhFixeYy6l8hgPU7R70SA/edit?usp=sharing",
       "key": "exploring_operators",
@@ -6640,6 +6742,18 @@
       },
       "seeding_key": {
         "resource.key": "object_references_manipulatives"
+      }
+    },
+    {
+      "name": "Probability with Math.random()",
+      "url": "https://youtu.be/HiRJW3IhgX8",
+      "key": "probability_with_math_random_",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "probability_with_math_random_"
       }
     },
     {
@@ -6857,6 +6971,12 @@
     {
       "seeding_key": {
         "lesson.key": "Adding Randomness to a Program",
+        "resource.key": "probability_with_math_random_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Adding Randomness to a Program",
         "resource.key": "quiz_quiz_trade_1"
       }
     },
@@ -6942,6 +7062,12 @@
       "seeding_key": {
         "lesson.key": "Comparing Object References and Data",
         "resource.key": "comparing_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Comparing Object References and Data",
+        "resource.key": "equals_and_aliasing"
       }
     },
     {
