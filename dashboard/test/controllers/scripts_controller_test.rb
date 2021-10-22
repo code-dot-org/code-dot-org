@@ -464,7 +464,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script, published_state: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    unit = create :script, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
     File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
     File.stubs(:write).with do |filename, contents|
@@ -474,7 +474,7 @@ class ScriptsControllerTest < ActionController::TestCase
       id: unit.id,
       script: {name: unit.name},
       script_text: '',
-      published_state: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
     }
     assert_response :success
     unit.reload
