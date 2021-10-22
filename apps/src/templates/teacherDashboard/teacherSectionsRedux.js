@@ -378,6 +378,21 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   return dispatch(finishEditingSection());
 };
 
+export const asyncLoadStudentsForCurrentSection = sectionId => dispatch => {
+  let request = '/api/teacher_panel_section';
+  if (sectionId) {
+    request += `?section_id=${sectionId}`;
+  }
+
+  $.ajax(request)
+    .success(section => {
+      dispatch(setStudentsForCurrentSection(section.id, section.students));
+    })
+    .fail(err => {
+      console.log(err);
+    });
+};
+
 export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.

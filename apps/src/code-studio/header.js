@@ -19,6 +19,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
+import {asyncLoadUserData} from '@cdo/apps/templates/currentUserRedux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -165,6 +166,11 @@ function setupReduxSubscribers(store) {
   });
 }
 setupReduxSubscribers(getStore());
+
+function setUpGlobalData(store) {
+  store.dispatch(asyncLoadUserData());
+}
+setUpGlobalData(getStore());
 
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());

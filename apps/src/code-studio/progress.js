@@ -371,14 +371,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
     ) {
       const pageType = currentLevelId ? 'level' : 'script_overview';
       queryLockStatus(store, scriptData.id, pageType);
-      renderTeacherPanel(
-        store,
-        scriptData.id,
-        scriptData.section,
-        scriptData.name,
-        pageType,
-        onOverviewPage
-      );
+      renderTeacherPanel(store, scriptData.name, pageType, onOverviewPage);
     }
   });
 }
