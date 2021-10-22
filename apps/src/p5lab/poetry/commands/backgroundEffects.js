@@ -58,7 +58,7 @@ export const commands = {
         this.backgroundEffect = () => {
           this.p5.push();
           this.p5.noStroke();
-          this.p5.background('black');
+          this.p5.background('white');
           for (let i = 0; i < numSquiggles; i++) {
             points.forEach(point => {
               point.x =
