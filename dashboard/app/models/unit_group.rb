@@ -2,19 +2,23 @@
 #
 # Table name: unit_groups
 #
-#  id               :integer          not null, primary key
-#  name             :string(255)
-#  properties       :text(65535)
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
-#  published_state  :string(255)      default("in_development"), not null
-#  instruction_type :string(255)      default("teacher_led"), not null
+#  id                   :integer          not null, primary key
+#  name                 :string(255)
+#  properties           :text(65535)
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  published_state      :string(255)      default("in_development"), not null
+#  instruction_type     :string(255)      default("teacher_led"), not null
+#  instructor_audience  :string(255)      default("teacher"), not null
+#  participant_audience :string(255)      default("student"), not null
 #
 # Indexes
 #
-#  index_unit_groups_on_instruction_type  (instruction_type)
-#  index_unit_groups_on_name              (name)
-#  index_unit_groups_on_published_state   (published_state)
+#  index_unit_groups_on_instruction_type      (instruction_type)
+#  index_unit_groups_on_instructor_audience   (instructor_audience)
+#  index_unit_groups_on_name                  (name)
+#  index_unit_groups_on_participant_audience  (participant_audience)
+#  index_unit_groups_on_published_state       (published_state)
 #
 
 require 'cdo/script_constants'
@@ -54,7 +58,9 @@ class UnitGroup < ApplicationRecord
   end
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
-  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be teacher_led or self_paced'}
+  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values, message: 'must be teacher_led or self_paced'}
+  validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be code.org admin, plc reviewer, facilitator, or teacher'}
+  validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
   def skip_name_format_validation
     !!plc_course
@@ -360,8 +366,8 @@ class UnitGroup < ApplicationRecord
         unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
+      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,

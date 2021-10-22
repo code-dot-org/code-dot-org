@@ -117,6 +117,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('hasCategories');
   blocklyWrapper.wrapReadOnlyProperty('html');
   blocklyWrapper.wrapReadOnlyProperty('inject');
+  blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
   blocklyWrapper.wrapReadOnlyProperty('mainBlockSpace');
@@ -191,6 +192,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       !!opt_showHidden
     );
     return strip(code);
+  };
+
+  blocklyWrapper.Input.prototype.getFieldRow = function() {
+    return this.titleRow;
   };
 
   return blocklyWrapper;
