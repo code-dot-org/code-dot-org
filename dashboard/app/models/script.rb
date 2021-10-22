@@ -154,7 +154,7 @@ class Script < ApplicationRecord
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
   validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be nil, teacher_led or self_paced'}
-  validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values.push(nil), message: 'must be nil, code.org admin, plc reviewer, facilitator, or teacher'}
+  validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values.push(nil), message: 'must be nil, code instructor, plc reviewer, facilitator, or teacher'}
   validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.push(nil), message: 'must be nil, facilitator, teacher, or student'}
 
   def prevent_duplicate_levels
