@@ -73,7 +73,15 @@ def main(options)
       LessonImportHelper.update_lesson(lesson, models)
     end
 
-    script.assign_attributes(is_migrated: true)
+    has_lesson_plans = script.lessons.any?(&:has_lesson_plan)
+    script.assign_attributes(
+      is_migrated: true,
+      # by default, we'll use code studio lesson plans for migrated scripts
+      # unless use_legacy_lesson_plans is set. therefore, if the script has
+      # any lesson plans, then we need to set this in order to preserve any
+      # existing links to lesson plans.
+      use_legacy_lesson_plans: has_lesson_plans
+    )
     script.save(validate: false)
     script.fix_script_level_positions
     script.write_script_dsl
