@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-01 16:24:57 UTC",
+    "serialized_at": "2021-10-22 14:01:15 UTC",
     "published_state": "in_development",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "spritelab-effects-challenge"
     }
@@ -77,6 +78,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -98,6 +102,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "effect block pop demo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -119,6 +126,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "effect block template"
+        ]
       },
       "bonus": false,
       "seeding_key": {

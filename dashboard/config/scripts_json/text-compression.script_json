@@ -11,8 +11,9 @@
     },
     "new_name": null,
     "family_name": "text-compression",
-    "serialized_at": "2021-09-30 23:11:19 UTC",
+    "serialized_at": "2021-10-22 14:00:45 UTC",
     "published_state": "preview",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "text-compression"
     }

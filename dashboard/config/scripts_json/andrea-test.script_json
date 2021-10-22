@@ -4,8 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
       "professional_learning_course": "Andrea Test",
+      "student_detail_progress_view": true,
       "announcements": [
         {
           "notice": "Announcing",
@@ -19,8 +19,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:39 UTC",
+    "serialized_at": "2021-10-22 13:59:29 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "andrea-test"
     }

@@ -11,8 +11,9 @@
     },
     "new_name": null,
     "family_name": "starwars",
-    "serialized_at": "2021-09-29 19:49:37 UTC",
+    "serialized_at": "2021-10-22 14:00:44 UTC",
     "published_state": "preview",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "starwars"
     }
@@ -276,6 +277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -297,6 +301,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_right_down"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -318,6 +325,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_backtrack"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -339,6 +349,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_diagonal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -360,6 +373,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_around"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -381,6 +397,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_move_finale"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -402,6 +421,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_two_items"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -423,6 +445,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_four_items"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -444,6 +469,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_score"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -465,6 +493,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_win_lose"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -486,6 +517,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_add_characters"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -507,6 +541,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_chain_characters"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -528,6 +565,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_multiply_characters"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -549,6 +589,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_change_setting"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -570,6 +613,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:StudioEC:js_hoc2015_event_free"
+        ]
       },
       "bonus": false,
       "seeding_key": {

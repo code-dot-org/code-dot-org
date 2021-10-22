@@ -4,14 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "peer_reviews_to_complete": 4,
       "professional_learning_course": "CSP Support",
+      "peer_reviews_to_complete": 4,
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:05 UTC",
+    "serialized_at": "2021-10-22 14:00:08 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csp3-support"
     }

@@ -10,8 +10,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-20 20:30:59 UTC",
+    "serialized_at": "2021-10-22 14:01:13 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "hello-world-retro"
     }

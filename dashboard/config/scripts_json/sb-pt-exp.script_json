@@ -11,8 +11,9 @@
     },
     "new_name": null,
     "family_name": "sb-pt-exp",
-    "serialized_at": "2021-07-21 12:22:04 UTC",
+    "serialized_at": "2021-10-22 14:01:11 UTC",
     "published_state": "pilot",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "sb-pt-exp"
     }

@@ -4,15 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
       "project_widget_visible": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
+      "lesson_extras_available": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/pre-express/{LESSON}",
+      "version_year": "2017",
       "supported_locales": [
         "ar-SA",
         "cs-CZ",
@@ -43,16 +43,16 @@
         "zh-TW"
       ],
       "curriculum_umbrella": "CSF",
-      "family_name": "pre-express",
+      "has_lesson_plan": true,
+      "is_stable": true,
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
       "is_course": true
     },
     "new_name": "pre-express-2017",
     "family_name": "pre-express",
-    "serialized_at": "2021-08-03 22:47:14 UTC",
+    "serialized_at": "2021-10-22 14:00:37 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "pre-express-2017"
     }

@@ -4,8 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
-      "professional_learning_course": "K5 Support",
       "script_announcements": [
         {
           "notice": "Updated version of this course available! ",
@@ -23,12 +21,14 @@
           "type": "warning",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "professional_learning_course": "K5 Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:50 UTC",
+    "serialized_at": "2021-10-22 13:59:23 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "K5-OnlinePD"
     }

@@ -4,13 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_verified_resources": true,
+      "hideable_lessons": true,
       "pilot_experiment": "csp-piloters",
       "curriculum_umbrella": "CSP",
-      "hideable_lessons": true
+      "has_lesson_plan": true,
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-10-22 14:00:06 UTC",
+    "published_state": "pilot",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csp10-pilot"
     }
@@ -34,6 +38,7 @@
       "name": "Project - Innovation Simulation Part 1",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -48,6 +53,7 @@
       "name": "Project - Innovation Simulation Part 2",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -62,6 +68,7 @@
       "name": "Data Policies and Privacy",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -76,6 +83,7 @@
       "name": "The Value of Privacy",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -90,6 +98,7 @@
       "name": "Project - Innovation Simulation Part 3",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -104,6 +113,7 @@
       "name": "Security Risks Part 1",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -118,6 +128,7 @@
       "name": "Security Risks Part 2",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -132,6 +143,7 @@
       "name": "Project: Innovation Simulation Part 4",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -146,6 +158,7 @@
       "name": "Protecting Data Part 1",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -160,6 +173,7 @@
       "name": "Protecting Data Part 2",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -174,6 +188,7 @@
       "name": "Project: Innovation Simulation Part 5",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -188,6 +203,7 @@
       "name": "Project: Innovation Simulation Part 6",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -202,6 +218,7 @@
       "name": "Project: Innovation Simulation Part 7",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -216,6 +233,7 @@
       "name": "Lesson 14: Unit Assessment Day",
       "absolute_position": 14,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -226,15 +244,25 @@
       }
     }
   ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L1 SFLP 20-21"
@@ -250,11 +278,15 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L01 CFU innovations"
+        ],
         "progression": "Check For Understanding"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L01 CFU innovations"
@@ -270,11 +302,15 @@
     {
       "chapter": 3,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L2 SFLP 20-21"
@@ -290,11 +326,15 @@
     {
       "chapter": 4,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L02 CFU innovations part 2"
+        ],
         "progression": "Check For Understanding"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L02 CFU innovations part 2"
@@ -310,11 +350,15 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L3 SFLP 20-21"
@@ -330,11 +374,15 @@
     {
       "chapter": 6,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L3 CFU Why Collect PII"
+        ],
         "progression": "Check For Understanding"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L3 CFU Why Collect PII"
@@ -350,11 +398,15 @@
     {
       "chapter": 7,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L4 SFLP 20-21"
@@ -370,11 +422,15 @@
     {
       "chapter": 8,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L5 SFLP 20-21"
@@ -390,11 +446,15 @@
     {
       "chapter": 9,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L6 SFLP 20-21"
@@ -410,11 +470,15 @@
     {
       "chapter": 10,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Keylogging"
+        ],
         "progression": "Keylogging"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Keylogging"
@@ -430,11 +494,15 @@
     {
       "chapter": 11,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Phishing"
+        ],
         "progression": "Phishing"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Phishing"
@@ -450,11 +518,15 @@
     {
       "chapter": 12,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Rogue Access Points"
+        ],
         "progression": "Malware"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Rogue Access Points"
@@ -470,11 +542,15 @@
     {
       "chapter": 13,
       "position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L07 CFU security risks"
+        ],
         "progression": "Check For Understanding"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L07 CFU security risks"
@@ -490,11 +566,15 @@
     {
       "chapter": 14,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L7 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L7 SFLP 20-21"
@@ -510,11 +590,15 @@
     {
       "chapter": 15,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L08 CFU security risks"
+        ],
         "progression": "Check For Understanding"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U10 L08 CFU security risks"
@@ -530,11 +614,15 @@
     {
       "chapter": 16,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L8 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L8 SFLP 20-21"
@@ -550,11 +638,15 @@
     {
       "chapter": 17,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L9 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L9 SFLP 20-21"
@@ -570,11 +662,15 @@
     {
       "chapter": 18,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher_2020"
+        ],
         "progression": "Encryption Widgets"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2020"
@@ -590,11 +686,15 @@
     {
       "chapter": 19,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution_2020"
+        ],
         "progression": "Encryption Widgets"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack Random Substitution_2020"
@@ -610,11 +710,15 @@
     {
       "chapter": 20,
       "position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L9 CFU public key"
+        ],
         "progression": "Check For Understanding"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L9 CFU public key"
@@ -630,11 +734,15 @@
     {
       "chapter": 21,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L10 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L10 SFLP 20-21"
@@ -650,11 +758,15 @@
     {
       "chapter": 22,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L10 CFU MFA"
+        ],
         "progression": "Check For Understanding"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U10L10 CFU MFA"
@@ -670,11 +782,15 @@
     {
       "chapter": 23,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L11 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L11 SFLP 20-21"
@@ -690,11 +806,15 @@
     {
       "chapter": 24,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L12 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L12 SFLP 20-21"
@@ -710,11 +830,15 @@
     {
       "chapter": 25,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L13 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L13 SFLP 20-21"
@@ -730,11 +854,15 @@
     {
       "chapter": 26,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": null,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U10L14 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U10L14 SFLP 20-21"
@@ -750,11 +878,15 @@
     {
       "chapter": 27,
       "position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Unit 10 Assessment"
+        ],
         "progression": "Unit 10 Exam"
       },
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP 20-21 Unit 10 Assessment"
@@ -1066,5 +1198,35 @@
         "script.name": "csp10-pilot"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

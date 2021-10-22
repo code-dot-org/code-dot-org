@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
       "professional_learning_course": "ECS Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:59 UTC",
+    "serialized_at": "2021-10-22 14:00:21 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "ecs-unit4"
     }

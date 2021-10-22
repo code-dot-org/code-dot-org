@@ -4,14 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "hideable_lessons": true
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:20 UTC",
+    "serialized_at": "2021-10-22 14:00:02 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csd4-old"
     }

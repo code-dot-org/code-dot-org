@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "pd": true,
       "professional_learning_course": "Equity Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:51 UTC",
+    "serialized_at": "2021-10-22 13:59:23 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "Equity-OnlinePD"
     }
