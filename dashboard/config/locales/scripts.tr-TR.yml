@@ -23119,6 +23119,8 @@ tr:
           lessons:
             Virus Simulation for Code Bytes:
               name: Simülasyon Kodlama
+            Outbreak:
+              name: Simülasyon Kodlama
           lesson_groups:
             outbreak:
               display_name: Salgın Simülasyonu
@@ -26613,5 +26615,13 @@ tr:
           lessons:
             lesson-1:
               name: Heceleme Yarışması
+          title: Heceleme Yarışması
         outbreak-csc:
           title: Salgın
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik

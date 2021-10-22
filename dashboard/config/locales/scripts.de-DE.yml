@@ -25713,6 +25713,8 @@ de:
           lessons:
             Virus Simulation for Code Bytes:
               name: Programmierung einer Simulation
+            Outbreak:
+              name: Programmierung einer Simulation
           lesson_groups:
             outbreak:
               display_name: Ausbruchssimulation
@@ -29498,5 +29500,13 @@ de:
           lessons:
             lesson-1:
               name: Buchstabierwettbewerb
+          title: Buchstabierwettbewerb
         outbreak-csc:
           title: Ausbruch
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt

@@ -73,7 +73,7 @@
   "spritelabFeedbackUseSpinningBehavior": "Qrafik obyektin fırlanmağa başlaması lazımdır. Davranışını dəyişdirməyə çalışın.",
   "spritelabFeedbackYellowAlienBehavior": "Sarı yadplanetliniz hərəkətə başlamadı.",
   "subject": "mövzu",
-  "subjectSprite": "mövzu Sprite",
+  "subjectSprite": "mövzu sprite",
   "sunDidntRotate": "Günəş sprite fırlanmadı. Fərqli bir davranış yoxlayın.",
   "titleVariable": "Başlıq ekranınızda ismarıcdan mətn daxil deyildi.",
   "tooManySprites": "Çox qrafik obyektiniz var. Yalnız yuxarıdakı təlimatlara uyğun olaraq sizə lazım olan qrafik obyekti yaradın."

@@ -2913,6 +2913,8 @@ el:
           lessons:
             Virus Simulation for Code Bytes:
               name: Κωδικοποίηση μίας προσομοίωσης
+            Outbreak:
+              name: Κωδικοποίηση μίας προσομοίωσης
           lesson_groups:
             outbreak:
               display_name: Προσομοίωση Επιδημικής Έξαρσης
@@ -3312,3 +3314,4 @@ el:
           lessons:
             lesson-1:
               name: Η μέλισσα της ορθογραφίας
+          title: Η μέλισσα της ορθογραφίας

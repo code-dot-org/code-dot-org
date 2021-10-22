@@ -63,7 +63,7 @@ mr:
     विद्यार्थ्यासाठी कॉम्प्युटर सायंस हा पाया आहे.
   social_hoc2019_dance: 'यात आहेत: केटी पेरी, जोनास ब्रदर्स, लिल नास एक्स, पॅनिक अॅट
     द डिस्को आणि इतर!'
-  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: AI for Oceans
   oceans_landing_description: मशीन लर्निंगबद्दल आणि AI च्या नैतिक वापराबद्दल शिका.
   cs_for_good_hashtag: "#CSforGood"
@@ -147,6 +147,12 @@ mr:
   hoc_overview_oceans_tutorial_desc: कृत्रिम बुद्धिमत्ता (AI), मशीन लर्निंग, ट्रेनिंग
     डेटा आणि नैतिक समस्यांचा विचार करताना पूर्वग्रह तसेच जगातील समस्या सोडवण्यासाठी
     AI चा कसा वापर करता येईल, हे शिका.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: AI म्हणजे काय?
   ai_video_title_algorithm_bias: अल्गोरीदम्समधील पूर्वग्रहाशी लढा देणे
   ai_video_title_phone_knows_dog: तुमच्या फोनला कसे कळते की हा कुत्रा आहे?
@@ -215,6 +221,8 @@ mr:
   hourofcode_homepage_hoc2018_header_line2: वय 4 ते 104.
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
   codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: कोडचा तासमध्ये माइनक्राफ्ट एका नवीन कामासोबत
     परत आले आहे! माइक्राफ्टमध्ये कोडच्या सहाय्याने फिरा.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
@@ -1579,7 +1587,7 @@ mr:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -5270,8 +5278,9 @@ mr:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -6338,8 +6347,7 @@ mr:
   tutorial_codespeakhappy_language: मराठी
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: मराठी
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: मराठी
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -7863,7 +7871,7 @@ mr:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_icomputelearn_string_platforms: सर्व आधुनिक ब्राउझर्स
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,

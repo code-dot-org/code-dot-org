@@ -1,5 +1,7 @@
 {
+  "genericBonusSuccess": "Bom trabalho!  Você terminou o nível, incluindo o desafio extra!",
   "makeBackground": "Você precisa adicionar um efeito de plano de fundo.",
+  "noSprites": "Você precisa criar um sprite.",
   "reinfFeedbackMsg": "Você terminou! Clique em \"Continuar\" para passar para o próximo nível.",
   "save": "Salvar",
   "shareGame": "Compartilhe seu jogo:"
