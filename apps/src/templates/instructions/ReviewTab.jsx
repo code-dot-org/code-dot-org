@@ -491,7 +491,6 @@ const styles = {
   },
   refreshButtonStyle: {
     margin: '10px 0',
-    fontSize: 13,
-    padding: '0 15px'
+    fontSize: 13
   }
 };
