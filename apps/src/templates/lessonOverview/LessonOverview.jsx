@@ -24,7 +24,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 class LessonOverview extends Component {
   static propTypes = {

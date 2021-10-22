@@ -1002,7 +1002,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script, published_state: SharedConstants::PUBLISHED_STATE.stable}
+    script {create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do

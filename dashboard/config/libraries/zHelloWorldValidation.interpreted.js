@@ -9,10 +9,11 @@ function level1(){
     });
   }
 
-  setSuccessTime();
+  // Logic
+  setSuccessTime(validationPropsle.successCriteria);
 
   if (!validationProps.successCriteria.starterSprite ||
-    !validationProps.successCriteria.usedSpeech) {
+    !validationProps.successCriterila.usedSpeech) {
     drawProgressBar("earlyFail");
   } else {
     drawProgressBar("pass");
@@ -41,12 +42,12 @@ function level2(){
     setSuccessCriteria({
       twoSprites: checkTwoSprites(spriteIds),
       differentLocations: checkSpriteLocations(spriteIds),
-      differentCostumes: checkSpriteCostumes(spriteIds),
-      changedBackground: checkBackgroundChanged()
+      differentCostumes: checkSpriteCostumes(spriteIds)
     });
   }
 
-  setSuccessTime();
+  // Logic
+  setSuccessTime(validationProps.successCriteria);
 
   if (!validationProps.successCriteria.twoSprites ||
     !validationProps.successCriteria.differentLocations ||
@@ -67,11 +68,7 @@ function level2(){
   }
 
   if (World.frameCount - validationProps.successTime >= WAIT_TIME) {
-    if (validationProps.successCriteria.changedBackground) {
-      levelFailure(0, "genericBonusSuccess");
-    } else {
-      levelFailure(0, "genericExplore");
-    }
+    levelFailure(0, "genericSuccess");
   }
 
 }
@@ -89,6 +86,9 @@ function level3(){
       differentCostumes: checkSpriteCostumes(spriteIds),
       allSpritesSpeaking: false
     });
+    validationProps.challengeCriteria = {
+      changedBackground: checkBackgroundChanged()
+    };
   }
 
   // Check sprites speaking
@@ -99,16 +99,15 @@ function level3(){
   }
   validationProps.successCriteria.allSpritesSpeaking = numSpritesWithSayBlocks == spriteIds.length;
 
-  setSuccessTime();
+  // Logic
+  setSuccessTime(validationProps.successCriteria);
 
   if (!validationProps.successCriteria.twoSprites ||
     !validationProps.successCriteria.differentLocations ||
     !validationProps.successCriteria.differentCostumes) {
     drawProgressBar("earlyFail");
-  } else if (!validationProps.successCriteria.allSpritesSpeaking) {
-    drawProgressBar("fail");
   } else {
-    drawProgressBar("pass");
+    determineAndDrawProgressBar(validationProps.successTime, false);
   }
 
   if (World.frameCount > EARLY_FAIL_TIME) {
@@ -132,7 +131,11 @@ function level3(){
   }
 
   if (World.frameCount - validationProps.successTime >= WAIT_TIME) {
-    levelFailure(0, "genericSuccess");
+    if (validationProps.challengeCriteria.changedBackground) {
+      levelFailure(0, "genericBonusSuccess");
+    } else {
+      levelFailure(0, "genericExplore");
+    }
   }
 
 }
@@ -153,27 +156,42 @@ function level4(){
     validationProps.clickedSprites=[];
   }
 
+  if(!validationProps.vars){
+    validationProps.vars = {
+      eventLogLength: 0,
+      clickedSprite: 0,
+      delay: 0
+    };
+  }
+
   //check for unclicked sprites, and show hand with rings
   if(World.seconds > 1){
     checkForUnclickedSprites(spriteIds, eventLog);
   }
 
-  validationProps.successCriteria.clickedAllSprites = validationProps.clickedSprites.length>=2;
-  console.log(validationProps.successCriteria.clickedAllSprites);
-
-  setSuccessTime(validationProps.successCriteria);
-  //console.log("successTime: " + validationProps.successTime);
-
-  if (!validationProps.successTime) {
-    drawProgressBar("fail");
-  } else {
-    drawProgressBar("pass");
+  var newClickedSprite = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);
+  console.log("newClickedSprite: " + newClickedSprite);
+  if (newClickedSprite >= 0){
+    if (validationProps.clickedSprites.indexOf(newClickedSprite) != -1) {
+      console.log("IN PUSH");
+      validationProps.clickedSprites.push(newClickedSprite);
+      validationProps.vars.delay = World.frameCount;
+    }
   }
 
-  if (World.frameCount - validationProps.successTime >= WAIT_TIME) {
-    levelFailure(0, "genericSuccess");
-  } else if (World.frameCount > WAIT_TIME) {
-    levelFailure(3, "clickAllSprites");
+  validationProps.successCriteria.clickedAllSprites = validationProps.clickedSprites.length>=2;
+
+  // Logic
+  setSuccessTime(validationProps.successCriteria);
+
+  determineAndDrawProgressBar(validationProps.successTime, validationProps.vars.delay);
+
+  if (World.frameCount-validationProps.vars.delay > WAIT_TIME) {
+    if (!validationProps.successTime) {
+      levelFailure(3, "clickAllSprites");
+    } else {
+      levelFailure(0, "genericSuccess");
+    }
   }
 
 }
@@ -181,151 +199,61 @@ function level4(){
 
 function level5(){
   //This level requires zValidationHelperFunctions
-  if (!validationProps.successCriteria) {
-    validationProps.successCriteria = {
-      starterSprite: false,
-      differentLocations: false,
-      differentCostumes: false,
-      noSpritesTouching: true,
-      clickedSprite: false,
-      spriteClickCausesSpeech: false
-    };
-  }
-
-  if (!validationProps.previous) {
-    validationProps.previous = {
-      delay : 0
-    };
-  }
-
-  // Helper variables
   var spriteIds = getSpriteIdsInUse();
   var eventLog = getEventLog();
 
-  if (!validationProps.numSpritesSpoken) {
-    validationProps.numSpritesSpoken = 0;
+  if (!validationProps.successCriteria) {
+    setSuccessCriteria({
+      twoSprites: checkTwoSprites(spriteIds),
+      starterSprite: checkOneSprite(spriteIds),
+      differentLocations: checkSpriteLocations(spriteIds),
+      differentCostumes: checkSpriteCostumes(spriteIds),
+      noSpritesTouching: checkSpritesTouching(spriteIds),
+      clickedSprite: false,
+      spriteClickCausesSpeech: false
+    });
   }
 
-  // Check for at least 1 sprite
-  validationProps.successCriteria.starterSprite = spriteIds.length>=1;
-
-  if (World.frameCount == 1) {
-
-    // Check sprite locations
-    var uniqueStartingSpriteLocations = [];
-    for (var i=0; i<spriteIds.length; i++) {
-      var coords = [getProp({id: spriteIds[i]}, "x"), getProp({id: spriteIds[i]}, "y")];
-      var noDuplicateCoords = true;
-      for (var j=0; j<uniqueStartingSpriteLocations.length; j++) {
-        if ((coords[0] == uniqueStartingSpriteLocations[j][0]) &&
-            (coords[1] == uniqueStartingSpriteLocations[j][1])){
-          noDuplicateCoords = false;
-          break;
-        }
-      }
-      if (!noDuplicateCoords) {
-        break;
-      } else {
-        uniqueStartingSpriteLocations.push(coords);
-      }
-    }
-    if (spriteIds.length == uniqueStartingSpriteLocations.length) {
-      validationProps.successCriteria.differentLocations = true;
-    }
-
-    // Check sprite costumes
-    var uniqueStartingSpriteCostumes = [];
-    for (var k=0; k<spriteIds.length; k++) {
-      var costume = getProp({id: spriteIds[k]}, "costume");
-      var noDuplicateCostumes = true;
-      for (var l=0; l<uniqueStartingSpriteCostumes.length; l++) {
-        if (costume == uniqueStartingSpriteCostumes[l]) {
-          noDuplicateCostumes = false;
-          break;
-        }
-      }
-      if (!noDuplicateCostumes) {
-        break;
-      } else {
-        uniqueStartingSpriteCostumes.push(costume);
-      }
-    }
-    if (spriteIds.length == uniqueStartingSpriteCostumes.length) {
-      validationProps.successCriteria.differentCostumes = true;
-    }
-
-    // Check that no sprites are touching
-    if (World.frameCount == 1) {
-      for (var m=0; m<spriteIds.length; m++) {
-        for (var n=m+1; n<spriteIds.length; n++) {
-          if (isTouchingSprite({id: spriteIds[m]}, {id: spriteIds[n]})) {
-            setProp({id: spriteIds[m]}, "debug", true);
-            setProp({id: spriteIds[n]}, "debug", true);
-            validationProps.successCriteria.noSpritesTouching = false;
-            break;
-          }
-        }
-        if (!validationProps.successCriteria.noSpritesTouching) {
-          break;
-        }
-      }
-    }
-
+  if (!validationProps.vars) {
+    validationProps.vars = {
+      delay : 0,
+      numSpritesSpoken : 0,
+      eventLogLength : 0,
+      clickedSprite : -1
+    };
   }
 
-
-  // Check if new event happened
-  if (eventLog.length > validationProps.previous.eventLogLength) {
-    var currentEvent = eventLog[eventLog.length - 1];
-    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
-    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
-      if (!validationProps.previous.clickedSprite ||
-          validationProps.previous.clickedSprite != clickedSpriteId) {
-        // current event is a click
-        validationProps.successCriteria.clickedSprite = true;
-        for (var spriteId in spriteIds) {
-          if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
-            // new sprite caused speech in some sprite
-            validationProps.numSpritesSpoken++;
-            validationProps.previous.delay = World.frameCount;
-            /*
-            if ((World.frameCount-(validationProps.previous.delay+50)) < 0) {
-              validationProps.previous.delay = World.frameCount;
-            } else {
-              validationProps.previous.delay += 50;
-            }
-            */
-            break;
-          }
-        }
-      }
-      validationProps.previous.clickedSprite = clickedSpriteId;
+  var newId = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);
+  if (newId == -2) {
+    validationProps.successCriteria.clickedSprite = true;
+  } else if (newId >= 0) {
+    validationProps.successCriteria.clickedSprite = true;
+    if (newId != validationProps.vars.clickedSprite) {
+      validationProps.vars.clickedSprite = newId;
+      validationProps.vars.numSpritesSpoken++;
+      validationProps.vars.delay = World.frameCount;
     }
   }
 
-  // Store previous event log length
-  validationProps.previous.eventLogLength = eventLog.length;
+  validationProps.vars.eventLogLength = eventLog.length;
 
-  // Set success time if success
-  if (validationProps.successCriteria.starterSprite &&
-      validationProps.successCriteria.noSpritesTouching &&
-      validationProps.successCriteria.differentLocations &&
-      validationProps.successCriteria.differentCostumes &&
-      validationProps.successCriteria.clickedSprite && 
-      validationProps.numSpritesSpoken>=1 &&
-     !validationProps.successTime)
-  {
-    validationProps.successTime = World.frameCount;
+  validationProps.successCriteria.spriteClickCausesSpeech = validationProps.vars.numSpritesSpoken>=1;
+
+  // Logic
+  setSuccessTime(validationProps.successCriteria);
+
+  if (!validationProps.successCriteria.twoSprites ||
+    !validationProps.successCriteria.starterSprite ||
+    !validationProps.successCriteria.differentLocations ||
+    !validationProps.successCriteria.differentCostumes) {
+    drawProgressBar("earlyFail");
+  } else {
+    determineAndDrawProgressBar(validationProps.successTime, validationProps.vars.delay);
   }
 
-  // Delay fail time (so student can observe the wrong animation)
-  var earlyFailTime = 10;
-  var failTime = 150;
-
-  // Check criteria and give failure feedback
-  if (World.frameCount > earlyFailTime) {
-    if (!validationProps.successCriteria.starterSprite) {
-      levelFailure(3, "noSprites");
+  if (World.frameCount > EARLY_FAIL_TIME) {
+    if (!validationProps.successCriteria.twoSprites) {
+      levelFailure(3, "createAtLeastTwoSprites");
     } else if (!validationProps.successCriteria.differentLocations) {
       levelFailure(3, "moveSpriteLocation");
     } else if (!validationProps.successCriteria.differentCostumes) {
@@ -333,16 +261,16 @@ function level5(){
     }
   }
 
-  if (World.frameCount-validationProps.previous.delay > failTime) {
+  if (World.frameCount-validationProps.vars.delay > WAIT_TIME) {
     if (!validationProps.successCriteria.noSpritesTouching) {
       levelFailure(3, "startingSpritesShouldNotTouch");
     } else if (!validationProps.successCriteria.clickedSprite) {
       // fail
       levelFailure(3, "singleSpriteNotClicked");
-    } else if (validationProps.numSpritesSpoken >= 2) {
+    } else if (validationProps.vars.numSpritesSpoken >= 2) {
       // bonus pass
       levelFailure(0, "genericBonusSuccess");
-    } else if (validationProps.numSpritesSpoken >= 1) {
+    } else if (validationProps.vars.numSpritesSpoken >= 1) {
       // pass
       levelFailure(0, "genericSuccess");
     } else {
@@ -351,274 +279,160 @@ function level5(){
     }
   }
 
-  /*
-  // Pass 5 seconds after success
-  var waitTime = 150;
-  if (World.frameCount - validationProps.successTime >= waitTime) {
-    levelFailure(0, "genericSuccess");
-  }
-  */
-
-  push();
-  stroke("white");
-  if (!validationProps.successCriteria.starterSprite ||
-      !validationProps.successCriteria.differentLocations ||
-      !validationProps.successCriteria.differentCostumes) {
-    fill(rgb(118,102,160));
-    rect(0,390,(World.frameCount*400/earlyFailTime),10);
-  } else if (!validationProps.successCriteria.noSpritesTouching ||
-      !validationProps.successCriteria.clickedSprite ||
-      (validationProps.numSpritesSpoken == 0)) {
-    fill(rgb(118,102,160));
-    rect(0,390,(World.frameCount*400/failTime),10);
-  } else {
-    fill(rgb(0,173,188));
-    rect(0,390,(max(0, World.frameCount-validationProps.previous.delay)*400/failTime),10);
-  }
-  pop();
 }
 
 
 function level6(){
-  //This level requires zValidationHelperFunctions
-  if (!validationProps.successCriteria) {
-    validationProps.successCriteria = {
-      singleSprite: false,
-      noSpritesTouching: true
-    };
-  }
-
-  // Helper variables
   var spriteIds = getSpriteIdsInUse();
   var eventLog = getEventLog();
   var background = getBackground();
 
-  if (!validationProps.previous) {
-    validationProps.previous = {
-      background: background
+  if (!validationProps.successCriteria) {
+    setSuccessCriteria({
+      singleSprite: checkOneSprite(spriteIds),
+      noSpritesTouching: checkSpritesTouching(spriteIds),
+      changedBackground: false
+    });
+  }
+
+  if (!validationProps.vars) {
+    validationProps.vars = {
+      delay: 0,
+      eventLogLength : 0,
+      clickedSprite: -1,
+      background: background,
+      numSpritesChangedBackground: 0
     };
   }
 
-  if (!validationProps.numSpritesChangedBackground) {
-    validationProps.numSpritesChangedBackground = 0;
-  }
-
-
-  // Check for a sprite
-  if (!validationProps.successCriteria.singleSprite) {
-    validationProps.successCriteria.singleSprite = spriteIds.length>=1;
-  }
-
-  if (World.frameCount == 1) {
-    // Check that no sprites are touching
-    for (var i=0; i<spriteIds.length; i++) {
-      for (var j=i+1; j<spriteIds.length; j++) {
-        if (isTouchingSprite({id: spriteIds[i]}, {id: spriteIds[j]})) {
-          setProp({id: spriteIds[i]}, "debug", true);
-          setProp({id: spriteIds[j]}, "debug", true);
-          validationProps.successCriteria.noSpritesTouching = false;
-          break;
-        }
-      }
-      if (!validationProps.successCriteria.noSpritesTouching) {
-        break;
-      }
-    }
-  }
-
   // Check if new event happened
-  if (eventLog.length > validationProps.previous.eventLogLength) {
-    var currentEvent = eventLog[eventLog.length - 1];
-    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
-    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
-      if ((!validationProps.previous.clickedSprite || validationProps.previous.clickedSprite != clickedSpriteId) &&
-         (background !== validationProps.previous.background)) {
-        validationProps.numSpritesChangedBackground++;
-        validationProps.previous.background = background;
-      }
-      validationProps.previous.clickedSprite = clickedSpriteId;
+  var newId = getClickedSpriteId(eventLog, validationProps.vars.eventLogLength);
+  if (newId >= 0) {
+    if ((validationProps.vars.clickedSprite != newId) &&
+        (background !== validationProps.vars.background)) {
+      validationProps.vars.numSpritesChangedBackground++;
+      validationProps.vars.background = background;
+      validationProps.successCriteria.changedBackground = validationProps.vars.numSpritesChangedBackground>=1;
+      validationProps.vars.delay = World.frameCount;
     }
+    validationProps.vars.clickedSprite = newId;
   }
 
-  // Store previous event log length
-  validationProps.previous.eventLogLength = eventLog.length;
+  validationProps.vars.eventLogLength = eventLog.length;
 
-  // Set success time if success
-  if (validationProps.successCriteria.singleSprite &&
-      validationProps.successCriteria.noSpritesTouching &&
-      validationProps.numSpritesChangedBackground>=1 &&
-      !validationProps.successTime)
-  {
-    validationProps.successTime = World.frameCount;
+  // Logic
+  setSuccessTime(validationProps.successCriteria);
+
+  if (!validationProps.successCriteria.singleSprite) {
+    drawProgressBar("earlyFail");
+  } else {
+    determineAndDrawProgressBar(validationProps.successTime, validationProps.vars.delay);
   }
 
-  var earlyFailTime = 10;
-  var failTime = 150;
-
-  if (World.frameCount > earlyFailTime) {
+  if (World.frameCount > EARLY_FAIL_TIME) {
     if (!validationProps.successCriteria.singleSprite) {
       levelFailure(3, "noSprites");
     }
   }
 
-  if (World.frameCount > failTime) {
+  if (World.frameCount-validationProps.vars.delay > WAIT_TIME) {
     if (!validationProps.successCriteria.noSpritesTouching) {
       levelFailure(3, "startingSpritesShouldNotTouch");
     } else if (!validationProps.successTime) {
       // fail
       levelFailure(3, "changeBackground");
-    } else if (validationProps.numSpritesChangedBackground >= 2) {
+    } else if (validationProps.vars.numSpritesChangedBackground >= 2) {
       // bonus pass
       levelFailure(0, "genericBonusSuccess");
-    } else if (validationProps.numSpritesChangedBackground >= 1) {
+    } else if (validationProps.vars.numSpritesChangedBackground >= 1) {
       // pass
       levelFailure(0, "genericSuccess");
     }
   }
 
-  push();
-  stroke("white");
-  if (!validationProps.successCriteria.singleSprite) {
-    fill(rgb(118,102,160));
-    rect(0,390,(World.frameCount*400/earlyFailTime),10);
-  } else if (!validationProps.successTime ||
-      !validationProps.successCriteria.noSpritesTouching) {
-    fill(rgb(118,102,160));
-    rect(0,390,(World.frameCount*400/failTime),10);
-  } else {
-    fill(rgb(0,173,188));
-    rect(0,390,((World.frameCount)*400/failTime),10);
-  }
-  pop();
 }
 
 
 function level7(){
   //This level requires zValidationHelperFunctions
-  if (!validationProps.successCriteria) {
-    validationProps.successCriteria = {
-      starterSprite: false,
-      noSpritesTouching: true
-    };
-  }
-
-  // Helper variables
   var spriteIds = getSpriteIdsInUse();
   var eventLog = getEventLog();
 
-  if (!validationProps.previous) {
-    validationProps.previous = {};
+  if (!validationProps.successCriteria) {
+    setSuccessCriteria({
+      starterSprite: checkOneSprite(spriteIds),
+      noSpritesTouching: checkSpritesTouching(spriteIds)
+    });
   }
 
-  if (!validationProps.numSpritesChangedCostume) {
-    validationProps.numSpritesChangedCostume = 0;
-  }
+  if (!validationProps.vars) {
+    validationProps.vars = {
+      delay: 0,
+      clickedSprite: -1,
+      eventLogLength: 0,
+      numSpritesChangedCostume: 0,
+      spritesCostumes: {}
+    };
 
-  // Keep track of sprites' current costumes
-  if(!validationProps.spritesCostumes) {
-    validationProps.spritesCostumes = {};
     for (var spriteId in  spriteIds) {
-      validationProps.spritesCostumes[spriteId] = getProp({id: spriteId}, "costume");
-    }
-  }
-
-  // Check for a sprite
-  if (!validationProps.successCriteria.starterSprite) {
-    validationProps.successCriteria.starterSprite = spriteIds.length>=1;
-  }
-
-  if (World.frameCount == 1) {
-    // Check that no sprites are touching
-    for (var i=0; i<spriteIds.length; i++) {
-      for (var j=i+1; j<spriteIds.length; j++) {
-        if (isTouchingSprite({id: spriteIds[i]}, {id: spriteIds[j]})) {
-          setProp({id: spriteIds[i]}, "debug", true);
-          setProp({id: spriteIds[j]}, "debug", true);
-          validationProps.successCriteria.noSpritesTouching = false;
-          break;
-        }
-      }
-      if (!validationProps.successCriteria.noSpritesTouching) {
-        break;
-      }
+      validationProps.vars.spritesCostumes[spriteId] = getProp({id: spriteId}, "costume");
     }
   }
 
   // Check if new event happened
-  if (eventLog.length > validationProps.previous.eventLogLength) {
-    var currentEvent = eventLog[eventLog.length - 1];
-    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
-    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
-      if (!validationProps.previous.clickedSprite ||
-          validationProps.previous.clickedSprite != clickedSpriteId) {
-        for (var spriteId_0 in spriteIds) {
-          var spriteCostume = getProp({id: spriteId_0}, "costume");
-          if (validationProps.spritesCostumes[spriteId_0] == undefined) {
-            validationProps.spritesCostumes[spriteId_0] = spriteCostume;
-          }
-          // check if sprite has changed costume since previous frame
-          if (spriteCostume != validationProps.spritesCostumes[spriteId_0]) {
-            validationProps.spritesCostumes[spriteId_0] = spriteCostume;
-            validationProps.numSpritesChangedCostume++;
-            break;
-          }
+  var newId = getClickedSpriteId(eventLog, validationProps.vars.eventLogLength);
+  if (newId >= 0) {
+    if (validationProps.vars.clickedSprite != newId) {
+      for (var spriteId_0 in spriteIds) {
+        var spriteCostume = getProp({id: spriteId_0}, "costume");
+        if (validationProps.vars.spritesCostumes[spriteId_0] == undefined) {
+          validationProps.vars.spritesCostumes[spriteId_0] = spriteCostume;
+        }
+        // check if sprite has changed costume since previous frame
+        if (spriteCostume != validationProps.vars.spritesCostumes[spriteId_0]) {
+          validationProps.vars.spritesCostumes[spriteId_0] = spriteCostume;
+          validationProps.vars.numSpritesChangedCostume++;
+          validationProps.vars.delay = World.frameCount;
+          break;
         }
       }
-      validationProps.previous.clickedSprite = clickedSpriteId;
     }
+    validationProps.vars.clickedSprite = newId;
   }
 
-  // Store previous event log length
-  validationProps.previous.eventLogLength = eventLog.length;
+  validationProps.vars.eventLogLength = eventLog.length;
 
-  // Set success time if success
-  if (validationProps.successCriteria.starterSprite &&
-      validationProps.successCriteria.noSpritesTouching &&
-      validationProps.numSpritesChangedCostume>=1 &&
-      !validationProps.successTime)
-  {
-    validationProps.successTime = World.frameCount;
+  // Logic
+  setSuccessTime(validationProps.successCriteria);
+
+  if (!validationProps.successCriteria.starterSprite) {
+    drawProgressBar("earlyFail");
+  } else {
+    determineAndDrawProgressBar(validationProps.successTime, validationProps.vars.delay);
   }
 
-  var earlyFailTime = 10;
-  var failTime = 150;
-
-  if (World.frameCount > earlyFailTime) {
+  if (World.frameCount > EARLY_FAIL_TIME) {
     if (!validationProps.successCriteria.starterSprite) {
       levelFailure(3, "noSprites");
     }
   }
 
-  if (World.frameCount > failTime) {
+  if (World.frameCount-validationProps.vars.delay > WAIT_TIME) {
     if (!validationProps.successCriteria.noSpritesTouching) {
       // fail
       levelFailure(3, "startingSpritesShouldNotTouch");
     } else if (!validationProps.successTime) {
       // fail
       levelFailure(3, "changeOrSetCostumeEvent");
-    } else if (validationProps.numSpritesChangedCostume >= 2) {
+    } else if (validationProps.vars.numSpritesChangedCostume >= 2) {
       // bonus pass
       levelFailure(0, "genericBonusSuccess");
-    } else if (validationProps.numSpritesChangedCostume >= 1) {
+    } else if (validationProps.vars.numSpritesChangedCostume >= 1) {
       // pass
       levelFailure(0, "genericSuccess");
     }
   }
 
-  push();
-  stroke("white");
-  if (!validationProps.successCriteria.starterSprite) {
-    fill(rgb(118,102,160));
-    rect(0,390,(World.frameCount*400/earlyFailTime),10);
-  } else if (!validationProps.successTime ||
-      !validationProps.successCriteria.noSpritesTouching) {
-    fill(rgb(118,102,160));
-    rect(0,390,(World.frameCount*400/failTime),10);
-  } else {
-    fill(rgb(0,173,188));
-    rect(0,390,((World.frameCount)*400/failTime),10);
-  }
-  pop();
 }
 
 
@@ -914,10 +728,8 @@ function level10(){
       // fail
       if (validationProps.previous.chooseSound) {
         levelFailure(3, "chooseSound");
-        console.log("You need to choose a sound from the drop-down menu.");
       } else {
         levelFailure(3, "noSound");
-        console.log("You need to add a sound.");
       }
     } else if (validationProps.successCriteria.changedSoundEvent) {
       // bonus pass

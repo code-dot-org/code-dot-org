@@ -2,29 +2,36 @@
 #
 # Table name: scripts
 #
-#  id              :integer          not null, primary key
-#  name            :string(255)      not null
-#  created_at      :datetime
-#  updated_at      :datetime
-#  wrapup_video_id :integer
-#  user_id         :integer
-#  login_required  :boolean          default(FALSE), not null
-#  properties      :text(65535)
-#  new_name        :string(255)
-#  family_name     :string(255)
-#  published_state :string(255)      default("in_development")
+#  id                   :integer          not null, primary key
+#  name                 :string(255)      not null
+#  created_at           :datetime
+#  updated_at           :datetime
+#  wrapup_video_id      :integer
+#  user_id              :integer
+#  login_required       :boolean          default(FALSE), not null
+#  properties           :text(65535)
+#  new_name             :string(255)
+#  family_name          :string(255)
+#  published_state      :string(255)      default("in_development")
+#  instruction_type     :string(255)
+#  instructor_audience  :string(255)
+#  participant_audience :string(255)
 #
 # Indexes
 #
-#  index_scripts_on_family_name      (family_name)
-#  index_scripts_on_name             (name) UNIQUE
-#  index_scripts_on_new_name         (new_name) UNIQUE
-#  index_scripts_on_published_state  (published_state)
-#  index_scripts_on_wrapup_video_id  (wrapup_video_id)
+#  index_scripts_on_family_name           (family_name)
+#  index_scripts_on_instruction_type      (instruction_type)
+#  index_scripts_on_instructor_audience   (instructor_audience)
+#  index_scripts_on_name                  (name) UNIQUE
+#  index_scripts_on_new_name              (new_name) UNIQUE
+#  index_scripts_on_participant_audience  (participant_audience)
+#  index_scripts_on_published_state       (published_state)
+#  index_scripts_on_wrapup_video_id       (wrapup_video_id)
 #
 
 require 'cdo/script_constants'
 require 'cdo/shared_constants'
+require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
@@ -32,6 +39,7 @@ TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 # A sequence of Levels
 class Script < ApplicationRecord
   include ScriptConstants
+  include SharedCourseConstants
   include SharedConstants
   include Rails.application.routes.url_helpers
 
@@ -130,7 +138,7 @@ class Script < ApplicationRecord
 
   def hide_pilot_units
     if !unit_group && pilot_experiment.present?
-      self.published_state = SharedConstants::PUBLISHED_STATE.pilot
+      self.published_state = SharedCourseConstants::PUBLISHED_STATE.pilot
     end
   end
 
@@ -144,7 +152,10 @@ class Script < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
-  validates :published_state, acceptance: {accept: SharedConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be nil, teacher_led or self_paced'}
+  validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values.push(nil), message: 'must be nil, code.org admin, plc reviewer, facilitator, or teacher'}
+  validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.push(nil), message: 'must be nil, facilitator, teacher, or student'}
 
   def prevent_duplicate_levels
     reload
@@ -581,7 +592,7 @@ class Script < ApplicationRecord
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
       unit_name = family_units.select {|s| unit_ids.include?(s.id)}&.first&.name
-      return Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) if unit_name
+      return Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) if unit_name
     end
 
     locale_str = locale&.to_s
@@ -600,7 +611,7 @@ class Script < ApplicationRecord
     end
 
     unit_name = latest_version&.name
-    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedConstants::PUBLISHED_STATE.beta) : nil
+    unit_name ? Script.new(redirect_to: unit_name, published_state: SharedCourseConstants::PUBLISHED_STATE.beta) : nil
   end
 
   def self.log_redirect(old_unit_name, new_unit_name, request, event_name, user_type)
@@ -1039,7 +1050,8 @@ class Script < ApplicationRecord
         wrapup_video: unit_data[:wrapup_video],
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
-        published_state: new_suffix ? SharedConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
+        published_state: new_suffix ? SharedCourseConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
+        instruction_type: new_suffix ? SharedCourseConstants::INSTRUCTION_TYPE.teacher_led : unit_data[:instruction_type],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1065,7 +1077,7 @@ class Script < ApplicationRecord
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
     transaction do
       unit = fetch_unit(options)
-      unit.update!(published_state: SharedConstants::PUBLISHED_STATE.in_development) if new_suffix
+      unit.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.in_development) if new_suffix
 
       unit.prevent_duplicate_lesson_groups(raw_lesson_groups)
       Script.prevent_some_lessons_in_lesson_groups_and_some_not(raw_lesson_groups)
@@ -1192,7 +1204,7 @@ class Script < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       copied_unit = dup
-      copied_unit.published_state = SharedConstants::PUBLISHED_STATE.in_development
+      copied_unit.published_state = SharedCourseConstants::PUBLISHED_STATE.in_development
       copied_unit.pilot_experiment = nil
       copied_unit.tts = false
       copied_unit.announcements = nil
@@ -1358,6 +1370,7 @@ class Script < ApplicationRecord
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
           published_state: (unit_group.present? && general_params[:published_state] == unit_group.published_state) ? nil : general_params[:published_state],
+          instruction_type: unit_group.present? ? nil : general_params[:instruction_type],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1493,15 +1506,15 @@ class Script < ApplicationRecord
   # A unit that the general public can assign. Has been soft or
   # hard launched.
   def launched?
-    [SharedConstants::PUBLISHED_STATE.preview, SharedConstants::PUBLISHED_STATE.stable].include?(get_published_state)
+    [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(get_published_state)
   end
 
   def stable?
-    get_published_state == SharedConstants::PUBLISHED_STATE.stable
+    get_published_state == SharedCourseConstants::PUBLISHED_STATE.stable
   end
 
   def in_development?
-    get_published_state == SharedConstants::PUBLISHED_STATE.in_development
+    get_published_state == SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
@@ -1864,7 +1877,7 @@ class Script < ApplicationRecord
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
   # If both are null, the script is in_development
   def get_published_state
-    published_state || unit_group&.published_state || SharedConstants::PUBLISHED_STATE.in_development
+    published_state || unit_group&.published_state || SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   # Use the unit group's pilot_experiment if one exists

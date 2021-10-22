@@ -190,6 +190,9 @@ module LevelsHelper
     if level_requires_channel && !is_cached_level
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
+        reduce_channel_updates: @script ?
+          !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
+          false
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
@@ -301,7 +304,7 @@ module LevelsHelper
     end
 
     if @level && @script_level
-      @app_options[:exampleSolutions] = @script_level.get_example_solutions(current_user, @section)
+      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section)
     end
 
     # Blockly caches level properties, whereas this field depends on the user
