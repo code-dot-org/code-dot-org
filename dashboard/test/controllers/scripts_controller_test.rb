@@ -460,6 +460,27 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
+  test "update instruction_type" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      script_text: '',
+      published_state: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+  end
+
   test "update published state to in_development" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
