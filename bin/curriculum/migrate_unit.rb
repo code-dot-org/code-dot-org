@@ -66,6 +66,11 @@ def main(options)
     script = Script.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
 
+    # TODO(dave): remove this check once teacher_resources are handled safely
+    if script.teacher_resources.present? && script.launched?
+      raise 'unsafe to migrate launched script containing teacher resources'
+    end
+
     next if options.dry_run
 
     models = ['Lesson', 'Activity']
