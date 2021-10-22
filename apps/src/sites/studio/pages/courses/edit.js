@@ -49,6 +49,12 @@ function showCourseEditor() {
         initialInstructionType={
           courseEditorData.course_summary.instruction_type
         }
+        initialInstructorAudience={
+          courseEditorData.course_summary.instructorAudience
+        }
+        initialParticipantAudience={
+          courseEditorData.course_summary.participantAudience
+        }
         initialPilotExperiment={
           courseEditorData.course_summary.pilot_experiment || ''
         }

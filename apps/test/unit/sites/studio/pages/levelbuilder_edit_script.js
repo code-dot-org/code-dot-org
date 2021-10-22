@@ -22,7 +22,9 @@ describe('the level builder page init script', () => {
         is_migrated: false,
         scriptPath: '/s/test-script',
         publishedState: 'beta',
-        instructionType: 'teacher_led'
+        instructionType: 'teacher_led',
+        instructorAudience: 'teacher',
+        participantAudience: 'student'
       },
       i18n: {
         lessonDescriptions: [],
