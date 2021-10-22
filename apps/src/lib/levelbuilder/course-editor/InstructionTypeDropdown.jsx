@@ -4,6 +4,11 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import {InstructionType} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
+const INSTRUCTION_TYPE_DISPLAY_NAMES = {
+  [InstructionType.teacher_led]: 'Teacher Led',
+  [InstructionType.self_paced]: 'Self Paced'
+};
+
 export default function InstructionTypeDropdown({
   instructionType,
   handleInstructionTypeChange
@@ -20,7 +25,7 @@ export default function InstructionTypeDropdown({
         >
           {Object.values(InstructionType).map(state => (
             <option key={state} value={state}>
-              {state}
+              {INSTRUCTION_TYPE_DISPLAY_NAMES[state]}
             </option>
           ))}
         </select>
