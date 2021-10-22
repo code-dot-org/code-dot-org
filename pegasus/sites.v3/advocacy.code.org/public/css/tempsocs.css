@@ -29,6 +29,7 @@ select.top-dropdown {
 .carousel-control {
 	text-shadow: none !important;
 	color: #2C3F1C !important;
+	height: 110%; /*to account for bottom indicators*/
 }
 
 .carousel-control.left {
@@ -37,6 +38,14 @@ select.top-dropdown {
 
 .carousel-control.right {
 	background-image: linear-gradient(90deg, rgba(28,100,90,0.0001) 0, rgba(28,100,90,0.2)) !important;
+}
+
+.carousel-indicators {
+	background: #949F8D;
+	bottom: -12% !important;
+	width: 80% !important;
+	left: 10% !important;
+	margin-left: 0% !important;
 }
 
 .col-100 {
@@ -1770,6 +1779,10 @@ aside {
 /* pad */
 /**/
 @media screen and (max-width: 1000px) {
+	#tabby-tabs {
+		margin-top: 5%;
+	}
+
 	.sky-tabs > label span span {
 		padding: 0 15px;
 	}
@@ -1784,7 +1797,6 @@ aside {
 /* phone */
 /**/
 @media screen and (max-width: 767px) {
-	
 	.sky-tabs .grid-col,
 	.sky-tabs .grid-col:first-child {
 		float: none;
