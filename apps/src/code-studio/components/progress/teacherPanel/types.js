@@ -4,12 +4,10 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 export const sectionData = PropTypes.shape({
   is_verified_teacher: PropTypes.bool,
   lesson_extra: lessonExtra,
-  level_examples: PropTypes.array,
   page_type: PropTypes.string,
   script_id: PropTypes.number,
   script_name: PropTypes.string,
-  section: PropTypes.object,
-  teacher_level: levelWithProgress
+  section: PropTypes.object
 });
 
 const lessonExtra = PropTypes.shape({
