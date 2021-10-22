@@ -113,6 +113,9 @@
         "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
           "description": "Utiliser des variables conjointement avec des invites."
         },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Créez un programme informatique interactif qui réponde aux entrées de l'utilisateur."
+        },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
@@ -215,8 +218,20 @@
         "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
           "description": "Identifier et corriger les erreurs dans l'exécution d'un algorithme "
         },
+        "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
+          "description": "Établissez un modèle des bons comportements en salle informatique "
+        },
+        "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
+          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
+        },
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
           "description": "Traduire les mouvements en une série de commandes."
+        },
+        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
+          "description": "Construire un programme en réorganisant des mouvements séquentiels."
+        },
+        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
+          "description": "Construire un programme informatique à partir d'un ensemble d'instructions écrites."
         },
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
           "description": "Traduire les mouvements en une série de commandes."
@@ -287,8 +302,17 @@
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Appliquer des concepts informatiques dans un projet ouvert. "
+        },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Découvrir qu'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Comparer le fait d'ètre en sécurité en ligne avec celui de l'être dans le monde réel. "
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
           "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
@@ -380,6 +404,12 @@
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
         },
+        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
+          "description": "Comprendre à quoi peut ressembler la méchanceté en ligne et ce qu'elle peut faire aux gens. "
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "Identifiez des façons de répondre aux mots méchants en ligne, en utilisant S-T-O-P. "
+        },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
           "description": "Insister sur la précision, lors de la création d'instructions"
         },
@@ -470,6 +500,12 @@
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Identifier les actions qui aux événements d'entrée."
         },
+        "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
+          "description": "Recueillir et enregistrer des données sur des quantités d'objets réels ou de personnages sur un écran"
+        },
+        "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
+          "description": "Créez un graphique à barres et un camembert pour représenter des données simples."
+        },
         "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
           "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prédiction. "
         },
@@ -487,6 +523,12 @@
         },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "Définissez le terme « mot de passe » et décrivez le but d'un mot de passe."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "Entraînez-vous à créer un mot de passe fort et mémorisable."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "Recadrer une séquence d'étapes comme un programme codé"
@@ -787,6 +829,12 @@
         },
         "d1485387-01e4-484d-9935-75f7c14b9d76": {
           "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
+        },
+        "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
+          "description": "Établissez un modèle des bons comportements en salle informatique "
+        },
+        "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
+          "description": "Expérimentez des actions de programmation standard, basées sur des blocs, tels que : cliquer, glisser-déposer, etc. "
         },
         "a5a52414-42a7-4b32-897b-819a70572328": {
           "description": "Traduire les mouvements en une série de commandes."

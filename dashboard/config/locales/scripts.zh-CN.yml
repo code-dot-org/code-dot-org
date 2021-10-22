@@ -16035,6 +16035,8 @@ zh-CN:
           lessons:
             Virus Simulation for Code Bytes:
               name: 编码一个模拟
+            Outbreak:
+              name: 编码一个模拟
           lesson_groups:
             outbreak:
               display_name: 疫情爆发模拟
@@ -18442,5 +18444,13 @@ zh-CN:
           lessons:
             lesson-1:
               name: 拼字比赛
+          title: 拼字比赛
         outbreak-csc:
           title: 疫情爆发
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容

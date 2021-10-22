@@ -3177,6 +3177,28 @@
           "moving east and looping": "crwdns2695655:0crwdne2695655:0",
           "moving north and looping": "crwdns2695657:0crwdne2695657:0",
           "moving south and looping": "crwdns2695659:0crwdne2695659:0"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "crwdns2698393:0crwdne2698393:0",
+          "moving east": "crwdns2698395:0crwdne2698395:0",
+          "spinning left": "crwdns2698397:0crwdne2698397:0",
+          "spinning right": "crwdns2698399:0crwdne2698399:0",
+          "shrinking": "crwdns2698401:0crwdne2698401:0",
+          "growing": "crwdns2698403:0crwdne2698403:0",
+          "moving south": "crwdns2698405:0crwdne2698405:0",
+          "swimming left and right": "crwdns2698407:0crwdne2698407:0",
+          "moving north": "crwdns2698409:0crwdne2698409:0",
+          "jittering": "crwdns2698411:0crwdne2698411:0",
+          "moving west": "crwdns2698413:0crwdne2698413:0",
+          "patrolling": "crwdns2698415:0crwdne2698415:0",
+          "moving with arrow keys": "crwdns2698417:0crwdne2698417:0",
+          "driving with arrow keys": "crwdns2698419:0crwdne2698419:0",
+          "fluttering": "crwdns2698421:0crwdne2698421:0",
+          "wobbling": "crwdns2698423:0crwdne2698423:0",
+          "moving west and looping": "crwdns2698425:0crwdne2698425:0",
+          "moving east and looping": "crwdns2698427:0crwdne2698427:0",
+          "moving north and looping": "crwdns2698429:0crwdne2698429:0",
+          "moving south and looping": "crwdns2698431:0crwdne2698431:0"
         }
       }
     }

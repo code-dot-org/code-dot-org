@@ -13814,6 +13814,8 @@ fr:
               name: En Déplacement avec les Événements
               description_student: Crée ton jeu ou ta propre histoire.
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
+            Safety in My Online Neighborhood:
+              description_student: Apprenez à vous déplacer en ligne en toute sécurité.
           student_description: Apprends les bases de l'informatique et de la sécurité sur internet. À la fin du cours, crée ton propre jeu ou ta propre histoire que tu peux partager.
         courseb-2020:
           title: Cours B (2020)
@@ -15087,6 +15089,10 @@ fr:
           lessons:
             Virus Simulation for Code Bytes:
               name: Codage d'une simulation
+            Outbreak:
+              name: Codage d'une simulation
+              description_student: Un virus est arrivé à Monster Town ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir.
+              description_teacher: 'Cette leçon combine le **renforcement des compétences** autour d''événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans Sprite Lab. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. '
           lesson_groups:
             outbreak:
               display_name: Simulation de l'épidémie
@@ -15849,6 +15855,8 @@ fr:
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description_audience: 'Âges : 4 à 7 ans'
           lessons:
+            Safety in My Online Neighborhood:
+              description_student: Apprenez à vous déplacer en ligne en toute sécurité.
             Learn to Drag and Drop:
               key: Apprends à Faire Glisser et Déposer
               name: Apprends à Faire Glisser et Déposer
@@ -15981,6 +15989,8 @@ fr:
               description_teacher: Dans cette activité en ligne, les élèves auront l'occasion d'apprendre à utiliser les événements dans le Labo du Jeu et d'appliquer toutes les compétences de codage qu'ils ont apprises pour créer un jeu animé. Il est temps de faire preuve de créativité et de créer une histoire dans le Labo du Jeu !
             lesson-1:
               name: Fin du projet.
+              description_student: Crée ton propre jeu ou ta propre histoire !
+              description_teacher: Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et des événements dans un projet ouvert avec Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Citoyenneté Numérique
@@ -16182,6 +16192,7 @@ fr:
               key: Fin du projet.
               name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
+              description_teacher: Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !
             lesson-6:
               name: Regarder vers l'Avenir avec Minecraft
               description_student: Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft.
@@ -16410,6 +16421,7 @@ fr:
               key: Fin du projet.
               name: Fin du projet.
               description_student: Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !
+              description_teacher: Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !
             lesson-1:
               name: Concevoir pour l'Accessibilité
               description_student: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
@@ -16596,6 +16608,7 @@ fr:
               key: Fin du projet.
               name: Fin du projet.
               description_student: Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet.
+              description_teacher: Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !
             lesson-1:
               name: Soirée Dansante
               description_student: Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive.
@@ -17366,5 +17379,13 @@ fr:
           lessons:
             lesson-1:
               name: Concours d'orthographe
+          title: Concours d'orthographe
         outbreak-csc:
           title: Épidémie
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Journée d'Évaluation
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu

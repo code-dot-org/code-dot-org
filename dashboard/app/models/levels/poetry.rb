@@ -81,25 +81,27 @@ class Poetry < GamelabJr
     [
       ['', ''],
       ['My Brilliant Image', 'hafez'],
-      ['Twinkle, Twinkle Little Star', 'carroll_1'],
-      ['Crocodile', 'carroll_2'],
-      ['Jabberwocky', 'carroll_3'],
-      ['Sing', 'rumi_1'],
-      ['Ocean', 'rumi_2'],
+      ['The Star', 'taylor'],
+      ['Crocodile', 'carroll2'],
+      ['Jabberwocky', 'carroll3'],
+      ['Sing', 'rumi1'],
+      ['Ocean', 'rumi2'],
       ['Wynken, Blynken, and Nod', 'field'],
       ['Warm Summer Sun', 'twain'],
       ['I Wandered Lonely as a Cloud', 'wordsworth'],
       ['Harlem', 'hughes'],
       ['Don\'t Go Into the Library', 'rios'],
-      ['Dream Variations', 'hughes_1'],
+      ['Dream Variations', 'hughes1'],
       ['In the Garden', 'hopler'],
-      ['Return', 'lomeli'],
       ['Toasting Marshmallows', 'singer'],
       ['Affirmation', 'ewing'],
       ['Dream Destroyed', 'alexander'],
       ['Remember', 'harjo'],
       ['Mountain', 'po'],
-      ['Rejoice', 'tzu']
+      ['Rejoice', 'tzu'],
+      ['An Afternoon Nap', 'lomeli1'],
+      ['An Ode to Imagery', 'lomeli2'],
+      ['Nothing Gold Can Stay', 'frost']
     ]
   end
 end

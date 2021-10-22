@@ -95,6 +95,9 @@
         "machine_learning/oceans/unversioned": {
           "word": "Машинное обучение"
         },
+        "event/outbreak/unversioned": {
+          "word": "Событие"
+        },
         "behavior/coursef/2021": {
           "word": "Поведение"
         },

@@ -207,10 +207,12 @@
         },
         "courseA_maze_seq3": {
           "courseA_maze_seq3_a": "Bloklardan 1-i quşu səhv istiqamətə aparır. Onu tapıb düzgün blokla əvəz edə bilərsiz?",
-          "courseA_maze_seq3_b": "Addım düyməsini istifadə edərək proqramın harada səhv getdiyini tapmağa çalışın. 1-ci addımdırmı? Bəlkə 2?"
+          "courseA_maze_seq3_b": "Addım düyməsini istifadə edərək proqramın harada səhv getdiyini tapmağa çalışın. 1-ci addımdırmı? Bəlkə 2?",
+          "courseA_maze_seq3_c": "Bu blok quşu doğru istiqamətdə hərəkət etdirmir. Bunu başqa bir blokla əvəz edə bilərsinizmi?"
         },
         "courseA_maze_seq4": {
-          "courseA_maze_seq4_a": "Əgər çətinlik çəkirsinizsə, düzgün yolun nə olduğunu anlamağa çalışın və sonra uyğun olmayan bloku çıxarın."
+          "courseA_maze_seq4_a": "Əgər çətinlik çəkirsinizsə, düzgün yolun nə olduğunu anlamağa çalışın və sonra uyğun olmayan bloku çıxarın.",
+          "courseA_maze_seq4_b": "Kodu olduğu kimi işə salmağa çalışın . Nə isə səhv getdi? Hansı bloku çıxara bilərsiniz? Bunu necə düzəldə bilərsiniz? "
         },
         "courseA_maze_seq_challenge1_2019": {
           "courseA_maze_seq_challenge1_a": "Bu pazl üçün iki həll var."
@@ -259,7 +261,8 @@
         },
         "courseA_maze_seq9": {
           "courseA_maze_seq9_a": "Vurulmuş? Barmağınızla quş yolunu izləməyə çalışın.",
-          "courseA_maze_seq9_c": "Bu tapmacanı həll etmək üçün 3 istiqamətdə hərəkət etməlisiniz"
+          "courseA_maze_seq9_c": "Bu tapmacanı həll etmək üçün 3 istiqamətdə hərəkət etməlisiniz",
+          "courseA_maze_seq9_b": "Əgər nə edəcəyinizi bilmirsinizsə, 'Start over' -a basın və nəyin səhv olduğunu müşahidə edin.  "
         },
         "courseB_artist_loops3": {
           "courseB_artist_loops3_a": "Daha yaxşı kod üçün \"təkrar\" döngədən istifadə etməyi unutmayın!"
@@ -268,7 +271,8 @@
           "courseB_collector_loops6_c": "Bu tapmacanı həll etmək üçün 3 \"təkrar\" döngədən istifadə etmək istəyəcəksiniz."
         },
         "courseB_maze_seq1": {
-          "courseB_maze_seq1_a": "Quşun hərəkət etməsi üçün blokları [bloklu blok] [0] blokuna qoşun!"
+          "courseB_maze_seq1_a": "Quşun hərəkət etməsi üçün blokları [bloklu blok] [0] blokuna qoşun!",
+          "courseB_maze_seq1_b": "Quşu donuza çatdırmaq üçün bu bloklardan üçünü işlədin və onları birləşdirin."
         },
         "courseB_maze_seq10": {
           "courseB_maze_seq10_a": "Əvvəlcə addımları bir kağıza yazmağa çalışın.",
@@ -283,7 +287,9 @@
           "courseB_maze_seq2_b": "Quşun bundan sonra nə etməsi lazım olduğunu görmək üçün verdiyiniz kodu işlədməyə çalışın."
         },
         "courseB_maze_seq3": {
-          "courseB_maze_seq3_a": "Bloklardan biri quşu səhv istiqamətə aparır. Sən hansı olduğunu müəyyən edib düzgün blokla əvəz edə bilərsən?"
+          "courseB_maze_seq3_a": "Bloklardan biri quşu səhv istiqamətə aparır. Sən hansı olduğunu müəyyən edib düzgün blokla əvəz edə bilərsən?",
+          "courseB_maze_seq3_b": "Addım düyməsindən istifadə edərək proqramdakı yanlışlığı tapmağa çalışın. Bu ilk addımdadır? Yoxsa ikincidə?",
+          "courseB_maze_seq3_c": "Blok quşu doğru istiqamətə aparmır."
         },
         "courseB_maze_seq4": {
           "courseB_maze_seq4_a": "Donuza çatana qədər hər dəfə bir təlimat əlavə etməyə çalışın"
@@ -429,19 +435,24 @@
           "courseC_collector_prog2_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
         },
         "courseC_collector_prog4": {
-          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
         },
         "courseC_collector_prog4_2018": {
-          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
         },
         "courseC_collector_prog4_2019": {
-          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
         },
         "courseC_collector_prog4_2020": {
-          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
         },
         "courseC_collector_prog4_2021": {
-          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
+          "courseC_collector_prog4_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın.",
+          "courseC_collector_prog4_c": "Yol üçün bu seçimi sınayın."
         },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_a": "Bir balqabağa tərəf hərəkət etdikdən sonra onu toplamaq üçün [blockly block] [0] istifadə edin.",
@@ -637,7 +648,9 @@
           "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?"
         },
         "courseC_maze_programming5_2021": {
-          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?"
+          "courseC_maze_programming5_a": "Kodu sətir sətir çalışdırmak üçün \"Adım\" düyməsini istifadə edin. Bundan sonra nə etməli olduğunuzu müəyyən edə bilərsinizmi?",
+          "courseC_maze_programming5_b": "Quş bu məsələni həll etmək üçün bir dönüş etməlidir. Necə olduğunu həll edə bilərsinizmi?",
+          "courseC_maze_programming5_c": "Həll iki \"irəli get\" bloku, bir dönüş və daha iki \"irəli get\" bloku olacaq."
         },
         "courseC_maze_programming8": {
           "courseC_maze_programming8_b": "Səhv etməkdən qorxmayın! Hələ tapmacanı həll etdiyinizi düşünməsəniz də, nə olacağını görmək üçün blok əlavə edib kodu işlədməyə çalışın."
@@ -1281,6 +1294,125 @@
         },
         "courseF_variables_madlib_finish": {
           "card_idea1": "Başqa bir dəyişən ilə dəvətnamələrin yeni bir blok istifadə edərək, ikinci (və ya üçüncü və ya dördüncü) dəvəti əlavə edə bilərsiniz.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Hərəkət sözü daxil edin:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">feil</title>\n          </block>\n        </value>\n      </block>\n    </xml>"
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_b": "Kodunu asanlaşdırmaq üçün \"təkrarla\" döngələrindən istifadə et.",
+          "mc_8_c": "Məqsədin, ekranın yuxarısındakı evin qapısına girməkdir."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "Yerləşdirmək istədiyinizi seçmək üçün `yer` blokundakı oxu klikləyin. ",
+          "mc_6_b": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu icra et. ",
+          "mc_6_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu icra et. "
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "Dayandığın yerə məhsul əkmək üçün \"bitki məhsulu\" blokundan istifadə et. ",
+          "mc_7_b": "Suyun yanında olan tünd qəhvəyi torpaqların hər iki zolağını bitkilərlə doldurmaq lazımdır. ",
+          "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. "
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "Bütün kodlar lavanı yoxlamaq və onunla məşğul olmaq üçün yerindədir. Sənə tək lazım olan hərəkət etmək üçün bir blok əlavə etməkdir.",
+          "mc_11_b": "`İrəli get` əmrin `əgər` ifadəsinin içərisində və ya sonra keçməlidir? "
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Qırmızı ləkələri olan yerlər, qırmızı daş'ı tapa biləcəyin yerdir. ",
+          "mc_12_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. ",
+          "mc_12_c": "Lava boşluqlarını yoxlamaq üçün `əgər` ifadəsini istifadə et, sonra qırıq daşları qoy. "
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "Dəmir bloklar məşəlin arxasındakı ləkəli boşluqlardır! Oraya necə gedəcəksən?"
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_b": "Divardakı qara ləkələr kömürdür! Kömür çıxarmaq üçün 'bloku qır' dan istifadə et.",
+          "mc_9_c": "Dayandığın yerə məşəl qoymaq üçün \"məşəl qoy\" dan istifadə et. "
+        },
+        "courseA_collector_loops_challenge2": {
+          "courseA_collector_loops_challenge2_b": "Bunu həll etmək üçün yalnız 1 blokdan istifadə etməlisiniz."
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "Bir həll tapmaq üçün addımları kağız üzərində yazmağa çalış! "
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "Addımları yüksək səslə söylə və cavabın tapılmasına kömək edib -etmədiyini gör. "
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "2": "Səhv etməkdən qorxmayın! Bir şey sınayın və nəticə vermirsə, başqa bir şey sınayın!"
+        },
+        "courseB_artist_loops5": {
+          "courseB_artist_loops5_a": "'Təkrar et' komandasından istifadə edin , sonra başqa blokları içinə yerləşdirin. Bunu neçə dəfə təkrarlamalısınız?"
+        },
+        "courseB_collector_loops4": {
+          "courseB_collector_loops4_c": "'Təkrar et' komandasından sonra Laurel aşağı enməli və xəzinəni toplamalıdır!"
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "\"İlk addımda işləyirmi?\nİkinci addımda işləyirmi?\nİşlər harada səhv gedir? \"",
+          "courseC_collector_prog5_b": "Bir səhv düzəltmisinizsə və proqram hələ də işləmirsə, daha çox səhv tapmaq üçün yuxarıdakı addımları istifadə edin.",
+          "courseC_collector_prog5_c": "Çətinliklə qarşılaşsanız addımları bir kağıza yazmağa çalışın. ",
+          "courseC_collector_prog5_d": "Xəzinəni toplamaq üçün yolu izləyin. "
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "Nəyin səhv getdiyini anlaya bilərsinizmi?\n\n\"Addım\" düyməsini səhvləri tapmaq üçün kodunuzu sətir sətir işləyərək istifadə etməyə çalışın."
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   İlk addımdan sonra hər şey işləyirmi?\n-   Saniyədən sonra da işləyir?\n-   Harada səhv gedir?",
+          "courseC_maze_debugging1_b": "Bu tapmacanı tamamlamaq üçün əlavə etməli olduğunuz 1 blok var."
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "Bütün blokların bir yerə yığıldığından əmin olun və yenidən \"İcra et\" düyməsini basın."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "Unutma ki, dönəndə _quşun_ baxımından dönürsən. Sağa dönsən, quş aşağı baxacaq. ",
+          "courseC_maze_programming4_b": "Yolu izləmək üçün:\n\n-   irəli get\n-   bir istiqamətə dön\n-   irəli get\n-   başqa tərəfə dön\n-   irəli get"
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Bu tapmacanı həll etməyin iki yolu var!",
+          "courseC_maze_programming6_b": "Barmağını quşdan donuza qədər izlə, hansı addımları atdın?",
+          "courseC_maze_programming6_c": "Unutma ki, əvvəlcə dönməlisən, çünki quş divarla üzləşir. ",
+          "courseC_maze_programming6_d": "Zorlandığını hiss edirsən? Bu yola bax! "
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "Blok -blok keçmək və səhvləri axtarmaq üçün \"Addım\" düyməsini istifadə etməyi unutma.",
+          "courseC_maze_programming7_b": "Bu tapmacanı tapmaqda çətinlik çəkirsənsə, hərəkətləri bir kağıza yazmağa çalış."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "Donuza çatmağın bir çox yolu var. Bir yol tapmaq və sonra onu proqramlaşdırmaq üçün barmağınızı istifadə edin!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "\\_ \"Məni geriyə göndərsən, diqqətli ol ki, doğru istiqamətə dönüm!\" \\_",
+          "courseC_maze_programming_challenge2_b": "Ən qısa yol 5 blokdan ibarətdir, amma bu blokdan istifadə olunur [0]"
+        },
+        "courseD_artist_5_2021": {
+          "1": "Formalarını dəyişirsənsə, onların bucaqlarını da dəyişməyin lazım olduğunu unutma! "
+        },
+        "courseD_artist_nestedLoops1_2021": {
+          "courseD_artist_nestedLoops1_a": "Bunu çəkməyin ən asan yolu irəli getmək və sağa dönməkdir. "
+        },
+        "courseD_bee_nestedLoops2_2021": {
+          "courseD_bee_nestedLoops2_a": "Bu tapmacanı həll etmək üçün bir təkrarlama döngəsini digərinin içinə yerləşdirməlisən.",
+          "courseD_bee_nestedLoops2_b": "Döngələri hara qoyacağını anlaya bilmirsən? Kodu kağız üzərində addım-addım yazmağa çalış və nümunə axtar.",
+          "courseD_bee_nestedLoops2_c": "Bir döngənin içərisinə birdən çox blok qoya biləcəyini unutma."
+        },
+        "courseD_farmer_while4_2021": {
+          "courseD_farmer_conditionals4_b": "Bu əvvəlki bir tapmacaya çox bənzəyir, tək fərq sənə lazım olan döngədədir. "
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_conditionals8_c": "Hər yolun sonunda nə etmək lazımdır? "
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "Birdən çox `hələ ki` döngəsindən istifadə etməli olacaqsan. "
+        },
+        "courseD_harvester_nested_loops_challenge1_2021": {
+          "courseD_harvester_nested_loops_challenge1_c": "Bu tapmacanı həll etmək üçün əsas döngənə kiçik bir döngə qoymalısan! "
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "Bu tapmacanı həll etmək üçün başqa bir \"təkrarlama\" döngəsinin içərisində bir \"təkrarlama\" döngəsini \"yuva\" etməlisən. ",
+          "courseD_maze_nestedLoops3_b": "Döngələri hara qoyacağını anlaya bilmirsən? Kodu kağız üzərində addım-addım yazmağa çalış və nümunə axtar.",
+          "courseD_maze_nestedLoops3_c": "Bir düz yol və bir dönüş üçün kod yazmağa çalış. Günəbaxana yaxınlaşmaq üçün bunu təkrarlaya bilərsən?"
         }
       }
     }

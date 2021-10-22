@@ -22,7 +22,7 @@ function setSuccessTime(criteria){
   if (!validationProps.successTime) {
     var success = true;
     for (var criterion in criteria) {
-      if (!criterion) {
+      if ((!criteria[criterion])) {
         success = false;
         break;
       }
@@ -235,8 +235,8 @@ function checkAllSpritesSay(spriteIds){
  * @return {boolean} Returns true if new event
  *         occurred and false otherwise.
  */
-function checkForNewEvent(){
-  if (eventLog.length > validationProps.previous.eventLogLength) {
+function checkForNewEvent(eventLog, prevEventLogLength){
+  if (eventLog.length > prevEventLogLength) {
     return true;
   } else {
     return false;
@@ -249,8 +249,8 @@ function checkForNewEvent(){
  * @return {boolean} Returns true if new click
  *         event occurred and false otherwise.
  */
-function checkForNewClickEvent(){
-  if (eventLog.length > validationProps.previous.eventLogLength) {
+function checkForNewClickEvent(eventLog, prevEventLogLength){
+  if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       return true;
@@ -265,8 +265,8 @@ function checkForNewClickEvent(){
  * @return {boolean} Returns true if a sprite was
  *         clicked and false otherwise.
  */
-function checkSpriteClicked(){
-  if (eventLog.length > validationProps.previous.eventLogLength) {
+function checkSpriteClicked(eventLog, prevEventLogLength){
+  if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
     if ((currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) &&
@@ -281,14 +281,13 @@ function checkSpriteClicked(){
  * Checks if a sprite was clicked in current frame and returns spriteId if so.
  *
  * @return {int} Returns spriteId of the sprite that was
- *         clicked and and -1 otherwise.
+ *         clicked and -1 otherwise.
  */
-function getClickedSpriteId(){
-  if (eventLog.length > validationProps.previous.eventLogLength) {
+function getClickedSpriteId(eventLog, prevEventLogLength){
+  if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
-    if ((currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) &&
-        clickedSpriteId) {
+    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       return clickedSpriteId;
     }
   }
@@ -301,9 +300,9 @@ function getClickedSpriteId(){
  * @return {boolean} Returns true if a clicked sprite
  *         caused speech and false otherwise.
  */
-function checkSpriteSay(){
+function checkSpriteSay(eventLog, prevEventLogLength){
   // don't know if first if statement this should be in every event check method......
-  if (eventLog.length > validationProps.previous.eventLogLength) {
+  if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       for (var spriteId in spriteIds) {
@@ -315,6 +314,33 @@ function checkSpriteSay(){
     }
   }
   return false;
+}
+
+/**
+ * Checks if a clicked sprite causes some sprite to speak in the frame and returns
+ * spriteId that was clicked if so.
+ *
+ * @return {int} Returns spriteId of the sprite that was
+ *         clicked and caused speech in some sprite, -2 if a sprite was clicked
+ *		   but didn't cause speech, and -1 otherwise.
+ */
+function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
+  // don't know if first if statement this should be in every event check method......
+  if (eventLog.length > prevEventLogLength) {
+    var currentEvent = eventLog[eventLog.length - 1];
+    var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
+    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
+      var spriteIds = getSpriteIdsInUse();
+      for (var spriteId in spriteIds) {
+        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+          // clicked sprite caused speech in some sprite
+          return clickedSpriteId;
+        }
+      }
+      return -2;
+    }
+  }
+  return -1;
 }
 
 /**
@@ -419,11 +445,40 @@ function drawProgressBar(status){
       break;
     case "pass":
       fill(PASS_COLOR);
-      rect(0,PLAYSPACE_SIZE - 10,(World.frameCount*PLAYSPACE_SIZE/WAIT_TIME),10);
+      rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.successTime)*PLAYSPACE_SIZE/WAIT_TIME),10);
+      break;
+    case "newEventFail":
+      fill(FAIL_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.vars.delay)*PLAYSPACE_SIZE/WAIT_TIME),10);
+      break;
+    case "newEventPass":
+      fill(PASS_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.vars.delay)*PLAYSPACE_SIZE/WAIT_TIME),10);
       break;
     case "challengePass":
     //Do something for challengePass
   }
 
   pop();
+}
+
+/**
+ * Uses delay variable logic to determine which progress bar to draw
+ * in the playspace.
+ */
+function determineAndDrawProgressBar(successTime, delay){
+  console.log("delay: " + delay);
+  if (!successTime) {
+    if (delay && delay > 0) {
+      drawProgressBar("newEventFail");
+    } else {
+      drawProgressBar("fail");
+    }
+  } else {
+    if (delay && delay > 0) {
+      drawProgressBar("newEventPass");
+    } else {
+      drawProgressBar("pass");
+    }
+  }
 }

@@ -3157,6 +3157,26 @@
           "wobbling": "колебание",
           "moving west and looping": "движение на запад и зацикливание",
           "moving east and looping": "движение на восток и зацикливание"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         }
       }
     }

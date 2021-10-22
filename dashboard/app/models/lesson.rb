@@ -491,8 +491,8 @@ class Lesson < ApplicationRecord
       resources: resources.map(&:summarize_for_lesson_edit),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
       programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
-      programmingExpressions: programming_expressions.sort_by(&:syntax).map(&:summarize_for_lesson_edit),
-      objectives: objectives.sort_by(&:description).map(&:summarize_for_edit),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
@@ -519,8 +519,8 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.sort_by(&:syntax).map(&:summarize_for_lesson_show),
-      objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
@@ -541,8 +541,8 @@ class Lesson < ApplicationRecord
       preparation: render_property(:preparation),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.sort_by(&:syntax).map(&:summarize_for_lesson_show),
-      objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       link: script_lesson_path(script, self)
     }
@@ -560,7 +560,7 @@ class Lesson < ApplicationRecord
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.sort_by(&:syntax).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
     }
   end
