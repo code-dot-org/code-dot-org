@@ -67,8 +67,8 @@ def main(options)
     log "found code studio script name #{script.name} with id #{script.id}"
 
     # TODO(dave): remove this check once teacher_resources are handled safely
-    if script.teacher_resources.present? && script.launched?
-      raise 'unsafe to migrate launched script containing teacher resources'
+    if script.teacher_resources.present?
+      raise 'unsafe to migrate script containing teacher resources'
     end
 
     next if options.dry_run
