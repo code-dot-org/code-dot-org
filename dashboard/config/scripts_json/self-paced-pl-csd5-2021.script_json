@@ -6,13 +6,12 @@
     "properties": {
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "lesson_extras_available": true,
       "has_verified_resources": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-21 17:20:34 UTC",
+    "serialized_at": "2021-10-22 17:28:10 UTC",
     "published_state": "beta",
     "seeding_key": {
       "script.name": "self-paced-pl-csd5-2021"
@@ -128,6 +127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -150,6 +152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes"
+        ],
         "progression": "Introduction to AI and machine learning"
       },
       "bonus": false,
@@ -197,6 +202,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML"
+        ],
         "progression": "Introduction to AI and machine learning"
       },
       "bonus": false,
@@ -242,8 +250,11 @@
       "chapter": 6,
       "position": 6,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u"
+        ],
         "progression": "Introduction to AI and machine learning"
       },
       "bonus": false,
@@ -266,6 +277,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML"
+        ],
         "progression": "Introduction to AI and machine learning"
       },
       "bonus": false,
@@ -288,6 +302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L5overview-AIML"
+        ],
         "progression": "Train a machine learning model"
       },
       "bonus": false,
@@ -310,6 +327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILab-vid"
+        ],
         "progression": "Train a machine learning model"
       },
       "bonus": false,
