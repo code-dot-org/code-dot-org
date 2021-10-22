@@ -368,60 +368,6 @@ async function loadAppAsync(appOptions) {
     console.error('Could not load user progress.');
     return appOptions;
   }
-
-  // $.ajax(
-  //   `/api/user_progress` +
-  //     `/${appOptions.scriptName}` +
-  //     `/${appOptions.lessonPosition}` +
-  //     `/${appOptions.levelPosition}` +
-  //     `/${appOptions.serverLevelId}` +
-  //     `?get_channel_id=${shouldGetChannelId}`
-  // )
-  //   .done(data => {
-  //     appOptions.disableSocialShare = data.disableSocialShare;
-
-  //     // We do not need to process data.progress here because labs do not use
-  //     // the level progress data directly. (The progress bubbles in the header
-  //     // of the level pages are rendered by header.build in header.js.)
-
-  //     if (data.lastAttempt) {
-  //       appOptions.level.lastAttempt = data.lastAttempt.source;
-  //     } else if (!data.signedIn) {
-  //       // User is not signed in, load last attempt from session storage.
-  //       appOptions.level.lastAttempt = clientState.sourceForLevel(
-  //         appOptions.scriptName,
-  //         appOptions.serverProjectLevelId || appOptions.serverLevelId
-  //       );
-  //     }
-
-  //     if (data.userId) {
-  //       appOptions.userId = data.userId;
-  //       appOptions.isSignedIn = true;
-  //     }
-
-  //     appOptions.level.isNavigator = data.isNavigator;
-  //     if (data.pairingDriver) {
-  //       appOptions.level.pairingDriver = data.pairingDriver;
-  //       appOptions.level.pairingAttempt = data.pairingAttempt;
-  //       appOptions.level.pairingChannelId = data.pairingChannelId;
-  //     }
-
-  //     if (data.channel) {
-  //       appOptions.channel = data.channel;
-  //       appOptions.reduceChannelUpdates = data.reduceChannelUpdates;
-  //       loadProjectAndCheckAbuse(appOptions).then(appOptions => {
-  //         resolve(appOptions);
-  //       });
-  //     } else {
-  //       resolve(appOptions);
-  //     }
-  //   })
-  //   .fail(() => {
-  //     // TODO: Show an error to the user here? (LP-1815)
-  //     console.error('Could not load user progress.');
-  //     resolve(appOptions);
-  //   });
-  // });
 }
 
 window.dashboard = window.dashboard || {};
