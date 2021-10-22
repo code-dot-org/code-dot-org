@@ -125,8 +125,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', seeded_unit_group.name
     assert_equal SharedCourseConstants::PUBLISHED_STATE.stable, seeded_unit_group.published_state
     assert_equal SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, seeded_unit_group.instruction_type
-    assert_equal SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, seeded_unit_group.participant_audience
-    assert_equal SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, seeded_unit_group.instructor_audience
+    assert_equal SharedCourseConstants::PARTICIPANT_AUDIENCE.student, seeded_unit_group.participant_audience
+    assert_equal SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, seeded_unit_group.instructor_audience
     course_version = seeded_unit_group.course_version
     assert_not_nil course_version
     assert_equal '2021', course_version.key
