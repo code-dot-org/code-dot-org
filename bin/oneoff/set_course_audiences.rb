@@ -18,7 +18,7 @@ def set_course_audiences
                                  elsif [].include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
                                  elsif ['self-paced-pl-csd5-2021', 'self-paced-pl-csd6-2021', 'self-paced-pl-csd7-2021', 'self-paced-pl-csd8-2021'].include?(script.name)
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_admin
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor
                                  else
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
                                  end
@@ -43,7 +43,7 @@ def set_course_audiences
                                  elsif [].include?(course.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
                                  elsif ['self-paced-pl-csp-2021', 'self-paced-pl-csd-2021'].include?(course.name)
-                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_admin
+                                   SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor
                                  end
 
     course.participant_audience = if [].include?(course.name)
