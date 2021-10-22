@@ -467,6 +467,7 @@ function drawProgressBar(status){
  * in the playspace.
  */
 function determineAndDrawProgressBar(successTime, delay){
+  console.log("delay: " + delay);
   if (!successTime) {
     if (delay && delay > 0) {
       drawProgressBar("newEventFail");
