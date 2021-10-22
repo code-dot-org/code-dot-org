@@ -357,6 +357,8 @@ class ApiController < ApplicationController
       student_progress = section.students.order(:name).map do |student|
         script_level.summarize_for_teacher_panel(student, current_user)
       end
+
+      teacher_progress = script_level.summarize_for_teacher_panel(current_user)
     elsif params[:is_lesson_extras] && params[:lesson_id]
       lesson = script.lessons.find do |l|
         l.id == params[:lesson_id].to_i
@@ -370,11 +372,13 @@ class ApiController < ApplicationController
       student_progress = section.students.order(:name).map do |student|
         ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, student)
       end
+
+      teacher_progress = ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, current_user)
     else
       return head :bad_request
     end
 
-    render json: student_progress
+    render json: student_progress.push(teacher_progress)
   end
 
   def script_structure
@@ -417,9 +421,13 @@ class ApiController < ApplicationController
   # latter side effect, this should only be called when the user sees the level,
   # to avoid spurious activity monitor warnings about the level being started
   # but not completed.)
+  #
+  # GET /api/user_progress/:script/:lesson_position/:level_position
+  # GET /api/user_progress/:script/:lesson_position/:level_position/:level
   def user_progress_for_lesson
     response = user_summary(current_user)
     response[:signedIn] = !current_user.nil?
+    response[:userId] = current_user&.id
 
     script = Script.get_from_cache(params[:script])
     lesson = script.lessons[params[:lesson_position].to_i - 1]
@@ -476,6 +484,13 @@ class ApiController < ApplicationController
     end
 
     render json: response
+  end
+
+  # GET /api/example_solutions/:level_id
+  def example_solutions
+    script_level = Script.cache_find_script_level params[:level_id].to_i
+    section_id = params[:section_id] ? params[:section_id].to_i : nil
+    render json: script_level.get_example_solutions(current_user, section_id)
   end
 
   def section_text_responses

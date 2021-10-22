@@ -16,13 +16,12 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {hasLockableLessons} from '@cdo/apps/code-studio/progressRedux';
-import {sectionData, studentShape} from './types';
+import {studentShape} from './types';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
-    sectionData: sectionData,
     unitName: PropTypes.string,
     pageType: PropTypes.oneOf([
       pageTypes.level,
@@ -42,7 +41,9 @@ class TeacherPanel extends React.Component {
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape),
     levelsWithProgress: PropTypes.array,
-    loadLevelsWithProgress: PropTypes.func.isRequired
+    loadLevelsWithProgress: PropTypes.func.isRequired,
+    teacherId: PropTypes.number.isRequired,
+    exampleSolutions: PropTypes.array
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -77,7 +78,6 @@ class TeacherPanel extends React.Component {
 
   render() {
     const {
-      sectionData,
       viewAs,
       hasSections,
       sectionsAreLoaded,
@@ -85,7 +85,11 @@ class TeacherPanel extends React.Component {
       unitHasLockableLessons,
       unlockedLessonNames,
       students,
-      unitName
+      unitName,
+      pageType,
+      getSelectedUserId,
+      teacherId, // this is null on script overview page
+      exampleSolutions
     } = this.props;
 
     let currentStudent = null;
@@ -93,24 +97,25 @@ class TeacherPanel extends React.Component {
 
     const {levelsWithProgress} = this.props;
 
-    if (sectionData) {
-      if (sectionData.section && sectionData.section.students) {
-        currentStudent = sectionData.section.students.find(
-          student => this.props.getSelectedUserId() === student.id
-        );
+    if (students && students.length) {
+      currentStudent = students.find(
+        student => getSelectedUserId() === student.id
+      );
 
+      if (levelsWithProgress) {
         if (currentStudent) {
-          if (levelsWithProgress) {
-            currentStudentScriptLevel = levelsWithProgress.find(
-              level => this.props.getSelectedUserId() === level.userId
-            );
-          }
+          currentStudentScriptLevel = levelsWithProgress.find(
+            level => getSelectedUserId() === level.userId
+          );
         } else {
           currentStudent = {
             id: null,
             name: i18n.studentTableTeacherDemo()
           };
-          currentStudentScriptLevel = sectionData.teacher_level;
+
+          currentStudentScriptLevel = levelsWithProgress.find(
+            level => teacherId === level.userId
+          );
         }
       }
     }
@@ -118,10 +123,12 @@ class TeacherPanel extends React.Component {
     const sectionId = selectedSection && selectedSection.id;
 
     const displaySelectedStudentInfo =
-      viewAs === ViewType.Teacher && currentStudent;
+      viewAs === ViewType.Teacher &&
+      currentStudent &&
+      pageType !== pageTypes.scriptOverview;
 
     const displayLevelExamples =
-      viewAs === ViewType.Teacher && sectionData?.level_examples?.length > 0;
+      viewAs === ViewType.Teacher && exampleSolutions?.length > 0;
 
     const displayLockInfo =
       hasSections && unitHasLockableLessons && viewAs === ViewType.Teacher;
@@ -137,12 +144,12 @@ class TeacherPanel extends React.Component {
               selectedStudent={currentStudent}
               levelWithProgress={currentStudentScriptLevel}
               onSelectUser={id => this.onSelectUser(id, 'iterator')}
-              getSelectedUserId={this.props.getSelectedUserId}
+              getSelectedUserId={getSelectedUserId}
             />
           )}
           {displayLevelExamples && (
             <div style={styles.exampleSolutions}>
-              {sectionData.level_examples.map((example, index) => (
+              {exampleSolutions.map((example, index) => (
                 <Button
                   __useDeprecatedTag
                   key={index}
@@ -299,7 +306,10 @@ export default connect(
       students: state.teacherSections.selectedStudents,
       levelsWithProgress: state.teacherPanel.levelsWithProgress,
       isLoadingLevelsWithProgress:
-        state.teacherPanel.isLoadingLevelsWithProgress
+        state.teacherPanel.isLoadingLevelsWithProgress,
+      teacherId: state.pageConstants && state.pageConstants.userId,
+      exampleSolutions:
+        state.pageConstants && state.pageConstants.exampleSolutions
     };
   },
   dispatch => ({

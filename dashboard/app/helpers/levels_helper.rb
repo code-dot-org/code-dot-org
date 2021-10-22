@@ -296,15 +296,13 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
-    if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
-      @app_options[:serverScriptId] = @script.id
-      @app_options[:serverScriptLevelId] = @script_level.id
-      @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
-      @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
-    end
+    @app_options[:serverScriptId] = @script.id if @script
+    @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+    @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
 
-    if @level && @script_level
+    if @script_level
       @app_options[:exampleSolutions] = @script_level.get_example_solutions(current_user, @section)
+      @app_options[:serverScriptLevelId] = @script_level.id
     end
 
     # Blockly caches level properties, whereas this field depends on the user
