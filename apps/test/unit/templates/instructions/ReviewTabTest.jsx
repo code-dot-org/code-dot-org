@@ -9,6 +9,7 @@ import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 import CommentEditor from '@cdo/apps/templates/instructions/codeReview/CommentEditor';
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReview/ReviewNavigator';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Button from '@cdo/apps/templates/Button';
 
 describe('Code Review Tab', () => {
   const token = 'token';
@@ -69,21 +70,21 @@ describe('Code Review Tab', () => {
       );
     });
 
-    it('renders loading spinner before initial load is completed', () => {
+    it('renders loading spinner before load is completed', () => {
       expect(wrapper.find(Spinner).length).to.equal(1);
     });
 
-    it('calls onLoadComplete callback after initial load is completed', () => {
+    it('calls onLoadComplete callback after load is completed', () => {
       onLoadComplete.resetHistory();
       sinon.assert.notCalled(onLoadComplete);
 
-      wrapper.setState({initialLoadCompleted: true});
+      wrapper.setState({loadingReviewData: false});
       sinon.assert.calledOnce(onLoadComplete);
     });
 
     describe('after load', () => {
       beforeEach(() => {
-        wrapper.setState({initialLoadCompleted: true});
+        wrapper.setState({loadingReviewData: false});
       });
 
       it('renders without error if project has no comments', () => {
@@ -277,6 +278,17 @@ describe('Code Review Tab', () => {
       it('shows the ReviewNavigator if viewing own project', () => {
         expect(wrapper.find(ReviewNavigator).length).to.equal(1);
       });
+
+      it('reloads data on clicking refresh button', () => {
+        expect(wrapper.state().loadingReviewData).to.be.false;
+        expect(wrapper.find(Button).length).to.equal(1);
+        wrapper
+          .find(Button)
+          .first()
+          .simulate('click');
+
+        expect(wrapper.state().loadingReviewData).to.be.true;
+      });
     });
   });
 
@@ -301,7 +313,7 @@ describe('Code Review Tab', () => {
         reviewEnabled: false
       });
 
-      wrapper.setState({initialLoadCompleted: true});
+      wrapper.setState({loadingReviewData: false});
       expect(wrapper.find(CommentEditor).length).to.equal(1);
     });
 
