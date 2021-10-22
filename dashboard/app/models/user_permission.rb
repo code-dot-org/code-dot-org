@@ -46,6 +46,8 @@ class UserPermission < ApplicationRecord
     PROGRAM_MANAGER = 'program_manager'.freeze,
     # Grants access to review reported inaccuracies in census data
     CENSUS_REVIEWER = 'census_reviewer'.freeze,
+    # Grants ability to be the instructor of any course no matter instructor_audience
+    CODE_INSTRUCTOR = 'code_instructor'.freeze,
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack
