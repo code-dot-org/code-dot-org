@@ -1595,6 +1595,15 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Yangi blok!",
           "poetry_remove_sprite": "Yangi blok!"
+        },
+        "CSD U3 Variables Predict Where X": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U3 Variables Predict Where X_2018": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
         }
       }
     }

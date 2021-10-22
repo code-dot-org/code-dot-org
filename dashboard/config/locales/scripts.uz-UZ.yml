@@ -18115,6 +18115,8 @@ uz:
               name: Intellectual Property
             Images:
               name: Rasmlar
+            CSS Classes:
+              name: CSS sinflari
             Team Problem Solving:
               name: Jamoada muammoni hal qilish
           student_description: Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
@@ -18489,6 +18491,8 @@ uz:
               name: Loyiha yakuniy testi
             CS Discoveries Post Course survey:
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            Random Numbers:
+              name: Tasodifiy sonlar
             Sprites and Animations:
               name: Spraytlar va animatsiyalar
             Create a Scene:
@@ -19508,6 +19512,7 @@ uz:
                 uchun tahlil qilib, o‘z veb-saytlaridan qaysi biriga mos kelishini
                 hal qilishadi."
             CSS Classes:
+              name: CSS sinflari
               description_student: "**Kun savoli: Bir xil turdagi elementlar uchun
                 qanday qilib har xil uslublarni yaratishimiz mumkin?**\\\r \n\\\r
                 \nUshbu dars veb-dasturchilarga o‘zlari xohlagan elementlar guruhlarini
@@ -20741,6 +20746,7 @@ uz:
 
                 Ushbu darsda o‘quvchilar sonni belgilash uchun o‘zgaruvchidan qanday foydalanishni o‘rganadilar. O‘quvchilar darsni kiritish-chiqarish-saqlash-qayta ishlash modelining saqlash komponenti tarkibidagi o‘zgaruvchining maqsadini juda oddiy tavsiflash bilan boshlashadi. So‘ngra o‘quvchilar o‘zgaruvchining modelini raqamni nomlash usuli sifatida mustahkamlaydigan progressiya darajasini yakunlaydilar.
             Random Numbers:
+              name: Tasodifiy sonlar
               description_student: "**Question of the Day: How can we make our programs
                 behave differently each time they are run?** \\\r\n\\\r\nO‘quvchilar
                 `randomNumber()` bloki va undan qanday qilib o‘zlarining dasturlarida
@@ -22932,6 +22938,8 @@ uz:
                 xususiyatlari haqidagi bilimlarini qo‘llaydilar.
             Team Problem Solving:
               name: Jamoada muammoni hal qilish
+            CSS Classes:
+              name: CSS sinflari
             Post-Project Test:
               name: Loyiha yakuniy testi
             CS Discoveries Post Course survey:
@@ -23409,6 +23417,7 @@ uz:
 
                 Ushbu darsda o‘quvchilar sonni belgilash uchun o‘zgaruvchidan qanday foydalanishni o‘rganadilar. O‘quvchilar darsni kiritish-chiqarish-saqlash-qayta ishlash modelining saqlash komponenti tarkibidagi o‘zgaruvchining maqsadini juda oddiy tavsiflash bilan boshlashadi. So‘ngra o‘quvchilar o‘zgaruvchining modelini raqamni nomlash usuli sifatida mustahkamlaydigan progressiya darajasini yakunlaydilar.
             Random Numbers:
+              name: Tasodifiy sonlar
               description_student: "**Question of the Day: How can we make our programs
                 behave differently each time they are run?** \\\r\n\\\r\nO‘quvchilar
                 `randomNumber()` bloki va undan qanday qilib o‘zlarining dasturlarida
@@ -24254,6 +24263,8 @@ uz:
                 uchun tahlil qilib, o‘z veb-saytlaridan qaysi biriga mos kelishini
                 hal qilishadi."
             CSS Classes:
+              key: CSS sinflari
+              name: CSS sinflari
               description_teacher: "**Kun savoli: Bir xil turdagi elementlar uchun
                 qanday qilib har xil uslublarni yaratishimiz mumkin?**\\\r \n\\\r
                 \nUshbu dars veb-dasturchilarga o‘zlari xohlagan elementlar guruhlarini
@@ -24324,6 +24335,9 @@ uz:
             Variables:
               key: O‘zgaruvchilar
               name: O‘zgaruvchilar
+            Random Numbers:
+              key: Tasodifiy sonlar
+              name: Tasodifiy sonlar
             Sprites:
               key: Spraytlar
               name: Spraytlar
