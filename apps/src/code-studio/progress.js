@@ -376,7 +376,6 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         scriptData.id,
         scriptData.section,
         scriptData.name,
-        null,
         pageType,
         onOverviewPage
       );
