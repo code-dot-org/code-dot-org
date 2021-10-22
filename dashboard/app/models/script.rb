@@ -2,27 +2,31 @@
 #
 # Table name: scripts
 #
-#  id               :integer          not null, primary key
-#  name             :string(255)      not null
-#  created_at       :datetime
-#  updated_at       :datetime
-#  wrapup_video_id  :integer
-#  user_id          :integer
-#  login_required   :boolean          default(FALSE), not null
-#  properties       :text(65535)
-#  new_name         :string(255)
-#  family_name      :string(255)
-#  published_state  :string(255)      default("in_development")
-#  instruction_type :string(255)
+#  id                   :integer          not null, primary key
+#  name                 :string(255)      not null
+#  created_at           :datetime
+#  updated_at           :datetime
+#  wrapup_video_id      :integer
+#  user_id              :integer
+#  login_required       :boolean          default(FALSE), not null
+#  properties           :text(65535)
+#  new_name             :string(255)
+#  family_name          :string(255)
+#  published_state      :string(255)      default("in_development")
+#  instruction_type     :string(255)
+#  instructor_audience  :string(255)
+#  participant_audience :string(255)
 #
 # Indexes
 #
-#  index_scripts_on_family_name       (family_name)
-#  index_scripts_on_instruction_type  (instruction_type)
-#  index_scripts_on_name              (name) UNIQUE
-#  index_scripts_on_new_name          (new_name) UNIQUE
-#  index_scripts_on_published_state   (published_state)
-#  index_scripts_on_wrapup_video_id   (wrapup_video_id)
+#  index_scripts_on_family_name           (family_name)
+#  index_scripts_on_instruction_type      (instruction_type)
+#  index_scripts_on_instructor_audience   (instructor_audience)
+#  index_scripts_on_name                  (name) UNIQUE
+#  index_scripts_on_new_name              (new_name) UNIQUE
+#  index_scripts_on_participant_audience  (participant_audience)
+#  index_scripts_on_published_state       (published_state)
+#  index_scripts_on_wrapup_video_id       (wrapup_video_id)
 #
 
 require 'cdo/script_constants'
@@ -149,7 +153,9 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
-  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be teacher_led or self_paced'}
+  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be nil, teacher_led or self_paced'}
+  validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values.push(nil), message: 'must be nil, code.org admin, plc reviewer, facilitator, or teacher'}
+  validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.push(nil), message: 'must be nil, facilitator, teacher, or student'}
 
   def prevent_duplicate_levels
     reload
@@ -1045,6 +1051,7 @@ class Script < ApplicationRecord
         new_name: unit_data[:new_name],
         family_name: unit_data[:family_name],
         published_state: new_suffix ? SharedCourseConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
+        instruction_type: new_suffix ? SharedCourseConstants::INSTRUCTION_TYPE.teacher_led : unit_data[:instruction_type],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
     end
@@ -1363,6 +1370,7 @@ class Script < ApplicationRecord
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
           published_state: (unit_group.present? && general_params[:published_state] == unit_group.published_state) ? nil : general_params[:published_state],
+          instruction_type: unit_group.present? ? nil : general_params[:instruction_type],
           properties: Script.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1567,8 +1575,8 @@ class Script < ApplicationRecord
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
+      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       lesson_extras_available: lesson_extras_available,
       has_verified_resources: has_verified_resources?,
       curriculum_path: curriculum_path,

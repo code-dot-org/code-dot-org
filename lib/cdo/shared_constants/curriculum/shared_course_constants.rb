@@ -17,4 +17,23 @@ module SharedCourseConstants
       self_paced: "self_paced"
     }
   ).freeze
+
+  # Used to determine who can teach a course
+  INSTRUCTOR_AUDIENCE = OpenStruct.new(
+    {
+      code_admin: "code_admin",
+      plc_reviewer: "plc_reviewer",
+      facilitator: "facilitator",
+      teacher: "teacher"
+    }
+  ).freeze
+
+  # Used to determine who the learners are in a course
+  PARTICIPANT_AUDIENCE = OpenStruct.new(
+    {
+      facilitator: "facilitator",
+      teacher: "teacher",
+      student: "student"
+    }
+  ).freeze
 end

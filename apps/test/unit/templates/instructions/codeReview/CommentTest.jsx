@@ -37,7 +37,7 @@ describe('Code Review Comment', () => {
     const wrapper = renderWrapper(overrideProps);
 
     const commentBodyStyle = wrapper
-      .find('#code-review-comment-body')
+      .find('.code-review-comment-body')
       .first()
       .props().style;
 
