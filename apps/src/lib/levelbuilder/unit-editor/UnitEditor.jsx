@@ -29,6 +29,7 @@ import {
   PublishedState
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
+import InstructionTypeDropdown from '@cdo/apps/lib/levelbuilder/course-editor/InstructionTypeDropdown';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -453,49 +454,12 @@ class UnitEditor extends React.Component {
             </div>
           )}
           {!this.props.hasCourse && (
-            <label>
-              Instruction Type
-              <select
-                className="instructionTypeSelector"
-                value={this.state.instructionType}
-                style={styles.dropdown}
-                onChange={e =>
-                  this.setState({hasNumberedUnits: e.target.value})
-                }
-              >
-                {Object.values(InstructionType).map(state => (
-                  <option key={state} value={state}>
-                    {state}
-                  </option>
-                ))}
-              </select>
-              <HelpTip>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Instruction Type</th>
-                      <th>Overview</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td style={styles.tableBorder}>Teacher-Led</td>
-                      <td style={styles.tableBorder}>
-                        A course where a instructor is directing the learning
-                        for participants in the course.
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style={styles.tableBorder}>Self-Paced</td>
-                      <td style={styles.tableBorder}>
-                        A course where participants are progressing through the
-                        course at their own pace.
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </HelpTip>
-            </label>
+            <InstructionTypeDropdown
+              instructionType={this.state.instructionType}
+              handleInstructionTypeChange={e =>
+                this.setState({instructionType: e.target.value})
+              }
+            />
           )}
           <label>
             Default Progress to Detail View
