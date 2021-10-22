@@ -73,7 +73,8 @@ def main(options)
       LessonImportHelper.update_lesson(lesson, models)
     end
 
-    script.update!(is_migrated: true)
+    script.assign_attributes(is_migrated: true)
+    script.save(validate: false)
     script.fix_script_level_positions
     script.write_script_dsl
     script.write_script_json
