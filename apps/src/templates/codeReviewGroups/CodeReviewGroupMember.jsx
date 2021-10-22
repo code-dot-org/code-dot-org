@@ -12,8 +12,8 @@ import {grid} from './CodeReviewGroup';
 export default function CodeReviewGroupMember({member, index}) {
   return (
     <Draggable
-      key={member.id}
-      draggableId={member.id}
+      key={member.followerId}
+      draggableId={member.followerId.toString()}
       index={index}
       tab-index={index}
     >
@@ -22,7 +22,7 @@ export default function CodeReviewGroupMember({member, index}) {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          style={getItemStyle(
+          style={getMemberStyle(
             snapshot.isDragging,
             provided.draggableProps.style
           )}
@@ -47,8 +47,8 @@ CodeReviewGroupMember.propTypes = {
   index: PropTypes.number.isRequired
 };
 
-const getItemStyle = (isDragging, draggableStyle) => ({
-  // some basic styles to make the items look a bit nicer
+const getMemberStyle = (isDragging, draggableStyle) => ({
+  // some basic styles to make the group members look a bit nicer
   userSelect: 'none',
   padding: grid * 2,
   margin: grid,
