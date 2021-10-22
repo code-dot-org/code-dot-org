@@ -97,7 +97,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "can seed unit group from hash" do
-    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, instructor_audience: SharedCourseConstants::INSTUCTOR_AUDIENCE.facilitator)
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
