@@ -9,20 +9,21 @@ import CodeReviewGroupMember from './CodeReviewGroupMember';
 // These are called "Droppables" in the package we're using (React Beautiful DnD).
 // More information on React Beautiful DnD can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroup({group}) {
+export default function CodeReviewGroup({droppableId, members}) {
   return (
-    <Droppable key={group.droppableId} droppableId={group.droppableId}>
+    <Droppable key={droppableId} droppableId={droppableId}>
       {(provided, snapshot) => (
         <div
           ref={provided.innerRef}
           style={getListStyle(snapshot.isDraggingOver)}
           {...provided.droppableProps}
         >
-          {group.members.map((member, index) => (
+          {members.map((member, index) => (
             <CodeReviewGroupMember
-              key={member.followerId}
-              member={member}
+              followerId={member.followerId}
+              name={member.name}
               index={index}
+              key={member.followerId}
             />
           ))}
           {provided.placeholder}
@@ -32,9 +33,11 @@ export default function CodeReviewGroup({group}) {
   );
 }
 
-// TO DO: specify shape of members
+// Each group needs a unique droppableId (rather than a database-provided group ID)
+// so that we can create new groups on the fly without any interaction with our backend.
 CodeReviewGroup.propTypes = {
-  group: PropTypes.object.isRequired
+  droppableId: PropTypes.string.isRequired,
+  members: PropTypes.array.isRequired
 };
 
 const getListStyle = isDraggingOver => ({

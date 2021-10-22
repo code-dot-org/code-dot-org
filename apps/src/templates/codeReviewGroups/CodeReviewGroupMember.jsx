@@ -9,11 +9,11 @@ import {grid} from './CodeReviewGroup';
 // These are called "Draggables" in the package we're using (React Beautiful DnD).
 // More information on React Beautiful DnD can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroupMember({member, index}) {
+export default function CodeReviewGroupMember({followerId, name, index}) {
   return (
     <Draggable
-      key={member.followerId}
-      draggableId={member.followerId.toString()}
+      key={followerId}
+      draggableId={followerId.toString()}
       index={index}
       tab-index={index}
     >
@@ -33,7 +33,7 @@ export default function CodeReviewGroupMember({member, index}) {
               justifyContent: 'space-around'
             }}
           >
-            {member.name}
+            {name}
           </div>
         </div>
       )}
@@ -41,9 +41,9 @@ export default function CodeReviewGroupMember({member, index}) {
   );
 }
 
-// TO DO: should specify shape of member -- needs ID and content property that can be rendered.
 CodeReviewGroupMember.propTypes = {
-  member: PropTypes.object.isRequired,
+  followerId: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired
 };
 
