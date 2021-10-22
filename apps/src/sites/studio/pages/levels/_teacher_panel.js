@@ -13,7 +13,7 @@ import {
   renderTeacherPanel,
   queryLockStatus
 } from '@cdo/apps/code-studio/teacherPanelHelpers';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {loadAndSetVerifiedTeacher} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(initPage);
 
@@ -30,17 +30,15 @@ function initPage() {
     teacherPanelData.page_type
   );
   store.dispatch(getHiddenLessons(teacherPanelData.script_name, false));
-  if (teacherPanelData.is_verified_teacher) {
-    store.dispatch(setVerified());
-  }
+
+  store.dispatch(loadAndSetVerifiedTeacher());
+
   // Lesson Extras fail to load with this
   if (!teacherPanelData.lesson_extra) {
     renderTeacherContentToggle(store);
   }
   renderTeacherPanel(
     store,
-    teacherPanelData.script_id,
-    teacherPanelData.section,
     teacherPanelData.script_name,
     teacherPanelData.page_type
   );

@@ -32,3 +32,15 @@ export default function verifiedTeacher(state = initialState, action) {
     ...state
   };
 }
+
+export const loadAndSetVerifiedTeacher = () => dispatch => {
+  $.ajax('/api/current_user/is_verified_teacher')
+    .then(isVerified => {
+      if (isVerified) {
+        return dispatch(setVerified());
+      }
+    })
+    .fail(err => {
+      console.log(err);
+    });
+};

@@ -6,6 +6,7 @@ const SET_USER_SIGNED_IN = 'currentUser/SET_USER_SIGNED_IN';
 const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
 const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
+const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -67,5 +68,34 @@ export default function currentUser(state = initialState, action) {
       userType: action.userType
     };
   }
+
+  if (action.type === SET_INITIAL_DATA) {
+    const {id, username, user_type} = action.serverUser;
+    return {
+      ...state,
+      userId: id,
+      userName: username,
+      userType: user_type
+    };
+  }
+
   return state;
 }
+
+export const asyncLoadUserData = () => dispatch => {
+  $.ajax('/api/v1/users/current_user')
+    .done(data => {
+      if (!data.is_signed_in) {
+        dispatch(setUserSignedIn(false));
+      } else {
+        dispatch(setUserSignedIn(true));
+        dispatch({
+          type: SET_INITIAL_DATA,
+          serverUser: data
+        });
+      }
+    })
+    .fail(err => {
+      console.log(err);
+    });
+};

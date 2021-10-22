@@ -8,8 +8,8 @@ import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {reload} from '@cdo/apps/utils';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {asyncLoadStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
 
@@ -18,8 +18,6 @@ import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
  */
 export function renderTeacherPanel(
   store,
-  scriptId,
-  section,
   scriptName,
   pageType = null,
   isAsync = false
@@ -27,9 +25,8 @@ export function renderTeacherPanel(
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
 
-  if (section && section.students) {
-    store.dispatch(setStudentsForCurrentSection(section.id, section.students));
-  }
+  const sectionId = queryParams('section_id');
+  store.dispatch(asyncLoadStudentsForCurrentSection(sectionId));
 
   const onSelectUser = id => {
     updateQueryParam('user_id', id);
