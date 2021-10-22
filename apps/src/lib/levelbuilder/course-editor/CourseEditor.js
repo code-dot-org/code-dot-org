@@ -19,9 +19,12 @@ import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {
   PublishedState,
-  InstructionType
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import InstructionTypeDropdown from '@cdo/apps/lib/levelbuilder/course-editor/InstructionTypeDropdown';
+import AudiencesEditor from '@cdo/apps/lib/levelbuilder/course-editor/AudiencesEditor';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -34,6 +37,12 @@ class CourseEditor extends Component {
       .isRequired,
     initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
       .isRequired,
+    initialInstructorAudience: PropTypes.oneOf(
+      Object.values(InstructorAudience)
+    ).isRequired,
+    initialParticipantAudience: PropTypes.oneOf(
+      Object.values(ParticipantAudience)
+    ).isRequired,
     initialPilotExperiment: PropTypes.string,
     initialDescriptionShort: PropTypes.string,
     initialDescriptionStudent: PropTypes.string,
@@ -86,7 +95,9 @@ class CourseEditor extends Component {
       versionYear: this.props.initialVersionYear,
       unitsInCourse: this.props.initialUnitsInCourse,
       publishedState: this.props.initialPublishedState,
-      instructionType: this.props.initialInstructionType
+      instructionType: this.props.initialInstructionType,
+      instructorAudience: this.props.initialInstructorAudience,
+      participantAudience: this.props.initialParticipantAudience
     };
   }
 
@@ -115,6 +126,8 @@ class CourseEditor extends Component {
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
       instruction_type: this.state.instructionType,
+      participant_audience: this.state.participantAudience,
+      instructor_audience: this.state.instructorAudience,
       pilot_experiment: this.state.pilotExperiment,
       scripts: this.state.unitsInCourse
     };
@@ -182,7 +195,9 @@ class CourseEditor extends Component {
       pilotExperiment,
       unitsInCourse,
       publishedState,
-      instructionType
+      instructionType,
+      instructorAudience,
+      participantAudience
     } = this.state;
     return (
       <div>
@@ -301,6 +316,17 @@ class CourseEditor extends Component {
             updateAnnouncements={this.handleUpdateAnnouncements}
           />
         </CollapsibleEditorSection>
+
+        <AudiencesEditor
+          instructorAudience={instructorAudience}
+          participantAudience={participantAudience}
+          handleInstructorAudienceChange={e =>
+            this.setState({instructorAudience: e.target.value})
+          }
+          handleParticipantAudienceChange={e =>
+            this.setState({participantAudience: e.target.value})
+          }
+        />
 
         <CollapsibleEditorSection title="Publishing Settings">
           <CourseVersionPublishingEditor

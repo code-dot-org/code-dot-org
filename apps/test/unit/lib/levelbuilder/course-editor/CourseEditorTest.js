@@ -17,7 +17,9 @@ import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import {
   PublishedState,
-  InstructionType
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
@@ -42,7 +44,9 @@ const defaultProps = {
   initialAnnouncements: [],
   useMigratedResources: false,
   coursePath: '/courses/test-course',
-  initialInstructionType: InstructionType.teacher_led
+  initialInstructionType: InstructionType.teacher_led,
+  initialInstructorAudience: InstructorAudience.teacher,
+  initialParticipantAudience: ParticipantAudience.student
 };
 
 describe('CourseEditor', () => {
@@ -143,6 +147,7 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
     assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
     assert.equal(wrapper.find('InstructionTypeDropdown').length, 1);
+    assert.equal(wrapper.find('AudiencesEditor').length, 1);
   });
 
   it('has correct markdown for preview of course teacher and student description', () => {
