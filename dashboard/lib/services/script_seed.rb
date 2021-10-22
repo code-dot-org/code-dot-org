@@ -679,6 +679,8 @@ module Services
         :serialized_at,
         :published_state,
         :instruction_type,
+        :instructor_audience,
+        :participant_audience,
         :seeding_key
       )
 
