@@ -327,6 +327,12 @@
           "overview": "Pelajaran **projek** ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek baharu!",
           "student_overview": "Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda."
         },
+        "express-2021/Programming with Angry Birds": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan membangunkan algoritma berjujukan untuk menggerakkan burung dari satu bahagian pagar sesat ke bahagian lain tempat khinzir berada. Untuk melakukan ini, mereka akan menyusun blok kod bersama dalam jujukan linear, membuatkannya bergerak lurus, belok ke kiri, atau belok ke kanan.",
+          "preparation": "-   Main melalui teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
+          "purpose": "Dalam pelajaran ini, pelajar akan membangunkan kemahiran pengaturcaraan dengan menggunakan platform komputer. Format teka-teki berasaskan blok ini membantu pelajar mempelajari tentang jujukan dan konsep, tanpa perlu bimbang menyempurnakan sintaks.",
+          "student_overview": "Pelajari tentang jujukan dan algoritma dengan _Angry Birds_."
+        },
         "express-2021/Debugging with Scrat": {
           "purpose": "Pelajar di dalam kelas anda mungkin berasa kecewa dengan pelajaran ini kerana inti pati penyahpepijatan. Penyahpepijatan ialah konsep yang sangat penting kepada pengaturcaraan komputer. Saintis komputer mesti mempunyai kecekapan yang tinggi untuk mencari pepijat dalam program mereka sendiri. Penyahpepijatan memaksa pelajar mengenali masalah dan mengatasinya sambil membina pemikiran kritikal dan kemahiran menyelesaikan masalah.",
           "student_overview": "Cari masalah di dalam teka-teki dan berlatih kemahiran penyahpepijatan anda."
@@ -419,32 +425,60 @@
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan membangunkan algoritma berjujukan untuk menggerakkan watak tupai dari satu bahagian pagar sesat ke bahagian lain tempat buah oak boleh didapati. Untuk melakukan ini, mereka akan menyusun blok kod bersama dalam jujukan linear.",
+          "preparation": "-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Dalam pelajaran ini, pelajar akan membangunkan kemahiran pengaturcaraan dan penyahpepijatan dengan menggunakan platform komputer. Format teka-teki berasaskan blok ini membantu pelajar mempelajari tentang jujukan dan konsep, tanpa perlu bimbang menyempurnakan sintaks.",
           "student_overview": "Atur cara Scrat mendapatkan buah oak."
         },
+        "pre-express-2021/Programming in with Angry Birds": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan kemahiran algoritma berjujukan.",
+          "preparation": "-   Main melalui pelajaran bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Dalam pelajaran ini, pelajar akan membangunkan kemahiran pengaturcaraan dan penyahpepijatan dengan menggunakan platform komputer. Format teka-teki berasaskan blok ini membantu pelajar mempelajari tentang jujukan dan konsep, tanpa perlu bimbang menyempurnakan sintaks."
+        },
         "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan BB-8."
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan BB-8.",
+          "preparation": "-   Main teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Bersama matlamat memindahkan pengetahuan, pelajaran ini memberi pelajar persekitaran baharu untuk berlatih kemahiran yang telah mereka pupuk. Peminat Star Wars akan melompat gembira apabila melihat teka-teki ini. Setiap teka-teki dalam siri ini telah ditambah untuk memberikan pemahaman yang lebih mendalam mengenai konsep asas yang akan mereka gunakan sepanjang kursus ini."
         },
         "pre-express-2021/Programming in Harvester": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan. ",
+          "preparation": "-   Main teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Dalam pelajaran ini, pelajar akan membangunkan kemahiran penyahpepijatan dan akan terus menambah baik kemahiran pengaturcaraan mereka.",
           "student_overview": "Bantu Penuai mengumpulkan sayuran di sepanjang laluan."
         },
         "pre-express-2021/Loops with Scrat": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih melakukan konsep gelung dalam pengaturcaraan teka-teki apabila matlamatnya ialah membantu tupai mendapatkan buah oak.",
+          "preparation": "-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Dalam pelajaran ini, pelajar akan mempelajari lebih banyak tentang gelung dan cara melaksanakannya dalam kod Blockly. Menggunakan _gelung_ adalah kemahiran penting dalam pengaturcaraan kerana mengulangi perintah secara manual membosankan dan tidak cekap. Dengan teka-teki Code.org ini, pelajar akan belajar menambah arahan kepada gelung sedia ada, mengumpulkan kod berulang ke dalam gelung dan mengenali corak yang perlu diulangi.",
           "student_overview": "Bantu Scrat menutup lebih banyak tanah dengan menggunakan gelung."
         },
         "pre-express-2021/Loops with Laurel": {
-          "overview": "Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \\`dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan."
+          "overview": "Dalam pelajaran ini, pelajar terus mempelajari konsep gelung. Di sini, Pengembara Laurel menggunakan gelung untuk mengumpulkan harta karun di dalam ruang gua yang terbuka. Blok \\`dapatkan harta karun' baharu diperkenalkan untuk membantunya semasa dalam perjalanan.",
+          "preparation": "-   Main melalui teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Pelajaran ini memberikan pelajar lebih banyak latihan dengan gelung dan menggalakkan mereka untuk meletakkan berbilang blok di dalam `ulang` semasa mereka cuba mengumpulkan harta karun sebanyak mungkin."
         },
         "pre-express-2021/Ocean Scene with Loops": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar mempelajari cara melukis imej dengan penggelungan jujukan arahan ringkas. Di sini, gelung mewujudkan corak. Pada bahagian akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka sendiri.",
+          "preparation": "-   Main teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Pelajaran ini memberikan perspektif berbeza mengenai cara gelung boleh mencipta sesuatu dalam pengaturcaraan. Pelajar juga boleh merenung sejenak mengenai ketidakcekapan pengaturcaraan tanpa gelung di sini kerana banyak blok diperlukan oleh atur cara tanpa bantuan gelung `berulang`.",
           "student_overview": "Gunakan gelung dan corak untuk menyiapkan imej."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar mempelajari cara melukis imej dengan penggelungan jujukan arahan ringkas. Di sini, pelajar menggunakan gelung untuk mencipta corak. Pada bahagian akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka sendiri.",
+          "preparation": "-   Main melalui pelajaran bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
+          "purpose": "Pelajaran ini memberikan perspektif berbeza mengenai cara gelung boleh mencipta sesuatu dalam pengaturcaraan. Pelajar akan menguji kemahiran pemikiran kritikal mereka dengan menilai kod yang diberikan dan menentukan perkara yang perlu ditambah untuk menyelesaikan teka-teki. Pelajar juga boleh merenung sejenak mengenai ketidakcekapan pengaturcaraan tanpa gelung di sini kerana banyak blok diperlukan oleh atur cara tanpa bantuan gelung `berulang`.",
           "student_overview": "Gunakan corak dan gelung untuk menyiapkan imej."
         },
         "pre-express-2021/On the Move with Events": {
+          "overview": "Dalam **projek mini** ini, pelajar berpeluang mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta permainan animasi. Sudah tiba masanya menjadi kreatif dan mencipta cerita di dalam Makmal Mainan!",
+          "preparation": "-   Main melalui teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan",
+          "purpose": "Pelajar akan membangunkan pemahaman mereka mengenai acara dengan menggunakan Makmal Mainan hari ini. Acara adalah sangat biasa dalam kebanyakan atur cara komputer. Dalam aktiviti ini, pelajar akan menggunakan acara untuk membuat watak bergerak di sekeliling skrin, membuat bunyi bising dan mengubah latar belakang berdasarkan acara yang dimulakan pengguna.",
           "student_overview": "Cipta permainan dan cerita anda sendiri."
         },
         "pre-express-2021/A Royal Battle with Events": {
-          "student_overview": "Gunakan peristiwa untuk mencipta cerita atau membuat permainan berinteraktif."
+          "overview": "Dalam **projek mini** ini, pelajar akan berpeluang mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta permainan animasi.",
+          "preparation": "-   Main melalui teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
+          "purpose": "Dalam aktiviti dalam talian ini, pelajar akan mempelajari cara menggunakan acara di dalam Makmal Mainan. Mereka akan mulakan dengan melatih kesatria untuk bergerak apabila kekunci anak panah ditekan, kemudian ditamatkan dengan peluang mempamerkan kemahiran lain yang mereka pelajari sepanjang kursus ini, termasuk jujukan dan penggelungan, sebagai sebahagian daripada teka-teki permainan bebas terakhir.",
+          "student_overview": "Gunakan acara untuk mencipta cerita atau membuat permainan berinteraktif."
         },
         "coursee-2021/Simon Says": {
           "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",

@@ -17,6 +17,12 @@
         "dance-party-playlist/dance/unversioned": {
           "name": "Spotify प्लेलिस्ट (सर्व वयोगट)"
         },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
+        },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Spotify प्लेलिस्ट (सर्व वयोगट)"
         },
@@ -46,6 +52,18 @@
         "making_sprites/coursef/2021": {
           "name": "स्प्राईट्स तयार करणे"
         },
+        "sprite_lab_documentation/coursef/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "शब्दांची शक्ती: लेसन क्विझ "
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "शब्दांची ताकद: शब्दांची शक्ती"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "शब्दांची शक्ती:शब्द दुखवू शकतात"
+        },
         "the_power_of_words_lesson_quiz/coursef/2021": {
           "name": "शब्दांची शक्ती: लेसन क्विझ "
         },
@@ -67,11 +85,19 @@
         "user_input_programs/coursef/2021": {
           "name": "वापरकर्ता इनपुट प्रोग्राम"
         },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "मिनी प्रोजेक्ट: वापरकर्ता इनपुट प्रोग्राम"
+        },
         "teacher_sandbox_level/coursef/2021": {
-          "name": "शिक्षक सँडबॉक्स लेव्हल "
+          "name": "शिक्षक सँडबॉक्स लेव्हल ",
+          "url": "https://studio.code.org/levels/27300"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "मिनी प्रोजेक्ट: वापरकर्ता इनपुट प्रोग्राम"
         },
         "pause_and_think_online/coursef/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन "
+          "name": "पॉज़ आणि थिंक ऑनलाईन ",
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "url": "https://youtu.be/mX857v5B4gE"
@@ -99,6 +125,9 @@
         "unplugged-video-internet/coursef/2021": {
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "आयपी अॅड्रेस कार्ड्स आणि डिलिव्हरी टाइप कार्ड्स"
+        },
         "get-site-ip-com/coursef/2021": {
           "name": "get-site-ip-com",
           "url": "http://get-site-ip.com/"
@@ -113,10 +142,14 @@
           "name": "CS मूलभूत अंतिम प्रोजेक्ट "
         },
         "csta_standards_mapping/coursef/2021": {
-          "name": "CSTA मानक मॅपिंग"
+          "name": "CSTA मानक मॅपिंग",
+          "url": "https://studio.code.org/s/coursef-2021/standards"
         },
         "common_core_and_ngss_guidance/coursef/2021": {
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
         },
         "course_vocabulary/coursef/2021": {
           "name": "कोर्स शब्दावली"
@@ -133,11 +166,20 @@
         "teacher_forum_1/coursef/2021": {
           "url": "https://forum.code.org/c/csf/"
         },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
         "virtual_lesson_modifications/coursef/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा "
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "डिजिटल ट्रेल्स: धड्याच्या स्लाइड"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "डिजिटल ट्रेल्स: डिजिटल ट्रेल फॉलो करा"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "डिजिटल ट्रेल्स: डिजिटल ट्रेल स्क्वेअर"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "डिजिटल ट्रेल्स: अॅनिमल ट्रॅक"
@@ -149,7 +191,14 @@
           "name": "चेहऱ्यावरील भावना"
         },
         "jigsaw/courseb/2021": {
-          "name": "ड्रॅग आणि ड्रॉप चा सराव"
+          "name": "ड्रॅग आणि ड्रॉप चा सराव",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Code.org वर क्लास सेक्शन कसा बनवायचा"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "अनप्लग्ड ब्लॉकली ब्लॉक (ग्रेड के -1)"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggles - Go Noodle"
@@ -172,6 +221,9 @@
         "unplugged-video-getting-loopy/courseb/2021": {
           "url": "https://youtu.be/JoKTqHCni0M"
         },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "सीएस फंडामेंटल्स मुख्य क्रियाकलाप टिपा"
+        },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन "
         },
@@ -191,10 +243,14 @@
           "name": "प्ले लॅब  प्रोजेक्ट नियोजन मार्गदर्शक"
         },
         "csta_standards_mapping/courseb/2021": {
-          "name": "CSTA मानक मॅपिंग"
+          "name": "CSTA मानक मॅपिंग",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
         },
         "course_vocabulary/courseb/2021": {
           "name": "अभ्यासक्रम शब्दसंग्रह"
@@ -214,11 +270,17 @@
         "virtual_lesson_modifications/courseb/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा "
         },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "माझ्या ऑनलाइन अतिपरिचित क्षेत्रातील सुरक्षितता: सुरक्षा: हे नियम!"
+        },
         "20_20_20_rule/coursea/2021": {
           "name": "20/20/20 नियम"
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggles - Go Noodle"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "सुरुवात करणे - वर्ग विभाग तयार करणे"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "url": "https://youtu.be/hrnhiKAQ1_k"
@@ -235,6 +297,9 @@
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
         },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "अनप्लग्ड ब्लॉकली ब्लॉक (ग्रेड के -1)"
+        },
         "20_20_20_rule_1/coursea/2021": {
           "name": "20/20/20 नियम"
         },
@@ -242,7 +307,8 @@
           "name": "Wiggles - Go Noodle"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
-          "name": "स्टेप बटणासह डीबगिंग"
+          "name": "स्टेप बटणासह डीबगिंग",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
@@ -289,6 +355,9 @@
         "feeling_faces_-_emotion_image_2/coursea/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
         },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "सीएस फंडामेंटल्स मुख्य क्रियाकलाप टिपा"
+        },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
         },
@@ -302,10 +371,14 @@
           "name": "आर्टीस्ट प्रोजेक्ट नियोजन मार्गदर्शक"
         },
         "csta_standards_mapping/coursea/2021": {
-          "name": "CSTA मानक मॅपिंग"
+          "name": "CSTA मानक मॅपिंग",
+          "url": "https://studio.code.org/s/coursea-2021/standards"
         },
         "common_core_and_ngss_guidance/coursea/2021": {
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
         },
         "course_vocabulary/coursea/2021": {
           "name": "अभ्यासक्रम शब्दसंग्रह"
@@ -333,6 +406,9 @@
         },
         "unplugged-maze-blocks/coursec/2021": {
           "name": "अनप्लग केलेले मेझ ब्लॉक्स"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "सीएस फंडामेंटल्स मुख्य क्रियाकलाप टिपा"
         },
         "debugging_guide/coursec/2021": {
           "name": "डीबगिंग गाईड (मार्गदर्शक)"
@@ -376,14 +452,21 @@
         "unplugged-video-binary-bracelets/coursec/2021": {
           "url": "https://youtu.be/3S2YfoO4_CM"
         },
+        "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "name": "प्ले लॅब प्रोजेक्ट प्लॅनिंग गाइड (उदाहरण)"
+        },
         "play-lab-project-guide/coursec/2021": {
           "name": "प्ले लॅब  प्रोजेक्ट नियोजन मार्गदर्शक"
         },
         "csta_standards_mapping/coursec/2021": {
-          "name": "CSTA मानक मॅपिंग"
+          "name": "CSTA मानक मॅपिंग",
+          "url": "https://studio.code.org/s/coursec-2021/standards"
         },
         "common_core_and_ngss_guidance/coursec/2021": {
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
         },
         "course_vocabulary/coursec/2021": {
           "name": "अभ्यासक्रम शब्दसंग्रह"
@@ -406,11 +489,23 @@
         "password_power-up_lesson_slides/coursed/2021": {
           "name": "पासवर्ड पॉवर-अप: लेसन स्लाईड"
         },
+        "password_power-up_power-up_your_password/coursed/2021": {
+          "name": "पासवर्ड पॉवर-अप: तुमचा पासवर्ड पॉवर-अप करा"
+        },
+        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": "पासवर्ड पॉवर-अप: तुमचा पासवर्ड पॉवर-अप करा"
+        },
         "password_power-up_lesson_quiz/coursed/2021": {
           "name": "पासवर्ड पॉवर-अप: लेसन क्विझ"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
           "name": "पासवर्ड पॉवर-अप: लेसन क्विझ"
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "पासवर्ड पॉवर-अप: जर ... तर ... परिदृश्य"
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "पासवर्ड पॉवर-अप: जर ... तर ... परिदृश्य"
         },
         "unplugged-video-graph-paper/coursed/2021": {
           "url": "https://youtu.be/Y_paSrH2ffw"
@@ -423,6 +518,9 @@
         },
         "course-cf-blockly-blocks/coursed/2021": {
           "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+        },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन "
@@ -454,14 +552,24 @@
         "unplugged-video-conditionals-cards/coursed/2021": {
           "url": "https://youtu.be/UymN4lTL50s"
         },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "कार्ड्स सॅम्पल प्रोग्रामसह सशर्त"
+        },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "url": "https://youtu.be/TbUaEnAYPjI"
         },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "CSF कोर्स D अभ्यासक्रमाचा प्रोजेक्ट प्लॅनिंग गाइडचा शेवट"
+        },
         "csta_standards_mapping/coursed/2021": {
-          "name": "CSTA मानक मॅपिंग"
+          "name": "CSTA मानक मॅपिंग",
+          "url": "https://studio.code.org/s/coursed-2021/standards"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
         },
         "course_vocabulary/coursed/2021": {
           "name": "अभ्यासक्रम शब्दसंग्रह"
@@ -497,10 +605,17 @@
           "name": "वळण आणि कोन"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "स्विमिंग फिश शिक्षक सँडबॉक्स"
+          "name": "स्विमिंग फिश शिक्षक सँडबॉक्स",
+          "url": "https://studio.code.org/levels/18623"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
           "name": "स्प्राईट्स तयार करणे"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "pause_and_think_online/express/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन "
@@ -542,7 +657,8 @@
           "name": "CS मूलभूत अंतिम प्रोजेक्ट "
         },
         "csta_standards_mapping/express/2021": {
-          "name": "CSTA मानक मॅपिंग"
+          "name": "CSTA मानक मॅपिंग",
+          "url": "https://studio.code.org/s/express-2021/standards"
         },
         "course_vocabulary_1/express/2021": {
           "name": "कोर्स शब्दावली"
@@ -552,6 +668,9 @@
         },
         "debugging_guide/express/2021": {
           "name": "डीबगिंग गाईड (मार्गदर्शक)"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "Code.org वर क्लास सेक्शन कसा बनवायचा"
         },
         "feeling-faces-image/pre-express/2021": {
           "name": "चेहऱ्यावरील भावना"
@@ -566,10 +685,12 @@
           "name": "पॉज़ आणि थिंक ऑनलाईन "
         },
         "csta_standards_mapping/pre-express/2021": {
-          "name": "CSTA मानक मॅपिंग"
+          "name": "CSTA मानक मॅपिंग",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
         },
         "course_vocabulary/pre-express/2021": {
-          "name": "कोर्स शब्दावली"
+          "name": "कोर्स शब्दावली",
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
           "url": "https://forum.code.org/c/csf/"
@@ -581,7 +702,17 @@
           "name": "अल्गोरिदमचे अनुसरण करा"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "स्विमिंग फिश शिक्षक सँडबॉक्स"
+          "name": "स्विमिंग फिश शिक्षक सँडबॉक्स",
+          "url": "https://studio.code.org/levels/18623"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "एक सुपर डिजिटल नागरिक बना: लेसन स्लाइड"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "एक सुपर डिजिटल नागरिक व्हा: सुपर डिजिटल नागरिक"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "पॉज़ आणि थिंक ऑनलाईन ",
@@ -606,6 +737,18 @@
           "name": "फंक्शन्ससह  सॉंग राईटींग ",
           "url": "https://youtu.be/5iDCKkI6y2Y"
         },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग"
+        },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
         },
@@ -622,10 +765,14 @@
           "name": "डिझाईन प्रक्रिया"
         },
         "csta_standards_mapping/coursee/2021": {
-          "name": "CSTA मानक मॅपिंग"
+          "name": "CSTA मानक मॅपिंग",
+          "url": "https://studio.code.org/s/coursee-2021/standards"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
         },
         "course_vocabulary/coursee/2021": {
           "name": "कोर्स शब्दावली"
@@ -641,6 +788,9 @@
         },
         "teacher_forum_1/coursee/2021": {
           "url": "https://forum.code.org/c/csf/"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा "

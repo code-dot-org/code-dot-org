@@ -2368,8 +2368,9 @@
         "7b5f9e78-8c46-4ffa-ab19-355d6d63624b": {
           "name": "Pengaturcaraan dengan Angry Birds",
           "tips": [
-            null
-          ]
+            "Tunjukkan kepada pelajar cara yang betul membantu rakan sekelas dengan:\nJangan duduk di atas kerusi rakan sekelas\nJangan gunakan papan kekunci rakan sekelas\nJangan sentuh tetikus rakan sekelas\nPastikan rakan sekelas dapat menghuraikan penyelesaian sebelum anda pergi"
+          ],
+          "progression_name": "Video: Pengenalan Pagar Sesat - Pengaturcaraan dengan Blok"
         },
         "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
           "progression_name": "Membina Kemahiran"
@@ -2388,6 +2389,9 @@
         },
         "19367182-a8f0-442e-9a7d-e7852546f961": {
           "progression_name": "Cabaran"
+        },
+        "0cf25b1a-ce7f-42e1-9460-f17762284ea3": {
+          "name": "Renungan"
         },
         "defc5a97-b60a-4a6b-8617-e05be08dab35": {
           "name": "Pengenalan"
@@ -3021,58 +3025,89 @@
           "name": "Pengenalan",
           "description": "### Berkelakuan di dalam Makmal Komputer\n\n\\*Matlamat:\\*\\* Perbincangan ini akan mengajar pelajar perkara yang dijangkakan dan cara berkelakuan baik apabila memasuki makmal komputer.",
           "tips": [
-            null
+            "### Mengajar kursus ini kepada seluruh kelas?\n\nKursus Asas CS yang sejajar dengan gred kita menggunakan pelajaran nirplag bagi membina komuniti dan memperkenalkan konsep sains komputer yang rumit, termasuk **kewarganegaraan digital**. Sila lihat pelajaran [Going Places Safely](https://curriculum.code.org/csf-19/coursea/1/) daripada [Course A](https://curriculum.code.org/csf-19/coursea/)!"
           ]
         },
         "03c8c7bd-1824-4ac2-b70b-a627df1abcb5": {
           "tips": [
-            null
+            "-   Berada dalam keadaan tenang di makmal\n-   Diingatkan jangan mengunyah gula-gula getah atau kandi\n-   Sanitasikan tangan anda\n-   Duduk bersama pasangan anda berkongsi satu komputer\n-   Pastikan \"pemandu\" pertama boleh mencapai tetikus\n-   Apabila anda berasa kecewa, jangan pukul atau goncang komputer atau monitor\n-   Ikuti **\\*Peraturan 20/20/20**\n-   Cara menangani **\\*Bergoyang-goyang** setiap 20-30 minit (memerlukan log masuk percuma ke dalam GoNoodle). \n-   Tanya pasangan anda terlebih dahulu, sebelum anda bertanya guru\n-   Pastikan kelantangannya rendah supaya semua individu lain boleh mendengar pasangan mereka\n-   Gunakan jurnal anda untuk menjejaki perasaan dan penyelesaian"
           ]
+        },
+        "1c2125d9-33ff-4e9b-af87-c814567226a5": {
+          "description": "**Bincangkan:**\n\nAdakan perbincangan yang baik mengenai jangkaan makmal komputer untuk memastikan bahawa pelajar memahami peraturan. Beberapa topik perbincangan mungkin termasuk:\n\n-   Adakah pengendalian makmal komputer baik?\\_\n-   Berapa kuat bunyi kita berjalan dibenarkan ketika berada di dalam makmal komputer?\\_\n-   Apakah yang perlu anda lakukan jika anda tersangkut dengan teka-teki?\\_\n-   Jika anda berasa kecewa, adakah ia akan membantu dengan memukul komputer?\\_\n-   Apabila kita hendak pergi ke makmal komputer, bagaimanakah kita perlu bersiap sedia?"
+        },
+        "3e550dce-3786-49bf-8181-0db85bf76550": {
+          "description": "### Pratonton Teka-teki Dalam Talian (5 minit)\n\nTayangkan teka-teki daripada pelajaran 1. Tunjukkan kepada kelas cara mengklik pada gambar dan letakkan di tempat yang betul dengan menyeret dan melepaskan. Cuba lakukan kesalahan dengan sengaja seperti mengklik latar belakang atau melepaskan imej di hadapan tempatnya yang betul. Minta bantuan sukarelawan di kelas apabila anda menghadapi masalah ini."
         },
         "4dd75533-0a88-4007-b78d-c6237dc99e05": {
           "name": "Pelajari Tarik dan Lepas",
-          "description": "**Matlamat:** Ini akan mengajar pelajar cara menggunakan Code.org untuk menyelesaikan teka-teki dalam talian.\n\nTahap ini direka bentuk untuk memberi peluang kepada pelajar supaya mengamalkan kemahiran koordinasi tangan-mata, mengklik dan seret & lepas. Pelajar juga akan bermain dengan jujukan."
+          "description": "**Matlamat:** Ini akan mengajar pelajar cara menggunakan Code.org untuk menyelesaikan teka-teki dalam talian.\n\nTahap ini direka bentuk bagi memberi peluang kepada pelajar untuk berlatih kemahiran koordinasi tangan-mata, mengklik dan seret & lepas. Pelajar juga akan bermain dengan jujukan."
         },
         "f8ae0c1b-6fd2-4f09-9ab3-67830399dfe0": {
           "description": "Bahagikan sedikit masa untuk mengajar cara mengklik, menyeret dan melepaskan dengan betul-betul. Bahagikan masa untuk memperkenalkan bahasa di sekeliling peranti yang akan digunakan oleh pelajar semasa mereka berusaha menyelesaikan teka-teki. Jika anda mempunyai tablet, pelajar akan menggunakan _skrin sentuh_. Jika anda mempunyai komputer riba, mereka mungkin akan menggunakan _pad jejak_. Komputer desktop seperti yang anda mungkin temui di dalam makmal akan bergantung pada penggunaan _tetikus_.",
           "tips": [
-            null
+            "Mempertimbangkan untuk meminta pelajar memecahkan langkah menyeret dan melepaskan, serta merekodkannya pada papan tulis. Sebagai contoh: \n\n1.  Gerakkan anak panah kepada blok. \n2.  Klik dan tahan butang tetikus. \n3.  Gerakkan tetikus. \n4.  Lepaskan butang itu.\n\nDengan melakukan perkara ini, ia akan memberikan pelajar latihan dengan mencipta algoritma, iaitu konsep yang akan diterokai dalam pelajaran akan datang."
           ]
+        },
+        "88dc7233-0f13-40b9-8ce1-8a021d175bb5": {
+          "description": "Letakkan kanak-kanak secara berpasangan dan minta mereka tonton video pengaturcaraan berpasangan secara seluruh kelas atau di stesen mereka. Ini akan membantu pelajar memulakannya dengan arah yang betul."
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
           "description": "Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa teka-teki dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Teka-teki dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah:",
           "tips": [
-            null
+            "Tunjukkan kepada pelajar cara yang betul membantu rakan sekelas:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
+        },
+        "6de9f22c-a1d4-45f0-bc41-d7ab54516eab": {
+          "description": "-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar supaya menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri."
         },
         "bde027df-b2a3-4252-980a-7e8493d898e6": {
           "progression_name": "Membina Kemahiran"
         },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Lukiskan satu daripada wajah beremosi yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Bolehkah anda melukis jujukan untuk bersiap sedia pergi ke makmal komputer?\n-   Lukiskan perkara yang  \"Boleh\" dan \"Tidak Boleh\" dilakukan di makmal komputer\n-   Lukis dan labelkan nama bahagian komputer yang anda gunakan apabila mengklik dan menyeret semasa menyelesaikan teka-teki. (butang tetikus, skrin sentuh, pad jejak)"
+        },
+        "d69fc3f9-0235-4de1-90c7-13f7c8c22cc9": {
+          "description": "Jika pelajar menyelesaikan teka-teki daripada Peringkat 4 lebih awal, minta mereka luangkan masa cuba mencipta teka-teki mereka sendiri dalam jurnal renungan mereka."
         },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
+          "name": "Berkelakuan baik di dalam Makmal Komputer",
+          "description": "Semak jangkaan dan cara berkelakuan apabila mereka memasuki makmal komputer.\n\n**Bincangkan:**\n\nAdakan perbincangan yang baik mengenai jangkaan makmal komputer untuk memastikan bahawa pelajar memahami peraturan. Beberapa topik perbincangan mungkin termasuk:\n\n-   Adakah pengendalian makmal komputer baik?\n-   Berapa kuat bunyi kita berjalan dibenarkan ketika berada di dalam makmal komputer?\n-   Apakah yang perlu anda lakukan jika anda tersangkut dengan teka-teki?\n-   Jika anda berasa kecewa, adakah ia akan membantu dengan memukul komputer?\n-   Apabila kita hendak pergi ke makmal komputer, bagaimanakah kita perlu bersiap sedia?",
           "tips": [
-            null
+            "-   Berada dalam keadaan tenang di makmal\n-   Diingatkan jangan mengunyah gula-gula getah atau kandi\n-   Sanitasikan tangan anda\n-   Duduk bersama pasangan anda berkongsi satu komputer\n-   Pastikan \"pemandu\" pertama boleh mencapai tetikus\n-   Apabila anda berasa kecewa, jangan pukul atau goncang komputer atau monitor\n-   Ikuti **\\*Peraturan 20/20/20**\n-   Cara menangani **\\*Bergoyang-goyang** setiap 20-30 minit (memerlukan log masuk percuma ke dalam GoNoodle). \n-   Tanya pasangan anda terlebih dahulu, sebelum anda bertanya guru\n-   Pastikan kelantangannya rendah supaya semua individu lain boleh mendengar pasangan mereka\n-   Gunakan jurnal anda untuk menjejaki perasaan dan penyelesaian"
           ]
         },
         "e3728ba7-a25a-431b-8a91-f1aee34cc177": {
           "description": "Tayangkan teka-teki daripada pelajaran. Tunjukkan kepada kelas cara mengklik pada blok dan letakkannya di tempat yang betul dengan menyeret dan melepaskan. Cuba lakukan kesalahan dengan sengaja seperti mengklik latar belakang atau melepaskan imej di hadapan tempatnya yang betul. Minta bantuan sukarelawan di dalam kelas apabila anda menghadapi masalah ini dan bantu mereka menggunakan kemahiran yang mereka bangunkan dalam pelajaran nirplag terakhir untuk melakukannya dengan betul.",
           "tips": [
-            null
+            "### Mengajar kursus ini kepada seluruh kelas?\n\nKursus Asas CS yang sejajar dengan gred kita menggunakan pelajaran nirplag bagi membina komuniti dan memperkenalkan konsep sains komputer yang rumit, termasuk **penjujukan**. Sila lihat pelajaran [Happy Maps](https://curriculum.code.org/csf-19/coursea/3/) daripada [Course A](https://curriculum.code.org/csf-19/coursea/) atau [Move It, Move It!](https://curriculum.code.org/csf-19/courseb/2/) daripada [Course B](https://curriculum.code.org/csf-19/courseb/)!"
           ]
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
           "name": "Pengaturcaraan dengan Blok",
           "tips": [
-            null
+            "Tunjukkan kepada pelajar cara yang betul membantu rakan sekelas:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
+        },
+        "20e998a3-d920-48f1-9d92-ec4102990042": {
+          "description": "Ini akan mengajar pelajar cara menggunakan Code.org untuk menyelesaikan teka-teki dalam talian.\n\nTahap ini direka bentuk bagi memberi peluang kepada pelajar untuk berlatih kemahiran koordinasi tangan-mata, mengklik dan kemahiran seret & lepaskan. Pelajar juga akan bermain dengan jujukan.\n\nPerbendaharaan kata yang diperkenalkan dalam pelajaran ini menjadi berkaitan semasa melakukan aktiviti ini. Luangkan sedikit masa untuk mengajar dengan sangat jelas cara mengklik, mengklik dua kali, seret dan lepaskan. Mungkin ia lebih baik untuk anda memasukkan semua perkataan ini dalam persekitaran kelas apabila anda boleh memimpin melalui teladan -- atau ia mungkin lebih munasabah untuk mengajar perkataan tersebut secara individu semasa pelajar berusaha menyelesaikan teka-teki mereka di dalam makmal. Anda akan perlu memutuskan perkara yang anda percaya paling sesuai untuk kelas anda.\n\nTonton video **\\*Pengaturcaraan Berpasangan** bersama pelajar anda, kemudian tetapkan mereka secara berpasangan. Ini akan membantu pelajar memulakannya dengan arah yang betul.\n\nGuru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Pelajaran dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah:\n\n-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar supaya menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri."
+        },
+        "1ed021eb-9033-4d39-98d7-e9e245a7f785": {
+          "progression_name": "Video: Pengaturcaraan dengan Blok"
         },
         "0394c5d4-246e-42bc-aca2-97d7bd159173": {
           "progression_name": "Membina Kemahiran"
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Bolehkah anda melukis jujukan untuk bersiap sedia pergi ke makmal komputer?\n-   Lukiskan perkara yang \"Boleh\" dan \"Tidak Boleh\" dilakukan di makmal komputer\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda."
+        },
+        "f810e0b8-71b7-4b54-8c8b-4205a471ca3b": {
+          "description": "Jika pelajar menyelesaikan teka-teki daripada pelajaran ini lebih awal, minta mereka luangkan masa cuba mencipta teka-teki mereka sendiri dalam jurnal renungan mereka."
+        },
+        "14da8da8-681c-4934-97fc-01e71ad67ef3": {
+          "description": "Untuk menyelesaikan penyambungan, pratonton teka-teki dalam talian (atau dua) seluruh kelas.\n\n**Model:** Dedahkan keseluruhan teka-teki dalam talian daripada perkembangan yang akan datang. Kami menyarankan Teka-teki 5. Adakah mereka melihat apa-apa persamaan dengan latihan yang baharu sahaja mereka lakukan? Apakah perbezaan yang besar?\n\nBekerjasama dengan kelas anda untuk menyeret kod ke dalam ruang kerja sehingga burung (akhirnya) sampai kepada khinzir. \n\n**Peralihan:** Pelajar kini perlu bersedia untuk beralih kepada komputer bagi menyelesaikan sendiri teka-teki dalam talian."
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Pengaturcaraan dengan Angry Birds",
@@ -3087,19 +3122,28 @@
         "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
           "progression_name": "Tambahan Pelajaran"
         },
+        "dec19d15-6248-4a60-87e3-b8bf155470bc": {
+          "description": "**Sebarkan:** Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Pelajaran dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah: \n\n-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar supaya menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri."
+        },
         "179a6d3a-af19-4c62-85c7-82844964d06a": {
           "tips": [
-            null
+            "Tunjukkan kepada pelajar _cara_ yang\\_ betul membantu rakan sekelas dengan:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
         },
         "12c1b1b7-2a91-4f58-ae14-136ea1536a67": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda."
+        },
+        "4bda804b-66e2-4290-8cf1-79b0649b470d": {
+          "description": "Dalam kumpulan kecil, biarkan pelajar mereka bentuk pagar sesat mereka sendiri di atas kertas dan cabar pelajar atau kumpulan lain menulis atur cara bertujuan menyelesaikannya. Untuk keseronokan tambahan, buat pagar sesat bersaiz sebenar dengan pelajar menjadi khinzir dan burung."
         },
         "5990c610-f353-48fd-9d5f-a813486a237f": {
-          "name": "Pengenalan"
+          "name": "Pengenalan",
+          "description": "Gunakan soalan ini tentang pelajaran yang lalu,  \"Pengaturcaraan dengan Angry Birds\", bertujuan membentuk penilaian ringkas pengaturcaraan dan penyahpepijatan. \n\n-   Teka-teki yang manakah terlalu sukar atau terlalu mudah? \n-   Teka-teki yang manakah mengecewakan atau amat menyeronokkan?\n-   Sekiranya mereka mengajar pelajaran itu kepada rakan, bahagian pelajaran yang manakah mereka mahu semak?\n\nJika anda berasa selesa, sila berikan pengenalan ringkas kepada _BB-8_ daripada _Star Wars_. Ramai pelajar mungkin sudah biasa dengan robot yang menawan hati, tetapi pengenalan tersebut pasti akan membina keterujaan."
         },
         "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
-          "name": "Pengaturcaraan dengan Rey dan BB-8"
+          "name": "Pengaturcaraan dengan Rey dan BB-8",
+          "progression_name": "Video: Pengaturcaraan dengan Rey dan BB-8"
         },
         "3ea0d264-5395-49ba-8d4a-822734bcc3e2": {
           "progression_name": "Membina Kemahiran"
@@ -3110,22 +3154,34 @@
         "8a743287-1638-4c96-8c21-387ebf05d760": {
           "progression_name": "Latihan"
         },
+        "720aa090-bf1d-4934-9c4f-f8cad6b511ac": {
+          "description": "Kami amat menyarankan menonton dan menggunakan video **\\*Pengaturcaraan Berpasangan** bersama seluruh kelas. Pengaturcaraan berpasangan merangsang perbincangan yang boleh menjawab soalan, menilai konsep asas dan membina keyakinan dengan subjek."
+        },
         "4f8c5eb5-a782-4698-a471-19808d1dbbc4": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan gambar BB-8 yang anda lalui sepanjang pagar sesat pada hari ini dan tambahkan senarai perintah yang anda gunakan."
         },
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
-          "name": "Pengenalan"
+          "name": "Pengenalan",
+          "description": "#### Penyahpepijatan, Ketabahan dan Kekecewaan\n\n**Bincangkan:** Sediakan pelajar untuk latihan dalam talian hari ini dengan bertanya kepada mereka perkara yang akan mereka lakukan jika mereka berpendapat terdapat pepijat dalam kod mereka. Secara lebih khusus lagi, apakah yang akan mereka tanyakan kepada diri mereka sendiri?\n\n-   Adakah semua langkah pertama dilakukan dengan betul?\n-   Bagaimanakah dengan yang kedua? Ketiga?\n-   Apakah ralat kepada atur cara saya?\n-   Apakah perkara yang cuba disampaikan?\n\n**Prom**: **Penyahpepijatan** boleh menjadi mengecewakan! Tetapi ketabahan boleh membantu kita melaluinya. Apakah beberapa perkara yang boleh kita lakukan untuk bertahan mengharungi kekecewaan? \n\nContoh respons:\n\n-   Kira sampai 10\n-   Tarik nafas dengan dalam\n-   Catatkan jurnal tentang pepijat yang kita temui\n-   Bercakap dengan rakan kongsi mengenai pepijat\n-   Minta bantuan\n\n**Peralihan:** Biarkan pelajar anda ketahui bahawa kekecewaan ialah sebahagian daripada pengekodan. Semua individu mendapat pepijat! Tetapi, ia tidak menjadi apa-apa masalah jika mereka fikir mereka mempunyai pepijat tetapi mereka tidak dapat menemuinya atau menyelesaikannya dengan segera. Dengan menggunakan strategi seperti yang disenaraikan di atas dapat membantu mereka bertahan mengharungi kekecewaan dan menyelesaikan apa-apa masalah!"
         },
         "0684b025-9c16-437c-936c-d9743cad2d94": {
-          "name": "Pengaturcaraan dengan Penuai"
+          "name": "Pengaturcaraan dengan Penuai",
+          "description": "Setakat ini, pelajar sepatutnya sudah biasa dengan persekitaran pengaturcaraan. Beberapa perkara baharu yang perlu diperhatikan dalam pelajaran ini ialah kekeliruan tentang proses penyahpepijatan atau tidak ingat untuk menggunakan blok `kutip jagung` apabila penuai sampai kepada jagung."
         },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [
-            null
+            "Tunjukkan kepada pelajar _cara_ yang\\_ betul membantu rakan sekelas dengan:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
+        },
+        "45d59019-4dd4-4a32-b08c-fd79528eab76": {
+          "progression_name": "Video: Penuai"
         },
         "7675abfe-e572-4b1b-9203-ac0c1e6c3407": {
           "progression_name": "Membina Kemahiran"
+        },
+        "629aedef-bd99-44af-a6bc-9ee890a1c7c8": {
+          "progression_name": "Video: Penyahpepijatan dengan Butang Langkah"
         },
         "1dae474b-e6aa-4934-b8f8-e8521eadb593": {
           "progression_name": "Membina Kemahiran"
@@ -3136,24 +3192,39 @@
         "6f0b2804-a745-47e0-8211-45bfc553e106": {
           "progression_name": "Latihan"
         },
+        "465fb2e2-097a-4f1b-a2e1-9dc16c0a15e1": {
+          "description": "**Sebarkan:** Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Di samping idea yang disenaraikan dalam pelajaran yang lalu, beberapa idea mengenai cara melakukannya ialah: \n\n-   Ingatkan pelajar untuk menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanyakan soalan utama untuk meminta pelajar mengesan kesilapan mereka sendiri.\n\n**Peralihan:** Minta pelajar mengambil Jurnal Thinkspot mereka dan ambil sedikit masa untuk meninggalkan pelajaran itu kepada diri mereka sendiri."
+        },
         "94b18069-db8a-43d7-bbf0-8912ac563349": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan masa anda menemui pepijat dalam kod anda."
         },
         "f6ac49ff-86ee-444b-9e56-62de0b794363": {
-          "name": "Pengenalan"
+          "name": "Pengenalan",
+          "description": "Untuk menyelesaikan penyambungan, pratonton teka-teki dalam talian (atau dua) seluruh kelas."
         },
         "cc53970f-5da8-46dc-9d2b-ba8af22f7f27": {
+          "description": "**Model:** Dedahkan keseluruhan teka-teki dalam talian daripada perkembangan yang akan datang. Bekerjasama dengan kelas anda untuk menyeret kod ke dalam ruang kerja sehingga Scrat (akhirnya) berjaya mendapatkan buah oak. Pastikan untuk mengetengahkan penggunaan blok berulang.",
           "tips": [
-            null
+            "### Mengajar kursus ini kepada seluruh kelas?\n\nKursus Asas CS yang sejajar dengan gred kita menggunakan pelajaran nirplag bagi membina komuniti dan memperkenalkan konsep sains komputer yang rumit, termasuk **gelung**. Sila lihat pelajaran [Happy Loops](https://curriculum.code.org/csf-19/coursea/7/) daripada [Course A](https://curriculum.code.org/csf-19/coursea/) dan [Getting Loopy](https://curriculum.code.org/csf-19/courseb/6/) daripada [Course B](https://curriculum.code.org/csf-19/courseb/)!"
           ]
+        },
+        "388885b9-02f4-4150-b753-0b33d7db86fa": {
+          "description": "**Peralihan:** Pelajar kini perlu bersedia untuk beralih kepada komputer bagi menyelesaikan sendiri teka-teki dalam talian."
+        },
+        "0c3cdd42-4e3e-4b16-942b-47ce55609295": {
+          "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tanpa gelung."
         },
         "c6bb8fa9-dfaa-414e-ac47-0f6196d8fa9e": {
           "tips": [
-            null
+            "Tunjukkan kepada pelajar _cara_ yang\\_ betul membantu rakan sekelas dengan:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
         },
         "c46e4d51-ddeb-4387-8f5a-73fb0f7e2574": {
           "progression_name": "Membina Kemahiran"
+        },
+        "eb340c7e-d71e-49fb-aaf8-73205f85d432": {
+          "progression_name": "Video: Gelung Ice Age"
         },
         "ff9ff779-b617-4ae3-80c1-db23e1b9c27b": {
           "progression_name": "Membina Kemahiran"
@@ -3164,17 +3235,41 @@
         "01ea78e0-acb4-4a08-8295-6257c3d3aa29": {
           "progression_name": "Latihan"
         },
+        "9a875694-a4f4-4cd2-8bf8-31f8441d4a50": {
+          "description": "**Sebarkan:** Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Pelajaran dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah: \n\n-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar supaya menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri."
+        },
         "0366b799-b555-4aef-b6c7-741c035590aa": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan _Scrat_ dan acorn.\n-   Lukiskan diri anda menggunakan gelung untuk melakukan aktiviti harian, seperti menggosok gigi."
+        },
+        "efb62b8a-4d4e-446b-aa68-1f20c45fc7a3": {
+          "description": "Gunakan aktiviti ini untuk meningkatkan pembelajaran pelajar. Ini juga boleh digunakan sebagai aktiviti luar kelas atau rancangan pengayaan lain.\n\n**Terus Bergerak**\n\n-   Berikan pelajar gambar aksi atau gerakan tarian yang boleh mereka lakukan.\n    -   Minta pelajar mengatur gerakan dan menambah gelung untuk mereka tarian sendiri.\n-   Berkongsi tarian dengan seluruh kelas.\n\n**Sambungkan Semula**\n\n-   Cari beberapa video tarian popular dalam YouTube yang berulang.\n-   Bolehkah kelas anda mencari gelung?\n-   Cuba lakukan perkara yang sama dengan lagu!"
         },
         "3948532c-fefc-466f-a7ff-7d95e6692b96": {
           "name": "Pengenalan",
           "description": "Semak definisi gelung dengan pantas, tindakan melakukan sesuatu secara berulang kali.\n\n-   Apakah gelung?\n-   Mengapakah kita menggunakannya?"
         },
+        "525d11d6-d492-48d2-b775-6dd460d72215": {
+          "description": "Untuk memperkenalkan Laurel Pengumpul, pratonton teka-teki (atau dua) dalam talian kepada seluruh kelas.\n\n**Model:** Dedahkan keseluruhan teka-teki dalam talian daripada perkembangan yang akan datang. Kami menyarankan Teka-teki 8. Adakah pelajar melihat apa-apa persamaan dengan latihan yang baharu sahaja mereka lakukan? Apakah perbezaan yang besar? Bilakah blok `dapatkan harta karun` boleh digunakan?\n\nBekerjasama dengan kelas anda untuk menyeret kod ke dalam ruang kerja sehingga Laurel (akhirnya) mengumpul semua harta karun itu. \n\n**Peralihan:** Pelajar kini perlu bersedia untuk beralih kepada komputer bagi menyelesaikan sendiri teka-teki dalam talian."
+        },
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
-          "name": "Gelung dengan Laurel"
+          "name": "Gelung dengan Laurel",
+          "description": "### Demonstrasi Guru\n\nKita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas.\n\nTahap Ramalan:\n\n-   [Loops in Collector](https://studio.code.org/levels/8746)"
+        },
+        "b8fea05b-6234-4075-8416-bbfdef9e22f0": {
+          "name": "Teka-teki Dalam Talian",
+          "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tanpa gelung."
+        },
+        "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
+          "progression_name": "Video: Pengumpul"
         },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
+          "progression_name": "Membina Kemahiran"
+        },
+        "dead7fa5-406d-419c-a084-3a913cbd2499": {
+          "progression_name": "Video: Menggunakan Blok Berulang"
+        },
+        "08049c61-d346-4c06-96f3-58775b4bf69d": {
           "progression_name": "Membina Kemahiran"
         },
         "46172f79-e306-4a8f-9ecd-640b05733fb6": {
@@ -3187,21 +3282,33 @@
           "progression_name": "Tambahan Pelajaran"
         },
         "6397718f-1733-47e6-8ace-820b3f9d1701": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan garisan harta karun yang dapat dikumpulkan oleh Laurel.\n-   Lukis sesuatu yang menggunakan gelung."
         },
         "6361a98f-3232-4060-8758-b1f8064507a8": {
-          "name": "Pengenalan"
+          "name": "Pengenalan",
+          "description": "-   Semak definisi gelung dengan pantas, tindakan melakukan sesuatu secara berulang kali. \n-   Bincangkan pelbagai corak seperti zig zag dan anak tangga.\n    -   _Bagaimanakah anda akan menerangkan kepada seseorang cara melukis corak tersebut?_\n    -   _Bagaimanakah anda boleh melukis ini dengan menggunakan gelung?_\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/s1hLHCasuv0ndccCRC50Qig.png)\n\nPada peringkat artis, pelajar akan menggunakan sudut 45 darjah yang dihuraikan sebagai arah barat laut, timur laut, barat daya, tenggara. Kami menyarankan agar dapat membincangkan arahan ini dengan ringkas bersama seluruh kelas dan melukis imej untuk pelajar merujuknya semula.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/Directions.png)"
         },
         "8cb479d1-0b50-4d24-998d-9fff971dcf0c": {
-          "name": "Pemandangan Lautan dengan Gelung"
+          "name": "Pemandangan Lautan dengan Gelung",
+          "description": "#### Demonstrasi Guru"
         },
         "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
           "tips": [
-            null
+            "Ingatkan pelajar supaya berkongsi kerja mereka dengan rakan atau keluarga terdekat sahaja. Untuk maklumat lebih lanjut, sila tonton atau tunjukkan kepada kelas video **\\*Jeda dan Fikir Dalam Talian**."
           ]
+        },
+        "bbc61306-32dd-4de2-9a6b-35b47408093f": {
+          "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas.\n\nTahap Ramalan:\n\n-   [Loops in Artist](https://studio.code.org/levels/8726)"
+        },
+        "7ccc621e-43b3-4402-a0cc-c626dfa1ea79": {
+          "progression_name": "Video: Artis dalam Studio Kod"
         },
         "cd1f7b2a-82e7-4f7f-82f5-a4ce10bf4fab": {
           "progression_name": "Membina Kemahiran"
+        },
+        "eabc47c6-9f94-4b32-aab1-4a138064532b": {
+          "progression_name": "Video: Gelung dalam Artis"
         },
         "94271c9b-4000-4e8c-a99c-9a04d851549e": {
           "progression_name": "Membina Kemahiran"
@@ -3219,15 +3326,20 @@
           "progression_name": "Tambahan Pelajaran"
         },
         "7043a915-b252-47d3-bb01-5975d613129c": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan beberapa anak tangga. Bayangkan gelung diperlukan untuk melukis ini.\n-   Lukiskan sesuatu yang lain dalam hidup anda yang menggunakan gelung."
         },
         "b53a9767-0731-41e2-b2fe-0b8b841cd403": {
-          "name": "Pengenalan"
+          "name": "Pengenalan",
+          "description": "-   Semak definisi gelung dengan pantas, tindakan melakukan sesuatu secara berulang kali. \n-   Bincangkan corak berbeza seperti zig zag dan anak tangga.\n    -   _Bagaimanakah anda akan menerangkan kepada seseorang cara melukis corak tersebut?_\n    -   _Bagaimanakah anda boleh melukis ini dengan menggunakan gelung?_"
+        },
+        "e5e50ac0-9ede-4521-8a97-17ab48738bfc": {
+          "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas.\n\nTahap Ramalan:\n\n-   [Loops in Artist](https://studio.code.org/levels/8745)"
         },
         "21511f7a-c70c-4aa0-ba16-d10d2e64fd4f": {
           "name": "Melukis Taman dengan Gelung",
           "tips": [
-            null
+            "Ingatkan pelajar supaya berkongsi kerja mereka dengan rakan atau keluarga terdekat sahaja. Untuk maklumat lebih lanjut, sila tonton atau tunjukkan kepada kelas video **\\*Jeda dan Fikir Dalam Talian**."
           ]
         },
         "1474d69b-c98f-40d9-b8c5-07cbeb090699": {
@@ -3246,16 +3358,29 @@
           "progression_name": "Tambahan Pelajaran"
         },
         "e382cc47-35ef-4c10-80a1-4b9090d86856": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan corak yang anda buat dengan gelung.\n-   Lukiskan corak yang ingin anda buat dengan gelung."
         },
         "e54a7c2e-64b2-4b83-a007-845a622ca484": {
           "name": "Pengenalan",
+          "description": "Sekarang kita akan menambahkan acara kepada kod kita. Secara khususnya, kita akan mengadakan acara apabila dua watak bersentuhan antara satu sama lain.",
           "tips": [
-            null
+            "### Mengajar kursus ini kepada seluruh kelas?\n\nKursus Asas CS yang sejajar dengan gred kita menggunakan pelajaran nirplag bagi membina komuniti dan memperkenalkan konsep sains komputer yang rumit, termasuk **acara**. Sila lihat pelajaran [The Big Event Jr.](https://curriculum.code.org/csf-19/coursea/11/) daripada [Course A](https://curriculum.code.org/csf-19/coursea/)!"
           ]
         },
+        "7d0da3ba-532d-4204-860e-8506667f52f0": {
+          "description": "-   Bilakah anda pernah melihat dua watak bersentuhan antara satu sama lain semasa acara berlangsung dalam permainan?"
+        },
+        "76c12b77-7e58-4d27-b6b5-ae529ae291ba": {
+          "name": "Pratonton Teka-teki Dalam Talian oleh Seluruh Kelas",
+          "description": "Tarik teka-teki daripada teka-teki yang sepadan dalam talian. Kami menyarankan teka-teki 7. Panggil pelajar berlainan untuk membuat bunyi bising yang lucu apabila anda mengklik pada Jorge. Jelaskan bahawa ini ialah acara yang mereka berikan reaksi dan Jorge boleh dikodkan untuk membuat bising apabila anda mengkliknya."
+        },
         "6c8d4815-0e66-45fd-980a-dacf20015a66": {
-          "name": "Bergerak bersama Peristiwa"
+          "name": "Bergerak bersama Acara",
+          "description": "Pada tahap akhir pelajar mempunyai kebebasan mencipta cerita mereka sendiri. Anda mungkin mahu memberikan garis panduan berstruktur mengenai jenis cerita yang hendak ditulis, terutamanya bagi pelajar yang mempunyai terlalu banyak pilihan."
+        },
+        "dbb4fe5e-fe4d-40d4-8509-c11f826128ae": {
+          "progression_name": "Video: Pengenalan kepada Makmal Mainan"
         },
         "708df6be-8599-4a1a-993b-13ca6e874d5c": {
           "progression_name": "Permainan Bebas"
@@ -3263,17 +3388,29 @@
         "dd7a6bce-6e0d-4774-8588-76327c4315d6": {
           "progression_name": "Latihan"
         },
+        "bf84d5a1-77c9-4769-9963-84b33df1e0b9": {
+          "progression_name": "Projek mini: Jorge Si Anjing"
+        },
         "0a6abf88-92c8-455d-8d64-e8f61ae227ad": {
           "progression_name": "Tambahan Pelajaran"
         },
         "9336ef6c-3ac8-4703-8f8d-98e88518e5e9": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada [r feeling-faces-image/pre-express/2021] yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan acara yang anda gunakan dalam atur cara anda hari ini.\n-   Bayangkan anda mempunyai robot kawalan jauh. Bagaimanakah rupa bentuk alat kawalan jauh itu? Lukiskan gambar perkara yang anda fikir anda mungkin boleh minta robot tersebut lakukan."
+        },
+        "93b502d2-fe7e-4895-a9e2-349a3d7a0bb0": {
+          "description": "Gunakan aktiviti ini untuk meningkatkan pembelajaran pelajar. Ini juga boleh digunakan sebagai aktiviti luar kelas atau rancangan pengayaan lain.\n\n**Lihat Di Bawah Hud**\n\nApabila anda berkongsi pautan kepada cerita anda, anda juga berkongsi semua kod yang terdapat di belakangnya. Ini ialah cara yang amat baik untuk pelajar mempelajari daripada satu sama lain.\n\n-   Siarkan pautan kepada cerita yang lengkap dalam talian\n    -   Buat cerita anda sendiri untuk dikongsikan juga!\n-   Apabila pelajar memuatkan pautan, minta mereka mengklik butang \"Cara ia Berfungsi\" untuk melihat kod di sebalik cerita tersebut.\n-   Bincangkan secara berkumpulan cara berbeza rakan sekelas anda mengekod cerita mereka.\n    -   Apakah yang mengejutkan anda?\n    -   Apakah yang ingin anda cuba?\n-   Pilih cerita individu lain dan klik `Gubah Semula` untuk membina cerita di atasnya. (Jangan bimbang, cerita asal akan selamat.)"
         },
         "e41f8532-e8cd-4df7-a729-43346d3df6d1": {
-          "name": "Pengenalan"
+          "name": "Pengenalan",
+          "description": "Tarik teka-teki daripada teka-teki yang sepadan dalam talian. Kami menyarankan teka-teki 4 peringkat ini. Panggil pelajar berlainan untuk membuat wajah yang lucu mewakili mood apabila anda klik pada Daisy. Jelaskan bahawa ini ialah acara yang mereka berikan reaksi dan Daisy boleh dikodkan untuk mengubah mood apabila anda mengkliknya."
         },
         "fbc5ec8c-04e4-4690-8361-be9c49c1daca": {
-          "name": "Pertempuran Diraja bersama Peristiwa"
+          "name": "Pertempuran Diraja bersama Acara",
+          "description": "Pada tahap akhir pelajar mempunyai kebebasan mencipta cerita mereka sendiri. Anda mungkin mahu memberikan garis panduan berstruktur mengenai jenis cerita yang hendak ditulis, terutamanya bagi pelajar yang mempunyai terlalu banyak pilihan."
+        },
+        "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7": {
+          "progression_name": "Projek mini: Pertempuran Diraja"
         },
         "ddebabd0-cce0-446d-81ad-f4734e71d06c": {
           "progression_name": "Permainan Bebas"
@@ -3282,7 +3419,11 @@
           "progression_name": "Tambahan Pelajaran"
         },
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
-          "name": "Renungan"
+          "name": "Renungan",
+          "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Feeling Faces** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan acara yang anda gunakan dalam atur cara anda hari ini.\n-   Bayangkan anda mempunyai robot kawalan jauh. Bagaimanakah rupa bentuk alat kawalan jauh itu? Lukiskan gambar perkara yang anda fikir anda mungkin boleh minta robot tersebut lakukan."
+        },
+        "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
+          "description": "Gunakan aktiviti ini untuk meningkatkan pembelajaran pelajar. Ini juga boleh digunakan sebagai aktiviti luar kelas atau rancangan pengayaan lain.\n\n**Lihat Di Bawah Hud**\n\nApabila anda berkongsi pautan kepada cerita anda, anda juga berkongsi semua kod yang terdapat di belakangnya. Ini ialah cara yang amat baik untuk pelajar mempelajari daripada satu sama lain.\n\n-   Siarkan pautan kepada cerita yang lengkap dalam talian\n    -   Buat cerita anda sendiri untuk dikongsikan juga!\n-   Apabila pelajar memuatkan pautan, minta mereka mengklik butang \"Cara ia Berfungsi\" untuk melihat kod di sebalik cerita tersebut.\n-   Bincangkan secara berkumpulan cara berbeza rakan sekelas anda mengekod cerita mereka.\n    -   Apakah yang mengejutkan anda?\n    -   Apakah yang ingin anda cuba?\n-   Pilih cerita individu lain dan klik `Gubah Semula` untuk membina cerita di atasnya. (Jangan bimbang, cerita asal akan selamat.)"
         },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Pengenalan"

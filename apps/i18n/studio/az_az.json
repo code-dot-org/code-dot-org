@@ -205,6 +205,7 @@
   "hoc2015_chain_characters_instructions": "\"Özün necə istəyirən, R2-D2!\"",
   "hoc2015_chain_characters_instructions2": "\nBir Tauntaun aldığınızda iki və ya daha çox Mynock - un görünməsini təmin edin. 8 Mynock əldə edin.",
   "hoc2015_multiply_characters_instructions": "\"Onlar çoxalırlar!\"",
+  "hoc2015_multiply_characters_instructions2": "Siz ele ede bilersiniz ki iki ve yaxud cox Mouse Droid-ler [mousedroid], her defe R2-D2 Mouse Droid-in ustune cixanda peyde olsun? 20 dene Mouse Droid cixardin ekrana.",
   "hoc2015_change_setting_instructions": "Başqa bir planetə baş çəkmək vaxtıdı",
   "hoc2015_change_setting_instructions2": "Droidinizi və onun sürətini dəyişdirmək üçün yeni əmrlərdən istifadə edin. Sonra Rebel Pilot əldə edin.",
   "hoc2015_event_free_instructions": "İndi sən özünlə təkbətəksən, R2-D2",
@@ -347,7 +348,7 @@
   "playSoundLosePoint": "xal itirmək səsini oynat",
   "playSoundLosePoint2": "xal 2 uduzmaq səsini oynat",
   "playSoundRetro": "qədimi səs oynat",
-  "playSoundRubber": "rezin səsini oynat",
+  "playSoundRubber": "pozan səsini oynat",
   "playSoundSlap": "çırpma səsini oynat",
   "playSoundTooltip": "Seçilmiş səsi oynat.",
   "playSoundWinPoint": "qələbə xalı səsini oynat",
@@ -664,6 +665,8 @@
   "setMapGrid": "şəbəkə xəritəsini təyin edin",
   "setMapBlobs": "su damlaları xəritəsi et",
   "setMapTooltip": "Səhnədəki xəritəni dəyişdirir",
+  "shareStudioTwitter": "Düzəltdiyim proqrama nəzər yetirin. Onu @codeorg ilə özüm yazmışam",
+  "shareStudioTwitterDonor": "Hazırladığım hekayəyə göz at. ( {donor} @codeorg dəstəklədiyi üçün təşəkkürlər )",
   "shareGame": "Hekayənizi bölüşün:",
   "showCoordinates": "koordinatları göstər",
   "showCoordinatesTooltip": "qəhrəmanın koordinatlarını ekranda göstərin",
@@ -851,6 +854,7 @@
   "failedChainCharactersTimeoutGotSome": "Təbrik edirik, Mynocks etmək üçün kod əlavə etdiniz. Növbəti tapmacaya gedə və ya onlardan 8-ni əldə etmək üçün yenidən cəhd edə bilərsiniz.",
   "failedMultiplyCharactersTimeout": "20 Mouse Droid əldə etməlisiniz. Hər aldığınız zaman iki və ya daha çox Mouse Droid əlavə etdiyinizdən əmin olun.",
   "failedMultiplyCharactersTimeoutBlockly": "20 Mouse Droid əldə etməlisiniz. Hər aldığınız zaman iki və ya daha çox Mouse Droid əlavə etmək üçün \"Nə zaman Mouse Droid alın\" hadisəsi daxilindəki \"Mouse Droid əlavə et\" əmrini istifadə edin.",
+  "failedMultiplyCharactersTimeoutGotSome": "Təbriklər, siz Mouse Droids yaratmaq üçün kod əlavə etdiniz. Siz növbəti suala keçə bilər və ya 20 Mouse Droids əldə etmək üçün yenidən cəhd edə bilərsiniz. Onlardan daha çox əlavə etməklə bunu asanlaşdırmağa çalışın.  Daha tez hərəkət etdirmək üçün  klaviaturanın ( və ya ekranın)  üzərindəki nöqtələrə bas və saxla. ",
   "failedChangeSettingTimeout": "Davam etmək üçün üç üsyançı pilot alın.",
   "failedChangeSettingSettings": "Oyunu özünüz həll edin. Bu tapmacanı keçmək üçün droidinizi dəyişdirməli və sürətini təyin etməlisiniz."
 }

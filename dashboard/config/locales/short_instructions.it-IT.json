@@ -3574,7 +3574,16 @@
         "CourseF_outbreak5": "Ora tutti i mostri malati iniziano gradualmente a guarire.",
         "international_outbreak_freeplay": "Aggiungi al tuo progetto tutte le modifiche o i miglioramenti che desideri.",
         "poetry_hoc_exemplar1": "Fai una previsione!",
-        "poetry_hoc_exemplar2": "Fai una previsione!"
+        "poetry_hoc_exemplar2": "Fai una previsione!",
+        "courseF_sprites_behaviors": "Suggerisci un comportamento a un personaggio.",
+        "courseF_sprites_desert": "Aggiungi un codice per creare una scena del deserto con diversi personaggi.",
+        "courseF_sprites_freeplay_air": "Ora tocca a te creare qualunque cosa desideri!",
+        "courseF_sprites_freeplay_animals": "Ora tocca a te creare qualunque cosa desideri!",
+        "courseF_sprites_freeplay_aquatic": "Ora tocca a te creare qualunque cosa desideri!",
+        "courseF_sprites_freeplay_blank": "Ora tocca a te creare qualunque cosa desideri!",
+        "courseF_sprites_freeplay_food": "Ora tocca a te creare qualunque cosa desideri!",
+        "courseF_sprites_freeplay_space": "Ora tocca a te creare qualunque cosa desideri!",
+        "courseF_sprites_moreSprites": "Crea quattro personaggi."
       }
     }
   }
