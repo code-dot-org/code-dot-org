@@ -39,14 +39,14 @@ export default function InstructionTypeDropdown({
             </thead>
             <tbody>
               <tr>
-                <td style={styles.tableBorder}>Teacher-Led</td>
+                <td style={styles.tableBorder}>Teacher Led</td>
                 <td style={styles.tableBorder}>
                   A course where a instructor is directing the learning for
                   participants in the course.
                 </td>
               </tr>
               <tr>
-                <td style={styles.tableBorder}>Self-Paced</td>
+                <td style={styles.tableBorder}>Self Paced</td>
                 <td style={styles.tableBorder}>
                   A course where participants are progressing through the course
                   at their own pace.
