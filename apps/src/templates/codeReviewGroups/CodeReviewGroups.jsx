@@ -71,8 +71,14 @@ export default function CodeReviewGroups({initialGroups}) {
       </button>
       <div style={styles.groupsContainer}>
         <DragDropContext onDragEnd={onDragEnd}>
-          {groups.map((group, index) => {
-            return <CodeReviewGroup key={group.droppableId} group={group} />;
+          {groups.map(group => {
+            return (
+              <CodeReviewGroup
+                droppableId={group.droppableId}
+                members={group.members}
+                key={group.droppableId}
+              />
+            );
           })}
         </DragDropContext>
       </div>
