@@ -18,8 +18,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:25 UTC",
+    "serialized_at": "2021-10-22 22:17:29 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -6081,6 +6082,19 @@
       }
     },
     {
+      "name": "Introduction to Lists - Part 2",
+      "url": "https://youtu.be/TL0Y_GI4NZg",
+      "key": "introduction_to_lists_-_part_2",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_2.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_lists_-_part_2"
+      }
+    },
+    {
       "name": "CSP Loops Make - Lock Screen Maker",
       "url": "https://docs.google.com/document/d/1MPQ1wXqf5SwDuqCJtiG7aGzrtmkOwCD5PUiPU32-LE4/edit?usp=sharing",
       "key": "loops-make-activity-guide",
@@ -6231,6 +6245,12 @@
       "seeding_key": {
         "lesson.key": "Lists Explore",
         "resource.key": "introduction_to_lists_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "introduction_to_lists_-_part_2"
       }
     },
     {
