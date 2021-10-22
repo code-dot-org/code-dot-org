@@ -12,10 +12,13 @@ import {
   gradeFormatter,
   loginInfoFormatter,
   studentsFormatter,
-  GRADES
+  GRADES,
+  COLUMNS
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
 import {teacherSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+const GRADE_COLUMN = COLUMNS.GRADE.toString();
 
 const sectionRowData = [
   {
@@ -164,15 +167,16 @@ const sectionGradesRowData = [
   }
 ];
 
+// Scramble these for the table to start un-ordered
 const initialState = {
   teacherSections: {
     sections: {
-      '1': sectionGradesRowData[0],
-      '2': sectionGradesRowData[1],
+      '1': sectionGradesRowData[5],
+      '2': sectionGradesRowData[0],
       '3': sectionGradesRowData[2],
-      '4': sectionGradesRowData[3],
-      '5': sectionGradesRowData[4],
-      '6': sectionGradesRowData[5],
+      '4': sectionGradesRowData[4],
+      '5': sectionGradesRowData[3],
+      '6': sectionGradesRowData[1],
       '7': sectionGradesRowData[6]
     }
   }
@@ -210,9 +214,9 @@ describe('OwnedSectionsTable Sorting', () => {
       const cells = tr.find('td');
       // If looking at the null grade, expect empty string
       if (rowIndex === 6) {
-        expect(cells.at(2).text()).to.equal('');
+        expect(cells.at(GRADE_COLUMN).text()).to.equal('');
       } else {
-        expect(cells.at(2).text()).to.equal(
+        expect(cells.at(GRADE_COLUMN).text()).to.equal(
           sectionGradesRowData[rowIndex].grade
         );
       }
@@ -226,9 +230,9 @@ describe('OwnedSectionsTable Sorting', () => {
     trows.forEach((tr, rowIndex) => {
       const cells = tr.find('td');
       if (rowIndex === 0) {
-        expect(cells.at(2).text()).to.equal('');
+        expect(cells.at(GRADE_COLUMN).text()).to.equal('');
       } else {
-        expect(cells.at(2).text()).to.equal(
+        expect(cells.at(GRADE_COLUMN).text()).to.equal(
           // subtract index from section count to check reverse order
           sectionGradesRowData[6 - rowIndex].grade
         );
