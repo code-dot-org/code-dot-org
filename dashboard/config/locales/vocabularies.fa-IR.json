@@ -2,6 +2,318 @@
   "fa-IR": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/hero/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/hero/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/hero/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "function/hero/unversioned": {
+          "word": "تابع",
+          "definition": ""
+        },
+        "code/flappy/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/flappy/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/flappy/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/hourofcode/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/hourofcode/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/frozen/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/frozen/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/frozen/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/iceage/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/iceage/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/iceage/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/artist/unversioned": {
+          "word": "کد",
+          "definition": ""
+        },
+        "debugging/artist/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/artist/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/gumball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/gumball/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/gumball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "شرطی ها",
+          "definition": ""
+        },
+        "loops/aquatic/unversioned": {
+          "word": "حلقه‌ها",
+          "definition": ""
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwars/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwars/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/starwars/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/mc/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/mc/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/mc/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/playlab/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/playlab/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/playlab/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/sports/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/sports/unversioned": {
+          "word": "کد",
+          "definition": ""
+        },
+        "debugging/sports/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/sports/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/infinity/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/infinity/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/infinity/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "debugging/basketball/unversioned": {
+          "word": "اشکال‌زدایی",
+          "definition": ""
+        },
+        "program/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "sprite/coursef/2021": {
           "word": "",
           "definition": ""

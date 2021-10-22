@@ -1519,6 +1519,30 @@
           "wobbling": "хитання",
           "moving west and looping": "рух на захід і циклічно",
           "moving east and looping": "рух на схід і циклічно"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
         }
       }
     }

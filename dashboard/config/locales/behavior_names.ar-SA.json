@@ -2566,6 +2566,34 @@
           "spinning right": "الدوران ناحية اليمين",
           "spinning left": "الدوران ناحية اليسار",
           "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "التحرك",
+          "moving east": "التحرك ناحية الشرق",
+          "spinning left": "الدوران ناحية اليسار",
+          "spinning right": "الدوران ناحية اليمين",
+          "shrinking": "الانقباض",
+          "growing": "النمو",
+          "moving south": "التحرك ناحية الجنوب",
+          "moving north": "التحرك ناحية الشمال",
+          "jittering": "الاهتزاز",
+          "moving west": "التحرك ناحية الغرب",
+          "patrolling": "التجوُّل",
+          "moving with arrow keys": "التحرك من خلال الأسهم"
         }
       }
     }

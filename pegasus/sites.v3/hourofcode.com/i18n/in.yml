@@ -29,6 +29,7 @@ in:
   africa_campaign_date_full: crwdns2461876:0crwdne2461876:0
   africa_campaign_date_year: crwdns2461878:0crwdne2461878:0
   africa_campaign_date_full_year: crwdns2461880:0crwdne2461880:0
+  social_hoc2021_cse: crwdns2698161:0crwdne2698161:0
   hoc2020_header: crwdns2471694:0crwdne2471694:0
   hoc2020_header_with_line_break_markdown: crwdns2471696:0crwdne2471696:0
   social_hoc2020_cs_important: crwdns2471698:0crwdne2471698:0
@@ -47,6 +48,7 @@ in:
   social_hoc2019_hoc_is_about_csforgood: crwdns2066364:0crwdne2066364:0
   social_hoc2019_coming_dates: crwdns2066366:0crwdne2066366:0
   social_hoc2019_dance: crwdns2066368:0crwdne2066368:0
+  social_hoc_anybody: crwdns2698163:0crwdne2698163:0
   oceans_landing_title: crwdns2289698:0crwdne2289698:0
   oceans_landing_description: crwdns2289700:0crwdne2289700:0
   cs_for_good_hashtag: crwdns2289953:0crwdne2289953:0
@@ -75,6 +77,9 @@ in:
   hoc_live_learn_more: crwdns2481830:0crwdne2481830:0
   hoc_overview_oceans_tutorial_header: crwdns2289714:0crwdne2289714:0
   hoc_overview_oceans_tutorial_desc: crwdns2289716:0crwdne2289716:0
+  hoc_overview_csc_header: crwdns2698675:0crwdne2698675:0
+  hoc_overview_csc_desc: crwdns2698677:0crwdne2698677:0
+  hoc_overview_csc_learn_more: crwdns2698679:0crwdne2698679:0
   ai_video_title_what_is_ai: crwdns2289853:0crwdne2289853:0
   ai_video_title_algorithm_bias: crwdns2289965:0crwdne2289965:0
   ai_video_title_phone_knows_dog: crwdns2289855:0crwdne2289855:0
@@ -124,6 +129,9 @@ in:
   codeorg_homepage_hoc2018_video: crwdns271258:0crwdne271258:0
   hourofcode_homepage_hoc2018_header_line1: crwdns304628:0crwdne304628:0
   hourofcode_homepage_hoc2018_header_line2: crwdns304630:0crwdne304630:0
+  codeorg_homepage_hoc_is_coming: crwdns2698165:0crwdne2698165:0
+  codeorg_homepage_celebrate_cse: crwdns2698167:0crwdne2698167:0
+  codeorg_homepage_csc: crwdns2698681:0crwdne2698681:0
   hoc2018_tutorial_mchoc_description: crwdns328050:0crwdne328050:0
   codeorg_homepage_hoc2019_dance_heading: crwdns2071316:0crwdne2071316:0
   codeorg_homepage_hoc2019_dance_heading_markdown: crwdns2364796:0crwdne2364796:0

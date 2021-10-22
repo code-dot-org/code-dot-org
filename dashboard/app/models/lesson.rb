@@ -489,10 +489,10 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
       programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
-      objectives: objectives.map(&:summarize_for_edit),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
@@ -518,9 +518,9 @@ class Lesson < ApplicationRecord
       preparation: render_property(:preparation),
       activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
-      objectives: objectives.map(&:summarize_for_lesson_show),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
@@ -540,9 +540,9 @@ class Lesson < ApplicationRecord
       displayName: localized_name,
       preparation: render_property(:preparation),
       resources: resources_for_lesson_plan(user&.authorized_teacher?),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
-      objectives: objectives.map(&:summarize_for_lesson_show),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       link: script_lesson_path(script, self)
     }
@@ -559,8 +559,8 @@ class Lesson < ApplicationRecord
       overview: get_localized_property(:student_overview) || '',
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
     }
   end
@@ -829,7 +829,7 @@ class Lesson < ApplicationRecord
   end
 
   def resources_for_lesson_plan(verified_teacher)
-    grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    grouped_resources = resources.sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
     if verified_teacher && grouped_resources.key?('Verified Teacher')
       grouped_resources['Teacher'] ||= []
       grouped_resources['Teacher'] += grouped_resources['Verified Teacher']

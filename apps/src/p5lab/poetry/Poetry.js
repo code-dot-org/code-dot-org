@@ -1,9 +1,20 @@
 import msg from '@cdo/poetry/locale';
+import {getStore} from '@cdo/apps/redux';
+import {setPoem} from '../redux/poetry';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
+import {getPoem} from './poem';
 
 export default class Poetry extends SpriteLab {
+  init(config) {
+    super.init(config);
+    const poem = config.level.selectedPoem || getPoem(this.level.defaultPoem);
+    if (poem) {
+      getStore().dispatch(setPoem(poem));
+    }
+  }
+
   getAvatarUrl(levelInstructor) {
     const defaultAvatar = 'octi';
     return `/blockly/media/poetry/${levelInstructor || defaultAvatar}.png`;
@@ -23,6 +34,32 @@ export default class Poetry extends SpriteLab {
       return;
     }
     return new PoetryLibrary(args.p5);
+  }
+
+  preloadInstructorImage() {
+    if (!this.preloadInstructorImage_) {
+      this.preloadInstructorImage_ = new Promise(resolve => {
+        this.p5Wrapper.p5.loadImage(
+          '/blockly/media/poetry/octiFinish.png',
+          image => resolve(image),
+          err => {
+            console.error(err);
+            resolve();
+          }
+        );
+      });
+    }
+
+    return this.preloadInstructorImage_.then(
+      image => (this.p5Wrapper.p5._preloadedInstructorImage = image)
+    );
+  }
+
+  preloadLabAssets() {
+    return Promise.all([
+      super.preloadLabAssets(),
+      this.preloadInstructorImage()
+    ]);
   }
 
   setupReduxSubscribers(store) {

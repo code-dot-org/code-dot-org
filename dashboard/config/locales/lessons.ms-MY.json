@@ -2,6 +2,28 @@
   "ms-MY": {
     "data": {
       "lessons": {
+        "artist/Artist": {
+          "overview": "Dalam pelajaran ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan pelajar mencipta imej kekompleksan yang meningkat dengan menggunakan blok baharu seperti `bergerak ke hadapan dengan 100 piksel` dan \\`belok ke kanan sebanyak 90 darjah '.",
+          "student_overview": "Cipta imej yang cantik dengan mengatur cara Artis."
+        },
+        "sports/Sports": {
+          "overview": "Dalam aktiviti dalam talian ini, pelajar akan mempelajari maksud peristiwa dan cara komputer menggunakannya dalam pengaturcaraan seperti permainan video. Pelajar akan melakukannya melalui teka-teki dengan membuatkan pengaturcaraan memberikan reaksi terhadap peristiwa (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan dan suara yang berbeza.",
+          "student_overview": "Adakah anda pernah berharap agar dapat bermain permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta permainan itu sendiri!"
+        },
+        "basketball/Bounce": {
+          "overview": "Dalam aktiviti dalam talian ini, pelajar akan mempelajari maksud peristiwa dan cara komputer menggunakannya dalam pengaturcaraan seperti permainan video. Pelajar akan melakukannya melalui teka-teki dengan membuatkan pengaturcaraan memberikan reaksi terhadap peristiwa (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan dan suara yang berbeza.",
+          "student_overview": "Adakah anda pernah berharap agar dapat bermain permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta permainan itu sendiri!"
+        },
+        "oceans/Oceans": {
+          "student_overview": "Rumusan Tutorial: Pelajar pertama mengklasifikasikan objek sebagai sama ada \"ikan\" atau \"bukan ikan\" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya."
+        },
+        "outbreak/Outbreak": {
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Pelajaran ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.",
+          "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
+        },
         "coursef-2021/lesson-6": {
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan membincangkan peranan komputer dan teknologi dalam kehidupan mereka, dengan menumpukan kepada cara aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya. Pelajar juga akan meneroka aplikasi yang serupa dengan aplikasi yang akan mereka cipta sendiri nanti.",
           "preparation": "-   Tentukan cara pelajar akan log masuk ke dalam Code.org.\n-   Jika diperlukan, cipta akaun Code.org untuk pelajar.\n-   Berikan topik Memperkenalkan Makmal Peperi kepada pelajar.\n-   Cetak salinan lembaran kerja **\\* Meneroka Aplikasi** (atau siarkan versi digital kepada LMS anda).",
@@ -34,15 +56,26 @@
         },
         "coursef-2021/lesson-9": {
           "overview": "Dalam pelajaran **tetapan konteks** ini, pelajar akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) sebagai konteks untuk memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan.",
+          "preparation": "Dapatkan 6 sampul surat (juga sesuai: kad kertas atau indeks, yang dilipat dua). \n\n-   Labelkan bahagian depan setiap sampul surat dengan huruf besar: objek, cecair, nombor, kata sifat, bahagian badan, nombor\n-   Cetak salinan **\\*lembaran kerja** pelajar (atau siarkan versi digital kepada LMS anda).",
+          "purpose": "Pelajaran ini memberikan konteks bersama yang akan membantu untuk memahami cara pemboleh ubah berfungsi semasa pelajar kembali kepada pengaturcaraan.",
           "student_overview": "Dalam aktiviti ini, anda akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) untuk bersiap sedia memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan. "
         },
         "coursef-2021/lesson-10": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. ",
-          "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran."
+          "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran.",
+          "purpose": "Pemboleh ubah akan digunakan dalam kursus ini untuk menyimpan dan mengubah suai data. Pada ketika ini, pelajar hanya akan menyimpan dan mendapatkan semula nilai tanpa menukarnya. Dalam sesi yang akan datang, pelajar akan menyimpan nilai berangka dan mengubah suainya dari masa ke masa untuk menjejaki perkara seperti skor pemain dalam permainan.",
+          "student_overview": "Dalam pelajaran ini anda akan berlatih dengan pemboleh ubah di dalam Makmal Peperi."
+        },
+        "coursef-2021/lesson-11": {
+          "overview": "Pelajar akan menggunakan kemahiran baharu mereka dengan pemboleh ubah kepada satu daripada tiga **projek mini** terbuka. Pelajar akan meneroka atur cara sampel, mencipta rancangan untuk projek mereka sendiri dan mengatur caranya tanpa apa-apa asas.",
+          "preparation": "-   Cetak panduan perancangan atau edarkan salinan digital kepada setiap pelajar. Semaknya terlebih dahulu sekiranya anda ingin membuat pengubahsuaian agar sesuai dengan kelas anda.\n\n-   Semak pilihan dalam tahap 3 lebih awal untuk membiasakan diri dengan aliran yang perlu diikuti oleh pelajar.\n\n-   Pelajaran ini mempunyai potensi untuk dilanjutkan kepada tempoh kelas berbilang. Pertimbangkan implikasi penjadualan dengan lebih awal.",
+          "purpose": "Pelajaran ini tidak memperkenalkan kemahiran atau konsep baharu, tetapi sebaliknya memberi peluang kepada pelajar menggunakan perkara yang telah mereka pelajari secara kreatif.",
+          "student_overview": "Gunakan kemahiran baharu anda dengan pemboleh ubah kepada satu daripada tiga projek terbuka."
         },
         "coursef-2021/Loops with the Artist": {
           "overview": "Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini.",
-          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
+          "student_overview": "Dalam pelajaran ini, **gelung** memudahkan imej menarik dibuat dengan Artis!"
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.",
@@ -140,10 +173,14 @@
         },
         "coursea-2021/Programming: Happy Maps": {
           "overview": "Pelajaran **tetapan konteks** ini menyatupadukan pasukan dengan tugas mudah: bawa \"flurb\" kepada buah. Pelajar akan berlatih menulis arahan yang tepat semasa mereka berusaha menterjemahkan arahan kepada simbol yang disediakan.",
+          "preparation": "-   Cetak satu **\\*Lembaran Kerja** dan satu set **\\*Manipulatif** untuk setiap kumpulan yang mempunyai 2-3 ahli.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Jambatan yang menyambungkan algoritma dengan pengaturcaraan boleh menjadi pendek jika pelajar memahami perbezaan antara merancang jujukan dengan teliti dan mengekod jujukan tersebut ke dalam bahasa yang sesuai. Aktiviti ini akan membantu pelajar memperoleh pengalaman membaca dan menulis dalam trengkas.",
           "student_overview": "Tulis arahan untuk membawa Flurb kepada buah."
         },
         "coursea-2021/Sequencing with Scrat": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan membangunkan algoritma berjujukan untuk menggerakkan watak tupai dari satu bahagian pagar sesat ke bahagian lain tempat buah oak boleh didapati. Untuk melakukan ini, mereka akan menyusun blok kod bersama dalam jujukan linear.",
+          "preparation": "-   Potong blok arah daripada **\\*Manipulatif** untuk digunakan dengan aktiviti gabungan Peta Bahagia.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
+          "purpose": "Dalam pelajaran ini, pelajar akan membangunkan kemahiran pengaturcaraan dan penyahpepijatan dengan menggunakan platform komputer. Format teka-teki berasaskan blok ini membantu pelajar mempelajari tentang jujukan dan konsep, tanpa perlu bimbang menyempurnakan sintaks.",
           "student_overview": "Atur cara Scrat mendapatkan buah oak."
         },
         "coursea-2021/Programming in Ice Age": {
@@ -354,7 +391,9 @@
         },
         "express-2021/lesson-4": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. ",
-          "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran."
+          "preparation": "Sila lalui tahap tersebut dan semak slaid pelajaran.",
+          "purpose": "Pemboleh ubah akan digunakan dalam kursus ini untuk menyimpan dan mengubah suai data. Pada ketika ini, pelajar hanya akan menyimpan dan mendapatkan semula nilai tanpa menukarnya. Dalam sesi yang akan datang, pelajar akan menyimpan nilai berangka dan mengubah suainya dari masa ke masa untuk menjejaki perkara seperti skor pemain dalam permainan.",
+          "student_overview": "Dalam pelajaran ini anda akan berlatih dengan pemboleh ubah di dalam Makmal Peperi."
         },
         "express-2021/Variables with Artist": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.",
@@ -379,6 +418,7 @@
           "student_overview": "Klik dan tarik untuk menyelesaikan teka-teki."
         },
         "pre-express-2021/Sequencing with Scrat": {
+          "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan membangunkan algoritma berjujukan untuk menggerakkan watak tupai dari satu bahagian pagar sesat ke bahagian lain tempat buah oak boleh didapati. Untuk melakukan ini, mereka akan menyusun blok kod bersama dalam jujukan linear.",
           "student_overview": "Atur cara Scrat mendapatkan buah oak."
         },
         "pre-express-2021/Programming with Rey and BB-8": {
@@ -432,7 +472,8 @@
           "student_overview": "Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta."
         },
         "coursee-2021/Programming and Loops with the Artist": {
-          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan."
+          "preparation": "-   Main teka-teki bertujuan mencari kawasan bermasalah yang berpotensi untuk kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
+          "student_overview": "Dalam pelajaran ini, **gelung** memudahkan imej menarik dibuat dengan Artis!"
         },
         "coursee-2021/Nested Loops in Artist": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, mencipta reka bentuk yang rumit dengan menggunakan Artis. Pelajaran ini berakhir dengan peluang untuk pelajar mencipta reka bentuk mereka sendiri.",

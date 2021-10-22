@@ -2,6 +2,27 @@
   "th-TH": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "เพลย์ลิสต์ของ Spotify (ทุกช่วงอายุ)"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "เพลย์ลิสต์ของ Spotify (ทุกช่วงอายุ)"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "เพลย์ลิสต์ของ Spotify (ทุกช่วงอายุ)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "เพลย์ลิสต์ของ Spotify (ทุกช่วงอายุ)"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: การเรียนรู้ของระบบ"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: ผลกระทบต่อสังคม"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: ข้อมูลการฝึกฝนและอคติ"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "สนุกกับ For ลูป"
         },
@@ -109,10 +130,37 @@
           "name": "กฎ 20/20/20"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "จะจัดชั้นเรียนบน Code.org อย่างไร"
+          "name": "จะจัดชั้นเรียนบน Code.org อย่างไร",
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "แผนที่แห่งความสุข"
+          "name": "แผนที่สุดหรรษา",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "การ์ดแผนที่สุดหรรษา",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "การ์ดแผนที่สุดหรรษา",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
+        },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "กฎ 20/20/20"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "การดีบักด้วยปุ่มขั้น",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+        },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "อีเวนท์ใหญ่"

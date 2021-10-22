@@ -780,6 +780,7 @@ el:
       first_name: 'Όνομα'
       last_name: 'Επώνυμο'
       email: 'Ηλεκτρονικό ταχυδρομείο'
+      school: 'Σχολείο'
       school_name: 'Όνομα σχολείου'
       school_country: 'Χώρα σχολείου'
       colombian_chilean_school_name: 'Όνομα σχολείου'

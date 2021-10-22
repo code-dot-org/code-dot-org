@@ -187,6 +187,12 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
         }
       }
     }

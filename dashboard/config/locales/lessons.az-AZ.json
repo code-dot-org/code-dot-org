@@ -2,6 +2,12 @@
   "az-AZ": {
     "data": {
       "lessons": {
+        "hoc-encryption/Simple Encryption": {
+          "preparation": "Vidjetlərin hər iki variantını yoxla"
+        },
+        "jigsaw/Jigsaw": {
+          "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
+        },
         "coursef-2021/lesson-6": {
           "overview": "Bu **kontekst-xassə** dərsində tələbələr, tətbiqetmələrin və vasitələrin istifadəçilərə bunlardan necə istifadə etmə seçimləri verdiyinə diqqət yetirərək kompüterlərin və texnologiyaların həyatındakı rolunu müzakirə edəcəklər. Tələbələr, daha sonra özləri yaratacaqlarına oxşar tətbiqləri araşdıracaqlar."
         },
@@ -11,8 +17,14 @@
           "purpose": "Sağlam Fikirli Təhsil (Common Sense Education) bu dərsi şagirdlərə yerlərə onlayn olaraq təhlükəsiz şəkildə necə gedə biləcəklərini öyrənmək üçün yaradıb.",
           "student_overview": "Onlayn olaraq yerlərə necə təhlükəsiz getməyi öyrənin."
         },
+        "coursea-2021/Learn to Drag and Drop": {
+          "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
+        },
         "coursea-2021/Loops: Happy Loops": {
           "purpose": "Bu dərs dövrlərə giriş rolunu oynayır. Dövrlər şagirdlərin təkrarlanması lazım olan əmrləri qruplaşdıraraq kodlarını sadələşdirməsinə imkan verir. Şagirdlər sinif yoldaşlarının hərəkətlərindəki təkrarı qeyd edərək əmrlərin neçə dəfə təkrarlanacağını təyin edərək kritik düşünmə qabiliyyətlərini inkişaf etdirəcəklər. \"Xoşbəxt Xəritələr\"ə yenidən baxmaqla şagirdlər sıralamaq kimi köhnə anlayışları yeni təkrar dövrlər konsepsiyası ilə əlaqələndirmə şansı əldə edəcəklər."
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
         }
       }
     }

@@ -30,7 +30,7 @@ export default class JavabuilderConnection {
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
-  connectJavabuilder() {
+  connectJavabuilder(executionType) {
     // Don't attempt to connect to Javabuilder if we do not have a project identifier.
     // This typically occurs if a teacher is trying to view a student's project
     // that has not been modified from the starter code.
@@ -49,7 +49,8 @@ export default class JavabuilderConnection {
         channelId: this.channelId,
         projectVersion: project.getCurrentSourceVersionId(),
         levelId: this.levelId,
-        options: this.options
+        options: this.options,
+        executionType: executionType
       }
     })
       .done(result => this.establishWebsocketConnection(result.token))
@@ -130,6 +131,7 @@ export default class JavabuilderConnection {
         this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:
+        this.onNewlineMessage();
         handleException(data, this.onOutputMessage);
         this.onNewlineMessage();
         break;

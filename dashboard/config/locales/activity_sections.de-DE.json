@@ -2,34 +2,593 @@
   "de-DE": {
     "data": {
       "activity_sections": {
+        "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
+          "name": "Einführung"
+        },
+        "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
+          "tips": [
+            null
+          ]
+        },
+        "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
+          "name": "Tanzparty - Weitermachen"
+        },
+        "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
+          "progression_name": "Formation einnehmen"
+        },
+        "d6973268-2630-4056-8169-81c3d5a34041": {
+          "progression_name": "Wo sind sie hin?"
+        },
+        "67bbe0f1-5e68-4669-a12b-d1ab6f3a527c": {
+          "progression_name": "Tanz-Crews"
+        },
+        "4ff44f8e-3e97-47b2-9a6e-25e7e5836896": {
+          "progression_name": "Viertelnoten"
+        },
+        "2ab803d8-6973-49d0-b987-e023b6780b6b": {
+          "progression_name": "Bass, Mitten und Höhen"
+        },
+        "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
+          "progression_name": "Beschleunigen, verlangsamen"
+        },
+        "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
+          "name": "Nächste Schritte"
+        },
+        "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "563d9088-3ce6-48c1-aa79-6f673e089247": {
+          "name": "Einführung"
+        },
+        "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
+          "tips": [
+            null
+          ]
+        },
+        "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
+          "tips": [
+            null
+          ]
+        },
+        "75d779c4-24f7-40be-bf92-b0c094c16d11": {
+          "name": "Mincecraft-Designer: Stunde des Codes"
+        },
+        "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
+          "tips": [
+            null
+          ]
+        },
+        "20b7009c-3a45-4211-a9ad-c65f56099200": {
+          "name": "Nächste Schritte"
+        },
+        "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
+          "tips": [
+            null
+          ]
+        },
+        "4fd098be-b798-4e23-b091-e90c95344d97": {
+          "tips": [
+            null
+          ]
+        },
+        "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
+          "name": "Minecraft: Hero’s Journey"
+        },
+        "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
+          "tips": [
+            null
+          ]
+        },
+        "34238f3b-6699-4e27-b77a-54bcd8d57459": {
+          "progression_name": "Minecraft: Hero’s Journey"
+        },
+        "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
+          "name": "Nächste Schritte"
+        },
+        "147a2b22-0cba-4505-81ef-770b81eee73e": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "aced2726-6ed1-4645-9fd2-eccfe982584f": {
+          "tips": [
+            null
+          ]
+        },
+        "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
+          "name": "Flappy Code"
+        },
+        "47fe47af-9de3-4ba5-8193-1f489bef9544": {
+          "tips": [
+            null
+          ]
+        },
+        "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
+          "name": "Nächste Schritte"
+        },
+        "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
+          "tips": [
+            null
+          ]
+        },
+        "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "9aba0e85-a709-43f5-8cfb-251671159b3a": {
+          "name": "Labyrinth"
+        },
+        "524f2e35-6286-4585-879e-96e7286e8a6d": {
+          "tips": [
+            null
+          ]
+        },
+        "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
+          "name": "Nächste Schritte"
+        },
+        "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
+          "tips": [
+            null
+          ]
+        },
+        "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
+          "tips": [
+            null
+          ]
+        },
+        "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
+          "name": "Programmiere mit Anna und Elsa"
+        },
+        "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
+          "tips": [
+            null
+          ]
+        },
+        "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
+          "name": "Nächste Schritte"
+        },
+        "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "fc04ef5f-0d78-418b-9311-e12201106453": {
+          "tips": [
+            null
+          ]
+        },
+        "c628ba28-35c2-4ded-a19d-74079377b309": {
+          "name": "Ice Age Spielelabor"
+        },
+        "548dc37b-f338-4a52-a77e-7380794c64f2": {
+          "tips": [
+            null
+          ]
+        },
+        "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
+          "name": "Nächste Schritte"
+        },
+        "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "tips": [
+            null
+          ]
+        },
+        "dd7bde99-d360-4587-8d30-75383b930808": {
+          "tips": [
+            null
+          ]
+        },
+        "88489303-1952-49c3-914a-2cfa7a138778": {
+          "name": "Einführung"
+        },
+        "75db60fb-671b-4740-80ae-0b13f4c09897": {
+          "name": "Künstler"
+        },
+        "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
+          "tips": [
+            null
+          ]
+        },
+        "0e395269-9740-4229-a7ac-b18b9f4eced9": {
+          "name": "Gumball Spielelabor"
+        },
+        "eea63453-59c2-4c48-8d04-d6612d379584": {
+          "tips": [
+            null
+          ]
+        },
+        "59cd05df-cb4d-4280-8700-840826c01845": {
+          "name": "Nächste Schritte"
+        },
+        "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
+          "name": "Einführung"
+        },
+        "acc2ced5-83ed-4926-9830-f5bd846136a1": {
+          "tips": [
+            null
+          ]
+        },
+        "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
+          "tips": [
+            null
+          ]
+        },
+        "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "tips": [
+            null
+          ]
+        },
+        "456b1d51-129d-43ff-aab9-727995464e36": {
+          "name": "Nächste Schritte"
+        },
+        "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
+          "name": "Einführung"
+        },
+        "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
+          "tips": [
+            null
+          ]
+        },
+        "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
+          "tips": [
+            null
+          ]
+        },
+        "91cc858b-9f90-4134-b890-237f457e8423": {
+          "name": "Minecraft: Voyage Aquatic"
+        },
+        "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
+          "tips": [
+            null
+          ]
+        },
+        "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
+          "name": "Nächste Schritte"
+        },
+        "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
+          "tips": [
+            null
+          ]
+        },
+        "b4a270c7-538c-4278-a88e-d074a04fafb4": {
+          "tips": [
+            null
+          ]
+        },
+        "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
+          "tips": [
+            null
+          ]
+        },
+        "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
+          "tips": [
+            null
+          ]
+        },
+        "7219d891-31ac-454e-8060-eb84a3a0d1df": {
+          "tips": [
+            null
+          ]
+        },
+        "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
+          "tips": [
+            null
+          ]
+        },
+        "c694a6e6-b265-4802-bfca-bbc9180c8407": {
+          "tips": [
+            null
+          ]
+        },
+        "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
+          "tips": [
+            null
+          ]
+        },
+        "a69a3310-4b81-4e04-8313-51044489351a": {
+          "name": "Star Wars: Baue eine Galaxie aus Code"
+        },
+        "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
+          "tips": [
+            null
+          ]
+        },
+        "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
+          "name": "Nächste Schritte"
+        },
+        "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
+          "name": "Einführung"
+        },
+        "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
+          "tips": [
+            null
+          ]
+        },
+        "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
+          "tips": [
+            null
+          ]
+        },
+        "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
+          "name": "Minecraft Abenteurer",
+          "tips": [
+            null
+          ]
+        },
+        "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
+          "name": "Nächste Schritte"
+        },
+        "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
+          "name": "Spielelabor"
+        },
+        "d430e170-dccc-4c02-bcfe-5084169a154b": {
+          "tips": [
+            null
+          ]
+        },
+        "e4662587-95dc-4eae-b19f-dfee2139a34d": {
+          "name": "Nächste Schritte"
+        },
+        "8531cf05-6363-4654-b20a-455e85fa16a0": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
+          "name": "Einführung"
+        },
+        "430134f0-2f85-4888-abd3-f55fbf0753da": {
+          "name": "Einführung in AppLab"
+        },
+        "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "tips": [
+            null
+          ]
+        },
+        "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
+          "progression_name": "Entwurfsmodus"
+        },
+        "88f6ccc1-0efa-4c60-985c-971a235d5645": {
+          "tips": [
+            null
+          ]
+        },
+        "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
+          "tips": [
+            null
+          ]
+        },
+        "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
+          "name": "Nächste Schritte"
+        },
+        "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "f5f6ef34-367d-424d-af63-a8a04c146c34": {
+          "tips": [
+            null
+          ]
+        },
+        "540e3c12-987d-44de-8efc-5e6e12fed295": {
+          "tips": [
+            null
+          ]
+        },
+        "9e4304e5-944c-4b21-88eb-708558b2b82f": {
+          "progression_name": "Text-Kompression"
+        },
+        "21f43e64-dea3-4abc-8284-e055480370ce": {
+          "name": "Einführung",
+          "tips": [
+            null
+          ]
+        },
+        "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "tips": [
+            null
+          ]
+        },
+        "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "tips": [
+            null
+          ]
+        },
+        "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "name": "Prüfung",
+          "tips": [
+            null
+          ]
+        },
+        "6874de98-8778-447b-8453-0138809b2c7e": {
+          "tips": [
+            null
+          ]
+        },
+        "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
+          "name": "Disney Infinity Spielelabor"
+        },
+        "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
+          "tips": [
+            null
+          ]
+        },
+        "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
+          "name": "Nächste Schritte"
+        },
+        "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
+          "name": "￼Erweitern Sie Ihr Wissen"
+        },
+        "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
+          "name": "Einführung",
+          "tips": [
+            null
+          ]
+        },
+        "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "tips": [
+            null
+          ]
+        },
+        "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "name": "Prüfung",
+          "tips": [
+            null
+          ]
+        },
+        "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
+          "tips": [
+            null
+          ]
+        },
+        "ef068b27-a180-4c77-8254-b150c8499acb": {
+          "progression_name": "Hin und her"
+        },
+        "efd37169-ddb7-4ef6-8049-36da981ea0f6": {
+          "progression_name": "Mehr Interaktion"
+        },
+        "72e0b520-4c05-4c32-84c3-1a51fd86daad": {
+          "progression_name": "Formation einnehmen"
+        },
+        "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
+          "progression_name": "Wo sind sie hin?"
+        },
+        "221fbe2a-57a8-43d4-9674-5815273512dc": {
+          "progression_name": "Tanz-Crews"
+        },
+        "7c943749-994a-44b2-a116-f33f70d2df95": {
+          "progression_name": "Viertelnoten"
+        },
+        "d4e671fd-e312-4461-b97b-50e6e05c9cf1": {
+          "progression_name": "Bass, Mitten und Höhen"
+        },
+        "501df195-7991-40ad-bad9-df715484240b": {
+          "progression_name": "Beschleunigen, verlangsamen"
+        },
+        "0dffb367-12f3-485a-bcde-cf4e789baed9": {
+          "name": "Nächste Schritte"
+        },
+        "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
+          "tips": [
+            null
+          ]
+        },
+        "e1243ccf-be45-4f8e-a138-54953ea12f92": {
+          "tips": [
+            null
+          ]
+        },
+        "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
+          "tips": [
+            null
+          ]
+        },
+        "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
+          "name": "Nächste Schritte"
+        },
+        "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "tips": [
+            null
+          ]
+        },
+        "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "name": "KI für Meere",
+          "tips": [
+            null
+          ]
+        },
+        "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "tips": [
+            null
+          ]
+        },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Aufwärmübung"
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zusammenfassung"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Reflektieren"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Einführung"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Ausbruch",
+          "description": "_Die Lektion heute spielt in “Monster Town”. In der Stadt steht ein Virenausbruch bevor. Dr. Monster braucht eure Hilfe, um die Ausbreitung des Virus zu verlangsamen._\n\n_Ihr erstellt im Sprite-Labor eine Ausbruchssimulation und nutzt die Simulation, um zu untersuchen, wie sich ein Virus ausbreiten kann. Ihr helft außerdem den Monstern, wieder gesund zu werden!_",
+          "progression_name": "Ausbruch"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Willkommen in Monster Stadt"
         },
-        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+        "df13fa93-37df-4188-837d-462c48179625": {
           "progression_name": "Kompetenzaufbau"
         },
-        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "progression_name": "Mini-Projekt: Ausbruchssimulation"
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Freies Spiel",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Freies Spiel"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_Mit Simulationen ist eine tolle Möglichkeit, Dinge zu erfahren, die man in der realen Welt nicht beobachten kann. Sie helfen den Wissenschaftlern Problem zu lösen und vorherzusagen, wie das Problem gelöst werden kann. Sie können Ideen sicher und effektiv testen. Deine Simulation ist eine Möglichkeit zu simulieren, wie ein Virenausbruch in Monster Town aussehen könnte._"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflektieren"
+        },
+        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
+          "name": "Puzzle"
+        },
+        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "Lehrerinnen und Lehrer spielen eine wichtige Rolle im Informatikunterricht und unterstützen eine kollaborative und lebendige Unterrichtsumgebung. Bei Online-Rätseln ist die Rolle des Lehrers in erster Linie die der Ermutigung und Unterstützung. Online-Rätsel sollen schülerzentriert sein, daher sollten Lehrer es vermeiden, einzugreifen, wenn die SchülerInnen nicht weiterkommen. Einige Ideen, wie du das machen kannst, sind:",
+          "tips": [
+            null
+          ]
+        },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Level"
+        },
+        "319eb690-ba34-4d34-9158-d30d777c4b05": {
+          "name": "Reflektieren"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Einführung"

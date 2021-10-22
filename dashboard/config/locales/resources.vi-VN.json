@@ -11,6 +11,48 @@
         "making_sprites/coursef/2021": {
           "name": "Tạo nhân vật"
         },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "Sức mạnh của ngôn từ: Slide bài học"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "Sức mạnh của ngôn từ: Sức mạnh của ngôn từ\t"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "Sức mạnh của ngôn từ: Lời nói có thể gây tổn thương"
+        },
+        "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "Sức mạnh của ngôn từ: Bài kiểm tra"
+        },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "Sức mạnh của ngôn từ: Bài kiểm tra"
+        },
+        "variables_blank_space_stories/coursef/2021": {
+          "name": "Biến: Câu chuyện khoảng trống"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "Câu chuyện khoảng trống"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "Câu chuyện khoảng trống"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "Văn bản và Lời nhắc"
+        },
+        "user_input_programs/coursef/2021": {
+          "name": "Chương trình nhập liệu của người dùng"
+        },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "Dự án nhỏ: Chương trình nhập liệu của người dùng"
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "Cấp độ hộp cát dành cho giáo viên"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "Dự án nhỏ: Chương trình nhập liệu của người dùng"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Cho vòng lặp vui vẻ"
         },
@@ -71,6 +113,9 @@
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Tạo vòng lặp"
         },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Sự kiện lớn"
         },
@@ -91,6 +136,9 @@
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Bản đồ thú vị"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Sự kiện lớn"
@@ -133,6 +181,9 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Sự kiện lớn"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Vòng đeo tay nhị phân"
@@ -194,6 +245,12 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Chương trình chuyển tiếp"
         },
+        "pause_and_think_online/coursed/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
         "implementation_guide/coursed/2021": {
           "name": "Hướng dẫn thực hiện"
         },
@@ -206,6 +263,12 @@
         "making_sprites/express/2021": {
           "name": "Tạo nhân vật"
         },
+        "pause_and_think_online/express/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "Văn bản và Lời nhắc"
+        },
         "variables_video/express/2021": {
           "name": "Các biến"
         },
@@ -215,11 +278,32 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Lập trình đôi"
         },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Diễn đàn giáo viên"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Làm theo thuật toán"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "Thông tin cá nhân và riêng tư: Slide bài học"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "Thông tin cá nhân và riêng tư: Thông tin cá nhân và riêng tư"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "Thông tin cá nhân và riêng tư: Câu hỏi tổng kết"
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "Thông tin cá nhân và riêng tư: Bài kiểm tra"
+        },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "Thông tin cá nhân và riêng tư: Bài kiểm tra"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Thiết kế cho trợ năng"

@@ -512,6 +512,8 @@ zh-CN:
           lessons:
             Jigsaw:
               name: 拼图
+              description_student: 点击并拖拽来完成难题。
+              description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
           student_description: 试试拼图教程
         step:
           title: 步进
@@ -16033,6 +16035,8 @@ zh-CN:
           lessons:
             Virus Simulation for Code Bytes:
               name: 编码一个模拟
+            Outbreak:
+              name: 编码一个模拟
           lesson_groups:
             outbreak:
               display_name: 疫情爆发模拟
@@ -18008,6 +18012,8 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            Java Lab:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -18383,6 +18389,8 @@ zh-CN:
               name: 评估日
             lesson-15:
               name: 评估日
+            Java Lab:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -18422,3 +18430,27 @@ zh-CN:
           lessons:
             lesson-1:
               name: 舞会：离线
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: 小部件
+            lesson-2:
+              name: 工具
+        poetry:
+          lessons:
+            lesson-3:
+              name: 变量
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: 拼字比赛
+          title: 拼字比赛
+        outbreak-csc:
+          title: 疫情爆发
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容

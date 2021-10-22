@@ -464,9 +464,15 @@ class ApiController < ApplicationController
         tag: 'activity_start',
         script_level_id: script_level.try(:id),
         level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
-        user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
+        user_agent: request.user_agent&.valid_encoding? ? request.user_agent : 'invalid_encoding',
         locale: locale
       )
+    end
+
+    if params[:get_channel_id] == "true"
+      response[:channel] = get_channel_for(level, script.id, current_user)
+      response[:reduceChannelUpdates] =
+        !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script.name}, default: true)
     end
 
     render json: response

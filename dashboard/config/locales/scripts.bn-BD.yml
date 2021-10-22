@@ -1791,3 +1791,12 @@ bn:
           lessons:
             lesson-1:
               name: সংক্ষিপ্ত বিবরণ
+        poetry:
+          lessons:
+            lesson-3:
+              name: চলকগুলো
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: বানান মৌমাছি
+          title: বানান মৌমাছি

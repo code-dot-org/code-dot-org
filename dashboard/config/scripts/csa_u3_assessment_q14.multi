@@ -19,7 +19,7 @@ What is printed to the console based on the code below?
 
 ```
 String[] animals = {“cat”, “puppy”, “hippo”, “rabbit”, “kangaroo”};
-for( int i = animals.length; i >= 0; i--){
+for( int i = animals.length - 1; i >= 0; i--){
     System.out.print(animals[i] + “ “);
 }
 

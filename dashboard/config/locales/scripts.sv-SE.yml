@@ -3233,6 +3233,8 @@ sv:
           lessons:
             Virus Simulation for Code Bytes:
               name: Koda en simulering
+            Outbreak:
+              name: Koda en simulering
           lesson_groups:
             outbreak:
               display_name: Utbrottssimulering
@@ -3656,5 +3658,18 @@ sv:
               display_name: Innehåll
             lesson_group:
               display_name: Innehåll
+            lessonGroup-2:
+              display_name: Innehåll
+        poetry:
+          lessons:
+            lesson-3:
+              name: variabler
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stavnings-bi
+          title: Stavnings-bi
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Innehåll

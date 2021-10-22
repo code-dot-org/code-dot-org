@@ -1677,6 +1677,12 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "di chuyển bằng phím mũi tên"
         }
       }
     }

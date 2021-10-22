@@ -795,6 +795,8 @@ ur:
           lessons:
             Virus Simulation for Code Bytes:
               name: ایک سیمولیشن کا کوڈ لکھنا
+            Outbreak:
+              name: ایک سیمولیشن کا کوڈ لکھنا
           lesson_groups:
             outbreak:
               display_name: وباء کی سیمولیشن
@@ -951,3 +953,7 @@ ur:
           lesson_groups:
             lessonGroup-2:
               description: آزمانا
+        poetry:
+          lessons:
+            lesson-3:
+              name: متغیرات

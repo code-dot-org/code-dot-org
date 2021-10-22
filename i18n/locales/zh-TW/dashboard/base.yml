@@ -995,6 +995,7 @@ zh-TW:
       email: '電子信箱'
       email_alternate: '備用信箱'
       gender: '性別'
+      school: '學校'
       school_name: '學校名稱'
       school_city: '學校所在城市'
       school_country: '學校所屬國家'

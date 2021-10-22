@@ -1,5 +1,5 @@
 {
-  "category": "",
+  "category": "Poetry - Effects",
   "config": {
     "func": "setBackgroundEffect",
     "blockText": "set background effect {EFFECT} {PALETTE}",
@@ -65,11 +65,11 @@
             "\"ocean\""
           ],
           [
-            "Sunrise",
+            "Dawn",
             "\"sunrise\""
           ],
           [
-            "Sunset",
+            "Dusk",
             "\"sunset\""
           ],
           [

@@ -2,6 +2,63 @@
   "es-ES": {
     "data": {
       "objectives": {
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "Crear un programa para completar una imagen mediante pasos secuenciales."
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "Dividir formas complejas en partes simples."
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Desarrollar programas que respondan a eventos cronometrados"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "Desarrollar programas que respondan a las entradas de los usuarios"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Crear animaciones de baile a través del código"
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Identificar acciones que se correlacionan con eventos de entrada."
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "Crear un juego interactivo mediante secuencia y controladores de eventos."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Compartir un artefacto creativo con otros estudiantes."
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Identificar acciones que se correlacionan con eventos de entrada."
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "Crear un juego interactivo mediante secuencia y controladores de eventos."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Compartir un artefacto creativo con otros estudiantes."
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Desarrollar programas que respondan a eventos cronometrados"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "Desarrollar programas que respondan a las entradas de los usuarios"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Crear animaciones de baile a través del código"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Discute el papel que juega la inteligencia artificial en sus vidas."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Entrena y prueba un modelo de aprendizaje automático."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
+        },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Describir la importancia del usuario en el proceso de diseño."
         },
@@ -164,6 +221,15 @@
         "61329a99-1c0a-414f-9694-78f7f9c81372": {
           "description": "Crear un programa que repita secuencias simples para dibujar formas complejas."
         },
+        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
+          "description": "Enumera varios ejemplos diferentes de aplicaciones para teléfonos inteligentes."
+        },
+        "595564b5-94b4-4104-9613-05eadc30663e": {
+          "description": "Recomendar la tecnología a otras personas en función de sus necesidades particulares. "
+        },
+        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
+          "description": "Aplicar la empatía y la creatividad al diseñar tecnología para los demás. "
+        },
         "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
           "description": "Repetir los comandos dados por un instructor."
         },
@@ -181,6 +247,9 @@
         },
         "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
+        },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Apply computer science concepts in an open-ended project."
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
@@ -280,6 +349,12 @@
         },
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
+        },
+        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
+          "description": "Entender cómo puede ser la maldad en línea y cómo puede hacer sentir a la gente."
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "Identificar maneras de responder a las palabras mezquinas en línea, utilizando S-T-O-P."
         },
         "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
           "description": "Prestar atención a la precisión a la hora de crear instrucciones"

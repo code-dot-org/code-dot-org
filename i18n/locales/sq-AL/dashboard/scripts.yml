@@ -2963,3 +2963,20 @@ sq:
               display_name: Përmbajtja
             lessonGroup-2:
               display_name: Përmbajtja
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: Veglat
+        poetry:
+          lessons:
+            lesson-3:
+              name: variabla
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Bleta Gërmëzuese
+          title: Bleta Gërmëzuese
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja

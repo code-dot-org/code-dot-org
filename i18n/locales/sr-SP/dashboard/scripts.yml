@@ -2270,3 +2270,12 @@ sr:
           lessons:
             lesson-1:
               name: Преглед
+        poetry:
+          lessons:
+            lesson-3:
+              name: Променљиве
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Пчелица словарица
+          title: Пчелица словарица

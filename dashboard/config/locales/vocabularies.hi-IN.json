@@ -2,6 +2,276 @@
   "hi-IN": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "event/dance-extras/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "program/dance-extras/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/minecraft/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "event/minecraft/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "loop/minecraft/unversioned": {
+          "word": "लूप",
+          "definition": "कुछ बार-बार करने की क्रिया।"
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/hero/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/hero/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "function/hero/unversioned": {
+          "word": "कार्य",
+          "definition": "कोड का भाग, जिसे आप आसानी से बार-बार कह सकते हैं।"
+        },
+        "code/flappy/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/flappy/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/frozen/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/iceage/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/artist/unversioned": {
+          "word": "कोड",
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/artist/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/artist/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/gumball/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "event/dance/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "program/dance/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/aquatic/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "शर्तें",
+          "definition": "क्रिया को अनुमति देने से पहले यह देखने के लिए प्रोग्राम कुछ जांचें करता है कि यह सही है या नहीं।"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "कंडीशनल्स",
+          "definition": "वे कथन, जो केवल निश्चित शर्तों के अंतर्गत ही चलाए जा सकते हैं।"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "फंदे",
+          "definition": "कुछ बार-बार करने की क्रिया।"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "कूटलेखन"
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/starwars/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/mc/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/mc/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/playlab/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "दोषरहित संक्षिप्तीकरण"
+        },
+        "event/sports/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "code/sports/unversioned": {
+          "word": "कोड"
+        },
+        "debugging/sports/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/sports/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/infinity/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "event/basketball/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "डीबगिंग",
+          "definition": "कलन विधि या प्रोग्राम में समस्याएं ढूंढना और हल करना।"
+        },
+        "program/basketball/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) कोड लिखने के लिए, या कंप्यूटर के लिए निर्देश लिखने के लिए।"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "प्रोग्राम",
+          "definition": "एक कलन विधि, जो किसी ऐसी चीज़ में कोड की गई है, जिसे मशीन द्वारा चलाया जा सकता है।"
+        },
+        "machine_learning/oceans/unversioned": {
+          "definition": "कंप्यूटर पैटर्नों को किस प्रकार पहचानते हैं और बिना स्पष्ट रूप से प्रोग्राम किए निर्णय लेते हैं"
+        },
+        "event/outbreak/unversioned": {
+          "word": "इवेंट ",
+          "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "नमूने और अनुकरण",
+          "definition": "ऐसा प्रोग्राम, जो वास्तविक जीवन में प्रयोग चलाने की लागत, समय या खतरे के बिना इसके व्यवहार की जांच करने के लिए वास्तविक दुनिया इवेंट की मुख्य विशेषताओं की प्रतिकृति बनाता या नकल उतारता है।"
+        },
         "sprite/coursef/2021": {
           "word": "स्प्राइट",
           "definition": "स्थान, आकार और रंगरूप के साथ स्क्रीन पर एक ग्राफिक।"
@@ -31,10 +301,12 @@
           "definition": "जानकारी के भाग के लिए प्लेसहोल्डर, जिसे बदला जा सकता है।"
         },
         "prompt/coursef/2021": {
-          "word": "अनुबोध"
+          "word": "सुझाव",
+          "definition": "कंप्यूटर स्क्रीन पर एक संदेश, जो उपयोगकर्ता से इनपुट की प्रतीक्षा करता है।"
         },
         "input/coursef/2021": {
-          "word": "इनपुट"
+          "word": "इनपुट",
+          "definition": "वह जानकारी, जो कंप्यूटर उपयोगकर्ताओं से प्राप्त करते हैं।"
         },
         "loop/coursef/2021": {
           "word": "लूप",
@@ -47,6 +319,14 @@
         "for_loop/coursef/2021": {
           "word": "फॉर लूप",
           "definition": "लूप्स, जिनकी पूर्वनिर्धारित शुरुआत, अंत और बढ़त होती है (चरण अंतराल)।"
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "नमूने और अनुकरण",
+          "definition": "ऐसा प्रोग्राम, जो वास्तविक जीवन में प्रयोग चलाने की लागत, समय या खतरे के बिना इसके व्यवहार की जांच करने के लिए वास्तविक दुनिया इवेंट की मुख्य विशेषताओं की प्रतिकृति बनाता या नकल उतारता है।"
+        },
+        "machine_learning/coursef/2021": {
+          "word": "मशीन प्रशिक्षण",
+          "definition": "कंप्यूटर पैटर्नों को किस प्रकार पहचानते हैं और बिना स्पष्ट रूप से प्रोग्राम किए निर्णय लेते हैं"
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -292,6 +572,9 @@
           "word": "कंडीशनल्स",
           "definition": "वे कथन, जो केवल निश्चित शर्तों के अंतर्गत ही चलाए जा सकते हैं।"
         },
+        "pseudocode/coursed/2021": {
+          "word": "स्यूडोकोड"
+        },
         "condition/coursed/2021": {
           "word": "शर्तें",
           "definition": "क्रिया को अनुमति देने से पहले यह देखने के लिए प्रोग्राम कुछ जांचें करता है कि यह सही है या नहीं।"
@@ -299,6 +582,9 @@
         "while_loop/coursed/2021": {
           "word": "व्हाइल लूप",
           "definition": "एक लूप, जिसे किसी स्थिति के सही होने बार लगातार दोहराया जाता है।"
+        },
+        "until/coursed/2021": {
+          "word": "तक"
         },
         "algorithm/express/2021": {
           "word": "कलन विधि",
@@ -325,8 +611,8 @@
           "definition": "प्रोग्राम तैयार करने की कला।"
         },
         "behavior/express/2021": {
-          "definition": "एक क्रिया, जो स्प्राइट लगातार तब तक करता है, जब तक उसे रुकने के लिए नहीं कहा जाता।",
-          "word": "व्यवहार"
+          "word": "व्यवहार",
+          "definition": "एक क्रिया, जो स्प्राइट लगातार तब तक करता है, जब तक उसे रुकने के लिए नहीं कहा जाता।"
         },
         "sprite/express/2021": {
           "word": "स्प्राइट",
@@ -363,6 +649,9 @@
           "word": "व्हाइल लूप",
           "definition": "एक लूप, जिसे किसी स्थिति के सही होने बार लगातार दोहराया जाता है।"
         },
+        "until/express/2021": {
+          "word": "तक"
+        },
         "function/express/2021": {
           "word": "कार्य",
           "definition": "कोड का भाग, जिसे आप आसानी से बार-बार कह सकते हैं।"
@@ -370,6 +659,10 @@
         "variable/express/2021": {
           "word": "चर",
           "definition": "जानकारी के भाग के लिए प्लेसहोल्डर, जिसे बदला जा सकता है।"
+        },
+        "prompt/express/2021": {
+          "word": "सुझाव",
+          "definition": "कंप्यूटर स्क्रीन पर एक संदेश, जो उपयोगकर्ता से इनपुट की प्रतीक्षा करता है।"
         },
         "for_loop/express/2021": {
           "word": "फॉर लूप",
@@ -444,7 +737,8 @@
           "definition": " क्रिया, जो किसी को घटित होने के लिए सक्रिय करती है।"
         },
         "behavior/coursee/2021": {
-          "definition": "एक क्रिया, जो स्प्राइट लगातार तब तक करता है, जब तक उसे रुकने के लिए नहीं कहा जाता।"
+          "definition": "एक क्रिया, जो स्प्राइट लगातार तब तक करता है, जब तक उसे रुकने के लिए नहीं कहा जाता।",
+          "word": "व्यवहार"
         },
         "sprite/coursee/2021": {
           "word": "स्प्राइट",

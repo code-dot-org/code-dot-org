@@ -2,6 +2,12 @@
   "az-AZ": {
     "data": {
       "resources": {
+        "exploring_apps/coursef/2021": {
+          "name": "Tətbiqləri araşdırmaq"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "Tətbiqləri araşdırmaq"
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "İnternet"
         },
@@ -43,6 +49,12 @@
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Estafet proqramlaşdırması"
+        },
+        "20_20_20_rule/coursea/2021": {
+          "name": "20/20/20 Qaydası"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "Başlanğıc - Sinif bölməsinin yaradılması"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Şən xəritələr"
@@ -119,8 +131,14 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Estafet proqramlaşdırması"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "20/20/20 Qaydası"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Müəllim Forumu"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "Alqoritm ilə ilərlə"
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "Kurikulum Bələdçisi"

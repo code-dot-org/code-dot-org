@@ -176,6 +176,12 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
         }
       }
     }

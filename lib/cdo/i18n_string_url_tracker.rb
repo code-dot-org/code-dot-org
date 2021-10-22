@@ -1,4 +1,4 @@
-require 'cdo/redis'
+require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 require 'uri'
 require 'active_support/core_ext/numeric/time'
@@ -17,8 +17,7 @@ class I18nStringUrlTracker
 
   # The amount of time which will pass before the buffered i18n usage data is uploaded to Firehose.
   # Select a random interval time between the MIN and MAX so we can avoid all the servers flushing data at the same time.
-  # TODO - Set MIN to 8 hours once we have proven this works.
-  FLUSH_INTERVAL_MIN = 1.hour
+  FLUSH_INTERVAL_MIN = 8.hours
   FLUSH_INTERVAL_MAX = 16.hours
 
   MAX_BUFFER_SIZE = 250.megabytes
@@ -125,7 +124,7 @@ class I18nStringUrlTracker
       buffer[url].each_key do |string_key|
         buffer[url][string_key].each do |source|
           # record the string : url association.
-          RedisClient.instance.put_record(
+          FirehoseClient.instance.put_record(
             :i18n,
             {url: url, string_key: string_key, source: source}
           )

@@ -1145,6 +1145,7 @@ es-MX:
           EFFECT:
             '"burst"': ráfaga
             '"rain"': lluvia
+            '"spiral"': espiral
       gamelab_makeNewSpriteAnon:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       gamelab_makeNumSprites:
@@ -1318,8 +1319,6 @@ es-MX:
             '"when"': cuando
             '"while"': mientras
       gamelab_spriteSay:
-        text: "{SPRITE} dice {SPEECH}"
-      gamelab_spriteSayChoices:
         text: "{SPRITE} dice {SPEECH}"
       gamelab_startAvoiding:
         text: "{SPRITE} empieza a evitar {TARGET}"

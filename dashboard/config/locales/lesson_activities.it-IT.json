@@ -2,6 +2,285 @@
   "it-IT": {
     "data": {
       "lesson_activities": {
+        "a34f3d0c-c670-4774-a52e-bf7881f5a3cc": {
+          "name": "Per iniziare (5 minuti)"
+        },
+        "b5a5dd70-3968-40ab-bcb5-5d0e7df30880": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
+          "name": "Conclusione"
+        },
+        "ab15beb1-d005-41c6-a156-e4c110c423b8": {
+          "name": "Approfondimenti"
+        },
+        "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
+          "name": "Per cominciare"
+        },
+        "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
+          "name": "Conclusione"
+        },
+        "e4041676-353d-409e-a7aa-bcfcc62bab09": {
+          "name": "Approfondimenti"
+        },
+        "e85d6071-2762-4dbb-843e-2f65408a30f8": {
+          "name": "Per iniziare (5 minuti)"
+        },
+        "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
+          "name": "Conclusione"
+        },
+        "ce329650-3549-4f96-8da9-8bc77c162411": {
+          "name": "Approfondimenti"
+        },
+        "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
+          "name": "Per cominciare"
+        },
+        "3ff80342-0510-45ed-bf69-4cf19ebaf5c1": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
+          "name": "Conclusione"
+        },
+        "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
+          "name": "Valutazione"
+        },
+        "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
+          "name": "Approfondimenti"
+        },
+        "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
+          "name": "Per cominciare"
+        },
+        "67c7a27f-b92e-4c6f-af4c-87ceb52ea7b0": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
+          "name": "Conclusione"
+        },
+        "5408728c-7b75-4da5-b4bb-b42cb3c2984b": {
+          "name": "Valutazione"
+        },
+        "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
+          "name": "Approfondimenti"
+        },
+        "5cb4e862-56b7-445e-a99a-22cc738504a1": {
+          "name": "Per iniziare (5 minuti)"
+        },
+        "84586f7e-4b74-4a9f-936e-d358a0e7670b": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "633ec4e2-ea0b-496f-8878-d4178882a69e": {
+          "name": "Conclusione"
+        },
+        "f49ce667-e4b7-4a66-88a4-16848365e63a": {
+          "name": "Approfondimenti"
+        },
+        "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
+          "name": "Per cominciare"
+        },
+        "b3fd8108-41b8-46f8-9382-f19c73c597cb": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
+          "name": "Conclusione"
+        },
+        "a1d9b125-849a-4eb9-bd45-7b387ec2cc44": {
+          "name": "Valutazione"
+        },
+        "d091559f-3ec9-46c5-9e79-a245aadfb146": {
+          "name": "Approfondimenti"
+        },
+        "c53a1348-2816-4c38-9417-92561d0bca19": {
+          "name": "Riscaldamento"
+        },
+        "12a90414-dae4-4f2b-8598-0b3b9fd6a767": {
+          "name": "Attività principale"
+        },
+        "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d": {
+          "name": "Conclusione"
+        },
+        "777be184-c917-4732-ad47-bb1fad0a30e4": {
+          "name": "Approfondimenti"
+        },
+        "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
+          "name": "Per cominciare"
+        },
+        "d31e813b-9457-415f-8632-009132bb5e48": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
+          "name": "Conclusione"
+        },
+        "0e9caf95-fa34-4ffc-b218-0859134ee293": {
+          "name": "Valutazione"
+        },
+        "6e0020c2-9d9e-488e-bb8d-126ac1760e8b": {
+          "name": "Approfondimenti"
+        },
+        "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f": {
+          "name": "Per cominciare"
+        },
+        "0f404bbf-d9f1-45c9-a496-271179254aed": {
+          "name": "Esercizi"
+        },
+        "14d674a9-18e0-43f3-ae74-d593dfc0fbda": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
+          "name": "Conclusione"
+        },
+        "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
+          "name": "Per cominciare"
+        },
+        "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
+          "name": "Approfondimenti"
+        },
+        "d42497ec-48f5-404c-90b9-2133dd4759cc": {
+          "name": "Per cominciare"
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Attività"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Conclusione"
+        },
+        "10b66543-86a4-459e-bc67-a31d688547ce": {
+          "name": "Approfondimenti"
+        },
+        "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
+          "name": "Per iniziare (5 minuti)"
+        },
+        "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
+          "name": "Conclusione"
+        },
+        "262ad475-1b09-4834-8401-0cf39d3955c5": {
+          "name": "Approfondimenti"
+        },
+        "37f266a7-4b80-449e-805a-4a06aad37292": {
+          "name": "Per cominciare"
+        },
+        "301e5420-a6e3-46c3-a76f-c2e042652974": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "4e2ce993-660e-4574-9264-448e234c4bac": {
+          "name": "Approfondimenti"
+        },
+        "f266050e-62e6-415d-8735-b80cb922587d": {
+          "name": "Per cominciare"
+        },
+        "974b1dfa-682c-4556-89d8-af3f0d0a9d69": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "308d7e22-610e-46cb-be15-54fab1e436bb": {
+          "name": "Conclusione"
+        },
+        "408e3cc9-9733-4518-93f3-0a3bb6b6f62d": {
+          "name": "Valutazione"
+        },
+        "aad5bc18-7988-4acf-be28-9e125e9d930e": {
+          "name": "Approfondimenti"
+        },
+        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
+          "name": "Riscaldamento"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Attività"
+        },
+        "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Conclusione"
+        },
+        "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
+          "name": "Per iniziare (5 minuti)"
+        },
+        "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
+          "name": "Approfondimenti"
+        },
+        "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
+          "name": "Per cominciare"
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Attività"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Conclusione"
+        },
+        "ddc8f987-c000-409d-aaf7-8546464a70d9": {
+          "name": "Approfondimenti"
+        },
+        "05180d31-d1ff-422e-8227-69f7d07884a6": {
+          "name": "Riscaldamento"
+        },
+        "6a240b51-f019-4729-a5df-cbe901844a7e": {
+          "name": "Attività principale"
+        },
+        "4abbf2ec-b39e-4740-a51a-635072063171": {
+          "name": "Conclusione"
+        },
+        "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
+          "name": "Approfondimenti"
+        },
+        "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
+          "name": "Per iniziare (5 minuti)"
+        },
+        "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
+          "name": "Approfondimenti"
+        },
+        "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
+          "name": "Riscaldamento"
+        },
+        "dca1904a-ae71-49d2-b77f-708aa02d2707": {
+          "name": "Attività principale"
+        },
+        "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b": {
+          "name": "Conclusione"
+        },
+        "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
+          "name": "Approfondimenti"
+        },
+        "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
+          "name": "Esercizi"
+        },
+        "42552407-b313-4fc4-9163-e6a8e4a6029d": {
+          "name": "Approfondimenti"
+        },
+        "82dec89b-f375-4238-a251-ffae17c2dfd1": {
+          "name": "Attività (30-45 minuti)"
+        },
+        "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
+          "name": "Esercizi"
+        },
+        "239ba7ce-544c-4508-9e5c-e956de964002": {
+          "name": "Conclusione"
+        },
+        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
+          "name": "Riscaldamento"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Attività"
+        },
+        "04400eef-5989-4325-a801-ab4ad451f130": {
+          "name": "Approfondimenti"
+        },
         "f0e43cbc-520d-42b7-8de2-0572d569695e": {
           "name": "Riscaldamento"
         },
@@ -11,8 +290,29 @@
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": "Conclusione"
         },
-        "06dfaf3b-e495-4577-baa6-883a782e198f": {
-          "name": "Esercizi"
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Riscaldamento"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Attività principale"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Conclusione"
+        },
+        "f652e4d2-c712-4cff-a011-f1dcea192263": {
+          "name": "Riscaldamento"
+        },
+        "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2": {
+          "name": "Attività principale"
+        },
+        "4286b9b3-8562-4acf-8967-f6b6b1b18f9e": {
+          "name": "Conclusione"
+        },
+        "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
+          "name": "Valutazione"
+        },
+        "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
+          "name": "Approfondimenti"
         },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Riscaldamento"

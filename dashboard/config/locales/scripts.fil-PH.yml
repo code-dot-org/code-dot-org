@@ -568,6 +568,12 @@ fil:
           lessons:
             Jigsaw:
               name: Jigsaw
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
           student_description: Subukan ang aming mga tutoryal sa jigsaw.
         step:
           title: Hakbang
@@ -18609,6 +18615,8 @@ fil:
           lessons:
             Virus Simulation for Code Bytes:
               name: Pag-coding ng isang Simulasyon
+            Outbreak:
+              name: Pag-coding ng isang Simulasyon
           lesson_groups:
             outbreak:
               display_name: Simula ng Simulasyon
@@ -20625,3 +20633,16 @@ fil:
           lessons:
             lesson-2:
               name: Mga Widget
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Mga Widget
+        poetry:
+          lessons:
+            lesson-3:
+              name: Mga variable
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+          title: Spelling Bee

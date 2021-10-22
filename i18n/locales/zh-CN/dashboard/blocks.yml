@@ -1310,8 +1310,6 @@ zh-CN:
             '"while"': 当
       gamelab_spriteSay:
         text: "{SPRITE} 表示 {SPEECH}"
-      gamelab_spriteSayChoices:
-        text: "{SPRITE} 表示 {SPEECH}"
       gamelab_stopCollectingData:
         text: 停止收集数据
       gamelab_subjectSpritePointer:

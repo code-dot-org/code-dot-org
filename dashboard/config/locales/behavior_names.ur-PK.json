@@ -176,6 +176,12 @@
         },
         "helloworld_retro_sounds": {
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
         }
       }
     }

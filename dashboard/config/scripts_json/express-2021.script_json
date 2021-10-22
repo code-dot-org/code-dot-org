@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2021-09-13 21:55:53 UTC",
+    "serialized_at": "2021-10-07 20:23:29 UTC",
     "published_state": "stable",
     "seeding_key": {
       "script.name": "express-2021"
@@ -18219,7 +18219,7 @@
       "key": "turns_angles",
       "properties": {
         "audience": "Student",
-        "type": "Handout"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "turns_angles"
@@ -18231,7 +18231,7 @@
       "key": "turns_angles_1",
       "properties": {
         "audience": "Student",
-        "type": "Video"
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "turns_angles_1"

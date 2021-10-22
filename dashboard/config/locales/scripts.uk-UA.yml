@@ -5204,6 +5204,8 @@ uk:
           lessons:
             Virus Simulation for Code Bytes:
               name: Моделювання симуляції
+            Outbreak:
+              name: Моделювання симуляції
           lesson_groups:
             outbreak:
               display_name: Симуляція спалаху
@@ -6027,5 +6029,26 @@ uk:
               display_name: Зміст
             lesson_group:
               display_name: Зміст
+            lessonGroup-2:
+              display_name: Зміст
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Віджети
+            lesson-2:
+              name: Інструменти
+            lesson-3:
+              name: Приклади
+        poetry:
+          lessons:
+            lesson-3:
+              name: Змінні
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Грамотна Бджілка
+          title: Грамотна Бджілка
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Зміст

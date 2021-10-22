@@ -1794,7 +1794,8 @@
         },
         "poetry_hoc_freeplay": {
           "poetry_burst": "Blok baru!",
-          "poetry_multiple_sprites": "Blok baru!"
+          "poetry_multiple_sprites": "Blok baru!",
+          "poetry_new_block": "Blok baru!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Blok baru!"

@@ -2551,3 +2551,16 @@ ca:
           lessons:
             lesson-2:
               name: Ginys
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Ginys
+        poetry:
+          lessons:
+            lesson-3:
+              name: Variables
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Abella ortogràfica
+          title: Abella ortogràfica

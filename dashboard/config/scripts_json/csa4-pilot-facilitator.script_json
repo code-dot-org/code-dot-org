@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-23 19:38:59 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-10-18 18:50:39 UTC",
+    "published_state": null,
     "seeding_key": {
       "script.name": "csa4-pilot-facilitator"
     }
@@ -46,9 +46,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "Unit 4 Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Sandbox"
       },
@@ -327,12 +339,27 @@
       }
     },
     {
-      "key": "lesson-1",
-      "name": "Java Lab",
+      "key": "lesson-5",
+      "name": "Unit 4 Pilot Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -344,10 +371,10 @@
     {
       "key": "lesson-2",
       "name": "The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -359,10 +386,10 @@
     {
       "key": "lesson-3",
       "name": "The Theater",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -374,10 +401,10 @@
     {
       "key": "lesson-4",
       "name": "The Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -1003,6 +1030,18 @@
       }
     },
     {
+      "key": "dcc209a8-99d6-4737-90a1-4edbdb1e9105",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dcc209a8-99d6-4737-90a1-4edbdb1e9105",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
       "key": "c265d88c-6ba1-403e-b6c2-ccce8fd63957",
       "position": 1,
       "properties": {
@@ -1180,19 +1219,8 @@
       }
     },
     {
-      "key": "ca421237-00ca-4802-93a2-fb267f0df27c",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the APIs and Libraries video."
-      },
-      "seeding_key": {
-        "activity_section.key": "ca421237-00ca-4802-93a2-fb267f0df27c",
-        "lesson_activity.key": "fd199637-7f6b-4b68-8d03-5c82e5cef32a"
-      }
-    },
-    {
       "key": "15329ba9-9a01-4ead-a07f-0e07fc9174e1",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "The `Scanner` and `String` classes are part of the Java API, which we use to write programs. That is why the package names start with `java`, such as `java.util` and `java.lang`.\n\nWe saw at the beginning of class that apps and websites often use functions from other apps. The software engineers of these programs can add functions and interact with other apps by using APIs.\n\nLet's look at some popular APIs used in many of the programs we use every day.",
         "duration": "15",
@@ -1206,7 +1234,7 @@
     },
     {
       "key": "b9f082dc-70cd-4214-9d44-4f3e92c7780c",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students explore example APIs such as Google Developers and Spotify for Developers.",
         "progression_name": "Exploring APIs"
@@ -1218,7 +1246,7 @@
     },
     {
       "key": "5f599b64-cd50-4fd3-b10d-f07b6c3bcc47",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What do you notice about these APIs?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students notice that the APIs define functionalities that software engineers can incorporate into their programs and include documentation explaining how to use them. Students may wonder if there are APIs for other apps they use or how to incorporate these into their programs."
       },
@@ -1229,7 +1257,7 @@
     },
     {
       "key": "e255333c-e573-4648-950f-4bfcc917dded",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Neighborhood is hosting a block party, and you have been asked to develop a game to play at the block party. In this unit, you will implement the API for The Playground, which allows people in the community to gather to play games with their friends and family.\n\nThroughout this unit, you will develop a game called Pop the Balloon for The Neighborhood Block Party.",
         "remarks": true
@@ -1241,7 +1269,7 @@
     },
     {
       "key": "3ed82c0e-fac9-40fc-8893-5474dcb1a659",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to review the API documentation for The Playground.",
         "progression_name": "Exploring The Playground"
@@ -1253,7 +1281,7 @@
     },
     {
       "key": "9b18d480-6417-4ba2-90fd-f997899141b3",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 5 on Code Studio. Students import The Playground and run the sample code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Playground.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
         "progression_name": "Creating the Dice and Roll Button"
@@ -1997,7 +2025,8 @@
       "key": "c5677a14-e4c6-4f25-90c8-8e4e825396c5",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
+        "progression_name": "Calculating the Score"
       },
       "seeding_key": {
         "activity_section.key": "c5677a14-e4c6-4f25-90c8-8e4e825396c5",
@@ -2632,7 +2661,7 @@
       "key": "58084baa-faab-4936-9d9a-2557a9ec632b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditional Statements video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "58084baa-faab-4936-9d9a-2557a9ec632b",
@@ -2947,7 +2976,7 @@
       "key": "0241d184-36f4-4b08-a345-46e1054934cb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define truth table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Creating a Truth Table video. Direct students to follow along and complete the truth tables on their activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define truth table."
       },
       "seeding_key": {
         "activity_section.key": "0241d184-36f4-4b08-a345-46e1054934cb",
@@ -3792,6 +3821,17 @@
       }
     },
     {
+      "key": "0bc803b6-e420-466b-99c9-47fb0a62bbbf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 4 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0bc803b6-e420-466b-99c9-47fb0a62bbbf",
+        "lesson_activity.key": "dcc209a8-99d6-4737-90a1-4edbdb1e9105"
+      }
+    },
+    {
       "key": "6077f977-4867-4878-b714-8fd0e54ab410",
       "position": 1,
       "properties": {
@@ -4594,7 +4634,8 @@
       "properties": {
         "level_keys": [
           "CSA U4L5-L6"
-        ]
+        ],
+        "progression": "Calculating the Score"
       },
       "bonus": false,
       "seeding_key": {
@@ -4618,7 +4659,8 @@
       "properties": {
         "level_keys": [
           "CSA U4L5-L7"
-        ]
+        ],
+        "progression": "Calculating the Score"
       },
       "bonus": false,
       "seeding_key": {
@@ -4660,11 +4702,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1"
+        ],
         "progression": "Predict the Output"
       },
       "bonus": false,
@@ -4682,11 +4727,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2"
+        ],
         "progression": "Comparing Objects"
       },
       "bonus": false,
@@ -4704,11 +4752,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3"
+        ],
         "progression": "String Equality"
       },
       "bonus": false,
@@ -4726,11 +4777,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4 v2"
+        ],
         "progression": "The Same Dessert"
       },
       "bonus": false,
@@ -4748,11 +4802,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5 v2"
+        ],
         "progression": "The Same Cake"
       },
       "bonus": false,
@@ -4770,11 +4827,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6 v2"
+        ],
         "progression": "Checking Balloons for Valid Moves"
       },
       "bonus": false,
@@ -4792,11 +4852,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L7 v2"
+        ],
         "progression": "Checking Balloons for Valid Moves"
       },
       "bonus": false,
@@ -4814,11 +4877,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4836,11 +4902,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1"
+        ],
         "progression": "Conditional Painting"
       },
       "bonus": false,
@@ -4858,11 +4927,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2"
+        ],
         "progression": "Conditional Painting"
       },
       "bonus": false,
@@ -4880,11 +4952,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3"
+        ],
         "progression": "Conditional Painting"
       },
       "bonus": false,
@@ -4902,11 +4977,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4"
+        ],
         "progression": "Checking the Player's Move"
       },
       "bonus": false,
@@ -4924,11 +5002,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5"
+        ],
         "progression": "Checking the Player's Move"
       },
       "bonus": false,
@@ -4946,11 +5027,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4968,11 +5052,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1"
+        ],
         "progression": "Multi-Selection Statements"
       },
       "bonus": false,
@@ -4990,11 +5077,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2"
+        ],
         "progression": "Multi-Selection Statements"
       },
       "bonus": false,
@@ -5012,11 +5102,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3"
+        ],
         "progression": "Check for Game Over"
       },
       "bonus": false,
@@ -5034,11 +5127,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4"
+        ],
         "progression": "Check for Game Over"
       },
       "bonus": false,
@@ -5056,11 +5152,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5078,11 +5177,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1"
+        ],
         "progression": "Nested if Statement"
       },
       "bonus": false,
@@ -5100,11 +5202,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L2"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -5122,11 +5227,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L3"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -5144,11 +5252,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L4"
+        ],
         "progression": "Improving the Game"
       },
       "bonus": false,
@@ -5166,11 +5277,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L5"
+        ],
         "progression": "Improving the Game"
       },
       "bonus": false,
@@ -5188,11 +5302,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L6"
+        ],
         "progression": "Improving the Game"
       },
       "bonus": false,
@@ -5210,11 +5327,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5232,11 +5352,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5254,11 +5377,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L12-L1"
+        ],
         "progression": "Neighborhood Block Party Project"
       },
       "bonus": false,
@@ -5276,11 +5402,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L13-L1"
+        ],
         "progression": "Neighborhood Block Party Project"
       },
       "bonus": false,
@@ -5298,11 +5427,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 4 Pilot Assessment 2021"
+        ],
         "progression": "Unit 4 Assessment"
       },
       "bonus": false,
@@ -5320,7 +5452,32 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Facilitator Survey Unit 4"
+        ],
+        "progression": "Unit 4 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Facilitator Survey Unit 4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator",
+        "activity_section.key": "0bc803b6-e420-466b-99c9-47fb0a62bbbf"
+      },
+      "level_keys": [
+        "CSA Facilitator Survey Unit 4"
+      ]
+    },
+    {
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5345,7 +5502,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5370,7 +5527,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5395,7 +5552,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5819,18 +5976,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U4L10-L1",
-        "script_level.level_keys": [
-          "CSA U4L10-L1"
-        ],
-        "lesson.key": "Applying De Morgan's Laws to Boolean Expressions",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa4-pilot-facilitator",
-        "activity_section.key": "b2fb5aff-7d78-4d18-9f33-2c94ad1dc375"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA U4L6-L1",
         "script_level.level_keys": [
           "CSA U4L6-L1"
@@ -6143,6 +6288,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U4L10-L1",
+        "script_level.level_keys": [
+          "CSA U4L10-L1"
+        ],
+        "lesson.key": "Applying De Morgan's Laws to Boolean Expressions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator",
+        "activity_section.key": "b2fb5aff-7d78-4d18-9f33-2c94ad1dc375"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L12-L1",
+        "script_level.level_keys": [
+          "CSA U4L12-L1"
+        ],
+        "lesson.key": "Neighborhood Block Party Project - Day 2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot-facilitator",
+        "activity_section.key": "148642b3-11e0-4631-ba1c-8214645903fc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4L13-L1",
+        "script_level.level_keys": [
+          "CSA U4L13-L1"
+        ],
+        "lesson.key": "Neighborhood Block Party Project - Day 3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot-facilitator",
+        "activity_section.key": "15c449cb-584f-4a75-ac18-036862bbd7f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 4 Pilot Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 4 Pilot Assessment 2021"
+        ],
+        "lesson.key": "Assessment Day",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-pilot-facilitator",
+        "activity_section.key": "cb0d25b5-72d4-4a1a-a214-8802208b1730"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Facilitator Survey Unit 4",
+        "script_level.level_keys": [
+          "CSA Facilitator Survey Unit 4"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot-facilitator",
+        "activity_section.key": "0bc803b6-e420-466b-99c9-47fb0a62bbbf"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Java Lab Sandbox",
         "script_level.level_keys": [
           "CSA Java Lab Sandbox"
@@ -6187,42 +6392,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-pilot-facilitator",
         "activity_section.key": "c08a3b69-2933-4ab1-a5f5-61ccd188c901"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4L12-L1",
-        "script_level.level_keys": [
-          "CSA U4L12-L1"
-        ],
-        "lesson.key": "Neighborhood Block Party Project - Day 2",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa4-pilot-facilitator",
-        "activity_section.key": "148642b3-11e0-4631-ba1c-8214645903fc"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4L13-L1",
-        "script_level.level_keys": [
-          "CSA U4L13-L1"
-        ],
-        "lesson.key": "Neighborhood Block Party Project - Day 3",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa4-pilot-facilitator",
-        "activity_section.key": "15c449cb-584f-4a75-ac18-036862bbd7f8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA Unit 4 Pilot Assessment 2021",
-        "script_level.level_keys": [
-          "CSA Unit 4 Pilot Assessment 2021"
-        ],
-        "lesson.key": "Assessment Day",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa4-pilot-facilitator",
-        "activity_section.key": "cb0d25b5-72d4-4a1a-a214-8802208b1730"
       }
     }
   ],
@@ -6432,6 +6601,18 @@
       }
     },
     {
+      "name": "Casting and Rounding",
+      "url": "https://youtu.be/DimjDSTb7T0",
+      "key": "casting_and_rounding",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_rounding"
+      }
+    },
+    {
       "name": "Casting Exploration",
       "url": "https://docs.google.com/document/d/1IPYgSjg3JmKCD33csEdikwi4-egwQGrWwciFeaHLFUA/edit#",
       "key": "casting_exploration",
@@ -6456,6 +6637,18 @@
       }
     },
     {
+      "name": "Equals and Aliasing",
+      "url": "https://youtu.be/o4UfB3r-TPI",
+      "key": "equals_and_aliasing",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "equals_and_aliasing"
+      }
+    },
+    {
       "name": "Exploring Operators",
       "url": "https://docs.google.com/document/d/1Oel7wKZ_3KAaDW_7R84z_AuhFixeYy6l8hgPU7R70SA/edit?usp=sharing",
       "key": "exploring_operators",
@@ -6465,6 +6658,18 @@
       },
       "seeding_key": {
         "resource.key": "exploring_operators"
+      }
+    },
+    {
+      "name": "Final Classes and Static Methods",
+      "url": "https://youtu.be/9cGeWGs0A4g",
+      "key": "final_classes_and_static_methods",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "final_classes_and_static_methods"
       }
     },
     {
@@ -6489,6 +6694,18 @@
       },
       "seeding_key": {
         "resource.key": "frq_writing_2"
+      }
+    },
+    {
+      "name": "if/else Statements",
+      "url": "https://youtu.be/A1zMZrt_0yA",
+      "key": "if_else_statements",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "if_else_statements"
       }
     },
     {
@@ -6528,6 +6745,18 @@
       }
     },
     {
+      "name": "Probability with Math.random()",
+      "url": "https://youtu.be/HiRJW3IhgX8",
+      "key": "probability_with_math_random_",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "probability_with_math_random_"
+      }
+    },
+    {
       "name": "Quiz, Quiz Trade",
       "url": "https://docs.google.com/document/u/2/d/1c9smHGRY2DNFQupRe7GS3RlU7u4Dd2J-y8dfpukljc4/edit",
       "key": "quiz_quiz_trade_1",
@@ -6537,6 +6766,18 @@
       },
       "seeding_key": {
         "resource.key": "quiz_quiz_trade_1"
+      }
+    },
+    {
+      "name": "Random",
+      "url": "https://youtu.be/Lx5-YOnWm3M",
+      "key": "random",
+      "properties": {
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "random"
       }
     },
     {
@@ -6730,6 +6971,12 @@
     {
       "seeding_key": {
         "lesson.key": "Adding Randomness to a Program",
+        "resource.key": "probability_with_math_random_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Adding Randomness to a Program",
         "resource.key": "quiz_quiz_trade_1"
       }
     },
@@ -6815,6 +7062,12 @@
       "seeding_key": {
         "lesson.key": "Comparing Object References and Data",
         "resource.key": "comparing_objects"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Comparing Object References and Data",
+        "resource.key": "equals_and_aliasing"
       }
     },
     {
@@ -6952,6 +7205,12 @@
     {
       "seeding_key": {
         "lesson.key": "Providing an Alternate Path of Execution",
+        "resource.key": "if_else_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Providing an Alternate Path of Execution",
         "resource.key": "u4l7_extra_practice"
       }
     },
@@ -6971,6 +7230,12 @@
       "seeding_key": {
         "lesson.key": "Solving Problems with the Math Class",
         "resource.key": "_key_u4l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Solving Problems with the Math Class",
+        "resource.key": "final_classes_and_static_methods"
       }
     },
     {
@@ -7024,7 +7289,19 @@
     {
       "seeding_key": {
         "lesson.key": "Treating Data as a Different Types",
+        "resource.key": "casting_and_rounding"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Treating Data as a Different Types",
         "resource.key": "casting_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Treating Data as a Different Types",
+        "resource.key": "random"
       }
     },
     {

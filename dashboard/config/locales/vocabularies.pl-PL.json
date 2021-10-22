@@ -2,6 +2,288 @@
   "pl-PL": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Pętla",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/hero/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "function/hero/unversioned": {
+          "word": "Funkcja",
+          "definition": "Część kodu, który można łatwo przywoływać bez końca."
+        },
+        "code/flappy/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/flappy/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/frozen/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/iceage/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/artist/unversioned": {
+          "word": "Kod",
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/artist/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/gumball/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "event/dance/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Warunek",
+          "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Zdania z warunkami",
+          "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Pętle",
+          "definition": "Czynność wykonywania czegoś w nieskończoność."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Szyfr Cezara",
+          "definition": "technika szyfrowania, która przesuwa alfabet o pewną liczby znaków"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Szyfrowanie",
+          "definition": "termin ogólny dla techniki (lub algorytmu), wykonującej szyfrowanie"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Łamanie szyfru"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Szyfrowanie"
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/starwars/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/mc/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/playlab/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Kompresja bezstratna"
+        },
+        "event/sports/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "code/sports/unversioned": {
+          "word": "Kod",
+          "definition": "(v) napisać kod lub instrukcje dla komputera."
+        },
+        "debugging/sports/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/sports/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/infinity/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "event/basketball/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Debugowanie",
+          "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
+        },
+        "program/basketball/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Program",
+          "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Uczenie maszynowe",
+          "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modele i symulacje"
+        },
         "sprite/coursef/2021": {
           "word": "Duszek",
           "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."

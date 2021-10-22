@@ -2,6 +2,69 @@
   "sr-SP": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "function/hero/unversioned": {
+          "word": "Функција"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Кондиционали"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Петље"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Отклањање грешака"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Отклањање грешака"
+        },
         "behavior/coursef/2021": {
           "word": "Понашање"
         },
