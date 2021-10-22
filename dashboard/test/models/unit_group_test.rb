@@ -97,7 +97,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "can seed unit group from hash" do
-    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, instructor_audience: SharedCourseConstants::INSTUCTOR_AUDIENCE.facilitator)
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
@@ -125,8 +125,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', seeded_unit_group.name
     assert_equal SharedCourseConstants::PUBLISHED_STATE.stable, seeded_unit_group.published_state
     assert_equal SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, seeded_unit_group.instruction_type
-    assert_equal SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, seeded_unit_group.participant_audience
-    assert_equal SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, seeded_unit_group.instructor_audience
+    assert_equal SharedCourseConstants::PARTICIPANT_AUDIENCE.student, seeded_unit_group.participant_audience
+    assert_equal SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, seeded_unit_group.instructor_audience
     course_version = seeded_unit_group.course_version
     assert_not_nil course_version
     assert_equal '2021', course_version.key
@@ -324,7 +324,7 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       unit1.reload
       unit2.reload
-      assert_nil unit1.instructor_audienceg
+      assert_nil unit1.instructor_audience
       assert_nil unit1.participant_audience
       assert_nil unit2.instructor_audience
       assert_nil unit2.participant_audience
