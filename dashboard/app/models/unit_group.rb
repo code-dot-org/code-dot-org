@@ -360,8 +360,8 @@ class UnitGroup < ApplicationRecord
         unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display(include_lessons))
       end,
       teacher_resources: teacher_resources,
-      migrated_teacher_resources: resources.map(&:summarize_for_resources_dropdown),
-      student_resources: student_resources.map(&:summarize_for_resources_dropdown),
+      migrated_teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
+      student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
