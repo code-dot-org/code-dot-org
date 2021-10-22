@@ -435,7 +435,7 @@ class CoursesControllerTest < ActionController::TestCase
       version_year: '2019',
       family_name: 'csp',
       has_verified_resources: true,
-      published_state: SharedCourseConstants::INSTRUCTION_TYPE.stable,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable,
       instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
     }
     unit_group.reload
