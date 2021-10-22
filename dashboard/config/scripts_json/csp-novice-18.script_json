@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "exclude_csf_column_in_legend": true,
       "professional_learning_course": "CS Principles Facilitator in Training 2018-2019",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:05 UTC",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csp-novice-18"
     }

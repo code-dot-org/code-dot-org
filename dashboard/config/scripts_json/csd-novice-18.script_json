@@ -5,13 +5,13 @@
     "login_required": true,
     "properties": {
       "professional_learning_course": "CS Discoveries Facilitator in Training 2018-2019",
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "exclude_csf_column_in_legend": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 13:59:58 UTC",
+    "serialized_at": "2021-08-03 22:47:35 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csd-novice-18"
     }

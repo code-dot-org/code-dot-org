@@ -11,9 +11,8 @@
     },
     "new_name": null,
     "family_name": "infinity",
-    "serialized_at": "2021-10-22 14:00:29 UTC",
+    "serialized_at": "2021-09-29 22:05:43 UTC",
     "published_state": "preview",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "infinity"
     }
@@ -277,9 +276,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_move_right"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -301,9 +297,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_say"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -325,9 +318,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_move_directions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -349,9 +339,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_move_collide"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,9 +360,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_touch_score"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -397,9 +381,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_shoot"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -421,9 +402,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_shoot_directions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -445,9 +423,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_repeat"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -469,9 +444,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_catch"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -493,9 +465,6 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Infinity_finale"
-        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -4,18 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
+      "has_verified_resources": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit7/{LESSON}",
       "pilot_experiment": "csp-piloters",
       "curriculum_umbrella": "CSP",
-      "has_lesson_plan": true,
-      "has_verified_resources": true
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:13 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csp7-pilot"
     }
@@ -76,7 +72,6 @@
       "name": "Parameters and Return Explore",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -91,7 +86,6 @@
       "name": "Parameters and Return Investigate",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -106,7 +100,6 @@
       "name": "Parameters and Return Practice",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -121,7 +114,6 @@
       "name": "Parameters and Return Make",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -136,7 +128,6 @@
       "name": "Libraries Explore",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -151,7 +142,6 @@
       "name": "Libraries Investigate",
       "absolute_position": 6,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -166,7 +156,6 @@
       "name": "Libraries Practice",
       "absolute_position": 7,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -181,7 +170,6 @@
       "name": "Project - Make a Library Part 1",
       "absolute_position": 8,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -196,7 +184,6 @@
       "name": "Project - Make a Library Part 2",
       "absolute_position": 9,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -211,7 +198,6 @@
       "name": "Project - Make a Library Part 3",
       "absolute_position": 10,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -226,7 +212,6 @@
       "name": "Lesson 11: Assessment Day",
       "absolute_position": 11,
       "lockable": true,
-      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -241,7 +226,6 @@
       "name": "Unit 7 STUDENT Survey",
       "absolute_position": 12,
       "lockable": true,
-      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -256,7 +240,6 @@
       "name": "Unit 7 TEACHER Survey",
       "absolute_position": 13,
       "lockable": true,
-      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -271,7 +254,6 @@
       "name": "[OLD] Parameters and Return Make",
       "absolute_position": 14,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -282,25 +264,15 @@
       }
     }
   ],
-  "lesson_activities": [
-
-  ],
-  "activity_sections": [
-
-  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L1 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L1 SFLP 20-21"
@@ -316,15 +288,11 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U7L1 CFU Return"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L1 CFU Return"
@@ -340,15 +308,11 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L2 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L2 SFLP 20-21"
@@ -364,15 +328,11 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Investigate Rock"
-        ],
         "progression": "App Investigation"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Investigate Rock"
@@ -388,15 +348,11 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Investigate Poetry App"
-        ],
         "progression": "App Investigation"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Investigate Poetry App"
@@ -412,15 +368,11 @@
     {
       "chapter": 6,
       "position": 4,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U7L2 CSP CFU Param and Return"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L2 CSP CFU Param and Return"
@@ -436,15 +388,11 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L3 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L3 SFLP 20-21"
@@ -460,15 +408,11 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Practice Part 1"
-        ],
         "progression": "console.log Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 1"
@@ -484,15 +428,11 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Practice Part 2"
-        ],
         "progression": "console.log Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 2"
@@ -508,15 +448,11 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Practice Part 4"
-        ],
         "progression": "console.log Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 4"
@@ -532,15 +468,11 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Practice Part 3"
-        ],
         "progression": "console.log Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 3"
@@ -556,15 +488,11 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Practice Part 5"
-        ],
         "progression": "console.log Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice Part 5"
@@ -580,15 +508,11 @@
     {
       "chapter": 13,
       "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Investigate Calculator App"
-        ],
         "progression": "App Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Investigate Calculator App"
@@ -604,15 +528,11 @@
     {
       "chapter": 14,
       "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Practice App 2"
-        ],
         "progression": "App Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Practice App 2"
@@ -628,15 +548,11 @@
     {
       "chapter": 15,
       "position": 9,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Practice MOD"
-        ],
         "progression": "MOD Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Practice MOD"
@@ -652,15 +568,11 @@
     {
       "chapter": 16,
       "position": 10,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U73 CFU Param Return AP"
-        ],
         "progression": "Check For Understanding: AP Practice"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U73 CFU Param Return AP"
@@ -676,15 +588,11 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L4 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L4 SFLP 20-21"
@@ -700,15 +608,11 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Make RPS App_2020"
-        ],
         "progression": "Try the Rock Paper Scissors App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App_2020"
@@ -724,15 +628,11 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Make RPS App Project_2020"
-        ],
         "progression": "Make the Rock Paper Scissors App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App Project_2020"
@@ -748,15 +648,11 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L5 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L5 SFLP 20-21"
@@ -772,15 +668,11 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U7 L04 Exit Ticket"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 L04 Exit Ticket"
@@ -796,15 +688,11 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L6 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L6 SFLP 20-21"
@@ -820,15 +708,11 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "Full Year Pilot Experiments Dashboard - Libraries"
-        ],
         "progression": "Turn On Student Created Libraries"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Full Year Pilot Experiments Dashboard - Libraries"
@@ -844,15 +728,11 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7L6 States App Investigation"
-        ],
         "progression": "States App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L6 States App Investigation"
@@ -868,15 +748,11 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7L6 Pigify App Investigation"
-        ],
         "progression": "Pigify App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L6 Pigify App Investigation"
@@ -892,15 +768,11 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U7L6 CSP CFU Libraries"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7L6 CSP CFU Libraries"
@@ -916,15 +788,11 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L7 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L7 SFLP 20-21"
@@ -940,15 +808,11 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Practice 3"
-        ],
         "progression": "Using Libraries"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 3"
@@ -964,15 +828,11 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Practice 5"
-        ],
         "progression": "Using Libraries"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 5"
@@ -988,15 +848,11 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Practice 2"
-        ],
         "progression": "Testing Libraries"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 2"
@@ -1012,15 +868,11 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Practice 1"
-        ],
         "progression": "Testing Libraries"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 1"
@@ -1036,15 +888,11 @@
     {
       "chapter": 32,
       "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Practice 4"
-        ],
         "progression": "Testing Libraries"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Practice 4"
@@ -1060,15 +908,11 @@
     {
       "chapter": 33,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L8 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L8 SFLP 20-21"
@@ -1084,15 +928,11 @@
     {
       "chapter": 34,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Project Part 1"
-        ],
         "progression": "Build Your Library"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Project Part 1"
@@ -1108,15 +948,11 @@
     {
       "chapter": 35,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L9 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L9 SFLP 20-21"
@@ -1132,15 +968,11 @@
     {
       "chapter": 36,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Project Part 2"
-        ],
         "progression": "Build Your Library"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Project Part 2"
@@ -1156,15 +988,11 @@
     {
       "chapter": 37,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Project Test a Library"
-        ],
         "progression": "Test a Classmate's Library"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Project Test a Library"
@@ -1180,15 +1008,11 @@
     {
       "chapter": 38,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L10 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L10 SFLP 20-21"
@@ -1204,15 +1028,11 @@
     {
       "chapter": 39,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U7 Libraries Project Part 3"
-        ],
         "progression": "Build Your Library"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Libraries Project Part 3"
@@ -1228,15 +1048,11 @@
     {
       "chapter": 40,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U7L12 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7L12 SFLP 20-21"
@@ -1252,15 +1068,11 @@
     {
       "chapter": 41,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 7 AP-Style Assessment _2020"
-        ],
         "progression": "Unit 7 Exam"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 7 AP-Style Assessment _2020"
@@ -1276,15 +1088,11 @@
     {
       "chapter": 42,
       "position": 1,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U7 20-21 Student Pilot Survey"
-        ],
         "progression": "Unit 7 STUDENT Survey"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7 20-21 Student Pilot Survey"
@@ -1300,15 +1108,11 @@
     {
       "chapter": 43,
       "position": 1,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U7 20-21 Teacher Pilot Survey"
-        ],
         "progression": "Unit 7 TEACHER Survey"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U7 20-21 Teacher Pilot Survey"
@@ -1324,15 +1128,11 @@
     {
       "chapter": 44,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Make RPS App 1"
-        ],
         "progression": "Try the Rock Paper Scissors App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App 1"
@@ -1348,15 +1148,11 @@
     {
       "chapter": 45,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Make RPS App 2"
-        ],
         "progression": "Build the Rock Paper Scissors App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App 2"
@@ -1372,15 +1168,11 @@
     {
       "chapter": 46,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Make RPS App 3"
-        ],
         "progression": "Build the Rock Paper Scissors App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App 3"
@@ -1396,15 +1188,11 @@
     {
       "chapter": 47,
       "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Make RPS App 4"
-        ],
         "progression": "Build the Rock Paper Scissors App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App 4"
@@ -1420,15 +1208,11 @@
     {
       "chapter": 48,
       "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Make RPS App 5"
-        ],
         "progression": "Build the Rock Paper Scissors App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App 5"
@@ -1444,15 +1228,11 @@
     {
       "chapter": 49,
       "position": 6,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Make RPS App 6"
-        ],
         "progression": "Build the Rock Paper Scissors App"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U7 Param Return Make RPS App 6"
@@ -2006,35 +1786,5 @@
         "script.name": "csp7-pilot"
       }
     }
-  ],
-  "resources": [
-
-  ],
-  "lessons_resources": [
-
-  ],
-  "scripts_resources": [
-
-  ],
-  "scripts_student_resources": [
-
-  ],
-  "vocabularies": [
-
-  ],
-  "lessons_vocabularies": [
-
-  ],
-  "lessons_programming_expressions": [
-
-  ],
-  "objectives": [
-
-  ],
-  "lessons_standards": [
-
-  ],
-  "lessons_opportunity_standards": [
-
   ]
 }

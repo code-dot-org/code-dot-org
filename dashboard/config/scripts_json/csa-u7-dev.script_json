@@ -8,9 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:01:12 UTC",
+    "serialized_at": "2021-09-10 19:56:52 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csa-u7-dev"
     }

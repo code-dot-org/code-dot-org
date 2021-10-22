@@ -8,9 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:17 UTC",
+    "serialized_at": "2021-08-03 22:46:54 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "cspunit4"
     }

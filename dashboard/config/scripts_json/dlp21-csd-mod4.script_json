@@ -11,9 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:01:10 UTC",
+    "serialized_at": "2021-10-11 14:27:25 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "dlp21-csd-mod4"
     }

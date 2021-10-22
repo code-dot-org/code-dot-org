@@ -13,9 +13,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:50 UTC",
+    "serialized_at": "2021-10-05 13:41:38 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "2021drafting"
     }

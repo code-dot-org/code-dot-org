@@ -12,9 +12,8 @@
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2021-10-22 14:01:14 UTC",
+    "serialized_at": "2021-10-13 22:42:41 UTC",
     "published_state": "in_development",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "spelling-bee"
     }

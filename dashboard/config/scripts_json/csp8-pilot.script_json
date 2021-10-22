@@ -4,18 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
+      "has_verified_resources": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/create-20-21/create-pt-prep/{LESSON}/",
       "pilot_experiment": "csp-piloters",
       "curriculum_umbrella": "CSP",
-      "has_lesson_plan": true,
-      "has_verified_resources": true
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:13 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csp8-pilot"
     }
@@ -39,7 +35,6 @@
       "name": "Create PT - Review the Task",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -54,7 +49,6 @@
       "name": "Create PT - Make a Plan",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -69,7 +63,6 @@
       "name": "Create PT - Complete the Task",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -80,25 +73,15 @@
       }
     }
   ],
-  "lesson_activities": [
-
-  ],
-  "activity_sections": [
-
-  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U8L1 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U8L1 SFLP 20-21"
@@ -114,15 +97,11 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U8L2 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U8L2 SFLP 20-21"
@@ -138,15 +117,11 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U8L3 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U8L3 SFLP 20-21"
@@ -162,15 +137,11 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "csp-pt-tech-setup-and-tools_2020"
-        ],
         "progression": "Tech Setup and Tools for Create PT"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pt-tech-setup-and-tools_2020"
@@ -186,15 +157,11 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "Create PT Workspace 2020"
-        ],
         "progression": "Create PT Coding Workspace"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Create PT Workspace 2020"
@@ -264,35 +231,5 @@
         "script.name": "csp8-pilot"
       }
     }
-  ],
-  "resources": [
-
-  ],
-  "lessons_resources": [
-
-  ],
-  "scripts_resources": [
-
-  ],
-  "scripts_student_resources": [
-
-  ],
-  "vocabularies": [
-
-  ],
-  "lessons_vocabularies": [
-
-  ],
-  "lessons_programming_expressions": [
-
-  ],
-  "objectives": [
-
-  ],
-  "lessons_standards": [
-
-  ],
-  "lessons_opportunity_standards": [
-
   ]
 }

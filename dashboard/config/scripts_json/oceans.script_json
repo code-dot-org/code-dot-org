@@ -11,9 +11,8 @@
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2021-10-22 14:00:35 UTC",
+    "serialized_at": "2021-09-28 17:18:13 UTC",
     "published_state": "preview",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "oceans"
     }
@@ -353,9 +352,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Machine_Learning"
-        ],
         "progression": "AI Machine Learning - Video"
       },
       "bonus": false,
@@ -378,9 +374,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_FishVTrash"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -402,9 +395,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_CreaturesVTrashDemo"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -426,9 +416,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_CreaturesVTrash"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -450,9 +437,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Training_Data"
-        ],
         "progression": "AI: Training Data & Bias - Video"
       },
       "bonus": false,
@@ -475,9 +459,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Short"
-        ],
         "progression": "Using Training Data"
       },
       "bonus": false,
@@ -500,9 +481,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Societal_Implications"
-        ],
         "progression": "AI: Impact on Society - Video"
       },
       "bonus": false,
@@ -525,9 +503,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Long"
-        ],
         "progression": "Teach AI a New Word"
       },
       "bonus": false,
