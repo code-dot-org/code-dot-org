@@ -1,5 +1,0 @@
-function playSoundEffect() {
-    playSound();
-}
-
-playSound();
