@@ -7,8 +7,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 03:50:04 UTC",
+    "serialized_at": "2021-10-22 13:59:28 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "allthesurveys"
     }

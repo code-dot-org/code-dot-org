@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:45 UTC",
+    "serialized_at": "2021-10-22 13:59:58 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csd-tests"
     }

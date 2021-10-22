@@ -7,7 +7,7 @@
     "self-paced-pl-csd4-2021"
   ],
   "published_state": "beta",
-  "instruction_type": "teacher_led",
+  "instruction_type": "self_paced",
   "properties": {
     "has_verified_resources": true,
     "version_year": "2021"

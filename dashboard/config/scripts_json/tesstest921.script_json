@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 21:04:32 UTC",
+    "serialized_at": "2021-10-22 14:01:13 UTC",
     "published_state": null,
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "tesstest921"
     }

@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:19 UTC",
+    "serialized_at": "2021-10-22 14:00:02 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csd5-old"
     }

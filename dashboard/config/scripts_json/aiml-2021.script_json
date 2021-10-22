@@ -18,8 +18,9 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-09-22 15:40:36 UTC",
+    "serialized_at": "2021-10-22 14:01:04 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -12582,7 +12583,7 @@
       "seeding_key": {
         "lesson.key": "lesson6",
         "programming_environment.name": "applab",
-        "programming_expression.key": "getText"
+        "programming_expression.key": "declareAssign_x"
       }
     },
     {
@@ -12596,14 +12597,14 @@
       "seeding_key": {
         "lesson.key": "lesson6",
         "programming_environment.name": "applab",
-        "programming_expression.key": "setText"
+        "programming_expression.key": "getText"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson6",
         "programming_environment.name": "applab",
-        "programming_expression.key": "declareAssign_x"
+        "programming_expression.key": "setText"
       }
     },
     {

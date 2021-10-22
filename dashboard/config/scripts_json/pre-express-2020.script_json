@@ -4,15 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
       "project_widget_visible": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "has_lesson_plan": true,
+      "lesson_extras_available": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/pre-express/{LESSON}",
       "version_year": "2020",
       "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
+      "is_stable": true,
+      "tts": true,
+      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -30,17 +35,13 @@
           "standardMappings",
           "https://curriculum.code.org/csf-20/express/standards"
         ]
-      ],
-      "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_stable": true,
-      "is_course": true
+      ]
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-08-03 22:47:56 UTC",
+    "serialized_at": "2021-10-22 14:00:40 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "pre-express-2020"
     }

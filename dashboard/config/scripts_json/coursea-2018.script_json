@@ -4,15 +4,24 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
       "project_widget_visible": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "has_lesson_plan": true,
-      "version_year": "2018",
+      "lesson_extras_available": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/coursea/{LESSON}",
+      "version_year": "2018",
+      "supported_locales": [
+        "it-IT",
+        "sk-SK"
+      ],
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
       "is_stable": true,
+      "tts": true,
+      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -30,22 +39,13 @@
           "standardMappings",
           "https://curriculum.code.org/csf-18/coursea/standards/"
         ]
-      ],
-      "supported_locales": [
-        "it-IT",
-        "sk-SK"
-      ],
-      "curriculum_umbrella": "CSF",
-      "family_name": "coursea",
-      "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_course": true
+      ]
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2021-08-03 22:47:25 UTC",
+    "serialized_at": "2021-10-22 13:59:39 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "coursea-2018"
     }

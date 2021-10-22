@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "hideable_lessons": true,
       "student_detail_progress_view": true,
-      "has_verified_resources": true,
       "curriculum_umbrella": "CSP",
-      "hideable_lessons": true
+      "has_verified_resources": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:20 UTC",
+    "serialized_at": "2021-10-22 14:00:08 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csp3-staging"
     }
@@ -2480,8 +2481,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_affirmation_intervention_3",
-          "csp_affirmation_control_3"
+          "csp_affirmation_control_3",
+          "csp_affirmation_intervention_3"
         ],
         "progression": "Pre-test reflection",
         "variants": {
@@ -2503,16 +2504,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_affirmation_intervention_3",
-          "csp_affirmation_control_3"
+          "csp_affirmation_control_3",
+          "csp_affirmation_intervention_3"
         ],
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp3-staging"
       },
       "level_keys": [
-        "csp_affirmation_intervention_3",
-        "csp_affirmation_control_3"
+        "csp_affirmation_control_3",
+        "csp_affirmation_intervention_3"
       ]
     },
     {
@@ -3578,8 +3579,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_intervention_3",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_3",
-          "csp_affirmation_control_3"
+          "csp_affirmation_control_3",
+          "csp_affirmation_intervention_3"
         ],
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
@@ -3590,8 +3591,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_control_3",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_3",
-          "csp_affirmation_control_3"
+          "csp_affirmation_control_3",
+          "csp_affirmation_intervention_3"
         ],
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",

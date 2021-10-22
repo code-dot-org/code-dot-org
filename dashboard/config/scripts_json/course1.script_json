@@ -4,24 +4,24 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
+      "project_widget_visible": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "project_widget_visible": true,
-      "has_lesson_plan": true,
+      "lesson_extras_available": true,
       "curriculum_path": "https://code.org/curriculum/course1/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
       "version_year": "unversioned",
       "is_course": true
     },
     "new_name": null,
     "family_name": "course1",
-    "serialized_at": "2021-08-03 22:46:40 UTC",
+    "serialized_at": "2021-10-22 13:59:36 UTC",
     "published_state": "preview",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "course1"
     }

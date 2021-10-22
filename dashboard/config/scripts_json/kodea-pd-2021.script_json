@@ -9,8 +9,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:05 UTC",
+    "serialized_at": "2021-10-22 14:01:02 UTC",
     "published_state": "pilot",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "kodea-pd-2021"
     }
@@ -180,7 +181,7 @@
       }
     },
     {
-      "key": "Next Steps",
+      "key": "Next steps",
       "name": "Next Steps",
       "absolute_position": 11,
       "lockable": false,
@@ -189,7 +190,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       }
@@ -1989,7 +1990,7 @@
         "script_level.level_keys": [
           "OPD-K5 Stage10Start_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       },
@@ -2012,7 +2013,7 @@
         "script_level.level_keys": [
           "OPD-K5 PostSurvey_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       },
@@ -2035,7 +2036,7 @@
         "script_level.level_keys": [
           "OPD-K5 Closing_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       },
@@ -2058,7 +2059,7 @@
         "script_level.level_keys": [
           "OPD-K5 Connect_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       },
@@ -2081,7 +2082,7 @@
         "script_level.level_keys": [
           "OPD-K5 Celebrate_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       },
@@ -2944,7 +2945,7 @@
         "script_level.level_keys": [
           "OPD-K5 Stage10Start_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       }
@@ -2955,7 +2956,7 @@
         "script_level.level_keys": [
           "OPD-K5 PostSurvey_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       }
@@ -2966,7 +2967,7 @@
         "script_level.level_keys": [
           "OPD-K5 Closing_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       }
@@ -2977,7 +2978,7 @@
         "script_level.level_keys": [
           "OPD-K5 Connect_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       }
@@ -2988,7 +2989,7 @@
         "script_level.level_keys": [
           "OPD-K5 Celebrate_dani"
         ],
-        "lesson.key": "Next Steps",
+        "lesson.key": "Next steps",
         "lesson_group.key": "",
         "script.name": "kodea-pd-2021"
       }

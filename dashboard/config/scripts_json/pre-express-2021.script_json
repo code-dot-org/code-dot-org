@@ -20,8 +20,9 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-08-31 20:01:26 UTC",
+    "serialized_at": "2021-10-22 14:00:58 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "pre-express-2021"
     }

@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:47 UTC",
+    "serialized_at": "2021-10-22 14:00:16 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "cspunit3"
     }
@@ -104,7 +105,7 @@
       }
     },
     {
-      "key": "Creating functions with Parameters",
+      "key": "Creating Functions with Parameters",
       "name": "Creating Functions with Parameters",
       "absolute_position": 6,
       "lockable": false,
@@ -113,7 +114,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -1406,7 +1407,7 @@
         "script_level.level_keys": [
           "U3L08 Student Lesson Introduction"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1429,7 +1430,7 @@
         "script_level.level_keys": [
           "U3L08 - drawSquareWithParam"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1452,7 +1453,7 @@
         "script_level.level_keys": [
           "U3L07 - createTriangleParam"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1475,7 +1476,7 @@
         "script_level.level_keys": [
           "U3L08 - squareTwoParams"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1498,7 +1499,7 @@
         "script_level.level_keys": [
           "U3L08 - createTwoParamTriangle"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1521,7 +1522,7 @@
         "script_level.level_keys": [
           "U3L08 - introUnderTheSea"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1544,7 +1545,7 @@
         "script_level.level_keys": [
           "U3L08 - paramsToStarfish"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1567,7 +1568,7 @@
         "script_level.level_keys": [
           "U3L08 - seaGrass"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1590,7 +1591,7 @@
         "script_level.level_keys": [
           "U3L08 - fish"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1613,7 +1614,7 @@
         "script_level.level_keys": [
           "U3L08 - multiParamFish"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1636,7 +1637,7 @@
         "script_level.level_keys": [
           "U3L08 - randomInput"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1659,7 +1660,7 @@
         "script_level.level_keys": [
           "U3L08 - freePlay"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1682,7 +1683,7 @@
         "script_level.level_keys": [
           "U3L08 Assessment1"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -1705,7 +1706,7 @@
         "script_level.level_keys": [
           "U3L08 Assessment2"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       },
@@ -8463,7 +8464,7 @@
         "script_level.level_keys": [
           "U3L08 Student Lesson Introduction"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8474,7 +8475,7 @@
         "script_level.level_keys": [
           "U3L08 - drawSquareWithParam"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8485,7 +8486,7 @@
         "script_level.level_keys": [
           "U3L07 - createTriangleParam"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8496,7 +8497,7 @@
         "script_level.level_keys": [
           "U3L08 - squareTwoParams"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8507,7 +8508,7 @@
         "script_level.level_keys": [
           "U3L08 - createTwoParamTriangle"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8518,7 +8519,7 @@
         "script_level.level_keys": [
           "U3L08 - introUnderTheSea"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8529,7 +8530,7 @@
         "script_level.level_keys": [
           "U3L08 - paramsToStarfish"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8540,7 +8541,7 @@
         "script_level.level_keys": [
           "U3L08 - seaGrass"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8551,7 +8552,7 @@
         "script_level.level_keys": [
           "U3L08 - fish"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8562,7 +8563,7 @@
         "script_level.level_keys": [
           "U3L08 - multiParamFish"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8573,7 +8574,7 @@
         "script_level.level_keys": [
           "U3L08 - randomInput"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8584,7 +8585,7 @@
         "script_level.level_keys": [
           "U3L08 - freePlay"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8595,7 +8596,7 @@
         "script_level.level_keys": [
           "U3L08 Assessment1"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }
@@ -8606,7 +8607,7 @@
         "script_level.level_keys": [
           "U3L08 Assessment2"
         ],
-        "lesson.key": "Creating functions with Parameters",
+        "lesson.key": "Creating Functions with Parameters",
         "lesson_group.key": "",
         "script.name": "cspunit3"
       }

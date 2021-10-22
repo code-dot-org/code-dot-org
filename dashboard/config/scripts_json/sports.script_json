@@ -12,8 +12,9 @@
     },
     "new_name": null,
     "family_name": "sports",
-    "serialized_at": "2021-09-29 17:41:05 UTC",
+    "serialized_at": "2021-10-22 14:00:43 UTC",
     "published_state": "preview",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "sports"
     }

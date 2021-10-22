@@ -4,6 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "hideable_lessons": true,
+      "lesson_extras_available": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}",
+      "version_year": "2019",
+      "supported_locales": [
+        "cs-CZ",
+        "sk-SK"
+      ],
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
+      "is_stable": true,
+      "tts": true,
+      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -25,26 +38,13 @@
           "curriculumGuide",
           "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview"
         ]
-      ],
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-19/coursed/{LESSON}",
-      "version_year": "2019",
-      "has_lesson_plan": true,
-      "curriculum_umbrella": "CSF",
-      "is_stable": true,
-      "family_name": "coursed",
-      "tts": true,
-      "supported_locales": [
-        "cs-CZ",
-        "sk-SK"
-      ],
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_course": true
+      ]
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-08-03 22:47:37 UTC",
+    "serialized_at": "2021-10-22 13:59:48 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "coursed-2019"
     }
