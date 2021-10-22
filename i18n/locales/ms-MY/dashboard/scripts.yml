@@ -5148,6 +5148,7 @@ ms:
             Programming with Angry Birds:
               key: Pengaturcaraan dengan Angry Birds
               name: Pengaturcaraan dengan Angry Birds
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan membangunkan algoritma berjujukan untuk menggerakkan burung dari satu bahagian pagar sesat ke bahagian lain tempat khinzir berada. Untuk melakukan ini, mereka akan menyusun blok kod bersama dalam jujukan linear, membuatkannya bergerak lurus, belok ke kiri, atau belok ke kanan.
             Debugging with Scrat:
               key: Penyahpepijatan dengan Scrat
               name: Penyahpepijatan di dalam Pagar Sesat
@@ -5290,6 +5291,7 @@ ms:
               key: Gelung dengan Scrat
               name: Gelung dengan Scrat
               description_student: Bantu Scrat menutup lebih banyak tanah dengan menggunakan gelung.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih melakukan konsep gelung dalam pengaturcaraan teka-teki apabila matlamatnya ialah membantu tupai mendapatkan buah oak.
             Loops with Laurel:
               key: Gelung dengan Laurel
               name: Gelung dengan Laurel
@@ -5298,14 +5300,17 @@ ms:
               key: Pemandangan Lautan dengan Gelung
               name: Pemandangan Lautan dengan Gelung
               description_student: Gunakan gelung dan corak untuk menyiapkan imej.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar mempelajari cara melukis imej dengan penggelungan jujukan arahan ringkas. Di sini, gelung mewujudkan corak. Pada bahagian akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka sendiri.
             Drawing Gardens with Loops:
               key: Melukis Taman dengan Gelung
               name: Melukis Taman dengan Gelung
               description_student: Gunakan corak dan gelung untuk menyiapkan imej.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar mempelajari cara melukis imej dengan penggelungan jujukan arahan ringkas. Di sini, pelajar menggunakan gelung untuk mencipta corak. Pada bahagian akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka sendiri.
             On the Move with Events:
               key: Bergerak bersama Peristiwa
               name: Bergerak bersama Peristiwa
               description_student: Cipta permainan dan cerita anda sendiri.
+              description_teacher: Dalam **projek mini** ini, pelajar berpeluang mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta permainan animasi. Sudah tiba masanya menjadi kreatif dan mencipta cerita di dalam Makmal Mainan!
             A Royal Battle with Events:
               key: Pertempuran Diraja bersama Peristiwa
               name: Pertempuran Diraja bersama Peristiwa
