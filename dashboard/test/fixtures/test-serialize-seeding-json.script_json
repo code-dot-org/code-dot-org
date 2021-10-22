@@ -11,8 +11,11 @@
     },
     "new_name": null,
     "family_name": "test-serialize-seeding-json-family",
+    "serialized_at": "2021-10-22 15:28:55 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "test-serialize-seeding-json-script"
     }
