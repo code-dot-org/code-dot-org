@@ -122,7 +122,7 @@ class Comment extends Component {
           </span>
         </div>
         <div
-          id={'code-review-comment-body'}
+          className={'code-review-comment-body'}
           style={{
             ...styles.comment,
             ...(isFromTeacher && styles.commentFromTeacher),

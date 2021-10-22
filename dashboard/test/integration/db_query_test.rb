@@ -98,7 +98,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       is_course: true,
       family_name: 'hoc-family',
       version_year: 'unversioned',
-      published_state: SharedConstants::PUBLISHED_STATE.stable
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(script)
 
@@ -124,6 +124,45 @@ class DBQueryTest < ActionDispatch::IntegrationTest
 
     assert_cached_queries(3) do
       get "/api/v1/teacher_feedbacks/count?student_id=#{student.id}"
+      assert_response :success
+    end
+  end
+
+  test "student in section views uncached hoc level" do
+    unit = create(
+      :script,
+      :with_levels,
+      levels_count: 10,
+      is_course: true,
+      family_name: 'hoc-family',
+      version_year: 'unversioned',
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(unit)
+    level = unit.levels.first
+
+    teacher = create :teacher
+    section = create :section, user: teacher, script: unit
+    student = create :student
+    section.students = [student]
+    student.assign_script(unit)
+    sign_in student
+
+    assert_cached_queries(19) do
+      get "/s/#{unit.name}/lessons/1/levels/1"
+      assert_response :success
+    end
+
+    # Simulate all the ajax requests which the level page sends to the
+    # server on page load.
+
+    assert_cached_queries(10) do
+      get "/api/user_progress/#{unit.name}/1/1/#{level.id}"
+      assert_response :success
+    end
+
+    assert_cached_queries(3) do
+      get "/levels/#{level.id}/get_rubric"
       assert_response :success
     end
   end

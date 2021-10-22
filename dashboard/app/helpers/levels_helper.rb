@@ -179,14 +179,29 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
+    view_options(public_caching: @public_caching)
+
+    is_caching_exception = request ? ScriptConfig.uncached_script_level_path?(request.path) : false
+    is_cached_level = @public_caching && !is_caching_exception
+
+    level_requires_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    # If the level is cached, the channel is loaded client-side in loadApp.js
+    if level_requires_channel && !is_cached_level
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
-        server_project_level_id: @level.project_template_level.try(:id),
+        reduce_channel_updates: @script ?
+          !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
+          false
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
     end
+
+    view_options(
+      level_requires_channel: level_requires_channel,
+      server_project_level_id: @level.project_template_level.try(:id)
+    )
 
     # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
     if @level.is_a?(Javalab) && (@user || current_user)
@@ -228,9 +243,6 @@ module LevelsHelper
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone_mode: post_milestone_mode(post_milestone, post_failed_run_milestone))
-
-    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
-    view_options(public_caching: @public_caching)
 
     if PuzzleRating.enabled?
       view_options(puzzle_ratings_url: puzzle_ratings_path)

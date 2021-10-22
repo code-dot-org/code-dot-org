@@ -13,8 +13,3 @@ module.exports.isSafari = function() {
     navigator.userAgent.indexOf('Chrome') === -1
   );
 };
-
-module.exports.isChrome34 = function() {
-  var reg = /Chrome\/34/;
-  return reg.test(window.navigator.userAgent);
-};

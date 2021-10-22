@@ -108,6 +108,7 @@ export const PlaygroundExceptionType = {
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
+export const EXCEPTION_PREFIX = '[EXCEPTION]';
 
 export const PlaygroundSignalType = {
   // Indicate that the Playground game has started
@@ -150,4 +151,11 @@ export const PlaygroundFontStyleType = makeEnum(
 export const PlaygroundItemType = {
   IMAGE: 'image',
   TEXT: 'text'
+};
+
+export const ExecutionType = {
+  // Compile and run the main method
+  RUN: 'RUN',
+  // Compile and run tests
+  TEST: 'TEST'
 };

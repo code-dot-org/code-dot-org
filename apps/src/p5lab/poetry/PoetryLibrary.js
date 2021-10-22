@@ -1,3 +1,4 @@
+/* global appOptions */
 import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
@@ -5,12 +6,14 @@ import {POEMS} from './constants';
 import * as utils from './commands/utils';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
+import spritelabCommands from '../spritelab/commands/index';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
 const FONT_SIZE = 25;
 const PLAYSPACE_SIZE = 400;
 const POEM_DURATION = 400;
+const OCTI_SIZE = 75;
 
 export default class PoetryLibrary extends CoreLibrary {
   constructor(p5) {
@@ -23,7 +26,6 @@ export default class PoetryLibrary extends CoreLibrary {
       ..._.cloneDeep(getStore().getState().poetry.selectedPoem),
       font: {
         fill: 'black',
-        stroke: 'rgba(0,0,0,0)',
         font: 'Arial'
       },
       isVisible: true,
@@ -32,13 +34,15 @@ export default class PoetryLibrary extends CoreLibrary {
       // The animation can be restarted with the animatePoem() block, which
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
-      animationStartFrame: 1
+      animationStartFrame:
+        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
     this.lineEvents = {};
     this.p5.textAlign(this.p5.CENTER);
     this.p5.angleMode(this.p5.DEGREES);
+    this.p5.noStroke();
 
     this.commands = {
       // Keep everything from Core Sprite Lab
@@ -75,6 +79,10 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
+      destroy(costume) {
+        spritelabCommands.destroy.call(this, {costume});
+      },
+
       // And add custom Poem Bot commands
       textConcat(text1, text2) {
         return [text1, text2].join('');
@@ -91,12 +99,9 @@ export default class PoetryLibrary extends CoreLibrary {
         this.poemState.lines.push(line || '');
       },
 
-      setFontColor(fill, stroke) {
+      setFontColor(fill) {
         if (fill) {
           this.poemState.font.fill = fill;
-        }
-        if (stroke) {
-          this.poemState.font.stroke = stroke;
         }
       },
 
@@ -177,6 +182,33 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
+      drawOcti() {
+        this.p5.push();
+        this.p5.noStroke();
+        if (this.p5.World.frameCount > this.validationInfo.endTime) {
+          let octiImage = this.p5._preloadedInstructorImage;
+          this.p5.image(
+            octiImage,
+            PLAYSPACE_SIZE - OCTI_SIZE /* x */,
+            PLAYSPACE_SIZE - OCTI_SIZE /* y */,
+            OCTI_SIZE /* width */,
+            OCTI_SIZE /* height */
+          );
+        }
+        this.p5.pop();
+      },
+
+      isOctiClicked() {
+        return (
+          this.validationInfo.successFrame &&
+          this.p5.mouseDown() &&
+          this.p5.World.mouseX > PLAYSPACE_SIZE - OCTI_SIZE &&
+          this.p5.World.mouseX < PLAYSPACE_SIZE &&
+          this.p5.World.mouseY > PLAYSPACE_SIZE - OCTI_SIZE &&
+          this.p5.World.mouseY < PLAYSPACE_SIZE
+        );
+      },
+
       drawProgressBar() {
         this.p5.push();
         this.p5.noStroke();
@@ -208,10 +240,6 @@ export default class PoetryLibrary extends CoreLibrary {
   getScaledFontSize(text, font, desiredSize) {
     this.p5.push();
     this.p5.textFont(font);
-    // stroke color doesn't matter here, we just need to set a stroke to get an
-    // accurate width calculation.
-    this.p5.stroke('black');
-    this.p5.strokeWeight(3);
     this.p5.textSize(desiredSize);
     const fullWidth = this.p5.textWidth(text);
     const scaledSize = Math.min(
@@ -276,6 +304,10 @@ export default class PoetryLibrary extends CoreLibrary {
   }
 
   applyGlobalLineAnimation(renderInfo, frameCount) {
+    if (this.poemState.animationStartFrame === null) {
+      return renderInfo;
+    }
+
     // Add 2 so there's time before the first line and after the last line
     const framesPerLine = POEM_DURATION / (renderInfo.lines.length + 2);
 
@@ -368,8 +400,6 @@ export default class PoetryLibrary extends CoreLibrary {
 
   drawFromRenderInfo(renderInfo) {
     this.p5.fill(renderInfo.font.fill);
-    this.p5.stroke(renderInfo.font.stroke);
-    this.p5.strokeWeight(3);
     this.p5.textFont(renderInfo.font.font);
     if (renderInfo.title) {
       this.p5.textSize(renderInfo.title.size);
@@ -391,8 +421,6 @@ export default class PoetryLibrary extends CoreLibrary {
     renderInfo.lines.forEach(item => {
       let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);
       this.p5.fill(fillColor);
-      let strokeColor = this.getP5Color(renderInfo.font.stroke, item.alpha);
-      this.p5.stroke(strokeColor);
       this.p5.text(item.text, item.x, item.y);
     });
   }
