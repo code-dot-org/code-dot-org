@@ -12,9 +12,8 @@
     },
     "new_name": null,
     "family_name": "artist",
-    "serialized_at": "2021-10-22 13:59:30 UTC",
+    "serialized_at": "2021-09-29 18:15:19 UTC",
     "published_state": "preview",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "artist"
     }

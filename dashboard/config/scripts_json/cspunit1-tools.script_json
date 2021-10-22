@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "pd": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:15 UTC",
+    "serialized_at": "2021-08-03 22:46:58 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "cspunit1-tools"
     }

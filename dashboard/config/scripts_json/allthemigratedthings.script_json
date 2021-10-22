@@ -14,9 +14,8 @@
     },
     "new_name": null,
     "family_name": "ui-test-versioned-script",
-    "serialized_at": "2021-10-22 14:01:02 UTC",
+    "serialized_at": "2021-07-27 16:15:39 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "allthemigratedthings"
     }

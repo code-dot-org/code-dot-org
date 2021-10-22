@@ -4,7 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
       "student_detail_progress_view": true,
       "project_widget_visible": true,
       "project_widget_types": [
@@ -12,13 +11,13 @@
         "gamelab",
         "weblab"
       ],
-      "lesson_extras_available": true
+      "lesson_extras_available": true,
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:03 UTC",
+    "serialized_at": "2021-08-03 22:47:19 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csd6-draft"
     }

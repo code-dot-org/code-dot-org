@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "pd": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 13:59:26 UTC",
+    "serialized_at": "2021-08-03 22:46:49 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "algebraPD2a"
     }
@@ -210,7 +210,7 @@
       }
     },
     {
-      "key": "Big Game - Collision Detection",
+      "key": "Big GAme - Collision Detection",
       "name": "Big Game - Collision Detection",
       "absolute_position": 13,
       "lockable": false,
@@ -219,7 +219,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       }
@@ -1757,7 +1757,7 @@
         "script_level.level_keys": [
           "Big Game Collision 1"
         ],
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       },
@@ -1780,7 +1780,7 @@
         "script_level.level_keys": [
           "Big Game Collision 4"
         ],
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       },
@@ -1803,7 +1803,7 @@
         "script_level.level_keys": [
           "Big Game Collision 3"
         ],
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       },
@@ -1826,7 +1826,7 @@
         "script_level.level_keys": [
           "Big Game Final"
         ],
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       },
@@ -2603,7 +2603,7 @@
         "script_level.level_keys": [
           "Big Game Collision 1"
         ],
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       }
@@ -2614,7 +2614,7 @@
         "script_level.level_keys": [
           "Big Game Collision 4"
         ],
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       }
@@ -2625,7 +2625,7 @@
         "script_level.level_keys": [
           "Big Game Collision 3"
         ],
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       }
@@ -2636,7 +2636,7 @@
         "script_level.level_keys": [
           "Big Game Final"
         ],
-        "lesson.key": "Big Game - Collision Detection",
+        "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
         "script.name": "algebraPD2a"
       }

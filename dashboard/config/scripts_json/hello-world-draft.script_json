@@ -9,9 +9,8 @@
     },
     "new_name": null,
     "family_name": "poster",
-    "serialized_at": "2021-10-22 14:01:11 UTC",
+    "serialized_at": "2021-09-01 18:34:15 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "hello-world-draft"
     }

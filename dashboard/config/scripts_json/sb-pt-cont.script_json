@@ -12,9 +12,8 @@
     },
     "new_name": null,
     "family_name": "sb-pt-cont",
-    "serialized_at": "2021-10-22 14:01:11 UTC",
+    "serialized_at": "2021-07-21 12:21:45 UTC",
     "published_state": "pilot",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "sb-pt-cont"
     }

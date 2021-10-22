@@ -21,7 +21,7 @@ def set_instruction_type
                               else
                                 'teacher_led'
                               end
-    script.save(validate: false)
+    script.save!
     script.write_script_json
   end
 

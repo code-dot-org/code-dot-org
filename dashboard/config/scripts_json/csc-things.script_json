@@ -8,9 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:01:12 UTC",
+    "serialized_at": "2021-09-20 18:37:29 UTC",
     "published_state": "in_development",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csc-things"
     }
@@ -78,9 +77,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "(TEST) Poetry HoC_Final Level"
-        ]
       },
       "bonus": false,
       "seeding_key": {

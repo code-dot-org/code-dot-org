@@ -4,17 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}",
       "pilot_experiment": "csp-piloters",
-      "has_lesson_plan": true,
-      "has_verified_resources": true
+      "has_verified_resources": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/cspilot/unit1/{LESSON}",
+      "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:06 UTC",
-    "published_state": "pilot",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csp1-pilot"
     }
@@ -51,7 +47,6 @@
       "name": "CS Principles Pre-survey",
       "absolute_position": 1,
       "lockable": true,
-      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -66,7 +61,6 @@
       "name": "Welcome to CSP",
       "absolute_position": 2,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -81,7 +75,6 @@
       "name": "Representing Information",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -96,7 +89,6 @@
       "name": "Circle Square Patterns",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -111,7 +103,6 @@
       "name": "Binary Numbers",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -126,7 +117,6 @@
       "name": "Overflow and Rounding",
       "absolute_position": 6,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -141,7 +131,6 @@
       "name": "Representing Text",
       "absolute_position": 7,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -156,7 +145,6 @@
       "name": "Black and White Images",
       "absolute_position": 8,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -171,7 +159,6 @@
       "name": "Color Images",
       "absolute_position": 9,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -186,7 +173,6 @@
       "name": "Lossless Compression",
       "absolute_position": 10,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -201,7 +187,6 @@
       "name": "Lossy Compression",
       "absolute_position": 11,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -216,7 +201,6 @@
       "name": "Intellectual Property",
       "absolute_position": 12,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -231,7 +215,6 @@
       "name": "Project - Digital Information Dilemmas Part 1",
       "absolute_position": 13,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -246,7 +229,6 @@
       "name": "Project - Digital Information Dilemmas Part 2",
       "absolute_position": 14,
       "lockable": false,
-      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -261,7 +243,6 @@
       "name": "Lesson 14: Assessment Day",
       "absolute_position": 15,
       "lockable": true,
-      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -276,7 +257,6 @@
       "name": "Unit 1 STUDENT Survey",
       "absolute_position": 16,
       "lockable": true,
-      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -291,7 +271,6 @@
       "name": "Unit 1 TEACHER Survey",
       "absolute_position": 17,
       "lockable": true,
-      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
       },
@@ -302,24 +281,14 @@
       }
     }
   ],
-  "lesson_activities": [
-
-  ],
-  "activity_sections": [
-
-  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pre-survey-2017-levelgroup_2020 pilot"
-        ]
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pre-survey-2017-levelgroup_2020 pilot"
@@ -335,15 +304,11 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L1 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L1 SFLP 20-21"
@@ -359,15 +324,11 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "Computer Science is Changing Everything_2020"
-        ],
         "progression": "Computer Science is Changing Everything"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Computer Science is Changing Everything_2020"
@@ -383,15 +344,11 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp_socialBelonging_control_2018"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "csp_socialBelonging_control_2018"
@@ -407,15 +364,11 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L2 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L2 SFLP 20-21"
@@ -431,15 +384,11 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L3 CFU Sending Complex Messages"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L3 CFU Sending Complex Messages"
@@ -455,15 +404,11 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L4 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L4 SFLP 20-21"
@@ -479,15 +424,11 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U1L4 CYU3"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L4 CYU3"
@@ -503,15 +444,11 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L5 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L5 SFLP 20-21"
@@ -527,15 +464,11 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L5 CFU how many bits"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CFU how many bits"
@@ -551,15 +484,11 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L5 CFU adding bits"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CFU adding bits"
@@ -575,15 +504,11 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L5 CFU bin dec similarities"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L5 CFU bin dec similarities"
@@ -599,15 +524,11 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L6 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L6 SFLP 20-21"
@@ -623,15 +544,11 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "Widget: Binary Odometer_2020"
-        ],
         "progression": "Widget: Binary Odometer"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "Widget: Binary Odometer_2020"
@@ -647,15 +564,11 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L6 CFU beyond odometer"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L6 CFU beyond odometer"
@@ -671,15 +584,11 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L6 CFU representing fractions"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L6 CFU representing fractions"
@@ -695,15 +604,11 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L7 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L7 SFLP 20-21"
@@ -719,15 +624,11 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L8 Reflection Multiple Representations CSP"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L8 Reflection Multiple Representations CSP"
@@ -743,15 +644,11 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L8 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L8 SFLP 20-21"
@@ -767,15 +664,11 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1 L9 Introduction to Pixelation"
-        ],
         "progression": "Video: Intro to Pixelation Encoding B&W"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 L9 Introduction to Pixelation"
@@ -791,15 +684,11 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation - Make the Letter A_2019"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation - Make the Letter A_2019"
@@ -815,15 +704,11 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget Fix bit offset"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation Widget Fix bit offset"
@@ -839,15 +724,11 @@
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge a"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge a"
@@ -863,15 +744,11 @@
     {
       "chapter": 24,
       "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge B"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge B"
@@ -887,15 +764,11 @@
     {
       "chapter": 25,
       "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge C"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Pixelation Widget challenge C"
@@ -911,15 +784,11 @@
     {
       "chapter": 26,
       "position": 8,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 CFU pixel data"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 CFU pixel data"
@@ -935,15 +804,11 @@
     {
       "chapter": 27,
       "position": 9,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 Multiple Choice Digital Analog"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 Multiple Choice Digital Analog"
@@ -959,15 +824,11 @@
     {
       "chapter": 28,
       "position": 10,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 CFU Sampling"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L9 CFU Sampling"
@@ -983,15 +844,11 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L9 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L9 SFLP 20-21"
@@ -1007,15 +864,11 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 RGB"
-        ],
         "progression": "RGB Color"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 RGB"
@@ -1031,15 +884,11 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Pixelation Widget 1"
-        ],
         "progression": "Pixelation Widget: Color"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 1"
@@ -1055,15 +904,11 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 More Shades of Color"
-        ],
         "progression": "More Shades of Color"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 More Shades of Color"
@@ -1079,15 +924,11 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Pixelation Widget 2"
-        ],
         "progression": "Pixelation Widget: Color"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 2"
@@ -1103,15 +944,11 @@
     {
       "chapter": 34,
       "position": 6,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Pixelation Widget 3"
-        ],
         "progression": "Pixelation Widget: Color"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 3"
@@ -1127,15 +964,11 @@
     {
       "chapter": 35,
       "position": 7,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Sampling"
-        ],
         "progression": "Color Sampling"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Sampling"
@@ -1151,15 +984,11 @@
     {
       "chapter": 36,
       "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Pixelation Widget 4"
-        ],
         "progression": "Pixelation Widget: Color"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 Color Pixelation Widget 4"
@@ -1175,15 +1004,11 @@
     {
       "chapter": 37,
       "position": 9,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L10 Multiple Choice analog vs digital"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L10 Multiple Choice analog vs digital"
@@ -1199,15 +1024,11 @@
     {
       "chapter": 38,
       "position": 10,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L10 CFU Sampling"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L10 CFU Sampling"
@@ -1223,15 +1044,11 @@
     {
       "chapter": 39,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L10 SFLP 20-21"
@@ -1247,15 +1064,11 @@
     {
       "chapter": 40,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1L11 Widget: Text Compression"
-        ],
         "progression": "Widget: Text Compression"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L11 Widget: Text Compression"
@@ -1271,15 +1084,11 @@
     {
       "chapter": 41,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1 L11 Text Compression Widget Aloe Blacc"
-        ],
         "progression": "Video: Text Compression Widget with Aloe Blacc"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 L11 Text Compression Widget Aloe Blacc"
@@ -1295,15 +1104,11 @@
     {
       "chapter": 42,
       "position": 4,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L11 Multiple Choice lossless compression"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L11 Multiple Choice lossless compression"
@@ -1319,15 +1124,11 @@
     {
       "chapter": 43,
       "position": 5,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L11 CFU Compression for Email"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L11 CFU Compression for Email"
@@ -1343,15 +1144,11 @@
     {
       "chapter": 44,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L11 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L11 SFLP 20-21"
@@ -1367,15 +1164,11 @@
     {
       "chapter": 45,
       "position": 2,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1 Lossy Compression Widget v1"
-        ],
         "progression": "Lossy Compression Widget"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 Lossy Compression Widget v1"
@@ -1391,15 +1184,11 @@
     {
       "chapter": 46,
       "position": 3,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "U1 Lossy Compression Widget v2"
-        ],
         "progression": "Lossy Compression Widget"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1 Lossy Compression Widget v2"
@@ -1415,15 +1204,11 @@
     {
       "chapter": 47,
       "position": 4,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L11 CPS CFU Cell Phone"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L11 CPS CFU Cell Phone"
@@ -1439,15 +1224,11 @@
     {
       "chapter": 48,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L12 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L12 SFLP 20-21"
@@ -1463,15 +1244,11 @@
     {
       "chapter": 49,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L12 CFU Creative Commons"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L12 CFU Creative Commons"
@@ -1487,15 +1264,11 @@
     {
       "chapter": 50,
       "position": 3,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L12 CFU Copyright"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L12 CFU Copyright"
@@ -1511,15 +1284,11 @@
     {
       "chapter": 51,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L13 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L13 SFLP 20-21"
@@ -1535,15 +1304,11 @@
     {
       "chapter": 52,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L13 CFU Digital Representation"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L13 CFU Digital Representation"
@@ -1559,15 +1324,11 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
-      "assessment": false,
+      "assessment": null,
       "properties": {
-        "level_keys": [
-          "CSP U1L14 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1L14 SFLP 20-21"
@@ -1583,15 +1344,11 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L14 CSP CFU digital information"
-        ],
         "progression": "Check For Understanding"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "U1L14 CSP CFU digital information"
@@ -1607,15 +1364,11 @@
     {
       "chapter": 55,
       "position": 1,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 1 AP-Style Assessment _2020"
-        ],
         "progression": "Unit 1 Exam"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 1 AP-Style Assessment _2020"
@@ -1631,15 +1384,11 @@
     {
       "chapter": 56,
       "position": 1,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U1 20-21 Student Pilot Survey"
-        ],
         "progression": "Unit 1 STUDENT Survey"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1 20-21 Student Pilot Survey"
@@ -1655,15 +1404,11 @@
     {
       "chapter": 57,
       "position": 1,
-      "activity_section_position": null,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U1 20-21 Teacher Pilot Survey"
-        ],
         "progression": "Unit 1 TEACHER Survey"
       },
-      "bonus": false,
+      "bonus": null,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U1 20-21 Teacher Pilot Survey"
@@ -2305,35 +2050,5 @@
         "script.name": "csp1-pilot"
       }
     }
-  ],
-  "resources": [
-
-  ],
-  "lessons_resources": [
-
-  ],
-  "scripts_resources": [
-
-  ],
-  "scripts_student_resources": [
-
-  ],
-  "vocabularies": [
-
-  ],
-  "lessons_vocabularies": [
-
-  ],
-  "lessons_programming_expressions": [
-
-  ],
-  "objectives": [
-
-  ],
-  "lessons_standards": [
-
-  ],
-  "lessons_opportunity_standards": [
-
   ]
 }

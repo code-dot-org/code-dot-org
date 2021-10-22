@@ -11,9 +11,8 @@
     },
     "new_name": null,
     "family_name": "hourofcode",
-    "serialized_at": "2021-10-22 14:00:29 UTC",
+    "serialized_at": "2021-09-30 23:36:31 UTC",
     "published_state": "preview",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "hourofcode"
     }

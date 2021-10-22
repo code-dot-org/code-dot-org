@@ -4,8 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
       "student_detail_progress_view": true,
+      "has_verified_resources": true,
       "script_announcements": [
         {
           "notice": "This unit is being replaced....",
@@ -15,6 +15,7 @@
         }
       ],
       "has_lesson_plan": true,
+      "hideable_lessons": true,
       "announcements": [
         {
           "notice": "This unit is being replaced....",
@@ -22,14 +23,12 @@
           "link": "http://forum.code.org/t/curriculum-updates-2017-18/10762/52",
           "type": "bullhorn"
         }
-      ],
-      "has_verified_resources": true
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 14:00:04 UTC",
+    "serialized_at": "2021-08-03 22:47:12 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
     "seeding_key": {
       "script.name": "csp-ap"
     }
