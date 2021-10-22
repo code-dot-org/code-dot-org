@@ -382,12 +382,14 @@ class ReviewTab extends Component {
 
     return (
       <div style={styles.reviewsContainer}>
-        <div>
+        <div style={styles.refreshButtonContainer}>
           <Button
             key="refresh"
-            text="refresh"
+            icon="refresh"
+            text={javalabMsg.refresh()}
             onClick={this.onClickRefresh}
-            color="gray"
+            color={Button.ButtonColor.blue}
+            style={styles.refreshButtonStyle}
           />
         </div>
         <div style={styles.reviewHeader}>
@@ -443,7 +445,7 @@ const styles = {
     justifyContent: 'center'
   },
   reviewsContainer: {
-    margin: '25px 5%'
+    margin: '0px 5% 25px 5%'
   },
   reviewCheckboxRow: {
     margin: 0,
@@ -482,5 +484,14 @@ const styles = {
   },
   reviewDisabledText: {
     fontStyle: 'italic'
+  },
+  refreshButtonContainer: {
+    display: 'flex',
+    justifyContent: 'end'
+  },
+  refreshButtonStyle: {
+    margin: '10px 0',
+    fontSize: 13,
+    padding: '0 15px'
   }
 };
