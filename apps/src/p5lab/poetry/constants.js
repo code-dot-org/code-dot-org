@@ -48,5 +48,6 @@ export const POEMS = {
   rumi2: {author: 'Rumi'},
   hughes1: {author: 'Langston Hughes'},
   lomeli1: {author: 'Caia Lomeli'},
-  lomeli2: {author: 'Caia Lomeli'}
+  lomeli2: {author: 'Caia Lomeli'},
+  frost: {author: 'Robert Frost'}
 };
