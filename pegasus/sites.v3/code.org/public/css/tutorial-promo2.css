@@ -13,6 +13,7 @@
 .tutorial-heading {
   margin-top: 0px;
   margin-bottom: 10px;
+  margin-right: 20px;
   color: white;
   position: absolute;
   top: 20px;
@@ -25,17 +26,17 @@
   top: 70px;
 }
 
-.left-tutorial  {
+.right-tutorial  {
   right: 20px;
 }
-.left-tutorial.right-to-left{
+html[dir= 'rtl'] .right-tutorial {
   left: 20px;
   right: auto;
 }
-.right-tutorial {
+.left-tutorial {
   right: 270px;
 }
-.right-tutorial.right-to-left{
+html[dir= 'rtl']  .left-tutorial{
   left: 270px;
   right: auto;
 }
@@ -49,12 +50,19 @@
 .specific-tutorial-heading {
   margin-top: 0px;
   margin-bottom: 10px;
+  margin-right: 20px;
   color: white;
 }
 
 @media screen and (min-width: 970px) {
-  .tutorial-details {
-      _height: 100px;
+  .tutorial-heading {
+    top: 15px;
+  }
+
+  html[dir= 'rtl'] .tutorial-heading {
+    right: 464px;
+    left: auto;
+    margin-right: 0px;
   }
 }
 
@@ -73,17 +81,16 @@
     font-size: 17px;
   }
 
+  .tutorial-heading {
+    left: auto;
+    right: auto;
+  }
+
   .specific-tutorial {
     width: 100%;
-    _height: 220px;
     padding: 5px;
     position: static;
     margin-bottom: 10px;
-  }
-
-  .tutorial-heading {
-    top: 15px;
-    left: 290px;
   }
 
   .img-container {
@@ -100,7 +107,6 @@
 @media screen and (min-width: 0px) and (max-width: 512px) {
   .specific-tutorial {
     width: 100%;
-    _height: 220px;
     position: static;
   }
 

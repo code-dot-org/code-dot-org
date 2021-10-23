@@ -1,8 +1,7 @@
 ---
 title: Hello World
-video_player: true
 theme: responsive
-style_min: false
+set_dir: true
 ---
 
 # Hello World!
