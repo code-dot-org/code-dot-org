@@ -660,8 +660,7 @@ module Pd::Application
           'Technology Foundations',
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
-        ],
-        interested_in_online_program: [YES, NO]
+        ]
       }
     end
 
@@ -693,8 +692,6 @@ module Pd::Application
         cs_how_many_weeks_per_year
         plan_to_teach
         replace_existing
-
-        interested_in_online_program
 
         gender_identity
         race

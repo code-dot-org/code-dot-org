@@ -282,14 +282,17 @@ ChooseYourProgram.processPageData = data => {
   const changes = {};
 
   if (data.program) {
-    uniqueRequiredFields
-      .filter(program => program !== data.program)
-      .forEach(field => {
+    const otherPrograms = Object.keys(uniqueRequiredFields).filter(
+      program => program !== data.program
+    );
+    otherPrograms.forEach(otherProgram => {
+      uniqueRequiredFields[otherProgram].forEach(field => {
         changes[field] = undefined;
       });
+    });
   }
-  // the follow are unique to csa but not required
-  if (data.program && data.program !== PROGRAM_CSA) {
+  // the following are unique to csa but not required
+  if (data.program !== PROGRAM_CSA) {
     changes.csaAlreadyKnow = undefined;
     changes.csaPhoneScreen = undefined;
   }
