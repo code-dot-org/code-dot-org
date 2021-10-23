@@ -9,7 +9,7 @@ wrong 'My first example was a piece of trash. Student B had a fish as the first 
 
 
 markdown <<MARKDOWN
-#### Student A and Student B are discussing their results after training AI Bot to recognize fish. They notice that one A.I. Bot identified six pieces of trash as fish and the other A.I. Bot did not identify any trash as fish. 
+#### Student A and Student B are discussing their results after training A.I. Bot to recognize fish. They notice that one A.I. Bot incorrectly identified six pieces of trash as fish and the other A.I. Bot did not identify any trash as fish. 
 
 #### You ask, "**What is a possible explanation for why one A.I. Bot was more accurate than the other in telling the difference between trash and fish?".**
 
