@@ -71,6 +71,11 @@ def main(options)
       raise 'unsafe to migrate script containing teacher resources'
     end
 
+    # TODO(dave): remove this check once level swapping is handled correctly
+    if script.script_levels.any? {|sl| sl.levels.count > 1}
+      raise 'unsafe to migrate script which uses level swapping'
+    end
+
     next if options.dry_run
 
     models = ['Lesson', 'Activity']
