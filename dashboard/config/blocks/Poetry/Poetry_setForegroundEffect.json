@@ -2,7 +2,7 @@
   "category": "Poetry - Effects",
   "config": {
     "func": "setForegroundEffect",
-    "blockText": "do {EFFECT} foreground effect",
+    "blockText": "do {EFFECT} effect",
     "args": [
       {
         "name": "EFFECT",

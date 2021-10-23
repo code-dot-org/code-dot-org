@@ -27,7 +27,8 @@ class P5LabVisualizationHeader extends React.Component {
     onInterfaceModeChange: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     numAllowedModes: PropTypes.number.isRequired,
-    isShareView: PropTypes.bool.isRequired
+    isShareView: PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool.isRequired
   };
 
   changeInterfaceMode = mode => {
@@ -56,13 +57,20 @@ class P5LabVisualizationHeader extends React.Component {
     this.props.onInterfaceModeChange(mode);
   };
 
+  shouldShowPoemSelector() {
+    return (
+      this.props.labType === P5LabType.POETRY &&
+      this.props.interfaceMode === P5LabInterfaceMode.CODE &&
+      !this.props.isShareView &&
+      !this.props.isReadOnlyWorkspace
+    );
+  }
+
   render() {
     const {interfaceMode, allowAnimationMode} = this.props;
     return (
       <div>
-        {!this.props.isShareView && this.props.labType === P5LabType.POETRY && (
-          <PoemSelector />
-        )}
+        {this.shouldShowPoemSelector() && <PoemSelector />}
         {this.props.numAllowedModes > 1 && (
           <div style={styles.main} id="playSpaceHeader">
             <ToggleGroup
@@ -114,7 +122,8 @@ export default connect(
     allowAnimationMode: allowAnimationMode(state),
     isBlockly: state.pageConstants.isBlockly,
     numAllowedModes: countAllowedModes(state),
-    isShareView: state.pageConstants.isShareView
+    isShareView: state.pageConstants.isShareView,
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),
   dispatch => ({
     onInterfaceModeChange: mode => dispatch(changeInterfaceMode(mode))

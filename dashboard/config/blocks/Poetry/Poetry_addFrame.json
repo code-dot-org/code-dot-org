@@ -1,0 +1,51 @@
+{
+  "category": "Poetry - Effects",
+  "config": {
+    "func": "addFrame",
+    "blockText": "add {BRUSH} outline",
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "args": [
+      {
+        "name": "BRUSH",
+        "options": [
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Hearts",
+            "\"hearts\""
+          ],
+          [
+            "Flowers",
+            "\"flowers\""
+          ],
+          [
+            "Zig-Zag",
+            "\"zigzag\""
+          ],
+          [
+            "Swirls",
+            "\"swirls\""
+          ],
+          [
+            "Paw Prints",
+            "\"pawPrints\""
+          ],
+          [
+            "Waves",
+            "\"waves\""
+          ],
+          [
+            "Brick",
+            "\"brick\""
+          ]
+        ]
+      }
+    ]
+  }
+}
