@@ -1,8 +1,7 @@
 ---
 title: Poetry
-video_player: true
 theme: responsive
-style_min: true
+set_dir: true
 ---
 
 # Coding with Poetry

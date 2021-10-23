@@ -1,8 +1,7 @@
 ---
 title: CS Connections
-video_player: true
 theme: responsive
-style_min: false
+set_dir: true
 ---
 
 # Computer Science Connections
