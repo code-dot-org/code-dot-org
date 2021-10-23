@@ -6,7 +6,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
-import CommentOptions from './CommentOptions';
+import CommentMenu from './CommentMenu';
 import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -20,15 +20,15 @@ class Comment extends Component {
     viewAsTeacher: PropTypes.bool
   };
 
-  state = {isShowingCommentOptions: false};
+  state = {
+    hideWhileResolved: true
+  };
 
   onDelete = () => {
-    this.setState({isShowingCommentOptions: false});
     this.props.onDelete();
   };
 
   onResolve = () => {
-    this.setState({isShowingCommentOptions: false});
     this.props.onResolveStateToggle();
   };
 
@@ -72,6 +72,45 @@ class Comment extends Component {
     return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
   };
 
+  toggleHideResolved = () => {
+    this.setState({hideWhileResolved: !this.state.hideWhileResolved});
+  };
+
+  getListItems = () => {
+    const {viewAsCodeReviewer, viewAsTeacher} = this.props;
+    const {isResolved} = this.props.comment;
+    const {hideWhileResolved} = this.state;
+    let listItems = [];
+    if (isResolved) {
+      listItems.push({
+        key: 'visibility',
+        onClick: this.toggleHideResolved,
+        text: hideWhileResolved ? msg.show() : msg.hide(),
+        iconClass: hideWhileResolved ? 'eye' : 'eye-slash'
+      });
+    }
+    if (viewAsTeacher || !viewAsCodeReviewer) {
+      listItems.push({
+        key: 'resolve',
+        onClick: this.onResolve,
+        text: isResolved
+          ? javalabMsg.markIncomplete()
+          : javalabMsg.markComplete(),
+        iconClass: isResolved ? 'circle-o' : 'check-circle'
+      });
+    }
+    if (viewAsTeacher) {
+      listItems.push({
+        key: 'delete',
+        onClick: this.onDelete,
+        text: javalabMsg.delete(),
+        iconClass: 'trash'
+      });
+    }
+
+    return listItems;
+  };
+
   render() {
     const {
       commentText,
@@ -81,9 +120,8 @@ class Comment extends Component {
       isResolved,
       hasError
     } = this.props.comment;
-    const {viewAsCodeReviewer, viewAsTeacher} = this.props;
 
-    const {isShowingCommentOptions} = this.state;
+    const {hideWhileResolved} = this.state;
 
     return (
       <div
@@ -101,38 +139,22 @@ class Comment extends Component {
             <span style={styles.timestamp}>
               {this.renderFormattedTimestamp(timestampString)}
             </span>
-            {(viewAsTeacher || !viewAsCodeReviewer) && (
-              <i
-                className="fa fa-ellipsis-h"
-                style={styles.ellipsisMenu}
-                onClick={() =>
-                  this.setState({
-                    isShowingCommentOptions: !isShowingCommentOptions
-                  })
-                }
-              >
-                {isShowingCommentOptions && (
-                  <CommentOptions
-                    isResolved={isResolved}
-                    onResolveStateToggle={() => this.onResolve()}
-                    onDelete={() => this.onDelete()}
-                  />
-                )}
-              </i>
-            )}
+            <CommentMenu menuOptions={this.getListItems()} />
           </span>
         </div>
-        <div
-          className={'code-review-comment-body'}
-          style={{
-            ...styles.comment,
-            ...(isFromTeacher && styles.commentFromTeacher),
-            ...((isFromOlderVersionOfProject || isResolved) &&
-              styles.lessVisibleBackgroundColor)
-          }}
-        >
-          {commentText}
-        </div>
+        {!(isResolved && hideWhileResolved) && (
+          <div
+            className={'code-review-comment-body'}
+            style={{
+              ...styles.comment,
+              ...(isFromTeacher && styles.commentFromTeacher),
+              ...((isFromOlderVersionOfProject || isResolved) &&
+                styles.lessVisibleBackgroundColor)
+            }}
+          >
+            {commentText}
+          </div>
+        )}
         {hasError && this.renderErrorMessage()}
       </div>
     );
@@ -153,12 +175,6 @@ const styles = {
   },
   nameSuffix: {
     fontStyle: 'italic'
-  },
-  ellipsisMenu: {
-    fontSize: 18,
-    lineHeight: '18px',
-    margin: '0 0 0 5px',
-    cursor: 'pointer'
   },
   check: {
     position: 'absolute',
