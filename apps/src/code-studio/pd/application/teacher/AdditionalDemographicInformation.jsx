@@ -8,10 +8,7 @@ import {
 import {FormGroup} from 'react-bootstrap';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
-import {
-  labelFor,
-  LabelsContext
-} from '../../form_components_func/LabeledFormComponent';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {FormContext} from '../../form_components_func/FormComponent';
 import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 import {
@@ -58,7 +55,7 @@ const AdditionalDemographicInformation = props => {
             name="agree"
             label={
               <span>
-                {labelFor('agree').replace(
+                {PageLabels.additionalDemographicInformation.agree.replace(
                   'my local Code.org Regional Partner',
                   regionalPartner
                     ? regionalPartner.name
