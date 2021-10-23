@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect} from 'react';
 import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
@@ -49,6 +49,16 @@ const AboutYou = props => {
   const {accountEmail, onChange, errors, data} = props;
   const [regionalPartner] = useRegionalPartner(data);
   const nominated = queryString.parse(window.location.search).nominated;
+
+  useEffect(() => {
+    onChange({
+      regionalPartnerId: regionalPartner?.id,
+      regionalPartnerGroup: regionalPartner?.group,
+      regionalPartnerWorkshopIds: (regionalPartner?.workshops || []).map(
+        workshop => workshop.id
+      )
+    });
+  }, [regionalPartner]);
 
   const resetCountry = () => onChange({country: US});
   const exitApplication = () => (window.location = PD_RESOURCES_URL);

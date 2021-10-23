@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
   PageLabels,
@@ -22,18 +22,8 @@ import {useRegionalPartner} from '../../components/useRegionalPartner';
 import {FormContext} from '../../form_components_func/FormComponent';
 
 const ProfessionalLearningProgramRequirements = props => {
-  const {data, onChange} = props;
+  const {data} = props;
   const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
-
-  useEffect(() => {
-    onChange({
-      regionalPartnerId: regionalPartner?.id,
-      regionalPartnerGroup: regionalPartner?.group,
-      regionalPartnerWorkshopIds: (regionalPartner?.workshops || []).map(
-        workshop => workshop.id
-      )
-    });
-  }, [regionalPartner]);
 
   const renderAssignedWorkshopList = () => {
     if (regionalPartner.workshops.length === 0) {
