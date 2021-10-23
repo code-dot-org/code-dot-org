@@ -62,6 +62,22 @@
         "implementation_guide/coursef/2021": {
           "name": "คู่มือการใช้งาน"
         },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "ร่องรอยดิจิทัล: สไลด์บทเรียน",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "ร่องรอยดิจิทัล: ติดตามร่องรอยดิจิทัล",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "ร่องรอยดิจิทัล: Digital Trail Squares",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "ร่องรอยดิจิทัล: การติดตามสัตว์",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+        },
         "mimi-activity/courseb/2021": {
           "name": "ขยับหน่อยสิ ขยับหน่อย"
         },
@@ -69,19 +85,62 @@
           "name": "ขยับหน่อยสิ ขยับหน่อย"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "ขยับหน่อยสิ ขยับหน่อย"
+          "name": "ขยับหน่อยสิ ขยับหน่อย",
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "ขยับหน่อยสิ ขยับหน่อย"
+          "name": "ขยับหน่อยสิ ขยับหน่อย",
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+        },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "ใบหน้าบอกความรู้สึก",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "การฝึกลากและวาง",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "จะจัดชั้นเรียนบน Code.org อย่างไร",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "pair-programming-vid/courseb/2021": {
-          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+          "name": "การจับคู่เพื่อเขียนโปรแกรม",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "20_20_20_rule/courseb/2021": {
+          "name": "กฎ 20/20/20",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "เกมต่อภาพแผนที่สุดหรรษา-------------",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "เข็มทิศคอมพาสโรส",
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+        },
+        "feeling_faces_-_emotion_image/courseb/2021": {
+          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "สตีวี่และโครงการใหญ่"
+          "name": "สตีวี่และโครงการใหญ่",
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "บั๊กที่รอดหูรอดตาไป"
+          "name": "บักที่รอดหูรอดตาไป",
+          "url": "https://youtu.be/rah3DYlp5nQ"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "มาวนลูปกัน"
@@ -124,10 +183,15 @@
           "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
         },
         "pair-programming-vid/coursea/2021": {
-          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+          "name": "การจับคู่เพื่อเขียนโปรแกรม",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "20_20_20_rule/coursea/2021": {
-          "name": "กฎ 20/20/20"
+          "name": "กฎ 20/20/20",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "จะจัดชั้นเรียนบน Code.org อย่างไร",
@@ -145,22 +209,54 @@
           "name": "การ์ดแผนที่สุดหรรษา",
           "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "เกมต่อภาพแผนที่สุดหรรษา-------------",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
         "20_20_20_rule_1/coursea/2021": {
-          "name": "กฎ 20/20/20"
+          "name": "กฎ 20/20/20",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "การดีบักด้วยปุ่มขั้น",
           "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
         },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์"
+          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์"
+          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึก",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair-programming/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "อีเวนท์ใหญ่"
@@ -170,6 +266,14 @@
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "อีเวนท์ใหญ่"
+        },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "implementation_guide/coursea/2021": {
           "name": "คู่มือการใช้งาน"
@@ -190,7 +294,11 @@
           "name": "เพื่อนหุ่นยนต์"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+          "name": "การจับคู่เพื่อเขียนโปรแกรม",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "อีเวนท์ใหญ่"
@@ -223,7 +331,8 @@
           "name": "การเขียนกระดาษกราฟ"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+          "name": "การจับคู่เพื่อเขียนโปรแกรม",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "โปรแกรมการถ่ายทอดข้อมูล"
@@ -246,6 +355,10 @@
         "dance-party-playlist/coursed/2021": {
           "name": "เพลย์ลิสต์ของ Spotify (ทุกช่วงอายุ)"
         },
+        "feeling-faces-image/coursed/2021": {
+          "name": "ใบหน้าบอกความรู้สึก",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "เงื่อนไข"
         },
@@ -265,16 +378,36 @@
           "name": "คู่มือการใช้งาน"
         },
         "pair_programming/express/2021": {
-          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+          "name": "การจับคู่เพื่อเขียนโปรแกรม",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "dance-party-playlist/express/2021": {
           "name": "เพลย์ลิสต์ของ Spotify (ทุกช่วงอายุ)"
+        },
+        "pair_programming_video/express/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "variables_video/express/2021": {
           "name": "ตัวแปร"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "การจับคู่เพื่อเขียนโปรแกรม"
+          "name": "การจับคู่เพื่อเขียนโปรแกรม",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "จะจัดชั้นเรียนบน Code.org อย่างไร",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "ใบหน้าบอกความรู้สึก",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "กฎ 20/20/20",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "ติดตามอัลกอริทึม"

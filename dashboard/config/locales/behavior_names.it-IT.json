@@ -1679,7 +1679,9 @@
           "swimming left and right2": "nuotata sinistra-destra 2",
           "moving north2": "spostamento verso nord 2",
           "jittering2": "pulsazione 2",
-          "patrolling2": "pattugliamento 2"
+          "patrolling2": "pattugliamento 2",
+          "moving with arrow keys2": "movimento con tasti freccia2",
+          "driving with arrow keys2": "guida con tasti freccia2"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "guida con tasti freccia",
@@ -1695,7 +1697,8 @@
           "moving south": "spostamento verso sud",
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
-          "spinning left": "rotazione anti-oraria"
+          "spinning left": "rotazione anti-oraria",
+          "blocking movement": "movimento di blocco"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "guida con tasti freccia",
@@ -1723,7 +1726,10 @@
           "moving north2": "spostamento verso nord 2",
           "jittering2": "pulsazione 2",
           "moving west2": "spostamento verso ovest 2",
-          "patrolling2": "pattugliamento 2"
+          "patrolling2": "pattugliamento 2",
+          "blocking movement": "movimento di blocco",
+          "moving with arrow keys2": "movimento con tasti freccia2",
+          "driving with arrow keys2": "guida con tasti freccia2"
         },
         "courseF_apps_collector": {
           "wandering": "movimento casuale",
@@ -1751,7 +1757,10 @@
           "swimming left and right2": "nuotata sinistra-destra 2",
           "moving north2": "spostamento verso nord 2",
           "jittering2": "pulsazione 2",
-          "patrolling2": "pattugliamento 2"
+          "patrolling2": "pattugliamento 2",
+          "flying west and looping": "in volo verso ovest e ciclo",
+          "moving with arrow keys2": "movimento con tasti freccia2",
+          "driving with arrow keys2": "guida con tasti freccia2"
         },
         "courseF_apps_madlib": {
           "wandering": "movimento casuale",
@@ -1806,7 +1815,8 @@
           "moving south": "spostamento verso sud",
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
-          "spinning left": "rotazione anti-oraria"
+          "spinning left": "rotazione anti-oraria",
+          "blocking movement": "movimento di blocco"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "guida con tasti freccia",
@@ -1822,7 +1832,8 @@
           "moving south": "spostamento verso sud",
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
-          "spinning left": "rotazione anti-oraria"
+          "spinning left": "rotazione anti-oraria",
+          "blocking movement": "movimento di blocco"
         },
         "courseF_editable_madlib": {
           "wandering": "movimento casuale",
