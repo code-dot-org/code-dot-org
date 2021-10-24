@@ -308,7 +308,6 @@ export default class PoetryLibrary extends CoreLibrary {
       return renderInfo;
     }
 
-    // Add 2 so there's time before the first line and after the last line
     const framesPerLine = POEM_DURATION / renderInfo.lines.length;
 
     const newLines = [];
