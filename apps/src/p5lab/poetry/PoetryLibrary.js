@@ -260,19 +260,28 @@ export default class PoetryLibrary extends CoreLibrary {
       frameWidth
     );
 
-    // rotate canvas 90 degrees to draw the sides of the frame
+    // In p5, you can't rotate an image, you just rotate the canvas.
+    // right
     this.p5.translate(200, 200);
     this.p5.rotate(90);
     this.p5.translate(-200, -200);
-
-    // right
-    this.p5.image(frameImage, 0, 0, PLAYSPACE_SIZE, frameWidth);
-    // left
     this.p5.image(
       frameImage,
+      frameWidth,
       0,
-      PLAYSPACE_SIZE - frameWidth,
-      PLAYSPACE_SIZE,
+      PLAYSPACE_SIZE - 2 * frameWidth,
+      frameWidth
+    );
+
+    // left
+    this.p5.translate(200, 200);
+    this.p5.rotate(180);
+    this.p5.translate(-200, -200);
+    this.p5.image(
+      frameImage,
+      frameWidth,
+      0,
+      PLAYSPACE_SIZE - 2 * frameWidth,
       frameWidth
     );
 
