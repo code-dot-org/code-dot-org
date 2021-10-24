@@ -63,10 +63,30 @@ export default class Poetry extends SpriteLab {
     );
   }
 
+  preloadFrames() {
+    if (!this.preloadFrames_) {
+      this.preloadFrames_ = new Promise(resolve => {
+        this.p5Wrapper.p5.loadImage(
+          '/blockly/media/common_images/brick.png',
+          image => resolve(image),
+          err => {
+            console.error(err);
+            resolve();
+          }
+        );
+      });
+    }
+
+    return this.preloadFrames_.then(
+      image => (this.p5Wrapper.p5._preloadedFrame = image)
+    );
+  }
+
   preloadLabAssets() {
     return Promise.all([
       super.preloadLabAssets(),
-      this.preloadInstructorImage()
+      this.preloadInstructorImage(),
+      this.preloadFrames()
     ]);
   }
 

@@ -28,6 +28,7 @@ export default class PoetryLibrary extends CoreLibrary {
         fill: 'black',
         font: 'Arial'
       },
+      frameType: undefined,
       isVisible: true,
       textEffects: [],
       // By default, start the poem animation when the program starts (frame 1)
@@ -54,6 +55,7 @@ export default class PoetryLibrary extends CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
+        this.drawFrame();
         const renderInfo = this.getRenderInfo(
           this.poemState,
           this.p5.World.frameCount
@@ -77,6 +79,10 @@ export default class PoetryLibrary extends CoreLibrary {
         if (!this.isPreviewFrame()) {
           this.foregroundEffects.forEach(effect => effect.func());
         }
+      },
+
+      addFrame(frameType) {
+        this.poemState.frameType = frameType;
       },
 
       destroy(costume) {
@@ -231,6 +237,42 @@ export default class PoetryLibrary extends CoreLibrary {
       ...backgroundEffects,
       ...foregroundEffects
     };
+  }
+
+  drawFrame() {
+    const frameWidth = 15;
+    this.p5.push();
+    this.p5.noStroke();
+    let frameImage = this.p5._preloadedFrame;
+
+    // top
+    this.p5.image(frameImage, 0, 0, PLAYSPACE_SIZE, frameWidth);
+    // bottom
+    this.p5.image(
+      frameImage,
+      0,
+      PLAYSPACE_SIZE - frameWidth,
+      PLAYSPACE_SIZE,
+      frameWidth
+    );
+
+    // rotate canvas 90 degrees to draw the sides of the frame
+    this.p5.translate(200, 200);
+    this.p5.rotate(90);
+    this.p5.translate(-200, -200);
+
+    // right
+    this.p5.image(frameImage, 0, 0, PLAYSPACE_SIZE, frameWidth);
+    // left
+    this.p5.image(
+      frameImage,
+      0,
+      PLAYSPACE_SIZE - frameWidth,
+      PLAYSPACE_SIZE,
+      frameWidth
+    );
+
+    this.p5.pop();
   }
 
   isPreviewFrame() {
