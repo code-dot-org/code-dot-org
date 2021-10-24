@@ -240,10 +240,14 @@ export default class PoetryLibrary extends CoreLibrary {
   }
 
   drawFrame() {
+    const frameImage = this.p5._preloadedFrames[this.poemState.frameType];
+    if (!frameImage) {
+      return;
+    }
+
     const frameWidth = 15;
     this.p5.push();
     this.p5.noStroke();
-    let frameImage = this.p5._preloadedFrame;
 
     // top
     this.p5.image(frameImage, 0, 0, PLAYSPACE_SIZE, frameWidth);

@@ -64,22 +64,40 @@ export default class Poetry extends SpriteLab {
   }
 
   preloadFrames() {
+    const frames = {
+      rainbow: 'rainbow',
+      hearts: 'heart-pink',
+      flowers: 'flower-purple',
+      zigzag: 'lightning',
+      swirls: 'swirlyline',
+      pawPrints: 'pawprint',
+      waves: 'water',
+      brick: 'brick'
+    };
     if (!this.preloadFrames_) {
-      this.preloadFrames_ = new Promise(resolve => {
-        this.p5Wrapper.p5.loadImage(
-          '/blockly/media/common_images/brick.png',
-          image => resolve(image),
-          err => {
-            console.error(err);
-            resolve();
-          }
-        );
-      });
+      this.preloadFrames_ = Promise.all(
+        Object.keys(frames).map(
+          frame =>
+            new Promise(resolve => {
+              this.p5Wrapper.p5.loadImage(
+                `/blockly/media/common_images/${frames[frame]}.png`,
+                image => resolve({name: frame, image}),
+                err => {
+                  console.error(err);
+                  resolve();
+                }
+              );
+            })
+        )
+      );
     }
 
-    return this.preloadFrames_.then(
-      image => (this.p5Wrapper.p5._preloadedFrame = image)
-    );
+    return this.preloadFrames_.then(values => {
+      this.p5Wrapper.p5._preloadedFrames = {};
+      values.forEach(value => {
+        this.p5Wrapper.p5._preloadedFrames[value.name] = value.image;
+      });
+    });
   }
 
   preloadLabAssets() {
