@@ -309,16 +309,14 @@ export default class PoetryLibrary extends CoreLibrary {
     }
 
     // Add 2 so there's time before the first line and after the last line
-    const framesPerLine = POEM_DURATION / (renderInfo.lines.length + 2);
+    const framesPerLine = POEM_DURATION / renderInfo.lines.length;
 
     const newLines = [];
     for (let i = 0; i < renderInfo.lines.length; i++) {
-      const lineNum = i + 1; // account for time before the first line shows
       const newLine = {...renderInfo.lines[i]};
-      newLine.start =
-        this.poemState.animationStartFrame + lineNum * framesPerLine;
+      newLine.start = this.poemState.animationStartFrame + i * framesPerLine;
       newLine.end =
-        this.poemState.animationStartFrame + (lineNum + 1) * framesPerLine;
+        this.poemState.animationStartFrame + (i + 1) * framesPerLine;
       if (frameCount >= newLine.start) {
         newLines.push(newLine);
       }
