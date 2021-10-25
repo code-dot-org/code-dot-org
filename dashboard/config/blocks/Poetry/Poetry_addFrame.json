@@ -11,6 +11,7 @@
     "args": [
       {
         "name": "BRUSH",
+        "type": "String",
         "options": [
           [
             "Metal Frame"
