@@ -277,10 +277,6 @@
           "word": "Sprite",
           "definition": "Un graphique à l'écran avec un emplacement, une taille et une apparence. "
         },
-        "user/coursef/2021": {
-          "word": "Utilisateur",
-          "definition": "Quelqu'un qui utilise un objet, dont des logiciels et du matériel. "
-        },
         "behavior/coursef/2021": {
           "word": "comportement",
           "definition": "Une action qu'un sprite exécute en continu jusqu'à ce qu'on lui dise de s'arrêter. "
@@ -290,8 +286,7 @@
           "definition": "Algorithme qui a été codé dans quelque chose qui peut être exécuté par une machine."
         },
         "algorithm/coursef/2021": {
-          "word": "Algorithme",
-          "definition": "Une série d'étapes à suivre pour terminer une tâche."
+          "word": "Algorithme"
         },
         "event/coursef/2021": {
           "word": "Évènement",
@@ -302,12 +297,10 @@
           "definition": "Un espace réservé pour une information qui peut changer."
         },
         "prompt/coursef/2021": {
-          "word": "Invite",
           "definition": "Message sur l'écran de l'ordinateur qui attend une saisie de l'utilisateur. "
         },
         "input/coursef/2021": {
-          "word": "Entrée",
-          "definition": "Les informations que les ordinateurs obtiennent des utilisateurs. "
+          "word": "Entrée"
         },
         "loop/coursef/2021": {
           "word": "Boucle",
@@ -329,41 +322,11 @@
           "word": "Apprentissage Automatique",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "abréviation de Domain Name System, ce système traduit les noms de domaine (comme exemple.com) en adresses IP (comme 93.184.216.34)"
-        },
         "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "Un groupe d'ordinateurs et de serveurs qui sont reliés les uns aux autres."
+          "word": "Internet"
         },
         "packets/coursef/2021": {
-          "word": "PaqLes uets",
-          "definition": "De petits morceaux d'informations qui ont été soigneusement formés à partir de plus grands blocs d'informations."
-        },
-        "servers/coursef/2021": {
-          "word": "Serveurs",
-          "definition": "Ordinateurs qui n'existent que pour fournir des choses aux autres."
-        },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "Une adresse facile à retenir pour appeler une page web (comme www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Câble",
-          "definition": "Un procédé d'envoi d'informations utilisant les câbles téléphoniques ou de télévision."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Câble à Fibre Optique",
-          "definition": "Une connexion qui utilise la lumière pour transmettre des informations"
-        },
-        "ip_address/coursef/2021": {
-          "word": "Adresse IP",
-          "definition": "Un numéro attribué à tout élément connecté à Internet."
-        },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "Procédé sans fil d'envoi d'informations à l'aide d'ondes radio."
+          "word": "PaqLes uets"
         },
         "define/coursef/2021": {
           "word": "Définis",
@@ -518,8 +481,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "binary/coursec/2021": {
-          "word": "Binaire",
-          "definition": "Une façon de représenter l'information n'utilisant que deux options."
+          "word": "Binaire"
         },
         "algorithm/coursed/2021": {
           "word": "Algorithme",
@@ -545,10 +507,6 @@
           "word": "Programmation",
           "definition": "L'art de créer un programme."
         },
-        "frustrated/coursed/2021": {
-          "word": "Frustré",
-          "definition": "Te sentir agacé ou en colère parce que quelque chose n'est pas comme tu le veux."
-        },
         "persistence/coursed/2021": {
           "word": "Persévérance",
           "definition": "Essayer encore et encore, même quand quelque chose est très difficile."
@@ -558,7 +516,6 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/coursed/2021": {
-          "word": "code",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "repeat/coursed/2021": {
@@ -572,10 +529,6 @@
         "conditionals/coursed/2021": {
           "word": "Instructions conditionnelles",
           "definition": "Déclarations qui s'exécutent que sous certaines conditions."
-        },
-        "pseudocode/coursed/2021": {
-          "word": "pseudocode",
-          "definition": "Une description en langage clair des étapes d'un algorithme "
         },
         "condition/coursed/2021": {
           "word": "Condition",
@@ -620,9 +573,6 @@
         "event/express/2021": {
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
-        },
-        "code/express/2021": {
-          "word": "code"
         },
         "loop/express/2021": {
           "word": "Boucle",

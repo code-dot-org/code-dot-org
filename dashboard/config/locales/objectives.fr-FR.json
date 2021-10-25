@@ -59,12 +59,6 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
         },
-        "5b8eb232-7326-4c4d-8507-0c2da9642581": {
-          "description": "Décrire l'importance de l'utilisateur dans le processus de conception. "
-        },
-        "d67e0be9-d618-464a-9f80-4549d63a2e03": {
-          "description": "Identifiez les sprites dans un programme informatique en cours d'exécution. "
-        },
         "b827b751-3ba7-4042-a8b4-8fed0ccceb21": {
           "description": "Créez de nouveaux sprites et attribuez-leur des déguisements et des comportements. "
         },
@@ -80,41 +74,11 @@
         "a1174680-99bd-4d3d-a4e7-124d1aa5a0e7": {
           "description": "Créez une animation interactive à l'aide d'événements. "
         },
-        "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
-          "description": "Créez un animal de compagnie virtuel interactif en utilisant des événements, des comportements et des illustrations personnalisées. "
-        },
-        "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
-          "description": "Programmez des solutions aux problèmes qui surviennent lors de la conception d'un animal de compagnie virtuel, comme le nourrir. "
-        },
-        "8cbf109a-b450-420b-973a-db9efd47f61f": {
-          "description": "Décidez quels types de déclarations sont acceptables à dire en ligne et lesquelles ne le sont pas. "
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": "Déclarer une variable"
-        },
-        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
-          "description": "Attribuer une valeur à une variable "
-        },
-        "41ddf297-8c92-42c1-8157-97ba0660483d": {
-          "description": "Appelez une variable plusieurs fois dans un programme. "
-        },
-        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
-          "description": "Déterminez la relation entre la façon dont une variable est définie, stockée et récupérée lorsqu'on appuie sur « Exécuter » sur un programme."
-        },
-        "28d3cc79-4aea-431d-a445-745e75e747d8": {
-          "description": "Utiliser des variables pour contenir des mots et des phrases."
-        },
         "66e1fe88-3957-437f-a065-66909844fcd1": {
           "description": "Utiliser des variables conjointement avec des invites."
         },
-        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
-          "description": "Utiliser des variables pour contenir des mots et des phrases."
-        },
         "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
           "description": "Utiliser des variables conjointement avec des invites."
-        },
-        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
-          "description": "Créez un programme informatique interactif qui réponde aux entrées de l'utilisateur."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -146,12 +110,6 @@
         "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
           "description": "Examinez le code pour trouver des endroits où des variables peuvent remplacer certaines valeurs."
         },
-        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
-          "description": "Déterminer la valeur de départ, la valeur d'arrêt et la valeur de progression pour une boucle « pour »."
-        },
-        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
-          "description": "Illustrer les valeurs de compteur, frappées à chaque fois, via une boucle « pour » pendant l'exécution."
-        },
         "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
           "description": "Déterminer la valeur de départ, la valeur d'arrêt et la valeur de progression pour une boucle `« pour »`."
         },
@@ -164,15 +122,6 @@
         "7ad09074-8899-4330-bb54-6a00c5164299": {
           "description": "Reconnaître quand utiliser une boucle « pour » et quand utiliser d'autres boucles telles que les boucles « répéter » et « tant que »."
         },
-        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
-          "description": "Utiliser une simulation informatique pour recueillir des données sur un modèle "
-        },
-        "519c1444-230e-4182-a4eb-09414a7d09fb": {
-          "description": "Créer un graphique à double ligne pour comparer les données de deux sources différentes "
-        },
-        "16dabf47-0051-4143-834c-067bb8fb605c": {
-          "description": "Faire et tester une prédiction en modifiant les variables de simulation "
-        },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Discutez du rôle que joue l'intelligence artificielle dans leur vie."
         },
@@ -182,17 +131,8 @@
         "6638c886-891e-4d59-820a-227e37274e49": {
           "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
         },
-        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
-          "description": "Découvrir la complexité de l'envoi de messages sur Internet."
-        },
-        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
-          "description": "Traduire les URL en adresses IP."
-        },
         "12c53e25-70d7-4192-a97a-da08dd673338": {
           "description": "Apprendre à planifier à l'avance pour une mission en cours."
-        },
-        "b76f1811-9865-416d-bd06-601301120384": {
-          "description": "Être en mesure d'expliquer comment les limites du système peuvent affecter la conception du projet."
         },
         "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
           "description": "Décrire comment un compromis peut aider à maintenir un projet sur la bonne voie et inspirer la créativité."
@@ -203,21 +143,6 @@
         "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
           "description": "Articuler le processus de conception et la façon dont il a contribué à façonner le projet final terminé."
         },
-        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
-          "description": "Apprenez que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». "
-        },
-        "5efa6c72-000c-40a0-ace0-55f47117305b": {
-          "description": "Découvrez quelles informations peuvent être partagées en ligne. "
-        },
-        "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
-          "description": "Définir une liste d'étapes (algorithme) pour amener un ami de sa position de départ à son objectif "
-        },
-        "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
-          "description": "Traduire une liste d'étapes en une série d'actions physiques "
-        },
-        "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
-          "description": "Identifier et corriger les erreurs dans l'exécution d'un algorithme "
-        },
         "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
           "description": "Établissez un modèle des bons comportements en salle informatique "
         },
@@ -227,35 +152,17 @@
         "fae372cb-4b72-4b35-abd6-e2424e54d791": {
           "description": "Traduire les mouvements en une série de commandes."
         },
-        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
-          "description": "Construire un programme en réorganisant des mouvements séquentiels."
-        },
-        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
-          "description": "Construire un programme informatique à partir d'un ensemble d'instructions écrites."
-        },
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
           "description": "Traduire les mouvements en une série de commandes."
         },
         "d5f927b9-727a-423e-90d3-80faad21aa34": {
           "description": "Identifier et localiser les bugs dans un programme."
         },
-        "6c67256a-a8d5-4a57-9744-092686fb01a0": {
-          "description": "Répéter les actions initiées par l'instructeur."
-        },
-        "368e8edc-290d-4737-a616-a543e5298c66": {
-          "description": "Traduire un programme d'image en une danse du monde réel."
-        },
-        "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
-          "description": "Convertir une série d'actions multiples en une seule boucle."
-        },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
         "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
           "description": "Décomposer une longue séquence d'instructions en la plus petite séquence reproductible possible."
-        },
-        "8293f536-510e-44a0-880b-397b3f97deeb": {
-          "description": "Créer un programme pour une tâche donnée qui boucle une séquence de commandes."
         },
         "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
           "description": "Employer une combinaison de commandes séquentielles et en boucle pour atteindre la fin d'un labyrinthe."
@@ -274,15 +181,6 @@
         },
         "61329a99-1c0a-414f-9694-78f7f9c81372": {
           "description": "Créer un programme qui dessine des formes complexes en répétant de simples séquences."
-        },
-        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
-          "description": "Énumérez plusieurs exemples différents d'applications pour smartphone. "
-        },
-        "595564b5-94b4-4104-9613-05eadc30663e": {
-          "description": "Recommander la technologie à d'autres, en fonction de leurs besoins à eux. "
-        },
-        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
-          "description": "Faites preuve d'empathie et de créativité pour concevoir des technologies pour les autres. "
         },
         "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
           "description": "Répéter les commandes données par un instructeur."
@@ -308,26 +206,11 @@
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
         },
-        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
-          "description": "Découvrir qu'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
-        },
-        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
-          "description": "Comparer le fait d'ètre en sécurité en ligne avec celui de l'être dans le monde réel. "
-        },
-        "ba49206c-c099-4994-be57-1f8744273eaf": {
-          "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
-        },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
         },
         "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
-        },
-        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
-          "description": "Traduire un algorithme en un programme"
-        },
-        "95ef707d-603d-4106-955e-3138f0f16a5d": {
-          "description": "Décoder et exécuter un programme créé par quelqu'un d'autre"
         },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
           "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
@@ -344,20 +227,11 @@
         "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
           "description": "Construire un programme d'ordinateur à partir d'un ensemble d'instructions écrites"
         },
-        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "Choisir les procesus de débogage appropriés lors de la résolution de problèmes"
-        },
         "199aed02-347c-4892-9e98-d7571ae64c9d": {
           "description": "Séquencer des commandes dans un ordre logique."
         },
         "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
           "description": "Reconnaître des problèmes ou « bugs », dans un programme, et élaborer un plan pour résoudre les problèmes."
-        },
-        "407c5a4d-9337-4218-92d5-018597e41e19": {
-          "description": "Identifier un code répétitif et réduire plusieurs actions en une seule boucle."
-        },
-        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
-          "description": "Interpréter un programme avec des boucles comme une série de plusieurs actions."
         },
         "cb7cab91-20ca-495a-a429-621631cb0507": {
           "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
@@ -404,15 +278,6 @@
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
         },
-        "1b4ddab6-f8a7-436e-929d-8ea87e41575f": {
-          "description": "Comprendre à quoi peut ressembler la méchanceté en ligne et ce qu'elle peut faire aux gens. "
-        },
-        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
-          "description": "Identifiez des façons de répondre aux mots méchants en ligne, en utilisant S-T-O-P. "
-        },
-        "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
-          "description": "Insister sur la précision, lors de la création d'instructions"
-        },
         "26392005-5f64-4707-b38b-847d1f009a29": {
           "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
         },
@@ -446,12 +311,6 @@
         "d47b51d2-9114-4dfd-ad21-810573d85543": {
           "description": "Casse des formes complexes en parties simples."
         },
-        "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
-          "description": "Identifier les modèles, répétés dans le code, qui pourraient être remplacés par une boucle"
-        },
-        "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
-          "description": "Écrire des instructions qui utilisent des boucles pour répéter des modèles"
-        },
         "46288097-dbab-437f-897c-4e14352ae388": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
         },
@@ -460,15 +319,6 @@
         },
         "8e76410f-b4db-446b-88c0-00013d9c05bd": {
           "description": "Employer une combinaison de commandes séquentielles et en boucle pour atteindre la fin d'un labyrinthe."
-        },
-        "ff15ce2c-8445-442a-89f0-7a50e741850a": {
-          "description": "Écrire un programme pour une tâche donnée qui boucle une seule commande."
-        },
-        "757d864e-38a3-4b30-8617-b9a4174c8b08": {
-          "description": "Identifier quand une boucle peut être utilisée pour simplifier une action répétitive."
-        },
-        "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
-          "description": "Utilisez une combinaison de commandes séquentielles et en boucle pour déplacer et effectuer des actions."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "Identifier les avantages de l'utilisation d'une structure de boucle au lieu de la répétition manuelle."
@@ -479,62 +329,17 @@
         "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
           "description": "Répéter les commandes données par un instructeur."
         },
-        "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
-          "description": "Reconnaître les mouvements de l'enseignant comme des signaux pour lancer des commandes."
-        },
         "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
           "description": "S'entraîner à différencier des actions prédéfinies et des actions axées sur des événements."
-        },
-        "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
-          "description": "Faire correspondre les blocs avec le gestionnaire d'événements approprié."
-        },
-        "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
-          "description": "Créer un jeu à l'aide de gestionnaires d'événements."
         },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
           "description": "Partager un artefact créatif avec d'autres élèves."
         },
-        "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
-          "description": "Créez un jeu animé et interactif à l'aide de séquences et de gestionnaires d'événements."
-        },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "Identifier les actions qui aux événements d'entrée."
         },
-        "f60bacab-23a9-428a-bfe3-629f21ce8b4c": {
-          "description": "Recueillir et enregistrer des données sur des quantités d'objets réels ou de personnages sur un écran"
-        },
-        "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
-          "description": "Créez un graphique à barres et un camembert pour représenter des données simples."
-        },
-        "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
-          "description": "Faites des comparaisons entre les visualisations de données faites par d'autres et utilisez-les pour faire une prédiction. "
-        },
-        "9a785141-1fe6-4728-996c-2fbb8781b62c": {
-          "description": "Encoder des lettres en binaire."
-        },
-        "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
-          "description": "Décoder du binaire en lettres."
-        },
-        "ce1f4117-76f3-4359-a554-683a878f82cb": {
-          "description": "Établir un lien entre l'idée de stocker des lettres sur l'idée de stocker des informations dans un ordinateur."
-        },
-        "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
-          "description": "Utiliser une conception planifiée en tant que plan de création."
-        },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
-        },
-        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
-          "description": "Définissez le terme « mot de passe » et décrivez le but d'un mot de passe."
-        },
-        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
-          "description": "Entraînez-vous à créer un mot de passe fort et mémorisable."
-        },
-        "3c4b51d5-b72f-42df-a55a-86c146214424": {
-          "description": "Recadrer une séquence d'étapes comme un programme codé"
-        },
-        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
-          "description": "Expliquer les contraintes de la traduction des problèmes, du langage humain au langage machine"
         },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
           "description": "Ordonne des commandes de mouvement à l'image d'étapes séquentielles dans un programme."
@@ -545,24 +350,6 @@
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
           "description": "Décomposer une longue séquence d'instructions en la plus grande séquence reproductible."
         },
-        "8a0addda-b47f-4551-8c82-9115be3c130d": {
-          "description": "Définir des idées en utilisant du code et des symboles."
-        },
-        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
-          "description": "Vérifier le travail effectué par les coéquipiers."
-        },
-        "8dba466d-d809-49c6-8f60-218c27964411": {
-          "description": "Identifiez les signes d'énervement"
-        },
-        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
-          "description": "Lire et comprendre un code donné."
-        },
-        "71cede4e-3e93-41d6-a422-f2443f756a61": {
-          "description": "Identifier un bug et les problèmes qu'il génère dans un programme."
-        },
-        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
-          "description": "Décrire et mettre en œuvre un plan pour déboguer un programme."
-        },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Identifier les actions qui aux événements d'entrée."
         },
@@ -571,9 +358,6 @@
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Partager un artefact créatif avec d'autres élèves."
-        },
-        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
-          "description": "Créer un jeu animé et interactif à l'aide de séquences et de d'événements."
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "Identifier les actions qui aux événements d'entrée."
@@ -613,9 +397,6 @@
         },
         "494526f8-7392-4788-9126-b2e2dd53b241": {
           "description": "Déterminer si une condition est remplie, en fonction de critères."
-        },
-        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
-          "description": "Parcourir un programme et prédire le résultat, en fonction d'un ensemble d'entrées."
         },
         "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
           "description": "Définir les circonstances dans lesquelles certaines parties d'un programme doivent s'exécuter et quand elles ne le doivent pas."
@@ -767,12 +548,6 @@
         "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
           "description": "Traduire des déclarations conditionnelles et des boucles de langue parlée en un programme."
         },
-        "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
-          "description": "Imbriquer des conditions pour analyser plusieurs conditions de valeur à l'aide de la logique si, sinon si, sinon."
-        },
-        "0174cd8f-0a91-423b-b643-2b8a0290fcff": {
-          "description": "Associer une boucle et une instruction conditionnelle."
-        },
         "1ece8579-425f-4324-a041-8f47ce736f42": {
           "description": "Utiliser des fonctions pour simplifier des programmes complexes."
         },
@@ -920,9 +695,6 @@
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
         },
-        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
-          "description": "Combiner des formes simples dans des concepts complexes avec des boucles imbriquées."
-        },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "Compter le nombre de fois qu'une action doit être répétée et le représenter comme une boucle."
         },
@@ -937,15 +709,6 @@
         },
         "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
           "description": "Décomposer le code en séquences reproductibles les plus grandes, à l'aide à la fois des boucles et des boucles imbriquées."
-        },
-        "e26d818e-81fd-43c6-8558-fc69835e693a": {
-          "description": "Localiser les phrases répétitives à l'intérieur des paroles d'une chanson."
-        },
-        "815c91bc-4848-43ba-a234-d1b184ab120b": {
-          "description": "Identifier les sections d'une chanson à intégrer dans une fonction."
-        },
-        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
-          "description": "Décrire comment les fonctions peuvent faciliter l'écriture de programmes."
         },
         "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
           "description": "Utiliser des fonctions pour simplifier des programmes complexes."
@@ -979,9 +742,6 @@
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
           "description": "Apprendre à planifier à l'avance pour une mission en cours."
-        },
-        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
-          "description": "Expliquer comment les limites du système peuvent affecter la conception du projet."
         },
         "45927b72-922a-4845-8b40-2458a92372f5": {
           "description": "Décrire comment un compromis peut aider à maintenir un projet sur la bonne voie et inspirer la créativité."
