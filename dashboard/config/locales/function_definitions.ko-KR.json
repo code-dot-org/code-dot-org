@@ -2100,16 +2100,23 @@
             "parameters": {
               "points": "점수",
               "length": "length"
-            }
+            },
+            "description": "주어진 점과 주어진 길이의 변으로 별을 그리세요."
           },
           "draw a circle": {
-            "name": "원 그리기"
+            "name": "원 그리기",
+            "parameters": {
+              "radius": "반지름"
+            },
+            "description": "주어진 반지름으로 원 그리기"
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "length",
-              "repeat": "반복"
-            }
+              "repeat": "반복",
+              "sides": "변"
+            },
+            "name": "바람개비 그리기"
           },
           "draw a triangle": {
             "name": "삼각형 그리기",
@@ -2119,8 +2126,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "length"
-            }
+              "length": "length",
+              "sides": "변"
+            },
+            "name": "도형 그리기"
           },
           "draw a house": {
             "name": "집 그리기",
@@ -2131,8 +2140,21 @@
           "draw a square": {
             "name": "사각형 그리기",
             "parameters": {
-              "length": "length"
+              "length": "length",
+              "sides": "변"
             }
+          },
+          "small flower": {
+            "name": "작은 꽃"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "로직 플라워2"
+          },
+          "LOGIC FLOWER": {
+            "name": "로직 플라워"
+          },
+          "LOGIC FLOWERS": {
+            "name": "로직 플라워"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -2141,16 +2163,23 @@
             "parameters": {
               "points": "점수",
               "length": "length"
-            }
+            },
+            "description": "주어진 점과 주어진 길이의 변으로 별을 그리세요."
           },
           "draw a circle": {
-            "name": "원 그리기"
+            "name": "원 그리기",
+            "description": "주어진 반지름으로 원 그리기",
+            "parameters": {
+              "radius": "반지름"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "length",
-              "repeat": "반복"
-            }
+              "repeat": "반복",
+              "sides": "변"
+            },
+            "name": "바람개비 그리기"
           },
           "draw a triangle": {
             "name": "삼각형 그리기",
@@ -2160,8 +2189,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "length"
-            }
+              "length": "length",
+              "sides": "변"
+            },
+            "name": "도형 그리기"
           },
           "draw a house": {
             "name": "집 그리기",
@@ -2182,16 +2213,23 @@
             "parameters": {
               "points": "점수",
               "length": "length"
-            }
+            },
+            "description": "주어진 점과 주어진 길이의 변으로 별을 그리세요."
           },
           "draw a circle": {
-            "name": "원 그리기"
+            "name": "원 그리기",
+            "description": "주어진 반지름으로 원 그리기",
+            "parameters": {
+              "radius": "반지름"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "length",
-              "repeat": "반복"
-            }
+              "repeat": "반복",
+              "sides": "변"
+            },
+            "name": "바람개비 그리기"
           },
           "draw a triangle": {
             "name": "삼각형 그리기",
@@ -2201,8 +2239,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "length"
-            }
+              "length": "length",
+              "sides": "변"
+            },
+            "name": "도형 그리기"
           },
           "draw a house": {
             "name": "집 그리기",
@@ -2231,7 +2271,8 @@
           "draw a pinwheel": {
             "parameters": {
               "length": "length",
-              "repeat": "반복"
+              "repeat": "반복",
+              "sides": "변"
             }
           },
           "draw a triangle": {
@@ -2242,7 +2283,8 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "length"
+              "length": "length",
+              "sides": "변"
             }
           },
           "draw a house": {
@@ -2438,6 +2480,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "함수 이름"
+          },
+          "draw line of polygons": {
+            "name": "다각형의 선 그리기"
+          },
+          "draw polygon": {
+            "name": "다각형 그리기"
           }
         },
         "courseF_apps_collector": {
@@ -2854,6 +2902,23 @@
         "CourseF_app_computer": {
           "reset game": {
             "name": "게임 재설정"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "경로를 따라 선택하기"
+          },
+          "pumpkin square": {
+            "name": "호박 스퀘어"
+          },
+          "check square for corn": {
+            "name": "옥수수에 대한 사각형 확인"
+          },
+          "get produce": {
+            "name": "생산"
+          },
+          "get all pumpkins": {
+            "name": "모든 호박 갖기"
           }
         }
       }

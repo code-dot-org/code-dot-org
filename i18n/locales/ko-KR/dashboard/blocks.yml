@@ -1686,7 +1686,6 @@ ko:
           BEHAVIOR:
             growing: 성장
             jittering: 지터링
-            shrinking: 감소
             spinning_left: 왼쪽으로 회전
             spinning_right: 오른쪽으로 회전
             wandering: 배회
@@ -1695,7 +1694,6 @@ ko:
           BEHAVIOR:
             growing: 성장
             jittering: 지터링
-            shrinking: 감소
             spinning_left: 왼쪽으로 회전
             spinning_right: 오른쪽으로 회전
             wandering: 배회
