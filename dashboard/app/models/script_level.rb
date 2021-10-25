@@ -667,7 +667,7 @@ class ScriptLevel < ApplicationRecord
   def get_level_keys(seed_context, use_existing_level_keys = true)
     # Use the level_keys property if it's there, unless we specifically want to re-query the level keys.
     # This property is set during seeding.
-    return self.level_keys if use_existing_level_keys && !self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
+    return self.level_keys.sort if use_existing_level_keys && !self.level_keys.nil_or_empty? # rubocop:disable Style/RedundantSelf
 
     if levels.loaded?
       my_levels = levels
@@ -681,7 +681,7 @@ class ScriptLevel < ApplicationRecord
       end
       raise "No levels found for #{inspect}" if my_levels.nil_or_empty?
     end
-    my_levels.sort_by(&:id).map(&:key)
+    my_levels.sort_by(&:id).map(&:key).sort
   end
 
   # @param [Array<Hash>] levels_data - Array of hashes each representing a level
