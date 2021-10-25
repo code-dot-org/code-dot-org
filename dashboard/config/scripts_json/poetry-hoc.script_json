@@ -4,14 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
-      "version_year": "unversioned",
-      "is_course": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "poembot-hoc",
-    "serialized_at": "2021-09-16 16:53:05 UTC",
+    "serialized_at": "2021-10-25 22:54:58 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "poetry-hoc"
     }

@@ -4,8 +4,6 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "professional_learning_course": "CSP Support",
-      "student_detail_progress_view": true,
       "announcements": [
         {
           "notice": "This professional learning course is associated with a version of the CS Principles course that is no longer supported.  Please visit our Courses Overview page (https://studio.code.org/courses) to see our most current curricula.",
@@ -15,12 +13,15 @@
           "visibility": "Teacher-only"
         }
       ],
-      "deprecated": true
+      "deprecated": true,
+      "professional_learning_course": "CSP Support",
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 20:42:38 UTC",
+    "serialized_at": "2021-10-25 22:53:23 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp5-support"
     }

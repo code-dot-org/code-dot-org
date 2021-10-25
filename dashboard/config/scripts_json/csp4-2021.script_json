@@ -4,21 +4,21 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 23:03:29 UTC",
+    "serialized_at": "2021-10-25 22:54:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "seeding_key": {
@@ -6859,9 +6859,9 @@
       "url": "https://docs.google.com/document/d/1Xl34LDzK2GB2x46Bo8Mx6RI1K-deRG_vHO1oQqZlfsA/edit",
       "key": "conditionals-make-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "conditionals-make-activity-guide"
@@ -6872,8 +6872,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -6884,9 +6884,9 @@
       "url": "https://www.youtube.com/watch?v=y3rCKJNOwpA&t=6s",
       "key": "cs-principles-conditionals-part-1-boolean-expressions",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/conditionals_1.mp4"
+        "download_url": "https://videos.code.org/2015/csp/applab/conditionals_1.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "cs-principles-conditionals-part-1-boolean-expressions"
@@ -6897,8 +6897,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -6909,9 +6909,9 @@
       "url": "https://docs.google.com/document/d/1K_0TbgCTNsO52Nm4rzy_o3P0X80SI8nx0KwHhHpFfrk/edit?usp=sharing",
       "key": "csp_functions_make",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "csp_functions_make"
@@ -6934,9 +6934,9 @@
       "url": "https://docs.google.com/document/d/1NfOGQsV9pT72cRKwSaN8PmYaBMwepjPzPjcXySnJg7E/edit?usp=sharing",
       "key": "csp_u4_practice_pt_rubric",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "csp_u4_practice_pt_rubric"
@@ -6947,8 +6947,8 @@
       "url": "https://docs.google.com/presentation/d/1a4w7xtUqAs-3jxMdcLiwGayVA9r3x7k27oiVfsApRMs/edit?usp=sharing",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_4_-_variables_conditionals_and_functions"
@@ -6971,8 +6971,8 @@
       "url": "https://youtu.be/Vlj1_X474to",
       "key": "debugging_global_vs_local_variables",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "debugging_global_vs_local_variables"
@@ -6983,8 +6983,8 @@
       "url": "https://drive.google.com/file/d/1f2vmIhT_8di6f_rXusxVzkDfiVRXjgLk/view?usp=sharing",
       "key": "debugging_variable_scope_functions",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "debugging_variable_scope_functions"
@@ -6995,9 +6995,9 @@
       "url": "https://youtu.be/NBwlNBE9Fl0",
       "key": "defining_and_calling_functions",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/csp_definingandcallingfunctions_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "defining_and_calling_functions"
@@ -7021,8 +7021,8 @@
       "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
       "key": "guide_to_eipm_lessons",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons"
@@ -7033,8 +7033,8 @@
       "url": "https://youtu.be/mzm-xqXH8BQ",
       "key": "guide_to_explore_lessons",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "guide_to_explore_lessons"
@@ -7045,8 +7045,8 @@
       "url": "https://youtu.be/jC85CeXs3ds",
       "key": "guide_to_investigate_lessons",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "guide_to_investigate_lessons"
@@ -7057,8 +7057,8 @@
       "url": "https://youtu.be/d5IK3kUlXW4",
       "key": "guide_to_make_lessons",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "guide_to_make_lessons"
@@ -7069,8 +7069,8 @@
       "url": "https://youtu.be/Aad0UJXGcR4",
       "key": "guide_to_practice_lessons",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "guide_to_practice_lessons"
@@ -7081,9 +7081,9 @@
       "url": "https://youtu.be/0oG3Wck2fRU",
       "key": "introduction_to_conditionals_-_part_2a",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/2015/csp/applab/conditionals_2A.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_conditionals_-_part_2a"
@@ -7094,9 +7094,9 @@
       "url": "https://youtu.be/ZIL_3YRD14s",
       "key": "introduction_to_conditionals_-_part_2b",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/2015/csp/applab/conditionals_2B.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_conditionals_-_part_2b"
@@ -7107,9 +7107,9 @@
       "url": "https://youtu.be/aFssCTE5hs8",
       "key": "introduction_to_conditionals_-_part_2c",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/2015/csp/applab/conditionals_2C.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_conditionals_-_part_2c"
@@ -7120,9 +7120,9 @@
       "url": "https://youtu.be/kyFdniI-ZZs",
       "key": "introduction_to_conditionals_-_part_3",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/2015/csp/applab/conditionals_3.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_conditionals_-_part_3"
@@ -7133,9 +7133,9 @@
       "url": "https://docs.google.com/document/d/1Kf0x84kHyOPXsEVp3LnXEYGiGybKXqqL86a4xgKHBLI/edit?usp=sharing",
       "key": "song-lyrics-functions",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "song-lyrics-functions"
@@ -7146,8 +7146,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -7158,8 +7158,8 @@
       "url": "https://studio.code.org/projects/applab/lbl7hzxzm4WsAa75hJVFqMykHh7YfI5_te2qrxqh2uI",
       "key": "u4_high_score_sample_app",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u4_high_score_sample_app"
@@ -7170,8 +7170,8 @@
       "url": "https://docs.google.com/document/d/1a74SEh_S7NqBmWVdhw9FLoRjDIM8C_5Q-alJkJiInQA/edit?usp=sharing",
       "key": "u4_high_score_sample_planning_guide_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u4_high_score_sample_planning_guide_rubric"
@@ -7182,8 +7182,8 @@
       "url": "https://studio.code.org/projects/applab/5cwc9FM-cZe5TG4wy5wh3QGguDb5Si_juSUBdCFZRsA",
       "key": "u4_mid_score_sample_app",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u4_mid_score_sample_app"
@@ -7194,8 +7194,8 @@
       "url": "https://docs.google.com/document/d/1mwmJdpiMS6WeH5q_2LWVvPLsI8LVXJLs9n_96GU-g7w/edit?usp=sharing",
       "key": "u4_mid_score_sample_planning_guide_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u4_mid_score_sample_planning_guide_rubric"
@@ -7206,9 +7206,9 @@
       "url": "https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit",
       "key": "variables-make-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "variables-make-activity-guide"
@@ -7219,8 +7219,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -7647,123 +7647,23 @@
   ],
   "objectives": [
     {
-      "key": "b73ec12e-b071-4600-8989-ddb458f017ff",
+      "key": "0220ce0f-d66f-4abb-b066-37533b60ecd3",
       "properties": {
-        "description": "Use appropriate vocabulary to describe variables, expressions, and variable assignment."
+        "description": "Trace the flow of execution in programs that declare and call functions"
       },
       "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "objective.key": "b73ec12e-b071-4600-8989-ddb458f017ff"
+        "lesson.key": "Functions Explore / Investigate",
+        "objective.key": "0220ce0f-d66f-4abb-b066-37533b60ecd3"
       }
     },
     {
-      "key": "7dee95b3-d6a3-460e-8b26-dcb16c69a793",
+      "key": "09b92421-9ec2-47b2-86c2-03c99467b984",
       "properties": {
-        "description": "Evaluate expressions that include numbers, strings, and arithmetic operators."
+        "description": "Recognize the need for a function to reduce repeated code while developing a functional app"
       },
       "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "objective.key": "7dee95b3-d6a3-460e-8b26-dcb16c69a793"
-      }
-    },
-    {
-      "key": "7a22a087-a777-4e78-8e70-2d0f51a60eee",
-      "properties": {
-        "description": "Trace simple programs that use variables, expressions, and variable assignment."
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "objective.key": "7a22a087-a777-4e78-8e70-2d0f51a60eee"
-      }
-    },
-    {
-      "key": "0e2d2d12-ae50-44c8-8ffd-18f7043eeca7",
-      "properties": {
-        "description": "Identify common programming patterns when using variables as part of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "objective.key": "0e2d2d12-ae50-44c8-8ffd-18f7043eeca7"
-      }
-    },
-    {
-      "key": "6d88e78b-f94d-45db-9c66-a133a69b5967",
-      "properties": {
-        "description": "Explain the purpose of those programming patterns with variables both in terms of how they work and what they accomplish"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "objective.key": "6d88e78b-f94d-45db-9c66-a133a69b5967"
-      }
-    },
-    {
-      "key": "e0df7a4d-b19d-4496-b5ff-5297eb15ada7",
-      "properties": {
-        "description": "Modify apps that make use of common programming patterns with variables to adjust their functionality"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "objective.key": "e0df7a4d-b19d-4496-b5ff-5297eb15ada7"
-      }
-    },
-    {
-      "key": "bfb5f12c-94a0-488f-8788-b670bc039e72",
-      "properties": {
-        "description": "Write programs that use variables and expressions with the support of sample code."
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "objective.key": "bfb5f12c-94a0-488f-8788-b670bc039e72"
-      }
-    },
-    {
-      "key": "4ccf4c76-90ca-4050-b8d6-c9641ba25e86",
-      "properties": {
-        "description": "Debug programs that use variables and expressions"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "objective.key": "4ccf4c76-90ca-4050-b8d6-c9641ba25e86"
-      }
-    },
-    {
-      "key": "72802b49-84c3-4814-a689-5bf143b62ecb",
-      "properties": {
-        "description": "Recognize the need for programming patterns with variables as part of developing a functioning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "objective.key": "72802b49-84c3-4814-a689-5bf143b62ecb"
-      }
-    },
-    {
-      "key": "4474e1e9-0fe8-40fe-9574-3a2aa266a92a",
-      "properties": {
-        "description": "Implement programming patterns with variables to develop a functioning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "objective.key": "4474e1e9-0fe8-40fe-9574-3a2aa266a92a"
-      }
-    },
-    {
-      "key": "57a87d38-2ac3-4860-a5bb-fa88c11722a8",
-      "properties": {
-        "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "objective.key": "57a87d38-2ac3-4860-a5bb-fa88c11722a8"
-      }
-    },
-    {
-      "key": "ea1157e7-b2f1-4963-8661-69860ed9388d",
-      "properties": {
-        "description": "Use debugging skills as part of developing an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "objective.key": "ea1157e7-b2f1-4963-8661-69860ed9388d"
+        "lesson.key": "Functions Make",
+        "objective.key": "09b92421-9ec2-47b2-86c2-03c99467b984"
       }
     },
     {
@@ -7777,173 +7677,13 @@
       }
     },
     {
-      "key": "1e49a7db-965a-47e4-b73e-9b6e9f5fb7ad",
+      "key": "0e2d2d12-ae50-44c8-8ffd-18f7043eeca7",
       "properties": {
-        "description": "Evaluate expressions that include Boolean values, comparison operators, and logical operators"
+        "description": "Identify common programming patterns when using variables as part of an app"
       },
       "seeding_key": {
-        "lesson.key": "Conditionals Explore",
-        "objective.key": "1e49a7db-965a-47e4-b73e-9b6e9f5fb7ad"
-      }
-    },
-    {
-      "key": "fa6bcc13-cd5d-47d7-987d-37806ed57ddf",
-      "properties": {
-        "description": "Trace simple programs that use Boolean expressions and conditional statements"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Explore",
-        "objective.key": "fa6bcc13-cd5d-47d7-987d-37806ed57ddf"
-      }
-    },
-    {
-      "key": "56a6cfd4-6ff7-40a9-ba3b-e6bdfa4329cf",
-      "properties": {
-        "description": "Identify common programming patterns using boolean expressions and conditional statements"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
-        "objective.key": "56a6cfd4-6ff7-40a9-ba3b-e6bdfa4329cf"
-      }
-    },
-    {
-      "key": "1f21ad9d-8ff1-4a7b-b97e-768dc9a1afde",
-      "properties": {
-        "description": "Explain the purpose of those programming patterns with boolean expressions and conditional statements both in terms of how they work and what they accomplish"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
-        "objective.key": "1f21ad9d-8ff1-4a7b-b97e-768dc9a1afde"
-      }
-    },
-    {
-      "key": "7b6db9c8-8a02-49e9-895e-ebeebc5aa3b3",
-      "properties": {
-        "description": "Modify apps that make use of common programming patterns with boolean expressions and conditional statements to adjust their functionality"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
-        "objective.key": "7b6db9c8-8a02-49e9-895e-ebeebc5aa3b3"
-      }
-    },
-    {
-      "key": "6c6536da-3462-44e0-baf2-a552e60be99e",
-      "properties": {
-        "description": "Write programs that use boolean expressions and conditional statements with the support of sample code."
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "objective.key": "6c6536da-3462-44e0-baf2-a552e60be99e"
-      }
-    },
-    {
-      "key": "ec00b5b5-e106-4c1e-88a3-8955ff40069a",
-      "properties": {
-        "description": "Debug programs that use boolean expressions and conditional statements"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "objective.key": "ec00b5b5-e106-4c1e-88a3-8955ff40069a"
-      }
-    },
-    {
-      "key": "144bfb3b-0479-4752-8a11-7c4aabf92a4a",
-      "properties": {
-        "description": "Recognize the need for programming patterns with Boolean expressions and conditional statements as part of developing a functioning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditional Make",
-        "objective.key": "144bfb3b-0479-4752-8a11-7c4aabf92a4a"
-      }
-    },
-    {
-      "key": "d72521bf-5d19-4828-a865-130926f39e08",
-      "properties": {
-        "description": "Implement programming patterns with boolean expressions and conditionals statements to develop a functioning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditional Make",
-        "objective.key": "d72521bf-5d19-4828-a865-130926f39e08"
-      }
-    },
-    {
-      "key": "79fa0814-1759-4d00-afd6-26fa82939d68",
-      "properties": {
-        "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditional Make",
-        "objective.key": "79fa0814-1759-4d00-afd6-26fa82939d68"
-      }
-    },
-    {
-      "key": "4b8ac230-a8b8-4156-866d-5a1a05cfe63e",
-      "properties": {
-        "description": "Use debugging skills as part of developing an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditional Make",
-        "objective.key": "4b8ac230-a8b8-4156-866d-5a1a05cfe63e"
-      }
-    },
-    {
-      "key": "60e19e05-dcaa-4053-94e6-c7bcb129734c",
-      "properties": {
-        "description": "Use appropriate vocabulary to describe the declaring and calling of functions"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions Explore / Investigate",
-        "objective.key": "60e19e05-dcaa-4053-94e6-c7bcb129734c"
-      }
-    },
-    {
-      "key": "0220ce0f-d66f-4abb-b066-37533b60ecd3",
-      "properties": {
-        "description": "Trace the flow of execution in programs that declare and call functions"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions Explore / Investigate",
-        "objective.key": "0220ce0f-d66f-4abb-b066-37533b60ecd3"
-      }
-    },
-    {
-      "key": "e0ce939e-7679-44b0-9756-b17e849b07d3",
-      "properties": {
-        "description": "Describe the way a function call interrupts the normal flow of execution within a program"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions Explore / Investigate",
-        "objective.key": "e0ce939e-7679-44b0-9756-b17e849b07d3"
-      }
-    },
-    {
-      "key": "fa774817-847a-4cdf-b6c7-377bad2fb094",
-      "properties": {
-        "description": "Modify programs that declare and call functions to adjust their functionality"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions Explore / Investigate",
-        "objective.key": "fa774817-847a-4cdf-b6c7-377bad2fb094"
-      }
-    },
-    {
-      "key": "755864a0-9211-4f4a-82d7-824af7b68582",
-      "properties": {
-        "description": "Write programs that use functions with the support of sample code"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions Practice",
-        "objective.key": "755864a0-9211-4f4a-82d7-824af7b68582"
-      }
-    },
-    {
-      "key": "14a2ebd0-f70d-46da-90ea-c2ba99b67609",
-      "properties": {
-        "description": "Debug programs that use functions"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions Practice",
-        "objective.key": "14a2ebd0-f70d-46da-90ea-c2ba99b67609"
+        "lesson.key": "Variables Investigate",
+        "objective.key": "0e2d2d12-ae50-44c8-8ffd-18f7043eeca7"
       }
     },
     {
@@ -7957,13 +7697,223 @@
       }
     },
     {
-      "key": "09b92421-9ec2-47b2-86c2-03c99467b984",
+      "key": "144bfb3b-0479-4752-8a11-7c4aabf92a4a",
       "properties": {
-        "description": "Recognize the need for a function to reduce repeated code while developing a functional app"
+        "description": "Recognize the need for programming patterns with Boolean expressions and conditional statements as part of developing a functioning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "objective.key": "144bfb3b-0479-4752-8a11-7c4aabf92a4a"
+      }
+    },
+    {
+      "key": "14a2ebd0-f70d-46da-90ea-c2ba99b67609",
+      "properties": {
+        "description": "Debug programs that use functions"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "objective.key": "14a2ebd0-f70d-46da-90ea-c2ba99b67609"
+      }
+    },
+    {
+      "key": "1783e1a6-f8fe-4c29-a9c3-40fa5292510e",
+      "properties": {
+        "description": "Use debugging skills as part of developing an app"
       },
       "seeding_key": {
         "lesson.key": "Functions Make",
-        "objective.key": "09b92421-9ec2-47b2-86c2-03c99467b984"
+        "objective.key": "1783e1a6-f8fe-4c29-a9c3-40fa5292510e"
+      }
+    },
+    {
+      "key": "1e49a7db-965a-47e4-b73e-9b6e9f5fb7ad",
+      "properties": {
+        "description": "Evaluate expressions that include Boolean values, comparison operators, and logical operators"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Explore",
+        "objective.key": "1e49a7db-965a-47e4-b73e-9b6e9f5fb7ad"
+      }
+    },
+    {
+      "key": "1f21ad9d-8ff1-4a7b-b97e-768dc9a1afde",
+      "properties": {
+        "description": "Explain the purpose of those programming patterns with boolean expressions and conditional statements both in terms of how they work and what they accomplish"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "objective.key": "1f21ad9d-8ff1-4a7b-b97e-768dc9a1afde"
+      }
+    },
+    {
+      "key": "26b98216-10d4-4640-a890-ccf28cffa87a",
+      "properties": {
+        "description": "See rubric for guidance in measuring student learning"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 2",
+        "objective.key": "26b98216-10d4-4640-a890-ccf28cffa87a"
+      }
+    },
+    {
+      "key": "3ba536c9-3825-4a52-ba91-b23f842a50da",
+      "properties": {
+        "description": "See rubric for guidance in measuring student learning"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 1",
+        "objective.key": "3ba536c9-3825-4a52-ba91-b23f842a50da"
+      }
+    },
+    {
+      "key": "4474e1e9-0fe8-40fe-9574-3a2aa266a92a",
+      "properties": {
+        "description": "Implement programming patterns with variables to develop a functioning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "objective.key": "4474e1e9-0fe8-40fe-9574-3a2aa266a92a"
+      }
+    },
+    {
+      "key": "4b8ac230-a8b8-4156-866d-5a1a05cfe63e",
+      "properties": {
+        "description": "Use debugging skills as part of developing an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "objective.key": "4b8ac230-a8b8-4156-866d-5a1a05cfe63e"
+      }
+    },
+    {
+      "key": "4ccf4c76-90ca-4050-b8d6-c9641ba25e86",
+      "properties": {
+        "description": "Debug programs that use variables and expressions"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "objective.key": "4ccf4c76-90ca-4050-b8d6-c9641ba25e86"
+      }
+    },
+    {
+      "key": "56a6cfd4-6ff7-40a9-ba3b-e6bdfa4329cf",
+      "properties": {
+        "description": "Identify common programming patterns using boolean expressions and conditional statements"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "objective.key": "56a6cfd4-6ff7-40a9-ba3b-e6bdfa4329cf"
+      }
+    },
+    {
+      "key": "57a87d38-2ac3-4860-a5bb-fa88c11722a8",
+      "properties": {
+        "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "objective.key": "57a87d38-2ac3-4860-a5bb-fa88c11722a8"
+      }
+    },
+    {
+      "key": "60e19e05-dcaa-4053-94e6-c7bcb129734c",
+      "properties": {
+        "description": "Use appropriate vocabulary to describe the declaring and calling of functions"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "objective.key": "60e19e05-dcaa-4053-94e6-c7bcb129734c"
+      }
+    },
+    {
+      "key": "69fdd18e-9c93-4ada-8ac5-debd966fc9a6",
+      "properties": {
+        "description": "See rubric for guidance in measuring student learning"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App Part 3",
+        "objective.key": "69fdd18e-9c93-4ada-8ac5-debd966fc9a6"
+      }
+    },
+    {
+      "key": "6c6536da-3462-44e0-baf2-a552e60be99e",
+      "properties": {
+        "description": "Write programs that use boolean expressions and conditional statements with the support of sample code."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Practice",
+        "objective.key": "6c6536da-3462-44e0-baf2-a552e60be99e"
+      }
+    },
+    {
+      "key": "6d88e78b-f94d-45db-9c66-a133a69b5967",
+      "properties": {
+        "description": "Explain the purpose of those programming patterns with variables both in terms of how they work and what they accomplish"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "objective.key": "6d88e78b-f94d-45db-9c66-a133a69b5967"
+      }
+    },
+    {
+      "key": "72802b49-84c3-4814-a689-5bf143b62ecb",
+      "properties": {
+        "description": "Recognize the need for programming patterns with variables as part of developing a functioning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "objective.key": "72802b49-84c3-4814-a689-5bf143b62ecb"
+      }
+    },
+    {
+      "key": "755864a0-9211-4f4a-82d7-824af7b68582",
+      "properties": {
+        "description": "Write programs that use functions with the support of sample code"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "objective.key": "755864a0-9211-4f4a-82d7-824af7b68582"
+      }
+    },
+    {
+      "key": "79fa0814-1759-4d00-afd6-26fa82939d68",
+      "properties": {
+        "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "objective.key": "79fa0814-1759-4d00-afd6-26fa82939d68"
+      }
+    },
+    {
+      "key": "7a22a087-a777-4e78-8e70-2d0f51a60eee",
+      "properties": {
+        "description": "Trace simple programs that use variables, expressions, and variable assignment."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "objective.key": "7a22a087-a777-4e78-8e70-2d0f51a60eee"
+      }
+    },
+    {
+      "key": "7b6db9c8-8a02-49e9-895e-ebeebc5aa3b3",
+      "properties": {
+        "description": "Modify apps that make use of common programming patterns with boolean expressions and conditional statements to adjust their functionality"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "objective.key": "7b6db9c8-8a02-49e9-895e-ebeebc5aa3b3"
+      }
+    },
+    {
+      "key": "7dee95b3-d6a3-460e-8b26-dcb16c69a793",
+      "properties": {
+        "description": "Evaluate expressions that include numbers, strings, and arithmetic operators."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "objective.key": "7dee95b3-d6a3-460e-8b26-dcb16c69a793"
       }
     },
     {
@@ -7987,234 +7937,123 @@
       }
     },
     {
-      "key": "1783e1a6-f8fe-4c29-a9c3-40fa5292510e",
+      "key": "b73ec12e-b071-4600-8989-ddb458f017ff",
+      "properties": {
+        "description": "Use appropriate vocabulary to describe variables, expressions, and variable assignment."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "objective.key": "b73ec12e-b071-4600-8989-ddb458f017ff"
+      }
+    },
+    {
+      "key": "bfb5f12c-94a0-488f-8788-b670bc039e72",
+      "properties": {
+        "description": "Write programs that use variables and expressions with the support of sample code."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "objective.key": "bfb5f12c-94a0-488f-8788-b670bc039e72"
+      }
+    },
+    {
+      "key": "d72521bf-5d19-4828-a865-130926f39e08",
+      "properties": {
+        "description": "Implement programming patterns with boolean expressions and conditionals statements to develop a functioning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "objective.key": "d72521bf-5d19-4828-a865-130926f39e08"
+      }
+    },
+    {
+      "key": "e0ce939e-7679-44b0-9756-b17e849b07d3",
+      "properties": {
+        "description": "Describe the way a function call interrupts the normal flow of execution within a program"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "objective.key": "e0ce939e-7679-44b0-9756-b17e849b07d3"
+      }
+    },
+    {
+      "key": "e0df7a4d-b19d-4496-b5ff-5297eb15ada7",
+      "properties": {
+        "description": "Modify apps that make use of common programming patterns with variables to adjust their functionality"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "objective.key": "e0df7a4d-b19d-4496-b5ff-5297eb15ada7"
+      }
+    },
+    {
+      "key": "ea1157e7-b2f1-4963-8661-69860ed9388d",
       "properties": {
         "description": "Use debugging skills as part of developing an app"
       },
       "seeding_key": {
-        "lesson.key": "Functions Make",
-        "objective.key": "1783e1a6-f8fe-4c29-a9c3-40fa5292510e"
+        "lesson.key": "Variables Make",
+        "objective.key": "ea1157e7-b2f1-4963-8661-69860ed9388d"
       }
     },
     {
-      "key": "3ba536c9-3825-4a52-ba91-b23f842a50da",
+      "key": "ec00b5b5-e106-4c1e-88a3-8955ff40069a",
       "properties": {
-        "description": "See rubric for guidance in measuring student learning"
+        "description": "Debug programs that use boolean expressions and conditional statements"
       },
       "seeding_key": {
-        "lesson.key": "Project - Decision Maker App Part 1",
-        "objective.key": "3ba536c9-3825-4a52-ba91-b23f842a50da"
+        "lesson.key": "Conditionals Practice",
+        "objective.key": "ec00b5b5-e106-4c1e-88a3-8955ff40069a"
       }
     },
     {
-      "key": "26b98216-10d4-4640-a890-ccf28cffa87a",
+      "key": "fa6bcc13-cd5d-47d7-987d-37806ed57ddf",
       "properties": {
-        "description": "See rubric for guidance in measuring student learning"
+        "description": "Trace simple programs that use Boolean expressions and conditional statements"
       },
       "seeding_key": {
-        "lesson.key": "Project - Decision Maker App Part 2",
-        "objective.key": "26b98216-10d4-4640-a890-ccf28cffa87a"
+        "lesson.key": "Conditionals Explore",
+        "objective.key": "fa6bcc13-cd5d-47d7-987d-37806ed57ddf"
       }
     },
     {
-      "key": "69fdd18e-9c93-4ada-8ac5-debd966fc9a6",
+      "key": "fa774817-847a-4cdf-b6c7-377bad2fb094",
       "properties": {
-        "description": "See rubric for guidance in measuring student learning"
+        "description": "Modify programs that declare and call functions to adjust their functionality"
       },
       "seeding_key": {
-        "lesson.key": "Project - Decision Maker App Part 3",
-        "objective.key": "69fdd18e-9c93-4ada-8ac5-debd966fc9a6"
+        "lesson.key": "Functions Explore / Investigate",
+        "objective.key": "fa774817-847a-4cdf-b6c7-377bad2fb094"
       }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-1.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-1.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-1.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-1.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-1.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-1.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Investigate",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-1.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.A.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables Make",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Explore",
+        "lesson.key": "Conditional Make",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Explore",
+        "lesson.key": "Conditional Make",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-15"
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditional Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-21"
       }
     },
     {
@@ -8233,23 +8072,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
+        "lesson.key": "Conditionals Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
+        "lesson.key": "Conditionals Explore",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
+        "standard.shortcode": "3A-AP-15"
       }
     },
     {
@@ -8268,16 +8100,23 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Practice",
+        "lesson.key": "Conditionals Investigate",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals Practice",
+        "lesson.key": "Conditionals Investigate",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -8387,44 +8226,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditional Make",
+        "lesson.key": "Conditionals Practice",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditional Make",
+        "lesson.key": "Conditionals Practice",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditional Make",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditional Make",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions Explore / Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions Explore / Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -8450,16 +8261,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions Practice",
+        "lesson.key": "Functions Explore / Investigate",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-17"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions Practice",
+        "lesson.key": "Functions Explore / Investigate",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-14"
+        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -8485,6 +8296,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Decision Maker App Part 1",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-10"
@@ -8565,6 +8390,181 @@
         "lesson.key": "Project - Decision Maker App Part 3",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Explore",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
       }
     }
   ],
