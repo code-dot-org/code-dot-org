@@ -9,7 +9,11 @@ const names = [
   'Ben',
   'Jessie',
   'Jamila',
-  'Hannah'
+  'Hannah',
+  'Harry',
+  'Hermione',
+  'Ron',
+  'Hagrid'
 ];
 
 // Fake data generator.
@@ -29,13 +33,20 @@ const groups = [
   {id: 2, members: getMembers(4, 4)}
 ];
 
+const unassigned = getMembers(4, 8);
+
 export default storybook => {
   storybook
     .storiesOf('CodeReviewGroups/CodeReviewGroupsManager', module)
     .addStoryTable([
       {
         name: 'Panel Showing Existing Code Review Groups',
-        story: () => <CodeReviewGroupsManager initialGroups={groups} />
+        story: () => (
+          <CodeReviewGroupsManager
+            initialGroups={groups}
+            initialUnassigned={unassigned}
+          />
+        )
       }
     ]);
 };
