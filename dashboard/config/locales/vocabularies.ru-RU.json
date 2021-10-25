@@ -5,14 +5,26 @@
         "event/dance-extras/unversioned": {
           "word": "Событие"
         },
+        "program/dance-extras/unversioned": {
+          "word": "Программа"
+        },
         "debugging/minecraft/unversioned": {
           "word": "Отладка"
+        },
+        "program/minecraft/unversioned": {
+          "word": "Программа"
         },
         "event/minecraft/unversioned": {
           "word": "Событие"
         },
+        "loop/minecraft/unversioned": {
+          "word": "Цикл"
+        },
         "debugging/hero/unversioned": {
           "word": "Отладка"
+        },
+        "program/hero/unversioned": {
+          "word": "Программа"
         },
         "function/hero/unversioned": {
           "word": "Функция"
@@ -20,14 +32,26 @@
         "debugging/flappy/unversioned": {
           "word": "Отладка"
         },
+        "program/flappy/unversioned": {
+          "word": "Программа"
+        },
         "debugging/hourofcode/unversioned": {
           "word": "Отладка"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Программа"
         },
         "debugging/frozen/unversioned": {
           "word": "Отладка"
         },
+        "program/frozen/unversioned": {
+          "word": "Программа"
+        },
         "debugging/iceage/unversioned": {
           "word": "Отладка"
+        },
+        "program/iceage/unversioned": {
+          "word": "Программа"
         },
         "code/artist/unversioned": {
           "word": "Код"
@@ -35,14 +59,26 @@
         "debugging/artist/unversioned": {
           "word": "Отладка"
         },
+        "program/artist/unversioned": {
+          "word": "Программа"
+        },
         "debugging/gumball/unversioned": {
           "word": "Отладка"
+        },
+        "program/gumball/unversioned": {
+          "word": "Программа"
         },
         "event/dance/unversioned": {
           "word": "Событие"
         },
+        "program/dance/unversioned": {
+          "word": "Программа"
+        },
         "debugging/aquatic/unversioned": {
           "word": "Отладка"
+        },
+        "program/aquatic/unversioned": {
+          "word": "Программа"
         },
         "conditionals/aquatic/unversioned": {
           "word": "Условные команды"
@@ -56,14 +92,26 @@
         "debugging/starwars/unversioned": {
           "word": "Отладка"
         },
+        "program/starwars/unversioned": {
+          "word": "Программа"
+        },
         "debugging/mc/unversioned": {
           "word": "Отладка"
+        },
+        "program/mc/unversioned": {
+          "word": "Программа"
         },
         "debugging/playlab/unversioned": {
           "word": "Отладка"
         },
+        "program/playlab/unversioned": {
+          "word": "Программа"
+        },
         "debugging/starwarsblocks/unversioned": {
           "word": "Отладка"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Программа"
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Сжатие без потерь"
@@ -77,8 +125,14 @@
         "debugging/sports/unversioned": {
           "word": "Отладка"
         },
+        "program/sports/unversioned": {
+          "word": "Программа"
+        },
         "debugging/infinity/unversioned": {
           "word": "Отладка"
+        },
+        "program/infinity/unversioned": {
+          "word": "Программа"
         },
         "event/basketball/unversioned": {
           "word": "Событие"
@@ -86,11 +140,20 @@
         "debugging/basketball/unversioned": {
           "word": "Отладка"
         },
+        "program/basketball/unversioned": {
+          "word": "Программа"
+        },
         "event/dance-extras-2019/unversioned": {
           "word": "Событие"
         },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Программа"
+        },
         "event/dance-2019/unversioned": {
           "word": "Событие"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Программа"
         },
         "machine_learning/oceans/unversioned": {
           "word": "Машинное обучение"
@@ -100,6 +163,12 @@
         },
         "behavior/coursef/2021": {
           "word": "Поведение"
+        },
+        "program/coursef/2021": {
+          "word": "Программа"
+        },
+        "algorithm/coursef/2021": {
+          "word": "Алгоритм"
         },
         "event/coursef/2021": {
           "word": "Событие"
@@ -113,14 +182,14 @@
         "loop/coursef/2021": {
           "word": "Цикл"
         },
+        "for_loop/coursef/2021": {
+          "word": "Для цикла"
+        },
         "machine_learning/coursef/2021": {
           "word": "Машинное обучение"
         },
         "internet/coursef/2021": {
           "word": "интернет"
-        },
-        "url/coursef/2021": {
-          "word": "Ссылка"
         },
         "define/coursef/2021": {
           "word": "Определить"
@@ -141,6 +210,9 @@
         "drop/courseb/2021": {
           "word": "Дроп"
         },
+        "program/courseb/2021": {
+          "word": "Программа"
+        },
         "programming/courseb/2021": {
           "word": "Программирование"
         },
@@ -156,6 +228,9 @@
         },
         "debugging/coursea/2021": {
           "word": "Отладка"
+        },
+        "program/coursea/2021": {
+          "word": "Программа"
         },
         "click/coursea/2021": {
           "word": "Перейти"
@@ -185,6 +260,9 @@
         "debugging/coursec/2021": {
           "word": "Отладка"
         },
+        "program/coursec/2021": {
+          "word": "Программа"
+        },
         "sequencing/coursec/2021": {
           "word": "Последовательность действий"
         },
@@ -204,6 +282,9 @@
           "word": "Алгоритм",
           "definition": "Список шагов для завершения задачи."
         },
+        "program/coursed/2021": {
+          "word": "Программа"
+        },
         "bug/coursed/2021": {
           "word": "Ошибка"
         },
@@ -218,9 +299,6 @@
         },
         "event/coursed/2021": {
           "word": "Событие"
-        },
-        "program/coursed/2021": {
-          "word": "Программа"
         },
         "conditionals/coursed/2021": {
           "word": "Условные команды"
@@ -249,9 +327,6 @@
         },
         "event/express/2021": {
           "word": "Событие"
-        },
-        "code/express/2021": {
-          "word": "код"
         },
         "loop/express/2021": {
           "word": "Цикл"
@@ -316,9 +391,6 @@
         },
         "conditionals/coursee/2021": {
           "word": "Условные команды"
-        },
-        "condition/coursee/2021": {
-          "word": "Условие"
         },
         "define/coursee/2021": {
           "word": "Определить"
