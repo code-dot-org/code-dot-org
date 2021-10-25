@@ -1518,6 +1518,25 @@
           "courseF_bee_for_challenge2_a": "Ta ein kikk på dette alternativet for røyrsle: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "Prøv å bruke to for-løkker: ein for å klatre opp og ta nektar, og ei anna for å klatre ned og lage honning.",
           "courseF_bee_for_challenge2_c": "Legg merke til at ei for-løkke treng fleire vanlege løkker inni seg som gjentek 'teljar'-gangar for å lage det aukande trappemønsteret. \n\nDen andre for-løkka treng berre ei vanleg løkke for å lage ein 'teljar'-mengde med honning."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "Hvis Scrat ikke gjør det du vil, være forsikret om at begge blokkene er fullstendig sammenklikket, så klikk \"Kjør\" igjen",
+          "2": "Ikke vær redd for å gjøre en feil! Prøv noe, hvis det ikke fungerer, prøv noe annet!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "Koden din skal se slik ut:\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "Koden din skal se slik ut:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "Koden din skal se slik ut:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "Koden din skal se slik ut:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "Koden din skal se slik ut:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         }
       }
     }
