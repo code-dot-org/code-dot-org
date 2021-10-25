@@ -4,6 +4,10 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
+      "has_lesson_plan": true,
+      "hideable_lessons": true,
+      "pilot_experiment": "ai-unit-pilot",
       "teacher_resources": [
         [
           "lessonPlans",
@@ -17,16 +21,13 @@
           "standardMappings",
           "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"
         ]
-      ],
-      "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
-      "has_lesson_plan": true,
-      "pilot_experiment": "ai-unit-pilot",
-      "hideable_lessons": true
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:03 UTC",
+    "serialized_at": "2021-10-25 22:54:42 UTC",
     "published_state": "pilot",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }

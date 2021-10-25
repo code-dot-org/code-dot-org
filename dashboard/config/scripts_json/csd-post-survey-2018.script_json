@@ -5,14 +5,15 @@
     "login_required": true,
     "properties": {
       "exclude_csf_column_in_legend": true,
-      "has_verified_resources": true,
       "has_lesson_plan": true,
+      "has_verified_resources": true,
       "hideable_lessons": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:46 UTC",
+    "serialized_at": "2021-10-25 22:54:00 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd-post-survey-2018"
     }

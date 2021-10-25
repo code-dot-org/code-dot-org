@@ -4,16 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "curriculum_umbrella": "CSP",
       "exclude_csf_column_in_legend": true,
       "has_lesson_plan": true,
-      "curriculum_umbrella": "CSP",
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:57 UTC",
+    "serialized_at": "2021-10-25 22:53:16 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp6"
     }

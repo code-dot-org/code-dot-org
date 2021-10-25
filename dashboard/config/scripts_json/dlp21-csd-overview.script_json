@@ -9,8 +9,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-29 15:48:10 UTC",
+    "serialized_at": "2021-10-25 22:54:53 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "dlp21-csd-overview"
     }

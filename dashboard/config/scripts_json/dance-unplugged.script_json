@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "version_year": "unversioned",
       "is_course": true,
-      "use_legacy_lesson_plans": true
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "dance-unplugged",
-    "serialized_at": "2021-09-28 16:48:29 UTC",
+    "serialized_at": "2021-10-25 22:54:59 UTC",
     "published_state": "in_development",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "dance-unplugged"
     }
