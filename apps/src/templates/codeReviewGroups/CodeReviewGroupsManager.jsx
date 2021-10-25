@@ -11,7 +11,7 @@ const DROPPABLE_ID_PREFIX = 'groupId';
 // More information on the package we're using here (React Beautiful DnD)
 // can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroups({initialGroups}) {
+export default function CodeReviewGroupsManager({initialGroups}) {
   const [groups, setGroups] = useState(
     initialGroups.map(group => addDroppableIdToGroup(group))
   );
@@ -86,7 +86,7 @@ export default function CodeReviewGroups({initialGroups}) {
   );
 }
 
-CodeReviewGroups.propTypes = {initialGroups: PropTypes.array.isRequired};
+CodeReviewGroupsManager.propTypes = {initialGroups: PropTypes.array.isRequired};
 
 // Reorders members in a group if member dragged elsewhere in the same group.
 // Returns a copied, updated group.

@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeReviewGroups from './CodeReviewGroups';
+import CodeReviewGroupsManager from './CodeReviewGroupsManager';
 
 const names = [
   'Sanchit',
@@ -31,11 +31,11 @@ const groups = [
 
 export default storybook => {
   storybook
-    .storiesOf('CodeReviewGroups/CodeReviewGroups', module)
+    .storiesOf('CodeReviewGroups/CodeReviewGroupsManager', module)
     .addStoryTable([
       {
         name: 'Panel Showing Existing Code Review Groups',
-        story: () => <CodeReviewGroups initialGroups={groups} />
+        story: () => <CodeReviewGroupsManager initialGroups={groups} />
       }
     ]);
 };
