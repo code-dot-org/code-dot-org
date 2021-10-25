@@ -7,29 +7,29 @@ style_min: true
 
 # Witaj Świecie!
 
-In Computer Science 101, the first program many students create is a simple one that outputs an iconic line of text: “Hello World!” Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps. Choose from four fun themes to code interactive characters in a world you create!
+W informatyce 101, pierwszy program, który tworzy wielu studentów, jest prosty i wyświetla kultową linię tekstu: „Hello World!” Przywitaj się ze światem informatyki dzięki temu ćwiczeniu wprowadzającemu, które wyposaża uczniów w podstawowe umiejętności kodowania i pewność w tworzeniu aplikacji. Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie!
 
-## How to continue learning
+## Jak kontynuować naukę
 
-“Hello World” is the perfect first step for classrooms before trying the open-ended projects within our new curriculum, CS Connections! After learning some coding basics, students will be able to progress to CS Connections’ cross-curricular projects. Learn more about CS Connections.
-# Choose your Hello World theme
+„Hello World” to idealny pierwszy krok dla klas przed wypróbowaniem otwartych projektów w ramach naszego nowego programu nauczania Powiązania z informatyką! Po zapoznaniu się z podstawami kodowania, uczniowie będą mogli przejść do międzyprzedmiotowych projektów Powiązań z informatyką. Dowiedz się więcej o Powiązaniach z informatyką.
+# Wybierz swój motyw Hello World
 
-{{ spritelab_module, title: "Happy Food", color: "#C14790", image: "images/csc/helloworld/module0.png", url: "/about" }}
-{{ spritelab_module, title: "Animals", color: "#00ADBC", image: "images/csc/helloworld/module0.png", url: "/" }}
-{{ spritelab_module, title: "Retro", color: "#FFA400", image: "images/csc/helloworld/module0.png", url: "/" }}
-{{ spritelab_module, title: "Emoji", color: "#0094CA", image: "images/csc/helloworld/module0.png", url: "/" }}
+{{ spritelab_module, tytuł: "Happy Food", kolor: "#C14790", obraz: "images/csc/helloworld/module0.png", url: "/about" }}
+{{ spritelab_module, tytuł: "Zwierzęta", kolor: "#00ADBC", obraz: "images/csc/helloworld/module0.png", url: "/" }}
+{{ spritelab_module, tytuł: "Retro", kolor: "#FFA400", obraz: "images/csc/helloworld/module0.png", url: "/" }}
+{{ spritelab_module, tytuł: "Emotikon", kolor: "#0094CA", obraz: "images/csc/helloworld/module0.png", url: "/" }}
 {{ clearfix }}
 
 {{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Hello World", description: "Hello World description goes here.", button_text: "Learn more" }}
 
-## Featured Student Creations
+## Wyróżnione utwory uczniów
 
-{{ featured_project, title: "Coin color", author: "M", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/about" }}
-{{ featured_project, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "ROBOT", author: "B", age: "18+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "EVADE", author: "W", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "Protect the castle", author: "S", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "Kolor monety", autor: "M", wiek: "13+", obraz: "images/csc/helloworld/creation0.png", url: "/about" }}
+{{ featured_project, tytuł: "Symulacja w świecie rzeczywistym", autor: "D", wiek: "8+", obraz: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "ROBOT", autor: "B", wiek: "18+", obraz: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "EVADE", autor: "W", wiek: "13+", obraz: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "Chroń zamek", autor: "S", wiek: "8+", obraz: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "Remix: mój projekt", autor: "K", wiek: "8+", obraz: "images/csc/helloworld/creation0.png", url: "/" }}
 {{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/helloworld/creation0.png", url: "/" }}
 {{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/" }}
 {{ clearfix }}
