@@ -84,17 +84,17 @@ module Pd
         ),
         csa_how_offer: 'How will you offer CSA?',
         cs_how_many_minutes: clean_multiline(
-          'How many minutes per day is one CS program class section? (Include the
+          'How many minutes per day is one {{CS program}} class section? (Include the
           number of minutes from start to finish that you see your students per class
           period. If it varies from day to day, estimate the average number of minutes
           you meet per class period.)'
         ),
-        cs_how_many_days_per_week: 'How many days per week will your CS program class be offered to one section of students?',
+        cs_how_many_days_per_week: 'How many days per week will your {{CS program}} class be offered to one section of students?',
         cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
         cs_total_course_hours: 'Computed total course hours',
         plan_to_teach: "Do you plan to personally teach this course in the #{YEAR} school year?",
         replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
-        replace_which_course: 'Which existing course or curriculum will CS program replace? Mark all that apply.'
+        replace_which_course: 'Which existing course or curriculum will {{CS program}} replace? Mark all that apply.'
       },
       professional_learning_program_requirements:
         {
@@ -166,9 +166,11 @@ module Pd
         program: LABEL_OVERRIDES[:program],
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
-        cs_how_many_minutes: "How many minutes will your CS Program class last?",
+        cs_how_many_minutes: "How many minutes will your CS program class last?",
+        cs_how_many_days_per_week: "How many days per week will your CS program class be offered to one section of students?",
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
+        replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
         previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
