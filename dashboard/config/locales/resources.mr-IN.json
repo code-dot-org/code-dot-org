@@ -3,19 +3,23 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)"
+          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "कलाकाराचा परिचय"
+          "name": "कलाकाराचा परिचय",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
           "name": "वळण आणि कोन"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "वळण आणि कोन"
+          "name": "वळण आणि कोन",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)"
+          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
@@ -24,13 +28,16 @@
           "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)"
+          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)"
+          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "AI: मशीन लर्निंग"
+          "name": "AI: मशीन लर्निंग",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
         },
         "ai-societal/oceans/unversioned": {
           "name": "AI: समाजावर परिणाम",
@@ -43,9 +50,6 @@
         "exploring_apps/coursef/2021": {
           "name": "एक्सप्लोरींग ॲप्स"
         },
-        "introducing_sprite_lab_1/coursef/2021": {
-          "url": "https://youtu.be/yd-9xZ275dM"
-        },
         "exploring_apps_1/coursef/2021": {
           "name": "एक्सप्लोरींग ॲप्स"
         },
@@ -54,24 +58,6 @@
         },
         "sprite_lab_documentation/coursef/2021": {
           "url": "https://studio.code.org/docs/spritelab/"
-        },
-        "the_power_of_words_lesson_slides/coursef/2021": {
-          "name": "शब्दांची शक्ती: लेसन क्विझ "
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "name": "शब्दांची ताकद: शब्दांची शक्ती"
-        },
-        "the_power_of_words_words_can_hurt/coursef/2021": {
-          "name": "शब्दांची शक्ती:शब्द दुखवू शकतात"
-        },
-        "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "शब्दांची शक्ती: लेसन क्विझ "
-        },
-        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "शब्दांची शक्ती: लेसन क्विझ "
-        },
-        "variables_blank_space_stories/coursef/2021": {
-          "name": "व्हेरिएबल्स: रिकाम्या जागेची गोष्ट"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "ब्लॅंक स्पेस स्टोरीज"
@@ -82,37 +68,19 @@
         "text_and_prompts/coursef/2021": {
           "name": "टेक्स्ट आणि प्रॉम्प्ट्स"
         },
-        "user_input_programs/coursef/2021": {
-          "name": "वापरकर्ता इनपुट प्रोग्राम"
-        },
-        "mini_project_user_input_programs/coursef/2021": {
-          "name": "मिनी प्रोजेक्ट: वापरकर्ता इनपुट प्रोग्राम"
-        },
-        "teacher_sandbox_level/coursef/2021": {
-          "name": "शिक्षक सँडबॉक्स लेव्हल ",
-          "url": "https://studio.code.org/levels/27300"
-        },
-        "mini_project_user_input_programs_1/coursef/2021": {
-          "name": "मिनी प्रोजेक्ट: वापरकर्ता इनपुट प्रोग्राम"
-        },
         "pause_and_think_online/coursef/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
-        },
-        "unplugged-video-for-loop-fun/coursef/2021": {
-          "url": "https://youtu.be/mX857v5B4gE"
-        },
-        "flf-assessment-teacher-key/coursef/2021": {
-          "name": "लूप फन साठी - असेसमेंट की"
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
         },
         "course-cf-blockly-blocks/coursef/2021": {
-          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "running-simulations/coursef/2021": {
           "name": "रनिंग सिम्युलेशन"
         },
         "ai-ml/coursef/2021": {
-          "name": "AI: मशीन लर्निंग"
+          "name": "AI: मशीन लर्निंग",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
         },
         "ai-training/coursef/2021": {
           "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
@@ -122,21 +90,8 @@
           "name": "AI: समाजावर परिणाम",
           "url": "https://youtu.be/ng4c1g3COfs"
         },
-        "unplugged-video-internet/coursef/2021": {
-          "url": "https://youtu.be/mFOUbqYv1Sc"
-        },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "आयपी अॅड्रेस कार्ड्स आणि डिलिव्हरी टाइप कार्ड्स"
-        },
-        "get-site-ip-com/coursef/2021": {
-          "name": "get-site-ip-com",
-          "url": "http://get-site-ip.com/"
-        },
         "design-process/coursef/2021": {
           "name": "डिझाईन प्रक्रिया"
-        },
-        "final-project-design-worksheet/coursef/2021": {
-          "name": "अंतिम प्रकल्प डिझाइन"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "CS मूलभूत अंतिम प्रोजेक्ट "
@@ -149,19 +104,30 @@
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
         },
         "cross-curricular_extension_activities_1/coursef/2021": {
-          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursef/2021": {
-          "name": "कोर्स शब्दावली"
+          "name": "कोर्स शब्दावली",
+          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        },
+        "implementation_guide/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursef/2021": {
-          "name": "लेसन टाईप गाईड "
+          "name": "लेसन टाईप गाईड ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursef/2021": {
-          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+          "name": "डीबगिंग गाईड (मार्गदर्शक)",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "curriculum_guide_1/coursef/2021": {
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursef/2021": {
-          "name": "2021 लॉग बदला"
+          "name": "2021 लॉग बदला",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursef/2021": {
           "url": "https://forum.code.org/c/csf/"
@@ -172,69 +138,58 @@
         "virtual_lesson_modifications/coursef/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा "
         },
-        "digital-trails-lesson-slides/courseb/2021": {
-          "name": "डिजिटल ट्रेल्स: धड्याच्या स्लाइड"
-        },
-        "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "डिजिटल ट्रेल्स: डिजिटल ट्रेल फॉलो करा"
-        },
-        "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "डिजिटल ट्रेल्स: डिजिटल ट्रेल स्क्वेअर"
-        },
-        "digital-trails-animal-tracks/courseb/2021": {
-          "name": "डिजिटल ट्रेल्स: अॅनिमल ट्रॅक"
-        },
         "feeling_faces_emotion_image/courseb/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/courseb/2021": {
           "name": "चेहऱ्यावरील भावना"
         },
-        "jigsaw/courseb/2021": {
-          "name": "ड्रॅग आणि ड्रॉप चा सराव",
-          "url": "https://studio.code.org/s/jigsaw"
-        },
         "class-section-video/courseb/2021": {
-          "name": "Code.org वर क्लास सेक्शन कसा बनवायचा"
+          "name": "Code.org वर क्लास सेक्शन कसा बनवायचा",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "अनप्लग्ड ब्लॉकली ब्लॉक (ग्रेड के -1)"
+          "name": "अनप्लग्ड ब्लॉकली ब्लॉक (ग्रेड के -1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_gonoodle/courseb/2021": {
-          "name": "Wiggles - Go Noodle"
+          "name": "Wiggles - Go Noodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "20/20/20 नियम"
         },
         "happy-map-game-pieces/courseb/2021": {
-          "name": "हॅपी मॅप गेम पीसेस"
-        },
-        "compass-rose/courseb/2021": {
-          "name": "कंपास रोझ "
+          "name": "हॅपी मॅप गेम पीसेस",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
-        },
-        "unspotted_bugs/courseb/2021": {
-          "url": "https://youtu.be/rah3DYlp5nQ"
-        },
-        "unplugged-video-getting-loopy/courseb/2021": {
-          "url": "https://youtu.be/JoKTqHCni0M"
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf-lesson-recommend/courseb/2021": {
           "name": "सीएस फंडामेंटल्स मुख्य क्रियाकलाप टिपा"
         },
         "common-sense-media-pause-think/courseb/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन "
-        },
-        "the-right-app-scenarios/courseb/2021": {
-          "name": "राइट अॅप परिदृश्य"
+          "name": "पॉज़ आणि थिंक ऑनलाईन ",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-big-event/courseb/2021": {
           "url": "https://youtu.be/u0WV9shCoak"
         },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
         "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "मोठा इव्हेंट (अभ्यासक्रम A, B)"
+          "name": "मोठा इव्हेंट (अभ्यासक्रम A, B)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "play_lab_project_planning_guide/courseb/2021": {
           "name": "प्ले लॅब  प्रोजेक्ट नियोजन मार्गदर्शक"
@@ -250,19 +205,30 @@
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
         },
         "cross-curricular_extension_activities/courseb/2021": {
-          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/courseb/2021": {
-          "name": "अभ्यासक्रम शब्दसंग्रह"
+          "name": "अभ्यासक्रम शब्दसंग्रह",
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        },
+        "implementation_guide/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/courseb/2021": {
-          "name": "लेसन टाईप गाईड "
+          "name": "लेसन टाईप गाईड ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/courseb/2021": {
-          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+          "name": "डीबगिंग गाईड (मार्गदर्शक)",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "curriculum_guide_1/courseb/2021": {
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/courseb/2021": {
-          "name": "2021 लॉग बदला"
+          "name": "2021 लॉग बदला",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/courseb/2021": {
           "url": "https://forum.code.org/c/csf/"
@@ -270,105 +236,86 @@
         "virtual_lesson_modifications/courseb/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा "
         },
-        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "माझ्या ऑनलाइन अतिपरिचित क्षेत्रातील सुरक्षितता: सुरक्षा: हे नियम!"
+        "pair-programming-vid/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "20/20/20 नियम"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "name": "Wiggles - Go Noodle"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "सुरुवात करणे - वर्ग विभाग तयार करणे"
-        },
-        "unplugged-video-happy-maps/coursea/2021": {
-          "url": "https://youtu.be/hrnhiKAQ1_k"
-        },
-        "happy-map-cards/coursea/2021": {
-          "name": "हॅपी मॅप कार्ड्स"
-        },
-        "activity-answer-happy-maps/coursea/2021": {
-          "name": "हॅपी मॅप कार्ड्स"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "happy-map-game-pieces/coursea/2021": {
-          "name": "हॅपी मॅप गेम पीसेस"
+          "name": "हॅपी मॅप गेम पीसेस",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "अनप्लग्ड ब्लॉकली ब्लॉक (ग्रेड के -1)"
+          "name": "अनप्लग्ड ब्लॉकली ब्लॉक (ग्रेड के -1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "20_20_20_rule_1/coursea/2021": {
           "name": "20/20/20 नियम"
         },
         "wiggles_-_gonoodle/coursea/2021": {
-          "name": "Wiggles - Go Noodle"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "name": "स्टेप बटणासह डीबगिंग",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "name": "Wiggles - Go Noodle",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
-        },
-        "happy-map-cards-xl/coursea/2021": {
-          "name": "हॅपी मॅप कार्ड्स XL"
-        },
-        "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "हॅपी मॅप गेम पीसेस बोनस पॅक"
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "चेहऱ्यावरील भावना"
         },
         "pair-programming/coursea/2021": {
-          "name": "पेअर- प्रोग्रामिंग"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
-        },
-        "csf_lesson_recommendations/coursea/2021": {
-          "name": "CSF पाठासाठी असलेल्या शिफारसी "
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "common-sense-media-pause-think/coursea/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन "
+          "name": "पॉज़ आणि थिंक ऑनलाईन ",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
-        },
-        "csf_lesson_recommendations_1/coursea/2021": {
-          "name": "CSF पाठासाठी असलेल्या शिफारसी "
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "unplugged-video-big-event/coursea/2021": {
           "url": "https://youtu.be/u0WV9shCoak"
         },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
         "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "मोठा इव्हेंट (अभ्यासक्रम A, B)"
+          "name": "मोठा इव्हेंट (अभ्यासक्रम A, B)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csf-lesson-recommend/coursea/2021": {
           "name": "सीएस फंडामेंटल्स मुख्य क्रियाकलाप टिपा"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
-        },
-        "csf_lesson_recommendations_2/coursea/2021": {
-          "name": "CSF पाठासाठी असलेल्या शिफारसी "
-        },
-        "artist_project_planning_guide/coursea/2021": {
-          "name": "आर्टीस्ट प्रोजेक्ट नियोजन मार्गदर्शक"
-        },
-        "artist_project_planning_guide_1/coursea/2021": {
-          "name": "आर्टीस्ट प्रोजेक्ट नियोजन मार्गदर्शक"
+          "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "CSTA मानक मॅपिंग",
@@ -381,16 +328,26 @@
           "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
         },
         "course_vocabulary/coursea/2021": {
-          "name": "अभ्यासक्रम शब्दसंग्रह"
+          "name": "अभ्यासक्रम शब्दसंग्रह",
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
+        },
+        "implementation_guide/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursea/2021": {
-          "name": "लेसन टाईप गाईड "
+          "name": "लेसन टाईप गाईड ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursea/2021": {
-          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+          "name": "डीबगिंग गाईड (मार्गदर्शक)",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursea/2021": {
-          "name": "2021 लॉग बदला"
+          "name": "2021 लॉग बदला",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursea/2021": {
           "url": "https://forum.code.org/c/csf/"
@@ -398,14 +355,11 @@
         "virtual_lesson_modifications/coursea/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा "
         },
-        "unplugged-video-robotic-friends/coursec/2021": {
-          "url": "https://youtu.be/xaW3PAzHxCU"
-        },
-        "c2-maze-bridge/coursec/2021": {
-          "name": "मेझ ब्रिजिंग पेज"
-        },
         "unplugged-maze-blocks/coursec/2021": {
           "name": "अनप्लग केलेले मेझ ब्लॉक्स"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "सीएस फंडामेंटल्स मुख्य क्रियाकलाप टिपा"
@@ -414,16 +368,20 @@
           "name": "डीबगिंग गाईड (मार्गदर्शक)"
         },
         "course-cf-blockly-blocks/coursec/2021": {
-          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "कलाकाराचा परिचय"
+          "name": "कलाकाराचा परिचय",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "वळण आणि कोन"
+          "name": "वळण आणि कोन",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "वळण आणि कोन"
+          "name": "वळण आणि कोन",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "चेहऱ्यावरील भावना व भावनांची प्रतिमा"
@@ -431,29 +389,21 @@
         "unplugged-video-big-event/coursec/2021": {
           "url": "https://youtu.be/u0WV9shCoak"
         },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "मोठा इव्हेंट (अभ्यासक्रम C)"
+        "csf-the-big-event-assessment/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
         },
         "pause_and_think_online/coursec/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन "
+          "name": "पॉज़ आणि थिंक ऑनलाईन ",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "ओपन-एंडेड प्रोग्रामिंग लेव्हल्स "
         },
         "open-ended_programming_levels_1/coursec/2021": {
           "name": "ओपन-एंडेड प्रोग्रामिंग लेव्हल्स "
-        },
-        "right-app-scenarios/coursec/2021": {
-          "name": "प्ले लॅबमधून ग्राफिंग डेटा"
-        },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "बिट्स विरुद्ध बाइट्स"
-        },
-        "unplugged-video-binary-bracelets/coursec/2021": {
-          "url": "https://youtu.be/3S2YfoO4_CM"
-        },
-        "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "प्ले लॅब प्रोजेक्ट प्लॅनिंग गाइड (उदाहरण)"
         },
         "play-lab-project-guide/coursec/2021": {
           "name": "प्ले लॅब  प्रोजेक्ट नियोजन मार्गदर्शक"
@@ -466,19 +416,30 @@
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
         },
         "cross-curricular_extension_activities/coursec/2021": {
-          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursec/2021": {
-          "name": "अभ्यासक्रम शब्दसंग्रह"
+          "name": "अभ्यासक्रम शब्दसंग्रह",
+          "url": "https://studio.code.org/s/coursec-2021/vocab"
+        },
+        "implementation_guide/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursec/2021": {
-          "name": "लेसन टाईप गाईड "
+          "name": "लेसन टाईप गाईड ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide_1/coursec/2021": {
-          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+          "name": "डीबगिंग गाईड (मार्गदर्शक)",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "curriculum_guide_1/coursec/2021": {
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursec/2021": {
-          "name": "2021 लॉग बदला"
+          "name": "2021 लॉग बदला",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursec/2021": {
           "url": "https://forum.code.org/c/csf/"
@@ -486,44 +447,19 @@
         "virtual_lesson_modifications/coursec/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा "
         },
-        "password_power-up_lesson_slides/coursed/2021": {
-          "name": "पासवर्ड पॉवर-अप: लेसन स्लाईड"
-        },
-        "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "पासवर्ड पॉवर-अप: तुमचा पासवर्ड पॉवर-अप करा"
-        },
-        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "पासवर्ड पॉवर-अप: तुमचा पासवर्ड पॉवर-अप करा"
-        },
-        "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "पासवर्ड पॉवर-अप: लेसन क्विझ"
-        },
-        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "पासवर्ड पॉवर-अप: लेसन क्विझ"
-        },
-        "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "पासवर्ड पॉवर-अप: जर ... तर ... परिदृश्य"
-        },
-        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "पासवर्ड पॉवर-अप: जर ... तर ... परिदृश्य"
-        },
-        "unplugged-video-graph-paper/coursed/2021": {
-          "url": "https://youtu.be/Y_paSrH2ffw"
-        },
-        "unplugged-video-relay-programming/coursed/2021": {
-          "url": "https://youtu.be/l5MKkXbzOsk"
-        },
-        "teacher-video-relay-programming-2/coursed/2021": {
-          "url": "https://youtu.be/ZULpfAVJOBo"
+        "pair-programming-vid/coursed/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "course-cf-blockly-blocks/coursed/2021": {
-          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
           "name": "बाउन्समधील इव्हेंट्स - ते कसे घडतात?"
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन "
+          "name": "पॉज़ आणि थिंक ऑनलाईन ",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "ओपन-एंडेड प्रोग्रामिंग लेव्हल्स "
@@ -535,7 +471,8 @@
           "name": "डांस पार्टी प्रोजेक्ट गाईड "
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)"
+          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "डान्स पार्टी: अनप्लग केलेले"
@@ -547,19 +484,8 @@
           "name": "चेहऱ्यावरील भावना"
         },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन "
-        },
-        "unplugged-video-conditionals-cards/coursed/2021": {
-          "url": "https://youtu.be/UymN4lTL50s"
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "कार्ड्स सॅम्पल प्रोग्रामसह सशर्त"
-        },
-        "conditionals-with-cards-assessment-video/coursed/2021": {
-          "url": "https://youtu.be/TbUaEnAYPjI"
-        },
-        "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "CSF कोर्स D अभ्यासक्रमाचा प्रोजेक्ट प्लॅनिंग गाइडचा शेवट"
+          "name": "पॉज़ आणि थिंक ऑनलाईन ",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "CSTA मानक मॅपिंग",
@@ -569,19 +495,30 @@
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
         },
         "cross-curricular_extension_activities/coursed/2021": {
-          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursed/2021": {
-          "name": "अभ्यासक्रम शब्दसंग्रह"
+          "name": "अभ्यासक्रम शब्दसंग्रह",
+          "url": "https://studio.code.org/s/coursed-2021/vocab"
+        },
+        "implementation_guide/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursed/2021": {
-          "name": "लेसन टाईप गाईड "
+          "name": "लेसन टाईप गाईड ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursed/2021": {
-          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+          "name": "डीबगिंग गाईड (मार्गदर्शक)",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "curriculum_guide_1/coursed/2021": {
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursed/2021": {
-          "name": "2021 लॉग बदला"
+          "name": "2021 लॉग बदला",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursed/2021": {
           "url": "https://forum.code.org/c/csf/"
@@ -592,17 +529,23 @@
         "unplugged_maze_blocks/express/2021": {
           "name": "अनप्लग केलेले मेझ ब्लॉक्स"
         },
+        "pair_programming/express/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
         "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
-          "name": "कलाकाराचा परिचय"
+          "name": "कलाकाराचा परिचय",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "turns_angles/express/2021": {
-          "name": "वळण आणि कोन"
+          "name": "वळण आणि कोन",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "turns_angles_1/express/2021": {
-          "name": "वळण आणि कोन"
+          "name": "वळण आणि कोन",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
           "name": "स्विमिंग फिश शिक्षक सँडबॉक्स",
@@ -618,40 +561,41 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "pause_and_think_online/express/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन "
+          "name": "पॉज़ आणि थिंक ऑनलाईन ",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "dance-party-project-guide/express/2021": {
           "name": "डांस पार्टी प्रोजेक्ट गाईड "
         },
         "dance-party-playlist/express/2021": {
-          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)"
+          "name": "Spotify प्लेलिस्ट (सर्व वयोगट)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "ओपन-एंडेड प्रोग्रामिंग लेव्हल्स "
         },
         "pair_programming_video/express/2021": {
-          "name": "प्रोग्रामिंग व्हिडिओ जोडा"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
+          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
           "name": "टेक्स्ट आणि प्रॉम्प्ट्स"
-        },
-        "variables_video/express/2021": {
-          "url": "https://youtu.be/DI7DprN4FtE"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "CS मूलभूत अंतिम प्रोजेक्ट "
@@ -661,16 +605,22 @@
           "url": "https://studio.code.org/s/express-2021/standards"
         },
         "course_vocabulary_1/express/2021": {
-          "name": "कोर्स शब्दावली"
+          "name": "कोर्स शब्दावली",
+          "url": "https://studio.code.org/s/express-2021/vocab"
         },
         "teacher_forum_1/express/2021": {
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/express/2021": {
-          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+          "name": "डीबगिंग गाईड (मार्गदर्शक)",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "class-section-video/pre-express/2021": {
-          "name": "Code.org वर क्लास सेक्शन कसा बनवायचा"
+          "name": "Code.org वर क्लास सेक्शन कसा बनवायचा",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "feeling-faces-image/pre-express/2021": {
           "name": "चेहऱ्यावरील भावना"
@@ -679,10 +629,11 @@
           "name": "20/20/20 नियम"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "Wiggles - Go Noodle"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "common-sense-media-pause-think/pre-express/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन "
+          "name": "पॉज़ आणि थिंक ऑनलाईन ",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "CSTA मानक मॅपिंग",
@@ -696,7 +647,8 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/pre-express/2021": {
-          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+          "name": "डीबगिंग गाईड (मार्गदर्शक)",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "अल्गोरिदमचे अनुसरण करा"
@@ -708,55 +660,20 @@
         "sprite_lab_documentation/coursee/2021": {
           "url": "https://studio.code.org/docs/spritelab/"
         },
-        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "एक सुपर डिजिटल नागरिक बना: लेसन स्लाइड"
-        },
-        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "एक सुपर डिजिटल नागरिक व्हा: सुपर डिजिटल नागरिक"
-        },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "पॉज़ आणि थिंक ऑनलाईन ",
-          "url": "https://youtu.be/X_duZ-1LApg"
-        },
-        "about_me_planning_guide/coursee/2021": {
-          "name": "माझ्या बद्दल नियोजन मार्गदर्शक"
-        },
-        "digital-sharing-lesson/coursee/2021": {
-          "name": "डिजिटल शेअरिंग धड्याचा प्लॅन"
-        },
-        "digital-sharing-video/coursee/2021": {
-          "name": "डिजिटल शेअरिंग एथिक्स (व्हिडिओ)"
+          "name": "पॉज़ आणि थिंक ऑनलाईन "
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "वळण आणि कोन"
+          "name": "वळण आणि कोन",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "वळण आणि कोन"
-        },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "फंक्शन्ससह  सॉंग राईटींग ",
-          "url": "https://youtu.be/5iDCKkI6y2Y"
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग"
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग"
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग"
-        },
-        "assessment-answer-songwriting/coursee/2021": {
-          "name": "फंक्शन्स अनप्लग्ड: सॉंग राईटींग"
+          "name": "वळण आणि कोन",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "course-cf-blockly-blocks/coursee/2021": {
-          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)"
-        },
-        "types_of_disabilities/coursee/2021": {
-          "name": "अपंगत्वाचे प्रकार"
-        },
-        "end-of-course-project-guide/coursee/2021": {
-          "name": "अभ्यासक्रमाच्या  शेवटी प्रोजेक्ट गाईड"
+          "name": " अनप्लग ब्लॉक्स (अभ्यासक्रम  C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "CS मूलभूत अंतिम प्रोजेक्ट "
@@ -772,19 +689,30 @@
           "name": "सामान्य कोर आणि NGSS मार्गदर्शन"
         },
         "cross-curricular_extension_activities/coursee/2021": {
-          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज"
+          "name": "क्रॉस-करिक्युलर एक्सटेंशन अॅक्टिव्हिटीज",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursee/2021": {
-          "name": "कोर्स शब्दावली"
+          "name": "कोर्स शब्दावली",
+          "url": "https://studio.code.org/s/coursee-2021/vocab"
+        },
+        "implementation_guide/coursee/2021": {
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursee/2021": {
-          "name": "लेसन टाईप गाईड "
+          "name": "लेसन टाईप गाईड ",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
         },
         "debugging_guide/coursee/2021": {
-          "name": "डीबगिंग गाईड (मार्गदर्शक)"
+          "name": "डीबगिंग गाईड (मार्गदर्शक)",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "curriculum_guide_1/coursee/2021": {
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursee/2021": {
-          "name": "2021 लॉग बदला"
+          "name": "2021 लॉग बदला",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursee/2021": {
           "url": "https://forum.code.org/c/csf/"

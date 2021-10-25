@@ -1297,7 +1297,9 @@
           "courseA_harvester_loops4_b": "इथे किती कणसे आहेत? तुमचा कोड कितीवेळा रिपीट होतो?"
         },
         "courseA_harvester_loops5_2021": {
-          "courseA_harvester_loops5_a": "तुम्ही अडकलात तर हे कोडे 2 भागात सोडवण्याचा प्रयत्न करा, एक भाग कॉर्नरच्या आधीचा आणि एक भाग कॉर्नरच्या नंतरचा."
+          "courseA_harvester_loops5_a": "तुम्ही अडकलात तर हे कोडे 2 भागात सोडवण्याचा प्रयत्न करा, एक भाग कॉर्नरच्या आधीचा आणि एक भाग कॉर्नरच्या नंतरचा.",
+          "courseA_harvester_loops5_b": "तुमच्या अंतिम कोडमध्ये **एक** 'रिपीट' <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml> लूप, **एक** 'दक्षिणेकडे जा' <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> ब्लॉक आणि **एक** 'पूर्वेकडे जा' <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml> ब्लॉक असेल.   ",
+          "courseA_harvester_loops5_c": "सर्व कणसे खुडण्यासाठी हा मार्ग वापरा!"
         },
         "courseA_maze_ramp2_2021": {
           "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1317,6 +1319,217 @@
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "जर पक्षी डुकरापर्यंत पोचत नसेल तर दोन्ही ब्लॉक्स एकमेकांना पूर्णपणे जोडले आहेत हे सुनिश्चित करा, नंतर पुन्हा  \"Run\" क्लिक करा.",
           "courseC_maze_programming1_b": "चूक करायला घाबरू नका! काहीतरी करायचा प्रयत्न करा आणि जर ते होत नसेल तर दुसरे काहीतरी करून बघा!"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "तुम्हाला एका 'रिपीट' <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> लूपनंतर दुसरा लूप लागेल.  ",
+          "courseA_harvester_loops5a_b": "एक लूप 'दक्षिणेकडे जा' <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> रिपीट करेल आणि दुसरा 'पूर्वकडे जा' <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml> रिपीट करेल",
+          "courseA_harvester_loops5a_c": "हा मार्ग एका दिशेने आणि मग दुसऱ्या दिशेने जाण्यासाठी वापरा."
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "'Run' दाबा आणि  काय घडते ते पाहा!",
+          "courseA_harvester_loops5b_b": "तुमचे लूप्स योग्य वेळा रिपीट होत आहेत का?",
+          "courseA_harvester_loops5b_c": "हा मार्ग वापरून एका दिशेने आणि मग दुसऱ्या दिशेने जा."
+        },
+        "courseA_harvester_loops6_2021": {
+          "courseA_harvester_loops6_a": "तुम्ही अडकलात तर पायऱ्या कागदावर लिहायचा आणि रिपीट होणारे पॅटर्न्स शोधायचा प्रयत्न करा.",
+          "courseA_harvester_loops6_b": "सर्व कणसे खुडण्यासाठी तुम्ही हा मार्ग घेतला पाहिजे."
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "तुम्हाला एकानंतर एक असे दोन 'रिपीट' <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> लूप्स लागतील!",
+          "courseA_harvester_loops7_b": "हा मार्ग अनुसरण्यासाठी दोन लूप्स वापरा."
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "या कोड्याचे तीन भागात विभाजन करा. एक भाग पहिल्या कोपऱ्यापर्यंत, एक भाग  दुसऱ्या कोपऱ्यापर्यंत आणि एक भाग शेवटपर्यंत.",
+          "courseA_harvester_loops9_b": "प्रत्येक भाग झाल्यावर काय घडते ते पाहण्यासाठी तुमचा कोड रन करायला घाबरू  नका!",
+          "courseA_harvester_loops9_c": "सर्व कणसे खुडण्यासाठी या मार्गाचे अनुसरण करा!"
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "तुम्ही अडकलात का? आधी कागदावर पायऱ्या लिहून पाहा.",
+          "courseA_harvester_seq10_b": "तुम्ही 'पूर्वेकडे जाणे', मग 'उत्तरेकडे जाणे' आवश्यक आहे. हे दोन वेळा करा. सगळी कणसे मिळवायलासुद्धा विसरू नका! ",
+          "courseA_harvester_seq10_c": "सर्व कणसे खुडण्यासाठी हा मार्ग वापरून पहा."
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "हार्वेस्टर कणसापर्यंत पोचला की त्याला ते खुडायला मदत करण्यासाठी हा ब्लॉक वापरा."
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "हार्वेस्टरला कणीस सापडले की त्याला ते खुडायला मदत करण्यासाठी हा ब्लॉक वापरा!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "कणसापर्यंत पोचण्यासाठी हार्वेस्टरला 3 वेळा पूर्वेकडे जावे लागेल. हा ब्लॉक वापरा:\n\n <xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "कणीस खुडण्यासाठी <xml><block type=\"harvester_corn\"/></xml> वापरायला विसरू नका!",
+          "courseA_harvester_seq2_b": "सोल्युशन शोधण्यासाठी कागदावर पायऱ्या लिहिण्याचा प्रयत्न करा!"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "तुमच्या हा ब्लॉक वापरायचे लक्षात होते का?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "या पायऱ्या मोठ्याने म्हणा आणि त्यातून तुम्हाला उत्तर शोधायला मदत मिळते का बघा."
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "हार्वेस्टर आणि कणसामध्ये किती स्पेसेस आहेत? तुमच्या वर्कस्पेसमध्ये आधीपासून किती ब्लॉक्स आहेत?",
+          "courseA_harvester_seq4_b": "तुम्हाला पाच 'पूर्वकडे जा' ब्लॉक्स आणि एक 'कणीस खुडा' ब्लॉक लागेल:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "कोणता ब्लॉक हार्वेस्टरला चुकीच्या दिशेने हलवतो?  ",
+          "courseA_harvester_seq5_b": "तुम्ही एक ब्लॉक हलवणे आवश्यक आहे.",
+          "courseA_harvester_seq5_c": "हा ब्लॉक कचऱ्यात टाका!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "तुम्ही अडकला असाल तर, पायऱ्या मोठ्याने म्हणून बघा. त्यामुळे तुम्हाला योग्य मार्ग शोधायला मदत होऊ शकते."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "हे कोडे 2 भागात सोडवा, एक भाग कॉर्नरच्या आधीचा आणि एक भाग कॉर्नरच्या नंतरचा.",
+          "courseA_harvester_seq7_b": "अवघड जातेय? हा मार्ग हार्वेस्टरने घेतला पाहिजे."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "तुमच्या अंतिम कोडमध्ये **4** मूव्हमेंट ब्लॉक्स आणि **2** पिक ब्लॉक्स असणे आवश्यक आहे.  "
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "काय घडते ते पाहण्यासाठी कोड काहीवेळा रन करा. हार्वेस्टर कुठे थांबतो?  ",
+          "courseA_harvester_seq9_b": "सर्व कणसे गोळा करायला विसरू नका! तुम्हाला **3** कणीस खुडा ब्लॉक्स आवश्यक आहेत. ",
+          "courseA_harvester_seq9_c": "सर्व कणसे खुडण्यासाठी तुम्ही या मार्गाने गेले पाहिजे."
+        },
+        "courseA_maze_seq10_2021": {
+          "courseA_maze_seq10_a": "तुम्हाला अवघड जात असेल तर आधी कागदावर पायऱ्या लिहून पाहा.",
+          "courseA_maze_seq10_b": "हे कोडे सोडवण्यासाठी तुम्हाला 3 वेगवेगळ्या दिशांना जावे लागेल."
+        },
+        "courseA_maze_seq13_2021": {
+          "courseA_maze_seq13_a": "जर तुम्हाला हवा असलेला मार्ग अस्पष्ट असेल तर पक्ष्यापासून डुकरापर्यंत पोचण्यासाठीचा मार्ग तुमच्या बोटाने आखा.",
+          "courseA_maze_seq13_b": "चूक करायला घाबरू नका! ब्लॉक्स जोडण्याचा प्रयत्न करा आणि काय घडतेय ते पाहण्यासाठी कोड रन करा.",
+          "courseA_maze_seq13_c": "हे <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\nब्लॉक्स तुम्हाला डुकराच्या अधिक जवळ जायला मदत करतील."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_a": "जर तुम्हाला पक्ष्याची हालचाल करण्यात समस्या येत असेल तर ब्लॉक्स <xml>\n  <block type=\"when_run\"/>\n</xml> च्या खाली जोडले आहेत याची खात्री करा",
+          "courseA_maze_seq1_b": "डुकरापर्यंत पोचण्यासाठी पक्ष्याला 3 वेळा पश्चिमेकडे जावे लागेल. हा ब्लॉक वापरा:\n\n <xml><block type=\"maze_moveWest\"/></xml>"
+        },
+        "courseA_maze_seq5_2021": {
+          "1": "सोल्युशन शोधण्यासाठी कागदावर पायऱ्या लिहिण्याचा प्रयत्न करा!",
+          "2": "तुम्हाला हा ब्लॉक वापरावा लागेल:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+        },
+        "courseA_maze_seq5a_2021": {
+          "1": "पायऱ्या मोठ्याने म्हणून बघा आणि त्यातून तुम्हाला उत्तर शोधायला मदत मिळते का पहा."
+        },
+        "courseA_maze_seq6_2021": {
+          "courseA_maze_seq6_a": "तुमच्या अंतिम कोडमध्ये 3 मूव्हमेंट ब्लॉक्स असले पाहिजेत.",
+          "courseA_maze_seq6_b": "तुम्ही अडकलात तर हे कोडे 2 भागात सोडवण्याचा प्रयत्न करा, एक भाग कॉर्नरच्या आधीचा आणि एक भाग कॉर्नरच्या नंतरचा."
+        },
+        "courseA_maze_seq8_2021": {
+          "courseA_maze_seq8_a": "जर तुम्ही अडकला असता तर पक्ष्याने कशी हालचाल केली पाहिजे हे पाहण्यासाठी कागदावर चित्र काढण्याचा प्रयत्न करा."
+        },
+        "courseA_maze_seq_challenge1_2021": {
+          "courseA_maze_seq_challenge1_a": "हे कोडे सोडवायचे दोन मार्ग आहेत."
+        },
+        "courseA_maze_seq_challenge2_2021": {
+          "courseA_maze_seq_challenge2_a": "जागा तुमच्या बोटांनी मोजण्याचा प्रयत्न करा. तुम्ही जिथून सुरू करता ती जागा मोजू नका!"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "जर तुम्हाला हा लूप 4 पेक्षा जास्त वेळा रिपीट करायचा असेल तर तुम्ही ब्लॉकच्या वरची संख्या बदलू शकता.",
+          "courseB_artist_loops2_b": "आर्टीस्ट काय करतो हे पाहण्यासाठी आधी हा कोड रन करायचा प्रयत्न करा."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "अधिक चांगल्या कोडसाठी 'रिपीट' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> लूप वापरायचे लक्षात ठेवा!",
+          "courseB_artist_loops3_b": "आर्टीस्टला ही रेष काढण्यासाठी दक्षिणेला जावे लागेल.  "
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "जंप ब्लॉक वापरून तुम्ही रेष न काढता पुढे जाऊ शकता.",
+          "courseB_artist_loops4_b": "हे कोडे सोडवण्यासाठी तुम्ही रिपीट लूपच्या आत एक ब्लॉक जोडणे आवश्यक आहे.",
+          "courseB_artist_loops4_c": "लूप जितक्या वेळा रिपीट होतो ती संख्या बदलायला विसरू नका."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "'रिपीट' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> लूप बाहेर ड्रॅग करा, मग इतर ब्लॉक्स त्याच्या आत ठेवा. तुम्हाला कितीवेळा रिपीट करावे लागेल?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "मूव्ह्ज एका कागदावर लिहिण्याचा प्रयत्न करा आणि काही पॅटर्न आहे का शोधा."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "हे आव्हान **4** लूप्स वापरते, एका पाठोपाठ एक! ",
+          "courseB_artist_loops7_b": "याची नोंद घ्या की प्रत्येक लूप एक जिन्याचा पॅटर्न बनवतो, जो वेगळ्या दिशेत जातो.\n\n![](https://images.code.org/7d08d5514766c5c15074e90731991505-image-1466705649513.gif)",
+          "courseB_artist_loops7_c": "लूप्सनी हे केले पाहिजे:\n\n-   लूप 1\n    -   उजवीकडे\n    -   खाली\n\n-   लूप 2\n    -   उजवीकडे\n    -   वर\n\n-   लूप 3\n    -   डावीकडे\n    -   वर\n\n-   लूप 4\n    -   डावीकडे\n    -   खाली"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "जेव्हा तुम्ही खजिन्यावर उभे असाल तेव्हा <xml><block type=\"collector_collect_simplified\"/></xml> ब्लॉक खजिना गोळा करण्यासाठी वापरता येईल."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "जर स्क्रॅट तुम्हाला पाहिजे ते करत नसेल तर दोन्ही ब्लॉक्स एकमेकांना व्यवस्थित जोडले आहेत, हे सुनिश्चित करा आणि मग पुन्हा \"Run\" क्लिक करा.",
+          "2": "चूक करायला घाबरू नका! काहीतरी करायचा प्रयत्न करा आणि जर ते होत नसेल तर दुसरे काहीतरी करून बघा!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "शिडी तयार करण्यासाठी तुम्ही कितीवेळा पॅटर्न रिपीट केला पाहिजे?",
+          "courseB_artist_loops8_b": "तुम्हाला दिलेला कोड काय करतो ते पाहण्यासाठी तो रन करायचा प्रयत्न करा."
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "हे लक्षात ठेवा की रेष न काढता हालचाल करण्यासाठी जंप ब्लॉक्स वापरता येतात.",
+          "courseB_artist_loops9_b": "तुम्हाला हे कोडे सोडवण्यासाठी W ब्लॉकचा वापर करायचा असेल.",
+          "courseB_artist_loops9_c": "लूप कुठे लिहायचे ते समजत नाही आहे? पायरी-पायरीने कोड लिहिण्याचा प्रयत्न करा आणि पॅटर्न शोधा."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_a": "यासारखे ब्लॉक्स: <xml>  <block type=\"simple_move_up_right\"/></xml> तुमच्या आर्टीस्टला एका तिरक्या रेषेत जायला मदत करेल! ",
+          "courseB_artist_loops_challenge1_b": "तुम्ही एक फासा पूर्ण केल्यावर, पुढच्या पातळीला 'उडी मारा'!",
+          "courseB_artist_loops_challenge1_c": "तुम्हाला यापैकी काही रेषांवरून 'हालचाल करायला' किंवा 'उडी मारायला' लागेल."
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "X काढायचा कोड तुम्हाला आधीच दिलेला आहे. तुम्हाला फक्त X रिपीट करायचा आहे आणि पुढच्या स्पॉटला 'उडी मारायची आहे.",
+          "courseB_artist_loops_challenge2_b": "फासा न टाकता इतर जागांकडे जाण्यासाठी तुम्ही ब्लॉक्सवरून 'उडी मारू शकता'."
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_a": "तुम्हाला 'रिपीट' लूप्स कुठे लिहायचे ते समजत नसेल तर पायरी-पायरीने कोड लिहिण्याचा प्रयत्न करा आणि पॅटर्न शोधा.",
+          "courseB_collector_loops10_b": "मूव्ह्ज एका कागदावर लिहिण्याचा प्रयत्न करा आणि काही पॅटर्न आहे का शोधा."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "तुम्ही कोणताही खजिना गोळा करण्यापूर्वी तुम्हाला हालचाल करावी लागेल.",
+          "courseB_collector_loops2_b": "जेव्हा तुम्ही खजिन्याच्या जागी पोचाल तेव्हा तो गोळा करण्यासाठी <xml><block type=\"collector_collect\"/></xml> ब्लॉक वापरा."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "तुमचा खजिना गोळा करण्यासाठी <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> ब्लॉक वापरण्याचा प्रयत्न करा.",
+          "courseB_collector_prog3_b": "लक्षात ठेवा, तुम्ही एका रिपीट लूपच्या आत एकापेक्षा जास्त ब्लॉक्स वापरू शकता."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "कुठे चुकते आहे ते शोधण्यासाठी स्टेप बटण वापरण्याचा प्रयत्न करा.",
+          "courseB_collector_loops4_b": "लॉरेल किती दूर जाते, हे बदलण्यासाठी, लूप किती वेळा रन होतो ती संख्या बदला.",
+          "courseB_collector_loops4_c": "लॉरेलला खाली चालत जावे लागेल आणि तिने 'रिपीट' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> लूप संपवल्यावर खजिना गोळा करावा लागेल!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "काम पूर्ण करण्यासाठी एकापेक्षा जास्त लूप्स वापरा.",
+          "courseB_collector_loops5_b": "कोड काय करतो ते पाहण्यासाठी तो एक-दोन वेळा रन करायचा प्रयत्न करा."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "काय चुकते आहे ते कळत नाही आहे? तुमच्या प्रोग्रॅममधील एकावेळी एक ब्लॉक रन करण्यासाठी \"स्टेप\" बटण वापरा.",
+          "courseB_collector_loops6_b": "तुम्ही \"3\" वर क्लिक करून आणि वेगळी संख्या निवडून रिपीट लूप कितीवेळा रन होतो ती संख्या बदलू शकता.",
+          "courseB_collector_loops6_c": "तुम्हाला हे कोडे सोडवण्यासाठी 3 'रिपीट' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> चा वापर करायचा असेल.",
+          "courseB_collector_loops6_d": "तुमचा गोंधळ उडाला असेल तर या कोड्याचे 3 भागात विभाजन करण्याचा प्रयत्न करा."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "तुम्हाला कोडे सोडवणे अवघड जात असेल तर तुम्हाला उत्तर काढण्यास मदत होण्यासाठी कोडे कागदावर काढण्याचा प्रयत्न करा.",
+          "courseB_collector_loops7_b": "तुम्हाला हे कोडे सोडवण्यासाठी 3 रिपीट लूप्स लागतील आणि शेवटी अतिरिक्त खजिना विसरू नका!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "तुम्हाला रिपीट लूप्स कुठे लिहायचे ते समजत नसेल तर पायरी-पायरीने कोड लिहिण्याचा प्रयत्न करा आणि पॅटर्न शोधा."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "हे फार अवघड वाटते आहे का? हे अधिक सोपे वाटण्यासाठी त्याचे 3 छोट्या समस्यांमध्ये रूपांतर करा.",
+          "courseB_collector_loops9_b": "या सोल्युशनसाठी तुम्हाला 3 रिपीट लूप्स आवश्यक असतील. "
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "खालील कमांड्स लूप करून सुरुवात करा:\n\n<xml>\n  <block type=\"maze_moveSouth\">\n    <next>\n    <block type=\"collector_collect\"></block>\n    </next>\n    </block>\n</xml>",
+          "courseB_collector_loops_challenge1_c": "प्रत्येक मार्गात दोनदा पूर्वेकडे जा.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nतुम्ही असे फक्त 14 ब्लॉक्ससाठी करू शकता. सोल्युशन पाहण्यासाठी अजून एका हिंटसाठी क्लिक करा.  ",
+          "courseB_collector_loops_challenge1_d": "हे करून पहा!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "तुटलेल्या बर्फापासून सावध राहा! स्क्रॅट त्यातून थेट पडू शकतो!",
+          "courseB_iceage_loops1_b": "तुम्हाला हा ब्लॉक वापरावा लागेल:\n\n<xml><block type=\"maze_moveEast\"/></xml>"
         }
       }
     }
