@@ -26,7 +26,8 @@ const getMembers = (count, offset = 0) =>
     name: names[k + offset]
   }));
 
-// Create two groups of four people.
+// Create code two groups of four students who have been assigned to a group,
+// as well as a group of students who have not been assigned to a group.
 // We'll also eventually pass in a group name as a top level property.
 const groups = [
   {id: 1, members: getMembers(4)},
