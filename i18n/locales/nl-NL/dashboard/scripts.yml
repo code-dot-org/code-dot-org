@@ -5644,10 +5644,6 @@ nl:
               name: Widgets
             lesson-2:
               name: Hulpmiddelen
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabelen
         spelling-bee:
           lessons:
             lesson-1:
