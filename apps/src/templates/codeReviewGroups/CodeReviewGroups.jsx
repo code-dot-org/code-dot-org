@@ -38,9 +38,8 @@ export default function CodeReviewGroups({initialGroups}) {
         destination.index
       );
 
-      const newGroups = [...groups];
-      updateGroups(newGroups, result);
-      setGroups(newGroups);
+      const updatedGroups = updateGroups(groups, [result]);
+      setGroups(updatedGroups);
     } else {
       // If a member was dropped in a different group.
       const result = move(
@@ -50,12 +49,13 @@ export default function CodeReviewGroups({initialGroups}) {
         destination.index
       );
 
-      const newGroups = [...groups];
-      updateGroups(newGroups, result.updatedSource);
-      updateGroups(newGroups, result.updatedDest);
+      const updatedGroups = updateGroups(groups, [
+        result.updatedSource,
+        result.updatedDest
+      ]);
 
       // Remove any blank groups
-      setGroups(newGroups.filter(group => group.members.length));
+      setGroups(updatedGroups.filter(group => group.members.length));
     }
   }
 
@@ -115,13 +115,19 @@ const move = (
   return {updatedSource, updatedDest};
 };
 
-// Replaces one element in an existing list of groups
-// with an updated version of the group (ie, with more, less, or reordered members).
-const updateGroups = (existingGroups, newGroup) => {
-  const updatedGroupIndex = existingGroups.findIndex(
-    group => group.droppableId === newGroup.droppableId
-  );
-  existingGroups[updatedGroupIndex] = newGroup;
+// Returns a copied list of groups
+// with updated versions of the provided changedGroups (ie, with more, less, or reordered members).
+const updateGroups = (groups, changedGroups) => {
+  const updatedGroups = [...groups];
+
+  changedGroups.forEach(changedGroup => {
+    const updatedGroupIndex = updatedGroups.findIndex(
+      group => group.droppableId === changedGroup.droppableId
+    );
+    updatedGroups[updatedGroupIndex] = changedGroup;
+  });
+
+  return updatedGroups;
 };
 
 const addDroppableIdToGroup = group => {
