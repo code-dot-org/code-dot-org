@@ -86,6 +86,8 @@ def main(options)
     models = ['Lesson', 'Activity']
     script.lessons.each do |lesson|
       LessonImportHelper.update_lesson(lesson, models)
+    rescue => e
+      raise e, "Error migrating unit #{script.name.dump} lesson #{lesson.name.dump}: #{e}", e.backtrace
     end
 
     has_lesson_plans = script.lessons.any?(&:has_lesson_plan)
