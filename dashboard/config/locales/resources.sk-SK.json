@@ -2,87 +2,66 @@
   "sk-SK": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Predstavenie Umelca"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Oblúky a uhly"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Oblúky a uhly"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+        },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "Udalosti v Bounce – Ako fungujú? "
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
           "name": "Udalosti v Bounce – Ako fungujú? "
         },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+        },
         "introducing_sprite_lab/coursef/2021": {
-          "name": "Predstavenie Sprite Labu",
-          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
+          "name": "Predstavenie Sprite Labu"
         },
         "exploring_apps/coursef/2021": {
-          "name": "Preskúmanie aplikácií",
-          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
+          "name": "Preskúmanie aplikácií"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "Predstavenie Sprite Labu",
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "name": "Predstavenie Sprite Labu"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "Preskúmanie aplikácií",
-          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+          "name": "Preskúmanie aplikácií"
         },
         "making_sprites/coursef/2021": {
-          "name": "Vytváranie postáv",
-          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+          "name": "Vytváranie postáv"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "Dokumentácia pre Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "Postavy v akcii",
-          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
-        },
-        "the_power_of_words_lesson_slides/coursef/2021": {
-          "name": "Objav silu slov: prezentácia k lekcii",
-          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
-        },
-        "the_power_of_words_the_power_of_words/coursef/2021": {
-          "name": "Objav silu slov: Objav silu slov\t",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
-        },
-        "the_power_of_words_words_can_hurt/coursef/2021": {
-          "name": "Objav silu slov: Slová dokážu ublížiť",
-          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
-        },
-        "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "Objav silu slov: kvíz pre lekciu",
-          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
-        },
-        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "Objav silu slov: kvíz pre lekciu",
-          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
-        },
-        "variables_blank_space_stories/coursef/2021": {
-          "name": "Premenné: Príbehy na doplnenie"
+          "name": "Postavy v akcii"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Príbehy na doplnenie"
         },
         "blank_space_stories/coursef/2021": {
-          "name": "Príbehy na doplnenie",
-          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+          "name": "Príbehy na doplnenie"
         },
         "text_and_prompts/coursef/2021": {
           "name": "Text a výzvy",
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
-        "user_input_programs/coursef/2021": {
-          "name": "Programy reagujúce na vstupy používateľa",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
-        },
-        "mini_project_user_input_programs/coursef/2021": {
-          "name": "Miniprojekt: Programy reagujúce na vstupy používateľa"
-        },
-        "mini_project_user_input_programs_1/coursef/2021": {
-          "name": "Miniprojekt: Programy reagujúce na vstupy používateľa"
-        },
         "pause_and_think_online/coursef/2021": {
-          "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "name": "Pause and Think Online"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Zábava s cyklami \"for\""
@@ -107,31 +86,17 @@
           "name": "Vytváranie simulácií"
         },
         "unplugged-video-internet/coursef/2021": {
-          "name": "Internet",
-          "url": "https://youtu.be/mFOUbqYv1Sc"
-        },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+          "name": "Internet"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "Internet",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "name": "Internet"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "Internet",
-          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
-        },
-        "get-site-ip-com/coursef/2021": {
-          "name": "get-site-ip-com",
-          "url": "http://get-site-ip.com/"
+          "name": "Internet"
         },
         "design-process/coursef/2021": {
           "name": "Proces návrhu",
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
-        },
-        "final-project-design-worksheet/coursef/2021": {
-          "name": "Návrh záverečného projektu",
-          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Základy informatiky – záverečný projekt",
@@ -197,8 +162,17 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Pohni sa, pohni sa"
         },
+        "feeling-faces-image/courseb/2021": {
+          "name": "Smajlíkovia"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Ako na Code.org vytvoriť triednu sekciu"
+        },
         "pair-programming-vid/courseb/2021": {
           "name": "Programovanie v páre"
+        },
+        "20_20_20_rule/courseb/2021": {
+          "name": "Pravidlo 20/20/20"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie a jej veľký projekt"
@@ -219,10 +193,7 @@
           "name": "Cykly sa zacykľujú"
         },
         "common-sense-media-pause-think/courseb/2021": {
-          "name": "Mysli celým telom, keď si online"
-        },
-        "the-right-app-scenarios/courseb/2021": {
-          "name": "Vhodná aplikácia – situácie"
+          "name": "Pause and Think Online"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Veľká udalosť"
@@ -272,11 +243,20 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Programovanie v páre"
         },
+        "20_20_20_rule/coursea/2021": {
+          "name": "Pravidlo 20/20/20"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Veselé mapy"
         },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "Pravidlo 20/20/20"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "Smajlíkovia"
+        },
         "common-sense-media-pause-think/coursea/2021": {
-          "name": "Mysli celým telom, keď si online"
+          "name": "Pause and Think Online"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Veľká udalosť"
@@ -337,6 +317,9 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Moji robotickí kamaráti"
         },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "Bloky bludiska bez počítača"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Programovanie v páre"
         },
@@ -346,6 +329,15 @@
         "course-cf-blockly-blocks/coursec/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "Predstavenie Umelca"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "Oblúky a uhly"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "Oblúky a uhly"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Veľká udalosť"
@@ -357,10 +349,13 @@
           "name": "Veľká udalosť"
         },
         "pause_and_think_online/coursec/2021": {
-          "name": "Mysli celým telom, keď si online"
+          "name": "Pause and Think Online"
         },
-        "right-app-scenarios/coursec/2021": {
-          "name": "Grafické znázorňovanie údajov z Play Labu"
+        "open-ended_programming_levels/coursec/2021": {
+          "name": "Úrovne na otvorené programovanie"
+        },
+        "open-ended_programming_levels_1/coursec/2021": {
+          "name": "Úrovne na otvorené programovanie"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Binárne náramky"
@@ -414,22 +409,22 @@
           "name": "Úpravy virtuálnych lekcií"
         },
         "graph-paper-programming/coursed/2021": {
-          "name": "Programovanie na štvorčekovom papieri"
+          "name": "Programovanie na štvorčekový papier"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "Programovanie na štvorčekovom papieri"
+          "name": "Programovanie na štvorčekový papier"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Programovanie na štvorčekovom papieri"
+          "name": "Programovanie na štvorčekový papier"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "Programovanie na štvorčekovom papieri"
+          "name": "Programovanie na štvorčekový papier"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "Programovanie na štvorčekovom papieri"
+          "name": "Programovanie na štvorčekový papier"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "Programovanie na štvorčekovom papieri"
+          "name": "Programovanie na štvorčekový papier"
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Programovanie v páre"
@@ -460,13 +455,28 @@
           "name": "Udalosti v Bounce – Ako fungujú? "
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "Mysli celým telom, keď si online"
+          "name": "Pause and Think Online"
+        },
+        "open-ended_programming_levels/coursed/2021": {
+          "name": "Úrovne na otvorené programovanie"
+        },
+        "open-ended_programming_levels_1/coursed/2021": {
+          "name": "Úrovne na otvorené programovanie"
         },
         "dance-party-project-guide/coursed/2021": {
           "name": "Tanečná párty – sprievodca projektom"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+        },
+        "open-ended_programming_levels_2/coursed/2021": {
+          "name": "Úrovne na otvorené programovanie"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "Smajlíkovia"
+        },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "Mysli celým telom, keď si online"
+          "name": "Pause and Think Online"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Podmienky s kartami"
@@ -520,47 +530,41 @@
           "name": "Úpravy virtuálnych lekcií"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "Bloky bludiska bez počítača",
-          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+          "name": "Bloky bludiska bez počítača"
         },
         "pair_programming/express/2021": {
-          "name": "Párové programovanie"
+          "name": "Programovanie v páre"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "Bloky na použitie bez počítača (kurzy C – F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
           "name": "Predstavenie Umelca"
         },
         "turns_angles/express/2021": {
-          "name": "Otočky a uhly"
+          "name": "Oblúky a uhly"
         },
         "turns_angles_1/express/2021": {
-          "name": "Otočky a uhly"
+          "name": "Oblúky a uhly"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "Plávajúca ryba – priestor učiteľa",
+          "name": "Plávajúca ryba - priestor učiteľa",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "Dokumentácia pre Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
-          "name": "Vytváranie postáv",
-          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+          "name": "Vytváranie postáv"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "Dokumentácia pre Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
-          "name": "Sprajty v akcii",
-          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+          "name": "Postavy v akcii"
         },
         "pause_and_think_online/express/2021": {
-          "name": "Mysli celým telom, keď si online"
+          "name": "Pause and Think Online"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Tanečná párty – sprievodca projektom"
@@ -571,19 +575,13 @@
         "open-ended_programming_levels/express/2021": {
           "name": "Úrovne na otvorené programovanie"
         },
-        "pair_programming_video/express/2021": {
-          "name": "Video „Párové programovanie“"
-        },
         "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "Bloky na použitie bez počítača (kurzy C – F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "Bloky na použitie bez počítača (kurzy C – F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "Bloky na použitie bez počítača (kurzy C – F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
@@ -599,12 +597,7 @@
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
-          "name": "Premenné",
-          "url": "https://youtu.be/DI7DprN4FtE"
-        },
-        "csf-express-end-of-course-project-planning-guide/express/2021": {
-          "name": "Základy informatiky – Sprievodca plánovaním záverečného projektu v expresnom kurze",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "name": "Premenné"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Základy informatiky – záverečný projekt",
@@ -627,7 +620,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "Párové programovanie"
+          "name": "Programovanie v páre"
         },
         "class-section-video/pre-express/2021": {
           "name": "Ako na Code.org vytvoriť triednu sekciu"
@@ -638,11 +631,8 @@
         "20_20_20_rule/pre-express/2021": {
           "name": "Pravidlo 20/20/20"
         },
-        "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "Keď sú žiaci neposední – Go Noodle"
-        },
         "common-sense-media-pause-think/pre-express/2021": {
-          "name": "Mysli celým telom, keď si online"
+          "name": "Pause and Think Online"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Mapovanie štandardov CSTA",
@@ -661,60 +651,17 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
-          "name": "Sleduj algoritmus",
-          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
+          "name": "Sleduj algoritmus"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "Plávajúca ryba - priestor učiteľa",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "Dokumentácia pre Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
         },
-        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "Buď super digitálny občan: snímky pre lekciu",
-          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
-        },
-        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "Buď super digitálny občan: Super digitálny občan",
-          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
-        },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "Súkromné a osobné informácie: prezentácia k lekcii",
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
-        },
-        "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "Súkromné a osobné informácie: Súkromné a osobné informácie",
-          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
-        },
-        "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "Súkromné a osobné informácie: výstupný test",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
-        },
-        "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "Súkromné a osobné informácie: kvíz pre lekciu",
-          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
-        },
-        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "Súkromné a osobné informácie: kvíz pre lekciu",
-          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
-        },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "Mysli celým telom, keď si online",
-          "url": "https://youtu.be/X_duZ-1LApg"
-        },
-        "about_me_planning_guide/coursee/2021": {
-          "name": "O mne: sprievodca plánovaním",
-          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
-        },
-        "digital-sharing-lesson/coursee/2021": {
-          "name": "Učebný plán: Digitálne zdieľanie",
-          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing"
-        },
-        "digital-sharing-video/coursee/2021": {
-          "name": "Etiketa digitálneho zdieľania (video)",
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "name": "Pause and Think Online"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Oblúky a uhly"
@@ -722,41 +669,9 @@
         "csf-turns-angles-video/coursee/2021": {
           "name": "Oblúky a uhly"
         },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "Písanie pesničiek s funkciami",
-          "url": "https://youtu.be/5iDCKkI6y2Y"
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit"
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
-        },
-        "assessment-answer-songwriting/coursee/2021": {
-          "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
-        },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
-        },
-        "designing_for_accessibility_1/coursee/2021": {
-          "name": "Navrhovanie s ohľadom na zjednodušenie ovládania",
-          "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
-        },
-        "types_of_disabilities/coursee/2021": {
-          "name": "Typy zdravotných postihnutí",
-          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/"
-        },
-        "end-of-course-project-guide/coursee/2021": {
-          "name": "Sprievodca záverečným projektom",
-          "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Základy informatiky – záverečný projekt",
@@ -765,10 +680,6 @@
         "design-process/coursee/2021": {
           "name": "Proces návrhu",
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
-        },
-        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 kreatívnych spôsobov pre vašich študentov, ako im ukázať, čo vedia",
-          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "Mapovanie štandardov CSTA",
