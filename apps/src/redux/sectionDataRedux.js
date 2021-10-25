@@ -21,6 +21,8 @@ export const sectionDataPropType = PropTypes.shape({
       name: PropTypes.string.isRequired
     })
   ).isRequired,
+  codeReviewEnabled: PropTypes.bool,
+  isTeachingCSA: PropTypes.bool,
   lessonExtras: PropTypes.bool,
   ttsAutoplayEnabled: PropTypes.bool
 });
@@ -47,6 +49,7 @@ export const setSection = section => {
     script: section.script,
     students: sortedStudents,
     codeReviewEnabled: section.code_review_enabled,
+    isTeachingCSA: section.is_teaching_csa,
     lessonExtras: section.lesson_extras,
     ttsAutoplayEnabled: section.tts_autoplay_enabled
   };

@@ -100,6 +100,8 @@ class Section < ApplicationRecord
   ADD_STUDENT_FULL = 'full'.freeze
   ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
+  CSA = 'csa'.freeze
+
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
   end
@@ -295,7 +297,8 @@ class Section < ApplicationRecord
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
       restrict_section: restrict_section,
-      code_review_enabled: code_review_enabled?
+      code_review_enabled: code_review_enabled?,
+      is_teaching_csa: teaching_csa?
     }
   end
 
@@ -397,6 +400,12 @@ class Section < ApplicationRecord
 
   def code_review_enabled?
     code_review_enabled.nil? ? true : code_review_enabled
+  end
+
+  # A section can be assigned a course (aka unit_group) without being assigned a script,
+  # so we check both here.
+  def teaching_csa?
+    script&.csa? || unit_group&.family_name == CSA
   end
 
   private
