@@ -2645,7 +2645,7 @@
         "courseA_harvester_loops9_2021": "Czy jesteś w stanie wymyślić, jak zebrać_całą_kukurydzę?",
         "courseA_harvester_seq10_2021": "Żniwiarka musi zebrać całą kukurydzę! Czy dostrzegasz wzorzec?",
         "courseA_harvester_seq11_2021": "Spróbuj sam! Zbierz całą kukurydzę.",
-        "courseA_harvester_seq12_2021": "_Dziękuję za otrzymaną pomoc!_\n\nZbierz całą kukurydzę.",
+        "courseA_harvester_seq12_2021": "_Dziękuję za otrzymaną pomoc!_Dopilnuj\nZbierz całą kukurydzę.",
         "courseA_harvester_seq13_2021": "Pomóż żniwiarce zebrać kukurydzę!",
         "courseA_harvester_seq1_2021": "Pomóż żniwiarce zebrać kukurydzę!",
         "courseA_harvester_seq2_2021": "Użyj **trzech** bloków <xml><block type=\"maze_moveWest\" block-text=\"move west\"/></xml>, aby żniwiarka dotarła do kukurydzy! ",
@@ -2686,7 +2686,7 @@
         "courseB_Scrat_ramp3a_2021": "Wyjmij blok <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> z przybornika i dodaj go do dolnej części innych bloków, aby ukończyć ten kod, a następnie kliknij \"▶ Uruchom\".",
         "courseB_Scrat_ramp3b_2021": "Na końcu tego kodu jest dodatkowy blok!\n\nPrzeciągnij go z powrotem do przybornika, aby go wyrzucić.",
         "courseB_Scrat_ramp4a_2021": "Czy jesteś w stanie wymyślić, który blok musisz dodać do dolnej części innych bloków, aby ukończyć ten kod?",
-        "courseB_Scrat_ramp5a_2021": "Wypróbuj to wszystko sam!",
+        "courseB_Scrat_ramp5a_2021": "Wypróbuj tego wszystkiego sam!",
         "courseB_artist_loops10_2021": "Wykorzystaj to, czego się nauczyłeś, aby narysować obrazek tego, co, jak Ci się wydaje, zobaczył artysta, gdy wrócił do domu.\n\n* * *\n\n### Pomysły\n\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)",
         "courseB_artist_loops1_2021": "To jest nowy typ łamigłówki o nazwie: \"Artysta\". Graj na tym poziomie i narysuj coś zabawnego.",
         "courseB_artist_loops2_2021": "Artysta próbuje narysować linię **6** razy, ale to mu się nie udaje. Możesz pomóc?",
@@ -3097,7 +3097,16 @@
         "poetry_hoc_sounds": "Dodanie podkładu muzycznego do programu może zmienić nastrój wiersza podczas jego czytania.\n\n-   Dodaj blok „odtwórz dźwięk” do obszaru roboczego.\n-   Znajdź dźwięk pasujący do nastroju wiersza.",
         "poetry_hoc_exemplar2": "Przeczytaj ten wiersz.\n\nNastępnie naciśnij Uruchom.\n\n_Czy obrazy pasowały do nastroju każdej linijki wiersza?_",
         "poetry_hoc_freeplay": "Zabawmy się. Zilustruj wiersz, jak chcesz i podziel się tym ze znajomymi!",
-        "poetry_hoc_spriteSizes": "Możesz zmienić **rozmiar** już utworzonego duszka.\n\n-   Zmień rozmiar swojego duszka, używając nowego bloku `ustaw rozmiar`.\n-   Zamień '50' na inny rozmiar, np. '150'."
+        "poetry_hoc_spriteSizes": "Możesz zmienić **rozmiar** już utworzonego duszka.\n\n-   Zmień rozmiar swojego duszka, używając nowego bloku `ustaw rozmiar`.\n-   Zamień '50' na inny rozmiar, np. '150'.",
+        "CourseF_app_computer": "**Zbuduj komputer**\n\nPołącz wszystkie części i wymyśl, jak włączyć komputer!",
+        "courseF_apps_aquarium": "**Wirtualne akwarium**\n\nWypełnij swoje akwarium różnymi przedmiotami, które cechuje własny styl zachowania.",
+        "courseF_apps_card": "**Spersonalizowana kartka z życzeniami**\n\nTen program zada Ci kilka pytań, a następnie utworzy dla Ciebie spersonalizowaną wiadomość urodzinową!",
+        "courseF_apps_collector": "**Gra \"Wielki kolekcjoner\"**\n\nTo są trzy gry w jednej! Wybierz swoją postać, a potem użyj klawiszy ze strzałami, aby zbierać przedmioty.",
+        "courseF_apps_madlib": "**Historia pustej przestrzeni**\n\nTen program poprosi cię o wpisanie pewnych słów, a następnie słowa te zostaną wykorzystane, aby opowiedzieć zabawną historyjkę!",
+        "courseF_apps_pet": "**Wirtualne zwierzę domowe**\n\nPrzeciągaj przedmioty do psa i obserwuj jego reakcję!",
+        "courseF_sprites_predict": "Zgadnij! Zbadaj kod.\n\n-   Oba samoloty będą się przemieszczać o jedno pole wzdłuż siatki.\n-   Oba samoloty zaczną się przemieszczać i nie będą się zatrzymywać.\n-   Jeden samolot ruszy jako pierwszy, a drugi - jako drugi.\n-   Samoloty się zderzą.",
+        "courseF_sprites_make": "# Making Sprites\n\n<div style=\"float:right\">\n\n![expandable](https://images.code.org/c473902f262d99da7e5a212ec4aa400b-image-1610480180510.png)\n\n</div>\n\nW celu utworzenia duszka należy otworzyć kategorię **Duszki** z przybornika i przeciągnąć ten blok:\n\n<xml><block type=\"gamelab_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"face_strawberry_1\"</title></block></xml>\n\n## Należy zrobić, co następuje\n\n-   Dołącz blok \"utwórz nowego duszka\" wstawiając go pod blok \"po uruchomieniu\".\n-   Wybierz kostium dla swojego duszka.\n-   Wciśnij przycisk \"Uruchom\", gdy kod jest gotowy.",
+        "courseF_sprites_positioning": "# Duszki pozycjonujące\n\nDo każdego duszka przypisana jest **lokalizacja**. Można określić lokalizację klikając szpilkę na tym bloku : <xml><block type=\"gamelab_location_picker\"><title name=\"LOCATION\">{\"x\":200,\"y\":200}</title></block></xml>\n\n## Zrób, co następuje\n\n<div style=\"float:right\">\n\n![expandable](https://images.code.org/7864ddf06e124427b01d415e441977f0-image-1610554148293.png)\n\n</div>\n\n-   Znajdź nowy blok w kategorii **Lokalizacje** w przyborniku i przeciągnij go do swojego obszaru roboczego.\n-   Połącz go z blokiem `zrób nowego duszka`, który dodałeś poprzednio.\n-   Kliknij szpilkę ![](https://images.code.org/6e59189145f18fc4e46140409e2ad5b8-image-1610554321961.png) na bloku lokalizacji, a następnie wybierz nową pozycję dla swojego duszka na ekranie.\n-   Naciśnij \"Uruchom\", gdy skończysz tworzenie swojego kodu."
       }
     }
   }

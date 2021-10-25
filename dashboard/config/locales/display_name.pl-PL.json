@@ -560,7 +560,9 @@
         "helloworld_retro_sizes": "Rozmiar",
         "helloworld_retro_sounds": "Dźwięki",
         "courseF_sprites_moreSprites": "Pozycjonowanie duszka",
-        "courseF_sprites_positioning": "Pozycjonowanie duszka"
+        "courseF_sprites_positioning": "Pozycjonowanie duszka",
+        "courseF_apps_madlib": "Historia pustej przestrzeni",
+        "courseF_editable_madlib": "Historia pustej przestrzeni"
       }
     }
   }

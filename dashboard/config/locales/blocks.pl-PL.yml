@@ -1963,26 +1963,6 @@ pl:
             '"starburst"': Rozprysk
             '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
-      Poetry_setPoem:
-        text: ustaw wiersz {POEM}
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': Mój wspaniały obraz
-            '"carroll_1"': Błysk, Błysk, Mała gwiazda
-            '"rumi_1"': Śpiewaj
-            '"field"': Wynken, Blynken, and Nod
-            '"carroll_2"': Krokodyl
-            '"twain"': Ciepłe letnie słońce
-            '"wordsworth"': Wędrowałem samotnie jak chmura
-            '"carroll_3"': Jabberwocky
-            '"rios"': Nie wchodź do biblioteki
-            '"rumi_2"': Ocean
-            '"hughes_1"': Wariacje snów
-            '"hughes"': Harlem
-            '"hopler"': W ogrodzie
-            '"lomeli"': Zwróć
-            '"singer"': Opiekanie pianek
       Poetry_setPrompt:
         text: monituj użytkownika {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} o zmienną {VAR}
       Poetry_setPromptWithChoices:

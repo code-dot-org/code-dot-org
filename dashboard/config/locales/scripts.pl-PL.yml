@@ -32668,8 +32668,6 @@ pl:
               name: Sztuka poezji
             lesson-2:
               name: Zakoduj swój własny wiersz
-            lesson-3:
-              name: Zmienne
             lesson-4:
               name: Zbuduj generator wierszy
             lesson-5:
@@ -32748,3 +32746,15 @@ pl:
               display_name: Pokaż, co wiesz
           name: csa5-exemplars
           title: Jednostka 5 – Organizacja nadania obiektów [Exemplars]
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Jednostka 1 Projekty
+            lesson-3:
+              name: Jednostka 3 Projekty
+            lesson-4:
+              name: Jednostka 4 Projekty
+            lesson-5:
+              name: Jednostka 5 Projekty
+            lesson-6:
+              name: Jednostka 6 Projekty

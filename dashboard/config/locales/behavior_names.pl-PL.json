@@ -1697,7 +1697,8 @@
           "moving south": "przechodzenie na południe",
           "moving west": "przechodzenie na zachód",
           "spinning right": "obracanie się w prawo",
-          "spinning left": "obracanie się w lewo"
+          "spinning left": "obracanie się w lewo",
+          "blocking movement": "ruch blokujący"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
@@ -1727,7 +1728,8 @@
           "moving west2": "poruszanie się na zachód2",
           "patrolling2": "patrolowanie2",
           "moving with arrow keys2": "poruszanie się za pomocą klawiszy strzałek2",
-          "driving with arrow keys2": "poruszanie się za pomocą klawiszy strzałek2"
+          "driving with arrow keys2": "poruszanie się za pomocą klawiszy strzałek2",
+          "blocking movement": "ruch blokujący"
         },
         "courseF_apps_collector": {
           "wandering": "wędrowanie",
@@ -1757,7 +1759,8 @@
           "jittering2": "trzęsienie się2",
           "patrolling2": "patrolowanie2",
           "moving with arrow keys2": "poruszanie się za pomocą klawiszy strzałek2",
-          "driving with arrow keys2": "poruszanie się za pomocą klawiszy strzałek2"
+          "driving with arrow keys2": "poruszanie się za pomocą klawiszy strzałek2",
+          "flying west and looping": "lot na zachód i powtarzanie w pętli"
         },
         "courseF_apps_madlib": {
           "wandering": "wędrowanie",
@@ -1812,7 +1815,8 @@
           "moving south": "przechodzenie na południe",
           "moving west": "przechodzenie na zachód",
           "spinning right": "obracanie się w prawo",
-          "spinning left": "obracanie się w lewo"
+          "spinning left": "obracanie się w lewo",
+          "blocking movement": "ruch blokujący"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
@@ -1828,7 +1832,8 @@
           "moving south": "przechodzenie na południe",
           "moving west": "przechodzenie na zachód",
           "spinning right": "obracanie się w prawo",
-          "spinning left": "obracanie się w lewo"
+          "spinning left": "obracanie się w lewo",
+          "blocking movement": "ruch blokujący"
         },
         "courseF_editable_madlib": {
           "wandering": "wędrowanie",
@@ -3151,6 +3156,72 @@
           "moving south and looping": "poruszanie się na południe i w pętli"
         },
         "poetry_hoc_spriteSizes": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "swimming left and right": "pływanie w lewo i prawo",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "fluttering": "trzepotanie",
+          "wobbling": "chybotanie",
+          "moving west and looping": "przechodząc na zachód i powtarzając w pętli",
+          "moving east and looping": "przechodząc na wschód i powtarzając w pętli",
+          "moving north and looping": "poruszanie się na północ i w pętli",
+          "moving south and looping": "poruszanie się na południe i w pętli"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "swimming left and right": "pływanie w lewo i prawo",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "fluttering": "trzepotanie",
+          "wobbling": "chybotanie",
+          "moving west and looping": "przechodząc na zachód i powtarzając w pętli",
+          "moving east and looping": "przechodząc na wschód i powtarzając w pętli",
+          "moving north and looping": "poruszanie się na północ i w pętli",
+          "moving south and looping": "poruszanie się na południe i w pętli"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "wędrowanie",
+          "moving east": "przechodzenie na wschód",
+          "spinning left": "obracanie się w lewo",
+          "spinning right": "obracanie się w prawo",
+          "shrinking": "zwężenie",
+          "growing": "rośnięcie",
+          "moving south": "przechodzenie na południe",
+          "swimming left and right": "pływanie w lewo i prawo",
+          "moving north": "przechodzenie na północ",
+          "jittering": "trzęsienie się",
+          "moving west": "przechodzenie na zachód",
+          "patrolling": "patrolowanie",
+          "moving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "driving with arrow keys": "poruszanie się za pomocą klawiszy strzałek",
+          "fluttering": "trzepotanie",
+          "wobbling": "chybotanie",
+          "moving west and looping": "przechodząc na zachód i powtarzając w pętli",
+          "moving east and looping": "przechodząc na wschód i powtarzając w pętli",
+          "moving north and looping": "poruszanie się na północ i w pętli",
+          "moving south and looping": "poruszanie się na południe i w pętli"
+        },
+        "poetry_hoc_spriteBehaviors": {
           "wandering": "wędrowanie",
           "moving east": "przechodzenie na wschód",
           "spinning left": "obracanie się w lewo",

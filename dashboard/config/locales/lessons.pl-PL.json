@@ -4,7 +4,6 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.",
-          "preparation": "-   Przejrzyj i ukończ samouczek online: [Potańcówka](https://studio.code.org/s/dance-extras/lessons/1/levels/1)\n-   Pamiętaj, aby najpierw go przetestować, zanim poprosisz uczniów o jego wykonanie. \n    Sprawdź swój sprzęt i zdecyduj, czy musisz coś rozwiązać jakieś problemy przed Godziną Kodowania.",
           "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia informatyczne związane z programowaniem i programowaniem zdarzeń (za pomocą bloków).",
           "student_overview": "Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę."
         },
@@ -39,7 +38,6 @@
         },
         "hoc-encryption/Simple Encryption": {
           "overview": "Na tej lekcji uczniowie zapoznają się z potrzebą szyfrowania i prostymi technikami łamania tajnych wiadomości. Próbują samodzielnie złamać wiadomość zakodowaną klasycznym szyfrem Cezara, a także losowym szyfrem podstawieniowym. Powinni dobrze poznać ideę, że w dobie potężnych narzędzi obliczeniowych techniki szyfrowania muszą być bardziej wyrafinowane. Najważniejszym aspektem tej lekcji jest zrozumienie, w jaki sposób i dlaczego szyfrowanie odgrywa taką rolę w naszym codziennym życiu w Internecie oraz że stworzenie dobrego szyfrowania nie jest trywialne. Uczniowie będą stawiać pierwsze kroki i napocą się, by zrozumieć czynniki, które należy wziąć pod uwagę przy tworzeniu silnego szyfrowania w obliczu potężnych narzędzi obliczeniowych, które można wykorzystać do jego złamania. Konieczność zachowania tajemnicy podczas przesyłania bitów przez Internet jest ważna dla każdego, kto korzysta z Internetu.",
-          "preparation": "-   Zbadaj obie wersje widgetu",
           "student_overview": "Na tej lekcji uczniowie zapoznają się z potrzebą szyfrowania i prostymi technikami łamania tajnych wiadomości. Próbują samodzielnie złamać wiadomość zakodowaną klasycznym szyfrem Cezara, a także losowym szyfrem podstawieniowym. Powinni dobrze poznać ideę, że w dobie potężnych narzędzi obliczeniowych techniki szyfrowania muszą być bardziej wyrafinowane. Najważniejszym aspektem tej lekcji jest zrozumienie, w jaki sposób i dlaczego szyfrowanie odgrywa taką rolę w naszym codziennym życiu w Internecie oraz że stworzenie dobrego szyfrowania nie jest trywialne. Uczniowie będą stawiać pierwsze kroki i napocą się, by zrozumieć czynniki, które należy wziąć pod uwagę przy tworzeniu silnego szyfrowania w obliczu potężnych narzędzi obliczeniowych, które można wykorzystać do jego złamania. Konieczność zachowania tajemnicy podczas przesyłania bitów przez Internet jest ważna dla każdego, kto korzysta z Internetu."
         },
         "starwars/Hour of Code 2015": {
@@ -72,17 +70,12 @@
         },
         "dance-2019/Dance Party": {
           "overview": "Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.",
-          "preparation": "### Tydzień przed Twoją Godziną Kodowania\n\n-   Zapoznaj się z [Poradnikiem edukatora Godziny Kodowania](http://hourofcode.com/resources/how-to/) i [Najlepszymi praktykami od skutecznych nauczycieli](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466), aby zacząć planować przebieg Twojej Godziny Kodowania. \n-   [Zarejestruj swoje wydarzenie Godziny Kodowania](http://hourofcode.com), jeśli chcesz uzyskać wsparcie w klasie, zniżkę na plakaty lub wziąć udział w rozdawaniu robotów (tylko w USA). \n-   Przejrzyj samouczek online i ukończ go samodzielnie: [Potańcówka](https://studio.code.org/s/dance-2019) \n-   Pamiętaj, abyś najpierw przetestował go, zanim poprosisz uczniów o jego ukończenie. Sprawdź swoje wyposażenie i zdecyduj, czy musisz rozwiązać jakiekolwiek problemy przed Godziną Kodowania. \n-   Zapoznaj się z dodatkowym planem lekcji [Wielka Potańcówka](https://curriculum.code.org/hoc/unplugged/4/), aby ustalić, czy chcesz poprowadzić tę lekcję przed Godziną Kodowania. \n\n### Jeden dzień przed Twoją Godziną Kodowania\n\n-   Każdy uczeń, który ukończył zajęcia, powinien otrzymać certyfikat. [Drukuj jeden](http://code.org/certificates) dla każdego ucznia z wyprzedzeniem, aby ułatwić sobie zakończenie Godziny Kodowania. \n-   (opcjonalnie) Zachęć uczniów, aby przynieśli własne słuchawki i użyli je podczas tych zajęć.",
           "purpose": "Na tej lekcji zostają wprowadzone podstawowe pojęcia informatyczne związane z programowaniem i programowaniem zdarzeń (za pomocą bloków).",
           "student_overview": "Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę."
         },
         "oceans/Oceans": {
           "overview": "Po pierwsze, uczniowie klasyfikują przedmioty jako „ryby” lub „nie ryby”, aby spróbować usunąć śmieci z oceanu. Następnie rozszerzają zestaw danych treningowych o inne stworzenia morskie. W drugiej części ćwiczenia uczniowie wybiorą własne etykiety do nałożenia na obrazy losowo generowanych ryb. Te dane treningowe są używane w modelu uczenia maszynowego, który następnie powinien być w stanie samodzielnie oznaczać nowe obrazy.",
           "student_overview": "Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie."
-        },
-        "hello-world-food/lesson-1": {
-          "overview": "Na tej lekcji uczniowie poznają podstawy informatyki poprzez programowanie w Sprite Lab. Sprite Lab to narzędzie, za pomocą którego możesz tworzyć pomysłowe i zabawne projekty. Uczniowie nauczą się tworzyć i animować duszki oraz uczynić je interaktywnymi za pomocą zdarzeń.\n\nIstnieje wiele wersji tej lekcji. Każda wersja uczy tych samych pojęć, ale zawiera różne obrazy, które przemawiają do różnych uczniów. Aby uzyskać więcej informacji, odwiedź [stronę docelową Hello World.](https://code.org/helloworld)",
-          "purpose": "Ta lekcja ma na celu przygotowanie uczniów do tworzenia prostych projektów programistycznych w Sprite Lab. Dzięki tej umiejętności uczniowie mogą tworzyć projekty na dowolny temat, na przykład inny temat szkolny lub coś, co jest dla nich osobiście istotne."
         },
         "outbreak/Outbreak": {
           "overview": "Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. ",
@@ -169,7 +162,6 @@
         },
         "coursef-2021/End of Course Project": {
           "overview": "W trakcie tej lekcji podsumowującej uczniowie przechodzą proces projektowania, tworzenia i przedstawiania swoich własnych projektów!",
-          "preparation": "\\--   Poświęć czas na przygotowanie swojego własnego projektu zarówno przy pomocy interfejsu Artist i Sprite Lab. Zapoznaj się z możliwościami i ograniczeniami każdego narzędzia. \n\n-   Modyfikuj kategorię, aby wpisywała się w cele Twojej klasy i wydrukuj egzemplarz dla każdego ucznia.\n-   Modyfikuj kartę zaprojektowania projektu, aby wpisywała się w Twoją klasę i wydrukuj jeden pakiet dla każdego ucznia.",
           "purpose": "Uczniowie mogą być gotowi, aby skoczyć prosto w budowanie swoich projektów, ale ta lekcja pomoże przekształcić ich pomysły w plany. Ta konstrukcja utrzyma marzycieli na ziemi oraz oświetli ścieżkę tym, którzy czują się pozostawieni w ciemności. Przyznaj uczniom sporą ilość czasu, na zbudowanie i sprawdzenie swoich projektów. Użyta na tej lekcji metoda prób i błędów będzie uczyć rozwiązywania problemów/ zadań i wytrwałości.",
           "student_overview": "Projekty tak dużych rozmiarów wymagają sporej ilości czasu i planowania. Znajdź dla siebie inspirację, opracuj plan i wyzwól swoją kreatywność!"
         },
@@ -178,7 +170,6 @@
         },
         "courseb-2021/Move It, Move It": {
           "overview": "Ta lekcja ma na celu przygotowanie mentalne uczniów do ćwiczeń w kodowaniu, na które natką się w trakcie kursu. W niewielkich zespołach uczniowie będą korzystać z fizycznego ćwiczenia do zaprogramowania  swoich kolegów z klasy tak, by przechodzili ostrożnie z miejsca na miejsce, aż do osiągnięcia celu.",
-          "purpose": "Poprzez wykorzystanie ruchu fizycznego w celu zaprogramowania swoich kolegów z klasy uczniowie będą napotykać na kwestie i emocje podobne do tego, co poczują, gdy zaczną kodowanie na komputerze. Konfrontacja z tymi stresami w otwartym środowisku zabawy pomoże zmniejszyć ich natężenie i pozwoli uczniom ćwiczyć niezbędne umiejętności zanim napotkają problemy samodzielnie.",
           "student_overview": "Zaprogramuj swoich kolegów z klasy, aby uważnie przechodzili z miejsca na miejsce."
         },
         "courseb-2021/Sequencing in Maze": {
@@ -258,7 +249,6 @@
         },
         "coursea-2021/Loops: Happy Loops": {
           "overview": "Te zajęcia są powrotem do Happy Maps. Tym razem uczniowie będą rozwiązywać większe, dłuższe łamigłówki za pomocą swojego kodu, dzięki czemu będą mogli poznać narzędzia strukturalne, które pozwolą im łatwiej napisać dłuższy kod.",
-          "purpose": "Ta lekcja jest wprowadzeniem do pętli. Pętle pozwalają uczniom uprościć ich kod, grupując polecenia, które muszą być powtarzane. Uczniowie rozwijają umiejętności krytycznego myślenia, zauważając powtarzanie się ruchów swoich kolegów z klasy i określając, ile razy są powtarzane polecenia. Po ponownym obejrzeniu \"Szczęśliwych map\" (Happy Maps) uczniowie będą mogli odnieść stare pojęcia, takie jak ustawianie w kolejności, do nowego pojęcia pętli.",
           "student_overview": "Pomóż Flurbowi rozwiązać większe problemy używając pętli."
         },
         "coursea-2021/Loops in Ice Age": {
@@ -267,7 +257,6 @@
         },
         "coursea-2021/Loops in Collector": {
           "overview": "Na tej lekcji uczniowie kontynuują poznawanie koncepcji pętli. Na poprzedniej lekcji uczniowie zostali wprowadzeni w pętle w formie przechodzenia przez labirynt i zbierania kukurydzy. Tutaj pętli używa się do zbierania skarbu w miejscach otwartych jaskiń.",
-          "purpose": "Ta lekcja zapewnia uczniom więcej praktyki w zakresie pętli oraz wprowadza nowy blok \"zdobądź skarb'. Blok działa na takiej samej zasadzie jak \"zbierz kukurydzę\" w interfejsie Harvester. Łamigłówki te są bardziej otwarte, dają uczniom więcej elastyczności w celu znalezienia ostatecznych rozwiązań.",
           "student_overview": "Pomóż poszukiwaczce przygód Laurel zebrać podziemny skarb."
         },
         "coursea-2021/Ocean Scene with Loops": {
@@ -292,7 +281,6 @@
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "overview": "Używając zbioru symboli zamiast kodu uczniowie będą projektować algorytmy, aby instruować \"robota\", jak ma ustawiać kubeczki według różnych wzorców. Uczniowie będą po kolei wcielać się w rolę robota, reagując tylko na algorytmy zdefiniowane przez rówieśników. W tym segmencie uczniom przedstawia się połączenia pomiędzy symbolami a działaniami, różnicę pomiędzy algorytmem a programem oraz cenną umiejętność debugowania.",
-          "purpose": "Ta lekcja w trybie \"unplugged\" - bez komputera - łączy klasę w zespół prostym zadaniem do wykonania: spraw, by \"robot\" ułożył kubeczki w piramidę według określonego projektu. Te zajęcia kładą podwaliny do programowania, które uczniowie będą realizować w trakcie kursu ucząc się, jak ważne jest zdefiniowanie wyraźnie przekazanego algorytmu.",
           "student_overview": "Na tej lekcji będziesz udawać, że koledzy z klasy są robotami i zaprogramujesz ich tak, aby budowali wzorce piramid z kubeczków."
         },
         "coursec-2021/Programming in Maze": {
@@ -315,7 +303,6 @@
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
           "overview": "Tworząc wstępną wersję zajęć \"Moi robotyczni przyjaciele\", uczniowie zajmują się większymi i bardziej skomplikowanymi projektami. W celu zaprojektowanie swoich \"robotów\", aby ukończyć większe konstrukcje, uczniowie będą musieli identyfikować wzorce powtórzone w swoich instrukcjach, które można zastąpić pętlą.",
-          "purpose": "Ta lekcja służy za ponowne wprowadzenie pętli, z użyciem teraz znanego zestawu instrukcji programowania \"robota\". Uczniowie rozwijają umiejętności krytycznego myślenia poszukując wzorców powtarzania się ruchów swoich kolegów z klasy i określając sposób uproszczenia tych powtarzanych wzorców stosowania pętli. ",
           "student_overview": "Na tej lekcji będziesz ponownie programować swoich kolegów z klasy, ale używając pętli będziesz mógł rozwiązywać większe i bardziej złożone problemy."
         },
         "coursec-2021/Loops with Rey and BB-8": {
@@ -339,7 +326,6 @@
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "W ramach tych zajęć online uczniowie będą mieli okazję dowiedzieć się, jak korzystać ze zdarzeń w Play Lab i zastosować wszystkie umiejętności programowania, które nabyli, aby utworzyć animowaną grę. Czas na kreatywność i utworzenie gry w Play Lab!",
-          "purpose": "Uczniowie będą tutaj dalej rozwijać rozumienie zdarzeń za pomocą Play Lab. Uczniowie będą używać zdarzeń, aby sprawiać, by postaci poruszały się po ekranie, wydawały dźwięki i zmieniać tło w zależności od danych wejściowych użytkownika. Na koniec sekwencji łamigłówki, uczniom umożliwi się udostępnienie ich projektów.",
           "student_overview": "Czas na twórcze działanie lub utworzenie gry w Play Lab!"
         },
         "coursec-2021/Picturing Data": {
@@ -359,16 +345,13 @@
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "overview": "\"Programując\" się wzajemnie na rysowanie obrazków uczniowie uzyskują możliwość zdobycia doświadczeń w zakresie pewnych kluczowych koncepcji programowania w przyjemny i dostępny sposób. Zajęcia rozpoczną się od polecenia uczniom użycia symboli do wzajemnego poinstruowania się, jak pokolorować kwadraciki na papierze milimetrowym, starając się odtworzyć istniejące rysunki.  Jeśli jest czas, lekcja może się zakończyć prezentacją rysunków, które uczniowie utworzyli samodzielnie.  ",
-          "purpose": "Celem tych zajęć jest zbudowanie umiejętności krytycznego myślenia oraz emocji w trakcie kursu wprowadzając pewne podstawowe pojęcia programowania, które będą używane w trakcie kursu. Poprzez wprowadzanie podstawowych pojęć takich jak tworzenie sekwencji i algorytmów w klasie w ramach zajęć w trybie \"unplugged\" - bez komputera, uczniowie, których komputery onieśmielają, nadal mogą budować podwaliny dla zrozumienia tych tematów. Na tej lekcji uczniowie będą się uczyć opracowywania algorytmów oraz kodowania go w program.",
           "student_overview": "Na tej lekcji będziesz programować swoich kolegów z klasy tak, by rysowali obrazki!"
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "overview": "W tym zestawie łamigłówek uczniowie rozpoczną od wprowadzanie (lub powtórki, w zależności od doświadczenia Twojej klasy) internetowego obszaru roboczego Code.org. Będą filmy wideo pokazujące podstawową funkcjonalność obszaru roboczego z uwzględnieniem przycisków \"Uruchom\", \"Resetuj\" i \"Krok\". Na tych filmach omówione zostaną następujące kwestie: przeciąganie bloków Blockly, usuwanie bloków Blockly i łączenie bloków Blockly. Później uczniowie będą ćwiczyć swoje umiejętności _tworzenia sekwencji_ i _debugowania_ w labiryncie. Od tego momentu uczniowie będą poznawać nowe rodzaje łamigłówek takie jak Collector, Artist i Harvester, gdy będą się uczyć podstaw _pętli_.",
-          "purpose": "Uznajemy, że w każdej klasie występuje spektrum zrozumienia każdego tematu. Niektórzy uczniowie w Twojej klasie mogą być \"komputerowymi czarodziejami\", natomiast inni nie mają aż tak dużego doświadczenia. W celu stworzenia różnych szans  na polu gry (i nauki), opracowaliśmy \"Etap równania w górę\" [\"Ramp Up Stage\"] na potrzeby Kursu D. Można go użyć albo jako wprowadzenie lub powtórzenie jak korzystać z Code.org oraz podstawowych pojęć informatycznych. Na tym etapie omawia się wszystkie warunki wstępne potrzebne do rozpoczęcia Kursu D.",
           "student_overview": "Ta lekcja da Ci możliwość ćwiczenia umiejętności, których będziesz potrzebować na tym kursie."
         },
         "coursed-2021/Relay Programming": {
-          "purpose": "W informatyce bardzo ważna jest praca zespołowa. Zamiast pracować indywidualnie uczniowie w zespołach piszą i debugują sobie wzajemnie kod. Na tej lekcji uczniowie będą się uczyć, jak współpracować,  by robić to w sposób możliwie najbardziej efektywny. \n\nNa tych zajęciach uczniowie będą mieli również okazję do poznania poczucia pilności wywiązania się z obowiązku, który nauczy uczniów starannego gospodarowania swoim czasem i unikania popełniania pomyłek bez generowania opóźnień. To doświadczenie może być stresujące (zgodnie z oczekiwaniami!). Upewnij się, że przekazano uczniom narzędzia do radzenia sobie z ewentualną frustracją.",
           "student_overview": "Pamiętaj na początku kursu, gdy tworzysz rysunki z kodem? Na tej lekcji będziesz pracować z zespołem, aby robić coś bardzo podobnego!"
         },
         "coursed-2021/Debugging in Collector": {
@@ -377,7 +360,6 @@
         },
         "coursed-2021/Events in Bounce": {
           "overview": "Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.",
-          "purpose": "Zdarzenia są bardzo popularne w programach komputerowych, zwłaszcza w grach wideo. \n\n Na tej lekcji uczniowie będą dalej rozwijać rozumienie zdarzeń tworząc gry sportowe. Uczniowie będą się uczyć sprawiać, by poruszało się ich wiosło zgodnie z poleceniami klawiszy ze strzałkami oraz wydawać odgłosy, gdy obiekty się zderzą. Na sam koniec będą musieli dostosować grę do swoich potrze, aby nadać jej bardziej unikalnego charakteru!",
           "student_overview": "Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!"
         },
         "coursed-2021/Build a Star Wars Game": {
@@ -395,7 +377,6 @@
         },
         "coursed-2021/Loops in Artist": {
           "overview": "Ta lekcja ma na celu budowanie zrozumienia zagadnienia pętli z poprzednich lekcji oraz zapewnienie uczniom szansy wykazania się prawdziwą kreatywnością. Te zajęcia niosą ze sobą podwójną korzyść jako ćwiczenie w debugowaniu na potrzeby dodatkowej praktyki w zakresie rozwiązywania problemów. ",
-          "purpose": "W tej serii podkreśla się moc pętli przy pomocy szeregu łamigłówek, które mają skłonić uczniów do zastanowienia się, dlaczego pętle \"powtórz\" jest lepsza od pisma odręcznego.",
           "student_overview": "Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć fajne obrazki przy pomocy interfejsu Artist!"
         },
         "coursed-2021/Nested Loops in Bee": {
@@ -419,7 +400,6 @@
         },
         "coursed-2021/Until Loops in Maze": {
           "overview": "Na tej lekcji uczniowie będą się uczyć o pętlach \"dopóki\". Uczniowie będą budować programy, które sprawiają, że główna postać powtarza czynności \"dopóki\" dojdą do pożądanego punktu zatrzymania.",
-          "purpose": "Ten zbiór łamigłówek służy ugruntowaniu i budowaniu wiedzy o pętlach poprzez dodanie wyrażenia warunkowego \"aż\". Poprzez połączenie tych dwóch pojęć w parę, uczniowie będą w stanie badać potencjał tworzenia skomplikowanych i innowacyjnych programów.",
           "student_overview": "Możesz robić pewne niesamowite rzeczy, gdy używasz pętli \"dopóki\"."
         },
         "coursed-2021/End of Course Project": {
@@ -477,7 +457,6 @@
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "overview": "Teraz uczniowie uczą się, jak układać pętle warstwowo, mogą tworzyć tyle pięknych rzeczy. Na tej lekcji uczniowie wykonają serie ćwiczeń, które pomogą im utworzyć obrazki do ich własnego portfolio korzystając ze wspaniałych umiejętności łyżwiarskich Anny i Elsy!",
-          "purpose": "W ramach tej serii uczniowie będą ćwiczyć zagnieżdżanie pętli w trakcie tworzenia obrazów, które z radością będą udostępniać innym. \n\nUczniowie, rozpoczynając z kilkoma instrukcjami, będą podejmowali własne decyzje dotyczące tworzenia projektów wymagających powtarzania. Następnie będą je obracać na różne sposoby, aby uzyskać pracę artystyczną o prawdziwie unikalnym charakterze.",
           "student_overview": "Anna i Elsa umieją świetnie jeździć na łyżwach, ale potrzebują Twojej pomocy w utworzeniu układów na lodzie. Użyj pętli zagnieżdżonych do utworzenia czegoś niewiarygodnie FAJNEGO."
         },
         "express-2021/Looking Ahead with Minecraft ": {
@@ -502,7 +481,6 @@
         },
         "express-2021/Harvesting with Conditionals": {
           "overview": "Uczniowie będą ćwiczyć pętle \"dopóki\", pętle \"aż do\" oraz instrukcje \"jeśli/ w przeciwnym razie\". We wszystkich tych blokach używa się wyrażeń warunkowych. Ćwicząc wszystkie trzy, uczniowie będą się uczyć pisania złożonych i elastycznych kodów.",
-          "purpose": "Ćwiczenie w zakresie używania wyrażeń warunkowych w różnych scenariuszach pomaga w zbudowaniu uczniowi tego, co mogą \"robić\" wyrażenia warunkowe. Na poprzedniej lekcji uczniowie wykorzystywali tylko wyrażeń warunkowych do tego, aby pomóc farmerowi dowiedzieć się, kiedy przeprowadzać żniwa. Tera wyłonią się wzorce i uczniowie będą korzystać z kreatywności i logicznego myślenia, aby określić warunki, w których można realizować i powtarzać kod. ",
           "student_overview": "Nie jest dokładnie jasne, kiedy należy używać każdego wyrażenia warunkowego. Ta lekcja pomoże Ci uzyskać praktykę w podejmowaniu decyzji, co robić."
         },
         "express-2021/Functions in Minecraft": {
@@ -558,15 +536,13 @@
           "purpose": "Podczas tej lekcji uczniowie rozwiną umiejętności programowania i debugowania na platformie komputerowej. Blokowy format łamigłówek pomaga im poznać kolejność czynności i pojęcia, nie martwiąc się o doskonalenie składni."
         },
         "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "Na tej lekcji uczniowie będą używać nowo nabytych umiejętności programowania w bardziej skomplikowane sposoby, aby nawigować po trudnej trasie z BB-8.",
-          "purpose": "Mając na uwadze transfer wiedzy, na tej lekcji daje się uczniom nowego środowiska do ćwiczenia umiejętności, które kultywują. Fani \"Gwiezdnych wojen\" będą skakać z radości, gdy zobaczą te łamigłówki. Każdą łamigłówkę w tej serii dodano, aby zapewnić głębsze zrozumienie podstawowych pojęć, którymi będą się posługiwać przez pozostałą część kursu."
+          "overview": "Na tej lekcji uczniowie będą używać nowo nabytych umiejętności programowania w bardziej skomplikowane sposoby, aby nawigować po trudnej trasie z BB-8."
         },
         "pre-express-2021/Programming in Harvester": {
           "overview": "Uczniowie będą stosować poznane koncepcje programowania do środowiska Żniwiarki. Teraz, zamiast samego doprowadzenia postaci do celu uczniowie będą zbierać kukurydzę używając nowego bloku. Uczniowie będą kontynuować rozwijanie sekwencyjnych umiejętności sekwencyjnych i zaczną korzystać z procesu debugowania.",
           "student_overview": "Pomóż żniwiarce zebrać po drodze warzywa."
         },
         "pre-express-2021/Loops with Scrat": {
-          "purpose": "Podczas tej lekcji uczniowie dowiedzą się więcej o pętlach i sposobach ich implementacji w kodzie w Blockly. Używanie _pętli_ jest ważną umiejętnością w programowaniu, ponieważ powtarzanie poleceń bez pętli jest uciążliwe i nieefektywne. Dzięki łamigłówkom Code.org uczniowie nauczą się dodawać instrukcje do istniejących pętli, gromadzić powtarzający się kod w pętlach i rozpoznawać układy instrukcji, które należy powtarzać.",
           "student_overview": "Pomóż Scratowi objąć więcej terenu używając pętli."
         },
         "pre-express-2021/Loops with Laurel": {
@@ -575,7 +551,6 @@
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.",
-          "purpose": "Ta lekcja dostarcza innego spojrzenia na to, jak pętle mogą być wykorzystane w programowaniu. Uczniowie mogą również zastanowić się nad nieefektywnością programowania bez pętli z powodu liczby bloków, które program mógłby potrzebować bez użycia pętli \"powtarzaj\".",
           "student_overview": "Używaj pętli i wzorców, aby ukończyć ilustracje."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
@@ -615,7 +590,6 @@
           "student_overview": "Tworząc interaktywny plakat przy pomocy SpriteLab, uczniowie będą stosować zasady udostępniania informacji o charakterze osobistym i prywatnym w Internecie w zakresie, w jakim je rozumieją."
         },
         "coursee-2021/Digital Sharing": {
-          "purpose": "Uczniowie będą wkrótce tworzyć projekty do udostępniania, a większość tych projektów będzie zawierać albo kod lub obraz, który nie został utworzony przez samych uczniów. Ta lekcja ma tutaj pokazać uczniom właściwy sposób do korzystania z treści, która nie jest ich własną treścią.",
           "student_overview": "Na tej lekcji będziesz się uczyć o wyzwaniach i korzyściach wynikających z własności i praw autorskich."
         },
         "coursee-2021/Programming and Loops with the Artist": {
@@ -623,7 +597,6 @@
           "student_overview": "Na tej lekcji przekonasz się, że dzięki pętlom łatwiej jest tworzyć jeszcze fajniejsze obrazki z Artystą!"
         },
         "coursee-2021/Nested Loops in Artist": {
-          "purpose": "Na tych zajęciach online uczniowie będą tworzyć w interfejsie Artist, który mogą z dumą udostępniać tym, których kochają. \n\nTe zajęcia mają na celu wykorzystanie pętli zagnieżdżonych jako sposobu zainspirowania uczniów o umysłach artystycznych do patrzenia na kodowanie jak na inną drogę wyrazu własnej kreatywności.  Jest to zestaw łamigłówek zbudowany w celu rozwijania umiejętności krytycznego myślenia, zrozumienia podstaw geometrii oraz kreatywności - wszystkiego w zakresie pętli zagnieżdżonych!",
           "student_overview": "Więcej pętli zagnieżdżonych! Tym razem będziesz tworzyć pewien NIESAMOWITY obrazek przy pomocy pętli zagnieżdżonych."
         },
         "coursee-2021/Nested Loops in Frozen": {
@@ -632,7 +605,6 @@
         },
         "coursee-2021/Functions: Songwriting": {
           "overview": "Jedną z najwspanialszych struktur w informatyce jest funkcja.  Funkcje (czasami nazywane procedurami) są mini programami, które można wielokrotnie używać wewnątrz większych programów. Ta lekcja pomoże uczniom intuicyjnie zrozumieć, dlaczego połączenie fragmentów kodu w funkcje może być tak dobrą praktyką.",
-          "purpose": "Użycie funkcji pomaga w uproszczeniu kodu i rozwijać umiejętność ucznia do porządkowania swojego programu. Uczniowie będą szybko uznać, że pisanie funkcji może uczynić ich programy łatwiejszymi do czytania i łatwiejszymi do debugowania, gdy coś pójdzie nie tak.",
           "student_overview": "Nawet gwiazdy rocka potrzebują umiejętności programowania. na tej lekcji będziesz się uczyć o funkcjach, korzystając ze słów piosenek."
         },
         "coursee-2021/Functions in Minecraft": {

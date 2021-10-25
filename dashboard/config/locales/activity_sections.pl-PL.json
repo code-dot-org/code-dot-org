@@ -3,8 +3,7 @@
     "data": {
       "activity_sections": {
         "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
-          "name": "Wstęp",
-          "description": "#### Ustawianie sceny\n\nPowitaj uczniów na zajęciach i krótko przedstaw plan dnia. Pamiętaj, aby powiedzieć uczniom, by nie spieszyli się i eksperymentowali."
+          "name": "Wstęp"
         },
         "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
@@ -378,16 +377,10 @@
             null
           ]
         },
-        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
-          "name": "Część 1 - Złam szyfr Cezara"
-        },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
             null
           ]
-        },
-        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
-          "name": "Część 2 - Złam szyfr losowego podstawienia"
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
@@ -417,12 +410,6 @@
           "tips": [
             null
           ]
-        },
-        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
-          "name": "Film: Szyfrowanie i klucze publiczne"
-        },
-        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
-          "name": "Dyskusja"
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
@@ -569,9 +556,6 @@
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
         },
-        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
-          "name": "Rozgrzewka"
-        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
             null
@@ -660,9 +644,6 @@
             null
           ]
         },
-        "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
-          "description": "Jaki jest twój ulubiony sposób na bycie kreatywnym?"
-        },
         "faf90391-c01a-42d3-b79c-0becac0a50d2": {
           "name": "Ogólne wsparcie"
         },
@@ -705,14 +686,10 @@
           "name": "Świętuj"
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
-          "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobała im się dzisiejsza aktywność, mają wiele możliwości kontynuowania programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn](http://code.org/learn) w celu uzyskania listy opcji lub, jeśli planujesz inne dodatkowe ćwiczenia, które nastąpią, powiedz uczniom, co będzie dalej w Twojej klasie."
+          "name": "Następne Kroki"
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
-        },
-        "4587cdae-c2ce-4d5f-9540-063b6383388d": {
-          "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny Kodowania istnieje wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów:\n\n-   Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n-   Odwiedź stronę [Możesz uczyć informatyki](https://studio.code.org/courses?view=teacher), aby uzyskać więcej propozycji kursów.\n-   Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
@@ -726,9 +703,6 @@
         },
         "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
           "name": "Ogólne wsparcie"
-        },
-        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
-          "name": "Poziom po poziomie"
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
@@ -762,9 +736,6 @@
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "AI: dane treningowe i stronniczość — Film"
         },
-        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
-          "description": "#### Poziom 6 - Stosując dane treningowe"
-        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
@@ -777,30 +748,15 @@
         "a47af864-6d0d-441c-98ea-6e50d036c415": {
           "progression_name": "Naucz AI nowego słowa"
         },
-        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
-          "description": "Na ekranie wyników końcowych można wyświetlić wizualizację modelu uczenia maszynowego sztucznej inteligencji, klikając ![](https://curriculum.code.org/media/uploads/info.png)."
-        },
-        "be0995b2-b12f-45ee-9047-8261719fcd56": {
-          "name": "Przykład 1: Trening oparty na jednej cesze (kształt ciała)"
-        },
-        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
-          "name": "Przykład 2: Używanie widoku Informacji do ulepszania modelu"
-        },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Rozgrzewka"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Główna aktywność (stara)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Główna aktywność (nowa)"
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zakończenie"
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
-            "Będziesz chciał poświęcić bardzo mało czasu na wstępne ładowanie lub wprowadzenie do swojej Godziny Kodowania. Zwłaszcza w przypadku młodych uczniów najlepiej jest zacząć tak szybko, jak to możliwe. Zbyt wiele wyjaśnień lub wykładów na początku psuje zabawę, a zabawa jest najważniejsza!"
+            null
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
@@ -808,9 +764,6 @@
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Witaj świecie"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](https://code.org/learn)."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Refleksja"
@@ -856,9 +809,6 @@
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Refleksja"
         },
-        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny kodowania, jest wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n\n-   Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
-        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Wstęp"
         },
@@ -876,9 +826,6 @@
           "tips": [
             null
           ]
-        },
-        "efa336e3-b101-4300-9bce-45771a6e114d": {
-          "name": "Zaproponuj ulepszenie"
         },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
           "name": "Refleksja"
@@ -971,12 +918,8 @@
         "06057973-b621-4a48-a991-4f99aafdedca": {
           "progression_name": "Potęga słów - Aktywność bez komputera"
         },
-        "c03754de-e580-4e9f-b58e-af136a073898": {
-          "name": "Ulubiony posilek"
-        },
-        "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
-          "name": "Utwórz własną historię (20 min.)",
-          "description": "Dzisiaj będziesz pracować z grupą, aby utworzyć własną historię o pustej przestrzeni. "
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Zabawy na imprezy"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
@@ -987,9 +930,6 @@
           "tips": [
             null
           ]
-        },
-        "220a9c31-c877-4fe2-83ef-722e93bed0a5": {
-          "name": "Wprowadzenie zmiennych"
         },
         "035f92b6-2d03-4fec-adc4-a15a1b620f08": {
           "name": "Refleksja"
@@ -1138,9 +1078,6 @@
             null
           ]
         },
-        "94a2704e-d539-4fc7-b390-a8e9850c64f5": {
-          "description": "żyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Uruchom to do tyłu**\n\n-   Wypróbuj to ćwiczenie jeszcze raz, ale tym razem niech numer na początku zostanie wybrany z użyciem trzech kostek, a numer na końcu z użyciem tylko jednej. Upewnij się, że przyrost jest ujemny!\n\n\\*_Gra w klasy_\n\n-   Korzystając z kredy narysuj wzór do gry w klasy na czarnej powierzchni \n    -   Ponumeruj kwadraty od dołu do góry\n    -   Niech uczniowie dają sobie wzajemnie kwadrat początkowy, kwadrat końcowy oraz informację, ile razy trzeba skoczyć\n    -   Gdy osoba skacząca skończy, niech zapisze właśnie wykonaną pętlę \n    -   Zacznij dodawać zajęcia dodatkowe do wykonania w każdym kwadracie, co zwiększy również złożoność zapisanej części."
-        },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Wstęp"
         },
@@ -1195,7 +1132,6 @@
           "name": "Wstęp"
         },
         "2a282546-3943-4555-adae-45fe80b8207a": {
-          "name": "Symulowanie eksperymentów",
           "progression_name": "Uruchom symulację"
         },
         "a9361037-3164-409e-a061-748c4929e168": {
@@ -1328,9 +1264,6 @@
             null
           ]
         },
-        "de8956c3-6f81-4290-9b7a-b90fd6f630d0": {
-          "name": "Prezentacje - Dzień 6"
-        },
         "b240c1ca-bdb8-4b45-80da-5acf76d4ca7b": {
           "description": "Jeśli Twoi uczniowie czują się swobodnie z koncepcjami kodowania, spróbuj skłonić ich do tworzenia swoich projektów w innej platformie, takiej jak [Scratch](https://scratch.mit.edu/) lub [Alice](http://www.alice.org/index.php)."
         },
@@ -1356,9 +1289,6 @@
             null
           ]
         },
-        "d8233290-3b13-4062-b13e-6bc56ccd2f7f": {
-          "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**X i O**\n\n-   Narysuj planszę do gry w \"Kółko i krzyżyk\" dla klasy.\n-   Umieść jeden X i jedno O gdzieś na planszy.\n-   Spytaj klasy, czy jest w stanie przemieścić X do O z użyciem gestów rąk, jako klasa .\n\n**X, O i strzałki**\n\n-   Podobnie do zajęć powyżej, niech uczniowie napiszą program z wyprzedzeniem, używając strzałek zamiast gestów ręką. \n    -   Można to zrobić w grupach.\n    -   Grupy mogą się dzielić swoimi rozwiązaniami z klasą."
-        },
         "af269d6d-e57d-4331-bc8d-daae801d1db0": {
           "tips": [
             null
@@ -1379,17 +1309,10 @@
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
           "name": "Refleksja"
         },
-        "0375d24a-10d8-4f65-87a3-d832c268c183": {
-          "description": "Jeśli uczniowie wcześniej skończą rozwiązywać łamigłówkę, niech spędzą trochę czasu próbując wymyślić własne łamigłówki w ich Dzienniku refleksji."
-        },
         "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
-          "name": "Przegląd aktywności bez komputera",
           "tips": [
             null
           ]
-        },
-        "af41bb35-0f50-4787-81ac-3658bfa59b98": {
-          "name": "Łamigłówki online z użyciem strzałek"
         },
         "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
           "name": "Programowanie z Angry Birds"
@@ -1448,9 +1371,6 @@
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "name": "Refleksja"
-        },
-        "8d66f089-ec12-474c-9410-cff9a1d9042a": {
-          "name": "Powtórz po mnie"
         },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "Poznając pętle"
@@ -1540,9 +1460,6 @@
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
           "name": "Refleksja"
-        },
-        "690e9bfd-7ca2-49f7-bd24-2ba8a921b4c5": {
-          "name": "Co to za aplikacja?"
         },
         "8c2a2318-b39e-4940-b04a-eb0319ed0d45": {
           "progression_name": "Right App - Aktywność bez komputera"
@@ -1662,13 +1579,6 @@
             null
           ]
         },
-        "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
-          "name": "Programowanie Happy Maps",
-          "progression_name": "Film: Wesołe Mapy — Aktywność bez komputera"
-        },
-        "c3cfdbc4-82d5-4717-bf83-22860936a687": {
-          "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można ich użyć w ramach zajęć pozalekcyjnych lub innej formy rozszerzenia. **Mapy pluszaków** - Utwórz siatkę naturalnej wielkości na chodniku wykorzystując taśmę i poleć uczniom, aby przynieśli do szkoły pluszaki. Teraz uczniowie mogą zaprogramować znajomych, aby przemieszczali swoje pluszaki zgodnie z instrukcjami  programów.\n\\*\\*Utwórz swoje własne \\*\\* -   Nich uczniowie tworzą swoje własne mapy.\n\n-   Niech inni uczniowie rozwiążą je z użyciem programów. "
-        },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
           "tips": [
             null
@@ -1693,13 +1603,9 @@
           "name": "Refleksja"
         },
         "7119f518-386e-44e7-893d-eff0fbc5a87d": {
-          "name": "Podstawy informatyki bez komputera",
           "tips": [
             null
           ]
-        },
-        "82d24278-d63c-4e22-921d-b92f4f1f8cd8": {
-          "name": "Programowanie ze Scratem"
         },
         "97ccc4b6-92d5-4c46-94a4-3289d38f068d": {
           "progression_name": "Film: Programowanie parami "
@@ -1758,7 +1664,6 @@
           "name": "Refleksja"
         },
         "cb522975-96ad-44b4-942c-601fc373771c": {
-          "name": "Podstawy informatyki bez komputera",
           "tips": [
             null
           ]
@@ -1920,7 +1825,6 @@
           "progression_name": "Projekt"
         },
         "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
-          "name": "Opowiadanie historii z Artystą",
           "progression_name": "Projekt"
         },
         "76119a2d-a3f8-4c17-b38a-c0194431de25": {
@@ -1937,9 +1841,6 @@
           "tips": [
             null
           ]
-        },
-        "4e234f90-8457-4749-866d-cdd800ccaeac": {
-          "name": "Rozmowa z robotami"
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
           "name": "Moi przyjaciele wśród robotów",
@@ -2162,9 +2063,6 @@
         "809e449a-e392-48c2-9b9f-f53ce1d06366": {
           "name": "Refleksja"
         },
-        "d5490110-1fb8-44ca-8e62-8b0c4e3b6dbe": {
-          "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Żniwa pomocy naukowych**\n\n-   Niech uczniowie tworzą sterty szkolnych pomocy naukowych na ławkach (ołówków, gumek, itp.)\n-   Niech partnerzy wymyślą,  jak żniwiarka będzie przechodziła od snopka do snopka, zbierając każdą grupę po drodze. \n-   Udostępnij programy pozostałej części klasy."
-        },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
           "name": "Wstęp"
         },
@@ -2226,9 +2124,6 @@
         },
         "a49ab9e9-2a47-4d02-93bf-ec9bd241a125": {
           "name": "Refleksja"
-        },
-        "f9faf5dc-b81a-441f-84f6-202dd305f24b": {
-          "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Zajrzyj pod maskę**\n\nGdy udostępniasz link do swojej gry, udostępniasz również cały kod, który się za nim kryje. To jest świetny sposób nauki uczniów wzajemnie od siebie. \n\n-   Zamieść linki do ukończonych gier online lub na tablicy.\n    -   Spraw, by gra stała się również Twoją historią, którą udostępnisz!\n-   Gdy uczniowie ładują link, niech klikną przycisk \"Jak to działa\", aby zobaczyć kod kryjący się za tą grą.\n-   Omów, jako grupa, różne sposoby, w jakie Twoi koledzy z klasy kodują swoje gry.\n-   Co Cię zaskoczyło?\n    -   Co chciałbyś wypróbować?\n-   Wybierz grę kogoś innego i użyj jej jako bazy (Nie martw się, oryginalna gra będzie bezpieczna)."
         },
         "782d1991-785a-406b-963c-687abb77e247": {
           "name": "Wstęp"
@@ -2292,9 +2187,6 @@
         "02945b11-d2db-485d-9002-9aff256a4ed4": {
           "name": "Refleksja"
         },
-        "3b646703-3875-4421-bdd8-865e9c2ace35": {
-          "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Binarne obrazki**\n\n-   Jest kilka świetnych materiałów w sieci, które pozwolą wynieść te zajęcia na wyższy poziom.\n-   Jeśli Twoich uczniów interesuje sposób przestawienia obrazków (a nawet muzyki) w zapisie binarnym, więcej informacji można znaleźć na   [Bombkach binarnych](http://code.org/files/CSEDbinary.pdf) firmy Thinkersmith."
-        },
         "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
           "name": "Planowanie"
         },
@@ -2328,9 +2220,6 @@
           "tips": [
             null
           ]
-        },
-        "8d3b579a-9959-4190-aa92-858495574689": {
-          "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju\n\n**Coraz lepiej**\n\n-   Niech twoja klasa spróbuje wymyślić swoje własne obrazki. \n-   Czy jesteś w stanie wymyślić, jak zaprogramować obrazki, które oni tworzą? \n\n**Wyzwanie dla klasy**\n\n-   Jako nauczyciel narysuj obrazek na siatce 5 x 5. \n-   Czy klasa może zakodować to z Tobą?"
         },
         "1ac03584-29b5-4a3d-8420-44259c0b1064": {
           "name": "Wstęp"
@@ -2589,9 +2478,6 @@
         "95951ba3-d513-4635-a484-1d1819906049": {
           "name": "Refleksja"
         },
-        "abc8cb08-ade8-44d3-95ba-558fadaf4c21": {
-          "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Tab prawda/ fałsz**\n\n-   Ustaw uczniów w linii jakby mieli grać [Czerwone światło/ Zielone światło](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Wybierz jedna osobę, aby stanęła przed Wywołującym.\n-   Wywołujący wyrażenie warunkowe i prosi każdego, kto spełnił wymogi wyrażenia warunkowego, aby wystąpili o krok naprzód. \n    -   Jeśli masz czerwony pasek, wystąp o krok naprzód.\n    -   Jeśli nosisz sandały, wystąp o krok naprzód.\n-   Spróbuj się zamienić mówiąc rzeczy takie jak: \"Jeśli nie jesteś blondynką, wystąp o krok naprzód.\"\n\n**Zagnieżdżanie**\n\n-   Podziel uczniów na pary lub małe grupy.\n-   Niech napiszą wyrażenia do gry w karty na paskach papieru po:\n    -   Jeśli figurą jest trefl\n    -   Jeśli kolorem jest czerwony\n-   Niech uczniowie zrobią paski papieru na potrzeby wyników.\n    -   Dodaj jeden punkt\n    -   Odejmij jeden punkt\n-   Po wykonaniu tego niech uczniowie wybiorą trzy z każdego typu paska i trzy karty do gry, zwracając uwagę na wybrany porządek.\n-   Korzystając z trzech kawałków papieru, niech uczniowie zapiszą trzy różne programy z wykorzystaniem tylko zestawów pasków które wybrali, w dowolnym porządku.\n    -   Zachęć uczniów, aby wstawili kilka wyrażeń warunkowych \"jeśli\" do innych wyrażeń warunkowych \"jeśli\".\n-   Teraz uczniowie powinni uruchomić wszystkie trzy programy, używając kart, które wylosowali, w tym samym porządku dla każdego programu.\n    -   Czy którykolwiek z dwóch programów doprowadził z powrotem do tej samej odpowiedzi?\n    -   Czy którykolwiek doprowadził do czegoś innego?"
-        },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Wstęp"
         },
@@ -2610,9 +2496,6 @@
         },
         "0e7cf944-a328-4388-afa7-8712fed768e0": {
           "name": "Wstęp"
-        },
-        "8cc71fbc-f53a-45d2-9b80-e102f01f25b7": {
-          "name": "Podgląd łamigłówek online"
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
           "name": "\"jeśli/w przeciwnym razie\" z Pszczółką"
@@ -2652,9 +2535,6 @@
         },
         "9edcc1a3-dce9-45bc-86af-546b41287b53": {
           "name": "Wstęp"
-        },
-        "c4193bf0-446f-4812-beb9-b3884a1385c9": {
-          "name": "Podgląd łamigłówek online"
         },
         "0a565c10-633a-486e-9d62-f62933373bf7": {
           "name": "Pętle \"dopóki\" z Rolnikiem"
@@ -2964,21 +2844,18 @@
           "name": "Refleksja"
         },
         "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
-          "description": "#### Rozgrzewka",
           "progression_name": "Film: Potańcówka Rozgrzewka"
         },
         "5283ba21-7c54-44c0-a4c2-00c1f5d240e6": {
           "progression_name": "Ćwiczenia"
         },
         "1a057037-bf26-4ab2-830f-80a5d94f87c7": {
-          "description": "#### Zdarzenia",
           "progression_name": "Film: Potańcówki"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "Zdarzenia"
         },
         "ec1bf1ca-d9d0-41e3-8234-638ae029834d": {
-          "description": "#### Takty",
           "progression_name": "Film: Takty w Potańcówce"
         },
         "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
@@ -3422,9 +3299,6 @@
         "b3ac68a6-7600-49ad-bfb3-88d318e25658": {
           "name": "Wstęp"
         },
-        "eac3c96a-98e8-4d3f-95de-b60f44c66df2": {
-          "name": "Pętle \"dla\" z Pszczółką"
-        },
         "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
           "progression_name": "Przejrzyj"
         },
@@ -3447,7 +3321,6 @@
           "name": "Wstęp"
         },
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
-          "name": "Pętle \"dla\" z Artistą ",
           "tips": [
             null
           ]
@@ -3476,7 +3349,6 @@
           ]
         },
         "38fe6f18-ce88-45d9-912c-64fc0addd0b7": {
-          "name": "Kodowanie",
           "tips": [
             null
           ]
@@ -3543,9 +3415,6 @@
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Refleksja"
-        },
-        "14da8da8-681c-4934-97fc-01e71ad67ef3": {
-          "description": "W celu zakończenia połączenia, podejrzyj łamigłówkę online (albo dwie) jako klasa.\n\n**Zaprezentuj:** Ujawnij całą łamigłówkę online z postępów, do których ma dojść. Zalecamy łamigłówkę 5. Czy uczniowie widzą podobieństwa do ostatniego zestawu ćwiczeń, które wykonali? Jakie występują duże różnice? \n\nPracuj ze swoją klasą, aby przeciągać kod do obszaru roboczego w taki sposób, aby ptak (ostatecznie) dotarł do świnki.\n\n**Przejście:** Uczniowie powinni być teraz gotowi do przejścia do komputerów, aby ukończyć rozwiązywanie łamigłówek online na własną rękę."
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Programowanie z Angry Birds",
@@ -3651,9 +3520,6 @@
         },
         "96d62dea-f1ff-46d9-a889-5ef9848c0acf": {
           "name": "Pętle z Laurel"
-        },
-        "b8fea05b-6234-4075-8416-bbfdef9e22f0": {
-          "name": "Łamigłówki online"
         },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
           "progression_name": "Budowanie umiejętności"
@@ -3792,9 +3658,6 @@
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Wstęp"
         },
-        "8a86be08-902a-47c7-8ed7-4aa78767ce45": {
-          "name": "Czego nauczyliśmy się?"
-        },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
           "name": "Refleksja",
           "tips": [
@@ -3897,9 +3760,6 @@
         },
         "504e1645-369b-4f38-9e75-ee5f7d5e03cb": {
           "name": "Refleksja"
-        },
-        "12028f3b-0333-4a2a-9059-74c7ea960ebd": {
-          "description": "Prosimy o  upewnienie się, że odwiedzicie [Copyright & Creativity ](https://copyrightandcreativity.org), aby znaleźć lekcje dotyczące praw do cyfrowego udostępniania i twórczości."
         },
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
           "name": "Wstęp"
@@ -4007,9 +3867,6 @@
             null
           ]
         },
-        "c3c1225f-3e42-4af3-b63e-6e2fb0a9f62a": {
-          "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można je wykorzystać do zajęć pozalekcyjnych albo w ramach urozmaicenia innego rodzaju.\n\n**Funkcjonalne łapacze słońca [Functional Suncatchers]**\nWejdź na [\"Tabelę w trybie \"unplugged\" - bez komputera - Podstaw informatyki\" {CS Fundamentals Unplugged Table}](https://code.org/curriculum/unplugged) lub  kliknij w link do [\"Funkcjonalnych łapaczy słońca\" {Functional Suncatchers}](https://studio.code.org/s/course3/stage/4/puzzle/1). Na te zajęcia potrzebne są pewne materiały ze sklepu dla majsterkowiczów, ale dzięki nim uczniowie mogą zobaczyć wartość wywoływania wielu funkcji. \n\n**Utwórz swoją piosenkę**\n\n-   Zacznij od skomponowania refrenu, a następnie powtórz go między zwrotkami piosenki, którą go obudowujesz.\n-   Wprowadź zmianę do refrenu i zastanów się o ile łatwiejsze jest wprowadzenie zmiany tylko w jednym miejscu. \n-   Zmień refren jeszcze raz, niech tym razem będzie dłuższy niż za pierwszym razem.\n-   Dodaj drugi refren i stosuj je zamiennie pomiędzy zwrotkami.\n\n**Pisanie programu na zasadzie piosenki**\n\n-   A jeśli odgrywalibyśmy piosenki zamiast je śpiewać? Nagle nasz refren stałby się funkcją powtarzanych czynności, a nie słowami.\n-   Wykorzystaj koncepcje strzałek z lekcji \"Programowanie na papierze milimetrowym\" i utwórz program, w którym będzie mnóstwo powtarzających się instrukcji. \n    -   Otocz kółkiem te powtarzające się czynności, aby klasa mogła zobaczyć, gdzie one są. \n    -   Zdefiniuj funkcję zwaną \"Refrenem\" nad programem. \n    -   Wykreśl wszędzie tam, gdzie pojawiają się powtarzające się działania w programie i zamiast tego napisz \"Refren\".\n-   Powtarzaj aż do momentu, w którym klasa będzie w stanie przejść proces uzyskując zaledwie niewielkie instrukcje. "
-        },
         "5051f377-1e03-4348-91f8-5ba36d7dd8c6": {
           "name": "Wstęp"
         },
@@ -4017,9 +3874,6 @@
           "tips": [
             null
           ]
-        },
-        "b249be1c-ef47-4ad8-87dd-2bcfb8d17530": {
-          "name": "Podgląd łamigłówek online"
         },
         "ad677781-a22b-4166-b8f8-6dad3630f9e3": {
           "name": "Funkcje w Minecrafcie",

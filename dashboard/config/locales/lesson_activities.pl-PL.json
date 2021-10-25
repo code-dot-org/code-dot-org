@@ -311,9 +311,6 @@
         "04400eef-5989-4325-a801-ab4ad451f130": {
           "name": "Wersja rozszerzona"
         },
-        "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
-          "name": "Zagłębianie się w widok informacji"
-        },
         "f0e43cbc-520d-42b7-8de2-0572d569695e": {
           "name": "Rozgrzewka"
         },
@@ -547,12 +544,6 @@
         },
         "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
           "name": "Dzień 3 - Zbuduj swój projekt"
-        },
-        "459d00f2-e296-4205-bca6-eab8d4599354": {
-          "name": "Dzień 4 - Zweryfikuj swój projekt"
-        },
-        "25d5e16a-9db1-441d-a4c4-916612df574b": {
-          "name": "Dzień 5 i 6 - Zaprezentuj swój projekt"
         },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Wersja rozszerzona"
@@ -809,9 +800,6 @@
         "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
           "name": "Rozgrzewka"
         },
-        "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
-          "name": "Zajęcia uzupełniające - Wybierz jedne"
-        },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Główna aktywność"
         },
@@ -895,9 +883,6 @@
         },
         "260a48d0-8cd7-4f15-b303-32e5c685a349": {
           "name": "Rozgrzewka"
-        },
-        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
-          "name": "Działanie uzupełniające -  oprogramowanie"
         },
         "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
           "name": "Podgląd łamigłówek online jako klasa"
@@ -1058,9 +1043,6 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Rozgrzewka"
         },
-        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
-          "name": "Główna aktywność "
-        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Zakończenie"
         },
@@ -1094,17 +1076,11 @@
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Zakończenie"
         },
-        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
-          "name": "Sprawdzian opcjonalny"
-        },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Wersja rozszerzona"
         },
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Rozgrzewka"
-        },
-        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
-          "name": "Zajęcia uzupełniające -  Programowanie"
         },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Główna aktywność"
@@ -1195,9 +1171,6 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Zakończenie"
-        },
-        "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": "Rozgrzewka"
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Główna aktywność"
@@ -1583,9 +1556,6 @@
         "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
           "name": "Wersja rozszerzona"
         },
-        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
-          "name": "Rozgrzewka: Podgląd programowania w labiryncie"
-        },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Główna aktywność"
         },
@@ -1627,9 +1597,6 @@
         },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Rozgrzewka"
-        },
-        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
-          "name": "Fundament online: Podejrzyj pętle w \"Kolekcjonerze\""
         },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Główna aktywność"
@@ -1729,9 +1696,6 @@
         },
         "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
           "name": "Możliwości międzyprzedmiotowe"
-        },
-        "077242ad-8c8a-4b24-a139-a5e198abd405": {
-          "name": "Rozgrzewka (opcjonalnie)"
         },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Główna aktywność"
@@ -1870,9 +1834,6 @@
         },
         "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
           "name": "Dzień 3 - Zbuduj swój projekt"
-        },
-        "e8be4727-c687-43bb-a1be-e1b3da780020": {
-          "name": "Dzień 4 i 5 - Zaprezentuj swój projekt"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Wersja rozszerzona"

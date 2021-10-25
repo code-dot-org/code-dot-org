@@ -148,17 +148,6 @@
           "word": "Pętle",
           "definition": "Czynność wykonywania czegoś w nieskończoność."
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "Szyfr Cezara",
-          "definition": "technika szyfrowania, która przesuwa alfabet o pewną liczby znaków"
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "Szyfrowanie",
-          "definition": "termin ogólny dla techniki (lub algorytmu), wykonującej szyfrowanie"
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "Łamanie szyfru"
-        },
         "encryption/hoc-encryption/unversioned": {
           "word": "Szyfrowanie"
         },
@@ -214,8 +203,7 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/sports/unversioned": {
-          "word": "Kod",
-          "definition": "(v) napisać kod lub instrukcje dla komputera."
+          "word": "Kod"
         },
         "debugging/sports/unversioned": {
           "word": "Debugowanie",
@@ -288,21 +276,16 @@
           "word": "Duszek",
           "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
         },
-        "user/coursef/2021": {
-          "word": "Użytkownik",
-          "definition": "Ktoś, kto używa obiektu, w tym oprogramowania i sprzętu."
-        },
         "behavior/coursef/2021": {
           "word": "Zachowanie",
-          "definition": "Czynność, którą duszek wykonuje nieustannie do momentu, gdy powie mu się, by przestał."
+          "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
         },
         "program/coursef/2021": {
           "word": "Program",
           "definition": "Algorytm zakodowany w takiej postaci, że może być uruchomiony na komputerze."
         },
         "algorithm/coursef/2021": {
-          "word": "Algorytm",
-          "definition": "Lista kroków do ukończenia zadania. "
+          "word": "Algorytm"
         },
         "event/coursef/2021": {
           "word": "Zdarzenie",
@@ -313,8 +296,7 @@
           "definition": "Etykieta informacji użyta w programie."
         },
         "input/coursef/2021": {
-          "word": "Wejście",
-          "definition": "Informacje, które komputery otrzymują od użytkowników."
+          "word": "Wejście"
         },
         "loop/coursef/2021": {
           "word": "Pętla",
@@ -325,7 +307,7 @@
           "definition": "Aby zrobić coś znowu."
         },
         "for_loop/coursef/2021": {
-          "word": "Pętla \"dla\" (for)",
+          "word": "Pętla \"dla\"",
           "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
         },
         "models_and_simulations/coursef/2021": {
@@ -335,41 +317,11 @@
           "word": "Uczenie maszynowe",
           "definition": "Jak komputery rozpoznają wzorce i podejmują decyzje bez programowania explicite"
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "skrót dla \"Systemu nazwy domen\" [Domain Name System], system przekłada na nazwy domen (na przykład example.com) na adresy OP (np. 93.184.216.34)"
-        },
         "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "Grupa komputerów i serwerów, które są ze sobą połączone."
+          "word": "Internet"
         },
         "packets/coursef/2021": {
-          "word": "Pakiety",
-          "definition": "Niewielkie fragmenty informacji, które zostały starannie utworzone z większych części informacji."
-        },
-        "servers/coursef/2021": {
-          "word": "Serwery",
-          "definition": "Komputery, które istnieją tylko po to, by przekazywać rzeczy innym."
-        },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "Zapadający w pamięć adres do wywołania strony internetowej (np. www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Kabel",
-          "definition": "Metoda wysyłania informacji z użyciem kabli telefonicznych lub telewizyjnych."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Światłowód",
-          "definition": "Połączenie, w którym używa się światła do przesyłu informacji"
-        },
-        "ip_address/coursef/2021": {
-          "word": "Adres IP",
-          "definition": "Liczba przypisana do dowolnej pozycji, która jest połączona z Internetem."
-        },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "Bezprzewodowa metoda wysyłania informacji korzystająca z fal radiowych."
+          "word": "Pakiety"
         },
         "define/coursef/2021": {
           "word": "Zdefiniuj",
@@ -524,8 +476,7 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "binary/coursec/2021": {
-          "word": "Binarny",
-          "definition": "Sposób przedstawiania informacji z użyciem tylko dwóch opcji."
+          "word": "Binarny"
         },
         "algorithm/coursed/2021": {
           "word": "Algorytm",
@@ -551,10 +502,6 @@
           "word": "Programowanie",
           "definition": "Sztuka tworzenia programu."
         },
-        "frustrated/coursed/2021": {
-          "word": "Sfrustrowany",
-          "definition": "Poczucie irytacji lub złości spowodowane tym, że coś idzie nie tak, jak chcemy."
-        },
         "persistence/coursed/2021": {
           "word": "Wytrwałość",
           "definition": "Ciągłe podejmowanie prób nawet wówczas, gdy coś jest bardzo trudne."
@@ -564,7 +511,6 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "code/coursed/2021": {
-          "word": "kodować",
           "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
         "repeat/coursed/2021": {
@@ -579,15 +525,12 @@
           "word": "Zdania z warunkami",
           "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
         },
-        "pseudocode/coursed/2021": {
-          "word": "pseudokod"
-        },
         "condition/coursed/2021": {
           "word": "Warunek",
           "definition": "Coś, co program sprawdza, by stwierdzić, czy jest prawdziwe przed podjęciem decyzji o podjęciu działania."
         },
         "while_loop/coursed/2021": {
-          "word": "Pętla \"dopóki\" (While)",
+          "word": "Pętla \"dopóki\"",
           "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
         },
         "until/coursed/2021": {
@@ -596,7 +539,7 @@
         },
         "algorithm/express/2021": {
           "word": "Algorytm",
-          "definition": "Lista działań do ukończenia zadania."
+          "definition": "Lista działań pozwalających wykonać zadanie."
         },
         "bug/express/2021": {
           "word": "Błąd",
@@ -629,9 +572,6 @@
         "event/express/2021": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "code/express/2021": {
-          "word": "koduj"
         },
         "loop/express/2021": {
           "word": "Pętla",
@@ -745,10 +685,6 @@
           "word": "Zachowanie",
           "definition": "Czynność, którą duszek wykonuje do momentu, gdy powie mu się, by przestał."
         },
-        "algorithm/coursee/2021": {
-          "word": "algorytm",
-          "definition": "Lista działań, aby ukończyć zadanie."
-        },
         "sprite/coursee/2021": {
           "word": "Duszek",
           "definition": "Grafika na ekranie z lokalizacją,  rozmiarem i wyglądem."
@@ -758,8 +694,7 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "copyright/coursee/2021": {
-          "word": "Prawa autorskie",
-          "definition": "wyłączne prawo do drukowania, publikowania, wykonywania, filmowania lub zapisywania materiału literackiego, artystycznego lub muzycznego oraz do nadawania innym uprawnień, by też mogli to robić"
+          "word": "Prawa autorskie"
         },
         "loop/coursee/2021": {
           "word": "Pętla",
@@ -782,7 +717,7 @@
           "definition": "Stwierdzenia, które uruchamiają się tylko w określonych warunkach."
         },
         "while_loop/coursee/2021": {
-          "word": "Pętla \"dopóki\" (While)",
+          "word": "Pętla \"dopóki\"",
           "definition": "Pętla, która powtarza się, gdy warunek jest spełniony."
         },
         "define/coursee/2021": {

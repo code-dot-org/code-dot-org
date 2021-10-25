@@ -31,7 +31,16 @@
         "helloworld_food_costumes": "Naucz się zmieniać wygląd duszków",
         "helloworld_food_sounds": "Dowiedz się, jak odtwarzać dźwięki.",
         "helloworld_retro_costumes": "Naucz się zmieniać wygląd duszków",
-        "helloworld_retro_sounds": "Dowiedz się, jak odtwarzać dźwięki."
+        "helloworld_retro_sounds": "Dowiedz się, jak odtwarzać dźwięki.",
+        "CourseF_app_computer": "Połącz wszystkie części i wymyśl, jak włączyć komputer!",
+        "courseF_apps_aquarium": "Wypełnij swoje akwarium różnymi przedmiotami.",
+        "courseF_apps_collector": "Zbierz przedmioty najszybciej, jak zdołasz!",
+        "courseF_apps_madlib": "Ten program poprosi cię o wpisanie pewnych słów, a następnie słowa te zostaną wykorzystane, aby opowiedzieć zabawną historyjkę!",
+        "courseF_apps_pet": "Przeciągaj przedmioty do psa i obserwuj jego reakcję!",
+        "courseF_editable_madlib": "Ten program poprosi cię o wpisanie pewnych słów, a następnie słowa te zostaną wykorzystane, aby opowiedzieć zabawną historyjkę!",
+        "courseF_sprites_make": "Ćwicz tworzenie duszków.",
+        "courseF_sprites_moreSprites": "Ćwicz tworzenie duszków i wybieranie ich lokalizacji.",
+        "courseF_sprites_positioning": "Ćwicz tworzenie duszków i wybieranie ich lokalizacji."
       }
     }
   }
