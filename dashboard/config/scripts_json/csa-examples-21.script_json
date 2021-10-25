@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-18 13:58:24 UTC",
+    "serialized_at": "2021-10-25 14:01:55 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csa-examples-21"
     }
@@ -337,6 +338,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 1"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -359,6 +363,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 2"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -381,6 +388,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 3"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -395,6 +405,72 @@
       },
       "level_keys": [
         "CSA Unit 1 Project - Student Example 3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Asphalt Art Project [The Neighborhood]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Asphalt Art Project [The Neighborhood]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Asphalt Art Project [The Neighborhood]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      },
+      "level_keys": [
+        "CSA Unit 1 Project - Student Example 6"
       ]
     }
   ],
@@ -428,6 +504,42 @@
         "level.key": "CSA Unit 1 Project - Student Example 3",
         "script_level.level_keys": [
           "CSA Unit 1 Project - Student Example 3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 4",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 4"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 5",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 1 Project - Student Example 6",
+        "script_level.level_keys": [
+          "CSA Unit 1 Project - Student Example 6"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
