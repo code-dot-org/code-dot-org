@@ -28,7 +28,7 @@ module LessonImportHelper
       raise "Script must have course version" unless course_version_id
     end
 
-    lesson_levels = lesson.script_levels.reject {|l| l.levels[0].type == 'CurriculumReference'}
+    lesson_levels = lesson.script_levels.to_a
     # Lockable lessons need to be handled as a separate case
     if cb_lesson_data.empty?
       if models_to_import.include?('Lesson')
