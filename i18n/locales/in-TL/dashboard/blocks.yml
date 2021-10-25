@@ -1950,26 +1950,6 @@ in:
             '"starburst"': crwdns2694205:0crwdne2694205:0
             '"glass"': crwdns2694207:0crwdne2694207:0
             '"twinkling"': crwdns2694209:0crwdne2694209:0
-      Poetry_setPoem:
-        text: crwdns2694211:0[POEM]crwdnd2694211:0[0]crwdne2694211:0
-        options:
-          POEM:
-            '"---"': crwdns2694213:0crwdne2694213:0
-            '"hafez"': crwdns2694215:0crwdne2694215:0
-            '"carroll_1"': crwdns2694217:0crwdne2694217:0
-            '"rumi_1"': crwdns2694219:0crwdne2694219:0
-            '"field"': crwdns2694221:0crwdne2694221:0
-            '"carroll_2"': crwdns2694223:0crwdne2694223:0
-            '"twain"': crwdns2694225:0crwdne2694225:0
-            '"wordsworth"': crwdns2694227:0crwdne2694227:0
-            '"carroll_3"': crwdns2694229:0crwdne2694229:0
-            '"rios"': crwdns2694231:0crwdne2694231:0
-            '"rumi_2"': crwdns2694233:0crwdne2694233:0
-            '"hughes_1"': crwdns2694235:0crwdne2694235:0
-            '"hughes"': crwdns2694237:0crwdne2694237:0
-            '"hopler"': crwdns2694239:0crwdne2694239:0
-            '"lomeli"': crwdns2694241:0crwdne2694241:0
-            '"singer"': crwdns2694243:0crwdne2694243:0
       Poetry_setPrompt:
         text: crwdns2694245:0[LEFT_QUOTE]crwdnd2694245:0[0]crwdnd2694245:0[NAME]crwdnd2694245:0[1]crwdnd2694245:0[RIGHT_QUOTE]crwdnd2694245:0[2]crwdnd2694245:0[VAR]crwdnd2694245:0[3]crwdne2694245:0
       Poetry_setPromptWithChoices:

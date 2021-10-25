@@ -10639,7 +10639,8 @@
           "storyboard_behavior_example": "crwdns2695063:0[0]crwdne2695063:0"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "crwdns2694933:0crwdne2694933:0"
+          "hw_no_changes": "crwdns2694933:0crwdne2694933:0",
+          "hw_click_sprites": "crwdns2698887:0crwdne2698887:0"
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "crwdns2695013:0[0]crwdne2695013:0"
@@ -10667,7 +10668,8 @@
           "storyboard_behavior_example": "crwdns2695313:0[0]crwdne2695313:0"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "crwdns2695183:0crwdne2695183:0"
+          "hw_no_changes": "crwdns2695183:0crwdne2695183:0",
+          "hw_click_sprites": "crwdns2698889:0crwdne2698889:0"
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "crwdns2695263:0[0]crwdne2695263:0"
@@ -10695,7 +10697,8 @@
           "storyboard_behavior_example": "crwdns2694853:0[0]crwdne2694853:0"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "crwdns2694723:0crwdne2694723:0"
+          "hw_no_changes": "crwdns2694723:0crwdne2694723:0",
+          "hw_click_sprites": "crwdns2698885:0crwdne2698885:0"
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "crwdns2694803:0[0]crwdne2694803:0"
@@ -10723,7 +10726,8 @@
           "storyboard_behavior_example": "crwdns2694603:0[0]crwdne2694603:0"
         },
         "helloworld_retro_click": {
-          "hw_no_changes": "crwdns2694473:0crwdne2694473:0"
+          "hw_no_changes": "crwdns2694473:0crwdne2694473:0",
+          "hw_click_sprites": "crwdns2698761:0crwdne2698761:0"
         },
         "helloworld_retro_costumes": {
           "hello_world_costumes": "crwdns2694553:0[0]crwdne2694553:0"
