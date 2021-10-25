@@ -23,6 +23,12 @@
         "ai-training/oceans/unversioned": {
           "name": "AI: ข้อมูลการฝึกฝนและอคติ"
         },
+        "exploring_apps/coursef/2021": {
+          "name": "การสำรวจแอป"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "การสำรวจแอป"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "สนุกกับ For ลูป"
         },
@@ -62,22 +68,6 @@
         "implementation_guide/coursef/2021": {
           "name": "คู่มือการใช้งาน"
         },
-        "digital-trails-lesson-slides/courseb/2021": {
-          "name": "ร่องรอยดิจิทัล: สไลด์บทเรียน",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
-        },
-        "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "ร่องรอยดิจิทัล: ติดตามร่องรอยดิจิทัล",
-          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
-        },
-        "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "ร่องรอยดิจิทัล: Digital Trail Squares",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
-        },
-        "digital-trails-animal-tracks/courseb/2021": {
-          "name": "ร่องรอยดิจิทัล: การติดตามสัตว์",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
-        },
         "mimi-activity/courseb/2021": {
           "name": "ขยับหน่อยสิ ขยับหน่อย"
         },
@@ -85,12 +75,10 @@
           "name": "ขยับหน่อยสิ ขยับหน่อย"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "ขยับหน่อยสิ ขยับหน่อย",
-          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
+          "name": "ขยับหน่อยสิ ขยับหน่อย"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "ขยับหน่อยสิ ขยับหน่อย",
-          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+          "name": "ขยับหน่อยสิ ขยับหน่อย"
         },
         "feeling_faces_emotion_image/courseb/2021": {
           "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์",
@@ -99,10 +87,6 @@
         "feeling-faces-image/courseb/2021": {
           "name": "ใบหน้าบอกความรู้สึก",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
-        },
-        "jigsaw/courseb/2021": {
-          "name": "การฝึกลากและวาง",
-          "url": "https://studio.code.org/s/jigsaw"
         },
         "class-section-video/courseb/2021": {
           "name": "จะจัดชั้นเรียนบน Code.org อย่างไร",
@@ -126,21 +110,15 @@
           "name": "เกมต่อภาพแผนที่สุดหรรษา-------------",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
-        "compass-rose/courseb/2021": {
-          "name": "เข็มทิศคอมพาสโรส",
-          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
-        },
         "feeling_faces_-_emotion_image/courseb/2021": {
           "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "สตีวี่และโครงการใหญ่",
-          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
+          "name": "สตีวี่และโครงการใหญ่"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "บักที่รอดหูรอดตาไป",
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "name": "บั๊กที่รอดหูรอดตาไป"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "มาวนลูปกัน"
@@ -166,22 +144,6 @@
         "implementation_guide/courseb/2021": {
           "name": "คู่มือการใช้งาน"
         },
-        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
-          "name": "ความปลอดภัยในสังคมออนไลน์ของฉัน: สไลด์บทเรียน",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
-        },
-        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
-          "name": "ความปลอดภัยในสังคมออนไลน์ของฉัน: สังคมออนไลน์ของฉัน",
-          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
-        },
-        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "ความปลอดภัยในสังคมออนไลน์ของฉัน: ความปลอดภัย: นี่คือกฏ!",
-          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
-        },
-        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "ความปลอดภัยในสังคมออนไลน์ของฉัน: หยุดคิดสักนิด",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
-        },
         "pair-programming-vid/coursea/2021": {
           "name": "การจับคู่เพื่อเขียนโปรแกรม",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
@@ -193,29 +155,15 @@
         "wiggles-go_noodle/coursea/2021": {
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "จะจัดชั้นเรียนบน Code.org อย่างไร",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
-        },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "แผนที่สุดหรรษา",
-          "url": "https://youtu.be/hrnhiKAQ1_k"
-        },
-        "happy-map-cards/coursea/2021": {
-          "name": "การ์ดแผนที่สุดหรรษา",
-          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
-        },
-        "activity-answer-happy-maps/coursea/2021": {
-          "name": "การ์ดแผนที่สุดหรรษา",
-          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
+          "name": "แผนที่แห่งความสุข"
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "เกมต่อภาพแผนที่สุดหรรษา-------------",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์",
-          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
+          "name": "ใบหน้าบอกความรู้สึก - ภาพแสดงอารมณ์"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
@@ -226,10 +174,6 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
-        },
-        "csf_debugging_k1_blocks/coursea/2021": {
-          "name": "การดีบักด้วยปุ่มขั้น",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "ใบหน้าบอกความรู้สึกและภาพแสดงอารมณ์",
