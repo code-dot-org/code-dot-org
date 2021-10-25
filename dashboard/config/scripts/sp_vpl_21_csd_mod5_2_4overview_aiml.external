@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Placeholder 
 
-Text level with a high-level overview of lessons 2 - 4
+## Text level with a high-level overview of lessons 2 - 4
 Lessons are designed to be facilitated by teachers, not a self-paced course for students
 Include examples of what this looks like in lessons 2 - 4 
 High-level overview of each lesson (possibly dropdowns) similar to a “previously on” session

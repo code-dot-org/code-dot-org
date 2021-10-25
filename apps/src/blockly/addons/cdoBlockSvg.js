@@ -126,4 +126,8 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
   setHSV(h, s, v) {
     return super.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
   }
+
+  getHexColour() {
+    return super.getColour();
+  }
 }
