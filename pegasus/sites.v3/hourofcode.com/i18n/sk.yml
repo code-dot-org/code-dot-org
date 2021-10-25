@@ -606,13 +606,13 @@ sk:
     spoločenských oblastí. Pozrite sa na <a href='%{tutorials}'> návody a aktivity</a>.
     Táto kampaň je podporovaná viac ako <a href='%{partners}'> 400 partnermi</a> a
     200.000 pedagógmi po celom svete.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: Projekt Hodina Kódu začala ako jednohodinový úvod
+    do informatiky, ktorý bol navrhnutý na odhalenie podstaty "kódu", rozšírenie účasti
+    v oblasti informatiky a s cieľom poukázať na to, že základy kódovania sa môže
+    naučiť ktokoľvek. Odvtedy sa celosvetové úsilie na oslavu informatiky, počnúc
+    jednou hodinou kódovacích aktivít, rozširuje do všetkých spoločenských oblastí.
+    Vyskúšajte [návody a aktivity](%{tutorials}). Túto kampaň podporuje celosvetovo
+    viac ako [400 partnerov](%{partners}) a 200 000 pedagógov.
   hoc_faq_last_year: Vyskúšajte si návody
   hoc_faq_when_is_hoc_q: Kedy začína Hodina kódu?
   hoc_faq_when_is_hoc_a: Aktivita Hodina kódu sa koná každý rok počas <a href='%{csedweek_url}'>týždňa
@@ -620,30 +620,30 @@ sk:
     %{campaign_date_full}, ale aktivity Hodiny kódu môžete využívať po celý rok. Tento
     týždeň sa koná každoročne počas výročia narodenín pioniera výpočtovej techniky
     <a href='%{grace_hopper}'> admirála Grace Murray Hoppera</a> (9. december 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: Aktivita Hodina kódu sa koná každý rok počas [Týždňa
+    výučby informatiky](%{csedweek_url}). V roku %{campaign_date_year} sa Týždeň výučby
+    informatiky bude konať dňa %{campaign_date_full}, ale vy môžete aktivity Hodiny
+    kódu organizovať počas celého roka. Tento týždeň sa koná každoročne na počesť
+    narodenín počítačovej priekopníčky [Admirálky Grace Murray Hopperovej] (%{grace_hopper}),
+    ktorá sa narodila 9. decembra 1906.
   hoc_faq_why_cs_q: Prečo informatika?
   hoc_faq_why_cs_a: "<i>Každý</i> študent by mal mať možnosť učiť sa informatiku.
     Rozvíja to zručnosti ako logika, tvorivosť, či riešenie problémových úloh. Ak
     začnú skoro, študenti získajú základy pre úspech v akejkoľvek profesnej dráhe
     21. storočia. Viac v štatistikách <a href='%{stats_url}'>tua>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: _Každý_ študent by mal mať možnosť učiť sa informatiku,
+    pretože rozvíja zručnosti pri riešení problémov, logiku a tvorivosť. Ak študenti
+    začnú skoro, získajú základy pre úspech v akejkoľvek profesijnej dráhe 21. storočia.
+    Viac sa dozviete v [týchto](%{stats_url}) štatistikách.
   hoc_faq_how_participate_q: Ako sa môžem zúčastniť Hodiny kódu?
   hoc_faq_how_participate_a: "<a href='/how-to'> Začnite plánovať</a> už dnes a pozrite
     si náš návod ako na to. V škole alebo vo svojej komunite môžete usporiadať podujatie
     Hodina kódu &mdash; alebo aj počas mimoškolských aktivít, neziskovách alebo v
     práci. Alebo jednoducho skúste sami keď bude %{campaign_date}."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[Začnite plánovať](%{howto}) už dnes a pozrite
+    si náš návod ako na to. Udalosť Hodina kódu môžete zorganizovať u vás v škole,
+    v práci, alebo vo svojej komunite v podobe mimoškolskej aktivity, či neziskovej
+    organizácie. Alebo si ju môžete odskúšať sami počas %{campaign_date}."
   hoc_faq_behind_hoc_q: Kto je zodpovedný za Hodinu kódu?
   hoc_faq_behind_hoc_a: Udalosť Hodina kódu organizuje <a href='http://code.org'>Code.org</a>,
     verejná nezisková organizácia /Us § 501 c3/, ktorá sa venuje zvyšovaniu podielu
@@ -651,11 +651,11 @@ sk:
     menšín. Je k dispozícii vo viacerých školách. <a href='%{codeorg_url}/about/partners'>Bezprecedentná
     koalícia partnerov</a> sa tiež spojila k podpore akcie Hodina kódu &mdash; vrátane
     Microsoftu, Applu, Amazonu, Boys and Girls Clubs of America a College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: Projekt Hodina kódu riadi [poradný výbor](%{partner_url})
+    Hodiny kódu a Týždňa výučby informatiky spolu s bezprecedentnou koalíciou partnerov,
+    ktorí sa spojili, aby tento projekt podporili. Medzi týchto partnerov patrí spoločnosť
+    Microsoft, Apple, Amazon a neziskové organizácie Boys and Girls Clubs of America
+    a College Board.
   hoc_faq_host_q: Neviem nič o programovaní. Môžem napriek tomu organizovať akciu?
   hoc_faq_host_a: Samozrejme, aktiity Hodiny kódu sú riadené samostatne. Jediné, čo
     je potrebné urobiť, je <a href='%{codeorg_url}/learn'>vyskúšať si naše súčasné
@@ -663,11 +663,12 @@ sk:
     my sa postaráme o zvyšok. Zároveň poskytujeme možnosti pre každú vekovú skupinu
     a skupinu s rôznymi úrovňami zručností. Naplánujte svoju udalosť prečítaním si
     nášho <a href='/how-to'>návodu ako na to</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: 'Samozrejme. Aktivity Hodiny kódu sú intuitívne. Stačí
+    ak [vyskúšate naše súčasné návody](%{codeorg_url}/learn) tak, že si vyberiete
+    cvičenie a hodinu, ktorú chcete. O zvyšok sa už postaráme my. Ponúkame možnosti
+    pre každú vekovú kategóriu, pre škôlkarov, aj pre starších a aj pre používateľov
+    s rôznou úrovňou zručnosti. Prečítajte si náš [návod](%{howto}) a začnite plánovať
+    svoju kódovaciu udalosť. '
   hoc_faq_devices_q: Aké zariadenia by mali moji študenti používať?
   hoc_faq_devices_a: Návody Code.org fungujú na všetkých zariadeniach a prehliadačoch.
     Viac informácií o technických požiadavkach pre návody Code.org môžete nájsť <a
@@ -675,11 +676,13 @@ sk:
     môžete nájsť <a href='%{codeorg_url}/learn'>%{partner_url}v popise každého špecifického
     návodu</a>. Nezabudnite aj na <a href='%{unplugged_url}'>unplugged aktivity</a>v
     prípade, že vaša škola si nemôže prispôsobiť návody!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: 'Cvičenia na webstránke code.org fungujú na všetkých
+    zariadeniach a prehliadačoch. Viac informácií o technických požiadavkách pre cvičenia
+    na webstránke code.org nájdete [tu](%{codeorg_url}/educate/it). Technické požiadavky
+    pre ostatné cvičenia môžete nájsť na stránke [%{partner_url}](%{codeorg_url}/learn)
+    v popise každého samostatného cvičenia. Nezabúdajte, že ponúkame aj [aktivity,
+    ktoré nevyžadujú používanie počítača](%{unplugged_url}), ak vaša škola nedokáže
+    týmto cvičeniam vyhovieť. '
   hoc_faq_need_computers_q: Potrebujem počítač pre každého účastníka?
   hoc_faq_need_computers_a: Nie. Máme výukové programy aktivity Hodina kódu, ktoré
     fungujú na počítačoch, smartfónoch, tabletoch a niektoré nevyžadujú počítač vôbec!
@@ -692,14 +695,17 @@ sk:
     Hodina kódu. Sledujte spoločne video, striedajte sa v riešení úloh alebo odpovedí
     na otázky. <li><b>Bez pripojenia.</b> Ponúkame aj <a href='%{unplugged_url}'>kurzy,
     ktoré nevyžadujú počítač.</a></ul>
-  hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
-
-    _Here are a few options:_
-
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+  hoc_faq_need_computers_a_markdown: "Nie. Ponúkame cvičenia, ktoré fungujú na počítačoch,
+    smartfónoch, tabletoch a dokonca pri niektorých počítač vlastne vôbec nepotrebujete.
+    V podstate sa môžete pripojiť s tým čo máte, nech ste kdekoľvek.\n\n_Tu je pár
+    možností:_\n\n-**Pracujte v dvojiciach.** [Výskumy ukázali](%{pair_programming_research}),
+    že študenti sa učia najlepšie, keď [programujú vo dvojici](%{pair_programming_video})
+    a delia sa o jeden počítač. Vyzvite vašich študentov, aby pracovali v pároch.
+    \n-**Premietnite im obrazovku.** Celá vaša skupina môže absolvovať udalosť Hodiny
+    kódu spoločne, ak máte projektor a tabuľu, na ktorú môžete premietnuť obrazovku
+    z počítača pripojeného na internet. Študenti môžu sledovať video spoločne, striedať
+    sa pri riešení problémov a odpovediach na otázky.\nAlebo to skúste -**bez pripojenia.**
+    Ponúkame totiž aj [cvičenia, pri ktorých nie je potrebné používať počítač](%{unplugged_url})."
   hoc_faq_international_q: Som na/v <country>. Ako sa môžem zúčastniť medzinárodne?
   hoc_faq_international_a: Každý človek, hocikde na svete môže zogranizovať Hodinu
     kódu. Minulý rok sa študenti z celého sveta spojili a zúčastnili sa akcie Hodina

@@ -179,8 +179,80 @@
         "d1485387-01e4-484d-9935-75f7c14b9d76": {
           "description": "Gunakan terminologi yang sesuai apabila merujuk kepada tetikus komputer, pad jejak, atau skrin sentuh."
         },
+        "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
+          "description": "Modelkan tingkah laku makmal komputer yang betul"
+        },
+        "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
+          "description": "Eksperimen dengan tindakan pengaturcaraan berasaskan blok standard seperti: mengklik, seret, lepaskan dan sebagainya."
+        },
+        "a5a52414-42a7-4b32-897b-819a70572328": {
+          "description": "Terjemahkan pergerakan ke dalam siri perintah."
+        },
+        "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
+          "description": "Bina atur cara dengan menyusun semula pergerakan berjujukan"
+        },
+        "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
+          "description": "Bangunkan atur cara komputer daripada set arahan bertulis"
+        },
+        "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
+          "description": "Perintah jujukan mengikut urutan logik."
+        },
+        "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
+          "description": "Kenali masalah atau \"pepijat\" dalam atur cara dan bangunkan rancangan yang bertujuan menyelesaikan isu."
+        },
+        "620da514-ad6e-4049-a9d3-d189a79af01e": {
+          "description": "Terjemahkan pergerakan ke dalam siri perintah."
+        },
+        "adabe26f-78e0-47f4-92b2-535a38f53f15": {
+          "description": "Kenal pasti dan cari pepijat dalam atur cara."
+        },
+        "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
+          "description": "Bina atur cara dengan menggunakan struktur yang mengulangi bahagian kod"
+        },
+        "b6f41a7c-0967-4986-b7b6-910819b28396": {
+          "description": "Menambah baik kod sedia ada dengan mencari bahagian pengulangan dan memindahkannya ke dalam struktur penggelungan"
+        },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
+        },
+        "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
+          "description": "Pecahkan jujukan arahan yang panjang kepada jujukan boleh diulangi terkecil yang mungkin."
+        },
+        "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
+          "description": "Kira bilangan tindakan yang perlu diulangi dan mewakilinya sebagai gelung."
+        },
+        "6aac3c12-4427-43d1-877c-727d0665ab49": {
+          "description": "Menguraikan bentuk kepada jujukan berulang yang terbesar."
+        },
+        "6dbab2fb-7a17-4269-885e-84768be03a1f": {
+          "description": "Cipta atur cara yang menarik bentuk kompleks dengan mengulangi jujukan mudah."
+        },
+        "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
+          "description": "Kira bilangan tindakan yang perlu diulangi dan mewakilinya sebagai gelung."
+        },
+        "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
+          "description": "Menguraikan bentuk kepada jujukan berulang yang terbesar."
+        },
+        "dc83123d-d493-40aa-a543-9daa1421c2c8": {
+          "description": "Cipta atur cara yang menarik bentuk kompleks dengan mengulangi jujukan mudah."
+        },
+        "15115c43-46c8-4ab4-93e4-947e2fd42703": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "2fa04500-f1d4-4924-aa39-70292711d432": {
+          "description": "Mencipta cerita animasi, berinteraktif dengan menggunakan jujukan dan pengendali acara."
+        },
+        "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
+          "description": "Berkongsi artifak kreatif dengan pelajar lain."
+        },
+        "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "70e87cab-0d62-4974-9061-425a179bcb2d": {
+          "description": "Mencipta cerita animasi, berinteraktif dengan menggunakan jujukan dan pengendali acara."
+        },
+        "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
+          "description": "Berkongsi artifak kreatif dengan pelajar lain."
         },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Cipta peperi baharu dan berikannya kostum dan tingkah laku."

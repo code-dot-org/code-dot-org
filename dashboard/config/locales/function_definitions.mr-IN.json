@@ -505,7 +505,50 @@
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a pinwheel": {
             "parameters": {
-              "repeat": "पुन्हा करा"
+              "repeat": "पुन्हा करा",
+              "sides": "बाजू",
+              "length": "लांबी"
+            },
+            "name": "एक भिरभिरे काढा"
+          },
+          "draw a star": {
+            "name": "एक चांदणी काढा",
+            "description": "दिलेले बिंदू आणि दिलेल्या लांबीच्या बाजू वापरून एक चांदणी काढा",
+            "parameters": {
+              "points": "बिंदू",
+              "length": "लांबी"
+            }
+          },
+          "draw a circle": {
+            "name": "एक वर्तुळ काढा",
+            "description": "दिलेल्या त्रिज्येचे एक वर्तुळ काढा",
+            "parameters": {
+              "radius": "त्रिज्या"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a shape": {
+            "name": "एक आकार काढा",
+            "parameters": {
+              "sides": "लांबी",
+              "length": "लांबी"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
             }
           }
         },

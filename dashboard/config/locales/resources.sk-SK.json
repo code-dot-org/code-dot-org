@@ -37,6 +37,7 @@
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "Objav silu slov: prezentácia k lekcii",
           "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
@@ -98,17 +99,31 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Zábava s cyklami \"for\""
         },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": " Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "running-simulations/coursef/2021": {
           "name": "Vytváranie simulácií"
         },
         "unplugged-video-internet/coursef/2021": {
-          "name": "Internet"
+          "name": "Internet",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
+        },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
+          "name": "Internet",
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
+          "name": "Internet",
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/"
         },
         "design-process/coursef/2021": {
           "name": "Proces návrhu",
@@ -328,6 +343,10 @@
         "debugging_guide/coursec/2021": {
           "name": "Sprievodca ladením"
         },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": " Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Veľká udalosť"
         },
@@ -433,6 +452,10 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Štafetové programovanie"
         },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": " Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
           "name": "Udalosti v Bounce – Ako fungujú? "
         },
@@ -504,7 +527,8 @@
           "name": "Párové programovanie"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "Bloky na použitie bez počítača (kurzy C – F)"
+          "name": "Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
           "name": "Predstavenie Umelca"
@@ -551,19 +575,24 @@
           "name": "Video „Párové programovanie“"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "Bloky na použitie bez počítača (kurzy C – F)"
+          "name": "Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "Bloky na použitie bez počítača (kurzy C – F)"
+          "name": "Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "Bloky na použitie bez počítača (kurzy C – F)"
+          "name": "Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": " Bloky na použitie bez počítača (kurzy C – F)"
+          "name": " Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": " Bloky na použitie bez počítača (kurzy C – F)"
+          "name": " Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
           "name": "Text a výzvy",
@@ -714,7 +743,8 @@
           "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
         },
         "course-cf-blockly-blocks/coursee/2021": {
-          "name": " Bloky na použitie bez počítača (kurzy C – F)"
+          "name": " Bloky na použitie bez počítača (kurzy C – F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Navrhovanie s ohľadom na zjednodušenie ovládania",
