@@ -7199,10 +7199,6 @@ is:
           lessons:
             lesson-1:
               name: Græjur
-        poetry:
-          lessons:
-            lesson-3:
-              name: Breytur
         spelling-bee:
           lessons:
             lesson-1:
