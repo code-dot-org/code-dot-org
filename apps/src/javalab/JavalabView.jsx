@@ -21,6 +21,7 @@ class JavalabView extends React.Component {
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
     onStop: PropTypes.func.isRequired,
+    onTest: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
@@ -87,7 +88,7 @@ class JavalabView extends React.Component {
     this.setState(
       state => ({isTesting: !state.isTesting}),
       () => {
-        // TODO: Run/stop tests.
+        this.props.onTest();
       }
     );
   };
@@ -208,7 +209,7 @@ class JavalabView extends React.Component {
                     disableRunButtons={awaitingContainedResponse}
                     onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
-                    showTestButton={false}
+                    showTestButton={true}
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
                   />
