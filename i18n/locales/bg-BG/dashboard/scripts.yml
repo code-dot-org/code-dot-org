@@ -944,6 +944,8 @@ bg:
               name: Компресия на текста
             Web Lab:
               name: Web Lab
+            Java Lab:
+              name: Java (Джава) Практически Урок
           student_description: Всички типове нива за тестване на потребителски интерфейс. Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата работят само ако сте в профила си).
         algebraPD2b:
           title: Компютърни науки в алгебрата
@@ -4036,22 +4038,37 @@ bg:
             intro:
               name: Урок 1
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa2-pilot:
+          lessons:
+            lesson-16:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lesson group:
               display_name: Съдържание
         csa3-pilot:
+          lessons:
+            lesson-17:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa4-pilot:
+          lessons:
+            lesson-16:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -4182,22 +4199,37 @@ bg:
             lessonGroup-2:
               display_name: Уроци
         csa1-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa2-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lesson group:
               display_name: Съдържание
         csa3-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa4-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa5-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -4230,10 +4262,6 @@ bg:
               name: Инструменти
             lesson-3:
               name: Примери
-        poetry:
-          lessons:
-            lesson-3:
-              name: Променливи
         spelling-bee:
           lessons:
             lesson-1:
