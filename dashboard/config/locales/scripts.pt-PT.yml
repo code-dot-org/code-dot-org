@@ -4042,10 +4042,6 @@ pt:
               name: Widgets
             lesson-2:
               name: Ferramentas
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variáveis
         spelling-bee:
           lessons:
             lesson-1:
