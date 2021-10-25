@@ -2600,10 +2600,6 @@ ne:
               display_name: Content
             lessonGroup-2:
               display_name: Content
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variables
         spelling-bee:
           lessons:
             lesson-1:
