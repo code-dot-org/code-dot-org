@@ -3,6 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JsonApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
+  skip_before_action :load_user, only: [:get_current_user]
 
   def load_user
     user_id = params[:user_id]
@@ -10,6 +11,22 @@ class Api::V1::UsersController < Api::V1::JsonApiController
       raise CanCan::AccessDenied
     end
     @user = current_user
+  end
+
+  # GET /api/v1/users/current_user
+  def get_current_user
+    if current_user
+      render json: {
+        id: current_user.id,
+        username: current_user.username,
+        user_type: current_user.user_type,
+        is_signed_in: true
+      }
+    else
+      render json: {
+        is_signed_in: false
+      }
+    end
   end
 
   # GET /api/v1/users/<user_id>/school_name

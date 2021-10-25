@@ -30,8 +30,6 @@ import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standa
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import currentUser, {
-  setCurrentUserId,
-  setCurrentUserName,
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/unitSelectionRedux';
@@ -46,7 +44,6 @@ const {
   validScripts,
   studentScriptIds,
   validCourses,
-  currentUserId,
   hasSeenStandardsReportInfo,
   localeCode,
   textToSpeechUnitIds,
@@ -72,8 +69,6 @@ $(document).ready(function() {
   });
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
-  store.dispatch(setCurrentUserId(currentUserId));
-  store.dispatch(setCurrentUserName(scriptData.userName));
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
