@@ -66,6 +66,11 @@ def main(options)
     script = Script.find_by_name!(unit_name)
     log "found code studio script name #{script.name} with id #{script.id}"
 
+    if script.is_migrated?
+      log "skipping script #{script.name.dump} because it is already migrated"
+      next
+    end
+
     # TODO(dave): remove this check once teacher_resources are handled safely
     if script.teacher_resources.present?
       raise "unsafe to migrate script #{script.name.dump} containing teacher resources"
