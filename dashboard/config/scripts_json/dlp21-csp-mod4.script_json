@@ -5,14 +5,15 @@
     "login_required": true,
     "properties": {
       "is_migrated": true,
+      "peer_reviews_to_complete": 6,
       "professional_learning_course": "2021 CS Principles Deeper Learning",
-      "tts": true,
-      "peer_reviews_to_complete": 6
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-11 14:26:30 UTC",
+    "serialized_at": "2021-10-25 22:54:53 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "dlp21-csp-mod4"
     }

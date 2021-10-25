@@ -4,24 +4,25 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
       "curriculum_path": "https://curriculum.code.org/csd-20/unit3/{LESSON}",
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_course": true,
       "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "teacherForum",
           "https://forum.code.org/c/csd3"
         ]
       ],
-      "version_year": "unversioned",
-      "is_course": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csd3-virtual",
-    "serialized_at": "2021-08-03 22:48:00 UTC",
+    "serialized_at": "2021-10-25 22:54:15 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd3-virtual"
     }
