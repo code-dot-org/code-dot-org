@@ -1628,7 +1628,7 @@
   "setUpClassWordIntro": "Sinifinizi gizli sözlər hesabları ilə qurmaq üçün aşağıdakıları edin:",
   "setUpClassWordPic1": "1. Hər bir tələbənizi yuxarıdakı cədvələ əlavə edin.",
   "setUpClassEmail1": "Şagirdlərinizə öz e -poçt ünvanlarını[create Code.org accounts]({createAccountLink}) verin. Əgər onların artıq e-poçt ünvanları ilə əlaqəli Code.org hesabı varsa, bu addımı keçə bilərlər.",
-  "setUpClassEmail2": "Bölmənizə qoşulmaq üçün şagirdlərinizi bu linkə daxil edin: [{join Link}] ({join Link}).",
+  "setUpClassEmail2": "Bölmənizə qoşulmaq üçün şagirdlərinizi bu linkə daxil edin: [{joinLink}] ({joinLink}).",
   "setUpClass4": "4. Şagirdlərinizin daxil olmaq üçün aşağıdakı təlimatları izləmələrini istəyin.",
   "setUpClassroom": "Sinifinizi quraşdırın",
   "setupCoursesTeacher": "Sinifinizə bir kurs təyin edin və ya öz kursunuza başlayın.\n",
