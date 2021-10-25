@@ -1,0 +1,12 @@
+{
+  "category": "Poetry - Effects",
+  "config": {
+    "func": "addTextHighlight",
+    "blockText": "add text highlight",
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}

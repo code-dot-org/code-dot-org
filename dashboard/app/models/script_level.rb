@@ -369,7 +369,7 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(self)
   end
 
-  def summarize(include_prev_next=true, for_edit: false)
+  def summarize(include_prev_next=true, for_edit: false, user_id: nil)
     ids = level_ids
     active_id = oldest_active_level.id
     inactive_ids = ids - [active_id]
@@ -404,7 +404,7 @@ class ScriptLevel < ApplicationRecord
     end
 
     if bubble_choice?
-      summary[:sublevels] = level.summarize_sublevels(script_level: self)
+      summary[:sublevels] = level.summarize_sublevels(script_level: self, user_id: user_id)
     end
 
     if for_edit
@@ -446,10 +446,10 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
-    summary = summarize
+    summary = summarize(user_id: current_user&.id)
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
-    summary[:exampleSolutions] = get_example_solutions(current_user)
+    summary[:exampleSolutions] = get_example_solutions(oldest_active_level, current_user)
     summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
@@ -717,14 +717,12 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def get_example_solutions(current_user, section=nil)
+  def get_example_solutions(level, current_user, section=nil)
     level_example_links = []
 
-    return [] unless current_user&.teacher?
+    return [] if !current_user&.teacher? || CDO.properties_encryption_key.blank?
 
-    level = levels.first
-
-    if level.try(:examples).present? && (current_user.authorized_teacher? || script.csf?) # 'solutions' for applab-type levels
+    if level.try(:examples).present? && (current_user&.authorized_teacher? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
         # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
