@@ -272,10 +272,6 @@
         "sprite/coursef/2021": {
           "word": "Sprite"
         },
-        "user/coursef/2021": {
-          "word": "Usuario",
-          "definition": "Alguien que utiliza un objeto, incluido software y hardware."
-        },
         "behavior/coursef/2021": {
           "word": "Comportamiento"
         },
@@ -284,8 +280,7 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritmo",
-          "definition": "Una lista de pasos para completar una tarea."
+          "word": "Algoritmo"
         },
         "event/coursef/2021": {
           "word": "Evento",
@@ -314,41 +309,11 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "abreviatura de Domain Name System (sistema de nombres de dominio), que traduce nombres de dominio (como ejemplo.com) a direcciones IP (como 93.184.216.34)."
-        },
         "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "un grupo de computadoras y servidores que están conectados entre sí."
+          "word": "Internet"
         },
         "packets/coursef/2021": {
-          "word": "Paquetes",
-          "definition": "pequeños fragmentos de información que se formaron minuciosamente a partir de fragmentos más grandes."
-        },
-        "servers/coursef/2021": {
-          "word": "Servidores",
-          "definition": "computadoras cuya función es proporcionar cosas a otros."
-        },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "una dirección fácil de recordar que llama a una página web (como www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Cable",
-          "definition": "un método para enviar información mediante cables telefónicos o de televisión."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Cable de fibra óptica",
-          "definition": "una conexión que utiliza la luz para transmitir información."
-        },
-        "ip_address/coursef/2021": {
-          "word": "Dirección IP",
-          "definition": "un número asignado a cualquier elemento que esté conectado a Internet."
-        },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "un método inalámbrico para enviar información mediante ondas de radio."
+          "word": "Paquetes"
         },
         "define/coursef/2021": {
           "word": "Definir",
@@ -503,8 +468,7 @@
           "definition": "una acción que hace que algo suceda."
         },
         "binary/coursec/2021": {
-          "word": "Binario",
-          "definition": "una forma de representar la información con solo dos opciones."
+          "word": "Binario"
         },
         "algorithm/coursed/2021": {
           "word": "Algoritmo",
@@ -530,10 +494,6 @@
           "word": "Programación",
           "definition": "el arte de crear un programa."
         },
-        "frustrated/coursed/2021": {
-          "word": "Frustrado",
-          "definition": "sentirse molesto o enojado porque algo no sale como uno quiere."
-        },
         "persistence/coursed/2021": {
           "word": "Perseverancia",
           "definition": "intentar algo una y otra vez, incluso si es muy difícil."
@@ -543,7 +503,6 @@
           "definition": "una acción que hace que algo suceda."
         },
         "code/coursed/2021": {
-          "word": "Programar",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "repeat/coursed/2021": {
@@ -599,9 +558,6 @@
         "event/express/2021": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
-        },
-        "code/express/2021": {
-          "word": "Programar"
         },
         "loop/express/2021": {
           "word": "Bucle",
