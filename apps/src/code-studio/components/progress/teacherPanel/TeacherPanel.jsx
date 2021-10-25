@@ -88,14 +88,13 @@ class TeacherPanel extends React.Component {
       unitName,
       pageType,
       getSelectedUserId,
-      teacherId, // this is null on script overview page
-      exampleSolutions
+      teacherId,
+      exampleSolutions,
+      levelsWithProgress
     } = this.props;
 
     let currentStudent = null;
     let currentStudentScriptLevel = null;
-
-    const {levelsWithProgress} = this.props;
 
     if (students && students.length) {
       currentStudent = students.find(
