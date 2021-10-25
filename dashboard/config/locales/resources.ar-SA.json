@@ -56,9 +56,6 @@
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "حلقة التكرار المسلّية"
         },
-        "flf-assessment-teacher-key/coursef/2021": {
-          "name": "حلقة For للمرح - مفتاح التقييم"
-        },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "حلقة التكرار المسلّية"
         },
@@ -89,9 +86,6 @@
         "unplugged-video-internet/coursef/2021": {
           "name": "الانترنت"
         },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "بطاقات عناوين بروتوكول الإنترنت (IP Address) وبطاقات نوع التسليم"
-        },
         "csf-internet-assessment/coursef/2021": {
           "name": "الإنترنت"
         },
@@ -100,9 +94,6 @@
         },
         "design-process/coursef/2021": {
           "name": "عملية التصميم"
-        },
-        "final-project-design-worksheet/coursef/2021": {
-          "name": "تصميم المشروع النهائي"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
@@ -142,9 +133,6 @@
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "قطع لعبة الخرائط السعيدة"
-        },
-        "compass-rose/courseb/2021": {
-          "name": "البوصلة"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "ستيفي والمشروع الضخم"
@@ -197,23 +185,11 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "الخرائط السعيدة"
         },
-        "happy-map-cards/coursea/2021": {
-          "name": "بطاقات الخرائط السعيدة"
-        },
-        "activity-answer-happy-maps/coursea/2021": {
-          "name": "بطاقات الخرائط السعيدة"
-        },
         "happy-map-game-pieces/coursea/2021": {
           "name": "قطع لعبة الخرائط السعيدة"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "قوالب بلوكلي غير المتصلة (الصفوف من رياض الأطفال وحتى الفصل الأول)"
-        },
-        "happy-map-cards-xl/coursea/2021": {
-          "name": "بطاقات الخرائط السعيدة الكبيرة جدًا"
-        },
-        "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "الحزمة الإضافية من قطع لعبة الخرائط السعيدة"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "الإحساس بالوجوه"
@@ -290,14 +266,8 @@
         "assessment-answer-big-event/coursec/2021": {
           "name": "الحدث الكبير"
         },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "الحدث الكبير (الدورة \"ج\")"
-        },
         "pause_and_think_online/coursec/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت"
-        },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "وحدات البت ووحدات البايت"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "أساور الثنائية"
@@ -386,9 +356,6 @@
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "الشروط مع البطاقات"
         },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "عينة برنامج التعبيرات الشرطية باستخدام البطاقات"
-        },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "الشروط مع البطاقات"
         },
@@ -476,21 +443,6 @@
         "csf-turns-angles-video/coursee/2021": {
           "name": "لفات وزوايا"
         },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "كتابة الأغاني مع الدوال"
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني"
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني"
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني"
-        },
-        "assessment-answer-songwriting/coursee/2021": {
-          "name": "الدوال غير المتصلة: تأليف الأغاني"
-        },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "قوالب غير متصلة (الدورات ج - و)"
         },
@@ -502,9 +454,6 @@
         },
         "design-process/coursee/2021": {
           "name": "عملية التصميم"
-        },
-        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 طريقة إبداعية يمكن لطلابك استخدامها لإظهار ما يعرفونه"
         },
         "implementation_guide/coursee/2021": {
           "name": "دليل التنفيذ"
