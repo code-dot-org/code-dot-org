@@ -245,32 +245,32 @@ export default class PoetryLibrary extends CoreLibrary {
       return;
     }
 
-    const frameWidth = 15;
+    const frameThickness = 15;
     this.p5.push();
     this.p5.noStroke();
 
     // top
-    this.p5.image(frameImage, 0, 0, PLAYSPACE_SIZE, frameWidth);
+    this.p5.image(frameImage, 0, 0, PLAYSPACE_SIZE, frameThickness);
     // bottom
     this.p5.image(
       frameImage,
       0,
-      PLAYSPACE_SIZE - frameWidth,
+      PLAYSPACE_SIZE - frameThickness,
       PLAYSPACE_SIZE,
-      frameWidth
+      frameThickness
     );
 
-    // In p5, you can't rotate an image, you just rotate the canvas.
+    // In p5, you can't rotate an image, you just rotate the p5 canvas.
     // right
     this.p5.translate(200, 200);
     this.p5.rotate(90);
     this.p5.translate(-200, -200);
     this.p5.image(
       frameImage,
-      frameWidth,
+      frameThickness,
       0,
-      PLAYSPACE_SIZE - 2 * frameWidth,
-      frameWidth
+      PLAYSPACE_SIZE - 2 * frameThickness,
+      frameThickness
     );
 
     // left
@@ -279,10 +279,10 @@ export default class PoetryLibrary extends CoreLibrary {
     this.p5.translate(-200, -200);
     this.p5.image(
       frameImage,
-      frameWidth,
+      frameThickness,
       0,
-      PLAYSPACE_SIZE - 2 * frameWidth,
-      frameWidth
+      PLAYSPACE_SIZE - 2 * frameThickness,
+      frameThickness
     );
 
     this.p5.pop();
