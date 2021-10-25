@@ -28,6 +28,7 @@ export default class PoetryLibrary extends CoreLibrary {
         fill: 'black',
         font: 'Arial'
       },
+      frameType: undefined,
       isVisible: true,
       textEffects: [],
       // By default, start the poem animation when the program starts (frame 1)
@@ -54,6 +55,7 @@ export default class PoetryLibrary extends CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
+        this.drawFrame();
         const renderInfo = this.getRenderInfo(
           this.poemState,
           this.p5.World.frameCount
@@ -77,6 +79,10 @@ export default class PoetryLibrary extends CoreLibrary {
         if (!this.isPreviewFrame()) {
           this.foregroundEffects.forEach(effect => effect.func());
         }
+      },
+
+      addFrame(frameType) {
+        this.poemState.frameType = frameType;
       },
 
       destroy(costume) {
@@ -231,6 +237,55 @@ export default class PoetryLibrary extends CoreLibrary {
       ...backgroundEffects,
       ...foregroundEffects
     };
+  }
+
+  drawFrame() {
+    const frameImage = this.p5._preloadedFrames[this.poemState.frameType];
+    if (!frameImage) {
+      return;
+    }
+
+    const frameThickness = 15;
+    this.p5.push();
+    this.p5.noStroke();
+
+    // top
+    this.p5.image(frameImage, 0, 0, PLAYSPACE_SIZE, frameThickness);
+    // bottom
+    this.p5.image(
+      frameImage,
+      0,
+      PLAYSPACE_SIZE - frameThickness,
+      PLAYSPACE_SIZE,
+      frameThickness
+    );
+
+    // In p5, you can't rotate an image, you just rotate the p5 canvas.
+    // right
+    this.p5.translate(200, 200);
+    this.p5.rotate(90);
+    this.p5.translate(-200, -200);
+    this.p5.image(
+      frameImage,
+      frameThickness,
+      0,
+      PLAYSPACE_SIZE - 2 * frameThickness,
+      frameThickness
+    );
+
+    // left
+    this.p5.translate(200, 200);
+    this.p5.rotate(180);
+    this.p5.translate(-200, -200);
+    this.p5.image(
+      frameImage,
+      frameThickness,
+      0,
+      PLAYSPACE_SIZE - 2 * frameThickness,
+      frameThickness
+    );
+
+    this.p5.pop();
   }
 
   isPreviewFrame() {
