@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 14:01:55 UTC",
+    "serialized_at": "2021-10-25 22:55:01 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -413,6 +413,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 4"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -435,6 +438,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 5"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -457,6 +463,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 6"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
