@@ -285,7 +285,7 @@ describe('Code Review Tab', () => {
         wrapper
           .find(Button)
           .first()
-          .simulate('click');
+          .invoke('onClick')();
 
         expect(wrapper.state().loadingReviewData).to.be.true;
       });
