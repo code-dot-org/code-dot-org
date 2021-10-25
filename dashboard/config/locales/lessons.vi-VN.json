@@ -18,17 +18,16 @@
           "student_overview": "Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới."
         },
         "outbreak/Outbreak": {
+          "overview": "Bài học này kết hợp **phát triển kỹ năng** liên quan đến sự kiện với một **dự án nhỏ**, trong đó học sinh có thể xây dựng bản mô phỏng máy tính của riêng mình trong Sprite Lab. Học sinh sẽ nghiên cứu bản mô phỏng để hiểu tốc độ lây lan nhanh chóng của vi rút và phương pháp làm chậm tốc độ đó.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học trước, học sinh đã thu thập và giải thích dữ liệu từ một bản mô phỏng đơn giản. Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng."
+          "purpose": "Trong bài học trước, học sinh đã thu thập và giải thích dữ liệu từ một bản mô phỏng đơn giản. Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng.",
+          "student_overview": "Một loại vi rút đã lây lan tới Thị Trấn Quái Vật rồi! Hãy học cách tạo trình mô phỏng vi rút và giúp những con quái vật khỏe mạnh trở lại."
         },
         "jigsaw/Jigsaw": {
           "overview": "Bài học này sẽ cung cấp cho học sinh ý tưởng về những hoạt động sẽ diễn ra khi các em đến phòng máy tính. Bài học bắt đầu với một cuộc thảo luận ngắn giới thiệu về cách hành xử trong phòng máy tính, sau đó sẽ tiếp tục sử dụng máy tính để hoàn thành các bài tập trực tuyến.",
           "student_overview": "Nhấp chuột và kéo để hoàn thành các bài tập."
         },
         "coursef-2021/lesson-6": {
-          "overview": "Trong bài học **thiết lập ngữ cảnh** này, học sinh sẽ thảo luận về vai trò của máy tính và công nghệ trong cuộc sống, tập trung vào cách thức các ứng dụng và công cụ cho người dùng lựa chọn cách sử dụng. Học sinh còn khám phá các ứng dụng tương tự như những ứng dụng mà họ sẽ tự lập trình ở giai đoạn sau.",
-          "preparation": "-   Xác định phương thức đăng nhập Code.org của học sinh.\n-   Nếu cần, hãy tạo tài khoản Code.org cho học sinh.\n-   Chỉ định bài Giới thiệu Sprite Lab cho học sinh.\n-   In bảng **\\*Khám phá ứng dụng** (hoặc tải bản mềm lên LMS của bạn).",
-          "purpose": "Bài học đầu tiên là giúp học sinh hào hứng với khóa học và gắn kết sở thích cá nhân của họ với khoa học máy tính.",
           "student_overview": "Bạn sẽ thảo luận về vai trò của máy tính và công nghệ trong cuộc sống, tập trung vào cách thức các ứng dụng và công cụ cho người dùng lựa chọn cách sử dụng."
         },
         "coursef-2021/lesson-7": {
@@ -40,7 +39,6 @@
         "coursef-2021/lesson-8": {
           "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ thích. Học sinh sẽ viết chương trình phản hồi lại các sự kiện theo thời gian và dữ liệu đầu vào của người dùng.",
           "preparation": "Khám phá các cấp độ này và xem lại slide bài học.",
-          "purpose": "Bài học này được biên soạn nhằm củng cố các kỹ năng trong bài học trước và giới thiệu cho học sinh kỹ năng lập trình với sự kiện. Trong suốt khóa học này, sự kiện sẽ là phương tiện chính để học sinh thay đổi cách chạy chương trình theo thời gian hoặc để phản hồi lại người dùng.",
           "student_overview": "Bạn sẽ hoàn thành từng cấp độ lập trình và kết thúc với một nhiệm vụ “chơi tự do” có kết thúc mở để có thể phát triển bất cứ chương trình nào bạn thích."
         },
         "coursef-2021/Virtual Pet": {
@@ -50,15 +48,10 @@
           "student_overview": "Hãy tạo Thú cưng ảo tương tác có vẻ ngoài và hành động theo ý muốn! Hãy mang lại sức sống riêng cho thú cưng của bạn nhé!"
         },
         "coursef-2021/lesson-2": {
-          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nBài học này vốn do Common Sense Education biên soạn. [Tìm hiểu thêm.][2]\n\nTrong quá trình trưởng thành, trẻ dĩ nhiên sẽ bắt đầu giao tiếp trực tuyến nhiều hơn. Nhưng một số nội dung mà trẻ thấy có thể khiến trẻ cảm thấy bị tổn thương, buồn bã, tức giận hoặc thậm chí là sợ hãi. Hãy giúp học sinh của bạn đồng cảm với người khác và học các chiến lược để sử dụng khi đối mặt với nạn bắt nạt trên mạng.",
-          "preparation": "-   Xem lại tài liệu hướng dẫn.\n-   In (các) tài liệu phát cho mỗi học sinh.\n-   Chuẩn bị một sợi dây (hoặc dây thừng) dài và giấy cho cả lớp.",
-          "purpose": "Common Sense Education đã biên soạn bài học này để hướng dẫn học sinh những việc nên làm khi ai đó sử dụng ngôn từ tiêu cực hoặc gây tổn thương trên internet.",
           "student_overview": "Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy bạn về những điều nên và không nên phát ngôn trực tuyến."
         },
         "coursef-2021/lesson-9": {
           "overview": "Trong bài học **thiết lập ngữ cảnh** này, học sinh sẽ sử dụng các câu chuyện dạng điền vào chỗ trống (tương tự như Mad Libs®) làm ngữ cảnh để hiểu cách máy tính lấy và lưu trữ dữ liệu đầu vào từ người dùng, sau đó sử dụng dữ liệu này khi chương trình chạy.",
-          "preparation": "Lấy 6 phong bì (cũng có thể dùng giấy hoặc giấy ghi mục lục, gấp đôi lại).\n\n-   Dán nhãn mặt trước mỗi phong bì bằng các chữ cái lớn: đồ vật, chất lỏng, số, tính từ, bộ phận cơ thể, số\n-   In **\\*bảng** cho học sinh (hoặc tải bản mềm lên LMS của bạn).",
-          "purpose": "Bài học này cung cấp ngữ cảnh chia sẻ, sẽ giúp học sinh hiểu cách hoạt động của các biến khi trở lại với lập trình.",
           "student_overview": "Trong hoạt động này, học sinh sẽ sử dụng các câu chuyện dạng điền vào chỗ trống (tương tự như Mad Libs®) làm ngữ cảnh để sẵn sàng hiểu cách máy tính lấy và lưu trữ dữ liệu đầu vào từ người dùng, sau đó sử dụng dữ liệu này khi chương trình chạy."
         },
         "coursef-2021/lesson-10": {
@@ -69,8 +62,6 @@
         },
         "coursef-2021/lesson-11": {
           "overview": "Học sinh sẽ áp dụng các kỹ năng mới với biến vào một trong ba **dự án nhỏ** có kết thúc mở. Học sinh sẽ khám phá các chương trình mẫu, lập kế hoạch cho dự án của riêng mình và lập trình từ đầu.",
-          "preparation": "-   In hướng dẫn lập kế hoạch hoặc phát bản mềm cho mỗi học sinh. Xem lại trước trong trường hợp bạn muốn sửa bất kỳ phần nào để phù hợp với lớp học của mình.\n-   Xem lại trước các lựa chọn ở cấp độ 3 để hiểu quy trình mà học sinh cần làm theo.\n-   Bài học này có khả năng kéo dài trong nhiều tiết học. Hãy cân nhắc kết hợp thời khóa biểu từ trước.",
-          "purpose": "Bài học này không giới thiệu các kỹ năng hoặc khái niệm mới, nhưng thay vào đó, học sinh có cơ hội áp dụng những kiến thức đã học một cách sáng tạo.",
           "student_overview": "Hãy áp dụng các kỹ năng mới với biến trong một trong ba dự án mở."
         },
         "coursef-2021/Loops with the Artist": {
@@ -88,51 +79,76 @@
         "coursef-2021/Nested Loops in the Maze": {
           "overview": "Trong bài học **xây dựng kỹ năng** này, học sinh sẽ được khuyến khích tìm ra ảnh hưởng của những thay đổi nhỏ trong vòng lặp sẽ đối với chương trình của các em.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bài học này giới thiệu (hoặc đánh giá) cách hoạt động của bài tập Chú ong và giới thiệu cho học sinh về _vòng lặp lồng nhau_. Bài tiếp theo sẽ quay lại với biến.",
           "student_overview": "Bài học này sẽ hướng dẫn bạn về hiện tượng xảy ra khi đặt một vòng lặp bên trong một vòng lặp khác."
         },
         "coursef-2021/Variables that Change in Bee": {
           "overview": "Bài học **xây dựng kỹ năng** này sẽ giúp minh họa cách gia tăng tính linh hoạt cho chương trình với các biến bằng cách cho phép các giá trị thay đổi trong quá trình chạy mã lệnh.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bài học này sẽ minh họa lợi ích của mã lệnh có giá trị thay đổi và chuẩn bị để học sinh hiểu cách hoạt động của vòng lặp “for” (với) trong các bài học sắp tới.",
           "student_overview": "Chú ong này rất thích các biến!"
         },
         "coursef-2021/For Loop Fun": {
           "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ sử dụng các vòng lặp có cấu trúc mới hiệu quả.",
-          "preparation": "-   Xem **\\*video**.\n-   In một **\\*bảng** cho mỗi nhóm.\n-   In một **\\*bài đánh giá** cho mỗi học sinh.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Tại thời điểm này, học sinh đã thành thạo về vòng lặp. Hôm nay, họ sẽ tìm hiểu về một vòng lặp khác hay dùng trong lập trình. Vòng lặp “for” (với) lặp lại các lệnh một số lần nhất định, đồng thời theo dõi các giá trị đang lặp lại. Ví dụ: vòng lặp “for” (với) bắt đầu ở 4, kết thúc ở 8 và có giá trị bước là 1 sẽ lặp lại 4 lần, nhưng các giá trị 4, 5, 6 và 7 cũng sẽ được ghi lại để sử dụng ở những vị trí khác. Sử dụng cấu trúc này với các biến có thể tạo ra một số chương trình khá tuyệt vời. Hôm nay, học sinh sẽ chỉ học những kiến thức cơ bản về vòng lặp “for” (với) trước khi đi sâu vào bước lập trình với vòng lặp này vào lần sau!",
           "student_overview": "Bạn sẽ có vô số điều thú vị khi học về vòng lặp `for`!"
         },
         "coursef-2021/For Loops in Bee": {
-          "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ."
+          "overview": "Bài học **phát triển kỹ năng** này tập trung vào vòng lặp for và sử dụng một biến tăng dần để giải các bài tập phức tạp hơn.",
+          "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
+          "student_overview": "Trong những bài tập này, bạn sẽ hướng dẫn một chú ong lấy mật hoa và mật ong bằng cách sử dụng các vòng lặp!"
         },
         "coursef-2021/For Loops in Artist": {
+          "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hành các vòng lặp “for” với Họa sĩ. Học sinh sẽ hoàn thành các bài tập để tạo ra các thiết kế phức tạp và tác phẩm nghệ thuật độc đáo.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
+          "purpose": "Các kỹ năng sáng tạo và tư duy phản biện sẽ kết hợp với nhau thật ăn ý trong bài học này. Học sinh sẽ tiếp tục thực hành với vòng lặp for và biến, đồng thời sáng tạo các hình ảnh thật ấn tượng. Bài học này vừa khơi gợi óc sáng tạo, vừa dạy các khái niệm cốt lõi về khoa học máy tính.",
           "student_overview": "Hãy sẵn sàng để tạo ra kiệt tác tiếp theo của bạn. Ở đây, bạn sẽ sử dụng vòng lặp `for` để tạo ra một số hình ảnh vô cùng ấn tượng."
         },
         "coursef-2021/Simulating Experiments": {
+          "overview": "Trong bài học **thiết lập ngữ cảnh** này, học sinh sẽ chạy và thu thập dữ liệu từ một bản mô phỏng đơn giản trong Sprite Lab. Sau khi chạy mô phỏng nhiều lần, học sinh sẽ có cơ hội dự đoán tác động của sự thay đổi biến trong bản mô phỏng đến kết quả và kiểm tra giả thuyết đó.",
           "student_overview": "Chạy trình mô phỏng trên máy tính và thử nghiệm bằng cách thay đổi biến."
         },
         "coursef-2021/lesson-5": {
+          "overview": "Bài học này kết hợp **phát triển kỹ năng** liên quan đến sự kiện với một **dự án nhỏ**, trong đó học sinh có thể xây dựng bản mô phỏng máy tính của riêng mình trong Sprite Lab. Học sinh sẽ nghiên cứu bản mô phỏng để hiểu tốc độ lây lan nhanh chóng của vi rút và phương pháp làm chậm tốc độ đó.",
           "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học trước, học sinh đã thu thập và giải thích dữ liệu từ một bản mô phỏng đơn giản. Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng."
+          "purpose": "Trong bài học trước, học sinh đã thu thập và giải thích dữ liệu từ một bản mô phỏng đơn giản. Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng.",
+          "student_overview": "Một loại vi rút đã lây lan tới Thị Trấn Quái Vật rồi! Hãy học cách tạo trình mô phỏng vi rút và giúp những con quái vật khỏe mạnh trở lại."
+        },
+        "coursef-2021/AI for Oceans": {
+          "overview": "Trong bài học **khám phá** này, học sinh sẽ đào tạo một mô hình máy học bằng cách phân loại cá và các đối tượng khác.",
+          "student_overview": "Hãy phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, hãy mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, hãy chọn nhãn của riêng bạn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình máy học mà sau đó có thể tự gắn nhãn các hình ảnh mới."
+        },
+        "coursef-2021/Internet": {
+          "overview": "Học sinh sẽ giả vờ lướt mạng và tìm hiểu về các kết nối, URL, Địa chỉ IP và DNS trong bài học **khám phá** này.",
+          "student_overview": "Bạn đã bao giờ tự hỏi thông tin di chuyển trên Internet như thế nào chưa? Không phải nhờ phép thuật đâu nhé! Bài học này sẽ dạy bạn những kiến thức cơ bản về cách thức hoạt động của Internet."
         },
         "coursef-2021/End of Course Project": {
+          "overview": "Bài học **dự án** này dẫn dắt học sinh qua quá trình thiết kế, phát triển và giới thiệu các dự án mới!",
+          "purpose": "Học sinh có thể sẵn sàng bắt tay ngay vào việc xây dựng các dự án của mình, nhưng bài học này sẽ giúp hình thành các ý tưởng của họ thành các kế hoạch. Cấu trúc này sẽ giúp những người hay mơ mộng suy nghĩ thực tế hơn và định hướng cho những người đang cảm thấy hoang mang. Hãy cho học sinh nhiều thời gian để tạo và sửa dự án của mình. Thử nghiệm và không thể tránh khỏi sai sót trong bài học này sẽ dạy học sinh cách giải quyết vấn đề cũng như sự kiên trì.",
           "student_overview": "Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!"
         },
         "courseb-2021/Digital Trails": {
+          "preparation": "-   Xem lại tài liệu hướng dẫn.\n-   In (các) tài liệu phát cho mỗi học sinh.",
           "student_overview": "Tìm hiểu về dấu ấn kỹ thuật số và cách giữ an toàn khi truy cập các trang web."
         },
         "courseb-2021/Move It, Move It": {
+          "overview": "Học sinh sẽ lập trình cho các bạn cùng lớp bước đi cẩn thận quanh sàn nhà kẻ ô trong bài học **thiết lập ngữ cảnh** này.",
           "student_overview": "Lập trình cho các bạn cùng lớp bước đi cẩn thận từ vị trí này sang vị trí khác."
         },
         "courseb-2021/Sequencing in Maze": {
+          "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ phát triển các thuật toán trình tự để di chuyển một chú chim từ một bên của mê cung sang chỗ con heo ở phía bên kia. Để làm điều này, họ sẽ xếp chồng các khối mã lệnh lên nhau theo một trình tự tuyến tính.",
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
           "student_overview": "Giúp chú chim Red đi theo con đường dẫn đến con heo hư đốn."
         },
+        "courseb-2021/Programming in Maze": {
+          "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ tiếp tục phát triển các thuật toán trình tự.",
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
+          "student_overview": "Tạo các chương trình để giúp _Chú chim giận dữ_ di chuyển qua mê cung."
+        },
         "courseb-2021/Programming in Harvester": {
+          "overview": "Học sinh sẽ áp dụng các khái niệm lập trình đã học vào môi trường Người thu hoạch trong bài học **phát triển kỹ năng** này. Học sinh sẽ tiếp tục phát triển các kỹ năng giải thuật trình tự và bắt đầu áp dụng quy trình sửa lỗi.",
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng sửa lỗi và sẽ tiếp tục phát triển các kỹ năng lập trình của mình.",
           "student_overview": "Giúp Người thu hoạch thu thập các loại rau trên đường đi."
         },
         "courseb-2021/Loops: Getting Loopy": {
+          "overview": "Trong bài học **thiết lập ngữ cảnh** này, học sinh sẽ học cách sử dụng các vòng lặp để truyền đạt các chỉ dẫn dễ dàng hơn bằng cách xem các mẫu lặp đi lặp lại của một điệu nhảy.",
           "student_overview": "Trong bài học này, chúng ta sẽ tổ chức một bữa tiệc khiêu vũ bằng cách sử dụng vòng lặp!"
         },
         "courseb-2021/Loops in Harvester": {
@@ -164,9 +180,12 @@
           "student_overview": "Viết hướng dẫn để đưa Flurb đến chỗ trái cây."
         },
         "coursea-2021/Sequencing with Scrat": {
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
           "student_overview": "Viết chương trình để Scrat tìm đến hạt sồi."
         },
         "coursea-2021/Programming in Ice Age": {
+          "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ tiếp tục phát triển các thuật toán trình tự.",
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
           "student_overview": "Viết chương trình để giúp Scrat tới chỗ hạt sồi."
         },
         "coursea-2021/Programming with Rey and BB-8": {
@@ -195,6 +214,9 @@
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "student_overview": "Trong bài học này, bạn sẽ giả vờ rằng các bạn cùng lớp của mình là rô bốt và lập trình các bạn để tạo ra các mô hình cốc xếp chồng lên nhau."
+        },
+        "coursec-2021/Programming in Maze": {
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp."
         },
         "coursec-2021/Debugging in Maze": {
           "student_overview": "Tìm vấn đề trong bài tập và thực hành kỹ năng sửa lỗi."
@@ -286,7 +308,11 @@
           "student_overview": "Bạn có thể làm những điều vô cùng thú vị khi sử dụng vòng lặp `đến khi` đấy!"
         },
         "coursed-2021/End of Course Project": {
+          "overview": "Bài học **dự án** này dẫn dắt học sinh qua quá trình thiết kế, phát triển và giới thiệu các dự án mới!",
           "student_overview": "Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu xây dựng dự án của bạn."
+        },
+        "express-2021/Programming with Angry Birds": {
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp."
         },
         "express-2021/Debugging with Scrat": {
           "student_overview": "Tìm vấn đề trong bài tập và thực hành kỹ năng sửa lỗi."
@@ -361,21 +387,31 @@
           "student_overview": "Chú ong này rất thích các biến!"
         },
         "express-2021/For Loops with Bee": {
+          "overview": "Bài học **phát triển kỹ năng** này tập trung vào vòng lặp for và sử dụng một biến tăng dần để giải các bài tập phức tạp hơn.",
           "student_overview": "Vo ve. Trong những bài tập này, bạn sẽ hướng dẫn một chú ong lấy mật hoa và mật ong bằng cách sử dụng vòng lặp `for`!"
         },
         "express-2021/For Loops with Artist": {
+          "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ thực hành các vòng lặp “for” với Họa sĩ. Học sinh sẽ hoàn thành các bài tập để tạo ra các thiết kế phức tạp và tác phẩm nghệ thuật độc đáo.",
+          "purpose": "Các kỹ năng sáng tạo và tư duy phản biện sẽ kết hợp với nhau thật ăn ý trong bài học này. Học sinh sẽ tiếp tục thực hành với vòng lặp for và biến, đồng thời sáng tạo các hình ảnh thật ấn tượng. Bài học này vừa khơi gợi óc sáng tạo, vừa dạy các khái niệm cốt lõi về khoa học máy tính.",
           "student_overview": "Hãy sẵn sàng để tạo ra kiệt tác tiếp theo của bạn. Ở đây, bạn sẽ sử dụng vòng lặp `for` để tạo ra một số hình ảnh vô cùng ấn tượng."
         },
         "express-2021/End of Course Project": {
+          "overview": "Bài học **dự án** này dẫn dắt học sinh qua quá trình thiết kế, phát triển và giới thiệu các dự án mới!",
           "student_overview": "Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu xây dựng dự án của bạn."
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "student_overview": "Nhấp chuột và kéo để hoàn thành các bài tập."
         },
         "pre-express-2021/Sequencing with Scrat": {
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp.",
           "student_overview": "Viết chương trình để Scrat tìm đến hạt sồi."
         },
+        "pre-express-2021/Programming in with Angry Birds": {
+          "overview": "Trong bài học **phát triển kỹ năng** này, học sinh sẽ tiếp tục phát triển các thuật toán trình tự.",
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng lập trình và sửa lỗi trên nền tảng máy tính. Định dạng kiểu khối của những bài tập này giúp học sinh tìm hiểu về trình tự và khái niệm mà không cần phải lo lắng về việc hoàn thiện cú pháp."
+        },
         "pre-express-2021/Programming in Harvester": {
+          "purpose": "Trong bài học này, học sinh sẽ phát triển các kỹ năng sửa lỗi và sẽ tiếp tục phát triển các kỹ năng lập trình của mình.",
           "student_overview": "Giúp Người thu hoạch thu thập các loại rau trên đường đi."
         },
         "pre-express-2021/Loops with Scrat": {
@@ -412,11 +448,8 @@
           "student_overview": "Tìm hiểu cách trở thành người đứng lên chống lại nạn bắt nạt trên mạng."
         },
         "coursee-2021/Private and Personal Information": {
+          "preparation": "-   Xem lại tài liệu hướng dẫn.\n-   In (các) tài liệu phát cho mỗi học sinh.",
           "student_overview": "Internet rất vui và thú vị, nhưng điều quan trọng là phải giữ an toàn. Bài học này sẽ chỉ cho bạn thấy sự khác biệt giữa thông tin an toàn để chia sẻ và thông tin riêng tư."
-        },
-        "coursee-2021/About Me": {
-          "preparation": "-   (Tùy chọn) In bản sao **\\*hướng dẫn lập kế hoạch** cho học sinh hoặc gửi bản mềm.\n-   Cân nhắc việc tự tạo một dự án ví dụ để chia sẻ với cả lớp.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Bài học này nhằm giúp học sinh liên hệ bài học trước về thông tin cá nhân và thông tin riêng tư với bản thân. Với các ví dụ AN TOÀN (cá nhân) và KHÔNG AN TOÀN (riêng tư), học sinh thực hành cách tự thể hiện bản thân trên web một cách an toàn, sử dụng SpriteLab để tạo trang phục cho nhân vật của mình và tạo văn bản."
         },
         "coursee-2021/Digital Sharing": {
           "student_overview": "Trong bài học này, bạn sẽ tìm hiểu về những thách thức và lợi ích của quyền sở hữu và bản quyền."
@@ -449,6 +482,8 @@
           "student_overview": "Các hàm sẽ giúp bạn tiết kiệm rất nhiều công sức khi giúp người nông dân thu hoạch!"
         },
         "coursee-2021/End of Course Project": {
+          "overview": "Bài học **dự án** này dẫn dắt học sinh qua quá trình thiết kế, phát triển và giới thiệu các dự án mới!",
+          "purpose": "Học sinh có thể sẵn sàng bắt tay ngay vào việc xây dựng các dự án của mình, nhưng bài học này sẽ giúp hình thành các ý tưởng của họ thành các kế hoạch. Cấu trúc này sẽ giúp những người hay mơ mộng suy nghĩ thực tế hơn và định hướng cho những người đang cảm thấy hoang mang. Hãy cho học sinh nhiều thời gian để tạo và sửa dự án của mình. Thử nghiệm và không thể tránh khỏi sai sót trong bài học này sẽ dạy học sinh cách giải quyết vấn đề cũng như sự kiên trì.",
           "student_overview": "Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!"
         }
       }
