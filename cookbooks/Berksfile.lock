@@ -128,7 +128,7 @@ GRAPH
     ark (>= 0.0.0)
   cdo-users (0.1.31)
     apt (>= 0.0.0)
-  cdo-varnish (0.3.278)
+  cdo-varnish (0.3.280)
     apt (>= 0.0.0)
   chef-client (12.3.4)
     cron (>= 4.2.0)
