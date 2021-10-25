@@ -873,9 +873,6 @@
             null
           ]
         },
-        "94a2704e-d539-4fc7-b390-a8e9850c64f5": {
-          "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Execute de trás para frente**\n\n-   Tente fazer esta atividade de novo, mas desta vez peça que o número inicial seja selecionado usando três dados e o número final com apenas um. Lembre-se de trabalhar com um incremento negativo!\n\n**Amarelinha**\n\n-   Usando um giz, desenhe uma amarelinha ao ar livre, no asfalto\n    -   Numere os quadrados de baixo para cima\n    -   Peça aos alunos que definam um ao outro um quadrado inicial, um quadrado final e quantos eles precisam pular\n    -   Quando o saltador tiver terminado, peça que anote o laço que acabou de executar\n    -   Comece a acrescentar atividades adicionais a serem realizadas em cada quadrado, o que também vai aumentar a complexidade da parte escrita"
-        },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Introdução"
         },
@@ -1341,12 +1338,6 @@
             null
           ]
         },
-        "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
-          "name": "Feliz programaçao de mapas"
-        },
-        "c3cfdbc4-82d5-4717-bf83-22860936a687": {
-          "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n **Mapas para bichos de pelúcia**\n\n-   Crie uma grade em tamanho real no tapete usando fita adesiva e peça aos alunos que tragam bichos de pelúcia para a escola.\n-   Agora os alunos podem programar amigos para que eles movimentem seus bichos de pelúcia reais conforme indicado nos programas.\n\n**Crie o seu**\n\n-   Peça aos alunos que criem seus próprios mapas.\n-   Peça a outros alunos que os resolvam usando programas."
-        },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
           "tips": [
             null
@@ -1798,9 +1789,6 @@
         "809e449a-e392-48c2-9b9f-f53ce1d06366": {
           "name": "Reflexão"
         },
-        "d5490110-1fb8-44ca-8e62-8b0c4e3b6dbe": {
-          "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Colheita de materiais**\n\n-   Deixe que os alunos criem pilhas de materiais escolares na carteira (lápis, borrachas, etc.)\n-   Peça aos parceiros deles que descubram como uma colhedora faria para ir de pilha em pilha, coletando cada grupo de itens pelo caminho.\n-   Compartilhe os programas com o restante da turma."
-        },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
           "name": "Introdução"
         },
@@ -1861,9 +1849,6 @@
         "a49ab9e9-2a47-4d02-93bf-ec9bd241a125": {
           "name": "Reflexão"
         },
-        "f9faf5dc-b81a-441f-84f6-202dd305f24b": {
-          "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Observe o que há por trás**\n\nAo compartilhar um link para seu jogo, você também compartilha todo o código que está por trás dele. É uma ótima maneira de os alunos aprenderem uns com os outros.\n\n-   Publique links para jogos completos on-line ou no quadro.\n    -   Crie seu próprio jogo para compartilhar também!\n-   Quando os alunos carregarem um link, peça-lhes que cliquem no botão “Como funciona” para ver o código por trás do jogo.\n-   Discuta em grupo as diferentes maneiras como os colegas de classe programaram seus jogos.\n    -   O que surpreendeu você?\n    -   O que gostaria de tentar?\n-   Escolha o jogo de outra pessoa e aproveite-o para criar algo (não se preocupe; o jogo original continuará seguro)."
-        },
         "782d1991-785a-406b-963c-687abb77e247": {
           "name": "Introdução"
         },
@@ -1920,9 +1905,6 @@
         "02945b11-d2db-485d-9002-9aff256a4ed4": {
           "name": "Reflexão"
         },
-        "3b646703-3875-4421-bdd8-865e9c2ace35": {
-          "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Imagens binárias**\n\n-   Há excelentes recursos na web para levar esta atividade a um novo patamar.\n-   Se os alunos tiverem interesse em saber como imagens (ou até músicas) podem ser representadas no sistema binário, é possível encontrar mais informações em [Binary Baubles](http://code.org/files/CSEDbinary.pdf), da Thinkersmith."
-        },
         "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
           "name": "Planejamento"
         },
@@ -1959,9 +1941,6 @@
           "tips": [
             null
           ]
-        },
-        "8d3b579a-9959-4190-aa92-858495574689": {
-          "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Cada vez melhor**\n\n-   Peça à turma que tente criar suas próprias imagens.\n-   Os alunos conseguem descobrir como programar as imagens que eles criam?\n\n**Desafio para a turma**\n\n-   Como professor, desenhe uma imagem em uma grade 5x5.\n-   A turma consegue codificá-la junto com você?"
         },
         "1ac03584-29b5-4a3d-8420-44259c0b1064": {
           "name": "Introdução"
@@ -2188,9 +2167,6 @@
         "95951ba3-d513-4635-a484-1d1819906049": {
           "name": "Reflexão"
         },
-        "abc8cb08-ade8-44d3-95ba-558fadaf4c21": {
-          "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Tag verdadeiro/falso**\n\n-   Alinhe os alunos como se fossem jogar [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Selecione uma pessoa para ficar na frente como Chamador.\n-   O Chamador escolhe uma condição e pede a todos que atendam a essa condição que deem um passo à frente.\n    -   Se você tiver um cinto vermelho, dê um passo à frente.\n    -   Se estiver usando sandálias, dê um passo à frente.\n-   Tente mudar, dizendo coisas como “se você _não_ tiver cabelos loiros, dê um passo à frente”.\n\n**Aninhamento**\n\n-   Divida os alunos em duplas ou pequenos grupos.\n-   Peça que escrevam instruções “if” para cartas de baralho em tiras de papel, como:\n    -   Se o naipe for paus\n    -   Se a cor for vermelha\n-   Peça aos alunos que criem tiras semelhantes para os resultados.\n    -   Some um ponto\n    -   Subtraia um ponto\n-   Feito isso, peça aos alunos que escolham três tiras de cada tipo e três cartas de baralho, prestando atenção à sequência selecionada.\n-   Usando três pedaços de papel, peça aos alunos que escrevam três programas diferentes usando apenas os conjuntos de tiras que selecionaram, em qualquer sequência.\n    -   Estimule os alunos a colocarem algumas instruções “if” dentro de outras instruções “if”.\n-   Agora os alunos devem executar os três programas usando as cartas que pegaram, na mesma ordem para cada programa.\n    -   Houve dois programas que retornaram a mesma resposta?\n    -   Algum deles retornou um resultado diferente?"
-        },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Introdução"
         },
@@ -2304,7 +2280,6 @@
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
-          "name": "Projeto de Fim do Curso",
           "tips": [
             null
           ]
@@ -3488,9 +3463,6 @@
           "tips": [
             null
           ]
-        },
-        "c3c1225f-3e42-4af3-b63e-6e2fb0a9f62a": {
-          "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Móbiles de cristal funcionais**\nAcesse a [CS Fundamentals Unplugged Table](https://code.org/curriculum/unplugged) ou clique no link de [Functional Suncatchers](https://studio.code.org/s/course3/stage/4/puzzle/1). Esta atividade realmente precisa de alguns materiais da loja de artesanato, mas ajuda os alunos a entenderem o valor de chamar várias funções.\n\n**Crie sua música**\n\n-   Comece criando um refrão em conjunto e, em seguida, repita-o entre os versos de uma música que vocês elaborarem em torno dele.\n-   Faça uma alteração no refrão e reflita sobre como é mais fácil mudar em apenas um lugar.\n-   Altere o refrão novamente, tornando-o muito mais longo do que o original.\n-   Acrescente um segundo refrão e alterne entre eles nos seus versos.\n\n**Composição musical de um programa**\n\n-   E se nós representássemos as músicas em vez de cantá-las? De repente, nosso refrão seria uma função de ações repetidas em vez de palavras.\n-   Use os conceitos das setas da lição “Programação em papel quadriculado” e crie um programa com muitas instruções repetidas.\n    -   Circule as ações repetidas, para que a classe consiga ver onde estão.\n    -   Defina uma função chamada “Chorus” (Refrão) acima do programa.\n    -   Risque todas as partes em que as ações repetidas aparecem no programa e escreva “Chorus” no lugar delas.\n-   Repita até que a turma consiga realizar esse processo com pouca orientação."
         },
         "5051f377-1e03-4348-91f8-5ba36d7dd8c6": {
           "name": "Introdução"

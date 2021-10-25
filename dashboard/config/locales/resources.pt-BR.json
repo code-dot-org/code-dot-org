@@ -56,9 +56,6 @@
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Diversão com laços for"
         },
-        "flf-assessment-teacher-key/coursef/2021": {
-          "name": "Folha de avaliação de “Diversão com o laço for”"
-        },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Diversão com laços for"
         },
@@ -89,9 +86,6 @@
         "unplugged-video-internet/coursef/2021": {
           "name": "A Internet"
         },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "Cartões de endereço IP e tipos de entrega"
-        },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet"
         },
@@ -100,9 +94,6 @@
         },
         "design-process/coursef/2021": {
           "name": "Processo de design"
-        },
-        "final-project-design-worksheet/coursef/2021": {
-          "name": "Design do projeto final"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "Projeto Final em Fundamentos da Ciência da Computação"
@@ -131,6 +122,9 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Criando caminhos"
         },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
+        },
         "feeling-faces-image/courseb/2021": {
           "name": "Rostos sentimentais"
         },
@@ -143,11 +137,11 @@
         "pair-programming-vid/courseb/2021": {
           "name": "Programação em duplas"
         },
+        "20_20_20_rule/courseb/2021": {
+          "name": "Regra 20/20/20"
+        },
         "happy-map-game-pieces/courseb/2021": {
           "name": "Peças do jogo Mapas Divertidos"
-        },
-        "compass-rose/courseb/2021": {
-          "name": "Rosa dos ventos"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie e o Grande Projeto"
@@ -200,18 +194,8 @@
         "20_20_20_rule/coursea/2021": {
           "name": "Regra 20/20/20"
         },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "Começando - Criando um grupo de classe",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
-        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Mapas divertidos"
-        },
-        "happy-map-cards/coursea/2021": {
-          "name": "Cartões de Mapas Divertidos"
-        },
-        "activity-answer-happy-maps/coursea/2021": {
-          "name": "Cartões de Mapas Divertidos"
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "Peças do jogo Mapas Divertidos"
@@ -219,20 +203,26 @@
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Blocos Blocky desconectados (jardim da infância e primeiro ano)"
         },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "Regra 20/20/20"
+        },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Sentimento Rostos Emoção Imagem"
         },
-        "happy-map-cards-xl/coursea/2021": {
-          "name": "Cartões de Mapas Divertidos GG"
-        },
-        "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "Pacote de bônus com peças do jogo Mapas Divertidos"
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "Rostos sentimentais"
         },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
+        },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Pare e pense on-line"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "O grande evento"
@@ -294,6 +284,9 @@
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Ângulos e curvas"
         },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
+        },
         "unplugged-video-big-event/coursec/2021": {
           "name": "O grande evento"
         },
@@ -303,14 +296,8 @@
         "assessment-answer-big-event/coursec/2021": {
           "name": "O grande evento"
         },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "O grande evento (Curso C)"
-        },
         "pause_and_think_online/coursec/2021": {
           "name": "Pare e pense on-line"
-        },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "Bits x bytes"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Pulseiras binárias"
@@ -399,9 +386,6 @@
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Condicionais com cartas"
         },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "Condicionais com cartões - Programa de exemplo"
-        },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Condicionais com cartas"
         },
@@ -474,6 +458,9 @@
         "feeling-faces-image/pre-express/2021": {
           "name": "Rostos sentimentais"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "Regra 20/20/20"
+        },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Pare e pense on-line"
         },
@@ -492,21 +479,6 @@
         "csf-turns-angles-video/coursee/2021": {
           "name": "Ângulos e curvas"
         },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "Composição de músicas com funções"
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas"
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas"
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas"
-        },
-        "assessment-answer-songwriting/coursee/2021": {
-          "name": "Funções desconectadas: escrevendo músicas"
-        },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "Blocos desconectados (Cursos C-F)"
         },
@@ -518,9 +490,6 @@
         },
         "design-process/coursee/2021": {
           "name": "Processo de design"
-        },
-        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 maneiras criativas para seus estudantes mostrarem o que sabem"
         },
         "implementation_guide/coursee/2021": {
           "name": "Guia de implementação"

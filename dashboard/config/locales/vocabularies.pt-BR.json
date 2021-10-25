@@ -309,41 +309,11 @@
           "word": "Máquina de aprendizado",
           "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "Abreviação de “Domain Name System” (Sistema de Nomes de Domínio). Esse sistema transforma nomes de domínio (como exemplo.com) em endereços IP (como 93.184.216.34)."
-        },
         "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "Grupo de computadores e servidores conectados entre si."
+          "word": "Internet"
         },
         "packets/coursef/2021": {
-          "word": "Pacotes",
-          "definition": "Pequenos blocos de informações cuidadosamente formados a partir de blocos maiores de informações."
-        },
-        "servers/coursef/2021": {
-          "word": "Servidores",
-          "definition": "Computadores que existem apenas para fornecer recursos a outros."
-        },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "Endereço fácil de lembrar para chamar uma página da web (como www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Cabo",
-          "definition": "Método de envio de informações usando cabos de telefonia ou televisão."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Cabo de fibra óptica",
-          "definition": "Conexão que usa a luz para transmitir informações."
-        },
-        "ip_address/coursef/2021": {
-          "word": "Endereço IP",
-          "definition": "Número atribuído a qualquer item conectado à internet."
-        },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "Método sem fio para envio de informações usando ondas de rádio."
+          "word": "Pacotes"
         },
         "define/coursef/2021": {
           "word": "Definir",
@@ -498,8 +468,7 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "binary/coursec/2021": {
-          "word": "Binário",
-          "definition": "Forma de representar informações usando apenas duas opções."
+          "word": "Binário"
         },
         "algorithm/coursed/2021": {
           "word": "Algoritmo",
@@ -525,10 +494,6 @@
           "word": "Programação",
           "definition": "Arte de criar um programa."
         },
-        "frustrated/coursed/2021": {
-          "word": "Frustrado",
-          "definition": "Sentir irritação ou raiva porque algo não está do jeito que queremos."
-        },
         "persistence/coursed/2021": {
           "word": "Persistência",
           "definition": "Tentar de novo várias vezes, mesmo quando algo é muito difícil."
@@ -538,7 +503,6 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/coursed/2021": {
-          "word": "codificar",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "repeat/coursed/2021": {
@@ -594,9 +558,6 @@
         "event/express/2021": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
-        },
-        "code/express/2021": {
-          "word": "codificar"
         },
         "loop/express/2021": {
           "word": "Laço",
@@ -704,9 +665,6 @@
         },
         "behavior/coursee/2021": {
           "word": "Comportamento"
-        },
-        "algorithm/coursee/2021": {
-          "word": "algoritmo"
         },
         "sprite/coursee/2021": {
           "word": "Sprite"
