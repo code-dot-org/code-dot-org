@@ -14,7 +14,7 @@
     "display_name": "Time Events",
     "bubble_choice_description": "Make the sprite begin a new behavior after some time has passed.",
     "short_instructions": "Give each sprite a different location.",
-    "long_instructions": "_Give each sprite a different location._\n\n-   Use the pin on the location block to move sprites to different locations.\n-   Press _\"Run\"_ when you are finished.",
+    "long_instructions": "_Give each sprite a different location._\n\n-   Click the pin on the location block to move sprites to different locations.\n-   Press _\"Run\"_ when you are finished.",
     "authored_hints": {
       "location_pin_hint": "To change a sprite's location, click the pin on the location block, then click where you want it to go.\n\n[][0]"
     },
@@ -24,7 +24,7 @@
   },
   "https://studio.code.org/s/hello-world-emoji/lessons/1/levels/3": {
     "short_instructions": "Make each of your two sprites say something. ",
-    "long_instructions": "_Let's chat! Make your two sprites each say something._\n\n-   Add code to make each sprite say something.\n-   Press _\"Run\"_ when you are finished.",
+    "long_instructions": "_Let's chat! Make your two sprites each say something._\n\n-   Add code to make each sprite say something.\n-   Press _\"Run\"_ when you are finished.\n\n_Extra Challenge:_ Set a background.",
     "authored_hints": {
       "storyboard_costume": "Make sure the costumes match for each sprite.\n[blockly block][0]"
     },
@@ -36,6 +36,7 @@
     "short_instructions": "What makes these sprites talk?",
     "long_instructions": "_What's different here? Can you make these sprites talk?_\n\n-   Read the code. What do you notice?\n-   Click the _\"Run\"_ button.\n-   Click or tap the sprites.",
     "authored_hints": {
+      "hw_click_sprites": "Click on the sprites while the program is running.",
       "hw_no_changes": "You don't need to change any of the code in this level."
     },
     "callouts": {
@@ -198,7 +199,7 @@
   },
   "https://studio.code.org/s/hello-world-emoji/lessons/1/levels/11": {
     "short_instructions": "It's time to create whatever you want!",
-    "long_instructions": "_It's time to start create whatever you want! When you are done, share your project and say \"Hello!\" to the people in your world!_\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/cbCRwipEkaXhe.AzOSYwavvMApEYUkCa/category_food/face_pizza.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/up6b2tgqAjH6fxO6bKFn7O0CrgtxSkFz/category_animals/cuteanimals_bear.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48/category_emoji/emoji_19.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/O1HNS9DSfUZLw6lzWIkyCTLChPoDOJhz/category_retro/retrocreature_18.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\n</div>\n\n-   Add more sprite _costumes_ to your project by clicking the _costumes_ tab.\n-   Add _code_ to the workspace to make sprites appear.\n-   Try adding more features to your project to make it even better.\n-   Press the _Share_ button above to send your project to some friends!\n\nFor some extra fun, check out the brand new `create effect` block in the **Sprites** category!\n\n[blockly block][0]",
+    "long_instructions": "_It's time to start creating whatever you want! When you are done, share your project and say \"Hello!\" to the people in your world!_\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://studio.code.org/api/v1/animation-library/spritelab/cbCRwipEkaXhe.AzOSYwavvMApEYUkCa/category_food/face_pizza.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/up6b2tgqAjH6fxO6bKFn7O0CrgtxSkFz/category_animals/cuteanimals_bear.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/hKXwNDtCaVI4G0Ow.udOCdsMRnK77A48/category_emoji/emoji_19.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\"><img src=\"https://studio.code.org/api/v1/animation-library/spritelab/O1HNS9DSfUZLw6lzWIkyCTLChPoDOJhz/category_retro/retrocreature_18.png\" style=\"height:60px; border-width:0px; border-style:solid; border-color:black; border-radius:10px\">\n</div>\n\n-   Add more sprite _costumes_ to your project by clicking the _costumes_ tab.\n-   Add _code_ to the workspace to make sprites appear.\n-   Try adding more features to your project to make it even better.\n-   Press the _Share_ button above to send your project to some friends!\n\nFor some extra fun, check out the brand new `create effect` block in the **Sprites** category!\n\n[blockly block][0]",
     "callouts": {
       "costumes_tab": "Click here to add costumes to your project."
     },
