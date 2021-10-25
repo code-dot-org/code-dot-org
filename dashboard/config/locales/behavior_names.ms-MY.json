@@ -193,6 +193,15 @@
         },
         "poetry_hoc_spriteSizes": {
           "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_exemplar1": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_exemplar2": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
         }
       }
     }
