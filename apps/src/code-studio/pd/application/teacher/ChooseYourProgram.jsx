@@ -156,7 +156,7 @@ const ChooseYourProgram = props => {
               width: '100px'
             }}
             label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
-              'CS program',
+              '{{CS program}}',
               getNameForSelectedProgram()
             )}
             labelWidth={{md: 8}}
@@ -169,7 +169,7 @@ const ChooseYourProgram = props => {
               width: '100px'
             }}
             label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
-              'CS program',
+              '{{CS program}}',
               getNameForSelectedProgram()
             )}
             labelWidth={{md: 8}}
@@ -181,10 +181,6 @@ const ChooseYourProgram = props => {
             style={{
               width: '100px'
             }}
-            label={PageLabels.chooseYourProgram.csHowManyWeeksPerYear.replace(
-              'CS program',
-              getNameForSelectedProgram()
-            )}
             labelWidth={{md: 8}}
             controlWidth={{md: 4}}
             inlineControl={true}
@@ -237,7 +233,7 @@ const ChooseYourProgram = props => {
             <LabeledRadioButtonsWithAdditionalTextFields
               name="replaceWhichCourse"
               label={PageLabels.chooseYourProgram.replaceWhichCourse.replace(
-                'CS program',
+                '{{CS program}}',
                 getNameForSelectedProgram()
               )}
               textFieldMap={{
