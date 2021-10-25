@@ -2,38 +2,107 @@
   "de-DE": {
     "data": {
       "vocabularies": {
+        "event/dance-extras/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
         "debugging/minecraft/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "debugging/hero/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/hero/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "function/hero/unversioned": {
           "word": "Funktion"
         },
         "debugging/flappy/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/flappy/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/frozen/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/frozen/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/iceage/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/iceage/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "code/artist/unversioned": {
           "word": "Code"
         },
         "debugging/artist/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/artist/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/gumball/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/gumball/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "event/dance/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/aquatic/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "condition/aquatic/unversioned": {
           "word": "Bedingung"
@@ -42,43 +111,118 @@
           "word": "Bedingungen"
         },
         "loops/aquatic/unversioned": {
-          "word": "Schleifen"
+          "word": "Schleifen",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "encryption/hoc-encryption/unversioned": {
           "word": "Verschlüsselung"
         },
         "debugging/starwars/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/starwars/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/mc/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/mc/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/playlab/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/playlab/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Verlustlose Kompression"
+        },
+        "event/sports/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "code/sports/unversioned": {
           "word": "Code"
         },
         "debugging/sports/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/sports/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "debugging/infinity/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/infinity/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "event/basketball/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "debugging/basketball/unversioned": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/basketball/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "machine_learning/oceans/unversioned": {
           "word": "Maschinelles Lernen"
         },
+        "event/outbreak/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
         "behavior/coursef/2021": {
           "word": "Verhalten"
+        },
+        "program/coursef/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algorithmus"
+        },
+        "event/coursef/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "variable/coursef/2021": {
           "word": "Variable"
@@ -86,11 +230,16 @@
         "input/coursef/2021": {
           "word": "Eingabe"
         },
+        "loop/coursef/2021": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/coursef/2021": {
+          "word": "Wiederholen:",
+          "definition": "Um wieder etwas zu tun."
+        },
         "machine_learning/coursef/2021": {
           "word": "Maschinelles Lernen"
-        },
-        "dns/coursef/2021": {
-          "word": "DNS"
         },
         "internet/coursef/2021": {
           "word": "Internet"
@@ -102,34 +251,52 @@
           "word": "Definiere"
         },
         "algorithm/courseb/2021": {
-          "word": "Algorithmus"
+          "word": "Algorithmus",
+          "definition": "Eine Liste von Schritten zum Abschließen einer Aufgabe."
         },
         "bug/courseb/2021": {
-          "word": "Fehler"
+          "word": "Bug/Fehler",
+          "definition": "Teil eines Programms, der nicht korrekt funktioniert."
         },
         "debugging/courseb/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "click/courseb/2021": {
-          "word": "Klick"
+          "word": "Klick",
+          "definition": "Drücken der Maustaste"
         },
         "drag/courseb/2021": {
-          "word": "Ziehen"
+          "word": "-   Ziehen:",
+          "definition": "Klicken mit der Maus und die Maustaste gedrückt halten, während man den Mauszeiger an einen anderen Ort bewegt"
         },
         "drop/courseb/2021": {
-          "word": "Fallen lassen"
+          "word": "Fallen lassen",
+          "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/courseb/2021": {
-          "word": "Doppelklick"
+          "word": "-   Doppelklicken:",
+          "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
         },
         "program/courseb/2021": {
-          "word": "Programm"
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "programming/courseb/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst, ein Programm zu erstellen."
         },
         "loop/courseb/2021": {
-          "word": "Schleife"
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/courseb/2021": {
+          "word": "Wiederholen:",
+          "definition": "Um wieder etwas zu tun."
+        },
+        "event/courseb/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "algorithm/coursea/2021": {
           "word": "Algorithmus",
@@ -168,7 +335,7 @@
           "definition": "Die Kunst, ein Programm zu erstellen."
         },
         "loop/coursea/2021": {
-          "word": "Schleifen",
+          "word": "Schleife",
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "repeat/coursea/2021": {
@@ -180,52 +347,74 @@
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "algorithm/coursec/2021": {
-          "word": "Algorithmus"
+          "word": "Algorithmus",
+          "definition": "Eine Liste von Schritten zum Abschließen einer Aufgabe."
         },
         "bug/coursec/2021": {
-          "word": "Fehler"
+          "word": "Bug/Fehler",
+          "definition": "Teil eines Programms, der nicht korrekt funktioniert."
         },
         "debugging/coursec/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "program/coursec/2021": {
-          "word": "Programm"
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "sequencing/coursec/2021": {
           "word": "Sequencing"
         },
         "programming/coursec/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst, ein Programm zu erstellen."
         },
         "loop/coursec/2021": {
-          "word": "Schleife"
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/coursec/2021": {
+          "word": "Wiederholen:",
+          "definition": "Um wieder etwas zu tun."
+        },
+        "event/coursec/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "binary/coursec/2021": {
           "word": "Binärdatei"
         },
         "algorithm/coursed/2021": {
-          "word": "Algorithmus"
+          "word": "Algorithmus",
+          "definition": "Eine Liste von Schritten zum Abschließen einer Aufgabe."
         },
         "program/coursed/2021": {
-          "word": "Programm"
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "bug/coursed/2021": {
-          "word": "Fehler"
+          "word": "Bug/Fehler",
+          "definition": "Teil eines Programms, der nicht korrekt funktioniert."
         },
         "debugging/coursed/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "loop/coursed/2021": {
-          "word": "Schleife"
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
         "programming/coursed/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst, ein Programm zu erstellen."
         },
-        "frustrated/coursed/2021": {
-          "word": "Frustriert"
+        "event/coursed/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
-        "code/coursed/2021": {
-          "word": "Code"
+        "repeat/coursed/2021": {
+          "word": "Wiederholen:",
+          "definition": "Um wieder etwas zu tun."
         },
         "command/coursed/2021": {
           "word": "Befehl"
@@ -236,20 +425,43 @@
         "condition/coursed/2021": {
           "word": "Bedingung"
         },
+        "algorithm/express/2021": {
+          "word": "Algorithmus",
+          "definition": "Eine Liste von Schritten zum Abschließen einer Aufgabe."
+        },
         "bug/express/2021": {
-          "word": "Fehler"
+          "word": "Bug/Fehler",
+          "definition": "Teil eines Programms, der nicht korrekt funktioniert."
         },
         "debugging/express/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
         },
         "sequencing/express/2021": {
           "word": "Sequencing"
         },
+        "program/express/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
+        },
         "programming/express/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst, ein Programm zu erstellen."
         },
         "behavior/express/2021": {
           "word": "Verhalten"
+        },
+        "event/express/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "loop/express/2021": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/express/2021": {
+          "word": "Wiederholen:",
+          "definition": "Um wieder etwas zu tun."
         },
         "command/express/2021": {
           "word": "Befehl"
@@ -270,31 +482,70 @@
           "word": "Definiere"
         },
         "click/pre-express/2021": {
-          "word": "Klick"
+          "word": "Klick",
+          "definition": "Drücken der Maustaste"
         },
         "drag/pre-express/2021": {
-          "word": "Ziehen"
+          "word": "-   Ziehen:",
+          "definition": "Klicken mit der Maus und die Maustaste gedrückt halten, während man den Mauszeiger an einen anderen Ort bewegt"
         },
         "drop/pre-express/2021": {
-          "word": "Fallen lassen"
+          "word": "Fallen lassen",
+          "definition": "Die Maustaste loslassem, um das Element, das man zieht, abzulegen"
         },
         "double_click/pre-express/2021": {
-          "word": "Doppelklick"
+          "word": "-   Doppelklicken:",
+          "definition": "Zweimaliges, sehr schnelles Drücken der Maustaste."
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algorithmus",
+          "definition": "Eine Liste von Schritten zum Abschließen einer Aufgabe."
         },
         "bug/pre-express/2021": {
-          "word": "Fehler"
+          "word": "Bug/Fehler",
+          "definition": "Teil eines Programms, der nicht korrekt funktioniert."
         },
         "debugging/pre-express/2021": {
-          "word": "Debugging/Fehlerbeseitigung"
+          "word": "Debugging/Fehlerbeseitigung",
+          "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
+        },
+        "program/pre-express/2021": {
+          "word": "Programm",
+          "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "programming/pre-express/2021": {
-          "word": "Programmierung"
+          "word": "Programmierung",
+          "definition": "Die Kunst, ein Programm zu erstellen."
+        },
+        "loop/pre-express/2021": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/pre-express/2021": {
+          "word": "Wiederholen:",
+          "definition": "Um wieder etwas zu tun."
+        },
+        "event/pre-express/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "behavior/coursee/2021": {
           "word": "Verhalten"
         },
+        "event/coursee/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
         "copyright/coursee/2021": {
           "word": "Copyright"
+        },
+        "loop/coursee/2021": {
+          "word": "Schleife",
+          "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
+        },
+        "repeat/coursee/2021": {
+          "word": "Wiederholen:",
+          "definition": "Um wieder etwas zu tun."
         },
         "function/coursee/2021": {
           "word": "Funktion"
