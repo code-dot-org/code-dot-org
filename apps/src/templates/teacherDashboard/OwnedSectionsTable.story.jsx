@@ -165,12 +165,6 @@ const validScripts = [
   }
 ];
 
-const validGrades = [
-  'K',
-  [...Array(13).keys()].slice(1).map(String),
-  'Other'
-].flat();
-
 export default storybook => {
   storybook
     .storiesOf('OwnedSectionsTable (teacher dashboard)', module)
@@ -179,7 +173,24 @@ export default storybook => {
         name: 'section table',
         story: () => {
           const store = createStore(combineReducers({teacherSections}));
-          store.dispatch(setValidGrades(validGrades));
+          store.dispatch(
+            setValidGrades([
+              'K',
+              '1',
+              '2',
+              '3',
+              '4',
+              '5',
+              '6',
+              '7',
+              '8',
+              '9',
+              '10',
+              '11',
+              '12',
+              'Other'
+            ])
+          );
           store.dispatch(setValidAssignments(validCourses, validScripts));
           store.dispatch(setSections(serverSections));
           return (
