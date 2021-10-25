@@ -73,6 +73,9 @@
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Za Hodinou kódu"
         },
+        "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
+          "name": "Příprava scény"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -110,6 +113,9 @@
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Za Hodinou kódu"
         },
+        "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
+          "name": "Příprava scény"
+        },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
             null
@@ -130,6 +136,9 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Za Hodinou kódu"
+        },
+        "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
+          "name": "Příprava scény"
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
@@ -162,6 +171,9 @@
         },
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
           "name": "Umělec"
+        },
+        "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
+          "name": "Příprava scény"
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
@@ -253,6 +265,9 @@
             null
           ]
         },
+        "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
+          "name": "Příprava scény"
+        },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
             null
@@ -290,6 +305,9 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Za Hodinou kódu"
+        },
+        "366afa8a-feff-4dd4-a415-03a04e01e897": {
+          "name": "Příprava scény"
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -329,6 +347,9 @@
         },
         "2113da19-595f-418e-be70-5219f0b47aa8": {
           "progression_name": "Sdílej svou appku"
+        },
+        "00b66dcf-d546-4649-aa21-6d97981fa444": {
+          "name": "Příprava scény"
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -378,6 +399,9 @@
             null
           ]
         },
+        "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
+          "name": "Příprava scény"
+        },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
             null
@@ -416,6 +440,9 @@
             null
           ]
         },
+        "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
+          "name": "Příprava scény"
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
             null
@@ -445,6 +472,9 @@
         "501df195-7991-40ad-bad9-df715484240b": {
           "progression_name": "Zrychli to, zpomal to"
         },
+        "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
+          "name": "Příprava scény"
+        },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
             null
@@ -461,6 +491,7 @@
           ]
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "name": "Vytvářejte vzrušení!",
           "tips": [
             null
           ]
@@ -478,6 +509,12 @@
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Zahřátí"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Rekapitulace"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "Příprava scény"
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
@@ -538,9 +575,13 @@
           ]
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
+          "name": "Prozkoumávání aplikací",
           "tips": [
             null
           ]
+        },
+        "f321b39c-8051-4fc9-9e40-24f25216f88c": {
+          "name": "Rozdělení si"
         },
         "1fa1e4c0-3147-4057-8131-07b03520b95e": {
           "name": "Reflexe"
@@ -603,6 +644,9 @@
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "Reflexe"
         },
+        "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
+          "name": "Klíčový slovník"
+        },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
           "name": "Večírkové hry"
         },
@@ -621,6 +665,9 @@
         },
         "d2b97c32-0187-432e-9fa2-979e9f34280a": {
           "name": "Posouzení"
+        },
+        "05818b32-90cc-466a-b952-8fcf048e4e5c": {
+          "name": "Text a výzvy"
         },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
           "tips": [
@@ -659,6 +706,9 @@
             null
           ]
         },
+        "d5bf3b23-128d-4078-bdb2-a806a59a2db1": {
+          "name": "Ukázka"
+        },
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Úvod"
         },
@@ -670,6 +720,9 @@
         },
         "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf": {
           "name": "Posouzení"
+        },
+        "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
+          "name": "Použití proměnných s Artist"
         },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "Volná hra"
@@ -693,6 +746,9 @@
         },
         "3d33fa77-1fa9-4e46-921f-fd661884b23f": {
           "name": "Úvod"
+        },
+        "aa24a7a8-7cec-408b-b980-89e9c457605a": {
+          "name": "Proměnná s včelou"
         },
         "a3b35da9-5d20-4f58-998a-e5395fc7e23f": {
           "name": "Reflexe"
@@ -771,7 +827,6 @@
           ]
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
-          "description": "**Proveďte tohle:** Přiveďte třídu zpět, aby si četli _Epidemie: Myslet jako vědec._",
           "progression_name": "Učení se na základě simulací"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
@@ -782,6 +837,9 @@
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Reflexe"
+        },
+        "2c7244e0-80ea-472a-9dbe-051909768cfc": {
+          "name": "Vytvářejte vzrušení!"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
           "name": "AI pomáhá oceánům",
@@ -839,6 +897,9 @@
             null
           ]
         },
+        "1008c1d7-2968-4264-9de2-076e0bc0b086": {
+          "name": "Definování a příprava"
+        },
         "e1f77c6c-fd3c-4f0d-b13b-d6846b5625c0": {
           "tips": [
             null
@@ -852,12 +913,16 @@
             null
           ]
         },
+        "910ddad6-f546-4378-9991-170e0fa35093": {
+          "name": "Prezentace – 5. den"
+        },
         "65182889-0109-4c77-bcdc-5fffb9016ca1": {
           "tips": [
             null
           ]
         },
         "0747338b-f02e-459d-b669-3c0f11486ae1": {
+          "name": "Kde se stala chyba?",
           "tips": [
             null
           ]
@@ -955,6 +1020,9 @@
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "Úvod"
         },
+        "080f9c60-77da-4902-a7ba-a5b21efd9aca": {
+          "name": "Ukázka učitele"
+        },
         "9b293bbc-d3e3-494d-892e-f90e56347451": {
           "progression_name": "Výzva"
         },
@@ -968,6 +1036,7 @@
           "name": "Úvod"
         },
         "d5bea39f-5b7a-4eea-84f2-3f3c9bb07945": {
+          "name": "Ukázka učitele",
           "tips": [
             null
           ]
@@ -1034,6 +1103,9 @@
             null
           ]
         },
+        "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
+          "name": "Ukázka"
+        },
         "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
           "progression_name": "Mé online sousedství"
         },
@@ -1076,6 +1148,9 @@
           "tips": [
             null
           ]
+        },
+        "d639c3c7-2708-41eb-afae-cf5a65464fd8": {
+          "name": "Programování s bloky"
         },
         "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
           "tips": [
@@ -1152,6 +1227,9 @@
         "dacbc9c3-1382-49f8-856d-5bce1247ebb4": {
           "name": "Úvod"
         },
+        "5679d0c2-9bce-45bb-a7ad-713853ccb683": {
+          "name": "Ukázka učitele"
+        },
         "ec7877d9-c2e0-4cd3-8665-25bc3aac4008": {
           "tips": [
             null
@@ -1170,7 +1248,8 @@
           "name": "Úvod"
         },
         "13752711-384a-4249-bf95-632d8a8ad185": {
-          "name": "Oceánská scéna s cykly"
+          "name": "Oceánská scéna s cykly",
+          "description": "#### Ukázka učitele"
         },
         "879f345b-620d-4541-8467-84f00e515229": {
           "progression_name": "Výzva"
@@ -1237,6 +1316,12 @@
           "tips": [
             null
           ]
+        },
+        "adc355f7-34d5-450e-aa57-e001b2a7973c": {
+          "name": "Ukázka"
+        },
+        "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
+          "name": "Klíčový slovník"
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
           "name": "Moji robotičtí přátelé"
@@ -1477,6 +1562,12 @@
             null
           ]
         },
+        "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
+          "name": "Ukázka"
+        },
+        "b8f03681-d01e-4384-b88f-5e562eab172f": {
+          "name": "Klíčový slovník"
+        },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Úvod"
         },
@@ -1498,6 +1589,7 @@
           "name": "Úvod"
         },
         "d9efb3c8-51e0-4036-9f50-31012c76a905": {
+          "name": "Online hádanky",
           "tips": [
             null
           ]
@@ -1507,6 +1599,9 @@
         },
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "name": "Reflexe"
+        },
+        "67688952-e1da-43b1-a7d0-f2889dec7e48": {
+          "name": "Kde se stala chyba?"
         },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
           "tips": [
@@ -1576,10 +1671,19 @@
         "df2c1698-1e56-4e44-9a0b-9d43facaf9f2": {
           "name": "Reflexe"
         },
+        "e81e3694-cf5c-46d3-aab8-4dd74e18c4fa": {
+          "name": "Příprava scény"
+        },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
           "tips": [
             null
           ]
+        },
+        "2fe76df3-dde6-43fd-a725-2a1c458996b2": {
+          "name": "Zakódujte si vlastní taneční párty"
+        },
+        "07d81a89-c42f-4e92-90cf-a745cd0196d8": {
+          "name": "Podpora po úrovních"
         },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
           "progression_name": "Události"
@@ -1734,6 +1838,9 @@
             null
           ]
         },
+        "bfb31158-7c6c-4e30-9e86-141b77445111": {
+          "name": "Ukázka"
+        },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "Úvod",
           "tips": [
@@ -1863,6 +1970,12 @@
         },
         "8970ddea-49ba-429a-9607-6239c33e06be": {
           "name": "Reflexe"
+        },
+        "88b00482-3c11-4079-9869-faaa51c340c2": {
+          "name": "Zakódujte si vlastní taneční párty"
+        },
+        "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
+          "name": "Podpora po úrovních"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "Události"
@@ -2075,6 +2188,9 @@
         "8df13f72-0404-4fa0-8fe7-1b7847e7072f": {
           "name": "Posouzení"
         },
+        "e7833677-6e13-40dc-9e36-56388378828d": {
+          "name": "Text a výzvy"
+        },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
           "tips": [
             null
@@ -2094,6 +2210,9 @@
         "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0": {
           "name": "Posouzení"
         },
+        "b270733d-2d48-4470-a0e4-7a805255d765": {
+          "name": "Použití proměnných s Artist"
+        },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "Volná hra"
         },
@@ -2102,6 +2221,9 @@
         },
         "6ab692c9-eee1-4966-91fa-3bda39450263": {
           "name": "Úvod"
+        },
+        "60fb6e02-bbf3-49df-ab58-79496259ada1": {
+          "name": "Proměnná s včelou"
         },
         "40a52b8d-4101-4d39-a124-460b6553eea6": {
           "name": "Reflexe"
@@ -2145,6 +2267,9 @@
             null
           ]
         },
+        "d99249e4-021e-4a39-9462-045e0306c00a": {
+          "name": "Ukázka"
+        },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "Úvod",
           "tips": [
@@ -2183,6 +2308,7 @@
           ]
         },
         "d5b98b5f-7fc7-4ad4-8d79-b02a63621c46": {
+          "name": "Programování s bloky",
           "tips": [
             null
           ]
@@ -2274,7 +2400,8 @@
           "name": "Úvod"
         },
         "8cb479d1-0b50-4d24-998d-9fff971dcf0c": {
-          "name": "Oceánská scéna s cykly"
+          "name": "Oceánská scéna s cykly",
+          "description": "#### Ukázka učitele"
         },
         "b510eb90-ae82-47f6-9d8f-7b2b52700802": {
           "tips": [
@@ -2396,6 +2523,12 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "Reflexe"
         },
+        "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
+          "name": "Klíčový slovník"
+        },
+        "bec84680-216c-4711-b91f-5b37260fd598": {
+          "name": "Klíčový slovník"
+        },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Úvod"
         },
@@ -2403,6 +2536,9 @@
           "tips": [
             null
           ]
+        },
+        "e7f9b4de-f4a4-401b-99ad-207a2fad7964": {
+          "name": "Rozdělení si"
         },
         "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {
           "name": "Reflexe"
@@ -2550,6 +2686,9 @@
             null
           ]
         },
+        "37929d1a-a0f2-4700-96e9-7d207a70dc1e": {
+          "progression_name": "Video: \"Pokud/jiné\""
+        },
         "85c2f391-04ff-4b1f-8e2d-dad1aebd0b17": {
           "progression_name": "Výzva"
         },
@@ -2558,6 +2697,9 @@
         },
         "990891b6-d051-4117-8dd5-fc3346d69dc5": {
           "name": "Úvod"
+        },
+        "24e49944-567b-4a1a-8f14-8e60585cb81f": {
+          "name": "Online hádanky"
         },
         "7bbfd5d9-bdc8-4db4-9d73-c2885278eff5": {
           "progression_name": "Výzva"
@@ -2572,6 +2714,9 @@
         "365538ed-acdc-4054-9f6c-fb4085cced76": {
           "name": "Reflexe"
         },
+        "4c5a950e-1fc0-4ec3-9eda-a4a8e7631801": {
+          "name": "Definování a příprava"
+        },
         "076a8517-ba6d-4f59-804d-d40a49d9f184": {
           "tips": [
             null
@@ -2584,6 +2729,9 @@
           "tips": [
             null
           ]
+        },
+        "6a4f65e2-5864-40c5-84bb-d1f70643e914": {
+          "name": "Prezentace – 5. den"
         },
         "91a938ed-5c11-4efb-be88-9d4875f227c6": {
           "tips": [
