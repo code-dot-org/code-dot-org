@@ -561,8 +561,7 @@
           ]
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
-          "name": "Sprite laboratoriyasi bilan tanishish",
-          "progression_name": "Video: Sprite laboratoriyasi bilan tanishish"
+          "name": "Sprite laboratoriyasi bilan tanishish"
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "name": "Exploring Apps",
@@ -585,14 +584,10 @@
           "name": "Kirish"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
-          "name": "Sprayt yasash",
           "tips": [
             null
           ],
           "progression_name": "Oldindan ko'rish"
-        },
-        "3eb6f356-a55c-4c86-a056-e8af46058092": {
-          "progression_name": "Video: Sprayt qanday qilinadi"
         },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
@@ -606,8 +601,7 @@
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "tips": [
             null
-          ],
-          "progression_name": "Erkin o'yin: Sahna yaratish"
+          ]
         },
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
           "name": "Reflection"
@@ -649,17 +643,11 @@
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "O‘rganish"
         },
-        "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
-          "progression_name": "Erkin o'yin"
-        },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "Reflection"
         },
         "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
           "name": "Asosiy Lug‘at"
-        },
-        "06057973-b621-4a48-a991-4f99aafdedca": {
-          "progression_name": "So‘z kuchi - kompyutersiz mashg‘ulotlar"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
@@ -804,9 +792,6 @@
             null
           ]
         },
-        "94a2704e-d539-4fc7-b390-a8e9850c64f5": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Qarama-qarshi tomonga ishlatish \\*\\* \n\n-   Ushbu mashqni qayta urinib ko‘ring, ammo bu safar uchta zar yordamida boshlang‘ich raqami va bitta raqam bilan to‘xtash raqami tanlansin. Salbiy o‘sishga ishonch hosil qiling! \n\n \\*\\* Chertak \\*\\* \n\n-   Bo‘r yordamida tashqarida qora tyuzada chertak diagrammasini chizamiz \n-   Kvadratlarni pastdan tepaga raqamlang \n-   Talabalar bir-birlariga boshlang‘ich kvadrat, to‘xtash kvadrati berishlarini va bir vaqtning o‘zida qancha sakrashlari kerakligin aytishsin \n-   Sakrash tugagandan so‘ng, ular bajargan siklni yozib qo‘yishlari kerak \n-   Har bir kvadrat bo‘yicha bajariladigan qo‘shimcha mashqlarni qo‘shishni boshlang, bu yozma qismdagi murakkablikni oshiradi"
-        },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Kirish"
         },
@@ -815,6 +800,9 @@
         },
         "1668a313-16da-49db-9713-13d7ad33889e": {
           "progression_name": "Sharh"
+        },
+        "671c8e13-e78c-49f3-867b-45e7643d0026": {
+          "progression_name": "Video: For sikli"
         },
         "297e5651-8422-476e-b1db-3d893b7e0bc8": {
           "progression_name": "Oldindan ko'rish"
@@ -835,7 +823,8 @@
           "name": "Kirish"
         },
         "b838a926-533f-414b-86f6-17f8ea078fad": {
-          "name": "Rassom bilan For Sikllarini ishlatish"
+          "name": "Rassom bilan For Sikllarini ishlatish",
+          "progression_name": "Video: For sikli"
         },
         "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
           "progression_name": "O‘rganish"
@@ -901,12 +890,6 @@
           "tips": [
             null
           ]
-        },
-        "919543ed-3f8f-4a49-ba9e-c34d0d3cfaa3": {
-          "progression_name": "Video: Jamiyatga ta'sirlar"
-        },
-        "833ae7ce-6703-495b-b010-224f0d32134f": {
-          "progression_name": "Sun'iy Intellektga yangi so'z o'rgating"
         },
         "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
           "tips": [
@@ -993,9 +976,6 @@
           "tips": [
             null
           ]
-        },
-        "d8233290-3b13-4062-b13e-6bc56ccd2f7f": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n**X‘s and O‘s**\n\n-   Sinf uchun tick-tack-toe taxtasini chizish. \n\n-   Bitta X va bitta O ni taxtaning biron bir joyiga qo‘ying. \n\n-   Sinfdoshlardan sinf sifatida qo‘l imo-ishoralari yordamida X ni O ga etkazishlarini so‘rang. \n\n    \\*\\* X, O va O‘qlar \\*\\* \n\n-   Yuqoridagi mashqlarga o‘xshash, ammo o‘quvchilar dasturlarini imo-ishoralar o‘rniga o‘qlar yordamida oldindan yozib qo‘ying. \n\n-   Buni guruhlarga bo‘lib amalga oshirish mumkin. \n\n-   Guruhlar sinf uchun o‘z yechimlarini baham ko‘rishlari mumkin."
         },
         "af269d6d-e57d-4331-bc8d-daae801d1db0": {
           "tips": [
@@ -1258,9 +1238,6 @@
           "tips": [
             null
           ]
-        },
-        "c3cfdbc4-82d5-4717-bf83-22860936a687": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Stuffie Maps \\*\\*\n\n-   Skotch bilan gilamchada katak yarating va o‘quvchiga o‘yinchoq hayvonlarni maktabga olib kelishni ayting. \n\n-   Endi talabalar do‘stlariga dasturlarda ko‘rsatilgandek, o‘zlarining haqiqiy narsalarini ko‘chirish uchun dasturlashlari mumkin. \n\n    \\*\\* O‘zingiznikini yarating \\*\\* \n\n-   Talabalardan o‘z xaritalarini tuzishlarini so‘rang. \n\n-   Boshqa talabalar ularni dasturlardan foydalanib yechishlarini so‘rang."
         },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
           "tips": [
@@ -1712,9 +1689,6 @@
         "809e449a-e392-48c2-9b9f-f53ce1d06366": {
           "name": "Reflection"
         },
-        "d5490110-1fb8-44ca-8e62-8b0c4e3b6dbe": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Materiallarni to‘plash \\*\\* \n\n-   O‘quvchilarga ish stollari (qalam, o‘chirish moslamasi va boshqalar) ustida uyumlarni yaratsinlar \n-   Sheriklari har bir guruhni yig‘ib terimchining uyumdan uyumga yurib,  qanday qilib yo‘l bo‘ylab narsalarni terishni aniqlab bersin. \n-   Dasturlarni sinfning qolgan qismi bilan ulashing."
-        },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
           "name": "Kirish"
         },
@@ -1772,9 +1746,6 @@
         "a49ab9e9-2a47-4d02-93bf-ec9bd241a125": {
           "name": "Reflection"
         },
-        "f9faf5dc-b81a-441f-84f6-202dd305f24b": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Kapyushon ostiga qarang \\*\\* \n\n O‘zingizning o‘yiningizga havolani ulashganingizda, siz uning orqasida turgan barcha kodlarni ham ulashasiz. Bu o‘quvchilar uchun bir-biridan o‘rganish uchun ajoyib usuldir.\n\n-   Tugallangan o‘yinlarga havolalarni Internetda joylashtiring\n-   O‘zingizning o‘yiningizni ham o‘rtoqlashing!\n-   Talabalar havolani yuklaganlarida, o‘yinning orqasidagi kodni ko‘rish uchun ularga \"Qanday ishlaydi \" tugmasini bosish kerakligini ayting.\n-   Sinfdoshlaringiz o‘zlarining o‘yinlarini kodlash usullarini guruh bilan muhokama qiling.\n-   Sizni nima ajablantirdi?\n-   Siz nimani sinab ko‘rmoqchisiz?\n-   Birovning o‘yinini tanlang va uni o‘zgartirish uchun \"Remiks\" tugmasini bosing. (Xavotir olmang, asl o‘yin xavfsiz bo‘ladi.)"
-        },
         "782d1991-785a-406b-963c-687abb77e247": {
           "name": "Kirish"
         },
@@ -1827,9 +1798,6 @@
         "02945b11-d2db-485d-9002-9aff256a4ed4": {
           "name": "Reflection"
         },
-        "3b646703-3875-4421-bdd8-865e9c2ace35": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Ikkilik rasmlar \\*\\* \n\n-   Internetda ushbu mashg‘ulotni keyingi bosqichga ko‘tarish uchun bir nechta ajoyib manbalar mavjud. \n-   Agar o‘quvchilaringiz rasmlarni (yoki hattoki musiqani) qanday qilib ikkilik shaklida namoyish etishni bilishni xohlasalar, batafsil ma’lumotni Thinkersmithning  [Binary Baubles](http://code.org/files/CSEDbinary.pdf) da topishingiz mumkin."
-        },
         "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
           "name": "Planning"
         },
@@ -1865,9 +1833,6 @@
           "tips": [
             null
           ]
-        },
-        "8d3b579a-9959-4190-aa92-858495574689": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Yanada yaxshi \\*\\* \n\n-   Sinfingiz o‘z rasmlarini yaratishga harakat qilishsin. \n\n-   Ular o‘zlari yaratgan rasmlarni qanday dasturlashni tushunib yetishadimi? \n\n    \\*\\* Sinf mashqi \\*\\* \n\n-   O‘qituvchi sifatida 5x5 katakka rasm chizish. \n\n-   Siz bilan birga sinf kodlay oladimi?"
         },
         "1ac03584-29b5-4a3d-8420-44259c0b1064": {
           "name": "Kirish"
@@ -2086,9 +2051,6 @@
         "95951ba3-d513-4635-a484-1d1819906049": {
           "name": "Reflection"
         },
-        "abc8cb08-ade8-44d3-95ba-558fadaf4c21": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqari mashg‘ulotlar yoki boshqa boyitish sifatida ishlatilishi mumkin.\n\n**To‘g‘ri / Noto‘g‘ri Teg**\n\n-   O‘quvchilarni o‘ynash uchun safga qo‘ying. [Qizil Chiroq / Yashil Chiroq](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Chaqiruvchi sifatida oldida turish uchun bitta kishini tanlang.\n-   Chaqiruvchi shartni tanlaydi va ushbu shartga javob beradigan har kimdan bir qadam oldinga o‘tishini so‘raydi.\n    -   Agar sizda qizil kamar bo‘lsa, oldinga qadam qo‘ying.\n    -   Agar siz sandal kiysangiz, oldinga bir qadam tashlang.\n-   Quyidagilar kabi jumlalar ishlatib, shartlarni almashtiring \"Agar siz sariq sochli bo‘lmasangiz, oldinga qadam qo‘ying.\"\n\n**Guruhlash**\n\n-   O‘quvchilarni juftlarga yoki kichik guruhlarga ajrating.\n-   Ularga, karta o‘ynash uchun shartlarni qog‘ozda yozishlarini ayting. Masalan:\n    -   Agar karta donasi yuraklar bo‘lsa\n    -   Agar rang qizil bo‘lsa\n-   O‘quvchilarga natijalar uchun shu kabi shartli qog‘ozlar yaratishlarini ayting.\n    -   Bir ball qo‘shing\n    -   Bir ball oling\n-   Shundan so‘ng, o‘quvchilarga, har bir shartli qog‘ozdan uchtasini va uchta o‘yin kartasini tanlashni ayting. Tanlangan tartibga e‘tibor bering.\n-   Uchta qog‘ozdan foydalanib, o‘quvchilarga faqat tanlagan chiziqlar to‘plamidan foydalanib, har xil tartibda uchta turli dasturlar yaratishni ayting.\n    -   O‘quvchilarga, bir nechta shartlarni, ikkinchisibir shartning ichiga qo‘yishlarini tavsiya eting.\n-   Endi o‘quvchilar har uchala dastur uchun bir xil tartibda, o‘zlari chizgan kartochkalar yordamida uchta dasturni bajarishlari ayting.\n    -   Biror ikkata dastur bir xil javobni berdimi?\n    -   Biror bir dastur boshqacha narsani qaytardimi?"
-        },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Kirish"
         },
@@ -2104,9 +2066,6 @@
         },
         "0e7cf944-a328-4388-afa7-8712fed768e0": {
           "name": "Kirish"
-        },
-        "8cc71fbc-f53a-45d2-9b80-e102f01f25b7": {
-          "name": "Onlayn boshqotirmalardan parcha "
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
           "name": "Asalari bilan If/Else"
@@ -2140,9 +2099,6 @@
         },
         "9edcc1a3-dce9-45bc-86af-546b41287b53": {
           "name": "Kirish"
-        },
-        "c4193bf0-446f-4812-beb9-b3884a1385c9": {
-          "name": "Onlayn boshqotirmalardan parcha "
         },
         "0a565c10-633a-486e-9d62-f62933373bf7": {
           "name": "While Loops in Farmer"
@@ -2810,6 +2766,9 @@
         "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
           "progression_name": "Sharh"
         },
+        "387d8104-557d-4700-bdef-2c8ea2855b07": {
+          "progression_name": "Video: For sikli"
+        },
         "600fa08b-d08b-4e28-96a5-e1e2b6b5c908": {
           "progression_name": "Oldindan ko'rish"
         },
@@ -2831,7 +2790,8 @@
         "5defab8f-984c-4baa-89a5-d0a37e70bf26": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: For sikli"
         },
         "7d78c293-a385-49ee-a08a-1e0a02b185aa": {
           "progression_name": "O‘rganish"
@@ -2912,9 +2872,6 @@
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Reflection"
-        },
-        "14da8da8-681c-4934-97fc-01e71ad67ef3": {
-          "description": "Ulanishni tugatish uchun onlayn jumboqni (yoki ikkitasini) sinf bilan ko‘rib chiqing.\n\n\\*\\* Model: \\*\\* Butun onlayn jumboqni ochib bering. 5-jumboqni tavsiya qilamiz. Ular hozirgina bajargan mashqlariga o‘xshashliklarini ko‘rishadimi? Qanday katta farqlar mavjud?\n\nKodni ish maydoniga qush (oxir-oqibat) cho‘chqaga yetib boradigan tarzda qo‘yish uchun o‘zingizning sinfingiz bilan ishlang. \n\n \\*\\* O‘tish: \\*\\* Endi talabalar o‘zlari onlayn jumboqlarni bajarish uchun kompyuterlarga o‘tishga tayyor bo‘lishlari kerak."
         },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Jahldor qushlar bilan dasturlash",
@@ -3231,9 +3188,6 @@
         "504e1645-369b-4f38-9e75-ee5f7d5e03cb": {
           "name": "Reflection"
         },
-        "12028f3b-0333-4a2a-9059-74c7ea960ebd": {
-          "description": "Raqamli almashinuv va ijodiy huquqlar bo‘yicha ko‘proq darslarni topish uchun [Copyright & Creativity ](https://copyrightandcreativity.org)sahifasiga tashrif buyuring."
-        },
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
           "name": "Kirish"
         },
@@ -3329,9 +3283,6 @@
           "tips": [
             null
           ]
-        },
-        "c3c1225f-3e42-4af3-b63e-6e2fb0a9f62a": {
-          "description": "Ushbu mashg‘ulotlardan o‘quvchilar bilimini oshirish uchun foydalaning. Ular sinfdan tashqarida ishlatilishi mumkin.\n\n\\*\\* Funktsional nur-tutuvchilar\\*\\* \n  [CS Fundamentals Unplugged Table](https://code.org/curriculum/unplugged)ga tashrif buyuring yoki  [Functional Suncatchers](https://studio.code.org/s/course3/stage/4/puzzle/1) havolasini bosing. Ushbu mashg‘ulot qo‘l san‘atlari do‘konidan bir nechta materiallarni oladi, ammo bu o‘quvchilarga bir nechta funksiyalarni chaqirishning ahamiyatini tushunishga yordam beradi. \n\n \\*\\* O‘zingizning qo‘shiqingizni yarating \\*\\* \n\n-   Birgalikda naqoratni yaratishdan boshlang, so‘ngra uni o‘zingiz yaratgan qo‘shiqning kupletlari orasida takrorlang. \n    \\-Naqoratni o‘zgartiring va faqat bitta joyda o‘zgartirish qanchalik oson ekanligi haqida o‘ylang. \n-   Naqoratni yana o‘zgartiring, uni avvalgidan ancha uzunroq qilib qo‘ying. \n-   Ikkinchi  naqoratni qo‘shing va kupletlaringizda ularni almashtiring. \n\n \\*\\* Dasturni yozish \\*\\* \n\n-   Agar qo‘shiqlarni kuylash o‘rniga o‘ynasak nima bo‘ladi? To‘satdan, bizning naqoratimiz so‘zlardan ko‘ra takrorlanadigan harakatlar funksiyasiga aylanadi. \n-   Grafik qog‘ozni dasturlash darsidagi o‘qlar tushunchalaridan foydalaning va ko‘plab takrorlanadigan ko‘rsatmalar bilan dastur yarating. \n-   Takrorlanadigan amallarni doira bilan belgilang, shunda sinf ular qayerdaligini ko‘radi. \n-   Dastur ustida \"Naqorat \" deb nomlangan funksiyani aniqlang. \n-   Har bir joyda takrorlanadigan amallar dasturda paydo bo‘ladi va o‘rniga \"Naqorat\" deb yozing. \n-   Sinf bu jarayonni ozgina yo‘nalish bilan o‘tishganiga qadar takrorlang."
         },
         "5051f377-1e03-4348-91f8-5ba36d7dd8c6": {
           "name": "Kirish"

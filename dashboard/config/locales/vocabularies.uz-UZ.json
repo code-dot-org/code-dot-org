@@ -273,9 +273,6 @@
           "word": "Sprait",
           "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
         },
-        "user/coursef/2021": {
-          "word": "Foydalanuvchi"
-        },
         "behavior/coursef/2021": {
           "word": "Harakatlar/O‘zini tutish",
           "definition": "Sprayt to‘xtash buyrug‘i berilmaguncha qiladigan amal. "
@@ -314,41 +311,11 @@
           "word": "Mashinalar o‘rganishi",
           "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
         },
-        "dns/coursef/2021": {
-          "word": "DNS",
-          "definition": "domen nomlari tizimi uchun qisqartma, ushbu tizim domen nomlarini (masalan.com.com) IP-manzillarga o‘giradi (93.184.216.34 kabi)"
-        },
         "internet/coursef/2021": {
-          "word": "Internet",
-          "definition": "Bir-biriga ulangan kompyuter va serverlar to‘plami."
+          "word": "Internet"
         },
         "packets/coursef/2021": {
-          "word": "Paketlar",
-          "definition": "Katta hajmli ma'lumotlardan ehtiyotkorlik bilan shakllangan kichik ma'lumotlar qismlari."
-        },
-        "servers/coursef/2021": {
-          "word": "Serverlar",
-          "definition": "Faqat boshqa kompyuterlarga ma'lumot taqdim qilish uchun xizmat qiladigan kompyuter."
-        },
-        "url/coursef/2021": {
-          "word": "URL",
-          "definition": "Biror saytning eslab qolish oson bo‘lgan manzili (masalan, www.code.org)."
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/Cable",
-          "definition": "Telefon yoki televizion kabellar yordamida ma'lumot uzatish usuli."
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "Optik kabel (Fiber Optic Cable)",
-          "definition": "Axborotni uzatish uchun yorug‘likdan foydalanadigan aloqa"
-        },
-        "ip_address/coursef/2021": {
-          "word": "IP manzil",
-          "definition": "Internetga ulangan har qanday elementga tayinlangan son."
-        },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "Simsiz tarzda radio to‘lqinlar orqali ma'lumot uzatish usuli."
+          "word": "Paketlar"
         },
         "define/coursef/2021": {
           "word": "Aniqlash",
@@ -503,8 +470,7 @@
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "binary/coursec/2021": {
-          "word": "Binarli",
-          "definition": "Faqat ikki xil qiymatdan foydalangan holda ma'lumotni tasvirlash usuli."
+          "word": "Binarli"
         },
         "algorithm/coursed/2021": {
           "word": "Algoritm",
@@ -530,10 +496,6 @@
           "word": "Dasturlash (Programming)",
           "definition": "Dastur yaratish san'ati."
         },
-        "frustrated/coursed/2021": {
-          "word": "Umidsizlik",
-          "definition": "Biror narsa siz xohlagan darajada emasligi sababli bezovtalanish yoki g‘azablanish."
-        },
         "persistence/coursed/2021": {
           "word": "Qat'iylik",
           "definition": "Biror narsa juda qiyin bo‘lsa ham, qayta-qayta yechishga urinish."
@@ -543,7 +505,6 @@
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "code/coursed/2021": {
-          "word": "Kod",
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },
         "repeat/coursed/2021": {
@@ -605,9 +566,6 @@
         "event/express/2021": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "code/express/2021": {
-          "word": "Kod"
         },
         "loop/express/2021": {
           "word": "Sikl",
@@ -730,8 +688,7 @@
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "copyright/coursee/2021": {
-          "word": "Mualliflik huquqi",
-          "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
+          "word": "Mualliflik huquqi"
         },
         "loop/coursee/2021": {
           "word": "Sikl",
