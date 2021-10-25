@@ -4,8 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "curriculum_umbrella": "CSD",
       "exclude_csf_column_in_legend": true,
+      "family_name": "csd6",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_maker_unit": true,
+      "is_stable": true,
+      "project_sharing": true,
+      "project_widget_types": [
+        "applab"
+      ],
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -28,24 +39,14 @@
           "https://curriculum.code.org/csd/unit6/code/"
         ]
       ],
-      "has_verified_resources": true,
-      "project_widget_types": [
-        "applab"
-      ],
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSD",
-      "family_name": "csd6",
       "tts": true,
-      "hideable_lessons": true,
-      "is_maker_unit": true
+      "version_year": "2017"
     },
     "new_name": "csd6-2017",
     "family_name": "csd6",
-    "serialized_at": "2021-08-03 22:47:07 UTC",
+    "serialized_at": "2021-10-25 22:53:24 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd6-2017"
     }

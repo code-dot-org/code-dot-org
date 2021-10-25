@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "version_year": "unversioned",
+      "curriculum_umbrella": "CSC",
       "is_course": true,
-      "curriculum_umbrella": "CSC"
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-10-25 21:44:52 UTC",
+    "serialized_at": "2021-10-25 22:55:00 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -1372,6 +1372,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_variables"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1417,6 +1420,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1897,8 +1903,8 @@
       "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
       "key": "list_of_poems",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "list_of_poems"
@@ -1941,13 +1947,13 @@
       }
     },
     {
-      "key": "program",
-      "word": "Program",
-      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "key": "line",
+      "word": "Line",
+      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "program"
+        "vocabulary.key": "line"
       }
     },
     {
@@ -1961,16 +1967,6 @@
       }
     },
     {
-      "key": "line",
-      "word": "Line",
-      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "line"
-      }
-    },
-    {
       "key": "poetry",
       "word": "Poetry",
       "definition": "making art with words.",
@@ -1978,6 +1974,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "poetry"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -1997,7 +2003,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "program"
+        "vocabulary.key": "line"
       }
     },
     {
@@ -2009,7 +2015,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "line"
+        "vocabulary.key": "program"
       }
     },
     {
@@ -2024,33 +2030,13 @@
   ],
   "objectives": [
     {
-      "key": "acd30991-2a9c-437b-8973-c49b9047c6bd",
+      "key": "27ffe298-e5fc-4973-ba73-e1f1799eb3dd",
       "properties": {
-        "description": "Develop programs that respond to timed events."
+        "description": "Describe how visual and multimedia elements contribute to the meaning, tone, or beauty of a text ."
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "acd30991-2a9c-437b-8973-c49b9047c6bd"
-      }
-    },
-    {
-      "key": "b2c333fa-5e25-45f6-a3d8-d304d6a2ebcd",
-      "properties": {
-        "description": "Illustrate shifts in the mood of a poem."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "b2c333fa-5e25-45f6-a3d8-d304d6a2ebcd"
-      }
-    },
-    {
-      "key": "b1676163-966e-4b6a-acb9-44557c99a514",
-      "properties": {
-        "description": "Represent figurative and literal language in a text."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "b1676163-966e-4b6a-acb9-44557c99a514"
+        "lesson.key": "lesson-2",
+        "objective.key": "27ffe298-e5fc-4973-ba73-e1f1799eb3dd"
       }
     },
     {
@@ -2064,6 +2050,36 @@
       }
     },
     {
+      "key": "acd30991-2a9c-437b-8973-c49b9047c6bd",
+      "properties": {
+        "description": "Develop programs that respond to timed events."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "acd30991-2a9c-437b-8973-c49b9047c6bd"
+      }
+    },
+    {
+      "key": "b1676163-966e-4b6a-acb9-44557c99a514",
+      "properties": {
+        "description": "Represent figurative and literal language in a text."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b1676163-966e-4b6a-acb9-44557c99a514"
+      }
+    },
+    {
+      "key": "b2c333fa-5e25-45f6-a3d8-d304d6a2ebcd",
+      "properties": {
+        "description": "Illustrate shifts in the mood of a poem."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b2c333fa-5e25-45f6-a3d8-d304d6a2ebcd"
+      }
+    },
+    {
       "key": "dc337c5c-3857-489b-9dad-8620387757f0",
       "properties": {
         "description": "Make connections between text and a visual presentation of that text, identifying where visual representations reflect specific descriptions in the text."
@@ -2072,40 +2088,9 @@
         "lesson.key": "lesson-2",
         "objective.key": "dc337c5c-3857-489b-9dad-8620387757f0"
       }
-    },
-    {
-      "key": "27ffe298-e5fc-4973-ba73-e1f1799eb3dd",
-      "properties": {
-        "description": "Describe how visual and multimedia elements contribute to the meaning, tone, or beauty of a text ."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "27ffe298-e5fc-4973-ba73-e1f1799eb3dd"
-      }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -2136,16 +2121,23 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -2174,6 +2166,20 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "ccela",
         "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     }
   ],

@@ -5,13 +5,14 @@
     "login_required": false,
     "properties": {
       "exclude_csf_column_in_legend": true,
-      "student_detail_progress_view": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:15 UTC",
+    "serialized_at": "2021-10-25 22:53:32 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd4-draft"
     }

@@ -4,7 +4,32 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Are you signed up for the AP exam?",
+          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.",
+          "link": "https://code.org/educate/csp/ap-students",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        }
+      ],
+      "curriculum_umbrella": "CSP",
       "exclude_csf_column_in_legend": true,
+      "family_name": "csp1",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "project_sharing": true,
+      "script_announcements": [
+        {
+          "notice": "Are you signed up for the AP exam?",
+          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.",
+          "link": "https://code.org/educate/csp/ap-students",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        }
+      ],
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -28,37 +53,13 @@
           "https://studio.code.org/s/csp1-support"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2018",
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "Are you signed up for the AP exam?",
-          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.",
-          "link": "https://code.org/educate/csp/ap-students",
-          "type": "bullhorn",
-          "visibility": "Student-only"
-        }
-      ],
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp1",
-      "hideable_lessons": true,
-      "announcements": [
-        {
-          "notice": "Are you signed up for the AP exam?",
-          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.",
-          "link": "https://code.org/educate/csp/ap-students",
-          "type": "bullhorn",
-          "visibility": "Student-only"
-        }
-      ]
+      "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csp1",
-    "serialized_at": "2021-08-03 22:47:30 UTC",
+    "serialized_at": "2021-10-25 22:53:46 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp1-2018"
     }
