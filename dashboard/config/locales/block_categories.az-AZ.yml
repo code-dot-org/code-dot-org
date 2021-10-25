@@ -12,7 +12,7 @@ az:
       Conditionals: Şərti ifadələr
       Dancers: Rəqqaslar
       Default: İlkin
-      Events: Hadisələr
+      Events: Tədbirlər
       Functions: Funksiyalar
       'Functions ': 'Funksiyalar '
       Game/Score: Oyun/Hesab
@@ -26,6 +26,7 @@ az:
       Math: Riyaziyyat
       Numbers: Ədədlər
       Properties: Xüsusiyyətlər
+      Sprites: Spraytlar
       Text: mətn
       Variables: dəyişənlər
       'Variables ': 'Dəyişənlər '

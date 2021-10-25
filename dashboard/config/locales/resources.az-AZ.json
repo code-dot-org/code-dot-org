@@ -2,28 +2,23 @@
   "az-AZ": {
     "data": {
       "resources": {
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "Fəaliyyət Bələdçisi - Mətnin kiçildilməsi",
-          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/"
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "Bu mesajı deşifr et",
-          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be"
+        "introducing_sprite_lab/coursef/2021": {
+          "name": "Sprite Laboratoriyasını təqdim edirik"
         },
         "exploring_apps/coursef/2021": {
           "name": "Tətbiqləri araşdırmaq"
         },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "name": "Sprite Laboratoriyasını təqdim edirik"
+        },
         "exploring_apps_1/coursef/2021": {
           "name": "Tətbiqləri araşdırmaq"
+        },
+        "making_sprites/coursef/2021": {
+          "name": "Spraytlar düzəltmək"
+        },
+        "sprites_in_action/coursef/2021": {
+          "name": "Spritelar Hərəkətdə"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "İnternet"
@@ -52,14 +47,37 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Hərəkət et"
         },
-        "jigsaw/courseb/2021": {
-          "name": "Çəkmək və Buraxmaq Praktikası"
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Code.org-da sinif seçimi necə edilir ",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
         },
         "pair-programming-vid/courseb/2021": {
-          "name": "Estafet proqramlaşdırması"
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "20/20/20 Qaydası"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "Xoşbəxt xəritə oyun hissələri",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "feeling_faces_-_emotion_image/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie və Böyük Layihə"
@@ -83,19 +101,56 @@
           "name": "Müəllim Forumu"
         },
         "pair-programming-vid/coursea/2021": {
-          "name": "Estafet proqramlaşdırması"
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "20/20/20 Qaydası"
         },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "Başlanğıc - Sinif bölməsinin yaradılması"
+        "wiggles-go_noodle/coursea/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Şən xəritələr"
         },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "Xoşbəxt xəritə oyun hissələri",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
         "20_20_20_rule_1/coursea/2021": {
           "name": "20/20/20 Qaydası"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair-programming/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Böyük hadisə"
@@ -105,6 +160,12 @@
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Böyük hadisə"
+        },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "Kurikulum Bələdçisi"
@@ -128,7 +189,11 @@
           "name": "Mənim robot dostlarım"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Estafet proqramlaşdırması"
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Üz emosiyaları hiss etmə səhifəsi"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Böyük hadisə"
@@ -164,7 +229,8 @@
           "name": "Millimetrlik kağızda proqramlaşdırma"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Estafet proqramlaşdırması"
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Estafet proqramlaşdırması"
@@ -184,6 +250,10 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Estafet proqramlaşdırması"
         },
+        "feeling-faces-image/coursed/2021": {
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
         "curriculum_guide_1/coursed/2021": {
           "name": "Kurikulum Bələdçisi"
         },
@@ -191,7 +261,17 @@
           "name": "Müəllim Forumu"
         },
         "pair_programming/express/2021": {
-          "name": "Estafet proqramlaşdırması"
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "making_sprites/express/2021": {
+          "name": "Spraytlar düzəltmək"
+        },
+        "sprites_in_action/express/2021": {
+          "name": "Spritelar Hərəkətdə"
+        },
+        "pair_programming_video/express/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "variables_video/express/2021": {
           "name": "dəyişənlər"
@@ -200,13 +280,22 @@
           "name": "Müəllim Forumu"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "Estafet proqramlaşdırması"
+          "name": "Estafet proqramlaşdırması",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "Code.org-da sinif seçimi necə edilir ",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "Hiss üz ifadələri"
+          "name": "Üzləri hiss etmək",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "20/20/20 Qaydası"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "course_vocabulary/pre-express/2021": {
           "name": "Kurs lüğəti"
@@ -215,13 +304,7 @@
           "name": "Müəllim Forumu"
         },
         "follow_the_algorithm/coursee/2021": {
-          "name": "Alqoritm ilə ilərlə"
-        },
-        "private-and-personal-information-lesson-slides/coursee/2021": {
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
-        },
-        "private-and-personal-information-exit-ticket/coursee/2021": {
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "name": "Alqoritmi izləyin."
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Əlçatanlıq üçün dizayn"

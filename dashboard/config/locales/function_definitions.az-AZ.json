@@ -347,6 +347,9 @@
               "points": "xallar"
             },
             "name": "score_points"
+          },
+          "level_up": {
+            "name": "səviyyəni qaldırmaq"
           }
         },
         "Course 4 Play Lab Params 2": {
@@ -473,6 +476,9 @@
               "points": "xallar"
             },
             "name": "score_points"
+          },
+          "level_up": {
+            "name": "səviyyəni qaldırmaq"
           }
         },
         "Geometric Sun": {
@@ -671,14 +677,16 @@
             "name": "çevrə çək",
             "parameters": {
               "radius": "radius"
-            }
+            },
+            "description": "verilən radiuslu çevrə çək"
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "uzunluq",
               "repeat": "təkrar et",
               "sides": "tərəflər"
-            }
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",
@@ -964,14 +972,16 @@
           "pick row": {
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "name": "sıra seçin"
           }
         },
         "course4_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "name": "sıra seçin"
           }
         },
         "courseC_artist_prog3": {
@@ -2170,14 +2180,16 @@
             "name": "çevrə çək",
             "parameters": {
               "radius": "radius"
-            }
+            },
+            "description": "verilən radiuslu çevrə çək"
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "uzunluq",
               "repeat": "təkrar et",
               "sides": "tərəflər"
-            }
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",
@@ -2278,44 +2290,46 @@
           "pick row": {
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "name": "sıra seçin"
           }
         },
         "courseF_bee_fwp_challenge2": {
           "pick row": {
             "parameters": {
               "length": "uzunluq"
-            }
+            },
+            "name": "sıra seçin"
           }
         },
         "courseF_bee_variables_7_2018": {
           "collect": {
-            "name": "topla "
+            "name": "topla  "
           }
         },
         "courseF_bee_variables_7_2019": {
           "collect": {
-            "name": "topla "
+            "name": "topla  "
           }
         },
         "courseF_bee_variables_7_2020": {
           "collect": {
-            "name": "topla "
+            "name": "topla  "
           }
         },
         "courseF_bee_variables_8_2018": {
           "collect": {
-            "name": "topla "
+            "name": "topla  "
           }
         },
         "courseF_bee_variables_8_2019": {
           "collect": {
-            "name": "topla "
+            "name": "topla  "
           }
         },
         "courseF_bee_variables_8_2020": {
           "collect": {
-            "name": "topla "
+            "name": "topla  "
           }
         },
         "grade5_artist_binary11": {
@@ -2355,14 +2369,16 @@
             "name": "çevrə çək",
             "parameters": {
               "radius": "radius"
-            }
+            },
+            "description": "verilən radiuslu çevrə çək"
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "uzunluq",
               "repeat": "təkrar et",
               "sides": "tərəflər"
-            }
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",
@@ -2612,14 +2628,16 @@
             "name": "çevrə çək",
             "parameters": {
               "radius": "radius"
-            }
+            },
+            "description": "verilən radiuslu çevrə çək"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "tərəflər",
               "length": "uzunluq",
               "repeat": "təkrar et"
-            }
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",
@@ -2723,14 +2741,16 @@
             "name": "çevrə çək",
             "parameters": {
               "radius": "radius"
-            }
+            },
+            "description": "verilən radiuslu çevrə çək"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "tərəflər",
               "length": "uzunluq",
               "repeat": "təkrar et"
-            }
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",
@@ -2771,14 +2791,16 @@
             "name": "çevrə çək",
             "parameters": {
               "radius": "radius"
-            }
+            },
+            "description": "verilən radiuslu çevrə çək"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "tərəflər",
               "length": "uzunluq",
               "repeat": "təkrar et"
-            }
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",
@@ -2818,14 +2840,16 @@
             "name": "çevrə çək",
             "parameters": {
               "radius": "radius"
-            }
+            },
+            "description": "verilən radiuslu çevrə çək"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "tərəflər",
               "length": "uzunluq",
               "repeat": "təkrar et"
-            }
+            },
+            "name": "təkər çək"
           },
           "draw a triangle": {
             "name": "üçbucaq çək",

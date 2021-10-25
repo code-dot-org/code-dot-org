@@ -24,19 +24,19 @@ az:
                 işləyəcəyini unutmayın.
       messages:
         blank: zəruridir
-        blank_plural: zəruridir
-        invalid: səhvdir
-        invalid_plural: səhvdir
+        blank_plural: tələb olunur
+        invalid: 'səhvdir '
+        invalid_plural: 'səhvdir '
     attributes:
       user:
         name: Göstərilən adınız
-        name_example: Görünən Adınız (məs. Super Koder və ya Filankəs F.)
+        name_example: 'Görünən Adınız (məs. Super Koder və ya Filankəs F.) '
         email: E-poçt
-        parent_email: Valideyn/Qəyyum e-poçtu
-        personal_email: Şəxsi e-poçtunuz <a href="%{url}">(əgər e-poçtunuz yoxdursa
-          bura sıxın)</a>
+        parent_email: 'Valideyn/Qəyyum e-poçtu '
+        personal_email: 'Şəxsi e-poçtunuz <a href="%{url}">(əgər e-poçtunuz yoxdursa
+          bura kliklərin)</a> '
         personal_email_markdown: 'Şəxsi e-poçtunuz [(əgər e-poçtunuz yoxdursa bura
-          sıxın)](%{url})
+          klikləyin)](%{url})
 
 '
         username: istifadəçi adı
@@ -47,7 +47,7 @@ az:
         age: Yaşınız
         gender: Cins
         edit_header: Hesab Detallarına düzəliş edin
-        finish_sign_up_header: Hesabınızı yaratmağı tamamlayın
+        finish_sign_up_header: Hesabınızı yaratmağı bitirin
         finish_sign_up_subheader: "<strong>%{email} </strong> Code.org hesabı yaratmağı
           bitirmək üçün aşağıdakı məlumatları doldurun."
         finish_sign_up_subheader_markdown: "**%{email} ** üçün bir Code.org hesabı
@@ -235,7 +235,7 @@ az:
     email_preference_question: Kurslarımızdakı yeniliklər, yerli imkanlar və ya digər
       kompüter elmləri xəbərləri barədə sizə e-poçt göndərə bilərikmi? (təxminən ayda
       bir dəfə)
-    email_preference_privacy: "(Daha ətraflı)"
+    email_preference_privacy: "(Gizlilik siyasətimizə baxın)"
     email_preference_yes: Bəli
     email_preference_no: Xeyr
     email_preference_required: Bir e-poçt təyin etməlisiniz.
@@ -404,6 +404,7 @@ az:
       sections: Bölmələr
       help_support: Kömək və dəstək
       report_bug: Problemi bildirin
+      report_abuse: Şikayət etmək
       teacher_community: Müəllim icması
       professional_learning: Peşəkar təhsil
       documentation: Təlimat və sənədlər
@@ -434,6 +435,7 @@ az:
       help_us: Bizə kömək edin
       teach: Öyrədin
       about: Haqqımızda
+      legal: Məxfilik və Hüquq
       legal_privacy: Məxfilik siyasəti
       legal_tos: Xidmət şərtləri
     user:
@@ -587,7 +589,7 @@ az:
     link_a_parent_email: Övladınızın irəliləməsi və layihələri haqqında məlumat almaq
       üçün bir valideyn / qəyyum e-poçt ünvanını bu hesaba bağlayın. Parolun bərpası
       üçün bu e-poçt adresindən də istifadə edə biləcəksiniz.
-    parent_guardian_email_label: Valideyn/Qəyyum e-poçtu
+    parent_guardian_email_label: 'Valideyn/Qəyyum e-poçtu '
     remove_parent_email_label: Sil
     none: Heç biri
     only_one_parent_email_supported_warning: 'Qeyd: bu anda bir tələbə hesabı üçün
@@ -1312,7 +1314,7 @@ az:
         cs: Kompüter Elmləri
         ict: IKT
         math: Riyaziyyat
-        science: Elm
+        science: 'Elm '
         history: Tarixi / Sosial Araşdırmalar
         la: Dillər
         efl: İngilis Xarici dil kimi
@@ -1320,6 +1322,7 @@ az:
         art: İncəsənət
         other: 'Başqa:'
       resources:
+        bootstrap: ilkin yükləmə
         codecademy: Kod Akademiyası
         csfirst: Əvvəlcə Google CS
         khan: Khan Akademiyası
@@ -1328,15 +1331,18 @@ az:
         tynker: '"Tynker"'
         other: 'Başqa:'
       robotics:
+        grok: Anlayaraq öyrənmək
         kodable: Kodlanabilər
         lego: LEGO Təhsil
         microbit: Mikrobit
         ozobot: Ozobot
         sphero: Kürə
+        raspberry: Moruq Pi
         wonder: Əla emalatxana
         other: 'Başqa:'
       workshop_course:
         csf_af: Kompüter Elmləri əsasları (A-F kursları)
+        csf_express: CS (Əvvəldən ifadə etmək və ya ifadə etmək)
         csd: Kompüter Elmləri kəşfləri
         csp: Kompüter Elmləri prinsipləri
         not_applicable: Tətbiq olunmağa uyğun deyil
@@ -1345,6 +1351,14 @@ az:
         opt_in_no: Xeyr
     international_opt_in:
       title: Məşğələdə iştirak
+      intro: Code.org kurikulumu üzrə təlim almaq üçün vaxt ayırdığınız üçün təşəkkür
+        edirik. Dünyanın bütün məktəblərində bütün uşaqlara kompüter elmləri təhsili
+        imkanlarını təqdim etmək missiyamız sizsiz mümkün olmazdı.
+      instructions: 'Zəhmət olmasa aşağıdakı formu doldurun ki, 1) Code.org -un beynəlxalq
+        tərəfdaşlarından birinin keçirdiyi bir təlim seminarına qatıldınız və 2) məlumatlarınızı
+        ölkənizdəki beynəlxalq tərəfdaşımızla paylaşmağa razı olursunuz ki, bu da
+        onlara sizə kompyuter elmleri müəllimi səyahətinizdə dəstək olmağa kömək edə
+        bilər. '
       thanks_markdown: Təqdim etdiyiniz üçün təşəkkür edirik! Code.org -un tədris
         proqramı və alətləri ilə tanış olduğunuz zaman sizə dəstək olmağı gözləyirik.
         Suallarınızı və rəylərinizi bizə yazaraq bizimlə bölüşməyə davam edin [support@code.org](%{support_email_url})
@@ -1354,6 +1368,9 @@ az:
       organizer_not_listed: Təşkilatçım siyahıda qeyd olunmayıb
     logged_out:
       heading: Peşəkar Öyrənmə Proqramına olan marağınız görə təşəkkür edirik!
+      body: Başlamaq üçün əvvəlcə Code.org hesabınıza daxil olmalısınız. Tətbiqinizə
+        başlamazdan əvvəl proqram haqqında daha çox məlumat əldə etmək istəyirsinizsə,
+        <a href="%{url}"> Peşəkar Öyrənmə Proqramına ümumi baxış </a> bölməsinə baxın.
     not_teacher:
       body_markdown: Code.org -un Peşəkar Öyrənmə Proqramına olan marağınız üçün təşəkkür
         edirik! Hazırda tələbə hesabına daxil olmusunuz. Zəhmət olmasa müəllim hesabı
@@ -1376,7 +1393,7 @@ az:
   page_not_found_description: Sizin müraciət etdiyiniz səhifə bu ünvanda mövcud deyil.
     Veb ünvanı dəqiqləşdirib yenidən cəhd edin. və ya geri, ilk səhifəyə qayıdın.
   page_not_found_button: İlk səhifəyə qayıt
-  copy: Köçür
+  copy: Kopyala
   confirm: Təsdiq et
   maker:
     google_oauth:
