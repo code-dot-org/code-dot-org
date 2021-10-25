@@ -1515,7 +1515,11 @@
         "iceage_sound_and_points_dani": "Be tudod úgy fejezni ezt a programot, hogy a **pontnyerés hang lejátszása** és a **pontszám** is aktiválódnak amikor Sid és Nagyi összeütköznek? ",
         "iceage_throw_hearts": "Használd az `amikor a 2. szereplő érinti bármely lövedéket` parancsot, hogy Sid (1. szereplő) szíveket dobjon Nagyira (2. szereplő), és állítsd Nagyi hangulatát boldogra amikor eltalálja velük.",
         "iceage_warn_ice_age": "Változtasd meg a színhelyet egy jeges háttérre, és állítsd Sid (1. szereplő) sebességét gyorsra.",
-        "iceage_warn_ice_age_dani": "Változtasd meg a színhelyet egy jeges háttérre, és állítsd Sid (1. szereplő) sebességét gyorsra."
+        "iceage_warn_ice_age_dani": "Változtasd meg a színhelyet egy jeges háttérre, és állítsd Sid (1. szereplő) sebességét gyorsra.",
+        "courseB_Scrat_ramp1_2021": "Ehhez a kirakóshoz, pattintsd össze a blokkokat és nayomd meg a \"▶Futás\" gombot.",
+        "courseB_Scrat_ramp2_2021": "Pattintsd össze az összes blokkot, hogy befejezd a kódodat, és nyomd meg a \"▶ Futás\".",
+        "courseB_Scrat_ramp3a_2021": "Adj egy 'Észak\" gombot a többi blokk aljához, hogy befejezd ezt a kódot, és nyomd meg a \"▶ Futás\" gombot.",
+        "courseB_Scrat_ramp3b_2021": "Húzd vissza az extra blokkot az eszköztárba, hogy 'kidobd'."
       }
     }
   }

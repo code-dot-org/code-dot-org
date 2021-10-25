@@ -3840,6 +3840,18 @@
         "Overworld Plant Crops_2021": {
           "mc_7_a": "Használd az `ültess növényeket` blokkot, hogy palántát ültess a helyre, ahol állsz.",
           "mc_7_c": "Egy vagy több blokkot is belerakhatsz az `ismételd` ciklusba."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "2": "Ne félj hibázni! Próbálj ki valamit, és ha em működik akkor próálkozz tovább!"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": " A  kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": " A  kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": " A  kódodnak így kéne kinéznie:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         }
       }
     }
