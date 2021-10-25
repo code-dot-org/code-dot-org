@@ -59,9 +59,6 @@
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "有趣的計次迴圈"
         },
-        "flf-assessment-teacher-key/coursef/2021": {
-          "name": "有趣的計數迴圈 - 評估答案"
-        },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "有趣的計次迴圈"
         },
@@ -92,9 +89,6 @@
         "unplugged-video-internet/coursef/2021": {
           "name": "網際網路"
         },
-        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "IP 位址卡與傳遞類型卡"
-        },
         "csf-internet-assessment/coursef/2021": {
           "name": "網際網路 Internet"
         },
@@ -103,9 +97,6 @@
         },
         "design-process/coursef/2021": {
           "name": "設計流程"
-        },
-        "final-project-design-worksheet/coursef/2021": {
-          "name": "期末專案設計"
         },
         "rubric-csf-final-projects/coursef/2021": {
           "name": "電腦科學基礎期末專案"
@@ -145,9 +136,6 @@
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "「快樂地圖」遊戲物件"
-        },
-        "compass-rose/courseb/2021": {
-          "name": "羅盤玫瑰"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie 和 Big Project"
@@ -200,23 +188,11 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "快樂地圖"
         },
-        "happy-map-cards/coursea/2021": {
-          "name": "「快樂地圖」卡片"
-        },
-        "activity-answer-happy-maps/coursea/2021": {
-          "name": "「快樂地圖」卡片"
-        },
         "happy-map-game-pieces/coursea/2021": {
           "name": "「快樂地圖」遊戲物件"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "不插電活動 Blockly 積木（K-1 年級）"
-        },
-        "happy-map-cards-xl/coursea/2021": {
-          "name": "加大版「快樂地圖」卡片"
-        },
-        "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "「快樂地圖」遊戲物件獎勵包"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "各種感受的面孔"
@@ -293,14 +269,8 @@
         "assessment-answer-big-event/coursec/2021": {
           "name": "大事件"
         },
-        "the_big_event_course_c_/coursec/2021": {
-          "name": "大事件（課程 C）"
-        },
         "pause_and_think_online/coursec/2021": {
           "name": "在線上，停一停、想一想"
-        },
-        "csf-bit-byte-video/coursec/2021": {
-          "name": "位元與位元組"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "二進制手環"
@@ -385,9 +355,6 @@
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "用撲克牌學習條件判斷（Conditionals）"
-        },
-        "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "用撲克牌學習條件式（Conditional）計畫範本"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "用撲克牌學習條件判斷（Conditionals）"
@@ -479,21 +446,6 @@
         "csf-turns-angles-video/coursee/2021": {
           "name": "轉向與角度"
         },
-        "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "以函式作曲"
-        },
-        "lesson-in-action-songwriting/coursee/2021": {
-          "name": "函式（不插電活動）：作曲"
-        },
-        "csf-songwriting-worksheets/coursee/2021": {
-          "name": "函式（不插電活動）：作曲"
-        },
-        "csf-songwriting-assessment/coursee/2021": {
-          "name": "函式（不插電活動）：作曲"
-        },
-        "assessment-answer-songwriting/coursee/2021": {
-          "name": "函式（不插電活動）：作曲"
-        },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "不插電活動積木（課程 C-F）"
         },
@@ -505,9 +457,6 @@
         },
         "design-process/coursee/2021": {
           "name": "設計流程"
-        },
-        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 種創意方法，讓學生展示自己學到的東西"
         },
         "implementation_guide/coursee/2021": {
           "name": "實施指南"

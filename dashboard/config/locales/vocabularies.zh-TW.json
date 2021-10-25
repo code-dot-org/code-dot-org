@@ -324,41 +324,11 @@
           "word": "機器學習",
           "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
         },
-        "dns/coursef/2021": {
-          "word": "DNS (網域名稱系統)",
-          "definition": "網域名稱系統（Domain Name System）的縮寫。這個系統會把網域名稱（例如 example.com）翻譯為 IP 位址（例如 93.184.216.34）"
-        },
         "internet/coursef/2021": {
-          "word": "網際網路 Internet",
-          "definition": "互相連線的電腦與伺服器群組。"
+          "word": "網際網路 Internet"
         },
         "packets/coursef/2021": {
-          "word": "封包",
-          "definition": "小塊的資訊，從較大塊的資訊小心地組成。"
-        },
-        "servers/coursef/2021": {
-          "word": "伺服器（Servers）",
-          "definition": "僅用來為其他人提供資訊的電腦。"
-        },
-        "url/coursef/2021": {
-          "word": "網址",
-          "definition": "易於記憶的位址，用於呼叫網站（例如 www.code.org）。"
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "DSL/纜線（Cable）",
-          "definition": "使用電話或電視纜線傳送資訊的方法。"
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "光纖纜線（Fiber Optic Cable）",
-          "definition": "使用光線來傳輸資訊的連線方式。"
-        },
-        "ip_address/coursef/2021": {
-          "word": "IP 位址（IP Address）",
-          "definition": "一個數字；會分配至已建立網際網路連線的任何項目。"
-        },
-        "wi_fi/coursef/2021": {
-          "word": "Wi-Fi",
-          "definition": "使用無線電波無線傳送資訊的方式。"
+          "word": "封包"
         },
         "define/coursef/2021": {
           "word": "定義",
@@ -513,8 +483,7 @@
           "definition": "導致某些事情發生的操作。"
         },
         "binary/coursec/2021": {
-          "word": "二進制（Binary）",
-          "definition": "僅使用兩個選項來表示資訊的方式。"
+          "word": "二進制（Binary）"
         },
         "algorithm/coursed/2021": {
           "word": "演算法（Algorithm）",
@@ -539,10 +508,6 @@
         "programming/coursed/2021": {
           "word": "程式設計",
           "definition": "製作程式的藝術。"
-        },
-        "frustrated/coursed/2021": {
-          "word": "挫折（Frustrated）",
-          "definition": "由於某些事情不像所希望的方式進展，因此感到煩擾或生氣。"
         },
         "persistence/coursed/2021": {
           "word": "堅持（Persistence）",
