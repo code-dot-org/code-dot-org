@@ -292,7 +292,7 @@ ChooseYourProgram.processPageData = data => {
     });
   }
   // the following are unique to csa but not required
-  if (data.program !== PROGRAM_CSA) {
+  if (data.program && data.program !== PROGRAM_CSA) {
     changes.csaAlreadyKnow = undefined;
     changes.csaPhoneScreen = undefined;
   }
