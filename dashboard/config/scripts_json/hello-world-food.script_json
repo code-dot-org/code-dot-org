@@ -5,12 +5,16 @@
     "login_required": false,
     "properties": {
       "is_migrated": true,
-      "tts": true
+      "tts": true,
+      "version_year": "2021",
+      "curriculum_umbrella": "CSC",
+      "is_course": true
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-14 18:41:01 UTC",
+    "family_name": "hello-world-food",
+    "serialized_at": "2021-10-25 13:37:48 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "hello-world-food"
     }
