@@ -602,7 +602,14 @@
         "helloworld_food_costumes": "Kostümler",
         "helloworld_retro_costumes": "Kostümler",
         "courseF_apps_card": "Tebrik Kartı",
-        "courseF_editable_card": "Tebrik Kartı"
+        "courseF_editable_card": "Tebrik Kartı",
+        "courseF_apps_aquarium": "Sanal Akvaryum",
+        "courseF_apps_chatbot": "Sohbet Robotu X-9",
+        "courseF_apps_madlib": "Boş Alan Hikayesi",
+        "courseF_apps_pet": "Sanal Evcil Hayvan",
+        "courseF_editable_madlib": "Boş Alan Hikayesi",
+        "courseF_place_fruit": "Meyvenin boyutunu değiştir.",
+        "courseF_sprites_desert": "Çöl Sahnesi"
       }
     }
   }

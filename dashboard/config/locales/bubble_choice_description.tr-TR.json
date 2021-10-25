@@ -12,7 +12,15 @@
         "CourseF_outbreak6": "Hareketli nesnelerinizin zaman içinde otomatik olarak daha iyi olmasına yardım edin!",
         "CourseF_outbreak7": "Bir virüs her zaman bulaşmaz ve maskeler de bulaşmayı tam anlamıyla durdurmaz. Enfeksiyonları rastgele bir şansla gerçekleştirerek simülasyonunuzu geliştirin.",
         "CourseF_outbreak8": "Hareketli nesnelerinize dokunulmazlık vererek onların hastalanmasını önleyin.",
-        "international_outbreak_freeplay": "Mesaj paylaşmak için projenizi kullanın. Başkalarının bundan ne öğrenmesini istiyorsunuz?"
+        "international_outbreak_freeplay": "Mesaj paylaşmak için projenizi kullanın. Başkalarının bundan ne öğrenmesini istiyorsunuz?",
+        "courseF_apps_aquarium": "Akvaryumunu farklı cisimlerle doldur.",
+        "courseF_apps_card": "Bu program size birkaç soru soracak ve ardından sizin için özel bir doğum günü mesajı oluşturacaktır.",
+        "courseF_apps_chatbot": "Bu robot, size sorular sorar ve yazdıklarınızı hatırlar! Yanıtlarınızı yazın ve X-9 ile sohbet edin!",
+        "courseF_apps_madlib": "Bu program senden birkaç kelime yazmanı ister ve ardından bu kelimeleri kullanarak saçma bir hikaye anlatır!",
+        "courseF_apps_pet": "Nesneleri köpeğe doğru sürükleyin ve verdiği tepkiyi izleyin!",
+        "courseF_editable_madlib": "Bu program senden birkaç kelime yazmanı ister ve ardından bu kelimeleri kullanarak saçma bir hikaye anlatır!",
+        "courseF_place_fruit": "Çilekler çok büyük! Hareketli nesnelerin boyutunu değiştirme alıştırması yap.",
+        "courseF_sprites_desert": "Bir sahne yarat. Hareketli nesne yapma ve konumlarını seçme alıştırması yap."
       }
     }
   }

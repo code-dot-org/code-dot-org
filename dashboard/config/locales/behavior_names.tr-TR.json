@@ -1675,7 +1675,9 @@
           "swimming left and right2": "sola ve sağa yüzme2",
           "moving north2": "kuzeye hareket etme2",
           "jittering2": "kararsızlık2",
-          "patrolling2": "denetleme2"
+          "patrolling2": "denetleme2",
+          "moving with arrow keys2": "ok tuşları2 ile hareket",
+          "driving with arrow keys2": "ok tuşları2 ile hareket"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "ok tuşları ile hareket",
@@ -1691,7 +1693,8 @@
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
           "spinning right": "sağa dönme",
-          "spinning left": "sola dönme"
+          "spinning left": "sola dönme",
+          "blocking movement": "engelleme hareketi"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "ok tuşları ile hareket",
@@ -1719,7 +1722,10 @@
           "moving north2": "kuzeye hareket etme2",
           "jittering2": "kararsızlık2",
           "moving west2": "batıya hareket etme2",
-          "patrolling2": "denetleme2"
+          "patrolling2": "denetleme2",
+          "blocking movement": "engelleme hareketi",
+          "moving with arrow keys2": "ok tuşları2 ile hareket",
+          "driving with arrow keys2": "ok tuşları2 ile hareket"
         },
         "courseF_apps_collector": {
           "wandering": "gezinme",
@@ -1747,7 +1753,9 @@
           "swimming left and right2": "sola ve sağa yüzme2",
           "moving north2": "kuzeye hareket etme2",
           "jittering2": "kararsızlık2",
-          "patrolling2": "denetleme2"
+          "patrolling2": "denetleme2",
+          "moving with arrow keys2": "ok tuşları2 ile hareket",
+          "driving with arrow keys2": "ok tuşları2 ile hareket"
         },
         "courseF_apps_madlib": {
           "wandering": "gezinme",
@@ -1802,7 +1810,8 @@
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
           "spinning right": "sağa dönme",
-          "spinning left": "sola dönme"
+          "spinning left": "sola dönme",
+          "blocking movement": "engelleme hareketi"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "ok tuşları ile hareket",
@@ -1818,7 +1827,8 @@
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
           "spinning right": "sağa dönme",
-          "spinning left": "sola dönme"
+          "spinning left": "sola dönme",
+          "blocking movement": "engelleme hareketi"
         },
         "courseF_editable_madlib": {
           "wandering": "gezinme",
@@ -3125,6 +3135,66 @@
           "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "poetry_hoc_spriteSizes": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "swimming left and right": "sola ve sağa yüzme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "swimming left and right": "sola ve sağa yüzme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "swimming left and right": "sola ve sağa yüzme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
+        },
+        "poetry_hoc_spriteBehaviors": {
           "wandering": "gezinme",
           "moving east": "doğuya ilerleme",
           "spinning left": "sola dönme",

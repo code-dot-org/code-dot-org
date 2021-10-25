@@ -1909,6 +1909,37 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Yeni blok!",
           "poetry_remove_sprite": "Yeni blok!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
         }
       }
     }

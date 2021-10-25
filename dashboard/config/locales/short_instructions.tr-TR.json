@@ -3568,7 +3568,10 @@
         "CourseF_outbreak5": "Simülasyonunuzdaki canavar tipi hareketli nesne sayısını ve boyutunu değiştirin.",
         "international_outbreak_freeplay": "Simülasyonunuz ile mesaj paylaşın.",
         "poetry_hoc_exemplar1": "Bir tahminde bulunun!",
-        "poetry_hoc_exemplar2": "Bir tahminde bulunun!"
+        "poetry_hoc_exemplar2": "Bir tahminde bulunun!",
+        "courseF_apps_chatbot": "Bu robot, size sorular sorar ve yazdıklarınızı hatırlar! Yanıtlarınızı yazın ve X-9 ile sohbet edin!",
+        "courseF_place_fruit": "Hareketli nesnelerin boyutunu değiştirerek muzun çileklerden daha büyük olmasını sağla.",
+        "courseF_sprites_desert": "Farklı hareketli nesnelerin olduğu bir çöl sahnesi yaratmak için kod ekle."
       }
     }
   }

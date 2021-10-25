@@ -699,6 +699,9 @@
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "Yansıma"
         },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Parti Oyunları"
+        },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
             null
@@ -923,7 +926,6 @@
           "progression_name": "Beceri Oluşturma"
         },
         "6a891356-b6da-4faa-bb30-f79f23f2bbcb": {
-          "description": "**Şunu yapın:** _Salgın: Bilim Adamı Gibi Düşünmek'i okumak için sınıfı tekrar bir araya getirin._",
           "progression_name": "Simülasyonlardan Öğrenmek"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
