@@ -18,8 +18,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:25 UTC",
+    "serialized_at": "2021-10-22 23:35:00 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -444,8 +445,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "2fd0da4f-e076-4051-9d70-614e8b497d52",
+      "key": "07c7eced-fe64-4881-9a59-ed0ab21be2d9",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07c7eced-fe64-4881-9a59-ed0ab21be2d9",
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "2fd0da4f-e076-4051-9d70-614e8b497d52",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -459,7 +473,7 @@
     },
     {
       "key": "98e2cec8-7aaf-44b9-a7a3-7b68b9db1981",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -473,7 +487,7 @@
     },
     {
       "key": "86b6aeb8-b8db-4c5e-8562-7428898febbf",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -487,7 +501,7 @@
     },
     {
       "key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -498,8 +512,21 @@
       }
     },
     {
-      "key": "a524fea0-d8fc-42e9-aa28-d11f3420b74b",
+      "key": "fb0ec501-095d-448b-b7c2-604941526c2a",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb0ec501-095d-448b-b7c2-604941526c2a",
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "a524fea0-d8fc-42e9-aa28-d11f3420b74b",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -513,7 +540,7 @@
     },
     {
       "key": "44691909-06b5-4471-b2a9-aabb1c696569",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -527,7 +554,7 @@
     },
     {
       "key": "000523bf-2e1f-477c-b7ae-e62cfd34498e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -540,8 +567,21 @@
       }
     },
     {
-      "key": "5beb0da0-34dd-484b-a002-0810398c6439",
+      "key": "7e4c7577-04ec-4295-ba4e-860d9cb2da5d",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e4c7577-04ec-4295-ba4e-860d9cb2da5d",
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "5beb0da0-34dd-484b-a002-0810398c6439",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -555,7 +595,7 @@
     },
     {
       "key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -569,7 +609,7 @@
     },
     {
       "key": "b8ca9667-3fb0-44c1-9959-4a2626da517b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -583,7 +623,7 @@
     },
     {
       "key": "1cc00f11-2df2-4262-ab47-e319e4f663ef",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -594,8 +634,21 @@
       }
     },
     {
-      "key": "0b996b04-98b6-48dc-b683-78b3ca018ca5",
+      "key": "b440a5ed-d09e-4d71-91cf-4087d6d76221",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b440a5ed-d09e-4d71-91cf-4087d6d76221",
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "0b996b04-98b6-48dc-b683-78b3ca018ca5",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -609,7 +662,7 @@
     },
     {
       "key": "21da5ec7-42ae-47e5-bf21-4918a884bc33",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -623,7 +676,7 @@
     },
     {
       "key": "c657ce28-a376-4075-863f-f8e148fcd123",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -636,8 +689,21 @@
       }
     },
     {
-      "key": "0c3a2eb5-b1ca-4f7f-a9d7-860e397a713d",
+      "key": "15a50031-3138-497c-84b6-1d1896d94ea4",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15a50031-3138-497c-84b6-1d1896d94ea4",
+        "lesson.key": "Loops Explore",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "0c3a2eb5-b1ca-4f7f-a9d7-860e397a713d",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -651,7 +717,7 @@
     },
     {
       "key": "c4b3f93b-e745-48ca-9484-e1db79ae86f3",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -665,7 +731,7 @@
     },
     {
       "key": "d766ca0f-63ed-4dd8-802d-3aa3f38ba957",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -679,7 +745,7 @@
     },
     {
       "key": "24256e70-e392-49e8-a571-6bfb91738b6c",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -690,8 +756,21 @@
       }
     },
     {
-      "key": "2436ddda-6b27-4322-aad8-b4d1a9823bb0",
+      "key": "264b1b18-d8fb-4216-9849-4b057b5d5251",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "264b1b18-d8fb-4216-9849-4b057b5d5251",
+        "lesson.key": "Loops Investigate",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "2436ddda-6b27-4322-aad8-b4d1a9823bb0",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -705,7 +784,7 @@
     },
     {
       "key": "786b1b6e-0ae9-4a64-a7cc-c974ba017716",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -719,7 +798,7 @@
     },
     {
       "key": "8329da4e-675d-4656-836c-21f1fabac747",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -732,20 +811,21 @@
       }
     },
     {
-      "key": "14a84aad-343a-4889-9683-1903951f99b9",
-      "position": 4,
+      "key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
+      "position": 1,
       "properties": {
+        "name": "Lesson Modifications"
       },
       "seeding_key": {
-        "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9",
-        "lesson.key": "Loops Investigate",
+        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
+        "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021"
       }
     },
     {
       "key": "af64318d-1d9d-45a5-b8ee-0c286d87fb50",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -759,7 +839,7 @@
     },
     {
       "key": "c71c3389-b880-4bae-ac9a-1ec525b74e41",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -773,7 +853,7 @@
     },
     {
       "key": "323e2f8b-da06-4786-a3e2-c587263386ed",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -786,20 +866,21 @@
       }
     },
     {
-      "key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
-      "position": 4,
+      "key": "2afdaa65-5984-4a69-ae98-9ef3a78dd72c",
+      "position": 1,
       "properties": {
+        "name": "Lesson Modifications"
       },
       "seeding_key": {
-        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
-        "lesson.key": "Loops Practice",
+        "lesson_activity.key": "2afdaa65-5984-4a69-ae98-9ef3a78dd72c",
+        "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021"
       }
     },
     {
       "key": "57aabee9-7c2d-4b7c-a030-7442bbdf5755",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -813,7 +894,7 @@
     },
     {
       "key": "b9a1fd36-2594-4ca7-bb28-05e23de5c26e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -827,7 +908,7 @@
     },
     {
       "key": "b9b4559f-0922-4a34-a4dc-86186ddcd7c3",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -840,8 +921,21 @@
       }
     },
     {
-      "key": "77207611-4afa-4da3-a8ab-a6e3fb541e8a",
+      "key": "0cbe09a8-102e-42da-83ee-82a0f126ac83",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0cbe09a8-102e-42da-83ee-82a0f126ac83",
+        "lesson.key": "Traversals Explore",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "77207611-4afa-4da3-a8ab-a6e3fb541e8a",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -855,7 +949,7 @@
     },
     {
       "key": "2e19598b-8fb8-4086-b06f-fb2f28266d0c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -869,7 +963,7 @@
     },
     {
       "key": "6cac2785-a577-4c38-84d7-6ccb691ca222",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -882,8 +976,21 @@
       }
     },
     {
-      "key": "9d2a2e62-db9d-41cb-88b7-bfc8bedc8d1c",
+      "key": "ebc630d8-09cd-4c3c-b8d6-3155df285730",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ebc630d8-09cd-4c3c-b8d6-3155df285730",
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "9d2a2e62-db9d-41cb-88b7-bfc8bedc8d1c",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -897,7 +1004,7 @@
     },
     {
       "key": "ed41f7ef-2dee-487c-ad9b-9c53517bba57",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -911,7 +1018,7 @@
     },
     {
       "key": "73c79453-c2a2-437f-9c83-1a68c1f7bf80",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -924,8 +1031,21 @@
       }
     },
     {
-      "key": "4909dde8-c244-4985-8482-1d23fbca66ea",
+      "key": "7b2d44af-b321-461d-9bcc-46f3c2cbc245",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b2d44af-b321-461d-9bcc-46f3c2cbc245",
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "4909dde8-c244-4985-8482-1d23fbca66ea",
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -939,7 +1059,7 @@
     },
     {
       "key": "6410b5d4-7c92-4d43-8000-0bfa5647b888",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -953,7 +1073,7 @@
     },
     {
       "key": "a901616d-689e-468f-ae88-e1a12f43111c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -966,8 +1086,21 @@
       }
     },
     {
-      "key": "88f74165-3f50-4fcd-afc5-d4cc8a06214e",
+      "key": "429c8110-84f8-408c-b307-81bb62f23e1d",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "429c8110-84f8-408c-b307-81bb62f23e1d",
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "88f74165-3f50-4fcd-afc5-d4cc8a06214e",
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -981,7 +1114,7 @@
     },
     {
       "key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -995,7 +1128,7 @@
     },
     {
       "key": "5b113b1c-bea3-43d0-bf00-88b8f6e6be8b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1008,8 +1141,21 @@
       }
     },
     {
-      "key": "17eb6beb-026f-472d-92f1-98d4c2890397",
+      "key": "e21ee4c2-a9f1-4551-bbec-c4fc1d6dcb21",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e21ee4c2-a9f1-4551-bbec-c4fc1d6dcb21",
+        "lesson.key": "Semester Hackathon Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "17eb6beb-026f-472d-92f1-98d4c2890397",
+      "position": 2,
       "properties": {
         "duration": 3,
         "name": "Warm Up"
@@ -1023,7 +1169,7 @@
     },
     {
       "key": "c9da20bc-2099-4d5e-bba4-379c8a293d48",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1037,7 +1183,7 @@
     },
     {
       "key": "a3987dda-424f-4408-a38d-72fbe48e4c55",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 2,
         "name": "Wrap Up"
@@ -1050,8 +1196,21 @@
       }
     },
     {
-      "key": "cd12a374-9ef8-485d-ae5f-3371ac6109c8",
+      "key": "446ad567-c1d6-493c-87eb-e5d094411933",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "446ad567-c1d6-493c-87eb-e5d094411933",
+        "lesson.key": "Semester Hackathon Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "cd12a374-9ef8-485d-ae5f-3371ac6109c8",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -1064,7 +1223,7 @@
     },
     {
       "key": "58a35cbc-454a-4c94-b8ad-ea03ef39691d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1078,7 +1237,7 @@
     },
     {
       "key": "1e910917-81d2-42d0-a371-8bae165924da",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1091,8 +1250,21 @@
       }
     },
     {
-      "key": "c293f5df-d64f-48aa-8930-010ba39fa27f",
+      "key": "6dc2ae1e-5daa-4838-95c3-b3a20de96957",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6dc2ae1e-5daa-4838-95c3-b3a20de96957",
+        "lesson.key": "Semester Hackathon Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "c293f5df-d64f-48aa-8930-010ba39fa27f",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -1105,7 +1277,7 @@
     },
     {
       "key": "77f1ecde-a64f-41d0-858a-9ff842015fe1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1119,7 +1291,7 @@
     },
     {
       "key": "a1c4396e-ae0b-47c7-8823-9f2b8642e04e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1132,8 +1304,21 @@
       }
     },
     {
-      "key": "fd43ae7b-1922-4049-a928-e3b058a7e0e9",
+      "key": "5f5ee1e1-f005-413a-b4cd-1c1dfb40fd77",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f5ee1e1-f005-413a-b4cd-1c1dfb40fd77",
+        "lesson.key": "Semester Hackathon Part 4",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "fd43ae7b-1922-4049-a928-e3b058a7e0e9",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -1146,7 +1331,7 @@
     },
     {
       "key": "40dd8e76-67a2-4b02-9bac-367dba9dccd6",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1160,7 +1345,7 @@
     },
     {
       "key": "facd910b-5ce0-44fa-89d3-ed18edc9f9de",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1173,8 +1358,21 @@
       }
     },
     {
-      "key": "0f939a45-635d-47b2-825b-f3fb6a3f398b",
+      "key": "09cb9416-ea52-4397-95f5-239bd44506ca",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09cb9416-ea52-4397-95f5-239bd44506ca",
+        "lesson.key": "Semester Hackathon Part 5",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "0f939a45-635d-47b2-825b-f3fb6a3f398b",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -1187,7 +1385,7 @@
     },
     {
       "key": "15d07a80-2cbc-49af-9521-509807d4cc19",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1201,7 +1399,7 @@
     },
     {
       "key": "ad60d948-c66c-4d73-a2bb-3b412f00cfe7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1214,8 +1412,21 @@
       }
     },
     {
-      "key": "656d61c3-6f76-49af-b1a6-11c3151f8d16",
+      "key": "da8e85c2-4738-452e-b153-55fc6c9e1eac",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da8e85c2-4738-452e-b153-55fc6c9e1eac",
+        "lesson.key": "Lesson 18: Assessment Day",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "656d61c3-6f76-49af-b1a6-11c3151f8d16",
+      "position": 2,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -1229,7 +1440,7 @@
     },
     {
       "key": "0247d771-7446-4e81-a4f1-56973d033744",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -1243,6 +1454,17 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "dab65186-c721-484f-bf9d-4514cc176c58",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1_JiH1xXiHo4N6Uvc_21wnoutnucn006iMWl-Nh1dsnM/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "dab65186-c721-484f-bf9d-4514cc176c58",
+        "lesson_activity.key": "07c7eced-fe64-4881-9a59-ed0ab21be2d9"
+      }
+    },
     {
       "key": "cd2244da-6c7b-4f9d-8f4f-4a8c64f8874e",
       "position": 1,
@@ -1324,6 +1546,17 @@
       "seeding_key": {
         "activity_section.key": "8fee2296-7332-439a-931d-cbb357a0bb76",
         "lesson_activity.key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97"
+      }
+    },
+    {
+      "key": "53ddd1f2-5937-4d51-8b35-ec3ec02c2946",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/17N0rIzuUkvVioR5SdZnzr_PZ232jLhbBunZJDgufM_Q/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "53ddd1f2-5937-4d51-8b35-ec3ec02c2946",
+        "lesson_activity.key": "fb0ec501-095d-448b-b7c2-604941526c2a"
       }
     },
     {
@@ -1444,6 +1677,17 @@
       "seeding_key": {
         "activity_section.key": "f0d761a9-aa8b-43c3-a6e9-bcb60f782971",
         "lesson_activity.key": "000523bf-2e1f-477c-b7ae-e62cfd34498e"
+      }
+    },
+    {
+      "key": "9aa6f70a-69c9-434c-adb8-2f06c47ba0d9",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Z53lslCQAsL8MfYjGBiEEa7wzBYtmNDLcUITmf1m8nQ/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "9aa6f70a-69c9-434c-adb8-2f06c47ba0d9",
+        "lesson_activity.key": "7e4c7577-04ec-4295-ba4e-860d9cb2da5d"
       }
     },
     {
@@ -1650,6 +1894,17 @@
       }
     },
     {
+      "key": "a0e3ec26-9190-4327-a4c2-783def7d1690",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Lb6Zb8zDD8TjjAl7CGtFHhgplnsTfsx9VZ-ejYYadpE/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "a0e3ec26-9190-4327-a4c2-783def7d1690",
+        "lesson_activity.key": "b440a5ed-d09e-4d71-91cf-4087d6d76221"
+      }
+    },
+    {
       "key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
       "position": 1,
       "properties": {
@@ -1777,6 +2032,17 @@
       }
     },
     {
+      "key": "0ba551f2-4d02-4e0f-a5fb-e010930d5104",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/19_bPJDxHCBMvpsqQ_c-VGW2fQLyCkHaz7tGl-ZVFhXw/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "0ba551f2-4d02-4e0f-a5fb-e010930d5104",
+        "lesson_activity.key": "15a50031-3138-497c-84b6-1d1896d94ea4"
+      }
+    },
+    {
       "key": "dc931c66-1eab-4f26-9fe5-2dfe4bd7f46d",
       "position": 1,
       "properties": {
@@ -1889,6 +2155,17 @@
       "seeding_key": {
         "activity_section.key": "b1dab762-59b7-44b1-a615-4197a822c677",
         "lesson_activity.key": "24256e70-e392-49e8-a571-6bfb91738b6c"
+      }
+    },
+    {
+      "key": "76544dbe-91a8-4501-bd02-3074c95b19dd",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1bFsNXxoznFCTa0dNc8cIZ8nle-CRck_KIl-DD47geWE/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "76544dbe-91a8-4501-bd02-3074c95b19dd",
+        "lesson_activity.key": "264b1b18-d8fb-4216-9849-4b057b5d5251"
       }
     },
     {
@@ -2083,7 +2360,8 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think back on the Font Tester App. Can you think of an example of another app or feature of an app which would use a loop to control different elements on a screen?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9865749b-36a9-44b1-bb53-8364b24782f7",
@@ -2091,14 +2369,15 @@
       }
     },
     {
-      "key": "5fac1c33-5897-446c-a420-b5f0b394ce59",
+      "key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
       "position": 1,
       "properties": {
-        "progression_name": "Check For Understanding"
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1zHvcREojOLrrbDUeq1YV5k68Y2HptzBUT35zUrE1DzA/edit?usp=sharing) to access the modifications.",
+        "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
-        "activity_section.key": "5fac1c33-5897-446c-a420-b5f0b394ce59",
-        "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9"
+        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
+        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49"
       }
     },
     {
@@ -2297,7 +2576,8 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What will be displayed after this code segment is run?\n\n![](https://images.code.org/24f101b4da2c1b4c7274bb91a0a21389-image-1611869581204.53.16-PM.png)\n\n**Question:** What will be displayed after this code segment is run?\n\n![](https://images.code.org/33c792c256cfb493d046dea8758fad5c-image-1611869581201.39.26-PM.png)",
-        "name": "Assessment: Check For Understanding: AP Practice\r"
+        "name": "Assessment: Check For Understanding: AP Practice\r",
+        "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
         "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702",
@@ -2305,14 +2585,14 @@
       }
     },
     {
-      "key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
+      "key": "1f410a56-1cd6-477d-81f0-e6f42bfc1a1e",
       "position": 1,
       "properties": {
-        "progression_name": "Check For Understanding: AP Practice"
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ys33Q7bvhxP0y3i5fPRNoH7J9noVoNhuSoZtx2Ih7iE/edit?usp=sharing) to access the modifications."
       },
       "seeding_key": {
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
-        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49"
+        "activity_section.key": "1f410a56-1cd6-477d-81f0-e6f42bfc1a1e",
+        "lesson_activity.key": "2afdaa65-5984-4a69-ae98-9ef3a78dd72c"
       }
     },
     {
@@ -2462,6 +2742,17 @@
       }
     },
     {
+      "key": "3d441e9b-ead6-48de-a315-1884385a98d2",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1dMvP-yw6KGaN1Ufztp09MrxDxOiqT-0RfFUu8upHdqQ/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "3d441e9b-ead6-48de-a315-1884385a98d2",
+        "lesson_activity.key": "0cbe09a8-102e-42da-83ee-82a0f126ac83"
+      }
+    },
+    {
       "key": "6345d8d4-230b-42a1-a6e4-bcca0bd99008",
       "position": 1,
       "properties": {
@@ -2558,6 +2849,17 @@
       "seeding_key": {
         "activity_section.key": "e19ba162-e7c1-4ab3-9062-36d4c35db240",
         "lesson_activity.key": "6cac2785-a577-4c38-84d7-6ccb691ca222"
+      }
+    },
+    {
+      "key": "0ad5d485-48e5-4b0a-a643-a845b3506c20",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1jde5Kjx0A6TDiamplHnYYNkzhBnEvhyfU3uAKzuQjS4/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "0ad5d485-48e5-4b0a-a643-a845b3506c20",
+        "lesson_activity.key": "ebc630d8-09cd-4c3c-b8d6-3155df285730"
       }
     },
     {
@@ -2663,6 +2965,17 @@
       "seeding_key": {
         "activity_section.key": "9c9e3eef-8e3b-4b87-89e3-37c90af8abb1",
         "lesson_activity.key": "73c79453-c2a2-437f-9c83-1a68c1f7bf80"
+      }
+    },
+    {
+      "key": "19a6ee94-d13e-426e-99b3-cd4bf78f704b",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1t7-t3vUMMCCBn2RZMJ_d7Dd90nNO5MIOYgf10PxpOlE/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "19a6ee94-d13e-426e-99b3-cd4bf78f704b",
+        "lesson_activity.key": "7b2d44af-b321-461d-9bcc-46f3c2cbc245"
       }
     },
     {
@@ -2822,6 +3135,17 @@
       }
     },
     {
+      "key": "8b7de8d8-6571-46f4-b746-44aac5b5b23f",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1V1LBmASIokyCCsrdvncdB6FW8z5GH4mZnSr7FKJ3HzU/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "8b7de8d8-6571-46f4-b746-44aac5b5b23f",
+        "lesson_activity.key": "429c8110-84f8-408c-b307-81bb62f23e1d"
+      }
+    },
+    {
       "key": "e5d12501-e1e6-46f2-ba7e-21e284b0edb9",
       "position": 1,
       "properties": {
@@ -2926,6 +3250,17 @@
       }
     },
     {
+      "key": "87e53ff9-21af-4c00-9339-be19d0c26d94",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1UU8gRdqy4bt-SMKkjonHy0zJ5YUIMbggop9sSNii76I/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "87e53ff9-21af-4c00-9339-be19d0c26d94",
+        "lesson_activity.key": "e21ee4c2-a9f1-4551-bbec-c4fc1d6dcb21"
+      }
+    },
+    {
       "key": "457a2767-0c88-43d7-a3e0-4f255c0c2224",
       "position": 1,
       "properties": {
@@ -3013,6 +3348,17 @@
       }
     },
     {
+      "key": "166bd9b9-5b5a-47ae-8a20-53ae548c28b3",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/15Z75SyQ9tp1k7vl3GKNVUHQsl9lv6D1QQilcaVDrrro/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "166bd9b9-5b5a-47ae-8a20-53ae548c28b3",
+        "lesson_activity.key": "446ad567-c1d6-493c-87eb-e5d094411933"
+      }
+    },
+    {
       "key": "cc31ee79-c6f0-4484-937d-e45393f042d2",
       "position": 1,
       "properties": {
@@ -3086,6 +3432,17 @@
       "seeding_key": {
         "activity_section.key": "3f1741da-73b8-4ded-9af2-fd90fe9127e8",
         "lesson_activity.key": "1e910917-81d2-42d0-a371-8bae165924da"
+      }
+    },
+    {
+      "key": "c72fcc3c-9384-4390-9809-5935811fe93b",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ejQ2TQJi571hJsTDBqcl1BlSNIjm1v3MSgclwYOCWqI/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "c72fcc3c-9384-4390-9809-5935811fe93b",
+        "lesson_activity.key": "6dc2ae1e-5daa-4838-95c3-b3a20de96957"
       }
     },
     {
@@ -3180,6 +3537,17 @@
       }
     },
     {
+      "key": "2ded6029-7cd9-4f06-b123-e001167e8d2e",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1hHfyT15riYXQBrSvHfe0WMC-qZevvhfnhutnvSQ357E/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ded6029-7cd9-4f06-b123-e001167e8d2e",
+        "lesson_activity.key": "5f5ee1e1-f005-413a-b4cd-1c1dfb40fd77"
+      }
+    },
+    {
       "key": "a4367bd1-fd8c-415c-a669-de5a82746c1e",
       "position": 1,
       "properties": {
@@ -3252,6 +3620,17 @@
       "seeding_key": {
         "activity_section.key": "dfec55b6-2840-4d90-9a56-f8831fc681ee",
         "lesson_activity.key": "facd910b-5ce0-44fa-89d3-ed18edc9f9de"
+      }
+    },
+    {
+      "key": "66831425-cf5a-429e-a024-002716d0b051",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1uNBmyn6sQsLkZqspZ2q4lkaVlqy3uK5XYziIPPIg0b4/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "66831425-cf5a-429e-a024-002716d0b051",
+        "lesson_activity.key": "09cb9416-ea52-4397-95f5-239bd44506ca"
       }
     },
     {
@@ -3379,6 +3758,17 @@
       "seeding_key": {
         "activity_section.key": "99a6c29e-df38-4d02-80bb-dd8e4b806c98",
         "lesson_activity.key": "ad60d948-c66c-4d73-a2bb-3b412f00cfe7"
+      }
+    },
+    {
+      "key": "fc0a887c-a71e-41b0-bca4-a541c99d7932",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1nauoXCZpBBr3iLgV6fYTjFIPv9YcHHyMXw-fLapdssI/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "fc0a887c-a71e-41b0-bca4-a541c99d7932",
+        "lesson_activity.key": "da8e85c2-4738-452e-b153-55fc6c9e1eac"
       }
     },
     {
@@ -4168,9 +4558,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U3L6 CSP CFU Element Looping_2021"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4181,7 +4568,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5fac1c33-5897-446c-a420-b5f0b394ce59"
+        "activity_section.key": "9865749b-36a9-44b1-bb53-8364b24782f7"
       },
       "level_keys": [
         "U3L6 CSP CFU Element Looping_2021"
@@ -4393,9 +4780,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U5L7 CFU Loops Psuedocode_2021"
-        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4406,7 +4790,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18"
+        "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702"
       },
       "level_keys": [
         "U5L7 CFU Loops Psuedocode_2021"
@@ -4418,9 +4802,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U5L7 CFU Loops Psuedocode 2_2021"
-        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4431,7 +4812,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18"
+        "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702"
       },
       "level_keys": [
         "U5L7 CFU Loops Psuedocode 2_2021"
@@ -5483,7 +5864,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5fac1c33-5897-446c-a420-b5f0b394ce59"
+        "activity_section.key": "9865749b-36a9-44b1-bb53-8364b24782f7"
       }
     },
     {
@@ -5591,7 +5972,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18"
+        "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702"
       }
     },
     {
@@ -5603,7 +5984,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18"
+        "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702"
       }
     },
     {
@@ -6056,6 +6437,19 @@
       }
     },
     {
+      "name": "Data Tab in App Lab",
+      "url": "https://youtu.be/PNe3MSreQAA",
+      "key": "data_tab_in_app_lab",
+      "properties": {
+        "download_url": "https://videos.code.org/levelbuilder/csp_datatabinapplab_sm-1-mp4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_tab_in_app_lab"
+      }
+    },
+    {
       "name": "Guide to EIPM Lessons",
       "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
       "key": "guide_to_eipm_lessons",
@@ -6081,6 +6475,45 @@
       }
     },
     {
+      "name": "Introduction to Lists - Part 2",
+      "url": "https://youtu.be/TL0Y_GI4NZg",
+      "key": "introduction_to_lists_-_part_2",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_2.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_lists_-_part_2"
+      }
+    },
+    {
+      "name": "Introduction to Lists - Part 3",
+      "url": "https://youtu.be/rWSsVSMGXXY",
+      "key": "introduction_to_lists_-_part_3",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_3.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_lists_-_part_3"
+      }
+    },
+    {
+      "name": "Introduction to Lists - Part 4",
+      "url": "https://youtu.be/H__zi1BiXJM",
+      "key": "introduction_to_lists_-_part_4",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_4.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_lists_-_part_4"
+      }
+    },
+    {
       "name": "CSP Loops Make - Lock Screen Maker",
       "url": "https://docs.google.com/document/d/1MPQ1wXqf5SwDuqCJtiG7aGzrtmkOwCD5PUiPU32-LE4/edit?usp=sharing",
       "key": "loops-make-activity-guide",
@@ -6103,6 +6536,19 @@
       },
       "seeding_key": {
         "resource.key": "loops_game_board"
+      }
+    },
+    {
+      "name": "Processing Lists with Loops",
+      "url": "https://youtu.be/RQ6GJt9f2vg",
+      "key": "processing_lists_with_loops",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/processing_lists.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "processing_lists_with_loops"
       }
     },
     {
@@ -6202,6 +6648,19 @@
       }
     },
     {
+      "name": "Using Loops",
+      "url": "https://youtu.be/G8hfAk4PfOM",
+      "key": "using_loops",
+      "properties": {
+        "download_url": "https://videos.code.org/2015/csp/applab/loops.mp4",
+        "type": "Video",
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "using_loops"
+      }
+    },
+    {
       "name": "Virtual Modification Resources",
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
@@ -6235,8 +6694,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "introduction_to_lists_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lists Investigate",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "resource.key": "introduction_to_lists_-_part_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "resource.key": "introduction_to_lists_-_part_4"
       }
     },
     {
@@ -6267,6 +6744,12 @@
       "seeding_key": {
         "lesson.key": "Loops Explore",
         "resource.key": "loops_game_board"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "resource.key": "using_loops"
       }
     },
     {
@@ -6416,6 +6899,12 @@
     {
       "seeding_key": {
         "lesson.key": "Traversals Explore",
+        "resource.key": "processing_lists_with_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
         "resource.key": "traversal_machine"
       }
     },
@@ -6423,6 +6912,12 @@
       "seeding_key": {
         "lesson.key": "Traversals Investigate",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "resource.key": "data_tab_in_app_lab"
       }
     },
     {
