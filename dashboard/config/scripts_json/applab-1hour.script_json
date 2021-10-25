@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:24 UTC",
+    "serialized_at": "2021-10-25 23:29:04 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,107 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472",
+        "lesson.key": "Room Escape",
+        "lesson_group.key": "",
+        "script.name": "applab-1hour"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "9464522b-46d2-4c42-9519-81defc325fcc",
+      "position": 1,
+      "properties": {
+        "progression_name": "Escape Room Example"
+      },
+      "seeding_key": {
+        "activity_section.key": "9464522b-46d2-4c42-9519-81defc325fcc",
+        "lesson_activity.key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472"
+      }
+    },
+    {
+      "key": "d74e9b44-c6c4-4a94-a02a-6d60695cd99e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview: Design Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "d74e9b44-c6c4-4a94-a02a-6d60695cd99e",
+        "lesson_activity.key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472"
+      }
+    },
+    {
+      "key": "d509bc4b-591e-48c5-a69e-cbdd20efa1ad",
+      "position": 3,
+      "properties": {
+        "progression_name": "Overview: Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "d509bc4b-591e-48c5-a69e-cbdd20efa1ad",
+        "lesson_activity.key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472"
+      }
+    },
+    {
+      "key": "c37b08ca-8352-4cb8-9c54-b0fdc4eb7851",
+      "position": 4,
+      "properties": {
+        "progression_name": "Overview: onEvent"
+      },
+      "seeding_key": {
+        "activity_section.key": "c37b08ca-8352-4cb8-9c54-b0fdc4eb7851",
+        "lesson_activity.key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472"
+      }
+    },
+    {
+      "key": "943b0e83-b5fa-4594-91cd-ba705dd5a02c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Overview: setPosition"
+      },
+      "seeding_key": {
+        "activity_section.key": "943b0e83-b5fa-4594-91cd-ba705dd5a02c",
+        "lesson_activity.key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472"
+      }
+    },
+    {
+      "key": "6547e397-81e7-40c4-95f6-0d3e34ff0775",
+      "position": 6,
+      "properties": {
+        "progression_name": "Overview: If Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "6547e397-81e7-40c4-95f6-0d3e34ff0775",
+        "lesson_activity.key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472"
+      }
+    },
+    {
+      "key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7",
+      "position": 7,
+      "properties": {
+        "name": "Final Room Escape App",
+        "progression_name": "Final Room Escape App"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7",
+        "lesson_activity.key": "ea2c5b6a-961b-485d-93af-3f6f2e3eb472"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Escape Room Example"
-        ],
         "progression": "Escape Room Example"
       },
       "bonus": false,
@@ -69,7 +156,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "9464522b-46d2-4c42-9519-81defc325fcc"
       },
       "level_keys": [
         "Escape Room Example"
@@ -78,12 +166,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Design Mode"
-        ],
         "progression": "Overview: Design Mode"
       },
       "bonus": false,
@@ -93,7 +178,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "d74e9b44-c6c4-4a94-a02a-6d60695cd99e"
       },
       "level_keys": [
         "Overview: Design Mode"
@@ -102,12 +188,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Images"
-        ],
         "progression": "Overview: Images"
       },
       "bonus": false,
@@ -117,7 +200,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "d509bc4b-591e-48c5-a69e-cbdd20efa1ad"
       },
       "level_keys": [
         "Overview: Images"
@@ -126,12 +210,10 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 1"
-        ]
+        "progression": "Overview: onEvent"
       },
       "bonus": false,
       "seeding_key": {
@@ -140,7 +222,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "c37b08ca-8352-4cb8-9c54-b0fdc4eb7851"
       },
       "level_keys": [
         "Room Escape Workshop - 1"
@@ -149,12 +232,10 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 3"
-        ]
+        "progression": "Overview: onEvent"
       },
       "bonus": false,
       "seeding_key": {
@@ -163,7 +244,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "c37b08ca-8352-4cb8-9c54-b0fdc4eb7851"
       },
       "level_keys": [
         "Room Escape Workshop - 3"
@@ -172,12 +254,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: onEvent"
-        ],
         "progression": "Overview: onEvent"
       },
       "bonus": false,
@@ -187,7 +266,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "c37b08ca-8352-4cb8-9c54-b0fdc4eb7851"
       },
       "level_keys": [
         "Overview: onEvent"
@@ -196,12 +276,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: setPosition"
-        ],
         "progression": "Overview: setPosition"
       },
       "bonus": false,
@@ -211,7 +288,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "943b0e83-b5fa-4594-91cd-ba705dd5a02c"
       },
       "level_keys": [
         "Overview: setPosition"
@@ -220,12 +298,10 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 3-2"
-        ]
+        "progression": "Overview: If Statements"
       },
       "bonus": false,
       "seeding_key": {
@@ -234,7 +310,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "6547e397-81e7-40c4-95f6-0d3e34ff0775"
       },
       "level_keys": [
         "Room Escape Workshop - 3-2"
@@ -243,12 +320,10 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 4"
-        ]
+        "progression": "Overview: If Statements"
       },
       "bonus": false,
       "seeding_key": {
@@ -257,7 +332,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "6547e397-81e7-40c4-95f6-0d3e34ff0775"
       },
       "level_keys": [
         "Room Escape Workshop - 4"
@@ -266,12 +342,9 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: If Statements"
-        ],
         "progression": "Overview: If Statements"
       },
       "bonus": false,
@@ -281,7 +354,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "6547e397-81e7-40c4-95f6-0d3e34ff0775"
       },
       "level_keys": [
         "Overview: If Statements"
@@ -290,12 +364,10 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 5"
-        ]
+        "progression": "Final Room Escape App"
       },
       "bonus": false,
       "seeding_key": {
@@ -304,7 +376,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       },
       "level_keys": [
         "Room Escape Workshop - 5"
@@ -313,12 +386,10 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 7"
-        ]
+        "progression": "Final Room Escape App"
       },
       "bonus": false,
       "seeding_key": {
@@ -327,7 +398,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       },
       "level_keys": [
         "Room Escape Workshop - 7"
@@ -336,12 +408,10 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 8"
-        ]
+        "progression": "Final Room Escape App"
       },
       "bonus": false,
       "seeding_key": {
@@ -350,7 +420,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       },
       "level_keys": [
         "Room Escape Workshop - 8"
@@ -359,12 +430,10 @@
     {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 9-2"
-        ]
+        "progression": "Final Room Escape App"
       },
       "bonus": false,
       "seeding_key": {
@@ -373,7 +442,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       },
       "level_keys": [
         "Room Escape Workshop - 9-2"
@@ -382,12 +452,10 @@
     {
       "chapter": 15,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 10"
-        ]
+        "progression": "Final Room Escape App"
       },
       "bonus": false,
       "seeding_key": {
@@ -396,7 +464,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       },
       "level_keys": [
         "Room Escape Workshop - 10"
@@ -405,12 +474,10 @@
     {
       "chapter": 16,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 10 - 2"
-        ]
+        "progression": "Final Room Escape App"
       },
       "bonus": false,
       "seeding_key": {
@@ -419,7 +486,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       },
       "level_keys": [
         "Room Escape Workshop - 10 - 2"
@@ -428,12 +496,9 @@
     {
       "chapter": 17,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Final Room Escape App"
-        ],
         "progression": "Final Room Escape App"
       },
       "bonus": false,
@@ -443,7 +508,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       },
       "level_keys": [
         "Final Room Escape App"
@@ -459,7 +525,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "9464522b-46d2-4c42-9519-81defc325fcc"
       }
     },
     {
@@ -470,7 +537,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "d74e9b44-c6c4-4a94-a02a-6d60695cd99e"
       }
     },
     {
@@ -481,7 +549,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "d509bc4b-591e-48c5-a69e-cbdd20efa1ad"
       }
     },
     {
@@ -492,7 +561,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "c37b08ca-8352-4cb8-9c54-b0fdc4eb7851"
       }
     },
     {
@@ -503,7 +573,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "c37b08ca-8352-4cb8-9c54-b0fdc4eb7851"
       }
     },
     {
@@ -514,7 +585,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "c37b08ca-8352-4cb8-9c54-b0fdc4eb7851"
       }
     },
     {
@@ -525,7 +597,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "943b0e83-b5fa-4594-91cd-ba705dd5a02c"
       }
     },
     {
@@ -536,7 +609,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "6547e397-81e7-40c4-95f6-0d3e34ff0775"
       }
     },
     {
@@ -547,7 +621,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "6547e397-81e7-40c4-95f6-0d3e34ff0775"
       }
     },
     {
@@ -558,7 +633,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "6547e397-81e7-40c4-95f6-0d3e34ff0775"
       }
     },
     {
@@ -569,7 +645,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       }
     },
     {
@@ -580,7 +657,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       }
     },
     {
@@ -591,7 +669,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       }
     },
     {
@@ -602,7 +681,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       }
     },
     {
@@ -613,7 +693,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       }
     },
     {
@@ -624,7 +705,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       }
     },
     {
@@ -635,7 +717,8 @@
         ],
         "lesson.key": "Room Escape",
         "lesson_group.key": "",
-        "script.name": "applab-1hour"
+        "script.name": "applab-1hour",
+        "activity_section.key": "2e5d1486-ee19-450a-9cc0-3bde3d5f53d7"
       }
     }
   ],

@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:47 UTC",
+    "serialized_at": "2021-10-25 23:35:30 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -46,7 +47,19 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "012ad18e-236b-4aae-94a1-d063ae8e6609",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "012ad18e-236b-4aae-94a1-d063ae8e6609",
+        "lesson.key": "Fancy Geometry",
+        "lesson_group.key": "Fancy Geometry",
+        "script.name": "fancygeometry-pilot"
+      }
+    }
   ],
   "activity_sections": [
 

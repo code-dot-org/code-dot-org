@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:29 UTC",
+    "serialized_at": "2021-10-25 23:36:46 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -120,21 +121,298 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "1bfba273-73fe-4047-9b6f-0ce6e6b52bba",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1bfba273-73fe-4047-9b6f-0ce6e6b52bba",
+        "lesson.key": "CSP Tuesday",
+        "lesson_group.key": "",
+        "script.name": "novice-view"
+      }
+    },
+    {
+      "key": "9d568cf9-1045-4816-bcf2-e069df8422bd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9d568cf9-1045-4816-bcf2-e069df8422bd",
+        "lesson.key": "CSP Wednesday",
+        "lesson_group.key": "",
+        "script.name": "novice-view"
+      }
+    },
+    {
+      "key": "ec470724-b15f-4949-a272-7c3cf6cad22e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec470724-b15f-4949-a272-7c3cf6cad22e",
+        "lesson.key": "CSP Thursday",
+        "lesson_group.key": "",
+        "script.name": "novice-view"
+      }
+    },
+    {
+      "key": "cf6ba4ed-7a82-47ee-b876-b2f532a711ea",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cf6ba4ed-7a82-47ee-b876-b2f532a711ea",
+        "lesson.key": "CSD Tuesday",
+        "lesson_group.key": "",
+        "script.name": "novice-view"
+      }
+    },
+    {
+      "key": "a632eb54-1c3d-403f-8d98-aa247c5c7fca",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a632eb54-1c3d-403f-8d98-aa247c5c7fca",
+        "lesson.key": "CSD Wednesday",
+        "lesson_group.key": "",
+        "script.name": "novice-view"
+      }
+    },
+    {
+      "key": "be9f57b0-b753-40ab-8069-53146fc107e1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be9f57b0-b753-40ab-8069-53146fc107e1",
+        "lesson.key": "CSD Thursday",
+        "lesson_group.key": "",
+        "script.name": "novice-view"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1659b378-53b3-4f0e-9a6e-d8e517e75837",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "1659b378-53b3-4f0e-9a6e-d8e517e75837",
+        "lesson_activity.key": "1bfba273-73fe-4047-9b6f-0ce6e6b52bba"
+      }
+    },
+    {
+      "key": "0b78bb4a-7d2b-4138-87dd-c99555eb96a7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pedagogy Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b78bb4a-7d2b-4138-87dd-c99555eb96a7",
+        "lesson_activity.key": "1bfba273-73fe-4047-9b6f-0ce6e6b52bba"
+      }
+    },
+    {
+      "key": "99d7191b-8084-4fb2-aecb-10748b0c0836",
+      "position": 3,
+      "properties": {
+        "name": "Facilitation Reflection",
+        "progression_name": "Facilitation Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "99d7191b-8084-4fb2-aecb-10748b0c0836",
+        "lesson_activity.key": "1bfba273-73fe-4047-9b6f-0ce6e6b52bba"
+      }
+    },
+    {
+      "key": "a1f60180-0e3d-485a-ad22-a3be10411027",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1f60180-0e3d-485a-ad22-a3be10411027",
+        "lesson_activity.key": "9d568cf9-1045-4816-bcf2-e069df8422bd"
+      }
+    },
+    {
+      "key": "603fd9ad-dee1-4b6a-8b80-41b6f4edec47",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pedagogy Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "603fd9ad-dee1-4b6a-8b80-41b6f4edec47",
+        "lesson_activity.key": "9d568cf9-1045-4816-bcf2-e069df8422bd"
+      }
+    },
+    {
+      "key": "c17afdf4-61ec-4c4f-88b9-b4a480335c7c",
+      "position": 3,
+      "properties": {
+        "name": "Facilitation Reflection",
+        "progression_name": "Facilitation Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "c17afdf4-61ec-4c4f-88b9-b4a480335c7c",
+        "lesson_activity.key": "9d568cf9-1045-4816-bcf2-e069df8422bd"
+      }
+    },
+    {
+      "key": "a276a7cc-9e92-4291-95ab-9bdb0d95fee9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "a276a7cc-9e92-4291-95ab-9bdb0d95fee9",
+        "lesson_activity.key": "ec470724-b15f-4949-a272-7c3cf6cad22e"
+      }
+    },
+    {
+      "key": "d0d7acf1-1b77-4b5e-a57f-a9cdca6fb7c3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pedagogy Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0d7acf1-1b77-4b5e-a57f-a9cdca6fb7c3",
+        "lesson_activity.key": "ec470724-b15f-4949-a272-7c3cf6cad22e"
+      }
+    },
+    {
+      "key": "7d6817c7-5e6a-4caa-8926-cbcf1aabf6d3",
+      "position": 3,
+      "properties": {
+        "name": "Facilitation Reflection",
+        "progression_name": "Facilitation Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d6817c7-5e6a-4caa-8926-cbcf1aabf6d3",
+        "lesson_activity.key": "ec470724-b15f-4949-a272-7c3cf6cad22e"
+      }
+    },
+    {
+      "key": "67b995ab-ede9-4054-882a-3e10086e7c97",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "67b995ab-ede9-4054-882a-3e10086e7c97",
+        "lesson_activity.key": "cf6ba4ed-7a82-47ee-b876-b2f532a711ea"
+      }
+    },
+    {
+      "key": "b61656bf-3c43-4988-9dc2-b8d234fe491d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Teacher Pedagogy Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "b61656bf-3c43-4988-9dc2-b8d234fe491d",
+        "lesson_activity.key": "cf6ba4ed-7a82-47ee-b876-b2f532a711ea"
+      }
+    },
+    {
+      "key": "6b8674a0-e965-4598-9cea-071595cd0cc3",
+      "position": 3,
+      "properties": {
+        "name": "Facilitation Reflection",
+        "progression_name": "Facilitation Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b8674a0-e965-4598-9cea-071595cd0cc3",
+        "lesson_activity.key": "cf6ba4ed-7a82-47ee-b876-b2f532a711ea"
+      }
+    },
+    {
+      "key": "5c1f94e2-6293-4c32-9ad7-da56b6ea9184",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c1f94e2-6293-4c32-9ad7-da56b6ea9184",
+        "lesson_activity.key": "a632eb54-1c3d-403f-8d98-aa247c5c7fca"
+      }
+    },
+    {
+      "key": "097e0440-c6b2-4592-a2f1-a34c2e4371d1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Teacher Pedagogy Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "097e0440-c6b2-4592-a2f1-a34c2e4371d1",
+        "lesson_activity.key": "a632eb54-1c3d-403f-8d98-aa247c5c7fca"
+      }
+    },
+    {
+      "key": "239fc5a7-a62b-47dc-80f1-4bdf6f2fa282",
+      "position": 3,
+      "properties": {
+        "name": "Facilitation Reflection",
+        "progression_name": "Facilitation Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "239fc5a7-a62b-47dc-80f1-4bdf6f2fa282",
+        "lesson_activity.key": "a632eb54-1c3d-403f-8d98-aa247c5c7fca"
+      }
+    },
+    {
+      "key": "cffcd2da-9a03-452e-82f6-144defabf4ed",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "cffcd2da-9a03-452e-82f6-144defabf4ed",
+        "lesson_activity.key": "be9f57b0-b753-40ab-8069-53146fc107e1"
+      }
+    },
+    {
+      "key": "6e415ad9-5622-4a54-8aee-15f55075a3cb",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pedagogy Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e415ad9-5622-4a54-8aee-15f55075a3cb",
+        "lesson_activity.key": "be9f57b0-b753-40ab-8069-53146fc107e1"
+      }
+    },
+    {
+      "key": "c8fef12e-6e63-47e9-bbe2-b44984f01b1d",
+      "position": 3,
+      "properties": {
+        "name": "Facilitation Reflection",
+        "progression_name": "Facilitation Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8fef12e-6e63-47e9-bbe2-b44984f01b1d",
+        "lesson_activity.key": "be9f57b0-b753-40ab-8069-53146fc107e1"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-tuesday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -144,7 +422,8 @@
         ],
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "1659b378-53b3-4f0e-9a6e-d8e517e75837"
       },
       "level_keys": [
         "csp-tuesday-unit"
@@ -153,12 +432,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-tuesday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -168,7 +444,8 @@
         ],
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "1659b378-53b3-4f0e-9a6e-d8e517e75837"
       },
       "level_keys": [
         "csp-tuesday-unit2"
@@ -177,12 +454,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-tuesday-pedagogy"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -192,7 +466,8 @@
         ],
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "0b78bb4a-7d2b-4138-87dd-c99555eb96a7"
       },
       "level_keys": [
         "csp-tuesday-pedagogy"
@@ -201,12 +476,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-tuesday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -216,7 +488,8 @@
         ],
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "99d7191b-8084-4fb2-aecb-10748b0c0836"
       },
       "level_keys": [
         "csp-tuesday-facilitation"
@@ -225,12 +498,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-wednesday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -240,7 +510,8 @@
         ],
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "a1f60180-0e3d-485a-ad22-a3be10411027"
       },
       "level_keys": [
         "csp-wednesday-unit"
@@ -249,12 +520,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-wednesday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -264,7 +532,8 @@
         ],
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "a1f60180-0e3d-485a-ad22-a3be10411027"
       },
       "level_keys": [
         "csp-wednesday-unit2"
@@ -273,12 +542,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-wednesday-pedagogy"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -288,7 +554,8 @@
         ],
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "603fd9ad-dee1-4b6a-8b80-41b6f4edec47"
       },
       "level_keys": [
         "csp-wednesday-pedagogy"
@@ -297,12 +564,9 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-wednesday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -312,7 +576,8 @@
         ],
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "c17afdf4-61ec-4c4f-88b9-b4a480335c7c"
       },
       "level_keys": [
         "csp-wednesday-facilitation"
@@ -321,12 +586,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -336,7 +598,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "a276a7cc-9e92-4291-95ab-9bdb0d95fee9"
       },
       "level_keys": [
         "csp-thursday-unit"
@@ -345,12 +608,9 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -360,7 +620,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "a276a7cc-9e92-4291-95ab-9bdb0d95fee9"
       },
       "level_keys": [
         "csp-thursday-unit2"
@@ -369,12 +630,9 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-pedagogy"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -384,7 +642,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "d0d7acf1-1b77-4b5e-a57f-a9cdca6fb7c3"
       },
       "level_keys": [
         "csp-thursday-pedagogy"
@@ -393,12 +652,9 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-pedagogy2"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -408,7 +664,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "d0d7acf1-1b77-4b5e-a57f-a9cdca6fb7c3"
       },
       "level_keys": [
         "csp-thursday-pedagogy2"
@@ -417,12 +674,9 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -432,7 +686,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "7d6817c7-5e6a-4caa-8926-cbcf1aabf6d3"
       },
       "level_keys": [
         "csp-thursday-facilitation"
@@ -441,12 +696,9 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-tuesday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -456,7 +708,8 @@
         ],
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "67b995ab-ede9-4054-882a-3e10086e7c97"
       },
       "level_keys": [
         "csd-tuesday-unit"
@@ -465,12 +718,9 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-tuesday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -480,7 +730,8 @@
         ],
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "67b995ab-ede9-4054-882a-3e10086e7c97"
       },
       "level_keys": [
         "csd-tuesday-unit2"
@@ -489,12 +740,9 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-tuesday-pedagogy"
-        ],
         "progression": "Teacher Pedagogy Reflection"
       },
       "bonus": false,
@@ -504,7 +752,8 @@
         ],
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "b61656bf-3c43-4988-9dc2-b8d234fe491d"
       },
       "level_keys": [
         "csd-tuesday-pedagogy"
@@ -513,12 +762,9 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-tuesday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -528,7 +774,8 @@
         ],
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "6b8674a0-e965-4598-9cea-071595cd0cc3"
       },
       "level_keys": [
         "csd-tuesday-facilitation"
@@ -537,12 +784,9 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-wednesday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -552,7 +796,8 @@
         ],
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "5c1f94e2-6293-4c32-9ad7-da56b6ea9184"
       },
       "level_keys": [
         "csd-wednesday-unit"
@@ -561,12 +806,9 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-wednesday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -576,7 +818,8 @@
         ],
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "5c1f94e2-6293-4c32-9ad7-da56b6ea9184"
       },
       "level_keys": [
         "csd-wednesday-unit2"
@@ -585,12 +828,9 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-wednesday-pedagogy"
-        ],
         "progression": "Teacher Pedagogy Reflection"
       },
       "bonus": false,
@@ -600,7 +840,8 @@
         ],
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "097e0440-c6b2-4592-a2f1-a34c2e4371d1"
       },
       "level_keys": [
         "csd-wednesday-pedagogy"
@@ -609,12 +850,9 @@
     {
       "chapter": 21,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-wednesday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -624,7 +862,8 @@
         ],
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "239fc5a7-a62b-47dc-80f1-4bdf6f2fa282"
       },
       "level_keys": [
         "csd-wednesday-facilitation"
@@ -633,12 +872,9 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-thursday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -648,7 +884,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "cffcd2da-9a03-452e-82f6-144defabf4ed"
       },
       "level_keys": [
         "csd-thursday-unit"
@@ -657,12 +894,9 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-thursday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -672,7 +906,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "cffcd2da-9a03-452e-82f6-144defabf4ed"
       },
       "level_keys": [
         "csd-thursday-unit2"
@@ -681,12 +916,9 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-thursday-pedagogy"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -696,7 +928,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "6e415ad9-5622-4a54-8aee-15f55075a3cb"
       },
       "level_keys": [
         "csd-thursday-pedagogy"
@@ -705,12 +938,9 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-thursday-pedagogy2"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -720,7 +950,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "6e415ad9-5622-4a54-8aee-15f55075a3cb"
       },
       "level_keys": [
         "csd-thursday-pedagogy2"
@@ -729,12 +960,9 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-thursday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -744,7 +972,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "c8fef12e-6e63-47e9-bbe2-b44984f01b1d"
       },
       "level_keys": [
         "csd-thursday-facilitation"
@@ -760,7 +989,8 @@
         ],
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "1659b378-53b3-4f0e-9a6e-d8e517e75837"
       }
     },
     {
@@ -771,7 +1001,8 @@
         ],
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "1659b378-53b3-4f0e-9a6e-d8e517e75837"
       }
     },
     {
@@ -782,7 +1013,8 @@
         ],
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "0b78bb4a-7d2b-4138-87dd-c99555eb96a7"
       }
     },
     {
@@ -793,7 +1025,8 @@
         ],
         "lesson.key": "CSP Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "99d7191b-8084-4fb2-aecb-10748b0c0836"
       }
     },
     {
@@ -804,7 +1037,8 @@
         ],
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "a1f60180-0e3d-485a-ad22-a3be10411027"
       }
     },
     {
@@ -815,7 +1049,8 @@
         ],
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "a1f60180-0e3d-485a-ad22-a3be10411027"
       }
     },
     {
@@ -826,7 +1061,8 @@
         ],
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "603fd9ad-dee1-4b6a-8b80-41b6f4edec47"
       }
     },
     {
@@ -837,7 +1073,8 @@
         ],
         "lesson.key": "CSP Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "c17afdf4-61ec-4c4f-88b9-b4a480335c7c"
       }
     },
     {
@@ -848,7 +1085,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "a276a7cc-9e92-4291-95ab-9bdb0d95fee9"
       }
     },
     {
@@ -859,7 +1097,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "a276a7cc-9e92-4291-95ab-9bdb0d95fee9"
       }
     },
     {
@@ -870,7 +1109,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "d0d7acf1-1b77-4b5e-a57f-a9cdca6fb7c3"
       }
     },
     {
@@ -881,7 +1121,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "d0d7acf1-1b77-4b5e-a57f-a9cdca6fb7c3"
       }
     },
     {
@@ -892,7 +1133,8 @@
         ],
         "lesson.key": "CSP Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "7d6817c7-5e6a-4caa-8926-cbcf1aabf6d3"
       }
     },
     {
@@ -903,7 +1145,8 @@
         ],
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "67b995ab-ede9-4054-882a-3e10086e7c97"
       }
     },
     {
@@ -914,7 +1157,8 @@
         ],
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "67b995ab-ede9-4054-882a-3e10086e7c97"
       }
     },
     {
@@ -925,7 +1169,8 @@
         ],
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "b61656bf-3c43-4988-9dc2-b8d234fe491d"
       }
     },
     {
@@ -936,7 +1181,8 @@
         ],
         "lesson.key": "CSD Tuesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "6b8674a0-e965-4598-9cea-071595cd0cc3"
       }
     },
     {
@@ -947,7 +1193,8 @@
         ],
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "5c1f94e2-6293-4c32-9ad7-da56b6ea9184"
       }
     },
     {
@@ -958,7 +1205,8 @@
         ],
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "5c1f94e2-6293-4c32-9ad7-da56b6ea9184"
       }
     },
     {
@@ -969,7 +1217,8 @@
         ],
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "097e0440-c6b2-4592-a2f1-a34c2e4371d1"
       }
     },
     {
@@ -980,7 +1229,8 @@
         ],
         "lesson.key": "CSD Wednesday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "239fc5a7-a62b-47dc-80f1-4bdf6f2fa282"
       }
     },
     {
@@ -991,7 +1241,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "cffcd2da-9a03-452e-82f6-144defabf4ed"
       }
     },
     {
@@ -1002,7 +1253,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "cffcd2da-9a03-452e-82f6-144defabf4ed"
       }
     },
     {
@@ -1013,7 +1265,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "6e415ad9-5622-4a54-8aee-15f55075a3cb"
       }
     },
     {
@@ -1024,7 +1277,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "6e415ad9-5622-4a54-8aee-15f55075a3cb"
       }
     },
     {
@@ -1035,7 +1289,8 @@
         ],
         "lesson.key": "CSD Thursday",
         "lesson_group.key": "",
-        "script.name": "novice-view"
+        "script.name": "novice-view",
+        "activity_section.key": "c8fef12e-6e63-47e9-bbe2-b44984f01b1d"
       }
     }
   ],

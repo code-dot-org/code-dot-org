@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "peer_reviews_to_complete": 4,
       "professional_learning_course": "CS Principles Curriculum Training for Facilitators",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:11 UTC",
+    "serialized_at": "2021-10-25 23:32:51 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -78,21 +79,122 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "19e9ec23-58da-4652-b99b-66740ff16dd2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19e9ec23-58da-4652-b99b-66740ff16dd2",
+        "lesson.key": "Saturday Session Resources",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "key": "cfa99098-be70-4c92-a438-943454f4232c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cfa99098-be70-4c92-a438-943454f4232c",
+        "lesson.key": "Getting Familiar with Traversals EIPM",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    },
+    {
+      "key": "45682745-4493-4228-855c-648318a510c7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45682745-4493-4228-855c-648318a510c7",
+        "lesson.key": "Comparing Make Lessons",
+        "lesson_group.key": "",
+        "script.name": "csp-march-virtual"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "579cdf04-b4ab-4600-bc6f-cc6ed6597a5c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "579cdf04-b4ab-4600-bc6f-cc6ed6597a5c",
+        "lesson_activity.key": "19e9ec23-58da-4652-b99b-66740ff16dd2"
+      }
+    },
+    {
+      "key": "a83c221b-59a7-4b03-9843-8142adbbc664",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview and Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "a83c221b-59a7-4b03-9843-8142adbbc664",
+        "lesson_activity.key": "cfa99098-be70-4c92-a438-943454f4232c"
+      }
+    },
+    {
+      "key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Tasks"
+      },
+      "seeding_key": {
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7",
+        "lesson_activity.key": "cfa99098-be70-4c92-a438-943454f4232c"
+      }
+    },
+    {
+      "key": "7779405e-e53b-4ff3-a921-aa2542351b4a",
+      "position": 3,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "7779405e-e53b-4ff3-a921-aa2542351b4a",
+        "lesson_activity.key": "cfa99098-be70-4c92-a438-943454f4232c"
+      }
+    },
+    {
+      "key": "5c597906-6303-4a5c-8288-21f89f2a2e30",
+      "position": 1,
+      "properties": {
+        "progression_name": "Tasks"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30",
+        "lesson_activity.key": "45682745-4493-4228-855c-648318a510c7"
+      }
+    },
+    {
+      "key": "6d341e56-edd2-45ec-8afc-0e8cef28a155",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d341e56-edd2-45ec-8afc-0e8cef28a155",
+        "lesson_activity.key": "45682745-4493-4228-855c-648318a510c7"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Prework_0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -101,7 +203,8 @@
         ],
         "lesson.key": "Saturday Session Resources",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "579cdf04-b4ab-4600-bc6f-cc6ed6597a5c"
       },
       "level_keys": [
         "Mar20 Prework_0"
@@ -110,12 +213,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_1"
-        ],
         "progression": "Overview and Setup"
       },
       "bonus": false,
@@ -125,7 +225,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "a83c221b-59a7-4b03-9843-8142adbbc664"
       },
       "level_keys": [
         "Mar20 Part1_1"
@@ -134,12 +235,9 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_2"
-        ],
         "progression": "Overview and Setup"
       },
       "bonus": false,
@@ -149,7 +247,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "a83c221b-59a7-4b03-9843-8142adbbc664"
       },
       "level_keys": [
         "Mar20 Part1_2"
@@ -158,12 +257,9 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_Task1"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -173,7 +269,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       },
       "level_keys": [
         "Mar20 Part1_Task1"
@@ -182,12 +279,9 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_Task2"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -197,7 +291,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       },
       "level_keys": [
         "Mar20 Part1_Task2"
@@ -206,12 +301,9 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_Task3"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -221,7 +313,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       },
       "level_keys": [
         "Mar20 Part1_Task3"
@@ -230,12 +323,9 @@
     {
       "chapter": 7,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_Task4"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -245,7 +335,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       },
       "level_keys": [
         "Mar20 Part1_Task4"
@@ -254,12 +345,9 @@
     {
       "chapter": 8,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_Task5"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -269,7 +357,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       },
       "level_keys": [
         "Mar20 Part1_Task5"
@@ -278,12 +367,9 @@
     {
       "chapter": 9,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_Task6"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -293,7 +379,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       },
       "level_keys": [
         "Mar20 Part1_Task6"
@@ -302,12 +389,9 @@
     {
       "chapter": 10,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part1_Task7"
-        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -317,7 +401,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "7779405e-e53b-4ff3-a921-aa2542351b4a"
       },
       "level_keys": [
         "Mar20 Part1_Task7"
@@ -326,12 +411,10 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part2_1"
-        ]
+        "progression": "Tasks"
       },
       "bonus": false,
       "seeding_key": {
@@ -340,7 +423,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30"
       },
       "level_keys": [
         "Mar20 Part2_1"
@@ -349,12 +433,9 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part2_Task1"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -364,7 +445,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30"
       },
       "level_keys": [
         "Mar20 Part2_Task1"
@@ -373,12 +455,9 @@
     {
       "chapter": 13,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part2_Task2"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -388,7 +467,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30"
       },
       "level_keys": [
         "Mar20 Part2_Task2"
@@ -397,12 +477,9 @@
     {
       "chapter": 14,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part2_Task3"
-        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -412,7 +489,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30"
       },
       "level_keys": [
         "Mar20 Part2_Task3"
@@ -421,12 +499,9 @@
     {
       "chapter": 15,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mar20 Part2_Task4"
-        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -436,7 +511,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "6d341e56-edd2-45ec-8afc-0e8cef28a155"
       },
       "level_keys": [
         "Mar20 Part2_Task4"
@@ -452,7 +528,8 @@
         ],
         "lesson.key": "Saturday Session Resources",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "579cdf04-b4ab-4600-bc6f-cc6ed6597a5c"
       }
     },
     {
@@ -463,7 +540,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "a83c221b-59a7-4b03-9843-8142adbbc664"
       }
     },
     {
@@ -474,7 +552,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "a83c221b-59a7-4b03-9843-8142adbbc664"
       }
     },
     {
@@ -485,7 +564,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       }
     },
     {
@@ -496,7 +576,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       }
     },
     {
@@ -507,7 +588,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       }
     },
     {
@@ -518,7 +600,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       }
     },
     {
@@ -529,7 +612,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       }
     },
     {
@@ -540,7 +624,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "1eac8a6c-4e3e-474b-9716-4547fbe855b7"
       }
     },
     {
@@ -551,7 +636,8 @@
         ],
         "lesson.key": "Getting Familiar with Traversals EIPM",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "7779405e-e53b-4ff3-a921-aa2542351b4a"
       }
     },
     {
@@ -562,7 +648,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30"
       }
     },
     {
@@ -573,7 +660,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30"
       }
     },
     {
@@ -584,7 +672,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30"
       }
     },
     {
@@ -595,7 +684,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "5c597906-6303-4a5c-8288-21f89f2a2e30"
       }
     },
     {
@@ -606,7 +696,8 @@
         ],
         "lesson.key": "Comparing Make Lessons",
         "lesson_group.key": "",
-        "script.name": "csp-march-virtual"
+        "script.name": "csp-march-virtual",
+        "activity_section.key": "6d341e56-edd2-45ec-8afc-0e8cef28a155"
       }
     }
   ],

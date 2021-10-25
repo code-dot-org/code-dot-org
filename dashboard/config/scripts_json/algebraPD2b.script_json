@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:08 UTC",
+    "serialized_at": "2021-10-25 23:28:47 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -212,21 +212,292 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f915827e-11a8-449d-9e21-019fa0ce1b44",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f915827e-11a8-449d-9e21-019fa0ce1b44",
+        "lesson.key": "Course Overview",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "4d184b3a-18be-45ab-b49d-6954d59ba913",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d184b3a-18be-45ab-b49d-6954d59ba913",
+        "lesson.key": "Best Practices for Teaching Computer Science",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "6e75638a-be0a-4512-b822-b1c7aa34c345",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e75638a-be0a-4512-b822-b1c7aa34c345",
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "51cfacaa-4fc7-4dc2-a8ae-968a5c952f70",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "51cfacaa-4fc7-4dc2-a8ae-968a5c952f70",
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "84969454-a4b0-4d83-81dd-f13a346af23a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "84969454-a4b0-4d83-81dd-f13a346af23a",
+        "lesson.key": "Strings and Images",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "73add939-42a6-4f41-bf43-dbad3545d048",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "73add939-42a6-4f41-bf43-dbad3545d048",
+        "lesson.key": "Writing Contracts",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "f1551149-e907-46a0-9f72-09190ee70217",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1551149-e907-46a0-9f72-09190ee70217",
+        "lesson.key": "Defining Variables",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "9731e0f5-a781-47ef-8820-76f45aa922ce",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9731e0f5-a781-47ef-8820-76f45aa922ce",
+        "lesson.key": "Defining Functions",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "f67c8dba-1ef6-4192-8676-2e6d52ce2c6e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f67c8dba-1ef6-4192-8676-2e6d52ce2c6e",
+        "lesson.key": "Rocket-Height",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "2109720e-52d9-4f5c-a993-e15b6ae0b838",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2109720e-52d9-4f5c-a993-e15b6ae0b838",
+        "lesson.key": "Booleans",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "19132cf6-cb4f-4b94-8e62-c22f69acd1d8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19132cf6-cb4f-4b94-8e62-c22f69acd1d8",
+        "lesson.key": "Eval: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    },
+    {
+      "key": "7278de24-3f4a-4600-a54f-ead7c678596a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7278de24-3f4a-4600-a54f-ead7c678596a",
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2b"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c",
+        "lesson_activity.key": "f915827e-11a8-449d-9e21-019fa0ce1b44"
+      }
+    },
+    {
+      "key": "bb9694aa-4377-492f-a5b4-1e9186adcc55",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55",
+        "lesson_activity.key": "4d184b3a-18be-45ab-b49d-6954d59ba913"
+      }
+    },
+    {
+      "key": "4bbca8d7-7d7d-4f29-8d6b-bbf039a495ba",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4bbca8d7-7d7d-4f29-8d6b-bbf039a495ba",
+        "lesson_activity.key": "6e75638a-be0a-4512-b822-b1c7aa34c345"
+      }
+    },
+    {
+      "key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c",
+        "lesson_activity.key": "51cfacaa-4fc7-4dc2-a8ae-968a5c952f70"
+      }
+    },
+    {
+      "key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e",
+        "lesson_activity.key": "84969454-a4b0-4d83-81dd-f13a346af23a"
+      }
+    },
+    {
+      "key": "b0a92a46-f32e-46f2-91de-077fceddb8de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de",
+        "lesson_activity.key": "73add939-42a6-4f41-bf43-dbad3545d048"
+      }
+    },
+    {
+      "key": "4db67dd1-5a45-404d-a149-878e00930407",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407",
+        "lesson_activity.key": "f1551149-e907-46a0-9f72-09190ee70217"
+      }
+    },
+    {
+      "key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91",
+        "lesson_activity.key": "9731e0f5-a781-47ef-8820-76f45aa922ce"
+      }
+    },
+    {
+      "key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa",
+        "lesson_activity.key": "f67c8dba-1ef6-4192-8676-2e6d52ce2c6e"
+      }
+    },
+    {
+      "key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0",
+        "lesson_activity.key": "2109720e-52d9-4f5c-a993-e15b6ae0b838"
+      }
+    },
+    {
+      "key": "1172c47f-5ade-45c0-a344-6806981787fa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa",
+        "lesson_activity.key": "19132cf6-cb4f-4b94-8e62-c22f69acd1d8"
+      }
+    },
+    {
+      "key": "8f8eb0f7-03da-4111-8066-8a822a65fbe2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8f8eb0f7-03da-4111-8066-8a822a65fbe2",
+        "lesson_activity.key": "7278de24-3f4a-4600-a54f-ead7c678596a"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "K5PD tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -235,7 +506,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       },
       "level_keys": [
         "K5PD tour"
@@ -244,12 +516,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg circles to blocks"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -258,7 +527,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       },
       "level_keys": [
         "PDAlg circles to blocks"
@@ -267,12 +537,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg block match"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -281,7 +548,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       },
       "level_keys": [
         "PDAlg block match"
@@ -290,12 +558,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Scope"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -304,7 +569,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       },
       "level_keys": [
         "PDAlg Scope"
@@ -313,12 +579,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg implementation"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -327,7 +590,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       },
       "level_keys": [
         "PDAlg implementation"
@@ -336,12 +600,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg course goals"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,7 +611,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       },
       "level_keys": [
         "PDAlg course goals"
@@ -359,12 +621,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Culture"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,7 +632,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       },
       "level_keys": [
         "PDAlg Culture"
@@ -382,12 +642,9 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "OPD-K5 Pair"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -396,7 +653,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       },
       "level_keys": [
         "OPD-K5 Pair"
@@ -405,12 +663,9 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDK5 Pair programming match"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -419,7 +674,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       },
       "level_keys": [
         "PDK5 Pair programming match"
@@ -428,12 +684,9 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "OPD-K5 Problem Solving Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -442,7 +695,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       },
       "level_keys": [
         "OPD-K5 Problem Solving Video"
@@ -451,12 +705,9 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Strategy Reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -465,7 +716,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       },
       "level_keys": [
         "PDAlg Strategy Reflection"
@@ -474,12 +726,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDK5 Teacher Dashboard 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -488,7 +737,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4bbca8d7-7d7d-4f29-8d6b-bbf039a495ba"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 1"
@@ -497,12 +747,9 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDK5 Teacher Dashboard 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -511,7 +758,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4bbca8d7-7d7d-4f29-8d6b-bbf039a495ba"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 2"
@@ -520,12 +768,9 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Teacher Dashboard"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -534,7 +779,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4bbca8d7-7d7d-4f29-8d6b-bbf039a495ba"
       },
       "level_keys": [
         "PDAlg Teacher Dashboard"
@@ -543,12 +789,9 @@
     {
       "chapter": 15,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Blocks Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -557,7 +800,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "PDAlg Blocks Video"
@@ -566,12 +810,9 @@
     {
       "chapter": 16,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval .4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -580,7 +821,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Calc Circles of Eval .4"
@@ -589,12 +831,9 @@
     {
       "chapter": 17,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -603,7 +842,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Calc Circles of Eval 1"
@@ -612,12 +852,9 @@
     {
       "chapter": 18,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -626,7 +863,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Calc Circles of Eval 4"
@@ -635,12 +873,9 @@
     {
       "chapter": 19,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -649,7 +884,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Calc Circles of Eval 5"
@@ -658,12 +894,9 @@
     {
       "chapter": 20,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -672,7 +905,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Calc Circles of Eval 6"
@@ -681,12 +915,9 @@
     {
       "chapter": 21,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -695,7 +926,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Calc Circles of Eval 9"
@@ -704,12 +936,9 @@
     {
       "chapter": 22,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Math 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -718,7 +947,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Blocks to Math 2"
@@ -727,12 +957,9 @@
     {
       "chapter": 23,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Math 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -741,7 +968,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Blocks to Math 4"
@@ -750,12 +978,9 @@
     {
       "chapter": 24,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Math 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -764,7 +989,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Blocks to Math 5"
@@ -773,12 +999,9 @@
     {
       "chapter": 25,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Math 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -787,7 +1010,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Blocks to Math 6"
@@ -796,12 +1020,9 @@
     {
       "chapter": 26,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Math 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -810,7 +1031,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Blocks to Math 7"
@@ -819,12 +1041,9 @@
     {
       "chapter": 27,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -833,7 +1052,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       },
       "level_keys": [
         "Calc Circles of Eval Free Play"
@@ -842,12 +1062,9 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Types Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -856,7 +1073,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       },
       "level_keys": [
         "PDAlg Types Video"
@@ -865,12 +1083,9 @@
     {
       "chapter": 29,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -879,7 +1094,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       },
       "level_keys": [
         "Eval Strings Images 5"
@@ -888,12 +1104,9 @@
     {
       "chapter": 30,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -902,7 +1115,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       },
       "level_keys": [
         "Eval Strings Images 6"
@@ -911,12 +1125,9 @@
     {
       "chapter": 31,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -925,7 +1136,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       },
       "level_keys": [
         "Eval Strings Images 7"
@@ -934,12 +1146,9 @@
     {
       "chapter": 32,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -948,7 +1157,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       },
       "level_keys": [
         "Eval Strings Images 8"
@@ -957,12 +1167,9 @@
     {
       "chapter": 33,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Multi Strings Images 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -971,7 +1178,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       },
       "level_keys": [
         "Multi Strings Images 1"
@@ -980,12 +1188,9 @@
     {
       "chapter": 34,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -994,7 +1199,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       },
       "level_keys": [
         "Eval Strings Images Free Play"
@@ -1003,12 +1209,9 @@
     {
       "chapter": 35,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Contracts A"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1017,7 +1220,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       },
       "level_keys": [
         "Eval Contracts A"
@@ -1026,12 +1230,9 @@
     {
       "chapter": 36,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Contracts B"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1040,7 +1241,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       },
       "level_keys": [
         "Eval Contracts B"
@@ -1049,12 +1251,9 @@
     {
       "chapter": 37,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Contracts C"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1063,7 +1262,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       },
       "level_keys": [
         "Eval Contracts C"
@@ -1072,12 +1272,9 @@
     {
       "chapter": 38,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Contracts D"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1086,7 +1283,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       },
       "level_keys": [
         "Eval Contracts D"
@@ -1095,12 +1293,9 @@
     {
       "chapter": 39,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Contracts E"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1109,7 +1304,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       },
       "level_keys": [
         "Eval Contracts E"
@@ -1118,12 +1314,9 @@
     {
       "chapter": 40,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Contracts F"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1132,7 +1325,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       },
       "level_keys": [
         "Eval Contracts F"
@@ -1141,12 +1335,9 @@
     {
       "chapter": 41,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Contracts 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1155,7 +1346,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       },
       "level_keys": [
         "Eval Contracts 4"
@@ -1164,12 +1356,9 @@
     {
       "chapter": 42,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Contracts 4 B"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1178,7 +1367,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       },
       "level_keys": [
         "Eval Contracts 4 B"
@@ -1187,12 +1377,9 @@
     {
       "chapter": 43,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1201,7 +1388,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "Calc Vars 1"
@@ -1210,12 +1398,9 @@
     {
       "chapter": 44,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 1.1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1224,7 +1409,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "Calc Vars 1.1"
@@ -1233,12 +1419,9 @@
     {
       "chapter": 45,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1247,7 +1430,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "Calc Vars 3"
@@ -1256,12 +1440,9 @@
     {
       "chapter": 46,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1270,7 +1451,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "Calc Vars 2"
@@ -1279,12 +1461,9 @@
     {
       "chapter": 47,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 2.1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1293,7 +1472,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "Calc Vars 2.1"
@@ -1302,12 +1482,9 @@
     {
       "chapter": 48,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1316,7 +1493,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "Calc Vars 4"
@@ -1325,12 +1503,9 @@
     {
       "chapter": 49,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1339,7 +1514,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "msm variables multi 1"
@@ -1348,12 +1524,9 @@
     {
       "chapter": 50,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1362,7 +1535,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "msm variables multi 2"
@@ -1371,12 +1545,9 @@
     {
       "chapter": 51,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1385,7 +1556,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "msm variables multi 3"
@@ -1394,12 +1566,9 @@
     {
       "chapter": 52,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1408,7 +1577,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "msm variables multi 4"
@@ -1417,12 +1587,9 @@
     {
       "chapter": 53,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1431,7 +1598,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "msm variables multi 5"
@@ -1440,12 +1608,9 @@
     {
       "chapter": 54,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1454,7 +1619,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       },
       "level_keys": [
         "msm variables multi 6"
@@ -1463,12 +1629,9 @@
     {
       "chapter": 55,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1477,7 +1640,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Eval Define Funcs 1"
@@ -1486,12 +1650,9 @@
     {
       "chapter": 56,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1500,7 +1661,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Eval Define Funcs 2"
@@ -1509,12 +1671,9 @@
     {
       "chapter": 57,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1523,7 +1682,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Eval Define Funcs 3"
@@ -1532,12 +1692,9 @@
     {
       "chapter": 58,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1546,7 +1703,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Eval Define Funcs 4"
@@ -1555,12 +1713,9 @@
     {
       "chapter": 59,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1569,7 +1724,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Eval Define Funcs 5"
@@ -1578,12 +1734,9 @@
     {
       "chapter": 60,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Define Funcs 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1592,7 +1745,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Calc Define Funcs 1"
@@ -1601,12 +1755,9 @@
     {
       "chapter": 61,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Define Funcs 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1615,7 +1766,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Calc Define Funcs 2"
@@ -1624,12 +1776,9 @@
     {
       "chapter": 62,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Define Funcs 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1638,7 +1787,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Calc Define Funcs 3"
@@ -1647,12 +1797,9 @@
     {
       "chapter": 63,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Define Funcs 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1661,7 +1808,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Calc Define Funcs 4"
@@ -1670,12 +1818,9 @@
     {
       "chapter": 64,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Multi Define Funcs 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1684,7 +1829,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Multi Define Funcs 1"
@@ -1693,12 +1839,9 @@
     {
       "chapter": 65,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Multi Define Funcs 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1707,7 +1850,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Multi Define Funcs 2"
@@ -1716,12 +1860,9 @@
     {
       "chapter": 66,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Multi Define Funcs 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1730,7 +1871,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "Multi Define Funcs 3"
@@ -1739,12 +1881,9 @@
     {
       "chapter": 67,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 10"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1753,7 +1892,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "msm variables multi 10"
@@ -1762,12 +1902,9 @@
     {
       "chapter": 68,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 11"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1776,7 +1913,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "msm variables multi 11"
@@ -1785,12 +1923,9 @@
     {
       "chapter": 69,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "msm variables multi 13"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1799,7 +1934,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       },
       "level_keys": [
         "msm variables multi 13"
@@ -1808,12 +1944,9 @@
     {
       "chapter": 70,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Design Recipe Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1822,7 +1955,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       },
       "level_keys": [
         "PDAlg Design Recipe Video"
@@ -1831,12 +1965,9 @@
     {
       "chapter": 71,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1845,7 +1976,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       },
       "level_keys": [
         "Play Lab Rocket 3"
@@ -1854,12 +1986,9 @@
     {
       "chapter": 72,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1868,7 +1997,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       },
       "level_keys": [
         "Play Lab Rocket 4"
@@ -1877,12 +2007,9 @@
     {
       "chapter": 73,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1891,7 +2018,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       },
       "level_keys": [
         "Play Lab Rocket 5"
@@ -1900,12 +2028,9 @@
     {
       "chapter": 74,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1914,7 +2039,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       },
       "level_keys": [
         "Play Lab Rocket 6"
@@ -1923,12 +2049,9 @@
     {
       "chapter": 75,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1937,7 +2060,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       },
       "level_keys": [
         "Play Lab Rocket 7"
@@ -1946,12 +2070,9 @@
     {
       "chapter": 76,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1960,7 +2081,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       },
       "level_keys": [
         "Play Lab Rocket 8"
@@ -1969,12 +2091,9 @@
     {
       "chapter": 77,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1983,7 +2102,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       },
       "level_keys": [
         "Play Lab Rocket Free Play"
@@ -1992,12 +2112,9 @@
     {
       "chapter": 78,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2006,7 +2123,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Eval Booleans 1"
@@ -2015,12 +2133,9 @@
     {
       "chapter": 79,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2029,7 +2144,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Eval Booleans 2"
@@ -2038,12 +2154,9 @@
     {
       "chapter": 80,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2052,7 +2165,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Eval Booleans 3"
@@ -2061,12 +2175,9 @@
     {
       "chapter": 81,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2075,7 +2186,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Eval Booleans 4"
@@ -2084,12 +2196,9 @@
     {
       "chapter": 82,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2098,7 +2207,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Eval Booleans 5"
@@ -2107,12 +2217,9 @@
     {
       "chapter": 83,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2121,7 +2228,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Eval Booleans 6"
@@ -2130,12 +2238,9 @@
     {
       "chapter": 84,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2144,7 +2249,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Blocks to Bools 1"
@@ -2153,12 +2259,9 @@
     {
       "chapter": 85,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2167,7 +2270,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Blocks to Bools 2"
@@ -2176,12 +2280,9 @@
     {
       "chapter": 86,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2190,7 +2291,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Blocks to Bools 3"
@@ -2199,12 +2301,9 @@
     {
       "chapter": 87,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2213,7 +2312,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Blocks to Bools 4"
@@ -2222,12 +2322,9 @@
     {
       "chapter": 88,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2236,7 +2333,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       },
       "level_keys": [
         "Eval Booleans Free Play"
@@ -2245,12 +2343,9 @@
     {
       "chapter": 89,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2259,7 +2354,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       },
       "level_keys": [
         "Eval Cond 1"
@@ -2268,12 +2364,9 @@
     {
       "chapter": 90,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2282,7 +2375,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       },
       "level_keys": [
         "Eval Cond 2"
@@ -2291,12 +2385,9 @@
     {
       "chapter": 91,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2305,7 +2396,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       },
       "level_keys": [
         "Eval Cond 3"
@@ -2314,12 +2406,9 @@
     {
       "chapter": 92,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2328,7 +2417,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       },
       "level_keys": [
         "Eval Cond 4"
@@ -2337,12 +2427,9 @@
     {
       "chapter": 93,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2351,7 +2438,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       },
       "level_keys": [
         "Eval Cond 5"
@@ -2360,12 +2448,9 @@
     {
       "chapter": 94,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2374,7 +2459,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       },
       "level_keys": [
         "Eval Cond 6"
@@ -2383,12 +2469,9 @@
     {
       "chapter": 95,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2397,7 +2480,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       },
       "level_keys": [
         "Eval Cond 7"
@@ -2406,12 +2490,9 @@
     {
       "chapter": 96,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2420,7 +2501,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       },
       "level_keys": [
         "Eval Cond 8"
@@ -2429,12 +2511,9 @@
     {
       "chapter": 97,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg end of P3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2443,7 +2522,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "8f8eb0f7-03da-4111-8066-8a822a65fbe2"
       },
       "level_keys": [
         "PDAlg end of P3"
@@ -2452,12 +2532,9 @@
     {
       "chapter": 98,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg whats next"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2466,7 +2543,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "8f8eb0f7-03da-4111-8066-8a822a65fbe2"
       },
       "level_keys": [
         "PDAlg whats next"
@@ -2482,7 +2560,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       }
     },
     {
@@ -2493,7 +2572,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       }
     },
     {
@@ -2504,7 +2584,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       }
     },
     {
@@ -2515,7 +2596,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       }
     },
     {
@@ -2526,7 +2608,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       }
     },
     {
@@ -2537,7 +2620,8 @@
         ],
         "lesson.key": "Course Overview",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1e1e4c91-7924-4ff0-ba8e-c3e9ed01c37c"
       }
     },
     {
@@ -2548,7 +2632,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       }
     },
     {
@@ -2559,7 +2644,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       }
     },
     {
@@ -2570,7 +2656,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       }
     },
     {
@@ -2581,7 +2668,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       }
     },
     {
@@ -2592,7 +2680,8 @@
         ],
         "lesson.key": "Best Practices for Teaching Computer Science",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "bb9694aa-4377-492f-a5b4-1e9186adcc55"
       }
     },
     {
@@ -2603,7 +2692,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4bbca8d7-7d7d-4f29-8d6b-bbf039a495ba"
       }
     },
     {
@@ -2614,7 +2704,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4bbca8d7-7d7d-4f29-8d6b-bbf039a495ba"
       }
     },
     {
@@ -2625,7 +2716,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4bbca8d7-7d7d-4f29-8d6b-bbf039a495ba"
       }
     },
     {
@@ -2636,7 +2728,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2647,7 +2740,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2658,7 +2752,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2669,7 +2764,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2680,7 +2776,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2691,7 +2788,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2702,7 +2800,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2713,7 +2812,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2724,7 +2824,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2735,7 +2836,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2746,7 +2848,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2757,7 +2860,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2768,7 +2872,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "a75d3266-2cf0-43a7-ae93-1b01adc7a10c"
       }
     },
     {
@@ -2779,7 +2884,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       }
     },
     {
@@ -2790,7 +2896,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       }
     },
     {
@@ -2801,7 +2908,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       }
     },
     {
@@ -2812,7 +2920,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       }
     },
     {
@@ -2823,7 +2932,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       }
     },
     {
@@ -2834,7 +2944,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       }
     },
     {
@@ -2845,7 +2956,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1de6dbf9-2d2a-44e1-bbef-703cd00e7c2e"
       }
     },
     {
@@ -2856,7 +2968,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       }
     },
     {
@@ -2867,7 +2980,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       }
     },
     {
@@ -2878,7 +2992,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       }
     },
     {
@@ -2889,7 +3004,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       }
     },
     {
@@ -2900,7 +3016,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       }
     },
     {
@@ -2911,7 +3028,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       }
     },
     {
@@ -2922,7 +3040,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       }
     },
     {
@@ -2933,7 +3052,8 @@
         ],
         "lesson.key": "Writing Contracts",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "b0a92a46-f32e-46f2-91de-077fceddb8de"
       }
     },
     {
@@ -2944,7 +3064,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -2955,7 +3076,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -2966,7 +3088,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -2977,7 +3100,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -2988,7 +3112,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -2999,7 +3124,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -3010,7 +3136,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -3021,7 +3148,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -3032,7 +3160,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -3043,7 +3172,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -3054,7 +3184,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -3065,7 +3196,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "4db67dd1-5a45-404d-a149-878e00930407"
       }
     },
     {
@@ -3076,7 +3208,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3087,7 +3220,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3098,7 +3232,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3109,7 +3244,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3120,7 +3256,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3131,7 +3268,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3142,7 +3280,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3153,7 +3292,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3164,7 +3304,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3175,7 +3316,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3186,7 +3328,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3197,7 +3340,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3208,7 +3352,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3219,7 +3364,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3230,7 +3376,8 @@
         ],
         "lesson.key": "Defining Functions",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "ae30ef7a-6e3f-4f2a-9a78-e22492be6f91"
       }
     },
     {
@@ -3241,7 +3388,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       }
     },
     {
@@ -3252,7 +3400,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       }
     },
     {
@@ -3263,7 +3412,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       }
     },
     {
@@ -3274,7 +3424,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       }
     },
     {
@@ -3285,7 +3436,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       }
     },
     {
@@ -3296,7 +3448,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       }
     },
     {
@@ -3307,7 +3460,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       }
     },
     {
@@ -3318,7 +3472,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "937b6f75-dd7e-4e7d-9691-37fc3420ebaa"
       }
     },
     {
@@ -3329,7 +3484,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3340,7 +3496,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3351,7 +3508,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3362,7 +3520,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3373,7 +3532,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3384,7 +3544,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3395,7 +3556,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3406,7 +3568,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3417,7 +3580,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3428,7 +3592,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3439,7 +3604,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "f6ab5a59-75a3-4b6d-8cea-4d650e98b2e0"
       }
     },
     {
@@ -3450,7 +3616,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       }
     },
     {
@@ -3461,7 +3628,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       }
     },
     {
@@ -3472,7 +3640,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       }
     },
     {
@@ -3483,7 +3652,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       }
     },
     {
@@ -3494,7 +3664,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       }
     },
     {
@@ -3505,7 +3676,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       }
     },
     {
@@ -3516,7 +3688,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       }
     },
     {
@@ -3527,7 +3700,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "1172c47f-5ade-45c0-a344-6806981787fa"
       }
     },
     {
@@ -3538,7 +3712,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "8f8eb0f7-03da-4111-8066-8a822a65fbe2"
       }
     },
     {
@@ -3549,7 +3724,8 @@
         ],
         "lesson.key": "Next Steps",
         "lesson_group.key": "",
-        "script.name": "algebraPD2b"
+        "script.name": "algebraPD2b",
+        "activity_section.key": "8f8eb0f7-03da-4111-8066-8a822a65fbe2"
       }
     }
   ],

@@ -13,21 +13,12 @@
           "visibility": "Teacher and student"
         }
       ],
-      "pd": true,
-      "professional_learning_course": "K5 Support",
-      "script_announcements": [
-        {
-          "notice": "This Online PD Resource is no longer available",
-          "details": "Click \"Learn More\" to find out about the new Online PD Resources.",
-          "link": "https://studio.code.org/s/k5-onlinepd-2019",
-          "type": "failure",
-          "visibility": "Teacher and student"
-        }
-      ]
+      "is_migrated": true,
+      "professional_learning_course": "K5 Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:03 UTC",
+    "serialized_at": "2021-10-25 23:24:34 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {

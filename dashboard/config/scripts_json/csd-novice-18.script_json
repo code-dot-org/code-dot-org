@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "exclude_csf_column_in_legend": true,
+      "is_migrated": true,
       "professional_learning_course": "CS Discoveries Facilitator in Training 2018-2019",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:49 UTC",
+    "serialized_at": "2021-10-25 23:31:01 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -136,21 +136,158 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "290234e3-ea5d-4e30-935f-8c9db66cbfc7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "290234e3-ea5d-4e30-935f-8c9db66cbfc7",
+        "lesson.key": "Novice Reflection Overview",
+        "lesson_group.key": "required",
+        "script.name": "csd-novice-18"
+      }
+    },
+    {
+      "key": "c98e316d-1ef7-471c-babd-74fef2c0bb36",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c98e316d-1ef7-471c-babd-74fef2c0bb36",
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "csd-novice-18"
+      }
+    },
+    {
+      "key": "5e37cab8-e536-40de-8f4b-0435584daab7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e37cab8-e536-40de-8f4b-0435584daab7",
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "csd-novice-18"
+      }
+    },
+    {
+      "key": "df0abadd-8512-4dda-8d61-0e9389110407",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df0abadd-8512-4dda-8d61-0e9389110407",
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "csd-novice-18"
+      }
+    },
+    {
+      "key": "973918b0-3d70-4482-8e5f-2386008d2ca8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "973918b0-3d70-4482-8e5f-2386008d2ca8",
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "csd-novice-18"
+      }
+    },
+    {
+      "key": "c5d06eb6-844d-4f07-bac9-b97b79350fc0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c5d06eb6-844d-4f07-bac9-b97b79350fc0",
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "csd-novice-18"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "6c970d4b-ee32-4fc0-bdf6-dd081e73913b",
+      "position": 1,
+      "properties": {
+        "name": "Welcome Novices Facilitators!",
+        "progression_name": "Welcome Novices Facilitators!"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c970d4b-ee32-4fc0-bdf6-dd081e73913b",
+        "lesson_activity.key": "290234e3-ea5d-4e30-935f-8c9db66cbfc7"
+      }
+    },
+    {
+      "key": "58d9e0d3-acce-4f99-b1cf-fb2c2d140f95",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "58d9e0d3-acce-4f99-b1cf-fb2c2d140f95",
+        "lesson_activity.key": "c98e316d-1ef7-471c-babd-74fef2c0bb36"
+      }
+    },
+    {
+      "key": "27814d08-31ba-47f4-a508-49c1e84e95c2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "27814d08-31ba-47f4-a508-49c1e84e95c2",
+        "lesson_activity.key": "5e37cab8-e536-40de-8f4b-0435584daab7"
+      }
+    },
+    {
+      "key": "890ba9a8-2dd1-4a91-9b6c-cfa5cd08fc6d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "890ba9a8-2dd1-4a91-9b6c-cfa5cd08fc6d",
+        "lesson_activity.key": "df0abadd-8512-4dda-8d61-0e9389110407"
+      }
+    },
+    {
+      "key": "0a90ec7a-0186-4c89-876d-9be8d636f4d8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0a90ec7a-0186-4c89-876d-9be8d636f4d8",
+        "lesson_activity.key": "973918b0-3d70-4482-8e5f-2386008d2ca8"
+      }
+    },
+    {
+      "key": "90033c7d-82e2-4004-ac1a-a94bdf00f78c",
+      "position": 1,
+      "properties": {
+        "name": "Congrats!",
+        "progression_name": "Congrats!"
+      },
+      "seeding_key": {
+        "activity_section.key": "90033c7d-82e2-4004-ac1a-a94bdf00f78c",
+        "lesson_activity.key": "c5d06eb6-844d-4f07-bac9-b97b79350fc0"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "welcome-novice-18"
-        ],
         "progression": "Welcome Novices Facilitators!"
       },
       "bonus": false,
@@ -160,7 +297,8 @@
         ],
         "lesson.key": "Novice Reflection Overview",
         "lesson_group.key": "required",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "6c970d4b-ee32-4fc0-bdf6-dd081e73913b"
       },
       "level_keys": [
         "welcome-novice-18"
@@ -169,12 +307,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-monday-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,7 +318,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "58d9e0d3-acce-4f99-b1cf-fb2c2d140f95"
       },
       "level_keys": [
         "novice-monday-1"
@@ -192,12 +328,9 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-monday-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -206,7 +339,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "58d9e0d3-acce-4f99-b1cf-fb2c2d140f95"
       },
       "level_keys": [
         "novice-monday-2"
@@ -215,12 +349,9 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-pushDL-unit1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -229,7 +360,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "58d9e0d3-acce-4f99-b1cf-fb2c2d140f95"
       },
       "level_keys": [
         "csd-pushDL-unit1"
@@ -238,12 +370,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-tuesday-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -252,7 +381,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "27814d08-31ba-47f4-a508-49c1e84e95c2"
       },
       "level_keys": [
         "novice-tuesday-1"
@@ -261,12 +391,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-tuesday-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,7 +402,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "27814d08-31ba-47f4-a508-49c1e84e95c2"
       },
       "level_keys": [
         "novice-tuesday-2"
@@ -284,12 +412,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-pushDL-unit2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -298,7 +423,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "27814d08-31ba-47f4-a508-49c1e84e95c2"
       },
       "level_keys": [
         "csd-pushDL-unit2"
@@ -307,12 +433,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-wednesday-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,7 +444,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "890ba9a8-2dd1-4a91-9b6c-cfa5cd08fc6d"
       },
       "level_keys": [
         "novice-wednesday-1"
@@ -330,12 +454,9 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-wednesday-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -344,7 +465,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "890ba9a8-2dd1-4a91-9b6c-cfa5cd08fc6d"
       },
       "level_keys": [
         "novice-wednesday-2"
@@ -353,12 +475,9 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-pushDL-unit2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -367,7 +486,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "890ba9a8-2dd1-4a91-9b6c-cfa5cd08fc6d"
       },
       "level_keys": [
         "csd-pushDL-unit2"
@@ -376,12 +496,9 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-thursday-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -390,7 +507,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "0a90ec7a-0186-4c89-876d-9be8d636f4d8"
       },
       "level_keys": [
         "novice-thursday-1"
@@ -399,12 +517,9 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-thursday-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -413,7 +528,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "0a90ec7a-0186-4c89-876d-9be8d636f4d8"
       },
       "level_keys": [
         "novice-thursday-2"
@@ -422,12 +538,9 @@
     {
       "chapter": 13,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-pushDL-unit3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,7 +549,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "0a90ec7a-0186-4c89-876d-9be8d636f4d8"
       },
       "level_keys": [
         "csd-pushDL-unit3"
@@ -445,12 +559,9 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-congrats"
-        ],
         "progression": "Congrats!"
       },
       "bonus": false,
@@ -460,7 +571,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "90033c7d-82e2-4004-ac1a-a94bdf00f78c"
       },
       "level_keys": [
         "novice-congrats"
@@ -476,7 +588,8 @@
         ],
         "lesson.key": "Novice Reflection Overview",
         "lesson_group.key": "required",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "6c970d4b-ee32-4fc0-bdf6-dd081e73913b"
       }
     },
     {
@@ -487,7 +600,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "58d9e0d3-acce-4f99-b1cf-fb2c2d140f95"
       }
     },
     {
@@ -498,7 +612,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "58d9e0d3-acce-4f99-b1cf-fb2c2d140f95"
       }
     },
     {
@@ -509,7 +624,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "58d9e0d3-acce-4f99-b1cf-fb2c2d140f95"
       }
     },
     {
@@ -520,7 +636,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "27814d08-31ba-47f4-a508-49c1e84e95c2"
       }
     },
     {
@@ -531,7 +648,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "27814d08-31ba-47f4-a508-49c1e84e95c2"
       }
     },
     {
@@ -542,7 +660,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "27814d08-31ba-47f4-a508-49c1e84e95c2"
       }
     },
     {
@@ -553,7 +672,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "890ba9a8-2dd1-4a91-9b6c-cfa5cd08fc6d"
       }
     },
     {
@@ -564,7 +684,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "890ba9a8-2dd1-4a91-9b6c-cfa5cd08fc6d"
       }
     },
     {
@@ -575,7 +696,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "890ba9a8-2dd1-4a91-9b6c-cfa5cd08fc6d"
       }
     },
     {
@@ -586,7 +708,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "0a90ec7a-0186-4c89-876d-9be8d636f4d8"
       }
     },
     {
@@ -597,7 +720,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "0a90ec7a-0186-4c89-876d-9be8d636f4d8"
       }
     },
     {
@@ -608,7 +732,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "0a90ec7a-0186-4c89-876d-9be8d636f4d8"
       }
     },
     {
@@ -619,7 +744,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
-        "script.name": "csd-novice-18"
+        "script.name": "csd-novice-18",
+        "activity_section.key": "90033c7d-82e2-4004-ac1a-a94bdf00f78c"
       }
     }
   ],

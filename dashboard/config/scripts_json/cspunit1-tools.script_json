@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:16 UTC",
+    "serialized_at": "2021-10-25 23:33:40 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -47,21 +47,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "7443e975-0c86-4d4a-b4e1-729224099d68",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7443e975-0c86-4d4a-b4e1-729224099d68",
+        "lesson.key": "netsim",
+        "lesson_group.key": "",
+        "script.name": "cspunit1-tools"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "520b501c-e01f-4bc2-82c7-b4cad8698a01",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "520b501c-e01f-4bc2-82c7-b4cad8698a01",
+        "lesson_activity.key": "7443e975-0c86-4d4a-b4e1-729224099d68"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "plc csp1 intro to tools"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -70,7 +88,8 @@
         ],
         "lesson.key": "netsim",
         "lesson_group.key": "",
-        "script.name": "cspunit1-tools"
+        "script.name": "cspunit1-tools",
+        "activity_section.key": "520b501c-e01f-4bc2-82c7-b4cad8698a01"
       },
       "level_keys": [
         "plc csp1 intro to tools"
@@ -86,7 +105,8 @@
         ],
         "lesson.key": "netsim",
         "lesson_group.key": "",
-        "script.name": "cspunit1-tools"
+        "script.name": "cspunit1-tools",
+        "activity_section.key": "520b501c-e01f-4bc2-82c7-b4cad8698a01"
       }
     }
   ],

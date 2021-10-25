@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "ECS Support Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:16 UTC",
+    "serialized_at": "2021-10-25 23:24:10 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -107,21 +107,131 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "036cb352-4e3b-400c-a750-4f91b3ef8458",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "036cb352-4e3b-400c-a750-4f91b3ef8458",
+        "lesson.key": "Welcome to Phase 1!",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "key": "f996dba1-6599-452c-9bc5-1df27ccc0011",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f996dba1-6599-452c-9bc5-1df27ccc0011",
+        "lesson.key": "Background and Context",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "key": "31315c62-4ae4-4924-85d0-b9fbee4802a5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31315c62-4ae4-4924-85d0-b9fbee4802a5",
+        "lesson.key": "ECS Curriculum",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "key": "f7f46d32-0279-4740-92b1-c3eb6c0b592a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7f46d32-0279-4740-92b1-c3eb6c0b592a",
+        "lesson.key": "Classroom and workshop style ",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    },
+    {
+      "key": "bc7fc003-0370-4885-b806-34e28b23b2f2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bc7fc003-0370-4885-b806-34e28b23b2f2",
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "",
+        "script.name": "ECSPD1"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a401546b-4b72-4975-868a-f7fd2519a218",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218",
+        "lesson_activity.key": "036cb352-4e3b-400c-a750-4f91b3ef8458"
+      }
+    },
+    {
+      "key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4",
+        "lesson_activity.key": "f996dba1-6599-452c-9bc5-1df27ccc0011"
+      }
+    },
+    {
+      "key": "eb729817-3046-4427-b404-064485825c16",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16",
+        "lesson_activity.key": "31315c62-4ae4-4924-85d0-b9fbee4802a5"
+      }
+    },
+    {
+      "key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146",
+        "lesson_activity.key": "f7f46d32-0279-4740-92b1-c3eb6c0b592a"
+      }
+    },
+    {
+      "key": "a5edc9a4-1dd2-4a15-912d-e5bb003b30c6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a5edc9a4-1dd2-4a15-912d-e5bb003b30c6",
+        "lesson_activity.key": "bc7fc003-0370-4885-b806-34e28b23b2f2"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS Welcome Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -130,7 +240,8 @@
         ],
         "lesson.key": "Welcome to Phase 1!",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218"
       },
       "level_keys": [
         "PDECS Welcome Video"
@@ -139,12 +250,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -153,7 +261,8 @@
         ],
         "lesson.key": "Welcome to Phase 1!",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218"
       },
       "level_keys": [
         "PDECS tour"
@@ -162,12 +271,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 professional learning program phases"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -176,7 +282,8 @@
         ],
         "lesson.key": "Welcome to Phase 1!",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218"
       },
       "level_keys": [
         "ECSPD1 professional learning program phases"
@@ -185,12 +292,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS Matching Program Commitment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -199,7 +303,8 @@
         ],
         "lesson.key": "Welcome to Phase 1!",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218"
       },
       "level_keys": [
         "ECS Matching Program Commitment"
@@ -208,12 +313,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 cs is about"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -222,7 +324,8 @@
         ],
         "lesson.key": "Background and Context",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4"
       },
       "level_keys": [
         "ECSPD1 cs is about"
@@ -231,12 +334,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 dikjstra"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,7 +345,8 @@
         ],
         "lesson.key": "Background and Context",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4"
       },
       "level_keys": [
         "ECSPD1 dikjstra"
@@ -254,12 +355,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 equity in cs education"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -268,7 +366,8 @@
         ],
         "lesson.key": "Background and Context",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4"
       },
       "level_keys": [
         "ECSPD1 equity in cs education"
@@ -277,12 +376,9 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 background reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -291,7 +387,8 @@
         ],
         "lesson.key": "Background and Context",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4"
       },
       "level_keys": [
         "ECSPD1 background reflection"
@@ -300,12 +397,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 curriculum design"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -314,7 +408,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       },
       "level_keys": [
         "ECSPD1 curriculum design"
@@ -323,12 +418,9 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 unit overviews"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -337,7 +429,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       },
       "level_keys": [
         "ECSPD1 unit overviews"
@@ -346,12 +439,9 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 Matching Unit Descriptions and Numbers"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -360,7 +450,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       },
       "level_keys": [
         "ECSPD1 Matching Unit Descriptions and Numbers"
@@ -369,12 +460,9 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 unit 1 overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -383,7 +471,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       },
       "level_keys": [
         "ECSPD1 unit 1 overview"
@@ -392,12 +481,9 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 unit 2 overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -406,7 +492,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       },
       "level_keys": [
         "ECSPD1 unit 2 overview"
@@ -415,12 +502,9 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 curriculum connections"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -429,7 +513,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       },
       "level_keys": [
         "ECSPD1 curriculum connections"
@@ -438,12 +523,9 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 computational thinker"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -452,7 +534,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       },
       "level_keys": [
         "ECSPD1 computational thinker"
@@ -461,12 +544,9 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 unifying themes"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -475,7 +555,8 @@
         ],
         "lesson.key": "Classroom and workshop style ",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146"
       },
       "level_keys": [
         "ECSPD1 unifying themes"
@@ -484,12 +565,9 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS PD1 classroom culture"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -498,7 +576,8 @@
         ],
         "lesson.key": "Classroom and workshop style ",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146"
       },
       "level_keys": [
         "ECS PD1 classroom culture"
@@ -507,12 +586,9 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 your role"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -521,7 +597,8 @@
         ],
         "lesson.key": "Classroom and workshop style ",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146"
       },
       "level_keys": [
         "ECSPD1 your role"
@@ -530,12 +607,9 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 student centered learning"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -544,7 +618,8 @@
         ],
         "lesson.key": "Classroom and workshop style ",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146"
       },
       "level_keys": [
         "ECSPD1 student centered learning"
@@ -553,12 +628,9 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 Forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -567,7 +639,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a5edc9a4-1dd2-4a15-912d-e5bb003b30c6"
       },
       "level_keys": [
         "ECSPD1 Forum"
@@ -576,12 +649,9 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 post survey"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -590,7 +660,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a5edc9a4-1dd2-4a15-912d-e5bb003b30c6"
       },
       "level_keys": [
         "ECSPD1 post survey"
@@ -599,12 +670,9 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 congratulations end"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -613,7 +681,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a5edc9a4-1dd2-4a15-912d-e5bb003b30c6"
       },
       "level_keys": [
         "ECSPD1 congratulations end"
@@ -629,7 +698,8 @@
         ],
         "lesson.key": "Welcome to Phase 1!",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218"
       }
     },
     {
@@ -640,7 +710,8 @@
         ],
         "lesson.key": "Welcome to Phase 1!",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218"
       }
     },
     {
@@ -651,7 +722,8 @@
         ],
         "lesson.key": "Welcome to Phase 1!",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218"
       }
     },
     {
@@ -662,7 +734,8 @@
         ],
         "lesson.key": "Welcome to Phase 1!",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a401546b-4b72-4975-868a-f7fd2519a218"
       }
     },
     {
@@ -673,7 +746,8 @@
         ],
         "lesson.key": "Background and Context",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4"
       }
     },
     {
@@ -684,7 +758,8 @@
         ],
         "lesson.key": "Background and Context",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4"
       }
     },
     {
@@ -695,7 +770,8 @@
         ],
         "lesson.key": "Background and Context",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4"
       }
     },
     {
@@ -706,7 +782,8 @@
         ],
         "lesson.key": "Background and Context",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "3b0cc6a3-6d1f-4ab5-b051-71af5c42bbf4"
       }
     },
     {
@@ -717,7 +794,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       }
     },
     {
@@ -728,7 +806,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       }
     },
     {
@@ -739,7 +818,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       }
     },
     {
@@ -750,7 +830,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       }
     },
     {
@@ -761,7 +842,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       }
     },
     {
@@ -772,7 +854,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       }
     },
     {
@@ -783,7 +866,8 @@
         ],
         "lesson.key": "ECS Curriculum",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "eb729817-3046-4427-b404-064485825c16"
       }
     },
     {
@@ -794,7 +878,8 @@
         ],
         "lesson.key": "Classroom and workshop style ",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146"
       }
     },
     {
@@ -805,7 +890,8 @@
         ],
         "lesson.key": "Classroom and workshop style ",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146"
       }
     },
     {
@@ -816,7 +902,8 @@
         ],
         "lesson.key": "Classroom and workshop style ",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146"
       }
     },
     {
@@ -827,7 +914,8 @@
         ],
         "lesson.key": "Classroom and workshop style ",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "faa910e3-9cdc-480d-a0b5-cc2b1bbf8146"
       }
     },
     {
@@ -838,7 +926,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a5edc9a4-1dd2-4a15-912d-e5bb003b30c6"
       }
     },
     {
@@ -849,7 +938,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a5edc9a4-1dd2-4a15-912d-e5bb003b30c6"
       }
     },
     {
@@ -860,7 +950,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "",
-        "script.name": "ECSPD1"
+        "script.name": "ECSPD1",
+        "activity_section.key": "a5edc9a4-1dd2-4a15-912d-e5bb003b30c6"
       }
     }
   ],

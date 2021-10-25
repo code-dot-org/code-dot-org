@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "peer_reviews_to_complete": 4,
       "professional_learning_course": "CSP Support",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:19 UTC",
+    "serialized_at": "2021-10-25 23:33:02 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -238,21 +239,943 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4ce4df9f-a627-4021-8e1a-1b09004a2417",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4ce4df9f-a627-4021-8e1a-1b09004a2417",
+        "lesson.key": "Unit 1 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "916af12b-1b75-4f8f-862f-102709cfd66f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "916af12b-1b75-4f8f-862f-102709cfd66f",
+        "lesson.key": "AP Preparation and Support",
+        "lesson_group.key": "required",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a",
+        "lesson.key": "Lessons 2 - 3: Binary Messages",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9",
+        "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "9fadd13b-f488-4541-a967-846cc5c80524",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9fadd13b-f488-4541-a967-846cc5c80524",
+        "lesson.key": "Lesson 7: Encoding and Sending Text",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "7d470dc2-1296-4ca8-9358-639190364530",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d470dc2-1296-4ca8-9358-639190364530",
+        "lesson.key": "Lesson 9: Internet Addressing",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "6a73dd6e-1df4-4121-b4cf-10c9d775add8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a73dd6e-1df4-4121-b4cf-10c9d775add8",
+        "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "ee67ab11-91ee-481d-926f-f807526f617d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee67ab11-91ee-481d-926f-f807526f617d",
+        "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
+        "lesson_group.key": "content",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "c9a054c6-1c74-4c9a-a00e-4fe3468559b8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9a054c6-1c74-4c9a-a00e-4fe3468559b8",
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "76325160-b408-4771-809b-42bdef7d3ed6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76325160-b408-4771-809b-42bdef7d3ed6",
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "08a3a5f4-f2db-4fb6-9903-a72544826cfd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "08a3a5f4-f2db-4fb6-9903-a72544826cfd",
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    },
+    {
+      "key": "c2297588-bd87-427e-9e67-f54bb895f489",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2297588-bd87-427e-9e67-f54bb895f489",
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp1-support"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ab888c5b-18eb-4ea1-a4a4-cd516161738d",
+      "position": 1,
+      "properties": {
+        "progression_name": "What's inside and how is it organized?"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab888c5b-18eb-4ea1-a4a4-cd516161738d",
+        "lesson_activity.key": "4ce4df9f-a627-4021-8e1a-1b09004a2417"
+      }
+    },
+    {
+      "key": "3d4e4039-69df-413a-a131-6fc06c4f9c18",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d4e4039-69df-413a-a131-6fc06c4f9c18",
+        "lesson_activity.key": "4ce4df9f-a627-4021-8e1a-1b09004a2417"
+      }
+    },
+    {
+      "key": "ad583971-bce3-4b12-9a8f-5f2a76b4fcba",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 1 Teaching Philosophy and Commentary"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad583971-bce3-4b12-9a8f-5f2a76b4fcba",
+        "lesson_activity.key": "4ce4df9f-a627-4021-8e1a-1b09004a2417"
+      }
+    },
+    {
+      "key": "f7959cef-be9a-472c-b75c-2e9b054f7b9d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Teaching with the Internet Simulator"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7959cef-be9a-472c-b75c-2e9b054f7b9d",
+        "lesson_activity.key": "4ce4df9f-a627-4021-8e1a-1b09004a2417"
+      }
+    },
+    {
+      "key": "1c489558-0b8a-4cfb-94b5-3d17c128103a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice Performance Tasks in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c489558-0b8a-4cfb-94b5-3d17c128103a",
+        "lesson_activity.key": "4ce4df9f-a627-4021-8e1a-1b09004a2417"
+      }
+    },
+    {
+      "key": "3f149957-6170-4747-9b69-ddd4e884e91b",
+      "position": 6,
+      "properties": {
+        "name": "Unit 1 Self-Assessment",
+        "progression_name": "Unit 1 Self-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f149957-6170-4747-9b69-ddd4e884e91b",
+        "lesson_activity.key": "4ce4df9f-a627-4021-8e1a-1b09004a2417"
+      }
+    },
+    {
+      "key": "757b3784-3259-4656-a7c4-b93f7a2d85e6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 1 Vocab and Concept Review Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "757b3784-3259-4656-a7c4-b93f7a2d85e6",
+        "lesson_activity.key": "916af12b-1b75-4f8f-862f-102709cfd66f"
+      }
+    },
+    {
+      "key": "a88f6988-27db-4968-ace0-ceb35fb6778b",
+      "position": 2,
+      "properties": {
+        "name": "AP Test Prep Guidance",
+        "progression_name": "AP Test Prep Guidance"
+      },
+      "seeding_key": {
+        "activity_section.key": "a88f6988-27db-4968-ace0-ceb35fb6778b",
+        "lesson_activity.key": "916af12b-1b75-4f8f-862f-102709cfd66f"
+      }
+    },
+    {
+      "key": "3da7519b-a85f-4599-a623-10dd115f16d6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 1.2 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3da7519b-a85f-4599-a623-10dd115f16d6",
+        "lesson_activity.key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a"
+      }
+    },
+    {
+      "key": "814f7624-8ae1-4e74-aceb-0503cb4f6e0b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Understanding Communication Protocols"
+      },
+      "seeding_key": {
+        "activity_section.key": "814f7624-8ae1-4e74-aceb-0503cb4f6e0b",
+        "lesson_activity.key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a"
+      }
+    },
+    {
+      "key": "f9343551-f841-4b07-b8b5-92951a50addc",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson 1.3 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9343551-f841-4b07-b8b5-92951a50addc",
+        "lesson_activity.key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a"
+      }
+    },
+    {
+      "key": "038ea6c1-e29c-43c1-87e0-a8eec9b39587",
+      "position": 4,
+      "properties": {
+        "progression_name": "Binary as an Encoding Scheme"
+      },
+      "seeding_key": {
+        "activity_section.key": "038ea6c1-e29c-43c1-87e0-a8eec9b39587",
+        "lesson_activity.key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a"
+      }
+    },
+    {
+      "key": "242979c9-c1fe-4c40-a069-7dfe99f42fb3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Internet Simulator: Sending Binary Messages"
+      },
+      "seeding_key": {
+        "activity_section.key": "242979c9-c1fe-4c40-a069-7dfe99f42fb3",
+        "lesson_activity.key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a"
+      }
+    },
+    {
+      "key": "d58a39d5-bd15-4b36-b801-6210e8d2b3ae",
+      "position": 6,
+      "properties": {
+        "progression_name": "The Internet: Wires, Cables, and Wifi"
+      },
+      "seeding_key": {
+        "activity_section.key": "d58a39d5-bd15-4b36-b801-6210e8d2b3ae",
+        "lesson_activity.key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a"
+      }
+    },
+    {
+      "key": "9add5e9d-84fd-4ac4-b4cd-6c23ceaf925e",
+      "position": 7,
+      "properties": {
+        "name": "Lessons 2 - 3: Teaching and Student Support Plan",
+        "progression_name": "Lessons 2 - 3: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "9add5e9d-84fd-4ac4-b4cd-6c23ceaf925e",
+        "lesson_activity.key": "788ce37a-abd7-4c4a-883b-2c3992b4da3a"
+      }
+    },
+    {
+      "key": "0e3cd344-e6d1-4ec8-991c-6b441e28b398",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 1.4 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e3cd344-e6d1-4ec8-991c-6b441e28b398",
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9"
+      }
+    },
+    {
+      "key": "a0fd6d10-0e07-4f52-a3db-695cdfa49715",
+      "position": 2,
+      "properties": {
+        "progression_name": "Why Teach Number Systems?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0fd6d10-0e07-4f52-a3db-695cdfa49715",
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9"
+      }
+    },
+    {
+      "key": "9a176dae-5f17-44c8-8671-e7916959274d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson 1.5 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a176dae-5f17-44c8-8671-e7916959274d",
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9"
+      }
+    },
+    {
+      "key": "08073b00-5858-4be4-8fd5-6383ba9c723b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Lesson 1.6 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "08073b00-5858-4be4-8fd5-6383ba9c723b",
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9"
+      }
+    },
+    {
+      "key": "0de38248-4a76-4502-89f9-96b56627ee01",
+      "position": 5,
+      "properties": {
+        "progression_name": "Sending Numbers: The Big Picture"
+      },
+      "seeding_key": {
+        "activity_section.key": "0de38248-4a76-4502-89f9-96b56627ee01",
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9"
+      }
+    },
+    {
+      "key": "79d2485f-1bfe-49b7-9943-d4864060bc78",
+      "position": 6,
+      "properties": {
+        "progression_name": "Internet Simulator: Sending Numbers"
+      },
+      "seeding_key": {
+        "activity_section.key": "79d2485f-1bfe-49b7-9943-d4864060bc78",
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9"
+      }
+    },
+    {
+      "key": "1fdffa50-ed59-4a43-8c36-042161ba9dc2",
+      "position": 7,
+      "properties": {
+        "progression_name": "Reflection: Create your Own Number System"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fdffa50-ed59-4a43-8c36-042161ba9dc2",
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9"
+      }
+    },
+    {
+      "key": "dbe3d319-8b77-41a1-ba5d-47f5238ccca5",
+      "position": 8,
+      "properties": {
+        "name": "Lessons 4 - 6: Teaching and Student Support Plan",
+        "progression_name": "Lessons 4 - 6: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbe3d319-8b77-41a1-ba5d-47f5238ccca5",
+        "lesson_activity.key": "0695e9f5-4ed7-425c-8480-2ede364f4ff9"
+      }
+    },
+    {
+      "key": "4952e534-3aab-4a27-8a4b-77a0eaf8344b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 1.7 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "4952e534-3aab-4a27-8a4b-77a0eaf8344b",
+        "lesson_activity.key": "9fadd13b-f488-4541-a967-846cc5c80524"
+      }
+    },
+    {
+      "key": "ee672cad-fbc6-4254-9465-33231b1772e4",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is ASCII?"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee672cad-fbc6-4254-9465-33231b1772e4",
+        "lesson_activity.key": "9fadd13b-f488-4541-a967-846cc5c80524"
+      }
+    },
+    {
+      "key": "0d4469a3-e476-4158-8450-13a4a59677ec",
+      "position": 3,
+      "properties": {
+        "progression_name": "Task: ASCII Representation of your Name"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d4469a3-e476-4158-8450-13a4a59677ec",
+        "lesson_activity.key": "9fadd13b-f488-4541-a967-846cc5c80524"
+      }
+    },
+    {
+      "key": "665b5da2-7d3e-45de-aa86-f4901fa0f55e",
+      "position": 4,
+      "properties": {
+        "progression_name": "What is HTML?"
+      },
+      "seeding_key": {
+        "activity_section.key": "665b5da2-7d3e-45de-aa86-f4901fa0f55e",
+        "lesson_activity.key": "9fadd13b-f488-4541-a967-846cc5c80524"
+      }
+    },
+    {
+      "key": "97fa287f-46aa-48f0-9310-182e199cc29a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Internet Simulator: Sending Text"
+      },
+      "seeding_key": {
+        "activity_section.key": "97fa287f-46aa-48f0-9310-182e199cc29a",
+        "lesson_activity.key": "9fadd13b-f488-4541-a967-846cc5c80524"
+      }
+    },
+    {
+      "key": "8706f939-555d-4bda-af0d-fe08de1c3156",
+      "position": 6,
+      "properties": {
+        "name": "Lesson 7: Teaching and Student Support Plan",
+        "progression_name": "Lesson 7: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "8706f939-555d-4bda-af0d-fe08de1c3156",
+        "lesson_activity.key": "9fadd13b-f488-4541-a967-846cc5c80524"
+      }
+    },
+    {
+      "key": "12c66d1d-dd92-4b36-94ba-ff28e99f7385",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 1.9 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "12c66d1d-dd92-4b36-94ba-ff28e99f7385",
+        "lesson_activity.key": "7d470dc2-1296-4ca8-9358-639190364530"
+      }
+    },
+    {
+      "key": "6234d5b2-8790-4765-980c-da497f691ea9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Addressing in the Game of Battleship"
+      },
+      "seeding_key": {
+        "activity_section.key": "6234d5b2-8790-4765-980c-da497f691ea9",
+        "lesson_activity.key": "7d470dc2-1296-4ca8-9358-639190364530"
+      }
+    },
+    {
+      "key": "663d9047-ff5c-411b-b962-d450fd199141",
+      "position": 3,
+      "properties": {
+        "progression_name": "Task: Develop a Battleship Protocol"
+      },
+      "seeding_key": {
+        "activity_section.key": "663d9047-ff5c-411b-b962-d450fd199141",
+        "lesson_activity.key": "7d470dc2-1296-4ca8-9358-639190364530"
+      }
+    },
+    {
+      "key": "63c32601-ce60-4a6f-80c1-6bbfac216a6d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Internet Simulator: Broadcast"
+      },
+      "seeding_key": {
+        "activity_section.key": "63c32601-ce60-4a6f-80c1-6bbfac216a6d",
+        "lesson_activity.key": "7d470dc2-1296-4ca8-9358-639190364530"
+      }
+    },
+    {
+      "key": "279d68e8-41aa-4dfd-aa05-29b31c4fb6b6",
+      "position": 5,
+      "properties": {
+        "progression_name": "The Internet: IP Addresses & DNS"
+      },
+      "seeding_key": {
+        "activity_section.key": "279d68e8-41aa-4dfd-aa05-29b31c4fb6b6",
+        "lesson_activity.key": "7d470dc2-1296-4ca8-9358-639190364530"
+      }
+    },
+    {
+      "key": "a26596d0-b6a7-4c17-8d65-670de2a1b4b9",
+      "position": 6,
+      "properties": {
+        "name": "Lesson 9: Teaching and Student Support Plan",
+        "progression_name": "Lesson 9: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "a26596d0-b6a7-4c17-8d65-670de2a1b4b9",
+        "lesson_activity.key": "7d470dc2-1296-4ca8-9358-639190364530"
+      }
+    },
+    {
+      "key": "6b5ae1d7-757a-4604-93db-b5d3916fc268",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 1.10 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b5ae1d7-757a-4604-93db-b5d3916fc268",
+        "lesson_activity.key": "6a73dd6e-1df4-4121-b4cf-10c9d775add8"
+      }
+    },
+    {
+      "key": "ec6d1e44-9873-473c-b468-a3b72429804d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Internet Simulator: Routers"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec6d1e44-9873-473c-b468-a3b72429804d",
+        "lesson_activity.key": "6a73dd6e-1df4-4121-b4cf-10c9d775add8"
+      }
+    },
+    {
+      "key": "d77a0296-f61b-4d47-95b4-318d989539b9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson 1.11 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d77a0296-f61b-4d47-95b4-318d989539b9",
+        "lesson_activity.key": "6a73dd6e-1df4-4121-b4cf-10c9d775add8"
+      }
+    },
+    {
+      "key": "0017fb0a-51ff-4224-8e45-1597a456dbb5",
+      "position": 4,
+      "properties": {
+        "progression_name": "Internet Simulator: Packets"
+      },
+      "seeding_key": {
+        "activity_section.key": "0017fb0a-51ff-4224-8e45-1597a456dbb5",
+        "lesson_activity.key": "6a73dd6e-1df4-4121-b4cf-10c9d775add8"
+      }
+    },
+    {
+      "key": "96ff8c75-3861-424f-ab4e-1c08b99eb29f",
+      "position": 5,
+      "properties": {
+        "progression_name": "The Internet: Packets, Routing, and Reliability"
+      },
+      "seeding_key": {
+        "activity_section.key": "96ff8c75-3861-424f-ab4e-1c08b99eb29f",
+        "lesson_activity.key": "6a73dd6e-1df4-4121-b4cf-10c9d775add8"
+      }
+    },
+    {
+      "key": "63f8b163-b23b-4736-bb66-f9b58af514d2",
+      "position": 6,
+      "properties": {
+        "name": "Lessons 10 - 11: Teaching and Student Support Plan",
+        "progression_name": "Lessons 10 - 11: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "63f8b163-b23b-4736-bb66-f9b58af514d2",
+        "lesson_activity.key": "6a73dd6e-1df4-4121-b4cf-10c9d775add8"
+      }
+    },
+    {
+      "key": "fa94e81b-c2da-4dc4-88d3-dbf91d6b7604",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson 1.12 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa94e81b-c2da-4dc4-88d3-dbf91d6b7604",
+        "lesson_activity.key": "ee67ab11-91ee-481d-926f-f807526f617d"
+      }
+    },
+    {
+      "key": "20804a50-4613-4596-8271-a88f9a964ad5",
+      "position": 2,
+      "properties": {
+        "progression_name": "Internet Simulator: DNS"
+      },
+      "seeding_key": {
+        "activity_section.key": "20804a50-4613-4596-8271-a88f9a964ad5",
+        "lesson_activity.key": "ee67ab11-91ee-481d-926f-f807526f617d"
+      }
+    },
+    {
+      "key": "aa4770b6-08a6-4a9c-8884-6533acb6cbe8",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Internet: IP Addresses & DNS"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa4770b6-08a6-4a9c-8884-6533acb6cbe8",
+        "lesson_activity.key": "ee67ab11-91ee-481d-926f-f807526f617d"
+      }
+    },
+    {
+      "key": "e88368d3-9788-44e0-942f-8f5e7478648a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Lesson 1.13 Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e88368d3-9788-44e0-942f-8f5e7478648a",
+        "lesson_activity.key": "ee67ab11-91ee-481d-926f-f807526f617d"
+      }
+    },
+    {
+      "key": "11703597-fe66-47bf-b1bc-5941c83e5ca7",
+      "position": 5,
+      "properties": {
+        "progression_name": "The Internet: HTTP and HTML"
+      },
+      "seeding_key": {
+        "activity_section.key": "11703597-fe66-47bf-b1bc-5941c83e5ca7",
+        "lesson_activity.key": "ee67ab11-91ee-481d-926f-f807526f617d"
+      }
+    },
+    {
+      "key": "7e034c7b-4ab8-4461-b803-15c3e07d7d49",
+      "position": 6,
+      "properties": {
+        "name": "Lessons 12 - 13: Teaching and Student Support Plan",
+        "progression_name": "Lessons 12 - 13: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e034c7b-4ab8-4461-b803-15c3e07d7d49",
+        "lesson_activity.key": "ee67ab11-91ee-481d-926f-f807526f617d"
+      }
+    },
+    {
+      "key": "4c751827-543f-4d57-bbd1-c7001edcf1fe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Group Work and Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c751827-543f-4d57-bbd1-c7001edcf1fe",
+        "lesson_activity.key": "c9a054c6-1c74-4c9a-a00e-4fe3468559b8"
+      }
+    },
+    {
+      "key": "909d4a9c-ba64-4086-868d-75ce44b45146",
+      "position": 2,
+      "properties": {
+        "progression_name": "Group Work and Peer Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "909d4a9c-ba64-4086-868d-75ce44b45146",
+        "lesson_activity.key": "c9a054c6-1c74-4c9a-a00e-4fe3468559b8"
+      }
+    },
+    {
+      "key": "a85d5539-4f96-4908-8794-40571833346c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Collaborative Learning and Group Work: Description and Strategies"
+      },
+      "seeding_key": {
+        "activity_section.key": "a85d5539-4f96-4908-8794-40571833346c",
+        "lesson_activity.key": "c9a054c6-1c74-4c9a-a00e-4fe3468559b8"
+      }
+    },
+    {
+      "key": "34bd3840-ef7d-4001-a4a4-1e8d97a0cc92",
+      "position": 4,
+      "properties": {
+        "progression_name": "The Official Peer Instruction Blog"
+      },
+      "seeding_key": {
+        "activity_section.key": "34bd3840-ef7d-4001-a4a4-1e8d97a0cc92",
+        "lesson_activity.key": "c9a054c6-1c74-4c9a-a00e-4fe3468559b8"
+      }
+    },
+    {
+      "key": "a3e5e3c3-1c8f-45f6-a33d-07f3420d3ec9",
+      "position": 5,
+      "properties": {
+        "progression_name": "the Journal of Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "a3e5e3c3-1c8f-45f6-a33d-07f3420d3ec9",
+        "lesson_activity.key": "c9a054c6-1c74-4c9a-a00e-4fe3468559b8"
+      }
+    },
+    {
+      "key": "0542befd-dfb4-41f7-bbc8-0ce57660b735",
+      "position": 6,
+      "properties": {
+        "name": "Teaching Practice Plan: Group Work and Peer Learning",
+        "progression_name": "Teaching Practice Plan: Group Work and Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "0542befd-dfb4-41f7-bbc8-0ce57660b735",
+        "lesson_activity.key": "c9a054c6-1c74-4c9a-a00e-4fe3468559b8"
+      }
+    },
+    {
+      "key": "d95e6c57-3788-41fe-9674-fa378efba18c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Balancing Teachers and Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "d95e6c57-3788-41fe-9674-fa378efba18c",
+        "lesson_activity.key": "76325160-b408-4771-809b-42bdef7d3ed6"
+      }
+    },
+    {
+      "key": "04e45e3b-e78b-4f55-b080-439878e04421",
+      "position": 2,
+      "properties": {
+        "progression_name": "Balancing Teacher and Tools in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "04e45e3b-e78b-4f55-b080-439878e04421",
+        "lesson_activity.key": "76325160-b408-4771-809b-42bdef7d3ed6"
+      }
+    },
+    {
+      "key": "92492bde-8283-4934-b7fe-ec1f0c9811c4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Classroom Management Tips for School Computer Labs"
+      },
+      "seeding_key": {
+        "activity_section.key": "92492bde-8283-4934-b7fe-ec1f0c9811c4",
+        "lesson_activity.key": "76325160-b408-4771-809b-42bdef7d3ed6"
+      }
+    },
+    {
+      "key": "850d0242-140b-4529-b0e9-7af67d77e32e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Considerations for the 1-to-1 Classroom"
+      },
+      "seeding_key": {
+        "activity_section.key": "850d0242-140b-4529-b0e9-7af67d77e32e",
+        "lesson_activity.key": "76325160-b408-4771-809b-42bdef7d3ed6"
+      }
+    },
+    {
+      "key": "911d4762-0dfb-4742-8a60-25578e6dfc0e",
+      "position": 5,
+      "properties": {
+        "name": "Teaching Practice Plan: Balancing Teacher and Tools",
+        "progression_name": "Teaching Practice Plan: Balancing Teacher and Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "911d4762-0dfb-4742-8a60-25578e6dfc0e",
+        "lesson_activity.key": "76325160-b408-4771-809b-42bdef7d3ed6"
+      }
+    },
+    {
+      "key": "fe84e54d-b243-45d6-bf4b-6395b6ab6dee",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Discovery Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe84e54d-b243-45d6-bf4b-6395b6ab6dee",
+        "lesson_activity.key": "08a3a5f4-f2db-4fb6-9903-a72544826cfd"
+      }
+    },
+    {
+      "key": "3e23de46-21f5-4d98-9407-73135d091d15",
+      "position": 2,
+      "properties": {
+        "progression_name": "Discovery Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e23de46-21f5-4d98-9407-73135d091d15",
+        "lesson_activity.key": "08a3a5f4-f2db-4fb6-9903-a72544826cfd"
+      }
+    },
+    {
+      "key": "a5a17bf1-4e3b-4b62-8ac3-7ba8f4adbd4d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Discovery learning definition and history"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5a17bf1-4e3b-4b62-8ac3-7ba8f4adbd4d",
+        "lesson_activity.key": "08a3a5f4-f2db-4fb6-9903-a72544826cfd"
+      }
+    },
+    {
+      "key": "3ea1b438-7d83-42d9-af55-ada95debeff8",
+      "position": 4,
+      "properties": {
+        "progression_name": "Discovery learning techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ea1b438-7d83-42d9-af55-ada95debeff8",
+        "lesson_activity.key": "08a3a5f4-f2db-4fb6-9903-a72544826cfd"
+      }
+    },
+    {
+      "key": "1a5c50bf-e749-4172-bca1-c14f6829a96f",
+      "position": 5,
+      "properties": {
+        "name": "Teaching Practice Plan: Discovery Learning",
+        "progression_name": "Teaching Practice Plan: Discovery Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a5c50bf-e749-4172-bca1-c14f6829a96f",
+        "lesson_activity.key": "08a3a5f4-f2db-4fb6-9903-a72544826cfd"
+      }
+    },
+    {
+      "key": "69d495f8-798a-4d5a-ba31-09c05dd4bdd5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Capturing Student Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "69d495f8-798a-4d5a-ba31-09c05dd4bdd5",
+        "lesson_activity.key": "c2297588-bd87-427e-9e67-f54bb895f489"
+      }
+    },
+    {
+      "key": "61d7d6df-21be-45e5-ab42-c8d76f59ff50",
+      "position": 2,
+      "properties": {
+        "progression_name": "Assessing Student Learning in Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "61d7d6df-21be-45e5-ab42-c8d76f59ff50",
+        "lesson_activity.key": "c2297588-bd87-427e-9e67-f54bb895f489"
+      }
+    },
+    {
+      "key": "c3973d79-f553-4c57-aab5-981388c5b880",
+      "position": 3,
+      "properties": {
+        "progression_name": "What is the difference between formative and summative assessment?"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3973d79-f553-4c57-aab5-981388c5b880",
+        "lesson_activity.key": "c2297588-bd87-427e-9e67-f54bb895f489"
+      }
+    },
+    {
+      "key": "4facdfd8-157f-45ef-b5f6-6e8e4cf6ce8b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Designing Assessment Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "4facdfd8-157f-45ef-b5f6-6e8e4cf6ce8b",
+        "lesson_activity.key": "c2297588-bd87-427e-9e67-f54bb895f489"
+      }
+    },
+    {
+      "key": "a8ef5708-2a30-49fb-95b4-e6edd2344b9d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Classroom Assessment Techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8ef5708-2a30-49fb-95b4-e6edd2344b9d",
+        "lesson_activity.key": "c2297588-bd87-427e-9e67-f54bb895f489"
+      }
+    },
+    {
+      "key": "549a9da8-d9f3-4482-9f51-f77c79ac6c79",
+      "position": 6,
+      "properties": {
+        "name": "Teaching Practice Plan: Assessing Student Learning",
+        "progression_name": "Teaching Practice Plan: Assessing Student Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "549a9da8-d9f3-4482-9f51-f77c79ac6c79",
+        "lesson_activity.key": "c2297588-bd87-427e-9e67-f54bb895f489"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What's inside and how is it organized?"
-        ],
         "progression": "What's inside and how is it organized?"
       },
       "bonus": false,
@@ -262,7 +1185,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "ab888c5b-18eb-4ea1-a4a4-cd516161738d"
       },
       "level_keys": [
         "What's inside and how is it organized?"
@@ -271,12 +1195,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Introduction to Unit 1"
-        ],
         "progression": "Introduction to Unit 1"
       },
       "bonus": false,
@@ -286,7 +1207,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3d4e4039-69df-413a-a131-6fc06c4f9c18"
       },
       "level_keys": [
         "Introduction to Unit 1"
@@ -295,12 +1217,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 1 Teaching Philosophy and Commentary"
-        ],
         "progression": "Unit 1 Teaching Philosophy and Commentary"
       },
       "bonus": false,
@@ -310,7 +1229,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "ad583971-bce3-4b12-9a8f-5f2a76b4fcba"
       },
       "level_keys": [
         "Unit 1 Teaching Philosophy and Commentary"
@@ -319,12 +1239,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Teaching with the Internet Simulator"
-        ],
         "progression": "Teaching with the Internet Simulator"
       },
       "bonus": false,
@@ -334,7 +1251,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "f7959cef-be9a-472c-b75c-2e9b054f7b9d"
       },
       "level_keys": [
         "Teaching with the Internet Simulator"
@@ -343,12 +1261,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Practice Performance Tasks in Unit 1"
-        ],
         "progression": "Practice Performance Tasks in Unit 1"
       },
       "bonus": false,
@@ -358,7 +1273,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "1c489558-0b8a-4cfb-94b5-3d17c128103a"
       },
       "level_keys": [
         "Practice Performance Tasks in Unit 1"
@@ -367,12 +1283,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 1 Self-Assessment"
-        ],
         "progression": "Unit 1 Self-Assessment"
       },
       "bonus": false,
@@ -382,7 +1295,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3f149957-6170-4747-9b69-ddd4e884e91b"
       },
       "level_keys": [
         "Unit 1 Self-Assessment"
@@ -391,12 +1305,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 1 Vocab and Concept Review Activity"
-        ],
         "progression": "Unit 1 Vocab and Concept Review Activity"
       },
       "bonus": false,
@@ -406,7 +1317,8 @@
         ],
         "lesson.key": "AP Preparation and Support",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "757b3784-3259-4656-a7c4-b93f7a2d85e6"
       },
       "level_keys": [
         "Unit 1 Vocab and Concept Review Activity"
@@ -415,12 +1327,9 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AP Test Prep Guidance"
-        ],
         "progression": "AP Test Prep Guidance"
       },
       "bonus": false,
@@ -430,7 +1339,8 @@
         ],
         "lesson.key": "AP Preparation and Support",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a88f6988-27db-4968-ace0-ceb35fb6778b"
       },
       "level_keys": [
         "AP Test Prep Guidance"
@@ -439,12 +1349,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.2 Overview"
-        ],
         "progression": "Lesson 1.2 Overview"
       },
       "bonus": false,
@@ -454,7 +1361,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3da7519b-a85f-4599-a623-10dd115f16d6"
       },
       "level_keys": [
         "Lesson 1.2 Overview"
@@ -463,12 +1371,9 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Understanding Communication Protocols"
-        ],
         "progression": "Understanding Communication Protocols"
       },
       "bonus": false,
@@ -478,7 +1383,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "814f7624-8ae1-4e74-aceb-0503cb4f6e0b"
       },
       "level_keys": [
         "Understanding Communication Protocols"
@@ -487,12 +1393,9 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.3 Overview"
-        ],
         "progression": "Lesson 1.3 Overview"
       },
       "bonus": false,
@@ -502,7 +1405,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "f9343551-f841-4b07-b8b5-92951a50addc"
       },
       "level_keys": [
         "Lesson 1.3 Overview"
@@ -511,12 +1415,9 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Binary as an Encoding Scheme"
-        ],
         "progression": "Binary as an Encoding Scheme"
       },
       "bonus": false,
@@ -526,7 +1427,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "038ea6c1-e29c-43c1-87e0-a8eec9b39587"
       },
       "level_keys": [
         "Binary as an Encoding Scheme"
@@ -535,12 +1437,9 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator: Sending Binary Messages"
-        ],
         "progression": "Internet Simulator: Sending Binary Messages"
       },
       "bonus": false,
@@ -550,7 +1449,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "242979c9-c1fe-4c40-a069-7dfe99f42fb3"
       },
       "level_keys": [
         "Internet Simulator: Sending Binary Messages"
@@ -559,12 +1459,9 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "The Internet: Wires, Cables, and Wifi"
-        ],
         "progression": "The Internet: Wires, Cables, and Wifi"
       },
       "bonus": false,
@@ -574,7 +1471,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "d58a39d5-bd15-4b36-b801-6210e8d2b3ae"
       },
       "level_keys": [
         "The Internet: Wires, Cables, and Wifi"
@@ -583,12 +1481,9 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lessons 2 - 3: Teaching and Student Support Plan"
-        ],
         "progression": "Lessons 2 - 3: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -598,7 +1493,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "9add5e9d-84fd-4ac4-b4cd-6c23ceaf925e"
       },
       "level_keys": [
         "Lessons 2 - 3: Teaching and Student Support Plan"
@@ -607,12 +1503,9 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.4 Overview"
-        ],
         "progression": "Lesson 1.4 Overview"
       },
       "bonus": false,
@@ -622,7 +1515,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0e3cd344-e6d1-4ec8-991c-6b441e28b398"
       },
       "level_keys": [
         "Lesson 1.4 Overview"
@@ -631,12 +1525,9 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Why Teach Number Systems?"
-        ],
         "progression": "Why Teach Number Systems?"
       },
       "bonus": false,
@@ -646,7 +1537,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a0fd6d10-0e07-4f52-a3db-695cdfa49715"
       },
       "level_keys": [
         "Why Teach Number Systems?"
@@ -655,12 +1547,9 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.5 Overview"
-        ],
         "progression": "Lesson 1.5 Overview"
       },
       "bonus": false,
@@ -670,7 +1559,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "9a176dae-5f17-44c8-8671-e7916959274d"
       },
       "level_keys": [
         "Lesson 1.5 Overview"
@@ -679,12 +1569,9 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.6 Overview"
-        ],
         "progression": "Lesson 1.6 Overview"
       },
       "bonus": false,
@@ -694,7 +1581,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "08073b00-5858-4be4-8fd5-6383ba9c723b"
       },
       "level_keys": [
         "Lesson 1.6 Overview"
@@ -703,12 +1591,9 @@
     {
       "chapter": 20,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sending Numbers: The Big Picture"
-        ],
         "progression": "Sending Numbers: The Big Picture"
       },
       "bonus": false,
@@ -718,7 +1603,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0de38248-4a76-4502-89f9-96b56627ee01"
       },
       "level_keys": [
         "Sending Numbers: The Big Picture"
@@ -727,12 +1613,9 @@
     {
       "chapter": 21,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator: Sending Numbers"
-        ],
         "progression": "Internet Simulator: Sending Numbers"
       },
       "bonus": false,
@@ -742,7 +1625,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "79d2485f-1bfe-49b7-9943-d4864060bc78"
       },
       "level_keys": [
         "Internet Simulator: Sending Numbers"
@@ -751,12 +1635,9 @@
     {
       "chapter": 22,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Reflection: Create your Own Number System"
-        ],
         "progression": "Reflection: Create your Own Number System"
       },
       "bonus": false,
@@ -766,7 +1647,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "1fdffa50-ed59-4a43-8c36-042161ba9dc2"
       },
       "level_keys": [
         "Reflection: Create your Own Number System"
@@ -775,12 +1657,9 @@
     {
       "chapter": 23,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lessons 4 - 6: Teaching and Student Support Plan"
-        ],
         "progression": "Lessons 4 - 6: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -790,7 +1669,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "dbe3d319-8b77-41a1-ba5d-47f5238ccca5"
       },
       "level_keys": [
         "Lessons 4 - 6: Teaching and Student Support Plan"
@@ -799,12 +1679,9 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.7 Overview"
-        ],
         "progression": "Lesson 1.7 Overview"
       },
       "bonus": false,
@@ -814,7 +1691,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "4952e534-3aab-4a27-8a4b-77a0eaf8344b"
       },
       "level_keys": [
         "Lesson 1.7 Overview"
@@ -823,12 +1701,9 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What is ASCII?"
-        ],
         "progression": "What is ASCII?"
       },
       "bonus": false,
@@ -838,7 +1713,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "ee672cad-fbc6-4254-9465-33231b1772e4"
       },
       "level_keys": [
         "What is ASCII?"
@@ -847,12 +1723,9 @@
     {
       "chapter": 26,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Task: ASCII Representation of your Name"
-        ],
         "progression": "Task: ASCII Representation of your Name"
       },
       "bonus": false,
@@ -862,7 +1735,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0d4469a3-e476-4158-8450-13a4a59677ec"
       },
       "level_keys": [
         "Task: ASCII Representation of your Name"
@@ -871,12 +1745,9 @@
     {
       "chapter": 27,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What is HTML?"
-        ],
         "progression": "What is HTML?"
       },
       "bonus": false,
@@ -886,7 +1757,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "665b5da2-7d3e-45de-aa86-f4901fa0f55e"
       },
       "level_keys": [
         "What is HTML?"
@@ -895,12 +1767,9 @@
     {
       "chapter": 28,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator: Sending Text"
-        ],
         "progression": "Internet Simulator: Sending Text"
       },
       "bonus": false,
@@ -910,7 +1779,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "97fa287f-46aa-48f0-9310-182e199cc29a"
       },
       "level_keys": [
         "Internet Simulator: Sending Text"
@@ -919,12 +1789,9 @@
     {
       "chapter": 29,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 7: Teaching and Student Support Plan"
-        ],
         "progression": "Lesson 7: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -934,7 +1801,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "8706f939-555d-4bda-af0d-fe08de1c3156"
       },
       "level_keys": [
         "Lesson 7: Teaching and Student Support Plan"
@@ -943,12 +1811,9 @@
     {
       "chapter": 30,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.9 Overview"
-        ],
         "progression": "Lesson 1.9 Overview"
       },
       "bonus": false,
@@ -958,7 +1823,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "12c66d1d-dd92-4b36-94ba-ff28e99f7385"
       },
       "level_keys": [
         "Lesson 1.9 Overview"
@@ -967,12 +1833,9 @@
     {
       "chapter": 31,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Addressing in the Game of Battleship"
-        ],
         "progression": "Addressing in the Game of Battleship"
       },
       "bonus": false,
@@ -982,7 +1845,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "6234d5b2-8790-4765-980c-da497f691ea9"
       },
       "level_keys": [
         "Addressing in the Game of Battleship"
@@ -991,12 +1855,9 @@
     {
       "chapter": 32,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Task: Develop a Battleship Protocol"
-        ],
         "progression": "Task: Develop a Battleship Protocol"
       },
       "bonus": false,
@@ -1006,7 +1867,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "663d9047-ff5c-411b-b962-d450fd199141"
       },
       "level_keys": [
         "Task: Develop a Battleship Protocol"
@@ -1015,12 +1877,9 @@
     {
       "chapter": 33,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator: Broadcast"
-        ],
         "progression": "Internet Simulator: Broadcast"
       },
       "bonus": false,
@@ -1030,7 +1889,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "63c32601-ce60-4a6f-80c1-6bbfac216a6d"
       },
       "level_keys": [
         "Internet Simulator: Broadcast"
@@ -1039,12 +1899,9 @@
     {
       "chapter": 34,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "The Internet: IP Addresses & DNS"
-        ],
         "progression": "The Internet: IP Addresses & DNS"
       },
       "bonus": false,
@@ -1054,7 +1911,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "279d68e8-41aa-4dfd-aa05-29b31c4fb6b6"
       },
       "level_keys": [
         "The Internet: IP Addresses & DNS"
@@ -1063,12 +1921,9 @@
     {
       "chapter": 35,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 9: Teaching and Student Support Plan"
-        ],
         "progression": "Lesson 9: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1078,7 +1933,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a26596d0-b6a7-4c17-8d65-670de2a1b4b9"
       },
       "level_keys": [
         "Lesson 9: Teaching and Student Support Plan"
@@ -1087,12 +1943,9 @@
     {
       "chapter": 36,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.10 Overview"
-        ],
         "progression": "Lesson 1.10 Overview"
       },
       "bonus": false,
@@ -1102,7 +1955,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "6b5ae1d7-757a-4604-93db-b5d3916fc268"
       },
       "level_keys": [
         "Lesson 1.10 Overview"
@@ -1111,12 +1965,9 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator: Routers"
-        ],
         "progression": "Internet Simulator: Routers"
       },
       "bonus": false,
@@ -1126,7 +1977,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "ec6d1e44-9873-473c-b468-a3b72429804d"
       },
       "level_keys": [
         "Internet Simulator: Routers"
@@ -1135,12 +1987,9 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.11 Overview"
-        ],
         "progression": "Lesson 1.11 Overview"
       },
       "bonus": false,
@@ -1150,7 +1999,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "d77a0296-f61b-4d47-95b4-318d989539b9"
       },
       "level_keys": [
         "Lesson 1.11 Overview"
@@ -1159,12 +2009,9 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator: Packets"
-        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -1174,7 +2021,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0017fb0a-51ff-4224-8e45-1597a456dbb5"
       },
       "level_keys": [
         "Internet Simulator: Packets"
@@ -1183,12 +2031,9 @@
     {
       "chapter": 40,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "The Internet: Packets, Routing, and Reliability"
-        ],
         "progression": "The Internet: Packets, Routing, and Reliability"
       },
       "bonus": false,
@@ -1198,7 +2043,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "96ff8c75-3861-424f-ab4e-1c08b99eb29f"
       },
       "level_keys": [
         "The Internet: Packets, Routing, and Reliability"
@@ -1207,12 +2053,9 @@
     {
       "chapter": 41,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lessons 10 - 11: Teaching and Student Support Plan"
-        ],
         "progression": "Lessons 10 - 11: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1222,7 +2065,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "63f8b163-b23b-4736-bb66-f9b58af514d2"
       },
       "level_keys": [
         "Lessons 10 - 11: Teaching and Student Support Plan"
@@ -1231,12 +2075,9 @@
     {
       "chapter": 42,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.12 Overview"
-        ],
         "progression": "Lesson 1.12 Overview"
       },
       "bonus": false,
@@ -1246,7 +2087,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "fa94e81b-c2da-4dc4-88d3-dbf91d6b7604"
       },
       "level_keys": [
         "Lesson 1.12 Overview"
@@ -1255,12 +2097,9 @@
     {
       "chapter": 43,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator: DNS"
-        ],
         "progression": "Internet Simulator: DNS"
       },
       "bonus": false,
@@ -1270,7 +2109,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "20804a50-4613-4596-8271-a88f9a964ad5"
       },
       "level_keys": [
         "Internet Simulator: DNS"
@@ -1279,12 +2119,9 @@
     {
       "chapter": 44,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "The Internet: IP Addresses & DNS"
-        ],
         "progression": "The Internet: IP Addresses & DNS"
       },
       "bonus": false,
@@ -1294,7 +2131,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "aa4770b6-08a6-4a9c-8884-6533acb6cbe8"
       },
       "level_keys": [
         "The Internet: IP Addresses & DNS"
@@ -1303,12 +2141,9 @@
     {
       "chapter": 45,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson 1.13 Overview"
-        ],
         "progression": "Lesson 1.13 Overview"
       },
       "bonus": false,
@@ -1318,7 +2153,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "e88368d3-9788-44e0-942f-8f5e7478648a"
       },
       "level_keys": [
         "Lesson 1.13 Overview"
@@ -1327,12 +2163,9 @@
     {
       "chapter": 46,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "The Internet: HTTP and HTML"
-        ],
         "progression": "The Internet: HTTP and HTML"
       },
       "bonus": false,
@@ -1342,7 +2175,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "11703597-fe66-47bf-b1bc-5941c83e5ca7"
       },
       "level_keys": [
         "The Internet: HTTP and HTML"
@@ -1351,12 +2185,9 @@
     {
       "chapter": 47,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lessons 12 - 13: Teaching and Student Support Plan"
-        ],
         "progression": "Lessons 12 - 13: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1366,7 +2197,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "7e034c7b-4ab8-4461-b803-15c3e07d7d49"
       },
       "level_keys": [
         "Lessons 12 - 13: Teaching and Student Support Plan"
@@ -1375,12 +2207,9 @@
     {
       "chapter": 48,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Group Work and Peer Learning"
-        ],
         "progression": "Overview: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -1390,7 +2219,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "4c751827-543f-4d57-bbd1-c7001edcf1fe"
       },
       "level_keys": [
         "Overview: Group Work and Peer Learning"
@@ -1399,12 +2229,9 @@
     {
       "chapter": 49,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Group Work and Peer Learning in Unit 1"
-        ],
         "progression": "Group Work and Peer Learning in Unit 1"
       },
       "bonus": false,
@@ -1414,7 +2241,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "909d4a9c-ba64-4086-868d-75ce44b45146"
       },
       "level_keys": [
         "Group Work and Peer Learning in Unit 1"
@@ -1423,12 +2251,9 @@
     {
       "chapter": 50,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Collaborative Learning and Group Work: Description and Strategies"
-        ],
         "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
       "bonus": false,
@@ -1438,7 +2263,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a85d5539-4f96-4908-8794-40571833346c"
       },
       "level_keys": [
         "Collaborative Learning and Group Work: Description and Strategies"
@@ -1447,12 +2273,9 @@
     {
       "chapter": 51,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "The Official Peer Instruction Blog"
-        ],
         "progression": "The Official Peer Instruction Blog"
       },
       "bonus": false,
@@ -1462,7 +2285,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "34bd3840-ef7d-4001-a4a4-1e8d97a0cc92"
       },
       "level_keys": [
         "The Official Peer Instruction Blog"
@@ -1471,12 +2295,9 @@
     {
       "chapter": 52,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "the Journal of Peer Learning"
-        ],
         "progression": "the Journal of Peer Learning"
       },
       "bonus": false,
@@ -1486,7 +2307,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a3e5e3c3-1c8f-45f6-a33d-07f3420d3ec9"
       },
       "level_keys": [
         "the Journal of Peer Learning"
@@ -1495,12 +2317,9 @@
     {
       "chapter": 53,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Teaching Practice Plan: Group Work and Peer Learning"
-        ],
         "progression": "Teaching Practice Plan: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -1510,7 +2329,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0542befd-dfb4-41f7-bbc8-0ce57660b735"
       },
       "level_keys": [
         "Teaching Practice Plan: Group Work and Peer Learning"
@@ -1519,12 +2339,9 @@
     {
       "chapter": 54,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Balancing Teachers and Tools"
-        ],
         "progression": "Overview: Balancing Teachers and Tools"
       },
       "bonus": false,
@@ -1534,7 +2351,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "d95e6c57-3788-41fe-9674-fa378efba18c"
       },
       "level_keys": [
         "Overview: Balancing Teachers and Tools"
@@ -1543,12 +2361,9 @@
     {
       "chapter": 55,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Balancing Teacher and Tools in Unit 1"
-        ],
         "progression": "Balancing Teacher and Tools in Unit 1"
       },
       "bonus": false,
@@ -1558,7 +2373,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "04e45e3b-e78b-4f55-b080-439878e04421"
       },
       "level_keys": [
         "Balancing Teacher and Tools in Unit 1"
@@ -1567,12 +2383,9 @@
     {
       "chapter": 56,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Classroom Management Tips for School Computer Labs"
-        ],
         "progression": "Classroom Management Tips for School Computer Labs"
       },
       "bonus": false,
@@ -1582,7 +2395,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "92492bde-8283-4934-b7fe-ec1f0c9811c4"
       },
       "level_keys": [
         "Classroom Management Tips for School Computer Labs"
@@ -1591,12 +2405,9 @@
     {
       "chapter": 57,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Considerations for the 1-to-1 Classroom"
-        ],
         "progression": "Considerations for the 1-to-1 Classroom"
       },
       "bonus": false,
@@ -1606,7 +2417,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "850d0242-140b-4529-b0e9-7af67d77e32e"
       },
       "level_keys": [
         "Considerations for the 1-to-1 Classroom"
@@ -1615,12 +2427,9 @@
     {
       "chapter": 58,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Teaching Practice Plan: Balancing Teacher and Tools"
-        ],
         "progression": "Teaching Practice Plan: Balancing Teacher and Tools"
       },
       "bonus": false,
@@ -1630,7 +2439,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "911d4762-0dfb-4742-8a60-25578e6dfc0e"
       },
       "level_keys": [
         "Teaching Practice Plan: Balancing Teacher and Tools"
@@ -1639,12 +2449,9 @@
     {
       "chapter": 59,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Discovery Learning"
-        ],
         "progression": "Overview: Discovery Learning"
       },
       "bonus": false,
@@ -1654,7 +2461,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "fe84e54d-b243-45d6-bf4b-6395b6ab6dee"
       },
       "level_keys": [
         "Overview: Discovery Learning"
@@ -1663,12 +2471,9 @@
     {
       "chapter": 60,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Discovery Learning in Unit 1"
-        ],
         "progression": "Discovery Learning in Unit 1"
       },
       "bonus": false,
@@ -1678,7 +2483,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3e23de46-21f5-4d98-9407-73135d091d15"
       },
       "level_keys": [
         "Discovery Learning in Unit 1"
@@ -1687,12 +2493,9 @@
     {
       "chapter": 61,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Discovery learning definition and history"
-        ],
         "progression": "Discovery learning definition and history"
       },
       "bonus": false,
@@ -1702,7 +2505,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a5a17bf1-4e3b-4b62-8ac3-7ba8f4adbd4d"
       },
       "level_keys": [
         "Discovery learning definition and history"
@@ -1711,12 +2515,9 @@
     {
       "chapter": 62,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Discovery learning techniques"
-        ],
         "progression": "Discovery learning techniques"
       },
       "bonus": false,
@@ -1726,7 +2527,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3ea1b438-7d83-42d9-af55-ada95debeff8"
       },
       "level_keys": [
         "Discovery learning techniques"
@@ -1735,12 +2537,9 @@
     {
       "chapter": 63,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Teaching Practice Plan: Discovery Learning"
-        ],
         "progression": "Teaching Practice Plan: Discovery Learning"
       },
       "bonus": false,
@@ -1750,7 +2549,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "1a5c50bf-e749-4172-bca1-c14f6829a96f"
       },
       "level_keys": [
         "Teaching Practice Plan: Discovery Learning"
@@ -1759,12 +2559,9 @@
     {
       "chapter": 64,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Capturing Student Learning"
-        ],
         "progression": "Overview: Capturing Student Learning"
       },
       "bonus": false,
@@ -1774,7 +2571,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "69d495f8-798a-4d5a-ba31-09c05dd4bdd5"
       },
       "level_keys": [
         "Overview: Capturing Student Learning"
@@ -1783,12 +2581,9 @@
     {
       "chapter": 65,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Assessing Student Learning in Unit 1"
-        ],
         "progression": "Assessing Student Learning in Unit 1"
       },
       "bonus": false,
@@ -1798,7 +2593,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "61d7d6df-21be-45e5-ab42-c8d76f59ff50"
       },
       "level_keys": [
         "Assessing Student Learning in Unit 1"
@@ -1807,12 +2603,9 @@
     {
       "chapter": 66,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What is the difference between formative and summative assessment?"
-        ],
         "progression": "What is the difference between formative and summative assessment?"
       },
       "bonus": false,
@@ -1822,7 +2615,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "c3973d79-f553-4c57-aab5-981388c5b880"
       },
       "level_keys": [
         "What is the difference between formative and summative assessment?"
@@ -1831,12 +2625,9 @@
     {
       "chapter": 67,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Designing Assessment Questions"
-        ],
         "progression": "Designing Assessment Questions"
       },
       "bonus": false,
@@ -1846,7 +2637,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "4facdfd8-157f-45ef-b5f6-6e8e4cf6ce8b"
       },
       "level_keys": [
         "Designing Assessment Questions"
@@ -1855,12 +2647,9 @@
     {
       "chapter": 68,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Classroom Assessment Techniques"
-        ],
         "progression": "Classroom Assessment Techniques"
       },
       "bonus": false,
@@ -1870,7 +2659,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a8ef5708-2a30-49fb-95b4-e6edd2344b9d"
       },
       "level_keys": [
         "Classroom Assessment Techniques"
@@ -1879,12 +2669,9 @@
     {
       "chapter": 69,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Teaching Practice Plan: Assessing Student Learning"
-        ],
         "progression": "Teaching Practice Plan: Assessing Student Learning"
       },
       "bonus": false,
@@ -1894,7 +2681,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "549a9da8-d9f3-4482-9f51-f77c79ac6c79"
       },
       "level_keys": [
         "Teaching Practice Plan: Assessing Student Learning"
@@ -1910,7 +2698,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "ab888c5b-18eb-4ea1-a4a4-cd516161738d"
       }
     },
     {
@@ -1921,7 +2710,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3d4e4039-69df-413a-a131-6fc06c4f9c18"
       }
     },
     {
@@ -1932,7 +2722,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "ad583971-bce3-4b12-9a8f-5f2a76b4fcba"
       }
     },
     {
@@ -1943,7 +2734,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "f7959cef-be9a-472c-b75c-2e9b054f7b9d"
       }
     },
     {
@@ -1954,7 +2746,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "1c489558-0b8a-4cfb-94b5-3d17c128103a"
       }
     },
     {
@@ -1965,7 +2758,8 @@
         ],
         "lesson.key": "Unit 1 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3f149957-6170-4747-9b69-ddd4e884e91b"
       }
     },
     {
@@ -1976,7 +2770,8 @@
         ],
         "lesson.key": "AP Preparation and Support",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "757b3784-3259-4656-a7c4-b93f7a2d85e6"
       }
     },
     {
@@ -1987,7 +2782,8 @@
         ],
         "lesson.key": "AP Preparation and Support",
         "lesson_group.key": "required",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a88f6988-27db-4968-ace0-ceb35fb6778b"
       }
     },
     {
@@ -1998,7 +2794,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3da7519b-a85f-4599-a623-10dd115f16d6"
       }
     },
     {
@@ -2009,7 +2806,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "814f7624-8ae1-4e74-aceb-0503cb4f6e0b"
       }
     },
     {
@@ -2020,7 +2818,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "f9343551-f841-4b07-b8b5-92951a50addc"
       }
     },
     {
@@ -2031,7 +2830,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "038ea6c1-e29c-43c1-87e0-a8eec9b39587"
       }
     },
     {
@@ -2042,7 +2842,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "242979c9-c1fe-4c40-a069-7dfe99f42fb3"
       }
     },
     {
@@ -2053,7 +2854,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "d58a39d5-bd15-4b36-b801-6210e8d2b3ae"
       }
     },
     {
@@ -2064,7 +2866,8 @@
         ],
         "lesson.key": "Lessons 2 - 3: Binary Messages",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "9add5e9d-84fd-4ac4-b4cd-6c23ceaf925e"
       }
     },
     {
@@ -2075,7 +2878,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0e3cd344-e6d1-4ec8-991c-6b441e28b398"
       }
     },
     {
@@ -2086,7 +2890,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a0fd6d10-0e07-4f52-a3db-695cdfa49715"
       }
     },
     {
@@ -2097,7 +2902,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "9a176dae-5f17-44c8-8671-e7916959274d"
       }
     },
     {
@@ -2108,7 +2914,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "08073b00-5858-4be4-8fd5-6383ba9c723b"
       }
     },
     {
@@ -2119,7 +2926,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0de38248-4a76-4502-89f9-96b56627ee01"
       }
     },
     {
@@ -2130,7 +2938,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "79d2485f-1bfe-49b7-9943-d4864060bc78"
       }
     },
     {
@@ -2141,7 +2950,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "1fdffa50-ed59-4a43-8c36-042161ba9dc2"
       }
     },
     {
@@ -2152,7 +2962,8 @@
         ],
         "lesson.key": "Lessons 4 - 6: Encoding and Sending Numbers",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "dbe3d319-8b77-41a1-ba5d-47f5238ccca5"
       }
     },
     {
@@ -2163,7 +2974,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "4952e534-3aab-4a27-8a4b-77a0eaf8344b"
       }
     },
     {
@@ -2174,7 +2986,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "ee672cad-fbc6-4254-9465-33231b1772e4"
       }
     },
     {
@@ -2185,7 +2998,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0d4469a3-e476-4158-8450-13a4a59677ec"
       }
     },
     {
@@ -2196,7 +3010,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "665b5da2-7d3e-45de-aa86-f4901fa0f55e"
       }
     },
     {
@@ -2207,7 +3022,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "97fa287f-46aa-48f0-9310-182e199cc29a"
       }
     },
     {
@@ -2218,7 +3034,8 @@
         ],
         "lesson.key": "Lesson 7: Encoding and Sending Text",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "8706f939-555d-4bda-af0d-fe08de1c3156"
       }
     },
     {
@@ -2229,7 +3046,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "12c66d1d-dd92-4b36-94ba-ff28e99f7385"
       }
     },
     {
@@ -2240,7 +3058,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "6234d5b2-8790-4765-980c-da497f691ea9"
       }
     },
     {
@@ -2251,7 +3070,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "663d9047-ff5c-411b-b962-d450fd199141"
       }
     },
     {
@@ -2262,7 +3082,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "63c32601-ce60-4a6f-80c1-6bbfac216a6d"
       }
     },
     {
@@ -2273,7 +3094,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "279d68e8-41aa-4dfd-aa05-29b31c4fb6b6"
       }
     },
     {
@@ -2284,7 +3106,8 @@
         ],
         "lesson.key": "Lesson 9: Internet Addressing",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a26596d0-b6a7-4c17-8d65-670de2a1b4b9"
       }
     },
     {
@@ -2295,7 +3118,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "6b5ae1d7-757a-4604-93db-b5d3916fc268"
       }
     },
     {
@@ -2306,7 +3130,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "ec6d1e44-9873-473c-b468-a3b72429804d"
       }
     },
     {
@@ -2317,7 +3142,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "d77a0296-f61b-4d47-95b4-318d989539b9"
       }
     },
     {
@@ -2328,7 +3154,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0017fb0a-51ff-4224-8e45-1597a456dbb5"
       }
     },
     {
@@ -2339,7 +3166,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "96ff8c75-3861-424f-ab4e-1c08b99eb29f"
       }
     },
     {
@@ -2350,7 +3178,8 @@
         ],
         "lesson.key": "Lessons 10 - 11: Routers, Redundancy, and Packets",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "63f8b163-b23b-4736-bb66-f9b58af514d2"
       }
     },
     {
@@ -2361,7 +3190,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "fa94e81b-c2da-4dc4-88d3-dbf91d6b7604"
       }
     },
     {
@@ -2372,7 +3202,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "20804a50-4613-4596-8271-a88f9a964ad5"
       }
     },
     {
@@ -2383,7 +3214,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "aa4770b6-08a6-4a9c-8884-6533acb6cbe8"
       }
     },
     {
@@ -2394,7 +3226,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "e88368d3-9788-44e0-942f-8f5e7478648a"
       }
     },
     {
@@ -2405,7 +3238,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "11703597-fe66-47bf-b1bc-5941c83e5ca7"
       }
     },
     {
@@ -2416,7 +3250,8 @@
         ],
         "lesson.key": "Lessons 12 - 13: Abstraction on the Internet",
         "lesson_group.key": "content",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "7e034c7b-4ab8-4461-b803-15c3e07d7d49"
       }
     },
     {
@@ -2427,7 +3262,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "4c751827-543f-4d57-bbd1-c7001edcf1fe"
       }
     },
     {
@@ -2438,7 +3274,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "909d4a9c-ba64-4086-868d-75ce44b45146"
       }
     },
     {
@@ -2449,7 +3286,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a85d5539-4f96-4908-8794-40571833346c"
       }
     },
     {
@@ -2460,7 +3298,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "34bd3840-ef7d-4001-a4a4-1e8d97a0cc92"
       }
     },
     {
@@ -2471,7 +3310,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a3e5e3c3-1c8f-45f6-a33d-07f3420d3ec9"
       }
     },
     {
@@ -2482,7 +3322,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "0542befd-dfb4-41f7-bbc8-0ce57660b735"
       }
     },
     {
@@ -2493,7 +3334,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "d95e6c57-3788-41fe-9674-fa378efba18c"
       }
     },
     {
@@ -2504,7 +3346,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "04e45e3b-e78b-4f55-b080-439878e04421"
       }
     },
     {
@@ -2515,7 +3358,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "92492bde-8283-4934-b7fe-ec1f0c9811c4"
       }
     },
     {
@@ -2526,7 +3370,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "850d0242-140b-4529-b0e9-7af67d77e32e"
       }
     },
     {
@@ -2537,7 +3382,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "911d4762-0dfb-4742-8a60-25578e6dfc0e"
       }
     },
     {
@@ -2548,7 +3394,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "fe84e54d-b243-45d6-bf4b-6395b6ab6dee"
       }
     },
     {
@@ -2559,7 +3406,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3e23de46-21f5-4d98-9407-73135d091d15"
       }
     },
     {
@@ -2570,7 +3418,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a5a17bf1-4e3b-4b62-8ac3-7ba8f4adbd4d"
       }
     },
     {
@@ -2581,7 +3430,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "3ea1b438-7d83-42d9-af55-ada95debeff8"
       }
     },
     {
@@ -2592,7 +3442,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "1a5c50bf-e749-4172-bca1-c14f6829a96f"
       }
     },
     {
@@ -2603,7 +3454,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "69d495f8-798a-4d5a-ba31-09c05dd4bdd5"
       }
     },
     {
@@ -2614,7 +3466,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "61d7d6df-21be-45e5-ab42-c8d76f59ff50"
       }
     },
     {
@@ -2625,7 +3478,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "c3973d79-f553-4c57-aab5-981388c5b880"
       }
     },
     {
@@ -2636,7 +3490,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "4facdfd8-157f-45ef-b5f6-6e8e4cf6ce8b"
       }
     },
     {
@@ -2647,7 +3502,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "a8ef5708-2a30-49fb-95b4-e6edd2344b9d"
       }
     },
     {
@@ -2658,7 +3514,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp1-support"
+        "script.name": "csp1-support",
+        "activity_section.key": "549a9da8-d9f3-4482-9f51-f77c79ac6c79"
       }
     }
   ],

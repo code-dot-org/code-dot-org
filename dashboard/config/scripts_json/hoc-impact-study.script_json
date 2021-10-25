@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:22 UTC",
+    "serialized_at": "2021-10-25 23:35:41 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -75,21 +76,85 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "55cacc66-1654-4da5-b584-376f1f627748",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "55cacc66-1654-4da5-b584-376f1f627748",
+        "lesson.key": "Pre Hour of Code Survey",
+        "lesson_group.key": "",
+        "script.name": "hoc-impact-study"
+      }
+    },
+    {
+      "key": "d8eef6e2-db25-4115-aff8-e36932c0a516",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d8eef6e2-db25-4115-aff8-e36932c0a516",
+        "lesson.key": "Hour of Code 2013",
+        "lesson_group.key": "",
+        "script.name": "hoc-impact-study"
+      }
+    },
+    {
+      "key": "03926503-fe07-4c43-88b4-1d6d0e72b85a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03926503-fe07-4c43-88b4-1d6d0e72b85a",
+        "lesson.key": "Post Hour of Code Survey",
+        "lesson_group.key": "",
+        "script.name": "hoc-impact-study"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f99d62dd-d195-47aa-ae5a-62a6b3c6bcc2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f99d62dd-d195-47aa-ae5a-62a6b3c6bcc2",
+        "lesson_activity.key": "55cacc66-1654-4da5-b584-376f1f627748"
+      }
+    },
+    {
+      "key": "690e01c4-496d-49de-b077-b7f8acece02d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d",
+        "lesson_activity.key": "d8eef6e2-db25-4115-aff8-e36932c0a516"
+      }
+    },
+    {
+      "key": "8ecda319-3507-436b-93f6-b1721b5fa401",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8ecda319-3507-436b-93f6-b1721b5fa401",
+        "lesson_activity.key": "03926503-fe07-4c43-88b4-1d6d0e72b85a"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "HOC pre-survey 2016 levelgroup"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -98,7 +163,8 @@
         ],
         "lesson.key": "Pre Hour of Code Survey",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "f99d62dd-d195-47aa-ae5a-62a6b3c6bcc2"
       },
       "level_keys": [
         "HOC pre-survey 2016 levelgroup"
@@ -107,12 +173,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -121,7 +184,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_2"
@@ -130,12 +194,9 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,7 +205,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_1"
@@ -153,12 +215,9 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_2_5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -167,7 +226,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_2_5"
@@ -176,12 +236,9 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -190,7 +247,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_3"
@@ -199,12 +257,9 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -213,7 +268,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_4"
@@ -222,12 +278,9 @@
     {
       "chapter": 7,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -236,7 +289,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_5"
@@ -245,12 +299,9 @@
     {
       "chapter": 8,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -259,7 +310,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_6"
@@ -268,12 +320,9 @@
     {
       "chapter": 9,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -282,7 +331,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_7"
@@ -291,12 +341,9 @@
     {
       "chapter": 10,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -305,7 +352,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_8"
@@ -314,12 +362,9 @@
     {
       "chapter": 11,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -328,7 +373,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_9"
@@ -337,12 +383,9 @@
     {
       "chapter": 12,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_10"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -351,7 +394,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_10"
@@ -360,12 +404,9 @@
     {
       "chapter": 13,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_11"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -374,7 +415,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_11"
@@ -383,12 +425,9 @@
     {
       "chapter": 14,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_12"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -397,7 +436,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_12"
@@ -406,12 +446,9 @@
     {
       "chapter": 15,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_13"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -420,7 +457,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_13"
@@ -429,12 +467,9 @@
     {
       "chapter": 16,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_14"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -443,7 +478,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_14"
@@ -452,12 +488,9 @@
     {
       "chapter": 17,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_15"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -466,7 +499,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_15"
@@ -475,12 +509,9 @@
     {
       "chapter": 18,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_16"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -489,7 +520,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_16"
@@ -498,12 +530,9 @@
     {
       "chapter": 19,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_17"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -512,7 +541,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_17"
@@ -521,12 +551,9 @@
     {
       "chapter": 20,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 19,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_18"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -535,7 +562,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_18"
@@ -544,12 +572,9 @@
     {
       "chapter": 21,
       "position": 20,
-      "activity_section_position": null,
+      "activity_section_position": 20,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:Maze:2_19"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -558,7 +583,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       },
       "level_keys": [
         "blockly:Maze:2_19"
@@ -567,12 +593,9 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "HOC post-survey 2016 levelgroup"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -581,7 +604,8 @@
         ],
         "lesson.key": "Post Hour of Code Survey",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "8ecda319-3507-436b-93f6-b1721b5fa401"
       },
       "level_keys": [
         "HOC post-survey 2016 levelgroup"
@@ -597,7 +621,8 @@
         ],
         "lesson.key": "Pre Hour of Code Survey",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "f99d62dd-d195-47aa-ae5a-62a6b3c6bcc2"
       }
     },
     {
@@ -608,7 +633,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -619,7 +645,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -630,7 +657,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -641,7 +669,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -652,7 +681,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -663,7 +693,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -674,7 +705,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -685,7 +717,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -696,7 +729,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -707,7 +741,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -718,7 +753,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -729,7 +765,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -740,7 +777,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -751,7 +789,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -762,7 +801,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -773,7 +813,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -784,7 +825,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -795,7 +837,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -806,7 +849,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -817,7 +861,8 @@
         ],
         "lesson.key": "Hour of Code 2013",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "690e01c4-496d-49de-b077-b7f8acece02d"
       }
     },
     {
@@ -828,7 +873,8 @@
         ],
         "lesson.key": "Post Hour of Code Survey",
         "lesson_group.key": "",
-        "script.name": "hoc-impact-study"
+        "script.name": "hoc-impact-study",
+        "activity_section.key": "8ecda319-3507-436b-93f6-b1721b5fa401"
       }
     }
   ],

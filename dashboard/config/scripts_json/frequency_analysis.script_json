@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:11 UTC",
+    "serialized_at": "2021-10-25 23:35:34 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "aa60d46f-0da1-4be7-86a9-1a19ea1580fb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa60d46f-0da1-4be7-86a9-1a19ea1580fb",
+        "lesson.key": "Frequency Analysis",
+        "lesson_group.key": "",
+        "script.name": "frequency_analysis"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b914e949-5f57-4303-b94f-0b8fe5c14c5e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b914e949-5f57-4303-b94f-0b8fe5c14c5e",
+        "lesson_activity.key": "aa60d46f-0da1-4be7-86a9-1a19ea1580fb"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Frequency Analysis"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -68,7 +87,8 @@
         ],
         "lesson.key": "Frequency Analysis",
         "lesson_group.key": "",
-        "script.name": "frequency_analysis"
+        "script.name": "frequency_analysis",
+        "activity_section.key": "b914e949-5f57-4303-b94f-0b8fe5c14c5e"
       },
       "level_keys": [
         "Frequency Analysis"
@@ -84,7 +104,8 @@
         ],
         "lesson.key": "Frequency Analysis",
         "lesson_group.key": "",
-        "script.name": "frequency_analysis"
+        "script.name": "frequency_analysis",
+        "activity_section.key": "b914e949-5f57-4303-b94f-0b8fe5c14c5e"
       }
     }
   ],

@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:00 UTC",
+    "serialized_at": "2021-10-25 23:36:54 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "b6792c79-aea0-4feb-a405-cebca3c14abf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b6792c79-aea0-4feb-a405-cebca3c14abf",
+        "lesson.key": "Pluralsight LevelGroup",
+        "lesson_group.key": "",
+        "script.name": "pluralsight"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "21d08c37-2f50-4f2c-8fe4-ff1542329277",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "21d08c37-2f50-4f2c-8fe4-ff1542329277",
+        "lesson_activity.key": "b6792c79-aea0-4feb-a405-cebca3c14abf"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Pluralsight for CSP"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -68,7 +87,8 @@
         ],
         "lesson.key": "Pluralsight LevelGroup",
         "lesson_group.key": "",
-        "script.name": "pluralsight"
+        "script.name": "pluralsight",
+        "activity_section.key": "21d08c37-2f50-4f2c-8fe4-ff1542329277"
       },
       "level_keys": [
         "Pluralsight for CSP"
@@ -84,7 +104,8 @@
         ],
         "lesson.key": "Pluralsight LevelGroup",
         "lesson_group.key": "",
-        "script.name": "pluralsight"
+        "script.name": "pluralsight",
+        "activity_section.key": "21d08c37-2f50-4f2c-8fe4-ff1542329277"
       }
     }
   ],

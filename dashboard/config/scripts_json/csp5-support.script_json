@@ -14,12 +14,13 @@
         }
       ],
       "deprecated": true,
+      "is_migrated": true,
       "professional_learning_course": "CSP Support",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:23 UTC",
+    "serialized_at": "2021-10-25 23:33:24 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -217,21 +218,695 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "63f77daf-40da-485f-bf02-a37069ea9c32",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63f77daf-40da-485f-bf02-a37069ea9c32",
+        "lesson.key": "Unit 5 Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "4d00925d-a842-454f-920b-8ac350921427",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d00925d-a842-454f-920b-8ac350921427",
+        "lesson.key": "Event Driven Programming",
+        "lesson_group.key": "content",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "b2b579ff-23da-41f9-a89c-44a2fe1e972e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b2b579ff-23da-41f9-a89c-44a2fe1e972e",
+        "lesson.key": "Variables and Strings",
+        "lesson_group.key": "content",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "2087eecc-a9e8-472d-a71f-6e80b08c84c1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2087eecc-a9e8-472d-a71f-6e80b08c84c1",
+        "lesson.key": "Conditionals and Boolean Logic",
+        "lesson_group.key": "content",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "b301576a-7565-4198-a202-fa0c86fd2d00",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b301576a-7565-4198-a202-fa0c86fd2d00",
+        "lesson.key": "While Loops and Introduction to Arrays",
+        "lesson_group.key": "content",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "f6b54974-a02b-4411-8022-cab9ff865c34",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6b54974-a02b-4411-8022-cab9ff865c34",
+        "lesson.key": "Processing Arrays and Functions with Return Values",
+        "lesson_group.key": "content",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "43539ec6-7651-49db-b74f-619ca1f412d1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "43539ec6-7651-49db-b74f-619ca1f412d1",
+        "lesson.key": "Group Work and Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "a8fe239d-8f24-45b5-ad2b-23110b83668d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8fe239d-8f24-45b5-ad2b-23110b83668d",
+        "lesson.key": "Balancing Teachers and Tools",
+        "lesson_group.key": "practice",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "eb39f9a6-c6a5-4a42-ac81-0eb8a57c0ef8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb39f9a6-c6a5-4a42-ac81-0eb8a57c0ef8",
+        "lesson.key": "Discovery Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp5-support"
+      }
+    },
+    {
+      "key": "65efe537-2841-4bf2-8376-0ddc03223a2b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65efe537-2841-4bf2-8376-0ddc03223a2b",
+        "lesson.key": "Measuring Student Learning",
+        "lesson_group.key": "practice",
+        "script.name": "csp5-support"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "48d68ac2-4400-4ab1-9763-296ae9091f4d",
+      "position": 1,
+      "properties": {
+        "progression_name": "What's inside and how is it organized?"
+      },
+      "seeding_key": {
+        "activity_section.key": "48d68ac2-4400-4ab1-9763-296ae9091f4d",
+        "lesson_activity.key": "63f77daf-40da-485f-bf02-a37069ea9c32"
+      }
+    },
+    {
+      "key": "2a3ee75a-c382-4403-a1dc-c52e0f5c7b39",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Unit 5"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a3ee75a-c382-4403-a1dc-c52e0f5c7b39",
+        "lesson_activity.key": "63f77daf-40da-485f-bf02-a37069ea9c32"
+      }
+    },
+    {
+      "key": "52a8d9cd-8af3-4258-87ab-0c22624c844d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 5 Teaching Philosophy and Commentary"
+      },
+      "seeding_key": {
+        "activity_section.key": "52a8d9cd-8af3-4258-87ab-0c22624c844d",
+        "lesson_activity.key": "63f77daf-40da-485f-bf02-a37069ea9c32"
+      }
+    },
+    {
+      "key": "e88288fa-e2a0-4ae7-93c2-f767b80ab0f5",
+      "position": 4,
+      "properties": {
+        "progression_name": "Unit 5 Concepts and AP Assessments"
+      },
+      "seeding_key": {
+        "activity_section.key": "e88288fa-e2a0-4ae7-93c2-f767b80ab0f5",
+        "lesson_activity.key": "63f77daf-40da-485f-bf02-a37069ea9c32"
+      }
+    },
+    {
+      "key": "55143804-ad5b-4bac-b719-92842af4bc48",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice Performance Task in Unit 5"
+      },
+      "seeding_key": {
+        "activity_section.key": "55143804-ad5b-4bac-b719-92842af4bc48",
+        "lesson_activity.key": "63f77daf-40da-485f-bf02-a37069ea9c32"
+      }
+    },
+    {
+      "key": "fbd4c162-d65e-4eda-a0e6-cb21cb6da3cf",
+      "position": 6,
+      "properties": {
+        "name": "Unit 5 Self-Assessment",
+        "progression_name": "Unit 5 Self-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbd4c162-d65e-4eda-a0e6-cb21cb6da3cf",
+        "lesson_activity.key": "63f77daf-40da-485f-bf02-a37069ea9c32"
+      }
+    },
+    {
+      "key": "689c5903-4f67-44c6-a933-7839145424ec",
+      "position": 1,
+      "properties": {
+        "progression_name": "5.1 - 5.3 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "689c5903-4f67-44c6-a933-7839145424ec",
+        "lesson_activity.key": "4d00925d-a842-454f-920b-8ac350921427"
+      }
+    },
+    {
+      "key": "1a3cfbf9-2529-48e6-b0f4-aef01b766759",
+      "position": 2,
+      "properties": {
+        "progression_name": "Design Mode Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a3cfbf9-2529-48e6-b0f4-aef01b766759",
+        "lesson_activity.key": "4d00925d-a842-454f-920b-8ac350921427"
+      }
+    },
+    {
+      "key": "eae99279-fe3a-4c89-bb47-4a0892e56f92",
+      "position": 3,
+      "properties": {
+        "progression_name": "Events Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "eae99279-fe3a-4c89-bb47-4a0892e56f92",
+        "lesson_activity.key": "4d00925d-a842-454f-920b-8ac350921427"
+      }
+    },
+    {
+      "key": "0b84879d-16ec-45d2-8baa-7cdb62e4ed81",
+      "position": 4,
+      "properties": {
+        "progression_name": "Project Breakdown: Multi-Screen App"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b84879d-16ec-45d2-8baa-7cdb62e4ed81",
+        "lesson_activity.key": "4d00925d-a842-454f-920b-8ac350921427"
+      }
+    },
+    {
+      "key": "740dd14a-0a23-4804-bf46-61874e4837e3",
+      "position": 5,
+      "properties": {
+        "name": "U5 L1 - 3: Teaching and Student Support Plan",
+        "progression_name": "U5 L1 - 3: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "740dd14a-0a23-4804-bf46-61874e4837e3",
+        "lesson_activity.key": "4d00925d-a842-454f-920b-8ac350921427"
+      }
+    },
+    {
+      "key": "f111e084-6122-4de6-8703-c12b5bd75b19",
+      "position": 1,
+      "properties": {
+        "progression_name": "5.4 - 5.6 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "f111e084-6122-4de6-8703-c12b5bd75b19",
+        "lesson_activity.key": "b2b579ff-23da-41f9-a89c-44a2fe1e972e"
+      }
+    },
+    {
+      "key": "0580000b-d6d5-4875-a27e-8bea2e34afdc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Variables Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0580000b-d6d5-4875-a27e-8bea2e34afdc",
+        "lesson_activity.key": "b2b579ff-23da-41f9-a89c-44a2fe1e972e"
+      }
+    },
+    {
+      "key": "8c02b053-6c7c-4dfe-aa3a-f6e2429e614a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Project Breakdown: Clicker Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c02b053-6c7c-4dfe-aa3a-f6e2429e614a",
+        "lesson_activity.key": "b2b579ff-23da-41f9-a89c-44a2fe1e972e"
+      }
+    },
+    {
+      "key": "cad11bbc-f21d-457a-874b-03569e00622d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Strings Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "cad11bbc-f21d-457a-874b-03569e00622d",
+        "lesson_activity.key": "b2b579ff-23da-41f9-a89c-44a2fe1e972e"
+      }
+    },
+    {
+      "key": "86facb6d-36dd-4093-9c87-66a59721dc0c",
+      "position": 5,
+      "properties": {
+        "name": "U5 L4 - 6: Teaching and Student Support Plan",
+        "progression_name": "U5 L4 - 6: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "86facb6d-36dd-4093-9c87-66a59721dc0c",
+        "lesson_activity.key": "b2b579ff-23da-41f9-a89c-44a2fe1e972e"
+      }
+    },
+    {
+      "key": "76122b52-6bd5-4d2f-b17e-26baad9c6500",
+      "position": 1,
+      "properties": {
+        "progression_name": "5.7- 5.10 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "76122b52-6bd5-4d2f-b17e-26baad9c6500",
+        "lesson_activity.key": "2087eecc-a9e8-472d-a71f-6e80b08c84c1"
+      }
+    },
+    {
+      "key": "93c04ebb-ab1f-479a-8152-4c6aa338c1ff",
+      "position": 2,
+      "properties": {
+        "progression_name": "Boolean Logic and Expression Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "93c04ebb-ab1f-479a-8152-4c6aa338c1ff",
+        "lesson_activity.key": "2087eecc-a9e8-472d-a71f-6e80b08c84c1"
+      }
+    },
+    {
+      "key": "49ef66b3-7e73-4d69-bfae-dd1d271fdfb3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Conditionals Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "49ef66b3-7e73-4d69-bfae-dd1d271fdfb3",
+        "lesson_activity.key": "2087eecc-a9e8-472d-a71f-6e80b08c84c1"
+      }
+    },
+    {
+      "key": "5d12b8ce-bfa0-4040-bf3a-c82025861b6a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Project Breakdown: Color Sleuth"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d12b8ce-bfa0-4040-bf3a-c82025861b6a",
+        "lesson_activity.key": "2087eecc-a9e8-472d-a71f-6e80b08c84c1"
+      }
+    },
+    {
+      "key": "4a8ff495-95f5-4d5d-a648-2887cea6b5b6",
+      "position": 5,
+      "properties": {
+        "name": "U5 L7 - 10: Teaching and Student Support Plan",
+        "progression_name": "U5 L7 - 10: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a8ff495-95f5-4d5d-a648-2887cea6b5b6",
+        "lesson_activity.key": "2087eecc-a9e8-472d-a71f-6e80b08c84c1"
+      }
+    },
+    {
+      "key": "8a7c9b92-c6f6-4b9c-be1b-aaa6e04b5137",
+      "position": 1,
+      "properties": {
+        "progression_name": "5.11 - 5.14 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a7c9b92-c6f6-4b9c-be1b-aaa6e04b5137",
+        "lesson_activity.key": "b301576a-7565-4198-a202-fa0c86fd2d00"
+      }
+    },
+    {
+      "key": "b311610b-a186-409f-a193-a730d8c50cba",
+      "position": 2,
+      "properties": {
+        "progression_name": "While Loops Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b311610b-a186-409f-a193-a730d8c50cba",
+        "lesson_activity.key": "b301576a-7565-4198-a202-fa0c86fd2d00"
+      }
+    },
+    {
+      "key": "b7658b8a-d1dd-4488-996e-f07ca909b003",
+      "position": 3,
+      "properties": {
+        "progression_name": "Arrays Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7658b8a-d1dd-4488-996e-f07ca909b003",
+        "lesson_activity.key": "b301576a-7565-4198-a202-fa0c86fd2d00"
+      }
+    },
+    {
+      "key": "2dfc5485-0dbc-4181-9986-db3af179fe27",
+      "position": 4,
+      "properties": {
+        "progression_name": "Project Breakdown: Image Scroller"
+      },
+      "seeding_key": {
+        "activity_section.key": "2dfc5485-0dbc-4181-9986-db3af179fe27",
+        "lesson_activity.key": "b301576a-7565-4198-a202-fa0c86fd2d00"
+      }
+    },
+    {
+      "key": "4afda7b9-1f26-425b-b87f-9dd2e524b012",
+      "position": 5,
+      "properties": {
+        "name": "U5 L11 - 14: Teaching and Student Support Plan",
+        "progression_name": "U5 L11 - 14: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "4afda7b9-1f26-425b-b87f-9dd2e524b012",
+        "lesson_activity.key": "b301576a-7565-4198-a202-fa0c86fd2d00"
+      }
+    },
+    {
+      "key": "89e277d4-bed4-49f8-ab19-d4e54dcd4d8b",
+      "position": 1,
+      "properties": {
+        "progression_name": "5.15 - 5.17 Lesson Connections"
+      },
+      "seeding_key": {
+        "activity_section.key": "89e277d4-bed4-49f8-ab19-d4e54dcd4d8b",
+        "lesson_activity.key": "f6b54974-a02b-4411-8022-cab9ff865c34"
+      }
+    },
+    {
+      "key": "65bda9d5-0d7f-45ea-a826-96968899fa53",
+      "position": 2,
+      "properties": {
+        "progression_name": "Processing Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "65bda9d5-0d7f-45ea-a826-96968899fa53",
+        "lesson_activity.key": "f6b54974-a02b-4411-8022-cab9ff865c34"
+      }
+    },
+    {
+      "key": "12cfe10a-8117-4784-96aa-6551aba92bda",
+      "position": 3,
+      "properties": {
+        "progression_name": "Functions that Return Values"
+      },
+      "seeding_key": {
+        "activity_section.key": "12cfe10a-8117-4784-96aa-6551aba92bda",
+        "lesson_activity.key": "f6b54974-a02b-4411-8022-cab9ff865c34"
+      }
+    },
+    {
+      "key": "a5fc33b5-8167-416b-827f-5f7cc0a6a25f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Project Breakdown: Building a Canvas Painter"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5fc33b5-8167-416b-827f-5f7cc0a6a25f",
+        "lesson_activity.key": "f6b54974-a02b-4411-8022-cab9ff865c34"
+      }
+    },
+    {
+      "key": "7663f5b5-a714-4b25-ad19-46c21da12fb4",
+      "position": 5,
+      "properties": {
+        "name": "U5 L15 - 17: Teaching and Student Support Plan",
+        "progression_name": "U5 L15 - 17: Teaching and Student Support Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "7663f5b5-a714-4b25-ad19-46c21da12fb4",
+        "lesson_activity.key": "f6b54974-a02b-4411-8022-cab9ff865c34"
+      }
+    },
+    {
+      "key": "2ffac66d-97e1-4184-83a7-ecebcaf0a89c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Group Work and Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ffac66d-97e1-4184-83a7-ecebcaf0a89c",
+        "lesson_activity.key": "43539ec6-7651-49db-b74f-619ca1f412d1"
+      }
+    },
+    {
+      "key": "08c96794-2b2d-41be-ae16-4823579ce774",
+      "position": 2,
+      "properties": {
+        "progression_name": "Collaborative Learning and Group Work: Description and Strategies"
+      },
+      "seeding_key": {
+        "activity_section.key": "08c96794-2b2d-41be-ae16-4823579ce774",
+        "lesson_activity.key": "43539ec6-7651-49db-b74f-619ca1f412d1"
+      }
+    },
+    {
+      "key": "979d8eae-a361-4224-a77b-44ca202575b8",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Official Peer Instruction Blog"
+      },
+      "seeding_key": {
+        "activity_section.key": "979d8eae-a361-4224-a77b-44ca202575b8",
+        "lesson_activity.key": "43539ec6-7651-49db-b74f-619ca1f412d1"
+      }
+    },
+    {
+      "key": "006250c3-66ca-43ec-b748-a89f4c46a9ee",
+      "position": 4,
+      "properties": {
+        "progression_name": "the Journal of Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "006250c3-66ca-43ec-b748-a89f4c46a9ee",
+        "lesson_activity.key": "43539ec6-7651-49db-b74f-619ca1f412d1"
+      }
+    },
+    {
+      "key": "a1c42f0e-e037-4f23-8a70-4cd319b29b5e",
+      "position": 5,
+      "properties": {
+        "name": "Unit 5 Teaching Practice Plan: Group Work and Peer Learning",
+        "progression_name": "Unit 5 Teaching Practice Plan: Group Work and Peer Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1c42f0e-e037-4f23-8a70-4cd319b29b5e",
+        "lesson_activity.key": "43539ec6-7651-49db-b74f-619ca1f412d1"
+      }
+    },
+    {
+      "key": "114cd5fb-70c4-4301-8170-50a98eba92d3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Balancing Teachers and Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "114cd5fb-70c4-4301-8170-50a98eba92d3",
+        "lesson_activity.key": "a8fe239d-8f24-45b5-ad2b-23110b83668d"
+      }
+    },
+    {
+      "key": "6077d93e-a53b-4b87-8b18-b6df7cf796aa",
+      "position": 2,
+      "properties": {
+        "progression_name": "Classroom Management Tips for School Computer Labs"
+      },
+      "seeding_key": {
+        "activity_section.key": "6077d93e-a53b-4b87-8b18-b6df7cf796aa",
+        "lesson_activity.key": "a8fe239d-8f24-45b5-ad2b-23110b83668d"
+      }
+    },
+    {
+      "key": "04b6651d-aefa-4013-82f7-ff9425b950cb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Considerations for the 1-to-1 Classroom"
+      },
+      "seeding_key": {
+        "activity_section.key": "04b6651d-aefa-4013-82f7-ff9425b950cb",
+        "lesson_activity.key": "a8fe239d-8f24-45b5-ad2b-23110b83668d"
+      }
+    },
+    {
+      "key": "cbb1fa71-2ed8-4361-995a-d0b7cce97f83",
+      "position": 4,
+      "properties": {
+        "name": "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools",
+        "progression_name": "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools"
+      },
+      "seeding_key": {
+        "activity_section.key": "cbb1fa71-2ed8-4361-995a-d0b7cce97f83",
+        "lesson_activity.key": "a8fe239d-8f24-45b5-ad2b-23110b83668d"
+      }
+    },
+    {
+      "key": "48c0be86-f017-4ab4-b2bd-3ccf0101cecd",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Discovery Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "48c0be86-f017-4ab4-b2bd-3ccf0101cecd",
+        "lesson_activity.key": "eb39f9a6-c6a5-4a42-ac81-0eb8a57c0ef8"
+      }
+    },
+    {
+      "key": "363fcc8b-87cc-428d-85b4-ead8246ee287",
+      "position": 2,
+      "properties": {
+        "progression_name": "Discovery learning definition and history"
+      },
+      "seeding_key": {
+        "activity_section.key": "363fcc8b-87cc-428d-85b4-ead8246ee287",
+        "lesson_activity.key": "eb39f9a6-c6a5-4a42-ac81-0eb8a57c0ef8"
+      }
+    },
+    {
+      "key": "c1925b1e-0833-43cd-97dc-87afc3fd77b4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Discovery learning techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1925b1e-0833-43cd-97dc-87afc3fd77b4",
+        "lesson_activity.key": "eb39f9a6-c6a5-4a42-ac81-0eb8a57c0ef8"
+      }
+    },
+    {
+      "key": "576b449b-33aa-4ca1-9676-2824cbc8371e",
+      "position": 4,
+      "properties": {
+        "name": "Unit 5 Teaching Practice Plan: Discovery Learning",
+        "progression_name": "Unit 5 Teaching Practice Plan: Discovery Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "576b449b-33aa-4ca1-9676-2824cbc8371e",
+        "lesson_activity.key": "eb39f9a6-c6a5-4a42-ac81-0eb8a57c0ef8"
+      }
+    },
+    {
+      "key": "21f33cba-aa2d-4834-90ad-3eec50e5196d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview: Capturing Student Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "21f33cba-aa2d-4834-90ad-3eec50e5196d",
+        "lesson_activity.key": "65efe537-2841-4bf2-8376-0ddc03223a2b"
+      }
+    },
+    {
+      "key": "434501a2-e1c7-42dc-86ec-f2f04dff7a73",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is the difference between formative and summative assessment?"
+      },
+      "seeding_key": {
+        "activity_section.key": "434501a2-e1c7-42dc-86ec-f2f04dff7a73",
+        "lesson_activity.key": "65efe537-2841-4bf2-8376-0ddc03223a2b"
+      }
+    },
+    {
+      "key": "3e54ae2a-2644-43fc-801e-6ecb63a8e515",
+      "position": 3,
+      "properties": {
+        "progression_name": "Designing Assessment Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e54ae2a-2644-43fc-801e-6ecb63a8e515",
+        "lesson_activity.key": "65efe537-2841-4bf2-8376-0ddc03223a2b"
+      }
+    },
+    {
+      "key": "41390ae6-444a-4ff9-acf4-0d95bf46654d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Classroom Assessment Techniques"
+      },
+      "seeding_key": {
+        "activity_section.key": "41390ae6-444a-4ff9-acf4-0d95bf46654d",
+        "lesson_activity.key": "65efe537-2841-4bf2-8376-0ddc03223a2b"
+      }
+    },
+    {
+      "key": "3049ec68-98dd-4984-a7f5-09c0b81aac3e",
+      "position": 5,
+      "properties": {
+        "name": "Unit 5 Teaching Practice Plan: Assessing Student Learning",
+        "progression_name": "Unit 5 Teaching Practice Plan: Assessing Student Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "3049ec68-98dd-4984-a7f5-09c0b81aac3e",
+        "lesson_activity.key": "65efe537-2841-4bf2-8376-0ddc03223a2b"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What's inside and how is it organized?"
-        ],
         "progression": "What's inside and how is it organized?"
       },
       "bonus": false,
@@ -241,7 +916,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "48d68ac2-4400-4ab1-9763-296ae9091f4d"
       },
       "level_keys": [
         "What's inside and how is it organized?"
@@ -250,12 +926,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Introduction to Unit 5"
-        ],
         "progression": "Introduction to Unit 5"
       },
       "bonus": false,
@@ -265,7 +938,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "2a3ee75a-c382-4403-a1dc-c52e0f5c7b39"
       },
       "level_keys": [
         "Introduction to Unit 5"
@@ -274,12 +948,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 5 Teaching Philosophy and Commentary"
-        ],
         "progression": "Unit 5 Teaching Philosophy and Commentary"
       },
       "bonus": false,
@@ -289,7 +960,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "52a8d9cd-8af3-4258-87ab-0c22624c844d"
       },
       "level_keys": [
         "Unit 5 Teaching Philosophy and Commentary"
@@ -298,12 +970,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 5 Concepts and AP Assessments"
-        ],
         "progression": "Unit 5 Concepts and AP Assessments"
       },
       "bonus": false,
@@ -313,7 +982,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "e88288fa-e2a0-4ae7-93c2-f767b80ab0f5"
       },
       "level_keys": [
         "Unit 5 Concepts and AP Assessments"
@@ -322,12 +992,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Practice Performance Task in Unit 5"
-        ],
         "progression": "Practice Performance Task in Unit 5"
       },
       "bonus": false,
@@ -337,7 +1004,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "55143804-ad5b-4bac-b719-92842af4bc48"
       },
       "level_keys": [
         "Practice Performance Task in Unit 5"
@@ -346,12 +1014,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 5 Self-Assessment"
-        ],
         "progression": "Unit 5 Self-Assessment"
       },
       "bonus": false,
@@ -361,7 +1026,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "fbd4c162-d65e-4eda-a0e6-cb21cb6da3cf"
       },
       "level_keys": [
         "Unit 5 Self-Assessment"
@@ -370,12 +1036,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "5.1 - 5.3 Lesson Connections"
-        ],
         "progression": "5.1 - 5.3 Lesson Connections"
       },
       "bonus": false,
@@ -385,7 +1048,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "689c5903-4f67-44c6-a933-7839145424ec"
       },
       "level_keys": [
         "5.1 - 5.3 Lesson Connections"
@@ -394,12 +1058,9 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Design Mode Overview"
-        ],
         "progression": "Design Mode Overview"
       },
       "bonus": false,
@@ -409,7 +1070,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "1a3cfbf9-2529-48e6-b0f4-aef01b766759"
       },
       "level_keys": [
         "Design Mode Overview"
@@ -418,12 +1080,9 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Events Overview"
-        ],
         "progression": "Events Overview"
       },
       "bonus": false,
@@ -433,7 +1092,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "eae99279-fe3a-4c89-bb47-4a0892e56f92"
       },
       "level_keys": [
         "Events Overview"
@@ -442,12 +1102,9 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Project Breakdown: Multi-Screen App"
-        ],
         "progression": "Project Breakdown: Multi-Screen App"
       },
       "bonus": false,
@@ -457,7 +1114,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "0b84879d-16ec-45d2-8baa-7cdb62e4ed81"
       },
       "level_keys": [
         "Project Breakdown: Multi-Screen App"
@@ -466,12 +1124,9 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U5 L1 - 3: Teaching and Student Support Plan"
-        ],
         "progression": "U5 L1 - 3: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -481,7 +1136,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "740dd14a-0a23-4804-bf46-61874e4837e3"
       },
       "level_keys": [
         "U5 L1 - 3: Teaching and Student Support Plan"
@@ -490,12 +1146,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "5.4 - 5.6 Lesson Connections"
-        ],
         "progression": "5.4 - 5.6 Lesson Connections"
       },
       "bonus": false,
@@ -505,7 +1158,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "f111e084-6122-4de6-8703-c12b5bd75b19"
       },
       "level_keys": [
         "5.4 - 5.6 Lesson Connections"
@@ -514,12 +1168,9 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Variables Overview"
-        ],
         "progression": "Variables Overview"
       },
       "bonus": false,
@@ -529,7 +1180,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "0580000b-d6d5-4875-a27e-8bea2e34afdc"
       },
       "level_keys": [
         "Variables Overview"
@@ -538,12 +1190,9 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Project Breakdown: Clicker Game"
-        ],
         "progression": "Project Breakdown: Clicker Game"
       },
       "bonus": false,
@@ -553,7 +1202,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "8c02b053-6c7c-4dfe-aa3a-f6e2429e614a"
       },
       "level_keys": [
         "Project Breakdown: Clicker Game"
@@ -562,12 +1212,9 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Strings Overview"
-        ],
         "progression": "Strings Overview"
       },
       "bonus": false,
@@ -577,7 +1224,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "cad11bbc-f21d-457a-874b-03569e00622d"
       },
       "level_keys": [
         "Strings Overview"
@@ -586,12 +1234,9 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U5 L4 - 6: Teaching and Student Support Plan"
-        ],
         "progression": "U5 L4 - 6: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -601,7 +1246,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "86facb6d-36dd-4093-9c87-66a59721dc0c"
       },
       "level_keys": [
         "U5 L4 - 6: Teaching and Student Support Plan"
@@ -610,12 +1256,9 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "5.7- 5.10 Lesson Connections"
-        ],
         "progression": "5.7- 5.10 Lesson Connections"
       },
       "bonus": false,
@@ -625,7 +1268,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "76122b52-6bd5-4d2f-b17e-26baad9c6500"
       },
       "level_keys": [
         "5.7- 5.10 Lesson Connections"
@@ -634,12 +1278,9 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Boolean Logic and Expression Overview"
-        ],
         "progression": "Boolean Logic and Expression Overview"
       },
       "bonus": false,
@@ -649,7 +1290,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "93c04ebb-ab1f-479a-8152-4c6aa338c1ff"
       },
       "level_keys": [
         "Boolean Logic and Expression Overview"
@@ -658,12 +1300,9 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Conditionals Overview"
-        ],
         "progression": "Conditionals Overview"
       },
       "bonus": false,
@@ -673,7 +1312,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "49ef66b3-7e73-4d69-bfae-dd1d271fdfb3"
       },
       "level_keys": [
         "Conditionals Overview"
@@ -682,12 +1322,9 @@
     {
       "chapter": 20,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Project Breakdown: Color Sleuth"
-        ],
         "progression": "Project Breakdown: Color Sleuth"
       },
       "bonus": false,
@@ -697,7 +1334,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "5d12b8ce-bfa0-4040-bf3a-c82025861b6a"
       },
       "level_keys": [
         "Project Breakdown: Color Sleuth"
@@ -706,12 +1344,9 @@
     {
       "chapter": 21,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U5 L7 - 10: Teaching and Student Support Plan"
-        ],
         "progression": "U5 L7 - 10: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -721,7 +1356,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "4a8ff495-95f5-4d5d-a648-2887cea6b5b6"
       },
       "level_keys": [
         "U5 L7 - 10: Teaching and Student Support Plan"
@@ -730,12 +1366,9 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "5.11 - 5.14 Lesson Connections"
-        ],
         "progression": "5.11 - 5.14 Lesson Connections"
       },
       "bonus": false,
@@ -745,7 +1378,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "8a7c9b92-c6f6-4b9c-be1b-aaa6e04b5137"
       },
       "level_keys": [
         "5.11 - 5.14 Lesson Connections"
@@ -754,12 +1388,9 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "While Loops Overview"
-        ],
         "progression": "While Loops Overview"
       },
       "bonus": false,
@@ -769,7 +1400,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "b311610b-a186-409f-a193-a730d8c50cba"
       },
       "level_keys": [
         "While Loops Overview"
@@ -778,12 +1410,9 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Arrays Overview"
-        ],
         "progression": "Arrays Overview"
       },
       "bonus": false,
@@ -793,7 +1422,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "b7658b8a-d1dd-4488-996e-f07ca909b003"
       },
       "level_keys": [
         "Arrays Overview"
@@ -802,12 +1432,9 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Project Breakdown: Image Scroller"
-        ],
         "progression": "Project Breakdown: Image Scroller"
       },
       "bonus": false,
@@ -817,7 +1444,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "2dfc5485-0dbc-4181-9986-db3af179fe27"
       },
       "level_keys": [
         "Project Breakdown: Image Scroller"
@@ -826,12 +1454,9 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U5 L11 - 14: Teaching and Student Support Plan"
-        ],
         "progression": "U5 L11 - 14: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -841,7 +1466,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "4afda7b9-1f26-425b-b87f-9dd2e524b012"
       },
       "level_keys": [
         "U5 L11 - 14: Teaching and Student Support Plan"
@@ -850,12 +1476,9 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "5.15 - 5.17 Lesson Connections"
-        ],
         "progression": "5.15 - 5.17 Lesson Connections"
       },
       "bonus": false,
@@ -865,7 +1488,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "89e277d4-bed4-49f8-ab19-d4e54dcd4d8b"
       },
       "level_keys": [
         "5.15 - 5.17 Lesson Connections"
@@ -874,12 +1498,9 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Processing Arrays"
-        ],
         "progression": "Processing Arrays"
       },
       "bonus": false,
@@ -889,7 +1510,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "65bda9d5-0d7f-45ea-a826-96968899fa53"
       },
       "level_keys": [
         "Processing Arrays"
@@ -898,12 +1520,9 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Functions that Return Values"
-        ],
         "progression": "Functions that Return Values"
       },
       "bonus": false,
@@ -913,7 +1532,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "12cfe10a-8117-4784-96aa-6551aba92bda"
       },
       "level_keys": [
         "Functions that Return Values"
@@ -922,12 +1542,9 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Project Breakdown: Building a Canvas Painter"
-        ],
         "progression": "Project Breakdown: Building a Canvas Painter"
       },
       "bonus": false,
@@ -937,7 +1554,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "a5fc33b5-8167-416b-827f-5f7cc0a6a25f"
       },
       "level_keys": [
         "Project Breakdown: Building a Canvas Painter"
@@ -946,12 +1564,9 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U5 L15 - 17: Teaching and Student Support Plan"
-        ],
         "progression": "U5 L15 - 17: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -961,7 +1576,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "7663f5b5-a714-4b25-ad19-46c21da12fb4"
       },
       "level_keys": [
         "U5 L15 - 17: Teaching and Student Support Plan"
@@ -970,12 +1586,9 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Group Work and Peer Learning"
-        ],
         "progression": "Overview: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -985,7 +1598,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "2ffac66d-97e1-4184-83a7-ecebcaf0a89c"
       },
       "level_keys": [
         "Overview: Group Work and Peer Learning"
@@ -994,12 +1608,9 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Collaborative Learning and Group Work: Description and Strategies"
-        ],
         "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
       "bonus": false,
@@ -1009,7 +1620,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "08c96794-2b2d-41be-ae16-4823579ce774"
       },
       "level_keys": [
         "Collaborative Learning and Group Work: Description and Strategies"
@@ -1018,12 +1630,9 @@
     {
       "chapter": 34,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "The Official Peer Instruction Blog"
-        ],
         "progression": "The Official Peer Instruction Blog"
       },
       "bonus": false,
@@ -1033,7 +1642,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "979d8eae-a361-4224-a77b-44ca202575b8"
       },
       "level_keys": [
         "The Official Peer Instruction Blog"
@@ -1042,12 +1652,9 @@
     {
       "chapter": 35,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "the Journal of Peer Learning"
-        ],
         "progression": "the Journal of Peer Learning"
       },
       "bonus": false,
@@ -1057,7 +1664,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "006250c3-66ca-43ec-b748-a89f4c46a9ee"
       },
       "level_keys": [
         "the Journal of Peer Learning"
@@ -1066,12 +1674,9 @@
     {
       "chapter": 36,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 5 Teaching Practice Plan: Group Work and Peer Learning"
-        ],
         "progression": "Unit 5 Teaching Practice Plan: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -1081,7 +1686,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "a1c42f0e-e037-4f23-8a70-4cd319b29b5e"
       },
       "level_keys": [
         "Unit 5 Teaching Practice Plan: Group Work and Peer Learning"
@@ -1090,12 +1696,9 @@
     {
       "chapter": 37,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Balancing Teachers and Tools"
-        ],
         "progression": "Overview: Balancing Teachers and Tools"
       },
       "bonus": false,
@@ -1105,7 +1708,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "114cd5fb-70c4-4301-8170-50a98eba92d3"
       },
       "level_keys": [
         "Overview: Balancing Teachers and Tools"
@@ -1114,12 +1718,9 @@
     {
       "chapter": 38,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Classroom Management Tips for School Computer Labs"
-        ],
         "progression": "Classroom Management Tips for School Computer Labs"
       },
       "bonus": false,
@@ -1129,7 +1730,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "6077d93e-a53b-4b87-8b18-b6df7cf796aa"
       },
       "level_keys": [
         "Classroom Management Tips for School Computer Labs"
@@ -1138,12 +1740,9 @@
     {
       "chapter": 39,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Considerations for the 1-to-1 Classroom"
-        ],
         "progression": "Considerations for the 1-to-1 Classroom"
       },
       "bonus": false,
@@ -1153,7 +1752,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "04b6651d-aefa-4013-82f7-ff9425b950cb"
       },
       "level_keys": [
         "Considerations for the 1-to-1 Classroom"
@@ -1162,12 +1762,9 @@
     {
       "chapter": 40,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools"
-        ],
         "progression": "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools"
       },
       "bonus": false,
@@ -1177,7 +1774,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "cbb1fa71-2ed8-4361-995a-d0b7cce97f83"
       },
       "level_keys": [
         "Unit 5 Teaching Practice Plan: Balancing Teacher and Tools"
@@ -1186,12 +1784,9 @@
     {
       "chapter": 41,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Discovery Learning"
-        ],
         "progression": "Overview: Discovery Learning"
       },
       "bonus": false,
@@ -1201,7 +1796,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "48c0be86-f017-4ab4-b2bd-3ccf0101cecd"
       },
       "level_keys": [
         "Overview: Discovery Learning"
@@ -1210,12 +1806,9 @@
     {
       "chapter": 42,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Discovery learning definition and history"
-        ],
         "progression": "Discovery learning definition and history"
       },
       "bonus": false,
@@ -1225,7 +1818,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "363fcc8b-87cc-428d-85b4-ead8246ee287"
       },
       "level_keys": [
         "Discovery learning definition and history"
@@ -1234,12 +1828,9 @@
     {
       "chapter": 43,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Discovery learning techniques"
-        ],
         "progression": "Discovery learning techniques"
       },
       "bonus": false,
@@ -1249,7 +1840,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "c1925b1e-0833-43cd-97dc-87afc3fd77b4"
       },
       "level_keys": [
         "Discovery learning techniques"
@@ -1258,12 +1850,9 @@
     {
       "chapter": 44,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 5 Teaching Practice Plan: Discovery Learning"
-        ],
         "progression": "Unit 5 Teaching Practice Plan: Discovery Learning"
       },
       "bonus": false,
@@ -1273,7 +1862,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "576b449b-33aa-4ca1-9676-2824cbc8371e"
       },
       "level_keys": [
         "Unit 5 Teaching Practice Plan: Discovery Learning"
@@ -1282,12 +1872,9 @@
     {
       "chapter": 45,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Capturing Student Learning"
-        ],
         "progression": "Overview: Capturing Student Learning"
       },
       "bonus": false,
@@ -1297,7 +1884,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "21f33cba-aa2d-4834-90ad-3eec50e5196d"
       },
       "level_keys": [
         "Overview: Capturing Student Learning"
@@ -1306,12 +1894,9 @@
     {
       "chapter": 46,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What is the difference between formative and summative assessment?"
-        ],
         "progression": "What is the difference between formative and summative assessment?"
       },
       "bonus": false,
@@ -1321,7 +1906,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "434501a2-e1c7-42dc-86ec-f2f04dff7a73"
       },
       "level_keys": [
         "What is the difference between formative and summative assessment?"
@@ -1330,12 +1916,9 @@
     {
       "chapter": 47,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Designing Assessment Questions"
-        ],
         "progression": "Designing Assessment Questions"
       },
       "bonus": false,
@@ -1345,7 +1928,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "3e54ae2a-2644-43fc-801e-6ecb63a8e515"
       },
       "level_keys": [
         "Designing Assessment Questions"
@@ -1354,12 +1938,9 @@
     {
       "chapter": 48,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Classroom Assessment Techniques"
-        ],
         "progression": "Classroom Assessment Techniques"
       },
       "bonus": false,
@@ -1369,7 +1950,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "41390ae6-444a-4ff9-acf4-0d95bf46654d"
       },
       "level_keys": [
         "Classroom Assessment Techniques"
@@ -1378,12 +1960,9 @@
     {
       "chapter": 49,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 5 Teaching Practice Plan: Assessing Student Learning"
-        ],
         "progression": "Unit 5 Teaching Practice Plan: Assessing Student Learning"
       },
       "bonus": false,
@@ -1393,7 +1972,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "3049ec68-98dd-4984-a7f5-09c0b81aac3e"
       },
       "level_keys": [
         "Unit 5 Teaching Practice Plan: Assessing Student Learning"
@@ -1409,7 +1989,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "48d68ac2-4400-4ab1-9763-296ae9091f4d"
       }
     },
     {
@@ -1420,7 +2001,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "2a3ee75a-c382-4403-a1dc-c52e0f5c7b39"
       }
     },
     {
@@ -1431,7 +2013,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "52a8d9cd-8af3-4258-87ab-0c22624c844d"
       }
     },
     {
@@ -1442,7 +2025,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "e88288fa-e2a0-4ae7-93c2-f767b80ab0f5"
       }
     },
     {
@@ -1453,7 +2037,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "55143804-ad5b-4bac-b719-92842af4bc48"
       }
     },
     {
@@ -1464,7 +2049,8 @@
         ],
         "lesson.key": "Unit 5 Overview",
         "lesson_group.key": "required",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "fbd4c162-d65e-4eda-a0e6-cb21cb6da3cf"
       }
     },
     {
@@ -1475,7 +2061,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "689c5903-4f67-44c6-a933-7839145424ec"
       }
     },
     {
@@ -1486,7 +2073,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "1a3cfbf9-2529-48e6-b0f4-aef01b766759"
       }
     },
     {
@@ -1497,7 +2085,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "eae99279-fe3a-4c89-bb47-4a0892e56f92"
       }
     },
     {
@@ -1508,7 +2097,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "0b84879d-16ec-45d2-8baa-7cdb62e4ed81"
       }
     },
     {
@@ -1519,7 +2109,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "740dd14a-0a23-4804-bf46-61874e4837e3"
       }
     },
     {
@@ -1530,7 +2121,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "f111e084-6122-4de6-8703-c12b5bd75b19"
       }
     },
     {
@@ -1541,7 +2133,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "0580000b-d6d5-4875-a27e-8bea2e34afdc"
       }
     },
     {
@@ -1552,7 +2145,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "8c02b053-6c7c-4dfe-aa3a-f6e2429e614a"
       }
     },
     {
@@ -1563,7 +2157,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "cad11bbc-f21d-457a-874b-03569e00622d"
       }
     },
     {
@@ -1574,7 +2169,8 @@
         ],
         "lesson.key": "Variables and Strings",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "86facb6d-36dd-4093-9c87-66a59721dc0c"
       }
     },
     {
@@ -1585,7 +2181,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "76122b52-6bd5-4d2f-b17e-26baad9c6500"
       }
     },
     {
@@ -1596,7 +2193,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "93c04ebb-ab1f-479a-8152-4c6aa338c1ff"
       }
     },
     {
@@ -1607,7 +2205,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "49ef66b3-7e73-4d69-bfae-dd1d271fdfb3"
       }
     },
     {
@@ -1618,7 +2217,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "5d12b8ce-bfa0-4040-bf3a-c82025861b6a"
       }
     },
     {
@@ -1629,7 +2229,8 @@
         ],
         "lesson.key": "Conditionals and Boolean Logic",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "4a8ff495-95f5-4d5d-a648-2887cea6b5b6"
       }
     },
     {
@@ -1640,7 +2241,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "8a7c9b92-c6f6-4b9c-be1b-aaa6e04b5137"
       }
     },
     {
@@ -1651,7 +2253,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "b311610b-a186-409f-a193-a730d8c50cba"
       }
     },
     {
@@ -1662,7 +2265,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "b7658b8a-d1dd-4488-996e-f07ca909b003"
       }
     },
     {
@@ -1673,7 +2277,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "2dfc5485-0dbc-4181-9986-db3af179fe27"
       }
     },
     {
@@ -1684,7 +2289,8 @@
         ],
         "lesson.key": "While Loops and Introduction to Arrays",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "4afda7b9-1f26-425b-b87f-9dd2e524b012"
       }
     },
     {
@@ -1695,7 +2301,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "89e277d4-bed4-49f8-ab19-d4e54dcd4d8b"
       }
     },
     {
@@ -1706,7 +2313,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "65bda9d5-0d7f-45ea-a826-96968899fa53"
       }
     },
     {
@@ -1717,7 +2325,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "12cfe10a-8117-4784-96aa-6551aba92bda"
       }
     },
     {
@@ -1728,7 +2337,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "a5fc33b5-8167-416b-827f-5f7cc0a6a25f"
       }
     },
     {
@@ -1739,7 +2349,8 @@
         ],
         "lesson.key": "Processing Arrays and Functions with Return Values",
         "lesson_group.key": "content",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "7663f5b5-a714-4b25-ad19-46c21da12fb4"
       }
     },
     {
@@ -1750,7 +2361,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "2ffac66d-97e1-4184-83a7-ecebcaf0a89c"
       }
     },
     {
@@ -1761,7 +2373,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "08c96794-2b2d-41be-ae16-4823579ce774"
       }
     },
     {
@@ -1772,7 +2385,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "979d8eae-a361-4224-a77b-44ca202575b8"
       }
     },
     {
@@ -1783,7 +2397,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "006250c3-66ca-43ec-b748-a89f4c46a9ee"
       }
     },
     {
@@ -1794,7 +2409,8 @@
         ],
         "lesson.key": "Group Work and Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "a1c42f0e-e037-4f23-8a70-4cd319b29b5e"
       }
     },
     {
@@ -1805,7 +2421,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "114cd5fb-70c4-4301-8170-50a98eba92d3"
       }
     },
     {
@@ -1816,7 +2433,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "6077d93e-a53b-4b87-8b18-b6df7cf796aa"
       }
     },
     {
@@ -1827,7 +2445,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "04b6651d-aefa-4013-82f7-ff9425b950cb"
       }
     },
     {
@@ -1838,7 +2457,8 @@
         ],
         "lesson.key": "Balancing Teachers and Tools",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "cbb1fa71-2ed8-4361-995a-d0b7cce97f83"
       }
     },
     {
@@ -1849,7 +2469,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "48c0be86-f017-4ab4-b2bd-3ccf0101cecd"
       }
     },
     {
@@ -1860,7 +2481,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "363fcc8b-87cc-428d-85b4-ead8246ee287"
       }
     },
     {
@@ -1871,7 +2493,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "c1925b1e-0833-43cd-97dc-87afc3fd77b4"
       }
     },
     {
@@ -1882,7 +2505,8 @@
         ],
         "lesson.key": "Discovery Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "576b449b-33aa-4ca1-9676-2824cbc8371e"
       }
     },
     {
@@ -1893,7 +2517,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "21f33cba-aa2d-4834-90ad-3eec50e5196d"
       }
     },
     {
@@ -1904,7 +2529,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "434501a2-e1c7-42dc-86ec-f2f04dff7a73"
       }
     },
     {
@@ -1915,7 +2541,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "3e54ae2a-2644-43fc-801e-6ecb63a8e515"
       }
     },
     {
@@ -1926,7 +2553,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "41390ae6-444a-4ff9-acf4-0d95bf46654d"
       }
     },
     {
@@ -1937,7 +2565,8 @@
         ],
         "lesson.key": "Measuring Student Learning",
         "lesson_group.key": "practice",
-        "script.name": "csp5-support"
+        "script.name": "csp5-support",
+        "activity_section.key": "3049ec68-98dd-4984-a7f5-09c0b81aac3e"
       }
     }
   ],

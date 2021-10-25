@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:10 UTC",
+    "serialized_at": "2021-10-25 23:29:24 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -174,21 +175,223 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "2ec0adf8-bba0-4753-bd81-ba96f540b601",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2ec0adf8-bba0-4753-bd81-ba96f540b601",
+        "lesson.key": "Happy Maps",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "bee14b36-734e-446c-baf4-6b90502190a7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bee14b36-734e-446c-baf4-6b90502190a7",
+        "lesson.key": "Move it, Move it",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "d76b4a9f-aca3-4062-b361-00c203318e4a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d76b4a9f-aca3-4062-b361-00c203318e4a",
+        "lesson.key": "Real-life Algorithms: Plant a Seed",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "7dd4c64e-b810-4349-a9d5-beccec714177",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7dd4c64e-b810-4349-a9d5-beccec714177",
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "b6527a69-81e1-41d6-911e-5798681c97cb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b6527a69-81e1-41d6-911e-5798681c97cb",
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "a1c30034-41ca-4295-b369-14d8a5a80e73",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1c30034-41ca-4295-b369-14d8a5a80e73",
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "89a3d54f-5a9c-45ae-bc6d-212018b43dd5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89a3d54f-5a9c-45ae-bc6d-212018b43dd5",
+        "lesson.key": "The Big Event",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "4d91f7cb-9a9c-4152-9c88-808502d904d2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d91f7cb-9a9c-4152-9c88-808502d904d2",
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    },
+    {
+      "key": "bbc11e2c-3d73-4c1e-a966-b1058d2f703b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bbc11e2c-3d73-4c1e-a966-b1058d2f703b",
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "",
+        "script.name": "asUnplugged"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "2118b889-35f1-4eea-8144-21a2b80f0650",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2118b889-35f1-4eea-8144-21a2b80f0650",
+        "lesson_activity.key": "2ec0adf8-bba0-4753-bd81-ba96f540b601"
+      }
+    },
+    {
+      "key": "d88df004-21ab-4989-97ec-aabaa60fa6ac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d88df004-21ab-4989-97ec-aabaa60fa6ac",
+        "lesson_activity.key": "bee14b36-734e-446c-baf4-6b90502190a7"
+      }
+    },
+    {
+      "key": "9b48137b-24ac-49c5-b3a9-400ffe702724",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9b48137b-24ac-49c5-b3a9-400ffe702724",
+        "lesson_activity.key": "d76b4a9f-aca3-4062-b361-00c203318e4a"
+      }
+    },
+    {
+      "key": "67e0cc39-43ff-4240-98a2-2bec64ef5770",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "67e0cc39-43ff-4240-98a2-2bec64ef5770",
+        "lesson_activity.key": "7dd4c64e-b810-4349-a9d5-beccec714177"
+      }
+    },
+    {
+      "key": "56d4a848-5d4e-4842-8687-dcaa1e3f1201",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "56d4a848-5d4e-4842-8687-dcaa1e3f1201",
+        "lesson_activity.key": "b6527a69-81e1-41d6-911e-5798681c97cb"
+      }
+    },
+    {
+      "key": "23707e3b-665c-4ec5-bf39-8916be957e4e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "23707e3b-665c-4ec5-bf39-8916be957e4e",
+        "lesson_activity.key": "a1c30034-41ca-4295-b369-14d8a5a80e73"
+      }
+    },
+    {
+      "key": "54377cc6-983f-4c5c-a695-c94687b4ef50",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "54377cc6-983f-4c5c-a695-c94687b4ef50",
+        "lesson_activity.key": "89a3d54f-5a9c-45ae-bc6d-212018b43dd5"
+      }
+    },
+    {
+      "key": "7fb015c1-1b2a-4438-a422-a00c9d731496",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7fb015c1-1b2a-4438-a422-a00c9d731496",
+        "lesson_activity.key": "4d91f7cb-9a9c-4152-9c88-808502d904d2"
+      }
+    },
+    {
+      "key": "4c7da0e5-59ae-41ba-b51c-ed9b42a3fc66",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4c7da0e5-59ae-41ba-b51c-ed9b42a3fc66",
+        "lesson_activity.key": "bbc11e2c-3d73-4c1e-a966-b1058d2f703b"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "UnplugHappyMaps"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -197,7 +400,8 @@
         ],
         "lesson.key": "Happy Maps",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "2118b889-35f1-4eea-8144-21a2b80f0650"
       },
       "level_keys": [
         "UnplugHappyMaps"
@@ -206,12 +410,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MoveIt"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -220,7 +421,8 @@
         ],
         "lesson.key": "Move it, Move it",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "d88df004-21ab-4989-97ec-aabaa60fa6ac"
       },
       "level_keys": [
         "MoveIt"
@@ -229,12 +431,9 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PlantASeed"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -243,7 +442,8 @@
         ],
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "9b48137b-24ac-49c5-b3a9-400ffe702724"
       },
       "level_keys": [
         "PlantASeed"
@@ -252,12 +452,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "GraphPaperProgramming"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,7 +463,8 @@
         ],
         "lesson.key": "Graph Paper Programming",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "67e0cc39-43ff-4240-98a2-2bec64ef5770"
       },
       "level_keys": [
         "GraphPaperProgramming"
@@ -275,12 +473,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "BuildingAFoundation"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -289,7 +484,8 @@
         ],
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "56d4a848-5d4e-4842-8687-dcaa1e3f1201"
       },
       "level_keys": [
         "BuildingAFoundation"
@@ -298,12 +494,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "GettingLoopy"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -312,7 +505,8 @@
         ],
         "lesson.key": "Getting Loopy",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "23707e3b-665c-4ec5-bf39-8916be957e4e"
       },
       "level_keys": [
         "GettingLoopy"
@@ -321,12 +515,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "BigEvent"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -335,7 +526,8 @@
         ],
         "lesson.key": "The Big Event",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "54377cc6-983f-4c5c-a695-c94687b4ef50"
       },
       "level_keys": [
         "BigEvent"
@@ -344,12 +536,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "BinaryBracelets"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -358,7 +547,8 @@
         ],
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "7fb015c1-1b2a-4438-a422-a00c9d731496"
       },
       "level_keys": [
         "BinaryBracelets"
@@ -367,12 +557,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SongwritingParameters"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -381,7 +568,8 @@
         ],
         "lesson.key": "Songwriting",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "4c7da0e5-59ae-41ba-b51c-ed9b42a3fc66"
       },
       "level_keys": [
         "SongwritingParameters"
@@ -397,7 +585,8 @@
         ],
         "lesson.key": "Happy Maps",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "2118b889-35f1-4eea-8144-21a2b80f0650"
       }
     },
     {
@@ -408,7 +597,8 @@
         ],
         "lesson.key": "Move it, Move it",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "d88df004-21ab-4989-97ec-aabaa60fa6ac"
       }
     },
     {
@@ -419,7 +609,8 @@
         ],
         "lesson.key": "Real-life Algorithms: Plant a Seed",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "9b48137b-24ac-49c5-b3a9-400ffe702724"
       }
     },
     {
@@ -430,7 +621,8 @@
         ],
         "lesson.key": "Graph Paper Programming",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "67e0cc39-43ff-4240-98a2-2bec64ef5770"
       }
     },
     {
@@ -441,7 +633,8 @@
         ],
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "56d4a848-5d4e-4842-8687-dcaa1e3f1201"
       }
     },
     {
@@ -452,7 +645,8 @@
         ],
         "lesson.key": "Getting Loopy",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "23707e3b-665c-4ec5-bf39-8916be957e4e"
       }
     },
     {
@@ -463,7 +657,8 @@
         ],
         "lesson.key": "The Big Event",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "54377cc6-983f-4c5c-a695-c94687b4ef50"
       }
     },
     {
@@ -474,7 +669,8 @@
         ],
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "7fb015c1-1b2a-4438-a422-a00c9d731496"
       }
     },
     {
@@ -485,7 +681,8 @@
         ],
         "lesson.key": "Songwriting",
         "lesson_group.key": "",
-        "script.name": "asUnplugged"
+        "script.name": "asUnplugged",
+        "activity_section.key": "4c7da0e5-59ae-41ba-b51c-ed9b42a3fc66"
       }
     }
   ],

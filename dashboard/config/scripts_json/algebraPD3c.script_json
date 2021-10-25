@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:14 UTC",
+    "serialized_at": "2021-10-25 23:28:55 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -77,21 +77,85 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "80823af1-93be-4f23-bf52-6b35646c5de9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80823af1-93be-4f23-bf52-6b35646c5de9",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3c"
+      }
+    },
+    {
+      "key": "99d3ded0-770f-4f9e-acf4-357386b8ee3c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99d3ded0-770f-4f9e-acf4-357386b8ee3c",
+        "lesson.key": "Sharing Student Work",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3c"
+      }
+    },
+    {
+      "key": "c4b08f92-cb60-4846-aaf7-d3cde5ea273e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c4b08f92-cb60-4846-aaf7-d3cde5ea273e",
+        "lesson.key": "Planning For the Future",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3c"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233",
+        "lesson_activity.key": "80823af1-93be-4f23-bf52-6b35646c5de9"
+      }
+    },
+    {
+      "key": "32a7c156-bcc8-444b-a9a7-4557af053bcc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "32a7c156-bcc8-444b-a9a7-4557af053bcc",
+        "lesson_activity.key": "99d3ded0-770f-4f9e-acf4-357386b8ee3c"
+      }
+    },
+    {
+      "key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c",
+        "lesson_activity.key": "c4b08f92-cb60-4846-aaf7-d3cde5ea273e"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CWelcome"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -100,7 +164,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       },
       "level_keys": [
         "PDAlg 3CWelcome"
@@ -109,12 +174,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CAbout"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -123,7 +185,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       },
       "level_keys": [
         "PDAlg 3CAbout"
@@ -132,12 +195,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "OPD-K5 CS Tips"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -146,7 +206,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       },
       "level_keys": [
         "OPD-K5 CS Tips"
@@ -155,12 +216,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CPlanning"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -169,7 +227,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       },
       "level_keys": [
         "PDAlg 3CPlanning"
@@ -178,12 +237,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CGo"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -192,7 +248,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       },
       "level_keys": [
         "PDAlg 3CGo"
@@ -201,12 +258,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CGathering"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -215,7 +269,8 @@
         ],
         "lesson.key": "Sharing Student Work",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "32a7c156-bcc8-444b-a9a7-4557af053bcc"
       },
       "level_keys": [
         "PDAlg 3CGathering"
@@ -224,12 +279,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CSharing"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -238,7 +290,8 @@
         ],
         "lesson.key": "Sharing Student Work",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "32a7c156-bcc8-444b-a9a7-4557af053bcc"
       },
       "level_keys": [
         "PDAlg 3CSharing"
@@ -247,12 +300,9 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CShare Forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -261,7 +311,8 @@
         ],
         "lesson.key": "Sharing Student Work",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "32a7c156-bcc8-444b-a9a7-4557af053bcc"
       },
       "level_keys": [
         "PDAlg 3CShare Forum"
@@ -270,12 +321,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CFuture"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -284,7 +332,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       },
       "level_keys": [
         "PDAlg 3CFuture"
@@ -293,12 +342,9 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CCourseAB"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -307,7 +353,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       },
       "level_keys": [
         "PDAlg 3CCourseAB"
@@ -316,12 +363,9 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CBootstrap"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -330,7 +374,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       },
       "level_keys": [
         "PDAlg 3CBootstrap"
@@ -339,12 +384,9 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CElective"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -353,7 +395,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       },
       "level_keys": [
         "PDAlg 3CElective"
@@ -362,12 +405,9 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CSharePlan"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -376,7 +416,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       },
       "level_keys": [
         "PDAlg 3CSharePlan"
@@ -385,12 +426,9 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CCongrats"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -399,7 +437,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       },
       "level_keys": [
         "PDAlg 3CCongrats"
@@ -415,7 +454,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       }
     },
     {
@@ -426,7 +466,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       }
     },
     {
@@ -437,7 +478,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       }
     },
     {
@@ -448,7 +490,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       }
     },
     {
@@ -459,7 +502,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "fb25226a-5b3b-4212-9d6e-10a8ae24b233"
       }
     },
     {
@@ -470,7 +514,8 @@
         ],
         "lesson.key": "Sharing Student Work",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "32a7c156-bcc8-444b-a9a7-4557af053bcc"
       }
     },
     {
@@ -481,7 +526,8 @@
         ],
         "lesson.key": "Sharing Student Work",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "32a7c156-bcc8-444b-a9a7-4557af053bcc"
       }
     },
     {
@@ -492,7 +538,8 @@
         ],
         "lesson.key": "Sharing Student Work",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "32a7c156-bcc8-444b-a9a7-4557af053bcc"
       }
     },
     {
@@ -503,7 +550,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       }
     },
     {
@@ -514,7 +562,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       }
     },
     {
@@ -525,7 +574,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       }
     },
     {
@@ -536,7 +586,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       }
     },
     {
@@ -547,7 +598,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       }
     },
     {
@@ -558,7 +610,8 @@
         ],
         "lesson.key": "Planning For the Future",
         "lesson_group.key": "",
-        "script.name": "algebraPD3c"
+        "script.name": "algebraPD3c",
+        "activity_section.key": "b25a1602-9df3-44bf-a8e5-de9016f6b68c"
       }
     }
   ],

@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:24 UTC",
+    "serialized_at": "2021-10-25 23:29:06 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -90,21 +91,209 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "512b71c5-e8bc-439e-b155-be6a0bdb52fc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "512b71c5-e8bc-439e-b155-be6a0bdb52fc",
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "",
+        "script.name": "applab-2hour"
+      }
+    },
+    {
+      "key": "fe15d6bd-e16f-4ea0-b0d8-e74bb4cbebe7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe15d6bd-e16f-4ea0-b0d8-e74bb4cbebe7",
+        "lesson.key": "Event Driven Programming",
+        "lesson_group.key": "",
+        "script.name": "applab-2hour"
+      }
+    },
+    {
+      "key": "ef4882d4-9bd8-4bfc-9c47-46c3ba4564d3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef4882d4-9bd8-4bfc-9c47-46c3ba4564d3",
+        "lesson.key": "Basic App Functionality",
+        "lesson_group.key": "",
+        "script.name": "applab-2hour"
+      }
+    },
+    {
+      "key": "592220d0-0c83-4c5c-bcb6-522deb8999ab",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "592220d0-0c83-4c5c-bcb6-522deb8999ab",
+        "lesson.key": "Getters and Setters",
+        "lesson_group.key": "",
+        "script.name": "applab-2hour"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "cf4c5c2c-aa4d-432c-a361-052196e04ab7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Building a UI with Design Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf4c5c2c-aa4d-432c-a361-052196e04ab7",
+        "lesson_activity.key": "512b71c5-e8bc-439e-b155-be6a0bdb52fc"
+      }
+    },
+    {
+      "key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Choosing Good IDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c",
+        "lesson_activity.key": "512b71c5-e8bc-439e-b155-be6a0bdb52fc"
+      }
+    },
+    {
+      "key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd",
+        "lesson_activity.key": "512b71c5-e8bc-439e-b155-be6a0bdb52fc"
+      }
+    },
+    {
+      "key": "ba1498f6-5f08-4d4f-b279-e00245ebb50f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Responding to User Input"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba1498f6-5f08-4d4f-b279-e00245ebb50f",
+        "lesson_activity.key": "fe15d6bd-e16f-4ea0-b0d8-e74bb4cbebe7"
+      }
+    },
+    {
+      "key": "ef2b1af6-55f5-4489-9715-3021a6477bf3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Multi-Screen Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3",
+        "lesson_activity.key": "fe15d6bd-e16f-4ea0-b0d8-e74bb4cbebe7"
+      }
+    },
+    {
+      "key": "f15422c0-7029-4209-855f-8d0876d8d540",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540",
+        "lesson_activity.key": "fe15d6bd-e16f-4ea0-b0d8-e74bb4cbebe7"
+      }
+    },
+    {
+      "key": "2c9c3e09-faa0-426b-b0e8-95d6c5d27547",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2c9c3e09-faa0-426b-b0e8-95d6c5d27547",
+        "lesson_activity.key": "ef4882d4-9bd8-4bfc-9c47-46c3ba4564d3"
+      }
+    },
+    {
+      "key": "6686c710-22a9-455e-b639-63ec3ec9708a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Getters and Setters"
+      },
+      "seeding_key": {
+        "activity_section.key": "6686c710-22a9-455e-b639-63ec3ec9708a",
+        "lesson_activity.key": "592220d0-0c83-4c5c-bcb6-522deb8999ab"
+      }
+    },
+    {
+      "key": "9feb4d50-975e-44a3-ae16-f2478d3292c6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Getters and Setters"
+      },
+      "seeding_key": {
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6",
+        "lesson_activity.key": "592220d0-0c83-4c5c-bcb6-522deb8999ab"
+      }
+    },
+    {
+      "key": "3301ee2d-5f5b-47a7-9802-6301e4ae8235",
+      "position": 3,
+      "properties": {
+        "progression_name": "getText vs getNumber"
+      },
+      "seeding_key": {
+        "activity_section.key": "3301ee2d-5f5b-47a7-9802-6301e4ae8235",
+        "lesson_activity.key": "592220d0-0c83-4c5c-bcb6-522deb8999ab"
+      }
+    },
+    {
+      "key": "0b938ed1-46da-4637-8475-457cae40bb89",
+      "position": 4,
+      "properties": {
+        "progression_name": "getNumber"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b938ed1-46da-4637-8475-457cae40bb89",
+        "lesson_activity.key": "592220d0-0c83-4c5c-bcb6-522deb8999ab"
+      }
+    },
+    {
+      "key": "09e65642-df79-4d7b-8cf2-fa2c4ab31b25",
+      "position": 5,
+      "properties": {
+        "progression_name": "setProperty"
+      },
+      "seeding_key": {
+        "activity_section.key": "09e65642-df79-4d7b-8cf2-fa2c4ab31b25",
+        "lesson_activity.key": "592220d0-0c83-4c5c-bcb6-522deb8999ab"
+      }
+    },
+    {
+      "key": "1b48153b-eada-4ec3-8290-ac959d6c5a4b",
+      "position": 6,
+      "properties": {
+        "name": "UI Element Properties",
+        "progression_name": "UI Element Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b48153b-eada-4ec3-8290-ac959d6c5a4b",
+        "lesson_activity.key": "592220d0-0c83-4c5c-bcb6-522deb8999ab"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Building a UI with Design Mode"
-        ],
         "progression": "Building a UI with Design Mode"
       },
       "bonus": false,
@@ -114,7 +303,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "cf4c5c2c-aa4d-432c-a361-052196e04ab7"
       },
       "level_keys": [
         "Building a UI with Design Mode"
@@ -123,12 +313,10 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 Design Mode Video"
-        ]
+        "progression": "Choosing Good IDs"
       },
       "bonus": false,
       "seeding_key": {
@@ -137,7 +325,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c"
       },
       "level_keys": [
         "CSDU4 Design Mode Video"
@@ -146,12 +335,10 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 15"
-        ]
+        "progression": "Choosing Good IDs"
       },
       "bonus": false,
       "seeding_key": {
@@ -160,7 +347,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 15"
@@ -169,12 +357,10 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 4"
-        ]
+        "progression": "Choosing Good IDs"
       },
       "bonus": false,
       "seeding_key": {
@@ -183,7 +369,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 4"
@@ -192,12 +379,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Choosing Good IDs"
-        ],
         "progression": "Choosing Good IDs"
       },
       "bonus": false,
@@ -207,7 +391,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c"
       },
       "level_keys": [
         "Choosing Good IDs"
@@ -216,12 +401,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U4 - Design Mode Text"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -230,7 +412,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       },
       "level_keys": [
         "CSD U4 - Design Mode Text"
@@ -239,12 +422,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U4 - Design Mode Input Widgets"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -253,7 +433,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       },
       "level_keys": [
         "CSD U4 - Design Mode Input Widgets"
@@ -262,12 +443,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 21"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -276,7 +454,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 21"
@@ -285,12 +464,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode Icons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -299,7 +475,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       },
       "level_keys": [
         "CSDU4 - Design Mode Icons"
@@ -308,12 +485,9 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 18"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -322,7 +496,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 18"
@@ -331,12 +506,9 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Responding to User Input"
-        ],
         "progression": "Responding to User Input"
       },
       "bonus": false,
@@ -346,7 +518,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ba1498f6-5f08-4d4f-b279-e00245ebb50f"
       },
       "level_keys": [
         "Responding to User Input"
@@ -355,12 +528,10 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 16"
-        ]
+        "progression": "Multi-Screen Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -369,7 +540,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 16"
@@ -378,12 +550,10 @@
     {
       "chapter": 13,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 3"
-        ]
+        "progression": "Multi-Screen Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -392,7 +562,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 3"
@@ -401,12 +572,10 @@
     {
       "chapter": 14,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 17"
-        ]
+        "progression": "Multi-Screen Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -415,7 +584,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 17"
@@ -424,12 +594,9 @@
     {
       "chapter": 15,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Multi-Screen Apps"
-        ],
         "progression": "Multi-Screen Apps"
       },
       "bonus": false,
@@ -439,7 +606,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3"
       },
       "level_keys": [
         "Multi-Screen Apps"
@@ -448,12 +616,9 @@
     {
       "chapter": 16,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 19"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -462,7 +627,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 19"
@@ -471,12 +637,9 @@
     {
       "chapter": 17,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 - Design Mode - 20"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -485,7 +648,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 20"
@@ -494,12 +658,9 @@
     {
       "chapter": 18,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 Connecting Screens"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -508,7 +669,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540"
       },
       "level_keys": [
         "CSDU4 Connecting Screens"
@@ -517,12 +679,9 @@
     {
       "chapter": 19,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 Connecting Screens Getting Back"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -531,7 +690,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540"
       },
       "level_keys": [
         "CSDU4 Connecting Screens Getting Back"
@@ -540,12 +700,9 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 Functionality visible"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -554,7 +711,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "2c9c3e09-faa0-426b-b0e8-95d6c5d27547"
       },
       "level_keys": [
         "CSDU4 Functionality visible"
@@ -563,12 +721,9 @@
     {
       "chapter": 21,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD - Getters and Setters"
-        ],
         "progression": "Getters and Setters"
       },
       "bonus": false,
@@ -578,7 +733,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "6686c710-22a9-455e-b639-63ec3ec9708a"
       },
       "level_keys": [
         "CSD - Getters and Setters"
@@ -587,12 +743,9 @@
     {
       "chapter": 22,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - setScreen"
-        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -602,7 +755,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setScreen"
@@ -611,12 +765,9 @@
     {
       "chapter": 23,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - setText"
-        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -626,7 +777,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setText"
@@ -635,12 +787,9 @@
     {
       "chapter": 24,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - hide show"
-        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -650,7 +799,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - hide show"
@@ -659,12 +809,9 @@
     {
       "chapter": 25,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - getText"
-        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -674,7 +821,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - getText"
@@ -683,12 +831,9 @@
     {
       "chapter": 26,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - dropdown setText"
-        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -698,7 +843,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - dropdown setText"
@@ -707,12 +853,9 @@
     {
       "chapter": 27,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - get set with text input"
-        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -722,7 +865,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - get set with text input"
@@ -731,12 +875,9 @@
     {
       "chapter": 28,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - getNumber practice"
-        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -746,7 +887,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - getNumber practice"
@@ -755,12 +897,9 @@
     {
       "chapter": 29,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: getText vs getNumber"
-        ],
         "progression": "getText vs getNumber"
       },
       "bonus": false,
@@ -770,7 +909,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "3301ee2d-5f5b-47a7-9802-6301e4ae8235"
       },
       "level_keys": [
         "CSD: getText vs getNumber"
@@ -779,12 +919,9 @@
     {
       "chapter": 30,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - getNumber"
-        ],
         "progression": "getNumber"
       },
       "bonus": false,
@@ -794,7 +931,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "0b938ed1-46da-4637-8475-457cae40bb89"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - getNumber"
@@ -803,12 +941,9 @@
     {
       "chapter": 31,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: setProperty"
-        ],
         "progression": "setProperty"
       },
       "bonus": false,
@@ -818,7 +953,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "09e65642-df79-4d7b-8cf2-fa2c4ab31b25"
       },
       "level_keys": [
         "CSD: setProperty"
@@ -827,12 +963,9 @@
     {
       "chapter": 32,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - setProperty first level"
-        ],
         "progression": "UI Element Properties"
       },
       "bonus": false,
@@ -842,7 +975,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "1b48153b-eada-4ec3-8290-ac959d6c5a4b"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setProperty first level"
@@ -851,12 +985,9 @@
     {
       "chapter": 33,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - setProperty Image"
-        ],
         "progression": "UI Element Properties"
       },
       "bonus": false,
@@ -866,7 +997,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "1b48153b-eada-4ec3-8290-ac959d6c5a4b"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setProperty Image"
@@ -875,12 +1007,9 @@
     {
       "chapter": 34,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU6 - UI and Inputs - setProperty"
-        ],
         "progression": "UI Element Properties"
       },
       "bonus": false,
@@ -890,7 +1019,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "1b48153b-eada-4ec3-8290-ac959d6c5a4b"
       },
       "level_keys": [
         "CSDU6 - UI and Inputs - setProperty"
@@ -906,7 +1036,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "cf4c5c2c-aa4d-432c-a361-052196e04ab7"
       }
     },
     {
@@ -917,7 +1048,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c"
       }
     },
     {
@@ -928,7 +1060,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c"
       }
     },
     {
@@ -939,7 +1072,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c"
       }
     },
     {
@@ -950,7 +1084,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9fe71e3c-ce76-4f43-82c5-085c46d1d50c"
       }
     },
     {
@@ -961,7 +1096,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       }
     },
     {
@@ -972,7 +1108,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       }
     },
     {
@@ -983,7 +1120,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       }
     },
     {
@@ -994,7 +1132,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       }
     },
     {
@@ -1005,7 +1144,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "d5c50b9b-71f4-4d33-af48-9c54a59cddcd"
       }
     },
     {
@@ -1016,7 +1156,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ba1498f6-5f08-4d4f-b279-e00245ebb50f"
       }
     },
     {
@@ -1027,7 +1168,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3"
       }
     },
     {
@@ -1038,7 +1180,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3"
       }
     },
     {
@@ -1049,7 +1192,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3"
       }
     },
     {
@@ -1060,7 +1204,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "ef2b1af6-55f5-4489-9715-3021a6477bf3"
       }
     },
     {
@@ -1071,7 +1216,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540"
       }
     },
     {
@@ -1082,7 +1228,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540"
       }
     },
     {
@@ -1093,7 +1240,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540"
       }
     },
     {
@@ -1104,7 +1252,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "f15422c0-7029-4209-855f-8d0876d8d540"
       }
     },
     {
@@ -1115,7 +1264,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "2c9c3e09-faa0-426b-b0e8-95d6c5d27547"
       }
     },
     {
@@ -1126,7 +1276,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "6686c710-22a9-455e-b639-63ec3ec9708a"
       }
     },
     {
@@ -1137,7 +1288,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       }
     },
     {
@@ -1148,7 +1300,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       }
     },
     {
@@ -1159,7 +1312,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       }
     },
     {
@@ -1170,7 +1324,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       }
     },
     {
@@ -1181,7 +1336,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       }
     },
     {
@@ -1192,7 +1348,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       }
     },
     {
@@ -1203,7 +1360,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "9feb4d50-975e-44a3-ae16-f2478d3292c6"
       }
     },
     {
@@ -1214,7 +1372,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "3301ee2d-5f5b-47a7-9802-6301e4ae8235"
       }
     },
     {
@@ -1225,7 +1384,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "0b938ed1-46da-4637-8475-457cae40bb89"
       }
     },
     {
@@ -1236,7 +1396,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "09e65642-df79-4d7b-8cf2-fa2c4ab31b25"
       }
     },
     {
@@ -1247,7 +1408,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "1b48153b-eada-4ec3-8290-ac959d6c5a4b"
       }
     },
     {
@@ -1258,7 +1420,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "1b48153b-eada-4ec3-8290-ac959d6c5a4b"
       }
     },
     {
@@ -1269,7 +1432,8 @@
         ],
         "lesson.key": "Getters and Setters",
         "lesson_group.key": "",
-        "script.name": "applab-2hour"
+        "script.name": "applab-2hour",
+        "activity_section.key": "1b48153b-eada-4ec3-8290-ac959d6c5a4b"
       }
     }
   ],

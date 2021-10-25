@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:10 UTC",
+    "serialized_at": "2021-10-25 23:23:48 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -152,21 +152,200 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "fe2e2c45-fcba-4620-ba53-3376280f9bba",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe2e2c45-fcba-4620-ba53-3376280f9bba",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "CSPPD2"
+      }
+    },
+    {
+      "key": "14c1aafd-1b40-490c-a9bc-102aba1f3846",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14c1aafd-1b40-490c-a9bc-102aba1f3846",
+        "lesson.key": "Welcome to the Course!",
+        "lesson_group.key": "",
+        "script.name": "CSPPD2"
+      }
+    },
+    {
+      "key": "45095073-50cc-43b1-b265-1c10a07f1199",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45095073-50cc-43b1-b265-1c10a07f1199",
+        "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
+        "lesson_group.key": "",
+        "script.name": "CSPPD2"
+      }
+    },
+    {
+      "key": "df7515b2-6a64-4dab-b22b-4c1583e22901",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df7515b2-6a64-4dab-b22b-4c1583e22901",
+        "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "CSPPD2"
+      }
+    },
+    {
+      "key": "cc135ed1-331e-4358-a98a-08d9b4922080",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc135ed1-331e-4358-a98a-08d9b4922080",
+        "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
+        "lesson_group.key": "",
+        "script.name": "CSPPD2"
+      }
+    },
+    {
+      "key": "73569d66-7fee-4b66-8372-0a7d36c558bf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "73569d66-7fee-4b66-8372-0a7d36c558bf",
+        "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
+        "lesson_group.key": "",
+        "script.name": "CSPPD2"
+      }
+    },
+    {
+      "key": "3670fb57-1da9-419e-8e77-2903437cd454",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3670fb57-1da9-419e-8e77-2903437cd454",
+        "lesson.key": "Practice PT",
+        "lesson_group.key": "",
+        "script.name": "CSPPD2"
+      }
+    },
+    {
+      "key": "b4da5828-8fce-42ea-bde7-62cecaa24696",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4da5828-8fce-42ea-bde7-62cecaa24696",
+        "lesson.key": "Wrap Up and Next Steps",
+        "lesson_group.key": "",
+        "script.name": "CSPPD2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "80f7756d-0a4a-4b02-9fd1-984076b27a21",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21",
+        "lesson_activity.key": "fe2e2c45-fcba-4620-ba53-3376280f9bba"
+      }
+    },
+    {
+      "key": "6b1f945e-086e-4e84-a0b6-21f45f2bce2f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6b1f945e-086e-4e84-a0b6-21f45f2bce2f",
+        "lesson_activity.key": "14c1aafd-1b40-490c-a9bc-102aba1f3846"
+      }
+    },
+    {
+      "key": "6238d653-7741-4d50-8517-b54b9d8e1472",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472",
+        "lesson_activity.key": "45095073-50cc-43b1-b265-1c10a07f1199"
+      }
+    },
+    {
+      "key": "204a6234-bebd-4000-8a5e-bd4b83712c95",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "204a6234-bebd-4000-8a5e-bd4b83712c95",
+        "lesson_activity.key": "df7515b2-6a64-4dab-b22b-4c1583e22901"
+      }
+    },
+    {
+      "key": "b8245638-5f75-4898-8495-5520654ed113",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113",
+        "lesson_activity.key": "cc135ed1-331e-4358-a98a-08d9b4922080"
+      }
+    },
+    {
+      "key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51",
+        "lesson_activity.key": "73569d66-7fee-4b66-8372-0a7d36c558bf"
+      }
+    },
+    {
+      "key": "b0d60429-de0a-4786-a03a-edefee4939aa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa",
+        "lesson_activity.key": "3670fb57-1da9-419e-8e77-2903437cd454"
+      }
+    },
+    {
+      "key": "42f0e4f1-f68f-4f9f-b041-83e9f4e834a2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "42f0e4f1-f68f-4f9f-b041-83e9f4e834a2",
+        "lesson_activity.key": "b4da5828-8fce-42ea-bde7-62cecaa24696"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 welcome"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -175,7 +354,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       },
       "level_keys": [
         "CSPPD2 welcome"
@@ -184,12 +364,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -198,7 +375,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       },
       "level_keys": [
         "PDECS tour"
@@ -207,12 +385,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -221,7 +396,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       },
       "level_keys": [
         "CSPPD2 overview"
@@ -230,12 +406,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 tips for prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -244,7 +417,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       },
       "level_keys": [
         "CSPPD2 tips for prep"
@@ -253,12 +427,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 participation"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -267,7 +438,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       },
       "level_keys": [
         "CSPPD2 participation"
@@ -276,12 +448,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 lesson 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -290,7 +459,8 @@
         ],
         "lesson.key": "Welcome to the Course!",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6b1f945e-086e-4e84-a0b6-21f45f2bce2f"
       },
       "level_keys": [
         "CSPPD2 lesson 1"
@@ -299,12 +469,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 lesson 1 reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -313,7 +480,8 @@
         ],
         "lesson.key": "Welcome to the Course!",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6b1f945e-086e-4e84-a0b6-21f45f2bce2f"
       },
       "level_keys": [
         "CSPPD2 lesson 1 reflection"
@@ -322,12 +490,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -336,7 +501,8 @@
         ],
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472"
       },
       "level_keys": [
         "CSPPD2 chunk 1"
@@ -345,12 +511,9 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 1 lessons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -359,7 +522,8 @@
         ],
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472"
       },
       "level_keys": [
         "CSPPD2 chunk 1 lessons"
@@ -368,12 +532,9 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PIvideo"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -382,7 +543,8 @@
         ],
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472"
       },
       "level_keys": [
         "CSPPD2 PIvideo"
@@ -391,12 +553,9 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 1 reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -405,7 +564,8 @@
         ],
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472"
       },
       "level_keys": [
         "CSPPD2 chunk 1 reflection"
@@ -414,12 +574,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -428,7 +585,8 @@
         ],
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "204a6234-bebd-4000-8a5e-bd4b83712c95"
       },
       "level_keys": [
         "CSPPD2 chunk 2"
@@ -437,12 +595,9 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 2 lessons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -451,7 +606,8 @@
         ],
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "204a6234-bebd-4000-8a5e-bd4b83712c95"
       },
       "level_keys": [
         "CSPPD2 chunk 2 lessons"
@@ -460,12 +616,9 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 2 reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -474,7 +627,8 @@
         ],
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "204a6234-bebd-4000-8a5e-bd4b83712c95"
       },
       "level_keys": [
         "CSPPD2 chunk 2 reflection"
@@ -483,12 +637,9 @@
     {
       "chapter": 15,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -497,7 +648,8 @@
         ],
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113"
       },
       "level_keys": [
         "CSPPD2 chunk 3"
@@ -506,12 +658,9 @@
     {
       "chapter": 16,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 3 lessons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -520,7 +669,8 @@
         ],
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113"
       },
       "level_keys": [
         "CSPPD2 chunk 3 lessons"
@@ -529,12 +679,9 @@
     {
       "chapter": 17,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 share protocol"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -543,7 +690,8 @@
         ],
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113"
       },
       "level_keys": [
         "CSPPD2 share protocol"
@@ -552,12 +700,9 @@
     {
       "chapter": 18,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 3 reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -566,7 +711,8 @@
         ],
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113"
       },
       "level_keys": [
         "CSPPD2 chunk 3 reflection"
@@ -575,12 +721,9 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -589,7 +732,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       },
       "level_keys": [
         "CSPPD2 chunk 4"
@@ -598,12 +742,9 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 4 lessons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -612,7 +753,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       },
       "level_keys": [
         "CSPPD2 chunk 4 lessons"
@@ -621,12 +763,9 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 share compression"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -635,7 +774,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       },
       "level_keys": [
         "CSPPD2 share compression"
@@ -644,12 +784,9 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 pixel video 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -658,7 +795,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       },
       "level_keys": [
         "CSPPD2 pixel video 1"
@@ -667,12 +805,9 @@
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 pixel video 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -681,7 +816,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       },
       "level_keys": [
         "CSPPD2 pixel video 2"
@@ -690,12 +826,9 @@
     {
       "chapter": 24,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 4 reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -704,7 +837,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       },
       "level_keys": [
         "CSPPD2 chunk 4 reflection"
@@ -713,12 +847,9 @@
     {
       "chapter": 25,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PT"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -727,7 +858,8 @@
         ],
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa"
       },
       "level_keys": [
         "CSPPD2 PT"
@@ -736,12 +868,9 @@
     {
       "chapter": 26,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PT activity"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -750,7 +879,8 @@
         ],
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa"
       },
       "level_keys": [
         "CSPPD2 PT activity"
@@ -759,12 +889,9 @@
     {
       "chapter": 27,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PT forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -773,7 +900,8 @@
         ],
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa"
       },
       "level_keys": [
         "CSPPD2 PT forum"
@@ -782,12 +910,9 @@
     {
       "chapter": 28,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PT reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -796,7 +921,8 @@
         ],
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa"
       },
       "level_keys": [
         "CSPPD2 PT reflection"
@@ -805,12 +931,9 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 congrats"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -819,7 +942,8 @@
         ],
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "42f0e4f1-f68f-4f9f-b041-83e9f4e834a2"
       },
       "level_keys": [
         "CSPPD2 congrats"
@@ -828,12 +952,9 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 next step announcements"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -842,7 +963,8 @@
         ],
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "42f0e4f1-f68f-4f9f-b041-83e9f4e834a2"
       },
       "level_keys": [
         "CSPPD2 next step announcements"
@@ -851,12 +973,9 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 survey"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -865,7 +984,8 @@
         ],
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "42f0e4f1-f68f-4f9f-b041-83e9f4e834a2"
       },
       "level_keys": [
         "CSPPD2 survey"
@@ -881,7 +1001,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       }
     },
     {
@@ -892,7 +1013,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       }
     },
     {
@@ -903,7 +1025,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       }
     },
     {
@@ -914,7 +1037,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       }
     },
     {
@@ -925,7 +1049,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "80f7756d-0a4a-4b02-9fd1-984076b27a21"
       }
     },
     {
@@ -936,7 +1061,8 @@
         ],
         "lesson.key": "Welcome to the Course!",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6b1f945e-086e-4e84-a0b6-21f45f2bce2f"
       }
     },
     {
@@ -947,7 +1073,8 @@
         ],
         "lesson.key": "Welcome to the Course!",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6b1f945e-086e-4e84-a0b6-21f45f2bce2f"
       }
     },
     {
@@ -958,7 +1085,8 @@
         ],
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472"
       }
     },
     {
@@ -969,7 +1097,8 @@
         ],
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472"
       }
     },
     {
@@ -980,7 +1109,8 @@
         ],
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472"
       }
     },
     {
@@ -991,7 +1121,8 @@
         ],
         "lesson.key": "Lesson Chunk 1- Sending Binary Messages",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "6238d653-7741-4d50-8517-b54b9d8e1472"
       }
     },
     {
@@ -1002,7 +1133,8 @@
         ],
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "204a6234-bebd-4000-8a5e-bd4b83712c95"
       }
     },
     {
@@ -1013,7 +1145,8 @@
         ],
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "204a6234-bebd-4000-8a5e-bd4b83712c95"
       }
     },
     {
@@ -1024,7 +1157,8 @@
         ],
         "lesson.key": "Lesson Chunk 2- Encoding and Sending Numbers",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "204a6234-bebd-4000-8a5e-bd4b83712c95"
       }
     },
     {
@@ -1035,7 +1169,8 @@
         ],
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113"
       }
     },
     {
@@ -1046,7 +1181,8 @@
         ],
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113"
       }
     },
     {
@@ -1057,7 +1193,8 @@
         ],
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113"
       }
     },
     {
@@ -1068,7 +1205,8 @@
         ],
         "lesson.key": "Lesson Chunk 3- Encoding and Sending Text",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b8245638-5f75-4898-8495-5520654ed113"
       }
     },
     {
@@ -1079,7 +1217,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       }
     },
     {
@@ -1090,7 +1229,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       }
     },
     {
@@ -1101,7 +1241,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       }
     },
     {
@@ -1112,7 +1253,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       }
     },
     {
@@ -1123,7 +1265,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       }
     },
     {
@@ -1134,7 +1277,8 @@
         ],
         "lesson.key": "Lesson Chunk 4- Compressing and Storing Information",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "7f045ac0-6e7b-4e54-bfc6-c88163c92e51"
       }
     },
     {
@@ -1145,7 +1289,8 @@
         ],
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa"
       }
     },
     {
@@ -1156,7 +1301,8 @@
         ],
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa"
       }
     },
     {
@@ -1167,7 +1313,8 @@
         ],
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa"
       }
     },
     {
@@ -1178,7 +1325,8 @@
         ],
         "lesson.key": "Practice PT",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "b0d60429-de0a-4786-a03a-edefee4939aa"
       }
     },
     {
@@ -1189,7 +1337,8 @@
         ],
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "42f0e4f1-f68f-4f9f-b041-83e9f4e834a2"
       }
     },
     {
@@ -1200,7 +1349,8 @@
         ],
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "42f0e4f1-f68f-4f9f-b041-83e9f4e834a2"
       }
     },
     {
@@ -1211,7 +1361,8 @@
         ],
         "lesson.key": "Wrap Up and Next Steps",
         "lesson_group.key": "",
-        "script.name": "CSPPD2"
+        "script.name": "CSPPD2",
+        "activity_section.key": "42f0e4f1-f68f-4f9f-b041-83e9f4e834a2"
       }
     }
   ],

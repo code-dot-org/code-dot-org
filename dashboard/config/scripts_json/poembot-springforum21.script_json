@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:47 UTC",
+    "serialized_at": "2021-10-25 23:36:54 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -46,21 +47,52 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "9bf32985-4800-4a96-885d-01730d151ca1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9bf32985-4800-4a96-885d-01730d151ca1",
+        "lesson.key": "Programming Poem Bot",
+        "lesson_group.key": "lesson group",
+        "script.name": "poembot-springforum21"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "9c9646a1-1060-48c6-811e-0619425c7f67",
+      "position": 1,
+      "properties": {
+        "progression_name": "Poem Bot Prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c9646a1-1060-48c6-811e-0619425c7f67",
+        "lesson_activity.key": "9bf32985-4800-4a96-885d-01730d151ca1"
+      }
+    },
+    {
+      "key": "84823aca-3ba5-4618-ab4e-307ab40d68b6",
+      "position": 2,
+      "properties": {
+        "name": "Build a Poem Bot",
+        "progression_name": "Build a Poem Bot"
+      },
+      "seeding_key": {
+        "activity_section.key": "84823aca-3ba5-4618-ab4e-307ab40d68b6",
+        "lesson_activity.key": "9bf32985-4800-4a96-885d-01730d151ca1"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "haiku_prototype_choice1"
-        ],
         "progression": "Poem Bot Prototype"
       },
       "bonus": false,
@@ -70,7 +102,8 @@
         ],
         "lesson.key": "Programming Poem Bot",
         "lesson_group.key": "lesson group",
-        "script.name": "poembot-springforum21"
+        "script.name": "poembot-springforum21",
+        "activity_section.key": "9c9646a1-1060-48c6-811e-0619425c7f67"
       },
       "level_keys": [
         "haiku_prototype_choice1"
@@ -79,12 +112,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Poem Bot_Choice1_Background"
-        ],
         "progression": "Build a Poem Bot"
       },
       "bonus": false,
@@ -94,7 +124,8 @@
         ],
         "lesson.key": "Programming Poem Bot",
         "lesson_group.key": "lesson group",
-        "script.name": "poembot-springforum21"
+        "script.name": "poembot-springforum21",
+        "activity_section.key": "84823aca-3ba5-4618-ab4e-307ab40d68b6"
       },
       "level_keys": [
         "Poem Bot_Choice1_Background"
@@ -110,7 +141,8 @@
         ],
         "lesson.key": "Programming Poem Bot",
         "lesson_group.key": "lesson group",
-        "script.name": "poembot-springforum21"
+        "script.name": "poembot-springforum21",
+        "activity_section.key": "9c9646a1-1060-48c6-811e-0619425c7f67"
       }
     },
     {
@@ -121,7 +153,8 @@
         ],
         "lesson.key": "Programming Poem Bot",
         "lesson_group.key": "lesson group",
-        "script.name": "poembot-springforum21"
+        "script.name": "poembot-springforum21",
+        "activity_section.key": "84823aca-3ba5-4618-ab4e-307ab40d68b6"
       }
     }
   ],

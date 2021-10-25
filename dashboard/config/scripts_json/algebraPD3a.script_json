@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:10 UTC",
+    "serialized_at": "2021-10-25 23:28:52 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -92,21 +92,108 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "d7d2da26-5ff4-4315-af9b-94dd2925efa7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7d2da26-5ff4-4315-af9b-94dd2925efa7",
+        "lesson.key": "Updates - Tweaks and Polish",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3a"
+      }
+    },
+    {
+      "key": "ccb97f44-44e8-41e0-b8f7-7946bd930394",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ccb97f44-44e8-41e0-b8f7-7946bd930394",
+        "lesson.key": "Updates - The Big Game and Projects",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3a"
+      }
+    },
+    {
+      "key": "d4507164-f5a0-4d61-8330-09fc5db476df",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4507164-f5a0-4d61-8330-09fc5db476df",
+        "lesson.key": "Updates - The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3a"
+      }
+    },
+    {
+      "key": "52ba6b51-2f5b-4d71-a2e4-0266c8165422",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52ba6b51-2f5b-4d71-a2e4-0266c8165422",
+        "lesson.key": "Lesson Prep",
+        "lesson_group.key": "",
+        "script.name": "algebraPD3a"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3",
+        "lesson_activity.key": "d7d2da26-5ff4-4315-af9b-94dd2925efa7"
+      }
+    },
+    {
+      "key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c",
+        "lesson_activity.key": "ccb97f44-44e8-41e0-b8f7-7946bd930394"
+      }
+    },
+    {
+      "key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9",
+        "lesson_activity.key": "d4507164-f5a0-4d61-8330-09fc5db476df"
+      }
+    },
+    {
+      "key": "5aab296f-c286-4a92-90da-6c52e7c43794",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794",
+        "lesson_activity.key": "52ba6b51-2f5b-4d71-a2e4-0266c8165422"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Updates Tweaks"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -115,7 +202,8 @@
         ],
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3"
       },
       "level_keys": [
         "PDAlg Updates Tweaks"
@@ -124,12 +212,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Updates Space"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -138,7 +223,8 @@
         ],
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3"
       },
       "level_keys": [
         "PDAlg Updates Space"
@@ -147,12 +233,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Updates Errors"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,7 +244,8 @@
         ],
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3"
       },
       "level_keys": [
         "PDAlg Updates Errors"
@@ -170,12 +254,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Updates Cond"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -184,7 +265,8 @@
         ],
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3"
       },
       "level_keys": [
         "PDAlg Updates Cond"
@@ -193,12 +275,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Big Game"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -207,7 +286,8 @@
         ],
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c"
       },
       "level_keys": [
         "PDAlg Big Game"
@@ -216,12 +296,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Big Game Remix"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -230,7 +307,8 @@
         ],
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c"
       },
       "level_keys": [
         "PDAlg Big Game Remix"
@@ -239,12 +317,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Big Game History"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -253,7 +328,8 @@
         ],
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c"
       },
       "level_keys": [
         "PDAlg Big Game History"
@@ -262,12 +338,9 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Projects"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -276,7 +349,8 @@
         ],
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c"
       },
       "level_keys": [
         "PDAlg Projects"
@@ -285,12 +359,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Design Recipe Updates"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -299,7 +370,8 @@
         ],
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9"
       },
       "level_keys": [
         "PDAlg Design Recipe Updates"
@@ -308,12 +380,9 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Design Recipe Examples"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -322,7 +391,8 @@
         ],
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9"
       },
       "level_keys": [
         "PDAlg Design Recipe Examples"
@@ -331,12 +401,9 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Design Recipe Required"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -345,7 +412,8 @@
         ],
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9"
       },
       "level_keys": [
         "PDAlg Design Recipe Required"
@@ -354,12 +422,9 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Design Recipe Delete"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -368,7 +433,8 @@
         ],
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9"
       },
       "level_keys": [
         "PDAlg Design Recipe Delete"
@@ -377,12 +443,9 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Prep a Lesson"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -391,7 +454,8 @@
         ],
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794"
       },
       "level_keys": [
         "PDAlg Prep a Lesson"
@@ -400,12 +464,9 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Prep on Paper"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -414,7 +475,8 @@
         ],
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794"
       },
       "level_keys": [
         "PDAlg Prep on Paper"
@@ -423,12 +485,9 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Prep Sandbox"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -437,7 +496,8 @@
         ],
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794"
       },
       "level_keys": [
         "PDAlg Prep Sandbox"
@@ -446,12 +506,9 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson Prep Final"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,7 +517,8 @@
         ],
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794"
       },
       "level_keys": [
         "Lesson Prep Final"
@@ -476,7 +534,8 @@
         ],
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3"
       }
     },
     {
@@ -487,7 +546,8 @@
         ],
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3"
       }
     },
     {
@@ -498,7 +558,8 @@
         ],
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3"
       }
     },
     {
@@ -509,7 +570,8 @@
         ],
         "lesson.key": "Updates - Tweaks and Polish",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "1b0a4906-8052-4f37-8e01-82ac76f00bc3"
       }
     },
     {
@@ -520,7 +582,8 @@
         ],
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c"
       }
     },
     {
@@ -531,7 +594,8 @@
         ],
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c"
       }
     },
     {
@@ -542,7 +606,8 @@
         ],
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c"
       }
     },
     {
@@ -553,7 +618,8 @@
         ],
         "lesson.key": "Updates - The Big Game and Projects",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "d7f21edb-50c1-4add-9f8d-b7a9714f103c"
       }
     },
     {
@@ -564,7 +630,8 @@
         ],
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9"
       }
     },
     {
@@ -575,7 +642,8 @@
         ],
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9"
       }
     },
     {
@@ -586,7 +654,8 @@
         ],
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9"
       }
     },
     {
@@ -597,7 +666,8 @@
         ],
         "lesson.key": "Updates - The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "bcecadf2-4531-4ae7-b4bd-3b840d6a48f9"
       }
     },
     {
@@ -608,7 +678,8 @@
         ],
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794"
       }
     },
     {
@@ -619,7 +690,8 @@
         ],
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794"
       }
     },
     {
@@ -630,7 +702,8 @@
         ],
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794"
       }
     },
     {
@@ -641,7 +714,8 @@
         ],
         "lesson.key": "Lesson Prep",
         "lesson_group.key": "",
-        "script.name": "algebraPD3a"
+        "script.name": "algebraPD3a",
+        "activity_section.key": "5aab296f-c286-4a92-90da-6c52e7c43794"
       }
     }
   ],

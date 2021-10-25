@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS Principles Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:09 UTC",
+    "serialized_at": "2021-10-25 23:33:36 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -137,21 +137,177 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ecee1099-b6fd-48e6-ad11-57d757c1ef08",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ecee1099-b6fd-48e6-ad11-57d757c1ef08",
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "4d8ad387-63e1-4de4-a426-b78864875451",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d8ad387-63e1-4de4-a426-b78864875451",
+        "lesson.key": "Pixelation Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "8ec68f11-64f1-4426-be05-9ec3c69e76ad",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ec68f11-64f1-4426-be05-9ec3c69e76ad",
+        "lesson.key": "Text Compression Widget",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "70e197a1-daca-41ce-90c4-1bc101bbf7b1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70e197a1-daca-41ce-90c4-1bc101bbf7b1",
+        "lesson.key": "Internet Simulator",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "bf7df34a-2b64-4543-8dbd-8c3b1e158392",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf7df34a-2b64-4543-8dbd-8c3b1e158392",
+        "lesson.key": "App Lab",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "ec701852-ef84-4c71-9955-9bf9385030e5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec701852-ef84-4c71-9955-9bf9385030e5",
+        "lesson.key": "Broadcast Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    },
+    {
+      "key": "59b89ec0-4634-48f3-8f1e-2891d7d5b87b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59b89ec0-4634-48f3-8f1e-2891d7d5b87b",
+        "lesson.key": "Text Compression Lesson",
+        "lesson_group.key": "",
+        "script.name": "cspfacilitator"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "52ab1668-f79e-4d00-ac59-cbcd35612d4d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "52ab1668-f79e-4d00-ac59-cbcd35612d4d",
+        "lesson_activity.key": "ecee1099-b6fd-48e6-ad11-57d757c1ef08"
+      }
+    },
+    {
+      "key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2",
+        "lesson_activity.key": "4d8ad387-63e1-4de4-a426-b78864875451"
+      }
+    },
+    {
+      "key": "1d17df22-e022-4708-b7d1-5081582e8d09",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1d17df22-e022-4708-b7d1-5081582e8d09",
+        "lesson_activity.key": "8ec68f11-64f1-4426-be05-9ec3c69e76ad"
+      }
+    },
+    {
+      "key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e",
+        "lesson_activity.key": "70e197a1-daca-41ce-90c4-1bc101bbf7b1"
+      }
+    },
+    {
+      "key": "be685aa4-cf17-4c84-a4cf-71c2429170de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de",
+        "lesson_activity.key": "bf7df34a-2b64-4543-8dbd-8c3b1e158392"
+      }
+    },
+    {
+      "key": "76d20c7c-8a5d-4981-a0ea-208791289eb4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4",
+        "lesson_activity.key": "ec701852-ef84-4c71-9955-9bf9385030e5"
+      }
+    },
+    {
+      "key": "9679478d-f960-40fc-83bf-e48a3513bab3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3",
+        "lesson_activity.key": "59b89ec0-4634-48f3-8f1e-2891d7d5b87b"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPfac intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -160,7 +316,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "52ab1668-f79e-4d00-ac59-cbcd35612d4d"
       },
       "level_keys": [
         "CSPfac intro"
@@ -169,12 +326,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "a bit about pixels"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,7 +337,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       },
       "level_keys": [
         "a bit about pixels"
@@ -192,12 +347,9 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 14 - Make the Letter A"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -206,7 +358,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Make the Letter A"
@@ -215,12 +368,9 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 14 - Fix bit offset"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -229,7 +379,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Fix bit offset"
@@ -238,12 +389,9 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 14 - Make your own B and W Image"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -252,7 +400,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Make your own B and W Image"
@@ -261,12 +410,9 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Complete 3-bit color"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,7 +421,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Complete 3-bit color"
@@ -284,12 +431,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L13 Text Compression"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -298,7 +442,8 @@
         ],
         "lesson.key": "Text Compression Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "1d17df22-e022-4708-b7d1-5081582e8d09"
       },
       "level_keys": [
         "U1L13 Text Compression"
@@ -307,12 +452,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L4 NetSim SendAB"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,7 +463,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       },
       "level_keys": [
         "U1L4 NetSim SendAB"
@@ -330,12 +473,9 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L8 NetSim numbers no decimal"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -344,7 +484,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       },
       "level_keys": [
         "U1L8 NetSim numbers no decimal"
@@ -353,12 +494,9 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L5 NetSim Classroom Internet"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -367,7 +505,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       },
       "level_keys": [
         "U2L5 NetSim Classroom Internet"
@@ -376,12 +515,9 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L7 NetSim Need for Packets"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -390,7 +526,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       },
       "level_keys": [
         "U2L7 NetSim Need for Packets"
@@ -399,12 +536,9 @@
     {
       "chapter": 12,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L10 NetSim Automatic DNS"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -413,7 +547,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       },
       "level_keys": [
         "U2L10 NetSim Automatic DNS"
@@ -422,12 +557,9 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L2 Using Simple Commands"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,7 +568,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       },
       "level_keys": [
         "U3L2 Using Simple Commands"
@@ -445,12 +578,9 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L03 Define and use turnAround"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -459,7 +589,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       },
       "level_keys": [
         "U3L03 Define and use turnAround"
@@ -468,12 +599,9 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - Starry Night Starter Code"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -482,7 +610,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       },
       "level_keys": [
         "U3L07 - Starry Night Starter Code"
@@ -491,12 +620,9 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - Enchantment Under the Sea"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -505,7 +631,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       },
       "level_keys": [
         "U3L08 - Enchantment Under the Sea"
@@ -514,12 +641,9 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L13 - Turtle move with button"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -528,7 +652,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       },
       "level_keys": [
         "U3L13 - Turtle move with button"
@@ -537,12 +662,9 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L16 - use images"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -551,7 +673,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       },
       "level_keys": [
         "U3L16 - use images"
@@ -560,12 +683,9 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "broadcast lesson plan"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -574,7 +694,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       },
       "level_keys": [
         "broadcast lesson plan"
@@ -583,12 +704,9 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L2 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -597,7 +715,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       },
       "level_keys": [
         "U2L2 Student Lesson Introduction"
@@ -606,12 +725,9 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L2 NetSim Hub Mode"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -620,7 +736,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       },
       "level_keys": [
         "U2L2 NetSim Hub Mode"
@@ -629,12 +746,9 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L02 Free Response Reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -643,7 +757,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       },
       "level_keys": [
         "U2L02 Free Response Reflection"
@@ -652,12 +767,9 @@
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L02 Assessment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -666,7 +778,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       },
       "level_keys": [
         "U2L02 Assessment2"
@@ -675,12 +788,9 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "text compression lesson plan"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -689,7 +799,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       },
       "level_keys": [
         "text compression lesson plan"
@@ -698,12 +809,9 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L13 Student Lesson Summary"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -712,7 +820,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       },
       "level_keys": [
         "U1L13 Student Lesson Summary"
@@ -721,12 +830,9 @@
     {
       "chapter": 26,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L13 Text Compression"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -735,7 +841,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       },
       "level_keys": [
         "U1L13 Text Compression"
@@ -744,12 +851,9 @@
     {
       "chapter": 27,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L13 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -758,7 +862,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       },
       "level_keys": [
         "U1L13 Assessment 1"
@@ -767,12 +872,9 @@
     {
       "chapter": 28,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L13 Assessment 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -781,7 +883,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       },
       "level_keys": [
         "U1L13 Assessment 2"
@@ -790,12 +893,9 @@
     {
       "chapter": 29,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L13 Reflection Free Response"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -804,7 +904,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       },
       "level_keys": [
         "U1L13 Reflection Free Response"
@@ -813,12 +914,9 @@
     {
       "chapter": 30,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L13 Reflection 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -827,7 +925,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       },
       "level_keys": [
         "U1L13 Reflection 1"
@@ -836,12 +935,9 @@
     {
       "chapter": 31,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L13 Reflection 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -850,7 +946,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       },
       "level_keys": [
         "U1L13 Reflection 2"
@@ -866,7 +963,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "52ab1668-f79e-4d00-ac59-cbcd35612d4d"
       }
     },
     {
@@ -877,7 +975,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       }
     },
     {
@@ -888,7 +987,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       }
     },
     {
@@ -899,7 +999,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       }
     },
     {
@@ -910,7 +1011,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       }
     },
     {
@@ -921,7 +1023,8 @@
         ],
         "lesson.key": "Pixelation Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "b8fd8bf0-0c7f-4877-90bd-011f3220c1b2"
       }
     },
     {
@@ -932,7 +1035,8 @@
         ],
         "lesson.key": "Text Compression Widget",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "1d17df22-e022-4708-b7d1-5081582e8d09"
       }
     },
     {
@@ -943,7 +1047,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       }
     },
     {
@@ -954,7 +1059,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       }
     },
     {
@@ -965,7 +1071,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       }
     },
     {
@@ -976,7 +1083,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       }
     },
     {
@@ -987,7 +1095,8 @@
         ],
         "lesson.key": "Internet Simulator",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "91fb8398-4d6d-4679-91f7-d7f9b7722e0e"
       }
     },
     {
@@ -998,7 +1107,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       }
     },
     {
@@ -1009,7 +1119,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       }
     },
     {
@@ -1020,7 +1131,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       }
     },
     {
@@ -1031,7 +1143,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       }
     },
     {
@@ -1042,7 +1155,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       }
     },
     {
@@ -1053,7 +1167,8 @@
         ],
         "lesson.key": "App Lab",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "be685aa4-cf17-4c84-a4cf-71c2429170de"
       }
     },
     {
@@ -1064,7 +1179,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       }
     },
     {
@@ -1075,7 +1191,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       }
     },
     {
@@ -1086,7 +1203,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       }
     },
     {
@@ -1097,7 +1215,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       }
     },
     {
@@ -1108,7 +1227,8 @@
         ],
         "lesson.key": "Broadcast Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "76d20c7c-8a5d-4981-a0ea-208791289eb4"
       }
     },
     {
@@ -1119,7 +1239,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       }
     },
     {
@@ -1130,7 +1251,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       }
     },
     {
@@ -1141,7 +1263,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       }
     },
     {
@@ -1152,7 +1275,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       }
     },
     {
@@ -1163,7 +1287,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       }
     },
     {
@@ -1174,7 +1299,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       }
     },
     {
@@ -1185,7 +1311,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       }
     },
     {
@@ -1196,7 +1323,8 @@
         ],
         "lesson.key": "Text Compression Lesson",
         "lesson_group.key": "",
-        "script.name": "cspfacilitator"
+        "script.name": "cspfacilitator",
+        "activity_section.key": "9679478d-f960-40fc-83bf-e48a3513bab3"
       }
     }
   ],

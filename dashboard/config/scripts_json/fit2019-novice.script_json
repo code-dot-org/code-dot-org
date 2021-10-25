@@ -4,12 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "professional_learning_course": "Facilitators in Training Summer 2019",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:01 UTC",
+    "serialized_at": "2021-10-25 23:35:31 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -135,21 +136,158 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "96bbb2c7-ae61-4412-9f02-e3e475a5747c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96bbb2c7-ae61-4412-9f02-e3e475a5747c",
+        "lesson.key": "Novice Reflection Overview",
+        "lesson_group.key": "required",
+        "script.name": "fit2019-novice"
+      }
+    },
+    {
+      "key": "550e8757-81b9-44bd-91fc-ae3500856a4b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "550e8757-81b9-44bd-91fc-ae3500856a4b",
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-novice"
+      }
+    },
+    {
+      "key": "b39d77fc-2d21-411d-8e58-e01c70a0ac7e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b39d77fc-2d21-411d-8e58-e01c70a0ac7e",
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-novice"
+      }
+    },
+    {
+      "key": "b380763a-c249-4ead-b6ae-5aa37ba3db5c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b380763a-c249-4ead-b6ae-5aa37ba3db5c",
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-novice"
+      }
+    },
+    {
+      "key": "1e066f79-f196-40ce-834a-2640d139182b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e066f79-f196-40ce-834a-2640d139182b",
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-novice"
+      }
+    },
+    {
+      "key": "a3026848-44fe-4df5-b02d-a7467af98640",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a3026848-44fe-4df5-b02d-a7467af98640",
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-novice"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "3564dccc-d0a2-430e-819d-74fd1438898b",
+      "position": 1,
+      "properties": {
+        "name": "Welcome Novices Facilitators!",
+        "progression_name": "Welcome Novices Facilitators!"
+      },
+      "seeding_key": {
+        "activity_section.key": "3564dccc-d0a2-430e-819d-74fd1438898b",
+        "lesson_activity.key": "96bbb2c7-ae61-4412-9f02-e3e475a5747c"
+      }
+    },
+    {
+      "key": "5ba9cfbb-f6a8-42c1-9723-4e61355a2740",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5ba9cfbb-f6a8-42c1-9723-4e61355a2740",
+        "lesson_activity.key": "550e8757-81b9-44bd-91fc-ae3500856a4b"
+      }
+    },
+    {
+      "key": "d9ed7c91-a7b8-426c-bb8f-1bf9bddf2ef8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d9ed7c91-a7b8-426c-bb8f-1bf9bddf2ef8",
+        "lesson_activity.key": "b39d77fc-2d21-411d-8e58-e01c70a0ac7e"
+      }
+    },
+    {
+      "key": "c86df5c3-cf9f-47e8-86ff-e011f28dd147",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c86df5c3-cf9f-47e8-86ff-e011f28dd147",
+        "lesson_activity.key": "b380763a-c249-4ead-b6ae-5aa37ba3db5c"
+      }
+    },
+    {
+      "key": "da51ac77-88bb-40c7-9a69-e3b6da41fe76",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "da51ac77-88bb-40c7-9a69-e3b6da41fe76",
+        "lesson_activity.key": "1e066f79-f196-40ce-834a-2640d139182b"
+      }
+    },
+    {
+      "key": "4d3f11a5-3a59-4b12-a27e-30c1441c4ae6",
+      "position": 1,
+      "properties": {
+        "name": "Congrats!",
+        "progression_name": "Congrats!"
+      },
+      "seeding_key": {
+        "activity_section.key": "4d3f11a5-3a59-4b12-a27e-30c1441c4ae6",
+        "lesson_activity.key": "a3026848-44fe-4df5-b02d-a7467af98640"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "welcome-novice-18"
-        ],
         "progression": "Welcome Novices Facilitators!"
       },
       "bonus": false,
@@ -159,7 +297,8 @@
         ],
         "lesson.key": "Novice Reflection Overview",
         "lesson_group.key": "required",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "3564dccc-d0a2-430e-819d-74fd1438898b"
       },
       "level_keys": [
         "welcome-novice-18"
@@ -168,12 +307,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-monday-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,7 +318,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "5ba9cfbb-f6a8-42c1-9723-4e61355a2740"
       },
       "level_keys": [
         "novice-monday-1"
@@ -191,12 +328,9 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-monday-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -205,7 +339,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "5ba9cfbb-f6a8-42c1-9723-4e61355a2740"
       },
       "level_keys": [
         "novice-monday-2"
@@ -214,12 +349,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-tuesday-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -228,7 +360,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "d9ed7c91-a7b8-426c-bb8f-1bf9bddf2ef8"
       },
       "level_keys": [
         "novice-tuesday-1"
@@ -237,12 +370,9 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "instructional-strategy-tuesday"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -251,7 +381,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "d9ed7c91-a7b8-426c-bb8f-1bf9bddf2ef8"
       },
       "level_keys": [
         "instructional-strategy-tuesday"
@@ -260,12 +391,9 @@
     {
       "chapter": 6,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-tuesday-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -274,7 +402,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "d9ed7c91-a7b8-426c-bb8f-1bf9bddf2ef8"
       },
       "level_keys": [
         "novice-tuesday-2"
@@ -283,12 +412,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-wednesday-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -297,7 +423,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "c86df5c3-cf9f-47e8-86ff-e011f28dd147"
       },
       "level_keys": [
         "novice-wednesday-1"
@@ -306,12 +433,9 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "getting-buy-in-wednesday"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -320,7 +444,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "c86df5c3-cf9f-47e8-86ff-e011f28dd147"
       },
       "level_keys": [
         "getting-buy-in-wednesday"
@@ -329,12 +454,9 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-wednesday-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -343,7 +465,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "c86df5c3-cf9f-47e8-86ff-e011f28dd147"
       },
       "level_keys": [
         "novice-wednesday-2"
@@ -352,12 +475,9 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-thursday-1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -366,7 +486,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "da51ac77-88bb-40c7-9a69-e3b6da41fe76"
       },
       "level_keys": [
         "novice-thursday-1"
@@ -375,12 +496,9 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "recruiting-thursday"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -389,7 +507,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "da51ac77-88bb-40c7-9a69-e3b6da41fe76"
       },
       "level_keys": [
         "recruiting-thursday"
@@ -398,12 +517,9 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-thursday-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -412,7 +528,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "da51ac77-88bb-40c7-9a69-e3b6da41fe76"
       },
       "level_keys": [
         "novice-thursday-2"
@@ -421,12 +538,9 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "novice-congrats"
-        ],
         "progression": "Congrats!"
       },
       "bonus": false,
@@ -436,7 +550,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "4d3f11a5-3a59-4b12-a27e-30c1441c4ae6"
       },
       "level_keys": [
         "novice-congrats"
@@ -452,7 +567,8 @@
         ],
         "lesson.key": "Novice Reflection Overview",
         "lesson_group.key": "required",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "3564dccc-d0a2-430e-819d-74fd1438898b"
       }
     },
     {
@@ -463,7 +579,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "5ba9cfbb-f6a8-42c1-9723-4e61355a2740"
       }
     },
     {
@@ -474,7 +591,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "5ba9cfbb-f6a8-42c1-9723-4e61355a2740"
       }
     },
     {
@@ -485,7 +603,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "d9ed7c91-a7b8-426c-bb8f-1bf9bddf2ef8"
       }
     },
     {
@@ -496,7 +615,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "d9ed7c91-a7b8-426c-bb8f-1bf9bddf2ef8"
       }
     },
     {
@@ -507,7 +627,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "d9ed7c91-a7b8-426c-bb8f-1bf9bddf2ef8"
       }
     },
     {
@@ -518,7 +639,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "c86df5c3-cf9f-47e8-86ff-e011f28dd147"
       }
     },
     {
@@ -529,7 +651,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "c86df5c3-cf9f-47e8-86ff-e011f28dd147"
       }
     },
     {
@@ -540,7 +663,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "c86df5c3-cf9f-47e8-86ff-e011f28dd147"
       }
     },
     {
@@ -551,7 +675,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "da51ac77-88bb-40c7-9a69-e3b6da41fe76"
       }
     },
     {
@@ -562,7 +687,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "da51ac77-88bb-40c7-9a69-e3b6da41fe76"
       }
     },
     {
@@ -573,7 +699,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "da51ac77-88bb-40c7-9a69-e3b6da41fe76"
       }
     },
     {
@@ -584,7 +711,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
-        "script.name": "fit2019-novice"
+        "script.name": "fit2019-novice",
+        "activity_section.key": "4d3f11a5-3a59-4b12-a27e-30c1441c4ae6"
       }
     }
   ],

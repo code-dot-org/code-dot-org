@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:00 UTC",
+    "serialized_at": "2021-10-25 23:31:05 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -120,21 +121,397 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "18d50639-ebf6-474f-92c7-c64c7eec13ac",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18d50639-ebf6-474f-92c7-c64c7eec13ac",
+        "lesson.key": "Problem Solving and Computers",
+        "lesson_group.key": "",
+        "script.name": "csd-videos"
+      }
+    },
+    {
+      "key": "9aa9bd0d-22dd-46d9-beb3-e0673526fcef",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9aa9bd0d-22dd-46d9-beb3-e0673526fcef",
+        "lesson.key": "Web Development",
+        "lesson_group.key": "",
+        "script.name": "csd-videos"
+      }
+    },
+    {
+      "key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417",
+        "lesson.key": "Games and Animations",
+        "lesson_group.key": "",
+        "script.name": "csd-videos"
+      }
+    },
+    {
+      "key": "b6a6617d-025f-4041-b6a9-e1d2ceb9fb49",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b6a6617d-025f-4041-b6a9-e1d2ceb9fb49",
+        "lesson.key": "User Centered Design",
+        "lesson_group.key": "",
+        "script.name": "csd-videos"
+      }
+    },
+    {
+      "key": "b875830d-16e9-4708-a186-c966d099966c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b875830d-16e9-4708-a186-c966d099966c",
+        "lesson.key": "Data and Society",
+        "lesson_group.key": "",
+        "script.name": "csd-videos"
+      }
+    },
+    {
+      "key": "c47c6976-7d4f-46e4-afbc-70c065cc718f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c47c6976-7d4f-46e4-afbc-70c065cc718f",
+        "lesson.key": "Physical Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-videos"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "e31dcab5-1d2c-4581-9215-88788914f5d4",
+      "position": 1,
+      "properties": {
+        "name": "Video: What Makes a Computer, a Computer?",
+        "progression_name": "Video: What Makes a Computer, a Computer?"
+      },
+      "seeding_key": {
+        "activity_section.key": "e31dcab5-1d2c-4581-9215-88788914f5d4",
+        "lesson_activity.key": "18d50639-ebf6-474f-92c7-c64c7eec13ac"
+      }
+    },
+    {
+      "key": "46af0e8e-5487-4d54-b00c-bc1784a96510",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video: Intro to Web Lab - Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "46af0e8e-5487-4d54-b00c-bc1784a96510",
+        "lesson_activity.key": "9aa9bd0d-22dd-46d9-beb3-e0673526fcef"
+      }
+    },
+    {
+      "key": "abc4d439-3cb4-4f40-94e3-7565c043511f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Intro to Web Lab - Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "abc4d439-3cb4-4f40-94e3-7565c043511f",
+        "lesson_activity.key": "9aa9bd0d-22dd-46d9-beb3-e0673526fcef"
+      }
+    },
+    {
+      "key": "15d78d0e-26b3-4900-a610-de87c2db040b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Pair Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "15d78d0e-26b3-4900-a610-de87c2db040b",
+        "lesson_activity.key": "9aa9bd0d-22dd-46d9-beb3-e0673526fcef"
+      }
+    },
+    {
+      "key": "1fea8fa1-c85d-4c77-80c1-1104c4c279f6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Video: Intro to CSS"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fea8fa1-c85d-4c77-80c1-1104c4c279f6",
+        "lesson_activity.key": "9aa9bd0d-22dd-46d9-beb3-e0673526fcef"
+      }
+    },
+    {
+      "key": "82a1b78b-9ae2-46f3-afb1-663054bcfa2e",
+      "position": 5,
+      "properties": {
+        "name": "Video: Intro to CSS Part 2",
+        "progression_name": "Video: Intro to CSS Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "82a1b78b-9ae2-46f3-afb1-663054bcfa2e",
+        "lesson_activity.key": "9aa9bd0d-22dd-46d9-beb3-e0673526fcef"
+      }
+    },
+    {
+      "key": "a562f15a-55c3-42c1-9be3-c744b45c7809",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video: Drawing in Game Lab - Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "a562f15a-55c3-42c1-9be3-c744b45c7809",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "28dcf75d-9479-486b-a0b5-b5e8d88ed678",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Drawing in Game Lab - Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "28dcf75d-9479-486b-a0b5-b5e8d88ed678",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "20d8cef9-03da-4437-9ffa-7abcc26532c3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "20d8cef9-03da-4437-9ffa-7abcc26532c3",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "2af5fa0d-6a60-43dd-9107-e2af6b2946c8",
+      "position": 4,
+      "properties": {
+        "progression_name": "Video: Introduction to Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "2af5fa0d-6a60-43dd-9107-e2af6b2946c8",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "5d6b2763-e913-4e47-aba2-bcfa6b513ca4",
+      "position": 5,
+      "properties": {
+        "progression_name": "Video: The Animation Tab"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d6b2763-e913-4e47-aba2-bcfa6b513ca4",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "cdf0f136-b1e8-4977-85e1-841d6931cc76",
+      "position": 6,
+      "properties": {
+        "progression_name": "Video: Introduction to the Draw Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdf0f136-b1e8-4977-85e1-841d6931cc76",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "53e3bd7b-f803-48c7-9ff5-4361acf738d5",
+      "position": 7,
+      "properties": {
+        "progression_name": "Video: Sprite Movement"
+      },
+      "seeding_key": {
+        "activity_section.key": "53e3bd7b-f803-48c7-9ff5-4361acf738d5",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "eebfce63-c44c-4be2-91fd-8e40316f8f4c",
+      "position": 8,
+      "properties": {
+        "progression_name": "Video: Booleans"
+      },
+      "seeding_key": {
+        "activity_section.key": "eebfce63-c44c-4be2-91fd-8e40316f8f4c",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "3e9c5281-c0fc-464d-927d-d7dbf3d5543b",
+      "position": 9,
+      "properties": {
+        "progression_name": "Video: Conditional Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e9c5281-c0fc-464d-927d-d7dbf3d5543b",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "a87d9e47-1126-485d-a47b-fcc5dfb17fff",
+      "position": 10,
+      "properties": {
+        "progression_name": "Video: If/Else Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "a87d9e47-1126-485d-a47b-fcc5dfb17fff",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "22affd9d-1c09-4c36-9e64-a0e330a19d56",
+      "position": 11,
+      "properties": {
+        "progression_name": "Video: Velocity"
+      },
+      "seeding_key": {
+        "activity_section.key": "22affd9d-1c09-4c36-9e64-a0e330a19d56",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "0baa85fc-4428-42d6-9230-328d30aad9d9",
+      "position": 12,
+      "properties": {
+        "name": "Video: Calling and Defining Functions",
+        "progression_name": "Video: Calling and Defining Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "0baa85fc-4428-42d6-9230-328d30aad9d9",
+        "lesson_activity.key": "e8cb0dc3-ce3e-431e-8217-1cf40d17d417"
+      }
+    },
+    {
+      "key": "06a34f5b-5369-40ee-a985-ba605b3041af",
+      "position": 1,
+      "properties": {
+        "name": "Intro to Design Mode",
+        "progression_name": "Intro to Design Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "06a34f5b-5369-40ee-a985-ba605b3041af",
+        "lesson_activity.key": "b6a6617d-025f-4041-b6a9-e1d2ceb9fb49"
+      }
+    },
+    {
+      "key": "ff2ea441-ca87-4b04-9323-21ed84d45371",
+      "position": 1,
+      "properties": {
+        "progression_name": "Binary and Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff2ea441-ca87-4b04-9323-21ed84d45371",
+        "lesson_activity.key": "b875830d-16e9-4708-a186-c966d099966c"
+      }
+    },
+    {
+      "key": "a2c790c7-a041-464a-82a2-a7a607b24312",
+      "position": 2,
+      "properties": {
+        "progression_name": "How Netflix Uses Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2c790c7-a041-464a-82a2-a7a607b24312",
+        "lesson_activity.key": "b875830d-16e9-4708-a186-c966d099966c"
+      }
+    },
+    {
+      "key": "890a6c8e-7526-4ad6-9052-2fb3e5a49883",
+      "position": 3,
+      "properties": {
+        "progression_name": "How Waze Uses Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "890a6c8e-7526-4ad6-9052-2fb3e5a49883",
+        "lesson_activity.key": "b875830d-16e9-4708-a186-c966d099966c"
+      }
+    },
+    {
+      "key": "e842b2c5-aceb-49d1-9b12-7dfa4ed1e51d",
+      "position": 4,
+      "properties": {
+        "name": "How Amazon Uses Data",
+        "progression_name": "How Amazon Uses Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "e842b2c5-aceb-49d1-9b12-7dfa4ed1e51d",
+        "lesson_activity.key": "b875830d-16e9-4708-a186-c966d099966c"
+      }
+    },
+    {
+      "key": "9add55ba-615c-4c65-b38e-d67147c30cfc",
+      "position": 1,
+      "properties": {
+        "progression_name": "Hardware and Software"
+      },
+      "seeding_key": {
+        "activity_section.key": "9add55ba-615c-4c65-b38e-d67147c30cfc",
+        "lesson_activity.key": "c47c6976-7d4f-46e4-afbc-70c065cc718f"
+      }
+    },
+    {
+      "key": "a12620a0-1cc8-4941-bf25-3b3159844cf2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video: Introduction to Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "a12620a0-1cc8-4941-bf25-3b3159844cf2",
+        "lesson_activity.key": "c47c6976-7d4f-46e4-afbc-70c065cc718f"
+      }
+    },
+    {
+      "key": "c8aa89ed-13bb-47ff-bd0b-aa0d541c4080",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: For Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8aa89ed-13bb-47ff-bd0b-aa0d541c4080",
+        "lesson_activity.key": "c47c6976-7d4f-46e4-afbc-70c065cc718f"
+      }
+    },
+    {
+      "key": "138ceae5-0c2c-437e-911f-f03079c85036",
+      "position": 4,
+      "properties": {
+        "name": "Functions with Parameters",
+        "progression_name": "Functions with Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "138ceae5-0c2c-437e-911f-f03079c85036",
+        "lesson_activity.key": "c47c6976-7d4f-46e4-afbc-70c065cc718f"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD What Makes a Computer a Computer Video_2019"
-        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
       "bonus": false,
@@ -144,7 +521,8 @@
         ],
         "lesson.key": "Problem Solving and Computers",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "e31dcab5-1d2c-4581-9215-88788914f5d4"
       },
       "level_keys": [
         "CSD What Makes a Computer a Computer Video_2019"
@@ -153,12 +531,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Intro to Web Lab - Part 1_2019"
-        ],
         "progression": "Video: Intro to Web Lab - Part 1"
       },
       "bonus": false,
@@ -168,7 +543,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "46af0e8e-5487-4d54-b00c-bc1784a96510"
       },
       "level_keys": [
         "Intro to Web Lab - Part 1_2019"
@@ -177,12 +553,9 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Intro to Web Lab - Part 2_2019"
-        ],
         "progression": "Video: Intro to Web Lab - Part 2"
       },
       "bonus": false,
@@ -192,7 +565,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "abc4d439-3cb4-4f40-94e3-7565c043511f"
       },
       "level_keys": [
         "Intro to Web Lab - Part 2_2019"
@@ -201,12 +575,9 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Pair Programming Video_2019"
-        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -216,7 +587,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "15d78d0e-26b3-4900-a610-de87c2db040b"
       },
       "level_keys": [
         "CSD U2 Pair Programming Video_2019"
@@ -225,12 +597,9 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Video: Intro to CSS_2019"
-        ],
         "progression": "Video: Intro to CSS"
       },
       "bonus": false,
@@ -240,7 +609,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "1fea8fa1-c85d-4c77-80c1-1104c4c279f6"
       },
       "level_keys": [
         "Video: Intro to CSS_2019"
@@ -249,12 +619,9 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Video: Intro to CSS Part 2_2019"
-        ],
         "progression": "Video: Intro to CSS Part 2"
       },
       "bonus": false,
@@ -264,7 +631,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "82a1b78b-9ae2-46f3-afb1-663054bcfa2e"
       },
       "level_keys": [
         "Video: Intro to CSS Part 2_2019"
@@ -273,12 +641,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: Drawing in Game Lab 1_2019"
-        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
       "bonus": false,
@@ -288,7 +653,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "a562f15a-55c3-42c1-9be3-c744b45c7809"
       },
       "level_keys": [
         "CSD: Drawing in Game Lab 1_2019"
@@ -297,12 +663,9 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: Drawing in Game Lab 2_2019"
-        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -312,7 +675,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "28dcf75d-9479-486b-a0b5-b5e8d88ed678"
       },
       "level_keys": [
         "CSD: Drawing in Game Lab 2_2019"
@@ -321,12 +685,9 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Introduction to Variables - Part 1_2019"
-        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -336,7 +697,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "20d8cef9-03da-4437-9ffa-7abcc26532c3"
       },
       "level_keys": [
         "Introduction to Variables - Part 1_2019"
@@ -345,12 +707,9 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: Sprites in Game Lab_2019"
-        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -360,7 +719,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "2af5fa0d-6a60-43dd-9107-e2af6b2946c8"
       },
       "level_keys": [
         "CSD: Sprites in Game Lab_2019"
@@ -369,12 +729,9 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: Animation Tab_2019"
-        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -384,7 +741,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "5d6b2763-e913-4e47-aba2-bcfa6b513ca4"
       },
       "level_keys": [
         "CSD: Animation Tab_2019"
@@ -393,12 +751,9 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: Introduction to the Draw Loop_2019"
-        ],
         "progression": "Video: Introduction to the Draw Loop"
       },
       "bonus": false,
@@ -408,7 +763,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "cdf0f136-b1e8-4977-85e1-841d6931cc76"
       },
       "level_keys": [
         "CSD: Introduction to the Draw Loop_2019"
@@ -417,12 +773,9 @@
     {
       "chapter": 13,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: Animating Sprite Movement_2019"
-        ],
         "progression": "Video: Sprite Movement"
       },
       "bonus": false,
@@ -432,7 +785,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "53e3bd7b-f803-48c7-9ff5-4361acf738d5"
       },
       "level_keys": [
         "CSD: Animating Sprite Movement_2019"
@@ -441,12 +795,9 @@
     {
       "chapter": 14,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 - Booleans Video_2019"
-        ],
         "progression": "Video: Booleans"
       },
       "bonus": false,
@@ -456,7 +807,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "eebfce63-c44c-4be2-91fd-8e40316f8f4c"
       },
       "level_keys": [
         "CSD U3 - Booleans Video_2019"
@@ -465,12 +817,9 @@
     {
       "chapter": 15,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd U3 conditional statements video_2019"
-        ],
         "progression": "Video: Conditional Statements"
       },
       "bonus": false,
@@ -480,7 +829,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "3e9c5281-c0fc-464d-927d-d7dbf3d5543b"
       },
       "level_keys": [
         "csd U3 conditional statements video_2019"
@@ -489,12 +839,9 @@
     {
       "chapter": 16,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 - Conditionals Video_2019"
-        ],
         "progression": "Video: If/Else Statements"
       },
       "bonus": false,
@@ -504,7 +851,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "a87d9e47-1126-485d-a47b-fcc5dfb17fff"
       },
       "level_keys": [
         "CSD U3 - Conditionals Video_2019"
@@ -513,12 +861,9 @@
     {
       "chapter": 17,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: Sprite Velocity_2019"
-        ],
         "progression": "Video: Velocity"
       },
       "bonus": false,
@@ -528,7 +873,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "22affd9d-1c09-4c36-9e64-a0e330a19d56"
       },
       "level_keys": [
         "CSD: Sprite Velocity_2019"
@@ -537,12 +883,9 @@
     {
       "chapter": 18,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Functions Call Function_2019"
-        ],
         "progression": "Video: Calling and Defining Functions"
       },
       "bonus": false,
@@ -552,7 +895,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "0baa85fc-4428-42d6-9230-328d30aad9d9"
       },
       "level_keys": [
         "CSD U3 Functions Call Function_2019"
@@ -561,12 +905,9 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSDU4 Design Mode Video_2019"
-        ],
         "progression": "Intro to Design Mode"
       },
       "bonus": false,
@@ -576,7 +917,8 @@
         ],
         "lesson.key": "User Centered Design",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "06a34f5b-5369-40ee-a985-ba605b3041af"
       },
       "level_keys": [
         "CSDU4 Design Mode Video_2019"
@@ -585,12 +927,9 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 binary video_2019"
-        ],
         "progression": "Binary and Data"
       },
       "bonus": false,
@@ -600,7 +939,8 @@
         ],
         "lesson.key": "Data and Society",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "ff2ea441-ca87-4b04-9323-21ed84d45371"
       },
       "level_keys": [
         "CSD U5 binary video_2019"
@@ -609,12 +949,9 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 Netflix Data Video_2019"
-        ],
         "progression": "How Netflix Uses Data"
       },
       "bonus": false,
@@ -624,7 +961,8 @@
         ],
         "lesson.key": "Data and Society",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "a2c790c7-a041-464a-82a2-a7a607b24312"
       },
       "level_keys": [
         "CSD U5 Netflix Data Video_2019"
@@ -633,12 +971,9 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 Waze Data Video_2019"
-        ],
         "progression": "How Waze Uses Data"
       },
       "bonus": false,
@@ -648,7 +983,8 @@
         ],
         "lesson.key": "Data and Society",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "890a6c8e-7526-4ad6-9052-2fb3e5a49883"
       },
       "level_keys": [
         "CSD U5 Waze Data Video_2019"
@@ -657,12 +993,9 @@
     {
       "chapter": 23,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 Amazon Data Video_2019"
-        ],
         "progression": "How Amazon Uses Data"
       },
       "bonus": false,
@@ -672,7 +1005,8 @@
         ],
         "lesson.key": "Data and Society",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "e842b2c5-aceb-49d1-9b12-7dfa4ed1e51d"
       },
       "level_keys": [
         "CSD U5 Amazon Data Video_2019"
@@ -681,12 +1015,9 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U6 hardware software video_2019"
-        ],
         "progression": "Hardware and Software"
       },
       "bonus": false,
@@ -696,7 +1027,8 @@
         ],
         "lesson.key": "Physical Computing",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "9add55ba-615c-4c65-b38e-d67147c30cfc"
       },
       "level_keys": [
         "CSD U6 hardware software video_2019"
@@ -705,12 +1037,9 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U6 arrays video"
-        ],
         "progression": "Video: Introduction to Arrays"
       },
       "bonus": false,
@@ -720,7 +1049,8 @@
         ],
         "lesson.key": "Physical Computing",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "a12620a0-1cc8-4941-bf25-3b3159844cf2"
       },
       "level_keys": [
         "CSD U6 arrays video"
@@ -729,12 +1059,9 @@
     {
       "chapter": 26,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD: For Loop_2019"
-        ],
         "progression": "Video: For Loops"
       },
       "bonus": false,
@@ -744,7 +1071,8 @@
         ],
         "lesson.key": "Physical Computing",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "c8aa89ed-13bb-47ff-bd0b-aa0d541c4080"
       },
       "level_keys": [
         "CSD: For Loop_2019"
@@ -753,12 +1081,9 @@
     {
       "chapter": 27,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U6 functions paramters video_2019"
-        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,
@@ -768,7 +1093,8 @@
         ],
         "lesson.key": "Physical Computing",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "138ceae5-0c2c-437e-911f-f03079c85036"
       },
       "level_keys": [
         "CSD U6 functions paramters video_2019"
@@ -784,7 +1110,8 @@
         ],
         "lesson.key": "Problem Solving and Computers",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "e31dcab5-1d2c-4581-9215-88788914f5d4"
       }
     },
     {
@@ -795,7 +1122,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "46af0e8e-5487-4d54-b00c-bc1784a96510"
       }
     },
     {
@@ -806,7 +1134,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "abc4d439-3cb4-4f40-94e3-7565c043511f"
       }
     },
     {
@@ -817,7 +1146,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "15d78d0e-26b3-4900-a610-de87c2db040b"
       }
     },
     {
@@ -828,7 +1158,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "1fea8fa1-c85d-4c77-80c1-1104c4c279f6"
       }
     },
     {
@@ -839,7 +1170,8 @@
         ],
         "lesson.key": "Web Development",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "82a1b78b-9ae2-46f3-afb1-663054bcfa2e"
       }
     },
     {
@@ -850,7 +1182,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "a562f15a-55c3-42c1-9be3-c744b45c7809"
       }
     },
     {
@@ -861,7 +1194,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "28dcf75d-9479-486b-a0b5-b5e8d88ed678"
       }
     },
     {
@@ -872,7 +1206,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "20d8cef9-03da-4437-9ffa-7abcc26532c3"
       }
     },
     {
@@ -883,7 +1218,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "2af5fa0d-6a60-43dd-9107-e2af6b2946c8"
       }
     },
     {
@@ -894,7 +1230,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "5d6b2763-e913-4e47-aba2-bcfa6b513ca4"
       }
     },
     {
@@ -905,7 +1242,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "cdf0f136-b1e8-4977-85e1-841d6931cc76"
       }
     },
     {
@@ -916,7 +1254,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "53e3bd7b-f803-48c7-9ff5-4361acf738d5"
       }
     },
     {
@@ -927,7 +1266,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "eebfce63-c44c-4be2-91fd-8e40316f8f4c"
       }
     },
     {
@@ -938,7 +1278,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "3e9c5281-c0fc-464d-927d-d7dbf3d5543b"
       }
     },
     {
@@ -949,7 +1290,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "a87d9e47-1126-485d-a47b-fcc5dfb17fff"
       }
     },
     {
@@ -960,7 +1302,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "22affd9d-1c09-4c36-9e64-a0e330a19d56"
       }
     },
     {
@@ -971,7 +1314,8 @@
         ],
         "lesson.key": "Games and Animations",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "0baa85fc-4428-42d6-9230-328d30aad9d9"
       }
     },
     {
@@ -982,7 +1326,8 @@
         ],
         "lesson.key": "User Centered Design",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "06a34f5b-5369-40ee-a985-ba605b3041af"
       }
     },
     {
@@ -993,7 +1338,8 @@
         ],
         "lesson.key": "Data and Society",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "ff2ea441-ca87-4b04-9323-21ed84d45371"
       }
     },
     {
@@ -1004,7 +1350,8 @@
         ],
         "lesson.key": "Data and Society",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "a2c790c7-a041-464a-82a2-a7a607b24312"
       }
     },
     {
@@ -1015,7 +1362,8 @@
         ],
         "lesson.key": "Data and Society",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "890a6c8e-7526-4ad6-9052-2fb3e5a49883"
       }
     },
     {
@@ -1026,7 +1374,8 @@
         ],
         "lesson.key": "Data and Society",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "e842b2c5-aceb-49d1-9b12-7dfa4ed1e51d"
       }
     },
     {
@@ -1037,7 +1386,8 @@
         ],
         "lesson.key": "Physical Computing",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "9add55ba-615c-4c65-b38e-d67147c30cfc"
       }
     },
     {
@@ -1048,7 +1398,8 @@
         ],
         "lesson.key": "Physical Computing",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "a12620a0-1cc8-4941-bf25-3b3159844cf2"
       }
     },
     {
@@ -1059,7 +1410,8 @@
         ],
         "lesson.key": "Physical Computing",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "c8aa89ed-13bb-47ff-bd0b-aa0d541c4080"
       }
     },
     {
@@ -1070,7 +1422,8 @@
         ],
         "lesson.key": "Physical Computing",
         "lesson_group.key": "",
-        "script.name": "csd-videos"
+        "script.name": "csd-videos",
+        "activity_section.key": "138ceae5-0c2c-437e-911f-f03079c85036"
       }
     }
   ],

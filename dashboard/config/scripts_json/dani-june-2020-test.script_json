@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:14 UTC",
+    "serialized_at": "2021-10-25 23:34:43 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -127,21 +128,110 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f4f9f46e-880c-452f-a4d6-fac581ebe7b1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f4f9f46e-880c-452f-a4d6-fac581ebe7b1",
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "dani-june-2020-test"
+      }
+    },
+    {
+      "key": "ba4103f8-4df0-4bec-845b-fa3fda1a8661",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ba4103f8-4df0-4bec-845b-fa3fda1a8661",
+        "lesson.key": "lesson 2",
+        "lesson_group.key": "lg_1",
+        "script.name": "dani-june-2020-test"
+      }
+    },
+    {
+      "key": "b0a0cf56-e799-4a6e-85e8-37b13549ceb2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0a0cf56-e799-4a6e-85e8-37b13549ceb2",
+        "lesson.key": "CS Principles Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "dani-june-2020-test"
+      }
+    },
+    {
+      "key": "9265c832-1df3-4a47-b91b-27f3981acfc1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9265c832-1df3-4a47-b91b-27f3981acfc1",
+        "lesson.key": "Buttons and Events",
+        "lesson_group.key": "cs_lg",
+        "script.name": "dani-june-2020-test"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "81502d75-5c86-4de6-93bb-39a7a50f1a04",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "81502d75-5c86-4de6-93bb-39a7a50f1a04",
+        "lesson_activity.key": "f4f9f46e-880c-452f-a4d6-fac581ebe7b1"
+      }
+    },
+    {
+      "key": "a33538a2-2664-41a8-889f-5a562737b0e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a33538a2-2664-41a8-889f-5a562737b0e4",
+        "lesson_activity.key": "ba4103f8-4df0-4bec-845b-fa3fda1a8661"
+      }
+    },
+    {
+      "key": "b870a4b1-78ab-48ba-9fe5-6bb67cfcfd50",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b870a4b1-78ab-48ba-9fe5-6bb67cfcfd50",
+        "lesson_activity.key": "b0a0cf56-e799-4a6e-85e8-37b13549ceb2"
+      }
+    },
+    {
+      "key": "e623e4d0-1666-4b77-a90d-afcfe9af83a3",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e623e4d0-1666-4b77-a90d-afcfe9af83a3",
+        "lesson_activity.key": "9265c832-1df3-4a47-b91b-27f3981acfc1"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3L12 TFMD_virtual_2020"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -150,7 +240,8 @@
         ],
         "lesson.key": "new lesson",
         "lesson_group.key": "lesson group",
-        "script.name": "dani-june-2020-test"
+        "script.name": "dani-june-2020-test",
+        "activity_section.key": "81502d75-5c86-4de6-93bb-39a7a50f1a04"
       },
       "level_keys": [
         "CSD U3L12 TFMD_virtual_2020"
@@ -159,12 +250,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 dancing alien_virtual_2020"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -173,7 +261,8 @@
         ],
         "lesson.key": "lesson 2",
         "lesson_group.key": "lg_1",
-        "script.name": "dani-june-2020-test"
+        "script.name": "dani-june-2020-test",
+        "activity_section.key": "a33538a2-2664-41a8-889f-5a562737b0e4"
       },
       "level_keys": [
         "CSD U3 dancing alien_virtual_2020"
@@ -182,12 +271,9 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pre-survey-levelgroup_2019"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -196,7 +282,8 @@
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "dani-june-2020-test"
+        "script.name": "dani-june-2020-test",
+        "activity_section.key": "b870a4b1-78ab-48ba-9fe5-6bb67cfcfd50"
       },
       "level_keys": [
         "csp-pre-survey-levelgroup_2019"
@@ -205,12 +292,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U5L01 SFLP_2019"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -220,7 +304,8 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "cs_lg",
-        "script.name": "dani-june-2020-test"
+        "script.name": "dani-june-2020-test",
+        "activity_section.key": "e623e4d0-1666-4b77-a90d-afcfe9af83a3"
       },
       "level_keys": [
         "CSP U5L01 SFLP_2019"
@@ -236,7 +321,8 @@
         ],
         "lesson.key": "new lesson",
         "lesson_group.key": "lesson group",
-        "script.name": "dani-june-2020-test"
+        "script.name": "dani-june-2020-test",
+        "activity_section.key": "81502d75-5c86-4de6-93bb-39a7a50f1a04"
       }
     },
     {
@@ -247,7 +333,8 @@
         ],
         "lesson.key": "lesson 2",
         "lesson_group.key": "lg_1",
-        "script.name": "dani-june-2020-test"
+        "script.name": "dani-june-2020-test",
+        "activity_section.key": "a33538a2-2664-41a8-889f-5a562737b0e4"
       }
     },
     {
@@ -258,7 +345,8 @@
         ],
         "lesson.key": "CS Principles Pre-survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "dani-june-2020-test"
+        "script.name": "dani-june-2020-test",
+        "activity_section.key": "b870a4b1-78ab-48ba-9fe5-6bb67cfcfd50"
       }
     },
     {
@@ -269,7 +357,8 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "cs_lg",
-        "script.name": "dani-june-2020-test"
+        "script.name": "dani-june-2020-test",
+        "activity_section.key": "e623e4d0-1666-4b77-a90d-afcfe9af83a3"
       }
     }
   ],

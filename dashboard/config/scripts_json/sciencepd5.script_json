@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true,
       "professional_learning_course": "CS in Science Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:23 UTC",
+    "serialized_at": "2021-10-25 23:37:16 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -106,21 +107,131 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "beeba0e0-b655-4e74-b26b-29f35aa0c41f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "beeba0e0-b655-4e74-b26b-29f35aa0c41f",
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "sciencepd5"
+      }
+    },
+    {
+      "key": "96cf0afe-74cb-4cb1-9b66-f9723fa3d6fd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96cf0afe-74cb-4cb1-9b66-f9723fa3d6fd",
+        "lesson.key": "Earth Science Challenges",
+        "lesson_group.key": "",
+        "script.name": "sciencepd5"
+      }
+    },
+    {
+      "key": "cf0eeaa0-b3f6-4ba6-a436-18cc46728904",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cf0eeaa0-b3f6-4ba6-a436-18cc46728904",
+        "lesson.key": "Life Science Challenges",
+        "lesson_group.key": "",
+        "script.name": "sciencepd5"
+      }
+    },
+    {
+      "key": "ec072fa7-bfb7-4115-a9d1-818851df99df",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec072fa7-bfb7-4115-a9d1-818851df99df",
+        "lesson.key": "Physical Science Challenges",
+        "lesson_group.key": "",
+        "script.name": "sciencepd5"
+      }
+    },
+    {
+      "key": "58e8ac0f-995f-4fa7-bf04-17f4dc015f2a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "58e8ac0f-995f-4fa7-bf04-17f4dc015f2a",
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "sciencepd5"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "41da21b5-903f-45ee-83b0-d3646ef553ae",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "41da21b5-903f-45ee-83b0-d3646ef553ae",
+        "lesson_activity.key": "beeba0e0-b655-4e74-b26b-29f35aa0c41f"
+      }
+    },
+    {
+      "key": "de376089-6c5d-4651-b8db-346ff8deb094",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "de376089-6c5d-4651-b8db-346ff8deb094",
+        "lesson_activity.key": "96cf0afe-74cb-4cb1-9b66-f9723fa3d6fd"
+      }
+    },
+    {
+      "key": "15d2b7f3-1489-4918-9237-faf56ab71ba3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "15d2b7f3-1489-4918-9237-faf56ab71ba3",
+        "lesson_activity.key": "cf0eeaa0-b3f6-4ba6-a436-18cc46728904"
+      }
+    },
+    {
+      "key": "44acf095-f0f0-42ff-a90f-c48f96491e3d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "44acf095-f0f0-42ff-a90f-c48f96491e3d",
+        "lesson_activity.key": "ec072fa7-bfb7-4115-a9d1-818851df99df"
+      }
+    },
+    {
+      "key": "5c326904-308c-44d7-8d8e-da328b79676c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5c326904-308c-44d7-8d8e-da328b79676c",
+        "lesson_activity.key": "58e8ac0f-995f-4fa7-bf04-17f4dc015f2a"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD3OLP33 intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -129,7 +240,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "41da21b5-903f-45ee-83b0-d3646ef553ae"
       },
       "level_keys": [
         "sciPD3OLP33 intro"
@@ -138,12 +250,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 timeline"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -152,7 +261,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "41da21b5-903f-45ee-83b0-d3646ef553ae"
       },
       "level_keys": [
         "sciPD2 timeline"
@@ -161,12 +271,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PD check your progress"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -175,7 +282,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "41da21b5-903f-45ee-83b0-d3646ef553ae"
       },
       "level_keys": [
         "PD check your progress"
@@ -184,12 +292,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 earth1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -198,7 +303,8 @@
         ],
         "lesson.key": "Earth Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "de376089-6c5d-4651-b8db-346ff8deb094"
       },
       "level_keys": [
         "sciPD33 earth1"
@@ -207,12 +313,9 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 earth2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -221,7 +324,8 @@
         ],
         "lesson.key": "Earth Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "de376089-6c5d-4651-b8db-346ff8deb094"
       },
       "level_keys": [
         "sciPD33 earth2"
@@ -230,12 +334,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "challenges sample 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -244,7 +345,8 @@
         ],
         "lesson.key": "Life Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "15d2b7f3-1489-4918-9237-faf56ab71ba3"
       },
       "level_keys": [
         "challenges sample 3"
@@ -253,12 +355,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "challenges sample 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -267,7 +366,8 @@
         ],
         "lesson.key": "Life Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "15d2b7f3-1489-4918-9237-faf56ab71ba3"
       },
       "level_keys": [
         "challenges sample 4"
@@ -276,12 +376,9 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "challenges sample 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -290,7 +387,8 @@
         ],
         "lesson.key": "Life Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "15d2b7f3-1489-4918-9237-faf56ab71ba3"
       },
       "level_keys": [
         "challenges sample 5"
@@ -299,12 +397,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "challenges sample 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -313,7 +408,8 @@
         ],
         "lesson.key": "Physical Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "44acf095-f0f0-42ff-a90f-c48f96491e3d"
       },
       "level_keys": [
         "challenges sample 6"
@@ -322,12 +418,9 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "challenges sample 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -336,7 +429,8 @@
         ],
         "lesson.key": "Physical Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "44acf095-f0f0-42ff-a90f-c48f96491e3d"
       },
       "level_keys": [
         "challenges sample 7"
@@ -345,12 +439,9 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 thanks"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -359,7 +450,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "5c326904-308c-44d7-8d8e-da328b79676c"
       },
       "level_keys": [
         "sciPD33 thanks"
@@ -368,12 +460,9 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 end"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -382,7 +471,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "5c326904-308c-44d7-8d8e-da328b79676c"
       },
       "level_keys": [
         "sciPD33 end"
@@ -398,7 +488,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "41da21b5-903f-45ee-83b0-d3646ef553ae"
       }
     },
     {
@@ -409,7 +500,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "41da21b5-903f-45ee-83b0-d3646ef553ae"
       }
     },
     {
@@ -420,7 +512,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "41da21b5-903f-45ee-83b0-d3646ef553ae"
       }
     },
     {
@@ -431,7 +524,8 @@
         ],
         "lesson.key": "Earth Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "de376089-6c5d-4651-b8db-346ff8deb094"
       }
     },
     {
@@ -442,7 +536,8 @@
         ],
         "lesson.key": "Earth Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "de376089-6c5d-4651-b8db-346ff8deb094"
       }
     },
     {
@@ -453,7 +548,8 @@
         ],
         "lesson.key": "Life Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "15d2b7f3-1489-4918-9237-faf56ab71ba3"
       }
     },
     {
@@ -464,7 +560,8 @@
         ],
         "lesson.key": "Life Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "15d2b7f3-1489-4918-9237-faf56ab71ba3"
       }
     },
     {
@@ -475,7 +572,8 @@
         ],
         "lesson.key": "Life Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "15d2b7f3-1489-4918-9237-faf56ab71ba3"
       }
     },
     {
@@ -486,7 +584,8 @@
         ],
         "lesson.key": "Physical Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "44acf095-f0f0-42ff-a90f-c48f96491e3d"
       }
     },
     {
@@ -497,7 +596,8 @@
         ],
         "lesson.key": "Physical Science Challenges",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "44acf095-f0f0-42ff-a90f-c48f96491e3d"
       }
     },
     {
@@ -508,7 +608,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "5c326904-308c-44d7-8d8e-da328b79676c"
       }
     },
     {
@@ -519,7 +620,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencepd5"
+        "script.name": "sciencepd5",
+        "activity_section.key": "5c326904-308c-44d7-8d8e-da328b79676c"
       }
     }
   ],

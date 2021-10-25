@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:50 UTC",
+    "serialized_at": "2021-10-25 23:30:57 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e3bf53be-18e3-4e86-bfd2-4ac8d5bee763",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3bf53be-18e3-4e86-bfd2-4ac8d5bee763",
+        "lesson.key": "craft18 levels",
+        "lesson_group.key": "",
+        "script.name": "craft18"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "6deb5eba-fed5-48c9-988c-8be041f90fb7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6deb5eba-fed5-48c9-988c-8be041f90fb7",
+        "lesson_activity.key": "e3bf53be-18e3-4e86-bfd2-4ac8d5bee763"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Ryan_2018_mc_1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -68,7 +87,8 @@
         ],
         "lesson.key": "craft18 levels",
         "lesson_group.key": "",
-        "script.name": "craft18"
+        "script.name": "craft18",
+        "activity_section.key": "6deb5eba-fed5-48c9-988c-8be041f90fb7"
       },
       "level_keys": [
         "Ryan_2018_mc_1"
@@ -84,7 +104,8 @@
         ],
         "lesson.key": "craft18 levels",
         "lesson_group.key": "",
-        "script.name": "craft18"
+        "script.name": "craft18",
+        "activity_section.key": "6deb5eba-fed5-48c9-988c-8be041f90fb7"
       }
     }
   ],

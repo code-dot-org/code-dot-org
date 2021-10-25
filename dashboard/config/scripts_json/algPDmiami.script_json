@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:05 UTC",
+    "serialized_at": "2021-10-25 23:28:29 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -197,21 +197,269 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0950a539-8a57-4f1c-a19b-cc0a4f5ab942",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0950a539-8a57-4f1c-a19b-cc0a4f5ab942",
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "b5205bcb-d3a8-402c-ab72-6351b6fd3ec4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5205bcb-d3a8-402c-ab72-6351b6fd3ec4",
+        "lesson.key": "Strings and Images",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "0a78b12e-6dd2-4f9f-8c00-369bebc3386f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a78b12e-6dd2-4f9f-8c00-369bebc3386f",
+        "lesson.key": "Rocket-Height",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "885dcfdc-8a64-4115-b6a2-ca1f5e0b07b4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "885dcfdc-8a64-4115-b6a2-ca1f5e0b07b4",
+        "lesson.key": "Design Recipe Practice",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "87fb4526-a803-4413-9837-207c4e2590ca",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "87fb4526-a803-4413-9837-207c4e2590ca",
+        "lesson.key": "Your Game - Animation",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "77d4d156-f646-4371-a945-6dfe423c21de",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77d4d156-f646-4371-a945-6dfe423c21de",
+        "lesson.key": "Booleans",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "9489a4b7-07bf-4b96-96b8-bebd80df6098",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9489a4b7-07bf-4b96-96b8-bebd80df6098",
+        "lesson.key": "Sam the Bat",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "306a95ad-543b-473b-a3d5-e41b5f935d9e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "306a95ad-543b-473b-a3d5-e41b5f935d9e",
+        "lesson.key": "Your Game - Booleans",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "666400b3-7c1f-4da9-a6af-8c9c65d76c15",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "666400b3-7c1f-4da9-a6af-8c9c65d76c15",
+        "lesson.key": "Luigi's Pizza",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "78c79e6a-37b0-40da-b962-aab620e71e88",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "78c79e6a-37b0-40da-b962-aab620e71e88",
+        "lesson.key": "Your Game - Player Movement",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    },
+    {
+      "key": "364f64ad-23e1-4877-9c80-03f3cb411086",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "364f64ad-23e1-4877-9c80-03f3cb411086",
+        "lesson.key": "Your Game - Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "algPDmiami"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "5f63c960-9e24-42a1-8314-0446314a3876",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876",
+        "lesson_activity.key": "0950a539-8a57-4f1c-a19b-cc0a4f5ab942"
+      }
+    },
+    {
+      "key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb",
+        "lesson_activity.key": "b5205bcb-d3a8-402c-ab72-6351b6fd3ec4"
+      }
+    },
+    {
+      "key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b",
+        "lesson_activity.key": "0a78b12e-6dd2-4f9f-8c00-369bebc3386f"
+      }
+    },
+    {
+      "key": "0f2e1880-d395-45eb-b297-c076f6dea3ed",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed",
+        "lesson_activity.key": "885dcfdc-8a64-4115-b6a2-ca1f5e0b07b4"
+      }
+    },
+    {
+      "key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875",
+        "lesson_activity.key": "87fb4526-a803-4413-9837-207c4e2590ca"
+      }
+    },
+    {
+      "key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870",
+        "lesson_activity.key": "77d4d156-f646-4371-a945-6dfe423c21de"
+      }
+    },
+    {
+      "key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141",
+        "lesson_activity.key": "9489a4b7-07bf-4b96-96b8-bebd80df6098"
+      }
+    },
+    {
+      "key": "fca4b07c-4918-4896-8d5e-5db05017a707",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707",
+        "lesson_activity.key": "306a95ad-543b-473b-a3d5-e41b5f935d9e"
+      }
+    },
+    {
+      "key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503",
+        "lesson_activity.key": "666400b3-7c1f-4da9-a6af-8c9c65d76c15"
+      }
+    },
+    {
+      "key": "a967b900-abfa-4e38-b8ce-238301f5aa4a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a967b900-abfa-4e38-b8ce-238301f5aa4a",
+        "lesson_activity.key": "78c79e6a-37b0-40da-b962-aab620e71e88"
+      }
+    },
+    {
+      "key": "2dd35479-fbf8-4355-bd71-2766b06c1def",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2dd35479-fbf8-4355-bd71-2766b06c1def",
+        "lesson_activity.key": "364f64ad-23e1-4877-9c80-03f3cb411086"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -220,7 +468,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval 1"
@@ -229,12 +478,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -243,7 +489,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval 2"
@@ -252,12 +499,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,7 +510,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval 3"
@@ -275,12 +520,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -289,7 +531,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval 5"
@@ -298,12 +541,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -312,7 +552,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval 6"
@@ -321,12 +562,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -335,7 +573,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval 7"
@@ -344,12 +583,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -358,7 +594,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval 8"
@@ -367,12 +604,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -381,7 +615,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval 9"
@@ -390,12 +625,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -404,7 +636,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       },
       "level_keys": [
         "Calc Circles of Eval Free Play"
@@ -413,12 +646,9 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images .1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -427,7 +657,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images .1"
@@ -436,12 +667,9 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images .2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -450,7 +678,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images .2"
@@ -459,12 +688,9 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -473,7 +699,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images 1"
@@ -482,12 +709,9 @@
     {
       "chapter": 13,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -496,7 +720,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images 2"
@@ -505,12 +730,9 @@
     {
       "chapter": 14,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -519,7 +741,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images 3"
@@ -528,12 +751,9 @@
     {
       "chapter": 15,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -542,7 +762,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images 4"
@@ -551,12 +772,9 @@
     {
       "chapter": 16,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -565,7 +783,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images 5"
@@ -574,12 +793,9 @@
     {
       "chapter": 17,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -588,7 +804,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images 6"
@@ -597,12 +814,9 @@
     {
       "chapter": 18,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -611,7 +825,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images 7"
@@ -620,12 +835,9 @@
     {
       "chapter": 19,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -634,7 +846,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images 8"
@@ -643,12 +856,9 @@
     {
       "chapter": 20,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Multi Strings Images 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -657,7 +867,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Multi Strings Images 1"
@@ -666,12 +877,9 @@
     {
       "chapter": 21,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -680,7 +888,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       },
       "level_keys": [
         "Eval Strings Images Free Play"
@@ -689,12 +898,9 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -703,7 +909,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       },
       "level_keys": [
         "Play Lab Rocket 1"
@@ -712,12 +919,9 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 2B"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -726,7 +930,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       },
       "level_keys": [
         "Play Lab Rocket 2B"
@@ -735,12 +940,9 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -749,7 +951,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       },
       "level_keys": [
         "Play Lab Rocket 3"
@@ -758,12 +961,9 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -772,7 +972,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       },
       "level_keys": [
         "Play Lab Rocket 4"
@@ -781,12 +982,9 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -795,7 +993,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       },
       "level_keys": [
         "Play Lab Rocket 5"
@@ -804,12 +1003,9 @@
     {
       "chapter": 27,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -818,7 +1014,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       },
       "level_keys": [
         "Play Lab Rocket Free Play"
@@ -827,12 +1024,9 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe .1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -841,7 +1035,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Eval Design Recipe .1"
@@ -850,12 +1045,9 @@
     {
       "chapter": 29,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -864,7 +1056,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Eval Design Recipe 3"
@@ -873,12 +1066,9 @@
     {
       "chapter": 30,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -887,7 +1077,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Eval Design Recipe 4"
@@ -896,12 +1087,9 @@
     {
       "chapter": 31,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -910,7 +1098,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Eval Design Recipe 5"
@@ -919,12 +1108,9 @@
     {
       "chapter": 32,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -933,7 +1119,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Eval Design Recipe 6"
@@ -942,12 +1129,9 @@
     {
       "chapter": 33,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Design Recipe 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -956,7 +1140,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Calc Design Recipe 1"
@@ -965,12 +1150,9 @@
     {
       "chapter": 34,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Design Recipe 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -979,7 +1161,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Calc Design Recipe 2"
@@ -988,12 +1171,9 @@
     {
       "chapter": 35,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Design Recipe 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1002,7 +1182,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Calc Design Recipe 3"
@@ -1011,12 +1192,9 @@
     {
       "chapter": 36,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Design Recipe 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1025,7 +1203,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       },
       "level_keys": [
         "Calc Design Recipe 4"
@@ -1034,12 +1213,9 @@
     {
       "chapter": 37,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1048,7 +1224,8 @@
         ],
         "lesson.key": "Your Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875"
       },
       "level_keys": [
         "Big Game Animation 1"
@@ -1057,12 +1234,9 @@
     {
       "chapter": 38,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1071,7 +1245,8 @@
         ],
         "lesson.key": "Your Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875"
       },
       "level_keys": [
         "Big Game Animation 2"
@@ -1080,12 +1255,9 @@
     {
       "chapter": 39,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1094,7 +1266,8 @@
         ],
         "lesson.key": "Your Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875"
       },
       "level_keys": [
         "Big Game Animation 3"
@@ -1103,12 +1276,9 @@
     {
       "chapter": 40,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1117,7 +1287,8 @@
         ],
         "lesson.key": "Your Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875"
       },
       "level_keys": [
         "Big Game Animation 4"
@@ -1126,12 +1297,9 @@
     {
       "chapter": 41,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1140,7 +1308,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Eval Booleans 1"
@@ -1149,12 +1318,9 @@
     {
       "chapter": 42,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1163,7 +1329,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Eval Booleans 2"
@@ -1172,12 +1339,9 @@
     {
       "chapter": 43,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1186,7 +1350,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Eval Booleans 3"
@@ -1195,12 +1360,9 @@
     {
       "chapter": 44,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1209,7 +1371,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Eval Booleans 4"
@@ -1218,12 +1381,9 @@
     {
       "chapter": 45,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1232,7 +1392,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Eval Booleans 5"
@@ -1241,12 +1402,9 @@
     {
       "chapter": 46,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1255,7 +1413,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Eval Booleans 6"
@@ -1264,12 +1423,9 @@
     {
       "chapter": 47,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1278,7 +1434,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Blocks to Bools 1"
@@ -1287,12 +1444,9 @@
     {
       "chapter": 48,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1301,7 +1455,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Blocks to Bools 2"
@@ -1310,12 +1465,9 @@
     {
       "chapter": 49,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1324,7 +1476,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Blocks to Bools 3"
@@ -1333,12 +1486,9 @@
     {
       "chapter": 50,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1347,7 +1497,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       },
       "level_keys": [
         "Blocks to Bools 4"
@@ -1356,12 +1507,9 @@
     {
       "chapter": 51,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1370,7 +1518,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       },
       "level_keys": [
         "Sam the Butterfly 1"
@@ -1379,12 +1528,9 @@
     {
       "chapter": 52,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1393,7 +1539,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       },
       "level_keys": [
         "Sam the Butterfly 2"
@@ -1402,12 +1549,9 @@
     {
       "chapter": 53,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1416,7 +1560,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       },
       "level_keys": [
         "Sam the Butterfly 3"
@@ -1425,12 +1570,9 @@
     {
       "chapter": 54,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1439,7 +1581,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       },
       "level_keys": [
         "Sam the Butterfly 4"
@@ -1448,12 +1591,9 @@
     {
       "chapter": 55,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1462,7 +1602,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       },
       "level_keys": [
         "Sam the Butterfly 5"
@@ -1471,12 +1612,9 @@
     {
       "chapter": 56,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1485,7 +1623,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       },
       "level_keys": [
         "Big Game Booleans 1"
@@ -1494,12 +1633,9 @@
     {
       "chapter": 57,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1508,7 +1644,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       },
       "level_keys": [
         "Big Game Booleans 2"
@@ -1517,12 +1654,9 @@
     {
       "chapter": 58,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1531,7 +1665,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       },
       "level_keys": [
         "Big Game Booleans 3"
@@ -1540,12 +1675,9 @@
     {
       "chapter": 59,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1554,7 +1686,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       },
       "level_keys": [
         "Big Game Booleans 4"
@@ -1563,12 +1696,9 @@
     {
       "chapter": 60,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1577,7 +1707,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       },
       "level_keys": [
         "Big Game Booleans 5"
@@ -1586,12 +1717,9 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1600,7 +1728,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503"
       },
       "level_keys": [
         "Luigi's Pizza 1"
@@ -1609,12 +1738,9 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1623,7 +1749,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503"
       },
       "level_keys": [
         "Luigi's Pizza 2"
@@ -1632,12 +1759,9 @@
     {
       "chapter": 63,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1646,7 +1770,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503"
       },
       "level_keys": [
         "Luigi's Pizza 3"
@@ -1655,12 +1780,9 @@
     {
       "chapter": 64,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1669,7 +1791,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503"
       },
       "level_keys": [
         "Luigi's Pizza 4"
@@ -1678,12 +1801,9 @@
     {
       "chapter": 65,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1692,7 +1812,8 @@
         ],
         "lesson.key": "Your Game - Player Movement",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "a967b900-abfa-4e38-b8ce-238301f5aa4a"
       },
       "level_keys": [
         "Big Game Collision 1"
@@ -1701,12 +1822,9 @@
     {
       "chapter": 66,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1715,7 +1833,8 @@
         ],
         "lesson.key": "Your Game - Player Movement",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "a967b900-abfa-4e38-b8ce-238301f5aa4a"
       },
       "level_keys": [
         "Big Game Collision 2"
@@ -1724,12 +1843,9 @@
     {
       "chapter": 67,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1738,7 +1854,8 @@
         ],
         "lesson.key": "Your Game - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "2dd35479-fbf8-4355-bd71-2766b06c1def"
       },
       "level_keys": [
         "Big Game Collision 3"
@@ -1747,12 +1864,9 @@
     {
       "chapter": 68,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1761,7 +1875,8 @@
         ],
         "lesson.key": "Your Game - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "2dd35479-fbf8-4355-bd71-2766b06c1def"
       },
       "level_keys": [
         "Big Game Collision 4"
@@ -1770,12 +1885,9 @@
     {
       "chapter": 69,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Final"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1784,7 +1896,8 @@
         ],
         "lesson.key": "Your Game - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "2dd35479-fbf8-4355-bd71-2766b06c1def"
       },
       "level_keys": [
         "Big Game Final"
@@ -1800,7 +1913,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1811,7 +1925,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1822,7 +1937,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1833,7 +1949,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1844,7 +1961,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1855,7 +1973,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1866,7 +1985,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1877,7 +1997,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1888,7 +2009,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "5f63c960-9e24-42a1-8314-0446314a3876"
       }
     },
     {
@@ -1899,7 +2021,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1910,7 +2033,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1921,7 +2045,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1932,7 +2057,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1943,7 +2069,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1954,7 +2081,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1965,7 +2093,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1976,7 +2105,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1987,7 +2117,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -1998,7 +2129,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -2009,7 +2141,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -2020,7 +2153,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "cf211fed-9fb3-4cce-a4ac-019fa1d248bb"
       }
     },
     {
@@ -2031,7 +2165,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       }
     },
     {
@@ -2042,7 +2177,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       }
     },
     {
@@ -2053,7 +2189,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       }
     },
     {
@@ -2064,7 +2201,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       }
     },
     {
@@ -2075,7 +2213,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       }
     },
     {
@@ -2086,7 +2225,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "c531fcac-68a5-4bc6-bb1d-87c4edd18d6b"
       }
     },
     {
@@ -2097,7 +2237,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2108,7 +2249,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2119,7 +2261,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2130,7 +2273,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2141,7 +2285,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2152,7 +2297,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2163,7 +2309,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2174,7 +2321,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2185,7 +2333,8 @@
         ],
         "lesson.key": "Design Recipe Practice",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "0f2e1880-d395-45eb-b297-c076f6dea3ed"
       }
     },
     {
@@ -2196,7 +2345,8 @@
         ],
         "lesson.key": "Your Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875"
       }
     },
     {
@@ -2207,7 +2357,8 @@
         ],
         "lesson.key": "Your Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875"
       }
     },
     {
@@ -2218,7 +2369,8 @@
         ],
         "lesson.key": "Your Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875"
       }
     },
     {
@@ -2229,7 +2381,8 @@
         ],
         "lesson.key": "Your Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "b68c89d9-36b9-4832-bb9c-4fd93cf49875"
       }
     },
     {
@@ -2240,7 +2393,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2251,7 +2405,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2262,7 +2417,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2273,7 +2429,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2284,7 +2441,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2295,7 +2453,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2306,7 +2465,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2317,7 +2477,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2328,7 +2489,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2339,7 +2501,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "bd43ac4a-2cf5-4a5a-a729-3fddceef6870"
       }
     },
     {
@@ -2350,7 +2513,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       }
     },
     {
@@ -2361,7 +2525,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       }
     },
     {
@@ -2372,7 +2537,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       }
     },
     {
@@ -2383,7 +2549,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       }
     },
     {
@@ -2394,7 +2561,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "f0ca8b83-e588-48b2-bc5f-97b549d8b141"
       }
     },
     {
@@ -2405,7 +2573,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       }
     },
     {
@@ -2416,7 +2585,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       }
     },
     {
@@ -2427,7 +2597,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       }
     },
     {
@@ -2438,7 +2609,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       }
     },
     {
@@ -2449,7 +2621,8 @@
         ],
         "lesson.key": "Your Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "fca4b07c-4918-4896-8d5e-5db05017a707"
       }
     },
     {
@@ -2460,7 +2633,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503"
       }
     },
     {
@@ -2471,7 +2645,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503"
       }
     },
     {
@@ -2482,7 +2657,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503"
       }
     },
     {
@@ -2493,7 +2669,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "022caf5d-2faf-4fa7-9ff0-c4c0a6403503"
       }
     },
     {
@@ -2504,7 +2681,8 @@
         ],
         "lesson.key": "Your Game - Player Movement",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "a967b900-abfa-4e38-b8ce-238301f5aa4a"
       }
     },
     {
@@ -2515,7 +2693,8 @@
         ],
         "lesson.key": "Your Game - Player Movement",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "a967b900-abfa-4e38-b8ce-238301f5aa4a"
       }
     },
     {
@@ -2526,7 +2705,8 @@
         ],
         "lesson.key": "Your Game - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "2dd35479-fbf8-4355-bd71-2766b06c1def"
       }
     },
     {
@@ -2537,7 +2717,8 @@
         ],
         "lesson.key": "Your Game - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "2dd35479-fbf8-4355-bd71-2766b06c1def"
       }
     },
     {
@@ -2548,7 +2729,8 @@
         ],
         "lesson.key": "Your Game - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algPDmiami"
+        "script.name": "algPDmiami",
+        "activity_section.key": "2dd35479-fbf8-4355-bd71-2766b06c1def"
       }
     }
   ],

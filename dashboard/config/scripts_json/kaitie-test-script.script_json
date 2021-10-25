@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:15 UTC",
+    "serialized_at": "2021-10-25 23:36:20 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -180,21 +181,695 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "b09e18f3-e4ff-4d79-b0cf-2f40074e4a8e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b09e18f3-e4ff-4d79-b0cf-2f40074e4a8e",
+        "lesson.key": "Module 1",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "eb44b199-0d1a-4fa1-960f-2da7e6032362",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb44b199-0d1a-4fa1-960f-2da7e6032362",
+        "lesson.key": "Module 2",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "50a45cdb-d83f-4073-8a7b-5a2824589e3f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50a45cdb-d83f-4073-8a7b-5a2824589e3f",
+        "lesson.key": "Module 3",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "f3ab6b80-c368-4078-bf01-0ba0ef5bba22",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3ab6b80-c368-4078-bf01-0ba0ef5bba22",
+        "lesson.key": "Module 4",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "61c25a21-7912-4837-a025-0c95d904a0e5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "61c25a21-7912-4837-a025-0c95d904a0e5",
+        "lesson.key": "Module 5",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "b99e35e7-be50-4877-a634-fe3dc3ea08be",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b99e35e7-be50-4877-a634-fe3dc3ea08be",
+        "lesson.key": "Module 6",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "8f5e1614-9ff0-44a1-a001-038abba20f45",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f5e1614-9ff0-44a1-a001-038abba20f45",
+        "lesson.key": "Module 7",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "f4cee030-8f98-401f-87c7-f2486c8c06bf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f4cee030-8f98-401f-87c7-f2486c8c06bf",
+        "lesson.key": "Module 8",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "c782f593-d5ba-4880-bf8e-fc316ff4ba5d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c782f593-d5ba-4880-bf8e-fc316ff4ba5d",
+        "lesson.key": "CS Principles: Functions",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    },
+    {
+      "key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f",
+        "lesson.key": "CS Principles: Variables Practice - Choice Test",
+        "lesson_group.key": "",
+        "script.name": "kaitie-test-script"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "5a1dcce8-b12b-47a1-ba64-1ffad1d33bfa",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 1 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a1dcce8-b12b-47a1-ba64-1ffad1d33bfa",
+        "lesson_activity.key": "b09e18f3-e4ff-4d79-b0cf-2f40074e4a8e"
+      }
+    },
+    {
+      "key": "83f7bc5d-edb8-469c-bae3-725952fdea2c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrapping up Unit 3 (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "83f7bc5d-edb8-469c-bae3-725952fdea2c",
+        "lesson_activity.key": "b09e18f3-e4ff-4d79-b0cf-2f40074e4a8e"
+      }
+    },
+    {
+      "key": "3870c71b-a404-4e73-9415-6079e153b9c1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 4 Overview (~30 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1",
+        "lesson_activity.key": "b09e18f3-e4ff-4d79-b0cf-2f40074e4a8e"
+      }
+    },
+    {
+      "key": "780ed61a-b562-4932-b0a3-f9d0e0d9e770",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introducing EIPM (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "780ed61a-b562-4932-b0a3-f9d0e0d9e770",
+        "lesson_activity.key": "b09e18f3-e4ff-4d79-b0cf-2f40074e4a8e"
+      }
+    },
+    {
+      "key": "b876058c-e6b8-4e63-a2b1-41acac23b44a",
+      "position": 5,
+      "properties": {
+        "name": "Module 1 Asynchronous wrap-up (~10 minutes)",
+        "progression_name": "Module 1 Asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b876058c-e6b8-4e63-a2b1-41acac23b44a",
+        "lesson_activity.key": "b09e18f3-e4ff-4d79-b0cf-2f40074e4a8e"
+      }
+    },
+    {
+      "key": "f3a40c41-4bad-4906-bf8b-a6fc2923d8f3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 2 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3a40c41-4bad-4906-bf8b-a6fc2923d8f3",
+        "lesson_activity.key": "eb44b199-0d1a-4fa1-960f-2da7e6032362"
+      }
+    },
+    {
+      "key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af",
+      "position": 2,
+      "properties": {
+        "progression_name": "Variables Practice (~35 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af",
+        "lesson_activity.key": "eb44b199-0d1a-4fa1-960f-2da7e6032362"
+      }
+    },
+    {
+      "key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300",
+      "position": 3,
+      "properties": {
+        "progression_name": "Variables Make (~30 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300",
+        "lesson_activity.key": "eb44b199-0d1a-4fa1-960f-2da7e6032362"
+      }
+    },
+    {
+      "key": "0e7a6e12-5863-4f95-bc35-22885ac6da25",
+      "position": 4,
+      "properties": {
+        "progression_name": "Collaborative and Independent Work (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "0e7a6e12-5863-4f95-bc35-22885ac6da25",
+        "lesson_activity.key": "eb44b199-0d1a-4fa1-960f-2da7e6032362"
+      }
+    },
+    {
+      "key": "0ff1d3f1-33c3-47d1-8448-f1e774582745",
+      "position": 5,
+      "properties": {
+        "name": "Module 2 Asynchronous wrap-up (~10 minutes)",
+        "progression_name": "Module 2 Asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ff1d3f1-33c3-47d1-8448-f1e774582745",
+        "lesson_activity.key": "eb44b199-0d1a-4fa1-960f-2da7e6032362"
+      }
+    },
+    {
+      "key": "1cfedf1b-190e-427a-bb8a-01c77625105d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 3 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "1cfedf1b-190e-427a-bb8a-01c77625105d",
+        "lesson_activity.key": "50a45cdb-d83f-4073-8a7b-5a2824589e3f"
+      }
+    },
+    {
+      "key": "854d38d0-3b70-49f5-bb59-9ccd6555e135",
+      "position": 2,
+      "properties": {
+        "progression_name": "Understanding the Context for Lists (~55 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "854d38d0-3b70-49f5-bb59-9ccd6555e135",
+        "lesson_activity.key": "50a45cdb-d83f-4073-8a7b-5a2824589e3f"
+      }
+    },
+    {
+      "key": "377a56b8-ddf9-4528-952a-7c989d608701",
+      "position": 3,
+      "properties": {
+        "progression_name": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701",
+        "lesson_activity.key": "50a45cdb-d83f-4073-8a7b-5a2824589e3f"
+      }
+    },
+    {
+      "key": "f212f307-5fb3-4971-97df-415c67f9394e",
+      "position": 4,
+      "properties": {
+        "name": "Module 3 Asynchronous wrap-up (~10 minutes)",
+        "progression_name": "Module 3 Asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f212f307-5fb3-4971-97df-415c67f9394e",
+        "lesson_activity.key": "50a45cdb-d83f-4073-8a7b-5a2824589e3f"
+      }
+    },
+    {
+      "key": "aaf0b6c3-6c02-48ec-a724-7e530ff52487",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 4 Overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "aaf0b6c3-6c02-48ec-a724-7e530ff52487",
+        "lesson_activity.key": "f3ab6b80-c368-4078-bf01-0ba0ef5bba22"
+      }
+    },
+    {
+      "key": "bb0a1f24-6b02-4e9a-9598-5b4939a3d50f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Content of the Lists EIPM sequence (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb0a1f24-6b02-4e9a-9598-5b4939a3d50f",
+        "lesson_activity.key": "f3ab6b80-c368-4078-bf01-0ba0ef5bba22"
+      }
+    },
+    {
+      "key": "5a7b1aab-2ff9-4d4f-8236-cf8703622079",
+      "position": 3,
+      "properties": {
+        "progression_name": "The Lists EIPM sequence (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a7b1aab-2ff9-4d4f-8236-cf8703622079",
+        "lesson_activity.key": "f3ab6b80-c368-4078-bf01-0ba0ef5bba22"
+      }
+    },
+    {
+      "key": "94821613-9fb9-441d-a7bf-1c319f1b6c48",
+      "position": 4,
+      "properties": {
+        "progression_name": "Mental models in Unit 5 (~35 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "94821613-9fb9-441d-a7bf-1c319f1b6c48",
+        "lesson_activity.key": "f3ab6b80-c368-4078-bf01-0ba0ef5bba22"
+      }
+    },
+    {
+      "key": "462e854c-a341-4450-b1eb-e42369aada2a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Traversals and datasets (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a",
+        "lesson_activity.key": "f3ab6b80-c368-4078-bf01-0ba0ef5bba22"
+      }
+    },
+    {
+      "key": "48757a16-f400-4d0b-9c32-cb8f86469d73",
+      "position": 6,
+      "properties": {
+        "name": "Module 4 Asynchronous wrap-up (~10 minutes)",
+        "progression_name": "Module 4 Asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "48757a16-f400-4d0b-9c32-cb8f86469d73",
+        "lesson_activity.key": "f3ab6b80-c368-4078-bf01-0ba0ef5bba22"
+      }
+    },
+    {
+      "key": "70e8732e-345c-4c31-90e3-e5980149f226",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 5 overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "70e8732e-345c-4c31-90e3-e5980149f226",
+        "lesson_activity.key": "61c25a21-7912-4837-a025-0c95d904a0e5"
+      }
+    },
+    {
+      "key": "1d1e98a2-26bb-4f9e-b8cb-0ea99850e4cd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Understanding Unit 7 (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d1e98a2-26bb-4f9e-b8cb-0ea99850e4cd",
+        "lesson_activity.key": "61c25a21-7912-4837-a025-0c95d904a0e5"
+      }
+    },
+    {
+      "key": "c2629e81-e52b-4570-81f8-cd71afd1eecc",
+      "position": 3,
+      "properties": {
+        "progression_name": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2629e81-e52b-4570-81f8-cd71afd1eecc",
+        "lesson_activity.key": "61c25a21-7912-4837-a025-0c95d904a0e5"
+      }
+    },
+    {
+      "key": "775f8a9f-942a-426a-835d-96754971461b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b",
+        "lesson_activity.key": "61c25a21-7912-4837-a025-0c95d904a0e5"
+      }
+    },
+    {
+      "key": "57830d4e-515e-43c1-a49e-1c1c3047293a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Creating inclusive classrooms (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "57830d4e-515e-43c1-a49e-1c1c3047293a",
+        "lesson_activity.key": "61c25a21-7912-4837-a025-0c95d904a0e5"
+      }
+    },
+    {
+      "key": "9cf954c6-0ab5-4b29-8b12-febdcdb1435d",
+      "position": 6,
+      "properties": {
+        "name": "Module 5 Asynchronous wrap-up (~10 minutes)",
+        "progression_name": "Module 5 Asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9cf954c6-0ab5-4b29-8b12-febdcdb1435d",
+        "lesson_activity.key": "61c25a21-7912-4837-a025-0c95d904a0e5"
+      }
+    },
+    {
+      "key": "485b523f-ec0c-4b6a-8fa0-77c362a89043",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 6 overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "485b523f-ec0c-4b6a-8fa0-77c362a89043",
+        "lesson_activity.key": "b99e35e7-be50-4877-a634-fe3dc3ea08be"
+      }
+    },
+    {
+      "key": "7c8a30d3-fc55-4be2-9c8c-4c16b27f9f65",
+      "position": 2,
+      "properties": {
+        "progression_name": "Requirements of the Create Performance Task (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7c8a30d3-fc55-4be2-9c8c-4c16b27f9f65",
+        "lesson_activity.key": "b99e35e7-be50-4877-a634-fe3dc3ea08be"
+      }
+    },
+    {
+      "key": "78ca6a17-03f1-4fe3-a0e4-27f6b65e1187",
+      "position": 3,
+      "properties": {
+        "progression_name": "Digging into the Create PT Survival Guide (~40 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "78ca6a17-03f1-4fe3-a0e4-27f6b65e1187",
+        "lesson_activity.key": "b99e35e7-be50-4877-a634-fe3dc3ea08be"
+      }
+    },
+    {
+      "key": "19b6282b-e356-4712-a2e5-9ff54095fd67",
+      "position": 4,
+      "properties": {
+        "progression_name": "Role of the teacher during the Create PT (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "19b6282b-e356-4712-a2e5-9ff54095fd67",
+        "lesson_activity.key": "b99e35e7-be50-4877-a634-fe3dc3ea08be"
+      }
+    },
+    {
+      "key": "cdacde9b-a58d-4bb0-a477-1f7e58a9a6bd",
+      "position": 5,
+      "properties": {
+        "name": "Module 6 Asynchronous Wrap-Up (~10 minutes)",
+        "progression_name": "Module 6 Asynchronous Wrap-Up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdacde9b-a58d-4bb0-a477-1f7e58a9a6bd",
+        "lesson_activity.key": "b99e35e7-be50-4877-a634-fe3dc3ea08be"
+      }
+    },
+    {
+      "key": "b724fed0-2f22-407d-8e60-c666b4ed4bb3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 7 overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b724fed0-2f22-407d-8e60-c666b4ed4bb3",
+        "lesson_activity.key": "8f5e1614-9ff0-44a1-a001-038abba20f45"
+      }
+    },
+    {
+      "key": "045fd927-690d-478d-9194-20d76828680b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Overview of Unit 9 - Data (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "045fd927-690d-478d-9194-20d76828680b",
+        "lesson_activity.key": "8f5e1614-9ff0-44a1-a001-038abba20f45"
+      }
+    },
+    {
+      "key": "c272bbf6-ca73-4216-a44e-0b33f78f05a0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using the Google Trends tool (~20 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c272bbf6-ca73-4216-a44e-0b33f78f05a0",
+        "lesson_activity.key": "8f5e1614-9ff0-44a1-a001-038abba20f45"
+      }
+    },
+    {
+      "key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using the Data Visualizer tool (~45 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a",
+        "lesson_activity.key": "8f5e1614-9ff0-44a1-a001-038abba20f45"
+      }
+    },
+    {
+      "key": "c6397e4d-92ce-4b0d-a61c-34b5212312ee",
+      "position": 5,
+      "properties": {
+        "name": "Module 7 asynchronous wrap-up (~10 minutes)",
+        "progression_name": "Module 7 asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6397e4d-92ce-4b0d-a61c-34b5212312ee",
+        "lesson_activity.key": "8f5e1614-9ff0-44a1-a001-038abba20f45"
+      }
+    },
+    {
+      "key": "7bdc0015-66dd-4a49-8a09-eb837289371e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Module 8 overview (~5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bdc0015-66dd-4a49-8a09-eb837289371e",
+        "lesson_activity.key": "f4cee030-8f98-401f-87c7-f2486c8c06bf"
+      }
+    },
+    {
+      "key": "b7104953-4fc9-4ef9-9923-b224cb4f4f2c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Connecting to the CS community (~15 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7104953-4fc9-4ef9-9923-b224cb4f4f2c",
+        "lesson_activity.key": "f4cee030-8f98-401f-87c7-f2486c8c06bf"
+      }
+    },
+    {
+      "key": "e29ea2bd-6635-474b-ab2f-35d4a9e9854a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Preparing students for the AP multiple choice exam (~60 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "e29ea2bd-6635-474b-ab2f-35d4a9e9854a",
+        "lesson_activity.key": "f4cee030-8f98-401f-87c7-f2486c8c06bf"
+      }
+    },
+    {
+      "key": "43ddcba9-c849-4726-b806-17eea48f4a61",
+      "position": 4,
+      "properties": {
+        "name": "Module 8 asynchronous wrap-up (~10 minutes)",
+        "progression_name": "Module 8 asynchronous wrap-up (~10 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "43ddcba9-c849-4726-b806-17eea48f4a61",
+        "lesson_activity.key": "f4cee030-8f98-401f-87c7-f2486c8c06bf"
+      }
+    },
+    {
+      "key": "c47db20a-6572-43f6-ae07-0e048358ff57",
+      "position": 1,
+      "properties": {
+        "name": "CS Principles: Functions",
+        "progression_name": "CS Principles: Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "c47db20a-6572-43f6-ae07-0e048358ff57",
+        "lesson_activity.key": "c782f593-d5ba-4880-bf8e-fc316ff4ba5d"
+      }
+    },
+    {
+      "key": "0c39001a-e5d4-4eef-9f5d-acc8514bc0c5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c39001a-e5d4-4eef-9f5d-acc8514bc0c5",
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f"
+      }
+    },
+    {
+      "key": "e02fe803-b15e-40e9-b046-35c2400107fb",
+      "position": 2,
+      "properties": {
+        "progression_name": "Assigning Numbers and Strings"
+      },
+      "seeding_key": {
+        "activity_section.key": "e02fe803-b15e-40e9-b046-35c2400107fb",
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f"
+      }
+    },
+    {
+      "key": "8b60dd11-efb3-42e0-b3a3-4cb648513865",
+      "position": 3,
+      "properties": {
+        "progression_name": "Variables and Operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865",
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f"
+      }
+    },
+    {
+      "key": "dd028b29-367b-44c8-bb85-d441534c7b3b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Debugging Scope Issues"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd028b29-367b-44c8-bb85-d441534c7b3b",
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f"
+      }
+    },
+    {
+      "key": "63438036-00b3-4bca-aabd-acc4a0dcd876",
+      "position": 5,
+      "properties": {
+        "progression_name": "Putting it Together"
+      },
+      "seeding_key": {
+        "activity_section.key": "63438036-00b3-4bca-aabd-acc4a0dcd876",
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f"
+      }
+    },
+    {
+      "key": "066c5b2a-5f2f-440d-8ebb-dda2b57f441b",
+      "position": 6,
+      "properties": {
+        "progression_name": "Putting It Together"
+      },
+      "seeding_key": {
+        "activity_section.key": "066c5b2a-5f2f-440d-8ebb-dda2b57f441b",
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f"
+      }
+    },
+    {
+      "key": "9b0befe4-4206-4f28-b018-31d9c8ad60e5",
+      "position": 7,
+      "properties": {
+        "progression_name": "Check For Understanding: AP Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b0befe4-4206-4f28-b018-31d9c8ad60e5",
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f"
+      }
+    },
+    {
+      "key": "3858f3d5-a14b-43c4-bdd1-d79e058876f1",
+      "position": 8,
+      "properties": {
+        "name": "Check for Understanding: AP Practice",
+        "progression_name": "Check for Understanding: AP Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "3858f3d5-a14b-43c4-bdd1-d79e058876f1",
+        "lesson_activity.key": "c4746e43-42e7-447a-bc3c-fa85a65f0f6f"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL AYWS1 Workshop Overview"
-        ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -204,7 +879,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "5a1dcce8-b12b-47a1-ba64-1ffad1d33bfa"
       },
       "level_keys": [
         "CSP-PL AYWS1 Workshop Overview"
@@ -213,12 +889,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP Module 1 Unit 3 Context"
-        ],
         "progression": "Wrapping up Unit 3 (~20 minutes)"
       },
       "bonus": false,
@@ -228,7 +901,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "83f7bc5d-edb8-469c-bae3-725952fdea2c"
       },
       "level_keys": [
         "CSP Module 1 Unit 3 Context"
@@ -237,12 +911,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Unit 4 tasks overview"
-        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -252,7 +923,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1"
       },
       "level_keys": [
         "CSP - Unit 4 tasks overview"
@@ -261,12 +933,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL - U4 L12 Practice PT 1"
-        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -276,7 +945,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1"
       },
       "level_keys": [
         "CSP-PL - U4 L12 Practice PT 1"
@@ -285,12 +955,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL U4 L12 Practice PT 2"
-        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -300,7 +967,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1"
       },
       "level_keys": [
         "CSP-PL U4 L12 Practice PT 2"
@@ -309,12 +977,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP Module 1 Unit 4 Reflection"
-        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -324,7 +989,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1"
       },
       "level_keys": [
         "CSP Module 1 Unit 4 Reflection"
@@ -333,12 +999,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP Module 1 EIPM Reflection"
-        ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
       "bonus": false,
@@ -348,7 +1011,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "780ed61a-b562-4932-b0a3-f9d0e0d9e770"
       },
       "level_keys": [
         "CSP Module 1 EIPM Reflection"
@@ -357,12 +1021,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP Module 1 EIPM goes virtual"
-        ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
       "bonus": false,
@@ -372,7 +1033,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "780ed61a-b562-4932-b0a3-f9d0e0d9e770"
       },
       "level_keys": [
         "CSP Module 1 EIPM goes virtual"
@@ -381,12 +1043,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 1 Wrap Up"
-        ],
         "progression": "Module 1 Asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -396,7 +1055,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b876058c-e6b8-4e63-a2b1-41acac23b44a"
       },
       "level_keys": [
         "CSP - Module 1 Wrap Up"
@@ -405,12 +1065,9 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL AYWS2 Workshop Overview"
-        ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -420,7 +1077,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "f3a40c41-4bad-4906-bf8b-a6fc2923d8f3"
       },
       "level_keys": [
         "CSP-PL AYWS2 Workshop Overview"
@@ -429,12 +1087,9 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Variables Practice overview"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -444,7 +1099,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - Variables Practice overview"
@@ -453,12 +1109,9 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL - U4 L03 Variables numbers practice 1"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -468,7 +1121,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP-PL - U4 L03 Variables numbers practice 1"
@@ -477,12 +1131,9 @@
     {
       "chapter": 13,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - U4 L03 Variables numbers practice 4"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -492,7 +1143,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables numbers practice 4"
@@ -501,12 +1153,9 @@
     {
       "chapter": 14,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - U4 L03 Variables operator practice 1"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -516,7 +1165,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables operator practice 1"
@@ -525,12 +1175,9 @@
     {
       "chapter": 15,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - U4 L03 Variables operator practice 3"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -540,7 +1187,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables operator practice 3"
@@ -549,12 +1197,9 @@
     {
       "chapter": 16,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - U4 L03 Variables operator practice 2"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -564,7 +1209,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables operator practice 2"
@@ -573,12 +1219,9 @@
     {
       "chapter": 17,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - U4 L03 Variables operator practice 5"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -588,7 +1231,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables operator practice 5"
@@ -597,12 +1241,9 @@
     {
       "chapter": 18,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL8 - U4 L03 Variables operator practice 6"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -612,7 +1253,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - PL8 - U4 L03 Variables operator practice 6"
@@ -621,12 +1263,9 @@
     {
       "chapter": 19,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -636,7 +1275,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
@@ -645,12 +1285,9 @@
     {
       "chapter": 20,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - Practice Reflection"
-        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -660,7 +1297,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       },
       "level_keys": [
         "CSP - PL - Practice Reflection"
@@ -669,12 +1307,9 @@
     {
       "chapter": 21,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Variables Make overview"
-        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -684,7 +1319,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300"
       },
       "level_keys": [
         "CSP - Variables Make overview"
@@ -693,12 +1329,9 @@
     {
       "chapter": 22,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL U4 L04 Variables Make Project_2020"
-        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -708,7 +1341,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300"
       },
       "level_keys": [
         "CSP - PL U4 L04 Variables Make Project_2020"
@@ -717,12 +1351,9 @@
     {
       "chapter": 23,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - U4 L04 Variables Make Project Submit_2020"
-        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -732,7 +1363,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300"
       },
       "level_keys": [
         "CSP - PL - U4 L04 Variables Make Project Submit_2020"
@@ -741,12 +1373,9 @@
     {
       "chapter": 24,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - Make Reflection"
-        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -756,7 +1385,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300"
       },
       "level_keys": [
         "CSP - PL - Make Reflection"
@@ -765,12 +1395,9 @@
     {
       "chapter": 25,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL - Unit 4 Wrap-up"
-        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
       "bonus": false,
@@ -780,7 +1407,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "0e7a6e12-5863-4f95-bc35-22885ac6da25"
       },
       "level_keys": [
         "CSP-PL - Unit 4 Wrap-up"
@@ -789,12 +1417,9 @@
     {
       "chapter": 26,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - PL - Collaboration Reflection"
-        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
       "bonus": false,
@@ -804,7 +1429,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "0e7a6e12-5863-4f95-bc35-22885ac6da25"
       },
       "level_keys": [
         "CSP - PL - Collaboration Reflection"
@@ -813,12 +1439,9 @@
     {
       "chapter": 27,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 2 Wrap Up"
-        ],
         "progression": "Module 2 Asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -828,7 +1451,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "0ff1d3f1-33c3-47d1-8448-f1e774582745"
       },
       "level_keys": [
         "CSP - Module 2 Wrap Up"
@@ -837,12 +1461,9 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL AYWS3 Workshop Overview"
-        ],
         "progression": "Module 3 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -852,7 +1473,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "1cfedf1b-190e-427a-bb8a-01c77625105d"
       },
       "level_keys": [
         "CSP-PL AYWS3 Workshop Overview"
@@ -861,12 +1483,9 @@
     {
       "chapter": 29,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Understanding the context for the Model Lesson overview"
-        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -876,7 +1495,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "854d38d0-3b70-49f5-bb59-9ccd6555e135"
       },
       "level_keys": [
         "CSP - Understanding the context for the Model Lesson overview"
@@ -885,12 +1505,9 @@
     {
       "chapter": 30,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Synch3 - Reflection 1"
-        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -900,7 +1517,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "854d38d0-3b70-49f5-bb59-9ccd6555e135"
       },
       "level_keys": [
         "CSP - Synch3 - Reflection 1"
@@ -909,12 +1527,9 @@
     {
       "chapter": 31,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Synch3 - Reflection 2"
-        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -924,7 +1539,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "854d38d0-3b70-49f5-bb59-9ccd6555e135"
       },
       "level_keys": [
         "CSP - Synch3 - Reflection 2"
@@ -933,12 +1549,9 @@
     {
       "chapter": 32,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Asynch3 - Intro to CI"
-        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
       "bonus": false,
@@ -948,7 +1561,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701"
       },
       "level_keys": [
         "CSP - Asynch3 - Intro to CI"
@@ -957,12 +1571,9 @@
     {
       "chapter": 33,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Asynch3 - Broadening the def"
-        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
       "bonus": false,
@@ -972,7 +1583,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701"
       },
       "level_keys": [
         "CSP - Asynch3 - Broadening the def"
@@ -981,12 +1593,9 @@
     {
       "chapter": 34,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Asynch3 - Feedback in CI"
-        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
       "bonus": false,
@@ -996,7 +1605,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701"
       },
       "level_keys": [
         "CSP - Asynch3 - Feedback in CI"
@@ -1005,12 +1615,9 @@
     {
       "chapter": 35,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Asynch3 - Practice feedback"
-        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1020,7 +1627,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701"
       },
       "level_keys": [
         "CSP - Asynch3 - Practice feedback"
@@ -1029,12 +1637,9 @@
     {
       "chapter": 36,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 3 Wrap Up"
-        ],
         "progression": "Module 3 Asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -1044,7 +1649,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "f212f307-5fb3-4971-97df-415c67f9394e"
       },
       "level_keys": [
         "CSP - Module 3 Wrap Up"
@@ -1053,12 +1659,9 @@
     {
       "chapter": 37,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL AYWA4 Workshop Overview"
-        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1068,7 +1671,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "aaf0b6c3-6c02-48ec-a724-7e530ff52487"
       },
       "level_keys": [
         "CSP-PL AYWA4 Workshop Overview"
@@ -1077,12 +1681,9 @@
     {
       "chapter": 38,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Understanding the content of the Lists EIPM sequence"
-        ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
       "bonus": false,
@@ -1092,7 +1693,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "bb0a1f24-6b02-4e9a-9598-5b4939a3d50f"
       },
       "level_keys": [
         "CSP - Understanding the content of the Lists EIPM sequence"
@@ -1101,12 +1703,9 @@
     {
       "chapter": 39,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Lists EIPM reflection"
-        ],
         "progression": "The Lists EIPM sequence (~25 minutes)"
       },
       "bonus": false,
@@ -1116,7 +1715,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "5a7b1aab-2ff9-4d4f-8236-cf8703622079"
       },
       "level_keys": [
         "CSP - Lists EIPM reflection"
@@ -1125,12 +1725,9 @@
     {
       "chapter": 40,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP AYW4 - Mental Models in Unit 5"
-        ],
         "progression": "Mental models in Unit 5 (~35 minutes)"
       },
       "bonus": false,
@@ -1140,7 +1737,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "94821613-9fb9-441d-a7bf-1c319f1b6c48"
       },
       "level_keys": [
         "CSP AYW4 - Mental Models in Unit 5"
@@ -1149,12 +1747,9 @@
     {
       "chapter": 41,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Asynch4 - Intro to Traversals"
-        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1164,7 +1759,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       },
       "level_keys": [
         "CSP - Asynch4 - Intro to Traversals"
@@ -1173,12 +1769,9 @@
     {
       "chapter": 42,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
-        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1188,7 +1781,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       },
       "level_keys": [
         "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
@@ -1197,12 +1791,9 @@
     {
       "chapter": 43,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Asynch4 - U5L10 Traversals Investigate"
-        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1212,7 +1803,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       },
       "level_keys": [
         "CSP - Asynch4 - U5L10 Traversals Investigate"
@@ -1221,12 +1813,9 @@
     {
       "chapter": 44,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
-        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1236,7 +1825,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       },
       "level_keys": [
         "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
@@ -1245,12 +1835,9 @@
     {
       "chapter": 45,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP AYW4 - Reflection on datasets"
-        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1260,7 +1847,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       },
       "level_keys": [
         "CSP AYW4 - Reflection on datasets"
@@ -1269,12 +1857,9 @@
     {
       "chapter": 46,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 4 Wrap Up"
-        ],
         "progression": "Module 4 Asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -1284,7 +1869,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "48757a16-f400-4d0b-9c32-cb8f86469d73"
       },
       "level_keys": [
         "CSP - Module 4 Wrap Up"
@@ -1293,12 +1879,9 @@
     {
       "chapter": 47,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL Module 5 - Workshop Overview"
-        ],
         "progression": "Module 5 overview (~5 minutes)"
       },
       "bonus": false,
@@ -1308,7 +1891,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "70e8732e-345c-4c31-90e3-e5980149f226"
       },
       "level_keys": [
         "CSP-PL Module 5 - Workshop Overview"
@@ -1317,12 +1901,9 @@
     {
       "chapter": 48,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M5 - Intro to Unit 7"
-        ],
         "progression": "Understanding Unit 7 (~5 minutes)"
       },
       "bonus": false,
@@ -1332,7 +1913,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "1d1e98a2-26bb-4f9e-b8cb-0ea99850e4cd"
       },
       "level_keys": [
         "CSP-PL M5 - Intro to Unit 7"
@@ -1341,12 +1923,9 @@
     {
       "chapter": 49,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M5 - Param Explore"
-        ],
         "progression": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
       },
       "bonus": false,
@@ -1356,7 +1935,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "c2629e81-e52b-4570-81f8-cd71afd1eecc"
       },
       "level_keys": [
         "CSP-PL M5 - Param Explore"
@@ -1365,12 +1945,9 @@
     {
       "chapter": 50,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M5 - Param Prac 1"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1380,7 +1957,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "CSP-PL M5 - Param Prac 1"
@@ -1389,12 +1967,9 @@
     {
       "chapter": 51,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL U7 Param Return Practice Part 1"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1404,7 +1979,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 1"
@@ -1413,12 +1989,9 @@
     {
       "chapter": 52,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL U7 Param Return Practice Part 2"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1428,7 +2001,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 2"
@@ -1437,12 +2011,9 @@
     {
       "chapter": 53,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL U7 Param Return Practice Part 4"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1452,7 +2023,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 4"
@@ -1461,12 +2033,9 @@
     {
       "chapter": 54,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL U7 Param Return Practice Part 3"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1476,7 +2045,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 3"
@@ -1485,12 +2055,9 @@
     {
       "chapter": 55,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL U7 Param Return Practice Part 5"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1500,7 +2067,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 5"
@@ -1509,12 +2077,9 @@
     {
       "chapter": 56,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL U7 Param Investigate Calculator App"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1524,7 +2089,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "PL U7 Param Investigate Calculator App"
@@ -1533,12 +2099,9 @@
     {
       "chapter": 57,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL U7 Param Practice App 2"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1548,7 +2111,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "PL U7 Param Practice App 2"
@@ -1557,12 +2121,9 @@
     {
       "chapter": 58,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M5 - Param Prac 10"
-        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1572,7 +2133,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       },
       "level_keys": [
         "CSP-PL M5 - Param Prac 10"
@@ -1581,12 +2143,9 @@
     {
       "chapter": 59,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M5 - Inclusive Classrooms"
-        ],
         "progression": "Creating inclusive classrooms (~15 minutes)"
       },
       "bonus": false,
@@ -1596,7 +2155,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "57830d4e-515e-43c1-a49e-1c1c3047293a"
       },
       "level_keys": [
         "CSP-PL M5 - Inclusive Classrooms"
@@ -1605,12 +2165,9 @@
     {
       "chapter": 60,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 5 Wrap Up"
-        ],
         "progression": "Module 5 Asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -1620,7 +2177,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "9cf954c6-0ab5-4b29-8b12-febdcdb1435d"
       },
       "level_keys": [
         "CSP - Module 5 Wrap Up"
@@ -1629,12 +2187,9 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL Module 6 - Workshop Overview"
-        ],
         "progression": "Module 6 overview (~5 minutes)"
       },
       "bonus": false,
@@ -1644,7 +2199,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "485b523f-ec0c-4b6a-8fa0-77c362a89043"
       },
       "level_keys": [
         "CSP-PL Module 6 - Workshop Overview"
@@ -1653,12 +2209,9 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M6 - Create PT Reqs"
-        ],
         "progression": "Requirements of the Create Performance Task (~20 minutes)"
       },
       "bonus": false,
@@ -1668,7 +2221,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "7c8a30d3-fc55-4be2-9c8c-4c16b27f9f65"
       },
       "level_keys": [
         "CSP-PL M6 - Create PT Reqs"
@@ -1677,12 +2231,9 @@
     {
       "chapter": 63,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M6 - Survival Guide"
-        ],
         "progression": "Digging into the Create PT Survival Guide (~40 minutes)"
       },
       "bonus": false,
@@ -1692,7 +2243,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "78ca6a17-03f1-4fe3-a0e4-27f6b65e1187"
       },
       "level_keys": [
         "CSP-PL M6 - Survival Guide"
@@ -1701,12 +2253,9 @@
     {
       "chapter": 64,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M6 - Role of teacher"
-        ],
         "progression": "Role of the teacher during the Create PT (~15 minutes)"
       },
       "bonus": false,
@@ -1716,7 +2265,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "19b6282b-e356-4712-a2e5-9ff54095fd67"
       },
       "level_keys": [
         "CSP-PL M6 - Role of teacher"
@@ -1725,12 +2275,9 @@
     {
       "chapter": 65,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 6 Wrap Up"
-        ],
         "progression": "Module 6 Asynchronous Wrap-Up (~10 minutes)"
       },
       "bonus": false,
@@ -1740,7 +2287,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "cdacde9b-a58d-4bb0-a477-1f7e58a9a6bd"
       },
       "level_keys": [
         "CSP - Module 6 Wrap Up"
@@ -1749,12 +2297,9 @@
     {
       "chapter": 66,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL Module 7 - Workshop Overview"
-        ],
         "progression": "Module 7 overview (~5 minutes)"
       },
       "bonus": false,
@@ -1764,7 +2309,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b724fed0-2f22-407d-8e60-c666b4ed4bb3"
       },
       "level_keys": [
         "CSP-PL Module 7 - Workshop Overview"
@@ -1773,12 +2319,9 @@
     {
       "chapter": 67,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M7 - Unit 9 Overview"
-        ],
         "progression": "Overview of Unit 9 - Data (~10 minutes)"
       },
       "bonus": false,
@@ -1788,7 +2331,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "045fd927-690d-478d-9194-20d76828680b"
       },
       "level_keys": [
         "CSP-PL M7 - Unit 9 Overview"
@@ -1797,12 +2341,9 @@
     {
       "chapter": 68,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M7 - Google Trends"
-        ],
         "progression": "Using the Google Trends tool (~20 minutes)"
       },
       "bonus": false,
@@ -1812,7 +2353,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "c272bbf6-ca73-4216-a44e-0b33f78f05a0"
       },
       "level_keys": [
         "CSP-PL M7 - Google Trends"
@@ -1821,12 +2363,9 @@
     {
       "chapter": 69,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M7 - Data Viz 1"
-        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
       "bonus": false,
@@ -1836,7 +2375,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a"
       },
       "level_keys": [
         "CSP-PL M7 - Data Viz 1"
@@ -1845,12 +2385,9 @@
     {
       "chapter": 70,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M7 - Data Viz 2"
-        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
       "bonus": false,
@@ -1860,7 +2397,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a"
       },
       "level_keys": [
         "CSP-PL M7 - Data Viz 2"
@@ -1869,12 +2407,9 @@
     {
       "chapter": 71,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M7 - Data Viz 3"
-        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
       "bonus": false,
@@ -1884,7 +2419,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a"
       },
       "level_keys": [
         "CSP-PL M7 - Data Viz 3"
@@ -1893,12 +2429,9 @@
     {
       "chapter": 72,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M7 - Data Viz 4"
-        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
       "bonus": false,
@@ -1908,7 +2441,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a"
       },
       "level_keys": [
         "CSP-PL M7 - Data Viz 4"
@@ -1917,12 +2451,9 @@
     {
       "chapter": 73,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 7 Wrap Up"
-        ],
         "progression": "Module 7 asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -1932,7 +2463,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "c6397e4d-92ce-4b0d-a61c-34b5212312ee"
       },
       "level_keys": [
         "CSP - Module 7 Wrap Up"
@@ -1941,12 +2473,9 @@
     {
       "chapter": 74,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL Module 8 - Workshop Overview"
-        ],
         "progression": "Module 8 overview (~5 minutes)"
       },
       "bonus": false,
@@ -1956,7 +2485,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "7bdc0015-66dd-4a49-8a09-eb837289371e"
       },
       "level_keys": [
         "CSP-PL Module 8 - Workshop Overview"
@@ -1965,12 +2495,9 @@
     {
       "chapter": 75,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Community 1"
-        ],
         "progression": "Connecting to the CS community (~15 minutes)"
       },
       "bonus": false,
@@ -1980,7 +2507,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7104953-4fc9-4ef9-9923-b224cb4f4f2c"
       },
       "level_keys": [
         "CSP-PL M8 - Community 1"
@@ -1989,12 +2517,9 @@
     {
       "chapter": 76,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Community 2"
-        ],
         "progression": "Connecting to the CS community (~15 minutes)"
       },
       "bonus": false,
@@ -2004,7 +2529,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7104953-4fc9-4ef9-9923-b224cb4f4f2c"
       },
       "level_keys": [
         "CSP-PL M8 - Community 2"
@@ -2013,12 +2539,9 @@
     {
       "chapter": 77,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - MC Exam 1"
-        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
       "bonus": false,
@@ -2028,7 +2551,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e29ea2bd-6635-474b-ab2f-35d4a9e9854a"
       },
       "level_keys": [
         "CSP-PL M8 - MC Exam 1"
@@ -2037,12 +2561,9 @@
     {
       "chapter": 78,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Exam 2"
-        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
       "bonus": false,
@@ -2052,7 +2573,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e29ea2bd-6635-474b-ab2f-35d4a9e9854a"
       },
       "level_keys": [
         "CSP-PL M8 - Exam 2"
@@ -2061,12 +2583,9 @@
     {
       "chapter": 79,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Exam 3"
-        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
       "bonus": false,
@@ -2076,7 +2595,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e29ea2bd-6635-474b-ab2f-35d4a9e9854a"
       },
       "level_keys": [
         "CSP-PL M8 - Exam 3"
@@ -2085,12 +2605,9 @@
     {
       "chapter": 80,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 8 Wrap Up"
-        ],
         "progression": "Module 8 asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -2100,7 +2617,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "43ddcba9-c849-4726-b806-17eea48f4a61"
       },
       "level_keys": [
         "CSP - Module 8 Wrap Up"
@@ -2109,12 +2627,9 @@
     {
       "chapter": 81,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CS Principles: Functions"
-        ],
         "progression": "CS Principles: Functions"
       },
       "bonus": false,
@@ -2124,7 +2639,8 @@
         ],
         "lesson.key": "CS Principles: Functions",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "c47db20a-6572-43f6-ae07-0e048358ff57"
       },
       "level_keys": [
         "CS Principles: Functions"
@@ -2133,12 +2649,9 @@
     {
       "chapter": 82,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U4L3 SFLP 20-21"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2148,7 +2661,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "0c39001a-e5d4-4eef-9f5d-acc8514bc0c5"
       },
       "level_keys": [
         "CSP U4L3 SFLP 20-21"
@@ -2157,12 +2671,9 @@
     {
       "chapter": 83,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables numbers practice 1"
-        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -2172,7 +2683,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e02fe803-b15e-40e9-b046-35c2400107fb"
       },
       "level_keys": [
         "U4 L03 Variables numbers practice 1"
@@ -2181,12 +2693,9 @@
     {
       "chapter": 84,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables numbers practice 4"
-        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -2196,7 +2705,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e02fe803-b15e-40e9-b046-35c2400107fb"
       },
       "level_keys": [
         "U4 L03 Variables numbers practice 4"
@@ -2205,12 +2715,9 @@
     {
       "chapter": 85,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 1"
-        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -2220,7 +2727,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 1"
@@ -2229,12 +2737,9 @@
     {
       "chapter": 86,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 3"
-        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -2244,7 +2749,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 3"
@@ -2253,12 +2759,9 @@
     {
       "chapter": 87,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 2"
-        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -2268,7 +2771,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 2"
@@ -2277,12 +2781,9 @@
     {
       "chapter": 88,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 5"
-        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -2292,7 +2793,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 5"
@@ -2301,12 +2803,9 @@
     {
       "chapter": 89,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 6"
-        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -2316,7 +2815,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 6"
@@ -2325,12 +2825,9 @@
     {
       "chapter": 90,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variable Scope: Local vs. Global"
-        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -2340,7 +2837,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "dd028b29-367b-44c8-bb85-d441534c7b3b"
       },
       "level_keys": [
         "U4 L03 Variable Scope: Local vs. Global"
@@ -2349,12 +2847,9 @@
     {
       "chapter": 91,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Scope Issue"
-        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -2364,7 +2859,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "dd028b29-367b-44c8-bb85-d441534c7b3b"
       },
       "level_keys": [
         "U4 L03 Scope Issue"
@@ -2373,12 +2869,9 @@
     {
       "chapter": 92,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L03 Variables operator practice 4"
-        ],
         "progression": "Putting it Together"
       },
       "bonus": false,
@@ -2388,7 +2881,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "63438036-00b3-4bca-aabd-acc4a0dcd876"
       },
       "level_keys": [
         "U4 L03 Variables operator practice 4"
@@ -2397,12 +2891,9 @@
     {
       "chapter": 93,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-choice-test"
-        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -2412,7 +2903,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "066c5b2a-5f2f-440d-8ebb-dda2b57f441b"
       },
       "level_keys": [
         "csp-choice-test"
@@ -2421,12 +2913,9 @@
     {
       "chapter": 94,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U4L3 CFU Variables Psuedocode"
-        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2436,7 +2925,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "9b0befe4-4206-4f28-b018-31d9c8ad60e5"
       },
       "level_keys": [
         "U4L3 CFU Variables Psuedocode"
@@ -2445,12 +2935,9 @@
     {
       "chapter": 95,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U4L3 CFU Variables Randomness Psuedocode"
-        ],
         "progression": "Check for Understanding: AP Practice"
       },
       "bonus": false,
@@ -2460,7 +2947,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3858f3d5-a14b-43c4-bdd1-d79e058876f1"
       },
       "level_keys": [
         "U4L3 CFU Variables Randomness Psuedocode"
@@ -2476,7 +2964,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "5a1dcce8-b12b-47a1-ba64-1ffad1d33bfa"
       }
     },
     {
@@ -2487,7 +2976,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "83f7bc5d-edb8-469c-bae3-725952fdea2c"
       }
     },
     {
@@ -2498,7 +2988,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1"
       }
     },
     {
@@ -2509,7 +3000,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1"
       }
     },
     {
@@ -2520,7 +3012,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1"
       }
     },
     {
@@ -2531,7 +3024,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3870c71b-a404-4e73-9415-6079e153b9c1"
       }
     },
     {
@@ -2542,7 +3036,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "780ed61a-b562-4932-b0a3-f9d0e0d9e770"
       }
     },
     {
@@ -2553,7 +3048,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "780ed61a-b562-4932-b0a3-f9d0e0d9e770"
       }
     },
     {
@@ -2564,7 +3060,8 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b876058c-e6b8-4e63-a2b1-41acac23b44a"
       }
     },
     {
@@ -2575,7 +3072,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "f3a40c41-4bad-4906-bf8b-a6fc2923d8f3"
       }
     },
     {
@@ -2586,7 +3084,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2597,7 +3096,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2608,7 +3108,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2619,7 +3120,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2630,7 +3132,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2641,7 +3144,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2652,7 +3156,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2663,7 +3168,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2674,7 +3180,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2685,7 +3192,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7bf5818-e490-4dae-b9bc-26b5b0b8d5af"
       }
     },
     {
@@ -2696,7 +3204,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300"
       }
     },
     {
@@ -2707,7 +3216,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300"
       }
     },
     {
@@ -2718,7 +3228,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300"
       }
     },
     {
@@ -2729,7 +3240,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "a5cf8d24-7572-4f7a-bfa1-2f7ba6f51300"
       }
     },
     {
@@ -2740,7 +3252,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "0e7a6e12-5863-4f95-bc35-22885ac6da25"
       }
     },
     {
@@ -2751,7 +3264,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "0e7a6e12-5863-4f95-bc35-22885ac6da25"
       }
     },
     {
@@ -2762,7 +3276,8 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "0ff1d3f1-33c3-47d1-8448-f1e774582745"
       }
     },
     {
@@ -2773,7 +3288,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "1cfedf1b-190e-427a-bb8a-01c77625105d"
       }
     },
     {
@@ -2784,7 +3300,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "854d38d0-3b70-49f5-bb59-9ccd6555e135"
       }
     },
     {
@@ -2795,7 +3312,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "854d38d0-3b70-49f5-bb59-9ccd6555e135"
       }
     },
     {
@@ -2806,7 +3324,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "854d38d0-3b70-49f5-bb59-9ccd6555e135"
       }
     },
     {
@@ -2817,7 +3336,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701"
       }
     },
     {
@@ -2828,7 +3348,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701"
       }
     },
     {
@@ -2839,7 +3360,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701"
       }
     },
     {
@@ -2850,7 +3372,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "377a56b8-ddf9-4528-952a-7c989d608701"
       }
     },
     {
@@ -2861,7 +3384,8 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "f212f307-5fb3-4971-97df-415c67f9394e"
       }
     },
     {
@@ -2872,7 +3396,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "aaf0b6c3-6c02-48ec-a724-7e530ff52487"
       }
     },
     {
@@ -2883,7 +3408,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "bb0a1f24-6b02-4e9a-9598-5b4939a3d50f"
       }
     },
     {
@@ -2894,7 +3420,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "5a7b1aab-2ff9-4d4f-8236-cf8703622079"
       }
     },
     {
@@ -2905,7 +3432,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "94821613-9fb9-441d-a7bf-1c319f1b6c48"
       }
     },
     {
@@ -2916,7 +3444,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       }
     },
     {
@@ -2927,7 +3456,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       }
     },
     {
@@ -2938,7 +3468,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       }
     },
     {
@@ -2949,7 +3480,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       }
     },
     {
@@ -2960,7 +3492,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "462e854c-a341-4450-b1eb-e42369aada2a"
       }
     },
     {
@@ -2971,7 +3504,8 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "48757a16-f400-4d0b-9c32-cb8f86469d73"
       }
     },
     {
@@ -2982,7 +3516,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "70e8732e-345c-4c31-90e3-e5980149f226"
       }
     },
     {
@@ -2993,7 +3528,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "1d1e98a2-26bb-4f9e-b8cb-0ea99850e4cd"
       }
     },
     {
@@ -3004,7 +3540,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "c2629e81-e52b-4570-81f8-cd71afd1eecc"
       }
     },
     {
@@ -3015,7 +3552,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3026,7 +3564,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3037,7 +3576,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3048,7 +3588,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3059,7 +3600,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3070,7 +3612,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3081,7 +3624,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3092,7 +3636,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3103,7 +3648,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "775f8a9f-942a-426a-835d-96754971461b"
       }
     },
     {
@@ -3114,7 +3660,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "57830d4e-515e-43c1-a49e-1c1c3047293a"
       }
     },
     {
@@ -3125,7 +3672,8 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "9cf954c6-0ab5-4b29-8b12-febdcdb1435d"
       }
     },
     {
@@ -3136,7 +3684,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "485b523f-ec0c-4b6a-8fa0-77c362a89043"
       }
     },
     {
@@ -3147,7 +3696,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "7c8a30d3-fc55-4be2-9c8c-4c16b27f9f65"
       }
     },
     {
@@ -3158,7 +3708,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "78ca6a17-03f1-4fe3-a0e4-27f6b65e1187"
       }
     },
     {
@@ -3169,7 +3720,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "19b6282b-e356-4712-a2e5-9ff54095fd67"
       }
     },
     {
@@ -3180,7 +3732,8 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "cdacde9b-a58d-4bb0-a477-1f7e58a9a6bd"
       }
     },
     {
@@ -3191,7 +3744,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b724fed0-2f22-407d-8e60-c666b4ed4bb3"
       }
     },
     {
@@ -3202,7 +3756,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "045fd927-690d-478d-9194-20d76828680b"
       }
     },
     {
@@ -3213,7 +3768,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "c272bbf6-ca73-4216-a44e-0b33f78f05a0"
       }
     },
     {
@@ -3224,7 +3780,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a"
       }
     },
     {
@@ -3235,7 +3792,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a"
       }
     },
     {
@@ -3246,7 +3804,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a"
       }
     },
     {
@@ -3257,7 +3816,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "d35f5e73-a871-4d3d-bf58-a8c67da1204a"
       }
     },
     {
@@ -3268,7 +3828,8 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "c6397e4d-92ce-4b0d-a61c-34b5212312ee"
       }
     },
     {
@@ -3279,7 +3840,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "7bdc0015-66dd-4a49-8a09-eb837289371e"
       }
     },
     {
@@ -3290,7 +3852,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7104953-4fc9-4ef9-9923-b224cb4f4f2c"
       }
     },
     {
@@ -3301,7 +3864,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "b7104953-4fc9-4ef9-9923-b224cb4f4f2c"
       }
     },
     {
@@ -3312,7 +3876,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e29ea2bd-6635-474b-ab2f-35d4a9e9854a"
       }
     },
     {
@@ -3323,7 +3888,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e29ea2bd-6635-474b-ab2f-35d4a9e9854a"
       }
     },
     {
@@ -3334,7 +3900,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e29ea2bd-6635-474b-ab2f-35d4a9e9854a"
       }
     },
     {
@@ -3345,7 +3912,8 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "43ddcba9-c849-4726-b806-17eea48f4a61"
       }
     },
     {
@@ -3356,7 +3924,8 @@
         ],
         "lesson.key": "CS Principles: Functions",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "c47db20a-6572-43f6-ae07-0e048358ff57"
       }
     },
     {
@@ -3367,7 +3936,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "0c39001a-e5d4-4eef-9f5d-acc8514bc0c5"
       }
     },
     {
@@ -3378,7 +3948,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e02fe803-b15e-40e9-b046-35c2400107fb"
       }
     },
     {
@@ -3389,7 +3960,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "e02fe803-b15e-40e9-b046-35c2400107fb"
       }
     },
     {
@@ -3400,7 +3972,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       }
     },
     {
@@ -3411,7 +3984,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       }
     },
     {
@@ -3422,7 +3996,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       }
     },
     {
@@ -3433,7 +4008,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       }
     },
     {
@@ -3444,7 +4020,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "8b60dd11-efb3-42e0-b3a3-4cb648513865"
       }
     },
     {
@@ -3455,7 +4032,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "dd028b29-367b-44c8-bb85-d441534c7b3b"
       }
     },
     {
@@ -3466,7 +4044,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "dd028b29-367b-44c8-bb85-d441534c7b3b"
       }
     },
     {
@@ -3477,7 +4056,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "63438036-00b3-4bca-aabd-acc4a0dcd876"
       }
     },
     {
@@ -3488,7 +4068,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "066c5b2a-5f2f-440d-8ebb-dda2b57f441b"
       }
     },
     {
@@ -3499,7 +4080,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "9b0befe4-4206-4f28-b018-31d9c8ad60e5"
       }
     },
     {
@@ -3510,7 +4092,8 @@
         ],
         "lesson.key": "CS Principles: Variables Practice - Choice Test",
         "lesson_group.key": "",
-        "script.name": "kaitie-test-script"
+        "script.name": "kaitie-test-script",
+        "activity_section.key": "3858f3d5-a14b-43c4-bdd1-d79e058876f1"
       }
     }
   ],

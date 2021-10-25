@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:06 UTC",
+    "serialized_at": "2021-10-25 23:36:31 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {

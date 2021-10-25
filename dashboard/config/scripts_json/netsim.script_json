@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:04 UTC",
+    "serialized_at": "2021-10-25 23:36:32 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -180,21 +181,246 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "54eab9d1-bcfc-41a1-8186-8dca4ec7fa69",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54eab9d1-bcfc-41a1-8186-8dca4ec7fa69",
+        "lesson.key": "Overview and Setup Instructions",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "9019bc92-609a-4b76-9b57-3485c54624b4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9019bc92-609a-4b76-9b57-3485c54624b4",
+        "lesson.key": "Peer to Peer - Sending Bits on a Shared Wire",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "4167cbfe-c0f2-48d3-afab-ce74c099d403",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4167cbfe-c0f2-48d3-afab-ce74c099d403",
+        "lesson.key": "Peer to Peer - Sending Numbers",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "6cdbd4d1-2570-442e-bc9c-f446c1d5c7ae",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6cdbd4d1-2570-442e-bc9c-f446c1d5c7ae",
+        "lesson.key": "Peer to Peer - Sending Ascii",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "8e548634-c343-4763-8f95-1281820ee14e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e548634-c343-4763-8f95-1281820ee14e",
+        "lesson.key": "Broadcasting messages",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "2568ac6a-7f72-4682-99a0-b0385e93c118",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2568ac6a-7f72-4682-99a0-b0385e93c118",
+        "lesson.key": "Routers and addresses",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "c09b5627-bd51-44a7-9007-84c63bb029d4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c09b5627-bd51-44a7-9007-84c63bb029d4",
+        "lesson.key": "Packets and Reliability",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "79eddf22-2340-4a3d-aacf-8a22cf72af5e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "79eddf22-2340-4a3d-aacf-8a22cf72af5e",
+        "lesson.key": "Manual DNS",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "150e9bfe-96e0-4eae-b195-a0e8362fc8af",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "150e9bfe-96e0-4eae-b195-a0e8362fc8af",
+        "lesson.key": "Automatic DNS node",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    },
+    {
+      "key": "f99aa3f6-f56e-4742-b3ef-f57beccde742",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f99aa3f6-f56e-4742-b3ef-f57beccde742",
+        "lesson.key": "Internet Simulator Freeplay",
+        "lesson_group.key": "",
+        "script.name": "netsim"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "0a4aa75e-1faa-4694-8ef8-749f096f94d7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0a4aa75e-1faa-4694-8ef8-749f096f94d7",
+        "lesson_activity.key": "54eab9d1-bcfc-41a1-8186-8dca4ec7fa69"
+      }
+    },
+    {
+      "key": "e255a083-8ef4-48f1-8434-2ae25fc1d0f6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e255a083-8ef4-48f1-8434-2ae25fc1d0f6",
+        "lesson_activity.key": "9019bc92-609a-4b76-9b57-3485c54624b4"
+      }
+    },
+    {
+      "key": "975d8a9b-902b-4825-897c-5b51e21c7e71",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "975d8a9b-902b-4825-897c-5b51e21c7e71",
+        "lesson_activity.key": "4167cbfe-c0f2-48d3-afab-ce74c099d403"
+      }
+    },
+    {
+      "key": "846f704c-9006-4a48-9357-efb6a27859de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "846f704c-9006-4a48-9357-efb6a27859de",
+        "lesson_activity.key": "6cdbd4d1-2570-442e-bc9c-f446c1d5c7ae"
+      }
+    },
+    {
+      "key": "46f31d18-00a9-414b-8a1a-f1be3b6b70f3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "46f31d18-00a9-414b-8a1a-f1be3b6b70f3",
+        "lesson_activity.key": "8e548634-c343-4763-8f95-1281820ee14e"
+      }
+    },
+    {
+      "key": "37bb2f89-f669-4a54-8184-6026ed276a63",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37bb2f89-f669-4a54-8184-6026ed276a63",
+        "lesson_activity.key": "2568ac6a-7f72-4682-99a0-b0385e93c118"
+      }
+    },
+    {
+      "key": "ae3ee5cf-44bb-4fc4-bb0d-efe583841198",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ae3ee5cf-44bb-4fc4-bb0d-efe583841198",
+        "lesson_activity.key": "c09b5627-bd51-44a7-9007-84c63bb029d4"
+      }
+    },
+    {
+      "key": "0819fd15-0eda-4132-96dc-3c38f2994add",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0819fd15-0eda-4132-96dc-3c38f2994add",
+        "lesson_activity.key": "79eddf22-2340-4a3d-aacf-8a22cf72af5e"
+      }
+    },
+    {
+      "key": "3fba57da-4514-41db-89cd-8ec2731a6889",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3fba57da-4514-41db-89cd-8ec2731a6889",
+        "lesson_activity.key": "150e9bfe-96e0-4eae-b195-a0e8362fc8af"
+      }
+    },
+    {
+      "key": "54c2f353-6ae7-4491-8e4c-52b73ab241bc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "54c2f353-6ae7-4491-8e4c-52b73ab241bc",
+        "lesson_activity.key": "f99aa3f6-f56e-4742-b3ef-f57beccde742"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator Setup"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,7 +429,8 @@
         ],
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "0a4aa75e-1faa-4694-8ef8-749f096f94d7"
       },
       "level_keys": [
         "Internet Simulator Setup"
@@ -212,12 +439,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator Setup 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -226,7 +450,8 @@
         ],
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "0a4aa75e-1faa-4694-8ef8-749f096f94d7"
       },
       "level_keys": [
         "Internet Simulator Setup 2"
@@ -235,12 +460,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Internet Simulator Setup 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -249,7 +471,8 @@
         ],
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "0a4aa75e-1faa-4694-8ef8-749f096f94d7"
       },
       "level_keys": [
         "Internet Simulator Setup 3"
@@ -258,12 +481,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone SendAB"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -272,7 +492,8 @@
         ],
         "lesson.key": "Peer to Peer - Sending Bits on a Shared Wire",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "e255a083-8ef4-48f1-8434-2ae25fc1d0f6"
       },
       "level_keys": [
         "NetSim Standalone SendAB"
@@ -281,12 +502,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone Sending Numbers"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -295,7 +513,8 @@
         ],
         "lesson.key": "Peer to Peer - Sending Numbers",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "975d8a9b-902b-4825-897c-5b51e21c7e71"
       },
       "level_keys": [
         "NetSim Standalone Sending Numbers"
@@ -304,12 +523,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone Sending Numbers Ascii"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -318,7 +534,8 @@
         ],
         "lesson.key": "Peer to Peer - Sending Ascii",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "846f704c-9006-4a48-9357-efb6a27859de"
       },
       "level_keys": [
         "NetSim Standalone Sending Numbers Ascii"
@@ -327,12 +544,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone Broadcast"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -341,7 +555,8 @@
         ],
         "lesson.key": "Broadcasting messages",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "46f31d18-00a9-414b-8a1a-f1be3b6b70f3"
       },
       "level_keys": [
         "NetSim Standalone Broadcast"
@@ -350,12 +565,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone Classroom Routers"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -364,7 +576,8 @@
         ],
         "lesson.key": "Routers and addresses",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "37bb2f89-f669-4a54-8184-6026ed276a63"
       },
       "level_keys": [
         "NetSim Standalone Classroom Routers"
@@ -373,12 +586,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone Packets TCP"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -387,7 +597,8 @@
         ],
         "lesson.key": "Packets and Reliability",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "ae3ee5cf-44bb-4fc4-bb0d-efe583841198"
       },
       "level_keys": [
         "NetSim Standalone Packets TCP"
@@ -396,12 +607,9 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone Manual DNS"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -410,7 +618,8 @@
         ],
         "lesson.key": "Manual DNS",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "0819fd15-0eda-4132-96dc-3c38f2994add"
       },
       "level_keys": [
         "NetSim Standalone Manual DNS"
@@ -419,12 +628,9 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone Automatic DNS"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -433,7 +639,8 @@
         ],
         "lesson.key": "Automatic DNS node",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "3fba57da-4514-41db-89cd-8ec2731a6889"
       },
       "level_keys": [
         "NetSim Standalone Automatic DNS"
@@ -442,12 +649,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "NetSim Standalone Freeplay"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -456,7 +660,8 @@
         ],
         "lesson.key": "Internet Simulator Freeplay",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "54c2f353-6ae7-4491-8e4c-52b73ab241bc"
       },
       "level_keys": [
         "NetSim Standalone Freeplay"
@@ -472,7 +677,8 @@
         ],
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "0a4aa75e-1faa-4694-8ef8-749f096f94d7"
       }
     },
     {
@@ -483,7 +689,8 @@
         ],
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "0a4aa75e-1faa-4694-8ef8-749f096f94d7"
       }
     },
     {
@@ -494,7 +701,8 @@
         ],
         "lesson.key": "Overview and Setup Instructions",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "0a4aa75e-1faa-4694-8ef8-749f096f94d7"
       }
     },
     {
@@ -505,7 +713,8 @@
         ],
         "lesson.key": "Peer to Peer - Sending Bits on a Shared Wire",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "e255a083-8ef4-48f1-8434-2ae25fc1d0f6"
       }
     },
     {
@@ -516,7 +725,8 @@
         ],
         "lesson.key": "Peer to Peer - Sending Numbers",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "975d8a9b-902b-4825-897c-5b51e21c7e71"
       }
     },
     {
@@ -527,7 +737,8 @@
         ],
         "lesson.key": "Peer to Peer - Sending Ascii",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "846f704c-9006-4a48-9357-efb6a27859de"
       }
     },
     {
@@ -538,7 +749,8 @@
         ],
         "lesson.key": "Broadcasting messages",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "46f31d18-00a9-414b-8a1a-f1be3b6b70f3"
       }
     },
     {
@@ -549,7 +761,8 @@
         ],
         "lesson.key": "Routers and addresses",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "37bb2f89-f669-4a54-8184-6026ed276a63"
       }
     },
     {
@@ -560,7 +773,8 @@
         ],
         "lesson.key": "Packets and Reliability",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "ae3ee5cf-44bb-4fc4-bb0d-efe583841198"
       }
     },
     {
@@ -571,7 +785,8 @@
         ],
         "lesson.key": "Manual DNS",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "0819fd15-0eda-4132-96dc-3c38f2994add"
       }
     },
     {
@@ -582,7 +797,8 @@
         ],
         "lesson.key": "Automatic DNS node",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "3fba57da-4514-41db-89cd-8ec2731a6889"
       }
     },
     {
@@ -593,7 +809,8 @@
         ],
         "lesson.key": "Internet Simulator Freeplay",
         "lesson_group.key": "",
-        "script.name": "netsim"
+        "script.name": "netsim",
+        "activity_section.key": "54c2f353-6ae7-4491-8e4c-52b73ab241bc"
       }
     }
   ],

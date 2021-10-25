@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:17 UTC",
+    "serialized_at": "2021-10-25 23:29:14 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,41 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f6dc8369-6d93-4220-8014-95cd66fdabb3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6dc8369-6d93-4220-8014-95cd66fdabb3",
+        "lesson.key": "Build an App for Good",
+        "lesson_group.key": "",
+        "script.name": "apps-for-good"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "e0cdaf13-e667-46d8-950c-3f3eee154618",
+      "position": 1,
+      "properties": {
+        "name": "Explore",
+        "progression_name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "e0cdaf13-e667-46d8-950c-3f3eee154618",
+        "lesson_activity.key": "f6dc8369-6d93-4220-8014-95cd66fdabb3"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "apps for good 1"
-        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -69,7 +90,8 @@
         ],
         "lesson.key": "Build an App for Good",
         "lesson_group.key": "",
-        "script.name": "apps-for-good"
+        "script.name": "apps-for-good",
+        "activity_section.key": "e0cdaf13-e667-46d8-950c-3f3eee154618"
       },
       "level_keys": [
         "apps for good 1"
@@ -85,7 +107,8 @@
         ],
         "lesson.key": "Build an App for Good",
         "lesson_group.key": "",
-        "script.name": "apps-for-good"
+        "script.name": "apps-for-good",
+        "activity_section.key": "e0cdaf13-e667-46d8-950c-3f3eee154618"
       }
     }
   ],

@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:54 UTC",
+    "serialized_at": "2021-10-25 23:34:42 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,41 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0d629d97-93d0-4f2c-9f36-a1f157b0d1f0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d629d97-93d0-4f2c-9f36-a1f157b0d1f0",
+        "lesson.key": "Dance Party - Go Further",
+        "lesson_group.key": "",
+        "script.name": "dance-extras-gallery"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f5d73604-57cc-4be3-92c9-06c4470a4741",
+      "position": 1,
+      "properties": {
+        "name": "Keep On Dancing!",
+        "progression_name": "Keep On Dancing!"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5d73604-57cc-4be3-92c9-06c4470a4741",
+        "lesson_activity.key": "0d629d97-93d0-4f2c-9f36-a1f157b0d1f0"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Dance_Party_extras_gallery_intro"
-        ],
         "progression": "Keep On Dancing!"
       },
       "bonus": false,
@@ -69,7 +90,8 @@
         ],
         "lesson.key": "Dance Party - Go Further",
         "lesson_group.key": "",
-        "script.name": "dance-extras-gallery"
+        "script.name": "dance-extras-gallery",
+        "activity_section.key": "f5d73604-57cc-4be3-92c9-06c4470a4741"
       },
       "level_keys": [
         "Dance_Party_extras_gallery_intro"
@@ -85,7 +107,8 @@
         ],
         "lesson.key": "Dance Party - Go Further",
         "lesson_group.key": "",
-        "script.name": "dance-extras-gallery"
+        "script.name": "dance-extras-gallery",
+        "activity_section.key": "f5d73604-57cc-4be3-92c9-06c4470a4741"
       }
     }
   ],

@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "Equity Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:09 UTC",
+    "serialized_at": "2021-10-25 23:35:29 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -62,21 +62,62 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "2737e58a-3cb5-44dd-bf91-b41f444c9b41",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2737e58a-3cb5-44dd-bf91-b41f444c9b41",
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equity-pd"
+      }
+    },
+    {
+      "key": "a9c26908-0d6a-4902-9032-030be1ef8795",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a9c26908-0d6a-4902-9032-030be1ef8795",
+        "lesson.key": "Code.org Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equity-pd"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "438be66f-ff64-43a8-9f48-39539093cb74",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74",
+        "lesson_activity.key": "2737e58a-3cb5-44dd-bf91-b41f444c9b41"
+      }
+    },
+    {
+      "key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7",
+        "lesson_activity.key": "a9c26908-0d6a-4902-9032-030be1ef8795"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -85,7 +126,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74"
       },
       "level_keys": [
         "equity Intro"
@@ -94,12 +136,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity v equality"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -108,7 +147,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74"
       },
       "level_keys": [
         "equity v equality"
@@ -117,12 +157,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity is more"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -131,7 +168,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74"
       },
       "level_keys": [
         "equity is more"
@@ -140,12 +178,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity in CS"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -154,7 +189,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74"
       },
       "level_keys": [
         "equity in CS"
@@ -163,12 +199,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity lead 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -177,7 +210,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       },
       "level_keys": [
         "equity lead 1"
@@ -186,12 +220,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity activity"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -200,7 +231,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       },
       "level_keys": [
         "equity activity"
@@ -209,12 +241,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity vids"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -223,7 +252,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       },
       "level_keys": [
         "equity vids"
@@ -232,12 +262,9 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity expect"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -246,7 +273,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       },
       "level_keys": [
         "equity expect"
@@ -255,12 +283,9 @@
     {
       "chapter": 9,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity discuss"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -269,7 +294,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       },
       "level_keys": [
         "equity discuss"
@@ -278,12 +304,9 @@
     {
       "chapter": 10,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Equity Resources"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -292,7 +315,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       },
       "level_keys": [
         "Equity Resources"
@@ -308,7 +332,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74"
       }
     },
     {
@@ -319,7 +344,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74"
       }
     },
     {
@@ -330,7 +356,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74"
       }
     },
     {
@@ -341,7 +368,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "438be66f-ff64-43a8-9f48-39539093cb74"
       }
     },
     {
@@ -352,7 +380,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       }
     },
     {
@@ -363,7 +392,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       }
     },
     {
@@ -374,7 +404,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       }
     },
     {
@@ -385,7 +416,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       }
     },
     {
@@ -396,7 +428,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       }
     },
     {
@@ -407,7 +440,8 @@
         ],
         "lesson.key": "Code.org Equity PD",
         "lesson_group.key": "",
-        "script.name": "equity-pd"
+        "script.name": "equity-pd",
+        "activity_section.key": "e7375559-e7dc-4b9d-ae51-70cd8f2150f7"
       }
     }
   ],

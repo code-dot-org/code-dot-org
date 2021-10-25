@@ -5,11 +5,12 @@
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
+      "is_migrated": true,
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:23 UTC",
+    "serialized_at": "2021-10-25 23:32:41 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -75,21 +76,88 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "3f3bb6f0-c105-4940-94c5-b9f4cdc0715d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f3bb6f0-c105-4940-94c5-b9f4cdc0715d",
+        "lesson.key": "Snowflakes",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "csf2harvey"
+      }
+    },
+    {
+      "key": "cb48d18a-8c6f-459f-b0ba-c5008c8bb2dd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb48d18a-8c6f-459f-b0ba-c5008c8bb2dd",
+        "lesson.key": "Binary",
+        "lesson_group.key": "content",
+        "script.name": "csf2harvey"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "607e9f23-e1bb-47a6-9315-4d6a639e4f49",
+      "position": 1,
+      "properties": {
+        "progression_name": "Snowflake #1 (Converted to the Artist)"
+      },
+      "seeding_key": {
+        "activity_section.key": "607e9f23-e1bb-47a6-9315-4d6a639e4f49",
+        "lesson_activity.key": "3f3bb6f0-c105-4940-94c5-b9f4cdc0715d"
+      }
+    },
+    {
+      "key": "c8df2017-bddc-4b33-bd57-792a06bbc800",
+      "position": 2,
+      "properties": {
+        "progression_name": "Snowflake #2 (Converted to the Artist)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8df2017-bddc-4b33-bd57-792a06bbc800",
+        "lesson_activity.key": "3f3bb6f0-c105-4940-94c5-b9f4cdc0715d"
+      }
+    },
+    {
+      "key": "f124ddd4-27ed-4908-a1d6-29c8305ef24c",
+      "position": 3,
+      "properties": {
+        "name": "Express Course",
+        "progression_name": "Express Course"
+      },
+      "seeding_key": {
+        "activity_section.key": "f124ddd4-27ed-4908-a1d6-29c8305ef24c",
+        "lesson_activity.key": "3f3bb6f0-c105-4940-94c5-b9f4cdc0715d"
+      }
+    },
+    {
+      "key": "990170e6-9458-46dd-927f-f7a7cdd45566",
+      "position": 1,
+      "properties": {
+        "name": "Pixelation Widget",
+        "progression_name": "Pixelation Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "990170e6-9458-46dd-927f-f7a7cdd45566",
+        "lesson_activity.key": "cb48d18a-8c6f-459f-b0ba-c5008c8bb2dd"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "harvey_snowflake_artist1"
-        ],
         "progression": "Snowflake #1 (Converted to the Artist)"
       },
       "bonus": false,
@@ -99,7 +167,8 @@
         ],
         "lesson.key": "Snowflakes",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "csf2harvey"
+        "script.name": "csf2harvey",
+        "activity_section.key": "607e9f23-e1bb-47a6-9315-4d6a639e4f49"
       },
       "level_keys": [
         "harvey_snowflake_artist1"
@@ -108,12 +177,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "harvey_snowflake_artist2"
-        ],
         "progression": "Snowflake #2 (Converted to the Artist)"
       },
       "bonus": false,
@@ -123,7 +189,8 @@
         ],
         "lesson.key": "Snowflakes",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "csf2harvey"
+        "script.name": "csf2harvey",
+        "activity_section.key": "c8df2017-bddc-4b33-bd57-792a06bbc800"
       },
       "level_keys": [
         "harvey_snowflake_artist2"
@@ -132,12 +199,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "expresslink"
-        ],
         "progression": "Express Course"
       },
       "bonus": false,
@@ -147,7 +211,8 @@
         ],
         "lesson.key": "Snowflakes",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "csf2harvey"
+        "script.name": "csf2harvey",
+        "activity_section.key": "f124ddd4-27ed-4908-a1d6-29c8305ef24c"
       },
       "level_keys": [
         "expresslink"
@@ -156,12 +221,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "harvey_pixelation"
-        ],
         "progression": "Pixelation Widget"
       },
       "bonus": false,
@@ -171,7 +233,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "content",
-        "script.name": "csf2harvey"
+        "script.name": "csf2harvey",
+        "activity_section.key": "990170e6-9458-46dd-927f-f7a7cdd45566"
       },
       "level_keys": [
         "harvey_pixelation"
@@ -187,7 +250,8 @@
         ],
         "lesson.key": "Snowflakes",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "csf2harvey"
+        "script.name": "csf2harvey",
+        "activity_section.key": "607e9f23-e1bb-47a6-9315-4d6a639e4f49"
       }
     },
     {
@@ -198,7 +262,8 @@
         ],
         "lesson.key": "Snowflakes",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "csf2harvey"
+        "script.name": "csf2harvey",
+        "activity_section.key": "c8df2017-bddc-4b33-bd57-792a06bbc800"
       }
     },
     {
@@ -209,7 +274,8 @@
         ],
         "lesson.key": "Snowflakes",
         "lesson_group.key": "end_of_course_project",
-        "script.name": "csf2harvey"
+        "script.name": "csf2harvey",
+        "activity_section.key": "f124ddd4-27ed-4908-a1d6-29c8305ef24c"
       }
     },
     {
@@ -220,7 +286,8 @@
         ],
         "lesson.key": "Binary",
         "lesson_group.key": "content",
-        "script.name": "csf2harvey"
+        "script.name": "csf2harvey",
+        "activity_section.key": "990170e6-9458-46dd-927f-f7a7cdd45566"
       }
     }
   ],

@@ -5,12 +5,13 @@
     "login_required": true,
     "properties": {
       "hideable_lessons": true,
+      "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:14 UTC",
+    "serialized_at": "2021-10-25 23:33:33 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -211,21 +212,767 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "2282421c-5375-48fc-a065-635b19f7926c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2282421c-5375-48fc-a065-635b19f7926c",
+        "lesson.key": "Unit 5 Assessment 2",
+        "lesson_group.key": "csp5_1",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112",
+        "lesson.key": "While Loops",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc",
+        "lesson.key": "Loops and Simulations",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7",
+        "lesson.key": "Introduction to Arrays",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f",
+        "lesson.key": "Building an App: Image Scroller",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "950b70b2-aa9a-4018-bd01-a595b84d5432",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "950b70b2-aa9a-4018-bd01-a595b84d5432",
+        "lesson.key": "Unit 5 Assessment 3",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d",
+        "lesson.key": "Processing Arrays",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "1769b649-e9a3-4dce-9d51-7bc9eb7952bd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1769b649-e9a3-4dce-9d51-7bc9eb7952bd",
+        "lesson.key": "Functions with Return Values",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "be6745ca-8f37-4521-bd55-50a8e19ce6d3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be6745ca-8f37-4521-bd55-50a8e19ce6d3",
+        "lesson.key": "Building an App: Canvas Painter",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "086d243b-5c33-4067-a531-fac51ad9a051",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "086d243b-5c33-4067-a531-fac51ad9a051",
+        "lesson.key": "Unit 5 Assessment 4",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    },
+    {
+      "key": "ecff43ec-6256-4698-a685-aa58671945e4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ecff43ec-6256-4698-a685-aa58671945e4",
+        "lesson.key": "Unit 5 Assessment 5 - AP Pseudocode Practice Questions",
+        "lesson_group.key": "csp5_2",
+        "script.name": "csp5-virtual-part2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "acd360da-acd0-4a68-8578-06ea43302bc2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "acd360da-acd0-4a68-8578-06ea43302bc2",
+        "lesson_activity.key": "2282421c-5375-48fc-a065-635b19f7926c"
+      }
+    },
+    {
+      "key": "f3629531-2900-4e60-b709-e4fc1f165f41",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3629531-2900-4e60-b709-e4fc1f165f41",
+        "lesson_activity.key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112"
+      }
+    },
+    {
+      "key": "182bd3e1-1817-4138-a119-e8870cf60d89",
+      "position": 2,
+      "properties": {
+        "progression_name": "Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89",
+        "lesson_activity.key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112"
+      }
+    },
+    {
+      "key": "1a47b5b4-dd4b-416e-9db8-984afaf3aa73",
+      "position": 3,
+      "properties": {
+        "progression_name": "Updating Variables in Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a47b5b4-dd4b-416e-9db8-984afaf3aa73",
+        "lesson_activity.key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112"
+      }
+    },
+    {
+      "key": "d89b8d50-1272-45ac-a60f-c1117f209643",
+      "position": 4,
+      "properties": {
+        "progression_name": "Other Uses of Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643",
+        "lesson_activity.key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112"
+      }
+    },
+    {
+      "key": "74220974-a231-4851-ac56-9bb52141342d",
+      "position": 5,
+      "properties": {
+        "progression_name": "New Operators"
+      },
+      "seeding_key": {
+        "activity_section.key": "74220974-a231-4851-ac56-9bb52141342d",
+        "lesson_activity.key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112"
+      }
+    },
+    {
+      "key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1",
+      "position": 6,
+      "properties": {
+        "progression_name": "Loops Continued"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1",
+        "lesson_activity.key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112"
+      }
+    },
+    {
+      "key": "3501d041-8f98-4e4b-936a-845820b88fa2",
+      "position": 7,
+      "properties": {
+        "name": "Quick Check-In",
+        "progression_name": "Quick Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "3501d041-8f98-4e4b-936a-845820b88fa2",
+        "lesson_activity.key": "69d4cfe5-4ad4-4cb1-b072-d10fa061b112"
+      }
+    },
+    {
+      "key": "593192a7-6a95-47f3-a0b7-35b92fc15561",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "593192a7-6a95-47f3-a0b7-35b92fc15561",
+        "lesson_activity.key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc"
+      }
+    },
+    {
+      "key": "e81fa1e8-49c5-4045-8be5-e97ce200a8e3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Make a Hypothesis"
+      },
+      "seeding_key": {
+        "activity_section.key": "e81fa1e8-49c5-4045-8be5-e97ce200a8e3",
+        "lesson_activity.key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc"
+      }
+    },
+    {
+      "key": "677436d4-cad1-414e-9e05-9feb717eb009",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to Simulations"
+      },
+      "seeding_key": {
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009",
+        "lesson_activity.key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc"
+      }
+    },
+    {
+      "key": "55efa93a-e8f1-4cfd-a613-187c856b4329",
+      "position": 4,
+      "properties": {
+        "progression_name": "Update your Hypothesis - Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "55efa93a-e8f1-4cfd-a613-187c856b4329",
+        "lesson_activity.key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc"
+      }
+    },
+    {
+      "key": "7be996ff-8cc2-45b7-81bc-6c1d1290cf39",
+      "position": 5,
+      "properties": {
+        "progression_name": "Simulation Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "7be996ff-8cc2-45b7-81bc-6c1d1290cf39",
+        "lesson_activity.key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc"
+      }
+    },
+    {
+      "key": "c13d77de-562a-4913-b04f-0c6efdc53375",
+      "position": 6,
+      "properties": {
+        "progression_name": "Update your Hypothesis - Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "c13d77de-562a-4913-b04f-0c6efdc53375",
+        "lesson_activity.key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc"
+      }
+    },
+    {
+      "key": "0abbcd22-4c36-4699-8d55-8a256b1584d1",
+      "position": 7,
+      "properties": {
+        "name": "Experiment With Simulation",
+        "progression_name": "Experiment With Simulation"
+      },
+      "seeding_key": {
+        "activity_section.key": "0abbcd22-4c36-4699-8d55-8a256b1584d1",
+        "lesson_activity.key": "2e696370-80bc-4dbf-bad5-d6d56e5ca5cc"
+      }
+    },
+    {
+      "key": "a5712014-8369-47f1-a3cb-73823f8c5dae",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5712014-8369-47f1-a3cb-73823f8c5dae",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "cfda5497-6044-4740-80c5-db866ccc7955",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Lists - Part 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "cfda5497-6044-4740-80c5-db866ccc7955",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "9e844622-9060-4682-8608-687cfe01b330",
+      "position": 3,
+      "properties": {
+        "progression_name": "List Basics"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e844622-9060-4682-8608-687cfe01b330",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "f4ece627-476b-4b06-a2cd-cad9c277010b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Introduction to Lists - Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4ece627-476b-4b06-a2cd-cad9c277010b",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "61cfa0bb-f2ea-445e-9dbb-a14d8bd2585a",
+      "position": 5,
+      "properties": {
+        "progression_name": "List Basics"
+      },
+      "seeding_key": {
+        "activity_section.key": "61cfa0bb-f2ea-445e-9dbb-a14d8bd2585a",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "a9a47672-0723-4425-b384-8de53e650138",
+      "position": 6,
+      "properties": {
+        "progression_name": "Introduction to Lists - Part 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9a47672-0723-4425-b384-8de53e650138",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "2a21e09d-47a4-49ef-aced-4f43989b669f",
+      "position": 7,
+      "properties": {
+        "progression_name": "Updating and Assigning Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "62f54dea-5fc1-4b12-8f1f-98bc85602c87",
+      "position": 8,
+      "properties": {
+        "progression_name": "Introduction to Lists - Part 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "62f54dea-5fc1-4b12-8f1f-98bc85602c87",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "bc69bc56-4e25-4fe8-86e7-2f65042979b7",
+      "position": 9,
+      "properties": {
+        "progression_name": "Length and Indexes"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc69bc56-4e25-4fe8-86e7-2f65042979b7",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "389d7d5e-52e3-403d-817b-c35abf5103d6",
+      "position": 10,
+      "properties": {
+        "progression_name": "\"My Favorite Things\" Demo App"
+      },
+      "seeding_key": {
+        "activity_section.key": "389d7d5e-52e3-403d-817b-c35abf5103d6",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "fe36148c-ea91-479a-bee7-850175e95d8c",
+      "position": 11,
+      "properties": {
+        "progression_name": "Using Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "985bde46-0cd8-4142-a9c6-a7f13f90584c",
+      "position": 12,
+      "properties": {
+        "name": "Array Reflection Questions",
+        "progression_name": "Array Reflection Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "985bde46-0cd8-4142-a9c6-a7f13f90584c",
+        "lesson_activity.key": "b1e329b1-efe0-4a4f-ad81-fa19ecb9e9b7"
+      }
+    },
+    {
+      "key": "ebab505a-01b9-4da4-a182-d02f3da5f86d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "ebab505a-01b9-4da4-a182-d02f3da5f86d",
+        "lesson_activity.key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f"
+      }
+    },
+    {
+      "key": "dcb807ae-c15f-4810-b4b9-7658276ec446",
+      "position": 2,
+      "properties": {
+        "progression_name": "My Favorite Things Demonstration"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcb807ae-c15f-4810-b4b9-7658276ec446",
+        "lesson_activity.key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f"
+      }
+    },
+    {
+      "key": "3198be7c-61a8-4411-9d5b-2273875a0bfb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Key Event"
+      },
+      "seeding_key": {
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb",
+        "lesson_activity.key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f"
+      }
+    },
+    {
+      "key": "75c5cc86-ad52-4b7a-9161-7f3e215a7ab0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Functions in Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "75c5cc86-ad52-4b7a-9161-7f3e215a7ab0",
+        "lesson_activity.key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f"
+      }
+    },
+    {
+      "key": "24e05924-7654-4217-9fcb-b2f74a2fbdc3",
+      "position": 5,
+      "properties": {
+        "progression_name": "Adding Images Using URLs"
+      },
+      "seeding_key": {
+        "activity_section.key": "24e05924-7654-4217-9fcb-b2f74a2fbdc3",
+        "lesson_activity.key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f"
+      }
+    },
+    {
+      "key": "6bce43ae-4853-47b5-a6bd-aa7da041ed7d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Project: Image Scroller"
+      },
+      "seeding_key": {
+        "activity_section.key": "6bce43ae-4853-47b5-a6bd-aa7da041ed7d",
+        "lesson_activity.key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f"
+      }
+    },
+    {
+      "key": "9284d585-91ff-4ba4-a9a6-b1b0fb9d0adb",
+      "position": 7,
+      "properties": {
+        "name": "My Favorite Things Reflection Question",
+        "progression_name": "My Favorite Things Reflection Question"
+      },
+      "seeding_key": {
+        "activity_section.key": "9284d585-91ff-4ba4-a9a6-b1b0fb9d0adb",
+        "lesson_activity.key": "c2a4de4f-1e59-4986-8553-89b5ff9a3d0f"
+      }
+    },
+    {
+      "key": "44d7ad5e-88cb-4f20-9863-e35c052f5fd4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "44d7ad5e-88cb-4f20-9863-e35c052f5fd4",
+        "lesson_activity.key": "950b70b2-aa9a-4018-bd01-a595b84d5432"
+      }
+    },
+    {
+      "key": "9e533414-59b9-43fb-ae34-20eb60c68a1d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e533414-59b9-43fb-ae34-20eb60c68a1d",
+        "lesson_activity.key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d"
+      }
+    },
+    {
+      "key": "bf8d22bc-626c-436b-9c54-54a84c0a9dd0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Processing Lists with Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf8d22bc-626c-436b-9c54-54a84c0a9dd0",
+        "lesson_activity.key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d"
+      }
+    },
+    {
+      "key": "716d01a1-37ed-4042-a835-83dac4f922d7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to for Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "716d01a1-37ed-4042-a835-83dac4f922d7",
+        "lesson_activity.key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d"
+      }
+    },
+    {
+      "key": "e4e45932-6cd0-43b5-8c72-909dd300f765",
+      "position": 4,
+      "properties": {
+        "progression_name": "Printing an Array"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4e45932-6cd0-43b5-8c72-909dd300f765",
+        "lesson_activity.key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d"
+      }
+    },
+    {
+      "key": "f15c1077-f35c-4f07-b513-eb88fb05ae3d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Math and Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "f15c1077-f35c-4f07-b513-eb88fb05ae3d",
+        "lesson_activity.key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d"
+      }
+    },
+    {
+      "key": "00b23553-bf62-45c9-ac51-40145e176b04",
+      "position": 6,
+      "properties": {
+        "progression_name": "Booleans, if Statements, and Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04",
+        "lesson_activity.key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d"
+      }
+    },
+    {
+      "key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a",
+      "position": 7,
+      "properties": {
+        "name": "Arrays and Functions",
+        "progression_name": "Arrays and Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a",
+        "lesson_activity.key": "eaf72e0b-d053-4ef4-84b1-ca97a8f98e6d"
+      }
+    },
+    {
+      "key": "36244468-f278-41cd-b2ee-79b0d81e9b5c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "36244468-f278-41cd-b2ee-79b0d81e9b5c",
+        "lesson_activity.key": "1769b649-e9a3-4dce-9d51-7bc9eb7952bd"
+      }
+    },
+    {
+      "key": "2822711c-18e6-4dfa-8376-7d76bd4582d1",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Return Command"
+      },
+      "seeding_key": {
+        "activity_section.key": "2822711c-18e6-4dfa-8376-7d76bd4582d1",
+        "lesson_activity.key": "1769b649-e9a3-4dce-9d51-7bc9eb7952bd"
+      }
+    },
+    {
+      "key": "a6a74f81-63a3-4c68-b02f-dccc30a8e6c9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using minVal"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6a74f81-63a3-4c68-b02f-dccc30a8e6c9",
+        "lesson_activity.key": "1769b649-e9a3-4dce-9d51-7bc9eb7952bd"
+      }
+    },
+    {
+      "key": "c005f67a-2421-416d-b4d0-e3f630e72779",
+      "position": 4,
+      "properties": {
+        "progression_name": "Writing and Debugging maxVal"
+      },
+      "seeding_key": {
+        "activity_section.key": "c005f67a-2421-416d-b4d0-e3f630e72779",
+        "lesson_activity.key": "1769b649-e9a3-4dce-9d51-7bc9eb7952bd"
+      }
+    },
+    {
+      "key": "172ab9c8-74f9-42a8-8bef-c0dc4351cd44",
+      "position": 5,
+      "properties": {
+        "name": "Return Values in Apps",
+        "progression_name": "Return Values in Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "172ab9c8-74f9-42a8-8bef-c0dc4351cd44",
+        "lesson_activity.key": "1769b649-e9a3-4dce-9d51-7bc9eb7952bd"
+      }
+    },
+    {
+      "key": "07e52d6b-0aa5-4bd6-a080-3247ad08a784",
+      "position": 1,
+      "properties": {
+        "progression_name": "Canvas Painter Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "07e52d6b-0aa5-4bd6-a080-3247ad08a784",
+        "lesson_activity.key": "be6745ca-8f37-4521-bd55-50a8e19ce6d3"
+      }
+    },
+    {
+      "key": "480f9e04-fab5-4b6c-9235-f8382c2a982e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Events in Canvas Painter"
+      },
+      "seeding_key": {
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e",
+        "lesson_activity.key": "be6745ca-8f37-4521-bd55-50a8e19ce6d3"
+      }
+    },
+    {
+      "key": "2bea94b3-f093-45f2-84af-5d5071c9e1e7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Storing Information"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bea94b3-f093-45f2-84af-5d5071c9e1e7",
+        "lesson_activity.key": "be6745ca-8f37-4521-bd55-50a8e19ce6d3"
+      }
+    },
+    {
+      "key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Adding More Features to Your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a",
+        "lesson_activity.key": "be6745ca-8f37-4521-bd55-50a8e19ce6d3"
+      }
+    },
+    {
+      "key": "59f5abc4-9d62-40cb-8899-e90e49d60907",
+      "position": 5,
+      "properties": {
+        "progression_name": "Using Stored Information"
+      },
+      "seeding_key": {
+        "activity_section.key": "59f5abc4-9d62-40cb-8899-e90e49d60907",
+        "lesson_activity.key": "be6745ca-8f37-4521-bd55-50a8e19ce6d3"
+      }
+    },
+    {
+      "key": "b563ff49-0478-4459-bacb-b9856a4d08c0",
+      "position": 6,
+      "properties": {
+        "name": "Project: Canvas Painter",
+        "progression_name": "Project: Canvas Painter"
+      },
+      "seeding_key": {
+        "activity_section.key": "b563ff49-0478-4459-bacb-b9856a4d08c0",
+        "lesson_activity.key": "be6745ca-8f37-4521-bd55-50a8e19ce6d3"
+      }
+    },
+    {
+      "key": "c292e42f-553f-4979-93c8-8f1031733178",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c292e42f-553f-4979-93c8-8f1031733178",
+        "lesson_activity.key": "086d243b-5c33-4067-a531-fac51ad9a051"
+      }
+    },
+    {
+      "key": "ee8f3b5d-96fa-42e3-8aa2-ea2eb76ef0c2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ee8f3b5d-96fa-42e3-8aa2-ea2eb76ef0c2",
+        "lesson_activity.key": "ecff43ec-6256-4698-a685-aa58671945e4"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 2 MC_2018_2019_virtual"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -234,7 +981,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "acd360da-acd0-4a68-8578-06ea43302bc2"
       },
       "level_keys": [
         "CSP Unit 5 Cumulative Assessment 2 MC_2018_2019_virtual"
@@ -243,12 +991,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U5L11 SFLP_virtual"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -258,7 +1003,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "f3629531-2900-4e60-b709-e4fc1f165f41"
       },
       "level_keys": [
         "CSP U5L11 SFLP_virtual"
@@ -267,12 +1013,9 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 1_virtual"
-        ],
         "progression": "Loops"
       },
       "bonus": false,
@@ -282,7 +1025,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 1_virtual"
@@ -291,12 +1035,9 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 2_virtual"
-        ],
         "progression": "Loops"
       },
       "bonus": false,
@@ -306,7 +1047,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 2_virtual"
@@ -315,12 +1057,9 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 3_virtual"
-        ],
         "progression": "Loops"
       },
       "bonus": false,
@@ -330,7 +1069,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 3_virtual"
@@ -339,12 +1079,9 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - Typing in Console_virtual"
-        ],
         "progression": "Loops"
       },
       "bonus": false,
@@ -354,7 +1091,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - Typing in Console_virtual"
@@ -363,12 +1101,9 @@
     {
       "chapter": 7,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 4_virtual"
-        ],
         "progression": "Updating Variables in Loops"
       },
       "bonus": false,
@@ -378,7 +1113,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1a47b5b4-dd4b-416e-9db8-984afaf3aa73"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 4_virtual"
@@ -387,12 +1123,9 @@
     {
       "chapter": 8,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 5_virtual"
-        ],
         "progression": "Updating Variables in Loops"
       },
       "bonus": false,
@@ -402,7 +1135,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1a47b5b4-dd4b-416e-9db8-984afaf3aa73"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 5_virtual"
@@ -411,12 +1145,9 @@
     {
       "chapter": 9,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 8_virtual"
-        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -426,7 +1157,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 8_virtual"
@@ -435,12 +1167,9 @@
     {
       "chapter": 10,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 6_virtual"
-        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -450,7 +1179,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 6_virtual"
@@ -459,12 +1189,9 @@
     {
       "chapter": 11,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 7_virtual"
-        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -474,7 +1201,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 7_virtual"
@@ -483,12 +1211,9 @@
     {
       "chapter": 12,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 9_virtual"
-        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -498,7 +1223,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 9_virtual"
@@ -507,12 +1233,9 @@
     {
       "chapter": 13,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops -  Complex Condition_virtual"
-        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -522,7 +1245,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       },
       "level_keys": [
         "CSPU5_U3 - Loops -  Complex Condition_virtual"
@@ -531,12 +1255,9 @@
     {
       "chapter": 14,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 10_virtual"
-        ],
         "progression": "Other Uses of Loops"
       },
       "bonus": false,
@@ -546,7 +1267,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 10_virtual"
@@ -555,12 +1277,9 @@
     {
       "chapter": 15,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 11_virtual"
-        ],
         "progression": "New Operators"
       },
       "bonus": false,
@@ -570,7 +1289,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "74220974-a231-4851-ac56-9bb52141342d"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 11_virtual"
@@ -579,12 +1299,9 @@
     {
       "chapter": 16,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 12_virtual"
-        ],
         "progression": "New Operators"
       },
       "bonus": false,
@@ -594,7 +1311,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "74220974-a231-4851-ac56-9bb52141342d"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 12_virtual"
@@ -603,12 +1321,9 @@
     {
       "chapter": 17,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - Plus Plus_virtual"
-        ],
         "progression": "New Operators"
       },
       "bonus": false,
@@ -618,7 +1333,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "74220974-a231-4851-ac56-9bb52141342d"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - Plus Plus_virtual"
@@ -627,12 +1343,9 @@
     {
       "chapter": 18,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - Minus Minus_virtual"
-        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -642,7 +1355,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - Minus Minus_virtual"
@@ -651,12 +1365,9 @@
     {
       "chapter": 19,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - plus and minus = operator_virtual"
-        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -666,7 +1377,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - plus and minus = operator_virtual"
@@ -675,12 +1387,9 @@
     {
       "chapter": 20,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - minus = operator_virtual"
-        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -690,7 +1399,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - minus = operator_virtual"
@@ -699,12 +1409,9 @@
     {
       "chapter": 21,
       "position": 20,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 14_virtual"
-        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -714,7 +1421,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 14_virtual"
@@ -723,12 +1431,9 @@
     {
       "chapter": 22,
       "position": 21,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops - 15_virtual"
-        ],
         "progression": "Loops Continued"
       },
       "bonus": false,
@@ -738,7 +1443,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       },
       "level_keys": [
         "CSPU5_U3 - Loops - 15_virtual"
@@ -747,12 +1453,9 @@
     {
       "chapter": 23,
       "position": 22,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019_virtual"
-        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -762,7 +1465,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3501d041-8f98-4e4b-936a-845820b88fa2"
       },
       "level_keys": [
         "csp-pulse-check-survey-7-levelgroup-U5Ch2_2018_2019_virtual"
@@ -771,12 +1475,9 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U5L12 SFLP_virtual"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -786,7 +1487,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "593192a7-6a95-47f3-a0b7-35b92fc15561"
       },
       "level_keys": [
         "CSP U5L12 SFLP_virtual"
@@ -795,12 +1497,9 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Make a Hypothesis_2018_2019_virtual"
-        ],
         "progression": "Make a Hypothesis"
       },
       "bonus": false,
@@ -810,7 +1509,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "e81fa1e8-49c5-4045-8be5-e97ce200a8e3"
       },
       "level_keys": [
         "Make a Hypothesis_2018_2019_virtual"
@@ -819,12 +1519,9 @@
     {
       "chapter": 26,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Simulation - 1_virtual"
-        ],
         "progression": "Introduction to Simulations"
       },
       "bonus": false,
@@ -834,7 +1531,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009"
       },
       "level_keys": [
         "CSPU5_U3 - Simulation - 1_virtual"
@@ -843,12 +1541,9 @@
     {
       "chapter": 27,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Simulation - 2_virtual"
-        ],
         "progression": "Introduction to Simulations"
       },
       "bonus": false,
@@ -858,7 +1553,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009"
       },
       "level_keys": [
         "CSPU5_U3 - Simulation - 2_virtual"
@@ -867,12 +1563,9 @@
     {
       "chapter": 28,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Simulation - 2.1_virtual"
-        ],
         "progression": "Introduction to Simulations"
       },
       "bonus": false,
@@ -882,7 +1575,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009"
       },
       "level_keys": [
         "CSPU5_U3 - Simulation - 2.1_virtual"
@@ -891,12 +1585,9 @@
     {
       "chapter": 29,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Simulation - 2.5_virtual"
-        ],
         "progression": "Introduction to Simulations"
       },
       "bonus": false,
@@ -906,7 +1597,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009"
       },
       "level_keys": [
         "CSPU5_U3 - Simulation - 2.5_virtual"
@@ -915,12 +1607,9 @@
     {
       "chapter": 30,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Update your Hypothesis - Part 1_2018_2019_virtual"
-        ],
         "progression": "Update your Hypothesis - Part 1"
       },
       "bonus": false,
@@ -930,7 +1619,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "55efa93a-e8f1-4cfd-a613-187c856b4329"
       },
       "level_keys": [
         "Update your Hypothesis - Part 1_2018_2019_virtual"
@@ -939,12 +1629,9 @@
     {
       "chapter": 31,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Simulation - 3_virtual"
-        ],
         "progression": "Simulation Practice"
       },
       "bonus": false,
@@ -954,7 +1641,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "7be996ff-8cc2-45b7-81bc-6c1d1290cf39"
       },
       "level_keys": [
         "CSPU5_U3 - Simulation - 3_virtual"
@@ -963,12 +1651,9 @@
     {
       "chapter": 32,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Simulation - 4_virtual"
-        ],
         "progression": "Simulation Practice"
       },
       "bonus": false,
@@ -978,7 +1663,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "7be996ff-8cc2-45b7-81bc-6c1d1290cf39"
       },
       "level_keys": [
         "CSPU5_U3 - Simulation - 4_virtual"
@@ -987,12 +1673,9 @@
     {
       "chapter": 33,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Simulation - 5_virtual"
-        ],
         "progression": "Simulation Practice"
       },
       "bonus": false,
@@ -1002,7 +1685,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "7be996ff-8cc2-45b7-81bc-6c1d1290cf39"
       },
       "level_keys": [
         "CSPU5_U3 - Simulation - 5_virtual"
@@ -1011,12 +1695,9 @@
     {
       "chapter": 34,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Update your Hypothesis - Part 2_2018_2019_virtual"
-        ],
         "progression": "Update your Hypothesis - Part 2"
       },
       "bonus": false,
@@ -1026,7 +1707,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c13d77de-562a-4913-b04f-0c6efdc53375"
       },
       "level_keys": [
         "Update your Hypothesis - Part 2_2018_2019_virtual"
@@ -1035,12 +1717,9 @@
     {
       "chapter": 35,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Simulation - 6_virtual"
-        ],
         "progression": "Experiment With Simulation"
       },
       "bonus": false,
@@ -1050,7 +1729,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "0abbcd22-4c36-4699-8d55-8a256b1584d1"
       },
       "level_keys": [
         "CSPU5_U3 - Simulation - 6_virtual"
@@ -1059,12 +1739,9 @@
     {
       "chapter": 36,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U5L13 SFLP_virtual"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1074,7 +1751,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "a5712014-8369-47f1-a3cb-73823f8c5dae"
       },
       "level_keys": [
         "CSP U5L13 SFLP_virtual"
@@ -1083,12 +1761,9 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Introduction to Lists - Part 1_virtual"
-        ],
         "progression": "Introduction to Lists - Part 1"
       },
       "bonus": false,
@@ -1098,7 +1773,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "cfda5497-6044-4740-80c5-db866ccc7955"
       },
       "level_keys": [
         "Introduction to Lists - Part 1_virtual"
@@ -1107,12 +1783,9 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - createFirstArray_virtual"
-        ],
         "progression": "List Basics"
       },
       "bonus": false,
@@ -1122,7 +1795,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "9e844622-9060-4682-8608-687cfe01b330"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - createFirstArray_virtual"
@@ -1131,12 +1805,9 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - appendItem_virtual"
-        ],
         "progression": "List Basics"
       },
       "bonus": false,
@@ -1146,7 +1817,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "9e844622-9060-4682-8608-687cfe01b330"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - appendItem_virtual"
@@ -1155,12 +1827,9 @@
     {
       "chapter": 40,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Introduction to Lists - Part 2_virtual"
-        ],
         "progression": "Introduction to Lists - Part 2"
       },
       "bonus": false,
@@ -1170,7 +1839,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "f4ece627-476b-4b06-a2cd-cad9c277010b"
       },
       "level_keys": [
         "Introduction to Lists - Part 2_virtual"
@@ -1179,12 +1849,9 @@
     {
       "chapter": 41,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - introIndex_virtual"
-        ],
         "progression": "List Basics"
       },
       "bonus": false,
@@ -1194,7 +1861,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "61cfa0bb-f2ea-445e-9dbb-a14d8bd2585a"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - introIndex_virtual"
@@ -1203,12 +1871,9 @@
     {
       "chapter": 42,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - indexPractice_virtual"
-        ],
         "progression": "List Basics"
       },
       "bonus": false,
@@ -1218,7 +1883,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "61cfa0bb-f2ea-445e-9dbb-a14d8bd2585a"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - indexPractice_virtual"
@@ -1227,12 +1893,9 @@
     {
       "chapter": 43,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Introduction to Lists - Part 3_virtual"
-        ],
         "progression": "Introduction to Lists - Part 3"
       },
       "bonus": false,
@@ -1242,7 +1905,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "a9a47672-0723-4425-b384-8de53e650138"
       },
       "level_keys": [
         "Introduction to Lists - Part 3_virtual"
@@ -1251,12 +1915,9 @@
     {
       "chapter": 44,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - assignment_virtual"
-        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -1266,7 +1927,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - assignment_virtual"
@@ -1275,12 +1937,9 @@
     {
       "chapter": 45,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - assignment2_virtual"
-        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -1290,7 +1949,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - assignment2_virtual"
@@ -1299,12 +1959,9 @@
     {
       "chapter": 46,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - assignment3_virtual"
-        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -1314,7 +1971,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - assignment3_virtual"
@@ -1323,12 +1981,9 @@
     {
       "chapter": 47,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - stringsInArrays_virtual"
-        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -1338,7 +1993,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - stringsInArrays_virtual"
@@ -1347,12 +2003,9 @@
     {
       "chapter": 48,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - insertingItems_virtual"
-        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -1362,7 +2015,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - insertingItems_virtual"
@@ -1371,12 +2025,9 @@
     {
       "chapter": 49,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - remove_virtual"
-        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -1386,7 +2037,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - remove_virtual"
@@ -1395,12 +2047,9 @@
     {
       "chapter": 50,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - insertionErrors_virtual"
-        ],
         "progression": "Updating and Assigning Lists"
       },
       "bonus": false,
@@ -1410,7 +2059,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - insertionErrors_virtual"
@@ -1419,12 +2069,9 @@
     {
       "chapter": 51,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Introduction to Lists - Part 4_virtual"
-        ],
         "progression": "Introduction to Lists - Part 4"
       },
       "bonus": false,
@@ -1434,7 +2081,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "62f54dea-5fc1-4b12-8f1f-98bc85602c87"
       },
       "level_keys": [
         "Introduction to Lists - Part 4_virtual"
@@ -1443,12 +2091,9 @@
     {
       "chapter": 52,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - length_virtual"
-        ],
         "progression": "Length and Indexes"
       },
       "bonus": false,
@@ -1458,7 +2103,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "bc69bc56-4e25-4fe8-86e7-2f65042979b7"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - length_virtual"
@@ -1467,12 +2113,9 @@
     {
       "chapter": 53,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - lengthMinus1_virtual"
-        ],
         "progression": "Length and Indexes"
       },
       "bonus": false,
@@ -1482,7 +2125,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "bc69bc56-4e25-4fe8-86e7-2f65042979b7"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - lengthMinus1_virtual"
@@ -1491,12 +2135,9 @@
     {
       "chapter": 54,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - expressionsAsIndexes_virtual"
-        ],
         "progression": "Length and Indexes"
       },
       "bonus": false,
@@ -1506,7 +2147,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "bc69bc56-4e25-4fe8-86e7-2f65042979b7"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - expressionsAsIndexes_virtual"
@@ -1515,12 +2157,9 @@
     {
       "chapter": 55,
       "position": 20,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - Demo App_virtual"
-        ],
         "progression": "\"My Favorite Things\" Demo App"
       },
       "bonus": false,
@@ -1530,7 +2169,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "389d7d5e-52e3-403d-817b-c35abf5103d6"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - Demo App_virtual"
@@ -1539,12 +2179,9 @@
     {
       "chapter": 56,
       "position": 21,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings giveIDs_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1554,7 +2191,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings giveIDs_virtual"
@@ -1563,12 +2201,9 @@
     {
       "chapter": 57,
       "position": 22,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings createArray_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1578,7 +2213,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings createArray_virtual"
@@ -1587,12 +2223,9 @@
     {
       "chapter": 58,
       "position": 23,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings firstOutput_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1602,7 +2235,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings firstOutput_virtual"
@@ -1611,12 +2245,9 @@
     {
       "chapter": 59,
       "position": 24,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings Counting Variable_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1626,7 +2257,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings Counting Variable_virtual"
@@ -1635,12 +2267,9 @@
     {
       "chapter": 60,
       "position": 25,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings Next_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1650,7 +2279,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings Next_virtual"
@@ -1659,12 +2289,9 @@
     {
       "chapter": 61,
       "position": 26,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings Prev_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1674,7 +2301,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings Prev_virtual"
@@ -1683,12 +2311,9 @@
     {
       "chapter": 62,
       "position": 27,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings addItem_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1698,7 +2323,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings addItem_virtual"
@@ -1707,12 +2333,9 @@
     {
       "chapter": 63,
       "position": 28,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings bounds_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1722,7 +2345,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings bounds_virtual"
@@ -1731,12 +2355,9 @@
     {
       "chapter": 64,
       "position": 29,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - favThings keepPlaying_virtual"
-        ],
         "progression": "Using Lists"
       },
       "bonus": false,
@@ -1746,7 +2367,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - favThings keepPlaying_virtual"
@@ -1755,12 +2377,9 @@
     {
       "chapter": 65,
       "position": 30,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - Wrap Up 1_virtual"
-        ],
         "progression": "Array Reflection Questions"
       },
       "bonus": false,
@@ -1770,7 +2389,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "985bde46-0cd8-4142-a9c6-a7f13f90584c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - Wrap Up 1_virtual"
@@ -1779,12 +2399,9 @@
     {
       "chapter": 66,
       "position": 31,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Arrays - Wrap Up 2_virtual"
-        ],
         "progression": "Array Reflection Questions"
       },
       "bonus": false,
@@ -1794,7 +2411,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "985bde46-0cd8-4142-a9c6-a7f13f90584c"
       },
       "level_keys": [
         "CSPU5_U3 - Arrays - Wrap Up 2_virtual"
@@ -1803,12 +2421,9 @@
     {
       "chapter": 67,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U5L14 SFLP_virtual"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1818,7 +2433,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "ebab505a-01b9-4da4-a182-d02f3da5f86d"
       },
       "level_keys": [
         "CSP U5L14 SFLP_virtual"
@@ -1827,12 +2443,9 @@
     {
       "chapter": 68,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Keys - Demo App_virtual"
-        ],
         "progression": "My Favorite Things Demonstration"
       },
       "bonus": false,
@@ -1842,7 +2455,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "dcb807ae-c15f-4810-b4b9-7658276ec446"
       },
       "level_keys": [
         "CSPU5_U3 - Keys - Demo App_virtual"
@@ -1851,12 +2465,9 @@
     {
       "chapter": 69,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3L25 - drag out key event_virtual"
-        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -1866,7 +2477,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       },
       "level_keys": [
         "CSPU5_U3L25 - drag out key event_virtual"
@@ -1875,12 +2487,9 @@
     {
       "chapter": 70,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Keys - Key Up and Down_virtual"
-        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -1890,7 +2499,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       },
       "level_keys": [
         "CSPU5_U3 - Keys - Key Up and Down_virtual"
@@ -1899,12 +2509,9 @@
     {
       "chapter": 71,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3L25 - play sound when up key_virtual"
-        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -1914,7 +2521,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       },
       "level_keys": [
         "CSPU5_U3L25 - play sound when up key_virtual"
@@ -1923,12 +2531,9 @@
     {
       "chapter": 72,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Keys - Multiple Keys_virtual"
-        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -1938,7 +2543,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       },
       "level_keys": [
         "CSPU5_U3 - Keys - Multiple Keys_virtual"
@@ -1947,12 +2553,9 @@
     {
       "chapter": 73,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Keys - Buttons and Keys_virtual"
-        ],
         "progression": "Key Event"
       },
       "bonus": false,
@@ -1962,7 +2565,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       },
       "level_keys": [
         "CSPU5_U3 - Keys - Buttons and Keys_virtual"
@@ -1971,12 +2575,9 @@
     {
       "chapter": 74,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Keys - Functions_virtual"
-        ],
         "progression": "Functions in Your App"
       },
       "bonus": false,
@@ -1986,7 +2587,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "75c5cc86-ad52-4b7a-9161-7f3e215a7ab0"
       },
       "level_keys": [
         "CSPU5_U3 - Keys - Functions_virtual"
@@ -1995,12 +2597,9 @@
     {
       "chapter": 75,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Keys - Add Image URLs_virtual"
-        ],
         "progression": "Adding Images Using URLs"
       },
       "bonus": false,
@@ -2010,7 +2609,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "24e05924-7654-4217-9fcb-b2f74a2fbdc3"
       },
       "level_keys": [
         "CSPU5_U3 - Keys - Add Image URLs_virtual"
@@ -2019,12 +2619,9 @@
     {
       "chapter": 76,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Project - Final Image Scroller_virtual"
-        ],
         "progression": "Project: Image Scroller"
       },
       "bonus": false,
@@ -2034,7 +2631,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "6bce43ae-4853-47b5-a6bd-aa7da041ed7d"
       },
       "level_keys": [
         "Project - Final Image Scroller_virtual"
@@ -2043,12 +2641,9 @@
     {
       "chapter": 77,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3- Keys - Code Refactoring Exit Ticket_virtual"
-        ],
         "progression": "My Favorite Things Reflection Question"
       },
       "bonus": false,
@@ -2058,7 +2653,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "9284d585-91ff-4ba4-a9a6-b1b0fb9d0adb"
       },
       "level_keys": [
         "CSPU5_U3- Keys - Code Refactoring Exit Ticket_virtual"
@@ -2067,12 +2663,9 @@
     {
       "chapter": 78,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 3 MC_2018_2019_virtual"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2081,7 +2674,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 3",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "44d7ad5e-88cb-4f20-9863-e35c052f5fd4"
       },
       "level_keys": [
         "CSP Unit 5 Cumulative Assessment 3 MC_2018_2019_virtual"
@@ -2090,12 +2684,9 @@
     {
       "chapter": 79,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U5L15 SFLP_virtual"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2105,7 +2696,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "9e533414-59b9-43fb-ae34-20eb60c68a1d"
       },
       "level_keys": [
         "CSP U5L15 SFLP_virtual"
@@ -2114,12 +2706,9 @@
     {
       "chapter": 80,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Processing Lists with Loops_virtual"
-        ],
         "progression": "Processing Lists with Loops"
       },
       "bonus": false,
@@ -2129,7 +2718,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "bf8d22bc-626c-436b-9c54-54a84c0a9dd0"
       },
       "level_keys": [
         "Processing Lists with Loops_virtual"
@@ -2138,12 +2728,9 @@
     {
       "chapter": 81,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Intro For Loop_virtual"
-        ],
         "progression": "Introduction to for Loops"
       },
       "bonus": false,
@@ -2153,7 +2740,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "716d01a1-37ed-4042-a835-83dac4f922d7"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Intro For Loop_virtual"
@@ -2162,12 +2750,9 @@
     {
       "chapter": 82,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Print Array_virtual"
-        ],
         "progression": "Printing an Array"
       },
       "bonus": false,
@@ -2177,7 +2762,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "e4e45932-6cd0-43b5-8c72-909dd300f765"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Print Array_virtual"
@@ -2186,12 +2772,9 @@
     {
       "chapter": 83,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Add 5_virtual"
-        ],
         "progression": "Math and Arrays"
       },
       "bonus": false,
@@ -2201,7 +2784,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "f15c1077-f35c-4f07-b513-eb88fb05ae3d"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Add 5_virtual"
@@ -2210,12 +2794,9 @@
     {
       "chapter": 84,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Divid by 2_virtual"
-        ],
         "progression": "Math and Arrays"
       },
       "bonus": false,
@@ -2225,7 +2806,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "f15c1077-f35c-4f07-b513-eb88fb05ae3d"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Divid by 2_virtual"
@@ -2234,12 +2816,9 @@
     {
       "chapter": 85,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Loop Array If_virtual"
-        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -2249,7 +2828,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Loop Array If_virtual"
@@ -2258,12 +2838,9 @@
     {
       "chapter": 86,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Linear Search_virtual"
-        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -2273,7 +2850,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Linear Search_virtual"
@@ -2282,12 +2860,9 @@
     {
       "chapter": 87,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Counting Times_virtual"
-        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -2297,7 +2872,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Counting Times_virtual"
@@ -2306,12 +2882,9 @@
     {
       "chapter": 88,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Printing Single True_virtual"
-        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -2321,7 +2894,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Printing Single True_virtual"
@@ -2330,12 +2904,9 @@
     {
       "chapter": 89,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Search with Boolean Var_virtual"
-        ],
         "progression": "Booleans, if Statements, and Arrays"
       },
       "bonus": false,
@@ -2345,7 +2916,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Search with Boolean Var_virtual"
@@ -2354,12 +2926,9 @@
     {
       "chapter": 90,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Make it a Function_virtual"
-        ],
         "progression": "Arrays and Functions"
       },
       "bonus": false,
@@ -2369,7 +2938,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Make it a Function_virtual"
@@ -2378,12 +2948,9 @@
     {
       "chapter": 91,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Make it a Function - add list pa_virtual"
-        ],
         "progression": "Arrays and Functions"
       },
       "bonus": false,
@@ -2393,7 +2960,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Make it a Function - add list pa_virtual"
@@ -2402,12 +2970,9 @@
     {
       "chapter": 92,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - General Search Param_virtual"
-        ],
         "progression": "Arrays and Functions"
       },
       "bonus": false,
@@ -2417,7 +2982,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - General Search Param_virtual"
@@ -2426,12 +2992,9 @@
     {
       "chapter": 93,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Loops And Arrays - Find Min_virtual"
-        ],
         "progression": "Arrays and Functions"
       },
       "bonus": false,
@@ -2441,7 +3004,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a"
       },
       "level_keys": [
         "CSPU5_U3 - Loops And Arrays - Find Min_virtual"
@@ -2450,12 +3014,9 @@
     {
       "chapter": 94,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U5L16 SFLP_virtual"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2465,7 +3026,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "36244468-f278-41cd-b2ee-79b0d81e9b5c"
       },
       "level_keys": [
         "CSP U5L16 SFLP_virtual"
@@ -2474,12 +3036,9 @@
     {
       "chapter": 95,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Using Output from Functions: The return Command_2018_2019_virtual"
-        ],
         "progression": "The Return Command"
       },
       "bonus": false,
@@ -2489,7 +3048,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2822711c-18e6-4dfa-8376-7d76bd4582d1"
       },
       "level_keys": [
         "Using Output from Functions: The return Command_2018_2019_virtual"
@@ -2498,12 +3058,9 @@
     {
       "chapter": 96,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Return Values - useMinVal_virtual"
-        ],
         "progression": "Using minVal"
       },
       "bonus": false,
@@ -2513,7 +3070,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "a6a74f81-63a3-4c68-b02f-dccc30a8e6c9"
       },
       "level_keys": [
         "CSPU5_U3 - Return Values - useMinVal_virtual"
@@ -2522,12 +3080,9 @@
     {
       "chapter": 97,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Return Values - writeMaxVal_virtual"
-        ],
         "progression": "Writing and Debugging maxVal"
       },
       "bonus": false,
@@ -2537,7 +3092,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c005f67a-2421-416d-b4d0-e3f630e72779"
       },
       "level_keys": [
         "CSPU5_U3 - Return Values - writeMaxVal_virtual"
@@ -2546,12 +3102,9 @@
     {
       "chapter": 98,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Return Values - debuggingMaxVal_virtual"
-        ],
         "progression": "Writing and Debugging maxVal"
       },
       "bonus": false,
@@ -2561,7 +3114,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c005f67a-2421-416d-b4d0-e3f630e72779"
       },
       "level_keys": [
         "CSPU5_U3 - Return Values - debuggingMaxVal_virtual"
@@ -2570,12 +3124,9 @@
     {
       "chapter": 99,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Return Values - debuggingConstrain_virtual"
-        ],
         "progression": "Writing and Debugging maxVal"
       },
       "bonus": false,
@@ -2585,7 +3136,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c005f67a-2421-416d-b4d0-e3f630e72779"
       },
       "level_keys": [
         "CSPU5_U3 - Return Values - debuggingConstrain_virtual"
@@ -2594,12 +3146,9 @@
     {
       "chapter": 100,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Return Values - constrainTurtle_virtual"
-        ],
         "progression": "Return Values in Apps"
       },
       "bonus": false,
@@ -2609,7 +3158,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "172ab9c8-74f9-42a8-8bef-c0dc4351cd44"
       },
       "level_keys": [
         "CSPU5_U3 - Return Values - constrainTurtle_virtual"
@@ -2618,12 +3168,9 @@
     {
       "chapter": 101,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Return Values - wrapTurtle_virtual"
-        ],
         "progression": "Return Values in Apps"
       },
       "bonus": false,
@@ -2633,7 +3180,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "172ab9c8-74f9-42a8-8bef-c0dc4351cd44"
       },
       "level_keys": [
         "CSPU5_U3 - Return Values - wrapTurtle_virtual"
@@ -2642,12 +3190,9 @@
     {
       "chapter": 102,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - introCanvas_virtual"
-        ],
         "progression": "Canvas Painter Introduction"
       },
       "bonus": false,
@@ -2657,7 +3202,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "07e52d6b-0aa5-4bd6-a080-3247ad08a784"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - introCanvas_virtual"
@@ -2666,12 +3212,9 @@
     {
       "chapter": 103,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - 200dots_virtual"
-        ],
         "progression": "Canvas Painter Introduction"
       },
       "bonus": false,
@@ -2681,7 +3224,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "07e52d6b-0aa5-4bd6-a080-3247ad08a784"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - 200dots_virtual"
@@ -2690,12 +3234,9 @@
     {
       "chapter": 104,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - transparentDots_virtual"
-        ],
         "progression": "Canvas Painter Introduction"
       },
       "bonus": false,
@@ -2705,7 +3246,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "07e52d6b-0aa5-4bd6-a080-3247ad08a784"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - transparentDots_virtual"
@@ -2714,12 +3256,9 @@
     {
       "chapter": 105,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - clickToAdd_virtual"
-        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -2729,7 +3268,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - clickToAdd_virtual"
@@ -2738,12 +3278,9 @@
     {
       "chapter": 106,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - usingOffsetXY_virtual"
-        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -2753,7 +3290,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - usingOffsetXY_virtual"
@@ -2762,12 +3300,9 @@
     {
       "chapter": 107,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - draw at click point_virtual"
-        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -2777,7 +3312,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - draw at click point_virtual"
@@ -2786,12 +3322,9 @@
     {
       "chapter": 108,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - changeToMouseMove_virtual"
-        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -2801,7 +3334,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - changeToMouseMove_virtual"
@@ -2810,12 +3344,9 @@
     {
       "chapter": 109,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - shiftKey_virtual"
-        ],
         "progression": "Events in Canvas Painter"
       },
       "bonus": false,
@@ -2825,7 +3356,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - shiftKey_virtual"
@@ -2834,12 +3366,9 @@
     {
       "chapter": 110,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - appendToArray_virtual"
-        ],
         "progression": "Storing Information"
       },
       "bonus": false,
@@ -2849,7 +3378,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2bea94b3-f093-45f2-84af-5d5071c9e1e7"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - appendToArray_virtual"
@@ -2858,12 +3388,9 @@
     {
       "chapter": 111,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - delete_virtual"
-        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -2873,7 +3400,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - delete_virtual"
@@ -2882,12 +3410,9 @@
     {
       "chapter": 112,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - redrawRandom_virtual"
-        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -2897,7 +3422,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - redrawRandom_virtual"
@@ -2906,12 +3432,9 @@
     {
       "chapter": 113,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - redrawRandom2_virtual"
-        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -2921,7 +3444,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - redrawRandom2_virtual"
@@ -2930,12 +3454,9 @@
     {
       "chapter": 114,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - redrawOriginal_virtual"
-        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -2945,7 +3466,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - redrawOriginal_virtual"
@@ -2954,12 +3476,9 @@
     {
       "chapter": 115,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - movementFunction_virtual"
-        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -2969,7 +3488,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - movementFunction_virtual"
@@ -2978,12 +3498,9 @@
     {
       "chapter": 116,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - movementFunction fix Orig_virtual"
-        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -2993,7 +3510,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - movementFunction fix Orig_virtual"
@@ -3002,12 +3520,9 @@
     {
       "chapter": 117,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - One Dot sprayPaint_virtual"
-        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -3017,7 +3532,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - One Dot sprayPaint_virtual"
@@ -3026,12 +3542,9 @@
     {
       "chapter": 118,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - sprayPaint_virtual"
-        ],
         "progression": "Adding More Features to Your App"
       },
       "bonus": false,
@@ -3041,7 +3554,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - sprayPaint_virtual"
@@ -3050,12 +3564,9 @@
     {
       "chapter": 119,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - sketch_virtual"
-        ],
         "progression": "Using Stored Information"
       },
       "bonus": false,
@@ -3065,7 +3576,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "59f5abc4-9d62-40cb-8899-e90e49d60907"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - sketch_virtual"
@@ -3074,12 +3586,9 @@
     {
       "chapter": 120,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSPU5_U3 - Canvas - freePlay_virtual"
-        ],
         "progression": "Project: Canvas Painter"
       },
       "bonus": false,
@@ -3089,7 +3598,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "b563ff49-0478-4459-bacb-b9856a4d08c0"
       },
       "level_keys": [
         "CSPU5_U3 - Canvas - freePlay_virtual"
@@ -3098,12 +3608,9 @@
     {
       "chapter": 121,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 4 MC_2018_2019_virtual"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3112,7 +3619,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 4",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c292e42f-553f-4979-93c8-8f1031733178"
       },
       "level_keys": [
         "CSP Unit 5 Cumulative Assessment 4 MC_2018_2019_virtual"
@@ -3121,12 +3629,9 @@
     {
       "chapter": 122,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Cumulative Assess A_2018_2019_virtual"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3135,7 +3640,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 5 - AP Pseudocode Practice Questions",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "ee8f3b5d-96fa-42e3-8aa2-ea2eb76ef0c2"
       },
       "level_keys": [
         "CSP Cumulative Assess A_2018_2019_virtual"
@@ -3151,7 +3657,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "acd360da-acd0-4a68-8578-06ea43302bc2"
       }
     },
     {
@@ -3162,7 +3669,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "f3629531-2900-4e60-b709-e4fc1f165f41"
       }
     },
     {
@@ -3173,7 +3681,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89"
       }
     },
     {
@@ -3184,7 +3693,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89"
       }
     },
     {
@@ -3195,7 +3705,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89"
       }
     },
     {
@@ -3206,7 +3717,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "182bd3e1-1817-4138-a119-e8870cf60d89"
       }
     },
     {
@@ -3217,7 +3729,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1a47b5b4-dd4b-416e-9db8-984afaf3aa73"
       }
     },
     {
@@ -3228,7 +3741,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1a47b5b4-dd4b-416e-9db8-984afaf3aa73"
       }
     },
     {
@@ -3239,7 +3753,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       }
     },
     {
@@ -3250,7 +3765,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       }
     },
     {
@@ -3261,7 +3777,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       }
     },
     {
@@ -3272,7 +3789,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       }
     },
     {
@@ -3283,7 +3801,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       }
     },
     {
@@ -3294,7 +3813,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "d89b8d50-1272-45ac-a60f-c1117f209643"
       }
     },
     {
@@ -3305,7 +3825,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "74220974-a231-4851-ac56-9bb52141342d"
       }
     },
     {
@@ -3316,7 +3837,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "74220974-a231-4851-ac56-9bb52141342d"
       }
     },
     {
@@ -3327,7 +3849,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "74220974-a231-4851-ac56-9bb52141342d"
       }
     },
     {
@@ -3338,7 +3861,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       }
     },
     {
@@ -3349,7 +3873,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       }
     },
     {
@@ -3360,7 +3885,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       }
     },
     {
@@ -3371,7 +3897,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       }
     },
     {
@@ -3382,7 +3909,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "1d77a2c0-bf87-4b8c-b5ee-a9eb6a37fbd1"
       }
     },
     {
@@ -3393,7 +3921,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3501d041-8f98-4e4b-936a-845820b88fa2"
       }
     },
     {
@@ -3404,7 +3933,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "593192a7-6a95-47f3-a0b7-35b92fc15561"
       }
     },
     {
@@ -3415,7 +3945,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "e81fa1e8-49c5-4045-8be5-e97ce200a8e3"
       }
     },
     {
@@ -3426,7 +3957,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009"
       }
     },
     {
@@ -3437,7 +3969,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009"
       }
     },
     {
@@ -3448,7 +3981,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009"
       }
     },
     {
@@ -3459,7 +3993,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "677436d4-cad1-414e-9e05-9feb717eb009"
       }
     },
     {
@@ -3470,7 +4005,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "55efa93a-e8f1-4cfd-a613-187c856b4329"
       }
     },
     {
@@ -3481,7 +4017,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "7be996ff-8cc2-45b7-81bc-6c1d1290cf39"
       }
     },
     {
@@ -3492,7 +4029,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "7be996ff-8cc2-45b7-81bc-6c1d1290cf39"
       }
     },
     {
@@ -3503,7 +4041,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "7be996ff-8cc2-45b7-81bc-6c1d1290cf39"
       }
     },
     {
@@ -3514,7 +4053,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c13d77de-562a-4913-b04f-0c6efdc53375"
       }
     },
     {
@@ -3525,7 +4065,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "0abbcd22-4c36-4699-8d55-8a256b1584d1"
       }
     },
     {
@@ -3536,7 +4077,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "a5712014-8369-47f1-a3cb-73823f8c5dae"
       }
     },
     {
@@ -3547,7 +4089,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "cfda5497-6044-4740-80c5-db866ccc7955"
       }
     },
     {
@@ -3558,7 +4101,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "9e844622-9060-4682-8608-687cfe01b330"
       }
     },
     {
@@ -3569,7 +4113,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "9e844622-9060-4682-8608-687cfe01b330"
       }
     },
     {
@@ -3580,7 +4125,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "f4ece627-476b-4b06-a2cd-cad9c277010b"
       }
     },
     {
@@ -3591,7 +4137,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "61cfa0bb-f2ea-445e-9dbb-a14d8bd2585a"
       }
     },
     {
@@ -3602,7 +4149,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "61cfa0bb-f2ea-445e-9dbb-a14d8bd2585a"
       }
     },
     {
@@ -3613,7 +4161,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "a9a47672-0723-4425-b384-8de53e650138"
       }
     },
     {
@@ -3624,7 +4173,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       }
     },
     {
@@ -3635,7 +4185,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       }
     },
     {
@@ -3646,7 +4197,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       }
     },
     {
@@ -3657,7 +4209,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       }
     },
     {
@@ -3668,7 +4221,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       }
     },
     {
@@ -3679,7 +4233,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       }
     },
     {
@@ -3690,7 +4245,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2a21e09d-47a4-49ef-aced-4f43989b669f"
       }
     },
     {
@@ -3701,7 +4257,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "62f54dea-5fc1-4b12-8f1f-98bc85602c87"
       }
     },
     {
@@ -3712,7 +4269,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "bc69bc56-4e25-4fe8-86e7-2f65042979b7"
       }
     },
     {
@@ -3723,7 +4281,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "bc69bc56-4e25-4fe8-86e7-2f65042979b7"
       }
     },
     {
@@ -3734,7 +4293,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "bc69bc56-4e25-4fe8-86e7-2f65042979b7"
       }
     },
     {
@@ -3745,7 +4305,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "389d7d5e-52e3-403d-817b-c35abf5103d6"
       }
     },
     {
@@ -3756,7 +4317,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3767,7 +4329,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3778,7 +4341,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3789,7 +4353,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3800,7 +4365,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3811,7 +4377,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3822,7 +4389,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3833,7 +4401,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3844,7 +4413,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "fe36148c-ea91-479a-bee7-850175e95d8c"
       }
     },
     {
@@ -3855,7 +4425,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "985bde46-0cd8-4142-a9c6-a7f13f90584c"
       }
     },
     {
@@ -3866,7 +4437,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "985bde46-0cd8-4142-a9c6-a7f13f90584c"
       }
     },
     {
@@ -3877,7 +4449,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "ebab505a-01b9-4da4-a182-d02f3da5f86d"
       }
     },
     {
@@ -3888,7 +4461,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "dcb807ae-c15f-4810-b4b9-7658276ec446"
       }
     },
     {
@@ -3899,7 +4473,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       }
     },
     {
@@ -3910,7 +4485,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       }
     },
     {
@@ -3921,7 +4497,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       }
     },
     {
@@ -3932,7 +4509,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       }
     },
     {
@@ -3943,7 +4521,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "3198be7c-61a8-4411-9d5b-2273875a0bfb"
       }
     },
     {
@@ -3954,7 +4533,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "75c5cc86-ad52-4b7a-9161-7f3e215a7ab0"
       }
     },
     {
@@ -3965,7 +4545,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "24e05924-7654-4217-9fcb-b2f74a2fbdc3"
       }
     },
     {
@@ -3976,7 +4557,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "6bce43ae-4853-47b5-a6bd-aa7da041ed7d"
       }
     },
     {
@@ -3987,7 +4569,8 @@
         ],
         "lesson.key": "Building an App: Image Scroller",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "9284d585-91ff-4ba4-a9a6-b1b0fb9d0adb"
       }
     },
     {
@@ -3998,7 +4581,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 3",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "44d7ad5e-88cb-4f20-9863-e35c052f5fd4"
       }
     },
     {
@@ -4009,7 +4593,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "9e533414-59b9-43fb-ae34-20eb60c68a1d"
       }
     },
     {
@@ -4020,7 +4605,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "bf8d22bc-626c-436b-9c54-54a84c0a9dd0"
       }
     },
     {
@@ -4031,7 +4617,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "716d01a1-37ed-4042-a835-83dac4f922d7"
       }
     },
     {
@@ -4042,7 +4629,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "e4e45932-6cd0-43b5-8c72-909dd300f765"
       }
     },
     {
@@ -4053,7 +4641,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "f15c1077-f35c-4f07-b513-eb88fb05ae3d"
       }
     },
     {
@@ -4064,7 +4653,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "f15c1077-f35c-4f07-b513-eb88fb05ae3d"
       }
     },
     {
@@ -4075,7 +4665,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       }
     },
     {
@@ -4086,7 +4677,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       }
     },
     {
@@ -4097,7 +4689,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       }
     },
     {
@@ -4108,7 +4701,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       }
     },
     {
@@ -4119,7 +4713,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "00b23553-bf62-45c9-ac51-40145e176b04"
       }
     },
     {
@@ -4130,7 +4725,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a"
       }
     },
     {
@@ -4141,7 +4737,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a"
       }
     },
     {
@@ -4152,7 +4749,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a"
       }
     },
     {
@@ -4163,7 +4761,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "60bb1201-31fe-4890-83ff-5e48e5e2c23a"
       }
     },
     {
@@ -4174,7 +4773,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "36244468-f278-41cd-b2ee-79b0d81e9b5c"
       }
     },
     {
@@ -4185,7 +4785,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2822711c-18e6-4dfa-8376-7d76bd4582d1"
       }
     },
     {
@@ -4196,7 +4797,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "a6a74f81-63a3-4c68-b02f-dccc30a8e6c9"
       }
     },
     {
@@ -4207,7 +4809,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c005f67a-2421-416d-b4d0-e3f630e72779"
       }
     },
     {
@@ -4218,7 +4821,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c005f67a-2421-416d-b4d0-e3f630e72779"
       }
     },
     {
@@ -4229,7 +4833,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c005f67a-2421-416d-b4d0-e3f630e72779"
       }
     },
     {
@@ -4240,7 +4845,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "172ab9c8-74f9-42a8-8bef-c0dc4351cd44"
       }
     },
     {
@@ -4251,7 +4857,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "172ab9c8-74f9-42a8-8bef-c0dc4351cd44"
       }
     },
     {
@@ -4262,7 +4869,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "07e52d6b-0aa5-4bd6-a080-3247ad08a784"
       }
     },
     {
@@ -4273,7 +4881,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "07e52d6b-0aa5-4bd6-a080-3247ad08a784"
       }
     },
     {
@@ -4284,7 +4893,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "07e52d6b-0aa5-4bd6-a080-3247ad08a784"
       }
     },
     {
@@ -4295,7 +4905,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       }
     },
     {
@@ -4306,7 +4917,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       }
     },
     {
@@ -4317,7 +4929,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       }
     },
     {
@@ -4328,7 +4941,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       }
     },
     {
@@ -4339,7 +4953,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "480f9e04-fab5-4b6c-9235-f8382c2a982e"
       }
     },
     {
@@ -4350,7 +4965,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "2bea94b3-f093-45f2-84af-5d5071c9e1e7"
       }
     },
     {
@@ -4361,7 +4977,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       }
     },
     {
@@ -4372,7 +4989,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       }
     },
     {
@@ -4383,7 +5001,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       }
     },
     {
@@ -4394,7 +5013,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       }
     },
     {
@@ -4405,7 +5025,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       }
     },
     {
@@ -4416,7 +5037,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       }
     },
     {
@@ -4427,7 +5049,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       }
     },
     {
@@ -4438,7 +5061,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c8da6417-6de4-45d3-9752-ed55dd86dc4a"
       }
     },
     {
@@ -4449,7 +5073,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "59f5abc4-9d62-40cb-8899-e90e49d60907"
       }
     },
     {
@@ -4460,7 +5085,8 @@
         ],
         "lesson.key": "Building an App: Canvas Painter",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "b563ff49-0478-4459-bacb-b9856a4d08c0"
       }
     },
     {
@@ -4471,7 +5097,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 4",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "c292e42f-553f-4979-93c8-8f1031733178"
       }
     },
     {
@@ -4482,7 +5109,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 5 - AP Pseudocode Practice Questions",
         "lesson_group.key": "csp5_2",
-        "script.name": "csp5-virtual-part2"
+        "script.name": "csp5-virtual-part2",
+        "activity_section.key": "ee8f3b5d-96fa-42e3-8aa2-ea2eb76ef0c2"
       }
     }
   ],

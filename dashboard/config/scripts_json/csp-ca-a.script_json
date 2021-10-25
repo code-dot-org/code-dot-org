@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:23 UTC",
+    "serialized_at": "2021-10-25 23:32:46 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "8f79ae4c-1696-494e-b310-057f68fb1e1f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f79ae4c-1696-494e-b310-057f68fb1e1f",
+        "lesson.key": "Commutative Assessment A",
+        "lesson_group.key": "",
+        "script.name": "csp-ca-a"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a4f9a8e3-a5c5-49b9-86bb-cce644b78c9f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a4f9a8e3-a5c5-49b9-86bb-cce644b78c9f",
+        "lesson_activity.key": "8f79ae4c-1696-494e-b310-057f68fb1e1f"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Cumulative Assess A"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -68,7 +87,8 @@
         ],
         "lesson.key": "Commutative Assessment A",
         "lesson_group.key": "",
-        "script.name": "csp-ca-a"
+        "script.name": "csp-ca-a",
+        "activity_section.key": "a4f9a8e3-a5c5-49b9-86bb-cce644b78c9f"
       },
       "level_keys": [
         "CSP Cumulative Assess A"
@@ -84,7 +104,8 @@
         ],
         "lesson.key": "Commutative Assessment A",
         "lesson_group.key": "",
-        "script.name": "csp-ca-a"
+        "script.name": "csp-ca-a",
+        "activity_section.key": "a4f9a8e3-a5c5-49b9-86bb-cce644b78c9f"
       }
     }
   ],

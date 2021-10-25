@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:14 UTC",
+    "serialized_at": "2021-10-25 23:35:38 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "bd5c03f4-0c77-4b9d-9f01-d064ce27b3ae",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd5c03f4-0c77-4b9d-9f01-d064ce27b3ae",
+        "lesson.key": "Middle_School_Hackathon",
+        "lesson_group.key": "",
+        "script.name": "gamelab-hackathon"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8ebfe3dc-42fd-4e07-8159-14d6f05701df",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8ebfe3dc-42fd-4e07-8159-14d6f05701df",
+        "lesson_activity.key": "bd5c03f4-0c77-4b9d-9f01-d064ce27b3ae"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Middle School Hackathon Pt 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -68,7 +87,8 @@
         ],
         "lesson.key": "Middle_School_Hackathon",
         "lesson_group.key": "",
-        "script.name": "gamelab-hackathon"
+        "script.name": "gamelab-hackathon",
+        "activity_section.key": "8ebfe3dc-42fd-4e07-8159-14d6f05701df"
       },
       "level_keys": [
         "Middle School Hackathon Pt 1"
@@ -77,12 +97,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Middle School Hackathon Pt 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -91,7 +108,8 @@
         ],
         "lesson.key": "Middle_School_Hackathon",
         "lesson_group.key": "",
-        "script.name": "gamelab-hackathon"
+        "script.name": "gamelab-hackathon",
+        "activity_section.key": "8ebfe3dc-42fd-4e07-8159-14d6f05701df"
       },
       "level_keys": [
         "Middle School Hackathon Pt 2"
@@ -107,7 +125,8 @@
         ],
         "lesson.key": "Middle_School_Hackathon",
         "lesson_group.key": "",
-        "script.name": "gamelab-hackathon"
+        "script.name": "gamelab-hackathon",
+        "activity_section.key": "8ebfe3dc-42fd-4e07-8159-14d6f05701df"
       }
     },
     {
@@ -118,7 +137,8 @@
         ],
         "lesson.key": "Middle_School_Hackathon",
         "lesson_group.key": "",
-        "script.name": "gamelab-hackathon"
+        "script.name": "gamelab-hackathon",
+        "activity_section.key": "8ebfe3dc-42fd-4e07-8159-14d6f05701df"
       }
     }
   ],

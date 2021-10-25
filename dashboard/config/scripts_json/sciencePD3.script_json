@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Science Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:07 UTC",
+    "serialized_at": "2021-10-25 23:37:13 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -77,21 +77,85 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "31dc686a-b7f4-45d6-b7df-f8b8038b4631",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31dc686a-b7f4-45d6-b7df-f8b8038b4631",
+        "lesson.key": "Welcome Back!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3"
+      }
+    },
+    {
+      "key": "7d8ac029-3485-42f1-a4ff-7810ee057a55",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d8ac029-3485-42f1-a4ff-7810ee057a55",
+        "lesson.key": "Mystery Model",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3"
+      }
+    },
+    {
+      "key": "69e4d4b5-d233-45ed-abaa-399dcaa2cf48",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69e4d4b5-d233-45ed-abaa-399dcaa2cf48",
+        "lesson.key": "Decode and Share",
+        "lesson_group.key": "",
+        "script.name": "sciencePD3"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "560d0f7c-851f-4c89-90d2-57bca3700d70",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "560d0f7c-851f-4c89-90d2-57bca3700d70",
+        "lesson_activity.key": "31dc686a-b7f4-45d6-b7df-f8b8038b4631"
+      }
+    },
+    {
+      "key": "835deb65-4d52-4276-8071-c7d3d5fb341d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "835deb65-4d52-4276-8071-c7d3d5fb341d",
+        "lesson_activity.key": "7d8ac029-3485-42f1-a4ff-7810ee057a55"
+      }
+    },
+    {
+      "key": "7c3b1619-8a27-494c-891b-080e65d479f4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3b1619-8a27-494c-891b-080e65d479f4",
+        "lesson_activity.key": "69e4d4b5-d233-45ed-abaa-399dcaa2cf48"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPDpart4_S1_L1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -100,7 +164,8 @@
         ],
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "560d0f7c-851f-4c89-90d2-57bca3700d70"
       },
       "level_keys": [
         "sciPDpart4_S1_L1"
@@ -109,12 +174,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S1_L2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -123,7 +185,8 @@
         ],
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "560d0f7c-851f-4c89-90d2-57bca3700d70"
       },
       "level_keys": [
         "sciPD2Part4_S1_L2"
@@ -132,12 +195,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S1_L3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -146,7 +206,8 @@
         ],
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "560d0f7c-851f-4c89-90d2-57bca3700d70"
       },
       "level_keys": [
         "sciPD2Part4_S1_L3"
@@ -155,12 +216,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S2_L1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -169,7 +227,8 @@
         ],
         "lesson.key": "Mystery Model",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "835deb65-4d52-4276-8071-c7d3d5fb341d"
       },
       "level_keys": [
         "sciPD2Part4_S2_L1"
@@ -178,12 +237,9 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S2_L2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -192,7 +248,8 @@
         ],
         "lesson.key": "Mystery Model",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "835deb65-4d52-4276-8071-c7d3d5fb341d"
       },
       "level_keys": [
         "sciPD2Part4_S2_L2"
@@ -201,12 +258,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S3_L1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -215,7 +269,8 @@
         ],
         "lesson.key": "Decode and Share",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "7c3b1619-8a27-494c-891b-080e65d479f4"
       },
       "level_keys": [
         "sciPD2Part4_S3_L1"
@@ -224,12 +279,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S3_L2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -238,7 +290,8 @@
         ],
         "lesson.key": "Decode and Share",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "7c3b1619-8a27-494c-891b-080e65d479f4"
       },
       "level_keys": [
         "sciPD2Part4_S3_L2"
@@ -247,12 +300,9 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S3_L3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -261,7 +311,8 @@
         ],
         "lesson.key": "Decode and Share",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "7c3b1619-8a27-494c-891b-080e65d479f4"
       },
       "level_keys": [
         "sciPD2Part4_S3_L3"
@@ -277,7 +328,8 @@
         ],
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "560d0f7c-851f-4c89-90d2-57bca3700d70"
       }
     },
     {
@@ -288,7 +340,8 @@
         ],
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "560d0f7c-851f-4c89-90d2-57bca3700d70"
       }
     },
     {
@@ -299,7 +352,8 @@
         ],
         "lesson.key": "Welcome Back!",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "560d0f7c-851f-4c89-90d2-57bca3700d70"
       }
     },
     {
@@ -310,7 +364,8 @@
         ],
         "lesson.key": "Mystery Model",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "835deb65-4d52-4276-8071-c7d3d5fb341d"
       }
     },
     {
@@ -321,7 +376,8 @@
         ],
         "lesson.key": "Mystery Model",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "835deb65-4d52-4276-8071-c7d3d5fb341d"
       }
     },
     {
@@ -332,7 +388,8 @@
         ],
         "lesson.key": "Decode and Share",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "7c3b1619-8a27-494c-891b-080e65d479f4"
       }
     },
     {
@@ -343,7 +400,8 @@
         ],
         "lesson.key": "Decode and Share",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "7c3b1619-8a27-494c-891b-080e65d479f4"
       }
     },
     {
@@ -354,7 +412,8 @@
         ],
         "lesson.key": "Decode and Share",
         "lesson_group.key": "",
-        "script.name": "sciencePD3"
+        "script.name": "sciencePD3",
+        "activity_section.key": "7c3b1619-8a27-494c-891b-080e65d479f4"
       }
     }
   ],

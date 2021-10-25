@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:10 UTC",
+    "serialized_at": "2021-10-25 23:36:46 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "17f5bda0-87a2-43bf-bfb4-9978dfd8c6db",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17f5bda0-87a2-43bf-bfb4-9978dfd8c6db",
+        "lesson.key": "Odometer Widget",
+        "lesson_group.key": "",
+        "script.name": "odometer"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1db4de71-1a55-4405-8ae1-f992af355325",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1db4de71-1a55-4405-8ae1-f992af355325",
+        "lesson_activity.key": "17f5bda0-87a2-43bf-bfb4-9978dfd8c6db"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Odometer"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -68,7 +87,8 @@
         ],
         "lesson.key": "Odometer Widget",
         "lesson_group.key": "",
-        "script.name": "odometer"
+        "script.name": "odometer",
+        "activity_section.key": "1db4de71-1a55-4405-8ae1-f992af355325"
       },
       "level_keys": [
         "Odometer"
@@ -84,7 +104,8 @@
         ],
         "lesson.key": "Odometer Widget",
         "lesson_group.key": "",
-        "script.name": "odometer"
+        "script.name": "odometer",
+        "activity_section.key": "1db4de71-1a55-4405-8ae1-f992af355325"
       }
     }
   ],

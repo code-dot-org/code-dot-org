@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:51 UTC",
+    "serialized_at": "2021-10-25 23:36:54 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -47,21 +48,52 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "46c58ba2-d907-46b9-87ed-a812fc457baf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46c58ba2-d907-46b9-87ed-a812fc457baf",
+        "lesson.key": "HoC Tutorial 1",
+        "lesson_group.key": "about me_ip",
+        "script.name": "poster"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "191f8180-580b-42d1-9350-c5ee21aa98a6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video: How to Make a Sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "191f8180-580b-42d1-9350-c5ee21aa98a6",
+        "lesson_activity.key": "46c58ba2-d907-46b9-87ed-a812fc457baf"
+      }
+    },
+    {
+      "key": "17b01ad9-0945-4049-abe9-dae28bb95ec8",
+      "position": 2,
+      "properties": {
+        "name": "Skill Building",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "17b01ad9-0945-4049-abe9-dae28bb95ec8",
+        "lesson_activity.key": "46c58ba2-d907-46b9-87ed-a812fc457baf"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseEF_video_MakeSprite_2020"
-        ],
         "progression": "Video: How to Make a Sprite"
       },
       "bonus": false,
@@ -71,7 +103,8 @@
         ],
         "lesson.key": "HoC Tutorial 1",
         "lesson_group.key": "about me_ip",
-        "script.name": "poster"
+        "script.name": "poster",
+        "activity_section.key": "191f8180-580b-42d1-9350-c5ee21aa98a6"
       },
       "level_keys": [
         "CourseEF_video_MakeSprite_2020"
@@ -80,12 +113,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-expression_make1"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -95,7 +125,8 @@
         ],
         "lesson.key": "HoC Tutorial 1",
         "lesson_group.key": "about me_ip",
-        "script.name": "poster"
+        "script.name": "poster",
+        "activity_section.key": "17b01ad9-0945-4049-abe9-dae28bb95ec8"
       },
       "level_keys": [
         "self-expression_make1"
@@ -104,12 +135,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-expression_positioning"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -119,7 +147,8 @@
         ],
         "lesson.key": "HoC Tutorial 1",
         "lesson_group.key": "about me_ip",
-        "script.name": "poster"
+        "script.name": "poster",
+        "activity_section.key": "17b01ad9-0945-4049-abe9-dae28bb95ec8"
       },
       "level_keys": [
         "self-expression_positioning"
@@ -135,7 +164,8 @@
         ],
         "lesson.key": "HoC Tutorial 1",
         "lesson_group.key": "about me_ip",
-        "script.name": "poster"
+        "script.name": "poster",
+        "activity_section.key": "191f8180-580b-42d1-9350-c5ee21aa98a6"
       }
     },
     {
@@ -146,7 +176,8 @@
         ],
         "lesson.key": "HoC Tutorial 1",
         "lesson_group.key": "about me_ip",
-        "script.name": "poster"
+        "script.name": "poster",
+        "activity_section.key": "17b01ad9-0945-4049-abe9-dae28bb95ec8"
       }
     },
     {
@@ -157,7 +188,8 @@
         ],
         "lesson.key": "HoC Tutorial 1",
         "lesson_group.key": "about me_ip",
-        "script.name": "poster"
+        "script.name": "poster",
+        "activity_section.key": "17b01ad9-0945-4049-abe9-dae28bb95ec8"
       }
     }
   ],

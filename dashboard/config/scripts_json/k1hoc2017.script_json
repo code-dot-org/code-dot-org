@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:37 UTC",
+    "serialized_at": "2021-10-25 23:35:45 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4537e970-d2ba-427d-9d2f-7b5e3e90001f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4537e970-d2ba-427d-9d2f-7b5e3e90001f",
+        "lesson.key": "Collector Hour of Code 2017",
+        "lesson_group.key": "",
+        "script.name": "k1hoc2017"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "915b631c-1ab0-487b-a0ee-f1c409b03033",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033",
+        "lesson_activity.key": "4537e970-d2ba-427d-9d2f-7b5e3e90001f"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseAB_video_collector"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -68,7 +87,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseAB_video_collector"
@@ -77,12 +97,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_preLoops1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -91,7 +108,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_preLoops1"
@@ -100,12 +118,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_preLoops2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -114,7 +129,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_preLoops2"
@@ -123,12 +139,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_preLoops3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -137,7 +150,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_preLoops3"
@@ -146,12 +160,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_preLoops4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -160,7 +171,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_preLoops4"
@@ -169,12 +181,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_preLoops5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,7 +192,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_preLoops5"
@@ -192,12 +202,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_preLoops6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -206,7 +213,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_preLoops6"
@@ -215,12 +223,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_preLoops7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -229,7 +234,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_preLoops7"
@@ -238,12 +244,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_video_Loops"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -252,7 +255,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_video_Loops"
@@ -261,12 +265,9 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,7 +276,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops3"
@@ -284,12 +286,9 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -298,7 +297,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops4"
@@ -307,12 +307,9 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,7 +318,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops5"
@@ -330,12 +328,9 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -344,7 +339,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops6"
@@ -353,12 +349,9 @@
     {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -367,7 +360,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops7"
@@ -376,12 +370,9 @@
     {
       "chapter": 15,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -390,7 +381,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops8"
@@ -399,12 +391,9 @@
     {
       "chapter": 16,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops12"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -413,7 +402,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops12"
@@ -422,12 +412,9 @@
     {
       "chapter": 17,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops_challenge1"
-        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -436,7 +423,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops_challenge1"
@@ -445,12 +433,9 @@
     {
       "chapter": 18,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops_challenge2"
-        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -459,7 +444,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       },
       "level_keys": [
         "courseA_collector_loops_challenge2"
@@ -475,7 +461,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -486,7 +473,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -497,7 +485,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -508,7 +497,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -519,7 +509,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -530,7 +521,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -541,7 +533,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -552,7 +545,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -563,7 +557,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -574,7 +569,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -585,7 +581,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -596,7 +593,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -607,7 +605,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -618,7 +617,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -629,7 +629,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -640,7 +641,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -651,7 +653,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     },
     {
@@ -662,7 +665,8 @@
         ],
         "lesson.key": "Collector Hour of Code 2017",
         "lesson_group.key": "",
-        "script.name": "k1hoc2017"
+        "script.name": "k1hoc2017",
+        "activity_section.key": "915b631c-1ab0-487b-a0ee-f1c409b03033"
       }
     }
   ],

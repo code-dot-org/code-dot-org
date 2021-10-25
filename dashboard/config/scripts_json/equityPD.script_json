@@ -4,12 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "Equity Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:09 UTC",
+    "serialized_at": "2021-10-25 23:35:30 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -62,21 +62,62 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "b11b5323-59cb-487d-91fa-6c2054e9c794",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b11b5323-59cb-487d-91fa-6c2054e9c794",
+        "lesson.key": "Necessary Background",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    },
+    {
+      "key": "edd88be1-4e97-4b5f-9403-e268e48cf7a7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "edd88be1-4e97-4b5f-9403-e268e48cf7a7",
+        "lesson.key": "Equity PD",
+        "lesson_group.key": "",
+        "script.name": "equityPD"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871",
+        "lesson_activity.key": "b11b5323-59cb-487d-91fa-6c2054e9c794"
+      }
+    },
+    {
+      "key": "bfe5e99b-77a4-4b35-ad49-e934e0a30206",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bfe5e99b-77a4-4b35-ad49-e934e0a30206",
+        "lesson_activity.key": "edd88be1-4e97-4b5f-9403-e268e48cf7a7"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -85,7 +126,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871"
       },
       "level_keys": [
         "equity Intro"
@@ -94,12 +136,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity v equality"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -108,7 +147,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871"
       },
       "level_keys": [
         "equity v equality"
@@ -117,12 +157,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity is more"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -131,7 +168,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871"
       },
       "level_keys": [
         "equity is more"
@@ -140,12 +178,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity in CS"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -154,7 +189,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871"
       },
       "level_keys": [
         "equity in CS"
@@ -163,12 +199,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity lead 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -177,7 +210,8 @@
         ],
         "lesson.key": "Equity PD",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "bfe5e99b-77a4-4b35-ad49-e934e0a30206"
       },
       "level_keys": [
         "equity lead 1"
@@ -186,12 +220,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity activity"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -200,7 +231,8 @@
         ],
         "lesson.key": "Equity PD",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "bfe5e99b-77a4-4b35-ad49-e934e0a30206"
       },
       "level_keys": [
         "equity activity"
@@ -209,12 +241,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity vids"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -223,7 +252,8 @@
         ],
         "lesson.key": "Equity PD",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "bfe5e99b-77a4-4b35-ad49-e934e0a30206"
       },
       "level_keys": [
         "equity vids"
@@ -239,7 +269,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871"
       }
     },
     {
@@ -250,7 +281,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871"
       }
     },
     {
@@ -261,7 +293,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871"
       }
     },
     {
@@ -272,7 +305,8 @@
         ],
         "lesson.key": "Necessary Background",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "ef4325ad-8a2d-4748-9ae8-12fe7db8a871"
       }
     },
     {
@@ -283,7 +317,8 @@
         ],
         "lesson.key": "Equity PD",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "bfe5e99b-77a4-4b35-ad49-e934e0a30206"
       }
     },
     {
@@ -294,7 +329,8 @@
         ],
         "lesson.key": "Equity PD",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "bfe5e99b-77a4-4b35-ad49-e934e0a30206"
       }
     },
     {
@@ -305,7 +341,8 @@
         ],
         "lesson.key": "Equity PD",
         "lesson_group.key": "",
-        "script.name": "equityPD"
+        "script.name": "equityPD",
+        "activity_section.key": "bfe5e99b-77a4-4b35-ad49-e934e0a30206"
       }
     }
   ],

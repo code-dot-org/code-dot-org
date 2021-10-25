@@ -6,11 +6,12 @@
     "properties": {
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "is_migrated": true,
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:44 UTC",
+    "serialized_at": "2021-10-25 23:32:48 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -198,21 +199,269 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "b58e0826-a42f-4af9-acf8-5838f0ea336b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b58e0826-a42f-4af9-acf8-5838f0ea336b",
+        "lesson.key": "Unit 1 Assessment 1 - Binary and Ascii ",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "68882310-a852-44b8-ad9f-d3dfe1862ff0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "68882310-a852-44b8-ad9f-d3dfe1862ff0",
+        "lesson.key": "Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "8b0fb77e-c129-40e5-8813-d1b44c5442b1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8b0fb77e-c129-40e5-8813-d1b44c5442b1",
+        "lesson.key": "Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "34eb9bbc-8267-4039-abef-5c980c925e36",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "34eb9bbc-8267-4039-abef-5c980c925e36",
+        "lesson.key": "Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "866aaafd-2803-4067-ac1a-004b02d2807a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "866aaafd-2803-4067-ac1a-004b02d2807a",
+        "lesson.key": "Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "80aa2744-1a22-4698-9565-e74eba0cfec1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80aa2744-1a22-4698-9565-e74eba0cfec1",
+        "lesson.key": "Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "999cd8f1-2ba2-4200-a6fa-8ec7eb333be2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "999cd8f1-2ba2-4200-a6fa-8ec7eb333be2",
+        "lesson.key": "Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "fc248575-591e-4741-ab61-3170432f4c12",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc248575-591e-4741-ab61-3170432f4c12",
+        "lesson.key": "Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "eb50f808-5f82-4bc5-9cfa-1bed70d4219e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb50f808-5f82-4bc5-9cfa-1bed70d4219e",
+        "lesson.key": "Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "976e6857-1513-4002-b8b7-a02f073c38e6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "976e6857-1513-4002-b8b7-a02f073c38e6",
+        "lesson.key": "Unit 5 Assessment 4 - List Algorithms, Functions with Return Values",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    },
+    {
+      "key": "b8df1c1c-4c8c-489c-9212-ca7b747cc449",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b8df1c1c-4c8c-489c-9212-ca7b747cc449",
+        "lesson.key": "Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)",
+        "lesson_group.key": "",
+        "script.name": "csp-exam"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a93ea123-6756-49c8-b748-df2228cca914",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a93ea123-6756-49c8-b748-df2228cca914",
+        "lesson_activity.key": "b58e0826-a42f-4af9-acf8-5838f0ea336b"
+      }
+    },
+    {
+      "key": "d1026815-80d1-4455-9043-848cdbb26e98",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d1026815-80d1-4455-9043-848cdbb26e98",
+        "lesson_activity.key": "68882310-a852-44b8-ad9f-d3dfe1862ff0"
+      }
+    },
+    {
+      "key": "dc595610-0260-4c38-82e2-8b71bf9d7630",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dc595610-0260-4c38-82e2-8b71bf9d7630",
+        "lesson_activity.key": "8b0fb77e-c129-40e5-8813-d1b44c5442b1"
+      }
+    },
+    {
+      "key": "ea3257d9-d77a-4c95-8c05-a67a5e4d1e59",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ea3257d9-d77a-4c95-8c05-a67a5e4d1e59",
+        "lesson_activity.key": "34eb9bbc-8267-4039-abef-5c980c925e36"
+      }
+    },
+    {
+      "key": "82bde6d7-32b9-49be-9df5-8f0b9f9dc629",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "82bde6d7-32b9-49be-9df5-8f0b9f9dc629",
+        "lesson_activity.key": "866aaafd-2803-4067-ac1a-004b02d2807a"
+      }
+    },
+    {
+      "key": "b53d1dad-9182-47f5-84d7-9907d68eeafe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b53d1dad-9182-47f5-84d7-9907d68eeafe",
+        "lesson_activity.key": "80aa2744-1a22-4698-9565-e74eba0cfec1"
+      }
+    },
+    {
+      "key": "e7b520af-9994-4ec4-bb88-122ae5b8f85b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e7b520af-9994-4ec4-bb88-122ae5b8f85b",
+        "lesson_activity.key": "999cd8f1-2ba2-4200-a6fa-8ec7eb333be2"
+      }
+    },
+    {
+      "key": "653886ac-e79a-4571-b28c-a87525549caa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "653886ac-e79a-4571-b28c-a87525549caa",
+        "lesson_activity.key": "fc248575-591e-4741-ab61-3170432f4c12"
+      }
+    },
+    {
+      "key": "0d981ec1-2f7e-4a2b-8d96-7a2ccb3dfe5a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0d981ec1-2f7e-4a2b-8d96-7a2ccb3dfe5a",
+        "lesson_activity.key": "eb50f808-5f82-4bc5-9cfa-1bed70d4219e"
+      }
+    },
+    {
+      "key": "1975a2ab-4059-4107-abf4-faceb84384d2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1975a2ab-4059-4107-abf4-faceb84384d2",
+        "lesson_activity.key": "976e6857-1513-4002-b8b7-a02f073c38e6"
+      }
+    },
+    {
+      "key": "3041d16d-a3aa-4b47-bfe9-6fb0648aaba9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3041d16d-a3aa-4b47-bfe9-6fb0648aaba9",
+        "lesson_activity.key": "b8df1c1c-4c8c-489c-9212-ca7b747cc449"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -221,7 +470,8 @@
         ],
         "lesson.key": "Unit 1 Assessment 1 - Binary and Ascii ",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "a93ea123-6756-49c8-b748-df2228cca914"
       },
       "level_keys": [
         "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep"
@@ -230,12 +480,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -244,7 +491,8 @@
         ],
         "lesson.key": "Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "d1026815-80d1-4455-9043-848cdbb26e98"
       },
       "level_keys": [
         "CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep"
@@ -253,12 +501,9 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -267,7 +512,8 @@
         ],
         "lesson.key": "Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "dc595610-0260-4c38-82e2-8b71bf9d7630"
       },
       "level_keys": [
         "CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep"
@@ -276,12 +522,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -290,7 +533,8 @@
         ],
         "lesson.key": "Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "ea3257d9-d77a-4c95-8c05-a67a5e4d1e59"
       },
       "level_keys": [
         "CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep"
@@ -299,12 +543,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -313,7 +554,8 @@
         ],
         "lesson.key": "Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "82bde6d7-32b9-49be-9df5-8f0b9f9dc629"
       },
       "level_keys": [
         "CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep"
@@ -322,12 +564,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -336,7 +575,8 @@
         ],
         "lesson.key": "Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "b53d1dad-9182-47f5-84d7-9907d68eeafe"
       },
       "level_keys": [
         "CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep"
@@ -345,12 +585,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 1 MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -359,7 +596,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "e7b520af-9994-4ec4-bb88-122ae5b8f85b"
       },
       "level_keys": [
         "CSP Unit 5 Cumulative Assessment 1 MC_exam_prep"
@@ -368,12 +606,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 2 MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -382,7 +617,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "653886ac-e79a-4571-b28c-a87525549caa"
       },
       "level_keys": [
         "CSP Unit 5 Cumulative Assessment 2 MC_exam_prep"
@@ -391,12 +627,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 3 MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -405,7 +638,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "0d981ec1-2f7e-4a2b-8d96-7a2ccb3dfe5a"
       },
       "level_keys": [
         "CSP Unit 5 Cumulative Assessment 3 MC_exam_prep"
@@ -414,12 +648,9 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 4 MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -428,7 +659,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 4 - List Algorithms, Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "1975a2ab-4059-4107-abf4-faceb84384d2"
       },
       "level_keys": [
         "CSP Unit 5 Cumulative Assessment 4 MC_exam_prep"
@@ -437,12 +669,9 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Cumulative Assess A_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -451,7 +680,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "3041d16d-a3aa-4b47-bfe9-6fb0648aaba9"
       },
       "level_keys": [
         "CSP Cumulative Assess A_exam_prep"
@@ -467,7 +697,8 @@
         ],
         "lesson.key": "Unit 1 Assessment 1 - Binary and Ascii ",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "a93ea123-6756-49c8-b748-df2228cca914"
       }
     },
     {
@@ -478,7 +709,8 @@
         ],
         "lesson.key": "Unit 1 Assessment 2 - Internet Protocols, TCP/IP, DNS, HTTP, etc",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "d1026815-80d1-4455-9043-848cdbb26e98"
       }
     },
     {
@@ -489,7 +721,8 @@
         ],
         "lesson.key": "Unit 2 Assessment 1 - Bits, Bytes, Hexadecimal and Compression",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "dc595610-0260-4c38-82e2-8b71bf9d7630"
       }
     },
     {
@@ -500,7 +733,8 @@
         ],
         "lesson.key": "Unit 2 Assessment 2 - Interpreting Data & Charts, Big Data, Global Impacts",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "ea3257d9-d77a-4c95-8c05-a67a5e4d1e59"
       }
     },
     {
@@ -511,7 +745,8 @@
         ],
         "lesson.key": "Unit 3 Assessment 1 - Turtle Programming, Loops, Functions, Abstraction",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "82bde6d7-32b9-49be-9df5-8f0b9f9dc629"
       }
     },
     {
@@ -522,7 +757,8 @@
         ],
         "lesson.key": "Unit 4 Assessment 1 - Privacy, Cybersecurity, Encryption",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "b53d1dad-9182-47f5-84d7-9907d68eeafe"
       }
     },
     {
@@ -533,7 +769,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 1 - Events, Variables, Debugging, Arithmetic, Turtle Review",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "e7b520af-9994-4ec4-bb88-122ae5b8f85b"
       }
     },
     {
@@ -544,7 +781,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 2 - If Statements, Boolean Expressions, Strings",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "653886ac-e79a-4571-b28c-a87525549caa"
       }
     },
     {
@@ -555,7 +793,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 3 - While Loops, Boolean Expressions, Arrays and Lists",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "0d981ec1-2f7e-4a2b-8d96-7a2ccb3dfe5a"
       }
     },
     {
@@ -566,7 +805,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 4 - List Algorithms, Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "1975a2ab-4059-4107-abf4-faceb84384d2"
       }
     },
     {
@@ -577,7 +817,8 @@
         ],
         "lesson.key": "Unit 5 Assessment 5 - Practice AP Pseudocode Questions (Variables, Procedures, Loops, Conditionals)",
         "lesson_group.key": "",
-        "script.name": "csp-exam"
+        "script.name": "csp-exam",
+        "activity_section.key": "3041d16d-a3aa-4b47-bfe9-6fb0648aaba9"
       }
     }
   ],

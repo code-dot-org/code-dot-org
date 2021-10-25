@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "exclude_csf_column_in_legend": true,
+      "is_migrated": true,
       "peer_reviews_to_complete": 2,
       "professional_learning_course": "CS Discoveries Deeper Learning 2019 - 2020",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:01 UTC",
+    "serialized_at": "2021-10-25 23:34:44 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -92,21 +92,131 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "8c77420d-1a94-4951-90a5-f1663d8f3836",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c77420d-1a94-4951-90a5-f1663d8f3836",
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "key": "14bdf12a-46cb-4ecf-b4b3-8e6b65025d80",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14bdf12a-46cb-4ecf-b4b3-8e6b65025d80",
+        "lesson.key": "Focus Area 1",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    },
+    {
+      "key": "bd0f5afd-931a-47ac-a5c3-501e512e25ea",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd0f5afd-931a-47ac-a5c3-501e512e25ea",
+        "lesson.key": "Focus Area 2",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-fit"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "4604dd9d-a990-4c5a-95d4-804abb4f9ae7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Background"
+      },
+      "seeding_key": {
+        "activity_section.key": "4604dd9d-a990-4c5a-95d4-804abb4f9ae7",
+        "lesson_activity.key": "8c77420d-1a94-4951-90a5-f1663d8f3836"
+      }
+    },
+    {
+      "key": "24ee5c24-2d28-4f42-acb2-65f9b22374aa",
+      "position": 2,
+      "properties": {
+        "progression_name": "Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "24ee5c24-2d28-4f42-acb2-65f9b22374aa",
+        "lesson_activity.key": "8c77420d-1a94-4951-90a5-f1663d8f3836"
+      }
+    },
+    {
+      "key": "a4a3d9a9-2ca4-439b-9087-a4c00222f9aa",
+      "position": 3,
+      "properties": {
+        "progression_name": "Preparation"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4a3d9a9-2ca4-439b-9087-a4c00222f9aa",
+        "lesson_activity.key": "8c77420d-1a94-4951-90a5-f1663d8f3836"
+      }
+    },
+    {
+      "key": "2cdf6433-dc5d-44ff-a1c6-f22c3e2cb760",
+      "position": 4,
+      "properties": {
+        "progression_name": "Evaluation"
+      },
+      "seeding_key": {
+        "activity_section.key": "2cdf6433-dc5d-44ff-a1c6-f22c3e2cb760",
+        "lesson_activity.key": "8c77420d-1a94-4951-90a5-f1663d8f3836"
+      }
+    },
+    {
+      "key": "53f1f6d1-8ed2-4fef-8c2a-a4ee61b1451a",
+      "position": 5,
+      "properties": {
+        "name": "Due Dates",
+        "progression_name": "Due Dates"
+      },
+      "seeding_key": {
+        "activity_section.key": "53f1f6d1-8ed2-4fef-8c2a-a4ee61b1451a",
+        "lesson_activity.key": "8c77420d-1a94-4951-90a5-f1663d8f3836"
+      }
+    },
+    {
+      "key": "3f98730c-cac8-43cb-ac32-31b1a70c94b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3f98730c-cac8-43cb-ac32-31b1a70c94b6",
+        "lesson_activity.key": "14bdf12a-46cb-4ecf-b4b3-8e6b65025d80"
+      }
+    },
+    {
+      "key": "52556de7-0338-4985-9444-a36d2e881f01",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "52556de7-0338-4985-9444-a36d2e881f01",
+        "lesson_activity.key": "bd0f5afd-931a-47ac-a5c3-501e512e25ea"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview1"
-        ],
         "progression": "Background"
       },
       "bonus": false,
@@ -116,7 +226,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "4604dd9d-a990-4c5a-95d4-804abb4f9ae7"
       },
       "level_keys": [
         "dlp19_overview1"
@@ -125,12 +236,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview2"
-        ],
         "progression": "Process"
       },
       "bonus": false,
@@ -140,7 +248,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "24ee5c24-2d28-4f42-acb2-65f9b22374aa"
       },
       "level_keys": [
         "dlp19_overview2"
@@ -149,12 +258,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview3"
-        ],
         "progression": "Preparation"
       },
       "bonus": false,
@@ -164,7 +270,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "a4a3d9a9-2ca4-439b-9087-a4c00222f9aa"
       },
       "level_keys": [
         "dlp19_overview3"
@@ -173,12 +280,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview4"
-        ],
         "progression": "Evaluation"
       },
       "bonus": false,
@@ -188,7 +292,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "2cdf6433-dc5d-44ff-a1c6-f22c3e2cb760"
       },
       "level_keys": [
         "dlp19_overview4"
@@ -197,12 +302,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview5"
-        ],
         "progression": "Due Dates"
       },
       "bonus": false,
@@ -212,7 +314,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "53f1f6d1-8ed2-4fef-8c2a-a4ee61b1451a"
       },
       "level_keys": [
         "dlp19_overview5"
@@ -221,12 +324,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_csd_prework-fit_content1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -235,7 +335,8 @@
         ],
         "lesson.key": "Focus Area 1",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "3f98730c-cac8-43cb-ac32-31b1a70c94b6"
       },
       "level_keys": [
         "dlp19_csd_prework-fit_content1"
@@ -244,12 +345,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_csd_prework-fit-prompt"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -258,7 +356,8 @@
         ],
         "lesson.key": "Focus Area 1",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "3f98730c-cac8-43cb-ac32-31b1a70c94b6"
       },
       "level_keys": [
         "dlp19_csd_prework-fit-prompt"
@@ -267,12 +366,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_csd_prework-fit_content1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -281,7 +377,8 @@
         ],
         "lesson.key": "Focus Area 2",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "52556de7-0338-4985-9444-a36d2e881f01"
       },
       "level_keys": [
         "dlp19_csd_prework-fit_content1"
@@ -290,12 +387,9 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_csd_prework-fit-prompt"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -304,7 +398,8 @@
         ],
         "lesson.key": "Focus Area 2",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "52556de7-0338-4985-9444-a36d2e881f01"
       },
       "level_keys": [
         "dlp19_csd_prework-fit-prompt"
@@ -320,7 +415,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "4604dd9d-a990-4c5a-95d4-804abb4f9ae7"
       }
     },
     {
@@ -331,7 +427,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "24ee5c24-2d28-4f42-acb2-65f9b22374aa"
       }
     },
     {
@@ -342,7 +439,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "a4a3d9a9-2ca4-439b-9087-a4c00222f9aa"
       }
     },
     {
@@ -353,7 +451,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "2cdf6433-dc5d-44ff-a1c6-f22c3e2cb760"
       }
     },
     {
@@ -364,7 +463,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "53f1f6d1-8ed2-4fef-8c2a-a4ee61b1451a"
       }
     },
     {
@@ -375,7 +475,8 @@
         ],
         "lesson.key": "Focus Area 1",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "3f98730c-cac8-43cb-ac32-31b1a70c94b6"
       }
     },
     {
@@ -386,7 +487,8 @@
         ],
         "lesson.key": "Focus Area 1",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "3f98730c-cac8-43cb-ac32-31b1a70c94b6"
       }
     },
     {
@@ -397,7 +499,8 @@
         ],
         "lesson.key": "Focus Area 2",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "52556de7-0338-4985-9444-a36d2e881f01"
       }
     },
     {
@@ -408,7 +511,8 @@
         ],
         "lesson.key": "Focus Area 2",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-fit"
+        "script.name": "dlp19-csd-mod-fit",
+        "activity_section.key": "52556de7-0338-4985-9444-a36d2e881f01"
       }
     }
   ],

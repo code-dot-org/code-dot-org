@@ -4,10 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:01 UTC",
+    "serialized_at": "2021-10-25 23:36:48 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "seeding_key": {
@@ -45,21 +46,50 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "fc27b654-3a6b-4fb2-9210-935ac6241eea",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc27b654-3a6b-4fb2-9210-935ac6241eea",
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "37e51657-8e72-44d2-8011-994838e76e31",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "37e51657-8e72-44d2-8011-994838e76e31",
+        "lesson_activity.key": "fc27b654-3a6b-4fb2-9210-935ac6241eea"
+      }
+    },
+    {
+      "key": "680927f3-525d-4cc6-8569-963f8b1ac2ee",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee",
+        "lesson_activity.key": "fc27b654-3a6b-4fb2-9210-935ac6241eea"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD-PL AYWS1 Debugging Intro"
-        ],
         "progression": "Introduction to Debugging"
       },
       "bonus": false,
@@ -69,7 +99,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "37e51657-8e72-44d2-8011-994838e76e31"
       },
       "level_keys": [
         "CSD-PL AYWS1 Debugging Intro"
@@ -78,12 +109,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 drawing practice 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -92,7 +120,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee"
       },
       "level_keys": [
         "CSD U3 drawing practice 1"
@@ -101,12 +130,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 drawing practice 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -115,7 +141,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee"
       },
       "level_keys": [
         "CSD U3 drawing practice 3"
@@ -124,12 +151,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Variable names debug"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -138,7 +162,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee"
       },
       "level_keys": [
         "CSD U3 Variable names debug"
@@ -147,12 +172,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites debug"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,7 +183,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee"
       },
       "level_keys": [
         "CSD U3 Sprites debug"
@@ -177,7 +200,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "37e51657-8e72-44d2-8011-994838e76e31"
       }
     },
     {
@@ -188,7 +212,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee"
       }
     },
     {
@@ -199,7 +224,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee"
       }
     },
     {
@@ -210,7 +236,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee"
       }
     },
     {
@@ -221,7 +248,8 @@
         ],
         "lesson.key": "CSD Workshop 1 Bugs",
         "lesson_group.key": "",
-        "script.name": "pl-csd-bugs"
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "680927f3-525d-4cc6-8569-963f8b1ac2ee"
       }
     }
   ],
