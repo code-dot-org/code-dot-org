@@ -3583,7 +3583,8 @@
         "courseF_sprites_freeplay_blank": "Ora tocca a te creare qualunque cosa desideri!",
         "courseF_sprites_freeplay_food": "Ora tocca a te creare qualunque cosa desideri!",
         "courseF_sprites_freeplay_space": "Ora tocca a te creare qualunque cosa desideri!",
-        "courseF_sprites_moreSprites": "Crea quattro personaggi."
+        "courseF_sprites_moreSprites": "Crea quattro personaggi.",
+        "courseF_apps_chatbot": "Questo robot ti porrà delle domande e ricorderà cosa hai digitato! Scrivi le risposte e inizierai a conversare con X-9!"
       }
     }
   }

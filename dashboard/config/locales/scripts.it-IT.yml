@@ -11478,10 +11478,6 @@ it:
               name: Componenti
             lesson-2:
               name: Strumenti
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabili
         spelling-bee:
           lessons:
             lesson-1:

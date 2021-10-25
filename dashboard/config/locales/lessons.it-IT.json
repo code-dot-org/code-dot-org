@@ -62,12 +62,8 @@
           "overview": "Anche se molte persone usano Internet ogni giorno, non molti sanno come funziona. In questa lezione, gli studenti faranno finta di navigare in Internet, imparando a conoscere connessioni, URL, indirizzi IP e DNS."
         },
         "coursef-2021/End of Course Project": {
-          "preparation": "-   Dedica del tempo alla creazione del tuo progetto con l'Artista e il Laboratorio dei personaggi. Acquisisci familiarità con le capacità e i limiti di ogni strumento.\n-   Modifica la griglia per adattarla agli obiettivi della tua classe e stampane una copia per ogni alunno.\n-   Modifica il foglio di lavoro per la progettazione del progetto per adattarlo alla tua classe e stampa un pacchetto per ogni alunno.",
           "purpose": "Alcuni alunni potrebbero essere impazienti di iniziare subito a costruire i loro progetti, ma questa lezione li aiuterà a trasformare le loro idee in una corretta pianificazione. Questa struttura manterrà i più sognatori coi piedi a terra ed illuminerà la strada a coloro a cui sembrerà di brancolare nel buio. Fornisci agli alunni tutto il tempo per costruire e rivedere i loro progetti. I tentativi e gli errori inevitabilmente coinvolti in questa lezione insegneranno la risoluzione dei problemi e la persistenza.",
           "student_overview": "Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!"
-        },
-        "courseb-2021/Move It, Move It": {
-          "purpose": "Utilizzando il movimento fisico per programmare i loro compagni di classe, gli alunni incontreranno problemi ed emozioni simili a ciò che proveranno quando inizieranno a programmare su un computer. Incontrare questi stress in un ambiente giocoso e aperto aiuterà ad alleviare l'intensità e permetterà agli studenti di mettere in pratica le abilità necessarie prima che incontrino problemi da soli."
         },
         "courseb-2021/Sequencing in Maze": {
           "overview": "Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online.",
@@ -109,12 +105,10 @@
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
         },
         "coursea-2021/Loops: Happy Loops": {
-          "overview": "I cicli sono uno strumento molto utile e potente nella programmazione. Per capire quanto utili possono essere, gli studenti dovranno essere condotti a desiderare un modo più semplice per risolvere problemi banali.",
-          "purpose": "Con questa lezione vengono introdotte le istruzioni di ripetizione (cicli). I cicli permettono agli alunni di semplificare i programmi raggruppando le istruzioni che devono essere ripetute. Gli alunni svilupperanno il pensiero critico, notando la ripetizione nei movimenti dei loro compagni di classe e determinando quante volte ripetere le istruzioni. Vedendo di nuovo \"Mappe Felici\", gli alunni avranno la possibilità di mettere in relazione concetti vecchi come le sequenze di istruzioni con il nuovo concetto delle istruzioni di ripetizione."
+          "overview": "I cicli sono uno strumento molto utile e potente nella programmazione. Per capire quanto utili possono essere, gli studenti dovranno essere condotti a desiderare un modo più semplice per risolvere problemi banali."
         },
         "coursea-2021/Loops in Collector": {
-          "overview": "Basandosi sul concetto di istruzioni ripetute appreso in \"Cicli Felici\", in questa lezione gli studenti utilizzeranno i cicli per raccogliere dei diamanti su Code.org in modo più efficiente.",
-          "purpose": "Questa lezione offre agli alunni più pratica con i cicli e introduce un nuovo blocco, `prendi il tesoro`. Il blocco funziona esattamente come \"raccogli il mais\" nella Contadina. Questi esercizi sono più aperti e offrono agli alunni maggiore flessibilità per le loro soluzioni finali."
+          "overview": "Basandosi sul concetto di istruzioni ripetute appreso in \"Cicli Felici\", in questa lezione gli studenti utilizzeranno i cicli per raccogliere dei diamanti su Code.org in modo più efficiente."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli."
@@ -125,9 +119,6 @@
         "coursea-2021/Events in Play Lab": {
           "overview": "In questa attività online, gli studenti avranno l'opportunità di imparare a utilizzare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire una storia nel Laboratorio!",
           "purpose": "Oggi gli alunni svilupperanno ulteriormente la loro comprensione della gestione degli eventi utilizzando il Laboratorio. Gli eventi sono molto comuni nella maggior parte dei programmi per computer. In questa attività, gli studenti useranno gli eventi per far muovere un personaggio sullo schermo, fare rumori e cambiare lo sfondo in base agli eventi scatenati dall'utente."
-        },
-        "coursec-2021/Programming: My Robotic Friends": {
-          "purpose": "Questa lezione tradizionale riunisce l'intera classe in un'unica squadra motivata da un semplice compito: condurre un \"robot\" ad accatastare dei bicchieri secondo uno schema predeterminato. Questa attività pone le basi per la programmazione che gli alunni faranno durante il corso, mentre comprendono l'importanza di definire un algoritmo nel modo più dettagliato e comprensibile possibile."
         },
         "coursec-2021/Programming in Maze": {
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
@@ -141,9 +132,6 @@
         "coursec-2021/Programming in Artist": {
           "purpose": "Basandosi sulle precedenti esperienze degli alunni con le sequenze di istruzioni, questa lezione servirà ad ispirare maggiore creatività nella programmazione. Con questa lezione si ha lo scopo di consolidare le conoscenze sulle sequenze di istruzioni, introducendo nuovi blocchi ed obiettivi. Utilizzando i nuovi blocchi a disposizione in questi esercizi, gli alunni acquisiscono maggiore dimestichezza con i pixel e gli angoli, mentre continuano a far pratica con le loro abilità di programmazione. Inoltre, gli alunni saranno in grado di concepire nuovi obiettivi come la programmazione dell'artista per disegnare un quadrato.",
           "student_overview": "Crea splendide immagini programmando l'artista."
-        },
-        "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "purpose": "Questa lezione serve ad introdurre i cicli, usando l'ormai familiare insieme di istruzioni per programmare i \"robot\". Gli alunni sviluppano il pensiero critico cercando schemi di ripetizione nei movimenti dei compagni di classe e determinando come semplificare quegli schemi ripetuti usando i cicli."
         },
         "coursec-2021/Loops in Harvester": {
           "student_overview": "Usiamo i cicli per aiutare la contadina a raccogliere le sue verdure!"
@@ -160,7 +148,6 @@
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "In questa attività online, gli studenti avranno l'opportunità di imparare a usare gli eventi del Laboratorio e di applicare tutte le competenze di programmazione che hanno imparato per creare un gioco animato. È il momento di essere creativi e costruire un gioco nel Laboratorio!",
-          "purpose": "Qui gli alunni svilupperanno ulteriormente la loro comprensione degli eventi utilizzando il Laboratorio. Gli alunni useranno i gestori di eventi per far muovere i personaggi sullo schermo, fare rumori e cambiare lo sfondo in base agli input dell'utente. Alla fine degli esercizi gli alunni avranno l'opportunità di condividere i loro progetti.  ",
           "student_overview": "È il momento di essere creativi e creare un gioco nel Laboratorio!"
         },
         "coursec-2021/Binary Bracelets": {
@@ -169,16 +156,11 @@
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
           "student_overview": "Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto."
         },
-        "coursed-2021/Algorithms: Graph Paper Programming": {
-          "purpose": "Il traguardo di apprendimento che ci si pone con questa attività è lo sviluppo del pensiero critico e l'avvio del corso con entusiasmo, introducendo alcuni dei concetti fondamentali della programmazione che verranno utilizzati durante il corso. Presentando alla classe alcuni concetti base come la sequenza di istruzioni e gli algoritmi in un'attività tradizionale, anche gli alunni che sono intimoriti dai computer potranno costruirsi una base di comprensione su questi argomenti. In questa lezione, gli alunni impareranno come sviluppare un algoritmo e codificarlo in un programma. "
-        },
         "coursed-2021/Introduction to Online Puzzles": {
           "overview": "Negli esercizi di questa lezione, gli studenti inizieranno con un'introduzione (o un ripasso a seconda dell'esperienza della classe) dell'ambiente di lavoro online di Code.org. Con alcuni video verranno presentate le funzionalità di base dell'ambiente di lavoro, inclusi i pulsanti \"Esegui\", \"Ripristina\" e \"Fai un passo\". Altre indicazioni presentate in questi video: trascinamento, connessione ed eliminazione dei blocchi (questo tipo di programmazione a blocchi è denominata Blockly). Successivamente, gli studenti potranno esercitarsi nel labirinto con le sequenze di istruzioni e il debugging. Infine, gli studenti vedranno nuovi tipi di esercizi come la Collezionista, l'Artista e la Contadina, in cui impareranno le basi dei Cicli (istruzioni di ripetizione).",
-          "purpose": "Il livello ci comprensione di ogni materia è diversamente distribuito in ogni classe, alcuni alunni potrebbero essere maghi del computer, mentre altri potrebbero non avere molta dimestichezza. Questa lezione introduttiva per al Corso D è stata sviluppata proprio al fine di allineare il più possibile queste differenze e può essere usata sia come introduzione che come ripasso dell'ambiente di programmazione di Code.org e dei concetti di informatica trattati nei corsi precedenti. Questa lezione copre infatti tutti i prerequisiti necessari per iniziare il Corso D.",
           "student_overview": "Questa lezione ti permetterà di far pratica con le abilità di cui avrai bisogno in questo corso."
         },
         "coursed-2021/Relay Programming": {
-          "purpose": "Il lavoro di squadra è molto importante nell'informatica. Le squadre scrivono ed eseguono il debug del codice tra loro, invece di lavorare come individui. In questa lezione, gli alunni impareranno a lavorare insieme per essere il più efficienti possibile. \n\nQuesta attività fornisce anche un senso di urgenza che insegnerà agli alunni a bilanciare attentamente il loro tempo ed evitare errori senza rimanere troppo indietro. Quest'esperienza può essere stressante (cosa prevista!) Assicurati di fornire agli alunni gli strumenti per affrontare potenziali frustrazioni.",
           "student_overview": "Ricordi quando facevi i primi disegni con il coding all'inizio del corso? In questa lezione lavorerai in gruppo per fare qualcosa di molto simile!"
         },
         "coursed-2021/Debugging in Collector": {
@@ -187,7 +169,6 @@
         },
         "coursed-2021/Events in Bounce": {
           "overview": "In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.",
-          "purpose": "Gli eventi sono molto usati nei programmi per computer, specialmente nei videogiochi.  \n\nIn questa lezione, gli alunni svilupperanno la loro comprensione degli eventi realizzando un gioco a tema sportivo. Gli alunni impareranno a far muovere la racchetta in base alla pressione dei tasti freccia ed a riprodurre dei suoni quando gli oggetti si scontrano. Alla fine potranno personalizzare il loro gioco per renderlo unico!",
           "student_overview": "Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!"
         },
         "coursed-2021/Build a Star Wars Game": {
@@ -196,9 +177,6 @@
         },
         "coursed-2021/Dance Party": {
           "purpose": "Questa lezione introduce i concetti fondamentali CS di codifica e programmazione di eventi (usando i blocchi)."
-        },
-        "coursed-2021/Loops in Artist": {
-          "purpose": "Questa serie evidenzia la potenza dei cicli con una serie di esercizi pensati per far riflettere gli alunni sul perché i cicli \"ripeti\" sono superiori a quelli manoscritti."
         },
         "coursed-2021/Nested Loops in Bee": {
           "overview": "In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su \"Esegui\"."
@@ -237,9 +215,6 @@
           "overview": "In questa attività online, gli studenti avranno l'opportunità di spingere la loro comprensione dei Cicli ad un livello completamente nuovo. Giocando con l'Ape e gli Zombie, gli studenti impareranno a programmare un ciclo all'interno di un altro ciclo. Saranno anche incoraggiati ad indagare come dei piccoli cambiamenti in entrambi i cicli influenzano il programma quando si clicca su \"Esegui\".",
           "student_overview": "Cicli all'interno di altri cicli, all'interno di altri cicli... Cosa significa? Questa lezione ti insegnerà cosa succede quando crei un ciclo annidato."
         },
-        "express-2021/Snowflakes with Anna and Elsa": {
-          "purpose": "In questa lezione, gli alunni faranno pratica con i cicli annidati mentre creeranno meravigliose immagini da condivideranno con entusiasmo. \n\nUna volta avviati con un nucleo iniziale di istruzioni, gli alunni potranno prendere delle decisioni personali in merito alla creazione degli schemi da ripetere. Dopodiché li ripeteranno ulteriormente in vari modi per ottenere un capolavoro davvero unico."
-        },
         "express-2021/Looking Ahead with Minecraft ": {
           "purpose": "Questa serie di esercizi contribuirà a consolidare e costruire l'apprendimento dei cicli e ad introdurre le istruzioni condizionali. Associando questi due concetti insieme, gli alunni saranno in grado di esplorare il potenziale per la creazione di programmi complessi e innovativi in un ambiente nuovo ed entusiasmante."
         },
@@ -252,7 +227,6 @@
         },
         "express-2021/Harvesting with Conditionals": {
           "overview": "Gli studenti si eserciteranno con i cicli `mentre`, i cicli `ripeti fino a che` e le istruzioni `se / altrimenti`. Tutti questi blocchi utilizzano delle istruzioni condizionali. Esercitandosi su tutti e tre, gli studenti impareranno a scrivere codice complesso e flessibile.",
-          "purpose": "Esercitandosi nell'uso delle istruzioni condizionali in diversi contesti, gli alunni sviluppano una comprensione completa di ciò che si può fare con questi strumenti. Nella lezione precedente, gli alunni hanno usato le istruzioni condizionali solo per muoversi in un labirinto. In questa lezione, useranno le istruzioni condizionali per aiutare la contadina a capire quando raccogliere le sue colture. Emergeranno nuovi schemi e gli alunni useranno la loro creatività ed il pensiero logico per determinare le condizioni in cui il codice deve essere eseguito e ripetuto.",
           "student_overview": "Non è sempre facile capire quale istruzione condizionale usare. Questa lezione ti aiuterà a prendere confidenza e imparare a fare le scelte corrette."
         },
         "express-2021/Functions in Minecraft": {
@@ -295,22 +269,15 @@
         "pre-express-2021/Programming in with Angry Birds": {
           "purpose": "In questa lezione, gli alunni svilupperanno abilità di programmazione e debugging su una piattaforma informatica. Il formato di questi esercizi in cui il codice è raffigurato da dei blocchi grafici, aiuta gli alunni ad apprendere i concetti base dell'informatica, senza doversi preoccupare di imparare una specifica sintassi."
         },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "purpose": "Sempre allo scopo di trasferire le conoscenze, in questa lezione viene fornito agli alunni un nuovo ambiente per far pratica con le abilità che stanno acquisendo. I fan di Star Wars salteranno di gioia quando vedranno questi esercizi. Ogni esercizio di questa serie è stato aggiunto per approfondire i concetti di base che utilizzeranno per il resto del corso."
-        },
         "pre-express-2021/Programming in Harvester": {
           "purpose": "In questa lezione, gli alunni svilupperanno abilità nella risoluzione dei problemi e continueranno a sviluppare le loro capacità di programmazione."
-        },
-        "pre-express-2021/Loops with Scrat": {
-          "purpose": "In questa lezione, gli alunni impareranno altre cose sui cicli e su come implementarli con i blocchi Blockly. L'uso dei _cicli_ è un'abilità importante nella programmazione, perché la ripetizione manuale delle istruzioni è noiosa e inefficiente. Con gli esercizi di Code.org, gli alunni impareranno ad aggiungere istruzioni ai cicli esistenti, a riunire in cicli le sequenze di istruzioni ripetute e a riconoscere gli schemi che si ripetono e che devono essere ricondotti ad un ciclo."
         },
         "pre-express-2021/Loops with Laurel": {
           "overview": "In questa lezione, gli alunni continuano ad apprendere il concetto di ciclo. Qui, Laura l'avventuriera usa i cicli per raccogliere diamanti negli spazi aperti delle caverne. Viene introdotto un nuovo blocco \"Prendi diamanti\" per aiutarla nel suo viaggio.",
           "purpose": "Questa lezione offre agli alunni più pratica con i cicli e li incoraggia a inserire più blocchi all'interno di una `ripetizione` mentre cercano di raccogliere più diamanti possibile."
         },
         "pre-express-2021/Ocean Scene with Loops": {
-          "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.",
-          "purpose": "Questa lezione offre nuove prospettive di utilizzo creativo dei cicli nella programmazione. Qui gli alunni possono riflettere ulteriormente sull'inefficienza della programmazione senza cicli e rendersi conto di quanti blocchi richiederebbe il programma senza l'aiuto del ciclo `ripeti`."
+          "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
           "overview": "Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.",
@@ -327,16 +294,11 @@
         "coursee-2021/Private and Personal Information": {
           "student_overview": "Internet è divertente ed emozionante, ma è anche importante muoversi in sicurezza. In questa lezione imparerai la differenza tra i dati che si possono condividere ed i dati personali da mantenere privati."
         },
-        "coursee-2021/Digital Sharing": {
-          "purpose": "Gli alunni creeranno presto progetti da condividere e la maggior parte di questi progetti conterrà codice o immagini che gli alunni non hanno creato da soli. Questa lezione serve a mostrare agli alunni il ​​modo corretto di gestire l'uso di contenuti che non hanno creato loro."
-        },
         "coursee-2021/Nested Loops in Artist": {
-          "purpose": "In questa attività online, gli alunni creeranno progetti con l'Artista che potranno orgogliosamente condividere con amici e parenti.  \n\nLo scopo di questa tipologia di attività è di utilizzare i cicli annidati come leva per far breccia nelle menti più artistiche, facendo capire che la programmazione può avere sbocchi molto creativi. Questa serie di esercizi è stata progettata per sviluppare il pensiero critico, la comprensione della geometria elementare e la creatività, tutto nell'ambito dei cicli annidati!",
           "student_overview": "Ancora cicli annidati! Questa volta realizzerai alcuni disegni STRAORDINARI con i cicli annidati."
         },
         "coursee-2021/Functions: Songwriting": {
           "overview": "Una delle strutture più belle nell'informatica è la funzione. Le funzioni (a volte chiamate procedure) sono dei mini-programmi che è possibile utilizzare più e più volte all'interno di un programma più grande. Questa lezione aiuta gli studenti a comprendere intuitivamente perché raggruppare blocchi di codice all'interno di funzioni possa essere una pratica utile.",
-          "purpose": "L'uso delle funzioni aiuta a semplificare il codice e a sviluppare la capacità di organizzare il proprio programma. Gli alunni si renderanno rapidamente conto che la scrittura di funzioni permetterà di ridurre la lunghezza dei loro programmi, li renderà più facili da leggere e, di conseguenza, anche l'eventuale debugging  sarà più semplice.",
           "student_overview": "In un certo senso, anche le rockstar devono saper programmare. In questa lezione scoprirai le funzioni che si utilizzano nei testi delle canzoni."
         },
         "coursee-2021/Functions in Minecraft": {

@@ -36,7 +36,11 @@
         "helloworld_animals_sizes": "Impara a modificare la dimensione dei personaggi",
         "helloworld_emoji_sizes": "Impara a modificare la dimensione dei personaggi",
         "helloworld_food_sizes": "Impara a modificare la dimensione dei personaggi",
-        "helloworld_retro_sizes": "Impara a modificare la dimensione dei personaggi"
+        "helloworld_retro_sizes": "Impara a modificare la dimensione dei personaggi",
+        "courseF_apps_chatbot": "Questo robot ti porrà delle domande e ricorderà cosa hai digitato! Scrivi le risposte e inizierai a conversare con X-9!",
+        "courseF_apps_madlib": "Questo programma ti chiederà di inserire alcune parole, che riutilizzerà in seguito per raccontarti una stupida storia!",
+        "courseF_apps_pet": "Sposta gli oggetti verso il cane e osserva la sua reazione!",
+        "courseF_editable_madlib": "Questo programma ti chiederà di inserire alcune parole, che riutilizzerà in seguito per raccontarti una stupida storia!"
       }
     }
   }

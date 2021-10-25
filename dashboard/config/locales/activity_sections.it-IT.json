@@ -854,9 +854,6 @@
             null
           ]
         },
-        "94a2704e-d539-4fc7-b390-a8e9850c64f5": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Alla rovescia!**\n\n-   Prova di nuovo la medesima attività, ma questa volta seleziona il valore iniziale  usando tre dadi ed il valore finale con uno solo ed imposta un incremento negativo! \n\n**Il gioco della campana**\n\n-   Usando un gesso, disegna su un pavimento adatto lo schema del gioco della campana\n    -   Numera le caselle dal basso verso l'alto\n    -   Chiedi agli alunni di definire una casella iniziale, una casella finale e quante ne devono saltare ogni volta (il passo)\n    -   Quando il percorso è stato eseguito, chiedi agli alunni di scrivere il ciclo che hanno appena eseguito\n    -   Per aggiungere complessità, puoi definire diverse attività da svolgere in ogni casella"
-        },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Introduzione"
         },
@@ -1051,9 +1048,6 @@
           "tips": [
             null
           ]
-        },
-        "d8233290-3b13-4062-b13e-6bc56ccd2f7f": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono essere usate come attività extra-scolastica o come approfondimento.\n\n**di X e di O**\n\n-   Disegna una tavola da tris per la classe.\n-   Metti una sola X e una sola O da qualche parte sul tabellone.\n-   Chiedi alla classe se possono portare la X alla O usando i gesti delle braccia come classe.\n\n**di X, di O e Frecce**\n\n-   Simile all'attività in alto, ma chiedi agli alunni di scrivere i loro programmi in anticipo usando le frecce invece dei gesti delle mani.\n    -   Questo può essere fatto in gruppi.\n    -   I gruppi possono condividere le loro soluzioni per la classe."
         },
         "af269d6d-e57d-4331-bc8d-daae801d1db0": {
           "tips": [
@@ -1310,9 +1304,6 @@
           "tips": [
             null
           ]
-        },
-        "c3cfdbc4-82d5-4717-bf83-22860936a687": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli alunni. Possono anche essere utilizzate come attività extra scolastiche.\n\n**Mappe peluche**\n\n-   Usa del nastro adesivo per creare sul pavimento (o su un grande tappeto) una griglia a grandezza naturale e chiedi agli alunni di portare a scuola degli animali di peluche.\n-   Ora gli alunni possono \"programmare\" i loro compagni per spostare degli oggetti reali come indicato nei programmi.\n\n**Crea la tua mappa**\n\n-   Chiedi agli alunni di creare le proprie mappe.\n-   Chiedi ad altri alunni di risolverle usando i programmi."
         },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
           "tips": [
@@ -1734,9 +1725,6 @@
         "809e449a-e392-48c2-9b9f-f53ce1d06366": {
           "name": "Riflessione"
         },
-        "d5490110-1fb8-44ca-8e62-8b0c4e3b6dbe": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Raccolto scolastico**\n\n-   Fai creare agli alunni delle pile di materiale scolastico sui loro banchi (matite, gomme, ecc.)\n-   Chiedi ai rispettivi compagni di scoprire come potrebbe camminare una contadina da una pila all'altra, raccogliendo ogni gruppo di oggetti lungo il percorso.\n-   Condividi i programmi con il resto della classe."
-        },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
           "name": "Introduzione"
         },
@@ -1797,9 +1785,6 @@
         "a49ab9e9-2a47-4d02-93bf-ec9bd241a125": {
           "name": "Riflessione"
         },
-        "f9faf5dc-b81a-441f-84f6-202dd305f24b": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Guarda com'è fatto**\n\nQuando si condivide un link al proprio gioco, si condivide anche tutto il codice che lo fa funzionare. Questo è un ottimo modo per imparare dai propri compagni.\n\n-   Pubblica online i link dei giochi realizzati dai tuoi alunni\n    -   Crea anche tu un gioco da condividere!\n-   Quando gli alunni caricano un link, falli cliccare sul pulsante \"Come funziona\" per vedere il codice che sta dietro al gioco.\n-   Discuti in gruppo sui diversi modi usati per programmare i giochi.\n    -   Cosa vi ha sorpreso?\n    -   Cosa vorreste provare?\n-   Chiedi ad ogni alunno di scegliere il gioco di un compagno e cliccare su `Rimescola` per personalizzarlo. (Non preoccupatevi, il gioco originale è al sicuro e rimarrà invariato)."
-        },
         "782d1991-785a-406b-963c-687abb77e247": {
           "name": "Introduzione"
         },
@@ -1851,9 +1836,6 @@
         "02945b11-d2db-485d-9002-9aff256a4ed4": {
           "name": "Riflessione"
         },
-        "3b646703-3875-4421-bdd8-865e9c2ace35": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Immagini binarie**\n\n-   Sul web si trovano ottime risorse per estendere in molti modi diversi questa attività.\n-   Se ai tuoi alunni interessa capire come sono rappresentate le immagini (o anche la musica) in codice binario, puoi trovare maggiori dettagli in questo documento (in lingua inglese): Thinkersmith [Binary Baubles](http://code.org/files/CSEDbinary.pdf)."
-        },
         "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
           "name": "Gestione della classe"
         },
@@ -1886,9 +1868,6 @@
           "tips": [
             null
           ]
-        },
-        "8d3b579a-9959-4190-aa92-858495574689": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Di bene in meglio**\n\n-   Chiedi alla classe di provare ad inventare le proprie immagini.\n-   Riescono a capire come programmare le immagini che creano?\n\n**Sfida di classe**\n\n-   Disegna un'immagine su una griglia 5x5.\n-   Gli alunni riescono a programmarla insieme a te?"
         },
         "1ac03584-29b5-4a3d-8420-44259c0b1064": {
           "name": "Introduzione"
@@ -2099,9 +2078,6 @@
         "95951ba3-d513-4635-a484-1d1819906049": {
           "name": "Riflessione"
         },
-        "abc8cb08-ade8-44d3-95ba-558fadaf4c21": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Vero/Falso**\n\n-   Disponi gli alunni in fila come per giocare a [Luce rossa / Luce verde](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Scegli un alunno che svolga il ruolo di Chiamante.\n-   Il Chiamante definisce una condizione e chiede a tutti coloro che soddisfano tale condizione di fare un passo avanti. Esempi:\n    -   Se hai la cintura rossa, fai un passo avanti.\n    -   Se porti dei sandali, fai un passo avanti.\n-   Prova anche delle varianti come: \"Se NON sei biondo, fai un passo avanti\".\n\n**Annidamento**\n\n-   Suddividi gli studenti in coppie o piccoli gruppi.\n-   Fagli scrivere su delle strisce di carta delle istruzioni condizionali per giocare a carte, come ad esempio:\n    -   il segno è fiori\n    -   il colore è rosso\n-   Chiedi agli studenti di creare strisce simili per le azioni da compiere.\n    -   Aggiungi un punto\n    -   Sottrai un punto\n-   Chiedi poi agli alunni di scegliere tre strisce di ogni tipologia e tre carte da gioco, prestando attenzione all'ordine.\n-   Utilizzando tre fogli di carta, chiedi agli alunni di scrivere tre diversi programmi utilizzando solo le strisce che hanno scelto, in qualsiasi ordine.\n    -   Chiedi agli alunni di annidare alcune istruzioni all'interno di altre.\n-   Ora gli alunni dovrebbero eseguire tutti e tre i programmi usando le carte che hanno pescato, nello stesso ordine per ogni programma.\n    -   Ci sono stati programmi che hanno dato lo stesso risultato?\n    -   Alcuni hanno dato risultati differenti?"
-        },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Introduzione"
         },
@@ -2117,9 +2093,6 @@
         },
         "0e7cf944-a328-4388-afa7-8712fed768e0": {
           "name": "Introduzione"
-        },
-        "8cc71fbc-f53a-45d2-9b80-e102f01f25b7": {
-          "name": "Anteprima degli Esercizi online "
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
           "name": "Istruzioni condizionali con l'ape"
@@ -2150,9 +2123,6 @@
         },
         "9edcc1a3-dce9-45bc-86af-546b41287b53": {
           "name": "Introduzione"
-        },
-        "c4193bf0-446f-4812-beb9-b3884a1385c9": {
-          "name": "Anteprima degli Esercizi online "
         },
         "0a565c10-633a-486e-9d62-f62933373bf7": {
           "name": "Cicli \"mentre\" con la contadina"
@@ -2905,9 +2875,6 @@
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Riflessione"
         },
-        "14da8da8-681c-4934-97fc-01e71ad67ef3": {
-          "description": "Per completare il collegamento, visualizza in anteprima un esercizio online (o due) insieme a tutta la classe.\n\n**Illustrazione** - Esegui un esercizio online completo, consigliamo l'esercizio 5. Riescono a notare delle somiglianze rispetto all'esercizio che hanno appena svolto? Quali sono le differenze principali?\n\nTrascina insieme ai tuoi alunni i blocchi di codice nell'area di lavoro in modo tale che l'uccellino (possibilmente) arrivi dal maialino.\n\n**Transizione** - A questo punto, gli alunni dovrebbero essere pronti per passare ai computer e completare gli esercizi online in autonomia."
-        },
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Programmare con Angry Bird",
           "progression_name": "Esercizi per lo sviluppo delle competenze"
@@ -3205,9 +3172,6 @@
         "504e1645-369b-4f38-9e75-ee5f7d5e03cb": {
           "name": "Riflessione"
         },
-        "12028f3b-0333-4a2a-9059-74c7ea960ebd": {
-          "description": "Ti raccomandiamo di visitare [Copyright & Creativity ](https://copyrightandcreativity.org) per trovare altre lezioni sulla condivisione digitale e sui diritti creativi."
-        },
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
           "name": "Introduzione"
         },
@@ -3294,9 +3258,6 @@
           "tips": [
             null
           ]
-        },
-        "c3c1225f-3e42-4af3-b63e-6e2fb0a9f62a": {
-          "description": "Sfrutta queste attività per migliorare l'apprendimento degli studenti. Possono essere anche utilizzate come attività extra-scolastiche.\n\n**Acchiappasole funzionali**\nVisita [CS Fundamentals Unplugged Table](https://code.org/curriculum/unplugged) o fai clic sul collegamento per [Functional Suncatchers](https://studio.code.org/s/course3/stage/4/puzzle/1). Questa attività necessita di alcuni materiali, ma può essere di grande aiuto per mostrare l'utilità di richiamare più funzioni.\n\n**Crea la tua canzone**\n\n-   Inizia creando insieme un ritornello, poi ripetilo tra i versi di una canzone che si sviluppa intorno ad esso.\n-   Cambia il ritornello e fai notare quanto sia utile poterlo cambiare in un solo punto.\n-   Cambia di nuovo il ritornello, rendendolo molto più lungo di quanto non fosse in origine.\n-   Aggiungi un secondo ritornello e alternalo nei tuoi versi.\n\n**Scrittura di un programma**\n\n-   E se recitassimo delle canzoni invece di cantarle? All'improvviso, il nostro coro interpreterebbe delle azioni ripetute, piuttosto che cantare.\n-   Utilizza le frecce della lezione di \"Programmazione su carta a quadretti\" e crea un programma con molte istruzioni che si ripetono.\n    -   Cerchia le azioni che si ripetono in modo che la classe possa vedere dove si trovano.\n    -   Definisci una funzione chiamata \"Ritornello\" all'inizio del programma.\n    -   Cancella ovunque le azioni ripetute che appaiano nel programma e al loro posto scrivi \"Ritornello\".\n-   Ripeti l'attività fino a quando la classe sarà in grado di eseguire questo processo con poche indicazioni."
         },
         "5051f377-1e03-4348-91f8-5ba36d7dd8c6": {
           "name": "Introduzione"

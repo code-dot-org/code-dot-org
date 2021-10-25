@@ -59,12 +59,6 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "utilizzare la terminologia appropriata quando si fa riferimento al mouse, al trackpad o al touchscreen di un computer"
         },
-        "28d3cc79-4aea-431d-a445-745e75e747d8": {
-          "description": "usare le variabili per contenere parole e frasi"
-        },
-        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
-          "description": "usare le variabili per contenere parole e frasi"
-        },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
@@ -104,17 +98,8 @@
         "6638c886-891e-4d59-820a-227e37274e49": {
           "description": "ragionare su come i pregiudizi umani giocano un ruolo nell'apprendimento automatico"
         },
-        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
-          "description": "scoprire la complessità dell'invio di messaggi su Internet"
-        },
-        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
-          "description": "tradurre gli URL in indirizzi IP"
-        },
         "12c53e25-70d7-4192-a97a-da08dd673338": {
           "description": "imparare a pianificare in anticipo un'attività da svolgere"
-        },
-        "b76f1811-9865-416d-bd06-601301120384": {
-          "description": "spiegare in che modo i limiti del sistema possono influire sulla progettazione"
         },
         "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
           "description": "descrivere in che modo la ricerca del compromesso può aiutare a portare avanti un progetto ed ispirare la creatività"
@@ -124,15 +109,6 @@
         },
         "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
           "description": "articolare il processo di progettazione ed evidenziare in che modo questo ha contribuito a dare forma al progetto di finale"
-        },
-        "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
-          "description": "definire un elenco di passaggi (algoritmo) per portare un amico dalla sua posizione di partenza al suo obiettivo"
-        },
-        "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
-          "description": "tradurre un elenco di passaggi in una serie di azioni fisiche"
-        },
-        "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
-          "description": "Identificare e correggere gli errori nell'esecuzione di un algoritmo"
         },
         "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
           "description": "comportarsi correttamente in aula computer"
@@ -149,23 +125,11 @@
         "d5f927b9-727a-423e-90d3-80faad21aa34": {
           "description": "identificare e individuare gli errori in un programma"
         },
-        "6c67256a-a8d5-4a57-9744-092686fb01a0": {
-          "description": "ripetere azioni iniziate dall'insegnante"
-        },
-        "368e8edc-290d-4737-a616-a543e5298c66": {
-          "description": "tradurre un programma codificato con immagini in un ballo da realizzare con movimenti nel mondo fisico"
-        },
-        "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
-          "description": "convertire la ripetizione di una sequenza di azioni in un unico ciclo"
-        },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
           "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
           "description": "suddividere una lunga sequenza di istruzioni in una sequenza ripetibile il più piccola possibile"
-        },
-        "8293f536-510e-44a0-880b-397b3f97deeb": {
-          "description": "scrivere un programma per una determinata attività che ripete una sequenza di istruzioni"
         },
         "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
           "description": "usare una combinazione di istruzioni in sequenza e ripetute per raggiungere la fine del labirinto"
@@ -212,12 +176,6 @@
         "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
           "description": "utilizzare la terminologia appropriata quando si fa riferimento al mouse, al trackpad o al touchscreen di un computer"
         },
-        "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
-          "description": "tradurre un algoritmo in un programma"
-        },
-        "95ef707d-603d-4106-955e-3138f0f16a5d": {
-          "description": "decifrare ed eseguire un programma creato da qualcun altro"
-        },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
           "description": "individuare e risolvere anomalie o errori nelle sequenze di istruzioni"
         },
@@ -233,20 +191,11 @@
         "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
           "description": "costruire un programma per computer partendo da una lista di istruzioni"
         },
-        "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "scegliere le appropriate tecniche di debugging per la risoluzione dei problemi"
-        },
         "199aed02-347c-4892-9e98-d7571ae64c9d": {
           "description": "dare un ordine logico ad una sequenza di istruzioni"
         },
         "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
           "description": "riconoscere problemi o errori (\"bug\") in un programma e sviluppare un piano per risolverli"
-        },
-        "407c5a4d-9337-4218-92d5-018597e41e19": {
-          "description": "identificare le istruzioni che si ripetono e convertire una serie di azioni multiple in un unico ciclo"
-        },
-        "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
-          "description": "interpretare un programma contenente cicli come una serie di azioni multiple"
         },
         "cb7cab91-20ca-495a-a429-621631cb0507": {
           "description": "costruire un programma usando strutture che ripetono blocchi di codice"
@@ -290,9 +239,6 @@
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "superare ostacoli come vincoli di tempo o errori"
         },
-        "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
-          "description": "focalizzarsi sulla precisione durante la creazione delle istruzioni"
-        },
         "26392005-5f64-4707-b38b-847d1f009a29": {
           "description": "individuare e risolvere anomalie o errori nelle sequenze di istruzioni"
         },
@@ -326,12 +272,6 @@
         "d47b51d2-9114-4dfd-ad21-810573d85543": {
           "description": "suddividere forme complesse in parti più semplici"
         },
-        "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
-          "description": "individuare nel codice gli schemi ripetuti che possono essere sostituiti con dei cicli"
-        },
-        "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
-          "description": "scrivere programmi che usano le istruzioni di ripetizione (cicli) per eseguire schemi ripetuti"
-        },
         "46288097-dbab-437f-897c-4e14352ae388": {
           "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
@@ -340,15 +280,6 @@
         },
         "8e76410f-b4db-446b-88c0-00013d9c05bd": {
           "description": "usare una combinazione di istruzioni in sequenza e ripetute per raggiungere la fine del labirinto"
-        },
-        "ff15ce2c-8445-442a-89f0-7a50e741850a": {
-          "description": "scrivere un programma per una determinata attività che ripete una singola istruzione"
-        },
-        "757d864e-38a3-4b30-8617-b9a4174c8b08": {
-          "description": "identificare quando è possibile usare un ciclo per semplificare un'azione ripetitiva"
-        },
-        "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
-          "description": "usare una combinazione di istruzioni in sequenza e ripetute per muoversi ed eseguire azioni"
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
@@ -359,44 +290,17 @@
         "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
           "description": "ripetere i comandi impartiti dall'insegnante"
         },
-        "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
-          "description": "riconoscere certi movimenti dell'insegnante come segnali per avviare particolari comandi"
-        },
         "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
           "description": "notare la differenza tra azioni predefinite e azioni guidate da eventi"
-        },
-        "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
-          "description": "abbinare i blocchi con il gestore di eventi appropriato"
-        },
-        "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
-          "description": "creare un gioco utilizzando i gestori di eventi"
         },
         "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
           "description": "condividere un artefatto creativo con altri alunni"
         },
-        "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
-          "description": "creare un gioco animato interattivo, utilizzando sequenze di istruzioni e gestori di eventi"
-        },
         "c0757733-5e14-4797-9615-11b61d8d490f": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
         },
-        "9a785141-1fe6-4728-996c-2fbb8781b62c": {
-          "description": "codificare le lettere in binario"
-        },
-        "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
-          "description": "decodificare da binario a lettere"
-        },
-        "ce1f4117-76f3-4359-a554-683a878f82cb": {
-          "description": "collegare il concetto di memorizzare le lettere sulla carta con il concetto di memorizzare le informazioni in un computer"
-        },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "superare ostacoli come vincoli di tempo o errori"
-        },
-        "3c4b51d5-b72f-42df-a55a-86c146214424": {
-          "description": "riformulare una sequenza di passaggi, traducendola in un programma codificato"
-        },
-        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
-          "description": "spiegare i vincoli di traduzione dei problemi dal linguaggio umano al linguaggio macchina"
         },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
           "description": "mettere in ordine le istruzioni di movimento come passaggi sequenziali di un programma"
@@ -407,24 +311,6 @@
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
           "description": "suddividere una lunga sequenza di istruzioni nella più grande sequenza ripetibile possibile"
         },
-        "8a0addda-b47f-4551-8c82-9115be3c130d": {
-          "description": "definire concetti usando codice e simboli"
-        },
-        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
-          "description": "verificare il lavoro svolto dai compagni di squadra"
-        },
-        "8dba466d-d809-49c6-8f60-218c27964411": {
-          "description": "riconoscere i sintomi della frustrazione"
-        },
-        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
-          "description": "leggere e comprendere il codice fornito"
-        },
-        "71cede4e-3e93-41d6-a422-f2443f756a61": {
-          "description": "individuare un bug ed i relativi problemi che causa in un programma"
-        },
-        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
-          "description": "descrivere e mettere in atto un piano per eseguire il debugging di un programma"
-        },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
         },
@@ -433,9 +319,6 @@
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "condividere un artefatto creativo con altri alunni"
-        },
-        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
-          "description": "creare un gioco animato interattivo, utilizzando sequenze ed eventi"
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
@@ -475,9 +358,6 @@
         },
         "494526f8-7392-4788-9126-b2e2dd53b241": {
           "description": "determinare se un'istruzione condizionale è soddisfatta in base a certi criteri"
-        },
-        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
-          "description": "leggere un programma e prevederne il risultato, dato un insieme di dati di ingresso"
         },
         "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
           "description": "definire le circostanze in cui alcune parti di un programma devono essere eseguite e quando no"
@@ -538,12 +418,6 @@
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
           "description": "definire uno \"sprite\" come un personaggio o un oggetto sullo schermo che può essere spostato e modificato"
-        },
-        "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
-          "description": "creare un animale domestico virtuale interattivo utilizzando eventi, comportamenti, variabili e grafica personalizzata"
-        },
-        "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
-          "description": "programmare soluzioni ai problemi che sorgono durante la progettazione di un animale domestico virtuale, come dargli da mangiare o gestire il suo livello di felicità"
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "sviluppare programmi che rispondano ad eventi temporizzati"
@@ -616,12 +490,6 @@
         },
         "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
           "description": "tradurre in un programma cicli ed istruzioni condizionali espressi con la lingua parlata"
-        },
-        "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
-          "description": "annidare le istruzioni condizionali per analizzare diverse condizioni secondo la logica se, altrimenti-se, altrimenti"
-        },
-        "0174cd8f-0a91-423b-b643-2b8a0290fcff": {
-          "description": "abbinare un ciclo ed un'istruzione condizionale"
         },
         "1ece8579-425f-4324-a041-8f47ce736f42": {
           "description": "usare le funzioni per semplificare programmi complessi"
@@ -746,20 +614,11 @@
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "identificare le azioni correlate agli eventi in ingresso"
         },
-        "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
-          "description": "interpretare la condivisione etica di materiale protetto da copyright rispetto alla condivisione che non è etica"
-        },
-        "0709575a-e9e6-4856-a4f4-02b290f86975": {
-          "description": "comprendere i propri diritti sui materiali creati"
-        },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "identificare i vantaggi dell'utilizzo di una struttura ciclica invece della ripetizione manuale"
         },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "distinguere tra istruzioni che devono essere inserite in cicli per poter essere ripetute ed altre che devono essere usate singolarmente"
-        },
-        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
-          "description": "combinare forme semplici in disegni complessi sfruttando i cicli annidati"
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "contare quante volte un'azione deve essere ripetuta e rappresentarla come un ciclo"
@@ -775,15 +634,6 @@
         },
         "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
           "description": "organizzare il codice nelle sequenze di istruzioni ripetibili più lunghe possibili, utilizzando sia i cicli singoli che i cicli annidati"
-        },
-        "e26d818e-81fd-43c6-8558-fc69835e693a": {
-          "description": "trovare frasi ripetute all'interno dei testi delle canzoni"
-        },
-        "815c91bc-4848-43ba-a234-d1b184ab120b": {
-          "description": "identificare le sezioni di una canzone da inserire in una funzione"
-        },
-        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
-          "description": "descrivere in che modo le funzioni possono rendere i programmi più facili da scrivere"
         },
         "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
           "description": "usare le funzioni per semplificare programmi complessi"
@@ -817,9 +667,6 @@
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
           "description": "imparare a pianificare in anticipo un'attività da svolgere"
-        },
-        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
-          "description": "spiegare in che modo i limiti del sistema possono influire sulla progettazione"
         },
         "45927b72-922a-4845-8b40-2458a92372f5": {
           "description": "descrivere in che modo la ricerca del compromesso può aiutare a portare avanti un progetto ed ispirare la creatività"
