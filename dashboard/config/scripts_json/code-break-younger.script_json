@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "student_detail_progress_view": true,
       "hideable_lessons": true,
-      "version_year": "unversioned",
-      "is_course": true
+      "is_course": true,
+      "student_detail_progress_view": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "code-break-younger",
-    "serialized_at": "2021-08-03 22:47:59 UTC",
+    "serialized_at": "2021-10-25 22:54:14 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "code-break-younger"
     }

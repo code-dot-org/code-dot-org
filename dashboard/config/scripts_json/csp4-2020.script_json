@@ -4,40 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}",
-      "curriculum_umbrella": "CSP",
-      "project_sharing": true,
-      "hideable_lessons": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-20/unit4/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-20/unit4/standards/"
-        ]
-      ],
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        },
-        {
-          "notice": "EIPM Lessons",
-          "details": "In this unit, we beginning following our new programming model called EIPM. Check out this helpful video series to learn all about it! ",
-          "link": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
       "announcements": [
         {
           "notice": "",
@@ -67,12 +33,47 @@
           "type": "feedback",
           "visibility": "Student-only"
         }
+      ],
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit4/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "project_sharing": true,
+      "script_announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "EIPM Lessons",
+          "details": "In this unit, we beginning following our new programming model called EIPM. Check out this helpful video series to learn all about it! ",
+          "link": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-20/unit4/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-20/unit4/standards/"
+        ]
       ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:49 UTC",
+    "serialized_at": "2021-10-25 22:54:04 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp4-2020"
     }
