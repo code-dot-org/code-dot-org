@@ -44,6 +44,11 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
     this.workspace_.trashcan.setLidOpen(false);
     this.workspace_.hideTrashcan();
 
+    // Core Blockly logic will eventually update the block's disabled state, but
+    // we want to update it immediately. We rely on this value to skip
+    // code generation for disabled blocks, and since we have live-preview, it
+    // would be noticeable if this value were out of sync, even briefly.
+    // This only matters if the block is not being deleted.
     if (!wouldDeleteBlock) {
       this.draggingBlock_.setEnabled(!!this.draggingBlock_.parentBlock_);
     }
