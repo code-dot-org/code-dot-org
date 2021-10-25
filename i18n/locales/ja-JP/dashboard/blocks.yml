@@ -1936,26 +1936,6 @@ ja:
             '"starburst"': スターバースト
             '"glass"': ガラス割れ
             '"twinkling"': キラキラ
-      Poetry_setPoem:
-        text: 詩を{POEM}にセット
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': 私の光り輝くイメージ
-            '"carroll_1"': "「キラキラ光る、お空の星よ」"
-            '"rumi_1"': 歌う
-            '"field"': "「ウィンケン、ブリンケン、そしてノッド」"
-            '"carroll_2"': "「クロコダイル」"
-            '"twain"': 暖かい夏の太陽
-            '"wordsworth"': "「私は雲のように孤独をさまよった（I Wandered Lonely as a Cloud）」"
-            '"carroll_3"': "「ジャバウォックの詩（Jabberwocky）」"
-            '"rios"': "「図書館に入らないで（Don't Go Into the Library）」"
-            '"rumi_2"': 海
-            '"hughes_1"': "「夢のバリエーション（Dream Variations）」"
-            '"hughes"': "「ハーレム（Harlem）」"
-            '"hopler"': "「庭にて（In the Garden）」"
-            '"lomeli"': "「帰還（Return）」"
-            '"singer"': "「マシュマロのトースト（Toasting Marshmallows）」"
       Poetry_setPrompt:
         text: ユーザーに変数 {VAR} について {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} をプロンプト表示する
       Poetry_setPromptWithChoices:
