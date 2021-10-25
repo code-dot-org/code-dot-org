@@ -2106,4 +2106,8 @@ class Script < ApplicationRecord
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end
+
+  def teacher_led?
+    instruction_type == SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+  end
 end
