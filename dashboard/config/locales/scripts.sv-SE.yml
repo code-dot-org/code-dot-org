@@ -3660,10 +3660,6 @@ sv:
               display_name: Innehåll
             lessonGroup-2:
               display_name: Innehåll
-        poetry:
-          lessons:
-            lesson-3:
-              name: variabler
         spelling-bee:
           lessons:
             lesson-1:
