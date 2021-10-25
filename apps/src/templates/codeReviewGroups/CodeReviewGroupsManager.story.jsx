@@ -30,10 +30,9 @@ const getMembers = (count, offset = 0) =>
 // We'll also eventually pass in a group name as a top level property.
 const groups = [
   {id: 1, members: getMembers(4)},
-  {id: 2, members: getMembers(4, 4)}
+  {id: 2, members: getMembers(4, 4)},
+  {members: getMembers(4, 8), unassigned: true}
 ];
-
-const unassigned = getMembers(4, 8);
 
 export default storybook => {
   storybook
@@ -41,12 +40,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Panel Showing Existing Code Review Groups',
-        story: () => (
-          <CodeReviewGroupsManager
-            initialGroups={groups}
-            initialUnassigned={unassigned}
-          />
-        )
+        story: () => <CodeReviewGroupsManager initialGroups={groups} />
       }
     ]);
 };
