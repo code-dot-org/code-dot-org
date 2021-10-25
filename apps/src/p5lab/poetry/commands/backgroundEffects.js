@@ -490,16 +490,23 @@ export const commands = {
       }
       case 'hearts': {
         let hearts = [];
+        let amount = 0;
         this.backgroundEffect = () => {
-          hearts.push({
-            x: utils.randomInt(10, 390),
-            y: utils.randomInt(10, 390),
-            rotation: utils.randomInt(0, 359),
-            size: utils.randomInt(10, 120),
-            color: this.getP5Color(utils.randomColorFromPalette(palette), 60)
-          });
+          // Limit how fast new hearts are generated
+          if (this.p5.frameCount % 20 === 0) {
+            hearts.push({
+              x: utils.randomInt(10, 390),
+              y: utils.randomInt(10, 390),
+              rotation: utils.randomInt(0, 359),
+              size: utils.randomInt(10, 120),
+              color: this.getP5Color(utils.randomColorFromPalette(palette), 60)
+            });
+          }
           this.p5.push();
-          this.p5.background('white');
+          amount += 0.02;
+          this.p5.background(
+            utils.lerpColorFromPalette(this.p5, palette, amount)
+          );
           hearts.forEach(heart => {
             this.p5.push();
             this.p5.translate(heart.x, heart.y);
