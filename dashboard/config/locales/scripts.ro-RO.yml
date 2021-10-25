@@ -11281,10 +11281,6 @@ ro:
               name: Widget-uri
             lesson-2:
               name: Instrumente
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabile
         spelling-bee:
           lessons:
             lesson-1:
