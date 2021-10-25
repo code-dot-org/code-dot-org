@@ -2002,26 +2002,6 @@ en:
             '"starburst"': Starburst
             '"glass"': Shattering Glass
             '"twinkling"': Twinkling
-      Poetry_setPoem:
-        text: set poem [POEM][0]
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': My Brilliant Image
-            '"carroll_1"': Twinkle, Twinkle Little Star
-            '"rumi_1"': Sing
-            '"field"': Wynken, Blynken, and Nod
-            '"carroll_2"': Crocodile
-            '"twain"': Warm Summer Sun
-            '"wordsworth"': I Wandered Lonely as a Cloud
-            '"carroll_3"': Jabberwocky
-            '"rios"': Don't Go Into the Library
-            '"rumi_2"': Ocean
-            '"hughes_1"': Dream Variations
-            '"hughes"': Harlem
-            '"hopler"': In the Garden
-            '"lomeli"': Return
-            '"singer"': Toasting Marshmallows
       Poetry_setPrompt:
         text: prompt user [LEFT_QUOTE][0][NAME][1][RIGHT_QUOTE][2] for variable [VAR][3]
       Poetry_setPromptWithChoices:
