@@ -901,7 +901,7 @@
         },
         "courseB_starWars_prog8_2021": {
           "courseB_starWars_prog8_a": "நீங்கள் ஏற்கனவே பயணித்த இடங்களின் தொகுப்பிற்கு திரும்பிச் செல்வது சரி.",
-          "courseB_starWars_prog8_b": "நீங்கள் உள்ளே வைத்த குறியீட்டிற்கு என்ன நடக்கிறது என்பதைக் காண `மீண்டும்` தொகுதியைப் பயன்படுத்த முயற்சிக்கவும்."
+          "courseB_starWars_prog8_b": "நீங்கள் உள்ளே வைத்த குறியீட்டிற்கு என்ன நடக்கிறது என்பதைக் காண `மீண்டும்` தொகுதியைப் பயன்படுத்த முயற்சிக்கவும்.\n\n[blockly block] [0]"
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரை தீர்க்கவில்லை என்றாலும், என்ன நடக்கிறது என்பதைக் காண குறியீட்டை இயக்கவும்.",
@@ -926,7 +926,7 @@
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரை தீர்க்கவில்லை என்றாலும், என்ன நடக்கிறது என்பதைக் காண குறியீட்டை இயக்கவும்.",
           "courseB_starWars_prog9_b": "இந்த புதிரை தீர்க்க பல வழிகள் உள்ளன.",
-          "courseB_starWars_prog9_c": "ஒரு `மீண்டும்` [தடுக்கப்பட்ட தடுப்பு] [0] வளையத்தை இங்கு உதவ முடியுமா?"
+          "courseB_starWars_prog9_c": "ஒரு `மீண்டும்`  [blockly block] [0] வளையத்தை இங்கு உதவ முடியுமா?"
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "பிபி -8 ஸ்கிராப் மெட்டல் மீது உருளும் போது அவர் அதை தானாக எடுப்பார்.",
@@ -1253,11 +1253,11 @@
           "courseA_collector_loops8_c": "நீங்கள் ஒரு நேரத்தில் குறியீட்டின் ஒரு பகுதியை எழுதலாம் என்பதை நினைவில் கொள்ளுங்கள், பின்னர் நீங்கள் அங்கிருந்து எங்கு செல்ல வேண்டும் என்பதை அறிய \"Run\" என்பதை அழுத்தவும்."
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "நீங்கள் விரும்புவதை ஸ்க்ராட் செய்யவில்லை என்றால், இரண்டு தொகுதிகளும் முழுமையாக ஒன்றாக கிளிக் செய்யப்பட்டுள்ளதா என்பதை உறுதிசெய்து, மீண்டும் \"Run\" என்பதைக் கிளிக் செய்யவும்",
-          "2": "தவறு செய்ய பயப்பட வேண்டாம்! ஏதாவது முயற்சி செய்யுங்கள், அது வேலை செய்யவில்லை என்றால், வேறு ஏதாவது முயற்சி செய்யுங்கள்!"
+          "1": "ஸ்க்ராட் நீங்கள் விரும்பியதைச் செய்யவில்லை எனில், இரண்டு தொகுதிகளும் ஒன்றாகக் கிளிக் செய்யப்பட்டுள்ளன என்பதை உறுதிசெய்து, மீண்டும் \"Run\" என்பதைக் கிளிக் செய்க.",
+          "2": "தவறு செய்ய பயப்பட வேண்டாம்! ஏதாவது முயற்சி செய்யுங்கள், அது வேலை செய்யவில்லை என்றால், வேறு ஏதாவது முயற்சிக்கவும்!"
         },
         "courseB_Scrat_ramp2_2021": {
-          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2021": {
           "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1339,7 +1339,7 @@
           "courseA_harvester_loops9_c": "அனைத்து சோளங்களையும் எடுக்க இந்த வழியைப் பின்பற்றவும்."
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "உங்களுக்கு சிக்கல் இருந்தால், முதலில் ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்.",
+          "courseA_maze_seq10_a": "உங்களுக்கு சிக்கல் இருந்தால், முதலில் ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்",
           "courseA_maze_seq10_b": "இந்த புதிர் தீர்க்க நீங்கள் 3 வெவ்வேறு திசைகளில் செல்ல வேண்டும்."
         },
         "courseA_maze_seq13_2021": {
@@ -1348,19 +1348,19 @@
           "courseA_maze_seq13_c": "இவை <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n blocks கள் பன்றிக்கு அருகில் செல்ல உதவும்."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "பறவையை நகர்த்துவதில் சிக்கல் இருந்தால்,<xml>\n  <block type=\"when_run\"/>\n</xml>கள் பிடுங்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்.",
+          "courseA_maze_seq1_a": "பறவையை நகர்த்துவதில் சிக்கல் இருந்தால், <xml>\n  <block type=\"when_run\"/>\n</xml> கீழ் தொகுதிகள் பிடுங்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்.",
           "courseA_maze_seq1_b": "பறவை பன்றிக்குச் செல்ல 3 முறை மேற்கு நோக்கி நகர வேண்டும். இந்தத் தொகுதியைப் பயன்படுத்தவும்:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
           "1": "ஒரு தீர்வைக் கண்டுபிடிக்க காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்!",
-          "2": "இந்த தொகுதியை நீங்கள் பயன்படுத்த வேண்டும்:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
+          "2": "இந்த தொகுதியை நீங்கள் பயன்படுத்த வேண்டும்:"
         },
         "courseA_maze_seq5a_2021": {
           "1": "படிகளை உரக்கச் சொல்லுங்கள், பதிலைக் கண்டுபிடிக்க இது உங்களுக்கு உதவுமா என்று பாருங்கள்."
         },
         "courseA_maze_seq6_2021": {
           "courseA_maze_seq6_a": "உங்கள் இறுதி குறியீடு 3 இயக்கத் தொகுதிகளைக் கொண்டிருக்க வேண்டும்.",
-          "courseA_maze_seq6_b": "நீங்கள் சிக்கிக்கொண்டால், புதிரை 2 பகுதிகளாக தீர்க்க முயற்சி செய்யுங்கள், மூலையில் ஒரு பகுதி மற்றும் மூலையில் ஒரு பகுதி"
+          "courseA_maze_seq6_b": "நீங்கள் சிக்கிக்கொண்டால், புதிரை 2 பகுதிகளாக தீர்க்க முயற்சி செய்யுங்கள், மூலையில் ஒரு பகுதி மற்றும் மூலையில் ஒரு பகுதி."
         },
         "courseA_maze_seq8_2021": {
           "courseA_maze_seq8_a": "நீங்கள் சிக்கிக்கொண்டால், பறவை எப்படி நகர வேண்டும் என்பதை அறிய காகிதத்தில் படத்தை வரைய முயற்சிக்கவும்."
@@ -1378,7 +1378,7 @@
           "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2021": {
-          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:"
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "`நடிகர் 1 ஆக அமைக்கப்பட்டாரா ??? மேடையில் ஒரு நடிகரைச் சேர்க்க image` block ஐப் பயன்படுத்தலாம்.",
@@ -1448,6 +1448,256 @@
           "courseC_harvester_loops_challenge2_b": "உங்களுக்குத் தேவையான பல முறை `முன்னோக்கி நகர்த்தவும் 'மற்றும்` கீரை எடுக்கவும்\\` மீண்டும் செய்யவும், பின்னர் ஒவ்வொரு மூலையிலும் திரும்பவும்.",
           "courseC_harvester_loops_challenge2_c": "இந்த ஜிக்-ஜாக் வடிவத்தை 20 தொகுதிகளுடன் புதிர் முடிக்க இரண்டு முறை மீண்டும் செய்யலாம்!",
           "courseC_harvester_loops_challenge2_d": "இந்த சுழல் வடிவத்தை வெறும் 18 தொகுதிகளால் குறியிட முடியும்!"
+        },
+        "courseA_artist_loops2_2021": {
+          "courseA_artist_loops2_a": "ஒரு கோட்டை எப்படி வரைய வேண்டும் என்று கண்டுபிடிக்க முடியவில்லையா? என்ன நடக்கிறது என்று பார்க்க <xml><block type=\"when_run\"/></xml> block உடன் தொகுதிகளை இணைக்கத் தொடங்குங்கள்.",
+          "courseA_artist_loops2_b": "இந்தப் புதிரைத் தீர்க்க இந்தத்  blockயைப் பயன்படுத்தவும் <xml><block type=\"simple_move_right\"/></xml> ."
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "எங்கே தவறாக இருக்கிறது என்பதை அறிய உங்கள் விரலால் நிரலை மெதுவாகக் கண்டறியவும்.",
+          "courseA_artist_loops3_b": "இந்தப் புதிரைத் தீர்க்க இது போன்ற ஒரு தொகுதியை நீங்கள் பயன்படுத்த விரும்புவீர்கள்.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "லூப் 4 முறைக்கு மேல் திரும்ப வேண்டும் என நீங்கள் விரும்பினால், தொகுதியின் மேல் உள்ள எண்ணை மாற்றலாம்.",
+          "courseA_artist_loops4_b": "நீங்கள் ஒரு <xml><block type=\"simple_move_right\"/></xml> மட்டுமே பயன்படுத்த முடியும் என்பதால்\n\nதடு, <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> லூப்பின் உள்ளே வைக்க முயற்சி செய்யுங்கள்."
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "இந்த புதிரை முடிக்க நீங்கள் <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> blocks களைப் பற்றி கற்றுக்கொண்டதைப் பயன்படுத்த முயற்சிக்கவும்!",
+          "courseA_artist_loops5_b": "லூப் 4 முறைக்கு மேல் திரும்ப வேண்டும் என நீங்கள் விரும்பினால், தொகுதியின் மேல் உள்ள எண்ணை மாற்றலாம்.",
+          "courseA_artist_loops5_c": "நீங்கள் ஒரு <xml><block type=\"simple_move_right\"/></xml> block யை மட்டுமே பயன்படுத்த முடியும் என்பதால், அதை உள்ளே வைக்க முயற்சிக்கவும்\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\nலூப்."
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "மலையை எப்படி செய்வது என்று கண்டுபிடிக்க முடியவில்லையா? ஒவ்வொன்றும் எதை ஈர்க்கிறது என்பதைப் பார்க்க தொகுதிகளுடன் சிறிது விளையாட முயற்சிக்கவும்.",
+          "courseA_artist_loops6_b": "இந்த புதிர் தீர்க்க உங்களுக்கு 2 திசைகளில் 2 தொகுதிகள் தேவைப்படும்."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_a": "வளையத்தை எங்கே வைப்பது என்று கண்டுபிடிக்க முடியவில்லையா? குறியீட்டை படிப்படியாக எழுத முயற்சிக்கவும் மற்றும் ஒரு வடிவத்தைத் தேடுங்கள்.",
+          "courseA_artist_loops7_b": "முதலில் ஒரு அலைக்கான குறியீட்டை எழுதுங்கள், பின்னர் மற்ற இரண்டை வரைய மீண்டும் செய்யவும்.",
+          "courseA_artist_loops7_c": "நினைவில் வைத்து கொள்ளுங்கள், நீங்கள் ஒன்றுக்கு மேற்பட்ட தொகுதிகளை <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> வளையத்தில் வைக்கலாம்."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "உங்களுக்காக எழுதப்பட்டதைப் பார்க்க குறியீட்டை இயக்க முயற்சிக்கவும்.",
+          "courseA_artist_loops8_b": "உங்களுக்கு வழங்கப்பட்ட குறியீட்டை நீங்கள் எவ்வாறு சுழற்றுவீர்கள்?",
+          "courseA_artist_loops8_c": "குறியீடு என்ன செய்கிறது?\nஅது என்ன செய்ய வேண்டும்? \\\nஅது உங்களுக்கு என்ன சொல்கிறது?"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "மீதமுள்ள படிக்கட்டுகளை வரைய உங்களுக்கு கொடுக்கப்பட்ட குறியீட்டில் மற்றொரு தொகுதியைச் சேர்க்கவும்.",
+          "courseA_artist_loops9_b": "நீங்கள் சேர்க்கும் தொகுதி உள்ளே செல்ல வேண்டும்\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\nலூப்.",
+          "courseA_artist_loops9_c": "லூப்பை எங்கு வைக்க வேண்டும் என்பதை நீங்கள் கண்டுபிடிக்க முடியாவிட்டால், உங்கள் குறியீட்டை படிப்படியாக எழுத முயற்சிக்கவும், வடிவங்களைத் தேடுங்கள்."
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "இது போன்ற தொகுதிகள் <xml>  <block type=\"simple_move_up_left\"/></xml>  உங்கள் கலைஞரை சாய்வாக நகர்த்த அனுமதிக்கும்!",
+          "courseA_artist_loops_challenge2_b": "நீங்கள் ஒரு கூடாரத்தை முடிக்கும்போது, அடுத்த இடத்திற்குச் செல்ல இரண்டு முறை \\`குதிக்கவும்!",
+          "courseA_artist_loops_challenge2_c": "இந்த புதிரை முடிக்க உங்கள் தொகுதிகள் அனைத்தும் ஒரு வளையத்திற்குள் இருக்க வேண்டும்."
+        },
+        "courseA_harvester_seq10_2021": {
+          "courseA_harvester_seq10_a": "நீங்கள் சிக்கியுள்ளீர்களா? முதலில் ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்.",
+          "courseA_harvester_seq10_b": "நீங்கள் `கிழக்கை நகர்த்த வேண்டும்`, பிறகு\\` வடக்கிற்குச் செல்ல வேண்டும் '. இதை இரண்டு முறை செய்யவும். அனைத்து சோளத்தையும் பெற மறக்காதீர்கள்!",
+          "courseA_harvester_seq10_c": "அனைத்து சோளங்களையும் எடுக்க இந்த வழியைப் பயன்படுத்த முயற்சிக்கவும்."
+        },
+        "courseA_harvester_seq13_2021": {
+          "courseA_bee_seq1_a": "அறுவடை இயந்திரம் கிடைத்தவுடன் சோளத்தை எடுக்க இந்த தொகுதியைப் பயன்படுத்தவும்.\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>"
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "அறுவடை இயந்திரம் கண்டுபிடிக்கும்போது சோளத்தை எடுக்க இந்த தொகுதியைப் பயன்படுத்தவும்!",
+          "courseA_harvester_seq1_b": "அறுவடை இயந்திரம் சோளத்திற்கு மூன்று முறை கிழக்கு நோக்கி செல்ல வேண்டும். இந்தத் தொகுதியைப் பயன்படுத்தவும்"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "சோளத்தை எடுக்க \\[blockly block[0] பயன்படுத்த மறக்காதீர்கள்!",
+          "courseA_harvester_seq2_b": "ஒரு தீர்வைக் கண்டுபிடிக்க காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்!"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "இந்த தொகுதியை பயன்படுத்த நினைவிருக்கிறதா?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "படிகளை உரக்கச் சொல்லுங்கள், பதிலைக் கண்டுபிடிக்க இது உங்களுக்கு உதவுமா என்று பாருங்கள்."
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "ஹார்வெஸ்டர் மற்றும் சோளத்திற்கு இடையில் எத்தனை இடைவெளிகள் உள்ளன? உங்கள் பணியிடத்தில் ஏற்கனவே எத்தனை தொகுதிகள் உள்ளன?",
+          "courseA_harvester_seq4_b": "உங்களுக்கு ஐந்து `மூவ் ஈஸ்ட்` தொகுதிகள் மற்றும் ஒரு\\` பிக் கார்ன் 'தொகுதி தேவைப்படும்:"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "எந்த தொகுதி அறுவடை இயந்திரத்தை தவறான வழியில் நகர்த்துகிறது?",
+          "courseA_harvester_seq5_b": "நீங்கள் ஒரு தொகுதியை அகற்ற வேண்டும்.",
+          "courseA_harvester_seq5_c": "இந்த தொகுதியை குப்பையில் எறியுங்கள்!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "நீங்கள் சிக்கியிருந்தால், படிகளை சத்தமாக சொல்ல முயற்சிக்கவும். இது சரியான பாதையைக் கண்டறிய உதவும்."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "புதிரை 2 பகுதிகளாக தீர்க்க முயற்சி செய்யுங்கள், மூலையில் ஒரு பகுதி மற்றும் மறு மூலையில் அடுத்த ஒரு பகுதி.",
+          "courseA_harvester_seq7_b": "சிக்கல் உள்ளதா? அறுவடை செய்பவர் எடுக்க வேண்டிய பாதை இதுதான்."
+        },
+        "courseA_harvester_seq8_2021": {
+          "courseA_harvester_seq8_a": "உங்கள் இறுதி குறியீட்டில் \\*\\* 4 \\*\\* இயக்கத் தொகுதிகள் மற்றும் \\*\\* 2 \\*\\* தொகுதிகள் இருக்க வேண்டும்."
+        },
+        "courseA_harvester_seq9_2021": {
+          "courseA_harvester_seq9_a": "என்ன நடக்கிறது என்பதைப் பார்க்க சில முறை குறியீட்டை இயக்கவும். அறுவடை இயந்திரம் எங்கே நிற்கிறது?",
+          "courseA_harvester_seq9_b": "அனைத்து சோளத்தையும் எடுக்க மறக்காதீர்கள்! உங்களுக்கு \\*\\* 3 \\*\\* சோளத் தொகுதிகள் தேவை.",
+          "courseA_harvester_seq9_c": "அனைத்து மக்காச்சோளத்தையும் எடுக்க இந்த பாதையில் செல்ல வேண்டும்."
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "டாக் ஏதாவது சொல்ல வைக்கும் ஒரு தொகுதியை பாருங்கள்.",
+          "courseA_playLab_events2_b": "இந்த புதிரை நீங்கள் முடிக்க வேண்டிய குறியீடு இதுதான்:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "இந்த தொகுதியை  <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> வெளியே இழுத்து,<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> க்கு கீழே ஸ்னாப் செய்யவும்",
+          "courseA_playLab_events3_b": "உங்கள் நிரலை எழுதியவுடன் ஜார்ஜை கொடிக்கு நகர்த்த இடது அம்பு விசையைப் பயன்படுத்த நினைவில் கொள்ளுங்கள். கொடி பச்சை நிறமாக மாறும்போது, நீங்கள் முடித்துவிட்டீர்கள்!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "ஜார்ஜ் வலதுபுறம் செல்ல வேண்டிய நிகழ்வுத் தொகுதி இங்கே:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "இந்த புதிரை நீங்கள் முடிக்க வேண்டிய குறியீடு இது:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "ஜார்ஜை மேலும் கீழும் நகர்த்த நீங்கள் பயன்படுத்த வேண்டிய நிகழ்வு தொகுதிகள் இங்கே:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nமற்றும்\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "தொகுதியின் படத்தில் கிளிக் செய்து புதிய விசையைத் தேர்ந்தெடுப்பதன் மூலம் நிகழ்வு அம்புக்குறியின் விசையை மாற்றலாம் என்பது உங்களுக்குத் தெரியுமா?\n\n\\[] [0]"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "கிளிக் செய்யும் போது ஜார்ஜ் ஏதாவது செய்ய நீங்கள் பயன்படுத்தும் நிகழ்வு தொகுதி இங்கே:\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_b": "பின்னணியை மாற்ற நீங்கள் பயன்படுத்தும் தொகுதி இங்கே:",
+          "courseA_playLab_events6_c": "சீரற்ற ஒலியை இயக்க நீங்கள் பயன்படுத்தும் தொகுதி இங்கே:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "நடிகர்கள் மோதும்போது என்ன நடக்கும் என்பதைக் கட்டுப்படுத்த இந்தத் தொகுதியைப் பயன்படுத்தவும்.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "நீங்கள் ராபினைக் கிளிக் செய்யும் போது வாடில்ஸை பென்குயின் நிகழ்ச்சியாக ஆக்குங்கள்!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "நீங்கள் வாடில்ஸைக் கிளிக் செய்யும் போது பூ கோஸ்ட் ஷோவை உருவாக்குங்கள்!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "நீங்கள் பூவைக் கிளிக் செய்யும்போது ஜெய்டனை ஒரு தெளிவற்ற அசுரன் நிகழ்ச்சியாக ஆக்குங்கள்!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "நீங்கள் அரக்கனை கிளிக் செய்யும் போது ஸ்பிஃப் ரோபோ நிகழ்ச்சியை உருவாக்கவும்!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "இறுதியாக, நீங்கள் ஸ்பிஃபை கிளிக் செய்யும் போது வெண்டலை வழிகாட்டி நிகழ்ச்சியாக ஆக்குங்கள்!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "நீங்கள் ஒரு பறவையை பாட வைக்கலாம்.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "நீங்கள் ஒரு ரோபோ பீப் செய்யலாம்.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "நீங்கள் ஒரு கோபமான அசுரன் கூச்சலிடலாம்.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_artist_loops2_2021": {
+          "courseB_artist_loops2_a": "லூப் 4 முறைக்கு மேல் திரும்ப வேண்டும் என நீங்கள் விரும்பினால், தொகுதியின் மேல் உள்ள எண்ணை மாற்றலாம்.",
+          "courseB_artist_loops2_b": "கலைஞர் எங்கே முடிகிறார் என்பதை அறிய முதலில் குறியீட்டை இயக்க முயற்சிக்கவும்."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_a": "சிறந்த குறியீட்டிற்கு `ரிபீட்`  <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> லூப்பைப் பயன்படுத்த நினைவில் கொள்ளுங்கள்!",
+          "courseB_artist_loops3_b": "இந்த கோட்டை வரைய கலைஞர் தெற்கு நோக்கி செல்ல விரும்புவார்."
+        },
+        "courseB_artist_loops4_2021": {
+          "courseB_artist_loops4_a": "ஜம்ப் பிளாக் ஒரு கோட்டை வரையாமல் முன்னோக்கி செல்ல உங்களை அனுமதிக்கிறது.",
+          "courseB_artist_loops4_b": "இந்த புதிரைத் தீர்க்க நீங்கள் மீண்டும் மீண்டும் வளையத்தின் உள்ளே ஒரு தொகுதியைச் சேர்க்க வேண்டும்.",
+          "courseB_artist_loops4_c": "லூப் எத்தனை முறை திரும்புகிறது என்பதை மாற்ற மறக்காதீர்கள்."
+        },
+        "courseB_artist_loops5_2021": {
+          "courseB_artist_loops5_a": "ஒரு `ரிபீட்` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> லூப்பை இழுத்து, அதன் உள்ளே மற்ற தொகுதிகளை வைக்கவும். நீங்கள் எத்தனை முறை மீண்டும் செய்ய வேண்டும்?"
+        },
+        "courseB_artist_loops6_2021": {
+          "courseB_artist_loops6_b": "நகர்வுகளை ஒரு துண்டு காகிதத்தில் எழுத முயற்சி செய்து ஒரு வடிவத்தைத் தேடுங்கள்."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "இந்த சவால் \\*\\* 4 \\*\\* சுழல்களைப் பயன்படுத்துகிறது, ஒன்றன் பின் ஒன்றாக!",
+          "courseB_artist_loops7_b": "ஒவ்வொரு வளையமும் வெவ்வேறு திசையில் செல்லும் படிக்கட்டு வடிவத்தை உருவாக்குகிறது என்பதைக் கவனியுங்கள்.",
+          "courseB_artist_loops7_c": "சுழல்கள் இதை செய்ய வேண்டும்:\n\nவளையம் 1\n     \\- சரி\n     \\-   கீழ்\n\nவளையம் 2\n     \\- சரி\n     \\- மேலே\n\n-   வளையம் 3\n    -   இடது\n    -   மேலே\n\n-   வளையம் 4\n    -   இடது\n    -   கீழ்"
+        },
+        "courseB_artist_loops8_2021": {
+          "courseB_artist_loops8_a": "ஏணியை உருவாக்க நீங்கள் எத்தனை முறை வடிவத்தை மீண்டும் செய்ய வேண்டும்?",
+          "courseB_artist_loops8_b": "அது என்ன செய்கிறது என்று பார்க்க உங்களுக்கு கொடுக்கப்பட்ட குறியீட்டை இயக்க முயற்சிக்கவும்."
+        },
+        "courseB_artist_loops9_2021": {
+          "courseB_artist_loops9_a": "ஒரு கோட்டை வரையாமல் நகர்த்த ஜம்ப் பிளாக்ஸ் பயன்படுத்தப்படலாம் என்பதை நினைவில் கொள்ளுங்கள்.",
+          "courseB_artist_loops9_b": "இந்த புதிரை தீர்க்க W ப்ளாக்கை பயன்படுத்த வேண்டும்.",
+          "courseB_artist_loops9_c": "வளையத்தை எங்கே வைப்பது என்று கண்டுபிடிக்க முடியவில்லையா? குறியீட்டை படிப்படியாக எழுத முயற்சிக்கவும் மற்றும் ஒரு வடிவத்தைத் தேடுங்கள்."
+        },
+        "courseB_artist_loops_challenge1_2021": {
+          "courseB_artist_loops_challenge1_b": "பகடைகளில் ஒன்றை முடிக்கும்போது, அடுத்ததற்க்கு \\`குதிக்கவும் '",
+          "courseB_artist_loops_challenge1_c": "அதே கோடுகளில் சிலவற்றை நீங்கள் இரண்டு முறை `நகர்த்த வேண்டும் அல்லது` குதிக்க வேண்டும்."
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "courseB_artist_loops_challenge2_a": "X ஐ வரைய குறியீடு ஏற்கனவே உங்களுக்கு கொடுக்கப்பட்டுள்ளது. நீங்கள் செய்ய வேண்டியது X- ஐத் திரும்பச் சொல்லி அடுத்த இடத்திற்கு `ஜம்ப்` செய்யவேண்டும் ",
+          "courseB_artist_loops_challenge2_b": "வரைதல் இல்லாமல் மற்ற இடங்களுக்குச் செல்ல `ஜம்ப்` தொகுதிகளைப் பயன்படுத்தலாம்."
+        },
+        "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_b": "பின்வரும் கட்டளைகளை சுழற்றுவதன் மூலம் தொடங்கவும்:",
+          "courseB_collector_loops_challenge1_c": "ஒவ்வொரு பாதைக்கும் இடையில் இரண்டு முறை கிழக்கு நோக்கி நகரவும்.\n\n<xml>\n  <block type=\"maze_moveEast\"><next>\n  <block type=\"maze_moveEast\"></block></next></block>\n  </xml>\n\nநீங்கள் இதை 14 தொகுதிகளுடன் மட்டுமே செய்ய முடியும். ஒரு தீர்வைக் காண மேலும் ஒரு குறிப்பைக் கிளிக் செய்யவும்.",
+          "courseB_collector_loops_challenge1_d": "இதை முயற்சித்து பார்!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "ஏதேனும் தவறு நடந்தால், அதை பிழைத்திருத்த முயற்சிக்கவும். விட்டுக் கொடுக்காதே!",
+          "courseB_collector_loops_challenge2a_b": "பிரமை வழியாக செல்ல இந்த விருப்பத்தைப் பாருங்கள். நீங்கள் மீண்டும் செய்யக்கூடிய ஒரு வடிவத்தை நீங்கள் பார்க்கிறீர்களா?",
+          "courseB_collector_loops_challenge2a_c": "புதையல் முழுவதையும் சேகரிக்க, நீங்கள் உங்கள் வளையத்திற்குள் இரண்டு <xml> <block type=\"collector_collect\"/></xml> blocks சேர்க்க வேண்டும், அல்லது அதன் சொந்த \\`ரிபீட் 'தொகுதியின் உள்ளே தொகுதியை வைக்க வேண்டும்."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "உடைந்த பனிக்கட்டியைப் பாருங்கள்! ஸ்க்ராட் தண்ணீரில் விழும்!",
+          "courseB_iceage_loops10_b": "படிகளை சத்தமாக சொல்ல முயற்சிக்கவும் அல்லது அவற்றை ஒரு காகிதத்தில் எழுதவும் முயற்சிக்கவும். நீங்கள் எந்த வடிவங்களையும் பார்க்கிறீர்களா?",
+          "courseB_iceage_loops10_c": "இது ஒரு நீண்ட புதிர்! இந்த பாதையை பின்பற்றுங்கள்"
+        },
+        "courseB_iceage_loops1_2021": {
+          "courseB_iceage_loops1_a": "உடைந்த பனிக்கட்டிகளைக் கவனியுங்கள்! ஸ்க்ராட் சரியாக விழும்!",
+          "courseB_iceage_loops1_b": "இந்த தொகுதியை நீங்கள் பயன்படுத்த வேண்டும்:"
+        },
+        "courseB_iceage_loops2_2021": {
+          "courseB_iceage_loops2_a": "இந்த புதிரை இரண்டு துண்டுகளாக உடைக்கவும், ஒன்று மூலையில் முன்பு, மற்றொன்று  மூலையின் பின்பு.",
+          "courseB_iceage_loops2_b": "நீங்கள் சிக்கிக்கொண்டால், படிகளை சத்தமாக சொல்ல முயற்சிக்கவும்.",
+          "courseB_iceage_loops2_c": "ஸ்க்ராட்டை ஏகோர்னுக்குப் பெற இந்த வழியைப் பின்பற்றுங்கள்."
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "இந்த புதிய தொகுதியைப் பயன்படுத்துங்கள்!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "குறியீட்டை மீண்டும் செய்ய, `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> லூப்பை வெளியே இழுத்து, பிறகு நீங்கள் விரும்பும் தொகுதியை உள்ளே வைக்கவும்."
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_a": "ஏகோர்னைப் பெறுவதற்கு ஸ்க்ராட் எடுக்கும் படிகளை எழுத முயற்சிக்கவும். நீங்கள் ஒரு வடிவத்தைக் காண்கிறீர்களா?",
+          "courseB_iceage_loops4_b": "உங்கள் குறியீட்டை இயக்க பயப்பட வேண்டாம், என்ன நடக்கிறது என்று பாருங்கள்!",
+          "courseB_iceage_loops4_c": "ஸ்க்ராட் எடுக்க வேண்டிய பாதை இதுதான்."
+        },
+        "courseB_iceage_loops6_2021": {
+          "courseB_iceage_loops6_a": "உங்கள் இறுதிக் குறியீட்டில் \\*\\* மூன்று \\*\\* இயக்கத் தொகுதிகள் இருக்கும்.",
+          "courseB_iceage_loops6_b": "நீங்கள் \\*\\* ஒரு \\*\\* மேலும் வளையத்தை மட்டுமே சேர்க்க வேண்டும்!",
+          "courseB_iceage_loops6_c": "உங்கள் இறுதி பாதை இப்படி இருக்க வேண்டும்."
+        },
+        "courseB_iceage_loops7_2021": {
+          "courseB_iceage_loops7_a": "நீங்கள் சிக்கிக்கொண்டால், ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும். நீங்கள் ஒரு மாதிரியைக் காண்கிறீர்களா?",
+          "courseB_iceage_loops7_b": "ஏகோர்னைப் பெற ஸ்க்ராட் எடுக்க வேண்டிய பாதை இதுதான்"
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "இயக்க தொகுதிகள் சரியானதா? வேறு என்ன மாற்ற முடியும்?",
+          "courseB_iceage_loops8_b": "முதல் வளையம் \\*\\* 3 \\*\\* முறை செய்ய வேண்டும், இரண்டாவது \\*\\* 5 \\*\\* முறை செய்ய வேண்டும், மூன்றாவது லூப் \\*\\* 4 \\*\\* முறை செய்ய வேண்டும், கடைசி லூப் \\*\\* 4 \\*\\* முறை செய்ய வேண்டும்.",
+          "courseB_iceage_loops8_c": "இந்த பாதையை ஸ்க்ராட் பின்பற்ற உதவ சுழல்களைப் பயன்படுத்தவும்."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "சிக்கல் உள்ளதா? இந்த புதிரை சிறிய துண்டுகளாக உடைக்க முயற்சிக்கவும். நீங்கள் குறியீடாக உங்கள் புதிரை இயக்க பயப்பட வேண்டாம்!",
+          "courseB_iceage_loops9_b": "உங்கள் இறுதி குறியீட்டில் \\*\\* 4 \\*\\* சுழல்கள் இருக்க வேண்டும்.",
+          "courseB_iceage_loops9_c": "ஸ்க்ராட் ஏகோர்னைப் பெற இந்த வழியைப் பின்பற்ற வேண்டும்."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "டெய்ஸி ஏதாவது சொல்ல இது தொகுதி:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "நிகழ்வைச் சேர்க்க நீங்கள் பயன்படுத்த வேண்டிய தொகுதி இது:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "டெய்சியின் மனநிலையை நீங்கள் மாற்ற வேண்டிய தொகுதி இது:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "இடது அம்புக்குறியைக் கட்டுப்படுத்தும் நிகழ்வு இது:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_b": "குதிரையை இடது பக்கம் நகர்த்தும் தொகுதி இது.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "வலது அம்புக்குறியைக் கட்டுப்படுத்தும் நிகழ்வுத் தொகுதி இது:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events5_b": "க்னயிட்டை  ஓட வைக்கும் தொகுதி இது.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "உங்களுக்கு இந்த நிகழ்வு தொகுதிகள் தேவைப்படும்:\n\n<xml>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">up</title>\n  </block>\n  <block type=\"studio_whenArrow\" id=\"callMe\">\n    <title name=\"VALUE\">down</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events6_b": "வெவ்வேறு திசைகளைத் தேர்வு செய்ய பச்சை நிற \\`\\_\\_\\_ அம்பு அழுத்தும்போது 'நிகழ்வுத் தொகுதிகளில் கீழ்தோன்றும் அம்புகளைப் பயன்படுத்தவும்.\n\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)",
+          "courseB_playlab_events6_c": "கொடிகள் அனைத்தையும் கடந்து செல்லுங்கள்!"
+        },
+        "courseB_playlab_events7_2021": {
+          "courseB_playlab_events7_a": "உங்களுக்குத் தேவைப்படும் நிகழ்வுத் தொகுதி இது: \n\n<xml>\n<block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">0</title>\n    <title name=\"SPRITE2\">1</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_b": "நீங்கள் ஒலியை இயக்க வேண்டிய தொகுதி இது.\n\n<xml>\n<block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n</xml>",
+          "courseB_playlab_events7_c": "மாவீரர் காணாமல் போக நீங்கள் செய்ய வேண்டிய தொகுதி இது:\n\n<xml>\n<block type=\"studio_vanish\">\n    <title name=\"SPRITE\">1</title>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge1_2021": {
+          "courseB_playlab_events_challenge1_a": "நீங்கள் `press` ஐ அழுத்தும்போது மற்ற விலங்குகளை கீழே நகர்த்தச் செய்யுங்கள்.\n\n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title name=\"VALUE\">down</title>\n  </block>\n</xml>",
+          "courseB_playlab_events_challenge1_b": "இந்த தொகுதியைப் பயன்படுத்தி விலங்குகளின் வேகத்தை மாற்றவும்:\n\n<xml>\n  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.NORMAL</title>\n  </block></xml>",
+          "courseB_playlab_events_challenge1_c": "பந்தயம் முடிந்ததும் எல்லோரும் என்ன சொல்வார்கள்? இந்த நிகழ்ச்சியுடன் அவர்களைப் பேசச் செய்யுங்கள்:\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_saySpriteChoices\">\n        <title name=\"SPRITE\">2</title>\n        <title name=\"VALUE\">Woo hoo!</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_playlab_events_challenge2_2021": {
+          "courseB_playlab_events_challenge2_a": "விளையாட்டில் உள்ள ஒவ்வொரு மிருகமும் கிளிக் செய்யும்போது மறைந்து போக வேண்டும். ஓரிரு வினாடிகளுக்குப் பிறகு அது மீண்டும் வர வேண்டும்!",
+          "courseB_playlab_events_challenge2_b": "மற்ற விலங்குகளை மறைக்க மற்ற நிகழ்வு தொகுதிகளைப் பயன்படுத்தவும்!",
+          "courseB_playlab_events_challenge2_c": "நீங்கள் விலங்குகளைக் கிளிக் செய்யும் போது ஒலிகளை இயக்க அல்லது கூடுதல் புள்ளிகளைப் பெற கூடுதல் கட்டளைகளைப் பயன்படுத்தவும்!\n\n<xml>\n  <block type=\"studio_playSound\">\n    <title name=\"SOUND\">slap</title>\n  </block>\n  <block type=\"studio_changeScore\"/></xml>",
+          "courseB_playlab_events_challenge2_d": "கலக்கவும்!\n\nசில விலங்குகளை மற்றவர்களை விட அதிக புள்ளிகள் கொடுக்கச் செய்யுங்கள்.\nவெவ்வேறு ஒலிகளைப் பயன்படுத்துங்கள்.\nவிலங்குகளின் மனநிலையை மாற்றவும்!"
         }
       }
     }
