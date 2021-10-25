@@ -123,7 +123,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
       expect(wrapper.find('textarea').length).to.equal(3);
       expect(wrapper.find('select').length).to.equal(7);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(8);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
       expect(wrapper.find('SaveBar').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(0);
@@ -140,7 +140,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('input[type="checkbox"]').length).to.equal(13);
       expect(wrapper.find('textarea').length).to.equal(4);
       expect(wrapper.find('select').length).to.equal(6);
-      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(9);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(10);
       expect(wrapper.find('SaveBar').length).to.equal(1);
       expect(wrapper.find('InstructionTypeDropdown').length).to.equal(1);
       expect(wrapper.find('AudiencesEditor').length).to.equal(1);
