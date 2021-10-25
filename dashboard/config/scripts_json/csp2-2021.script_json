@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-18 21:41:46 UTC",
+    "serialized_at": "2021-10-22 16:27:45 UTC",
     "published_state": null,
     "seeding_key": {
       "script.name": "csp2-2021"
@@ -3100,7 +3100,7 @@
       "properties": {
         "type": "Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_http_html.mp4"
+        "download_url": "https://videos.code.org/2015/csp/concept_http_html.mp4"
       },
       "seeding_key": {
         "resource.key": "the-internet-http-and-html-1"
@@ -3120,12 +3120,13 @@
       }
     },
     {
-      "name": "The Internet: IP Addresses and DNS - Video",
+      "name": "The Internet: IP Addresses and DNS",
       "url": "https://youtu.be/5o8CwafCxnU?t=249",
       "key": "the-internet-ip-addresses-and-dns-video",
       "properties": {
         "audience": "Student",
-        "type": "Video"
+        "type": "Video",
+        "download_url": "https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4"
       },
       "seeding_key": {
         "resource.key": "the-internet-ip-addresses-and-dns-video"
