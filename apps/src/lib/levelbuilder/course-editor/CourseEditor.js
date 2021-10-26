@@ -23,8 +23,7 @@ import {
   InstructorAudience,
   ParticipantAudience
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import InstructionTypeDropdown from '@cdo/apps/lib/levelbuilder/course-editor/InstructionTypeDropdown';
-import AudiencesEditor from '@cdo/apps/lib/levelbuilder/course-editor/AudiencesEditor';
+import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -304,12 +303,6 @@ class CourseEditor extends Component {
               }
             />
           </label>
-          <InstructionTypeDropdown
-            instructionType={instructionType}
-            handleInstructionTypeChange={e =>
-              this.setState({instructionType: e.target.value})
-            }
-          />
           <AnnouncementsEditor
             announcements={announcements}
             inputStyle={styles.input}
@@ -317,9 +310,13 @@ class CourseEditor extends Component {
           />
         </CollapsibleEditorSection>
 
-        <AudiencesEditor
+        <CourseTypeEditor
           instructorAudience={instructorAudience}
           participantAudience={participantAudience}
+          instructionType={instructionType}
+          handleInstructionTypeChange={e =>
+            this.setState({instructionType: e.target.value})
+          }
           handleInstructorAudienceChange={e =>
             this.setState({instructorAudience: e.target.value})
           }

@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import color from '@cdo/apps/util/color';
 import {
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
+  InstructionType
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 
@@ -20,15 +22,63 @@ const PARTICIPANT_AUDIENCE_DISPLAY_NAMES = {
   [ParticipantAudience.student]: 'Student'
 };
 
-export default function AudiencesEditor({
+const INSTRUCTION_TYPE_DISPLAY_NAMES = {
+  [InstructionType.teacher_led]: 'Teacher Led',
+  [InstructionType.self_paced]: 'Self Paced'
+};
+
+export default function CourseTypeEditor({
   instructorAudience,
   participantAudience,
+  instructionType,
+  handleInstructionTypeChange,
   handleInstructorAudienceChange,
   handleParticipantAudienceChange
 }) {
   return (
     <div>
-      <CollapsibleEditorSection title="Audience Settings">
+      <CollapsibleEditorSection title="Course Type Settings">
+        <label>
+          Instruction Type
+          <select
+            className="instructionTypeSelector"
+            value={instructionType}
+            style={styles.dropdown}
+            onChange={handleInstructionTypeChange}
+          >
+            {Object.values(InstructionType).map(state => (
+              <option key={state} value={state}>
+                {INSTRUCTION_TYPE_DISPLAY_NAMES[state]}
+              </option>
+            ))}
+          </select>
+          <HelpTip>
+            <table>
+              <thead>
+                <tr>
+                  <th>Instruction Type</th>
+                  <th>Overview</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={styles.tableBorder}>Teacher Led</td>
+                  <td style={styles.tableBorder}>
+                    A course where a instructor is directing the learning for
+                    participants in the course.
+                  </td>
+                </tr>
+                <tr>
+                  <td style={styles.tableBorder}>Self Paced</td>
+                  <td style={styles.tableBorder}>
+                    A course where participants are progressing through the
+                    course at their own pace.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </HelpTip>
+        </label>
         <label>
           Who will instruct this course?
           <select
@@ -78,11 +128,13 @@ export default function AudiencesEditor({
   );
 }
 
-AudiencesEditor.propTypes = {
+CourseTypeEditor.propTypes = {
   instructorAudience: PropTypes.oneOf(Object.values(InstructorAudience))
     .isRequired,
   participantAudience: PropTypes.oneOf(Object.values(ParticipantAudience))
     .isRequired,
+  instructionType: PropTypes.oneOf(Object.values(InstructionType)).isRequired,
+  handleInstructionTypeChange: PropTypes.func,
   handleInstructorAudienceChange: PropTypes.func,
   handleParticipantAudienceChange: PropTypes.func
 };
@@ -90,5 +142,9 @@ AudiencesEditor.propTypes = {
 const styles = {
   dropdown: {
     margin: '0 6px'
+  },
+  tableBorder: {
+    border: '1px solid ' + color.white,
+    padding: 5
   }
 };
