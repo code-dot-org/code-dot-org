@@ -4,8 +4,31 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "announcements": [
+        {
+          "notice": "Are you signed up for the AP exam?",
+          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!",
+          "link": "",
+          "type": "information"
+        }
+      ],
+      "curriculum_umbrella": "CSD",
       "exclude_csf_column_in_legend": true,
+      "family_name": "csd1",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "project_sharing": true,
+      "script_announcements": [
+        {
+          "notice": "Are you signed up for the AP exam?",
+          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!",
+          "link": "",
+          "type": "information"
+        }
+      ],
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -24,35 +47,13 @@
           "https://curriculum.code.org/csd/unit1/standards/"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "Are you signed up for the AP exam?",
-          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!",
-          "link": "",
-          "type": "information"
-        }
-      ],
-      "project_sharing": true,
-      "curriculum_umbrella": "CSD",
-      "family_name": "csd1",
-      "hideable_lessons": true,
-      "announcements": [
-        {
-          "notice": "Are you signed up for the AP exam?",
-          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Not sure you want to take the test? We've got SIX reasons why you should. Check them out!",
-          "link": "",
-          "type": "information"
-        }
-      ]
+      "version_year": "2017"
     },
     "new_name": "csd1-2017",
     "family_name": "csd1",
-    "serialized_at": "2021-08-03 22:47:01 UTC",
+    "serialized_at": "2021-10-25 22:53:19 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd1-2017"
     }

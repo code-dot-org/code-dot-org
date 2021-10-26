@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "text-compression",
-    "serialized_at": "2021-09-30 23:11:19 UTC",
+    "serialized_at": "2021-10-25 22:53:05 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "text-compression"
     }
@@ -373,9 +374,9 @@
       "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/",
       "key": "activity-guide-text-compression",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "activity-guide-text-compression"
@@ -386,9 +387,9 @@
       "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/",
       "key": "activity-recap-decode-this-message",
       "properties": {
-        "type": "Activity Recap",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Recap"
       },
       "seeding_key": {
         "resource.key": "activity-recap-decode-this-message"
@@ -399,9 +400,9 @@
       "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/",
       "key": "decode-this-message",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "decode-this-message"
@@ -412,8 +413,8 @@
       "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1",
       "key": "textcompressioncodestudio",
       "properties": {
-        "type": "Widget",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Widget"
       },
       "seeding_key": {
         "resource.key": "textcompressioncodestudio"
@@ -424,9 +425,9 @@
       "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
       "key": "video-text-compression",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/textcompression_blacc.mp4"
+        "download_url": "https://videos.code.org/2015/csp/textcompression_blacc.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "video-text-compression"
@@ -496,13 +497,13 @@
   ],
   "objectives": [
     {
-      "key": "d2d65101-b356-4092-8f88-59b387334dd9",
+      "key": "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c",
       "properties": {
-        "description": "Collaborate with a peer to find a solution to a text compression problem using the Text Compression Widget (lossless compression scheme)."
+        "description": "Describe the purpose and rationale for lossless compression."
       },
       "seeding_key": {
         "lesson.key": "Text Compression",
-        "objective.key": "d2d65101-b356-4092-8f88-59b387334dd9"
+        "objective.key": "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c"
       }
     },
     {
@@ -526,13 +527,13 @@
       }
     },
     {
-      "key": "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c",
+      "key": "d2d65101-b356-4092-8f88-59b387334dd9",
       "properties": {
-        "description": "Describe the purpose and rationale for lossless compression."
+        "description": "Collaborate with a peer to find a solution to a text compression problem using the Text Compression Widget (lossless compression scheme)."
       },
       "seeding_key": {
         "lesson.key": "Text Compression",
-        "objective.key": "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c"
+        "objective.key": "d2d65101-b356-4092-8f88-59b387334dd9"
       }
     }
   ],

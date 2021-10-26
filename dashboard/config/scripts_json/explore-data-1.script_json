@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
       "curriculum_umbrella": "CSC",
-      "version_year": "2021",
-      "is_course": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "explore-data-1",
-    "serialized_at": "2021-10-13 22:03:38 UTC",
+    "serialized_at": "2021-10-25 22:55:01 UTC",
     "published_state": "in_development",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "explore-data-1"
     }
@@ -322,8 +323,8 @@
       "url": "https://youtu.be/4vaWVvrnsFk",
       "key": "data_visualizer_in_app_lab_part_1",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "data_visualizer_in_app_lab_part_1"
@@ -334,8 +335,8 @@
       "url": "https://docs.google.com/presentation/d/1vHtip4atGgbT6xRiR12FtKcVLs26wgDGLJxmnuTeRnI/edit",
       "key": "exploring_bar_charts_and_histograms",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "exploring_bar_charts_and_histograms"
@@ -346,8 +347,8 @@
       "url": "https://docs.google.com/document/d/15oXKCaqWYPaiBZGW-xW-HFsnwbFsMMdbVwQmxD9K3UY/edit",
       "key": "exploring_bar_charts_and_histograms_2",
       "properties": {
-        "type": "Activity Guide",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "exploring_bar_charts_and_histograms_2"
@@ -401,16 +402,6 @@
       }
     },
     {
-      "key": "d543a88f-695a-4555-b054-4e9a910136b1",
-      "properties": {
-        "description": "Draw conclusions by reading bar charts and histograms."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "d543a88f-695a-4555-b054-4e9a910136b1"
-      }
-    },
-    {
       "key": "a6fcac21-f9da-40dd-902d-80c9035d79b5",
       "properties": {
         "description": "Explain the reasons that someone would create either a bar chart or a histogram in order to explore a single column of data."
@@ -419,9 +410,26 @@
         "lesson.key": "lesson-1",
         "objective.key": "a6fcac21-f9da-40dd-902d-80c9035d79b5"
       }
+    },
+    {
+      "key": "d543a88f-695a-4555-b054-4e9a910136b1",
+      "properties": {
+        "description": "Draw conclusions by reading bar charts and histograms."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "d543a88f-695a-4555-b054-4e9a910136b1"
+      }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "6.SP.4"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -434,13 +442,6 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "6.SP.4"
       }
     }
   ],

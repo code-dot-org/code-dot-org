@@ -6,13 +6,14 @@
     "properties": {
       "has_lesson_plan": true,
       "hideable_lessons": true,
-      "version_year": "unversioned",
-      "is_course": true
+      "is_course": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "algebra",
-    "serialized_at": "2021-08-03 22:46:45 UTC",
+    "serialized_at": "2021-10-25 22:53:03 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "algebra"
     }
