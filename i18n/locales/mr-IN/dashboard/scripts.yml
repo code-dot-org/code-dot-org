@@ -457,6 +457,7 @@ mr:
               name: आर्टीस्टमध्ये पॅरामीटर्स असलेली फंक्शन्स
             Build a Star Wars Game:
               name: एक स्टार वॉर्स गेम तयार करा
+              description_student: या धड्यामध्ये तुम्ही तुमचा स्वतःचा स्टार वॉर्स गेम तयार करता ती शक्ती जाणवा
             Functions in Artist:
               name: आर्टीस्टमध्ये फंक्शन्स
               description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
@@ -878,6 +879,7 @@ mr:
               name: शेतकऱ्यासह कंडीशनल्स
             Build a Star Wars Game:
               name: एक स्टार वॉर्स गेम तयार करा
+              description_student: या धड्यामध्ये तुम्ही तुमचा स्वतःचा स्टार वॉर्स गेम तयार करता ती शक्ती जाणवा
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
               description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
@@ -1087,6 +1089,7 @@ mr:
               name: मेझ मध्ये नेस्टेड लूप
             Events with Sprite Lab:
               name: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
             Virtual Pet:
@@ -1108,6 +1111,8 @@ mr:
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
+            'Algorithms: Graph Paper Programming':
+              description_student: या धड्यामध्ये, तुम्ही तुमच्या वर्गमित्रांना चित्र काढण्यासाठी प्रोग्राम कराल!
             Debugging in Collector:
               name: लॉरेल सोबत डीबगिंग
             Events in Bounce:
@@ -1130,6 +1135,7 @@ mr:
               name: आर्टीस्टसह बायनरी इमेजेस
             Build a Star Wars Game:
               name: एक स्टार वॉर्स गेम तयार करा
+              description_student: या धड्यामध्ये तुम्ही तुमचा स्वतःचा स्टार वॉर्स गेम तयार करता ती शक्ती जाणवा
             Dance Party:
               name: डांस पार्टी
         coursee-2019:
@@ -1152,6 +1158,7 @@ mr:
               name: शेतकऱ्यासह कंडीशनल्स
             Build a Star Wars Game:
               name: एक स्टार वॉर्स गेम तयार करा
+              description_student: या धड्यामध्ये तुम्ही तुमचा स्वतःचा स्टार वॉर्स गेम तयार करता ती शक्ती जाणवा
             Functions in Minecraft:
               name: माईनक्राफ्ट मधील फंक्शन्स
             Functions in Harvester:
@@ -1164,6 +1171,7 @@ mr:
               description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या.
             Alien Dance Party with Sprite Lab:
               name: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Frozen:
@@ -1294,12 +1302,15 @@ mr:
               description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
             Ocean Scene with Loops:
               name: लूपसह ओशियन सीन
+              description_student: इमेजेस पूर्ण करण्यासाठी लूप्स आणि पॅटर्न वापरा.
             Learn to Drag and Drop:
               name: ड्रॅग आणि ड्रॉप करायला शिका
               description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
             Loops in Ice Age:
               name: स्क्रॅटसह लूप
               description_student: लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत करा.
+            Programming in Ice Age:
+              description_student: स्क्रॅटला एकोर्नपर्यंत पोहोचण्यास मदत करण्यासाठी प्रोग्राम लिहा.
             Programming with Rey and BB-8:
               description_student: स्क्रॅप मेटलला गोळा करण्यासाठी BB-8 ला मदत करा
             Sequencing with Scrat:
@@ -1311,12 +1322,19 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
+            Move It, Move It:
+              description_student: तुमच्या वर्गमित्रांना एका ठिकाणाहून काळजीपूर्वक पाऊल ठेवण्यासाठी प्रोग्राम करा.
             Loops in Collector:
               name: लॉरेल सोबत लूप
+              description_student: खुल्या गुहेत खजिना गोळा करण्यासाठी लॉरेल अॅडव्हेंचरर प्रोग्राम करा.
             Loops in Artist:
               name: लूपसह गार्डन काढणे
+              description_student: इमेजेस पूर्ण करण्यासाठी पॅटर्न आणि लूप वापरा.
+            'Events: The Big Event':
+              description_student: जेव्हा तुमचा शिक्षक एका विशाल रिमोटवर बटण दाबतो तेव्हा हलवा किंवा ओरडा.
             Events in Play Lab:
               name: इव्हेंटसह एक शाही लढाई
+              description_student: कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा वापर करा.
             The Right App:
               description_student: आपले स्वतःचे स्मार्टफोन अॅप स्केच करा.
             Loops in Harvester:
@@ -1640,6 +1658,8 @@ mr:
               description_student: फळाला फ्लर्ब मिळवण्यासाठी सूचना लिहा.
             Sequencing with Scrat:
               description_student: अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट
+            Programming in Ice Age:
+              description_student: स्क्रॅटला एकोर्नपर्यंत पोहोचण्यास मदत करण्यासाठी प्रोग्राम लिहा.
             Programming with Rey and BB-8:
               description_student: स्क्रॅप मेटलला गोळा करण्यासाठी BB-8 ला मदत करा
             'Loops: Happy Loops':
@@ -1652,6 +1672,7 @@ mr:
               name: लॉरेल सोबत लूप
             Ocean Scene with Loops:
               name: लूपसह ओशियन सीन
+              description_student: इमेजेस पूर्ण करण्यासाठी लूप्स आणि पॅटर्न वापरा.
             Events in Play Lab:
               name: इव्हेंटसह मूव्ह
               description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
@@ -1664,6 +1685,8 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
+            Move It, Move It:
+              description_student: तुमच्या वर्गमित्रांना एका ठिकाणाहून काळजीपूर्वक पाऊल ठेवण्यासाठी प्रोग्राम करा.
             Sequencing in Maze:
               name: अँग्री बर्ड्स सह अनुक्रम
             Programming in Maze:
@@ -1676,12 +1699,17 @@ mr:
               description_student: हार्वेस्टरला लूप वापरून आणखी गोळा करण्यात मदत करा!
             Loops in Collector:
               name: लॉरेल सोबत लूप
+              description_student: खुल्या गुहेत खजिना गोळा करण्यासाठी लॉरेल अॅडव्हेंचरर प्रोग्राम करा.
             Loops in Artist:
               name: लूपसह गार्डन काढणे
+              description_student: इमेजेस पूर्ण करण्यासाठी पॅटर्न आणि लूप वापरा.
             The Right App:
               description_student: आपले स्वतःचे स्मार्टफोन अॅप स्केच करा.
+            'Events: The Big Event':
+              description_student: जेव्हा तुमचा शिक्षक एका विशाल रिमोटवर बटण दाबतो तेव्हा हलवा किंवा ओरडा.
             Events in Play Lab:
               name: इव्हेंटसह एक शाही लढाई
+              description_student: कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा वापर करा.
         coursec-2020:
           title: अभ्यासक्रम C (2020)
           lesson_groups:
@@ -1724,12 +1752,15 @@ mr:
             csf_conditionals:
               display_name: कंडीशनल्स
           lessons:
+            'Algorithms: Graph Paper Programming':
+              description_student: या धड्यामध्ये, तुम्ही तुमच्या वर्गमित्रांना चित्र काढण्यासाठी प्रोग्राम कराल!
             Debugging in Collector:
               name: लॉरेल सोबत डीबगिंग
             Events in Bounce:
               name: बाउन्स मधील इव्हेंट
             Build a Star Wars Game:
               name: एक स्टार वॉर्स गेम तयार करा
+              description_student: या धड्यामध्ये तुम्ही तुमचा स्वतःचा स्टार वॉर्स गेम तयार करता ती शक्ती जाणवा
             Loops in Artist:
               name: लूपसह आकार काढणे
             Nested Loops in Bee:
@@ -1746,6 +1777,8 @@ mr:
               name: आर्टीस्टसह बायनरी इमेजेस
             Dance Party:
               name: डांस पार्टी
+            Be A Super Digital Citizen:
+              description_student: सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू शकता हे शिका
         coursee-2020:
           title: अभ्यासक्रम  E (2020)
           lesson_groups:
@@ -1763,6 +1796,7 @@ mr:
               description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या.
             Alien Dance Party with Sprite Lab:
               name: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Frozen:
@@ -1785,6 +1819,7 @@ mr:
               description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या.
             Events with Sprite Lab:
               name: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
             Nested Loops in the Maze:
@@ -2006,6 +2041,8 @@ mr:
               description_student: फळाला फ्लर्ब मिळवण्यासाठी सूचना लिहा.
             Sequencing with Scrat:
               description_student: अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट
+            Programming in Ice Age:
+              description_student: स्क्रॅटला एकोर्नपर्यंत पोहोचण्यास मदत करण्यासाठी प्रोग्राम लिहा.
             Programming with Rey and BB-8:
               description_student: स्क्रॅप मेटलला गोळा करण्यासाठी BB-8 ला मदत करा
             'Loops: Happy Loops':
@@ -2019,6 +2056,7 @@ mr:
             Ocean Scene with Loops:
               key: लूपसह ओशियन सीन
               name: लूपसह ओशियन सीन
+              description_student: इमेजेस पूर्ण करण्यासाठी लूप्स आणि पॅटर्न वापरा.
             Events in Play Lab:
               description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
             lesson-1:
@@ -2030,6 +2068,8 @@ mr:
               display_name: ईव्हेंट्स
         courseb-2021:
           lessons:
+            Move It, Move It:
+              description_student: तुमच्या वर्गमित्रांना एका ठिकाणाहून काळजीपूर्वक पाऊल ठेवण्यासाठी प्रोग्राम करा.
             Sequencing in Maze:
               name: अँग्री बर्ड्स सह अनुक्रम
             Programming in Maze:
@@ -2042,11 +2082,17 @@ mr:
               description_student: हार्वेस्टरला लूप वापरून आणखी गोळा करण्यात मदत करा!
             Loops in Collector:
               name: लॉरेल सोबत लूप
+              description_student: खुल्या गुहेत खजिना गोळा करण्यासाठी लॉरेल अॅडव्हेंचरर प्रोग्राम करा.
             Loops in Artist:
               key: आर्टीस्टमध्ये लूप्स
               name: लूपसह गार्डन काढणे
+              description_student: इमेजेस पूर्ण करण्यासाठी पॅटर्न आणि लूप वापरा.
             The Right App:
               description_student: आपले स्वतःचे स्मार्टफोन अॅप स्केच करा.
+            'Events: The Big Event':
+              description_student: जेव्हा तुमचा शिक्षक एका विशाल रिमोटवर बटण दाबतो तेव्हा हलवा किंवा ओरडा.
+            Events in Play Lab:
+              description_student: कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा वापर करा.
             lesson-1:
               description_student: आपली स्वतःची स्टोरी किंवा गेम तयार करा.
           lesson_groups:
@@ -2058,6 +2104,7 @@ mr:
           lessons:
             Programming in Maze:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
+              description_student: _अँग्री बर्ड्स_ सह अनुक्रम आणि अल्गोरिदम बद्दल जाणून घ्या.
             Debugging in Maze:
               key: मेझ मध्ये डीबगिंग
               name: मेझ मध्ये डीबगिंग
@@ -2092,6 +2139,8 @@ mr:
         coursed-2021:
           title: अभ्यासक्रम D (2021)
           lessons:
+            'Algorithms: Graph Paper Programming':
+              description_student: या धड्यामध्ये, तुम्ही तुमच्या वर्गमित्रांना चित्र काढण्यासाठी प्रोग्राम कराल!
             Debugging in Collector:
               name: लॉरेल सोबत डीबगिंग
             Events in Bounce:
@@ -2100,6 +2149,7 @@ mr:
             Build a Star Wars Game:
               key: एक स्टार वॉर्स गेम तयार करा
               name: एक स्टार वॉर्स गेम तयार करा
+              description_student: या धड्यामध्ये तुम्ही तुमचा स्वतःचा स्टार वॉर्स गेम तयार करता ती शक्ती जाणवा
             Dance Party:
               key: डांस पार्टी
               name: डांस पार्टी
@@ -2119,6 +2169,8 @@ mr:
             Artist Binary:
               key: आर्टीस्ट बायनरी
               name: आर्टीस्टसह बायनरी इमेजेस
+            Be A Super Digital Citizen:
+              description_student: सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू शकता हे शिका
             lesson-6:
               name: माइनक्राफ्ट सह पुढे  पाहणे
           lesson_groups:
@@ -2135,6 +2187,7 @@ mr:
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
               name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
+              description_student: येथे तुम्ही _माईनक्राफ्ट_ च्या जगातील कंडिशनल्सबद्दल जाणून घ्याल
             Conditionals:
               key: कंडीशनल्स
               name: शेतकऱ्यासह कंडीशनल्स
@@ -2146,6 +2199,7 @@ mr:
             Alien Dance Party with Sprite Lab:
               key: स्प्राइट लॅबसह एलियन डान्स पार्टी
               name: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Artist:
@@ -2159,6 +2213,8 @@ mr:
               key: आर्टीस्टमध्ये फंक्शन्स
               name: आर्टीस्टसह फंक्शन्स
               description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
+            lesson-4:
+              description_student: सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू शकता हे शिका
           lesson_groups:
             ramp_up:
               display_name: नेस्टेड लूप्स
@@ -2175,6 +2231,7 @@ mr:
               description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या.
             Events with Sprite Lab:
               name: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
             Nested Loops in the Maze:
@@ -2198,6 +2255,7 @@ mr:
               name: ब्लॅंक स्पेस स्टोरीज
             lesson-10:
               name: टेक्स्ट आणि प्रॉम्प्ट्स
+              description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल.
             lesson-5:
               name: उद्रेक
         express-2021:
@@ -2208,6 +2266,7 @@ mr:
             Programming with Angry Birds:
               key: अँग्री बर्ड्स सह प्रोग्रामिंग
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
+              description_student: _अँग्री बर्ड्स_ सह अनुक्रम आणि अल्गोरिदम बद्दल जाणून घ्या.
             Debugging with Scrat:
               key: स्क्रॅट सोबत डीबगिंग
               name: मेझ मध्ये डीबगिंग
@@ -2243,6 +2302,7 @@ mr:
             Until Loops in Maze:
               key: मेझ मध्ये लूप पर्यंत
               name: मेझ मध्ये लूप पर्यंत
+              description_student: जेव्हा तुम्ही अंटील लूप वापरता तेव्हा तुम्ही काही आश्चर्यकारक गोष्टी करू शकता!
             Harvesting with Conditionals:
               key: कंडीशनल्स सह हार्वेस्टिंग
               name: कंडीशनल्स सह हार्वेस्टिंग
@@ -2269,6 +2329,8 @@ mr:
               name: आर्टीस्टसह फॉर लूप्स
             Swimming Fish in Sprite Lab:
               description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या.
+            Alien Dance Party:
+              description_student: वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा.
             Virtual Pet with Sprite Lab:
               key: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
@@ -2278,6 +2340,7 @@ mr:
               name: स्प्राईट्स तयार करणे
             lesson-4:
               name: टेक्स्ट आणि प्रॉम्प्ट्स
+              description_student: या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल.
           lesson_groups:
             csf_warmup:
               display_name: वार्म अप
@@ -2310,9 +2373,11 @@ mr:
             Ocean Scene with Loops:
               key: लूपसह ओशियन सीन
               name: लूपसह ओशियन सीन
+              description_student: इमेजेस पूर्ण करण्यासाठी लूप्स आणि पॅटर्न वापरा.
             Drawing Gardens with Loops:
               key: लूपसह गार्डन काढणे
               name: लूपसह गार्डन काढणे
+              description_student: इमेजेस पूर्ण करण्यासाठी पॅटर्न आणि लूप वापरा.
             On the Move with Events:
               key: इव्हेंटसह मूव्ह
               name: इव्हेंटसह मूव्ह
@@ -2320,6 +2385,7 @@ mr:
             A Royal Battle with Events:
               key: इव्हेंटसह एक शाही लढाई
               name: इव्हेंटसह एक शाही लढाई
+              description_student: कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा वापर करा.
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
