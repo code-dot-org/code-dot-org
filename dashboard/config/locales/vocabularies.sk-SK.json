@@ -243,6 +243,22 @@
         "internet/coursef/2021": {
           "word": "Internet"
         },
+        "servers/coursef/2021": {
+          "word": "Servery"
+        },
+        "url/coursef/2021": {
+          "word": "URL"
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/káblové pripojenie"
+        },
+        "ip_address/coursef/2021": {
+          "definition": "Číslo priradené každej veci, ktorá sa pripojí na internet."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Metóda bezdrôtového odosielania informácií pomocou rádiových vĺn."
+        },
         "define/coursef/2021": {
           "word": "Definuj",
           "definition": "Určiť podrobnosti problémov, ktoré sa človek snaží vyriešiť."

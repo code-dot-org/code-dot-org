@@ -243,8 +243,8 @@ az-AZ:
         title: Cütləşdirmə
       4-5 Algorithms Multi 1:
         answers:
-        - {}
-        - {}
+        - text: Dişlərini fırçalamaq
+        - text: Kökələr bişirmək
         - {}
         - text: Banan
         questions:
@@ -292,18 +292,18 @@ az-AZ:
       4-5 Crowdsourcing Multi 2:
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - text: Şirniyyatını yemək
+        - text: Saçını daramaq
+        - text: Üzünü yumaq
         questions:
         - {}
         title: Çoxlu seçim
       4-5 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Sənin doğum günün
+        - text: Sənin sevimli yeməyin
+        - text: Ünvanın
+        - text: Valideynlərinin kredit kart nömrəsi
         questions:
         - {}
         title: Çoxlu seçim
@@ -392,7 +392,7 @@ az-AZ:
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         questions:
-        - {}
+        - text: Ən yaxşı blokları seçin.
         content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
       4-5 bee debug multi 1:
         answers:
@@ -443,32 +443,55 @@ az-AZ:
         content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
       CSD Header Size MC:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
         title: Başlıqları sürətli yoxlayın
+        content1: Aşağıdakı koda bax və başlığın necə görünəcəyini təxmin et. Sağdakı
+          seçimlərdən birini seç.
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
         title: Başlıqları sürətli yoxlayın
+        content1: Aşağıdakı koda bax və başlığın necə görünəcəyini təxmin et. Sağdakı
+          seçimlərdən birini seç.
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
         title: Başlıqları sürətli yoxlayın
+        content1: Aşağıdakı koda bax və başlığın necə görünəcəyini təxmin et. Sağdakı
+          seçimlərdən birini seç.
       CSD U2 image debug match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
         questions:
         - {}
         - {}
@@ -477,45 +500,75 @@ az-AZ:
         - text: 'Faylın adında boşluq (space) var '
       CSD U2 lists match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         title: Sürətli Yoxlama siyahıları
       CSD U2 lists match_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         title: Sürətli Yoxlama siyahıları
       CSD U2 lists match_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
         title: Sürətli Yoxlama siyahıları
       CSD U3 - conditionals - Matching:
         answers:
@@ -558,30 +611,66 @@ az-AZ:
         - {}
       CSD U3 Boolean MC:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: |-
+            doğru
+            yanlış
+            doğru
+        - text: |-
+            0
+            200
+            100
+        - text: |-
+            doğru
+            xəta
+            doğru
+        - text: |-
+            yanlış
+            doğru
+            yanlış
         questions:
-        - {}
+        - text: Bu proqram ilə konsolda hansı nəticə çap olunacaq?
         title: başlıq
       CSD U3 Boolean MC_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: |-
+            doğru
+            yanlış
+            doğru
+        - text: |-
+            0
+            200
+            100
+        - text: |-
+            doğru
+            xəta
+            doğru
+        - text: |-
+            yanlış
+            doğru
+            yanlış
         questions:
-        - {}
+        - text: Bu proqram ilə konsolda hansı nəticə çap olunacaq?
         title: başlıq
       CSD U3 Boolean MC_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: |-
+            doğru
+            yanlış
+            doğru
+        - text: |-
+            0
+            200
+            100
+        - text: |-
+            doğru
+            xəta
+            doğru
+        - text: |-
+            yanlış
+            doğru
+            yanlış
         questions:
-        - {}
+        - text: Bu proqram ilə konsolda hansı nəticə çap olunacaq?
         title: başlıq
       CSD U3 Functions Prediction define first:
         answers:
@@ -630,28 +719,31 @@ az-AZ:
         - {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
-        - {}
+        - text: 'Proqramı oxuyun və bu animasiyalardan hansının canlanacağını təxmin
+            edin. '
       CSD U3 Sprite Movement Predict Multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
-        - {}
+        - text: 'Proqramı oxuyun və bu animasiyalardan hansının canlanacağını təxmin
+            edin. '
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
-        - {}
+        - text: 'Proqramı oxuyun və bu animasiyalardan hansının canlanacağını təxmin
+            edin. '
       CSD U3 Sprites intro predict multi:
         answers:
         - text: "! [] (https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)"
@@ -662,90 +754,127 @@ az-AZ:
         - {}
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "! [] (https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+        - text: "! [] (https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "! [] (https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "! [] (https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - {}
       CSD U3 drawSprites placement match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
       CSD U3 drawSprites placement match_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
       CSD U6 array multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)"
       CSD U6 array multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)"
       CSD U6 array multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)"
       CSD U6 setProperty predict multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
         questions:
         - text: 'Kodu oxuy və bu tətbiq işləyərkən necə görünəcəyini təxmin et. '
+        title: Proqnoz verin
       CSD U6 setProperty predict multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
         questions:
         - text: 'Kodu oxuy və bu tətbiq işləyərkən necə görünəcəyini təxmin et. '
+        title: Proqnoz verin
       CSD U6 setProperty predict multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
         questions:
         - text: 'Kodu oxuy və bu tətbiq işləyərkən necə görünəcəyini təxmin et. '
+        title: Proqnoz verin
       K-1 Artist 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
@@ -778,6 +907,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Cütləşdirmə
+        content2: Şəkilləri növündən asılı olaraq uyğunlaşdırın.
       K-1 Bee 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/bee_images/nectar.png"
@@ -866,7 +996,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/move_blocks/E.png"
         - text: "/script_assets/k_1_images/move_blocks/W.png"
         questions:
-        - {}
+        - text: Son blok hansı seçim olmalıdır?
         content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         title: Çoxlu seçim
       K-1 Maze Loops Multi 1:
@@ -926,7 +1056,7 @@ az-AZ:
         - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
         questions:
-        - {}
+        - text: Bu alqoritmin əvvəlində hansı addım atılmalıdır?
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         title: Çoxlu seçim
       K-1 Plant a Seed Multi 2:
@@ -949,19 +1079,21 @@ az-AZ:
         title: Çoxlu seçim
       K-1 Word Search Multi 3:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Təyin et
+        - text: Dördbucaq
+        - text: Cənub
         questions:
-        - {}
+        - text: Hansı söz tələffüz olunur?
         content1: "/script_assets/k_1_images/search_images/square.png, 700"
         title: Çoxlu seçim
       behaviors 1 predict:
         answers:
         - text: Sprite fırlanacaq
+          feedback: Yanlış
         - text: Sprite büzüləcək
           feedback: Düzgün!
         - text: Sprite hərəkət edəcək.
+          feedback: Yanlış
         - text: Sprite rəngləri dəyişəcək.
           feedback: Yalnış
         questions:
@@ -969,18 +1101,23 @@ az-AZ:
       behaviors 1 predict_2020:
         answers:
         - text: Sprite fırlanacaq
+          feedback: Yanlış
         - text: Sprite büzüləcək
           feedback: Düzgün!
         - text: Sprite hərəkət edəcək.
+          feedback: Yanlış
         - text: Sprite rəngləri dəyişəcək.
           feedback: Yalnış
         questions:
         - {}
       behaviors 4 predict:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - feedback: Yanlış.
+        - text: sola sonra aşağı
+          feedback: Yanlış
+        - text: diaqonal olaraq
+          feedback: Düzgün!
+        - text: ziq-zaq
+          feedback: Yanlış.
         - text: Aşağı, sonra sola
           feedback: Yalnış
         questions:
@@ -988,9 +1125,12 @@ az-AZ:
             edəcək?
       behaviors 4 predict_2020:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - feedback: Yanlış.
+        - text: sola sonra aşağı
+          feedback: Yanlış
+        - text: diaqonal olaraq
+          feedback: Düzgün!
+        - text: ziq-zaq
+          feedback: Yanlış.
         - text: Aşağı, sonra sola
           feedback: Yalnış
         questions:
@@ -998,34 +1138,50 @@ az-AZ:
             edəcək?
       courseC_multi_artist_prog6_predict1:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
+        - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Rəssam tək xətt çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Rəssam dördbucaqlı çəkir.
+          feedback: Düzgün!
         - text: Bilmirəm.
+          feedback: Rəssam dördbucaqlı çəkir.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
+        - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Rəssam tək xətt çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Artist dördbucaqlı çəkəcək.
+          feedback: Düzgün!
         - text: Bilmirəm.
+          feedback: Rəssam dördbucaqlı çəkir.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
+        - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Rəssam tək xətt çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Artist dördbucaqlı çəkəcək.
+          feedback: Düzgün!
         - text: Bilmirəm.
+          feedback: Rəssam dördbucaqlı çəkir.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
+        - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Rəssam tək xətt çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Artist dördbucaqlı çəkəcək.
+          feedback: Düzgün!
         - text: Bilmirəm.
+          feedback: Rəssam dördbucaqlı çəkir.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
@@ -1033,8 +1189,10 @@ az-AZ:
         - text: '4'
           feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
-        - feedback: Düzgün!
-        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+        - text: on iki
+          feedback: Düzgün!
+        - text: on beş
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
         - text: Bilmirəm.
           feedback: " Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə 3 12-dir!"
@@ -1046,8 +1204,10 @@ az-AZ:
         - text: '4'
           feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
-        - feedback: Düzgün!
-        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+        - text: on iki
+          feedback: Düzgün!
+        - text: on beş
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
         - text: Bilmirəm.
           feedback: " Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə 3 12-dir!"
@@ -1059,8 +1219,10 @@ az-AZ:
         - text: '4'
           feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
-        - feedback: Düzgün!
-        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+        - text: on iki
+          feedback: Düzgün!
+        - text: on beş
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
         - text: Bilmirəm.
           feedback: " Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə 3 12-dir!"
@@ -1072,8 +1234,10 @@ az-AZ:
         - text: '4'
           feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
-        - feedback: Düzgün!
-        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+        - text: on iki
+          feedback: Düzgün!
+        - text: on beş
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
         - text: Bilmirəm.
           feedback: " Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə 3 12-dir!"
@@ -1116,7 +1280,7 @@ az-AZ:
         answers:
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Quş TNT-nin üzərinə uçacaq.
         - text: Bilmirəm.
         questions:
         - {}
@@ -1124,7 +1288,7 @@ az-AZ:
         answers:
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Quş TNT-nin üzərinə uçacaq.
         - text: Bilmirəm.
         questions:
         - {}
@@ -1132,7 +1296,7 @@ az-AZ:
         answers:
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Quş TNT-nin üzərinə uçacaq.
         - text: Bilmirəm.
         questions:
         - {}
@@ -1140,42 +1304,50 @@ az-AZ:
         answers:
         - {}
         - feedback: Düzgün!
-        - {}
+        - text: Quş TNT-nin üzərinə uçacaq.
         - text: Bilmirəm.
         questions:
         - {}
       courseC_multi_starWars_predict1:
         answers:
-        - {}
-        - {}
+        - text: BB-8 hərəkət etməyəcək.
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         - feedback: Düzgün!
         - text: Bilmirəm
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
-        - {}
+        - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict1_2018:
         answers:
-        - {}
-        - {}
+        - text: BB-8 hərəkət etməyəcək.
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         - feedback: Düzgün!
         - text: Bilmirəm
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
-        - {}
+        - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict1_2018_2019:
         answers:
-        - {}
-        - {}
+        - text: BB-8 hərəkət etməyəcək.
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         - feedback: Düzgün!
         - text: Bilmirəm
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
-        - {}
+        - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
+        - text: BB-8 hərəkət etməyəcək.
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         - feedback: Düzgün!
         - text: Bilmirəm
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
-        - {}
+        - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1183,7 +1355,8 @@ az-AZ:
         - {}
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
+            nə baş verəcək? '
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
@@ -1191,7 +1364,8 @@ az-AZ:
         - {}
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
+            nə baş verəcək? '
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
@@ -1199,7 +1373,8 @@ az-AZ:
         - {}
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
+            nə baş verəcək? '
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
@@ -1207,12 +1382,16 @@ az-AZ:
         - {}
         - text: Bilmirəm.
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
+            nə baş verəcək? '
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
+          feedback: Yanlış
         - text: B
+          feedback: Yanlış
         - text: C
+          feedback: Yanlış
         - text: D
           feedback: Düzgün!
         questions:
@@ -1220,8 +1399,11 @@ az-AZ:
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
+          feedback: Yanlış
         - text: B
+          feedback: Yanlış
         - text: C
+          feedback: Yanlış
         - text: D
           feedback: Düzgün!
         questions:
@@ -1229,8 +1411,11 @@ az-AZ:
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
+          feedback: Yanlış
         - text: B
+          feedback: Yanlış
         - text: C
+          feedback: Yanlış
         - text: D
           feedback: Düzgün!
         questions:
@@ -1238,8 +1423,11 @@ az-AZ:
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
+          feedback: Yanlış
         - text: B
+          feedback: Yanlış
         - text: C
+          feedback: Yanlış
         - text: D
           feedback: Düzgün!
         questions:
@@ -1354,7 +1542,7 @@ az-AZ:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
-        - {}
+        - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
         - {}
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1362,7 +1550,7 @@ az-AZ:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
-        - {}
+        - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
         - {}
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1370,7 +1558,7 @@ az-AZ:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
-        - {}
+        - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
         - {}
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1378,7 +1566,7 @@ az-AZ:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
-        - {}
+        - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
         - {}
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1389,7 +1577,7 @@ az-AZ:
         - text: '4'
         - text: '8'
           feedback: Düzgün!
-        - {}
+        - text: on iki
         - text: Bilmirəm.
         questions:
         - {}
@@ -1398,7 +1586,7 @@ az-AZ:
         - text: '4'
         - text: '8'
           feedback: Düzgün!
-        - {}
+        - text: on iki
         - text: Bilmirəm.
         questions:
         - {}
@@ -1407,7 +1595,7 @@ az-AZ:
         - text: '4'
         - text: '8'
           feedback: Düzgün!
-        - {}
+        - text: on iki
         - text: Bilmirəm.
         questions:
         - {}
@@ -1416,7 +1604,7 @@ az-AZ:
         - text: '4'
         - text: '8'
           feedback: Düzgün!
-        - {}
+        - text: on iki
         - text: Bilmirəm.
         questions:
         - {}
@@ -1533,7 +1721,7 @@ az-AZ:
         - {}
       courseD_multi_farmer_while4_predict1:
         answers:
-        - {}
+        - text: 'Heç nə baş verməyəcək. '
         - {}
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1541,7 +1729,7 @@ az-AZ:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         answers:
-        - {}
+        - text: 'Heç nə baş verməyəcək. '
         - {}
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1549,7 +1737,7 @@ az-AZ:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
-        - {}
+        - text: 'Heç nə baş verməyəcək. '
         - {}
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1557,7 +1745,7 @@ az-AZ:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
-        - {}
+        - text: 'Heç nə baş verməyəcək. '
         - {}
         - feedback: Düzgün!
         - text: Bilmirəm.
@@ -1602,7 +1790,7 @@ az-AZ:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
-        - {}
+        - text: Quş heç hərəkət etməyəcək.
         - feedback: Düzgün!
         - {}
         - text: Bilmirəm.
@@ -1610,7 +1798,7 @@ az-AZ:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - {}
+        - text: Quş heç hərəkət etməyəcək.
         - feedback: Düzgün!
         - {}
         - text: Bilmirəm.
@@ -1618,7 +1806,7 @@ az-AZ:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - {}
+        - text: Quş heç hərəkət etməyəcək.
         - feedback: Düzgün!
         - {}
         - text: Bilmirəm.
@@ -1626,7 +1814,7 @@ az-AZ:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
-        - {}
+        - text: Quş heç hərəkət etməyəcək.
         - feedback: Düzgün!
         - {}
         - text: Bilmirəm.
@@ -1740,25 +1928,28 @@ az-AZ:
         - {}
       courseF_bee_variables_8a_2018:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Arı heç bir nektar toplamayacaq, çünki dəyişkən "topla" demir.
+        - text: Arı yalnız 2 nektar toplayacaq.
+          feedback: Düzgün!
+        - text: Arı bütün nektarları toplayacaq.
         - text: Bilmirəm.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Arı heç bir nektar toplamayacaq, çünki dəyişkən "topla" demir.
+        - text: Arı yalnız 2 nektar toplayacaq.
+          feedback: Düzgün!
+        - text: Arı bütün nektarları toplayacaq.
         - text: Bilmirəm.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Arı heç bir nektar toplamayacaq, çünki dəyişkən "topla" demir.
+        - text: Arı yalnız 2 nektar toplayacaq.
+          feedback: Düzgün!
+        - text: Arı bütün nektarları toplayacaq.
         - text: Bilmirəm.
         questions:
         - {}
@@ -1982,37 +2173,45 @@ az-AZ:
         - {}
       grade2_multi_collector_A_predict1:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+        - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
+          feedback: Düzgün!
+        - text: Laurel bütün xəzinəni toplayacaq.
         - text: Bilmirəm.
+          feedback: Laurel xəzinə olmayan yerdə onu axtarır və bu xətaya səbəb olur
         questions:
         - text: Aşağıdakı koda diqqətlə baxın. Kod sonuna qədər işləyəcəksə (səhvlərə
             məhəl qoymadan) Laurel neçə xəzinə parçası toplayar?
       grade2_multi_collector_A_predict1_2018:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+        - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
+          feedback: Düzgün!
+        - text: Laurel bütün xəzinəni toplayacaq.
         - text: Bilmirəm.
+          feedback: Laurel xəzinə olmayan yerdə onu axtarır və bu xətaya səbəb olur
         questions:
-        - {}
+        - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+        - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
+          feedback: Düzgün!
+        - text: Laurel bütün xəzinəni toplayacaq.
         - text: Bilmirəm.
+          feedback: Laurel xəzinə olmayan yerdə onu axtarır və bu xətaya səbəb olur
         questions:
-        - {}
+        - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+        - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
+          feedback: Düzgün!
+        - text: Laurel bütün xəzinəni toplayacaq.
         - text: Bilmirəm.
+          feedback: Laurel xəzinə olmayan yerdə onu axtarır və bu xətaya səbəb olur
         questions:
-        - {}
+        - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
       Unit 1 Lesson 1 Overview:
         markdown: Sinif mümkün qədər qəpiklərə dəstək olacaq alüminium folqa qayıqlar
           dizayn etmək üçün qrup şəklində işləyir. Dərs sonunda qruplar fəaliyyətdəki
@@ -2163,10 +2362,15 @@ az-AZ:
           yaxşı şəkildə qarşılayacaq kağız prototipi yeniləşdirəcəksiniz.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Rəssam üç tərəfi bərabər olan bir üçbucaq çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Rəssam tək xətt çəkəcək.
+          feedback: Yanlış. Rəssam kvadrat çəkir.
+        - text: Artist dördbucaqlı çəkəcək.
+          correct: true
+          feedback: Düzgün!
+        - text: Rəssam beşbucaqlı cəkəcək
+          feedback: Yanlış. Rəssam dördbucaqlı çəkir.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2021:
@@ -2174,25 +2378,36 @@ az-AZ:
         - text: '4'
           feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
-        - feedback: Düzgün!
-        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+        - text: on iki
+          feedback: Düzgün!
+        - text: on beş
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
-        - feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
+        - text: iyirmi
+          feedback: Yanlış. Fermer 3 dövrün hər birində 4 balqabaq yığacaq. 4 dəfə
             3 12-dir!
         questions:
         - text: Aşağıdakı kodu diqqətlə nəzərdən keçirin. "Çalıştır" düyməsini vurduqdan
             sonra fermer neçə balqabaq yığacaq?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Scrat palıd qozasına çatacaq. Kodda heç bir səhv yoxdur.
+          feedback: Yanlış. Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat
+            palıd qozasına çatmaq üçün kifayət qədər irəliyə getmir.
+        - correct: true
+          feedback: Düzdü! Birincisi, Scrat yanlış istiqamətə dönür, sonra Scrat palıd
+            qozasına çatmaq üçün kifayət qədər irəli getmir.
+        - text: Scrat palıd qozasına çatmayacaq, çünki kifayət qədər "irəli hərəkət
+            et" blokları yoxdur.
+          correct: true
+        - text: Scrat birinci blokdan hərəkət etməyəcək.
         questions:
-        - {}
+        - text: Bu kodda səhvləri axtarın. Scrat palıd qozasına çatacaq, yoxsa bir
+            problem var?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: Quş donuzdan bir addım kənarda qalacaq.
+          feedback: Yanlış. Bu kod quşu donuza mükəmməl şəkildə çatdırır.
         - text: Quş donuza çatacaq.
           correct: true
           feedback: Düzgün!
@@ -2205,20 +2420,25 @@ az-AZ:
             nə olacaq? '
       courseC_multi_starWars_predict1_2021:
         answers:
-        - {}
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: BB-8 hərəkət etməyəcək.
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
+        - correct: true
+          feedback: Düzgün!
+        - text: BB-8 cəmi 3 boşluq hərəkət edəcək.
+          feedback: 'Yanlış. Təkrarla bloku BB-8-i 5 dəfə irəli aparacaq. '
         questions:
-        - {}
+        - text: '"İcra Et"-i kliklədikdə sizcə nə baş verəcək?'
       courseC_multi_starWars_predict2_2021:
         answers:
         - {}
-        - feedback: Düzgün!
+        - correct: true
+          feedback: Düzgün!
         - {}
         - {}
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqda
+            nə baş verəcək? '
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
@@ -2247,12 +2467,13 @@ az-AZ:
           feedback: Səhv. Sprite fırlanmağı dayandırmadı, belə ki, həm də eyni zamanda
             bunu edəcək.
         - text: Sprite dönüşümlü və eyni zamanda hərəkət edəcək.
+          correct: true
           feedback: Doğru! Hər iki davranış eyni zamanda baş verəcək.
         - text: Birincisi, sprite fırlanıb və sonra hərəkət edəcək.
           feedback: Səhv. Sprite Lab-də əlaqəli bloklar hər sonuncudan dərhal sonra
             baş verir, buna görə də hər iki davranış eyni vaxtda baş verəcəkdir.
         questions:
-        - {}
+        - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -2264,7 +2485,8 @@ az-AZ:
         - {}
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - feedback: Düzgün!
+        - text: Rəssam tərəfləri 50 piksel olan üçbucaq çəkəcək.
+          feedback: Düzgün!
         - {}
         - {}
         - text: Kompüter istifadəçidən nömrəni tələb edəcək.
@@ -2273,7 +2495,8 @@ az-AZ:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - {}
-        - feedback: Düzgün!
+        - correct: true
+          feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -2284,29 +2507,32 @@ az-AZ:
           feedback: Səhv. Bu sprites Onlar dayandırmaq demək qədər fəaliyyət davam
             edən bir "davranış" var.
         - text: Hər iki təyyarə hərəkət etməyə başlayacaq və dayanmayacaq.
+          correct: true
           feedback: Doğru! Bu davranış təyyarələr hərəkət başlamaq və hərəkət davam
             deyir.
         - text: Bir təyyarə birinci, digəri isə daha sonra hərəkət edəcək.
           feedback: Səhv. Sprite Lab-də kodun hər bir bloku növbəti dəfə dərhal başlayır.
         - text: Təyyarələr qırılacaq.
         questions:
-        - {}
+        - text: Kodu oxuyun, sonra proqnoz verin.
       courseF_variables_predict_multi:
         answers:
         - {}
-        - {}
-        - {}
-        - {}
+        - correct: true
+        - feedback: Yanlış. Mətn ekrana çap olundu.
+        - text: Kompüter başqa sual soruşacaq.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - feedback: Düzgün!
-        - {}
+        - text: Laurel bu kodu istifadə edərək 4 parça xəzinə yığacaq.
+        - text: Laurel xəzinə olmayan yerdə onu axtaracaq və bu xətaya səbəb olacaq.
+          correct: true
+          feedback: Düzgün!
+        - text: Laurel bütün xəzinəni toplayacaq.
         - {}
         questions:
-        - {}
+        - text: Koda diqqətlə bax.Səncə, proqramı işə saldıqda nə baş verəcək ?
       CSD U1 Test:
         title: Kompüterlər və Problemin Həlli Layihə Sonrası Test
       CSD U2 Expression Exemplars:
@@ -2645,6 +2871,35 @@ az-AZ:
           # Axtarışa Başlama
 
           Kompüter elmləri və proqramlaşdırmanın əyləncədə necə rol oynadığını öyrənmək üçün bir az araşdırma aparmalısınız. "Kompüter elmləri və & # 95; & # 95; & # 95; & # 95; & # 95; & # 95;" axtarmağa çalışın. film, televiziya, musiqi, oyunlar, animasiya, moda və s. kimi müxtəlif əyləncə növlərini sınamaq.
+        teacher_markdown: |-
+          Burada tələbələri işə salmaq üçün bir neçə sayt var. Bu saytlar ümumiyyətlə məktəbə uyğundur, lakin məzmunu tez -tez dəyişir, buna görə də ** hər bir saytın şagirdlərlə paylaşılmadan əvvəl uyğun olmayan məzmun olub olmadığını yoxlamanızı şiddətlə təklif edirik **.
+
+          [açar]
+
+          ## Sehrli İçəridə - [insidethemagic.net](http://www.insidethemagic.net)
+
+          ### Ümumi baxış
+
+          Bu sayt Disney haqqında xəbərlərə yönəlib, ancaq CS -nin fərqli əyləncə növlərində oynadığı böyük rol sizi təəccübləndirə bilər. Bu, CS yönümlü sayt olmadığına görə, müvafiq məqalələri tapmaq üçün axtarış funksiyasından istifadə etməlisiniz.
+
+          ### Müvafiq sahələr
+
+          * Film/TV
+          * Animasiya
+          * Robototexnika/Animatronika
+          * Oyunlar
+
+          ## Tənqidi Yol Videoları - [kritikpathproject.com/explore/playlists/ ](http://www.criticalpathproject.com/explore/playlists/)
+
+          ### Ümumi baxış
+
+          Oyun sənayesinin müxtəlif sahələrində çalışan və etdiklərindən bəhs edən bir çox insanın iştirak etdiyi videolar.
+
+          ### Müvafiq Sahələr
+
+          * Oyunlar
+          * Animasiya
+          * İncəsənət
       CSD U3 Functions SFLP:
         markdown: |-
           # Baxış
@@ -3212,8 +3467,10 @@ az-AZ:
           * ** [Sərhəd Rəngi] (// studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
       courseAB_EOC_2021:
         description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+        display_name: Kurs Layihəsinin Sonu
       courseB_EOC_2021:
         description: "Siz son dərsə çatmısiz! Yaratmaq üçün bir layihə seçin. \n"
+        display_name: Kurs layihələrinin sonu!
       courseD_EOC_2021:
         description: Siz D Kursunun sonu dərsinə çatdınız! Yaratmaq üçün layihə seçin.
       courseD_EOC_examples_2021:
@@ -3250,7 +3507,8 @@ az-AZ:
         answers:
         - text: Arı yalnız bir dəfə irəliləyəcək və nektar əldə edəcək.
         - {}
-        - feedback: Düzgün!
+        - correct: true
+          feedback: Düzgün!
         - {}
         questions:
         - {}
@@ -3269,7 +3527,8 @@ az-AZ:
         answers:
         - {}
         - {}
-        - feedback: Düzgün!
+        - correct: true
+          feedback: Düzgün!
         - {}
         questions:
         - {}
@@ -3284,7 +3543,7 @@ az-AZ:
         - {}
       courseD_multi_farmer_while4_predict1_2021:
         answers:
-        - {}
+        - text: 'Heç nə baş verməyəcək. '
         - {}
         - feedback: Düzgün!
         - {}
@@ -3292,7 +3551,8 @@ az-AZ:
         - {}
       courseD_multi_maze_until10_predict2_2021:
         answers:
-        - feedback: Düzgün!
+        - correct: true
+          feedback: Düzgün!
         - {}
         - {}
         - {}
@@ -3300,8 +3560,9 @@ az-AZ:
         - {}
       courseD_multi_maze_until2_predict1_2021:
         answers:
-        - {}
-        - feedback: Düzgün!
+        - text: Quş heç hərəkət etməyəcək.
+        - correct: true
+          feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -3313,12 +3574,14 @@ az-AZ:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: 'Heç nə baş verməyəcək. '
-        - {}
+          feedback: Yanlış. Yadplanetli ekranda yuxarı-aşağı hərəkət etməyə başlayacaq.
+        - feedback: Yanlış. Yadplanetli ekranda yuxarı-aşağı hərəkət etməyə başlayacaq.
         - correct: true
           feedback: Düzgün!
         - {}
         questions:
-        - {}
+        - text: 'Aşağıdakı kodu diqqətlə nəzərdən keçir. "İcra et" düyməsini basdıqdan
+            sonra nə olacaq? '
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - {}
@@ -3403,7 +3666,8 @@ az-AZ:
       coursee_prediction_artistfunction2_2021:
         answers:
         - {}
-        - feedback: Düzgün!
+        - correct: true
+          feedback: Düzgün!
         - {}
         - {}
         questions:
@@ -3733,3 +3997,66 @@ az-AZ:
         markdown: Sinifin əvvəlki dərsdə hazırladığı ekranlara əsaslanaraq komandalar
           ekranları tək bir tətbiqə birləşdirir. Sadə kod daha sonra düyməni basmaqla
           uyğun ekrana keçə bilər.
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |-
+          # Əlçatanlıq üçün dizayn
+
+          *Kompüter elmləri dünyasında ** əlçatanlıq ** əlillər üçün texnologiya yaratmaqdır.
+          * Əlilliyə fiziki, eşitmə, vizual və digərləri daxildir.
+          *Əlillik müxtəlifdir və insanlara ** smartfon tətbiqləri ** kimi texnologiyadan necə istifadə etdikləri də daxil olmaqla müxtəlif yollarla təsir edir.
+          * Əlilliyi olan insanlar üçün əlçatan olan proqramların layihələndirilməsi həmin proqramları hamı üçün daha yaxşı edir!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2019_2020:
+        markdown: |-
+          # Əlçatanlıq üçün dizayn
+
+          *Kompüter elmləri dünyasında ** əlçatanlıq ** əlillər üçün texnologiya yaratmaqdır.
+          * Əlilliyə fiziki, eşitmə, vizual və digərləri daxildir.
+          *Əlillik müxtəlifdir və insanlara ** smartfon tətbiqləri ** kimi texnologiyadan necə istifadə etdikləri də daxil olmaqla müxtəlif yollarla təsir edir.
+          * Əlilliyi olan insanlar üçün əlçatan olan proqramların layihələndirilməsi həmin proqramları hamı üçün daha yaxşı edir!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Əlçatanlıq üçün dizayn
+
+          *Kompüter elmləri dünyasında ** əlçatanlıq ** əlillər üçün texnologiya yaratmaqdır.
+          * Əlilliyə fiziki, eşitmə, vizual və digərləri daxildir.
+          *Əlillik müxtəlifdir və insanlara ** smartfon tətbiqləri ** kimi texnologiyadan necə istifadə etdikləri də daxil olmaqla müxtəlif yollarla təsir edir.
+          * Əlilliyi olan insanlar üçün əlçatan olan proqramların layihələndirilməsi həmin proqramları hamı üçün daha yaxşı edir!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Xoş Xəritələr
+
+          Bir xarakteri labirentdən keçmək üçün bir alqoritm yaradın.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |-
+          # Hərəkət etdir, hərəkət etdir
+
+          Bir xəritədən istifadə edin və məqsədə çatmaq üçün əmrlər verin.
+      PrivatePersonalInformation-Unplugged:
+        markdown: |-
+          # Şəxsi Məlumatlar
+
+          Common Sense Education tərəfindən hazırlanan bu dərs, internetdə paylaşılması təhlükəsiz olan məlumatlarla olmayan məlumat arasındakı fərqdən bəhs edir.
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      SimonSays-Unplugged:
+        markdown: Bir oyun oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin
+          lazım olduğunu düşünün.
+      SimonSays-Unplugged_2020:
+        markdown: Bir oyun oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin
+          lazım olduğunu düşünün.
+      Songwriting-Unplugged:
+        markdown: |
+          # Mahnı yazmaq
+
+          Funksiyaların təyin edilməsi və çağırılması haqqında məlumat əldə etmək üçün mahnıda xor anlayışından istifadə edin.
+      Songwriting-Unplugged_2020:
+        markdown: |
+          # Mahnı yazmaq
+
+          Funksiyaların təyin edilməsi və çağırılması haqqında məlumat əldə etmək üçün mahnıda xor anlayışından istifadə edin.

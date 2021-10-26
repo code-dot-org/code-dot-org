@@ -5421,12 +5421,16 @@ ko-KR:
         display_name: 과정말 프로젝트
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 스프라이트는 오른쪽으로 회전만 할 것입니다.
+          feedback: 틀렸습니다. 스프라이트는 동쪽으로도 이동할 것입니다.
+        - text: 스프라이트는 동쪽으로 이동만 할 것입니다.
+          feedback: 틀렸습니다. 스프라이트는 회전을 멈추지 않고 그래서 두 가지를 동시에 할 것입니다.
+        - text: 스프라이트는 동시에 회전하고 이동할 것입니다.
+          correct: true
+          feedback: 맞았습니다! 두 행동이 동시에 일어날 것입니다.
+        - text: 스프라이트는 먼저 회전하고 그 다음 나중에 이동할 것입니다.
         questions:
-        - {}
+        - text: 코드를 일고 그 다음 예측하세요.
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -5467,12 +5471,17 @@ ko-KR:
         - text: 아래 코드를 읽으세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 두 비행기 모두가 그리드를 따라 하나의 공간을 이동하고 그 다음 멈출 것입니다.
+          feedback: 틀렸습니다. 스프라이트는 멈추라는 말을 들을 때까지 계속 실행하는 "행동"을 갖습니다.
+        - text: 두 비행기 모두 이동하기 시작하고 멈추지 않을 것입니다.
+          correct: true
+          feedback: 맞았습니다! 그러한 행동은 비행기에게 이동하기 시작하고 계속 이동하라고 말합니다.
+        - text: 한 비행기가 먼저 이동하고 다른 비행기가 나중에 이동할 것입니다.
+          feedback: 틀렸습니다. 스프라이트 랩 내 코드의 각 블럭은 다음 것 후에 순간적으로 가동합니다.
+        - text: 비행기가 서로 충돌할 것입니다.
+          feedback: 틀렸습니다. 비행기는 서로 닿게 되는 위치에 놓이지 않습니다.
         questions:
-        - {}
+        - text: 코드를 일고 그 다음 예측하세요.
       courseF_variables_predict_multi:
         answers:
         - {}
@@ -5521,3 +5530,33 @@ ko-KR:
         - feedback: 틀렸습니다. 라우렐은 보물이 없는 곳에서 보물을 수집하려 하고 그 때문에 오류가 발생합니다.
         questions:
         - text: 이 코드는 주의 깊게 보세요. 프로그램이 "실행"되면 무슨 일이 벌어질거라 생각하세요?
+      courseF_events_freeplay:
+        display_name: 이벤트 - 프리 플레이
+      courseF_intro_apps:
+        display_name: 스프라이트 랩 앱
+        teacher_markdown: |
+          # 선택 레벨 개요
+          선택 레벨은 학생들이 완료할 추가 레벨 메뉴를 제공합니다. 학생들은 여기서 서브 레벨 중 적어도 하나를 완료해야 하지만 원하는 만큼 얼마든지 해도 됩니다.
+
+          여기서의 선택에 따라 학생은 그들이 탐구하게 될 샘플 앱으로 가게 됩니다. 이 활동은 [레슨 플랜](.././)에 있는 앱 탐구 워크시트에 맞게 편성하였습니다.
+      courseF_sprites_freeplay:
+        description: 이제 여러분이 원하는 무엇이든 만들 차례입니다! 어떤 종류의 프로젝트를 만들거예요?
+        display_name: 스프라이트- 프리 플레이
+      courseF_sprites_practice:
+        description: 지금까지 아주 잘하고 있어요! 다음 액티비티를 선택하세요. 가능한 많이 완료하세요. 스프라이트와 행동으로 계속
+          연습하세요!
+        display_name: 스프라이트 연습
+        teacher_markdown: |+
+          # 선택 레벨 개요
+          선택 레벨은 학생들이 완료할 추가 레벨로 구성된 메뉴를 제공합니다. 학생들은 여기서 서브 레벨 중 적어도 하나를 완료해야 하지만 원하는 만큼 얼마든지 해도 됩니다.
+
+          아래 설명을 사용하여 학생들이 스스로 선택하도록 도움을 주거나 또는 그들이 완료해야 하는 서브 레벨 수에 관한 기대치를 설정할 수 있습니다.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |사막 장면|과일 크기 조절.|항해선 애니메이션으로 만들기|산들바람이 부는 날|
+          |-|-|-|-|-|
+          | ***유형*** |**검토**|**검토**|**검토**|**검토**|
+          | ***개념***|*스프라이트, 위치*|*스프라이트, 속성*|*스프라이트, 위치, 행동*|*행동*|
+
+
+      courseF_variables_projects:
+        display_name: 프로젝트 선택

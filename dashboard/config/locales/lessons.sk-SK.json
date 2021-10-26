@@ -38,6 +38,12 @@
           "purpose": "Organizácia Common Sense Education vytvorila túto lekciu, aby žiakom ukázala, čo majú robiť, ak niekto používa urážlivý alebo nenávistný jazyk na internete.",
           "student_overview": "Šikana nikdy nie je v poriadku. Počas tejto lekcie sa naučíte, čo je OK povedať na internete a čo nie."
         },
+        "coursef-2021/lesson-9": {
+          "overview": "Na tejto lekcii zameranej na **vytvorenie kontextu** budú žiakom ako kontext na pochopenie toho, ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich neskôr používajú počas vykonávania programu, slúžiť dopĺňacie príbehy (podobné ako Mad Libs®). ",
+          "preparation": "Pripravte si 6 obálok (môžu to byť aj hárky papiera preložené na polovicu). \n\n-   Na prednú stranu každej obálky napíšte veľkými písmenami: predmet, tekutina, číslo, prídavné meno, časť tela, číslo\n-   Vytlačte si kópie **\\*pracovného hárka** pre žiakov (alebo zverejnite digitálnu kópiu v triednom systéme).",
+          "purpose": "Táto lekcia poskytuje zdieľaný kontext, vďaka ktorému budú môcť žiaci ľahšie pochopiť, ako fungujú premenné, keď sa vrátia k programovaniu.",
+          "student_overview": "V rámci tejto aktivity budete používať dopĺňacie príbehy príbehy (podobné ako Mad Libs®) na uľahčenie pochopenia toho, ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich neskôr používajú počas vykonávania programu."
+        },
         "coursef-2021/lesson-10": {
           "overview": "V tejto lekcii zameranej na **budovanie zručností** si žiaci precvičia použitie premenných v Sprite Labe.",
           "preparation": "Prejdite si úrovne a prezrite si prezentáciu k lekcii.",
@@ -91,6 +97,7 @@
           "overview": "I keď mnoho ľudí denne internet používa, veľa z nich nevie, ako funguje. V tejto lekcii budú študenti predstierať, že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach, URL aj IP adresách a DNS."
         },
         "coursef-2021/End of Course Project": {
+          "overview": "Táto lekcia s **projektom** prevedie žiakov procesom navrhovania, vytvárania a prezentácie nových projektov.",
           "preparation": "-   Venujte čas tomu, aby ste si vytvorili vlastný projekt v Umelcovi aj Sprite Labe. Oboznámte sa s možnosťami a obmedzeniami oboch nástrojov.\n-   Upravte hodnotiacu tabuľku tak, aby bola v súlade s vašimi triednymi cieľmi a každému žiakovi vytlačte jeden exemplár.\n-   Upravte hárok návrhu projektu tak, aby bol v súlade s vašimi triednymi cieľmi a každému žiakovi vytlačte jeden exemplár.",
           "purpose": "Hoci môžu byť žiaci pripravení vrhnúť sa do vytvárania vlastných projektov, táto lekcia im pomôže premeniť nápady na plány. Táto štruktúra pomôže uzemniť idealistov a zároveň ukáže cestu tým, ktorí ešte možno trocha blúdia. Dajte žiakom dosť času na to, aby si vytvorili a upravili svoje projekty. Nevyhnutnosť prístupu „pokus –omyl“ v tejto lekcii naučí žiakov riešiť problémy a vytrvať.",
           "student_overview": "Na takéto veľké projekty treba veľa času a plánovania. Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť naplno!"
@@ -191,6 +198,7 @@
           "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
         },
         "coursed-2021/End of Course Project": {
+          "overview": "Táto lekcia s **projektom** prevedie žiakov procesom navrhovania, vytvárania a prezentácie nových projektov.",
           "student_overview": "Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt."
         },
         "express-2021/Programming with Angry Birds": {
@@ -425,7 +433,7 @@
           "student_overview": "Vytvor pomocou udalostí príbeh alebo interaktívnu hru."
         },
         "coursee-2021/Simon Says": {
-          "overview": "V tejto lekcii zameranej na **vytvorenie kontextu** si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými inštrukciami.",
+          "overview": "Na tejto lekcii zameranej na **vytvorenie kontextu** si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými inštrukciami.",
           "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
           "purpose": "Cieľom tejto lekcie je pripraviť žiakov na zamyslenie nad jedným zo základných konceptov programovania v Sprite Lab, ktorým je správanie.",
           "student_overview": "Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy sú potrebné na dosiahnutie správneho výsledku."

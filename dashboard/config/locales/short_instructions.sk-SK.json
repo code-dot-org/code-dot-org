@@ -3035,7 +3035,8 @@
         "courseF_sprites_ship": "Vytvor postavu lode a nastav ju tak, aby plávala po vode.",
         "courseF_text_choice_interview": "Oprav chybu tak, aby sa text zobrazoval správne.",
         "courseF_text_choice_multiprompt": "Oprav chybu tak, aby sa text zobrazoval správne.",
-        "courseF_text_choice_title": "Pridaj do svojho programu veľký text pomocou úvodnej obrazovky. Potom úvodnú obrazovku skry pomocou udalosti."
+        "courseF_text_choice_title": "Pridaj do svojho programu veľký text pomocou úvodnej obrazovky. Potom úvodnú obrazovku skry pomocou udalosti.",
+        "CSDU4 - Design Mode - 16": "Pridajte obslužnú rutinu udalosti pre tlačidlo pomocou odkazu „Vložiť a zobraziť“ na karte Udalosti režimu dizajnu. (Kliknutím zobrazíte úplné pokyny)."
       }
     }
   }

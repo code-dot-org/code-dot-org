@@ -1771,6 +1771,45 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Nuovo blocco!",
           "poetry_remove_sprite": "Nuovo blocco!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseF_apps_aquarium": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_chatbot": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_collector": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_pet": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Cerca un nuovo blocco qui."
         }
       }
     }

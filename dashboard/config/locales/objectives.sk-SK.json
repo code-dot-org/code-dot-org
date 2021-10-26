@@ -29,6 +29,9 @@
         "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
           "description": "Programovať riešenia problémov, ktoré sa vyskytnú pri vytváraní virtuálneho zvieratka, napríklad kŕmenie."
         },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Rozhodnite, aké druhy výrokov je prípustné povedať na internete a aké nie."
+        },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "Používať premenné na ukladanie slov a slovných spojení."
         },
@@ -73,6 +76,12 @@
         },
         "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
           "description": "Určiť začiatočnú, konečnú a prírastkovú hodnotu v cykle „for“."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Určiť začiatočnú, konečnú a prírastkovú hodnotu v cykle „for“."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Rozlíšiť, kedy je vhodné použiť cyklus „for“ a kedy iné druhy cyklov, napríklad cyklus „opakuj“ či „pokiaľ“."
         },
         "68c038c1-990a-4009-ad61-619ba6ea71af": {
           "description": "Použiť cyklus „for“ na to, aby sa jeho realizácia viackrát upravila o rôzne hodnoty."

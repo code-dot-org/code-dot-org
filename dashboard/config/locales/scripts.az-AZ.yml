@@ -23,6 +23,8 @@ az:
         csp_2021_category_name: KE Prinsipləri ('21-'22)
         cspexams_category_name: Kompüter Elmlərinin Prinsipləri Praktik Test
         csp17_category_name: KE Prinsipləri ('17-'18)
+        aiml_2021_category_name: Süni İntellekt / Maşın Öyrənməsi
+        full_course_category_name: Tam Kurslar
         hoc_category_name: Kod Saatı
         math_category_name: Riyaziyyat
         research_studies_category_name: "Tədqiqat işləri \nğ"
@@ -54,6 +56,8 @@ az:
               name: Təməl qurmaq
             Happy Maps:
               name: Şən xəritələr
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: sürüşdürməni və buraxmağı öyrən'
             'Maze: Debugging':
               name: 'Labirint: Sazlama'
             'Maze: Loops':
@@ -64,8 +68,12 @@ az:
               name: Hərəkət et
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+            Spelling Bee:
+              name: Yazı yoxlayan arı
             'Studio: Create a Story':
               name: 'Oyun labı: Bir əhvalat düzəldin'
+            The Big Event:
+              name: Böyük hadisə
           student_description: Oxumağa yeni başlayanlar üçün Kurs 1 ilə başla. Tələbələr
             kompyuter proqramlarını düzəldərkən başqaları ilə əməkdaşlıq etmək, məsələləri
             həll etmək bacarıqlarını inkişaf etdirmək və çətin tapşırıqlardan keçməyi
@@ -109,6 +117,8 @@ az:
               name: Estafet proqramlaşdırması
             'Studio: Create a Story':
               name: 'Oyun labı: Bir əhvalat düzəldin'
+            The Big Event:
+              name: Böyük hadisə
           student_description: Kurs 2 oxumağı bacaran və heç bir ilkin proqramlaşdırma
             təcrübəsi olmayan şagirdlər üçün hazırlanıb. Bu kursda şagirdlər məsələləri
             həll etmək üçün proqramlar düzəldəcək və bölüşə biləcəkləri interaktiv
@@ -138,6 +148,8 @@ az:
               name: Arı Sazlama
             'Bee: Functions':
               name: 'Arı: Funksiyalar'
+            'Bee: Nested Loops':
+              name: 'Arı: İç-içə Dövrlər'
             Bounce:
               name: Tullan
             Computational Thinking:
@@ -158,6 +170,8 @@ az:
               name: 'Labirint: Şərti ifadələr'
             Songwriting:
               name: Mahnı yazma
+            'Studio: Create a Game':
+              name: 'Oyun laboratoriyası: Oyun Düzəlt'
             'Studio: Create a Story':
               name: 'Oyun labı: Bir əhvalat düzəldin'
           student_description: Kurs 3 artıq Kurs 2-ni keçmiş şagirdlər üçün hazırlanıb.
@@ -172,6 +186,13 @@ az:
           lessons:
             Play Lab:
               name: Oyun labı
+              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək oyun yaradırlar.
+              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
           student_description: Oyun laboratoriyası ilə bir əhvalat və ya oyun düzəldin!
         artist:
           title: Rəssam
@@ -180,14 +201,33 @@ az:
           lessons:
             Artist:
               name: Rəssam
+              description_teacher: Bu dərsdə şagirdlər ekrandakı rəsmləri tamamlamaq
+                üçün rəssamı idarə edəcəklər. Bu rəssam mərhələsi, tələbələrə '100
+                piksel irəli hərəkət etmək' və '90 dərəcə sağa dönmək' kimi proqramlaşdırma
+                bloklarından istifadə edərək tədricən çətinlik dərəcəsi artan şəkilləri
+                qurmağa imkan verəcək.
           student_description: Rəssamla fısqırıq şəkil və dizaynlar çəkin!
         hourofcode:
           title: Ənənəvi labirint
+          description: Əsəbi quşlar, Bitkilər və Zombilər və Buz dövründən Scrat personajı
+            ilə kompüter elmlərinin əsas anlayışlarında özünüzü sınayın!
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
           lessons:
             Maze:
               name: Labirint
+              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 4-10 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
+              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 4-10 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
+          student_description: Əsəbi quşlar, Bitkilər və Zombilər və Buz dövründən
+            Scrat personajı ilə kompüter elmlərinin əsas anlayışlarında özünüzü sınayın!
         frozen:
           title: Anna və Elza ilə proqramlaşdır
           description: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna və Elzaya
@@ -199,12 +239,30 @@ az:
           lessons:
             Artist:
               name: Anna və Elza ilə proqramlaşdır
+              description_student: Bu dərsdə, hər yaş qrupundan olan şagirdlər təhlükəsiz
+                və dəstəkləyici bir mühitdə kodlaşdırma və kompüter elmləri ilə tanışlıq
+                olacaqlar. Bu dərs 10-13 yaş arası orta sinif şagirdləri üçün hazırlanmışdır,
+                lakin bəzi təklifləri nəzərə alaraq kiçik və ya böyük yaşda olan şagirdlər
+                üçün də uyğunlaşdırıla bilər. Şagirdlərin sadə həndəsə bilikləri və
+                xüsusilə bucaqlar haqqında anlayışı olmalıdır.
+              description_teacher: Bu dərsdə, hər yaş qrupundan olan şagirdlər təhlükəsiz
+                və dəstəkləyici bir mühitdə kodlaşdırma və kompüter elmləri ilə tanışlıq
+                olacaqlar. Bu dərs 10-13 yaş arası orta sinif şagirdləri üçün hazırlanmışdır,
+                lakin bəzi təklifləri nəzərə alaraq kiçik və ya böyük yaşda olan şagirdlər
+                üçün də uyğunlaşdırıla bilər. Şagirdlərin sadə həndəsə bilikləri və
+                xüsusilə bucaqlar haqqında anlayışı olmalıdır.
           student_description: Gəlin, buzun sehrini və gözəlliyini kəşf edən Anna
             və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək. Buz üzərində
             sürüşərək siz qar dənəcikləri və naxışlar düzəldəcək, sonradan dostlarınızla
             bölüşə biləcəyiniz bir qış möcüzəsi quracaqsınız!
         course4:
           title: Kurs 4
+          description: Kurs 4, 2 və 3 -cü kursları götürən tələbələr üçün nəzərdə
+            tutulmuşdur. Şagirdlər, çətinlik dərəcəsi tədricən artan hər bir sualı
+            həll edərkən daha çətin pzallar üzərində işləməyi bacaracaqlar. Bu Kurs
+            tamamlandıqda, tələbələr dövrlər və parametrləri olan funksiyalar da daxil
+            olmaqla bir çox bacarığı nümayiş etdirməyə imkan verən proqramlar yaradacaqlar.
+            İşləməsi tövsiyə olunan siniflər 4 və 8-lərdir.
           description_short: Kurs 4 üçün şagirdlər artıq Kurs 2 və 3-ü keçmiş olmalıdırlar.
           description_audience: 10+ yaş (Kurs 3-dən sonra)
           lessons:
@@ -212,6 +270,8 @@ az:
               name: Rəssam
             Artist Binary:
               name: 'Rəssam: ikilik sistem'
+            'Artist: For Loops':
+              name: 'Rəssam: For Loops'
             'Artist: Functions':
               name: 'Rəssam: Funksiyalar'
             'Artist: Functions with Parameters':
@@ -220,10 +280,24 @@ az:
               name: 'Rəssam: Dəyişənlər'
             'Bee: For Loops':
               name: 'Arı: For Dövrləri'
+            'Bee: Functions with Parameters':
+              name: 'Arı: Parametrli funksiyalar'
+            Extreme Challenge - Comprehensive:
+              name: Həddindən artıq çətinlik - Hərtərəfli
             Maze and Bee:
               name: Labirint və arı
             'Play Lab: For Loops':
               name: 'Oyun Labı: For Dövrləri'
+            'Play Lab: Functions with Parameters':
+              name: 'Laboratoriyada oyna: Parametrləri olan funksiyalar'
+            'Play Lab: Variables':
+              name: Laboratoriyada oynat:dəyişənlər
+            Super Challenge - For Loops:
+              name: Super seviyyede cetinlik-loops üçün
+            Super Challenge - Functions and Parameters:
+              name: Super seviyyede çətinlik:funksiyalar ve parametrler
+            Super Challenge - Variables:
+              name: Super seviyyede çətinlik-dəyişənlər
             'Unplugged: Binary':
               name: 'Sərbəst: İkilik say sistemi '
             'Unplugged: Envelope Variables':
@@ -236,8 +310,18 @@ az:
               name: 'Sərbəst: Parametrlətlə musiqi yazma'
             'Unplugged: Tangrams':
               name: 'Sərbəst: Tanqramlar'
+          student_description: Kurs 4, 2 və 3 -cü kursları götürən tələbələr üçün
+            nəzərdə tutulmuşdur. Şagirdlər, çətinlik dərəcəsi tədricən artan hər bir
+            sualı həll edərkən daha çətin pzallar üzərində işləməyi bacaracaqlar.
+            Bu Kurs tamamlandıqda, tələbələr dövrlər və parametrləri olan funksiyalar
+            da daxil olmaqla bir çox bacarığı nümayiş etdirməyə imkan verən proqramlar
+            yaradacaqlar. İşləməsi tövsiyə olunan siniflər 4 və 8-lərdir.
         Course4pre:
           title: Kurs 4 üçün lazımi şərtlər
+          description: 2 -ci və 3 -cü kurslar tedris olunmamis tələbələr üçün qısa
+            anlayışlar.
+          description_short: 2 -ci və 3 -cü kurslar tedris olunmamis tələbələr üçün
+            qısa anlayışlar.
           lessons:
             'Artist: Functions':
               name: 'Rəssam: Funksiyalar'
@@ -251,25 +335,46 @@ az:
               name: 'Arı: Şərti ifadələr'
             'Bee: Debugging':
               name: Arı Sazlama
+            'Bee: Nested Loops':
+              name: 'Arı: İç-içə Dövrlər'
             'Farmer: While Loops':
               name: 'Fermer: "Hələ ki" dövrləri'
             'Maze: Sequence':
               name: 'Labirint: Ardıcıllıq'
+          student_description: 2 -ci və 3 -cü kurslar tedris olunmamis tələbələr üçün
+            qısa anlayışlar.
         usability:
           title: İstifadəyə Yararlılıq Testi
+          description: faydalılıq testi üçün 4 kurs kursu seçimi.
           lessons:
             Binary:
               name: İkilik
+            For Loops:
+              name: '"For" dövrü'
+            Functions and Functions with Parameters:
+              name: Parametrləri olan funksiyalar və funksiyalar
             Intro:
               name: Giriş
             Variables:
               name: dəyişənlər
+          student_description: faydalılıq testi üçün 4 kurs kursu seçimi.
         algebra:
+          title: Cəbrdə Kompüter Elmləri
+          description: Cəbr vasitəsilə Funksional Proqramlaşdırmanı öyrən.
+          description_short: Cəbr vasitəsilə Funksional Proqramlaşdırmanı öyrən.
           lessons:
+            'Calc: Defining Variables':
+              name: Dəyişənlərin müəyyən edilməsi və əvəz edilməsi
+            'Calc: Evaluation Blocks':
+              name: Qiymətləndirmə Blokları və Arifmetik İfadələr
             'Eval: Boolean Operators':
               name: Məntiqi operatorlar
             'Eval: Conditionals':
               name: Şərti ifadələr
+            'Eval: Defining Functions':
+              name: murekkeb funksiyalar
+            'Eval: Functions':
+              name: Dizayn teyinati ilə söz problemlərinin həll edilməsi
             'Eval: Strings and Images':
               name: Sətir və Şəkillər
             'Eval: Writing Contracts':
@@ -278,22 +383,105 @@ az:
               name: Böyük Oyun - Animasiya
             'Play Lab: Boolean (Big Game)':
               name: Böyük Oyun - Bool tipləri
+            'Play Lab: Booleans':
+              name: Yarasa Sam
+            'Play Lab: Collision Detection (Big Game)':
+              name: Böyük Oyun - Toqquşma aşkarlama
             'Play Lab: Defining Functions':
               name: Raket yüksəkliyi
             'Play Lab: Defining Variables (Big Game)':
               name: Böyük oyun- dəyişənlər
-        algebrademo:
+            'Unplugged: Collision Detection and the Distance Formula':
+              name: Baglantisiz:Kesismenin Askarlanması və Pifaqor Teoremi
+          student_description: Cəbr vasitəsilə Funksional Proqramlaşdırmanı öyrən.
+        infinity:
+          title: Disney Sonsuz Oyun Labaratoriyası
+          description: Disney Infinity personajlarının oynadığı bir hekayə və ya oyun
+            yaratmaq üçün Play Labdan istifadə edin.
+          description_short: Disney Infinity personajlarının oynadığı bir hekayə və
+            ya oyun yaratmaq üçün Play Labdan istifadə edin.
           lessons:
+            Infinity:
+              name: Disney Sonsuz Oyun Labaratoriyası
+              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək oyun yaradırlar.
+              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
+          student_description: Disney Infinity personajlarının oynadığı bir hekayə
+            və ya oyun yaratmaq üçün Play Labdan istifadə edin.
+        algebrademo:
+          title: Cəbr Demo
+          description: Code.org CS -də Cəbrdə istifadə olunan mühiti və proqramlaşdırma
+            dilini nümayiş etdirmək üçün bir neçə tapmaca
+          description_short: Code.org CS -də Cəbrdə istifadə olunan mühiti və proqramlaşdırma
+            dilini nümayiş etdirmək üçün bir neçə tapmaca
+          lessons:
+            Defining Simple Functions:
+              name: Sadə funksiyaların təyin edilməsi
             Defining Variables:
               name: Dəyişənlərin təyin edilməsi
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Making Pictures:
+              name: Şəkil qurmaq
+            The Design Recipe:
+              name: Dizayn resepti
+          student_description: Code.org CS -də Cəbrdə istifadə olunan mühiti və proqramlaşdırma
+            dilini nümayiş etdirmək üçün bir neçə tapmaca
         K5PD:
+          title: K5 peşəkar inkişaf (köhnə)
+          description: 'İbtidai sinif müəllimləri üçün sonuncu onlayn Peşəkar İnkişaf
+            mənbələri üçün:'
           lessons:
+            Computer Science Pedagogy:
+              name: Komputer elmleri pedaqojikasi
+            Introduction to PD:
+              name: PD-e giris
+            K-5 Courses:
+              name: K-5 kursları
+            Next Steps:
+              name: Növbəti addımlar
+            'Programming Concept: Conditionals':
+              name: 'Proqramlaşdırmanin anlayışı: Şərtlər'
+            'Programming Concept: Events':
+              name: 'Proqlanlasdırma anlayışı: hadisələr'
+            'Programming Concept: Functions':
+              name: 'Proqramlaşdırma anlayışı: funksiyalar'
             'Programming Concept: Loops':
               name: 'Proqramlaşdırma Konsepsiyası: Dovrlər'
+            Reflection:
+              name: Əksetmə
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Writing computer programs:
+              name: Kompüter proqramları yazmaq
             new stage:
               name: yeni mərhələ
+          student_description: 'İbtidai sinif müəllimləri üçün sonuncu onlayn Peşəkar
+            İnkişaf mənbələri üçün:'
+        netsim:
+          title: İnternet Simulyatoru
+          description: İnternetin necə işlədiyini öyrənin.
+          description_short: İnternetin necə işlədiyini öyrənin.
+          lessons:
+            Broadcasting messages:
+              name: Mesajların yayımlanması
+            Overview and Setup Instructions:
+              name: Baxış və Quraşdırma Təlimatları
+            Routers and addresses:
+              name: Routerlər və adreslər
+          student_description: İnternetin necə işlədiyini öyrənin.
+        pixelation:
+          title: Pikselləmə
+          description: Bit və baytlarla şəkillər yaradın.
+          description_short: Bit və baytlarla şəkillər yaradın.
+          lessons:
+            Color Pixelation Tutorial:
+              name: Rəng Pikselləndirmə Dərsliyi
+          student_description: Bit və baytlarla şəkillər yaradın.
         20-hour:
           title: İnformatikaya sürətləndirilmiş giriş kursu
           description: Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın
@@ -383,6 +571,16 @@ az:
           lessons:
             Flappy Code:
               name: Qanadlı Kod
+              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
+              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
           student_description: 10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz?
             Qanadlı Kod dərsliyimizi sınayın!
         jigsaw:
@@ -393,52 +591,127 @@ az:
               description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
         step:
           title: addım
+          description: Addım təlimi
+          description_short: Addım təlimi
           lessons:
             Step:
               name: addım
+          student_description: Addım təlimi
         Hour of Code:
           title: Kod Saatı 2013
+          description: Angry Birds and Plants vs Zombies personajları ilə kompüter
+            elminin əsaslarını sınayın!
           description_short: İnformatikanın əsaslarını əyləncəli personajlarla birlikdə
             öyrənməyə cəhd edin!
           lessons:
             Hour of Code 2013:
               name: Kod Saatı 2013
+          student_description: Angry Birds and Plants vs Zombies personajları ilə
+            kompüter elminin əsaslarını sınayın!
         CodeStudioPuzzleChallenge:
+          description: Bu əyləncəli kodlaşdırma tapmacalarını sınayın. Əlindən gələni
+            elə!
+          description_short: Özünə meydan oxu!
           lessons:
             Puzzles:
               name: Tapmacalar
+          student_description: Bu əyləncəli kodlaşdırma tapmacalarını sınayın. Əlindən
+            gələni elə!
         Tutorial Video - Code Studio Puzzle Challenge:
+          description: Bu əyləncəli kodlaşdırma tapmacalarını sınayın. Əlindən gələni
+            elə!
+          description_short: Özünə meydan oxu!
           lessons:
             Puzzles:
               name: Tapmacalar
+          student_description: Bu əyləncəli kodlaşdırma tapmacalarını sınayın. Əlindən
+            gələni elə!
         cspunit1:
           lessons:
             Binary Numbers:
               name: İkilik rəqəmlər
             Bytes and File Sizes:
               name: Bayt və Fayl ölçüləri
+            Encode a Complex Thing:
+              name: Təcrübəni dekodlaşdır
+            Encoding B&W Images:
+              name: B&W Şəkillərinin Kodlaşdırılması
+            Encoding Color Images:
+              name: Rəngli Şəkillərin Kodlaşdırılması
+            Encoding Numbers in the Real World:
+              name: Real Dünyada Rəqəmləri Dekodlaşdırma
+            Encoding and Sending Text:
+              name: mətni dekodlaşdırma və göndərmə
+            Lossy Compression and File Formats:
+              name: Real Dünyada Nömrələrin dekodlanması
             Number Systems:
               name: Say sistemləri
+            Personal Innovations:
+              name: Şəxsi İnnovasiyalar
             Sending Binary Messages:
               name: İkilik mesajların göndərilməsi
+            Sending Bits in the Real World:
+              name: Real Dünyada Bitlərin Göndərilməsi
+            Sending Complex Messages:
+              name: Qarışıq Mesajların Göndərilməsi
+            Sending Formatted Text:
+              name: Formatlandırılmış Mətnin Göndərilməsi
+            Sending Numbers:
+              name: nömrələri göndərmə
         algebraPD:
+          title: Cəbrd PD də Kompyuter Elmləri
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           lessons:
+            Course Overview:
+              name: Kursa ümumibaxış
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Introduction to PD:
+              name: PD-e giris
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Why Computer Science belongs in Algebra:
+              name: Nə üçün Komputer Elmləri Cəbrə məxsusdur
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
         algPDmiami:
+          title: Cəbrd PD də Kompyuter Elmləri
+          description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
+          description_short: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
           lessons:
             Booleans:
               name: Məntiqi dəyişənlər
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Luigi's Pizza:
+              name: Luiginin Pizzası
+            Rocket-Height:
+              name: Raket yüksəkliyi
+            Sam the Bat:
+              name: Yarasa Sam
             Strings and Images:
               name: Sətir və Şəkillər
             Your Game - Animation:
               name: Sənin oyunun - Animasiya
             Your Game - Booleans:
               name: Sizin Oyun - Bul tipləri
+            Your Game - Collision Detection:
+              name: Oyununuz - Toqquşma Aşkarlanması
+            Your Game - Player Movement:
+              name: Oyununuz - Oyunçu Hərəkəti
+          student_description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
+        text-compression:
+          description: Təkrarlanan nümunələri müəyyən edərək mətni qısaldın
+          description_short: Təkrarlanan nümunələri müəyyən edərək mətni qısaldın
+          student_description: Təkrarlanan nümunələri müəyyən edərək mətni qısaldın
         CSPPD:
           lessons:
+            Growth Mindset:
+              name: Böyümə Düşüncəsi
             Impact of Computer Science:
               name: Kompüter elminin təsiri
+            Introduction to PD:
+              name: PD-e giris
             Teaching Strategies:
               name: Öyrətmə strategiyası
             What is CSP?:
@@ -450,9 +723,16 @@ az:
             Lesson 15:
               name: Dərs 15
         ECSPD:
+          title: Kompyuter Elmlərinin PD Araşdırılması
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           lessons:
+            Growth Mindset:
+              name: Böyümə Düşüncəsi
             Impact of Computer Science:
               name: Kompüter elminin təsiri
+            Introduction to PD:
+              name: PD-e giris
             Teaching Strategies:
               name: Öyrətmə strategiyası
             What is ECS?:
@@ -460,26 +740,106 @@ az:
                 Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun
                 işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini
                 təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
+        sciencePD:
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
+          lessons:
+            Dispositions and Classroom Culture:
+              name: Davranış və sinif mədəniyyəti
+            Introduction to PD:
+              name: PD-e giris
+            The Tutorial:
+              name: Təlim
+            Using Computer Models in Science:
+              name: Elmdə kompüter modellərindən istifadə
+            Using Models in the Classroom:
+              name: Modellərdə sinifdə istifadə
+            What to Expect:
+              name: Nə gözləməli
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
         rbo-reference:
           lessons:
             reference:
               name: istinad
+        Test Wednesday:
+          title: İmtahan Çərşənbə
+          description: İmtahan Çərşənbə
+          description_short: İmtahan Çərşənbə
+          lessons:
+            PDK5 Intro:
+              name: PDK5 Giriş
+          student_description: İmtahan Çərşənbə
         cspunit3:
           lessons:
+            Controlling Memory with Variables:
+              name: Dəyişənlərlə yaddaşı idarə
+            Creating Functions:
+              name: Funksiya yaratmaq
+            Creating functions with Parameters:
+              name: Parametrlərlə funksiyaların yaradılması
+            Digital Assistant Project:
+              name: Rəqəmsal köməkçi layihəsi
+            Functions with Return Values:
+              name: Qaytarma dəyərləri olan funksiyalar
+            Introduction to Conditional Logic:
+              name: Şərti Məntiqə Giriş
+            Introduction to Digital Assistants:
+              name: Rəqəmsal köməkçilərə giriş
+            Looping and Random Numbers:
+              name: Döngə və Təsadüfi Ədədlər
+            Loops and Simulations:
+              name: Döngələr və Simulyasiyalar
             Multi-screen Apps:
               name: Çox-ekranlı Tətbiqlər
+            'Practice PT: Create':
+              name: 'Praktika PT: Yarat'
+            The Need For Programming Languages:
+              name: Proqramlaşdırma Dillərinə Ehtiyac
+            User Input and Strings:
+              name: İstifadəçi Girişlər və Simlər
+            Using Simple Commands:
+              name: Sadə əmrlərdən istifadə
+            Using Variables in Apps:
+              name: Tətbiqlərdə Dəyişənlərdən istifadə
+            While Loops:
+              name: '"While" dövrü'
+            Creating Functions with Parameters:
+              name: Parametrlərlə funksiyaların yaradılması
         algebraPD3:
+          description: Blok əsaslı Funksional Proqramlaşdırma vasitəsilə Cəbri öyrədin
+          description_short: Blok əsaslı Funksional Proqramlaşdırma vasitəsilə Cəbri
+            öyrədin
           lessons:
+            Computer Science Pedagogy:
+              name: Komputer elmleri pedaqojikasi
+            Course Overview:
+              name: Kursa ümumibaxış
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Next Steps:
+              name: Növbəti addımlar
             Strings and Images:
               name: Sətir və Şəkillər
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
             The Big Game:
               name: Böyük Oyun
+            The Design Recipe:
+              name: Dizayn resepti
+          student_description: Blok əsaslı Funksional Proqramlaşdırma vasitəsilə Cəbri
+            öyrədin
         ECSPD-NexTech:
+          title: Kompyuter Elmlərinin PD Araşdırılması
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           lessons:
+            Growth Mindset:
+              name: Böyümə Düşüncəsi
             Impact of Computer Science:
               name: Kompüter elminin təsiri
+            Introduction to PD:
+              name: PD-e giris
             Teaching Strategies:
               name: Öyrətmə strategiyası
             What is ECS?:
@@ -487,10 +847,18 @@ az:
                 Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun
                 işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini
                 təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
         ECSPD-iZone:
+          title: Kompyuter Elmlərinin PD Araşdırılması
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           lessons:
+            Growth Mindset:
+              name: Böyümə Düşüncəsi
             Impact of Computer Science:
               name: Kompüter elminin təsiri
+            Introduction to PD:
+              name: PD-e giris
             Teaching Strategies:
               name: Öyrətmə strategiyası
             What is ECS?:
@@ -498,26 +866,104 @@ az:
                 Xidməti (ECS), konteynerləri idarə edən və inkişaf etdiricilərin kodun
                 işləməsi üçün bir mühit qurmadan, buludda tətbiqetmələr işləməsini
                 təmin edən Amazon Veb Xidmətlərindəki (AWS) bir bulud hesablama xidmətidir.
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
         algebraPD-NexTech:
+          title: Cəbrd PD də Kompyuter Elmləri
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           lessons:
+            Course Overview:
+              name: Kursa ümumibaxış
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Introduction to PD:
+              name: PD-e giris
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Why Computer Science belongs in Algebra:
+              name: Nə üçün Komputer Elmləri Cəbrə məxsusdur
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
         algebraPD-iZone:
+          title: Cəbrd PD də Kompyuter Elmləri
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           lessons:
+            Course Overview:
+              name: Kursa ümumibaxış
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Introduction to PD:
+              name: PD-e giris
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Why Computer Science belongs in Algebra:
+              name: Nə üçün Komputer Elmləri Cəbrə məxsusdur
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
+        sciencePD-NexTech:
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
+          lessons:
+            Dispositions and Classroom Culture:
+              name: Davranış və sinif mədəniyyəti
+            Introduction to PD:
+              name: PD-e giris
+            The Tutorial:
+              name: Təlim
+            Using Computer Models in Science:
+              name: Elmdə kompüter modellərindən istifadə
+            Using Models in the Classroom:
+              name: Modellərdə sinifdə istifadə
+            What to Expect:
+              name: Nə gözləməli
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
+        sciencePD-iZone:
+          description: 'Mərhələ 1 : Onlayn təqdimetmə'
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
+          lessons:
+            Dispositions and Classroom Culture:
+              name: Davranış və sinif mədəniyyəti
+            Introduction to PD:
+              name: PD-e giris
+            The Tutorial:
+              name: Təlim
+            Using Computer Models in Science:
+              name: Elmdə kompüter modellərindən istifadə
+            Using Models in the Classroom:
+              name: Modellərdə sinifdə istifadə
+            What to Expect:
+              name: Nə gözləməli
+          student_description: 'Mərhələ 1 : Onlayn təqdimetmə'
         sciencePD2:
+          title: 'CS Elmində: 2 -ci hissə'
           lessons:
             Welcome!:
               name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
         sciencePD3:
+          title: 'Kompyuter Elmləri Elmdə: Hissə 3'
+          description: Tədris İl Dəstəyi - Semestr 1
+          description_short: Tədris İl Dəstəyi - Semestr 1
           lessons:
+            Decode and Share:
+              name: Deşifrə edin və Paylaşın
+            Mystery Model:
+              name: Gizli Model
             Welcome Back!:
               name: Xoş gəldiniz!
+          student_description: Tədris İl Dəstəyi - Semestr 1
+        Testing:
+          title: Yoxlama
+          description: Yoxlama
+          description_short: Yoxlama
+          lessons:
+            Testing:
+              name: Yoxlama
+          student_description: Yoxlama
         cspunit2:
           lessons:
+            Algorithms Detour - How Routers Learn:
+              name: Routerlərin Öyrənməsi
             Cracking the Code:
               name: Kodun sındırılması
             Encryption Algorithms:
@@ -525,6 +971,7 @@ az:
             Public Key Crypto:
               name: Açıq Açarlı Kriptoqrafiya
         algebraPD2a:
+          title: Cəbrd PD də Kompyuter Elmləri
           lessons:
             Big Game - Animation:
               name: Böyük Oyun - Animasiya
@@ -538,14 +985,29 @@ az:
               name: Məntiqi dəyişənlər
             Defining Variables:
               name: Dəyişənlərin təyin edilməsi
+            Evaluation Blocks:
+              name: ölçmə blokları
             Free Play:
               name: Azad Oyna
+            Luigi's Pizza:
+              name: Luiginin Pizzası
+            Rocket-Height:
+              name: Raket yüksəkliyi
+            Sam the Bat:
+              name: Yarasa Sam
             Strings and Images:
               name: Sətir və Şəkillər
+            The Design Recipe:
+              name: Dizayn resepti
             Big GAme - Collision Detection:
               name: Böyük Oyun - Kolliziyanın tapılması
         allthethings:
+          title: Bütün hər şey!
           lessons:
+            Anonymous student survey:
+              name: Anonim tələbə sorğusu
+            Anonymous student survey 2:
+              name: Anonim tələbə sorğusu 2
             AppLab:
               name: AppLab
             Artist:
@@ -558,10 +1020,14 @@ az:
               name: Fermer
             Flappy:
               name: Flappy
+            Free Response:
+              name: Azad Cavab
             Gamelab:
               name: Oyunlabı
             Jigsaw:
               name: Mozaika
+            Long assessment:
+              name: Uzun dəyərləndirmə
             Match:
               name: Uyğunluq
             Maze:
@@ -572,18 +1038,41 @@ az:
               name: Multi
             Multi2:
               name: Multi2
+            Netsim:
+              name: Netsim
+            Odometer:
+              name: Odometr
+            Pixelation:
+              name: Pikselləmə
             Public Key Cryptography:
               name: Açıq Açarlı Kriptoqrafiya
             Star wars:
               name: Ulduz Müharibələri
             Studio:
               name: Studiya
+            Web Lab:
+              name: Veb Laboratoriyası
+            Java Lab:
+              name: Java Lab
         algebraPD2b:
+          title: Cəbrd PD də Kompyuter Elmləri
           lessons:
+            Best Practices for Teaching Computer Science:
+              name: Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr
             Booleans:
               name: Məntiqi dəyişənlər
+            Course Overview:
+              name: Kursa ümumibaxış
+            Defining Functions:
+              name: Funksiyaların müəyyənləşdirilməsi
             Defining Variables:
               name: Dəyişənlərin təyin edilməsi
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Next Steps:
+              name: Növbəti addımlar
+            Rocket-Height:
+              name: Raket yüksəkliyi
             Strings and Images:
               name: Sətir və Şəkillər
             Teacher Dashboard:
@@ -594,12 +1083,22 @@ az:
           lessons:
             App Lab:
               name: Proqram Labı
+            Internet Simulator:
+              name: İnternet Simulyatoru
             Welcome!:
               name: Xoş gəldiniz!
         K5-OnlinePD:
           lessons:
+            Best Practices for Teaching Computer Science:
+              name: Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr
             Computer Science Fundamentals:
               name: Kompüter Elmləri Əsasları.
+            Getting Started:
+              name: Başlanqıc
+            'Mastering the Basics: Functions':
+              name: 'Əsaslara yiyələnmək: funksiyalar'
+            Next Steps:
+              name: Növbəti addımlar
             Planning:
               name: Planlama
         ECSPD2:
@@ -609,11 +1108,20 @@ az:
             Wrap-up:
               name: Yekun
         algebraPD2:
+          description: Akademik İl Dəstəyi
+          description_short: Akademik İl Dəstəyi
           lessons:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Teaching with Puzzles:
+              name: Tapmacalarla dərs
+            Teaching with the Design Recipe:
+              name: Dizayn təlimatı ilə tədris
+            The Design Recipe:
+              name: Dizayn resepti
             Welcome!:
               name: Xoş gəldiniz!
+          student_description: Akademik İl Dəstəyi
         sciencePD2b:
           lessons:
             Welcome!:
@@ -626,6 +1134,14 @@ az:
               name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
+        Equity-OnlinePD:
+          lessons:
+            Creating Equitable Learning Environments:
+              name: Adil öyrənmə mühiti yaratmaq
+            Getting Started:
+              name: Başlanqıc
+            Next Steps:
+              name: Növbəti addımlar
         sciencePD2b-iZone:
           lessons:
             Welcome!:
@@ -646,6 +1162,10 @@ az:
               name: Yekun
         CSPPD2:
           lessons:
+            Getting Started:
+              name: Başlanqıc
+            Welcome to the Course!:
+              name: Kursa xoş gəlmişsiniz!
             Wrap Up and Next Steps:
               name: Yekun və sonrakı addımlar
         asUnplugged:
@@ -663,8 +1183,13 @@ az:
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
             Songwriting:
               name: Mahnı yazma
+            The Big Event:
+              name: Böyük hadisə
         afterschool1:
+          title: Məktəbsonrası 1
           description_audience: 7-13 yaş
+        algebraPD3a:
+          title: Cəbrd PD də Kompyuter Elmləri
         sciencePD3_pre1:
           lessons:
             The TLO:
@@ -673,24 +1198,46 @@ az:
               name: Xoş gəldiniz!
         ECSPD3-Unit2:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Teaching Strategies:
               name: Öyrətmə strategiyası
+            Unit 2 Challenge:
+              name: Bölmə 2 Meydan oxuma
         ECSPD3-Unit3:
           lessons:
+            Getting Started:
+              name: Başlanqıc
+            Intro to Unit 3:
+              name: Bölmə 3-ə giriş
             Teaching Strategies:
               name: Öyrətmə strategiyası
         ECSPD3-Unit4:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Teaching Strategies:
               name: Öyrətmə strategiyası
+            Unit 4 Day-by-Day:
+              name: Bölmə 4 Günbəgün
         ECSPD3-Unit5:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Unit 5 Overview:
               name: 5cü Hissə Baxış
+            Unit 5 lessons:
+              name: Bölmə 5 dərslər
         ECSPD3-Unit6:
           lessons:
+            Getting Started:
+              name: Başlanqıc
+            Unit 6 Challenge:
+              name: Bölmə 6 Meydan oxuma
             Unit 6 Overview:
               name: 6cü Hissə Baxış
+            Unit 6 lessons:
+              name: Bölmə 6 dərslər
         cspunit4draft:
           description_short: məlumat
           lessons:
@@ -700,32 +1247,87 @@ az:
               name: Məlumatların İcrası
             Creating Javascript Objects:
               name: JavaScript obyekin yaradılması
+            How is Data Collected?:
+              name: Data necə yığılır?
             Search Terms:
               name: Axtarış Şərtləri
             Unique IDs, Delete and Update Records:
               name: Unikal IDlər, Məlumatları Sil və Yenilə
+            What Data Can Tell Us:
+              name: Data bizə nə deyə bilər
+            Why Make Apps?:
+              name: Niyə tətbiqlər quraq?
         ScienceP3OLPT2:
           lessons:
             Welcome!:
               name: Xoş gəldiniz!
             Wrap-Up:
               name: Yekun
+        algebraPD3b:
+          title: Cəbrd PD də Kompyuter Elmləri
+          lessons:
+            Getting Started:
+              name: Başlanqıc
         CSPPD3-Unit2:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Unit 2 Overview:
               name: 2cü Hissə Baxış
+        duino:
+          lessons:
+            Making Music:
+              name: Musiqi bəstələmək
         Special Fun:
           description_audience: 10+ yaş (Kurs 3-dən sonra)
         SpecialSeries:
           description_audience: 10+ yaş (Kurs 3-dən sonra)
+          lessons:
+            Spring 2016:
+              name: Yaz 2016
+        iceage:
+          lessons:
+            Ice Age Play Lab:
+              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək oyun yaradırlar.
+              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
         CSPPD3-Unit3:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Unit 3 Overview:
               name: 3cü Hissə Baxış
+        cspunit3temp:
+          lessons:
+            Functions with Return Values:
+              name: Qaytarma dəyərləri olan funksiyalar
+            Loops and Simulations:
+              name: Döngələr və Simulyasiyalar
+            'Practice PT: Create':
+              name: 'Praktika PT: Yarat'
+            While Loops:
+              name: '"While" dövrü'
         CSP-Unit3-Support:
           lessons:
             Unit 3 Overview:
               name: 3cü Hissə Baxış
+        gumball:
+          lessons:
+            Gumball Play Lab:
+              description_student: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
+              description_teacher: Bu dərsdə şagirdlər kompüter elmləri ilə tanış
+                olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu
+                dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır,
+                lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu
+                şagirdləri üçün də uyğunlaşdırıla bilər.
         starwars:
           title: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın (JavaScript)'
           description: Droidləri proqramlaşdırmağı öyrənin və üzaq bir qalaktikada
@@ -758,6 +1360,10 @@ az:
               name: Kod Saatı 2015
           student_description: Kod bloklarından istifadə edərək Stiv və ya Aleksə
             bu Maynkraft dünyasında bir macəra yaşadın.
+        oceans:
+          lessons:
+            Oceans:
+              name: Okeanlar
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -780,6 +1386,8 @@ az:
               name: Fəsil 1 Baxış
             Chapter 2 Overview:
               name: Fəsil 2 Baxış
+            Getting Started:
+              name: Başlanqıc
             Unit 4 Overview:
               name: 4cü Hissə Baxış
         cspunit6draft:
@@ -800,6 +1408,8 @@ az:
               name: Datanın Vizuallaşması
         CSPPD3-Unit5:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Unit 5 Overview:
               name: 5cü Hissə Baxış
         cspunit6:
@@ -823,9 +1433,25 @@ az:
             'Play Lab: Booleans':
               name: 'Oyun Labı: Məntiq Operatorları'
         algebraPD1:
+          description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           lessons:
+            Course Overview:
+              name: Kursa ümumibaxış
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Introduction to PD:
+              name: PD-e giris
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Why Computer Science belongs in Algebra:
+              name: Nə üçün Komputer Elmləri Cəbrə məxsusdur
+          student_description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
+        algebraPD3c:
+          title: Cəbrd PD də Kompyuter Elmləri
+          lessons:
+            Getting Started:
+              name: Başlanqıc
         csp1-2017:
           lesson_groups:
             cspSurvey:
@@ -837,8 +1463,12 @@ az:
               name: HTTP və Abstraksiya
             Number Systems:
               name: Say sistemləri
+            Personal Innovations:
+              name: Şəxsi İnnovasiyalar
             Sending Binary Messages:
               name: İkilik mesajların göndərilməsi
+            Sending Numbers:
+              name: nömrələri göndərmə
             The Internet:
               name: İnternet
         csp2-2017:
@@ -850,12 +1480,33 @@ az:
               name: Bayt və Fayl ölçüləri
             Cleaning Data:
               name: Məlumatların Təmizlənməsi
+            Encoding B&W Images:
+              name: B&W Şəkillərinin Kodlaşdırılması
+            Encoding Color Images:
+              name: Rəngli Şəkillərin Kodlaşdırılması
             Intro to Data:
               name: Data-ya Giriş
+            Lossy Compression and File Formats:
+              name: Real Dünyada Nömrələrin dekodlanması
         csp3-2017:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            Creating Functions:
+              name: Funksiya yaratmaq
+            Creativity in Algorithms:
+              name: Alqoritmlərdə yaradıcılıq
+            Looping and Random Numbers:
+              name: Döngə və Təsadüfi Ədədlər
+            The Need For Programming Languages:
+              name: Proqramlaşdırma Dillərinə Ehtiyac
+            The Need for Algorithms:
+              name: Alqoritmlərə Ehtiyac
+            Using Simple Commands:
+              name: Sadə əmrlərdən istifadə
+            Creating Functions with Parameters:
+              name: Parametrlərlə funksiyaların yaradılması
         csp4-2017:
           lesson_groups:
             cspSurvey:
@@ -876,29 +1527,109 @@ az:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Controlling Memory with Variables:
+              name: Dəyişənlərlə yaddaşı idarə
+            Digital Assistant Project:
+              name: Rəqəmsal köməkçi layihəsi
+            Functions with Return Values:
+              name: Qaytarma dəyərləri olan funksiyalar
+            Introduction to Conditional Logic:
+              name: Şərti Məntiqə Giriş
+            Introduction to Digital Assistants:
+              name: Rəqəmsal köməkçilərə giriş
+            Loops and Simulations:
+              name: Döngələr və Simulyasiyalar
             Multi-screen Apps:
               name: Çox-ekranlı Tətbiqlər
+            'Practice PT: Create':
+              name: 'Praktika PT: Yarat'
+            User Input and Strings:
+              name: İstifadəçi Girişlər və Simlər
+            Using Variables in Apps:
+              name: Tətbiqlərdə Dəyişənlərdən istifadə
+            While Loops:
+              name: '"While" dövrü'
             Buttons and Events:
               name: Düymə və Hadisələr
+            Possibly use later:
+              name: Ola bilsin ki, daha sonra istifadə edilsin
             '"if-else-if" and Conditional Logic':
               name: '"if-else-if" və Şərti Məntiq'
+            Multi-Screen Apps:
+              name: Çox-ekranlı Tətbiqlər
         CSDU3-Draft:
+          description_short: Proqramlaşdırma
           lessons:
+            Complex Conditionals:
+              name: Mürəkkəb Şərtlər
             Functions:
               name: Funksiyalar
+            'Project: Build a Game':
+              name: 'Layihə: Oyun qurun'
+            Velocity:
+              name: Sürət
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
+        2016_sciencePD_phase1:
+          lessons:
+            Dispositions and Classroom Culture:
+              name: Davranış və sinif mədəniyyəti
+            Introduction to PD:
+              name: PD-e giris
+            The Tutorial:
+              name: Təlim
+            Using Computer Models in Science:
+              name: Elmdə kompüter modellərindən istifadə
+            Using Models in the Classroom:
+              name: Modellərdə sinifdə istifadə
+            What to Expect:
+              name: Nə gözləməli
+        TEMP CSD Unit 3:
+          description_short: Proqramlaşdırma
         CSF_Secret_Sample:
+          title: Gizli Nümunə
+          description: Yeni təhsil fəlsəfəsi testi
+          description_short: Bu sirdir...shhhhh
           description_audience: 8+ yaş (Kurs 2-dən sonra)
           lessons:
             Sample Stage:
               name: Nümunə Mərhələsi
+          student_description: Yeni təhsil fəlsəfəsi testi
         ECSPD1:
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
           lessons:
             Wrap Up:
               name: Yekun
         algebraFacilitator:
+          description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
+          description_short: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
           lessons:
+            Evaluation Blocks:
+              name: ölçmə blokları
+            Introduction to PD:
+              name: PD-e giris
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Why Computer Science belongs in Algebra:
+              name: Nə üçün Komputer Elmləri Cəbrə məxsusdur
+          student_description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
+        sciencePD1:
+          description_short: 'Mərhələ 1 : Onlayn təqdimetmə'
+          lessons:
+            Dispositions and Classroom Culture:
+              name: Davranış və sinif mədəniyyəti
+            Introduction to PD:
+              name: PD-e giris
+            The Tutorial:
+              name: Təlim
+            Using Computer Models in Science:
+              name: Elmdə kompüter modellərindən istifadə
+            Using Models in the Classroom:
+              name: Modellərdə sinifdə istifadə
+            What to Expect:
+              name: Nə gözləməli
         cspunit1-support:
           lesson_groups:
             required:
@@ -908,6 +1639,10 @@ az:
             practice:
               display_name: Öyrədici proqramlar
           lessons:
+            Chapter Overviews:
+              name: Fəsillərə Baxışlar
+            Encoding and Sending Numbers:
+              name: Nömrələrin kodlaşdırılması və göndərilməsi
             Sending Binary Messages:
               name: İkilik mesajların göndərilməsi
         test-teaching-ap-cs-unit-1:
@@ -926,18 +1661,54 @@ az:
           lessons:
             Unit 1 Overview:
               name: 1cü Hissə Baxış
+        csp-facilitators:
+          lessons:
+            Introduction to Events:
+              name: Fəaliyyətə giriş
         CSDU4-Draft:
           lessons:
             Design Mode:
               name: Dizayn Rejimi
+            Analysis of Design:
+              name: Dizaynın təhlili
+            Understanding Your User:
+              name: İstifadəçinizi Anlamaq
+            Discovering Users:
+              name: İstifadəçiləri kəşf etmək
+            Analyzing Interviews:
+              name: Müsahibələrin təhlili
+            Presenting Your Design:
+              name: Dizaynınızı təqdim edin
+            Designing Apps for Good:
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              name: Bazar Araşdırması
+            User Research:
+              name: İstifadəçi Araşdırması
+            App Testing:
+              name: Tətbiq yoxlanışı
         CSDU1-Draft:
           lessons:
             Exploring Apps:
               name: Tətbiqləri araşdırmaq
+            Processing Information:
+              name: Məlumatların İşlənməsi
         CSDU2-Draft:
           lessons:
             Website Design:
               name: Vebsayt Dizaynı
+            Publishing a Website:
+              name: Web-səhifəni dərc etmək
+            Introduction to HTML:
+              name: HTML-ə giriş
+            Designing Web Pages:
+              name: Web-səhifəni dizayn etmək
+            Classes:
+              name: Dərslər
+            Usability and Accessibility:
+              name: İstifadəlilik və Əlçatanlıq
+            Peer Review:
+              name: Həmyaşıd rəyi
         CSDU5-Draft:
           description_short: məlumat
         CSF_Secret_Sample_Story:
@@ -946,13 +1717,18 @@ az:
             Sample Stage:
               name: Nümunə Mərhələsi
         MikeTest:
+          description: Heç nəyi pozmamağa çalışmaq
           description_audience: 8-98 yaş
           lessons:
             Artist Functions:
               name: Rəssam Funksiyalar
             Sample Stage:
               name: Nümunə Mərhələsi
+            The same thing with named levels:
+              name: Adlandırılmış səviyyələrlə eyni şey
+          student_description: Heç nəyi pozmamağa çalışmaq
         artistExemplar:
+          description_short: Rəssamın səviyyələrini necə işlədə bilərik?
           description_audience: 8+ yaş (Kurs 2-dən sonra)
         teachercon:
           lesson_groups:
@@ -966,15 +1742,22 @@ az:
           lessons:
             'Bee: Conditionals':
               name: 'Arı: Şərti ifadələr'
+            Kindergarten Stage 1:
+              name: Uşaq baxçası 1-ci Mərhələ
         gradeKinder:
+          title: Bağça
           description_audience: 5-18 yaş
           lessons:
             Debugging:
               name: Sazlama
             Events:
               name: Hadisələr
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: sürüşdürməni və buraxmağı öyrən'
             Loops:
               name: dövrlər
+            Programming:
+              name: Proqramlaşdırma
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         grade4:
@@ -995,19 +1778,31 @@ az:
               name: Sazlama
             Events:
               name: Hadisələr
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: sürüşdürməni və buraxmağı öyrən'
             Loops:
               name: dövrlər
+            Programming:
+              name: Proqramlaşdırma
+            Unspotted Bugs:
+              name: Gözədəyməz xətalar
         grade5:
           description_audience: 10-110 yaş
           lessons:
+            'Artist: For Loops':
+              name: 'Rəssam: For Loops'
             'Artist: Functions with Parameters':
               name: 'Rəssam: Parametrli funksiyalar'
             'Artist: Variables':
               name: 'Rəssam: Dəyişənlər'
             'Bee: For Loops':
               name: 'Arı: For Dövrləri'
+            'Bee: Functions with Parameters':
+              name: 'Arı: Parametrli funksiyalar'
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
+            'Play Lab: Variables':
+              name: Laboratoriyada oynat:dəyişənlər
             'Unplugged: Envelope Variables':
               name: 'Sərbəst: Konvert dəyişənlər'
             'Unplugged: For Loop Fun':
@@ -1022,24 +1817,46 @@ az:
               name: Yekun
         ecs-unit2:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Teaching Strategies:
               name: Öyrətmə strategiyası
+            Unit 2 Challenge:
+              name: Bölmə 2 Meydan oxuma
         ecs-unit3:
           lessons:
+            Getting Started:
+              name: Başlanqıc
+            Intro to Unit 3:
+              name: Bölmə 3-ə giriş
             Teaching Strategies:
               name: Öyrətmə strategiyası
         ecs-unit4:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Teaching Strategies:
               name: Öyrətmə strategiyası
+            Unit 4 Day-by-Day:
+              name: Bölmə 4 Günbəgün
         ecs-unit5:
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Unit 5 Overview:
               name: 5cü Hissə Baxış
+            Unit 5 lessons:
+              name: Bölmə 5 dərslər
         ecs-unit6:
           lessons:
+            Getting Started:
+              name: Başlanqıc
+            Unit 6 Challenge:
+              name: Bölmə 6 Meydan oxuma
             Unit 6 Overview:
               name: 6cü Hissə Baxış
+            Unit 6 lessons:
+              name: Bölmə 6 dərslər
         grade3:
           description_audience: 5-18 yaş
           lessons:
@@ -1051,6 +1868,8 @@ az:
               name: Arı Sazlama
             Bounce:
               name: Tullan
+            Build a Game:
+              name: Oyun yaradın
             'Farmer: While Loops':
               name: 'Fermer: "Hələ ki" dövrləri'
         alltheplcthings:
@@ -1080,11 +1899,23 @@ az:
               name: Dərs 2,3
         csd3-2017:
           lesson_groups:
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Complex Conditionals:
+              name: Mürəkkəb Şərtlər
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
+            'Project: Build a Game':
+              name: 'Layihə: Oyun qurun'
             'Project: Design a Game':
               name: 'Layihə: Dizayn və Oyun'
             Variables:
@@ -1096,6 +1927,8 @@ az:
           lessons:
             Flappy:
               name: Flappy
+            The Big Event:
+              name: Böyük hadisə
         transferring-over:
           lessons:
             20-hr Stage 2:
@@ -1116,25 +1949,45 @@ az:
               name: Şərti ifadələr
             Events:
               name: Hadisələr
+            For Loops:
+              name: '"For" dövrü'
             Functions:
               name: Funksiyalar
             Functions with Parameters:
               name: Parametrli funksiyalar
             Loops:
               name: dövrlər
+            Nested Loops:
+              name: Iç-içə dövrlər
             Variables:
               name: dəyişənlər
+            While Loops:
+              name: '"While" dövrü'
         algebrapdnext:
+          description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
           lessons:
             Teacher Dashboard:
               name: Müəllimin idarəetmə paneli
+            Teaching with Puzzles:
+              name: Tapmacalarla dərs
+            Teaching with the Design Recipe:
+              name: Dizayn təlimatı ilə tədris
+            The Design Recipe:
+              name: Dizayn resepti
             Welcome!:
               name: Xoş gəldiniz!
+          student_description: Funksional Proqramlaşdırılma vasitəsi ilə Cəbrin Örgədilməsi
         csd1-2017:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Intro to Problem Solving:
+              name: Problem Həllinə giriş
+            The Problem Solving Process:
+              name: Məsələnin həlli prosesi
+            What is a Computer?:
+              name: Kompüter nədir?
             Storage:
               name: Yaddaş
         csp-online-test:
@@ -1165,14 +2018,34 @@ az:
           lessons:
             Unit 1 Overview:
               name: 1cü Hissə Baxış
+        basketball:
+          lessons:
+            Bounce:
+              name: Özünün basketbol oyununu yarat
+        sample-csp5:
+          lessons:
+            Controlling Memory with Variables:
+              name: Dəyişənlərlə yaddaşı idarə
         csd2-2017:
           lessons:
             new stage:
               name: yeni mərhələ
             Website Design:
               name: Vebsayt Dizaynı
+            Classes:
+              name: Dərslər
+            Peer Review:
+              name: Həmyaşıd rəyi
+            Publishing a Website:
+              name: Web-səhifəni dərc etmək
+            Images in HTML:
+              name: HTML-dəki şəkillər
+            Intro to HTML:
+              name: HTML-ə giriş
             Lists:
               name: Siyahılar
+            Headings:
+              name: Başlıqlar
         csp2-support:
           lesson_groups:
             required:
@@ -1184,6 +2057,24 @@ az:
           lessons:
             Unit 2 Overview:
               name: 2cü Hissə Baxış
+        csd4-2017:
+          lessons:
+            Analysis of Design:
+              name: Dizaynın təhlili
+            Understanding Your User:
+              name: İstifadəçinizi Anlamaq
+            Discovering Users:
+              name: İstifadəçiləri kəşf etmək
+            Analyzing Interviews:
+              name: Müsahibələrin təhlili
+            Presenting Your Design:
+              name: Dizaynınızı təqdim edin
+            Designing Apps for Good:
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              name: Bazar Araşdırması
+            Testing the App:
+              name: Tətbiqi yoxlamaq
         minecraft:
           description_short: Öz Minecraft versiyanızda heyvanları və başqa Minecraft
             varlıqlarını proqramlaşdırın.
@@ -1199,15 +2090,31 @@ az:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+            'Programming: Happy Maps':
+              name: 'Proqramlaşdırma: Xoşbəxt Xəritələr'
+            Loops in Artist:
+              name: Rəssamdakı döngələr
         courseb-draft:
           lessons:
+            Sequence & Algorithms:
+              name: Ardıcıllıq & Alqoritmlər
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Keep it Private:
+              name: Gizli saxla
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         coursec-draft:
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
           lessons:
             Building a Foundation:
               name: Təməl qurmaq
         coursed-draft:
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
           lessons:
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
@@ -1215,9 +2122,13 @@ az:
               name: 'Sərbəst: İkilik say sistemi '
             Artist Binary:
               name: 'Rəssam: ikilik sistem'
+            Nested Loops:
+              name: Iç-içə dövrlər
             Introduction:
               name: Giriş
         coursee-draft:
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
           lesson_groups:
             content:
               display_name: Məzmun
@@ -1226,6 +2137,8 @@ az:
               name: Rəqəmsal vətəndaşlıq
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
             Internet:
               name: İnternet
             Introduction:
@@ -1233,12 +2146,16 @@ az:
             Conditionals:
               name: Şərti ifadələr
         coursef-draft:
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
           lesson_groups:
             content:
               display_name: Məzmun
           lessons:
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
+            Songwriting with Parameters:
+              name: Parametrlərlə mahnı yazmaq
             Introduction:
               name: Giriş
         classic-hoc-impact-study:
@@ -1255,6 +2172,12 @@ az:
               name: Kod Saatı 2013
         sports:
           title: Özünün idman oyununu kodlaşdır
+          description_short: İdman növlərini qarışdırın və uyğunlaşdırın
+          description: İdman növlərini qarışdırın və uyğunlaşdırın
+          lessons:
+            Sports:
+              name: Özünün idman oyununu kodlaşdır
+          student_description: İdman növlərini qarışdırın və uyğunlaşdırın
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1362,12 +2285,22 @@ az:
           lessons:
             Lists:
               name: Siyahılar
+            Event Types:
+              name: Hadisə növləri
+            For Loops:
+              name: '"For" dövrü'
+            Polling Events:
+              name: Səsvermə hadisəsi
             Map:
               name: Xəritə
+            Getting Properties:
+              name: Xüsusiyyətləri əldə etmək
             Designing Screens with Code:
               name: Kod ilə ekran dizaynı
             Arrays:
               name: Massivlər
+            Making Music:
+              name: Musiqi bəstələmək
             Functions with Parameters:
               name: Parametrli funksiyalar
         workshop-gamelab:
@@ -1380,10 +2313,26 @@ az:
           lessons:
             new stage:
               name: yeni mərhələ
+            Data in the Real World:
+              name: Data əsl dünyada
+            Problem Solving and Data:
+              name: Sual həll etmə və Data
+            Making Decisions with Data:
+              name: Data ilə bağlı qərar vermək
+            8-bit Numbers:
+              name: 8-bit rəqəmlər
+        applab-1hour:
+          lessons:
+            Event Types:
+              name: Hadisə növləri
+            Extra:
+              name: Əlavə
         applab-2hour:
           lessons:
             new stage:
               name: yeni mərhələ
+            Event Types:
+              name: Hadisə növləri
         coursed-ramp:
           lessons:
             Introduction:
@@ -1398,16 +2347,28 @@ az:
               name: 'Həqiqi Həyat Alqoritmləri: Zər Yarışı'
         csd6-2017:
           lessons:
+            Event Types:
+              name: Hadisə növləri
             Lists:
               name: Siyahılar
+            For Loops:
+              name: '"For" dövrü'
             Designing Screens with Code:
               name: Kod ilə ekran dizaynı
+            Getting Properties:
+              name: Xüsusiyyətləri əldə etmək
             Arrays:
               name: Massivlər
+            Making Music:
+              name: Musiqi bəstələmək
             Functions with Parameters:
               name: Parametrli funksiyalar
             Designing Screens with Code_:
               name: Kod ilə ekran dizaynı
+            Getting Properties_:
+              name: Xüsusiyyətləri əldə etmək
+            Making Music_:
+              name: Musiqi bəstələmək
             Functions with Parameters_:
               name: Parametrli funksiyalar
         csd3-draft:
@@ -1416,26 +2377,68 @@ az:
               name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
+            Complex Conditionals:
+              name: Mürəkkəb Şərtlər
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
             'Project: Design a Game':
               name: 'Layihə: Dizayn və Oyun'
         csd5-2017:
           lessons:
+            Problem Solving and Data:
+              name: Sual həll etmə və Data
+            Making Decisions with Data:
+              name: Data ilə bağlı qərar vermək
+            8-bit Numbers:
+              name: 8-bit rəqəmlər
             Keeping Data Secret:
               name: Məlumatlar Gizli Saxlanır
         csd3-old:
           lessons:
+            Complex Conditionals:
+              name: Mürəkkəb Şərtlər
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
             'Project: Design a Game':
               name: 'Layihə: Dizayn və Oyun'
+        csd1-old:
+          lessons:
+            Intro to Problem Solving:
+              name: Problem Həllinə giriş
+            The Problem Solving Process:
+              name: Məsələnin həlli prosesi
+            What is a Computer?:
+              name: Kompüter nədir?
         csd2-draft:
           lessons:
+            Images in HTML:
+              name: HTML-dəki şəkillər
+            Intro to HTML:
+              name: HTML-ə giriş
+            Images:
+              name: Şəkillər
             Lists:
               name: Siyahılar
         csd1-draft:
           lessons:
+            Intro to Problem Solving:
+              name: Problem Həllinə giriş
+            The Problem Solving Process:
+              name: Məsələnin həlli prosesi
+            What is a Computer?:
+              name: Kompüter nədir?
             Inputs and Outputs:
               name: Verilənlər və Nəticələr
             Storage:
@@ -1446,8 +2449,14 @@ az:
               name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
             'Project: Design a Game':
               name: 'Layihə: Dizayn və Oyun'
             'null':
@@ -1466,6 +2475,14 @@ az:
           lessons:
             Website Design:
               name: Vebsayt Dizaynı
+            Images in HTML:
+              name: HTML-dəki şəkillər
+            Classes:
+              name: Dərslər
+            Peer Review:
+              name: Həmyaşıd rəyi
+            Publishing a Website:
+              name: Web-səhifəni dərc etmək
         artist-and-bb8:
           lessons:
             B8 New BB8:
@@ -1495,6 +2512,10 @@ az:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+            'Programming: Happy Maps':
+              name: 'Proqramlaşdırma: Xoşbəxt Xəritələr'
+            Loops in Artist:
+              name: Rəssamdakı döngələr
         courseb-2017:
           title: B Kursu
           assignment_family_title: B Kursu
@@ -1502,13 +2523,23 @@ az:
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
+            Loops in Artist:
+              name: Rəssamdakı döngələr
         coursec-2017:
           title: C Kursu
           assignment_family_title: C Kursu
           description_audience: 'Yaşlar: 6-10'
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
+          lessons:
+            Loops in Artist:
+              name: Rəssamdakı döngələr
         coursed-2017:
           title: D Kursu
           assignment_family_title: D Kursu
+          description_audience: 'Yaşlar: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               description_teacher: "Bir-birilərini şəkil çəkmək üçün proqramlayaraq
@@ -1517,22 +2548,51 @@ az:
                 qrafik kağızı üzərindəki kvadratları rəngləmələrini təlimat verməklə
                 başlayacaq. Əgər vaxt qalsa, dərs \nşagirdlərin özləri yaratdığı şəkillərlə
                 sonlandırıla bilər."
+            Nested Loops:
+              name: Iç-içə dövrlər
         coursee-2017:
           title: E Kursu
           assignment_family_title: E Kursu
+          description_audience: 'Yaşlar: 8-12'
           lessons:
+            Songwriting with Parameters:
+              name: Parametrlərlə mahnı yazmaq
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
+            Functions in Bee:
+              description_student: Bütün nektar və balları toplamaq üçün çox uzun
+                kodlar yazma.Onun yerinə funksiyalardan istifadə et!
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Nested Loops:
+              name: Iç-içə dövrlər
         coursef-2017:
           title: F Kursu
           assignment_family_title: F Kursu
+          description_audience: 'Yaşlar: 9-13'
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
         csdnovice:
           lessons:
+            Tuesday:
+              name: Çərşənbə axşamı
+            Wednesday:
+              name: Çərşənbə
+            Thursday:
+              name: Cümə axşamı
+            Welcome:
+              name: Xoş gəlmişsiniz
+            Congrats:
+              name: Təbriklər
             Wrap Up:
               name: Yekun
         cspnovice:
@@ -1542,8 +2602,30 @@ az:
             content:
               display_name: Məzmun
           lessons:
+            Welcome:
+              name: Xoş gəlmişsiniz
+            Tuesday:
+              name: Çərşənbə axşamı
+            Wednesday:
+              name: Çərşənbə
+            Thursday:
+              name: Cümə axşamı
             Wrap Up:
               name: Yekun
+        novice-view:
+          lessons:
+            CSP Tuesday:
+              name: CSP Çərsənbə axşamı
+            CSP Wednesday:
+              name: CSP Çərşənbə
+            CSP Thursday:
+              name: CSP Cümə axşamı
+            CSD Tuesday:
+              name: CSD Çərşənbə axşamı
+            CSD Wednesday:
+              name: CSD Çərşənbə
+            CSD Thursday:
+              name: CSD Cümə axşamı
         csp1-dlp:
           lesson_groups:
             required:
@@ -1621,21 +2703,33 @@ az:
           lessons:
             Introduction:
               name: Giriş
+            Loops in Artist:
+              name: Rəssamdakı döngələr
             Internet:
               name: İnternet
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
+            Songwriting with Parameters:
+              name: Parametrlərlə mahnı yazmaq
             Building a Foundation:
               name: Təməl qurmaq
+            Nested Loops:
+              name: Iç-içə dövrlər
         pre-express-2017:
           description_audience: 'Yaşlar: 4-8'
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             'Programming: Star Wars':
               name: 'Proqramlaşdırma: Ulduz Müharibələri'
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Spelling Bee:
+              name: Yazı yoxlayan arı
         subgoal-labels-opt-in:
           lessons:
             other:
@@ -1653,18 +2747,50 @@ az:
           lessons:
             new stage:
               name: yeni mərhələ
+            The Need For Programming Languages:
+              name: Proqramlaşdırma Dillərinə Ehtiyac
+            The Need for Algorithms:
+              name: Alqoritmlərə Ehtiyac
+            Creativity in Algorithms:
+              name: Alqoritmlərdə yaradıcılıq
+            Using Simple Commands:
+              name: Sadə əmrlərdən istifadə
+            Creating Functions:
+              name: Funksiya yaratmaq
+            Looping and Random Numbers:
+              name: Döngə və Təsadüfi Ədədlər
             foo:
               name: foo
+        csd4-draft:
+          lessons:
+            Analysis of Design:
+              name: Dizaynın təhlili
+            Understanding Your User:
+              name: İstifadəçinizi Anlamaq
+            Designing Apps for Good:
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              name: Bazar Araşdırması
+            Testing the App:
+              name: Tətbiqi yoxlamaq
         craft17:
           lessons:
             craft17 stage:
               name: craft17 mərhələ
         e-f-ramp:
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Nested Loops:
+              name: Iç-içə dövrlər
             Conditionals:
               name: Şərti ifadələr
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
             Internet:
@@ -1673,6 +2799,8 @@ az:
           lessons:
             Introduction:
               name: Giriş
+            Nested Loops:
+              name: Iç-içə dövrlər
             Digital Citizenship:
               name: Rəqəmsal vətəndaşlıq
             'Unplugged: Binary':
@@ -1681,6 +2809,8 @@ az:
               name: 'Rəssam: ikilik sistem'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
         csp3-a:
           lessons:
             new stage:
@@ -1692,24 +2822,52 @@ az:
           lessons:
             Introduction:
               name: Giriş
+            Loops in Artist:
+              name: Rəssamdakı döngələr
             Building a Foundation:
               name: Təməl qurmaq
+            Nested Loops:
+              name: Iç-içə dövrlər
             Sarah test stage:
               name: Saranın test mərhələsi
+        new-stages-sept-2017:
+          lessons:
+            Loops in Artist:
+              name: Rəssamdakı döngələr
         new-e:
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
             Conditionals:
               name: Şərti ifadələr
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
             Internet:
               name: İnternet
         new-f:
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Songwriting with Parameters:
+              name: Parametrlərlə mahnı yazmaq
+        csd5-old:
+          lessons:
+            8-bit Numbers:
+              name: 8-bit rəqəmlər
+            Problem Solving and Data:
+              name: Sual həll etmə və Data
+            Making Decisions with Data:
+              name: Data ilə bağlı qərar vermək
         hocali:
           lessons:
             new stage:
@@ -1718,10 +2876,40 @@ az:
           lessons:
             craft17 stage:
               name: craft17 mərhələ
+        csd4-old:
+          lessons:
+            Analysis of Design:
+              name: Dizaynın təhlili
+            Understanding Your User:
+              name: İstifadəçinizi Anlamaq
+            Designing Apps for Good:
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              name: Bazar Araşdırması
+            Testing the App:
+              name: Tətbiqi yoxlamaq
+        csp3-staging:
+          lessons:
+            The Need For Programming Languages:
+              name: Proqramlaşdırma Dillərinə Ehtiyac
+            The Need for Algorithms:
+              name: Alqoritmlərə Ehtiyac
+            Creativity in Algorithms:
+              name: Alqoritmlərdə yaradıcılıq
+            Using Simple Commands:
+              name: Sadə əmrlərdən istifadə
+            Creating Functions:
+              name: Funksiya yaratmaq
+            Looping and Random Numbers:
+              name: Döngə və Təsadüfi Ədədlər
         pwc:
           lessons:
             new stage:
               name: yeni mərhələ
+            Personal Innovations:
+              name: Şəxsi İnnovasiyalar
+            What is a Computer?:
+              name: Kompüter nədir?
             Programming - Hour of Code:
               name: Proqramlaşdırma - Kod Saatı
             Creating Webpages:
@@ -1747,28 +2935,48 @@ az:
               name: yeni mərhələ
         course-e-2018:
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Nested Loops:
+              name: Iç-içə dövrlər
             Introduction:
               name: Giriş
             Conditionals:
               name: Şərti ifadələr
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
             Internet:
               name: İnternet
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
         course-f-2018:
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
             Introduction:
               name: Giriş
+            Songwriting with Parameters:
+              name: Parametrlərlə mahnı yazmaq
         csd6-old:
           lessons:
+            Event Types:
+              name: Hadisə növləri
             Lists:
               name: Siyahılar
+            For Loops:
+              name: '"For" dövrü'
         csd3-1819draft:
           lesson_groups:
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
             cspSurvey:
               display_name: Sorğu
           lessons:
@@ -1776,14 +2984,22 @@ az:
               name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
         textbook:
           lessons:
             new stage:
               name: yeni mərhələ
         csd3-2018:
           lesson_groups:
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
             cspSurvey:
               display_name: Sorğu
           lessons:
@@ -1791,21 +3007,36 @@ az:
               name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
         csd2-2018:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Intro to HTML:
+              name: HTML-ə giriş
+            Headings:
+              name: Başlıqlar
             Lists:
               name: Siyahılar
         coursea-2018:
+          title: A Kursu (2018)
           assignment_family_title: A Kursu
           description_audience: 'Yaşlar: 4-7'
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: Gözədəyməz xətalar
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie və Böyük Layihə
+            'Real-life Algorithms: Plant a Seed':
+              name: Toxum ək
             'Programming: Happy Maps':
               name: Şən xəritələr
             'Persistence & Frustration: Stevie and the Big Project':
@@ -1821,6 +3052,12 @@ az:
               name: Giriş
             Building a Foundation:
               name: Təməl qurmaq
+            Nested Loops:
+              name: Iç-içə dövrlər
+            'Events: The Big Event':
+              name: Böyük hadisə
+            Programming in Maze:
+              name: Angry Birds ilə proqramlaşdırma
             'Functions: Songwriting':
               name: Mahnı yazma
             'Unplugged: Binary':
@@ -1832,6 +3069,7 @@ az:
             Graph Paper Programming:
               name: Millimetrlik kağızda proqramlaşdırma
         courseb-2018:
+          title: B Kursu (2018)
           assignment_family_title: B Kursu
           description_audience: 'Yaşlar: 5-8'
           lessons:
@@ -1840,7 +3078,9 @@ az:
             Move It, Move It:
               name: Hərəkət et
         coursed-2018:
+          title: D Kursu (2018)
           assignment_family_title: D Kursu
+          description_audience: 'Yaşlar: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
@@ -1857,70 +3097,125 @@ az:
             Relay Programming:
               name: Estafet proqramlaşdırması
         coursec-2018:
+          title: C Kursu (2018)
           assignment_family_title: C Kursu
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
           description_audience: 'Yaşlar: 6-10'
           lessons:
             Building a Foundation:
               name: Təməl qurmaq
+            'Events: The Big Event':
+              name: Böyük hadisə
         csd6-2018:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Making Music_:
+              name: Musiqi bəstələmək\_
+            Accelerometer_:
+              name: Akselerometr\_
             Functions with Parameters_:
               name: Parametrli funksiyalar\_
             Designing Screens with Code:
               name: Kod ilə ekran dizaynı
+            Getting Properties:
+              name: Xüsusiyyətləri əldə etmək
+            Making Music:
+              name: Musiqi bəstələmək
             Functions with Parameters:
               name: Parametrli funksiyalar
         coursee-2018:
+          title: E Kursu (2018)
           assignment_family_title: E Kursu
+          description_audience: 'Yaşlar: 8-12'
           lessons:
+            'Programming: My Robotic Friends':
+              name: Mənim robot dostlarım
             Building a Foundation:
               name: Təməl qurmaq
             Introduction:
               name: Giriş
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
             'Functions: Songwriting':
               name: Mahnı yazma
+            Functions in Bee:
+              description_student: Bütün nektar və balları toplamaq üçün çox uzun
+                kodlar yazma.Onun yerinə funksiyalardan istifadə et!
             Internet:
               name: İnternet
             Minecraft Hour of Code:
               name: Maynkraft Kod Saatı
+            Copyright and Creativity:
+              name: Rəqəmsal paylaşım
         coursef-2018:
+          title: F Kursu (2018)
           assignment_family_title: F Kursu
+          description_audience: 'Yaşlar: 9-13'
           lessons:
+            'Programming: My Robotic Friends':
+              name: Mənim robot dostlarım
             Building a Foundation:
               name: Təməl qurmaq
             Introduction:
               name: Giriş
+            Songwriting with Parameters:
+              name: Parametrlərlə mahnı yazmaq
         csp1-2018:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Personal Innovations:
+              name: Şəxsi İnnovasiyalar
             Sending Binary Messages:
               name: İkilik mesajların göndərilməsi
             Number Systems:
               name: Say sistemləri
             Binary Numbers:
               name: İkilik rəqəmlər
+            Sending Numbers:
+              name: nömrələri göndərmə
             The Internet:
               name: İnternet
             HTTP and Abstraction:
               name: HTTP və Abstraksiya
+            Sending Text:
+              name: Mətn göndərmək
         csd1-2018:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Intro to Problem Solving:
+              name: Problem Həllinə giriş
+            The Problem Solving Process:
+              name: Məsələnin həlli prosesi
+            What is a Computer?:
+              name: Kompüter nədir?
             Storage:
               name: Yaddaş
+            Apps and Storage:
+              name: Tətbiqlər və Yaddaş
         csd4-2018:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            Analysis of Design:
+              name: Dizaynın təhlili
+            Understanding Your User:
+              name: İstifadəçinizi Anlamaq
+            Designing Apps for Good:
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              name: Bazar Araşdırması
+            Testing the App:
+              name: Tətbiqi yoxlamaq
         csd5-2018:
           lesson_groups:
             cspSurvey:
@@ -1928,10 +3223,20 @@ az:
           lessons:
             Keeping Data Secret:
               name: Məlumatlar Gizli Saxlanır
+            Problem Solving and Data:
+              name: Sual həll etmə və Data
+            Making Decisions with Data:
+              name: Data ilə bağlı qərar vermək
         csp2-2018:
           lessons:
             Bytes and File Sizes:
               name: Bayt və Fayl ölçüləri
+            Encoding B&W Images:
+              name: B&W Şəkillərinin Kodlaşdırılması
+            Encoding Color Images:
+              name: Rəngli Şəkillərin Kodlaşdırılması
+            Lossy Compression and File Formats:
+              name: Real Dünyada Nömrələrin dekodlanması
             Intro to Data:
               name: Data-ya Giriş
             Cleaning Data:
@@ -1940,6 +3245,21 @@ az:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            The Need For Programming Languages:
+              name: Proqramlaşdırma Dillərinə Ehtiyac
+            The Need for Algorithms:
+              name: Alqoritmlərə Ehtiyac
+            Creativity in Algorithms:
+              name: Alqoritmlərdə yaradıcılıq
+            Using Simple Commands:
+              name: Sadə əmrlərdən istifadə
+            Creating Functions:
+              name: Funksiya yaratmaq
+            Looping and Random Numbers:
+              name: Döngə və Təsadüfi Ədədlər
+            Creating Functions with Parameters:
+              name: Parametrlərlə funksiyaların yaradılması
         csp-explore-2018:
           lesson_groups:
             cspSurvey:
@@ -1970,8 +3290,20 @@ az:
               name: Düymə və Hadisələr
             Multi-screen Apps:
               name: Çox-ekranlı Tətbiqlər
+            Controlling Memory with Variables:
+              name: Dəyişənlərlə yaddaşı idarə
+            User Input and Strings:
+              name: İstifadəçi Girişlər və Simlər
             '"if-else-if" and Conditional Logic':
               name: '"if-else-if" və Şərti Məntiq'
+            While Loops:
+              name: '"While" dövrü'
+            Loops and Simulations:
+              name: Döngələr və Simulyasiyalar
+            Functions with Return Values:
+              name: Qaytarma dəyərləri olan funksiyalar
+            'Practice PT: Create':
+              name: 'Praktika PT: Yarat'
         csppostap-2018:
           lesson_groups:
             cspSurvey:
@@ -2080,12 +3412,28 @@ az:
             content:
               display_name: Məzmun
           lessons:
+            Welcome:
+              name: Xoş gəlmişsiniz
+            Tuesday:
+              name: Çərşənbə axşamı
+            Wednesday:
+              name: Çərşənbə
+            Thursday:
+              name: Cümə axşamı
             Wrap Up:
               name: Yekun
             Friday:
               name: Cümə
             Monday:
               name: Bazar ertəsi
+            Day 1:
+              name: Gün 1
+            Day 2:
+              name: Gün 2
+            Day 3:
+              name: Gün 3
+            Day 4:
+              name: Gün 4
         csd-apprentice-18:
           lesson_groups:
             required:
@@ -2093,8 +3441,22 @@ az:
             content:
               display_name: Məzmun
           lessons:
+            Tuesday:
+              name: Çərşənbə axşamı
+            Wednesday:
+              name: Çərşənbə
+            Thursday:
+              name: Cümə axşamı
             Wrap Up:
               name: Yekun
+            Day 1:
+              name: Gün 1
+            Day 2:
+              name: Gün 2
+            Day 3:
+              name: Gün 3
+            Day 4:
+              name: Gün 4
         csp-novice-18:
           lesson_groups:
             required:
@@ -2102,10 +3464,24 @@ az:
             content:
               display_name: Məzmun
           lessons:
+            Tuesday:
+              name: Çərşənbə axşamı
+            Wednesday:
+              name: Çərşənbə
+            Thursday:
+              name: Cümə axşamı
             Wrap Up:
               name: Yekun
             Monday:
               name: Bazar ertəsi
+            Day 1:
+              name: Gün 1
+            Day 2:
+              name: Gün 2
+            Day 3:
+              name: Gün 3
+            Day 4:
+              name: Gün 4
         csp-apprentice-18:
           lesson_groups:
             required:
@@ -2113,21 +3489,43 @@ az:
             content:
               display_name: Məzmun
           lessons:
+            Tuesday:
+              name: Çərşənbə axşamı
+            Wednesday:
+              name: Çərşənbə
+            Thursday:
+              name: Cümə axşamı
             Wrap Up:
               name: Yekun
+            Day 1:
+              name: Gün 1
+            Day 2:
+              name: Gün 2
+            Day 3:
+              name: Gün 3
+            Day 4:
+              name: Gün 4
         pre-express-2018:
           description_audience: 'Yaşlar: 4-8'
           lessons:
+            'Debugging: Unspotted Bugs':
+              name: Gözədəyməz xətalar
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie və Böyük Layihə
             'Real-life Algorithms: Plant a Seed':
               name: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
             'Programming: Star Wars':
               name: 'Proqramlaşdırma: Ulduz Müharibələri'
+            Spelling Bee:
+              name: Yazı yoxlayan arı
             Move It, Move It:
               name: Hərəkət et
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie və Böyük Layihə
+        2018hoc-ab:
+          lessons:
+            Labyrinth:
+              name: Labirint
         fit-test:
           lesson_groups:
             required:
@@ -2157,6 +3555,7 @@ az:
             Dance Party:
               name: Rəqs şənliyi
         dance-draft:
+          title: İSTİFADƏ ETMƏYİN
           lessons:
             Dance Party:
               name: Rəqs şənliyi
@@ -2168,30 +3567,42 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         coursef-2019:
           title: F Kursu (2019)
+          description_audience: 'Yaşlar: 9-13'
           lesson_groups:
             csf_variables:
               display_name: dəyişənlər
             csf_data:
               display_name: məlumat
+            csf_for_loops:
+              display_name: '"For" dövrü'
             csf_internet:
               display_name: İnternet
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
             The Artist:
               name: Rəssam
             Internet:
               name: İnternet
+            Digital Sharing:
+              name: Rəqəmsal paylaşım
         dance-low:
           lessons:
             Dance Party:
               name: Rəqs şənliyi
         coursed-2019:
           title: D Kursu (2019)
+          description_audience: 'Yaşlar: 7-11'
           lesson_groups:
             csf_events:
               display_name: Hadisələr
@@ -2224,20 +3635,41 @@ az:
               name: Rəqs şənliyi
         coursee-2019:
           title: E Kursu (2019)
+          description_audience: 'Yaşlar: 8-12'
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
+            csf_nested_loops:
+              display_name: Iç-içə dövrlər
             csf_functions:
               display_name: Funksiyalar
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Nested Loops:
+              name: Iç-içə dövrlər
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
             'Functions: Songwriting':
               name: Mahnı yazma
             Internet:
               name: İnternet
+            Access Ability:
+              name: Əlçatanlıq üçün dizayn
+            Digital Sharing:
+              name: Rəqəmsal paylaşım
+            Simon Says:
+              name: Simon söyləyir
+              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün
+                hansı əmrlərin lazım olduğunu düşünün.
+            Designing for Accessibility:
+              name: Əlçatanlıq üçün dizayn
             Songwriting:
               name: Mahnı yazma
         express-2019:
@@ -2252,6 +3684,8 @@ az:
               display_name: Funksiyalar
             csf_variables:
               display_name: dəyişənlər
+            csf_for_loops:
+              display_name: '"For" dövrü'
           lessons:
             Relay Programming:
               name: Estafet proqramlaşdırması
@@ -2267,6 +3701,15 @@ az:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            Intro to Problem Solving:
+              name: Problem Həllinə giriş
+            The Problem Solving Process:
+              name: Məsələnin həlli prosesi
+            What is a Computer?:
+              name: Kompüter nədir?
+            Apps and Storage:
+              name: Tətbiqlər və Yaddaş
         andrea-test:
           lesson_groups:
             required:
@@ -2288,10 +3731,16 @@ az:
               name: andrea-test-mərhələ3
             andrea-test-stage4:
               name: andrea-test-mərhələ4
+            Part 1:
+              name: 1-ci hissə
+            part 3:
+              name: 3-cü hissə
         dance-extras-gallery:
           title: Rəqs etməyə davam edin
         coursec-2019:
           title: C Kursu (2019)
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
           description_audience: 'Yaşlar: 6-10'
           lesson_groups:
             csf_digcit:
@@ -2304,6 +3753,13 @@ az:
               display_name: Hadisələr
             csf_data:
               display_name: məlumat
+          lessons:
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            'Events: The Big Event':
+              name: Böyük hadisə
+            Powerful Passwords:
+              name: Güclü Şifrələr
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2323,6 +3779,8 @@ az:
           lessons:
             'Programming: Happy Maps':
               name: Şən xəritələr
+            Loops in Artist:
+              name: Rəssamdakı döngələr
             Learn to Drag and Drop:
               description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
         courseb-2019:
@@ -2338,6 +3796,8 @@ az:
           lessons:
             Move It, Move It:
               name: Hərəkət et
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
         pre-express-2019:
           description_audience: 'Yaşlar: 4-8'
           lesson_groups:
@@ -2348,6 +3808,10 @@ az:
           lessons:
             Move It, Move It:
               name: Hərəkət et
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
+            Spelling Bee:
+              name: Yazı yoxlayan arı
         removed19:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2361,10 +3825,16 @@ az:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Intro to HTML:
+              name: HTML-ə giriş
+            Headings:
+              name: Başlıqlar
             Lists:
               name: Siyahılar
         csd3-2019:
           lesson_groups:
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
             cspSurvey:
               display_name: Sorğu
           lessons:
@@ -2372,12 +3842,29 @@ az:
               name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
         csd4-2019:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            Analysis of Design:
+              name: Dizaynın təhlili
+            Understanding Your User:
+              name: İstifadəçinizi Anlamaq
+            Designing Apps for Good:
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              name: Bazar Araşdırması
+            Testing the App:
+              name: Tətbiqi yoxlamaq
         csd5-2019:
           lesson_groups:
             cspSurvey:
@@ -2385,6 +3872,10 @@ az:
           lessons:
             Keeping Data Secret:
               name: Məlumatlar Gizli Saxlanır
+            Problem Solving and Data:
+              name: Sual həll etmə və Data
+            Making Decisions with Data:
+              name: Data ilə bağlı qərar vermək
         csd6-2019:
           lesson_groups:
             cspSurvey:
@@ -2392,6 +3883,10 @@ az:
           lessons:
             Designing Screens with Code:
               name: Kod ilə ekran dizaynı
+            Getting Properties:
+              name: Xüsusiyyətləri əldə etmək
+            Making Music:
+              name: Musiqi bəstələmək
             Functions with Parameters:
               name: Parametrli funksiyalar
         csp4-pilot:
@@ -2402,6 +3897,8 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
             required:
               display_name: Yekun
           lessons:
@@ -2412,12 +3909,18 @@ az:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Personal Innovations:
+              name: Şəxsi İnnovasiyalar
             Sending Binary Messages:
               name: İkilik mesajların göndərilməsi
             Number Systems:
               name: Say sistemləri
             Binary Numbers:
               name: İkilik rəqəmlər
+            Sending Numbers:
+              name: nömrələri göndərmə
+            Sending Text:
+              name: Mətn göndərmək
             The Internet:
               name: İnternet
             HTTP and Abstraction:
@@ -2429,10 +3932,27 @@ az:
           lessons:
             Bytes and File Sizes:
               name: Bayt və Fayl ölçüləri
+            Encoding B&W Images:
+              name: B&W Şəkillərinin Kodlaşdırılması
+            Encoding Color Images:
+              name: Rəngli Şəkillərin Kodlaşdırılması
         csp3-2019:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            The Need For Programming Languages:
+              name: Proqramlaşdırma Dillərinə Ehtiyac
+            The Need for Algorithms:
+              name: Alqoritmlərə Ehtiyac
+            Creativity in Algorithms:
+              name: Alqoritmlərdə yaradıcılıq
+            Using Simple Commands:
+              name: Sadə əmrlərdən istifadə
+            Creating Functions:
+              name: Funksiya yaratmaq
+            Looping and Random Numbers:
+              name: Döngə və Təsadüfi Ədədlər
         csp4-2019:
           lesson_groups:
             cspSurvey:
@@ -2455,8 +3975,18 @@ az:
               name: Düymə və Hadisələr
             Multi-screen Apps:
               name: Çox-ekranlı Tətbiqlər
+            Controlling Memory with Variables:
+              name: Dəyişənlərlə yaddaşı idarə
+            User Input and Strings:
+              name: İstifadəçi Girişlər və Simlər
             '"if-else-if" and Conditional Logic':
               name: '"if-else-if" və Şərti Məntiq'
+            While Loops:
+              name: '"While" dövrü'
+            Loops and Simulations:
+              name: Döngələr və Simulyasiyalar
+            Functions with Return Values:
+              name: Qaytarma dəyərləri olan funksiyalar
         csp-explore-2019:
           lesson_groups:
             cspSurvey:
@@ -2499,6 +4029,8 @@ az:
               name: yeni mərhələ
             Number Systems:
               name: Say sistemləri
+            Sending Text:
+              name: Mətn göndərmək
             Sending Binary Messages:
               name: İkilik mesajların göndərilməsi
             Binary Numbers:
@@ -2508,11 +4040,22 @@ az:
             new stage:
               name: yeni mərhələ
         time4csdemo:
+          description_audience: 4-cü sinif
           lessons:
+            'Programming: My Robotic Friends':
+              name: 'Proqramlaşdırma: Mənim Robot Dostlarım'
             Building a Foundation:
               name: Təməl qurmaq
+            Loops in Artist:
+              name: Rəssamdakı döngələr
             Build a Star Wars Game:
               name: Ulduz Müharibələri oyunu düzəldin
+            Debate:
+              name: Müzakirə
+            I'm in Big Trouble!:
+              name: Mən böyük çətinliyin içərisindəyəm!
+            I am in Big Trouble:
+              name: Mən böyük çətinliyin içərisindəyəm
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2521,7 +4064,10 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         csp2-pilot-staging:
+          title: Mövzu 2:İnternet
           lesson_groups:
             csp_variables:
               display_name: dəyişənlər
@@ -2529,6 +4075,14 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
+        csp3-pilot-staging:
+          lessons:
+            Introduction to Apps:
+              name: Tətbiqlərə giriş
+            'Project: Share Your App':
+              name: 'Layihə: Öz tətbiqini Paylaş'
         csp4-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2537,12 +4091,20 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: Siyahılar
             csp_loops:
               display_name: dövrlər
+            csp_traversals:
+              display_name: Keçidlər
+            csp_project:
+              display_name: Layihə
+            csp_libraries:
+              display_name: Kitabxanalar
         csp6-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2551,10 +4113,17 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         csp7-pilot-staging:
+          lesson_groups:
+            csp_libraries:
+              display_name: Kitabxanalar
           lessons:
             new stage:
               name: yeni mərhələ
+            Libraries:
+              name: Kitabxanalar
         csp8-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2563,7 +4132,10 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         csp9-pilot-staging:
+          title: 'Mövzu 9: Data'
           lesson_groups:
             csp_variables:
               display_name: dəyişənlər
@@ -2571,6 +4143,8 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         csp10-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -2579,6 +4153,8 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         express-2018-vn:
           lessons:
             Graph Paper Programming:
@@ -2597,11 +4173,17 @@ az:
               display_name: Siyahılar
             csp_loops:
               display_name: dövrlər
+            csp_traversals:
+              display_name: Keçidlər
+            csp_project:
+              display_name: Layihə
             required:
               display_name: Yekun
           lessons:
             new stage:
               name: yeni mərhələ
+            Semester Exam:
+              name: Semestr İmtahanı
         fit2019-novice:
           lesson_groups:
             required:
@@ -2609,8 +4191,20 @@ az:
             content:
               display_name: Məzmun
           lessons:
+            Day 1:
+              name: Gün 1
+            Day 2:
+              name: Gün 2
+            Day 3:
+              name: Gün 3
+            Day 4:
+              name: Gün 4
             Wrap Up:
               name: Yekun
+        csd-test-saving-state:
+          lessons:
+            What is a Computer?:
+              name: Kompüter nədir?
         fit2019-apprentice:
           lesson_groups:
             required:
@@ -2618,21 +4212,52 @@ az:
             content:
               display_name: Məzmun
           lessons:
+            Day 1:
+              name: Gün 1
+            Day 2:
+              name: Gün 2
+            Day 3:
+              name: Gün 3
+            Day 4:
+              name: Gün 4
             Wrap Up:
               name: Yekun
         csd1-pilot:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            Intro to Problem Solving:
+              name: Problem Həllinə giriş
+            The Problem Solving Process:
+              name: Məsələnin həlli prosesi
+            What is a Computer?:
+              name: Kompüter nədir?
+            Apps and Storage:
+              name: Tətbiqlər və Yaddaş
         csd2-pilot:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Intro to HTML:
+              name: HTML-ə giriş
+            Headings:
+              name: Başlıqlar
             Lists:
               name: Siyahılar
+            Project - Building a Webpage:
+              name: Layihə - Web-səhifə yaratmaq
+            Purpose of a  Websites:
+              name: Web-səhifələrin Məqsədi
+            Images:
+              name: Şəkillər
+            CSS Classes:
+              name: CSS dərsləri
         csd3-pilot:
           lesson_groups:
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
             cspSurvey:
               display_name: Sorğu
           lessons:
@@ -2640,8 +4265,18 @@ az:
               name: dəyişənlər
             Conditionals:
               name: Şərti ifadələr
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
+            Shapes and Parameters:
+              name: Forma və parametrlər
+            Random Numbers:
+              name: Təsadufi rəqəmlər
         maddie-test:
           lessons:
             stage 1:
@@ -2655,6 +4290,12 @@ az:
             required:
               display_name: Yekun
           lessons:
+            Introduction to Apps:
+              name: Tətbiqlərə giriş
+            'Project: Share Your App':
+              name: 'Layihə: Öz tətbiqini Paylaş'
+            Intro to Programming:
+              name: Proqramlaşdırmaya giriş
             Debugging:
               name: Sazlama
         csl-vn:
@@ -2669,6 +4310,9 @@ az:
               display_name: Yekun
             content:
               display_name: Məzmun
+          lessons:
+            Focus Area 1:
+              name: Kurikulum
         dlp19-csp-mod-fit:
           lesson_groups:
             required:
@@ -2682,6 +4326,8 @@ az:
             content:
               display_name: Məzmun
           lessons:
+            Module 1:
+              name: Modul 1
             Step 1:
               name: Addım 1
             Step 2:
@@ -2731,6 +4377,34 @@ az:
               display_name: Yekun
             content:
               display_name: Məzmun
+        csd-pilot:
+          lessons:
+            Pilot Information 1:
+              name: Pilot Məlumatı 1
+            Pilot Information 2:
+              name: Pilot Məlumatı 2
+            Pilot Information 3:
+              name: Pilot Məlumatı 3
+            Pilot Information 4:
+              name: Pilot Məlumatı 4
+            Pilot Information 5:
+              name: Pilot Məlumatı 5
+            Pilot Information 6:
+              name: Pilot Məlumatı 6
+            Pilot Information 7:
+              name: Pilot Məlumatı 7
+            Pilot Information 8:
+              name: Pilot Məlumatı 8
+            Pilot Information 9:
+              name: Pilot Məlumatı 9
+            Pilot Information 10:
+              name: Pilot Məlumatı 10
+        csd4-pilot:
+          lessons:
+            What is a Computer?:
+              name: Kompüter nədir?
+            Apps and Storage:
+              name: Tətbiqlər və Yaddaş
         csp2-pilot:
           lesson_groups:
             content:
@@ -2746,6 +4420,10 @@ az:
               name: yeni mərhələ
             Introduction:
               name: Giriş
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Nested Loops:
+              name: Iç-içə dövrlər
         csp6-pilot:
           lesson_groups:
             content:
@@ -2757,11 +4435,26 @@ az:
             Dance Party:
               name: Rəqs şənliyi
         k5-onlinepd-2019:
+          lesson_groups:
+            k5_getting_started:
+              display_name: Başlanqıc
+            k5_next_steps:
+              display_name: Növbəti addımlar
           lessons:
+            Getting Started:
+              name: Başlanqıc
             Computer Science Fundamentals:
               name: Kompüter Elmləri Əsasları.
+            'Mastering the Basics: Functions':
+              name: 'Əsaslara yiyələnmək: funksiyalar'
+            Best Practices for Teaching Computer Science:
+              name: Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr
             Planning:
               name: Planlama
+            Next Steps:
+              name: Növbəti addımlar
+            extra:
+              name: əlavə
             Loops:
               name: dövrlər
             Conditionals:
@@ -2770,12 +4463,20 @@ az:
               name: Hadisələr
             Functions:
               name: Funksiyalar
+            Next steps:
+              name: Növbəti addımlar
             Variables:
               name: dəyişənlər
+            For Loops:
+              name: '"For" dövrü'
         csp10-pilot:
           lessons:
             new stage:
               name: yeni mərhələ
+            Protecting Data Part 1:
+              name: Datanı Qoruma 1-ci Hissə
+            Protecting Data Part 2:
+              name: Datanı Qoruma 2-ci Hissə
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -2784,6 +4485,8 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
           lessons:
             new stage:
               name: yeni mərhələ
@@ -2791,14 +4494,26 @@ az:
           lessons:
             Conditionals:
               name: Şərti ifadələr
+            Simon Says:
+              name: Simon söyləyir
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
+            About Me:
+              name: Haqqımda
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
             csf_conditionals:
               display_name: Şərti ifadələr
+            csf_nested_loops:
+              display_name: Iç-içə dövrlər
             csf_functions:
               display_name: Funksiyalar
+        time4cs-experiment-unit-2:
+          lessons:
+            I am in Big Trouble:
+              name: Mən böyük çətinliyin içərisindəyəm
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -2812,6 +4527,12 @@ az:
           lessons:
             Conditionals:
               name: Şərti ifadələr
+            Simon Says:
+              name: Simon söyləyir
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
+            About Me:
+              name: Haqqımda
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -2825,8 +4546,16 @@ az:
           lessons:
             Conditionals:
               name: Şərti ifadələr
+            Simon Says:
+              name: Simon söyləyir
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
+            About Me:
+              name: Haqqımda
         csp7-pilot:
           lesson_groups:
+            csp_libraries:
+              display_name: Kitabxanalar
             required:
               display_name: Yekun
         csp8-pilot:
@@ -2841,12 +4570,28 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         csp5-2020:
           lesson_groups:
             csp_lists:
               display_name: Siyahılar
             csp_loops:
               display_name: dövrlər
+            csp_traversals:
+              display_name: Keçidlər
+            csp_project:
+              display_name: Layihə
+        csp7-2020:
+          lesson_groups:
+            csp_libraries:
+              display_name: Kitabxanalar
+        csd2-projects-temp:
+          lessons:
+            HTML  Project:
+              name: HTML layihəsi
+            CSS Project:
+              name: CSS layihəsi
         csp9-pilot:
           lessons:
             new stage:
@@ -2855,17 +4600,49 @@ az:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            Intro to HTML:
+              name: HTML-ə giriş
+            Headings:
+              name: Başlıqlar
+            Images:
+              name: Şəkillər
+            Project - Building a Webpage:
+              name: Layihə - Web-səhifə yaratmaq
+            Purpose of a  Websites:
+              name: Web-səhifələrin Məqsədi
+            CSS Classes:
+              name: CSS dərsləri
         csd1-2020:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Intro to Problem Solving:
+              name: Problem Həllinə giriş
+            The Problem Solving Process:
+              name: Məsələnin həlli prosesi
+            What is a Computer?:
+              name: Kompüter nədir?
+            Apps and Storage:
+              name: Tətbiqlər və Yaddaş
             Storage:
               name: Yaddaş
         csd4-2020:
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+          lessons:
+            Analysis of Design:
+              name: Dizaynın təhlili
+            Understanding Your User:
+              name: İstifadəçinizi Anlamaq
+            Designing Apps for Good:
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              name: Bazar Araşdırması
+            Testing the App:
+              name: Tətbiqi yoxlamaq
         csd5-2020:
           lesson_groups:
             cspSurvey:
@@ -2873,6 +4650,10 @@ az:
           lessons:
             Keeping Data Secret:
               name: Məlumatlar Gizli Saxlanır
+            Problem Solving and Data:
+              name: Sual həll etmə və Data
+            Making Decisions with Data:
+              name: Data ilə bağlı qərar vermək
         csd6-2020:
           lesson_groups:
             cspSurvey:
@@ -2880,19 +4661,35 @@ az:
           lessons:
             Designing Screens with Code:
               name: Kod ilə ekran dizaynı
+            Getting Properties:
+              name: Xüsusiyyətləri əldə etmək
+            Making Music:
+              name: Musiqi bəstələmək
             Functions with Parameters:
               name: Parametrli funksiyalar
         csd3-2020:
           lesson_groups:
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
             cspSurvey:
               display_name: Sorğu
           lessons:
+            Shapes and Parameters:
+              name: Forma və parametrlər
             Variables:
               name: dəyişənlər
+            Random Numbers:
+              name: Təsadufi rəqəmlər
             Conditionals:
               name: Şərti ifadələr
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
             Text:
               name: mətn
         coursea-2020:
@@ -2927,6 +4724,8 @@ az:
               name: Hərəkət et
         coursec-2020:
           title: C Kursu (2020)
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
           description_audience: 'Yaşlar: 6-10'
           lesson_groups:
             csf_digcit:
@@ -2939,8 +4738,14 @@ az:
               display_name: Hadisələr
             csf_data:
               display_name: məlumat
+          lessons:
+            Powerful Passwords:
+              name: Güclü Şifrələr
+            'Events: The Big Event':
+              name: Böyük hadisə
         coursed-2020:
           title: D Kursu (2020)
+          description_audience: 'Yaşlar: 7-11'
           lesson_groups:
             csf_events:
               display_name: Hadisələr
@@ -2975,16 +4780,32 @@ az:
               name: Super bir rəqəmsal vətəndaş olun
         coursee-2020:
           title: E Kursu (2020)
+          description_audience: 'Yaşlar: 8-12'
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
+            csf_nested_loops:
+              display_name: Iç-içə dövrlər
             csf_functions:
               display_name: Funksiyalar
           lessons:
+            Simon Says:
+              name: Simon söyləyir
+              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün
+                hansı əmrlərin lazım olduğunu düşünün.
+            Private and Personal Information:
+              name: Özəl və şəxsi informasiya
+            Access Ability:
+              name: Əlçatanlıq üçün dizayn
             'Functions: Songwriting':
               name: Mahnı yazma
+            Digital Sharing:
+              name: Rəqəmsal paylaşım
+            Designing for Accessibility:
+              name: Əlçatanlıq üçün dizayn
         coursef-2020:
           title: F Kursu (2020)
+          description_audience: 'Yaşlar: 9-13'
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -2992,9 +4813,13 @@ az:
               display_name: dəyişənlər
             csf_data:
               display_name: məlumat
+            csf_for_loops:
+              display_name: '"For" dövrü'
           lessons:
             Internet:
               name: İnternet
+            Digital Sharing:
+              name: Rəqəmsal paylaşım
         express-2020:
           title: Ekspress Kurs (2020)
           description_audience: 'Yaşlar: 9-18'
@@ -3007,9 +4832,15 @@ az:
               display_name: Funksiyalar
             csf_variables:
               display_name: dəyişənlər
+            csf_for_loops:
+              display_name: '"For" dövrü'
           lessons:
             Dance Party:
               name: Rəqs şənliyi
+            Loops in Artist:
+              name: Rəssamdakı döngələr
+            Build A Project:
+              name: Layihə qurun
         pre-express-2020:
           description_audience: 'Yaşlar: 4-8'
           lesson_groups:
@@ -3017,6 +4848,11 @@ az:
               display_name: dövrlər
             csf_events:
               display_name: Hadisələr
+          lessons:
+            Spelling Bee:
+              name: Yazı yoxlayan arı
+            Loops in Artist:
+              name: Rəssamdakı döngələr
         csp1-2020:
           lesson_groups:
             cspSurvey:
@@ -3027,6 +4863,9 @@ az:
             Binary Numbers:
               name: İkilik rəqəmlər
         csp2-2020:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: Mövzu 2:İnternet
           lessons:
             new stage:
               name: yeni mərhələ
@@ -3034,6 +4873,10 @@ az:
           lessons:
             new stage:
               name: yeni mərhələ
+            Introduction to Apps:
+              name: Tətbiqlərə giriş
+            Intro to Programming:
+              name: Proqramlaşdırmaya giriş
             Debugging:
               name: Sazlama
         csp6-2020:
@@ -3045,6 +4888,9 @@ az:
             new stage:
               name: yeni mərhələ
         csp9-2020:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Mövzu 9: Data'
           lessons:
             new stage:
               name: yeni mərhələ
@@ -3052,12 +4898,36 @@ az:
           lessons:
             new stage:
               name: yeni mərhələ
+            Protecting Data Part 1:
+              name: Datanı Qoruma 1-ci Hissə
+            Protecting Data Part 2:
+              name: Datanı Qoruma 2-ci Hissə
         csp-march-virtual:
           lessons:
+            Changes:
+              name: Dəyişikliklər
             Wrap up:
               name: Yekun
             new stage:
               name: yeni mərhələ
+            Reflections:
+              name: Əks etdirmələr
+            Part 1:
+              name: 1-ci hissə
+        csp3-virtual:
+          lessons:
+            The Need For Programming Languages:
+              name: Proqramlaşdırma Dillərinə Ehtiyac
+            The Need for Algorithms:
+              name: Alqoritmlərə Ehtiyac
+            Creativity in Algorithms:
+              name: Alqoritmlərdə yaradıcılıq
+            Using Simple Commands:
+              name: Sadə əmrlərdən istifadə
+            Creating Functions:
+              name: Funksiya yaratmaq
+            Looping and Random Numbers:
+              name: Döngə və Təsadüfi Ədədlər
         jess-test-script:
           lessons:
             new stage:
@@ -3066,23 +4936,77 @@ az:
               name: Alətlər
             Debugging:
               name: Sazlama
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 8:
+              name: Modul 8
+            Module 7:
+              name: Modul 7
+        csd2-virtual:
+          lessons:
+            Intro to HTML:
+              name: HTML-ə giriş
+            Headings:
+              name: Başlıqlar
+            Images:
+              name: Şəkillər
+            Project - Building a Webpage:
+              name: Layihə - Web-səhifə yaratmaq
+            Purpose of a  Websites:
+              name: Web-səhifələrin Məqsədi
+            CSS Classes:
+              name: CSS dərsləri
         csp5-virtual:
           lessons:
             Buttons and Events:
               name: Düymə və Hadisələr
             Multi-screen Apps:
               name: Çox-ekranlı Tətbiqlər
+            Controlling Memory with Variables:
+              name: Dəyişənlərlə yaddaşı idarə
+            User Input and Strings:
+              name: İstifadəçi Girişlər və Simlər
             '"if-else-if" and Conditional Logic':
               name: '"if-else-if" və Şərti Məntiq'
+            While Loops:
+              name: '"While" dövrü'
+            Loops and Simulations:
+              name: Döngələr və Simulyasiyalar
+            Functions with Return Values:
+              name: Qaytarma dəyərləri olan funksiyalar
             Variables:
               name: dəyişənlər
+            Keep Going:
+              name: Davam et
+            Keep Going!:
+              name: Davam et!
         virtual-holding-place:
           lesson_groups:
             content:
               display_name: Məzmun
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
           lessons:
+            Example Projects:
+              name: Nümunə Layihələr
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
         code-break:
           lessons:
             new stage:
@@ -3095,6 +5019,14 @@ az:
           lessons:
             new stage:
               name: yeni mərhələ
+        csp5-virtual-part2:
+          lessons:
+            While Loops:
+              name: '"While" dövrü'
+            Loops and Simulations:
+              name: Döngələr və Simulyasiyalar
+            Functions with Return Values:
+              name: Qaytarma dəyərləri olan funksiyalar
         k5-onlinepd-2020:
           lessons:
             Loops:
@@ -3107,6 +5039,15 @@ az:
               name: Funksiyalar
             Variables:
               name: dəyişənlər
+            For Loops:
+              name: '"For" dövrü'
+            Next steps:
+              name: Növbəti addımlar
+          lesson_groups:
+            k5_getting_started_1:
+              display_name: Başlanqıc
+            k5_next_steps_1:
+              display_name: Növbəti addımlar
         dani-june-2020-test:
           lessons:
             lesson 2:
@@ -3118,14 +5059,24 @@ az:
               display_name: Sorğu
         csd3-virtual:
           lessons:
+            Shapes and Parameters:
+              name: Forma və parametrlər
             Variables:
               name: dəyişənlər
+            Random Numbers:
+              name: Təsadufi rəqəmlər
             Text:
               name: mətn
             Conditionals:
               name: Şərti ifadələr
+            Velocity:
+              name: Sürət
             Functions:
               name: Funksiyalar
+            The Game Design Process:
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              name: Oyun Dizayn Prosesindən istifadə
           lesson_groups:
             csd3_1:
               display_name: Məzmun
@@ -3161,12 +5112,50 @@ az:
           lesson_groups:
             lg_1:
               display_name: Məzmun
+        kaitie-test-script:
+          lessons:
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 7:
+              name: Modul 7
+            Module 8:
+              name: Modul 8
+        vpl-csd-2020:
+          lessons:
+            Module 1:
+              name: Modul 1
+            Module 2:
+              name: Modul 2
+            Module 3:
+              name: Modul 3
+            Module 4:
+              name: Modul 4
+            Module 5:
+              name: Modul 5
+            Module 6:
+              name: Modul 6
+            Module 7:
+              name: Modul 7
+            Module 8:
+              name: Modul 8
         curriculum-sandbox-levels:
           lessons:
             Course A:
               name: A Kursu
             Course B:
               name: B Kursu
+            CS Discoveries:
+              name: Kompüter Elmləri kəşfləri
             Course E:
               name: E Kursu
             Course F:
@@ -3177,6 +5166,12 @@ az:
           lessons:
             visualizing:
               name: Datanın Vizuallaşması
+            project:
+              name: Son layihə
+            Ethics:
+              name: Etika
+            Project:
+              name: Son layihə
         2021drafting:
           lesson_groups:
             introduction:
@@ -3185,36 +5180,95 @@ az:
               display_name: dəyişənlər
             debugging:
               display_name: Sazlama
+            Argentina:
+              display_name: Argentina
+          description_audience: Daxili
+          description_short: Daxili
         csd1-2021:
           lessons:
+            Intro to Problem Solving:
+              key: Problem Həllinə giriş
+              name: Problem Həllinə giriş
+            The Problem Solving Process:
+              key: Məsələnin həlli prosesi
+              name: Məsələnin həlli prosesi
+            What is a Computer?:
+              key: Kompüter nədir?
+              name: Kompüter nədir?
             Storage:
               key: Yaddaş
               name: Yaddaş
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              description_student: |-
+                **Günün Sualı : Nə bizə birlikdə işləməyə və sualları komanda şəklində həll etməkdə kömək edə bilər?**
+                Bu dərs siz qrup şəklində mümkün olacaq qədər çox kitabı dəstəkləyəcək spagetti körpüsü dizayn edəcək, quracaq, yoxlayacaq və əks etdirəcəksiniz.
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
         csd2-2021:
+          lessons:
+            Intro to HTML:
+              key: HTML-ə giriş
+              name: HTML-ə giriş
+            Headings:
+              key: Başlıqlar
+              name: Başlıqlar
+            CSS Classes:
+              key: CSS dərsləri
+              name: CSS dərsləri
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
         csd3-2021:
           lessons:
+            Shapes and Parameters:
+              key: Forma və parametrlər
+              name: Forma və parametrlər
             Variables:
               key: dəyişənlər
               name: dəyişənlər
+            Random Numbers:
+              key: Təsadufi rəqəmlər
+              name: Təsadufi rəqəmlər
             Text:
               key: mətn
               name: mətn
             Conditionals:
               key: Şərti ifadələr
               name: Şərti ifadələr
+            Velocity:
+              key: Sürət
+              name: Sürət
             Functions:
               key: Funksiyalar
               name: Funksiyalar
+            The Game Design Process:
+              key: Oyun Dizayn Prosesi
+              name: Oyun Dizayn Prosesi
+            Using the Game Design Process:
+              key: Oyun Dizayn Prosesindən istifadə
+              name: Oyun Dizayn Prosesindən istifadə
           lesson_groups:
+            csd3_2:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
             cspSurvey:
               display_name: Sorğu
         csd4-2021:
+          lessons:
+            Analysis of Design:
+              key: Dizaynın təhlili
+            Understanding Your User:
+              key: İstifadəçinizi Anlamaq
+              name: İstifadəçinizi Anlamaq
+            Designing Apps for Good:
+              key: Əmtəə üçün proqramların dizaynı
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              key: Bazar Araşdırması
+              name: Bazar Araşdırması
+            Testing the App:
+              key: Tətbiqi yoxlamaq
+              name: Tətbiqi yoxlamaq
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
@@ -3223,6 +5277,12 @@ az:
             Keeping Data Secret:
               key: Məlumatlar Gizli Saxlanır
               name: Məlumatlar Gizli Saxlanır
+            Problem Solving and Data:
+              key: Sual həll etmə və Data
+              name: Sual həll etmə və Data
+            Making Decisions with Data:
+              key: Data ilə bağlı qərar vermək
+              name: Data ilə bağlı qərar vermək
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
@@ -3231,6 +5291,12 @@ az:
             Designing Screens with Code:
               key: Kod ilə ekran dizaynı
               name: Kod ilə ekran dizaynı
+            Getting Properties:
+              key: Xüsusiyyətləri əldə etmək
+              name: Xüsusiyyətləri əldə etmək
+            Making Music:
+              key: Musiqi bəstələmək
+              name: Musiqi bəstələmək
             Functions with Parameters:
               key: Parametrli funksiyalar
               name: Parametrli funksiyalar
@@ -3246,11 +5312,23 @@ az:
             cspSurvey:
               display_name: Sorğu
         csp2-2021:
+          lessons:
+            DNS and HTTP:
+              name: HTTP və DNS
           lesson_groups:
+            csp_unit2_2020:
+              display_name: Mövzu 2:İnternet
             lessonGroup-2:
               display_name: Sorğu
+              description: Salam
         csp3-2021:
           lessons:
+            Introduction to Apps:
+              key: Tətbiqlərə giriş
+              name: Tətbiqlərə giriş
+            Intro to Programming:
+              key: Proqramlaşdırmaya giriş
+              name: Proqramlaşdırmaya giriş
             Debugging:
               key: Sazlama
               name: Sazlama
@@ -3262,12 +5340,41 @@ az:
               display_name: Şərti ifadələr
             csp_functions:
               display_name: Funksiyalar
+            csp_project:
+              display_name: Layihə
         csp5-2021:
           lesson_groups:
             csp_lists:
               display_name: Siyahılar
             csp_loops:
               display_name: dövrlər
+            csp_traversals:
+              display_name: Keçidlər
+            csp_project:
+              display_name: Layihə
+        csp7-2021:
+          lesson_groups:
+            csp_libraries:
+              display_name: Kitabxanalar
+        csp9-2021:
+          lessons:
+            Learning From Data:
+              name: Datadan öyrənmə
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Mövzu 9: Data'
+        csp10-2021:
+          lessons:
+            Protecting Data Part 1:
+              key: Datanı Qoruma 1-ci Hissə
+              name: Datanı Qoruma 1-ci Hissə
+            Protecting Data Part 2:
+              key: Datanı Qoruma 2-ci Hissə
+              name: Datanı Qoruma 2-ci Hissə
+            'Project: Innovation Simulation Part 6':
+              description_student: Dərsin icmalı
+            'Project: Innovation Simulation Part 7':
+              description_student: Dərsin icmalı
         coursea-2021:
           description_audience: 'Yaşlar: 4-7'
           lessons:
@@ -3276,6 +5383,7 @@ az:
             Learn to Drag and Drop:
               description_student: Məsələni bitirmək üçün seçin və sürüşdürün.
             'Programming: Happy Maps':
+              key: 'Proqramlaşdırma: Xoşbəxt Xəritələr'
               name: Şən xəritələr
           lesson_groups:
             csf_digcit:
@@ -3290,6 +5398,8 @@ az:
             Move It, Move It:
               key: Hərəkət et
               name: Hərəkət et
+            Loops in Artist:
+              key: Rəssamdakı döngələr
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -3298,7 +5408,14 @@ az:
             csf_events:
               display_name: Hadisələr
         coursec-2021:
+          description_short: Kompüter elmlərinin əsaslarını öyrən və öz şəxsi rəsmlərini,
+            hekayələrini və oyunlarını yarat.
           description_audience: 'Yaşlar: 6-10'
+          lessons:
+            'Programming: My Robotic Friends':
+              key: 'Proqramlaşdırma: Mənim Robot Dostlarım'
+            'Events: The Big Event':
+              name: Böyük hadisə
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
@@ -3312,6 +5429,7 @@ az:
               display_name: məlumat
         coursed-2021:
           title: D Kursu (2021)
+          description_audience: 'Yaşlar: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Millimetrlik kağızda proqramlaşdırma
@@ -3324,6 +5442,8 @@ az:
             Dance Party:
               key: Rəqs şənliyi
               name: Rəqs şənliyi
+            Loops in Artist:
+              key: Rəssamdakı döngələr
             'Unplugged: Binary':
               key: 'Sərbəst: İkilik say sistemi '
               name: İkilik təsvirlər
@@ -3345,28 +5465,63 @@ az:
             lessonGroup-6:
               display_name: Rəqəmsal vətəndaşlıq
         coursee-2021:
+          description_audience: 'Yaşlar: 8-12'
           lessons:
             Conditionals:
               key: Şərti ifadələr
+            Simon Says:
+              key: Simon söyləyir
+              description_student: Oyunu oynayın və düzgün nəticə əldə etmək üçün
+                hansı əmrlərin lazım olduğunu düşünün.
+            Private and Personal Information:
+              key: Özəl və şəxsi informasiya
+              name: Özəl və şəxsi informasiya
+            About Me:
+              key: Haqqımda
+            Digital Sharing:
+              key: Rəqəmsal paylaşım
+              name: Rəqəmsal paylaşım
             'Functions: Songwriting':
               name: Mahnı yazma
+            Designing for Accessibility:
+              key: Əlçatanlıq üçün dizayn
+              name: Əlçatanlıq üçün dizayn
             lesson-4:
               name: Super bir rəqəmsal vətəndaş olun
+            lesson-1:
+              name: Əlçatanlıq üçün dizayn
           lesson_groups:
+            ramp_up:
+              display_name: Iç-içə dövrlər
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
             csf_nested_loops:
               display_name: Şərti ifadələr
             csf_functions:
               display_name: Funksiyalar
+            lessonGroup-8:
+              display_name: Silindi
         coursef-2021:
+          description_audience: 'Yaşlar: 9-13'
           lessons:
             Internet:
               key: İnternet
               name: İnternet
+            Virtual Pet:
+              key: virtual ev heyvanı
+            lesson-1:
+              name: Əlçatanlıq üçün dizayn
+            lesson-6:
+              description_student: Proqramların və vasitələrin istifadəçilərə onlardan
+                necə istifadə etmələri ilə bağlı seçimlər verdiyinə diqqət yetirərək
+                kompüterlər və texnologiyanın həyatınızdakı rolunu müzakirə edəcəksiniz.
           lesson_groups:
             csf_digcit:
               display_name: Rəqəmsal vətəndaşlıq
+            csf_variables:
+              display_name: '"For" dövrü'
+            csf_for_loops:
+              display_name: '"For" dövrü'
             lessonGroup-8:
               display_name: dəyişənlər
             lessonGroup-9:
@@ -3390,6 +5545,8 @@ az:
               display_name: Funksiyalar
             csf_variables:
               display_name: dəyişənlər
+            csf_for_loops:
+              display_name: '"For" dövrü'
             lessonGroup-9:
               display_name: Hadisələr
         pre-express-2021:
@@ -3411,6 +5568,22 @@ az:
             variables:
               display_name: dəyişənlər
         csd4-preview-2021:
+          lessons:
+            Analysis of Design:
+              key: Dizaynın təhlili
+              name: Dizaynın təhlili
+            Understanding Your User:
+              key: İstifadəçinizi Anlamaq
+              name: İstifadəçinizi Anlamaq
+            Designing Apps for Good:
+              key: Əmtəə üçün proqramların dizaynı
+              name: Əmtəə üçün proqramların dizaynı
+            Market Research:
+              key: Bazar Araşdırması
+              name: Bazar Araşdırması
+            Testing the App:
+              key: Tətbiqi yoxlamaq
+              name: Tətbiqi yoxlamaq
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
@@ -3421,31 +5594,62 @@ az:
             Keeping Data Secret:
               key: Məlumatlar Gizli Saxlanır
               name: Məlumatlar Gizli Saxlanır
+            Problem Solving and Data:
+              key: Sual həll etmə və Data
+              name: Sual həll etmə və Data
+            Making Decisions with Data:
+              key: Data ilə bağlı qərar vermək
+              name: Data ilə bağlı qərar vermək
           lesson_groups:
             cspSurvey:
               display_name: Sorğu
+        contagion-guided-practice:
+          description_audience: 5-ci sinif
+        ai-unit-pilot:
+          lessons:
+            intro:
+              name: Dərs 1
         csa1-pilot:
+          lessons:
+            lesson-1:
+              name: CSA-ya Xoş Gəldiniz
+            lesson-24:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         csa2-pilot:
+          lessons:
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Məzmun
         csa3-pilot:
+          lessons:
+            lesson-17:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         csa4-pilot:
+          lessons:
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         k5-onlinepd-2021:
           lessons:
+            Understanding the Computer Science Fundamentals Courses:
+              name: Code.org nədir?
             Loops:
               key: dövrlər
               name: dövrlər
@@ -3461,6 +5665,20 @@ az:
             Variables:
               key: dəyişənlər
               name: dəyişənlər
+            For Loops:
+              key: '"For" dövrü'
+              name: '"For" dövrü'
+            Next steps:
+              key: Növbəti addımlar
+              name: Növbəti addımları atmaq
+            Module 1:
+              name: Modul 1
+            Getting Started:
+              name: Başlanqıc
+            What is Code.org:
+              name: Code.org nədir?
+            Lesson Planning:
+              name: Dərs keçmək
           lesson_groups:
             k5_getting_started_1:
               display_name: Giriş
@@ -3468,12 +5686,30 @@ az:
               display_name: Giriş
         haikubot-pilot:
           lesson_groups:
+            Lesson 1:
+              display_name: Dərs 1
+            Lesson 2:
+              display_name: Dərs 2
             Lesson 3:
               display_name: Dərs 3
             Lesson 4:
               display_name: Dərs 4
             Lesson 5:
               display_name: Dərs 5
+        allthemigratedthings:
+          lessons:
+            lesson-1:
+              name: İlk dərs
+            lesson-2:
+              name: İkinci Dərs
+            lesson-3:
+              name: Üçüncü Dərs
+          lesson_groups:
+            lessonGroup-2:
+              big_questions: |-
+                \*Kim?
+                \*Nə?
+                \*Hara?
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -3488,17 +5724,110 @@ az:
               display_name: Sorğu
         kodea-pd-2021:
           lessons:
+            Getting Started:
+              key: Başlanqıc
+              name: Başlanqıc
             Computer Science Fundamentals:
               key: Kompüter Elmləri Əsasları.
               name: Kompüter Elmləri Əsasları.
+            'Mastering the Basics: Functions':
+              key: 'Əsaslara yiyələnmək: funksiyalar'
+              name: 'Əsaslara yiyələnmək: funksiyalar'
+            Best Practices for Teaching Computer Science:
+              key: Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr
+              name: Kompüter Elmlərinin Tədrisi üçün Ən Yaxşı Təcrübələr
             Planning:
               key: Planlama
               name: Planlama
+            Next Steps:
+              key: Növbəti addımlar
+              name: Növbəti addımlar
+        vpl-csd-2021:
+          lessons:
+            Module 1:
+              key: Modul 1
+              name: Modul 1
+            Module 2:
+              key: Modul 2
+              name: Modul 2
+            Module 3:
+              key: Modul 3
+              name: Modul 3
+            Module 4:
+              key: Modul 4
+              name: Modul 4
+            Module 5:
+              key: Modul 5
+              name: Modul 5
+            Module 6:
+              key: Modul 6
+              name: Modul 6
+            Module 7:
+              key: Modul 7
+              name: Modul 7
+            Module 8:
+              key: Modul 8
+              name: Modul 8
+          lesson_groups:
+            CSD_Module 1:
+              display_name: Modul 1
+            CSD_Module 2:
+              display_name: Modul 2
+            CSD_Module 3:
+              display_name: Modul 3
+            CSD_Module 4:
+              display_name: Modul 4
+            CSD_Module 5:
+              display_name: Modul 5
+            CSD_Module 6:
+              display_name: Modul 6
+            CSD_Module 7:
+              display_name: Modul 7
+            CSD_Module 8:
+              display_name: Modul 8
+        vpl-csp-2021:
+          lessons:
+            Module 1:
+              key: Modul 1
+              name: Modul 1
+            Module 2:
+              key: Modul 2
+              name: Modul 2
+            Module 3:
+              key: Modul 3
+              name: Modul 3
+            Module 4:
+              key: Modul 4
+              name: Modul 4
+            Module 5:
+              key: Modul 5
+            Module 6:
+              key: Modul 6
+            Module 7:
+              key: Modul 7
+            Module 8:
+              key: Modul 8
+        self-paced-pl-csd1-2021:
+          lessons:
+            lesson-4:
+              name: Xoş gəlmişsiniz
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Xoş gəlmişsiniz
         self-paced-pl-csd2-2021:
           lessons:
             lesson-9:
               name: Müəllimlərin icması
+            lesson-10:
+              name: Problemi bildirin
+        poster:
+          lessons:
+            HoC Tutorial 1:
+              name: Özünü ifadə etmək
         csa1-exemplars:
+          lessons:
+            lesson-1:
+              name: CSA-ya Xoş Gəldiniz
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -3510,6 +5839,16 @@ az:
           lesson_groups:
             lessonGroup-3:
               display_name: Resurslar
+            lessonGroup-2:
+              display_name: Bölmə 1
+            lessonGroup-4:
+              display_name: Bölmə 2
+            lessonGroup-5:
+              display_name: Bölmə 3
+            lessonGroup-6:
+              display_name: Bölmə 4
+            lessonGroup-7:
+              display_name: Bölmə 5
         csa3-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3518,6 +5857,10 @@ az:
           lessons:
             lesson-3:
               name: Yoxla
+        tesspltest:
+          lessons:
+            lesson-2:
+              name: Dərs 2
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -3527,7 +5870,14 @@ az:
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
+              display_name: Modul 1
               description: yoxla
+            lessonGroup-3:
+              display_name: Modul 2
+            lessonGroup-4:
+              display_name: Modul 3
+            lessonGroup-5:
+              display_name: Modul 4
         dlp21-csd-overview:
           lessons:
             lesson-1:
@@ -3542,36 +5892,230 @@ az:
               name: Alətlər
             lesson-17:
               name: Konsol
+            lesson-18:
+              name: Vidjetlər
           lesson_groups:
             lessonGroup-2:
               display_name: Dərslər
+            lessonGroup-3:
+              display_name: Layihə
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Salam, dünya!
+          title: '"Salam, dünya!"'
         csa1-pilot-facilitator:
+          lessons:
+            Welcome to CSA:
+              name: CSA-ya Xoş Gəldiniz
+            lesson-1:
+              key: dərs-1
+              name: Java Lab
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-10:
+              key: dərs-10
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+            lesson-16:
+              key: dərs-16
+            lesson-17:
+              key: dərs-17
+            lesson-18:
+              key: dərs-18
+            lesson-19:
+              key: dərs-19
+            lesson-20:
+              key: dərs-20
+            lesson-21:
+              key: dərs-21
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         csa2-pilot-facilitator:
+          lessons:
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-10:
+              key: dərs-10
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+            lesson-1:
+              key: dərs-1
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Məzmun
         csa3-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: dərs-1
+              name: Java Lab
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-10:
+              key: dərs-10
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+            lesson-16:
+              key: dərs-16
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         csa4-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: dərs-1
+              name: Java Lab
+            lesson-5:
+              key: dərs-5
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-10:
+              key: dərs-10
+            lesson-11:
+              key: dərs-11
+            lesson-2:
+              key: dərs-2
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         csa5-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-10:
+              key: dərs-10
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Layihə
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-ci Fəsil
+            lessonGroup-4:
+              display_name: 2-ci Fəsil
+        hello-world-food:
+          lessons:
+            lesson-1:
+              name: Salam Dünya
+          title: Salam Dünya
         csa-u7-dev:
           lessons:
+            lesson-2:
+              name: Vidjetlər
             lesson-3:
               name: Alətlər
           lesson_groups:
             lessonGroup-2:
               display_name: Dərslər
+            lessonGroup-3:
+              display_name: Layihə
+        hello-world-animals:
+          lessons:
+            lesson-1:
+              name: Salam Dünya
+          title: Salam Dünya
+        hello-world-emoji:
+          lessons:
+            lesson-1:
+              name: Salam Dünya
+          title: Salam Dünya
+        hello-world-retro:
+          lessons:
+            lesson-1:
+              name: Salam Dünya
+          title: Salam Dünya
+        hello-world-batman:
+          lessons:
+            lesson-1:
+              name: Salam Dünya
+          title: Salam Dünya
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3584,12 +6128,26 @@ az:
               display_name: Məzmun
         csa-u8-dev:
           lessons:
+            lesson-1:
+              name: Vidjetlər
             lesson-2:
               name: Alətlər
         poetry:
           lessons:
+            lesson-2:
+              name: Özünün Şeirini kodlaşdır
             lesson-3:
               name: dəyişənlər
+            lesson-5:
+              name: Söz Seçimi
+          name: poeziya
+          title: Kompüter Elmləri və Şeir
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Yazı yoxlayan arı
+              description_student: Arıya yeni sözləri tələffüz etməkdə kömək edin!
+          title: Yazı yoxlayan arı
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:

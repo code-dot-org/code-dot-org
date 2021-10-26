@@ -10838,6 +10838,7 @@ it:
                 contatore per creare progetti complessi. Alla fine avranno la possibilità
                 di creare il proprio progetto in un esercizio libero.
             Virtual Pet:
+              key: Animale virtuale
               name: 'Mini progetto: Animaletto Virtuale'
             End of Course Project:
               key: Progetto di fine corso

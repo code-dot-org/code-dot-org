@@ -8597,6 +8597,7 @@ it:
               description_student: Preparati a creare il tuo prossimo capolavoro. Qui userai i cicli con contatore per creare immagini sbalorditive.
               description_teacher: In questa lezione, gli studenti continuano ad esercitarsi con i cicli, questa volta con l'Artista. Gli studenti completeranno gli esercizi combinando i concetti di variabili, cicli e cicli con contatore per creare progetti complessi. Alla fine avranno la possibilità di creare il proprio progetto in un esercizio libero.
             Virtual Pet:
+              key: Animale virtuale
               name: 'Mini progetto: Animaletto Virtuale'
             End of Course Project:
               key: Progetto di fine corso

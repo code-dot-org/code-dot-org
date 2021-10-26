@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "irobot-classchat"
+    "/home": "nextsteps-alternatives"
   },
 
   "banners": {
-    "irobot-classchat": {
-      "image": "/images/csjourneys/irobot-classchat.png",
-      "title": "Building robots with iRobot",
-      "body": "Learn how two women are helping build software for robots and designing learning experiences that inspire the next generation of technologists. Recommended for grades K-5. Recording will be available the day after the live session.",
+    "nextsteps-alternatives": {
+      "image": "/images/csjourneys/nextsteps-alternatives.png",
+      "title": "Learn about key alternatives to the 4-year college degree",
+      "body": "Give high school students the opportunity to learn about key alternatives to the four-year college degree, including community college and apprenticeships. Recommended for grades 9-12.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat5",
-      "buttonId": "irobot-classchat-details"
+      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-3",
+      "buttonId": "nextsteps-alternatives-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

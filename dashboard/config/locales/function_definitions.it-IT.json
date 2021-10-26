@@ -3833,6 +3833,9 @@
               "length": "lunghezza",
               "sides": "lati"
             }
+          },
+          "small flower": {
+            "name": "fiore piccolo"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -4325,6 +4328,11 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "vai avanti e prendi il nettare con contatore"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "ripristina il gioco"
           }
         }
       }

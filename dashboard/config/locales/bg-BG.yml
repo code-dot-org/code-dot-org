@@ -1023,7 +1023,9 @@ bg:
       email: Имейл
       school: Училище
       school_name: Име на училището
+      school_city: 'Града на Училището '
       school_country: Училищен район
+      colombian_school_city: 'Града на Училището '
       colombian_chilean_school_name: Име на училището
     form_entries:
       gender:

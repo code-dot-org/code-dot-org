@@ -10449,6 +10449,9 @@
         "CourseF_outbreak3": {
           "hint1": "몬스터에게 마스크를 주려면, '클릭할 때' 이벤트와 '의상 변경' 블록을 같이 사용하세요:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n조그맣고 빨간 '클릭됨' 블록도 드래그해야 합니다!",
           "hint2": "이 레벨의 새로운 코드도 다음과 같아야 합니다:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "\"동쪽으로 이동 및 반복\", \"오른쪽으로 돌기\", \"떠돌기\" 등과 같은 행동을 사용해 보세요."
         }
       }
     }

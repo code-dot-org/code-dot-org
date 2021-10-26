@@ -20941,6 +20941,8 @@ pt:
                 todas as habilidades de programação que eles aprenderam para criar
                 um jogo animado. É hora de ser criativo e criar uma história no Laboratório
                 de Jogos!
+            Safety in My Online Neighborhood:
+              description_student: Saiba como ter segurança ao visitar lugares online.
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -22617,6 +22619,8 @@ pt:
             csd3_2:
               display_name: 'Capítulo 2: Construindo Jogos'
           lessons:
+            Example Projects:
+              name: Projetos de exemplo
             Velocity:
               name: Velocidade
             Collision Detection:
@@ -23760,6 +23764,8 @@ pt:
           description_short: Uma introdução à ciência da computação para pré-leitores.
           description_audience: 'Idade: de 4 a 7 anos'
           lessons:
+            Safety in My Online Neighborhood:
+              description_student: Saiba como ter segurança ao visitar lugares online.
             Learn to Drag and Drop:
               key: Aprenda a arrastar e soltar
               name: Aprenda a arrastar e soltar
@@ -24714,6 +24720,7 @@ pt:
               description_teacher: Aqui, os alunos usarão o Sprite Lab para criar
                 seus próprios comportamentos personalizados.
             Virtual Pet:
+              key: Animal de Estimação Virtual
               name: 'Mini-Projeto: Pet Virtual'
               description_student: Nesta lição, os alunos criarão um animal de estimação
                 virtual interativo que se parece e se comporta como deseja. Os alunos

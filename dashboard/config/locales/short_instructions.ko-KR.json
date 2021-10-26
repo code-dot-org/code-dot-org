@@ -3479,7 +3479,24 @@
         "CourseF_outbreak8": "시뮬레이션으로 메시지를 공유하세요.",
         "international_outbreak_freeplay": "프로젝트를 원하는대로  변경하거나 개선하세요.",
         "poetry_hoc_exemplar1": "예측하기!",
-        "poetry_hoc_exemplar2": "예측하기!"
+        "poetry_hoc_exemplar2": "예측하기!",
+        "courseF_apps_chatbot": "이 로봇은 질문을 하고 응답자가 입력한 내용을 기억합니다! 답변을 입력하며 X-9와 대화해 보세요!",
+        "courseF_events_ship": "이벤트를 사용하여 8초 후 배가 앞으로 이동하기 시작하게 만드세요. ",
+        "courseF_place_fruit": "바나나가 딸기보다 크게 스프라이트 크기를 변경합니다.",
+        "courseF_sprites_behaviors": "스프라이트에 행동을 부여하세요.",
+        "courseF_sprites_clouds": "구름을 화면을 따라 움직이게 만듭니다. 태양을 돌게 만듭니다. 나비를 이리저리 떠돌게 만듭니다.",
+        "courseF_sprites_desert": "여러 스프라이트로 사막 장면을 만들기 위해 코드를 추가합니다.",
+        "courseF_sprites_freeplay_air": "이제 여러분이 무엇이든 원하는 것을 만들 차례입니다!",
+        "courseF_sprites_freeplay_animals": "이제 여러분이 무엇이든 원하는 것을 만들 차례입니다!",
+        "courseF_sprites_freeplay_aquatic": "이제 여러분이 무엇이든 원하는 것을 만들 차례입니다!",
+        "courseF_sprites_freeplay_blank": "이제 여러분이 무엇이든 원하는 것을 만들 차례입니다!",
+        "courseF_sprites_freeplay_food": "이제 여러분이 무엇이든 원하는 것을 만들 차례입니다!",
+        "courseF_sprites_freeplay_space": "이제 여러분이 무엇이든 원하는 것을 만들 차례입니다!",
+        "courseF_sprites_make": "스프라이트 만들기",
+        "courseF_sprites_moreSprites": "네 개의 스프라이트 만들기",
+        "courseF_sprites_positioning": "화면 상에 스프라이트의 새 위치를 선택하세요.",
+        "courseF_sprites_properties": "스프라이트 카테고리 내 새 블록을 사용하여 두 번째 스프라이트의 크기를 변경하세요.",
+        "courseF_sprites_ship": "배 스프라이트를 만들고 물 위를 항해하게 합니다."
       }
     }
   }

@@ -11499,6 +11499,8 @@ sk:
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
                 tvoj projekt.
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
             lesson-6:
               name: Pohľad do budúcnosti s Minecraftom
               description_teacher: Túto lekciu pôvodne Minecraft tím vytvoril pre
@@ -11575,7 +11577,7 @@ sk:
               name: Sleduj algoritmus
               description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy
                 sú potrebné na dosiahnutie správneho výsledku.
-              description_teacher: V tejto lekcii zameranej na **vytvorenie kontextu**
+              description_teacher: Na tejto lekcii zameranej na **vytvorenie kontextu**
                 si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými
                 inštrukciami.
             Learning Sprites with Sprite Lab:
@@ -11817,6 +11819,8 @@ sk:
               description_student: Na takéto veľké projekty treba veľa času a plánovania.
                 Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
                 naplno!
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
             lesson-1:
               description_teacher: 'V rámci tejto **vysvetľujúcej** lekcie sa žiaci
                 naučia o zjednodušení ovládania a význame empatie prostredníctvom
@@ -11844,6 +11848,14 @@ sk:
                 programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
             lesson-9:
               name: Príbehy na doplnenie
+              description_student: V rámci tejto aktivity budete používať dopĺňacie
+                príbehy príbehy (podobné ako Mad Libs®) na uľahčenie pochopenia toho,
+                ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich
+                neskôr používajú počas vykonávania programu.
+              description_teacher: 'Na tejto lekcii zameranej na **vytvorenie kontextu**
+                budú žiakom ako kontext na pochopenie toho, ako počítače prijímajú
+                a ukladajú vstupy od používateľov a potom ich neskôr používajú počas
+                vykonávania programu, slúžiť dopĺňacie príbehy (podobné ako Mad Libs®). '
             lesson-10:
               name: Text a výzvy
               description_student: V tejto lekcii si precvičíš používanie premenných
@@ -12047,6 +12059,8 @@ sk:
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
                 tvoj projekt.
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
             lesson-1:
               name: Tanečná Párty
             lesson-2:

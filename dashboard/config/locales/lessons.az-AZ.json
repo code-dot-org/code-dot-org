@@ -2,14 +2,48 @@
   "az-AZ": {
     "data": {
       "lessons": {
+        "flappy/Flappy Code": {
+          "overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.",
+          "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər."
+        },
+        "hourofcode/Maze": {
+          "overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 4-10 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.",
+          "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 4-10 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya böyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər."
+        },
+        "frozen/Artist": {
+          "overview": "Bu dərsdə, hər yaş qrupundan olan şagirdlər təhlükəsiz və dəstəkləyici bir mühitdə kodlaşdırma və kompüter elmləri ilə tanışlıq olacaqlar. Bu dərs 10-13 yaş arası orta sinif şagirdləri üçün hazırlanmışdır, lakin bəzi təklifləri nəzərə alaraq kiçik və ya böyük yaşda olan şagirdlər üçün də uyğunlaşdırıla bilər. Şagirdlərin sadə həndəsə bilikləri və xüsusilə bucaqlar haqqında anlayışı olmalıdır.",
+          "student_overview": "Bu dərsdə, hər yaş qrupundan olan şagirdlər təhlükəsiz və dəstəkləyici bir mühitdə kodlaşdırma və kompüter elmləri ilə tanışlıq olacaqlar. Bu dərs 10-13 yaş arası orta sinif şagirdləri üçün hazırlanmışdır, lakin bəzi təklifləri nəzərə alaraq kiçik və ya böyük yaşda olan şagirdlər üçün də uyğunlaşdırıla bilər. Şagirdlərin sadə həndəsə bilikləri və xüsusilə bucaqlar haqqında anlayışı olmalıdır."
+        },
+        "iceage/Ice Age Play Lab": {
+          "overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.",
+          "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək oyun yaradırlar."
+        },
+        "artist/Artist": {
+          "overview": "Bu dərsdə şagirdlər ekrandakı rəsmləri tamamlamaq üçün rəssamı idarə edəcəklər. Bu rəssam mərhələsi, tələbələrə '100 piksel irəli hərəkət etmək' və '90 dərəcə sağa dönmək' kimi proqramlaşdırma bloklarından istifadə edərək tədricən çətinlik dərəcəsi artan şəkilləri qurmağa imkan verəcək."
+        },
+        "gumball/Gumball Play Lab": {
+          "overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.",
+          "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər."
+        },
         "hoc-encryption/Simple Encryption": {
           "preparation": "Vidjetlərin hər iki variantını yoxla"
         },
+        "playlab/Play Lab": {
+          "overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.",
+          "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək oyun yaradırlar."
+        },
+        "infinity/Infinity": {
+          "overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək bir oyun yaradırlar. Bu dərs 10-16 yaş arası ümumi orta məktəb şagirdləri üçün hazırlanmışdır, lakin müxtəlif təklifləri nəzərə alaraq kiçik və ya bpyük yaş qrupu şagirdləri üçün də uyğunlaşdırıla bilər.",
+          "student_overview": "Bu dərsdə şagirdlər kompüter elmləri ilə tanış olur və əsas blok kodundan istifadə edərək oyun yaradırlar."
+        },
         "jigsaw/Jigsaw": {
+          "preparation": "Daha çox onlayn təhlükəsizlik məzmunu üçün [sağlam düşüncə təhsili] [0] veb saytına baxın.",
+          "purpose": "Bu dərsin əsas məqsədi şagirdlərin kompüterlə təcrübə qazanmasıdır. Klikləmə, sürükləmə və buraxma kimi ən əsas kompüter funksiyalarını əhatə edərək, gələcək tapmacalar üçün sinifdə daha bərabər bir oyun sahəsi yaradırıq. Bu dərs, cihazlarınıza görə potensial olaraq \"siçan\", \"trackpad\" və ya \"toxunma ekranı\" daxil olmaqla, əsas kompüter avadanlıq terminologiyasını təqdim etmək üçün əla bir fürsət təmin edir.",
           "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
         },
         "coursef-2021/lesson-6": {
-          "overview": "Bu **kontekst-xassə** dərsində tələbələr, tətbiqetmələrin və vasitələrin istifadəçilərə bunlardan necə istifadə etmə seçimləri verdiyinə diqqət yetirərək kompüterlərin və texnologiyaların həyatındakı rolunu müzakirə edəcəklər. Tələbələr, daha sonra özləri yaratacaqlarına oxşar tətbiqləri araşdıracaqlar."
+          "overview": "Bu **kontekst-xassə** dərsində tələbələr, tətbiqetmələrin və vasitələrin istifadəçilərə bunlardan necə istifadə etmə seçimləri verdiyinə diqqət yetirərək kompüterlərin və texnologiyaların həyatındakı rolunu müzakirə edəcəklər. Tələbələr, daha sonra özləri yaratacaqlarına oxşar tətbiqləri araşdıracaqlar.",
+          "student_overview": "Proqramların və vasitələrin istifadəçilərə onlardan necə istifadə etmələri ilə bağlı seçimlər verdiyinə diqqət yetirərək kompüterlər və texnologiyanın həyatınızdakı rolunu müzakirə edəcəksiniz."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
           "overview": "[\\[sağlam düşüncə təhsili](https://creativecommons.org/)][1]\n\nBu dərs Sağlam Düşüncə Təhsili tərəfindən yaradılmışdır. [Daha çox məlumat.] [2]\n\nİnternetin gücü şagirdlərə şəxsən görə bilmədikləri yerləri yaşamağa və ziyarət etməyə imkan verir. Lakin, gerçək dünyada səyahət etdiyiniz kimi, onlayn səyahət edərkən də təhlükəsiz olmağınız vacibdir. Bu virtual ekskursiyada uşaqlar onlayn macəralarda təhlükəsiz olmağı praktika edə bilərlər.",
@@ -25,6 +59,18 @@
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "student_overview": "Məsələni bitirmək üçün seçin və sürüşdürün."
+        },
+        "pre-express-2021/Ocean Scene with Loops": {
+          "student_overview": "Şəkilləri bitirmək üçün döngələr və modellərdən istifadə edin."
+        },
+        "pre-express-2021/On the Move with Events": {
+          "student_overview": "Öz oyun və ya hekayənizi yaradın."
+        },
+        "pre-express-2021/A Royal Battle with Events": {
+          "student_overview": "Bir hekayə yaratmaq və ya interaktiv bir oyun qurmaq üçün hadisələrdən istifadə edin."
+        },
+        "coursee-2021/Simon Says": {
+          "student_overview": "Oyunu oynayın və düzgün nəticə əldə etmək üçün hansı əmrlərin lazım olduğunu düşünün."
         }
       }
     }

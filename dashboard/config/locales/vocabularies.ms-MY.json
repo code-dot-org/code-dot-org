@@ -491,27 +491,40 @@
           "definition": "Tekan butang tetikus"
         },
         "drag/pre-express/2021": {
-          "word": "Seret"
+          "word": "Seret",
+          "definition": "Klik butang tetikus anda dan tahan semasa anda menggerakkan penunjuknya ke arah lokasi baharu"
         },
         "drop/pre-express/2021": {
-          "word": "Gerakan Jatuh"
+          "word": "Gerakan Jatuh",
+          "definition": "Lepaskan butang tetikus anda untuk \"lepaskan\" item yang sedang anda seret"
+        },
+        "double_click/pre-express/2021": {
+          "word": "Klik Dua Kali",
+          "definition": "Tekan butang tetikus dengan begitu pantas"
         },
         "algorithm/pre-express/2021": {
           "word": "Algoritma",
           "definition": "Senarai langkah untuk menyelesaikan tugas. "
         },
         "bug/pre-express/2021": {
-          "word": "Pepijat"
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
         },
         "debugging/pre-express/2021": {
-          "word": "Penyahpepijatan"
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah di dalam algoritma atau atur cara."
         },
         "program/pre-express/2021": {
           "word": "Atur Cara",
           "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
         },
         "programming/pre-express/2021": {
-          "word": "Pengaturcaraan"
+          "word": "Pengaturcaraan",
+          "definition": "Seni mencipta atur cara."
+        },
+        "persistence/pre-express/2021": {
+          "word": "Ketabahan",
+          "definition": "Mencuba lagi dan lagi, walaupun apabila menghadapi sesuatu yang sukar."
         },
         "loop/pre-express/2021": {
           "word": "Gelung",
@@ -522,7 +535,7 @@
           "definition": "Untuk melakukan sesuatu lagi."
         },
         "event/pre-express/2021": {
-          "word": "Peristiwa",
+          "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
         },
         "behavior/coursee/2021": {

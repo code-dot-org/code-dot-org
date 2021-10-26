@@ -1953,6 +1953,8 @@ bg:
               name: Списъци
             For Loops:
               name: За циклите
+            Map:
+              name: Карта
             Functions with Parameters:
               name: Функции с параметри
         workshop-gamelab:
@@ -3814,6 +3816,8 @@ bg:
           lessons:
             new stage:
               name: нов етап
+            Tools:
+              name: Инструменти
             Debugging:
               name: Отстраняване на грешки
         csp5-virtual:
@@ -3898,18 +3902,30 @@ bg:
             cspSurvey:
               display_name: Съдържание
         ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: Урок
           lesson_groups:
             lg_1:
               display_name: Съдържание
         ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: Урок
           lesson_groups:
             lg_1:
               display_name: Съдържание
         ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: Урок
           lesson_groups:
             lg_1:
               display_name: Съдържание
         ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: Урок
           lesson_groups:
             lg_1:
               display_name: Съдържание
@@ -4309,12 +4325,17 @@ bg:
               name: Общ преглед
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: Инструменти
             lesson-13:
               name: Примери
             lesson-17:
               name: Конзола
             lesson-18:
               name: Джаджи
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Уроци
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -4339,8 +4360,13 @@ bg:
           lessons:
             lesson-2:
               name: Джаджи
+            lesson-3:
+              name: Инструменти
             lesson-4:
               name: Примери
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Уроци
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -4355,6 +4381,8 @@ bg:
           lessons:
             lesson-1:
               name: Джаджи
+            lesson-2:
+              name: Инструменти
             lesson-3:
               name: Примери
         poetry:

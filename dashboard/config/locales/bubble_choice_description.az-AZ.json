@@ -43,7 +43,16 @@
         "helloworld_retro_location": "Bir müddət sonra sprite yeni davranış başlamağa məcbur edin.",
         "courseC_artist_prog_challenge1_2021": "Heyvanların hər biri üçün otaqlar çək. ",
         "courseD_bee_nestedLoops8_2021": "Hər çiçəyin bütün nektarını topla və bal pətəyində bal hazırla.",
-        "courseD_bee_nestedLoops9_2021": "Bütün balı hazırla."
+        "courseD_bee_nestedLoops9_2021": "Bütün balı hazırla.",
+        "courseF_sprites_clouds": "Davranışlardan istifadə edərək məşq edin.",
+        "courseF_sprites_desert": "Səhnə yaradın. Spritlər hazırlamaq və yerlərini seçməklə praktika edin.",
+        "courseF_sprites_make": "Spritlər hazırlayın.",
+        "courseF_sprites_moreSprites": "Spritlər hazırlamaq və yerlərini seçməklə praktika edin.",
+        "courseF_sprites_positioning": "Spritlər hazırlamaq və yerlərini seçməklə praktika edin.",
+        "helloworld_animals_sounds": "Səsləri çalmağı oyrən",
+        "helloworld_emoji_sounds": "Səsləri çalmağı oyrən",
+        "helloworld_food_sounds": "Səsləri çalmağı oyrən",
+        "helloworld_retro_sounds": "Səsləri çalmağı oyrən"
       }
     }
   }

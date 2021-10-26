@@ -39,6 +39,8 @@ mr:
           lessons:
             Artist:
               name: आर्टीस्ट
+              description_student: आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार
+                करणे
           student_description: कलाकारासह छान चित्रे आणि डिझाईन्स काढा!
         hourofcode:
           title: क्लासिक मेझ
@@ -502,6 +504,7 @@ mr:
               name: एक स्टार वॉर्स गेम तयार करा
             Functions in Artist:
               name: आर्टीस्टमध्ये फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
             Debugging with Scrat:
               name: स्क्रॅट सोबत डीबगिंग
             Programming in Artist:
@@ -925,6 +928,7 @@ mr:
               name: एक स्टार वॉर्स गेम तयार करा
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
             Functions in Harvester:
               name: हार्वेस्टर सोबत फंक्शन्स
             Minecraft Hour of Code:
@@ -1129,8 +1133,14 @@ mr:
               name: आर्टीस्टसह फॉर लूप्स
             Learning Sprites with Sprite Lab:
               name: स्प्राइट लॅबसह स्विमिंग फिश
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून
+                घ्या.
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Nested Loops in the Maze:
               name: मेझ मध्ये नेस्टेड लूप
+            Events with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
             Virtual Pet:
@@ -1203,14 +1213,21 @@ mr:
               name: हार्वेस्टर सोबत फंक्शन्स
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
             Learning Sprites with Sprite Lab:
               name: स्प्राइट लॅबसह स्विमिंग फिश
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून
+                घ्या.
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Frozen:
               name: फ्रोझन सोबत नेस्टेड लूप
             Programming and Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Swimming Fish with Sprite Lab:
               name: स्प्राइट लॅबसह स्विमिंग फिश
         express-2019:
@@ -1266,6 +1283,8 @@ mr:
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
             Dance Party:
               name: डांस पार्टी
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
         andrea-test:
           lesson_groups:
             required:
@@ -1291,16 +1310,21 @@ mr:
               name: लॉरेलसह खजिना गोळा करणे
             Programming in Artist:
               name: कोडसह कलात्मक गोष्टी तयार करणे
+              description_student: आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार
+                करणे
             Loops with Rey and BB-8:
               name: रे आणि बीबी -8 सह लूप
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
             Loops in Harvester:
               name: लूप सह हार्वेस्टिंग क्रॉप्स
+            'Events: The Big Event':
+              description_student: इव्हेंटबद्दल जाणून घेण्यासाठी एक मजेदार गेम खेळा.
             Build a Flappy Game:
               name: " फ्लॅपी गेम तयार करा"
             Events in Play Lab:
               name: इव्हेंट सोबत गेम चा पाठलाग करणे
+              description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
             Looking Ahead:
               name: माइनक्राफ्ट सह पुढे  पाहणे
             Sticker Art with Loops:
@@ -1314,8 +1338,12 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
+            'Programming: Happy Maps':
+              description_student: फळाला फ्लर्ब मिळवण्यासाठी सूचना लिहा.
             'Loops: Happy Loops':
               name: हॅपी लूप्स
+              description_student: लूप वापरून फ्लर्बला मोठ्या समस्या सोडवण्यात मदत
+                करा.
             Loops in Collector:
               name: लॉरेल सोबत लूप
             Loops in Artist:
@@ -1330,6 +1358,12 @@ mr:
               description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
             Loops in Ice Age:
               name: स्क्रॅटसह लूप
+              description_student: लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत
+                करा.
+            Programming with Rey and BB-8:
+              description_student: स्क्रॅप मेटलला गोळा करण्यासाठी BB-8 ला मदत करा
+            Sequencing with Scrat:
+              description_student: अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट
         courseb-2019:
           lesson_groups:
             csf_sequencing:
@@ -1347,10 +1381,13 @@ mr:
               description_student: आपले स्वतःचे स्मार्टफोन अॅप स्केच करा.
             Loops in Harvester:
               name: हार्वेस्टर सोबत लूप
+              description_student: हार्वेस्टरला लूप वापरून आणखी गोळा करण्यात मदत करा!
             Programming in Maze:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
+              description_student: हार्वेस्टरला एका मार्गावर भाज्या गोळा करण्यात मदत
+                करा.
             Sequencing in Maze:
               name: अँग्री बर्ड्स सह अनुक्रम
         pre-express-2019:
@@ -1410,6 +1447,8 @@ mr:
               name: आर्टीस्टमध्ये लूप्स
             Nested Loops with Frozen:
               name: फ्रोझन सोबत नेस्टेड लूप
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Build a Flappy Game:
               name: " फ्लॅपी गेम तयार करा"
             Build a Star Wars Game:
@@ -1574,8 +1613,12 @@ mr:
               display_name: कंडीशनल्स
         time4cs-original-unit-1:
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Conditionals:
               name: कंडीशनल्स
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Drawing with Loops:
               name: लूप सोबत ड्रॉइंग
         time4cs-control-unit-2:
@@ -1612,8 +1655,12 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Conditionals:
               name: कंडीशनल्स
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_sequencing:
@@ -1623,8 +1670,12 @@ mr:
             csf_events:
               display_name: ईव्हेंट्स
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Conditionals:
               name: कंडीशनल्स
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
         csp7-pilot:
           lesson_groups:
             required:
@@ -1649,10 +1700,20 @@ mr:
             Learn to Drag and Drop:
               name: ड्रॅग आणि ड्रॉप करायला शिका
               description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
+            'Programming: Happy Maps':
+              description_student: फळाला फ्लर्ब मिळवण्यासाठी सूचना लिहा.
+            Sequencing with Scrat:
+              description_student: अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट
+            Programming with Rey and BB-8:
+              description_student: स्क्रॅप मेटलला गोळा करण्यासाठी BB-8 ला मदत करा
             'Loops: Happy Loops':
               name: हॅपी लूप्स
+              description_student: लूप वापरून फ्लर्बला मोठ्या समस्या सोडवण्यात मदत
+                करा.
             Loops in Ice Age:
               name: स्क्रॅटसह लूप
+              description_student: लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत
+                करा.
             Loops in Collector:
               name: लॉरेल सोबत लूप
             Ocean Scene with Loops:
@@ -1660,6 +1721,8 @@ mr:
             Events in Play Lab:
               name: इव्हेंटसह मूव्ह
               description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
+            Safety in My Online Neighborhood:
+              description_student: सुरक्षितपणे ऑनलाईन ठिकाणी कसे जायचे ते शिका.
         courseb-2020:
           lesson_groups:
             csf_sequencing:
@@ -1673,8 +1736,11 @@ mr:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
+              description_student: हार्वेस्टरला एका मार्गावर भाज्या गोळा करण्यात मदत
+                करा.
             Loops in Harvester:
               name: हार्वेस्टर सोबत लूप
+              description_student: हार्वेस्टरला लूप वापरून आणखी गोळा करण्यात मदत करा!
             Loops in Collector:
               name: लॉरेल सोबत लूप
             Loops in Artist:
@@ -1699,6 +1765,8 @@ mr:
               name: लॉरेलसह खजिना गोळा करणे
             Programming in Artist:
               name: कोडसह कलात्मक गोष्टी तयार करणे
+              description_student: आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार
+                करणे
             Loops with Rey and BB-8:
               name: रे आणि बीबी -8 सह लूप
             Loops in Harvester:
@@ -1707,10 +1775,13 @@ mr:
               name: माइनक्राफ्ट सह पुढे  पाहणे
             Sticker Art with Loops:
               name: लूपसह स्टिकर आर्ट
+            'Events: The Big Event':
+              description_student: इव्हेंटबद्दल जाणून घेण्यासाठी एक मजेदार गेम खेळा.
             Build a Flappy Game:
               name: " फ्लॅपी गेम तयार करा"
             Events in Play Lab:
               name: इव्हेंट सोबत गेम चा पाठलाग करणे
+              description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
         coursed-2020:
           title: अभ्यासक्रम D (2020)
           lesson_groups:
@@ -1751,10 +1822,16 @@ mr:
           lessons:
             Programming and Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Conditionals:
               name: शेतकऱ्यासह कंडीशनल्स
             Learning Sprites with Sprite Lab:
               name: स्प्राइट लॅबसह स्विमिंग फिश
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून
+                घ्या.
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Frozen:
@@ -1765,6 +1842,7 @@ mr:
               name: हार्वेस्टर सोबत फंक्शन्स
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
         coursef-2020:
           title: अभ्यासक्रम F (2020)
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
@@ -1774,6 +1852,10 @@ mr:
               name: माईनक्राफ्ट मधील फंक्शन्स
             Learning Sprites with Sprite Lab:
               name: स्प्राइट लॅबसह स्विमिंग फिश
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून
+                घ्या.
+            Events with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
             Nested Loops in the Maze:
@@ -1819,6 +1901,8 @@ mr:
               name: आर्टीस्टमध्ये लूप्स
             While Loops in Farmer:
               name: फार्मर मधील व्हाईल लुप्स
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Until Loops in Maze:
               name: मेझ मध्ये लूप पर्यंत
             Functions in Minecraft:
@@ -1827,6 +1911,8 @@ mr:
               name: आर्टीस्टमध्ये फंक्शन्स
             For Loops in Artist:
               name: आर्टीस्टमध्ये फॉर लूप्स
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Virtual Pet with Sprite Lab:
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
             Swimming Fish with Sprite Lab:
@@ -1992,14 +2078,26 @@ mr:
         coursea-2021:
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
           lessons:
+            Safety in My Online Neighborhood:
+              description_student: सुरक्षितपणे ऑनलाईन ठिकाणी कसे जायचे ते शिका.
             Learn to Drag and Drop:
               key: ड्रॅग आणि ड्रॉप करायला शिका
               name: ड्रॅग आणि ड्रॉप करायला शिका
               description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
+            'Programming: Happy Maps':
+              description_student: फळाला फ्लर्ब मिळवण्यासाठी सूचना लिहा.
+            Sequencing with Scrat:
+              description_student: अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट
+            Programming with Rey and BB-8:
+              description_student: स्क्रॅप मेटलला गोळा करण्यासाठी BB-8 ला मदत करा
             'Loops: Happy Loops':
               name: हॅपी लूप्स
+              description_student: लूप वापरून फ्लर्बला मोठ्या समस्या सोडवण्यात मदत
+                करा.
             Loops in Ice Age:
               name: स्क्रॅटसह लूप
+              description_student: लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत
+                करा.
             Loops in Collector:
               name: लॉरेल सोबत लूप
             Ocean Scene with Loops:
@@ -2022,8 +2120,11 @@ mr:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
+              description_student: हार्वेस्टरला एका मार्गावर भाज्या गोळा करण्यात मदत
+                करा.
             Loops in Harvester:
               name: हार्वेस्टर सोबत लूप
+              description_student: हार्वेस्टरला लूप वापरून आणखी गोळा करण्यात मदत करा!
             Loops in Collector:
               name: लॉरेल सोबत लूप
             Loops in Artist:
@@ -2050,18 +2151,25 @@ mr:
             Programming in Artist:
               key: आर्टीस्टमध्ये प्रोग्रॅमिंग
               name: कोडसह कलात्मक गोष्टी तयार करणे
+              description_student: आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार
+                करणे
             Loops with Rey and BB-8:
               key: रे आणि बीबी -8 सह लूप
               name: रे आणि बीबी -8 सह लूप
+              description_student: लुप्स वापरून मेझेस द्वारे _BB-8_ ला मदत करा!
             Loops in Harvester:
               name: लूप सह हार्वेस्टिंग क्रॉप्स
             Looking Ahead:
               name: माइनक्राफ्ट सह पुढे  पाहणे
             Sticker Art with Loops:
               key: लूपसह स्टिकर आर्ट
+            'Events: The Big Event':
+              description_student: इव्हेंटबद्दल जाणून घेण्यासाठी एक मजेदार गेम खेळा.
             Build a Flappy Game:
               key: " फ्लॅपी गेम तयार करा"
               name: " फ्लॅपी गेम तयार करा"
+            Events in Play Lab:
+              description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
@@ -2110,6 +2218,9 @@ mr:
           lessons:
             Programming and Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Conditionals:
               key: कंडीशनल्स
               name: शेतकऱ्यासह कंडीशनल्स
@@ -2117,6 +2228,11 @@ mr:
               name: अल्गोरिदमचे अनुसरण करा
             Learning Sprites with Sprite Lab:
               name: स्प्राइट लॅबसह स्विमिंग फिश
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून
+                घ्या.
+            Alien Dance Party with Sprite Lab:
+              key: स्प्राइट लॅबसह एलियन डान्स पार्टी
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Nested Loops in Bee:
               name: मेझ मध्ये नेस्टेड लूप
             Nested Loops in Artist:
@@ -2129,6 +2245,7 @@ mr:
             Functions in Artist:
               key: आर्टीस्टमध्ये फंक्शन्स
               name: आर्टीस्टसह फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
           lesson_groups:
             ramp_up:
               display_name: नेस्टेड लूप्स
@@ -2143,6 +2260,10 @@ mr:
               name: माईनक्राफ्ट मधील फंक्शन्स
             Learning Sprites with Sprite Lab:
               name: स्प्राइट लॅबसह स्विमिंग फिश
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून
+                घ्या.
+            Events with Sprite Lab:
+              name: स्प्राइट लॅबसह एलियन डान्स पार्टी
             Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
             Nested Loops in the Maze:
@@ -2185,9 +2306,12 @@ mr:
             Creating Art with Code:
               key: कोडसह कलात्मक गोष्टी तयार करणे
               name: कोडसह कलात्मक गोष्टी तयार करणे
+              description_student: आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार
+                करणे
             Loops with Rey and BB-8:
               key: रे आणि बीबी -8 सह लूप
               name: रे आणि बीबी -8 सह लूप
+              description_student: लुप्स वापरून मेझेस द्वारे _BB-8_ ला मदत करा!
             Sticker Art with Loops:
               key: लूपसह स्टिकर आर्ट
             Nested Loops in Maze:
@@ -2203,6 +2327,9 @@ mr:
               name: जर/अन्यथा  बी सह
             While Loops with the Farmer:
               name: फार्मर मधील व्हाईल लुप्स
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
+              name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Until Loops in Maze:
               key: मेझ मध्ये लूप पर्यंत
               name: मेझ मध्ये लूप पर्यंत
@@ -2218,6 +2345,7 @@ mr:
             Functions with Artist:
               key: आर्टीस्टसह फंक्शन्स
               name: आर्टीस्टसह फंक्शन्स
+              description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
             Variables with Artist:
               key: आर्टीस्टसह व्हेरीएबल्स
             Changing Variables with Bee:
@@ -2229,6 +2357,9 @@ mr:
             For Loops with Artist:
               key: आर्टीस्टसह फॉर लूप्स
               name: आर्टीस्टसह फॉर लूप्स
+            Swimming Fish in Sprite Lab:
+              description_student: स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून
+                घ्या.
             Virtual Pet with Sprite Lab:
               key: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
@@ -2253,13 +2384,19 @@ mr:
               key: ड्रॅग आणि ड्रॉप करायला शिका
               name: ड्रॅग आणि ड्रॉप करायला शिका
               description_student: कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा.
+            Sequencing with Scrat:
+              description_student: अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट
             Programming in with Angry Birds:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Programming in Harvester:
               name: हार्वेस्टरसह प्रोग्रामिंग
+              description_student: हार्वेस्टरला एका मार्गावर भाज्या गोळा करण्यात मदत
+                करा.
             Loops with Scrat:
               key: स्क्रॅटसह लूप
               name: स्क्रॅटसह लूप
+              description_student: लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत
+                करा.
             Loops with Laurel:
               key: लॉरेल सोबत लूप
               name: लॉरेल सोबत लूप

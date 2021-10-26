@@ -1188,13 +1188,16 @@ pt:
             "'sound://category_animals/bear.mp3'": Urso
             "'sound://category_animals/cat.mp3'": gato
             "'sound://category_animals/cow.mp3'": vaca
+            "'sound://category_animals/pig.mp3'": porco
             "'sound://category_animals/sheep.mp3'": ovelha
             "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/chicken.mp3'": galinha
+            "'sound://category_animals/rooster.mp3'": galo
             "'sound://category_animals/elephant.mp3'": elefante
             "'sound://category_animals/dolphin.mp3'": golfinho
             "'sound://category_animals/chick.mp3'": pintinho
             "'sound://category_animals/dog.mp3'": cachorro
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": selecionar
             "'sound://category_digital/jump_7.mp3'": pule
       gamelab_playSpeech:
         text: reproduzir fala {SOUND}
@@ -1243,12 +1246,16 @@ pt:
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grade
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': cozinha
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala de estar
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': campina
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pinheiros
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': arco-íris
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ficção científica
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': campo de futebol
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': estágio
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrelas
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metrô
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': quadra de tênis
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': obscuro
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': debaixo d'água
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': inverno
             undefined: nenhum
@@ -1612,9 +1619,13 @@ pt:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': frente da casa
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': cozinha
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala de estar
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': campina
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pinheiros
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': campo de futebol
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': estágio
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metrô
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': quadra de tênis
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': obscuro
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1735,21 +1746,27 @@ pt:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            fluttering: tremulando
             growing: crescendo
             jittering: tremendo
             shrinking: encolhendo
             spinning_left: girando para a esquerda
             spinning_right: girando para a direita
+            swimming_left_and_right: nadando
             wandering: vagando
+            wobbling: balançando
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            fluttering: tremulando
             growing: crescendo
             jittering: tremendo
             shrinking: encolhendo
             spinning_left: girando para a esquerda
             spinning_right: girando para a direita
+            swimming_left_and_right: nadando
             wandering: vagando
+            wobbling: balançando
       Poetry_textVariableJoin:
         text: "{VAR} {TEXT2}"
       Poetry_whenLineShows:

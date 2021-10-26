@@ -98,9 +98,9 @@ social:
 
 <a href="https://code.org/oceans" target="_blank"><img src="/images/tutorials/hoc2019/oceans.png" style="width: 100%"></a>
 <br>
-<a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>AI for Oceans</strong></h3></a>
-<p>Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</p>
-<p><i>From Code.org. For grades 3 and up.</i></p>
+<a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>IA para oceanos</strong></h3></a>
+<p>A ciência da computação envolve muito mais do que codificação! Aprenda sobre IA, aprendizado de máquina, dados de treinamento e preconceito, enquanto explora questões éticas e como a IA pode ser usada para resolver problemas mundiais.</p>
+<p><i>De Code.org. Para a 3ª série e seguintes.</i></p>
 
 </div>
 
@@ -108,9 +108,9 @@ social:
 
 <a href="https://aka.ms/HourofCode2020" target="_blank"><img src="/images/tutorials/hoc2020/mee_empathy.jpg" style="width: 100%"></a>
 <br>
-<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>A Minecraft Tale of Two Villages</strong></h3></a>
-<p>Use the power of code to bring two villages together. Players will experience empathy and compassion for their neighbors, learn cooperation and inclusion, and embrace the diversity that makes us all uniquely special.</p>
-<p><i>From Minecraft: Education Edition. For grades 2 and up.</i></p>
+<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>Um conto de duas aldeias do Minecraft</strong></h3></a>
+<p>Use o poder do código para unir duas aldeias. Os jogadores sentirão empatia e compaixão por seus vizinhos, aprenderão a cooperar e a incluir e abraçar a diversidade que nos torna todos únicos.</p>
+<p><i>Do Minecraft: Edição de Educação. Para a 2ª série e seguintes.</i></p>
 
 </div>
 
@@ -118,53 +118,53 @@ social:
 
 <a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><img src="/images/tutorials/hoc2020/csfirst_unplugged.png" style="width: 100%"></a>
 <br>
-<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS First Unplugged</strong></h3></a>
-<p>No computer or internet? No problem. Try the CS First Unplugged activities to explore how computer science can solve problems like helping people stay connected while apart. "Plugged in" Scratch activities are available too!</p>
-<p><i>From Google. For grades 2 through 8.</i></p>
+<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS Desconectado</strong></h3></a>
+<p>Sem computador ou internet? Não tem problema. Experimente as atividades do CS Desconectado para explorar como a ciência da computação pode resolver problemas como ajudar as pessoas a se manterem conectadas enquanto estão separadas. As atividades Scratch "plugadas" também estão disponíveis!</p>
+<p><i>Do Google. Para as classes 2 a 8.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<h3>More #CSforGood activities and lesson plans:</h3>
-<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: Code Quest</a> (SciGirls/Twin Cities PBS): In this online coding adventure, take Subby the submarine through underwater challenges, using code to find various items and collect scientific data on the ocean floor. A self-guided tutorial for beginners in grades 2-8.</p>
-<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">Climate Clock</a> (Vidcode): In this Hour of Code activity, students will be guided through the construction of their own climate clock. They will engage with objects, properties, variables, functions, and loops, and customize text to convey their message for the world and their hopes for the future. A self-guided tutorial for beginners in grades 6 and up.<p>
-<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Code a Happy Place Meditation App</a> (CodeSpeak Labs): It’s been a stressful year for students, but practicing mindfulness can be a challenge. Learn to program a meditation app that transports you to your "happy place." For beginners in grades 2 through 8. Great as a teacher-guided tutorial.</p>
-<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Robot Feelings: The Kind Playground</a> (iRobot): Our robot is learning how to make kind choices when playing with friends. In this game, help Root practice by making four kind decisions in a row. If Root makes a bad choice, it has to start all the way at the beginning again! Let's play together! For beginners in kindergarten through grade 5. Root robot is optional.</p>
-<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Saving Sea Turtles</a> (micro:bit): Create a prototype of a low-power, red LED beach light that can be used for lighting on beach paths which is also safe for sea turtles. For beginners in grades 6-8. Great for learning at home.</p>
+<h3>Mais atividades #CSforGood e planos de aula:</h3>
+<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: Caça ao código</a> (SciGirls/Twin Cities PBS): Nesta aventura de codificação online, conduza Subby, o submarino, por desafios subaquáticos, usando o código para encontrar vários itens e coletar dados científicos no fundo do oceano. Um tutorial autoguiado para iniciantes da 2ª à 8ª série.</p>
+<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">Relógio do Clima</a> (Vidcode): Nesta atividade da Hora do Código, os alunos serão orientados na construção de seu próprio relógio climático. Eles se envolverão com objetos, propriedades, variáveis, funções e loops, e personalizarão o texto para transmitir sua mensagem para o mundo e suas esperanças para o futuro. Um tutorial autoguiado para iniciantes da 6ª série e posteriores.<p>
+<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Codifique um aplicativo de meditação Happy Place</a> (CodeSpeak Labs): Tem sido um ano estressante para os alunos, mas praticar a plena consciência pode ser um desafio. Aprenda a programar um aplicativo de meditação que o transporta para o seu "lugar feliz". Para iniciantes da 2ª à 8ª série. Excelente como um tutorial orientado pelo professor.</p>
+<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Sentimentos de robô: O Playground gentil</a> (iRobot): Nosso robô está aprendendo a fazer escolhas gentis ao brincar com amigos. Neste jogo, ajude o Root a praticar tomando quatro decisões amáveis seguidas. Se o Root fizer uma escolha errada, ele terá que começar do zero novamente! Vamos jogar juntos! Para iniciantes no jardim de infância até a 5ª série. O robô Root é opcional.</p>
+<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Salvando tartarugas marinhas</a> (micro:bit):Crie um protótipo de uma luz de LED vermelha de baixa potência que pode ser usada para iluminar caminhos de praia que também é segura para tartarugas marinhas. Para iniciantes da 6ª à 8ª série. Ótimo para aprender em casa.</p>
 <br> 
-<p>See the full list of Hour of Code activities and lesson plans, including many more #CSforGood-themed tutorials, at <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>!</p>
+<p>Veja a lista completa de atividades e planos de aula da Hora do Código, incluindo muitos outros tutoriais com o tema #CSforGood, em <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>!</p>
 
 <a id="realworld"></a>
 <h2>Vá além: Como as pessoas estão usando #CSforgood no mundo real</h2>
-<p>Every day, organizations and individuals are finding new ways to use computer science to help solve the world's challenges. Here are some real-world examples to take a look at with your classroom.</p>
+<p>Todos os dias, organizações e indivíduos encontram novas maneiras de usar a ciência da computação para ajudar a resolver os desafios do mundo. Aqui estão alguns exemplos do mundo real para dar uma olhada em sua sala de aula.</p>
 
-<h3>Detecting problems</h3>
+<h3>Detectando problemas</h3>
 <ul>
-<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">Predicting the spread of COVID-19 with smart thermometers</a></li>
-<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">Scientists Can Now Take Virtual Walks Through Human Cells</a></li>
-<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">The AI that spots Alzheimer's from cookie drawing</a></li>
+<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">Prevendo a propagação de COVID-19 com termômetros inteligentes</a></li>
+<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">Os cientistas agora podem fazer caminhadas virtuais através de células humanas</a></li>
+<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">A IA que identifica Alzheimer a partir do desenho de biscoitos</a></li>
 </ul>
 
-<h3>Finding creative solutions</h3>
+<h3>Encontrando soluções criativas</h3>
 <ul>
-<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">Google's parent company is flying balloons with 'floating cell phone towers' across the ocean to bring internet to Kenya's Rift Valley</a></li>
-<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">The ambitious effort to piece together America’s fragmented health data</a></li>
-<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">The next generation of power plants will be virtual</a></li>
+<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">A empresa que controla o Google está voando em balões com 'torres flutuantes de telefonia celular' através do oceano para levar a internet ao Vale do Rift, no Quênia</a></li>
+<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">O ambicioso esforço para reunir os dados fragmentados de saúde da América</a></li>
+<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">A próxima geração de usinas será virtual</a></li>
 </ul>
 
-<h3>Connecting to each other</h3>
+<h3>Conectando-se um ao outro</h3>
 <ul>
-<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">Tech From The 1990s Is Helping Musicians Play In Time While Apart</a></li>
-<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">Video Games Connect Chronically Ill Children Isolated at Home, Hospital</a></li>
+<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">A tecnologia dos anos 90 está ajudando os músicos a tocar no tempo separados</a></li>
+<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">Videogames conectam crianças com doenças crônicas isoladas em casa, no hospital</a></li>
 </ul>
 
-<h3>Ensuring equity and inclusion</h3>
+<h3>Garantir equidade e inclusão</h3>
 <ul>
-<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">Fake Data Could Help Solve Machine Learning’s Bias Problem—if We Let It</a></li>
-<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">Native American teachers, entrepreneurs seek new ways to close digital divide</a></li>
-<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">Gamers Forge Their Own Paths When It Comes to Accessibility</a></li>
+<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">Dados falsos podem ajudar a resolver o problema de preconceito do aprendizado de máquina - se permitirmos</a></li>
+<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">Professores nativos americanos, empreendedores buscam novas maneiras de acabar com a exclusão digital</a></li>
+<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">Os jogadores criam seus próprios caminhos quando se trata de acessibilidade</a></li>
 </ul>
 
 <a id="reachout"></a>
-<h2>Reach out to us!</h2>
-<p>We want to hear about how your students are engaging with #CSforGood! Use the hashtag #CSforGood or send your #CSforGood stories to <a href="mailto:csforgood@code.org">csforgood@code.org</a>.
+<h2>Entre em contato conosco!</h2>
+<p>Queremos saber como seus alunos estão se envolvendo com #CSforGood! Use a hashtag #CSforGood ou envie suas histórias #CSforGood para <a href="mailto:csforgood@code.org">csforgood@code.org</a>.

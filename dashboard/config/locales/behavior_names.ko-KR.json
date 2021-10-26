@@ -1222,7 +1222,12 @@
           "jittering2": "지터링2",
           "wandering2": "배회2",
           "shrinking2": "축소2",
-          "spinning left2": "왼쪽으로 회전2"
+          "spinning left2": "왼쪽으로 회전2",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving west": "서쪽으로 이동",
@@ -1248,7 +1253,12 @@
           "jittering2": "지터링2",
           "wandering2": "배회2",
           "shrinking2": "축소2",
-          "spinning left2": "왼쪽으로 회전2"
+          "spinning left2": "왼쪽으로 회전2",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
           "wandering": "배회",
@@ -1262,7 +1272,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "CourseF_outbreak1": {
           "wandering": "배회",
@@ -1289,7 +1304,8 @@
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰",
-          "recovering": "복구 중"
+          "recovering": "복구 중",
+          "moving with arrow keys": "화살표 키로 이동"
         },
         "CourseF_outbreak5": {
           "wandering": "배회",
@@ -1312,7 +1328,8 @@
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰",
           "recovering": "복구 중",
-          "moving left and right": "왼쪽과 오른쪽으로 이동"
+          "moving left and right": "왼쪽과 오른쪽으로 이동",
+          "moving with arrow keys": "화살표 키로 이동"
         },
         "CourseF_outbreak8": {
           "wandering": "배회",
@@ -1327,7 +1344,8 @@
           "moving west": "서쪽으로 이동",
           "patrolling": "순찰",
           "recovering": "복구 중",
-          "moving left and right": "왼쪽과 오른쪽으로 이동"
+          "moving left and right": "왼쪽과 오른쪽으로 이동",
+          "moving with arrow keys": "화살표 키로 이동"
         },
         "Dance Party 2_2021": {
           "spinning left": "왼쪽으로 회전",
@@ -1488,7 +1506,12 @@
           "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "Virtual Pet 2_2021": {
           "wandering": "배회",
@@ -1542,7 +1565,9 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "wobbling": "워블링",
+          "moving with arrow keys": "화살표 키로 이동"
         },
         "courseE_aboutme_2_2021": {
           "wandering": "배회",
@@ -1624,7 +1649,12 @@
           "swimming left and right2": "오른쪽, 왼쪽으로 헤엄치기2",
           "moving north2": "북쪽으로 이동2",
           "jittering2": "지터링2",
-          "patrolling2": "순찰2"
+          "patrolling2": "순찰2",
+          "wobbling": "워블링",
+          "moving with arrow keys": "화살표 키로 이동",
+          "driving with arrow keys": "화살표 키로 운전",
+          "moving with arrow keys2": "화살표 키2로 이동",
+          "driving with arrow keys2": "화살표 키2로 추진"
         },
         "courseF_apps_card": {
           "wandering": "배회",
@@ -1638,7 +1668,10 @@
           "moving south": "남쪽으로 이동",
           "moving west": "서쪽으로 이동",
           "spinning right": "오른쪽으로 회전",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "blocking movement": "이동 차단",
+          "driving with arrow keys": "화살표 키로 운전",
+          "moving with arrow keys": "화살표 키로 이동"
         },
         "courseF_apps_chatbot": {
           "wandering": "배회",
@@ -1664,7 +1697,12 @@
           "moving north2": "북쪽으로 이동2",
           "jittering2": "지터링2",
           "moving west2": "서쪽으로 이동2",
-          "patrolling2": "순찰2"
+          "patrolling2": "순찰2",
+          "blocking movement": "이동 차단",
+          "driving with arrow keys": "화살표 키로 운전",
+          "moving with arrow keys": "화살표 키로 이동",
+          "moving with arrow keys2": "화살표 키2로 이동",
+          "driving with arrow keys2": "화살표 키2로 추진"
         },
         "courseF_apps_collector": {
           "wandering": "배회",
@@ -1689,7 +1727,13 @@
           "swimming left and right2": "오른쪽, 왼쪽으로 헤엄치기2",
           "moving north2": "북쪽으로 이동2",
           "jittering2": "지터링2",
-          "patrolling2": "순찰2"
+          "patrolling2": "순찰2",
+          "flying west and looping": "서쪽으로 비행 및  반복",
+          "fluttering": "플루터링",
+          "moving with arrow keys": "화살표 키로 이동",
+          "driving with arrow keys": "화살표 키로 운전",
+          "moving with arrow keys2": "화살표 키2로 이동",
+          "driving with arrow keys2": "화살표 키2로 추진"
         },
         "courseF_apps_madlib": {
           "wandering": "배회",
@@ -1703,7 +1747,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_apps_pet": {
           "patrolling": "순찰",
@@ -1717,7 +1766,13 @@
           "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "moving with arrow keys": "화살표 키로 이동",
+          "driving with arrow keys": "화살표 키로 운전",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_editable_card": {
           "wandering": "배회",
@@ -1731,7 +1786,9 @@
           "moving south": "남쪽으로 이동",
           "moving west": "서쪽으로 이동",
           "spinning right": "오른쪽으로 회전",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "blocking movement": "이동 차단",
+          "moving with arrow keys": "화살표 키로 이동"
         },
         "courseF_editable_chatbot": {
           "wandering": "배회",
@@ -1745,7 +1802,9 @@
           "moving south": "남쪽으로 이동",
           "moving west": "서쪽으로 이동",
           "spinning right": "오른쪽으로 회전",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "blocking movement": "이동 차단",
+          "moving with arrow keys": "화살표 키로 이동"
         },
         "courseF_editable_madlib": {
           "wandering": "배회",
@@ -1759,7 +1818,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_choice_conflict": {
           "patrolling": "순찰",
@@ -1772,7 +1836,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "순찰",
@@ -1784,7 +1852,11 @@
           "moving south": "남쪽으로 이동",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "순찰",
@@ -1797,7 +1869,12 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "wobbling": "워블링",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "순찰",
@@ -1810,7 +1887,12 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "wobbling": "워블링",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_conflict": {
           "patrolling": "순찰",
@@ -1823,7 +1905,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_freeplay_air": {
           "moving east": "동쪽으로 이동",
@@ -1835,7 +1921,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_events_freeplay_animals": {
           "moving east": "동쪽으로 이동",
@@ -1847,7 +1937,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_events_freeplay_aquatic": {
           "moving east": "동쪽으로 이동",
@@ -1859,7 +1953,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_events_freeplay_blank": {
           "moving east": "동쪽으로 이동",
@@ -1871,7 +1969,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_events_freeplay_food": {
           "moving east": "동쪽으로 이동",
@@ -1883,7 +1985,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_events_freeplay_space": {
           "moving east": "동쪽으로 이동",
@@ -1895,7 +2001,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_events_key": {
           "patrolling": "순찰",
@@ -1908,7 +2018,12 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "wobbling": "워블링",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_practice_reorder": {
           "moving east": "동쪽으로 이동",
@@ -1921,7 +2036,13 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving with arrow keys": "화살표 키로 이동",
+          "wobbling": "워블링",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_predict": {
           "mystery behavior": "미스터리 행동",
@@ -1950,7 +2071,12 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "wobbling": "워블링",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_ship": {
           "patrolling": "순찰",
@@ -1963,7 +2089,12 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "wobbling": "워블링",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_stops": {
           "moving east": "동쪽으로 이동",
@@ -1976,7 +2107,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_events_time": {
           "patrolling": "순찰",
@@ -1989,7 +2124,12 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "wobbling": "워블링",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_label_predict": {
           "moving east": "동쪽으로 이동",
@@ -2016,7 +2156,11 @@
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_sprites_behaviors": {
           "moving east": "동쪽으로 이동",
@@ -2038,7 +2182,11 @@
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_sprites_desert": {
           "moving east": "동쪽으로 이동",
@@ -2049,7 +2197,11 @@
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_sprites_freeplay_air": {
           "moving east": "동쪽으로 이동",
@@ -2061,7 +2213,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_sprites_freeplay_animals": {
           "moving east": "동쪽으로 이동",
@@ -2073,7 +2229,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_sprites_freeplay_aquatic": {
           "moving east": "동쪽으로 이동",
@@ -2085,7 +2245,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_sprites_freeplay_blank": {
           "moving east": "동쪽으로 이동",
@@ -2097,7 +2261,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_sprites_freeplay_food": {
           "moving east": "동쪽으로 이동",
@@ -2109,7 +2277,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_sprites_freeplay_space": {
           "moving east": "동쪽으로 이동",
@@ -2121,7 +2293,11 @@
           "growing": "성장",
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
-          "jittering": "지터링"
+          "jittering": "지터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복",
+          "fluttering": "플루터링",
+          "wobbling": "워블링"
         },
         "courseF_sprites_make": {
           "moving east": "동쪽으로 이동",
@@ -2132,7 +2308,11 @@
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_sprites_moreSprites": {
           "moving east": "동쪽으로 이동",
@@ -2143,7 +2323,11 @@
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_sprites_positioning": {
           "moving east": "동쪽으로 이동",
@@ -2154,7 +2338,11 @@
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_sprites_predict": {
           "moving east": "동쪽으로 이동",
@@ -2181,7 +2369,11 @@
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_sprites_ship": {
           "moving east": "동쪽으로 이동",
@@ -2192,7 +2384,11 @@
           "moving south": "남쪽으로 이동",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_answer": {
           "patrolling": "순찰",
@@ -2205,7 +2401,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_choice_color": {
           "patrolling": "순찰",
@@ -2218,7 +2418,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_choice_conversation": {
           "wandering": "배회",
@@ -2232,7 +2436,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_choice_events": {
           "wandering": "배회",
@@ -2246,7 +2455,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_choice_freeplay": {
           "wandering": "배회",
@@ -2260,7 +2474,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_choice_interview": {
           "wandering": "배회",
@@ -2274,7 +2493,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_choice_multiprompt": {
           "wandering": "배회",
@@ -2288,7 +2512,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_choice_title": {
           "patrolling": "순찰",
@@ -2301,7 +2530,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_concat": {
           "patrolling": "순찰",
@@ -2314,7 +2547,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_events": {
           "patrolling": "순찰",
@@ -2327,7 +2564,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_print": {
           "patrolling": "순찰",
@@ -2340,7 +2581,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_prompts": {
           "patrolling": "순찰",
@@ -2353,7 +2598,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_text_review": {
           "patrolling": "순찰",
@@ -2366,7 +2615,11 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동",
+          "fluttering": "플루터링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_variables_card": {
           "wandering": "배회",
@@ -2380,7 +2633,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_variables_card_finish": {
           "wandering": "배회",
@@ -2394,7 +2652,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_variables_chatbot": {
           "wandering": "배회",
@@ -2408,7 +2671,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_variables_chatbot_finish": {
           "wandering": "배회",
@@ -2422,7 +2690,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_variables_madlib": {
           "wandering": "배회",
@@ -2436,7 +2709,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_variables_madlib_finish": {
           "wandering": "배회",
@@ -2450,7 +2728,12 @@
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
           "moving west": "서쪽으로 이동",
-          "patrolling": "순찰"
+          "patrolling": "순찰",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "courseF_variables_predict": {
           "moving east": "동쪽으로 이동",
@@ -2480,7 +2763,12 @@
           "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
           "moving north": "북쪽으로 이동",
           "jittering": "지터링",
-          "moving west": "서쪽으로 이동"
+          "moving west": "서쪽으로 이동",
+          "moving with arrow keys": "화살표 키로 이동",
+          "fluttering": "플루터링",
+          "wobbling": "워블링",
+          "moving west and looping": "서쪽으로 이동 및  반복",
+          "moving east and looping": "동쪽으로 이동 및  반복"
         },
         "international_outbreak_freeplay": {
           "wandering": "배회",
@@ -2546,7 +2834,8 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동"
         },
         "helloworld_animals_sounds": {
           "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
@@ -2611,7 +2900,8 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동"
         },
         "helloworld_emoji_sounds": {
           "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
@@ -2662,7 +2952,8 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동"
         },
         "helloworld_food_sounds": {
           "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",
@@ -2727,7 +3018,8 @@
           "jittering": "지터링",
           "wandering": "배회",
           "shrinking": "감소",
-          "spinning left": "왼쪽으로 회전"
+          "spinning left": "왼쪽으로 회전",
+          "moving forward": "앞으로 이동"
         },
         "helloworld_retro_sounds": {
           "swimming left and right": "오른쪽, 왼쪽으로 헤엄치기",

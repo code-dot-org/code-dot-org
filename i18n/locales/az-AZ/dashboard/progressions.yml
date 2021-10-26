@@ -5,17 +5,23 @@ az:
       Adding Images: Şəkillər əlavə etmək
       Adding Screens: ekranlar əlavə etmək
       Alien Defender: Yadplanteli mudafiyesi
+      Analog Sensors: Analoq sensorlar
       'App Project: Linking Screens': 'Tətbiq Layihəsi: Ekranları Bağlamaq'
       Arrays: Massivlər
       Artist Project: Sənətçi Layihəsi
       'Artist: Variables': 'Rəssam: Dəyişənlər'
       Attribution: Atributlar
+      Back and Forth: Qabağa və Arxaya
+      Basic Conditionals: Əsas şərtlər
       Begin planning your project: Layihənizi planlaşdırmağa başlayın
       Binary Numbers: İkilik rəqəmlər
       Binary and Data: İkili və məlumat
       Build a Screen: Ekran qur
       Building an App: Bir App qurmaq
+      'Bunny ': 'dovşan'
       Button Circuits: düymə dövrələri
+      Buttons and Switch: Düymələr və Keçid
+      CSS Classes: CSS dərsləri
       CSS Text Properties: CSS Mətn Xüsusiyyətləri
       CSS and Style Sheets: CSS və Stil səhifələri
       Challenge: meydan oxumaq
@@ -26,63 +32,139 @@ az:
       Changing Screens: Ekranların dəyişdirilməsi
       Checking for a Winner: Qazananı yoxlamaq
       Collector Game: Kolleksiyaçı oyunu
+      'Conditionals: If Statements': 'Şərtlər: İf Operatorları'
       'Course F: Play Lab Project': 'Kurs F: Laboratoriya Layihəsin Oyna'
+      Create Your Own Animation: öz animasiyanızı yaradın
       Create a Story: Hekayə yarat
       Create your project: Layihə yarat
+      Creating Sprites: Spraytlar yaratmaq
+      Creative Commons Search: Yaradıcı ümumi araşdırma
       Customize: Özəlləşdir
+      Dance Crews: Rəqs komandası
       Debugging: Sazlama
       Demo Apps: Demo applikasiyalar
       Design Mode: Dizayn Rejimi
       Design Mode Elements: Dizayn rejimi elementləri
+      Design Your Game: Oyununu dizayn et
+      Design a Screen for your App: Proqramınız üçün ekran dizayn edin
       Designing Screens with Code: Kod ilə ekran dizaynı 
+      Designing for Accessibility: Əlçatanlıq üçün dizayn
+      Drawing: Şəkil
       Drawing Shapes: Rəsm Şekilləri
+      Editing Images: Şəkilləri redaktə etmək
       End of Course Projects: Kurs Layihələri
       Escape Room Example: Qaçış Otağı Nümunəsi
+      Event Types: Hadisə növləri
       Events: Hadisələr
+      Events and Linking Screens: Hadisələr və Əlaqələndirici  Ekranlar
       Events and Properties: Hadisələr və xüsusiyyətlər
       Example App Types: Nümunə Tətbiq Növləri
+      Example Projects: Nümunə Layihələr
       Example projects: " nümunə layihələr\n"
+      Exemplar Personal Websites: Nümunəvi şəxsi saytlar
+      Expanding Personal Website: Şəxsi Veb Saytın Genişləndirilməsi
+      Expanding Your Website: Veb saytını genişləndirmək
+      Experiment with Web Lab: Web Lab ilə  təcrübə
       Exploration: Kəşf
       'Exploration: Adding Style': 'Kəşfiyyat: Stil əlavə etmək'
+      'Exploration: Sample Apps': 'Tədqiqat: Nümunə Tətbiqlər'
+      'Exploration: Sample Programs': 'Tədqiqat: Nümunə Proqramlar'
+      'Exploration: Sample Project': 'Tədqiqat: Nümunə Layihəsi'
       Explore HTML: HTML kəşf edin
+      Final Personal Website: Son şəxsi sayt
+      Find the Wizard: Sehrbazı tapın
       Finish a Screen: Ekranı Bitirmək
       Finish the Prototype: Prototipi Bitirin
       Finishing Functions: Bitirmə Funksiyaları
+      Finishing Touches: Toxunuşları bitirmək
+      Follow the Mouse: Siçanı izlə
+      Fonts and Style: Şriftlər və üslub
       FoodFight: YeməkMübarizəsi
+      For Loops: '"For" dövrü'
       Formatting HTML: HTML formatı
       Free Play: Azad Oyna
+      'Free Play: Make a Scene': 'Pulsuz Oyun: Səhnə yaradın'
+      'Free Play: Make an Interactive Scene': 'Pulsuz Oyun: İnteraktiv bir səhnə yaradın'
       Functions: Funksiyalar
       Functions with Parameters: Parametrli funksiyalar
+      Get In Formation: Düzül
+      Getting Properties: Xüsusiyyətləri əldə etmək
+      Guess The Number: Rəqəmi təxmin et
       HTML Tags: HTML teqlər
+      Hardware and Software: Kompüter Təchizatı və Proqram Təminatı
+      Headings: Başlıqlar
       Headings in HTML: HTML başlıqları
+      How to Create a Simple Function: Sadə funksiya necə yaradılır
       Hyperlinks: Köprülər
+      Images and Sounds: Şəkillər və Səslər
+      Images in HTML: HTML-dəki şəkillər
       Importing Screens: Ekranlar idxal olunur
+      Improve Your Game: Oyununuzu təkmilləşdirin
+      Innovation Research: Yenilik Araşdırması
+      Input Examples: Giriş Nümunələri
+      InspirationalArtwork: İlham verən sənət əsəri
+      Intro to Design Mode: Dizayn rejiminə giriş
+      Intro to Sprites: Spraytlara giriş
+      Intro to Variables: Dəyişənlərə giriş
       Introduction to Game Lab: Oyun Laboratoriyasına giriş
       Introduction to Variables: Dəyişənlərə giriş
+      Iteration and Parameters: Təkrarlanma və Parametrlər
+      Keep On Dancing!: Rəqs etməyə davam edin!
       Keeping Data Secret: Məlumatlar Gizli Saxlanır
       Layout Properties: Düzən Xüsusiyyətləri
+      Learning from Simulations: Simulyasiyalardan öyrənmək
       Lesson Extras: Dərsə əlavələr
+      Lesson Overview: Dərsin icmalı
       Levels: Səviyyələr
+      Light Show: İşıq şousu
       Lists: Siyahılar
       Lists in HTML: HTML siyahıları
+      Make a Prediction: Proqnoz verin
+      Making Music: Musiqi bəstələmək
       Measures: Ölçülər
       Modifying and Creating Arrays: Dizilərin dəyişdirilməsi və yaradılması
       More Buttons: Daha çox Düymələr
+      Motorcycle: Motosiklet
+      Multi-Screen Apps: Çox-ekranlı Tətbiqlər
+      Multiframe Animations: Çox çərçivəli animasiyalar
+      My Online Neighborhood: Mənim onlayn qonşuluğum
       Naming Variables: Dəyişənlərin adlanması
+      New Shapes: Yeni Formalar
+      Orientation: oriyentasiya
       Overview: Yekun
+      'Overview: Design Mode': 'Baxış: Dizayn rejimi'
+      'Overview: Images': 'Baxış: Şəkillər'
       Pair Programming: Estafet proqramlaşdırması
+      Plan Your Project: Layihənizi Plaşdırın
       Planning: Planlama
       Plotting Shapes in Game Lab: Oyun Laboratoriyasında Şekiller Çizim
+      Polling Events: Səsvermə hadisəsi
+      Practice: Praktika
+      Prediction: Təxmin
+      Project: Layihə
       Properties: Xüsusiyyətlər
       RGB Widget: RGB Widget'i
+      Random Numbers: Təsadufi rəqəmlər
+      Reflection: Əksetmə
       Responding to User Input: İstifadəçi input-una cavab
       Review: Gözdən keçirmə
+      Revise Artist Project: Rəssamın layihəsini yenidən gözdən keçir
+      Sample App: Nümunə tətbiq
+      Sample Game: Örnək oyun
+      Sample Program: Nümunə program
+      Screen Design: Ekran Dizaynı
+      Shapes and Parameters: Forma və parametrlər
+      Speed it Up, Slow it Down: Sürətləndir,Yavaşlat
       Sprite Lab Project: Sprite Laboratoriyası Layihəsi
       Sprite Scenes: Sprite səhnələri
+      The Accelerometer: Akselerometr
+      The Animation Tab: "\nAnimasiya Nişanı"
       The Body Element: Bədən elementi
       Tour of Design Mode: Dizayn rejimi turu
       Using the Grid: Şəbəkədən istifadə
+      Using the Repeat Block: Dövr bloklarından istifadə etmək
       Variables: dəyişənlər
+      Velocity: Sürət
       Video: Video
       'Video: Conditional Statements': 'Video: Şərti Bəyanatlar'
       'Video: Drawing in Game Lab - Part 1': 'Video: Oyun Laboratoriyasında Rəsm - Hissə 1'
@@ -96,6 +178,8 @@ az:
       'Video: Intro to Web Lab - Part 2': 'Video: Veb laboratoriyasına giriş - hissə 2'
       'Video: Introduction to Arrays': 'Video: Massivlərə giriş'
       'Video: Problem Solving Process': 'Video: Problemin Həll olunması prosesi'
+      'Video: Velocity': 'Video: Sürət'
       'Video: What Makes a Computer, a Computer?': 'Video: Kompüter, kompüter nə edir?'
+      Where'd They Go?: Onlar hara getdilər?
       Wrap-up: Yekun
       getNumber: getNumber
