@@ -62,7 +62,7 @@ export default class PoetryLibrary extends CoreLibrary {
         );
         // Don't fire line events in preview
         if (!this.isPreviewFrame()) {
-          // filter non-poem-body lines (title and author) for line events
+          // filter non-poem-body lines (title, author, and blank lines) for line events
           const poemLines = renderInfo.lines.filter(
             line => line.isPoemBodyLine
           );
@@ -441,7 +441,7 @@ export default class PoetryLibrary extends CoreLibrary {
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: lineSize,
-        isPoemBodyLine: true
+        isPoemBodyLine: utils.containsAtLeastOneAlphaNumberic(line) // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });
