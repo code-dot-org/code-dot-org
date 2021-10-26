@@ -36,9 +36,9 @@ export default function ParameterEditor({
       <label>
         Required?
         <input
-          value={false}
+          checked={!!parameter.required}
           type="checkbox"
-          onChange={e => updateParameter('required', e.target.value)}
+          onChange={e => updateParameter('required', e.target.checked)}
         />
       </label>
       <TextareaWithMarkdownPreview

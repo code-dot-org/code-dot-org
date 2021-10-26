@@ -195,7 +195,7 @@ class ProgrammingExpression < ApplicationRecord
       syntax: syntax || '',
       returnValue: return_value || '',
       tips: tips || '',
-      parameters: parameters || []
+      parameters: palette_params || []
     }
   end
 
