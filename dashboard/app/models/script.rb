@@ -1560,6 +1560,7 @@ class Script < ApplicationRecord
       beta_title: Script.beta?(name) ? I18n.t('beta') : nil,
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
+      instructionType: get_instruction_type,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
@@ -1878,6 +1879,12 @@ class Script < ApplicationRecord
   # If both are null, the script is in_development
   def get_published_state
     published_state || unit_group&.published_state || SharedCourseConstants::PUBLISHED_STATE.in_development
+  end
+
+  # If a script is in a unit group, use that unit group's instruction type. If not, use the units's instruction type
+  # If both are null, the unit should be teacher led
+  def get_instruction_type
+    unit_group&.instruction_type || instruction_type || SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
   end
 
   # Use the unit group's pilot_experiment if one exists

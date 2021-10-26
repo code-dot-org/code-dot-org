@@ -911,7 +911,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should summarize migrated unit' do
-    unit = create(:script, name: 'single-lesson-script')
+    unit = create(:script, name: 'single-lesson-script', instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led)
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
@@ -923,9 +923,21 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:lessons].count
     assert_nil summary[:peerReviewLessonInfo]
     assert_equal 0, summary[:peerReviewsRequired]
+    assert_equal 'teacher_led', summary[:instructionType]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal '/overview-pdf-url', summary[:scriptOverviewPdfUrl]
     assert_equal '/resources-pdf-url', summary[:scriptResourcesPdfUrl]
+  end
+
+  test 'should summarize migrated unit in unit group' do
+    unit_group = create(:unit_group, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced)
+    unit = create(:script, name: 'single-lesson-script', is_migrated: true)
+    create(:unit_group_unit, position: 1, unit_group: unit_group, script: unit)
+
+    unit.reload
+    summary = unit.summarize
+
+    assert_equal 'self_paced', summary[:instructionType]
   end
 
   test 'should summarize migrated unit with legacy lesson plans' do
