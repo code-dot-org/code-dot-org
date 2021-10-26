@@ -20,7 +20,7 @@ export default class PoetryLibrary extends CoreLibrary {
     super(p5);
     // Extra information for validation code to be able to inspect the program state
     this.validationInfo = {
-      endTime: POEM_DURATION
+      endTime: POEM_DURATION * 1.25
     };
     this.poemState = {
       ..._.cloneDeep(getStore().getState().poetry.selectedPoem),
