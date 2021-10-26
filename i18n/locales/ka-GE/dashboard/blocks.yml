@@ -826,6 +826,10 @@ ka:
             '"down"': ქვედა ისარი
             '"left"': მარცხენა ისარი
             '"right"': მარჯვენა ისარი
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"rainbow"': ცისარტყელა
       Poetry_makeBurst:
         options:
           EFFECT:
