@@ -62,7 +62,11 @@ export default class PoetryLibrary extends CoreLibrary {
         );
         // Don't fire line events in preview
         if (!this.isPreviewFrame()) {
-          for (let i = 0; i < renderInfo.lines.length; i++) {
+          // filter non-poem-body lines (title and author) for line events
+          const poemLines = renderInfo.lines.filter(
+            line => line.isPoemBodyLine
+          );
+          for (let i = 0; i < poemLines.length; i++) {
             const lineNum = i + 1; // students will 1-index the lines
             if (this.lineEvents[lineNum] && !this.lineEvents[lineNum].fired) {
               // Fire line events
@@ -404,7 +408,8 @@ export default class PoetryLibrary extends CoreLibrary {
           poemState.title,
           poemState.font.font,
           FONT_SIZE * 2
-        )
+        ),
+        isPoemBodyLine: false
       });
       yCursor += LINE_HEIGHT;
     }
@@ -414,7 +419,8 @@ export default class PoetryLibrary extends CoreLibrary {
         text: poemState.author,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: this.getScaledFontSize(poemState.author, poemState.font.font, 16)
+        size: this.getScaledFontSize(poemState.author, poemState.font.font, 16),
+        isPoemBodyLine: false
       });
       yCursor += LINE_HEIGHT;
     }
@@ -434,7 +440,8 @@ export default class PoetryLibrary extends CoreLibrary {
         text: line,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: lineSize
+        size: lineSize,
+        isPoemBodyLine: true
       });
       yCursor += lineHeight;
     });
