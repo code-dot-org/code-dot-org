@@ -28,12 +28,8 @@ export const COLUMNS = {
 };
 
 // K, 1.. 12, Other, null
-export const GRADES = [
-  'K',
-  [...Array(13).keys()].slice(1).map(String),
-  'Other',
-  null
-].flat();
+const numberedGrades = Array.from({length: 12}, (_, i) => (i + 1).toString());
+export const GRADES = ['K', ...numberedGrades, 'Other', null];
 
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function(name, {rowData}) {
