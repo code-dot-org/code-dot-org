@@ -21,7 +21,7 @@
     "disable_param_editing": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "true",
+    "include_shared_functions": "false",
     "free_play": "true",
     "validation_enabled": "false",
     "show_debug_watch": "false",

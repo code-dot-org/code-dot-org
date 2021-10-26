@@ -25,7 +25,7 @@
     "disable_param_editing": "true",
     "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
-    "include_shared_functions": "true",
+    "include_shared_functions": "false",
     "free_play": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
