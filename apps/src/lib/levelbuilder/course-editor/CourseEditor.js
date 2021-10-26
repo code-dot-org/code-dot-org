@@ -17,7 +17,11 @@ import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVers
 import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  PublishedState,
+  InstructionType
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import InstructionTypeDropdown from '@cdo/apps/lib/levelbuilder/course-editor/InstructionTypeDropdown';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -27,6 +31,8 @@ class CourseEditor extends Component {
     initialFamilyName: PropTypes.string,
     initialVersionYear: PropTypes.string,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
+      .isRequired,
+    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
       .isRequired,
     initialPilotExperiment: PropTypes.string,
     initialDescriptionShort: PropTypes.string,
@@ -79,7 +85,8 @@ class CourseEditor extends Component {
       familyName: this.props.initialFamilyName,
       versionYear: this.props.initialVersionYear,
       unitsInCourse: this.props.initialUnitsInCourse,
-      publishedState: this.props.initialPublishedState
+      publishedState: this.props.initialPublishedState,
+      instructionType: this.props.initialInstructionType
     };
   }
 
@@ -107,6 +114,7 @@ class CourseEditor extends Component {
       family_name: this.state.familyName,
       version_year: this.state.versionYear,
       published_state: this.state.publishedState,
+      instruction_type: this.state.instructionType,
       pilot_experiment: this.state.pilotExperiment,
       scripts: this.state.unitsInCourse
     };
@@ -173,7 +181,8 @@ class CourseEditor extends Component {
       versionYear,
       pilotExperiment,
       unitsInCourse,
-      publishedState
+      publishedState,
+      instructionType
     } = this.state;
     return (
       <div>
@@ -280,6 +289,12 @@ class CourseEditor extends Component {
               }
             />
           </label>
+          <InstructionTypeDropdown
+            instructionType={instructionType}
+            handleInstructionTypeChange={e =>
+              this.setState({instructionType: e.target.value})
+            }
+          />
           <AnnouncementsEditor
             announcements={announcements}
             inputStyle={styles.input}

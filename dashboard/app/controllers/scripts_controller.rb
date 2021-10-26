@@ -256,6 +256,7 @@ class ScriptsController < ApplicationController
   def general_params
     h = params.permit(
       :published_state,
+      :instruction_type,
       :deprecated,
       :curriculum_umbrella,
       :family_name,
