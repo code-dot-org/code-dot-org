@@ -50,10 +50,10 @@ function showCourseEditor() {
           courseEditorData.course_summary.instruction_type
         }
         initialInstructorAudience={
-          courseEditorData.course_summary.instructorAudience
+          courseEditorData.course_summary.instructor_audience
         }
         initialParticipantAudience={
-          courseEditorData.course_summary.participantAudience
+          courseEditorData.course_summary.participant_audience
         }
         initialPilotExperiment={
           courseEditorData.course_summary.pilot_experiment || ''
