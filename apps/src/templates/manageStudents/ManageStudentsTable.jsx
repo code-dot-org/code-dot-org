@@ -167,7 +167,7 @@ class ManageStudentsTable extends Component {
     sectionName: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
-    isAssignedCSA: PropTypes.bool,
+    isSectionAssignedCSA: PropTypes.bool,
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
@@ -729,7 +729,7 @@ class ManageStudentsTable extends Component {
       sectionName,
       sectionCode,
       studentData,
-      isAssignedCSA
+      isSectionAssignedCSA
     } = this.props;
 
     const noSectionCode = [
@@ -803,7 +803,7 @@ class ManageStudentsTable extends Component {
               }
             />
           </div>
-          {isAssignedCSA &&
+          {isSectionAssignedCSA &&
             experiments.isEnabled(experiments.CODE_REVIEW_GROUPS) && (
               <div style={styles.button}>
                 <ManageCodeReviewGroups />
@@ -920,7 +920,7 @@ export default connect(
     sectionName: sectionName(state, state.sectionData.section.id),
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
-    isAssignedCSA: state.sectionData.section.isAssignedCSA,
+    isSectionAssignedCSA: state.sectionData.section.isAssignedCSA,
     editingData: state.manageStudents.editingData,
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,

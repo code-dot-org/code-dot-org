@@ -6,6 +6,7 @@ export default class ManageCodeReviewGroups extends React.Component {
   render() {
     return (
       <div style={styles.button}>
+        {/* use div instead of button HTML element for consistent spacing with other "buttons" in ManageStudentsTable header */}
         <Button
           __useDeprecatedTag
           onClick={() => {}}
