@@ -1039,6 +1039,54 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal({}, unit.properties)
   end
 
+  test 'setting tts for unit triggers generation of tts for the unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Script.any_instance.stubs(:tts_update).once
+
+    unit = create :script
+    stub_file_writes(unit.name)
+
+    assert_nil unit.tts
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      script_text: '',
+      tts: true
+    }
+    assert_response :success
+    unit.reload
+
+    assert_equal true, unit.tts
+  end
+
+  test 'setting tts to false does not trigger generation of tts for the unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Script.any_instance.stubs(:tts_update).never
+
+    unit = create :script, tts: true
+    stub_file_writes(unit.name)
+
+    assert_equal true, unit.tts
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      script_text: '',
+      tts: false
+    }
+    assert_response :success
+    unit.reload
+
+    puts unit.inspect
+
+    assert_equal false, unit.tts
+  end
+
   test 'published_state is set to nil for script within course' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
