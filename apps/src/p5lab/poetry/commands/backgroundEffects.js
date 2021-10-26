@@ -408,7 +408,7 @@ export const commands = {
         let drops = [];
         this.backgroundEffect = () => {
           drops.push({
-            x: utils.randomInt(-400, 380),
+            x: utils.randomInt(-APP_WIDTH, APP_WIDTH - 20),
             y: utils.randomInt(-50, -20),
             length: utils.randomInt(10, 20),
             color: utils.randomColorFromPalette(palette)
@@ -425,7 +425,9 @@ export const commands = {
             drop.x = drop.x + drop.length / 2;
             this.p5.pop();
           });
-          drops = drops.filter(drop => drop.y < 420 && drop.x < 420);
+          drops = drops.filter(
+            drop => drop.y < APP_HEIGHT + 20 && drop.x < APP_WIDTH + 20
+          );
           this.p5.pop();
         };
         break;
@@ -434,8 +436,8 @@ export const commands = {
         let bubbles = [];
         this.backgroundEffect = () => {
           bubbles.push({
-            x: this.p5.random(-100, 400),
-            y: 410,
+            x: this.p5.random(-100, APP_WIDTH),
+            y: APP_HEIGHT + 10,
             velocityX: this.p5.random(-2, 2),
             size: this.p5.random(6, 12, 18),
             color: this.getP5Color(utils.randomColorFromPalette(palette), 60)
@@ -449,7 +451,7 @@ export const commands = {
             const fallSpeed = this.p5.map(bubble.size, 6, 12, 1, 3);
             bubble.y -= fallSpeed;
             bubble.x += bubble.velocityX;
-            if (bubble.x < 0 || bubble.x > 400) {
+            if (bubble.x < 0 || bubble.x > APP_WIDTH) {
               bubble.velocityX *= -1;
             }
           });
@@ -462,7 +464,7 @@ export const commands = {
         let confetti = [];
         this.backgroundEffect = () => {
           confetti.push({
-            x: utils.randomInt(0, 400),
+            x: utils.randomInt(0, APP_WIDTH),
             y: utils.randomInt(-50, -20),
             velocityX: this.p5.random(-2, 2),
             size: this.p5.random(6, 12, 18),
@@ -484,19 +486,19 @@ export const commands = {
             confetto.x += confetto.velocityX;
             this.p5.pop();
           });
-          confetti = confetti.filter(confetto => confetto.y < 420);
+          confetti = confetti.filter(confetto => confetto.y < APP_HEIGHT + 20);
         };
         break;
       }
       case 'hearts': {
         let hearts = [];
         let amount = 0;
+        let generationSpeed = 20; // Number of frames until a new heart should be generated
         this.backgroundEffect = () => {
-          // Limit how fast new hearts are generated
-          if (this.p5.frameCount % 20 === 0) {
+          if (this.p5.frameCount % generationSpeed === 0) {
             hearts.push({
-              x: utils.randomInt(10, 390),
-              y: utils.randomInt(10, 390),
+              x: utils.randomInt(10, APP_WIDTH - 10),
+              y: utils.randomInt(10, APP_HEIGHT - 10),
               rotation: utils.randomInt(0, 359),
               size: utils.randomInt(10, 120),
               color: this.getP5Color(utils.randomColorFromPalette(palette), 60)
