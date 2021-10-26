@@ -73,6 +73,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal ['unit1', 'unit2', 'unit3'], obj['script_names']
     assert_equal obj['published_state'], SharedCourseConstants::PUBLISHED_STATE.stable
     assert_equal obj['instruction_type'], SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    assert_equal obj['instructor_audience'], SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    assert_equal obj['participant_audience'], SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   test "should serialize resources to json" do
@@ -95,7 +97,7 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "can seed unit group from hash" do
-    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced)
+    unit_group = create(:unit_group, name: 'my-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: SharedCourseConstants::PUBLISHED_STATE.stable))
@@ -107,6 +109,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', seeded_unit_group.name
     assert_equal 'stable', seeded_unit_group.published_state
     assert_equal 'self_paced', seeded_unit_group.instruction_type
+    assert_equal 'teacher', seeded_unit_group.participant_audience
+    assert_equal 'facilitator', seeded_unit_group.instructor_audience
     assert_equal 3, seeded_unit_group.default_unit_group_units.length
     assert_equal 3, seeded_unit_group.default_units.length
   end
@@ -121,6 +125,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', seeded_unit_group.name
     assert_equal SharedCourseConstants::PUBLISHED_STATE.stable, seeded_unit_group.published_state
     assert_equal SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, seeded_unit_group.instruction_type
+    assert_equal SharedCourseConstants::PARTICIPANT_AUDIENCE.student, seeded_unit_group.participant_audience
+    assert_equal SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, seeded_unit_group.instructor_audience
     course_version = seeded_unit_group.course_version
     assert_not_nil course_version
     assert_equal '2021', course_version.key
@@ -299,6 +305,31 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit2.published_state
     end
 
+    test "set instructor and participant audience to nil for new UnitGroupUnits" do
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1'])
+
+      unit1.reload
+      unit2.reload
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+
+      unit2.update!(instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.student)
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit1.reload
+      unit2.reload
+      assert_nil unit1.instructor_audience
+      assert_nil unit1.participant_audience
+      assert_nil unit2.instructor_audience
+      assert_nil unit2.participant_audience
+    end
+
     test "set instruction type to nil for new UnitGroupUnits" do
       unit_group = create :unit_group
 
@@ -423,7 +454,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     summary = unit_group.summarize
 
     assert_equal [:name, :id, :title, :assignment_family_title,
-                  :family_name, :version_year, :published_state,
+                  :family_name, :version_year, :published_state, :instruction_type,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
                   :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,
