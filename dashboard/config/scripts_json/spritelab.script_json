@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "script_announcements": [
+      "announcements": [
         {
           "notice": "This Progression is No Longer Supported",
           "details": "The standalone Sprite Lab progression is no longer supported by Code.org. We recommend you click \"Learn More\" to try the Express course.",
@@ -13,7 +13,7 @@
           "visibility": "Teacher and student"
         }
       ],
-      "announcements": [
+      "script_announcements": [
         {
           "notice": "This Progression is No Longer Supported",
           "details": "The standalone Sprite Lab progression is no longer supported by Code.org. We recommend you click \"Learn More\" to try the Express course.",
@@ -25,8 +25,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:34 UTC",
+    "serialized_at": "2021-10-25 22:53:48 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "spritelab"
     }

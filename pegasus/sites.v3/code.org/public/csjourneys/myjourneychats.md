@@ -145,12 +145,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <br>
 As Director of Software Engineering at <a href="https://www.irobot.com/" target="_blank">iRobot</a>, <strong>Eva Moscat</strong> is responsible for the Robot Operating System department, including connectivity, embedded Linux, manufacturing, and engineering tools. Eva is an immigrant from the Dominican Republic; through her culture and socioeconomic upbringing, she mentors children with a similar background in STEM. Eva is inspired daily by her husband and her newborn son. In her free time, she enjoys watching anime, playing basketball, and building her sneaker collection.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-robots-registration-168115226167" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/UWwtmCEMDWOpbFxlKieBu4oavUKGS5_ygXzTaEKqlPkZyOIoGMOX2W5AhOHqYNe2lzj4RixyrIP4DKuF.6Vh6XO0EndHG2rQq" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 

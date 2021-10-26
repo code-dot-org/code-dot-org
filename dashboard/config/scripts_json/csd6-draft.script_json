@@ -4,20 +4,21 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "project_widget_visible": true,
+      "hideable_lessons": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "applab",
         "gamelab",
         "weblab"
       ],
-      "lesson_extras_available": true,
-      "hideable_lessons": true
+      "project_widget_visible": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:19 UTC",
+    "serialized_at": "2021-10-25 22:53:36 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd6-draft"
     }

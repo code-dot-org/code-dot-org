@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2021-09-28 17:18:13 UTC",
+    "serialized_at": "2021-10-25 22:54:03 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "oceans"
     }
@@ -352,6 +353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning"
+        ],
         "progression": "AI Machine Learning - Video"
       },
       "bonus": false,
@@ -374,6 +378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -395,6 +402,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -416,6 +426,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -437,6 +450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data"
+        ],
         "progression": "AI: Training Data & Bias - Video"
       },
       "bonus": false,
@@ -459,6 +475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short"
+        ],
         "progression": "Using Training Data"
       },
       "bonus": false,
@@ -481,6 +500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Societal_Implications"
+        ],
         "progression": "AI: Impact on Society - Video"
       },
       "bonus": false,
@@ -503,6 +525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long"
+        ],
         "progression": "Teach AI a New Word"
       },
       "bonus": false,
@@ -624,9 +649,9 @@
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai-ml",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-ml"
@@ -637,9 +662,9 @@
       "url": "https://youtu.be/ng4c1g3COfs",
       "key": "ai-societal",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/03-ai-impactonsociety-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-societal"
@@ -650,9 +675,9 @@
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "ai-training",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai-training"
@@ -710,13 +735,13 @@
   ],
   "objectives": [
     {
-      "key": "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09",
+      "key": "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b",
       "properties": {
-        "description": "Discuss the role artificial intelligence plays in their lives."
+        "description": "Reason about how human bias plays a role in machine learning."
       },
       "seeding_key": {
         "lesson.key": "Oceans",
-        "objective.key": "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09"
+        "objective.key": "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b"
       }
     },
     {
@@ -730,13 +755,13 @@
       }
     },
     {
-      "key": "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b",
+      "key": "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09",
       "properties": {
-        "description": "Reason about how human bias plays a role in machine learning."
+        "description": "Discuss the role artificial intelligence plays in their lives."
       },
       "seeding_key": {
         "lesson.key": "Oceans",
-        "objective.key": "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b"
+        "objective.key": "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09"
       }
     }
   ],
