@@ -6,6 +6,7 @@ import {POEMS} from './constants';
 import * as utils from './commands/utils';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
+import {commands as behaviors} from './commands/behaviors';
 import spritelabCommands from '../spritelab/commands/index';
 
 const OUTER_MARGIN = 50;
@@ -239,7 +240,8 @@ export default class PoetryLibrary extends CoreLibrary {
       },
 
       ...backgroundEffects,
-      ...foregroundEffects
+      ...foregroundEffects,
+      ...behaviors
     };
   }
 

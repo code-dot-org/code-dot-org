@@ -257,6 +257,8 @@ class ScriptsController < ApplicationController
     h = params.permit(
       :published_state,
       :instruction_type,
+      :instructor_audience,
+      :participant_audience,
       :deprecated,
       :curriculum_umbrella,
       :family_name,
