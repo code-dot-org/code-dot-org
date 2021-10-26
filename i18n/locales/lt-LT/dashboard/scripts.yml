@@ -2964,10 +2964,6 @@ lt:
               display_name: Turinys
             lessonGroup-2:
               display_name: Turinys
-        poetry:
-          lessons:
-            lesson-3:
-              name: Kintamieji
         spelling-bee:
           lessons:
             lesson-1:
