@@ -1,7 +1,8 @@
 import {
   WebSocketMessageType,
   StatusMessageType,
-  STATUS_MESSAGE_PREFIX
+  STATUS_MESSAGE_PREFIX,
+  ExecutionType
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -16,7 +17,9 @@ export default class JavabuilderConnection {
     serverLevelId,
     options,
     onNewlineMessage,
-    setIsRunning
+    setIsRunning,
+    setIsTesting,
+    executionType
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -26,11 +29,13 @@ export default class JavabuilderConnection {
     this.options = options;
     this.onNewlineMessage = onNewlineMessage;
     this.setIsRunning = setIsRunning;
+    this.setIsTesting = setIsTesting;
+    this.executionType = executionType;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
-  connectJavabuilder(executionType) {
+  connectJavabuilder() {
     // Don't attempt to connect to Javabuilder if we do not have a project identifier.
     // This typically occurs if a teacher is trying to view a student's project
     // that has not been modified from the starter code.
@@ -50,7 +55,7 @@ export default class JavabuilderConnection {
         projectVersion: project.getCurrentSourceVersionId(),
         levelId: this.levelId,
         options: this.options,
-        executionType: executionType
+        executionType: this.executionType
       }
     })
       .done(result => this.establishWebsocketConnection(result.token))
@@ -158,7 +163,7 @@ export default class JavabuilderConnection {
   }
 
   onExit() {
-    if (this.miniApp) {
+    if (this.miniApp && this.executionType === ExecutionType.RUN) {
       // miniApp on close should handle setting isRunning state as it
       // may not align with actual program execution. If mini app does
       // not have on close we won't toggle back automatically.
@@ -170,8 +175,7 @@ export default class JavabuilderConnection {
         `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
       );
       this.onNewlineMessage();
-      // Set isRunning to false
-      this.setIsRunning(false);
+      this.handleExecutionFinished();
     }
   }
 
@@ -180,8 +184,7 @@ export default class JavabuilderConnection {
       'We hit an error connecting to our server. Try again.'
     );
     this.onNewlineMessage();
-    // Set isRunning to false
-    this.setIsRunning(false);
+    this.handleExecutionFinished();
     console.error(`[error] ${error.message}`);
   }
 
@@ -196,6 +199,17 @@ export default class JavabuilderConnection {
   closeConnection() {
     if (this.socket) {
       this.socket.close();
+    }
+  }
+
+  handleExecutionFinished() {
+    switch (this.executionType) {
+      case ExecutionType.RUN:
+        this.setIsRunning(false);
+        break;
+      case ExecutionType.TEST:
+        this.setIsTesting(false);
+        break;
     }
   }
 }
