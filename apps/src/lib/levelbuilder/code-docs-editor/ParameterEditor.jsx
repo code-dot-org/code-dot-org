@@ -4,24 +4,24 @@ import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 export default function ParameterEditor({
-  parameter,
-  updateParameter,
-  moveParameterUp,
-  moveParameterDown,
-  removeParameter
+  item: parameter,
+  update,
+  moveUp,
+  moveDown,
+  remove
 }) {
   return (
     <div>
       <div style={styles.control}>
-        <i onClick={() => moveParameterUp()} className="fa fa-caret-up" />
-        <i onClick={() => moveParameterDown()} className="fa fa-caret-down" />
-        <i onClick={() => removeParameter()} className="fa fa-trash" />
+        <i onClick={() => moveUp()} className="fa fa-caret-up" />
+        <i onClick={() => moveDown()} className="fa fa-caret-down" />
+        <i onClick={() => remove()} className="fa fa-trash" />
       </div>
       <label>
         Name
         <input
           value={parameter.name || ''}
-          onChange={e => updateParameter('name', e.target.value)}
+          onChange={e => update('name', e.target.value)}
           style={styles.textInput}
         />
       </label>
@@ -29,7 +29,7 @@ export default function ParameterEditor({
         Type
         <input
           value={parameter.type || ''}
-          onChange={e => updateParameter('type', e.target.value)}
+          onChange={e => update('type', e.target.value)}
           style={styles.textInput}
         />
       </label>
@@ -38,15 +38,13 @@ export default function ParameterEditor({
         <input
           checked={!!parameter.required}
           type="checkbox"
-          onChange={e => updateParameter('required', e.target.checked)}
+          onChange={e => update('required', e.target.checked)}
         />
       </label>
       <TextareaWithMarkdownPreview
         markdown={parameter.description || ''}
         label={'Description'}
-        handleMarkdownChange={e =>
-          updateParameter('description', e.target.value)
-        }
+        handleMarkdownChange={e => update('description', e.target.value)}
         features={{imageUpload: true}}
       />
     </div>
@@ -54,11 +52,11 @@ export default function ParameterEditor({
 }
 
 ParameterEditor.propTypes = {
-  parameter: PropTypes.object,
-  updateParameter: PropTypes.func,
-  moveParameterUp: PropTypes.func,
-  moveParameterDown: PropTypes.func,
-  removeParameter: PropTypes.func
+  item: PropTypes.object,
+  update: PropTypes.func,
+  moveUp: PropTypes.func,
+  moveDown: PropTypes.func,
+  remove: PropTypes.func
 };
 
 const styles = {
