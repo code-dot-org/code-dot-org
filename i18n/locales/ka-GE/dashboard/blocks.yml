@@ -933,11 +933,18 @@ ka:
       craft_moveForward:
         text: წინ გადაადგილება
       craft_placeBlock:
+        text: მოათავსე {blockType}
         options:
           blockType:
             '"seaLantern"': ზღვის სანათი
+      craft_placePrismarine:
+        text: პრიზმარინის მოთავსება
       craft_placeTorch:
         text: ჩირაღდნის დაყენება
+      craft_repeatUntilConduit:
+        text: |-
+          გაიმეორე არხის დასრულებამდე
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           მიზნამდე გაიმეორე

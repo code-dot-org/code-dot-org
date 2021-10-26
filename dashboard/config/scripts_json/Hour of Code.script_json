@@ -7,8 +7,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:39 UTC",
+    "serialized_at": "2021-10-25 22:52:58 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "Hour of Code"
     }

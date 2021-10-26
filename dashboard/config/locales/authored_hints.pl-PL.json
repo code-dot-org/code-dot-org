@@ -9340,11 +9340,11 @@
         },
         "courseB_iceage_loops2_2021": {
           "courseB_iceage_loops2_a": "Podziel tę łamigłówkę na dwie części: pierwszą przed zakrętem, a drugą po zakręcie.",
-          "courseB_iceage_loops2_b": "Jeśli gdzieś utkniesz, spróbuj wypowiedzieć kroki/ czynności na głos.",
+          "courseB_iceage_loops2_b": "Jeśli gdzieś utkniesz, spróbuj wypowiedzieć kroki na głos.",
           "courseB_iceage_loops2_c": "Podążaj tę ścieżkę, aby doprowadzić Scrata do żołędzia."
         },
         "courseB_iceage_loops3_2021": {
-          "courseB_iceage_loops3_a": "Użyj tego nowego bloku! \n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_a": "Użyj tego nowego bloku! \n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
           "courseB_iceage_loops3_b": "Aby powtórzyć kod, przeciągnij pętlę `repeat`, następnie umieść tam blok, który chcesz aby się powtarzał."
         },
         "courseB_iceage_loops4_2021": {
@@ -9369,7 +9369,7 @@
         "courseB_iceage_loops9_2021": {
           "courseB_iceage_loops9_a": "Masz kłopot? Spróbuj podzielić tę łamigłówkę na mniejsze kawałki. Nie bój się uruchomić swoją łamigłówkę w trakcie kodowania!",
           "courseB_iceage_loops9_b": "Twój kod końcowy powinien zawierać **4** pętle.",
-          "courseB_iceage_loops9_c": "Scrat powinien podążać tę ścieżkę, aby dojść do żołędzia."
+          "courseB_iceage_loops9_c": "Scrat powinien podążać tą ścieżką, aby dojść do żołędzia."
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1_a": "Połącz bloki z blokiem <xml><block type=\"when_run\"/></xml>, aby wprawić Scrata w ruch!",

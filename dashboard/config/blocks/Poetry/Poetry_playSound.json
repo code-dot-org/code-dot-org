@@ -17,8 +17,56 @@
             "\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\""
           ],
           [
+            "Bell"
+          ],
+          [
+            "Break"
+          ],
+          [
+            "Boing"
+          ],
+          [
+            "Bubble"
+          ],
+          [
+            "Chatter"
+          ],
+          [
+            "Deflate"
+          ],
+          [
+            "Fail"
+          ],
+          [
+            "Flutter"
+          ],
+          [
+            "Jump"
+          ],
+          [
+            "Light"
+          ],
+          [
+            "Poof"
+          ],
+          [
+            "Scan"
+          ],
+          [
             "Typewriter",
             "\"sound://category_background/typewriter.mp3\""
+          ],
+          [
+            "Vibrant"
+          ],
+          [
+            "Win"
+          ],
+          [
+            "Whirl"
+          ],
+          [
+            "Wind Chimes"
           ]
         ]
       }

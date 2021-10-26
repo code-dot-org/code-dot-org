@@ -47,7 +47,7 @@
   "created_at": "2021-10-13T19:53:43.000Z",
   "level_num": "custom",
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-10-13T19:53:43.738+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choices_practice\\\"\"],\"cloned_from\":\"poetry_module_choices_practice\"},{\"changed_at\":\"2021-10-13 19:54:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:04:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:06:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-22 14:45:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-13T19:53:43.738+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choices_practice\\\"\"],\"cloned_from\":\"poetry_module_choices_practice\"},{\"changed_at\":\"2021-10-13 19:54:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:04:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:06:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-22 14:45:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-25 12:49:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -156,57 +156,6 @@
             <block type="Poetry_setBackgroundEffect">
               <title name="EFFECT">"blooming"</title>
               <title name="PALETTE">"sunrise"</title>
-              <next>
-                <block type="gamelab_ifVarEquals">
-                  <title name="NUM">food</title>
-                  <value name="VAL">
-                    <block type="Poetry_stringValue">
-                      <title name="TEXT">sandwich</title>
-                    </block>
-                  </value>
-                  <statement name="STATEMENT">
-                    <block type="Poetry_makeBurst">
-                      <title name="EFFECT">"pop"</title>
-                      <title name="NUM">10</title>
-                      <title name="ANIMATION_NAME">"face_sandwich_1"</title>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="gamelab_ifVarEquals">
-                      <title name="NUM">food</title>
-                      <value name="VAL">
-                        <block type="Poetry_stringValue">
-                          <title name="TEXT">salad</title>
-                        </block>
-                      </value>
-                      <statement name="STATEMENT">
-                        <block type="Poetry_makeBurst">
-                          <title name="EFFECT">"pop"</title>
-                          <title name="NUM">10</title>
-                          <title name="ANIMATION_NAME">"face_salad_1"</title>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="gamelab_ifVarEquals">
-                          <title name="NUM">food</title>
-                          <value name="VAL">
-                            <block type="Poetry_stringValue">
-                              <title name="TEXT">cupcake</title>
-                            </block>
-                          </value>
-                          <statement name="STATEMENT">
-                            <block type="Poetry_makeBurst">
-                              <title name="EFFECT">"pop"</title>
-                              <title name="NUM">10</title>
-                              <title name="ANIMATION_NAME">"face_cupcake"</title>
-                            </block>
-                          </statement>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
             </block>
           </next>
         </block>

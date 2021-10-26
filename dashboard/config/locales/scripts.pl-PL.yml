@@ -32682,6 +32682,7 @@ pl:
           lessons:
             lesson-1:
               name: Literująca Pszczółka
+              description_student: Pomóż pszczółce przeliterować nowe słowa!
           name: spelling-bee
           title: CSC - Literująca pszczółka
         outbreak-csc:
@@ -32696,12 +32697,16 @@ pl:
           lessons:
             lesson-1:
               name: Eksploracja wykresów pudełkowych i histogramów
+              description_student: Utwórz wykresy słupkowe i histogramy w wizualizerze
+                danych w App Lab.
           name: explore-data-1
           title: Eksploracja wykresów pudełkowych i histogramów
         counting-csc:
           lessons:
             lesson-1:
               name: Liczenie z Laurel
+              description_student: Pomóż Laurel, poszukiwaczce skarbów, liczyć i dodawać
+                kroki, aby zbierać klejnoty!
           name: counting-csc
           title: Liczenie z Laurel
         csa5-exemplars:
@@ -32741,3 +32746,5 @@ pl:
               display_name: Treści
             lessonGroup-3:
               display_name: Pokaż, co wiesz
+          name: csa5-exemplars
+          title: Jednostka 5 – Organizacja nadania obiektów [Exemplars]
