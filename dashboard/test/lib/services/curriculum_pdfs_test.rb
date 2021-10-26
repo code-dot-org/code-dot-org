@@ -42,6 +42,24 @@ module Services
       refute Services::CurriculumPdfs.generate_pdfs?(script_data)
     end
 
+    test 'will not generate a PDF if using legacy lesson plans' do
+      CDO.stubs(:rack_env).returns(:staging)
+      script = create(:script)
+      script_data = {
+        'properties' => {
+          'is_migrated' => true,
+        },
+        'serialized_at' => Time.now.getutc,
+        'name' => script.name
+      }
+
+      script_data = JSON.parse(script_data.to_json)
+
+      assert Services::CurriculumPdfs.generate_pdfs?(script_data)
+      script_data['properties']['use_legacy_lesson_plans'] = true
+      refute Services::CurriculumPdfs.generate_pdfs?(script_data)
+    end
+
     test 'will not generate a overview PDF when unit does not have lesson plans' do
       CDO.stubs(:rack_env).returns(:staging)
       unit_with_lesson_plans = create(:script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
