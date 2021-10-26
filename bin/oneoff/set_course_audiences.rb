@@ -15,17 +15,38 @@ def set_course_audiences
 
     script.instructor_audience = if ['vpl-csp-2020', 'vpl-csd-2020', 'kodea-pd-2021'].include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
-                                 elsif ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18', 'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18', 'csp5-dlp-18', 'csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18', 'csd-novice-18', 'csp-apprentice-18', 'csd-apprentice-18', 'fit-test', 'andrea-test', 'fit2019-novice', 'fit2019-apprentice', 'dlp19-csp-mod-fit', 'dlp19-csd-mod-fit', 'dlp19-csd-mod-w1', 'dlp19-csd-mod-w2', 'dlp19-csd-mod-w3', 'dlp19-csd-mod-w4', 'dlp19-csp-mod-w1', 'dlp19-csp-mod-w2', 'dlp19-csp-mod-w3', 'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csp-mod1', 'dlp21-csd-overview', 'dlp21-csp-overview', 'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4', 'dlp21-csd-mod1', 'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
+                                 elsif ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
+                                        'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18',
+                                        'csp5-dlp-18', 'csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18',
+                                        'csd-novice-18', 'csp-apprentice-18', 'csd-apprentice-18', 'fit-test',
+                                        'andrea-test', 'fit2019-novice', 'fit2019-apprentice', 'dlp19-csp-mod-fit',
+                                        'dlp19-csd-mod-fit', 'dlp19-csd-mod-w1', 'dlp19-csd-mod-w2', 'dlp19-csd-mod-w3',
+                                        'dlp19-csd-mod-w4', 'dlp19-csp-mod-w1', 'dlp19-csp-mod-w2', 'dlp19-csp-mod-w3',
+                                        'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csp-mod1', 'dlp21-csd-overview',
+                                        'dlp21-csp-overview', 'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4',
+                                        'dlp21-csd-mod1', 'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer
-                                 elsif ['k5-onlinepd-2020', 'k5-onlinepd-2021', 'self-paced-pl-csd5-2021', 'self-paced-pl-csd6-2021', 'self-paced-pl-csd7-2021', 'self-paced-pl-csd8-2021'].include?(script.name)
+                                 elsif ['k5-onlinepd-2020', 'k5-onlinepd-2021', 'self-paced-pl-csd5-2021',
+                                        'self-paced-pl-csd6-2021', 'self-paced-pl-csd7-2021', 'self-paced-pl-csd8-2021'].include?(script.name)
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor
                                  else
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
                                  end
 
-    script.participant_audience = if ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18', 'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18', 'csp5-dlp-18', ' csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18', 'csd-novice-18', 'csp-apprentice-18', 'csd-apprentice-18', 'fit-test', 'andrea-test', 'fit2019-novice', 'fit2019-apprentice', 'dlp19-csp-mod-fit', 'dlp19-csd-mod-fit', 'dlp19-csd-mod-w1', 'dlp19-csd-mod-w2', 'dlp19-csd-mod-w3', 'dlp19-csd-mod-w4', 'dlp19-csp-mod-w1', 'dlp19-csp-mod-w2', 'dlp19-csp-mod-w3', 'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csd-overview', 'dlp21-csp-overview', 'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4', 'dlp21-csd-mod1', 'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
+    script.participant_audience = if ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
+                                      'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18',
+                                      'csp5-dlp-18', ' csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18',
+                                      'csd-novice-18', 'csp-apprentice-18', 'csd-apprentice-18', 'fit-test',
+                                      'andrea-test', 'fit2019-novice', 'fit2019-apprentice', 'dlp19-csp-mod-fit',
+                                      'dlp19-csd-mod-fit', 'dlp19-csd-mod-w1', 'dlp19-csd-mod-w2', 'dlp19-csd-mod-w3',
+                                      'dlp19-csd-mod-w4', 'dlp19-csp-mod-w1', 'dlp19-csp-mod-w2', 'dlp19-csp-mod-w3',
+                                      'dlp19-csp-mod-w4', 'alltheplcthings', 'dlp21-csd-overview', 'dlp21-csp-overview',
+                                      'dlp21-csp-mod2', 'dlp21-csp-mod3', 'dlp21-csp-mod4', 'dlp21-csd-mod1',
+                                      'dlp21-csd-mod2', 'dlp21-csd-mod3', 'dlp21-csd-mod4'].include?(script.name)
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
-                                  elsif ['k5-onlinepd-2020', 'k5-onlinepd-2021', 'self-paced-pl-csd5-2021', 'self-paced-pl-csd6-2021', 'self-paced-pl-csd7-2021', 'self-paced-pl-csd8-2021', 'vpl-csp-2020', 'vpl-csd-2020', 'kodea-pd-2021'].include?(script.name)
+                                  elsif ['k5-onlinepd-2020', 'k5-onlinepd-2021', 'self-paced-pl-csd5-2021',
+                                         'self-paced-pl-csd6-2021', 'self-paced-pl-csd7-2021', 'self-paced-pl-csd8-2021',
+                                         'vpl-csp-2020', 'vpl-csd-2020', 'kodea-pd-2021'].include?(script.name)
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
                                   else
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.student
