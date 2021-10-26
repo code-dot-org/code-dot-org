@@ -8888,7 +8888,7 @@
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_a": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие.",
           "courseA_artist_loops7_b": "Сначала напиши код для одной волны, а затем повтори его, чтобы нарисовать две другие.",
-          "courseA_artist_loops7_c": "Помни, что в цикл [blockly block] можно вставить не один, а несколько блоков."
+          "courseA_artist_loops7_c": "Помни, что в цикл <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> можно вставить не один, а несколько блоков."
         },
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_a": "Запусти код и посмотри, что для тебя написали.",
@@ -8915,7 +8915,7 @@
         },
         "courseA_collector_loops3_2021": {
           "courseA_collector_loops3_a": "Попробуй использовать цикл \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n!",
-          "courseA_collector_loops3_b": "Помни, что в цикл [blockly block] можно вложить не один, а несколько блоков."
+          "courseA_collector_loops3_b": "Помни, что в цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> можно вложить не один, а несколько блоков."
         },
         "courseA_collector_loops4_2021": {
           "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
@@ -8924,7 +8924,7 @@
         "courseA_collector_loops5_2021": {
           "courseA_collector_loops5_a": "Не сможешь найти ответ сразу – возьми лист бумаги и попробуй сообразить, какие стрелки понадобятся, и найти повторяющееся действие.",
           "courseA_collector_loops5_b": "Попробуй разбить задачу на две и двигаться сначала вбок, а затем вниз.",
-          "courseA_collector_loops5_c": "Начние с цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, заставляющего Лорел перемещаться на запад и собирать сокровища."
+          "courseA_collector_loops5_c": "Начни с цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, заставляющего Лорел перемещаться на запад и собирать сокровища."
         },
         "courseA_collector_loops6_2021": {
           "courseA_collector_loops6_a": "Не можешь догадаться, что не так? Попробуй прогнать код пару раз и посмотреть, что получится.",
@@ -8956,7 +8956,7 @@
           "courseA_harvester_loops1_a": "Когда ты подойдешь к кукурузе, используй этот блок, чтобы собрать ее!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops2_2021": {
-          "courseA_harvester_loops2_a": "Твой код будет включать **четыре** блока \"двигаться на запад\"\n\n <xml><block type=\"maze_moveWest\"/></xml>\n\n и **четыре** блока <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
+          "courseA_harvester_loops2_a": "Твой код будет включать **четыре** блока \"двигаться на запад\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n и **четыре** блока <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
           "courseA_harvester_loops2_b": "Если у тебя все еще не получается, попробуй назвать шаги вслух."
         },
         "courseA_harvester_loops3_2021": {
@@ -9195,7 +9195,7 @@
           "courseB_artist_loops9_c": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие."
         },
         "courseB_artist_loops_challenge1_2021": {
-          "courseB_artist_loops_challenge1_a": "Блоки, как этот: <xml>  <block type=\"simple_move_up_right\"/></xml>, позволят художнику двигаться под углом!",
+          "courseB_artist_loops_challenge1_a": "Такие блоки, как этот блок <xml>  <block type=\"simple_move_up_right\"/></xml>, позволят художнику двигаться под углом!",
           "courseB_artist_loops_challenge1_b": "Когда закончишь одну из костей, \"прыгни\" к следующей!",
           "courseB_artist_loops_challenge1_c": "Через некоторые линии тебе потребуется \"двигаться\" или \"прыгать\" дважды."
         },

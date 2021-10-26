@@ -11,7 +11,56 @@
     "args": [
       {
         "name": "BRUSH",
+        "type": "String",
         "options": [
+          [
+            "Metal Frame"
+          ],
+          [
+            "Bold"
+          ],
+          [
+            "Shadow Box"
+          ],
+          [
+            "Gilded"
+          ],
+          [
+            "Beaded"
+          ],
+          [
+            "Beveled"
+          ],
+          [
+            "Wood Frame"
+          ],
+          [
+            "Bamboo"
+          ],
+          [
+            "Decorative"
+          ],
+          [
+            "Donuts"
+          ],
+          [
+            "Ice Cream"
+          ],
+          [
+            "Fire"
+          ],
+          [
+            "Water"
+          ],
+          [
+            "Leaves"
+          ],
+          [
+            "Stars"
+          ],
+          [
+            "Fireworks"
+          ],
           [
             "Rainbow",
             "\"rainbow\""

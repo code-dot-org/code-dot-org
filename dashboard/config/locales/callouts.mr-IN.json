@@ -460,6 +460,12 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "नवीन ब्लॉक!",
           "poetry_remove_sprite": "नवीन ब्लॉक!"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी जास्तीचे ब्लॉक्स मिळतील. "
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स एकत्र जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा."
         }
       }
     }

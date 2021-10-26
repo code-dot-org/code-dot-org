@@ -12040,7 +12040,7 @@ es-MX:
         - text: La cosechadora recogerá todos los cultivos, excepto la calabaza.
           correct: true
           feedback: "¡Correcto!"
-        - text: La Granjera sólo recogerá la calabaza.
+        - text: La cosechadora sólo recogerá la calabaza.
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.

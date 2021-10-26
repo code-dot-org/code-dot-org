@@ -2063,7 +2063,8 @@
           "hello_world_new": "Novo bloco!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Novo bloco!"
+          "hello_world_new": "Novo bloco!",
+          "hello_world_new_block": "Novo bloco!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Novo bloco!"
@@ -2120,6 +2121,37 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Novo bloco!",
           "poetry_remove_sprite": "Novo bloco!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Pressione o botão Run primeiro!",
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Pressione o botão Run primeiro!",
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Pressione o botão Run primeiro!",
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Pressione o botão Run primeiro!",
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
         }
       }
     }
