@@ -1355,6 +1355,9 @@ class Script < ApplicationRecord
   # Update strings and serialize changes to .script file
   def update_text(unit_params, unit_text, metadata_i18n, general_params)
     unit_name = unit_params[:name]
+    # Check if TTS has been turned on for a unit. If so we will need to generate all the TTS for that unit after updating
+    need_to_update_tts = general_params[:tts] && !tts
+
     begin
       # avoid ScriptDSL path for migrated scripts
       unit_data, i18n =
@@ -1389,6 +1392,7 @@ class Script < ApplicationRecord
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
     update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
     update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
+    tts_update if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Script.find_by_name(unit_name)
