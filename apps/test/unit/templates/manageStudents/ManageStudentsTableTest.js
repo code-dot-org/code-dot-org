@@ -100,8 +100,17 @@ describe('ManageStudentsTable', () => {
     it('does not render ManageCodeReviewGroups button if section is not assigned CSA', () => {
       const wrapper = shallow(
         <UnconnectedManageStudentsTable
-          {...{...DEFAULT_PROPS, ...{isAssignedCSA: false}}}
+          {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: false}}}
         />
+      );
+      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.false;
+    });
+
+    it('does not render ManageCodeReviewGroups button if code review comments experiment is not enabled', () => {
+      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, false);
+
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
       );
       expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.false;
     });
@@ -109,10 +118,9 @@ describe('ManageStudentsTable', () => {
     it('does renders ManageCodeReviewGroups button if section is assigned CSA', () => {
       const wrapper = shallow(
         <UnconnectedManageStudentsTable
-          {...{...DEFAULT_PROPS, ...{isAssignedCSA: true}}}
+          {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: true}}}
         />
       );
-      console.log(wrapper.debug());
       expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.true;
     });
   });
