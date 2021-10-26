@@ -91,6 +91,8 @@ def main
         %w(
       PUBLISHED_STATE
       INSTRUCTION_TYPE
+      PARTICIPANT_AUDIENCE
+      INSTRUCTOR_AUDIENCE
     ),
       source_module: SharedCourseConstants, transform_keys: false
     ),

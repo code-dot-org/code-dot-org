@@ -1901,6 +1901,15 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Новый блок!",
           "poetry_remove_sprite": "Новый блок!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
         }
       }
     }

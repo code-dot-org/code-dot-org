@@ -5,6 +5,7 @@
   "danceFeedbackTooManyDancers": "Diqqətli olun!  əgər  `every 2 measures` içərisinə  `make a new`  blokunu əlavə etsəniz 2 rəqqas yaratmış olacaqsınız.",
   "danceFeedbackUseSetSize": "O rəqqası kiçiltmək üçün  `set backup_dancer2 size` komandasını istifadə et.",
   "danceFeedbackUseSetTint": "Bir rəqqasənin rəngini dəyişdirmək üçün `set tint` blokundan istifadə edin.",
+  "danceFeedbackUseStartMapping": "Calishin <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> kodunu oz programinizda tətbiq edin.",
   "danceFeedbackStartNewMove": "Rəqqasınız 4 cü  ölçüdən sonra yeni hərəkət icra etmədi.",
   "danceFeedbackNeedDifferentDance": "Fərqli rəqs istifadə etməlisiniz.",
   "danceFeedbackNeedEveryTwoMeasures": "`every 2 measures`  blokunu istifadə etdiyinizdən əmin olun.",
@@ -15,5 +16,7 @@
   "danceFeedbackNeedTwoDancers": "2 rəqqas düzəltməlisiniz.",
   "danceFeedbackOnlyOneDancerMoved": "Sadecə 1 rəqqasınız hərəkət etdi.",
   "danceFeedbackNeedLead": "Həmçinin siz   <xml><block type=\"Dancelab_makeAnonymousDanceSprite\"><title name=\"COSTUME\">???</title><title name=\"LOCATION\">'{'x: 200, y: 200'}'</title></block></xml> bloku ilə başçı rəqqas yaratmalısınız.",
-  "danceFeedbackSetSize": "musiqi başlamamışdan öncə ən azı 1 rəqqasın ölçüsünü dəyişməlisiniz."
+  "danceFeedbackNeedBackup": "Siz bundan <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10<title name=\"COSTUME\"><title name=\"COSTUME\"> istifadə edərək əlavə dansçılar olan qrup qurmalısınız",
+  "danceFeedbackSetSize": "musiqi başlamamışdan öncə ən azı 1 rəqqasın ölçüsünü dəyişməlisiniz.",
+  "measure": "Ölçü:"
 }

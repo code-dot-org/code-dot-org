@@ -1,8 +1,27 @@
 {
+  "alexanderLines": "O que acontece com um sonho destruído?\n\nEle afunda\ncomo um navio danificado no oceano?\n\nOu nada na água\ncomo um garoto no mar?\n\nTalvez ele apenas flutue\npra lá e pra cá...\n\nOu ele afoga?",
+  "alexanderTitle": "Sonho Destruído",
+  "author": "Autor",
+  "backgroundOrTextEffect": "Você precisa adicionar um efeito de fundo ou de texto. ",
+  "chooseSound": "Você precisa escolher um som do menu de opções. \n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">Escolher</title></block></xml>",
   "genericBonusSuccess": "Bom trabalho!  Você terminou o nível, incluindo o desafio extra!",
+  "hafezLines": "Eu gostaria de poder mostrar-lhe\nQuando você está sozinha ou na escuridão,\nA Fantástica Luz\nQue vem de Você mesmo(a)!",
+  "harjoLines": "Lembre-se to céu sob o qual você nasceu,\nsaiba a história de cada estrela.\nLembre-se da lua, saiba quem ela é.\nLembre-se do nascer do sol, que é \no ponto mais forte do dia. Lembre-se do pôr do sol\ne da chegada da noite.",
+  "harjoTitle": "Lembrar",
+  "lomeli1Title": "Siesta",
   "makeBackground": "Você precisa adicionar um efeito de plano de fundo.",
   "noSprites": "Você precisa criar um sprite.",
+  "poTitle": "Montanha",
   "reinfFeedbackMsg": "Você terminou! Clique em \"Continuar\" para passar para o próximo nível.",
   "save": "Salvar",
-  "shareGame": "Compartilhe seu jogo:"
+  "shareGame": "Compartilhe seu jogo:",
+  "successLevel1": "Parabéns! Você completou a Fase 1.",
+  "successLevel10": "Parabéns! Você completou a Fase 10.",
+  "successLevel2": "Parabéns! Você completou a Fase 2.",
+  "successLevel3": "Parabéns! Você completou a Fase 3.",
+  "successLevel4": "Parabéns! Você completou a Fase 4.",
+  "successLevel5": "Parabéns! Você completou a Fase 5.",
+  "successLevel6": "Parabéns! Você completou a Fase 6.",
+  "taylorTitle": "A Estrela",
+  "title": "Titulo"
 }

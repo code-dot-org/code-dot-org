@@ -101,16 +101,30 @@ az:
           ki, kompüter proqramı interaktiv ola bilər.
       2:
         image: notes/flappy02.jpg
+        text: İstənilən vaxt kompüter və telefonda  yazdiqda və yaxud hansısa bir
+          düyməni sıxdıqda, əməliyyat icra olunur, və bu zaman kod əməlliyyat icra
+          olduğu halda nə baş verəcəyinə qərar verir.
       3:
         image: notes/flappy03.jpg
+        text: Məsəl üçün, sizin event holder siçana toxunulduğu zamanda səs verməsini
+          deyə bilər.
       4:
         image: notes/flappy04.jpg
+        text: FlappyBird oyunu haqqında eşitmisiniz? Event handlerdən istifadə edərək,
+          biz öz FlappyBirdə oxşar oyunumuzu düzəltməyi öyrənəcik.
       5:
         image: notes/flappy05.jpg
+        text: Sizin yazacağınız kod komputerə blokları sürüşdürüb buraxmaq üçün əmrlər
+          yazmaqdan ibarətdir. Arxa planda, hər bir blok əsl kod ilə təmsil olunur.
       6:
         image: notes/flappy06.jpg
+        text: Yaxından baxdıqda, burada sizin üçün doldurulmuş yaşıl bloklar var.
+          Bunlar event handlers lərdi.
       7:
         image: notes/flappy07.jpg
+        text: Əgər siz quşun siçana toxunduğu zaman qanad çalmasını istəyirsinizsə,
+          bunu flap bloku düzgün event holderə tikərək edə bilərsiniz. Beləliklə siz
+          siçana toxunduğunuz zaman quş qanad çalacaq.
       8:
         image: notes/flappy08.jpg
       9:
@@ -367,10 +381,80 @@ az:
           oyunçular qarşılıqlı ünsiyyət qura, xoşbəxt və ya qəmli ola, xallar qazana
           və ya alov topları ata, hətta bir birini məhv edə biləcəklər. Hamısı sizdən
           və düzəltmək istədiyiniz oyundan asılıdır.
+    C1_artist_intro:
+      2:
+        text: Bunlar hoppanmaq bloklarıdır.Sən bunları istifadə etdikdə rəssam hərəkət
+          edir,lakin şəkil çəkmir, belə ki, hoppanmaq blokunu növbəti boz xətdə istifadə
+          et.
     C1_happy_maps_unplugged:
       1:
         text: Bu dərsin adı Şən xəritələrdir. Bu gün biz balaca tüklü dostumuz Flurba
           meyvəsinə yetişməkdə kömək edəsiyik.
+    C1_going_places_safely:
+      2:
+        text: Mən anamın kompüterini sevirəm,çünki mən İnternetə daxil ola bilirəm.İnternet
+          sənin qonşun kimidir.Sən gözəl yerlərə səyahət edə bilərsən,sən ailən və
+          dostların ilə danışa bilərsən və sən çoxlu yeni məlumatlar öyrənə bilərsən.
+    C3_maze_level_4:
+      1:
+        text: Bu nümunədə sənin hədəfin zombini günəbaxana çatdırmaqdı.Biz 5 irəli
+          hərəkət et blokundan istifadə edə və ya kompüterə irəli hərəkət et və bu
+          bir blokun istifadəsini 5 dəfə təkrarla deyə bilərik.
+      2:
+        text: Bu zaman itkisinin qarşısını alır və həlli asan edir.Bunu etmək üçün
+          yalnız irəli hərəkət et blokunu təkrarla blokunun içərisinə daxil etmək
+          lazımdır.Qaça bas və zombi ləzzətli günəbaxana doğru 5 dəfə hərəkətə keçəcək.
+    C3_songwriting_with_parameters:
+      1:
+        text: Bu mahnı yazmaq dərsidir.Mahnı daha çox kompüter proqramlarına oxşayır.Yazılmış
+          notlar və sözlər musiqiçiyə məhz nə etməli olduğunu deyir. Mahnının bəzi
+          hissələri təkrar və təkrar istifadə olunur.
+    starwars_congrats:
+      5:
+        text: Oyununu qurub-bitirdikdən sonra paylaşmağı seç və aldığın linki dostalarınla
+          paylaş və ya öz oyununu öz telefonunda oyna. Xoş əyləncələr!
+    starwars_blocks_intro:
+      6:
+        text: 'Sağdakı ağ boş hissə iş ərazisi adlanır və bura bizim proqramı quracağımız
+          yerdir. '
+    starwars_blocks_events:
+      7:
+        text: Addım-addım sənin oyunun daha cəlbedici olur.
+    starwars_blocks_congrats:
+      5:
+        text: Oyununu qurub-bitirdikdən sonra paylaşmağı seç və aldığın linki dostalarınla
+          paylaş və ya öz oyununu öz telefonunda oyna. Xoş əyləncələr!
+    mc_congrats_share:
+      1:
+        text: Təbriklər! Sən indicə kompüter elmlərində bloklar tikməyin əsaslarını
+          öyrəndin.
+    mc_congrats_no_share:
+      1:
+        text: Təbriklər! Sən indicə kompüter elmlərində bloklar tikməyin əsaslarını
+          öyrəndin.
+      4:
+        text: İndi sən nə istəsən qura bilərsən. Xoş əyləncələr!
+    mc_2016_intro:
+      6:
+        text: Əgər nə edəcəyini unutdunsa, hər səviyyə üçün təlimatlar yuxarıdadır.
+    mc_2017_agent_intro:
+      2:
+        text: Biraz gözlə - yolda çuxur var! (qışqırıq)
+      5:
+        text: Oh , tamam , ey, mən əsl dünyadayam hal-hazırda.Mən Minecraftın ofislərini
+          tapmağa çalışacam.
+      11:
+        text: Əgər nə edəcəyini unutdunsa, hər səviyyə üçün təlimatlar yuxarıdadır.
+    mc_2017_repeat:
+      3:
+        text: Mən elə hiss edirəm ki,  sanki mən yenidən "Minecraft"-yam.Salam. Necəsən?  Salam?
+    mc_2017_congratulations:
+      1:
+        text: 'Preston: Təbriklər!'
+      2:
+        text: Lizzy:Təbriklər!
+      3:
+        text: 'Stampy: Təbriklər, sən bunu bacardın!'
     hoc_dance_warmup:
       1:
         text: 'Kod Saatı | Rəqs şənliyi: Qızışma'
@@ -383,15 +467,43 @@ az:
     hoc_dance_congrats:
       1:
         text: 'Kod Saatı | Rəqs şənliyi: Şənlik davam edir!'
+      2:
+        text: Təbriklər! Siz indicə kompüter elmlərinin əsaslarını öyrəndiniz. İndi
+          siz bu bloklardan istifadə edərək öz dizaynızı dostlarınız ilə paylaşa biləyəcəyiniz
+          rəqs partisi yarada bilərsiniz.
+    mc_2018_intro:
+      3:
+        text: Solda siz Minecraft dünyasını görəcəksiniz.
+      9:
+        text: Əgər yenidən cəhd etmək istəyirsinizsə, "sıfırla" düyməsinə basaraq
+          geriyə-başladığınız yerə qayıda bilərsiniz.
+    mc_2018_closing:
+      3:
+        text: 'Netty: Sən bunu bacardın! Təbriklər.'
+      4:
+        text: 'Tomohawk: Təbriklər!'
+    teaching_csf_how_it_works:
+      1:
+        text: Bu kurs bir neçə mərhələlərə bölünüb.
+      2:
+        text: İlk bir neçə mərhələ sizə kompüter elmlərinin nə olduğunu təqdim edəcək,
+          həmçinin bəzi açar lüğəti.
     hoc_dance_warmup_2019:
       1:
         text: 'Kod Saatı | Rəqs şənliyi: Qızışma'
     hoc_dance_events_2019:
       1:
         text: 'Kod Saatı | Rəqs şənliyi: Hadisələr'
+      2:
+        text: Mənim adım Erindir və mən Code.org-da proqram təminatı mühəndisiyəm
+          və mən Rəqs Partisini qurmağa kömək etmişəm.
     hoc_dance_properties_2019:
       1:
         text: 'Kod Saatı | Rəqs şənliyi: Xüsusiyətlər'
     hoc_dance_congrats_2019:
       1:
         text: 'Kod Saatı | Rəqs şənliyi: Şənlik davam edir!'
+      2:
+        text: Təbriklər! Siz indicə kompüter elmlərinin əsaslarını öyrəndiniz. İndi
+          siz bu bloklardan istifadə edərək öz dizaynızı dostlarınız ilə paylaşa biləyəcəyiniz
+          rəqs partisi yarada bilərsiniz.

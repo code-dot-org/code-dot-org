@@ -1280,6 +1280,43 @@
         "CourseF_outbreak7": {
           "whenclicked": "## लशी\n\nराक्षसांवर क्लिक करून त्यांना लस देण्याचे सिम्युलेशन तुम्ही करू शकता. हे करण्यासाठी,  या इव्हेंटमध्ये `change costume` ब्लॉक वापरा:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "अडकल्यासारखे वाटत आहे? तुम्ही नेहमीच तुमचा कोड खाली `Version History` वर क्लिक करून आणि मग \"Start Over\" निवडून रीसेट करू शकता."
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "तुम्ही काही कणसे हलवलीत की ती गोळा करायला हा ब्लॉक वापरा!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "तुमच्या कोडमध्ये **चार** 'पश्चिमेकडे जा'\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\nब्लॉक्स आणि **चार** <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml> ब्लॉक्स असतील.",
+          "courseA_harvester_loops2_b": "जर तुम्हाला अजूनही समस्या येत असेल तर पायऱ्या मोठ्याने म्हणून पहा."
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "तुम्हाला मदत करण्यासाठी असा एक 'repeat' ब्लॉक वापरा!\n\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "कोड रिपीट करण्यासाठी, `repeat` (<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> )l लूप ड्रॅग करा, नंतर तुम्हाला हवा असलेला ब्लॉक त्याच्या आत घाला."
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "काय घडते ते पाहण्यासाठी 'Run' दाबायला विसरू नका! ",
+          "courseA_harvester_loops4_b": "इथे किती कणसे आहेत? तुमचा कोड कितीवेळा रिपीट होतो?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "तुम्ही अडकलात तर हे कोडे 2 भागात सोडवण्याचा प्रयत्न करा, एक भाग कॉर्नरच्या आधीचा आणि एक भाग कॉर्नरच्या नंतरचा."
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "तुमचा कोड असा दिसला पाहिजे:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "coursea_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "जर पक्षी डुकरापर्यंत पोचत नसेल तर दोन्ही ब्लॉक्स एकमेकांना पूर्णपणे जोडले आहेत हे सुनिश्चित करा, नंतर पुन्हा  \"Run\" क्लिक करा.",
+          "courseC_maze_programming1_b": "चूक करायला घाबरू नका! काहीतरी करायचा प्रयत्न करा आणि जर ते होत नसेल तर दुसरे काहीतरी करून बघा!"
         }
       }
     }

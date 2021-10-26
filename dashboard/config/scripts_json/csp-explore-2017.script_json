@@ -4,6 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSP",
+      "family_name": "csp-explore",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "project_sharing": true,
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -19,19 +26,13 @@
           "https://curriculum.code.org/csp/csp-explore/standards/"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp-explore",
-      "hideable_lessons": true
+      "version_year": "2017"
     },
     "new_name": "csp-explore-2017",
     "family_name": "csp-explore",
-    "serialized_at": "2021-08-03 22:47:35 UTC",
+    "serialized_at": "2021-10-25 22:53:50 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp-explore-2017"
     }

@@ -23,6 +23,13 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     super.mixin(mixinObj, true);
   }
 
+  isUnused() {
+    return (
+      this.disabled ||
+      this.workspace?.currentGesture_?.blockDragger_?.draggingBlock_ === this
+    );
+  }
+
   isVisible() {
     // TODO (eventually), but all Flappy blocks are visible, so this won't be a problem
     // until we convert other labs
@@ -125,5 +132,9 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
 
   setHSV(h, s, v) {
     return super.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
+  }
+
+  getHexColour() {
+    return super.getColour();
   }
 }
