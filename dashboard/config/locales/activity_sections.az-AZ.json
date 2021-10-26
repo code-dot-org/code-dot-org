@@ -122,6 +122,9 @@
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Kod Saatı bitəndən sonra"
         },
+        "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
+          "description": "Tələbələri dərsə salamlayın və günün fəaliyyətini qısaca təqdim edin.\n\n_Deyin: \"Bu gün kodu öyrənmək üçün bir saat sərf edəcəyik. Burada kimsə əvvəllər \"kod\" ifadəsini eşitmişdi? Bu nə məna ifadə edir? ”_\n\nŞagirdlər \"kod\" un gizli bir mesaja bənzədiyini və ya bir şəkildə kompüterlərlə əlaqəli olduğunu qeyd edə bilərlər."
+        },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
             null
@@ -338,9 +341,6 @@
             null
           ]
         },
-        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
-          "name": "Müzakirə"
-        },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
             null
@@ -372,7 +372,8 @@
           "name": "Kod Saatı bitəndən sonra"
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
-          "name": "Giriş"
+          "name": "Giriş",
+          "description": "Tələbələri dərsə salamlayın və günün fəaliyyətini qısaca təqdim edin.\n\n_Deyin: \"Bu gün kodu öyrənmək üçün bir saat sərf edəcəyik. Burada kimsə əvvəllər \"kod\" ifadəsini eşitmişdi? Bu nə məna ifadə edir? ”_\n\nŞagirdlər \"kod\" un gizli bir mesaja bənzədiyini və ya bir şəkildə kompüterlərlə əlaqəli olduğunu qeyd edə bilərlər."
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
@@ -469,9 +470,6 @@
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Kod Saatı bitəndən sonra"
         },
-        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
-          "name": "İsinmə"
-        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
             null
@@ -498,7 +496,7 @@
         },
         "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
           "tips": [
-            "Tələbələrə işlərini yalnız yaxın dostları və ailələri ilə paylaşmalarını xatırladın.  Əlavə məlumat üçün sinif videosunu [dayan və onlayn düşün] [0] izlə və ya göstər."
+            null
           ]
         },
         "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
@@ -617,9 +615,6 @@
         "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
           "name": "Ümumi Dəstək"
         },
-        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
-          "name": "Səviyyə Səviyyə"
-        },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
             null
@@ -649,18 +644,6 @@
             null
           ]
         },
-        "be0995b2-b12f-45ee-9047-8261719fcd56": {
-          "name": "Misal 1: Bir xüsusiyyətə əsaslanan məşq (bədən forması)"
-        },
-        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
-          "name": "Nümünə 2:modeli inkişaf etdirmək üçün informasiya görünüşünü işlətmək"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Əsas aktivlik (köhnə)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Əsas Aktivlik (Yeni)"
-        },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Yekun"
         },
@@ -687,23 +670,17 @@
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Əksetmə"
         },
-        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
-          "description": "#### Səhnənin qurulması\n\nTələbələri dərsə salamlayın və günün fəaliyyətini qısaca təqdim edin.\n\nDe: \\_Bu gün bəzi onlayn tapmacalarla işləmək və kompüter laboratoriyası davranışlarını öyrənmək üçün bir saat sərf edəcəyik.\nBu müzakirənin məqsədi şagirdlərə kompüter laboratoriyasına girərkən nə gözləyəcəyini və necə davranacağını öyrətməkdir."
-        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "Laboratoriyada sakit olmağa çalışın\n\n-   Saqqız və ya konfet çeynəməyin\n-   Əllərinizi dezinfeksiya edin\n-   Bir kompüterdə ortağınızla oturun\n-   İlk \"sürücünün\" siçana çata biləcəyinə əmin olun\n-   Əsəbiləşəndə kompüteri və ya monitoru vurmayın və silkələməyin\n-   [20/20/20 Qaydası] [0] qaydalarına əməl edin.\n-   Hər 20-30 dəqiqədə [Wiggles] [1] ilə necə məşğul olmaq olar (GoNoodle-da pulsuz giriş tələb olunur).\n-   Müəllimdən soruşmadan əvvəl yoldaşınızdan soruşun\n-   Səs səviyyəsini aşağı salın ki, hər kəs ortaqlarını eşitsin\n-   Hisslərinizi və həll yollarınızı izləmək üçün jurnalınızı istifadə edin"
+            null
           ]
-        },
-        "aa328958-bd87-4dbb-8585-cb33f905051f": {
-          "description": "\\*\\* Müzakirə et: \\*\\*\nŞagirdlərin qaydaları anladığından əmin olmaq üçün kompüter laboratoriyası gözləntiləri ətrafında yaxşı bir müzakirə aparın. Bəzi müzakirə mövzuları ola bilər:\n\n-   Kompüter laboratoriyasında işləmək yaxşıdırmı?\n-   Kompüter laboratoriyasında olanda yüksək səslə yerimək olarmı?\n-   Bir tapmacaya ilişsəniz nə etməlisiniz?\n-   Məyus olsanız, kompüterə vurmağınız kömək edəcəkmi?\n-   Kompüter laboratoriyasına gedəcəyimiz zaman necə hazırlaşmalıyıq?"
         },
         "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
           "name": "Mozaika"
         },
         "6610529a-20b8-4b76-83d1-1215f72ed51b": {
           "tips": [
-            null
+            "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
           ]
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
@@ -724,10 +701,16 @@
         "75264b2e-950d-4494-9313-aa20451bfd50": {
           "description": "Görə bilərik ki, bütün bu tətbiqlərdə istifadəçi onu necə istifadə etməsi ilə bağlı seçim edə bilər. Bu seçimlər daha çox insanın tətbiqdən istifadə etmək istəyinə səbəb ola bilər."
         },
+        "85dd5032-f0e5-446e-a687-45d34b5229c5": {
+          "description": " Ən sevdiyiniz oyun və ya proqram hansıdır? Onu istifadə edərkən hansı seçimləri etməli olursunuz?"
+        },
+        "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
+          "name": "Sprite Laboratoriyasını təqdim edirik"
+        },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
           "name": "Tətbiqləri araşdırmaq",
           "tips": [
-            null
+            "Əgər bu, tələbələriniz Code.org-dan ilk dəfə istifadəsirdirsə, tələbələrə vebsayta necə daxil olmağı və hesablarına daxil olmağı başa düşməyə kömək etmək üçün əlavə vaxt ayırın."
           ],
           "progression_name": "Tədqiqat: Nümunə Tətbiqlər"
         },
@@ -749,10 +732,11 @@
           "name": "Giriş"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Spraytlar düzəltmək",
           "tips": [
             null
           ],
-          "progression_name": "Proqnoz"
+          "progression_name": "Təxmin"
         },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "tips": [
@@ -760,7 +744,7 @@
           ]
         },
         "c5589504-a584-4599-8ee2-22e32a2374da": {
-          "progression_name": "Təcrübə et"
+          "progression_name": "Praktika"
         },
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "tips": [
@@ -772,11 +756,13 @@
           "name": "Əksetmə"
         },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
+          "name": "Alqoritmi izləyin.",
           "tips": [
             null
           ]
         },
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
+          "name": "Spritelar Hərəkətdə",
           "progression_name": "Təxmin"
         },
         "8afac6a6-bc6b-47a8-ad11-3d42bd53b0e7": {
@@ -811,6 +797,9 @@
         "9038d6a6-1ea1-4e38-8252-06e5cd610fad": {
           "name": "Əsas Lüğət"
         },
+        "c03754de-e580-4e9f-b58e-af136a073898": {
+          "name": "Sevimli Yemək"
+        },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
           "name": "Parti Oyunları"
         },
@@ -823,6 +812,9 @@
           "tips": [
             null
           ]
+        },
+        "220a9c31-c877-4fe2-83ef-722e93bed0a5": {
+          "name": "Dəyişənlərin təqdim edilməsi"
         },
         "035f92b6-2d03-4fec-adc4-a15a1b620f08": {
           "name": "Əksetmə"
@@ -847,7 +839,8 @@
           "progression_name": "Praktika"
         },
         "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
-          "name": "Gözdən keçirmə"
+          "name": "Gözdən keçirmə",
+          "description": "**Bunu edin:** Bu dərs üçün lüğəti nəzərdən keçirmək üçün dərs slaydlarından istifadə edin. Şagirdlərin bu anlayışların hər birini gördükləri dərsdən xatırlaya biləcəyinə əmin olun."
         },
         "d9171886-0618-4e77-a38b-4543fd46893e": {
           "name": "Əksetmə"
@@ -875,6 +868,9 @@
           "tips": [
             null
           ]
+        },
+        "d5bf3b23-128d-4078-bdb2-a806a59a2db1": {
+          "name": "Vitrin"
         },
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Giriş"
@@ -938,6 +934,9 @@
         },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Giriş"
+        },
+        "f636ac37-29ac-45d0-8b65-8bad3da1ab56": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
         },
         "1668a313-16da-49db-9713-13d7ad33889e": {
           "progression_name": "Gözdən keçirmə"
@@ -1102,23 +1101,43 @@
             null
           ]
         },
+        "6fbe07dc-fe00-448c-89a6-39971bfcc99f": {
+          "name": "Komputer Lobaratotiyasında davranış"
+        },
         "af269d6d-e57d-4331-bc8d-daae801d1db0": {
           "tips": [
             null
           ]
         },
+        "bca3fd9d-6986-4755-80d1-056fcf486977": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
+        },
+        "be611371-ad73-4d3a-b3cf-7e20b4687b61": {
+          "name": "Sərbəst oylar istifadə etməklə onlayn fəaliyyət"
+        },
         "07f0915c-fd00-4787-8a53-251613824cc8": {
+          "name": "Angry Birds ilə sıralama",
           "tips": [
-            null
+            "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
           ]
         },
         "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
+          "name": "Gözdən keçirmək Sərbəst fəaliyyət",
           "tips": [
             null
           ]
+        },
+        "4d06cf45-70a0-47fb-a3ff-0d4818645b5c": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
+        },
+        "af41bb35-0f50-4787-81ac-3658bfa59b98": {
+          "name": "Ox istifadə etməklə tapmacalar"
+        },
+        "8d4c8d73-6930-4a7f-a73d-3c3312a2705b": {
+          "name": "Əsəbi quşlarla proqramlaşdırma"
         },
         "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
           "progression_name": "meydan oxumaq"
@@ -1131,18 +1150,21 @@
         },
         "6a3d0163-b925-4e7a-933a-93f7d6432233": {
           "tips": [
-            null
+            "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
           ]
         },
         "c0a1cc94-6551-4771-841c-2b480772c527": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
           "name": "Giriş"
         },
+        "478f0185-2792-46bb-8d0d-e88788ebb722": {
+          "name": "Taxılbiçən ilə proqramlaşdırma"
+        },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
           "tips": [
-            null
+            "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
           ]
         },
         "fcc74691-719d-415b-87ae-8bc40b436318": {
@@ -1152,7 +1174,7 @@
           "progression_name": "Praktika"
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "8d66f089-ec12-474c-9410-cff9a1d9042a": {
           "name": "Məndən sonra təkrarla"
@@ -1163,10 +1185,16 @@
           ]
         },
         "740f60c7-c857-4947-804e-498fb18ab620": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
           "name": "Giriş"
+        },
+        "312282bb-1122-4f51-b143-605d761309d1": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
+        },
+        "11be2bd6-803f-4a86-9f3c-f366fbcbea4b": {
+          "description": "Şagirdlər tapmacalar üzərində işləyərkən bir döngə və ya bir döngə olmadan neçə blok istifadə etdiklərini anlaya bilirlərmi baxın."
         },
         "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
           "progression_name": "meydan oxumaq"
@@ -1190,7 +1218,7 @@
           "progression_name": "Dərsə əlavələr"
         },
         "b4e46590-0e84-4574-9230-c8fb9e768647": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "bd9b2ae7-e0c5-43b5-8416-ab1b164feb2b": {
           "name": "Giriş"
@@ -1213,13 +1241,13 @@
           "progression_name": "Dərsə əlavələr"
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "690e9bfd-7ca2-49f7-bd24-2ba8a921b4c5": {
           "name": "Tətbiq nədir?"
         },
         "804a67da-450d-4514-8c2e-2c9ed196e7c1": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "616fe3f0-31f4-4d6c-a96b-c2fea538d981": {
           "name": "Giriş"
@@ -1240,6 +1268,9 @@
             null
           ]
         },
+        "a1d91fb3-f7e1-49e4-a901-9316fa8a8327": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
+        },
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
           "progression_name": "Azad Oyna"
         },
@@ -1250,7 +1281,7 @@
           "progression_name": "Dərsə əlavələr"
         },
         "f7fafab8-5c1c-473a-901b-893eb23c491b": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
           "name": "Gözdən keçirmə",
@@ -1278,7 +1309,7 @@
           "name": "Vitrin"
         },
         "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
-          "progression_name": "Onlayn Məhəlləm"
+          "progression_name": "Mənim onlayn qonşuluğum"
         },
         "e89c6579-86c7-4478-8ddf-e941751a06c5": {
           "description": "Şagirdlərin öyrənməsini artırmaq üçün təmin edə biləcəyiniz əlavə qaynaqlar buradadır:\n\n-   [Ailə fəalliyyəti](https://drive.google.com/open?id=17Tq9wgw2F9sMkE2Z2a2zkriLK0zp1qDsSkv5YTB7Ldg)\n-   [Ailə tövsiyyələri](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)"
@@ -1291,6 +1322,9 @@
             null
           ]
         },
+        "e1c4af11-08ae-4ddd-90dc-da28738444fb": {
+          "name": "Dartıb buraxmağı oyrən "
+        },
         "b1107182-e8bd-4439-bf3e-135d5c0ab145": {
           "tips": [
             null
@@ -1298,11 +1332,8 @@
         },
         "2f105d16-8751-4faa-a550-ae4dc2ef5078": {
           "tips": [
-            null
+            "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
           ]
-        },
-        "31f60124-e5bb-4ed5-b5ef-97509d71cbda": {
-          "progression_name": "Bacarıq qurmaq"
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
           "name": "Əksetmə",
@@ -1319,13 +1350,18 @@
           ]
         },
         "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
-          "name": "Xoşbəxt Xəritələr Proqramlaşdırılması",
-          "progression_name": "Video: Xoşbəxt Xəritələr - Fərqli Fəaliyyət"
+          "name": "Xoşbəxt Xəritələr Proqramlaşdırılması"
+        },
+        "239ba3e6-f30a-4f56-8325-0058e708421a": {
+          "name": "Komputer Lobaratotiyasında davranış"
         },
         "fadfd6a5-099f-427c-aa1f-345ee17ca150": {
           "tips": [
             null
           ]
+        },
+        "d639c3c7-2708-41eb-afae-cf5a65464fd8": {
+          "name": "Bloklar ilə proqramlaşdırma"
         },
         "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
           "tips": [
@@ -1388,6 +1424,12 @@
             null
           ]
         },
+        "d1bd79aa-b64e-4e66-b7e5-657d5b990a60": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
+        },
+        "bfc26aa9-b856-47f4-86c0-36818d4d9c87": {
+          "description": "Şagirdlər tapmacalar üzərində işləyərkən bir döngə və ya bir döngə olmadan neçə blok istifadə etdiklərini anlaya bilirlərmi baxın."
+        },
         "277f1b5f-abbe-4158-9507-d91cce301994": {
           "progression_name": "meydan oxumaq"
         },
@@ -1418,6 +1460,9 @@
         },
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
           "progression_name": "Dərsə əlavələr"
+        },
+        "46ce0bcb-9f62-42c7-91dd-a6a98b68b10b": {
+          "description": "Şagirdlər tapmacalar üzərində işləyərkən bir döngə və ya bir döngə olmadan neçə blok istifadə etdiklərini anlaya bilirlərmi baxın."
         },
         "a79a0dff-fe81-486d-9961-8198b65bdb8c": {
           "name": "Əksetmə"
@@ -1469,6 +1514,9 @@
             null
           ]
         },
+        "9126c997-86b1-4d78-9eaf-3d07e06c6355": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
+        },
         "4221ebcd-383b-44bf-a876-41e658bd8460": {
           "progression_name": "Azad Oyna"
         },
@@ -1503,6 +1551,9 @@
             null
           ]
         },
+        "adc355f7-34d5-450e-aa57-e001b2a7973c": {
+          "name": "Vitrin"
+        },
         "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
           "name": "Əsas Lüğət"
         },
@@ -1513,8 +1564,7 @@
           "name": "Robotlarla danışmaq"
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
-          "name": "Mənim robot dostlarım",
-          "progression_name": "Mənim robot dostlarım-Sərbəst Fəaliyyət"
+          "name": "Mənim robot dostlarım"
         },
         "92835cd7-aad8-4ff9-8fbb-cdd1ffb21c96": {
           "tips": [
@@ -1536,6 +1586,7 @@
           ]
         },
         "c0ffac59-84f7-4177-b960-d808e21facb3": {
+          "name": "Əsəbi quşlarla proqramlaşdırma",
           "tips": [
             null
           ]
@@ -1578,6 +1629,9 @@
         },
         "c1c33567-d81d-49d9-a399-e0ba461f0165": {
           "name": "Giriş"
+        },
+        "e2aaa332-2426-4380-b14b-cd681477be54": {
+          "name": "Laurel ilə xəzinə toplama"
         },
         "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
           "progression_name": "meydan oxumaq"
@@ -1628,6 +1682,9 @@
         },
         "ff476c40-142d-458c-8c84-04f775b46de3": {
           "name": "Giriş"
+        },
+        "3ac4fdef-870d-4cad-8022-649ab64336b0": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
         },
         "cc9ef036-2cca-4863-b922-284a995c38b7": {
           "progression_name": "Təxmin"
@@ -1710,6 +1767,9 @@
         "6cc5d299-00fd-477a-a654-60dc83031733": {
           "name": "Giriş"
         },
+        "029d4726-2804-4d14-9270-4405e9461405": {
+          "name": "Kağız blokları istifadə etməklə sərbəst fəaliyyət"
+        },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
             null
@@ -1778,6 +1838,9 @@
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "Layihə"
         },
+        "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
+          "name": "Vitrin"
+        },
         "b8f03681-d01e-4384-b88f-5e562eab172f": {
           "name": "Əsas Lüğət"
         },
@@ -1811,7 +1874,7 @@
           "progression_name": "meydan oxumaq"
         },
         "b60e2fce-2cac-4440-8d56-d3a78c50d34d": {
-          "progression_name": "Təcrübə et"
+          "progression_name": "Praktika"
         },
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "name": "Əksetmə"
@@ -1833,28 +1896,22 @@
           ]
         },
         "fe8fc837-1652-4638-bb0d-fe8c61b31f79": {
-          "name": "Əksetmə "
+          "name": "Əksetmə"
         },
         "d2a287ee-e85d-4ced-a525-517d98f9258b": {
           "name": "Giriş"
-        },
-        "0fee56da-4a47-490c-b500-a54be824f01c": {
-          "progression_name": "Bacarıq qurmaq"
         },
         "1921c52c-25f6-457a-8dba-57926c95bfae": {
           "progression_name": "meydan oxumaq"
         },
         "04939762-e87a-4924-8049-62fb65e8dc0c": {
-          "progression_name": "Təcrübə et"
+          "progression_name": "Praktika"
         },
         "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9": {
           "name": "Əksetmə"
         },
         "9d0e1d83-61ee-4d81-8524-8423a2ddc53f": {
           "name": "Giriş"
-        },
-        "3fea7621-ed7a-4f12-852d-ccc7768ce6db": {
-          "progression_name": "Bacarıq qurmaq"
         },
         "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
           "progression_name": "Azad Oyna"
@@ -1900,7 +1957,7 @@
           "progression_name": "Praktika"
         },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
-          "progression_name": "Hadisələr"
+          "progression_name": "Tədbirlər"
         },
         "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
           "progression_name": "Ölçülər"
@@ -1927,6 +1984,10 @@
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Dövrlərə giriş"
+        },
+        "5959da7d-9d44-4fbd-8b75-25a422ccdfbb": {
+          "name": "Buz Dövründə Dövrlər",
+          "description": "Şagirdlər tapmacalar üzərində işləyərkən bir döngə və ya bir döngə olmadan neçə blok istifadə etdiklərini anlaya bilirlərmi baxın."
         },
         "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
           "progression_name": "meydan oxumaq"
@@ -2068,6 +2129,7 @@
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
+          "name": "Kurs layihələrinin sonu!",
           "tips": [
             null
           ]
@@ -2078,6 +2140,9 @@
         "cc80e93e-054f-4dfb-acf9-75c0fa999f10": {
           "progression_name": "Layihə yarat"
         },
+        "bfb31158-7c6c-4e30-9e86-141b77445111": {
+          "name": "Vitrin"
+        },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "Giriş",
           "tips": [
@@ -2085,13 +2150,10 @@
           ]
         },
         "7b5f9e78-8c46-4ffa-ab19-355d6d63624b": {
-          "name": "Angry Birds ilə proqramlaşdırma",
+          "name": "Əsəbi quşlarla proqramlaşdırma",
           "tips": [
             null
           ]
-        },
-        "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
-          "progression_name": "Bacarıq qurmaq"
         },
         "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
           "progression_name": "meydan oxumaq"
@@ -2100,7 +2162,7 @@
           "progression_name": "Praktika"
         },
         "6ae01f75-c26d-432f-9775-8a1743d620d7": {
-          "progression_name": "Proqnoz"
+          "progression_name": "Təxmin"
         },
         "02d18e9f-46ac-4658-8397-3896b78baea0": {
           "progression_name": "Praktika"
@@ -2117,14 +2179,11 @@
         "a03b28fc-fd86-4f3a-ba44-ade5b7437f24": {
           "name": "Lüğət"
         },
-        "50d3fc0c-d6f2-418b-aeb5-fd74abc01c94": {
-          "progression_name": "Bacarıq qurmaq"
-        },
         "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
           "progression_name": "meydan oxumaq"
         },
         "73d03eeb-a7b1-4ee8-ad5b-85638d568511": {
-          "progression_name": "Proqnoz"
+          "progression_name": "Təxmin"
         },
         "142926ac-9a7f-484f-975c-c0eceba04aa9": {
           "progression_name": "Praktika"
@@ -2141,12 +2200,6 @@
         "44711c15-152c-4e84-9eca-d87c42edd4a8": {
           "name": "Laurel ilə xəzinə toplama"
         },
-        "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
-          "progression_name": "Video:Toplayıcı"
-        },
-        "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
-          "progression_name": "Bacarıq qurmaq"
-        },
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
           "progression_name": "meydan oxumaq"
         },
@@ -2154,7 +2207,7 @@
           "progression_name": "Praktika"
         },
         "a68000ad-1ef6-4ac0-844e-ad079afe39cf": {
-          "progression_name": "Proqnoz"
+          "progression_name": "Təxmin"
         },
         "c2b48d91-12cf-4c18-a151-031c08eb35ff": {
           "progression_name": "Praktika"
@@ -2213,6 +2266,7 @@
           "name": "Giriş"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Spraytlar düzəltmək",
           "tips": [
             null
           ],
@@ -2228,11 +2282,13 @@
           "name": "Əksetmə"
         },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
+          "name": "Alqoritmi izləyin.",
           "tips": [
             null
           ]
         },
         "bc9a48f5-47d1-4044-89fc-a38283b796e2": {
+          "name": "Spritelar Hərəkətdə",
           "progression_name": "Təxmin"
         },
         "25d274b2-36a3-49fc-8646-93275a5162a0": {
@@ -2265,7 +2321,7 @@
           "progression_name": "Praktika"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
-          "progression_name": "Hadisələr"
+          "progression_name": "Tədbirlər"
         },
         "1e1080ab-15de-4319-9e76-f6c99f8ebe60": {
           "progression_name": "Ölçülər"
@@ -2511,6 +2567,9 @@
         "efc04a38-eabb-4c39-8ba5-571b966a2bd7": {
           "name": "Giriş"
         },
+        "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
+          "progression_name": "Biçinçi"
+        },
         "d505ce63-802f-4f28-bc12-8274cd540d14": {
           "progression_name": "Praktika"
         },
@@ -2549,7 +2608,8 @@
           "progression_name": "Praktika"
         },
         "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
-          "name": "Gözdən keçirmə"
+          "name": "Gözdən keçirmə",
+          "description": "**Bunu edin:** Bu dərs üçün lüğəti nəzərdən keçirmək üçün dərs slaydlarından istifadə edin. Şagirdlərin bu anlayışların hər birini gördükləri dərsdən xatırlaya biləcəyinə əmin olun."
         },
         "ba16d75f-cd57-4bf6-9c71-78f6bbe31603": {
           "name": "Əksetmə"
@@ -2638,6 +2698,9 @@
           "name": "Layihə yarat",
           "progression_name": "Layihə yarat"
         },
+        "d99249e4-021e-4a39-9462-045e0306c00a": {
+          "name": "Vitrin"
+        },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
           "name": "Giriş",
           "tips": [
@@ -2659,16 +2722,14 @@
         },
         "d42ef620-4171-4966-a8ef-47c6079cd1ef": {
           "tips": [
-            null
+            "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
           ]
-        },
-        "bde027df-b2a3-4252-980a-7e8493d898e6": {
-          "progression_name": "Bacarıq qurmaq"
         },
         "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
           "name": "Əksetmə"
         },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
+          "name": "Komputer Lobaratotiyasında davranış",
           "tips": [
             null
           ]
@@ -2683,12 +2744,6 @@
           "tips": [
             "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
           ]
-        },
-        "1ed021eb-9033-4d39-98d7-e9e245a7f785": {
-          "progression_name": "Video: Bloklar ilə proqramlaşdırma"
-        },
-        "0394c5d4-246e-42bc-aca2-97d7bd159173": {
-          "progression_name": "Bacarıq qurmaq"
         },
         "51b1c494-c02c-43d8-bf3d-543f6634f474": {
           "name": "Əksetmə"
@@ -2711,14 +2766,10 @@
           ]
         },
         "12c1b1b7-2a91-4f58-ae14-136ea1536a67": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "5990c610-f353-48fd-9d5f-a813486a237f": {
           "name": "Giriş"
-        },
-        "5ff6bd4a-2e05-4098-80a6-5e011fa70518": {
-          "name": "Rey və BB-8 ilə proqramlaşdırma",
-          "progression_name": "Video: Rey və BB-8 ilə proqramlaşdırma"
         },
         "98d68ccb-eacc-4a2a-83f7-aa4392ad93aa": {
           "progression_name": "meydan oxumaq"
@@ -2727,7 +2778,7 @@
           "progression_name": "Praktika"
         },
         "4f8c5eb5-a782-4698-a471-19808d1dbbc4": {
-          "name": "Yansıma"
+          "name": "Əksetmə"
         },
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
           "name": "Giriş"
@@ -2737,20 +2788,17 @@
         },
         "dfa32a81-45fc-4e60-b0d0-a3324b044c9b": {
           "tips": [
-            null
+            "Şagirdlərə sinif yoldaşlarına kömək etməyin doğru yolunu göstərin:\n\n-   Sinif yoldaşınızın kreslosuna əyləşməyin\n-   Sinif yoldaşınızın klaviaturasından istifadə etməyin\n-   Sinif yoldaşınızın siçanına toxunmayin\n-   Getmədən əvvəl sinif yoldaşınızın həlli yüksək səslə sizə izah edə biləcəyinə əmin olun"
           ]
-        },
-        "45d59019-4dd4-4a32-b08c-fd79528eab76": {
-          "progression_name": "Video: Taxıl biçən"
         },
         "fc22082b-67fd-47ec-8353-11c902f9ab4c": {
           "progression_name": "meydan oxumaq"
         },
         "6f0b2804-a745-47e0-8211-45bfc553e106": {
-          "progression_name": "təcrübə"
+          "progression_name": "Praktika"
         },
         "94b18069-db8a-43d7-bbf0-8912ac563349": {
-          "name": "Yansıma"
+          "name": "Əksetmə"
         },
         "f6ac49ff-86ee-444b-9e56-62de0b794363": {
           "name": "Giriş",
@@ -2760,6 +2808,9 @@
           "tips": [
             null
           ]
+        },
+        "0c3cdd42-4e3e-4b16-942b-47ce55609295": {
+          "description": "Şagirdlər tapmacalar üzərində işləyərkən bir döngə və ya bir döngə olmadan neçə blok istifadə etdiklərini anlaya bilirlərmi baxın."
         },
         "c6bb8fa9-dfaa-414e-ac47-0f6196d8fa9e": {
           "tips": [
@@ -2782,23 +2833,17 @@
           "name": "Onlayn tapmaca",
           "description": "Şagirdlər tapmacalar üzərində işləyərkən bir döngə və ya bir döngə olmadan neçə blok istifadə etdiklərini anlaya bilirlərmi baxın."
         },
-        "c3e95f81-dafa-4791-9bf4-1cc0d418b4e3": {
-          "progression_name": "Video: Kolleksiyaçı"
-        },
-        "dead7fa5-406d-419c-a084-3a913cbd2499": {
-          "progression_name": "Video: Təkrar Blokundan istifadə"
-        },
         "46172f79-e306-4a8f-9ecd-640b05733fb6": {
           "progression_name": "meydan oxumaq"
         },
         "c08bd0ec-993c-4554-b855-96bdf024e9ef": {
-          "progression_name": "Təcrübə"
+          "progression_name": "Praktika"
         },
         "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
           "progression_name": "Dərsə əlavələr"
         },
         "6397718f-1733-47e6-8ace-820b3f9d1701": {
-          "name": "Yansıma"
+          "name": "Əksetmə"
         },
         "6361a98f-3232-4060-8758-b1f8064507a8": {
           "name": "Giriş"
@@ -2807,12 +2852,6 @@
           "tips": [
             null
           ]
-        },
-        "7ccc621e-43b3-4402-a0cc-c626dfa1ea79": {
-          "progression_name": "Video: Kod studiyasındakı sənətçi"
-        },
-        "eabc47c6-9f94-4b32-aab1-4a138064532b": {
-          "progression_name": "Video: Sənətçidəki döngələr"
         },
         "073ef24a-022b-46a3-a900-9a5bd5c2b6fe": {
           "progression_name": "meydan oxumaq"
@@ -2827,7 +2866,7 @@
           "progression_name": "Dərsə əlavələr"
         },
         "7043a915-b252-47d3-bb01-5975d613129c": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "b53a9767-0731-41e2-b2fe-0b8b841cd403": {
           "name": "Giriş"
@@ -2850,7 +2889,7 @@
           "progression_name": "Dərsə əlavələr"
         },
         "e382cc47-35ef-4c10-80a1-4b9090d86856": {
-          "name": "Əks olunma"
+          "name": "Əksetmə"
         },
         "e54a7c2e-64b2-4b83-a007-845a622ca484": {
           "name": "Giriş",
@@ -2862,19 +2901,16 @@
           "progression_name": "Azad Oyna"
         },
         "dd7a6bce-6e0d-4774-8588-76327c4315d6": {
-          "progression_name": "Təcrübə"
+          "progression_name": "Praktika"
         },
         "0a6abf88-92c8-455d-8d64-e8f61ae227ad": {
           "progression_name": "Dərsə əlavələr"
         },
         "9336ef6c-3ac8-4703-8f8d-98e88518e5e9": {
-          "name": "Yansıma"
+          "name": "Əksetmə"
         },
         "e41f8532-e8cd-4df7-a729-43346d3df6d1": {
           "name": "Giriş"
-        },
-        "621d3a54-6cd9-48ae-a4f0-563b8c25a0e7": {
-          "progression_name": "Mini Layihə: Kral Döyüşü"
         },
         "ddebabd0-cce0-446d-81ad-f4734e71d06c": {
           "progression_name": "Azad Oyna"
@@ -2883,7 +2919,7 @@
           "progression_name": "Dərsə əlavələr"
         },
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
-          "name": "Yansıma"
+          "name": "Əksetmə"
         },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Giriş"
@@ -2914,10 +2950,7 @@
           ]
         },
         "75de5d52-becb-4805-82d8-5be30d0dca7d": {
-          "progression_name": "Proqnoz"
-        },
-        "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
-          "progression_name": "Bacarıq qurmaq"
+          "progression_name": "Təxmin"
         },
         "30997374-8929-4152-b55b-94e459e3ee58": {
           "progression_name": "Praktika"
@@ -2943,7 +2976,7 @@
           "progression_name": "Azad Oyna"
         },
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
-          "name": "Yansıma"
+          "name": "Əksetmə"
         },
         "fe0cef4a-d3fd-446e-9874-8270ccda6a52": {
           "name": "Əsas Lüğət"
