@@ -17,7 +17,6 @@ import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 
 export default function initPage(unitEditorData) {
   const scriptData = unitEditorData.script;
-  console.log(scriptData);
   const lessonLevelData = unitEditorData.lessonLevelData;
   const lessonGroups = mapLessonGroupDataForEditor(scriptData.lesson_groups);
 
