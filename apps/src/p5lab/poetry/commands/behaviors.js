@@ -1,18 +1,25 @@
 import * as utils from './utils';
 
+// These functions are duplicated from https://levelbuilder-studio.code.org/functions
+// In Sprite Lab, behaviors are defined using blockly so that students can edit
+// the behavior functions. In Poetry, we just need the function definitions, we don't
+// need them to be editable by students.
 export const commands = {
   fluttering(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.y += utils.randomInt(-1, 1);
   },
+
   growing(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.setScale(sprite.getScale() + 1 / 100);
   },
+
   jittering(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.setScale(sprite.getScale() + utils.randomInt(-1, 1) / 100);
   },
+
   moving_north_and_looping(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.y -= sprite.speed;
@@ -20,6 +27,7 @@ export const commands = {
       sprite.y = 450;
     }
   },
+
   moving_south_and_looping(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.y += sprite.speed;
@@ -27,6 +35,7 @@ export const commands = {
       sprite.y = -50;
     }
   },
+
   moving_east_and_looping(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.mirrorX(1);
@@ -36,6 +45,7 @@ export const commands = {
       sprite.x = -50;
     }
   },
+
   moving_west_and_looping(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.mirrorX(-1);
@@ -45,18 +55,22 @@ export const commands = {
       sprite.x = 450;
     }
   },
+
   shrinking(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.setScale(sprite.getScale() - 1 / 100);
   },
+
   spinning_left(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.rotation -= 6;
   },
+
   spinning_right(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     sprite.rotation += 6;
   },
+
   swimming_left_and_right(spriteArg) {
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
@@ -77,6 +91,7 @@ export const commands = {
       sprite.direction = (sprite.direction + 180) % 360;
     }
   },
+
   wandering(spriteArg) {
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
@@ -101,6 +116,7 @@ export const commands = {
       sprite.mirrorX(-1);
     }
   },
+
   wobbling(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
     if (utils.randomInt(0, 100) < 50) {
