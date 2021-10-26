@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:49 UTC",
+    "serialized_at": "2021-10-26 21:04:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "seeding_key": {
@@ -484,16 +484,16 @@
       }
     },
     {
-      "key": "Post-Unit Survey",
-      "name": "Post-Unit Survey",
+      "key": "CS Discoveries Post-Course Survey",
+      "name": "CS Discoveries Post-Course Survey",
       "absolute_position": 22,
-      "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Post-Unit Survey",
+        "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd7-2021"
       }
@@ -1707,13 +1707,13 @@
       }
     },
     {
-      "key": "e8cac1db-ac28-4f42-8e94-6e06003053b2",
+      "key": "df5a9a85-f94d-4abf-951b-090d0793629c",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "e8cac1db-ac28-4f42-8e94-6e06003053b2",
-        "lesson.key": "Post-Unit Survey",
+        "lesson_activity.key": "df5a9a85-f94d-4abf-951b-090d0793629c",
+        "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd7-2021"
       }
@@ -8092,13 +8092,20 @@
       }
     },
     {
-      "key": "76029f86-bc3c-4320-b7c1-952a7d44b15b",
+      "key": "9819f2db-593b-4631-96e8-ad45aba59e08",
       "position": 1,
       "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**To view results** -- the post-course survey is a little different. The survey which lives in its own unit of the course, and this page simply links to it.\n\n* To view anonymized results of the survey in your teacher dashboard, you need to (1) view survey/assessments, and then (2) select the post-course survey unit as the unit you want view.  \n\n* **More Instructions for viewing results of post-course survey**: [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\n\n\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "76029f86-bc3c-4320-b7c1-952a7d44b15b",
-        "lesson_activity.key": "e8cac1db-ac28-4f42-8e94-6e06003053b2"
+        "activity_section.key": "9819f2db-593b-4631-96e8-ad45aba59e08",
+        "lesson_activity.key": "df5a9a85-f94d-4abf-951b-090d0793629c"
       }
     }
   ],
@@ -9929,27 +9936,25 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD survey_placeholder_levelgroup"
-        ]
+        "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD survey_placeholder_levelgroup"
+          "csd-post-survey-markdown-with-link-to-survey_2021"
         ],
-        "lesson.key": "Post-Unit Survey",
+        "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd7-2021",
-        "activity_section.key": "76029f86-bc3c-4320-b7c1-952a7d44b15b"
+        "activity_section.key": "9819f2db-593b-4631-96e8-ad45aba59e08"
       },
       "level_keys": [
-        "CSD survey_placeholder_levelgroup"
+        "csd-post-survey-markdown-with-link-to-survey_2021"
       ]
     }
   ],
@@ -10832,14 +10837,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD survey_placeholder_levelgroup",
+        "level.key": "csd-post-survey-markdown-with-link-to-survey_2021",
         "script_level.level_keys": [
-          "CSD survey_placeholder_levelgroup"
+          "csd-post-survey-markdown-with-link-to-survey_2021"
         ],
-        "lesson.key": "Post-Unit Survey",
+        "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd7-2021",
-        "activity_section.key": "76029f86-bc3c-4320-b7c1-952a7d44b15b"
+        "activity_section.key": "9819f2db-593b-4631-96e8-ad45aba59e08"
       }
     }
   ],
