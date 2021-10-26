@@ -4,8 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "curriculum_umbrella": "CSP",
       "exclude_csf_column_in_legend": true,
+      "family_name": "csp5",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -32,20 +39,14 @@
           "https://studio.code.org/s/csp5-support"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp5",
       "tts": true,
-      "hideable_lessons": true
+      "version_year": "2017"
     },
     "new_name": "csp5-2017",
     "family_name": "csp5",
-    "serialized_at": "2021-08-03 22:46:57 UTC",
+    "serialized_at": "2021-10-25 22:53:15 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp5-2017"
     }
@@ -2672,8 +2673,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_affirmation_intervention_5",
-          "csp_affirmation_control_5"
+          "csp_affirmation_control_5",
+          "csp_affirmation_intervention_5"
         ],
         "progression": "Pre-test reflection",
         "variants": {
@@ -2695,16 +2696,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_affirmation_intervention_5",
-          "csp_affirmation_control_5"
+          "csp_affirmation_control_5",
+          "csp_affirmation_intervention_5"
         ],
         "lesson.key": "Unit 5 Assessment 1",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2017"
       },
       "level_keys": [
-        "csp_affirmation_intervention_5",
-        "csp_affirmation_control_5"
+        "csp_affirmation_control_5",
+        "csp_affirmation_intervention_5"
       ]
     },
     {
@@ -4657,8 +4658,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_affirmation_intervention_5",
-          "csp_affirmation_control_5"
+          "csp_affirmation_control_5",
+          "csp_affirmation_intervention_5"
         ],
         "progression": "Pre-test reflection",
         "variants": {
@@ -4680,16 +4681,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_affirmation_intervention_5",
-          "csp_affirmation_control_5"
+          "csp_affirmation_control_5",
+          "csp_affirmation_intervention_5"
         ],
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",
         "script.name": "csp5-2017"
       },
       "level_keys": [
-        "csp_affirmation_intervention_5",
-        "csp_affirmation_control_5"
+        "csp_affirmation_control_5",
+        "csp_affirmation_intervention_5"
       ]
     },
     {
@@ -8754,8 +8755,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_control_5",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_5",
-          "csp_affirmation_control_5"
+          "csp_affirmation_control_5",
+          "csp_affirmation_intervention_5"
         ],
         "lesson.key": "Unit 5 Assessment 1",
         "lesson_group.key": "csp5_1",
@@ -8766,8 +8767,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_intervention_5",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_5",
-          "csp_affirmation_control_5"
+          "csp_affirmation_control_5",
+          "csp_affirmation_intervention_5"
         ],
         "lesson.key": "Unit 5 Assessment 1",
         "lesson_group.key": "csp5_1",
@@ -9669,8 +9670,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_intervention_5",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_5",
-          "csp_affirmation_control_5"
+          "csp_affirmation_control_5",
+          "csp_affirmation_intervention_5"
         ],
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",
@@ -9681,8 +9682,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_control_5",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_5",
-          "csp_affirmation_control_5"
+          "csp_affirmation_control_5",
+          "csp_affirmation_intervention_5"
         ],
         "lesson.key": "Unit 5 Assessment 2",
         "lesson_group.key": "csp5_1",

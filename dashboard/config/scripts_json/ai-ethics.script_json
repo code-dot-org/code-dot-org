@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "version_year": "unversioned",
+      "curriculum_umbrella": "CSC",
       "is_course": true,
-      "curriculum_umbrella": "CSC"
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-10-14 17:30:23 UTC",
+    "serialized_at": "2021-10-25 22:54:59 UTC",
     "published_state": "in_development",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "ai-ethics"
     }
@@ -296,9 +297,9 @@
       "url": "https://docs.google.com/document/d/16D3jRO2Q3KxM8FHvC8sdGLa19sxa5DGperetnX9gqcY/edit?usp=sharing",
       "key": "ai-ethics-research-areas",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "ai-ethics-research-areas"
@@ -309,9 +310,9 @@
       "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
       "key": "ai-ethics-research-reflection",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "ai-ethics-research-reflection"
@@ -322,8 +323,8 @@
       "url": "https://docs.google.com/presentation/d/1R9kSIbLwHtLSY0HoeIz19Kt1eXQKmCCjG6qM_VQhVGc/copy",
       "key": "ai_code_of_ethics",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "ai_code_of_ethics"
@@ -334,8 +335,8 @@
       "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
       "key": "ethics_ai_equal_access_and_algorithmic_bias",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
@@ -346,8 +347,8 @@
       "url": "https://youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y",
       "key": "how-ai-works-video-series",
       "properties": {
-        "type": "Video Series",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video Series"
       },
       "seeding_key": {
         "resource.key": "how-ai-works-video-series"
@@ -358,8 +359,8 @@
       "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
       "key": "our-ai-code-of-ethics-template-slides",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "our-ai-code-of-ethics-template-slides"
@@ -451,16 +452,6 @@
   ],
   "objectives": [
     {
-      "key": "da3ad7a2-d100-4521-b04e-139a7488779f",
-      "properties": {
-        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "da3ad7a2-d100-4521-b04e-139a7488779f"
-      }
-    },
-    {
       "key": "440db7c0-d217-4abe-b348-515a57c0d0d9",
       "properties": {
         "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
@@ -479,23 +470,19 @@
         "lesson.key": "lesson-1",
         "objective.key": "b55b0bd5-5b57-4317-ab28-8b615334f9b4"
       }
+    },
+    {
+      "key": "da3ad7a2-d100-4521-b04e-139a7488779f",
+      "properties": {
+        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "da3ad7a2-d100-4521-b04e-139a7488779f"
+      }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-20"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -508,6 +495,20 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "ccela",
         "standard.shortcode": "9-10.RI.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
       }
     }
   ],
