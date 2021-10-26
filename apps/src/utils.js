@@ -862,3 +862,9 @@ export function tooltipifyVocabulary() {
     $(this).tooltip({placement: 'bottom'});
   });
 }
+
+export function containsAtLeastOneAlphaNumberic(string) {
+  return /^.*[a-zA-Z0-9èàùìòÈÀÒÙÌéáúíóÉÁÚÍÓëäüïöËÄÜÏÖêâûîôÊÂÛÎÔç'-]+.*$/.test(
+    string
+  );
+}

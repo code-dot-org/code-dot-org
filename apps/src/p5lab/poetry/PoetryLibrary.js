@@ -4,6 +4,7 @@ import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
 import * as utils from './commands/utils';
+import {containsAtLeastOneAlphaNumberic} from '../../utils';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
 import spritelabCommands from '../spritelab/commands/index';
@@ -441,7 +442,7 @@ export default class PoetryLibrary extends CoreLibrary {
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: lineSize,
-        isPoemBodyLine: utils.containsAtLeastOneAlphaNumberic(line) // Used to skip blank lines in animations
+        isPoemBodyLine: containsAtLeastOneAlphaNumberic(line) // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });
