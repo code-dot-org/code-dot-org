@@ -32,3 +32,9 @@ export function hexToRgb(hexColor) {
   const B = parseInt(hexColor.substr(5, 2), 16);
   return {R, G, B};
 }
+
+export function containsAtLeastOneAlphaNumberic(string) {
+  return /^.*[a-zA-Z0-9èàùìòÈÀÒÙÌéáúíóÉÁÚÍÓëäüïöËÄÜÏÖêâûîôÊÂÛÎÔç'-]+.*$/.test(
+    string
+  );
+}
