@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Draggable} from 'react-beautiful-dnd';
-import {grid} from './CodeReviewGroup';
+import {grid} from './StudentGroup';
 
 // A CodeReviewGroupMember is a component that
 // can be dragged between CodeReviewGroups
@@ -9,7 +9,7 @@ import {grid} from './CodeReviewGroup';
 // These are called "Draggables" in the package we're using (React Beautiful DnD).
 // More information on React Beautiful DnD can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroupMember({followerId, name, index}) {
+export default function Student({followerId, name, index}) {
   return (
     <Draggable
       key={followerId}
@@ -41,7 +41,7 @@ export default function CodeReviewGroupMember({followerId, name, index}) {
   );
 }
 
-CodeReviewGroupMember.propTypes = {
+Student.propTypes = {
   followerId: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired

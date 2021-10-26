@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
 import _ from 'lodash';
-import CodeReviewGroup from './CodeReviewGroup';
+import StudentGroup from './StudentGroup';
 
 const DROPPABLE_ID_PREFIX = 'groupId';
 const DROPPABLE_ID_UNASSIGNED = 'unassigned';
@@ -73,7 +73,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
     <div>
       <DragDropContext onDragEnd={onDragEnd}>
         <div style={styles.dragAndDropContainer}>
-          <CodeReviewGroup
+          <StudentGroup
             droppableId={getUnassignedGroup().droppableId}
             members={getUnassignedGroup().members}
           />
@@ -88,7 +88,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
             </button>
             {getAssignedGroups().map(group => {
               return (
-                <CodeReviewGroup
+                <StudentGroup
                   droppableId={group.droppableId}
                   members={group.members}
                   key={group.droppableId}
