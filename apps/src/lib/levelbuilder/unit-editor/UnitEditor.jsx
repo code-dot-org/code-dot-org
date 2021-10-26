@@ -589,12 +589,12 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
 
         {this.props.hasCourse && (
-          <div>
+          <CollapsibleEditorSection title="Course Type Settings">
             <p>
               This unit is part of a course. Go to the course edit page to set
-              the audience settings for the course and its units.
+              the course type settings for the course and its units.
             </p>
-          </div>
+          </CollapsibleEditorSection>
         )}
         {!this.props.hasCourse && (
           <CourseTypeEditor
