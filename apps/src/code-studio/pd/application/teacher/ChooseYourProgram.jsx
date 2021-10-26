@@ -21,41 +21,30 @@ import {
   LabeledRadioButtonsWithAdditionalTextFields
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {FormContext} from '../../form_components_func/FormComponent';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 
-const getMinCourseHours = program => {
+const getProgramInfo = program => {
   switch (program) {
     case PROGRAM_CSD:
-      return 50;
+      return {name: 'CS Discoveries', shortName: 'csd', minCourseHours: 50};
     case PROGRAM_CSP:
-      return 100;
+      return {name: 'CS Principles', shortName: 'csp', minCourseHours: 100};
     case PROGRAM_CSA:
-      return 140;
+      return {name: 'CSA', shortName: 'csa', minCourseHours: 140};
     default:
-      return 0;
+      return {name: 'CS Program', shortName: 'cs', minCourseHours: 0};
   }
 };
 
 const ChooseYourProgram = props => {
   const {data} = props;
 
-  const regionalPartner = null; // TODO useRegionalPartner
+  const [regionalPartner] = useRegionalPartner(data);
 
-  const isOffered = program => {
-    return true; // TODO look up regional partner
-  };
-
-  const getNameForSelectedProgram = () => {
-    switch (data.program) {
-      case PROGRAM_CSD:
-        return 'CS Discoveries';
-      case PROGRAM_CSP:
-        return 'CS Principles';
-      case PROGRAM_CSA:
-        return 'CSA';
-      default:
-        return 'CS Program';
-    }
-  };
+  const programInfo = getProgramInfo(data.program);
+  const isOffered =
+    regionalPartner &&
+    regionalPartner.pl_programs_offered[programInfo.shortName];
 
   // This should be kept consistent with the calculation logic in
   // dashboard/app/models/pd/application/teacher_application.rb.
@@ -73,8 +62,7 @@ const ChooseYourProgram = props => {
   }
 
   let belowMinCourseHours = false;
-  let program = data.program;
-  let minCourseHours = getMinCourseHours(program);
+  let minCourseHours = programInfo.minCourseHours;
   if (courseHours !== null && courseHours < minCourseHours) {
     belowMinCourseHours = true;
   }
@@ -129,7 +117,7 @@ const ChooseYourProgram = props => {
             </>
           )}
 
-          {data.program === PROGRAM_CSA && !isOffered(data.program) && (
+          {data.program === PROGRAM_CSA && !isOffered && (
             <p>
               The Computer Science A Professional Learning Program is not yet
               offered in your region for the {YEAR} academic year. We are
@@ -157,7 +145,7 @@ const ChooseYourProgram = props => {
             }}
             label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
               '{{CS program}}',
-              getNameForSelectedProgram()
+              programInfo.name
             )}
             labelWidth={{md: 8}}
             controlWidth={{md: 4}}
@@ -170,7 +158,7 @@ const ChooseYourProgram = props => {
             }}
             label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
               '{{CS program}}',
-              getNameForSelectedProgram()
+              programInfo.name
             )}
             labelWidth={{md: 8}}
             controlWidth={{md: 4}}
@@ -202,9 +190,9 @@ const ChooseYourProgram = props => {
           {belowMinCourseHours && (
             <p style={{color: 'red'}}>
               Note: {minCourseHours} or more hours of instruction per{' '}
-              {getNameForSelectedProgram()} section are strongly recommended. We
-              suggest checking with your school administration to see if
-              additional time can be allotted for this course in {YEAR}.
+              {programInfo.name} section are strongly recommended. We suggest
+              checking with your school administration to see if additional time
+              can be allotted for this course in {YEAR}.
             </p>
           )}
 
@@ -234,7 +222,7 @@ const ChooseYourProgram = props => {
               name="replaceWhichCourse"
               label={PageLabels.chooseYourProgram.replaceWhichCourse.replace(
                 '{{CS program}}',
-                getNameForSelectedProgram()
+                programInfo.name
               )}
               textFieldMap={{
                 [TextFields.iDontKnowExplain]: 'other'
