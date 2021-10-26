@@ -31,8 +31,7 @@ import {
   ParticipantAudience
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
-import InstructionTypeDropdown from '@cdo/apps/lib/levelbuilder/course-editor/InstructionTypeDropdown';
-import AudiencesEditor from '@cdo/apps/lib/levelbuilder/course-editor/AudiencesEditor';
+import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -458,22 +457,6 @@ class UnitEditor extends React.Component {
               <p>Require users to log in before viewing this unit.</p>
             </HelpTip>
           </label>
-          {this.props.hasCourse && (
-            <div>
-              <p>
-                This unit is part of a course. Go to the course edit page to set
-                the instruction type for the course and its units.
-              </p>
-            </div>
-          )}
-          {!this.props.hasCourse && (
-            <InstructionTypeDropdown
-              instructionType={this.state.instructionType}
-              handleInstructionTypeChange={e =>
-                this.setState({instructionType: e.target.value})
-              }
-            />
-          )}
           <label>
             Default Progress to Detail View
             <input
@@ -614,9 +597,13 @@ class UnitEditor extends React.Component {
           </div>
         )}
         {!this.props.hasCourse && (
-          <AudiencesEditor
+          <CourseTypeEditor
             instructorAudience={this.state.instructorAudience}
             participantAudience={this.state.participantAudience}
+            instructionType={this.state.instructionType}
+            handleInstructionTypeChange={e =>
+              this.setState({instructionType: e.target.value})
+            }
             handleInstructorAudienceChange={e =>
               this.setState({instructorAudience: e.target.value})
             }
