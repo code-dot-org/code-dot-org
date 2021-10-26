@@ -262,7 +262,7 @@ module UsersHelper
               sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
             end
 
-            # We need to check that level_progress exists due to a race condition where the user makes sublevel
+            # The existence of level_progress needs to be checked due to a race condition where the user makes sublevel
             # progress between when user_levels_by_level is fetched and when level_for_progress is fetched. In this
             # case, user_levels_by_level may not include the user level for the new level_for_progress, resulting in nil
             # level_progress. This may manifest for the user as a bubble choice bubble looking as though it hasn't been tried
