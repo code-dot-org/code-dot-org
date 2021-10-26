@@ -60,7 +60,6 @@ class ProgrammingExpressionsController < ApplicationController
 
   def programming_expression_params
     transformed_params = params.transform_keys(&:underscore)
-    puts transformed_params.keys.inspect
     transformed_params = transformed_params.permit(
       :name,
       :category,
@@ -70,9 +69,9 @@ class ProgrammingExpressionsController < ApplicationController
       :syntax,
       :return_value,
       :tips,
-      :parameters
+      :palette_params
     )
-    transformed_params[:parameters] = JSON.parse(transformed_params[:parameters]) if transformed_params[:parameters]
+    transformed_params[:palette_params] = JSON.parse(transformed_params[:palette_params]) if transformed_params[:palette_params]
     transformed_params
   end
 end

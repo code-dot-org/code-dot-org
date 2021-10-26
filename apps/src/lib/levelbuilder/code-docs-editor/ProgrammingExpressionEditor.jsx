@@ -94,7 +94,13 @@ export default function ProgrammingExpressionEditor({
       },
       body: JSON.stringify({
         ...programmingExpression,
-        parameters: JSON.stringify(parameters.parameters)
+        paletteParams: JSON.stringify(
+          parameters.parameters.map(p => {
+            const hash = {...p};
+            delete hash.key;
+            return hash;
+          })
+        )
       })
     })
       .then(response => {
