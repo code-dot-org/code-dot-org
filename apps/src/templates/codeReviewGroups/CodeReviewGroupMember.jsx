@@ -9,11 +9,11 @@ import {grid} from './CodeReviewGroup';
 // These are called "Draggables" in the package we're using (React Beautiful DnD).
 // More information on React Beautiful DnD can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroupMember({member, index}) {
+export default function CodeReviewGroupMember({followerId, name, index}) {
   return (
     <Draggable
-      key={member.id}
-      draggableId={member.id}
+      key={followerId}
+      draggableId={followerId.toString()}
       index={index}
       tab-index={index}
     >
@@ -22,7 +22,7 @@ export default function CodeReviewGroupMember({member, index}) {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          style={getItemStyle(
+          style={getMemberStyle(
             snapshot.isDragging,
             provided.draggableProps.style
           )}
@@ -33,7 +33,7 @@ export default function CodeReviewGroupMember({member, index}) {
               justifyContent: 'space-around'
             }}
           >
-            {member.name}
+            {name}
           </div>
         </div>
       )}
@@ -41,14 +41,14 @@ export default function CodeReviewGroupMember({member, index}) {
   );
 }
 
-// TO DO: should specify shape of member -- needs ID and content property that can be rendered.
 CodeReviewGroupMember.propTypes = {
-  member: PropTypes.object.isRequired,
+  followerId: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired
 };
 
-const getItemStyle = (isDragging, draggableStyle) => ({
-  // some basic styles to make the items look a bit nicer
+const getMemberStyle = (isDragging, draggableStyle) => ({
+  // some basic styles to make the group members look a bit nicer
   userSelect: 'none',
   padding: grid * 2,
   margin: grid,
