@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
 import _ from 'lodash';
@@ -15,6 +15,11 @@ export default function CodeReviewGroups({initialGroups}) {
   const [groups, setGroups] = useState(
     initialGroups.map(group => addDroppableIdToGroup(group))
   );
+  const [winReady, setWinReady] = useState(false);
+
+  useEffect(() => {
+    setWinReady(true);
+  });
 
   const getGroup = droppableId =>
     _.find(groups, group => group.droppableId === droppableId);
@@ -60,29 +65,31 @@ export default function CodeReviewGroups({initialGroups}) {
   }
 
   return (
-    <div>
-      <button
-        type="button"
-        onClick={() => {
-          setGroups([generateNewGroup(), ...groups]);
-        }}
-      >
-        Add new group
-      </button>
-      <div style={styles.groupsContainer}>
-        <DragDropContext onDragEnd={onDragEnd}>
-          {groups.map(group => {
-            return (
-              <CodeReviewGroup
-                droppableId={group.droppableId}
-                members={group.members}
-                key={group.droppableId}
-              />
-            );
-          })}
-        </DragDropContext>
+    winReady && (
+      <div>
+        <button
+          type="button"
+          onClick={() => {
+            setGroups([generateNewGroup(), ...groups]);
+          }}
+        >
+          Add new group
+        </button>
+        <div style={styles.groupsContainer}>
+          <DragDropContext onDragEnd={onDragEnd}>
+            {groups.map(group => {
+              return (
+                <CodeReviewGroup
+                  droppableId={group.droppableId}
+                  members={group.members}
+                  key={group.droppableId}
+                />
+              );
+            })}
+          </DragDropContext>
+        </div>
       </div>
-    </div>
+    )
   );
 }
 
