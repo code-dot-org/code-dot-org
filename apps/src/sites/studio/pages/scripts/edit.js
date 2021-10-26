@@ -54,6 +54,8 @@ export default function initPage(unitEditorData) {
         i18nData={unitEditorData.i18n}
         initialPublishedState={scriptData.publishedState}
         initialInstructionType={scriptData.instructionType}
+        initialInstructorAudience={scriptData.instructorAudience}
+        initialParticipantAudience={scriptData.participantAudience}
         initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
