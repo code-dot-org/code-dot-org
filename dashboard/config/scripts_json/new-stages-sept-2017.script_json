@@ -4,12 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:34 UTC",
+    "serialized_at": "2021-10-26 22:17:02 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "new-stages-sept-2017"
     }
@@ -75,21 +78,85 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "37017f91-827c-470f-ba78-350c2b23f484",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37017f91-827c-470f-ba78-350c2b23f484",
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "new-stages-sept-2017"
+      }
+    },
+    {
+      "key": "09f55871-5cc7-4ad3-9073-d02136e042b1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09f55871-5cc7-4ad3-9073-d02136e042b1",
+        "lesson.key": "Sequences with Scrat",
+        "lesson_group.key": "",
+        "script.name": "new-stages-sept-2017"
+      }
+    },
+    {
+      "key": "45d7b46f-5232-4ec0-bf6d-d33c71590959",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45d7b46f-5232-4ec0-bf6d-d33c71590959",
+        "lesson.key": "Testing Template",
+        "lesson_group.key": "",
+        "script.name": "new-stages-sept-2017"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "416da935-ffae-4243-b8de-232db4bbb300",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300",
+        "lesson_activity.key": "37017f91-827c-470f-ba78-350c2b23f484"
+      }
+    },
+    {
+      "key": "2071a2b8-81f5-4958-b9cd-86c22113040d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d",
+        "lesson_activity.key": "09f55871-5cc7-4ad3-9073-d02136e042b1"
+      }
+    },
+    {
+      "key": "417acfea-4de1-4314-80cc-f9658a298f06",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "417acfea-4de1-4314-80cc-f9658a298f06",
+        "lesson_activity.key": "45d7b46f-5232-4ec0-bf6d-d33c71590959"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_video_artistIntro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -98,7 +165,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_video_artistIntro"
@@ -107,12 +175,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -121,7 +186,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops1"
@@ -130,12 +196,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,7 +207,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops2"
@@ -153,12 +217,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_video_loopsArtist"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -167,7 +228,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_video_loopsArtist"
@@ -176,12 +238,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -190,7 +249,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops3"
@@ -199,12 +259,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -213,7 +270,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops4"
@@ -222,12 +280,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -236,7 +291,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops5"
@@ -245,12 +301,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -259,7 +312,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops6"
@@ -268,12 +322,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -282,7 +333,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops7"
@@ -291,13 +343,10 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "level_keys": [
-          "ramp_artist_loops8"
-        ]
+        "challenge": true
       },
       "bonus": false,
       "seeding_key": {
@@ -306,7 +355,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops8"
@@ -315,12 +365,9 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -329,7 +376,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       },
       "level_keys": [
         "ramp_artist_loops9"
@@ -338,12 +386,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseE_video_ramp1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -352,7 +397,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseE_video_ramp1"
@@ -361,12 +407,9 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_scrat_ramp1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -375,7 +418,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_ramp1"
@@ -384,12 +428,9 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_scrat_ramp2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -398,7 +439,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_ramp2"
@@ -407,12 +449,9 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_scrat_ramp3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -421,7 +460,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_ramp3"
@@ -430,12 +470,9 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_scrat_ramp4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -444,7 +481,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_ramp4"
@@ -453,12 +491,9 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_scrat_ramp5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -467,7 +502,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_ramp5"
@@ -476,12 +512,9 @@
     {
       "chapter": 18,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_scrat_predict1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -490,7 +523,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_predict1"
@@ -499,12 +533,9 @@
     {
       "chapter": 19,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_video_ScratLoops"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -513,7 +544,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_video_ScratLoops"
@@ -522,12 +554,9 @@
     {
       "chapter": 20,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_scrat_ramp6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -536,7 +565,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_ramp6"
@@ -545,12 +575,9 @@
     {
       "chapter": 21,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_scrat_ramp7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -559,7 +586,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_ramp7"
@@ -568,13 +596,10 @@
     {
       "chapter": 22,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "challenge": true,
-        "level_keys": [
-          "courseD_scrat_ramp8"
-        ]
+        "challenge": true
       },
       "bonus": false,
       "seeding_key": {
@@ -583,7 +608,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseD_scrat_ramp8"
@@ -592,12 +618,9 @@
     {
       "chapter": 23,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_video_artistIntro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -606,7 +629,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "ramp_video_artistIntro"
@@ -615,12 +639,9 @@
     {
       "chapter": 24,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseE_artist_ramp8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -629,7 +650,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseE_artist_ramp8"
@@ -638,12 +660,9 @@
     {
       "chapter": 25,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_video_angles"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -652,7 +671,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseC_video_angles"
@@ -661,12 +681,9 @@
     {
       "chapter": 26,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseE_artist_ramp9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -675,7 +692,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       },
       "level_keys": [
         "courseE_artist_ramp9"
@@ -684,12 +702,9 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_artist_loops1a"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -698,7 +713,8 @@
         ],
         "lesson.key": "Testing Template",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "417acfea-4de1-4314-80cc-f9658a298f06"
       },
       "level_keys": [
         "courseC_artist_loops1a"
@@ -707,12 +723,9 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseC_artist_loops6a"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -721,7 +734,8 @@
         ],
         "lesson.key": "Testing Template",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "417acfea-4de1-4314-80cc-f9658a298f06"
       },
       "level_keys": [
         "courseC_artist_loops6a"
@@ -737,7 +751,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -748,7 +763,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -759,7 +775,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -770,7 +787,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -781,7 +799,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -792,7 +811,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -803,7 +823,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -814,7 +835,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -825,7 +847,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -836,7 +859,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -847,7 +871,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "416da935-ffae-4243-b8de-232db4bbb300"
       }
     },
     {
@@ -858,7 +883,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -869,7 +895,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -880,7 +907,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -891,7 +919,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -902,7 +931,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -913,7 +943,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -924,7 +955,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -935,7 +967,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -946,7 +979,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -957,7 +991,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -968,7 +1003,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -979,7 +1015,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -990,7 +1027,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -1001,7 +1039,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -1012,7 +1051,8 @@
         ],
         "lesson.key": "Sequences with Scrat",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "2071a2b8-81f5-4958-b9cd-86c22113040d"
       }
     },
     {
@@ -1023,7 +1063,8 @@
         ],
         "lesson.key": "Testing Template",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "417acfea-4de1-4314-80cc-f9658a298f06"
       }
     },
     {
@@ -1034,7 +1075,8 @@
         ],
         "lesson.key": "Testing Template",
         "lesson_group.key": "",
-        "script.name": "new-stages-sept-2017"
+        "script.name": "new-stages-sept-2017",
+        "activity_section.key": "417acfea-4de1-4314-80cc-f9658a298f06"
       }
     }
   ],

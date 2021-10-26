@@ -4,12 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:12 UTC",
+    "serialized_at": "2021-10-26 22:15:31 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "cspunit3temp"
     }
@@ -150,21 +153,200 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "24d96e45-cedc-4c9d-bb76-3bbce2818d39",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24d96e45-cedc-4c9d-bb76-3bbce2818d39",
+        "lesson.key": "While Loops",
+        "lesson_group.key": "",
+        "script.name": "cspunit3temp"
+      }
+    },
+    {
+      "key": "538012aa-f145-4381-8050-210728a15359",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "538012aa-f145-4381-8050-210728a15359",
+        "lesson.key": "Loops and Simulations",
+        "lesson_group.key": "",
+        "script.name": "cspunit3temp"
+      }
+    },
+    {
+      "key": "c1eb54e7-cf6a-4836-8b76-c1eae985b6b2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c1eb54e7-cf6a-4836-8b76-c1eae985b6b2",
+        "lesson.key": "Introduction to Arrays",
+        "lesson_group.key": "",
+        "script.name": "cspunit3temp"
+      }
+    },
+    {
+      "key": "01ac3af6-fb3d-44dd-a718-9edceabe1f9f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01ac3af6-fb3d-44dd-a718-9edceabe1f9f",
+        "lesson.key": "Image Scroller with Key Events",
+        "lesson_group.key": "",
+        "script.name": "cspunit3temp"
+      }
+    },
+    {
+      "key": "332245b8-df16-4c30-bd2b-5ba9d9b5ab96",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "332245b8-df16-4c30-bd2b-5ba9d9b5ab96",
+        "lesson.key": "Processing Arrays",
+        "lesson_group.key": "",
+        "script.name": "cspunit3temp"
+      }
+    },
+    {
+      "key": "9e121cb2-2480-4593-b57c-786eb8613c88",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9e121cb2-2480-4593-b57c-786eb8613c88",
+        "lesson.key": "Functions with Return Values",
+        "lesson_group.key": "",
+        "script.name": "cspunit3temp"
+      }
+    },
+    {
+      "key": "c80f6229-a04e-450f-8a3f-69e0564f2e10",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c80f6229-a04e-450f-8a3f-69e0564f2e10",
+        "lesson.key": "Canvas and Arrays in Apps",
+        "lesson_group.key": "",
+        "script.name": "cspunit3temp"
+      }
+    },
+    {
+      "key": "3abd1dde-1857-44a5-b1a6-f1e2c22dda0c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3abd1dde-1857-44a5-b1a6-f1e2c22dda0c",
+        "lesson.key": "Practice PT: Create",
+        "lesson_group.key": "",
+        "script.name": "cspunit3temp"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "6be29511-a2ea-4897-a7d1-647056e51e98",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98",
+        "lesson_activity.key": "24d96e45-cedc-4c9d-bb76-3bbce2818d39"
+      }
+    },
+    {
+      "key": "526f028f-9dc4-4124-a9b2-75f649acf6e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3",
+        "lesson_activity.key": "538012aa-f145-4381-8050-210728a15359"
+      }
+    },
+    {
+      "key": "093b8219-1cce-4f58-91e2-acaeff300151",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151",
+        "lesson_activity.key": "c1eb54e7-cf6a-4836-8b76-c1eae985b6b2"
+      }
+    },
+    {
+      "key": "c1c742f1-e8b5-44d4-b2b6-310932823602",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602",
+        "lesson_activity.key": "01ac3af6-fb3d-44dd-a718-9edceabe1f9f"
+      }
+    },
+    {
+      "key": "3dd64c89-6b7f-4c00-8385-da2598a422f8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8",
+        "lesson_activity.key": "332245b8-df16-4c30-bd2b-5ba9d9b5ab96"
+      }
+    },
+    {
+      "key": "f26d790f-4578-45f2-a629-703f2b7761a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4",
+        "lesson_activity.key": "9e121cb2-2480-4593-b57c-786eb8613c88"
+      }
+    },
+    {
+      "key": "ecca4935-7019-4e3c-824b-e55fabbcd438",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438",
+        "lesson_activity.key": "c80f6229-a04e-450f-8a3f-69e0564f2e10"
+      }
+    },
+    {
+      "key": "88e4f9f6-56b8-44a4-a1dc-daad83344cf8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "88e4f9f6-56b8-44a4-a1dc-daad83344cf8",
+        "lesson_activity.key": "3abd1dde-1857-44a5-b1a6-f1e2c22dda0c"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L28 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -173,7 +355,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3L28 Student Lesson Introduction"
@@ -182,12 +365,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -196,7 +376,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 1"
@@ -205,12 +386,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -219,7 +397,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 2"
@@ -228,12 +407,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -242,7 +418,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 3"
@@ -251,12 +428,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - Typing in Console"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -265,7 +439,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - Typing in Console"
@@ -274,12 +449,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -288,7 +460,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 4"
@@ -297,12 +470,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -311,7 +481,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 5"
@@ -320,12 +491,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -334,7 +502,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 8"
@@ -343,12 +512,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -357,7 +523,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 6"
@@ -366,12 +533,9 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -380,7 +544,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 7"
@@ -389,12 +554,9 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -403,7 +565,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 9"
@@ -412,12 +575,9 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops -  Complex Condition"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -426,7 +586,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops -  Complex Condition"
@@ -435,12 +596,9 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 10"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -449,7 +607,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 10"
@@ -458,12 +617,9 @@
     {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 11"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -472,7 +628,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 11"
@@ -481,12 +638,9 @@
     {
       "chapter": 15,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 12"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -495,7 +649,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 12"
@@ -504,12 +659,9 @@
     {
       "chapter": 16,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - Plus Plus"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -518,7 +670,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - Plus Plus"
@@ -527,12 +680,9 @@
     {
       "chapter": 17,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - Minus Minus"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,7 +691,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - Minus Minus"
@@ -550,12 +701,9 @@
     {
       "chapter": 18,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - plus and minus = operator"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -564,7 +712,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - plus and minus = operator"
@@ -573,12 +722,9 @@
     {
       "chapter": 19,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 19,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - minus = operator"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -587,7 +733,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - minus = operator"
@@ -596,12 +743,9 @@
     {
       "chapter": 20,
       "position": 20,
-      "activity_section_position": null,
+      "activity_section_position": 20,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 14"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -610,7 +754,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 14"
@@ -619,12 +764,9 @@
     {
       "chapter": 21,
       "position": 21,
-      "activity_section_position": null,
+      "activity_section_position": 21,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops - 15"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -633,7 +775,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3 - Loops - 15"
@@ -642,12 +785,9 @@
     {
       "chapter": 22,
       "position": 22,
-      "activity_section_position": null,
+      "activity_section_position": 22,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U3L28 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -656,7 +796,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       },
       "level_keys": [
         "U3L28 Free Response Wrap Up"
@@ -665,12 +806,9 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L29 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -679,7 +817,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3L29 Student Lesson Introduction"
@@ -688,12 +827,9 @@
     {
       "chapter": 24,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -702,7 +838,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - Intro"
@@ -711,12 +848,9 @@
     {
       "chapter": 25,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -725,7 +859,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - 1"
@@ -734,12 +869,9 @@
     {
       "chapter": 26,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -748,7 +880,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - 2"
@@ -757,12 +890,9 @@
     {
       "chapter": 27,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - 2.1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -771,7 +901,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - 2.1"
@@ -780,12 +911,9 @@
     {
       "chapter": 28,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - 2.5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -794,7 +922,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - 2.5"
@@ -803,12 +932,9 @@
     {
       "chapter": 29,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 Simulation Updating Hypotheses"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -817,7 +943,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 Simulation Updating Hypotheses"
@@ -826,12 +953,9 @@
     {
       "chapter": 30,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -840,7 +964,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - 3"
@@ -849,12 +974,9 @@
     {
       "chapter": 31,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -863,7 +985,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - 4"
@@ -872,12 +995,9 @@
     {
       "chapter": 32,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -886,7 +1006,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - 5"
@@ -895,12 +1016,9 @@
     {
       "chapter": 33,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 Simulations Hypotheses Reflections"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -909,7 +1027,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 Simulations Hypotheses Reflections"
@@ -918,12 +1037,9 @@
     {
       "chapter": 34,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Simulation - 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -932,7 +1048,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       },
       "level_keys": [
         "U3 - Simulation - 6"
@@ -941,12 +1058,9 @@
     {
       "chapter": 35,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L30 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -955,7 +1069,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3L30 Student Lesson Introduction"
@@ -964,12 +1079,9 @@
     {
       "chapter": 36,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - createFirstArray"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -978,7 +1090,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - createFirstArray"
@@ -987,12 +1100,9 @@
     {
       "chapter": 37,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - appendItem"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1001,7 +1111,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - appendItem"
@@ -1010,12 +1121,9 @@
     {
       "chapter": 38,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - introIndex"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1024,7 +1132,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - introIndex"
@@ -1033,12 +1142,9 @@
     {
       "chapter": 39,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - indexPractice"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1047,7 +1153,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - indexPractice"
@@ -1056,12 +1163,9 @@
     {
       "chapter": 40,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - assignment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1070,7 +1174,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - assignment"
@@ -1079,12 +1184,9 @@
     {
       "chapter": 41,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - assignment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1093,7 +1195,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - assignment2"
@@ -1102,12 +1205,9 @@
     {
       "chapter": 42,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - assignment3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1116,7 +1216,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - assignment3"
@@ -1125,12 +1226,9 @@
     {
       "chapter": 43,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - stringsInArrays"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1139,7 +1237,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - stringsInArrays"
@@ -1148,12 +1247,9 @@
     {
       "chapter": 44,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - insertingItems"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1162,7 +1258,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - insertingItems"
@@ -1171,12 +1268,9 @@
     {
       "chapter": 45,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - remove"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1185,7 +1279,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - remove"
@@ -1194,12 +1289,9 @@
     {
       "chapter": 46,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - insertionErrors"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1208,7 +1300,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - insertionErrors"
@@ -1217,12 +1310,9 @@
     {
       "chapter": 47,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - length"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1231,7 +1321,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - length"
@@ -1240,12 +1331,9 @@
     {
       "chapter": 48,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - lengthMinus1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1254,7 +1342,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - lengthMinus1"
@@ -1263,12 +1352,9 @@
     {
       "chapter": 49,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - expressionsAsIndexes"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1277,7 +1363,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - expressionsAsIndexes"
@@ -1286,12 +1373,9 @@
     {
       "chapter": 50,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - Demo App"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1300,7 +1384,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - Demo App"
@@ -1309,12 +1394,9 @@
     {
       "chapter": 51,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings giveIDs"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1323,7 +1405,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings giveIDs"
@@ -1332,12 +1415,9 @@
     {
       "chapter": 52,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings createArray"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1346,7 +1426,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings createArray"
@@ -1355,12 +1436,9 @@
     {
       "chapter": 53,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 19,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings firstOutput"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1369,7 +1447,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings firstOutput"
@@ -1378,12 +1457,9 @@
     {
       "chapter": 54,
       "position": 20,
-      "activity_section_position": null,
+      "activity_section_position": 20,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings Counting Variable"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1392,7 +1468,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings Counting Variable"
@@ -1401,12 +1478,9 @@
     {
       "chapter": 55,
       "position": 21,
-      "activity_section_position": null,
+      "activity_section_position": 21,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings Next"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1415,7 +1489,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings Next"
@@ -1424,12 +1499,9 @@
     {
       "chapter": 56,
       "position": 22,
-      "activity_section_position": null,
+      "activity_section_position": 22,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings Prev"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1438,7 +1510,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings Prev"
@@ -1447,12 +1520,9 @@
     {
       "chapter": 57,
       "position": 23,
-      "activity_section_position": null,
+      "activity_section_position": 23,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings addItem"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1461,7 +1531,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings addItem"
@@ -1470,12 +1541,9 @@
     {
       "chapter": 58,
       "position": 24,
-      "activity_section_position": null,
+      "activity_section_position": 24,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings bounds"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1484,7 +1552,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings bounds"
@@ -1493,12 +1562,9 @@
     {
       "chapter": 59,
       "position": 25,
-      "activity_section_position": null,
+      "activity_section_position": 25,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - favThings keepPlaying"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1507,7 +1573,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - favThings keepPlaying"
@@ -1516,12 +1583,9 @@
     {
       "chapter": 60,
       "position": 26,
-      "activity_section_position": null,
+      "activity_section_position": 26,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - Wrap Up 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1530,7 +1594,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - Wrap Up 1"
@@ -1539,12 +1604,9 @@
     {
       "chapter": 61,
       "position": 27,
-      "activity_section_position": null,
+      "activity_section_position": 27,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays - Wrap Up 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1553,7 +1615,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       },
       "level_keys": [
         "U3 - Arrays - Wrap Up 2"
@@ -1562,12 +1625,9 @@
     {
       "chapter": 62,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L31 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1576,7 +1636,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3L31 Student Lesson Introduction"
@@ -1585,12 +1646,9 @@
     {
       "chapter": 63,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Keys - Demo App"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1599,7 +1657,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3 - Keys - Demo App"
@@ -1608,12 +1667,9 @@
     {
       "chapter": 64,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L25 - drag out key event"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1622,7 +1678,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3L25 - drag out key event"
@@ -1631,12 +1688,9 @@
     {
       "chapter": 65,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Keys - Key Up and Down"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1645,7 +1699,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3 - Keys - Key Up and Down"
@@ -1654,12 +1709,9 @@
     {
       "chapter": 66,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L25 - play sound when up key"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1668,7 +1720,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3L25 - play sound when up key"
@@ -1677,12 +1730,9 @@
     {
       "chapter": 67,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Keys - Multiple Keys"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1691,7 +1741,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3 - Keys - Multiple Keys"
@@ -1700,12 +1751,9 @@
     {
       "chapter": 68,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Keys - Buttons and Keys"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1714,7 +1762,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3 - Keys - Buttons and Keys"
@@ -1723,12 +1772,9 @@
     {
       "chapter": 69,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Keys - Functions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1737,7 +1783,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3 - Keys - Functions"
@@ -1746,12 +1793,9 @@
     {
       "chapter": 70,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Keys - Add Image URLs"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1760,7 +1804,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3 - Keys - Add Image URLs"
@@ -1769,12 +1814,9 @@
     {
       "chapter": 71,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Keys - Final Image Scroller"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1783,7 +1825,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3 - Keys - Final Image Scroller"
@@ -1792,12 +1835,9 @@
     {
       "chapter": 72,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U3- Keys - Code Refactoring Exit Ticket"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1806,7 +1846,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       },
       "level_keys": [
         "U3- Keys - Code Refactoring Exit Ticket"
@@ -1815,12 +1856,9 @@
     {
       "chapter": 73,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L32 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1829,7 +1867,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3L32 Student Lesson Introduction"
@@ -1838,12 +1877,9 @@
     {
       "chapter": 74,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Intro For Loop"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1852,7 +1888,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Intro For Loop"
@@ -1861,12 +1898,9 @@
     {
       "chapter": 75,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Print Array"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1875,7 +1909,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Print Array"
@@ -1884,12 +1919,9 @@
     {
       "chapter": 76,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Add 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1898,7 +1930,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Add 5"
@@ -1907,12 +1940,9 @@
     {
       "chapter": 77,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Divid by 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1921,7 +1951,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Divid by 2"
@@ -1930,12 +1961,9 @@
     {
       "chapter": 78,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Loop Array If"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1944,7 +1972,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Loop Array If"
@@ -1953,12 +1982,9 @@
     {
       "chapter": 79,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Linear Search"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1967,7 +1993,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Linear Search"
@@ -1976,12 +2003,9 @@
     {
       "chapter": 80,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Counting Times"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1990,7 +2014,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Counting Times"
@@ -1999,12 +2024,9 @@
     {
       "chapter": 81,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Printing Single True"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2013,7 +2035,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Printing Single True"
@@ -2022,12 +2045,9 @@
     {
       "chapter": 82,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Search with Boolean Var"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2036,7 +2056,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Search with Boolean Var"
@@ -2045,12 +2066,9 @@
     {
       "chapter": 83,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Make it a Function"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2059,7 +2077,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Make it a Function"
@@ -2068,12 +2087,9 @@
     {
       "chapter": 84,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Make it a Function - add list parameter"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2082,7 +2098,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Make it a Function - add list parameter"
@@ -2091,12 +2108,9 @@
     {
       "chapter": 85,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - General Search Param"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2105,7 +2119,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - General Search Param"
@@ -2114,12 +2129,9 @@
     {
       "chapter": 86,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Loops And Arrays - Find Min"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2128,7 +2140,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       },
       "level_keys": [
         "U3 - Loops And Arrays - Find Min"
@@ -2137,12 +2150,9 @@
     {
       "chapter": 87,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L27 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2151,7 +2161,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       },
       "level_keys": [
         "U3L27 Student Lesson Introduction"
@@ -2160,12 +2171,9 @@
     {
       "chapter": 88,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Arrays and Loops - Explain Functions with Returns"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2174,7 +2182,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       },
       "level_keys": [
         "U3 - Arrays and Loops - Explain Functions with Returns"
@@ -2183,12 +2192,9 @@
     {
       "chapter": 89,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Return Values - useMinVal"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2197,7 +2203,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       },
       "level_keys": [
         "U3 - Return Values - useMinVal"
@@ -2206,12 +2213,9 @@
     {
       "chapter": 90,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Return Values - writeMaxVal"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2220,7 +2224,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       },
       "level_keys": [
         "U3 - Return Values - writeMaxVal"
@@ -2229,12 +2234,9 @@
     {
       "chapter": 91,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Return Values - debuggingMaxVal"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2243,7 +2245,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       },
       "level_keys": [
         "U3 - Return Values - debuggingMaxVal"
@@ -2252,12 +2255,9 @@
     {
       "chapter": 92,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Return Values - debuggingConstrain"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2266,7 +2266,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       },
       "level_keys": [
         "U3 - Return Values - debuggingConstrain"
@@ -2275,12 +2276,9 @@
     {
       "chapter": 93,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Return Values - constrainTurtle"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2289,7 +2287,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       },
       "level_keys": [
         "U3 - Return Values - constrainTurtle"
@@ -2298,12 +2297,9 @@
     {
       "chapter": 94,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Return Values - wrapTurtle"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2312,7 +2308,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       },
       "level_keys": [
         "U3 - Return Values - wrapTurtle"
@@ -2321,12 +2318,9 @@
     {
       "chapter": 95,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L33 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2335,7 +2329,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3L33 Student Lesson Introduction"
@@ -2344,12 +2339,9 @@
     {
       "chapter": 96,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - introCanvas"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2358,7 +2350,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - introCanvas"
@@ -2367,12 +2360,9 @@
     {
       "chapter": 97,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - 200dots"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2381,7 +2371,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - 200dots"
@@ -2390,12 +2381,9 @@
     {
       "chapter": 98,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - transparentDots"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2404,7 +2392,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - transparentDots"
@@ -2413,12 +2402,9 @@
     {
       "chapter": 99,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - clickToAdd"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2427,7 +2413,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - clickToAdd"
@@ -2436,12 +2423,9 @@
     {
       "chapter": 100,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - usingOffsetXY"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2450,7 +2434,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - usingOffsetXY"
@@ -2459,12 +2444,9 @@
     {
       "chapter": 101,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - draw at click point"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2473,7 +2455,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - draw at click point"
@@ -2482,12 +2465,9 @@
     {
       "chapter": 102,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - changeToMouseMove"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2496,7 +2476,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - changeToMouseMove"
@@ -2505,12 +2486,9 @@
     {
       "chapter": 103,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - shiftKey"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2519,7 +2497,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - shiftKey"
@@ -2528,12 +2507,9 @@
     {
       "chapter": 104,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - appendToArray"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2542,7 +2518,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - appendToArray"
@@ -2551,12 +2528,9 @@
     {
       "chapter": 105,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - redrawRandom"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2565,7 +2539,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - redrawRandom"
@@ -2574,12 +2549,9 @@
     {
       "chapter": 106,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - redrawRandom2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2588,7 +2560,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - redrawRandom2"
@@ -2597,12 +2570,9 @@
     {
       "chapter": 107,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - redrawOriginal"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2611,7 +2581,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - redrawOriginal"
@@ -2620,12 +2591,9 @@
     {
       "chapter": 108,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - delete"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2634,7 +2602,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - delete"
@@ -2643,12 +2612,9 @@
     {
       "chapter": 109,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - movementFunction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2657,7 +2623,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - movementFunction"
@@ -2666,12 +2633,9 @@
     {
       "chapter": 110,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - movementFunction fix Orig"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2680,7 +2644,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - movementFunction fix Orig"
@@ -2689,12 +2654,9 @@
     {
       "chapter": 111,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 17,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - sprayPaint"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2703,7 +2665,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - sprayPaint"
@@ -2712,12 +2675,9 @@
     {
       "chapter": 112,
       "position": 18,
-      "activity_section_position": null,
+      "activity_section_position": 18,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Canvas - sketch"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2726,7 +2686,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3 - Canvas - sketch"
@@ -2735,12 +2696,9 @@
     {
       "chapter": 113,
       "position": 19,
-      "activity_section_position": null,
+      "activity_section_position": 19,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U3L33 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2749,7 +2707,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       },
       "level_keys": [
         "U3L33 Free Response Getting Started"
@@ -2758,12 +2717,9 @@
     {
       "chapter": 114,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L34 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2772,7 +2728,8 @@
         ],
         "lesson.key": "Practice PT: Create",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "88e4f9f6-56b8-44a4-a1dc-daad83344cf8"
       },
       "level_keys": [
         "U3L34 Student Lesson Introduction"
@@ -2781,12 +2738,9 @@
     {
       "chapter": 115,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3 - Practice Create Performance Task"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2795,7 +2749,8 @@
         ],
         "lesson.key": "Practice PT: Create",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "88e4f9f6-56b8-44a4-a1dc-daad83344cf8"
       },
       "level_keys": [
         "U3 - Practice Create Performance Task"
@@ -2811,7 +2766,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2822,7 +2778,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2833,7 +2790,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2844,7 +2802,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2855,7 +2814,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2866,7 +2826,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2877,7 +2838,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2888,7 +2850,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2899,7 +2862,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2910,7 +2874,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2921,7 +2886,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2932,7 +2898,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2943,7 +2910,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2954,7 +2922,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2965,7 +2934,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2976,7 +2946,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2987,7 +2958,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -2998,7 +2970,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -3009,7 +2982,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -3020,7 +2994,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -3031,7 +3006,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -3042,7 +3018,8 @@
         ],
         "lesson.key": "While Loops",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "6be29511-a2ea-4897-a7d1-647056e51e98"
       }
     },
     {
@@ -3053,7 +3030,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3064,7 +3042,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3075,7 +3054,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3086,7 +3066,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3097,7 +3078,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3108,7 +3090,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3119,7 +3102,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3130,7 +3114,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3141,7 +3126,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3152,7 +3138,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3163,7 +3150,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3174,7 +3162,8 @@
         ],
         "lesson.key": "Loops and Simulations",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "526f028f-9dc4-4124-a9b2-75f649acf6e3"
       }
     },
     {
@@ -3185,7 +3174,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3196,7 +3186,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3207,7 +3198,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3218,7 +3210,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3229,7 +3222,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3240,7 +3234,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3251,7 +3246,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3262,7 +3258,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3273,7 +3270,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3284,7 +3282,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3295,7 +3294,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3306,7 +3306,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3317,7 +3318,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3328,7 +3330,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3339,7 +3342,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3350,7 +3354,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3361,7 +3366,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3372,7 +3378,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3383,7 +3390,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3394,7 +3402,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3405,7 +3414,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3416,7 +3426,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3427,7 +3438,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3438,7 +3450,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3449,7 +3462,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3460,7 +3474,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3471,7 +3486,8 @@
         ],
         "lesson.key": "Introduction to Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "093b8219-1cce-4f58-91e2-acaeff300151"
       }
     },
     {
@@ -3482,7 +3498,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3493,7 +3510,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3504,7 +3522,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3515,7 +3534,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3526,7 +3546,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3537,7 +3558,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3548,7 +3570,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3559,7 +3582,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3570,7 +3594,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3581,7 +3606,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3592,7 +3618,8 @@
         ],
         "lesson.key": "Image Scroller with Key Events",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "c1c742f1-e8b5-44d4-b2b6-310932823602"
       }
     },
     {
@@ -3603,7 +3630,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3614,7 +3642,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3625,7 +3654,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3636,7 +3666,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3647,7 +3678,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3658,7 +3690,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3669,7 +3702,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3680,7 +3714,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3691,7 +3726,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3702,7 +3738,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3713,7 +3750,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3724,7 +3762,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3735,7 +3774,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3746,7 +3786,8 @@
         ],
         "lesson.key": "Processing Arrays",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "3dd64c89-6b7f-4c00-8385-da2598a422f8"
       }
     },
     {
@@ -3757,7 +3798,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       }
     },
     {
@@ -3768,7 +3810,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       }
     },
     {
@@ -3779,7 +3822,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       }
     },
     {
@@ -3790,7 +3834,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       }
     },
     {
@@ -3801,7 +3846,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       }
     },
     {
@@ -3812,7 +3858,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       }
     },
     {
@@ -3823,7 +3870,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       }
     },
     {
@@ -3834,7 +3882,8 @@
         ],
         "lesson.key": "Functions with Return Values",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "f26d790f-4578-45f2-a629-703f2b7761a4"
       }
     },
     {
@@ -3845,7 +3894,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3856,7 +3906,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3867,7 +3918,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3878,7 +3930,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3889,7 +3942,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3900,7 +3954,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3911,7 +3966,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3922,7 +3978,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3933,7 +3990,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3944,7 +4002,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3955,7 +4014,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3966,7 +4026,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3977,7 +4038,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3988,7 +4050,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -3999,7 +4062,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -4010,7 +4074,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -4021,7 +4086,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -4032,7 +4098,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -4043,7 +4110,8 @@
         ],
         "lesson.key": "Canvas and Arrays in Apps",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "ecca4935-7019-4e3c-824b-e55fabbcd438"
       }
     },
     {
@@ -4054,7 +4122,8 @@
         ],
         "lesson.key": "Practice PT: Create",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "88e4f9f6-56b8-44a4-a1dc-daad83344cf8"
       }
     },
     {
@@ -4065,7 +4134,8 @@
         ],
         "lesson.key": "Practice PT: Create",
         "lesson_group.key": "",
-        "script.name": "cspunit3temp"
+        "script.name": "cspunit3temp",
+        "activity_section.key": "88e4f9f6-56b8-44a4-a1dc-daad83344cf8"
       }
     }
   ],

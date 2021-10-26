@@ -1,5 +1,1 @@
-published_state 'beta'
-
-lesson 'Vigenere', display_name: 'Vigenere', has_lesson_plan: false
-level 'Vigenere'
-
+is_migrated true
