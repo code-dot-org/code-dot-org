@@ -165,11 +165,8 @@ const validScripts = [
   }
 ];
 
-const validGrades = [
-  'K',
-  [...Array(13).keys()].slice(1).map(String),
-  'Other'
-].flat();
+const numberedGrades = Array.from({length: 12}, (_, i) => (i + 1).toString());
+const validGrades = ['k', ...numberedGrades, 'Other'];
 
 export default storybook => {
   storybook
