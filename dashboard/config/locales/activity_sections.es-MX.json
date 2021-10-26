@@ -55,17 +55,13 @@
             "Una forma de presentar la Hora del Código si no estás muy familiarizado con la programación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está aquí](https://youtu.be/FC5FbmsH4fw)\"."
           ]
         },
-        "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
-          "description": "Explique que en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Indica a los alumnos que hoy van a practicar \"codificación\", \"programación\", \"eventos\", \"bucles\" y \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Depurar** significa comprobar el código para ver si hay errores y tratar de solucionarlos.\n-   **Evento** es una acción que hace que algo suceda.\n-   **Bucle** es la acción de hacer algo una y otra vez.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad sin conexión)."
-        },
         "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
           "tips": [
             "Conviene dedicar muy poco tiempo a la introducción de la Hora del Código. Especialmente en el caso de los alumnos más jóvenes, lo mejor es empezar lo antes posible. Demasiadas explicaciones o lecciones al principio tienden a estropear la diversión, ¡y la diversión es el objetivo!"
           ]
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
-          "name": "Minecraft: Hora del Código para diseñar",
-          "description": "Desafía a tus alumnos a completar el tutorial [Minecraft: Diseñador](http://studio.code.org/s/minecraft/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para estudiantes más jóvenes, sugerimos dividir su clase en parejas y pedir a cada pareja que trabaje junta para completar el tutorial utilizando [programación en parejas](https://youtu.be/vgkahOzFH2Q). \n-   En el caso de alumnos más grandes, encontramos que trabajar de forma independiente en los tutoriales funciona bien. A veces es útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con el tutorial [Programa con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [La Guerra de las Galaxias](https://code.org/starwars).\n-   Para estudiantes mayores o adultos, [Minecraft: Diseñador](http://studio.code.org/s/minecraft/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "name": "Minecraft: Hora del Código para diseñar"
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -351,9 +347,6 @@
             null
           ]
         },
-        "7f1244d9-811b-410c-96b2-9f7086959c6b": {
-          "description": "Explica que, en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Indique a los alumnos que hoy van a practicar la \"codificación\", la \"programación\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada).\n-   **Depurar** significa comprobar el código en busca de errores e intentar solucionarlos.\n\nPida a los alumnos que nombren algunos trabajos que hayan escuchado y que estén relacionados con la programación. Los alumnos pueden mencionar cosas como \"programador\", \"informático\", \"desarrollador de software\" o \"ingeniero\". Capta las respuestas de los alumnos en tu pizarra de \"Ciencias de la Computación\", haciendo un mapa mental de la información que tus alumnos comparten. \n\n**Comenta:** \\_¡Tienen razón, amigos! No hay respuestas correctas o incorrectas aquí... casi cualquier trabajo hoy en día implica algún tipo de conocimiento de código. Aunque hay muchas, muchas carreras que requieren algún conocimiento de programación, aprender a programar es algo que cualquiera puede hacer. Y nosotros vamos a hacerlo hoy. Puede que las cosas que vamos a hacer hoy no parezcan de inmediato como las que hacen ellos, pero todo lo que aprendas hoy podría llevarte a crear el próximo Angry Birds o Twitter\"."
-        },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "Star Wars: Creando una Galaxia con Código",
           "description": "Desafía a tus alumnos a completar el tutorial [Star Wars: Construyendo una galaxia con código](https://studio.code.org/s/starwars/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los estudiantes más jóvenes, le sugerimos que divida su clase en parejas y pida a cada pareja que trabaje junta para completar el tutorial utilizando [programación en parejas](https://youtu.be/vgkahOzFH2Q). \n-   En el caso de los alumnos mayores, encontramos que trabajar de forma independiente en los tutoriales funciona bien. A veces es útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en La guerra de las galaxias, pueden tener una experiencia similar con el tutorial [Escribe tu primer programa de computadora](https://studio.code.org/hoc/1).\n-   Para los estudiantes adultos, [La guerra de las galaxias: construyendo una galaxia con código](https://studio.code.org/s/starwars/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
@@ -456,9 +449,6 @@
           "tips": [
             null
           ]
-        },
-        "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
-          "description": "Explica que, en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede entender. Indica a los alumnos que hoy van a practicar la \"codificación\", la \"programación\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada).\n-   **Depurar** significa comprobar el código en busca de errores e intentar solucionarlos.\n\nPida a los alumnos que nombren algunos trabajos que hayan escuchado y que estén relacionados con la programación. Los alumnos pueden mencionar cosas como \"programador\", \"informático\", \"desarrollador de software\" o \"ingeniero\". Capta las respuestas de los alumnos en tu pizarra de \"Ciencias de la Computación\", haciendo un mapa mental de la información que tus alumnos comparten. \n\n**Comenta:** \\_¡Tienen razón, amigos! No hay respuestas correctas o incorrectas aquí... casi cualquier trabajo hoy en día implica algún tipo de conocimiento de código. Aunque hay muchas, muchas carreras que requieren algún conocimiento de programación, aprender a programar es algo que cualquiera puede hacer. Y nosotros vamos a hacerlo hoy. Puede que las cosas que vamos a hacer hoy no parezcan de inmediato como las que hacen ellos, pero todo lo que aprendas hoy podría llevarte a crear el próximo Angry Birds o Twitter\"."
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
           "description": "Desafía a tus alumnos a completar el tutorial [Star Wars: Construyendo una galaxia con código](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los estudiantes más jóvenes, le sugerimos que divida su clase en parejas y pida a cada pareja que trabaje junta para completar el tutorial utilizando [programación en parejas](https://youtu.be/vgkahOzFH2Q). \n-   En el caso de los alumnos mayores, encontramos que trabajar de forma independiente en los tutoriales funciona bien. A veces es útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en La guerra de las galaxias, pueden tener una experiencia similar con el tutorial [Escribe tu primer programa de computadora](https://studio.code.org/hoc/1).\n-   Para los estudiantes adultos, [La guerra de las galaxias: construyendo una galaxia con código](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
@@ -912,6 +902,7 @@
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
           "name": "Texto y Comentarios",
+          "description": "#### Predicción (5 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "progression_name": "Predicción"
         },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
@@ -960,6 +951,9 @@
             null
           ],
           "progression_name": "Mini-Proyecto: Programas de Entrada de Usuarios"
+        },
+        "d5bf3b23-128d-4078-bdb2-a806a59a2db1": {
+          "name": "Presentación"
         },
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Introducción"
@@ -1060,6 +1054,9 @@
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Introducción"
         },
+        "f636ac37-29ac-45d0-8b65-8bad3da1ab56": {
+          "name": "Actividad Desconectada Utilizando Bloques de Papel"
+        },
         "eeea4847-21c3-4f1e-a2a2-980aa7fe8d9b": {
           "name": "Previsualizar desafíos online como clase"
         },
@@ -1134,7 +1131,7 @@
         },
         "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
           "name": "Epidemia",
-          "progression_name": "Brote"
+          "progression_name": "Epidemia"
         },
         "55dd18e2-b025-4d47-9818-c91ba7de4f5c": {
           "description": "**Haz esto:** Lean el módulo _Bienvenidos a la Ciudad de Monstruos_ en clase.",
@@ -1144,7 +1141,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Video: Muchos Sprites"
+          "progression_name": "Vídeo: Muchos Sprites"
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "progression_name": "Desarrollo de habilidades"
@@ -1153,7 +1150,7 @@
           "progression_name": "Aprendiendo con Simulaciones"
         },
         "c7a4861c-a0ff-4ea3-819c-0aecb4d880a0": {
-          "progression_name": "Miniproyecto: Simulador de Epidemias"
+          "progression_name": "Miniproyecto: Simulador de Brotes"
         },
         "1669b35c-0860-4d88-afc0-acda928f054d": {
           "name": "Reflexión"
@@ -1304,7 +1301,7 @@
           "name": "Reflexión",
           "description": "**Sugerencias:**\n\n-   ¿Cuáles eran las cuatro direcciones de la rosa de los vientos?\n    -   ¿Qué trucos podemos utilizar para recordar el Norte, el Sur, el Este y el Oeste?\n-   Dibuja otra forma en la que podríamos haber dado instrucciones sin usar los brazos.\n-   Dibuja tu parte favorita de ese juego.",
           "tips": [
-            "Este tipo de reflexiones se pueden llevar a cabo de diferentes maneras. ¡La redacción de un diario o el debate (en grupo o en pareja) son buenas opciones!"
+            "Las actividades de reflexión como estas se pueden completar de diversas formas. ¡Escribir un diario o debatir (con grupos o pares) son excelentes opciones!"
           ]
         },
         "d8233290-3b13-4062-b13e-6bc56ccd2f7f": {
@@ -1312,7 +1309,7 @@
         },
         "6fbe07dc-fe00-448c-89a6-39971bfcc99f": {
           "name": "Comportamiento en el Laboratorio de Informática",
-          "description": "Repasar las expectativas y cómo comportarse al entrar en el Laboratorio de Informática."
+          "description": "Repasar las expectativas y cómo comportarse cuando entran en el laboratorio de informática."
         },
         "af269d6d-e57d-4331-bc8d-daae801d1db0": {
           "tips": [
@@ -1365,7 +1362,7 @@
           "name": "Repaso de la Actividad Desconectada",
           "description": "Esta lección se basa en muchas de las ideas desconectadas que los alumnos han aprendido en las semanas previas a esta primera actividad en línea.  Es importante que pongas esos conceptos (como la persistencia, los algoritmos y los programas) en un círculo completo para que tu clase pueda beneficiarse de ellos también en su trabajo en línea.",
           "tips": [
-            "Si tu clase ya ha aprendido los puntos cardinales, cambiar \"Arriba\" y \"Abajo\" por \"Norte\" y \"Sur\" no debería ser un problema.  Si no lo han hecho, hemos proporcionado una práctica hoja de trabajo con la Rosa de los vientos de Code.org que puedes utilizar para que los alumnos se familiaricen con ella.  Esta conversión será muy útil para casi todos los rompecabezas en línea dirigidos a los niños de preescolar y primer grado.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nAvisa a los alumnos de que verán esas letras en sus programas online junto a las flechas de dirección.  "
+            "Si en tu clase ya han aprendido los puntos cardinales, cambiar \"Arriba\" y \"Abajo\" por \"Norte\" y \"Sur\" no debería ser un problema.  Si no lo han hecho, hemos proporcionado una práctica hoja de trabajo con la Rosa de los vientos de Code.org que puedes utilizar para que los alumnos se familiaricen con ella.  Esta conversión será muy útil para casi todos los rompecabezas en línea dirigidos a los niños de preescolar y primer grado.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nInforma a los estudiantes de que verán esas letras en sus programas en línea junto a las flechas de dirección.  "
           ]
         },
         "85e4f61b-eaec-4bf9-b9d3-58afc91322bf": {
@@ -1375,7 +1372,7 @@
           "description": "Esta actividad ayudará a llevar los conceptos desconectados de Muévete, Muévete al mundo online en el que se mueven los alumnos. Elige _una_ de las siguientes actividades para realizar con tu clase:"
         },
         "4d06cf45-70a0-47fb-a3ff-0d4818645b5c": {
-          "name": "Actividad Desconectada con Bloques de Papel",
+          "name": "Actividad Desconectada Utilizando Bloques de Papel",
           "description": "**Distribuye: \\*\\* Entrega a los alumnos \\*_\\\\_Manipuladores** con comandos cardinales como `E →` (Este) y `W ←` (Oeste). \n\n**Muestra:** Elige un mapa de la **\\*Actividad de Mapas** y muéstralo para que la clase lo vea.\n**Modelo:** Empezando por el lugar de inicio, utiliza tu dedo para mostrar a los alumnos lo que hace cada bloque.  Muéstreles cómo la `E →` corresponde a la flecha de la derecha y mueve el \"robot\" un paso hacia la derecha.  Haz lo mismo con cada uno de los otros tres.\n\n**Piensa:** A estas alturas, la clase debería saber cómo llegar a una meta utilizando flechas. ¿Cómo llegarías a una meta utilizando los bloques Blockly?\n\n**En Parejas:** ¡Asegúrate de que entienden que los bloques deben ir de arriba a abajo y que todos deben estar conectados!\n\n**Comparte:** Haz que las parejas discutan sus respuestas con sus compañeros de codo.  ¿Consiguieron todos lo mismo?\n\n### -O-"
         },
         "af41bb35-0f50-4787-81ac-3658bfa59b98": {
@@ -1540,7 +1537,7 @@
           "description": "**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   ¿Cómo hicieron los bucles que tu programa fuera más fácil de escribir?\n-   Dibuja algo que utilice bucles."
         },
         "edccf663-8ffc-4d68-973b-04b5dc5cdcfd": {
-          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que Muévete**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que, a moverse**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
         },
         "73d6d577-ed28-4b7a-948a-8c9aea13dec4": {
           "description": "#### Tablero de Elección Maíz Loco (45-60 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informática + Lengua y Literatura Inglesas + Ciencias**\n\n[Tablero de Elección Maíz Loco](https://docs.google.com/document/d/1fFXhTfqPGrAyiyYWhh8Wfc6eRaDJh8F2iFRJqXPXxTI/edit#heading=h.oa0z8i3xy1ys) es una actividad opcional alineada con los Estándares Básicos Comunes de ELA y Ciencia de la Próxima Generación, escrita por nuestra comunidad de profesores. Los alumnos practicarán sus habilidades para hablar y escuchar mientras determinan qué propiedades del maíz de Cosechadora pueden utilizarse para resolver un problema humano a través de la biomímesis.\n\n_Estándares abordados:_\n\n-   **CSCSS.ELA-LITERACY.SL.1.1.A:** Seguir las reglas acordadas para las discusiones (por ejemplo, escuchar a los demás con atención, hablar de uno en uno sobre los temas y textos que se discuten).\n\n-   **CSCS.ELA-LITERACY.SL.1.1.B:** Aprovechar las conversaciones de los demás respondiendo a los comentarios de los compañeros a través de múltiples intercambios.\n\n-   **CCSS.ELA-LITERACY.SL.1.1.C:** Hacer preguntas para aclarar cualquier confusión sobre los temas y textos que se están discutiendo.\n\n-   **NGSS.1-LS1-1:** Utilizar materiales para diseñar una solución a un problema humano imitando cómo las plantas y/o los animales utilizan sus partes externas para ayudarles a sobrevivir, crecer y satisfacer sus necesidades."
@@ -1594,7 +1591,7 @@
         "d5bea39f-5b7a-4eea-84f2-3f3c9bb07945": {
           "name": "Demostración del Profesor",
           "tips": [
-            "Recuerda a los alumnos que sólo deben compartir su trabajo con sus amigos o familiares cercanos. Para más información, vea o muestre a la clase el vídeo **\\*Pausa y piensa en línea**."
+            "Recuerda a los alumnos que sólo deben compartir su trabajo con sus amigos o familiares cercanos. Para más información, visualiza o muestra a la clase el vídeo \"Pausa y Piensa en Línea\"."
           ]
         },
         "6e4b782c-58b7-4079-bec6-7fe157198276": {
@@ -1676,7 +1673,7 @@
           "description": "#### Flash Chat\n\n**Debatir**: Pide a los alumnos que reflexionen sobre lo que han aprendido mediante las siguientes preguntas:\n\n-   ¿Por qué debemos ser capaces de manejar eventos en un programa?\n-   ¿Qué otros tipos de eventos se te ocurren?\n\n#### Reflexión\n\n**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja una cara que muestre cómo te has sentido con la lección de hoy en la esquina de la página de tu diario.\n-   Dibuja un evento que haya causado una acción hoy.\n-   Dibuja una acción que fue causada por un evento que ocurrió hoy."
         },
         "e8051393-643c-4b38-acfd-5fbb3071c8d8": {
-          "description": "**Distribuir**: Reparte una **\\*Evaluación** a cada alumno y permíteles que la completen de forma autónoma después de haberles explicado bien las instrucciones. Esto debería resultarles familiar, gracias a las actividades anteriores."
+          "description": "**Distribuir**: Reparte una **\\*Evaluación** a cada alumno y permíteles que la completen de forma independiente después de haberles explicado bien las instrucciones. Esto debería resultarles familiar, gracias a las actividades anteriores."
         },
         "63765976-e5d4-4cd0-9dcf-89119045a801": {
           "description": "Use estas actividades para mejorar el aprendizaje de los alumnos. Pueden usarse como actividades fuera del aula u otros enriquecimientos. \n\n**El Evento de una Persona es la Reacción de Otra**\n\nAsigne a cada estudiante un evento del cual encargarse y una reacción apropiada para ese evento. Encadene las acciones para que así la reacción de un/a niño/a se convierta en un evento que gatilla la reacción de otro/a estudiante. Siga asignando hasta que todos tengan algo que hacer y que todos hagan reaccionar a alguien. \n\n**Eventopalooza**\n\nDivida la clase en grupos. Usando el Controlador de Eventos, asigne a cada grupo una reacción diferente para el mismo botón. Haga esto para cada uno de los tres botones, ¡y entonces observe el caos!"
@@ -1686,7 +1683,7 @@
         },
         "3506957f-7430-4cc9-8e53-36f1d67496a7": {
           "name": "Introducción",
-          "description": "Repasa la actividad \"El gran evento\" con los alumnos:\n\n-   \\_¿Qué hemos \"programado\" que hagan los eventos de los botones?\n\nAhora vamos a añadir eventos a nuestro código. Específicamente, vamos a tener un evento para cuando dos personajes se toquen.\n\n-   ¿Cuándo has visto que dos personajes se toquen como evento en los juegos?"
+          "description": "Repasa la actividad \"El gran evento\" con los alumnos:\n\n-   _¿Qué hemos \"programado\" que hagan los eventos de los botones?_\n\n_Ahora vamos a añadir eventos a nuestro código. Específicamente, vamos a tener un evento para cuando dos personajes se toquen._\n\n-   _¿Cuándo has visto que dos personajes se toquen como evento en los juegos?_"
         },
         "fb42b64a-9f49-441b-95d8-2bdb596c93a9": {
           "description": "Estas actividades ayudarán a trasladar los conceptos desconectados de \"El Gran Evento\" al mundo online en el que se mueven los alumnos. Escoge _una_ de las siguientes para hacer con tu clase:"
@@ -1758,11 +1755,11 @@
         "ec336597-2c69-4bfa-b542-abe5ccf06d5c": {
           "description": "A medida que los alumnos trabajan, ayúdales respondiendo a sus preguntas y aportando ideas. Anímales a compartir ideas entre ellos para que la actividad sea más colaborativa.",
           "tips": [
-            "Todas las opciones de esta lección se consideran \"Juego Libre\", lo que significa que no hay una única respuesta correcta. Si un alumno pulsa \"Terminar\", volverá a la lista de opciones. Puedes hacer que los alumnos completen sólo una opción o todas las que les interesen según el tiempo disponible."
+            "Todas las opciones de esta lección se consideran \"Juego Libre\", lo que significa que no hay una única respuesta correcta. Si un alumno pulsa \"Terminar\", volverá a la lista de opciones. Puedes pedir a los alumnos que completen una sola opción o todas las que les interesen según el tiempo disponible."
           ]
         },
         "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
-          "name": "Escaparate",
+          "name": "Presentación",
           "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que comenten cómo ha sido para ellos la experiencia de planificar y codificar, incluyendo las ideas que todavía les gustaría poner en práctica. \n-   **Prueba de juego por parejas**: Haz que los estudiantes o los grupos se pongan en parejas y prueben los proyectos de los demás. Mientras lo hacen, pídeles que se hagan comentarios positivos y constructivos entre ellos. La ventaja es que los estudiantes tendrán la oportunidad de proporcionar y responder a los comentarios en un entorno más pequeño. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Pide a los alumnos que se muevan al estilo de las \"sillas musicales\" a otro ordenador y que prueben el proyecto allí durante unos minutos, hasta que reciban una señal tuya para que se muevan a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan probar el mayor número posible de proyectos de sus compañeros."
         },
         "ef4f13d4-c5b0-4778-8ca1-359132023d82": {
@@ -1791,9 +1788,6 @@
           "tips": [
             "-   Mantente tranquilo en el laboratorio\n-   Recuerda no masticar chicles ni caramelos\n-   Desinfecta tus manos\n-   Siéntate con tu compañero en un ordenador\n-   Asegúrate de que el primer \"conductor\" pueda alcanzar el ratón\n-   Cuando te sientas frustrado, no golpees ni agites el ordenador o el monitor\n-   Sigue la regla **\\*20/20/20** - Cómo Prevenir la Fatiga Ocular\n-   Cómo lidiar con los **\\*Meneos** cada 20-30 minutos (requiere un inicio de sesión gratuito en GoNoodle). \n-   Pregunta a tu compañero antes de preguntar al profesor\n-   Baja el volumen para que los demás puedan oír a sus compañeros\n-   Utiliza tu diario para registrar los sentimientos y las soluciones"
           ]
-        },
-        "3dc37e4e-05d9-463f-a734-f65322cccb1a": {
-          "description": "**Debatir:**\n\nTen un buen debate sobre las expectativas del laboratorio de informática para asegurarte de que los alumnos entienden las normas. Algunos temas de reflexión pueden ser:\n\n-   ¿Está bien correr en el laboratorio de informática?\n-   ¿Cómo debemos caminar sin ruido cuando estamos en el laboratorio de informática?\n-   ¿Qué debes hacer si te quedas atascado en un rompecabezas?\n-   Si te frustras, ¿te ayuda golpear el ordenador?\n-   ¿Cómo debemos prepararnos para ir al laboratorio de informática?"
         },
         "128e4de4-71a8-4dac-9606-4444cac424ff": {
           "description": "### Previsualización\n\nProyecta un rompecabezas de la lección. Muestra a la clase cómo hacer clic en la imagen y colocarla en el lugar correcto arrastrando y soltando. Comete errores a propósito, como hacer clic en el fondo o soltar la imagen antes de que esté en el lugar correcto. Pide ayuda a los voluntarios de la clase cuando te encuentres con estos problemas."
@@ -2005,7 +1999,7 @@
           "name": "La Fundación Desconectada",
           "description": "Esta lección se basa en el concepto de bucles de repetición que los alumnos aprendieron en la actividad anterior, Bucles Felices.  Es importante trasladar esta idea del mundo real a la forma digital para que los alumnos entiendan cómo utilizar los bloques Blockly para repetir una tarea varias veces.",
           "tips": [
-            "Si en tu clase ya han aprendido los puntos cardinales, cambiar \"Arriba\" y \"Abajo\" por \"Norte\" y \"Sur\" no debería ser un problema.  Si no lo han hecho, hemos proporcionado una práctica hoja de trabajo con la Rosa de los vientos de Code.org que puede utilizar para que los alumnos se familiaricen con ella.  Esta conversión será muy útil para casi todos los rompecabezas en línea dirigidos a los niños de preescolar y primer grado.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nInforma a los estudiantes de que verán esas letras en sus programas en línea junto a las flechas de dirección.  "
+            "Si en tu clase ya han aprendido los puntos cardinales, cambiar \"Arriba\" y \"Abajo\" por \"Norte\" y \"Sur\" no debería ser un problema.  Si no lo han hecho, hemos proporcionado una práctica hoja de trabajo con la Rosa de los vientos de Code.org que puedes utilizar para que los alumnos se familiaricen con ella.  Esta conversión será muy útil para casi todos los rompecabezas en línea dirigidos a los niños de preescolar y primer grado.\n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nInforma a los estudiantes de que verán esas letras en sus programas en línea junto a las flechas de dirección.  "
           ]
         },
         "1557cb99-47ef-444c-bf08-6aa33be91fb2": {
@@ -2102,7 +2096,7 @@
           "progression_name": "Lecciones adicionales"
         },
         "46ce0bcb-9f62-42c7-91dd-a6a98b68b10b": {
-          "description": "A medida que los estudiantes trabajan con los rompecabezas, vea si pueden averiguar cuántos bloques utilizan con un bucle y sin un bucle."
+          "description": "A medida que los estudiantes trabajan con los rompecabezas, comprueba si pueden averiguar cuántos bloques utilizan con bucle y sin bucle."
         },
         "a79a0dff-fe81-486d-9961-8198b65bdb8c": {
           "name": "Reflexión",
@@ -2265,7 +2259,7 @@
           ]
         },
         "adc355f7-34d5-450e-aa57-e001b2a7973c": {
-          "name": "Escaparate",
+          "name": "Presentación",
           "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos y cuenten su historia delante de la clase. Mientras lo hacen, pídeles que hablen de cómo fue para ellos la experiencia de planificar y codificar. \n-   **Cuentacuentos en pareja**: Si la clase es muy numerosa o tiene poco tiempo, haz que los alumnos o los grupos se pongan en parejas y hagan una demostración de sus proyectos de esta manera. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Haz que los estudiantes se muevan al estilo \"sillas musicales\" a otro ordenador y ejecuten el proyecto allí y lean la historia. Cuando reciban una señal tuya, deben trasladarse a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan hacer una demostración del mayor número posible de proyectos de sus compañeros."
         },
         "8fcf051c-e4b4-4140-8a06-9d59d03b85ab": {
@@ -2323,7 +2317,7 @@
           "name": "Reflexión",
           "description": "**Sugerencias:**\n\n-   Dibuja tu propia pila de tazas que te gustaría que construyera un robot.\n-   ¿Puedes crear un programa para esa pila de tazas?",
           "tips": [
-            "Este tipo de reflexiones se pueden llevar a cabo de diferentes maneras. ¡La redacción de un diario o el debate (en grupo o en pareja) son buenas opciones!"
+            "Las actividades de reflexión como estas se pueden completar de diversas formas. ¡Escribir un diario o debatir (con grupos o pares) son excelentes opciones!"
           ]
         },
         "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
@@ -2716,25 +2710,31 @@
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
-            null
+            "Recuerda a los alumnos que sólo deben compartir su trabajo con sus amigos o familiares cercanos. Para más información, consulta o muestra a la clase el vídeo **\\*Pausa y Piensa en Línea**."
           ]
         },
         "a49ab9e9-2a47-4d02-93bf-ec9bd241a125": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué ha tratado la lección de hoy?\n-   ¿Qué te ha parecido la lección de hoy?\n-   ¿Qué has hecho para que tu juego sea único?\n-   Dibuja un juego que quieras hacer en el futuro."
         },
         "f9faf5dc-b81a-441f-84f6-202dd305f24b": {
           "description": "Utilice estas actividades para mejorar el aprendizaje de los/las estudiantes. Pueden ser utilizados como actividades fuera de la clase o en otra oportunidad.\n\n**Mira Bajo la Capa**\n\nCuando compartes un link para tu juego, también estás compartiendo el código detrás de él. Esta es una excelente forma de que los/as estudiantes aprendan los/as unos/as de los/as otros/as. \n\n-   Publique los links de los juegos online terminados o en la pizarra.\n    -   ¡Haga usted mismo/a un juego para compartir también!\n-   Cuando los/as estudiantes suben un link, deben hacer clic en el botón “Cómo funciona” para ver el código detrás del juego.\n-   Discutir en grupos las diferentes formas utilizadas por sus compañeros/as para codificar sus juegos.\n    -   ¿Qué te sorprendió?\n    -   ¿Qué te gustaría probar?\n-   Elija el juego de alguno/a de sus estudiantes y trabaje sobre él. (No se preocupe; el juego original estará guardado)"
         },
+        "736fbe77-a681-409c-b263-2de52938dd92": {
+          "description": "### Conviértete en Diseñador de Juegos (45-135 minutos)\n\n![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informática + Matemáticas + Ciencias**\n\n[\\*\\*Conviértete en Diseñador de Juegos\\*\\*](https://docs.google.com/document/d/1QfcYmWyn2U1X2IZO9Kpt2rH3uoxPpcEtp3ypVWcmBC8/edit?usp=sharing) es una actividad opcional alineada con los Estándares Básicos Comunes de Matemáticas y Ciencias de la Próxima Generación, escrita por nuestra comunidad de profesores. Los estudiantes se convertirán en diseñadores de juegos mientras crean y prueban un juego. Los alumnos también registrarán las puntuaciones, harán observaciones, crearán un gráfico de barras, analizarán los resultados y justificarán los cambios que harían en su juego.\n\n_Estándares abordados:_\n\n-   **2.MD.D.10:** Dibujar un gráfico de imagen y un gráfico de barras (con escala de una unidad) para representar un conjunto de datos con hasta cuatro categorías. \n\n-   **K-2 ETS1-1:** Hacer preguntas, hacer observaciones y reunir información sobre una situación que la gente quiere cambiar para definir un problema simple que puede ser resuelto a través del desarrollo de un objeto o herramienta nueva o mejorada.\n\n-   **K-2 ETS1-3:** Analizar los datos de las pruebas de un objeto o herramienta para determinar si funciona según lo previsto y comparar los puntos fuertes y débiles de su rendimiento."
+        },
         "782d1991-785a-406b-963c-687abb77e247": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "Comenta brevemente el juego _Flappy Bird_ de la última lección. Pide a los alumnos que inventen los distintos acontecimientos del juego. Los eventos incluyen:\n\n-   _Flappy_ golpeando el suelo\n-   _Flappy_ golpeando un obstáculo\n-   Un jugador que hace clic en la pantalla\n-   _Flappy_ pasando un obstáculo\n\nAhora, analiza las acciones que corresponden a estos eventos. Si _Flappy_ choca con algo, el juego termina, pero si _Flappy_ pasa un obstáculo, gana un punto. Un jugador que hace clic en la pantalla hace que _Flappy_ mueva las alas.\n\nPregunta a los alumnos qué otros eventos y acciones les gustaría ver. ¿Qué otros tipos de juegos podrían construirse en torno a esos eventos y acciones?"
         },
         "4b0c023d-7e3f-4186-83ea-e8136c32de1a": {
           "name": "Chase Game con Eventos",
           "tips": [
-            null
+            "Los alumnos tendrán la oportunidad de compartir su producto final con un enlace. Esta es una gran oportunidad para mostrar a tu comunidad escolar las grandes cosas que tus estudiantes están haciendo. Recoge todos los enlaces y guárdalos en la página web de tu clase para que todos los vean.\n\nRecuerda a los alumnos que sólo deben compartir sus trabajos con los amigos o familiares cercanos. Para más información, consulta o muestra el vídeo de la clase **\\*Pausa y Piensa en Línea.**"
           ]
         },
         "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
+          "description": "Esta es la actividad en línea más libre del curso. En la fase final, los alumnos tienen libertad para crear su propio juego. Es posible que quieras darles unas pautas estructuradas sobre el tipo de juego que deben crear, sobre todo a los alumnos que se sientan abrumados por el exceso de opciones.",
           "progression_name": "Vídeo: Introducción al Laboratorio de Juegos"
         },
         "55ade85d-fedf-4c9d-9046-4d1e6d813638": {
@@ -2750,25 +2750,54 @@
           "progression_name": "Lecciones adicionales"
         },
         "27d0103f-b003-4668-bab3-46e2517d375f": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Sugerencias:**\n\n-   ¿De qué ha tratado la lección de hoy?\n-   Cómo te has sentido con la lección de hoy?\n-   ¿Qué evento ha utilizado hoy tu programa?\n-   ¿Hay algún evento que te gustaría haber utilizado en tu juego y que no hayas podido usar en el Laboratorio de Juegos?"
         },
         "1893ef81-2dee-4c1b-9821-490dbd22164f": {
           "description": "Usa estas actividades para mejorar el aprendizaje del alumno. Se pueden usar como actividades al aire libre u otro tipo de enriquecimiento. \n\n**Mirar bajo la capucha**\n\nCuando compartes un enlace a tu historia, también compartes todo el código que va de fondo. Esta es una buena forma para que los alumnos aprendan de los demás. \n\n Publica enlaces para historias completas en línea. \n    \\-   ¡También inventa una historia para compartir! \n\n-   Cuando los alumnos suban un enlace, pídeles que hagan clic en el botón \"Cómo Funciona\" para ver el código que está detrás de la historia.\n-   Discutan como grupo las formas diferentes en que sus compañeros codificaron sus historias. \n    -   ¿Qué te sorprendió?\n    -   ¿Qué te gustaría intentar?\n-   Escoge la historia de alguien más y haz clic en `Remix` para construir desde ahí. (No te preocupes, la historia original será guardada)."
+        },
+        "aa392e98-dff3-420d-8dd5-4a29b7d3ce6f": {
+          "name": "La Necesidad de Visualización",
+          "description": "_En un momento voy a pedir a cada uno de vosotros que me diga cuál es su estación favorita. A la cuenta de 3, todos deben responder a la pregunta y luego intentaremos ver si podemos averiguar cuál es la estación más popular entre los alumnos de esta clase. ¿Estás pensando en tu estación favorita? 1, 2, 3..._"
+        },
+        "63144b5e-ca21-4844-ac12-3dd7567c9c3f": {
+          "description": "Los alumnos deben responder todos a la vez.\n\n**Comentar**: ¿Podemos saber qué estación le gusta a la mayoría de la clase? ¿Cómo podemos estar seguros? Anima a los alumnos a justificar por qué creen en su respuesta.\n\n**Sugerencia**: ¿Qué podríamos hacer para estar más seguros de saber qué estación le gusta a la mayoría? \n\nRecoge las ideas de la clase, pero dirígelas hacia la anotación de los datos mediante marcas de recuento en una pizarra o papel milimetrado."
+        },
+        "b4d7372a-86cd-4d90-855d-0c241617237f": {
+          "description": "_Las marcas de recuento como éstas nos ayudan a llevar la cuenta de las respuestas de todos, lo cual es estupendo. Sin embargo, se necesita tiempo para contarlas y saber qué opción ha sido elegida por el mayor o el menor número de alumnos. Imagina que alguien nos mostrara las marcas de recuento de toda la escuela. ¡Nos llevaría tiempo contarlas!_"
         },
         "7a3d8d3f-1c95-475e-b752-5df39bf0f024": {
           "name": "Gráficos de datos",
           "progression_name": "Gráficos de datos"
         },
         "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
+          "description": "**Distribuye**: Reparte la **\\*hoja de trabajo** junto con lápices e instrumentos de algún tipo para colorear. Dirige a los alumnos a Code Studio o proyecta el modelo en la pizarra.",
           "tips": [
-            null
+            "Este programa genera un surtido aleatorio de mascotas cada vez que se ejecuta. Si estás proyectando el programa para que lo utilice toda la clase, considera la posibilidad de ejecutarlo varias veces y pedir a diferentes grupos de estudiantes que hagan un seguimiento de los números cada vez, de modo que haya variedad en sus respuestas para su posterior discusión."
           ]
         },
+        "a86baf8b-04ef-40a3-b988-e7dc746f97ad": {
+          "description": "Esta actividad se divide en dos partes. En la primera página, los alumnos utilizan marcas de control para llevar la cuenta de cuántas veces aparece cada mascota en el programa. En la segunda página utilizan una serie de gráficos para visualizar los datos que han recogido.\n\n**Compartir**: Después de terminar, anima a los estudiantes a compartir sus resultados con un compañero y a buscar similitudes y diferencias. Cuando toda la clase esté lista, reúne a todos."
+        },
+        "183cb29b-8912-48e6-9589-333f1aec1837": {
+          "description": "**Comentar**: Pide a la clase que analice algunas de las siguientes preguntas:"
+        },
+        "cba35313-3a99-4833-94fb-aafc7ddfba1b": {
+          "description": "-   ¿Qué gráfico te muestra la información más útil? ¿Por qué?\n-   ¿Qué mascotas has visto más? ¿Es así para todos?\n-   ¿Qué crees que pasaría si este programa funcionara para 100 animales? 1000?\n-   ¿Qué preguntas podrías responder con tus datos?\n-   ¿Qué preguntas te gustaría poder responder?\n\nEl objetivo de esta reflexión es que los alumnos piensen en la utilidad de los datos para identificar o responder preguntas, y que empiecen a pensar en por qué podrían querer utilizar diferentes tipos de visualizaciones (gráficos en este caso)."
+        },
         "49ce681a-9731-4e09-8d4a-e6d4d8895a9a": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "**Decir:**\nRecoger y elaborar gráficos de datos puede ayudarnos a formular y responder preguntas interesantes. \n\n**Sugerencia:**\n\n-   ¿Cuál es una pregunta que te gustaría responder y qué datos podrías recopilar? \n\nPor ejemplo, si juegas al fútbol, te gustaría saber si los goles se marcan más a menudo por la izquierda, por la derecha o por el centro. ¿Qué datos querrías recoger para responder a esa pregunta? ¿Cómo los mostrarías?"
         },
         "e55d7d37-4ddc-467f-9a9d-f02a31886572": {
-          "name": "Introducción"
+          "name": "Introducción",
+          "description": "#### Vocabulario\n\nEsta lección tiene una palabra nueva e importante:\n\n**Binario** - _Dilo conmigo: Bi-na-rio_ \n\nUna forma de representar la información utilizando sólo dos opciones"
+        },
+        "a4178e11-f338-4b3a-a74b-27cf0bf02398": {
+          "description": "#### Apagado y Encendido\n\n-   Si has escrito un breve mensaje en la pizarra en binario, llama la atención de los alumnos sobre él y pregunta si alguien sabe qué es o qué significa.\n    -   Deja el mensaje a un lado y pasa a preparar la actividad.\n-   Puedes empezar preguntando a la clase si han visto alguna vez el interior de un ordenador.\n    -   ¿Qué hay ahí dentro?\n    -   Este es un buen momento para mostrarles el interior de un ordenador (o fotos del interior de un ordenador).\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/wikimediacomputer.jpg)"
+        },
+        "f77e3c90-8113-43bb-a9d1-31dd1827e961": {
+          "description": "-   Los cables transportan la información a través de la máquina en forma de electricidad.\n    -   Las dos opciones que utiliza un ordenador con respecto a esta información eléctrica son \"off\" y \"on\" (apagado) y (encendido). ¡Igual que las luces de esta habitación!\n        -   Cuando los ordenadores representan la información usando sólo dos opciones, se llama \"Binario\".\n    -   Ese tema de las dos opciones no termina cuando la información llega a su destino.\n-   Los ordenadores también _almacenan_ la información utilizando el binario.\n    -   El binario no es siempre de ida y vuelta.\n        -   Los discos duros almacenan la información utilizando positivo y negativo magnético.\n        -   Los DVDs almacenan la información como reflectante o no reflectante.\n    -   ¿Cómo crees que podemos convertir en binario las cosas de la vida real que queremos almacenar en un ordenador?\n        -   Empecemos por las letras.\n        -   Utiliza la **\\*Hoja de Trabajo** para mostrar cómo un ordenador podría representar las letras mayúsculas.\n            -   Este es un buen momento para mencionar que cada punto en el que hay una opción binaria se llama \"dígito binario\" o \"bit\" para abreviar.\n            -   Pregunta si alguien sabe cómo se llama una agrupación de ocho bits (es un byte.)\n            -   Dato curioso: una agrupación de cuatro bits se llama nibble.\n            -   Mira el vídeo **\\*Bits versus Bytes - Estudiante** (~1 minuto)\n        -   Repasa algunos ejemplos de conversión de letras a binario y luego a la inversa.\n        -   Después, escribe una letra codificada y dale a la clase unos segundos para que averigüe qué es.\n        -   Cuando la clase pueda descifrar esa letra codificada por sí misma, puedes pasar a la actividad."
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
           "name": "Pulseras binarias",
@@ -2776,31 +2805,51 @@
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
           "tips": [
-            null
+            "Tú eres quien mejor conoce tu clase. Como profesor, decide si los alumnos deben hacerlo individualmente o si deben trabajar en parejas o en pequeños grupos."
           ]
+        },
+        "b312d8ee-86f9-478f-9a9d-539be3e6dd50": {
+          "description": "#### Pulseras Binarias - Hoja de Trabajo\n\nNo es necesario abarcar todo el **binario**, como contar y convertir números de ida y vuelta desde el decimal. Esta lección pretende ser una introducción divertida a cómo los ordenadores almacenan la información, no una lección frustrante sobre las bases.\n\nInstrucciones:\n\n-   Encuentra la primera letra de tu nombre en la hoja de actividades.\n-   Rellena los cuadrados de una pulsera para que coincida con el patrón de los cuadrados junto a la letra que seleccionaste.\n-   Recorta la pulsera.\n-   Pega la pulsera a tu muñeca para llevarla.\n-   Comparte tu pulsera con tus compañeros de clase para ver si son capaces de adivinar tu letra.\n\n![](https://code.org/curriculum/course2/14/key.png)"
         },
         "1432f5df-3984-49d1-a829-436765d5cbc0": {
           "tips": [
-            null
+            "Si tu clase tiene un presupuesto extra para materiales, intenta hacer este ejercicio utilizando hilo (o limpiapipas) y cuentas para crear las pulseras binarias en lugar de lápiz y papel. Puedes proporcionar a los alumnos cualquier combinación de dos colores en cuentas, pero el blanco y el negro suelen ser los más fáciles, dada la forma en que se hace la clave."
           ]
         },
+        "2148291c-0083-4da5-9b64-e609fabea255": {
+          "description": "Después de la actividad, revisa el mensaje que estaba en la pizarra y comprueba si tu clase puede descifrarlo utilizando lo que han aprendido."
+        },
         "02945b11-d2db-485d-9002-9aff256a4ed4": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "description": "#### Flash Chat: ¿Qué hemos aprendido?\n\n-   ¿Qué más crees que se representa como binario dentro de un ordenador?\n-   ¿De qué otra forma podrías representar el binario en lugar de casillas que se llenan o no se llenan?\n-   ¿Cuál ha sido tu parte favorita de esta actividad?"
+        },
+        "8988c901-48ad-4e67-81a0-8a2645be5b27": {
+          "description": "**Sugerencias:**\n\n-   ¿De qué ha tratado la lección de hoy?\n-   ¿Cómo te has sentido durante la lección de hoy?\n-   Utiliza la hoja de trabajo de la actividad para escribir el resto de tu nombre o tu palabra favorita en binario.\n-   Imagina un mundo en el que habláramos en binario, diciendo \"on\" o \"off\", pero nada más. Dibuja dos personajes que intenten hablar entre sí en binario."
+        },
+        "8ab38e6e-a0b5-4cac-ace3-4336e3b01746": {
+          "description": "-   Reparte la **\\*evaluación** y deja que los alumnos la completen de forma autónoma después de haberles explicado bien las instrucciones.\n-   Esto debería resultarles familiar, gracias a las actividades anteriores."
         },
         "3b646703-3875-4421-bdd8-865e9c2ace35": {
           "description": "Use esas actividades para mejorar el aprendizaje de los alumnos. Se pueden usar como actividades fuera del aula o cualquier tipo de enriquecimiento. \n\n**Imágenes Binarias**\n\n-   Hay varios buenos recursos en la web para llevar esta actividad al siguiente nivel. \n-   Si sus alumnos están interesados en cómo las imágenes (o incluso la música) se pueden representar como binario, puede encontrar más detalles en Thinkersmith's [Binary Baubles](http://code.org/files/CSEDbinary.pdf)."
         },
         "87256b2e-55f1-4ca5-825e-d84ae553b1d6": {
-          "name": "Planificación"
+          "name": "Planificación",
+          "description": "¡Consigue que los alumnos se entusiasmen y se preparen para la actividad de hoy!"
+        },
+        "bbd8c847-74fe-42a2-9276-23a5c6aaafa0": {
+          "description": "Ya hemos tenido la oportunidad de construir un proyecto en el Laboratorio de Juegos. Hoy, esta experiencia será mucho más abierta, por lo que requerirá una planificación previa. La planificación es una parte muy importante de la codificación de un juego o de cualquier otro tipo de software. Así que, antes de saltar a los ordenadores, dedicaremos un tiempo a planificar los proyectos que queremos construir."
         },
         "11dd8aea-0a51-4c88-8517-0543fa4afb32": {
+          "description": "**Distribuir**: Reparte una **\\*Guía de Planificación de Proyectos** a cada alumno o pareja. Repasa con los alumnos los pasos que se indican en la guía y deja que los completen. Si es necesario, consulta el ejemplo incluido.",
           "tips": [
-            null
+            "Si los alumnos programan en parejas durante esta tarea, este calentamiento es una gran oportunidad para que practiquen el intercambio y el respeto de las ideas de los demás. Asegúrate de que los alumnos siguen las normas de trabajo en grupo que ya tienes establecidas en tu aula. De lo contrario, dedica un breve momento a repasar tus expectativas."
           ]
         },
         "43edf2e1-94e2-4ea0-866c-83bd18bfc87f": {
+          "name": "Proyecto de Codificación",
+          "description": "Equipados con sus guías de planificación completas, los estudiantes ya están preparados para dar vida a sus proyectos. Estos niveles se corresponden con la estructura de la guía de planificación, y ayudan a los estudiantes a navegar por el proceso de transformación de sus ideas en código.",
           "tips": [
-            null
+            "Los alumnos experimentarán muchas pruebas y errores mientras codifican. Es probable que sus proyectos se conviertan en versiones truncadas de su alcance original. Recuerda a los alumnos que este tipo de compromiso es habitual en el diseño de software. ¡No pasa nada si no consiguen incorporar todas las funciones que habían planeado!"
           ]
         },
         "1c65a4a2-b069-4b30-b733-a80c5081f8e3": {
@@ -2810,10 +2859,24 @@
           "progression_name": "Proyecto"
         },
         "98beea6f-7b7b-40b2-929f-ae004b2d650a": {
+          "name": "Presentación",
           "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que comenten cómo ha sido para ellos la experiencia de planificar y codificar, incluyendo las ideas que todavía les gustaría poner en práctica. \n-   **Prueba de juego por parejas**: Haz que los estudiantes o los grupos se pongan en parejas y prueben los proyectos de los demás. Mientras lo hacen, pídeles que se hagan comentarios positivos y constructivos entre ellos. La ventaja es que los estudiantes tendrán la oportunidad de proporcionar y responder a los comentarios en un entorno más pequeño. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Pide a los alumnos que se muevan al estilo de las \"sillas musicales\" a otro ordenador y que prueben el proyecto allí durante unos minutos, hasta que reciban una señal tuya para que se muevan a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan probar el mayor número posible de proyectos de sus compañeros."
         },
         "b8f03681-d01e-4384-b88f-5e562eab172f": {
-          "name": "Vocabulario Clave"
+          "name": "Vocabulario Clave",
+          "description": "-   **Contraseña**: una cadena secreta de letras, símbolos y números que puedes utilizar para restringir quién puede acceder a algo digital\n-   **Frase**: un grupo de palabras que van juntas y son fáciles de recordar\n-   **Símbolo**: un carácter que no es un número o una letra, como #, ! o @.\n-   **Nombre de Usuario**: un nombre que creas para iniciar sesión en una página web, una aplicación o un juego\n\n**Antes de la lección**: Como actividad opcional antes de la lección, haz que los alumnos jueguen al juego [Proteger con contraseña](https://www.digitalpassport.org/password-protect.html) en Digital Passport™ de Common Sense Education. Esto ayudará a introducir los conceptos clave de esta lección. Para ver más, consulta la [Guía del Educador del Pasaporte Digital](https://d1e2bohyu2u2w9.cloudfront.net/education/sites/default/files/tlr-asset/document-bundled-educator-guide-92018.pdf).\n\n**Pregunta**: _¿Qué hay en tu vida que tomas medidas para proteger? ¿Por qué y cómo lo proteges?_ ([Diapositiva 4](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3c3d552210_0_3))\n\nHaz que los alumnos piensen y compartan en parejas, y luego pídeles que lo compartan. Algunos ejemplos pueden ser _esconder un diario_, _usar un candado para la bicicleta_, _guardar un juguete en un lugar seguro_, etc. Aclara que una de las formas de proteger algo es restringiéndole el acceso.\n\n**Pregunta**: _Pensemos en el uso de dispositivos, como el teléfono o el ordenador. ¿Cómo se limita el acceso a algo que se quiere proteger y por qué se limita el acceso?_\n\nAlgunos ejemplos pueden ser la protección con contraseña, el bloqueo del dispositivo, el escáner de huellas dactilares o no dejar que otros utilicen el dispositivo.\n\n**Comenta**: Una de las formas más comunes de proteger tus dispositivos e información en línea es utilizando una contraseña. Una **contraseña** es una cadena secreta de letras, símbolos y números que puedes utilizar para restringir quién puede acceder a algo digital. Sin embargo, algunas contraseñas son más fuertes que otras porque son más difíciles de descifrar. Investiguemos por qué son importantes las contraseñas fuertes y cómo puedes asegurarte de que las tuyas son fuertes.\\_ ([Diapositiva 5](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3b037fe8d8_1_103))"
+        },
+        "379be0a3-0e9d-4c13-95e7-bb981bb48d50": {
+          "description": "**Distribuye** [Si... Entonces Escenarios del Estudiante](https://drive.google.com/open?id=1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4). Di a los alumnos que van a realizar una actividad de rompecabezas para entender POR QUÉ son importantes las contraseñas.\n\n**Divide** la clase en cinco grupos y diles que éste es su grupo \"de origen\". Pide a un alumno que lea en voz alta las instrucciones del folleto. ([Diapositiva 6](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3b037fe8d8_1_90))\n\n**Asigna** a cada grupo uno de los escenarios de la hoja informativa. Deja que los grupos trabajen durante cinco o siete minutos.\n\n**Divide** la clase en nuevos grupos para que cada grupo incluya al menos un estudiante de cada escenario (1, 2, 3, 4 y 5). Si es necesario, puede haber más de una persona de un determinado grupo \"de origen\" en un grupo de \"expertos\". Deja de cinco a siete minutos para que cada \"experto\" haga su presentación mientras el resto del grupo toma notas. ([Diapositiva 6](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3b037fe8d8_1_90))\n\n**Reconvoca** y pregunta: _Basado en estos escenarios, ¿por qué crees que es importante tener una contraseña fuerte? Por turnos, comparte tu idea con tu compañero._ Concede un minuto para compartir en parejas.\n\nAnima a los alumnos a compartir sus respuestas. Si es necesario, pide a los alumnos que se refieran directamente a los escenarios y a las consecuencias que se producirían si la contraseña de alguien se viera comprometida. Los ejemplos podrían incluir la pérdida de dinero, que la gente conozca su información privada, el robo de identidad y otras consecuencias futuras desconocidas."
+        },
+        "cb138589-db0b-4443-b830-110582e4733a": {
+          "description": "**Comenta**: Las consecuencias de las que acabamos de hablar pueden parecer aterradoras. Pero hay algo que puedes hacer para asegurarte de que nadie pueda adivinar tu contraseña. Aquí tienes algunos pasos importantes para mejorar tu contraseña.\n\n**Distribuye** y proyecta el [Cómo Mejorar tu Contraseña - Folleto del Alumno](https://drive.google.com/open?id=1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178). Diga: _Una forma de crear una contraseña fuerte es empezar con una frase memorable. Una **frase** es un grupo de palabras que van juntas y son fáciles de recordar. Vamos a hacer una ronda de práctica juntos usando la frase \"No hay manera de que bese a una rana\". Así que ya hemos completado el primer paso, que es idear una frase._ ([Diapositiva 7](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3cf30f4dfd_1_114))\n\n**Invita** a un alumno a leer el segundo paso. Pregunta: _¿Qué palabra formaría nuestra frase de ejemplo?_ Invita a un alumno a responder y a añadir \"tnwikaf\" en el folleto proyectado.\n\n**Repite** los pasos tres a cinco: Lee el paso en voz alta, pide a los alumnos que respondan y completa la sección \"Ronda de práctica\" del folleto. Las respuestas de los alumnos variarán, ya que elegirán poner en mayúsculas diferentes letras e insertar diferentes números. Si es necesario, aclara que los alumnos pueden insertar números en cualquier parte de la contraseña.\n\n**Comenta**: _Ahora vais a seguir estos pasos para crear vuestra propia contraseña. Trabaja de forma independiente para completar la sección \"Tu turno\" de la hoja de trabajo._ Concede a los alumnos cinco minutos para completar la hoja de trabajo."
+        },
+        "8d87fed2-e793-40e8-899f-18e8ff3313c4": {
+          "description": "**Proyecta** los **Consejos para Contraseñas** y lee cada uno de ellos en voz alta. Pide a los alumnos que rellenen los espacios en blanco de su hoja informativa a medida que los lees. Para el último consejo, aclara que un **símbolo** es _un carácter que no es un número o una letra, como #, ! o @._ ([Diapositiva 8](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3d416ba77f_0_21))\n\n**Comenta**: _A medida que crezcas, tener una contraseña fuerte será aún más importante. Las contraseñas te ayudarán a proteger tus perfiles en las redes sociales cuando estés en el instituto, a mantener tus notas en privado cuando estés en la universidad y a proteger tus cuentas bancarias y de tiendas online cuando seas adulto._\n\n**Haz**: Que los alumnos completen el [Cuestionario de la Lección](https://docs.google.com/forms/u/2/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy)."
+        },
+        "ceda9600-2c95-45be-ae4a-e478aca0d762": {
+          "description": "A continuación se presentan recursos adicionales que puedes proporcionar a los alumnos para mejorar su aprendizaje:\n\n-   [Actividad familiar](https://drive.google.com/open?id=1jzZbfj0Y1GJa6WWTHp2EEzr7t0m-Hof-qIb-QLiAcpA) \n-   Consejos para la familia][1]\n-   ¡Facilita un juego relacionado de BeakoutEDU que fue creado conjuntamente con Common Sense Education, llamado [Lip Sync Revenge](https://platform.breakoutedu.com/game/lip-sync-revenge)! Tendrás que crear una cuenta gratuita para poder acceder al juego y a los recursos relacionados."
         },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Introducción"
@@ -2830,7 +2893,7 @@
         "47c800d4-0c46-42ae-bc19-d837d28fd912": {
           "name": "Reflexión",
           "tips": [
-            "Este tipo de reflexiones se pueden llevar a cabo de diferentes maneras. ¡La redacción de un diario o el debate (en grupo o en pareja) son buenas opciones!"
+            "Las actividades de reflexión como estas se pueden completar de diversas formas. ¡Escribir un diario o debatir (con grupos o pares) son excelentes opciones!"
           ]
         },
         "8d3b579a-9959-4190-aa92-858495574689": {
@@ -3039,7 +3102,7 @@
           "name": "Reflexión"
         },
         "d1bdbe9c-8bc0-4401-96e0-636b3066c782": {
-          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que Muévete**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que, a moverse**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
         },
         "f34cb485-1f89-4670-bb09-f170b83be646": {
           "name": "Introducción"
@@ -3241,17 +3304,20 @@
           "name": "Reflexión"
         },
         "b4068598-c442-4526-9086-a22c466fa578": {
-          "name": "Planificación"
+          "name": "Planificación",
+          "description": "¡Consigue que los alumnos se entusiasmen y se preparen para la actividad de hoy!"
         },
         "ea88a8c8-980d-4d9f-a288-545a8cd65be6": {
+          "description": "**Distribuir**: Reparte una **\\*Guía de Planificación de Proyectos** a cada alumno o pareja. Repasa con los alumnos los pasos que se indican en la guía y deja que los completen. Si es necesario, consulta el ejemplo incluido.",
           "tips": [
-            null
+            "Si los alumnos programan en parejas durante esta tarea, este calentamiento es una gran oportunidad para que practiquen el intercambio y el respeto de las ideas de los demás. Asegúrate de que los alumnos siguen las normas de trabajo en grupo que ya tienes establecidas en tu aula. De lo contrario, dedica un breve momento a repasar tus expectativas."
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
           "name": "Proyecto de fin de curso",
+          "description": "Equipados con sus guías de planificación completas, los estudiantes ya están preparados para dar vida a sus proyectos. Estos niveles se corresponden con la estructura de la guía de planificación, y ayudan a los estudiantes a navegar por el proceso de transformación de sus ideas en código.",
           "tips": [
-            null
+            "Los alumnos experimentarán muchas pruebas y errores mientras codifican. Es probable que sus proyectos se conviertan en versiones truncadas de su alcance original. Recuerda a los alumnos que este tipo de compromiso es habitual en el diseño de software. ¡No pasa nada si no consiguen incorporar todas las funciones que habían planeado!"
           ]
         },
         "44ff9770-a1eb-4ec3-922d-013bcadaef08": {
@@ -3259,6 +3325,9 @@
         },
         "cc80e93e-054f-4dfb-acf9-75c0fa999f10": {
           "progression_name": "Crear tu proyecto"
+        },
+        "bfb31158-7c6c-4e30-9e86-141b77445111": {
+          "name": "Presentación"
         },
         "2765363f-4649-4b42-b4ae-245c6f5347ad": {
           "name": "Introducción",
@@ -3960,6 +4029,7 @@
         },
         "e7833677-6e13-40dc-9e36-56388378828d": {
           "name": "Texto y Comentarios",
+          "description": "#### Predicción (5 minutos)\n\n**Haz esto:** los estudiantes deben leer el código provisto y hacer una predicción sobre lo que sucederá. Después de presionar “Ejecutar”, permite que los estudiantes reflexionen sobre cualquier cosa que les haya parecido interesante o que los sorprendió.",
           "progression_name": "Predicción"
         },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
@@ -4067,16 +4137,18 @@
           "name": "Reflexión"
         },
         "780b5ade-e2d3-40e2-bdb2-570770641187": {
-          "name": "Planificación"
+          "name": "Planificación",
+          "description": "¡Consigue que los alumnos se entusiasmen y se preparen para la actividad de hoy!"
         },
         "83a07440-69f4-47bc-9a0a-4281dd6b5b7b": {
           "tips": [
-            null
+            "Si los alumnos programan en parejas durante esta tarea, este calentamiento es una gran oportunidad para que practiquen el intercambio y el respeto de las ideas de los demás. Asegúrate de que los alumnos siguen las normas de trabajo en grupo que ya tienes establecidas en tu aula. De lo contrario, dedica un breve momento a repasar tus expectativas."
           ]
         },
         "38fe6f18-ce88-45d9-912c-64fc0addd0b7": {
+          "description": "Equipados con sus guías de planificación completas, los estudiantes ya están preparados para dar vida a sus proyectos. Estos niveles se corresponden con la estructura de la guía de planificación, y ayudan a los estudiantes a navegar por el proceso de transformación de sus ideas en código.",
           "tips": [
-            null
+            "Los alumnos experimentarán muchas pruebas y errores mientras codifican. Es probable que sus proyectos se conviertan en versiones truncadas de su alcance original. Recuerda a los alumnos que este tipo de compromiso es habitual en el diseño de software. ¡No pasa nada si no consiguen incorporar todas las funciones que habían planeado!"
           ]
         },
         "b4d55ac7-44a4-4551-89ca-9fce880121ac": {
@@ -4088,6 +4160,7 @@
           "progression_name": "Crear tu proyecto"
         },
         "d99249e4-021e-4a39-9462-045e0306c00a": {
+          "name": "Presentación",
           "description": "Para celebrar el trabajo de los alumnos, dedica los últimos 10 minutos, más o menos, a permitirles mostrar sus proyectos. Esto puede hacerse de muchas maneras, pero aquí hay algunas:\n\n-   **Demostración pública**: Selecciona a algunos voluntarios ejemplares para que hagan una breve demostración de sus proyectos delante de la clase. Mientras lo hacen, pídeles que comenten cómo ha sido para ellos la experiencia de planificar y codificar, incluyendo las ideas que todavía les gustaría poner en práctica. \n-   **Prueba de juego por parejas**: Haz que los estudiantes o los grupos se pongan en parejas y prueben los proyectos de los demás. Mientras lo hacen, pídeles que se hagan comentarios positivos y constructivos entre ellos. La ventaja es que los estudiantes tendrán la oportunidad de proporcionar y responder a los comentarios en un entorno más pequeño. \n-   **Paseo por la galería**: Asegúrate de que todos los estudiantes tienen sus proyectos listos para la prueba. Pide a los alumnos que se muevan al estilo de las \"sillas musicales\" a otro ordenador y que prueben el proyecto allí durante unos minutos, hasta que reciban una señal tuya para que se muevan a otro ordenador. Repite esta operación cada pocos minutos. Aunque aquí hay menos oportunidades de comunicación estructurada, esto garantiza que los estudiantes puedan probar el mayor número posible de proyectos de sus compañeros."
         },
         "b1cca8ed-5145-40b2-b81d-7da6d6dd73dd": {
@@ -4312,7 +4385,7 @@
           "description": "Pedir a los alumnos que escriban sobre lo que han aprendido, por qué es útil y cómo se sienten al respecto puede ayudar a consolidar los conocimientos que han obtenido hoy y a crear una hoja de repaso que les sirva para el futuro.\n\n**Sugerencias:**\n\n-   ¿De qué trata la lección de hoy?\n-   Dibuja en la esquina de la página de tu diario una de las **\\*Caras de emoción** que muestra cómo te has sentido con la lección de hoy.\n-   Dibuja a _Scrat_ y una bellota.\n-   Dibújate a ti mismo utilizando un bucle para realizar una actividad cotidiana, como lavarte los dientes."
         },
         "efb62b8a-4d4e-446b-aa68-1f20c45fc7a3": {
-          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que Muévete**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades fuera de clase o de enriquecimiento.\n\n**Así que, a moverse**\n\n-   Proporciona a los alumnos imágenes de acciones o movimientos de baile que puedan realizar.\n    -   Haz que los alumnos organicen los movimientos y añadan bucles para coreografiar su propio baile.\n-   Comparte los bailes con el resto de la clase.\n\n**Conéctalo de nuevo**\n\n-   Busca algunos vídeos de YouTube de bailes populares que se repitan.\n-   ¿Puede tu clase encontrar los bucles?\n-   Intenta hacer lo mismo con las canciones."
         },
         "3948532c-fefc-466f-a7ff-7d95e6692b96": {
           "name": "Introducción",
