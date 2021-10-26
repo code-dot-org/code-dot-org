@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "CS Discoveries Deeper Learning 2019 - 2020",
+      "exclude_csf_column_in_legend": true,
       "peer_reviews_to_complete": 2,
-      "student_detail_progress_view": true,
-      "exclude_csf_column_in_legend": true
+      "professional_learning_course": "CS Discoveries Deeper Learning 2019 - 2020",
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:47 UTC",
+    "serialized_at": "2021-10-25 22:54:01 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "dlp19-csd-mod-fit"
     }

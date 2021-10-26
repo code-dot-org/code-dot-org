@@ -160,7 +160,8 @@ function PoemSelector(props) {
       .map(poemKey => getPoem(poemKey))
       .sort((a, b) => (a.title > b.title ? 1 : -1))
       .map(poem => ({value: poem.key, label: poem.title}));
-    options.push({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
+    // Add option to create your own poem to the top of the dropdown.
+    options.unshift({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
     return options;
   };
 

@@ -360,6 +360,7 @@ class UnitGroup < ApplicationRecord
       family_name: family_name,
       version_year: version_year,
       published_state: published_state,
+      instruction_type: instruction_type,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),

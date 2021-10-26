@@ -421,20 +421,22 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to course_params" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
 
     assert_nil unit_group.version_year
     assert_nil unit_group.family_name
     refute unit_group.has_verified_resources
     refute unit_group.launched?
     refute unit_group.stable?
+    assert_equal unit_group.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
 
     post :update, params: {
       course_name: unit_group.name,
       version_year: '2019',
       family_name: 'csp',
       has_verified_resources: true,
-      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable,
+      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
     }
     unit_group.reload
 
@@ -443,6 +445,7 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.has_verified_resources
     assert unit_group.launched?
     assert unit_group.stable?
+    assert_equal unit_group.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
   end
 
   test "update: persists teacher resources for migrated unit groups" do

@@ -7,8 +7,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:05 UTC",
+    "serialized_at": "2021-10-25 22:53:23 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "gamelab-demo"
     }

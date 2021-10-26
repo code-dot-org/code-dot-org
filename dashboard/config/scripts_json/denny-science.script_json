@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:47 UTC",
+    "serialized_at": "2021-10-25 22:54:02 UTC",
     "published_state": "pilot",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "denny-science"
     }

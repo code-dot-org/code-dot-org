@@ -16,10 +16,10 @@
     "use_modal_function_editor": "true",
     "embed": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"poetry_sprite\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"3\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each sprite has a **location**. You can set the location by clicking the pin on this block: \\n\\n<xml><block type=\\\"Poetry_makeNewSpriteAnon\\\">\\n    <title name=\\\"ANIMATION_NAME\\\">\\\"alligator_mouth_closed\\\"</title>\\n    <title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":243}</title>\\n  </block></xml>\\n\\n* Click the pin ![](https://images.code.org/6e59189145f18fc4e46140409e2ad5b8-image-1610554321961.png) on the location block then choose a new position for your sprite on the screen.\\n* Press the \\\"Run\\\" button when your code is finished.\",\"hint_id\":\"location_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7360b5738ca403cc2a9eb79a2ec5f1d6/poetry_hoc_addSprites.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each sprite has a **location**. You can set the location by clicking the pin on this block: \\n\\n<xml><block type=\\\"Poetry_makeNewSpriteAnon\\\"><title name=\\\"ANIMATION_NAME\\\">\\\"twinkling_star\\\"</title><title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":225}</title></block></xml>\\n\\n* Click the pin ![](https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png) on the location block then choose a new position for your sprite on the screen.\\n* Press the \\\"Run\\\" button when your code is finished.\\n\\n\",\"hint_id\":\"location_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7360b5738ca403cc2a9eb79a2ec5f1d6/poetry_hoc_addSprites.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can remove a sprite at a certain line number. You can add a new sprite to take its place: \\n\\n<xml><block type=\\\"Poetry_whenLineShows\\\"><title name=\\\"N\\\">3</title><next><block type=\\\"Poetry_destroy\\\"><title name=\\\"ANIMATION_NAME\\\">\\\"twinkling_star\\\"</title><next><block type=\\\"Poetry_makeNewSpriteAnon\\\"><title name=\\\"ANIMATION_NAME\\\">\\\"night_moon\\\"</title><title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":225}</title></block></next></block></next></block></xml>\",\"hint_id\":\"remove_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/456f29a693b44c1b6a1da017165daa71/poetry_hoc_addSprites.mp3\"}]",
     "instructions_important": "false",
     "short_instructions": "Authors use imagery to paint a picture in the reader's mind. You can add sprites to illustrate your poem. ",
-    "long_instructions": "Authors use **imagery** to paint a picture in the reader's mind using words. Add **sprites** to illustrate the images that come to your mind when you read the poem. \r\n\r\n* Connect a `make new sprite` block under the `when run` block.\r\n* Choose a costume for your sprite.\r\n\r\n*Extra Challenge:* Connect a `make new sprite` block to an event to make a new sprite appear when a new character is introduced in the poem. ",
+    "long_instructions": "Poets use words to paint a picture in the reader's mind. Add **sprites** to go with the images that come to your mind when you read the poem. \r\n\r\n* Add a `make new sprite` block to your code.\r\n* Choose a costume for your sprite.\r\n\r\n*Extra Challenge:* Connect a `make new sprite` block to an event to make a new sprite appear when a new image is introduced in the poem. ",
     "submittable": "false",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
@@ -33,22 +33,22 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "start_animations": "{\"orderedKeys\":[\"1b0b2f32-fa55-4c45-b1ed-0f132c91f7c4\",\"8b85dcd1-8ea0-44a9-b57e-7fb88686adb0\",\"2858ce95-ec94-44a1-b207-186c00bb6754\",\"60cf0328-9cc8-444d-85f0-6038c5978887\",\"57a3ec09-425d-46b0-a223-3b96ac149e4e\",\"5c98ace9-fe13-4db9-9a5c-e830d9f9970a\",\"9d451c52-6aa7-46af-88c7-f9e8107b8195\",\"19f6f9de-e155-4d41-ad6e-00ff6477fa82\",\"8c1e09f3-a929-457d-9b90-fd0a431cf6f8\",\"d980882a-ac0e-424b-9fca-2a551a3a1da7\",\"b78e2853-4223-485e-9c5e-98c3152ff950\",\"75825d16-3741-4047-88c1-133e2c4e1d2a\",\"9ba81b66-9e7d-49e3-8aaf-507bdfd591f5\",\"54cf744d-b2a9-46b5-808a-cd9163c8fb7c\",\"95aa660d-335e-4276-b4fe-ecf2d616bf7f\",\"157e9d89-44dd-428c-b657-02778f68505a\",\"c094361e-0e6d-4395-8223-d6a0f4b96258\",\"b9640314-70d7-4337-bcc8-c32b031fddd1\",\"da7516cd-8672-41e6-a0dc-bd8db0bef200\",\"c7a7b53a-5cdf-404f-a931-540f04d08307\",\"06d4f085-d72e-47a9-a12f-60467788e5fb\",\"2c9c0c18-62bc-439d-952e-710d03827237\",\"e3cb9d4f-ee22-41a6-a542-0cfd4319dc21\",\"928ee63d-2a02-4e0c-9a73-f6d0343ee125\",\"942abdb8-3d5b-446d-a10d-1a37004eabb2\",\"793c00fb-e669-4c26-bec3-43c4f4f02f49\",\"a8988b2e-cd92-42d0-a541-ce756d6dd59d\",\"c22d05f9-836c-4b2e-b53f-2a2347ecce92\",\"203f91ad-ce06-4b51-955b-c95937243135\",\"cf7037f9-0112-4ad6-aae8-593881807e47\",\"acf1f54b-1250-4493-817a-3850381b262d\",\"0b39215c-0537-4607-b950-b1ba3fe49057\",\"da895b10-5aa0-42fb-9601-362cfbd4951d\",\"cb00956b-ddc2-4951-92b4-ebd4dbecc90d\",\"ebf717c3-26ce-486a-88b2-e4340952ccba\",\"6e7de7ce-7b23-4d8c-b7c7-d4817c34e5ca\",\"a564c880-7d63-44fc-a67b-c16f2b7302cd\",\"8e7a24da-9d28-46e2-9e31-766d1d2e4297\",\"0bf5ca73-a99a-47fe-b88a-352b5896d1a3\",\"c5c3c5d0-88f9-480f-9b5d-f96f5f268a6e\",\"517e2d7a-58fe-4fa4-b8be-775b53e11ca8\",\"b2821afb-5763-4aff-89a0-c54c857c4e84\",\"492722ae-2203-46aa-a080-bba21ccbeaa1\",\"a87af658-7e5d-497d-947e-9907ffacedf2\",\"b23c7125-23b4-4b59-96dc-ebed3259d214\",\"a19a86e8-6d0b-4055-9175-9f240808940f\",\"e586618b-080a-4e39-b28c-ecb159f2327d\",\"35d7d28a-9611-46cb-975b-e2d4a360c14c\",\"6d484c31-3481-4ffc-813f-debc97396c4f\",\"f07d8a99-fdf6-4351-9342-e344aa0c963c\",\"b3ba5069-9477-40c8-bf0a-467e37a568be\",\"332921bf-09e4-4355-b29e-f31d41970678\",\"6885ee87-06f7-43fa-907f-848205274987\",\"5f194f40-42c9-4887-b083-6fb1dc621a28\",\"dab85523-0cde-4ff7-9630-2c32168af474\",\"d7b061fa-ab3a-4e8d-8bb8-6ffb69463d04\",\"9a1e1df8-85cd-428b-860b-6abce6251999\",\"0de4398a-3aa5-4ffa-b507-e3af6e1306e6\",         \"e7c8198c-304f-424d-94cd-a335b5b21eb6\",\r\n    \"da985e3a-9a08-4b90-be2a-77f82489e8ec\",\r\n    \"3645bbcc-9737-4dc1-a70b-014d9d685a97\",\r\n    \"93f4479b-2c23-403c-9947-6255b48871cf\",\r\n    \"4c439901-c180-40e7-b46e-438a7d9aacfd\",\r\n    \"4fad11f5-50b7-4f22-b57f-5747a9eb49b0\",\r\n    \"56ba9b78-671b-40ea-8382-e0c6c5790dff\",\r\n    \"56d5e52b-eecd-4cd2-ad67-e01e6df9be4f\",\r\n    \"84be1d2b-7300-45c2-9283-9d78fad333e9\",\r\n    \"e991e8cf-85b2-47be-9d9f-0aef6cc8a2d5\",\r\n    \"f087f567-5b52-485b-823e-2b91e2a3f6fa\",\r\n    \"2b7d2ef2-0e9b-4680-8218-ba1c90042092\",\r\n    \"8eefb986-3453-46ca-bf79-e9ab807452c0\",\r\n    \"3215d034-7f15-4667-87c9-f783f2a35d92\",\r\n    \"c32cf370-2bdf-4849-be8d-00229b48dec7\",\r\n    \"8f33acda-92e2-43f0-8563-7d72045ffa40\",\r\n    \"799fdf31-ddb7-4a2a-b7d2-754c7df72141\",\r\n    \"b8be886d-ecb7-4018-ad01-6acd9370f7ea\",\r\n    \"8831d71b-f6bf-4df0-bcf4-898bf55948fc\",\r\n    \"1c789133-57ec-435d-a05a-9bae8878988b\",\r\n    \"2cbc9795-0b26-4c99-b910-fb20cff51bbd\",\r\n    \"7ca4ab6d-01cc-4cab-a49c-41967397d3e0\",\r\n    \"7e7c204d-02d8-4320-9a6f-01d777c53355\"],\r\n \r\n\"propsByKey\":{\"0de4398a-3aa5-4ffa-b507-e3af6e1306e6\":{\"name\":\"sunset\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:40:02 UTC\",\"pngLastModified\":\"2021-10-12 18:40:00 UTC\",\"version\":\"INJCTX3gH6lIJURqVzdvEr1GKvu5.aSu\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/INJCTX3gH6lIJURqVzdvEr1GKvu5.aSu/category_backgrounds/sunset.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9a1e1df8-85cd-428b-860b-6abce6251999\":{\"name\":\"sunrise\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:39:40 UTC\",\"pngLastModified\":\"2021-10-12 18:39:37 UTC\",\"version\":\"HXPfhN_d_YXdK7KbeiZOSChCt7CU9.vd\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/HXPfhN_d_YXdK7KbeiZOSChCt7CU9.vd/category_backgrounds/sunrise.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"d7b061fa-ab3a-4e8d-8bb8-6ffb69463d04\":{\"name\":\"sun_lines\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:38:52 UTC\",\"pngLastModified\":\"2021-10-12 18:38:50 UTC\",\"version\":\"sJMkBSRS32wDqDQaH.N6MH66WGaPLXYw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/sJMkBSRS32wDqDQaH.N6MH66WGaPLXYw/category_backgrounds/sun_lines.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"dab85523-0cde-4ff7-9630-2c32168af474\":{\"name\":\"starry\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:38:24 UTC\",\"pngLastModified\":\"2021-10-12 18:38:22 UTC\",\"version\":\"btvJhZJ7T3HiMN2hPoJWHr3gKBRvpvyg\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/btvJhZJ7T3HiMN2hPoJWHr3gKBRvpvyg/category_backgrounds/starry.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5f194f40-42c9-4887-b083-6fb1dc621a28\":{\"name\":\"space\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:38:03 UTC\",\"pngLastModified\":\"2021-10-12 18:38:01 UTC\",\"version\":\"j_4GQB8Z3NkArFYWHC819EHSCzWNmchH\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/j_4GQB8Z3NkArFYWHC819EHSCzWNmchH/category_backgrounds/space.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6885ee87-06f7-43fa-907f-848205274987\":{\"name\":\"seafoam\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:37:34 UTC\",\"pngLastModified\":\"2021-10-12 18:37:31 UTC\",\"version\":\"A4PpwFmNCAOIIN6XbtzRuFAZWUGo3FCr\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/A4PpwFmNCAOIIN6XbtzRuFAZWUGo3FCr/category_backgrounds/seafoam.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"332921bf-09e4-4355-b29e-f31d41970678\":{\"name\":\"rainbow_watercolor\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 17:24:54 UTC\",\"pngLastModified\":\"2021-10-12 17:24:51 UTC\",\"version\":\"CH_1iQfefx1.CtNKBosMWLPSPXUoM1V3\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/CH_1iQfefx1.CtNKBosMWLPSPXUoM1V3/category_backgrounds/rainbow_watercolor.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b3ba5069-9477-40c8-bf0a-467e37a568be\":{\"name\":\"rainbow_glow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:37:15 UTC\",\"pngLastModified\":\"2021-10-12 18:37:13 UTC\",\"version\":\"_97PA1spMZAQE7QjNo6WLLaon5M2TvaM\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/_97PA1spMZAQE7QjNo6WLLaon5M2TvaM/category_backgrounds/rainbow_glow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f07d8a99-fdf6-4351-9342-e344aa0c963c\":{\"name\":\"rainbow_bright\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:36:59 UTC\",\"pngLastModified\":\"2021-10-12 18:36:57 UTC\",\"version\":\"Hu0p4zpTnmX5EfRNZMvqM_hMHmk2u.IS\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/Hu0p4zpTnmX5EfRNZMvqM_hMHmk2u.IS/category_backgrounds/rainbow_bright.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6d484c31-3481-4ffc-813f-debc97396c4f\":{\"name\":\"pink_watercolor\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:36:40 UTC\",\"pngLastModified\":\"2021-10-12 18:36:38 UTC\",\"version\":\"8c6JpeIhW3jbL0Js_sJoCZ3dMHbn4vPW\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/8c6JpeIhW3jbL0Js_sJoCZ3dMHbn4vPW/category_backgrounds/pink_watercolor.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"35d7d28a-9611-46cb-975b-e2d4a360c14c\":{\"name\":\"mountains_abstract\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:36:20 UTC\",\"pngLastModified\":\"2021-10-12 18:36:17 UTC\",\"version\":\"i5uYR5F5L0ZrRnl2qx0gDup_lA_A9yo.\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/i5uYR5F5L0ZrRnl2qx0gDup_lA_A9yo./category_backgrounds/mountains_abstract.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e586618b-080a-4e39-b28c-ecb159f2327d\":{\"name\":\"moon_abstract\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:36:01 UTC\",\"pngLastModified\":\"2021-10-12 18:35:59 UTC\",\"version\":\"FkhBkJg0HGlL7LFREx3z0FYIe6t75IRk\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/FkhBkJg0HGlL7LFREx3z0FYIe6t75IRk/category_backgrounds/moon_abstract.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a19a86e8-6d0b-4055-9175-9f240808940f\":{\"name\":\"line_waves\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:35:45 UTC\",\"pngLastModified\":\"2021-10-12 18:35:43 UTC\",\"version\":\"8Qu24RNk4zD6yLD4wHx_.S9gPGFJ6iVN\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/8Qu24RNk4zD6yLD4wHx_.S9gPGFJ6iVN/category_backgrounds/line_waves.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b23c7125-23b4-4b59-96dc-ebed3259d214\":{\"name\":\"lace\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:35:26 UTC\",\"pngLastModified\":\"2021-10-12 18:35:23 UTC\",\"version\":\"O6iHc_ffJo5kTBgj83e8umTGAW.Wwzm_\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/O6iHc_ffJo5kTBgj83e8umTGAW.Wwzm_/category_backgrounds/lace.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a87af658-7e5d-497d-947e-9907ffacedf2\":{\"name\":\"gold_sunrise\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:34:42 UTC\",\"pngLastModified\":\"2021-10-12 18:34:39 UTC\",\"version\":\"0_Jilyp3gunBcNo.muKnfnToRNm_AMil\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0_Jilyp3gunBcNo.muKnfnToRNm_AMil/category_backgrounds/gold_sunrise.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"492722ae-2203-46aa-a080-bba21ccbeaa1\":{\"name\":\"dotted_waves\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:34:21 UTC\",\"pngLastModified\":\"2021-10-12 18:34:19 UTC\",\"version\":\"AI6blAtaBX3BrOifJPkfCxTgRQFjQDPl\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/AI6blAtaBX3BrOifJPkfCxTgRQFjQDPl/category_backgrounds/dotted_waves.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b2821afb-5763-4aff-89a0-c54c857c4e84\":{\"name\":\"dark_watercolors\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:34:04 UTC\",\"pngLastModified\":\"2021-10-12 18:34:01 UTC\",\"version\":\"KTVMe_GvWHWJc4_UWx5.4tzyabQhnTfN\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/KTVMe_GvWHWJc4_UWx5.4tzyabQhnTfN/category_backgrounds/dark_watercolors.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"517e2d7a-58fe-4fa4-b8be-775b53e11ca8\":{\"name\":\"blue_watercolor\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:33:45 UTC\",\"pngLastModified\":\"2021-10-12 18:33:43 UTC\",\"version\":\"j_tsB.CRYBZlX_7K.pSnU4x0XFuWDllQ\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/j_tsB.CRYBZlX_7K.pSnU4x0XFuWDllQ/category_backgrounds/blue_watercolor.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"c5c3c5d0-88f9-480f-9b5d-f96f5f268a6e\":{\"name\":\"black_lines\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:33:10 UTC\",\"pngLastModified\":\"2021-10-12 18:33:08 UTC\",\"version\":\"rDa96PZauxKytv78XhLmOWoSI2m1ZlvY\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/rDa96PZauxKytv78XhLmOWoSI2m1ZlvY/category_backgrounds/black_lines.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"0bf5ca73-a99a-47fe-b88a-352b5896d1a3\":{\"name\":\"barbed_wire\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:32:44 UTC\",\"pngLastModified\":\"2021-10-12 18:32:42 UTC\",\"version\":\"yV9flT7UtdVbuRSZerIPt58o0h1adgvO\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/yV9flT7UtdVbuRSZerIPt58o0h1adgvO/category_backgrounds/barbed_wire.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8e7a24da-9d28-46e2-9e31-766d1d2e4297\":{\"name\":\"abstract\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2021-10-12 18:32:07 UTC\",\"pngLastModified\":\"2021-10-12 18:32:05 UTC\",\"version\":\"cVAz46hQ7TTQ6oSE72iohyN2bOGvy7FI\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/cVAz46hQ7TTQ6oSE72iohyN2bOGvy7FI/category_backgrounds/abstract.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a564c880-7d63-44fc-a67b-c16f2b7302cd\":{\"name\":\"tree_tall\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"video_games\"],\"jsonLastModified\":\"2021-10-12 18:53:24 UTC\",\"pngLastModified\":\"2021-10-12 18:53:22 UTC\",\"version\":\"G4ju711YZmDVbfjd3uJvodDUm8K.3HVh\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/G4ju711YZmDVbfjd3uJvodDUm8K.3HVh/category_video_games/tree_tall.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6e7de7ce-7b23-4d8c-b7c7-d4817c34e5ca\":{\"name\":\"tortoise_large\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-12 18:52:51 UTC\",\"pngLastModified\":\"2021-10-12 18:52:49 UTC\",\"version\":\"6TZGZBRkS9kDDE50OOIjoRWRXpKr5AGw\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/6TZGZBRkS9kDDE50OOIjoRWRXpKr5AGw/category_animals/tortoise_large.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"ebf717c3-26ce-486a-88b2-e4340952ccba\":{\"name\":\"snail_garden\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-12 18:52:27 UTC\",\"pngLastModified\":\"2021-10-12 18:52:25 UTC\",\"version\":\"I6PZZBdryQEMXY_hGKJhJ_gE5ROLRpRt\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/I6PZZBdryQEMXY_hGKJhJ_gE5ROLRpRt/category_animals/snail_garden.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"cb00956b-ddc2-4951-92b4-ebd4dbecc90d\":{\"name\":\"shipwreck\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"vehicles\"],\"jsonLastModified\":\"2021-10-12 18:52:01 UTC\",\"pngLastModified\":\"2021-10-12 18:51:59 UTC\",\"version\":\"4cfeJvMmeUAASnlYEy4aV5SQrflwPtqm\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/4cfeJvMmeUAASnlYEy4aV5SQrflwPtqm/category_vehicles/shipwreck.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"da895b10-5aa0-42fb-9601-362cfbd4951d\":{\"name\":\"ocean_wave\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"video_games\"],\"jsonLastModified\":\"2021-10-12 17:06:05 UTC\",\"pngLastModified\":\"2021-10-12 17:06:03 UTC\",\"version\":\"B0y1ALXEf6dvWAxSb6bIYQriNDubC7ez\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/B0y1ALXEf6dvWAxSb6bIYQriNDubC7ez/category_video_games/ocean_wave.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"0b39215c-0537-4607-b950-b1ba3fe49057\":{\"name\":\"marshmallow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"food\"],\"jsonLastModified\":\"2021-10-12 18:51:16 UTC\",\"pngLastModified\":\"2021-10-12 18:51:14 UTC\",\"version\":\"h1V4LaibAg3ikbSulHNdIcQn4NoLdePs\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/h1V4LaibAg3ikbSulHNdIcQn4NoLdePs/category_food/marshmallow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"acf1f54b-1250-4493-817a-3850381b262d\":{\"name\":\"marshmallow_toasted\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"food\"],\"jsonLastModified\":\"2021-10-12 18:50:50 UTC\",\"pngLastModified\":\"2021-10-12 18:50:48 UTC\",\"version\":\"sBwfb3Oco9SxxVamcMWJgqLCqwIF1FCU\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/sBwfb3Oco9SxxVamcMWJgqLCqwIF1FCU/category_food/marshmallow_toasted.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"cf7037f9-0112-4ad6-aae8-593881807e47\":{\"name\":\"lizard_yellow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-12 18:50:04 UTC\",\"pngLastModified\":\"2021-10-12 18:50:02 UTC\",\"version\":\"0phaHBUXyUScVEFecAEJ8mppHwsS7rwD\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/0phaHBUXyUScVEFecAEJ8mppHwsS7rwD/category_animals/lizard_yellow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"203f91ad-ce06-4b51-955b-c95937243135\":{\"name\":\"lizard_green\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-12 18:49:26 UTC\",\"pngLastModified\":\"2021-10-12 18:49:24 UTC\",\"version\":\"UNqWZeN9txqPPN4QbOyXdPgX75.So5N7\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/UNqWZeN9txqPPN4QbOyXdPgX75.So5N7/category_animals/lizard_green.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"c22d05f9-836c-4b2e-b53f-2a2347ecce92\":{\"name\":\"leaf_twig\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"video_games\"],\"jsonLastModified\":\"2021-10-12 18:48:50 UTC\",\"pngLastModified\":\"2021-10-12 18:48:48 UTC\",\"version\":\"W9wLwnnMvumxdBjmjgwCQ5R8oUXG6OWN\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/W9wLwnnMvumxdBjmjgwCQ5R8oUXG6OWN/category_video_games/leaf_twig.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a8988b2e-cd92-42d0-a541-ce756d6dd59d\":{\"name\":\"jackson\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-12 18:48:18 UTC\",\"pngLastModified\":\"2021-10-12 18:48:16 UTC\",\"version\":\"pZ_cZy.7p77BqFktQZPyW5m8eKiEni0y\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/pZ_cZy.7p77BqFktQZPyW5m8eKiEni0y/category_animals/jackson.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"793c00fb-e669-4c26-bec3-43c4f4f02f49\":{\"name\":\"grass_blades\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"video_games\"],\"jsonLastModified\":\"2021-10-12 18:47:47 UTC\",\"pngLastModified\":\"2021-10-12 18:47:45 UTC\",\"version\":\"XQ8hdwXf9Y53GpsHp9DcJ42AMOvsamah\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/XQ8hdwXf9Y53GpsHp9DcJ42AMOvsamah/category_video_games/grass_blades.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"942abdb8-3d5b-446d-a10d-1a37004eabb2\":{\"name\":\"frog_yellow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-12 18:47:19 UTC\",\"pngLastModified\":\"2021-10-12 18:47:17 UTC\",\"version\":\"z8MrS9MOpR83HHgAsu2P9VHXj8g8JFHS\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/z8MrS9MOpR83HHgAsu2P9VHXj8g8JFHS/category_animals/frog_yellow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"928ee63d-2a02-4e0c-9a73-f6d0343ee125\":{\"name\":\"frog_green\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-12 18:46:44 UTC\",\"pngLastModified\":\"2021-10-12 18:46:42 UTC\",\"version\":\"s19W4PYLQCmnHZXc5Uiws76aX7eIQq12\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/s19W4PYLQCmnHZXc5Uiws76aX7eIQq12/category_animals/frog_green.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e3cb9d4f-ee22-41a6-a542-0cfd4319dc21\":{\"name\":\"flowers_yellow\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"video_games\"],\"jsonLastModified\":\"2021-10-12 18:45:37 UTC\",\"pngLastModified\":\"2021-10-12 18:45:35 UTC\",\"version\":\"3gB.D3Gi.QATUmP8_xWlJ3Qd9khxErcb\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/3gB.D3Gi.QATUmP8_xWlJ3Qd9khxErcb/category_video_games/flowers_yellow.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2c9c0c18-62bc-439d-952e-710d03827237\":{\"name\":\"flowers_white\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"video_games\"],\"jsonLastModified\":\"2021-10-12 18:45:07 UTC\",\"pngLastModified\":\"2021-10-12 18:45:05 UTC\",\"version\":\"kSwSjjcueiAP29faAeMe5V77oDAQdXf8\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/kSwSjjcueiAP29faAeMe5V77oDAQdXf8/category_video_games/flowers_white.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"06d4f085-d72e-47a9-a12f-60467788e5fb\":{\"name\":\"flowers_purple\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"video_games\"],\"jsonLastModified\":\"2021-10-12 18:44:38 UTC\",\"pngLastModified\":\"2021-10-12 18:44:36 UTC\",\"version\":\"N8ibmg42kk1r3m7F6glGTomoPV8vLZJ1\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/N8ibmg42kk1r3m7F6glGTomoPV8vLZJ1/category_video_games/flowers_purple.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"c7a7b53a-5cdf-404f-a931-540f04d08307\":{\"name\":\"flame\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"tools\"],\"jsonLastModified\":\"2021-10-12 18:44:08 UTC\",\"pngLastModified\":\"2021-10-12 18:44:06 UTC\",\"version\":\"vV8i4T0.ZC2Ki0jWXYHeE5.Nkq87WoOM\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/vV8i4T0.ZC2Ki0jWXYHeE5.Nkq87WoOM/category_tools/flame.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"da7516cd-8672-41e6-a0dc-bd8db0bef200\":{\"name\":\"firework_red\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"icons\"],\"jsonLastModified\":\"2021-10-12 18:41:09 UTC\",\"pngLastModified\":\"2021-10-12 18:41:07 UTC\",\"version\":\"q_V1aZKGz2iRH5CDhhNURGixtuD5qt7P\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/q_V1aZKGz2iRH5CDhhNURGixtuD5qt7P/category_icons/firework_red.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b9640314-70d7-4337-bcc8-c32b031fddd1\":{\"name\":\"firework_blue\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"icons\"],\"jsonLastModified\":\"2021-10-12 18:07:03 UTC\",\"pngLastModified\":\"2021-10-12 18:07:01 UTC\",\"version\":\"zKNcZhXNhzal2korLav9XdZAeWVcAH.S\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/zKNcZhXNhzal2korLav9XdZAeWVcAH.S/category_icons/firework_blue.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"c094361e-0e6d-4395-8223-d6a0f4b96258\":{\"name\":\"cobra_brown\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"animals\"],\"jsonLastModified\":\"2021-10-12 18:40:37 UTC\",\"pngLastModified\":\"2021-10-12 18:40:35 UTC\",\"version\":\"h1oOBfpMLRGOuIXtsuMozTMAOtAonZ0K\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/h1oOBfpMLRGOuIXtsuMozTMAOtAonZ0K/category_animals/cobra_brown.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"157e9d89-44dd-428c-b657-02778f68505a\":{\"name\":\"clog\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-03T16:50:53.000Z\",\"pngLastModified\":\"2021-09-03T16:53:09.000Z\",\"version\":\"RtOSLwdMf67WuHWlWTGuUhEVqbMK9IZu\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/RtOSLwdMf67WuHWlWTGuUhEVqbMK9IZu/clog.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"95aa660d-335e-4276-b4fe-ecf2d616bf7f\":{\"name\":\"wind\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:08.000Z\",\"pngLastModified\":\"2021-09-02T00:35:27.000Z\",\"version\":\"0H8fbGkjIrIe7YCxj67gu5XLqcPBddbq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/0H8fbGkjIrIe7YCxj67gu5XLqcPBddbq/wind.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"54cf744d-b2a9-46b5-808a-cd9163c8fb7c\":{\"name\":\"twinkling_star\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:08.000Z\",\"pngLastModified\":\"2021-09-02T00:35:23.000Z\",\"version\":\"vjb.CoEaXyBgW9Y2UQpWm0GupWu_LGVX\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/vjb.CoEaXyBgW9Y2UQpWm0GupWu_LGVX/twinkling_star.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9ba81b66-9e7d-49e3-8aaf-507bdfd591f5\":{\"name\":\"smiling_sun\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:40:17.000Z\",\"pngLastModified\":\"2021-09-02T00:35:25.000Z\",\"version\":\"iyXXWnXSMWujUL1Kc2.E0BjaTZ9oMOeH\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/iyXXWnXSMWujUL1Kc2.E0BjaTZ9oMOeH/smiling_sun.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"75825d16-3741-4047-88c1-133e2c4e1d2a\":{\"name\":\"night_star\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:10.000Z\",\"pngLastModified\":\"2021-09-02T00:35:23.000Z\",\"version\":\"NLCaSULDfYRSqkUj7CA6TBnjsyxgSf1F\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/NLCaSULDfYRSqkUj7CA6TBnjsyxgSf1F/night_star.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b78e2853-4223-485e-9c5e-98c3152ff950\":{\"name\":\"night_moon\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:10.000Z\",\"pngLastModified\":\"2021-09-02T00:35:22.000Z\",\"version\":\"Y5hqneuuT25yNdgpP74PlbkBB3SpKggi\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Y5hqneuuT25yNdgpP74PlbkBB3SpKggi/night_moon.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"d980882a-ac0e-424b-9fca-2a551a3a1da7\":{\"name\":\"night_cloud\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:11.000Z\",\"pngLastModified\":\"2021-09-02T00:35:24.000Z\",\"version\":\"Gc.QvUXL142ZHgCNk9KKmWx_3a1pvMEg\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Gc.QvUXL142ZHgCNk9KKmWx_3a1pvMEg/night_cloud.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8c1e09f3-a929-457d-9b90-fd0a431cf6f8\":{\"name\":\"library\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:11.000Z\",\"pngLastModified\":\"2021-09-02T00:35:21.000Z\",\"version\":\"S6NXQa5A7rzgpM6NDhXsHCHwIRm1PszB\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S6NXQa5A7rzgpM6NDhXsHCHwIRm1PszB/library.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"19f6f9de-e155-4d41-ad6e-00ff6477fa82\":{\"name\":\"lake\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:13.000Z\",\"pngLastModified\":\"2021-09-02T00:35:21.000Z\",\"version\":\"6SvDTNnDBPouYh1c3Xp0JRJkgu3sHcHd\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/6SvDTNnDBPouYh1c3Xp0JRJkgu3sHcHd/lake.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9d451c52-6aa7-46af-88c7-f9e8107b8195\":{\"name\":\"drop\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:14.000Z\",\"pngLastModified\":\"2021-09-02T00:35:13.000Z\",\"version\":\"03g9texyGWM1wCQDddu1vH53Zw.lopXe\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/03g9texyGWM1wCQDddu1vH53Zw.lopXe/drop.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"5c98ace9-fe13-4db9-9a5c-e830d9f9970a\":{\"name\":\"daffodil2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:14.000Z\",\"pngLastModified\":\"2021-09-02T00:35:26.000Z\",\"version\":\"FGt5YuYuVNSCNTOm8R19ajvSLwoNurrP\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/FGt5YuYuVNSCNTOm8R19ajvSLwoNurrP/daffodil2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"57a3ec09-425d-46b0-a223-3b96ac149e4e\":{\"name\":\"daffodil1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:15.000Z\",\"pngLastModified\":\"2021-09-02T00:35:25.000Z\",\"version\":\"3myTIS7gTz0CJy1o8aZx0NYSNIuxX6Mr\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/3myTIS7gTz0CJy1o8aZx0NYSNIuxX6Mr/daffodil1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"60cf0328-9cc8-444d-85f0-6038c5978887\":{\"name\":\"cloud_single\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:40:16.000Z\",\"pngLastModified\":\"2021-09-02T00:35:26.000Z\",\"version\":\"tZmLxFQGrKnltSQuVsWwGhaX.xmPRvKt\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/tZmLxFQGrKnltSQuVsWwGhaX.xmPRvKt/cloud_single.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2858ce95-ec94-44a1-b207-186c00bb6754\":{\"name\":\"books\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:16.000Z\",\"pngLastModified\":\"2021-09-02T00:35:22.000Z\",\"version\":\"dGQwCtdcO_hpk64_eVgnfzNW3e2ds83b\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/dGQwCtdcO_hpk64_eVgnfzNW3e2ds83b/books.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8b85dcd1-8ea0-44a9-b57e-7fb88686adb0\":{\"name\":\"tropicalfish_04\",\"categories\":[\"animals\"],\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":324},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-03 17:03:25 UTC\",\"pngLastModified\":\"2021-09-03 17:03:25 UTC\",\"version\":\"HgcCG6ctH2acGz3C0qLMoA4c_UbzCyya\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/HgcCG6ctH2acGz3C0qLMoA4c_UbzCyya/category_animals/tropicalfish_04.png\",\"sourceSize\":{\"x\":400,\"y\":324}},\"1b0b2f32-fa55-4c45-b1ed-0f132c91f7c4\":{\"name\":\"alligator_mouth_closed\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"jsonLastModified\":\"2021-09-02T00:35:19.000Z\",\"pngLastModified\":\"2021-09-02T00:35:28.000Z\",\"version\":\"oM0isJgyj9Fl7nqWEXON0U9xB.vnyNFm\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/oM0isJgyj9Fl7nqWEXON0U9xB.vnyNFm/alligator_mouth_closed.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e7c8198c-304f-424d-94cd-a335b5b21eb6\": {\r\n      \"name\": \"gradient_17_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/0lJRolplCuorhSLCzhMPFOv9p2UaT61B/category_backgrounds/gradient_17.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 330\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"0lJRolplCuorhSLCzhMPFOv9p2UaT61B\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"da985e3a-9a08-4b90-be2a-77f82489e8ec\": {\r\n      \"name\": \"gradient_13_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/RnFEWg6kwTHgLC2WCCLXYrgyTwZwwy5q/category_backgrounds/gradient_13.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"RnFEWg6kwTHgLC2WCCLXYrgyTwZwwy5q\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"3645bbcc-9737-4dc1-a70b-014d9d685a97\": {\r\n      \"name\": \"gradient_12_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/v6mZ9WuidWXvzNRGR3s7bJUKPzsOaL6u/category_backgrounds/gradient_12.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"v6mZ9WuidWXvzNRGR3s7bJUKPzsOaL6u\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"93f4479b-2c23-403c-9947-6255b48871cf\": {\r\n      \"name\": \"texture_07_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/R5Ce80jCzTaJSm89_1XamM0fUQk8ISrS/category_backgrounds/texture_07.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"R5Ce80jCzTaJSm89_1XamM0fUQk8ISrS\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"4c439901-c180-40e7-b46e-438a7d9aacfd\": {\r\n      \"name\": \"alien_18_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/bSvHi.1CZI.Ys5vkrK4kJJiGBaWZz_Tn/category_fantasy/alien_18.png\",\r\n      \"frameSize\": {\r\n        \"x\": 261,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"bSvHi.1CZI.Ys5vkrK4kJJiGBaWZz_Tn\",\r\n      \"categories\": [\r\n        \"fantasy\"\r\n      ]\r\n    },\r\n    \"4fad11f5-50b7-4f22-b57f-5747a9eb49b0\": {\r\n      \"name\": \"emoji_05_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/NxaX3YQWiFYsZndIf9OBIPpFIhBaIPbd/category_emoji/emoji_05.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"NxaX3YQWiFYsZndIf9OBIPpFIhBaIPbd\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ]\r\n    },\r\n    \"56ba9b78-671b-40ea-8382-e0c6c5790dff\": {\r\n      \"name\": \"emoji_18_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/3Ie77SBtMLM1Y2EaqoTH6vbcPmJ3kgku/category_emoji/emoji_18.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"3Ie77SBtMLM1Y2EaqoTH6vbcPmJ3kgku\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ]\r\n    },\r\n    \"56d5e52b-eecd-4cd2-ad67-e01e6df9be4f\": {\r\n      \"name\": \"emoji_01_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/64UquKf.BELLAWoDPxffw7NAEorufIff/category_emoji/emoji_01.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"64UquKf.BELLAWoDPxffw7NAEorufIff\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ]\r\n    },\r\n    \"84be1d2b-7300-45c2-9283-9d78fad333e9\": {\r\n      \"name\": \"emoji_15_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/L7_UsfYsYBLgVYnZEL_MyiNA919ECeRn/category_emoji/emoji_15.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"L7_UsfYsYBLgVYnZEL_MyiNA919ECeRn\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ]\r\n    },\r\n    \"e991e8cf-85b2-47be-9d9f-0aef6cc8a2d5\": {\r\n      \"name\": \"emoji_13_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/DB.IN47rPOaJyW6TvK0aaquA24aEXhVR/category_emoji/emoji_13.png\",\r\n      \"frameSize\": {\r\n        \"x\": 300,\r\n        \"y\": 300\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"DB.IN47rPOaJyW6TvK0aaquA24aEXhVR\",\r\n      \"categories\": [\r\n        \"emoji\"\r\n      ]\r\n    },\r\n    \"f087f567-5b52-485b-823e-2b91e2a3f6fa\": {\r\n      \"name\": \"sticker_12_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/ds6tFbUz6rK49A8_WcKlK4eGrPOLsmcZ/category_stickers/sticker_12.png\",\r\n      \"frameSize\": {\r\n        \"x\": 398,\r\n        \"y\": 326\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ds6tFbUz6rK49A8_WcKlK4eGrPOLsmcZ\",\r\n      \"categories\": [\r\n        \"stickers\"\r\n      ]\r\n    },\r\n    \"2b7d2ef2-0e9b-4680-8218-ba1c90042092\": {\r\n      \"name\": \"sticker_54_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/8XN_Ylltl.w7hDC7tPg95N32towZCkML/category_stickers/sticker_54.png\",\r\n      \"frameSize\": {\r\n        \"x\": 334,\r\n        \"y\": 228\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"8XN_Ylltl.w7hDC7tPg95N32towZCkML\",\r\n      \"categories\": [\r\n        \"stickers\"\r\n      ]\r\n    },\r\n    \"8eefb986-3453-46ca-bf79-e9ab807452c0\": {\r\n      \"name\": \"blue_shirt_hand_up2_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/bO3KvTIGBpz2yQ4A_psLtdJiX5YeAwGs/category_people/blue_shirt_hand_up2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 175,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"bO3KvTIGBpz2yQ4A_psLtdJiX5YeAwGs\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"3215d034-7f15-4667-87c9-f783f2a35d92\": {\r\n      \"name\": \"blue_shirt_arms_crossed_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/s5YSy2PjXDzTfuoGo3oL.NBC0ewOit1D/category_people/blue_shirt_arms_crossed.png\",\r\n      \"frameSize\": {\r\n        \"x\": 133,\r\n        \"y\": 383\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"s5YSy2PjXDzTfuoGo3oL.NBC0ewOit1D\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"c32cf370-2bdf-4849-be8d-00229b48dec7\": {\r\n      \"name\": \"blue_hoodie_backpack_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/zPUFCzpi9NNCKu799uw5h7NO1Y13PEFP/category_people/blue_hoodie_backpack.png\",\r\n      \"frameSize\": {\r\n        \"x\": 119,\r\n        \"y\": 383\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"zPUFCzpi9NNCKu799uw5h7NO1Y13PEFP\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"8f33acda-92e2-43f0-8563-7d72045ffa40\": {\r\n      \"name\": \"blue_shirt_hands_behind_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/MesNu2ZiuhY9vAovUeL3Vzq.MZgpRfKD/category_people/blue_shirt_hands_behind.png\",\r\n      \"frameSize\": {\r\n        \"x\": 136,\r\n        \"y\": 386\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"MesNu2ZiuhY9vAovUeL3Vzq.MZgpRfKD\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"799fdf31-ddb7-4a2a-b7d2-754c7df72141\": {\r\n      \"name\": \"brown_sweater_hand_in_pocket_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/_pnzOaMejiNWn0gEbHtT8nuRGsq22uqi/category_people/brown_sweater_hand_in_pocket.png\",\r\n      \"frameSize\": {\r\n        \"x\": 126,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_pnzOaMejiNWn0gEbHtT8nuRGsq22uqi\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"b8be886d-ecb7-4018-ad01-6acd9370f7ea\": {\r\n      \"name\": \"red_shirt_hands_in_pockets2_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/Ri2bRRgD55pXt0Gw72bfUZGqUzVdoxna/category_people/red_shirt_hands_in_pockets2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 123,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"Ri2bRRgD55pXt0Gw72bfUZGqUzVdoxna\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"8831d71b-f6bf-4df0-bcf4-898bf55948fc\": {\r\n      \"name\": \"blue_dress_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/KUnlL6hGJRFxIL.OpIiREaXPfuGn6ufz/category_people/blue_dress.png\",\r\n      \"frameSize\": {\r\n        \"x\": 132,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"KUnlL6hGJRFxIL.OpIiREaXPfuGn6ufz\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"1c789133-57ec-435d-a05a-9bae8878988b\": {\r\n      \"name\": \"green_sweater_hands_in_hoodie_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/kHR_9np4TZWp03bAMnPg3nSbor1tOLQj/category_people/green_sweater_hands_in_hoodie.png\",\r\n      \"frameSize\": {\r\n        \"x\": 134,\r\n        \"y\": 398\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"kHR_9np4TZWp03bAMnPg3nSbor1tOLQj\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"2cbc9795-0b26-4c99-b910-fb20cff51bbd\": {\r\n      \"name\": \"black_abaya_hands_on_hips_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/vJZ9EqsF1SOFXPra9NQcc.bH8wrJSQ8r/category_people/black_abaya_hands_on_hips.png\",\r\n      \"frameSize\": {\r\n        \"x\": 119,\r\n        \"y\": 397\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"vJZ9EqsF1SOFXPra9NQcc.bH8wrJSQ8r\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"7ca4ab6d-01cc-4cab-a49c-41967397d3e0\": {\r\n      \"name\": \"green_dress_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/UkL57KXCn7LRXn15qVjUQr1dzg3NjA2./category_people/green_dress.png\",\r\n      \"frameSize\": {\r\n        \"x\": 133,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"UkL57KXCn7LRXn15qVjUQr1dzg3NjA2.\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    },\r\n    \"7e7c204d-02d8-4320-9a6f-01d777c53355\": {\r\n      \"name\": \"gray_shirt_wave2_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/T.aCol.qZs2.jRRNn3L_dL34cqSNC7ns/category_people/gray_shirt_wave2.png\",\r\n      \"frameSize\": {\r\n        \"x\": 140,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"T.aCol.qZs2.jRRNn3L_dL34cqSNC7ns\",\r\n      \"categories\": [\r\n        \"people\"\r\n      ]\r\n    }\r\n  }\r\n}",
-    "validation_code": "var validationInfo = getValidationInfo();\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\n\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {\r\n    numSpriteIds: 0,\r\n    usedEvent: false\r\n  };\r\n}\r\n\r\nif (spriteIds.length > 0) {\r\n  setSuccessFrame();\r\n}\r\n\r\nif (World.frameCount !== 1 && hasLineEvent && spriteIds.length > validationProps.previous.numSpriteIds) {\r\n  validationProps.previous.usedEvent = true;\r\n}\r\n\r\nvalidationProps.previous.numSpriteIds = spriteIds.length;\r\n\r\n\r\ndrawOcti();\r\nif (isOctiClicked()) {\r\n  if (validationProps.previous.usedEvent) {\r\n    levelFailure(0, 'genericBonusSuccess');\r\n  } else {\r\n    levelFailure(0, 'successLevel6');\r\n  }\r\n}\r\n\r\nif (!validationInfo.successFrame && World.frameCount == validationInfo.endTime) {\r\n  levelFailure(3, 'noSprites');\r\n}\r\n",
+    "validation_code": "var validationInfo = getValidationInfo();\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar hasLineEvent = validationInfo.lineEvents.length > 0;\r\n\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {\r\n    numSpriteIds: 0,\r\n    usedEvent: false\r\n  };\r\n}\r\n\r\nif (spriteIds.length > 0) {\r\n  setSuccessFrame();\r\n}\r\n\r\nif (World.frameCount !== 1 && hasLineEvent && spriteIds.length > validationProps.previous.numSpriteIds) {\r\n  validationProps.previous.usedEvent = true;\r\n}\r\n\r\nvalidationProps.previous.numSpriteIds = spriteIds.length;\r\n\r\n\r\ndrawOcti();\r\nif (isOctiClicked()) {\r\n  if (validationProps.previous.usedEvent) {\r\n    levelFailure(0, 'genericBonusSuccess');\r\n  } else {\r\n    levelFailure(0, 'successLevel6');\r\n  }\r\n}\r\n\r\ndrawProgressBar();\r\n\r\nif (!validationInfo.successFrame && World.frameCount == validationInfo.endTime) {\r\n  levelFailure(3, 'noSprites');\r\n}\r\n",
     "validation_enabled": "false",
     "hide_pause_button": "true",
-    "instructions_icon": "octiGeneral",
+    "instructions_icon": "octiSomber",
     "standalone_app_name": "poetry_hoc",
     "default_poem": "harjo",
     "skip_autosave": true,
     "video_key": "poembot-playtest-sprites",
     "preload_asset_list": null
   },
-  "user_id": 13468,
   "game_id": 69,
+  "published": true,
   "created_at": "2021-09-28T16:22:02.000Z",
   "level_num": "custom",
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-09-28 16:25:32 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:04:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:04:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:04:58 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:06:32 +0000\",\"changed\":[\"use_default_sprites\",\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:08:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:10:25 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:20:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:21:35 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:23:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:26:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:27:48 +0000\",\"changed\":[\"use_default_sprites\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:31:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:36:34 +0000\",\"changed\":[\"use_default_sprites\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:37:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:41:39 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:45:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:46:05 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-28 18:46:58 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-28 18:47:38 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:49:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:56:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-01 20:03:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-01 20:09:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-01 21:41:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-07 13:01:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:19:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"show_poem_dropdown\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 15:55:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:08:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:12:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:13:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:17:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:34:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:40:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:41:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:50:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:17:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:21:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:25:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-15 06:12:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-18 16:28:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-21 22:38:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-21 22:39:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "user_id": 13468,
+  "audit_log": "[{\"changed_at\":\"2021-09-28 16:25:32 +0000\",\"changed\":[\"block_pools\",\"use_default_sprites\",\"hide_animation_mode\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:04:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:04:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:04:58 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:06:32 +0000\",\"changed\":[\"use_default_sprites\",\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:08:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:10:25 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:20:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:21:35 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 17:23:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:26:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:27:48 +0000\",\"changed\":[\"use_default_sprites\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:31:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:36:34 +0000\",\"changed\":[\"use_default_sprites\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:37:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:41:39 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:45:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:46:05 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-28 18:46:58 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-09-28 18:47:38 +0000\",\"changed\":[\"authored_hints\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:49:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-28 18:56:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-10-01 20:03:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-01 20:09:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-01 21:41:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-07 13:01:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 13:19:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"show_poem_dropdown\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-07 15:55:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:08:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:12:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:13:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:17:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:34:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:40:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:41:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 21:50:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-12 22:17:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:21:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-14 18:25:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-15 06:12:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-18 16:28:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-21 22:38:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-21 22:39:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 19:48:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 19:58:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 19:59:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 20:00:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 20:01:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 20:32:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 21:07:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 21:12:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 21:13:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 21:37:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-22 22:47:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-10-23 23:00:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,19 +57,1336 @@
       <xml>
         <block type="when_run" movable="false">
           <next>
-            <block type="Poetry_setFontColor">
-              <value name="FILL">
-                <block type="colour_picker">
-                  <title name="COLOUR">#006600</title>
-                </block>
-              </value>
+            <block type="Poetry_setFont">
+              <title name="FONT">"Georgia"</title>
               <next>
-                <block type="Poetry_setTextEffect">
-                  <title name="EFFECT">"typewriter"</title>
+                <block type="Poetry_setFontColor">
+                  <value name="FILL">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#000099</title>
+                    </block>
+                  </value>
                 </block>
               </next>
             </block>
           </next>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite, changing its direction randomly</description>
+          </mutation>
+          <title name="NAME" id="wandering">wandering</title>
+          <statement name="STACK">
+            <block type="gamelab_withPercentChance" uservisible="false">
+              <value name="NUM">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">20</title>
+                </block>
+              </value>
+              <statement name="STATEMENT">
+                <block type="gamelab_changePropBy" uservisible="false">
+                  <title name="PROPERTY">"direction"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int" uservisible="false">
+                      <value name="FROM">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">-25</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">25</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward" uservisible="false">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" uservisible="false">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" uservisible="false">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges" uservisible="false">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace" uservisible="false">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" uservisible="false">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_random_int" uservisible="false">
+                                  <value name="FROM">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">135</title>
+                                    </block>
+                                  </value>
+                                  <value name="TO">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">225</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if" uservisible="false">
+                          <mutation else="1"/>
+                          <value name="IF0">
+                            <block type="logic_operation" uservisible="false">
+                              <title name="OP">OR</title>
+                              <value name="A">
+                                <block type="logic_compare" uservisible="false">
+                                  <title name="OP">GT</title>
+                                  <value name="A">
+                                    <block type="gamelab_getProp" uservisible="false">
+                                      <title name="PROPERTY">"direction"</title>
+                                      <value name="SPRITE">
+                                        <block type="sprite_parameter_get" uservisible="false">
+                                          <title name="VAR">this sprite</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">270</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="logic_compare" uservisible="false">
+                                  <title name="OP">LT</title>
+                                  <value name="A">
+                                    <block type="gamelab_getProp" uservisible="false">
+                                      <title name="PROPERTY">"direction"</title>
+                                      <value name="SPRITE">
+                                        <block type="sprite_parameter_get" uservisible="false">
+                                          <title name="VAR">this sprite</title>
+                                        </block>
+                                      </value>
+                                    </block>
+                                  </value>
+                                  <value name="B">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_mirrorSprite" uservisible="false">
+                              <title name="DIRECTION">"right"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                          <statement name="ELSE">
+                            <block type="gamelab_mirrorSprite" uservisible="false">
+                              <title name="DIRECTION">"left"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="Poetry_whenLineShows" y="200">
+          <title name="N">0</title>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the right across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving east">moving east</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" uservisible="false">
+              <title name="DIRECTION">"East"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its left</description>
+          </mutation>
+          <title name="NAME" id="spinning left">spinning left</title>
+          <statement name="STACK">
+            <block type="gamelab_turn" uservisible="false">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>rotate a sprite to its right</description>
+          </mutation>
+          <title name="NAME" id="spinning right">spinning right</title>
+          <statement name="STACK">
+            <block type="gamelab_turn" uservisible="false">
+              <title name="DIRECTION">"right"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="N">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">6</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="shrinking">shrinking</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" uservisible="false">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">-1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="growing">growing</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" uservisible="false">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">1</title>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite downwards across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving south">moving south</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" uservisible="false">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
+          </mutation>
+          <title name="NAME" id="swimming left and right">swimming left and right</title>
+          <statement name="STACK">
+            <block type="controls_if" uservisible="false">
+              <mutation elseif="1"/>
+              <value name="IF0">
+                <block type="logic_compare" uservisible="false">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="gamelab_getProp" uservisible="false">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">0</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_mirrorSprite" uservisible="false">
+                  <title name="DIRECTION">"right"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <value name="IF1">
+                <block type="logic_compare" uservisible="false">
+                  <title name="OP">EQ</title>
+                  <value name="A">
+                    <block type="gamelab_getProp" uservisible="false">
+                      <title name="PROPERTY">"direction"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <value name="B">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">180</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <statement name="DO1">
+                <block type="gamelab_mirrorSprite" uservisible="false">
+                  <title name="DIRECTION">"left"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="gamelab_moveForward" uservisible="false">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" uservisible="false">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" uservisible="false">
+                      <value name="IF0">
+                        <block type="gamelab_isTouchingEdges" uservisible="false">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_edgesDisplace" uservisible="false">
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" uservisible="false">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number" uservisible="false">
+                                  <title name="NUM">180</title>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite upwards across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving north">moving north</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" uservisible="false">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly change the size of a sprite</description>
+          </mutation>
+          <title name="NAME" id="jittering">jittering</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" uservisible="false">
+              <title name="PROPERTY">"scale"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int" uservisible="false">
+                  <value name="FROM">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">-1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite to the left across the screen</description>
+          </mutation>
+          <title name="NAME" id="moving west">moving west</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" uservisible="false">
+              <title name="DIRECTION">"West"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite across the screen, reversing direction if it touches the edges</description>
+          </mutation>
+          <title name="NAME" id="patrolling">patrolling</title>
+          <statement name="STACK">
+            <block type="gamelab_moveForward" uservisible="false">
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" uservisible="false">
+                  <value name="IF0">
+                    <block type="gamelab_isTouchingEdges" uservisible="false">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_edgesDisplace" uservisible="false">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <next>
+                        <block type="gamelab_changePropBy" uservisible="false">
+                          <title name="PROPERTY">"direction"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">180</title>
+                            </block>
+                          </value>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if" uservisible="false">
+                      <mutation else="1"/>
+                      <value name="IF0">
+                        <block type="logic_operation" uservisible="false">
+                          <title name="OP">OR</title>
+                          <value name="A">
+                            <block type="logic_compare" uservisible="false">
+                              <title name="OP">GT</title>
+                              <value name="A">
+                                <block type="gamelab_getProp" uservisible="false">
+                                  <title name="PROPERTY">"direction"</title>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" uservisible="false">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number" uservisible="false">
+                                  <title name="NUM">270</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="logic_compare" uservisible="false">
+                              <title name="OP">LT</title>
+                              <value name="A">
+                                <block type="gamelab_getProp" uservisible="false">
+                                  <title name="PROPERTY">"direction"</title>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" uservisible="false">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <value name="B">
+                                <block type="math_number" uservisible="false">
+                                  <title name="NUM">90</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_mirrorSprite" uservisible="false">
+                          <title name="DIRECTION">"right"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <statement name="ELSE">
+                        <block type="gamelab_mirrorSprite" uservisible="false">
+                          <title name="DIRECTION">"left"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite if the user is pressing the arrow keys</description>
+          </mutation>
+          <title name="NAME" id="moving with arrow keys">moving with arrow keys</title>
+          <statement name="STACK">
+            <block type="controls_if" uservisible="false">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed" uservisible="false">
+                  <title name="KEY">"up"</title>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveInDirection" uservisible="false">
+                  <title name="DIRECTION">"North"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" uservisible="false">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if" uservisible="false">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed" uservisible="false">
+                      <title name="KEY">"down"</title>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveInDirection" uservisible="false">
+                      <title name="DIRECTION">"South"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="gamelab_getProp" uservisible="false">
+                          <title name="PROPERTY">"speed"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if" uservisible="false">
+                      <value name="IF0">
+                        <block type="gamelab_isKeyPressed" uservisible="false">
+                          <title name="KEY">"left"</title>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_moveInDirection" uservisible="false">
+                          <title name="DIRECTION">"West"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="DISTANCE">
+                            <block type="gamelab_getProp" uservisible="false">
+                              <title name="PROPERTY">"speed"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if" uservisible="false">
+                          <value name="IF0">
+                            <block type="gamelab_isKeyPressed" uservisible="false">
+                              <title name="KEY">"right"</title>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_moveInDirection" uservisible="false">
+                              <title name="DIRECTION">"East"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="DISTANCE">
+                                <block type="gamelab_getProp" uservisible="false">
+                                  <title name="PROPERTY">"speed"</title>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" uservisible="false">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </statement>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>move a sprite if the user is pressing the arrow keys</description>
+          </mutation>
+          <title name="NAME" id="driving with arrow keys">driving with arrow keys</title>
+          <statement name="STACK">
+            <block type="controls_if" uservisible="false">
+              <value name="IF0">
+                <block type="gamelab_isKeyPressed" uservisible="false">
+                  <title name="KEY">"up"</title>
+                </block>
+              </value>
+              <statement name="DO0">
+                <block type="gamelab_moveForward" uservisible="false">
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" uservisible="false">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+              <next>
+                <block type="controls_if" uservisible="false">
+                  <value name="IF0">
+                    <block type="gamelab_isKeyPressed" uservisible="false">
+                      <title name="KEY">"down"</title>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_moveBackward" uservisible="false">
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="DISTANCE">
+                        <block type="gamelab_getProp" uservisible="false">
+                          <title name="PROPERTY">"speed"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                  <next>
+                    <block type="controls_if" uservisible="false">
+                      <value name="IF0">
+                        <block type="gamelab_isKeyPressed" uservisible="false">
+                          <title name="KEY">"left"</title>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_changePropBy" uservisible="false">
+                          <title name="PROPERTY">"direction"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_single" uservisible="false">
+                              <title name="OP">NEG</title>
+                              <value name="NUM">
+                                <block type="math_number" uservisible="false">
+                                  <title name="NUM">5</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="gamelab_changePropBy" uservisible="false">
+                              <title name="PROPERTY">"rotation"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_single" uservisible="false">
+                                  <title name="OP">NEG</title>
+                                  <value name="NUM">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">5</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="controls_if" uservisible="false">
+                          <value name="IF0">
+                            <block type="gamelab_isKeyPressed" uservisible="false">
+                              <title name="KEY">"right"</title>
+                            </block>
+                          </value>
+                          <statement name="DO0">
+                            <block type="gamelab_changePropBy" uservisible="false">
+                              <title name="PROPERTY">"direction"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                              <value name="VAL">
+                                <block type="math_number" uservisible="false">
+                                  <title name="NUM">5</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="gamelab_changePropBy" uservisible="false">
+                                  <title name="PROPERTY">"rotation"</title>
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" uservisible="false">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                  <value name="VAL">
+                                    <block type="math_number" uservisible="false">
+                                      <title name="NUM">5</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="controls_if" uservisible="false">
+                              <value name="IF0">
+                                <block type="gamelab_isTouchingEdges" uservisible="false">
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" uservisible="false">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </value>
+                              <statement name="DO0">
+                                <block type="gamelab_edgesDisplace" uservisible="false">
+                                  <value name="SPRITE">
+                                    <block type="sprite_parameter_get" uservisible="false">
+                                      <title name="VAR">this sprite</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </statement>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly change the vertical position of a sprite</description>
+          </mutation>
+          <title name="NAME" id="fluttering">fluttering</title>
+          <statement name="STACK">
+            <block type="gamelab_changePropBy" uservisible="false">
+              <title name="PROPERTY">"y"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="VAL">
+                <block type="math_random_int" uservisible="false">
+                  <value name="FROM">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">-1</title>
+                    </block>
+                  </value>
+                  <value name="TO">
+                    <block type="math_number" uservisible="false">
+                      <title name="NUM">1</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>randomly set the rotation of a sprite</description>
+          </mutation>
+          <title name="NAME" id="wobbling">wobbling</title>
+          <statement name="STACK">
+            <block type="gamelab_withPercentChance" uservisible="false">
+              <value name="NUM">
+                <block type="math_number" uservisible="false">
+                  <title name="NUM">50</title>
+                </block>
+              </value>
+              <statement name="STATEMENT">
+                <block type="gamelab_setProp" uservisible="false">
+                  <title name="PROPERTY">"rotation"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="VAL">
+                    <block type="math_random_int" uservisible="false">
+                      <value name="FROM">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">-1</title>
+                        </block>
+                      </value>
+                      <value name="TO">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">1</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving west and looping">moving west and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite" uservisible="false">
+              <title name="DIRECTION">"left"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection" uservisible="false">
+                  <title name="DIRECTION">"West"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" uservisible="false">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" uservisible="false">
+                      <value name="IF0">
+                        <block type="logic_compare" uservisible="false">
+                          <title name="OP">LT</title>
+                          <value name="A">
+                            <block type="gamelab_getProp" uservisible="false">
+                              <title name="PROPERTY">"x"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">-50</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_setProp" uservisible="false">
+                          <title name="PROPERTY">"x"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">450</title>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving east and looping">moving east and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_mirrorSprite" uservisible="false">
+              <title name="DIRECTION">"right"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_moveInDirection" uservisible="false">
+                  <title name="DIRECTION">"East"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                  <value name="DISTANCE">
+                    <block type="gamelab_getProp" uservisible="false">
+                      <title name="PROPERTY">"speed"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_if" uservisible="false">
+                      <value name="IF0">
+                        <block type="logic_compare" uservisible="false">
+                          <title name="OP">GT</title>
+                          <value name="A">
+                            <block type="gamelab_getProp" uservisible="false">
+                              <title name="PROPERTY">"x"</title>
+                              <value name="SPRITE">
+                                <block type="sprite_parameter_get" uservisible="false">
+                                  <title name="VAR">this sprite</title>
+                                </block>
+                              </value>
+                            </block>
+                          </value>
+                          <value name="B">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">450</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <statement name="DO0">
+                        <block type="gamelab_setProp" uservisible="false">
+                          <title name="PROPERTY">"x"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                          <value name="VAL">
+                            <block type="math_number" uservisible="false">
+                              <title name="NUM">-50</title>
+                            </block>
+                          </value>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving north and looping">moving north and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" uservisible="false">
+              <title name="DIRECTION">"North"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" uservisible="false">
+                  <value name="IF0">
+                    <block type="logic_compare" uservisible="false">
+                      <title name="OP">GT</title>
+                      <value name="A">
+                        <block type="gamelab_getProp" uservisible="false">
+                          <title name="PROPERTY">"y"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">450</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_setProp" uservisible="false">
+                      <title name="PROPERTY">"y"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">-50</title>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="behavior_definition" deletable="false" movable="false" editable="false" uservisible="false">
+          <mutation>
+            <arg name="this sprite" type="Sprite"/>
+            <description>Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.</description>
+          </mutation>
+          <title name="NAME" id="moving south and looping">moving south and looping</title>
+          <statement name="STACK">
+            <block type="gamelab_moveInDirection" uservisible="false">
+              <title name="DIRECTION">"South"</title>
+              <value name="SPRITE">
+                <block type="sprite_parameter_get" uservisible="false">
+                  <title name="VAR">this sprite</title>
+                </block>
+              </value>
+              <value name="DISTANCE">
+                <block type="gamelab_getProp" uservisible="false">
+                  <title name="PROPERTY">"speed"</title>
+                  <value name="SPRITE">
+                    <block type="sprite_parameter_get" uservisible="false">
+                      <title name="VAR">this sprite</title>
+                    </block>
+                  </value>
+                </block>
+              </value>
+              <next>
+                <block type="controls_if" uservisible="false">
+                  <value name="IF0">
+                    <block type="logic_compare" uservisible="false">
+                      <title name="OP">LT</title>
+                      <value name="A">
+                        <block type="gamelab_getProp" uservisible="false">
+                          <title name="PROPERTY">"y"</title>
+                          <value name="SPRITE">
+                            <block type="sprite_parameter_get" uservisible="false">
+                              <title name="VAR">this sprite</title>
+                            </block>
+                          </value>
+                        </block>
+                      </value>
+                      <value name="B">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">-50</title>
+                        </block>
+                      </value>
+                    </block>
+                  </value>
+                  <statement name="DO0">
+                    <block type="gamelab_setProp" uservisible="false">
+                      <title name="PROPERTY">"y"</title>
+                      <value name="SPRITE">
+                        <block type="sprite_parameter_get" uservisible="false">
+                          <title name="VAR">this sprite</title>
+                        </block>
+                      </value>
+                      <value name="VAL">
+                        <block type="math_number" uservisible="false">
+                          <title name="NUM">450</title>
+                        </block>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
     </start_blocks>
@@ -86,6 +1403,18 @@
           <title name="SPRITE">"twinkling_star"</title>
           <title name="VAL">150</title>
         </block>
+        <block type="Poetry_destroy">
+          <title name="ANIMATION_NAME">"twinkling_star"</title>
+        </block>
+        <block type="Poetry_setForegroundEffect">
+          <title name="EFFECT">"bubbles"</title>
+        </block>
+        <block type="Poetry_playMusic">
+          <title name="SOUND">"sound://category_background/fire_burning.mp3"</title>
+        </block>
+        <block type="Poetry_playSound">
+          <title name="SOUND">"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"</title>
+        </block>
         <block type="Poetry_setFont">
           <title name="FONT">"Arial"</title>
         </block>
@@ -99,12 +1428,6 @@
         <block type="Poetry_setTextEffect">
           <title name="EFFECT">"fade"</title>
         </block>
-        <block type="Poetry_playSound">
-          <title name="SOUND">"sound://category_nature/forest_woodland_ambience_2.mp3"</title>
-        </block>
-        <block type="Poetry_setForegroundEffect">
-          <title name="EFFECT">"rain"</title>
-        </block>
         <block type="Poetry_setBackground">
           <value name="COLOR">
             <block type="colour_picker">
@@ -112,12 +1435,12 @@
             </block>
           </value>
         </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <title name="IMG">"moon_abstract"</title>
+        </block>
         <block type="Poetry_setBackgroundEffect">
           <title name="EFFECT">"colors"</title>
           <title name="PALETTE">"grayscale"</title>
-        </block>
-        <block type="gamelab_setBackgroundImageAs">
-          <title name="IMG">"moon_abstract"</title>
         </block>
       </xml>
     </toolbox_blocks>
