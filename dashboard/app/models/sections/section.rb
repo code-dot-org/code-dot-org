@@ -298,7 +298,7 @@ class Section < ApplicationRecord
       students: include_students ? unique_students.map(&:summarize) : nil,
       restrict_section: restrict_section,
       code_review_enabled: code_review_enabled?,
-      is_teaching_csa: teaching_csa?
+      is_assigned_csa: assigned_csa?
     }
   end
 
@@ -404,7 +404,7 @@ class Section < ApplicationRecord
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
-  def teaching_csa?
+  def assigned_csa?
     script&.csa? || unit_group&.family_name == CSA
   end
 
