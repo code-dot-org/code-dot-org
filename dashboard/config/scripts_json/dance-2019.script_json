@@ -4,16 +4,17 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
-      "tts": true,
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "tts": true,
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "dance-2019",
-    "serialized_at": "2021-09-28 22:52:09 UTC",
+    "serialized_at": "2021-10-25 22:54:02 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "dance-2019"
     }
@@ -872,16 +873,6 @@
   ],
   "objectives": [
     {
-      "key": "f9486b57-7160-4b3b-b327-b311239d5d26",
-      "properties": {
-        "description": "Develop programs that respond to timed events"
-      },
-      "seeding_key": {
-        "lesson.key": "Dance Party",
-        "objective.key": "f9486b57-7160-4b3b-b327-b311239d5d26"
-      }
-    },
-    {
       "key": "251fe027-d9b3-4384-99f6-53505275e4ce",
       "properties": {
         "description": "Develop programs that respond to user input"
@@ -899,6 +890,16 @@
       "seeding_key": {
         "lesson.key": "Dance Party",
         "objective.key": "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a"
+      }
+    },
+    {
+      "key": "f9486b57-7160-4b3b-b327-b311239d5d26",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "f9486b57-7160-4b3b-b327-b311239d5d26"
       }
     }
   ],

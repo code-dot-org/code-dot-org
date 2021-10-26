@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:31 UTC",
+    "serialized_at": "2021-10-25 22:54:51 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csp5-2021"
     }
