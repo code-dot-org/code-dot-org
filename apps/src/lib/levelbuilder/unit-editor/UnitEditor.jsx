@@ -507,7 +507,19 @@ class UnitEditor extends React.Component {
               type="checkbox"
               checked={this.state.tts}
               style={styles.checkbox}
-              onChange={() => this.setState({tts: !this.state.tts})}
+              onChange={e => {
+                e.preventDefault();
+                const msg = this.state.tts
+                  ? 'Are you sure? All of the TTS files for this ' +
+                    'course have already been generated. Any new edits will not be reflected ' +
+                    'TTS files for this course.'
+                  : 'Are you sure? This will generate text to speech files for all ' +
+                    'levels in this script. We have to pay for each file generated. Please ' +
+                    'confirm that levels are in a stable state before checking.';
+                if (window.confirm(msg)) {
+                  this.setState({tts: !this.state.tts});
+                }
+              }}
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this unit.</p>
