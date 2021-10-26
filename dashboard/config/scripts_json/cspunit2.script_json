@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:07 UTC",
+    "serialized_at": "2021-10-26 22:14:58 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "cspunit2"
     }
@@ -331,21 +334,476 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "3d45cf94-70de-44c6-988f-951b99e16972",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d45cf94-70de-44c6-988f-951b99e16972",
+        "lesson.key": "The Internet",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "e0df7d05-d0ba-43e6-8ea9-4c72152893ad",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e0df7d05-d0ba-43e6-8ea9-4c72152893ad",
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "743b4ccb-45b9-4e7c-9169-6dda5782f5b4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "743b4ccb-45b9-4e7c-9169-6dda5782f5b4",
+        "lesson.key": "Invent an Addressing Protocol",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "ce215793-04be-426f-982f-58a9d85bcb7a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce215793-04be-426f-982f-58a9d85bcb7a",
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "19841f33-b0fd-4a52-85ea-6c274fcc3e6c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19841f33-b0fd-4a52-85ea-6c274fcc3e6c",
+        "lesson.key": "Packets and Making a Reliable Internet",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "a2bb65ae-607a-41a4-9bda-ac0789fe525b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a2bb65ae-607a-41a4-9bda-ac0789fe525b",
+        "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "52b6c5e4-5efd-4ca1-8688-3fdd27e46548",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52b6c5e4-5efd-4ca1-8688-3fdd27e46548",
+        "lesson.key": "Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "844a8c84-bec1-47f6-a4a3-a6979974662a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "844a8c84-bec1-47f6-a4a3-a6979974662a",
+        "lesson.key": "Algorithms Detour - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "fcab6a9a-e5d8-4455-9626-e3eb13f00bf9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fcab6a9a-e5d8-4455-9626-e3eb13f00bf9",
+        "lesson.key": "The Need for DNS",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "dae6d50b-5a55-4e32-8afe-c3641616500a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dae6d50b-5a55-4e32-8afe-c3641616500a",
+        "lesson.key": "DNS in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "a8fbfabb-f775-49a8-90d1-495ff5dace1d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8fbfabb-f775-49a8-90d1-495ff5dace1d",
+        "lesson.key": "HTTP and Abstraction",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "02f3332f-b7e2-40db-ad07-96b846c2fa23",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "02f3332f-b7e2-40db-ad07-96b846c2fa23",
+        "lesson.key": "Practice PT - The Internet and Society",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "1d147e8e-075e-4e46-9c00-3291857a6ac1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d147e8e-075e-4e46-9c00-3291857a6ac1",
+        "lesson.key": "Tell Me a Secret - Encrypting Text",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "6580580c-f0b6-4586-9413-3ed5264dcd64",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6580580c-f0b6-4586-9413-3ed5264dcd64",
+        "lesson.key": "Cracking the Code",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "a42eb264-ceb8-4576-a122-48199736b9c0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a42eb264-ceb8-4576-a122-48199736b9c0",
+        "lesson.key": "Encryption Algorithms",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "453f6a2e-ed73-4a8d-9d48-5c4ec288e8c9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "453f6a2e-ed73-4a8d-9d48-5c4ec288e8c9",
+        "lesson.key": "Algorithms Detour - Hard Problems TSP",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "c8f5b2ea-cc4a-4420-9ba8-f51ed152e68b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8f5b2ea-cc4a-4420-9ba8-f51ed152e68b",
+        "lesson.key": "One Way Functions - Ice Cream Vans",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "335f4218-30f8-47d3-a879-621fa05a28cb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "335f4218-30f8-47d3-a879-621fa05a28cb",
+        "lesson.key": "Alice and Bob and Asymmetric Keys",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "966dbdf4-436f-4bcb-b6dd-8c8b6a84cdbe",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "966dbdf4-436f-4bcb-b6dd-8c8b6a84cdbe",
+        "lesson.key": "Public Key Crypto",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    },
+    {
+      "key": "a1c99125-959c-4768-aabc-1ea0c2c7786f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1c99125-959c-4768-aabc-1ea0c2c7786f",
+        "lesson.key": "Practice PT - Cybersecurity Innovations",
+        "lesson_group.key": "",
+        "script.name": "cspunit2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6",
+        "lesson_activity.key": "3d45cf94-70de-44c6-988f-951b99e16972"
+      }
+    },
+    {
+      "key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20",
+        "lesson_activity.key": "e0df7d05-d0ba-43e6-8ea9-4c72152893ad"
+      }
+    },
+    {
+      "key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a",
+        "lesson_activity.key": "743b4ccb-45b9-4e7c-9169-6dda5782f5b4"
+      }
+    },
+    {
+      "key": "c766dc45-2511-4d7c-9c59-9d283566f0bc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc",
+        "lesson_activity.key": "ce215793-04be-426f-982f-58a9d85bcb7a"
+      }
+    },
+    {
+      "key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7",
+        "lesson_activity.key": "19841f33-b0fd-4a52-85ea-6c274fcc3e6c"
+      }
+    },
+    {
+      "key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8",
+        "lesson_activity.key": "a2bb65ae-607a-41a4-9bda-ac0789fe525b"
+      }
+    },
+    {
+      "key": "dea46b88-ed94-46ad-85bf-b710d87a4af2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2",
+        "lesson_activity.key": "52b6c5e4-5efd-4ca1-8688-3fdd27e46548"
+      }
+    },
+    {
+      "key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6",
+        "lesson_activity.key": "844a8c84-bec1-47f6-a4a3-a6979974662a"
+      }
+    },
+    {
+      "key": "05f13182-ce2b-41d3-a49c-98d9f51de02d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d",
+        "lesson_activity.key": "fcab6a9a-e5d8-4455-9626-e3eb13f00bf9"
+      }
+    },
+    {
+      "key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c",
+        "lesson_activity.key": "dae6d50b-5a55-4e32-8afe-c3641616500a"
+      }
+    },
+    {
+      "key": "105b8ac6-fd91-4277-8e8f-596356fd0058",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058",
+        "lesson_activity.key": "a8fbfabb-f775-49a8-90d1-495ff5dace1d"
+      }
+    },
+    {
+      "key": "83dcf0e5-7d0b-4d06-a6d9-0f176eca571d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "83dcf0e5-7d0b-4d06-a6d9-0f176eca571d",
+        "lesson_activity.key": "02f3332f-b7e2-40db-ad07-96b846c2fa23"
+      }
+    },
+    {
+      "key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373",
+        "lesson_activity.key": "1d147e8e-075e-4e46-9c00-3291857a6ac1"
+      }
+    },
+    {
+      "key": "25a6522b-c8d4-48e4-a64d-5a026a78238f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f",
+        "lesson_activity.key": "6580580c-f0b6-4586-9413-3ed5264dcd64"
+      }
+    },
+    {
+      "key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b",
+        "lesson_activity.key": "a42eb264-ceb8-4576-a122-48199736b9c0"
+      }
+    },
+    {
+      "key": "37976cd6-c264-4930-85a5-6c14c0f57103",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103",
+        "lesson_activity.key": "453f6a2e-ed73-4a8d-9d48-5c4ec288e8c9"
+      }
+    },
+    {
+      "key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41",
+        "lesson_activity.key": "c8f5b2ea-cc4a-4420-9ba8-f51ed152e68b"
+      }
+    },
+    {
+      "key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73",
+        "lesson_activity.key": "335f4218-30f8-47d3-a879-621fa05a28cb"
+      }
+    },
+    {
+      "key": "538b5fdc-57c7-4d7c-9118-466b2f73749a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a",
+        "lesson_activity.key": "966dbdf4-436f-4bcb-b6dd-8c8b6a84cdbe"
+      }
+    },
+    {
+      "key": "c3478896-43d6-4b9d-8799-cb3759592ee7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c3478896-43d6-4b9d-8799-cb3759592ee7",
+        "lesson_activity.key": "a1c99125-959c-4768-aabc-1ea0c2c7786f"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L1 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -354,7 +812,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       },
       "level_keys": [
         "U2L1 Student Lesson Introduction"
@@ -363,12 +822,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L01 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -377,7 +833,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       },
       "level_keys": [
         "U2L01 Assessment 1"
@@ -386,12 +843,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L01 Assessment 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -400,7 +854,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       },
       "level_keys": [
         "U2L01 Assessment 2"
@@ -409,12 +864,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L01 Assessment 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -423,7 +875,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       },
       "level_keys": [
         "U2L01 Assessment 3"
@@ -432,12 +885,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L01 Assessment 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -446,7 +896,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       },
       "level_keys": [
         "U2L01 Assessment 4"
@@ -455,12 +906,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L2 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -469,7 +917,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       },
       "level_keys": [
         "U2L2 Student Lesson Introduction"
@@ -478,12 +927,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L2 NetSim Hub Mode"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -492,7 +938,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       },
       "level_keys": [
         "U2L2 NetSim Hub Mode"
@@ -501,12 +948,9 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L02 Free Response Reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -515,7 +959,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       },
       "level_keys": [
         "U2L02 Free Response Reflection"
@@ -524,12 +969,9 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L02 Assessment 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -538,7 +980,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       },
       "level_keys": [
         "U2L02 Assessment 3"
@@ -547,12 +990,9 @@
     {
       "chapter": 10,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L02 Assessment 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -561,7 +1001,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       },
       "level_keys": [
         "U2L02 Assessment 4"
@@ -570,12 +1011,9 @@
     {
       "chapter": 11,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L02 Assessment 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -584,7 +1022,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       },
       "level_keys": [
         "U2L02 Assessment 5"
@@ -593,12 +1032,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L3 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -607,7 +1043,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       },
       "level_keys": [
         "U2L3 Student Lesson Introduction"
@@ -616,12 +1053,9 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L3: IP DNS Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -630,7 +1064,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       },
       "level_keys": [
         "U2L3: IP DNS Video"
@@ -639,12 +1074,9 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L3 Assessment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -653,7 +1085,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       },
       "level_keys": [
         "U2L3 Assessment"
@@ -662,12 +1095,9 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L3 NetSim Hub Mode"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -676,7 +1106,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       },
       "level_keys": [
         "U2L3 NetSim Hub Mode"
@@ -685,12 +1116,9 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L3 Assessment 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -699,7 +1127,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       },
       "level_keys": [
         "U2L3 Assessment 2"
@@ -708,12 +1137,9 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L3 Assessment 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -722,7 +1148,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       },
       "level_keys": [
         "U2L3 Assessment 3"
@@ -731,12 +1158,9 @@
     {
       "chapter": 18,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L3 Assessment 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -745,7 +1169,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       },
       "level_keys": [
         "U2L3 Assessment 4"
@@ -754,12 +1179,9 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L4 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -768,7 +1190,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       },
       "level_keys": [
         "U2L4 Student Lesson Introduction"
@@ -777,12 +1200,9 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L04 - NetSim Routers with Addresses"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -791,7 +1211,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       },
       "level_keys": [
         "U2L04 - NetSim Routers with Addresses"
@@ -800,12 +1221,9 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L04 Assessment1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -814,7 +1232,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       },
       "level_keys": [
         "U2L04 Assessment1"
@@ -823,12 +1242,9 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L04 Assessment4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -837,7 +1253,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       },
       "level_keys": [
         "U2L04 Assessment4"
@@ -846,12 +1263,9 @@
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L04 Assessment5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -860,7 +1274,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       },
       "level_keys": [
         "U2L04 Assessment5"
@@ -869,12 +1284,9 @@
     {
       "chapter": 24,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L04 Assessment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -883,7 +1295,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       },
       "level_keys": [
         "U2L04 Assessment2"
@@ -892,12 +1305,9 @@
     {
       "chapter": 25,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L04 Assessment3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -906,7 +1316,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       },
       "level_keys": [
         "U2L04 Assessment3"
@@ -915,12 +1326,9 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L5 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -929,7 +1337,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       },
       "level_keys": [
         "U2L5 Student Lesson Introduction"
@@ -938,12 +1347,9 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L05 - NetSim - Packets and Building TCP"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -952,7 +1358,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       },
       "level_keys": [
         "U2L05 - NetSim - Packets and Building TCP"
@@ -961,12 +1368,9 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L5 Packets and Reliability - Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -975,7 +1379,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       },
       "level_keys": [
         "U2L5 Packets and Reliability - Video"
@@ -984,12 +1389,9 @@
     {
       "chapter": 29,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L05 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -998,7 +1400,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       },
       "level_keys": [
         "U2L05 Assessment 1"
@@ -1007,12 +1410,9 @@
     {
       "chapter": 30,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L05 Assessment 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1021,7 +1421,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       },
       "level_keys": [
         "U2L05 Assessment 2"
@@ -1030,12 +1431,9 @@
     {
       "chapter": 31,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L05 Reflection 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1044,7 +1442,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       },
       "level_keys": [
         "U2L05 Reflection 1"
@@ -1053,12 +1452,9 @@
     {
       "chapter": 32,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L6 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1067,7 +1463,8 @@
         ],
         "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8"
       },
       "level_keys": [
         "U2L6 Student Lesson Introduction"
@@ -1076,12 +1473,9 @@
     {
       "chapter": 33,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L06 - Matching: Label the Diagram"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1090,7 +1484,8 @@
         ],
         "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8"
       },
       "level_keys": [
         "U2L06 - Matching: Label the Diagram"
@@ -1099,12 +1494,9 @@
     {
       "chapter": 34,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L06- MC: what is an MST?"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1113,7 +1505,8 @@
         ],
         "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8"
       },
       "level_keys": [
         "U2L06- MC: what is an MST?"
@@ -1122,12 +1515,9 @@
     {
       "chapter": 35,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L06 - MC: Which is an MST?"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1136,7 +1526,8 @@
         ],
         "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8"
       },
       "level_keys": [
         "U2L06 - MC: Which is an MST?"
@@ -1145,12 +1536,9 @@
     {
       "chapter": 36,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L7 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1159,7 +1547,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       },
       "level_keys": [
         "U2L7 Student Lesson Introduction"
@@ -1168,12 +1557,9 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L07 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1182,7 +1568,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       },
       "level_keys": [
         "U1L07 Assessment 1"
@@ -1191,12 +1578,9 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L07 Assessment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1205,7 +1589,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       },
       "level_keys": [
         "U2L07 Assessment2"
@@ -1214,12 +1599,9 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L07 Assessment3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1228,7 +1610,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       },
       "level_keys": [
         "U2L07 Assessment3"
@@ -1237,12 +1620,9 @@
     {
       "chapter": 40,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L07 Assessment4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1251,7 +1631,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       },
       "level_keys": [
         "U2L07 Assessment4"
@@ -1260,12 +1641,9 @@
     {
       "chapter": 41,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L07 Assessment5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1274,7 +1652,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       },
       "level_keys": [
         "U2L07 Assessment5"
@@ -1283,12 +1662,9 @@
     {
       "chapter": 42,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L8 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1297,7 +1673,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       },
       "level_keys": [
         "U2L8 Student Lesson Introduction"
@@ -1306,12 +1683,9 @@
     {
       "chapter": 43,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Free Response 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1320,7 +1694,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       },
       "level_keys": [
         "U2L08 Free Response 3"
@@ -1329,12 +1704,9 @@
     {
       "chapter": 44,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Free Response 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1343,7 +1715,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       },
       "level_keys": [
         "U2L08 Free Response 1"
@@ -1352,12 +1725,9 @@
     {
       "chapter": 45,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Free Response 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1366,7 +1736,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       },
       "level_keys": [
         "U2L08 Free Response 2"
@@ -1375,12 +1746,9 @@
     {
       "chapter": 46,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Assessment 0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1389,7 +1757,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       },
       "level_keys": [
         "U2L08 Assessment 0"
@@ -1398,12 +1767,9 @@
     {
       "chapter": 47,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1412,7 +1778,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       },
       "level_keys": [
         "U2L08 Assessment 1"
@@ -1421,12 +1788,9 @@
     {
       "chapter": 48,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L9 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1435,7 +1799,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       },
       "level_keys": [
         "U2L9 Student Lesson Introduction"
@@ -1444,12 +1809,9 @@
     {
       "chapter": 49,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L10 NetSim Automatic DNS"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1458,7 +1820,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       },
       "level_keys": [
         "U2L10 NetSim Automatic DNS"
@@ -1467,12 +1830,9 @@
     {
       "chapter": 50,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L09 Assessment1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1481,7 +1841,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       },
       "level_keys": [
         "U2L09 Assessment1"
@@ -1490,12 +1851,9 @@
     {
       "chapter": 51,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L09 Assessment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1504,7 +1862,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       },
       "level_keys": [
         "U2L09 Assessment2"
@@ -1513,12 +1872,9 @@
     {
       "chapter": 52,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L09 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1527,7 +1883,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       },
       "level_keys": [
         "U2L09 Free Response Wrap Up"
@@ -1536,12 +1893,9 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L10 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1550,7 +1904,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       },
       "level_keys": [
         "U2L10 Student Lesson Introduction"
@@ -1559,12 +1914,9 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L10 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1573,7 +1925,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       },
       "level_keys": [
         "U2L10 Free Response Getting Started"
@@ -1582,12 +1935,9 @@
     {
       "chapter": 55,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L10 Assessment1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1596,7 +1946,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       },
       "level_keys": [
         "U2L10 Assessment1"
@@ -1605,12 +1956,9 @@
     {
       "chapter": 56,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L10 Assessment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1619,7 +1967,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       },
       "level_keys": [
         "U2L10 Assessment2"
@@ -1628,12 +1977,9 @@
     {
       "chapter": 57,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L10 Assessment3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1642,7 +1988,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       },
       "level_keys": [
         "U2L10 Assessment3"
@@ -1651,12 +1998,9 @@
     {
       "chapter": 58,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L10 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1665,7 +2009,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       },
       "level_keys": [
         "U2L10 Free Response Wrap Up"
@@ -1674,12 +2019,9 @@
     {
       "chapter": 59,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L11 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1688,7 +2030,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       },
       "level_keys": [
         "U2L11 Student Lesson Introduction"
@@ -1697,12 +2040,9 @@
     {
       "chapter": 60,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2 HTTP and HTML - Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1711,7 +2051,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       },
       "level_keys": [
         "U2 HTTP and HTML - Video"
@@ -1720,12 +2061,9 @@
     {
       "chapter": 61,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L11 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1734,7 +2072,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       },
       "level_keys": [
         "U2L11 Assessment 1"
@@ -1743,12 +2082,9 @@
     {
       "chapter": 62,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L11 Assessment 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1757,7 +2093,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       },
       "level_keys": [
         "U2L11 Assessment 2"
@@ -1766,12 +2103,9 @@
     {
       "chapter": 63,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L11 Free Response"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1780,7 +2114,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       },
       "level_keys": [
         "U2L11 Free Response"
@@ -1789,12 +2124,9 @@
     {
       "chapter": 64,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L12 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1803,7 +2135,8 @@
         ],
         "lesson.key": "Practice PT - The Internet and Society",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "83dcf0e5-7d0b-4d06-a6d9-0f176eca571d"
       },
       "level_keys": [
         "U2L12 Student Lesson Introduction"
@@ -1812,12 +2145,9 @@
     {
       "chapter": 65,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L13 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1826,7 +2156,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       },
       "level_keys": [
         "U2L13 Student Lesson Introduction"
@@ -1835,12 +2166,9 @@
     {
       "chapter": 66,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2 frequency caesar"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1849,7 +2177,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       },
       "level_keys": [
         "U2 frequency caesar"
@@ -1858,12 +2187,9 @@
     {
       "chapter": 67,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L13 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1872,7 +2198,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       },
       "level_keys": [
         "U2L13 Free Response Getting Started"
@@ -1881,12 +2208,9 @@
     {
       "chapter": 68,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L13 Assessment1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1895,7 +2219,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       },
       "level_keys": [
         "U2L13 Assessment1"
@@ -1904,12 +2229,9 @@
     {
       "chapter": 69,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L13 Assessment3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1918,7 +2240,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       },
       "level_keys": [
         "U2L13 Assessment3"
@@ -1927,12 +2250,9 @@
     {
       "chapter": 70,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L13 Assessment4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1941,7 +2261,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       },
       "level_keys": [
         "U2L13 Assessment4"
@@ -1950,12 +2271,9 @@
     {
       "chapter": 71,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L13 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1964,7 +2282,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       },
       "level_keys": [
         "U2L13 Free Response Wrap Up"
@@ -1973,12 +2292,9 @@
     {
       "chapter": 72,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L14 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1987,7 +2303,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2L14 Student Lesson Introduction"
@@ -1996,12 +2313,9 @@
     {
       "chapter": 73,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2 frequency random sub"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2010,7 +2324,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2 frequency random sub"
@@ -2019,12 +2334,9 @@
     {
       "chapter": 74,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2 vigenere cipher"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2033,7 +2345,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2 vigenere cipher"
@@ -2042,12 +2355,9 @@
     {
       "chapter": 75,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L14 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2056,7 +2366,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2L14 Free Response Getting Started"
@@ -2065,12 +2376,9 @@
     {
       "chapter": 76,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L14 Assessment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2079,7 +2387,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2L14 Assessment"
@@ -2088,12 +2397,9 @@
     {
       "chapter": 77,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L14 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2102,7 +2408,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2L14 Free Response Wrap Up"
@@ -2111,12 +2418,9 @@
     {
       "chapter": 78,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L14 Assessment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2125,7 +2429,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2L14 Assessment2"
@@ -2134,12 +2439,9 @@
     {
       "chapter": 79,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L14 Assessment3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2148,7 +2450,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2L14 Assessment3"
@@ -2157,12 +2460,9 @@
     {
       "chapter": 80,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L14 Assessment4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2171,7 +2471,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       },
       "level_keys": [
         "U2L14 Assessment4"
@@ -2180,12 +2481,9 @@
     {
       "chapter": 81,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L15 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2194,7 +2492,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       },
       "level_keys": [
         "U2L15 Student Lesson Introduction"
@@ -2203,12 +2502,9 @@
     {
       "chapter": 82,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L15 Assessment1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2217,7 +2513,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       },
       "level_keys": [
         "U2L15 Assessment1"
@@ -2226,12 +2523,9 @@
     {
       "chapter": 83,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L15 Assessment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2240,7 +2534,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       },
       "level_keys": [
         "U2L15 Assessment2"
@@ -2249,12 +2544,9 @@
     {
       "chapter": 84,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L15 Assessment3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2263,7 +2555,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       },
       "level_keys": [
         "U2L15 Assessment3"
@@ -2272,12 +2565,9 @@
     {
       "chapter": 85,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L15 Assessment4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2286,7 +2576,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       },
       "level_keys": [
         "U2L15 Assessment4"
@@ -2295,12 +2586,9 @@
     {
       "chapter": 86,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L17 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2309,7 +2597,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       },
       "level_keys": [
         "U2L17 Student Lesson Introduction"
@@ -2318,12 +2607,9 @@
     {
       "chapter": 87,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2332,7 +2618,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       },
       "level_keys": [
         "U2L17 Assessment 1"
@@ -2341,12 +2628,9 @@
     {
       "chapter": 88,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Assessment 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2355,7 +2639,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       },
       "level_keys": [
         "U2L17 Assessment 2"
@@ -2364,12 +2649,9 @@
     {
       "chapter": 89,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L16 Free Response Assessment 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2378,7 +2660,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       },
       "level_keys": [
         "U2L16 Free Response Assessment 3"
@@ -2387,12 +2670,9 @@
     {
       "chapter": 90,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2401,7 +2681,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       },
       "level_keys": [
         "U2L17 Free Response Wrap Up"
@@ -2410,12 +2691,9 @@
     {
       "chapter": 91,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L18 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2424,7 +2702,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       },
       "level_keys": [
         "U2L18 Student Lesson Introduction"
@@ -2433,12 +2712,9 @@
     {
       "chapter": 92,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2447,7 +2723,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       },
       "level_keys": [
         "U2L17 Free Response Getting Started"
@@ -2456,12 +2733,9 @@
     {
       "chapter": 93,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Free Responses Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2470,7 +2744,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       },
       "level_keys": [
         "U2L17 Free Responses Assessment 1"
@@ -2479,12 +2754,9 @@
     {
       "chapter": 94,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 - Vocabulary matching"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2493,7 +2765,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       },
       "level_keys": [
         "U2L17 - Vocabulary matching"
@@ -2502,12 +2775,9 @@
     {
       "chapter": 95,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2516,7 +2786,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       },
       "level_keys": [
         "U2L18 Free Response Getting Started"
@@ -2525,12 +2796,9 @@
     {
       "chapter": 96,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Assessment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2539,7 +2807,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       },
       "level_keys": [
         "U2L18 Assessment"
@@ -2548,12 +2817,9 @@
     {
       "chapter": 97,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2562,7 +2828,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       },
       "level_keys": [
         "U2L18 Free Response Wrap Up"
@@ -2571,12 +2838,9 @@
     {
       "chapter": 98,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L16 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2585,7 +2849,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       },
       "level_keys": [
         "U2L16 Student Lesson Introduction"
@@ -2594,12 +2859,9 @@
     {
       "chapter": 99,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2 Encryption and Public Keys - Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2608,7 +2870,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       },
       "level_keys": [
         "U2 Encryption and Public Keys - Video"
@@ -2617,12 +2880,9 @@
     {
       "chapter": 100,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Free Response Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2631,7 +2891,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       },
       "level_keys": [
         "U2L18 Free Response Assessment 1"
@@ -2640,12 +2901,9 @@
     {
       "chapter": 101,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Match terms to cups and beans analogy"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2654,7 +2912,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       },
       "level_keys": [
         "U2L18 Match terms to cups and beans analogy"
@@ -2663,12 +2922,9 @@
     {
       "chapter": 102,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Free Response Assessment 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2677,7 +2933,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       },
       "level_keys": [
         "U2L18 Free Response Assessment 3"
@@ -2686,12 +2943,9 @@
     {
       "chapter": 103,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L19 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2700,7 +2954,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       },
       "level_keys": [
         "U2L19 Student Lesson Introduction"
@@ -2709,12 +2964,9 @@
     {
       "chapter": 104,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L19 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2723,7 +2975,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       },
       "level_keys": [
         "U2L19 Free Response Getting Started"
@@ -2732,12 +2985,9 @@
     {
       "chapter": 105,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L19 mutlichoice 20 mod 15"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2746,7 +2996,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       },
       "level_keys": [
         "U2L19 mutlichoice 20 mod 15"
@@ -2755,12 +3006,9 @@
     {
       "chapter": 106,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L19 multichoice 13 MOD 17"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2769,7 +3017,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       },
       "level_keys": [
         "U2L19 multichoice 13 MOD 17"
@@ -2778,12 +3027,9 @@
     {
       "chapter": 107,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L19 Assessment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2792,7 +3038,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       },
       "level_keys": [
         "U2L19 Assessment"
@@ -2801,12 +3048,9 @@
     {
       "chapter": 108,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L19 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2815,7 +3059,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       },
       "level_keys": [
         "U2L19 Free Response Wrap Up"
@@ -2824,12 +3069,9 @@
     {
       "chapter": 109,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L20 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2838,7 +3080,8 @@
         ],
         "lesson.key": "Practice PT - Cybersecurity Innovations",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c3478896-43d6-4b9d-8799-cb3759592ee7"
       },
       "level_keys": [
         "U2L20 Student Lesson Introduction"
@@ -2847,12 +3090,9 @@
     {
       "chapter": 110,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2 The Internet: Cybersecurity and Crime - Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2861,7 +3101,8 @@
         ],
         "lesson.key": "Practice PT - Cybersecurity Innovations",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c3478896-43d6-4b9d-8799-cb3759592ee7"
       },
       "level_keys": [
         "U2 The Internet: Cybersecurity and Crime - Video"
@@ -2870,12 +3111,9 @@
     {
       "chapter": 111,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2 Encryption and Public Keys - Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2884,7 +3122,8 @@
         ],
         "lesson.key": "Practice PT - Cybersecurity Innovations",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c3478896-43d6-4b9d-8799-cb3759592ee7"
       },
       "level_keys": [
         "U2 Encryption and Public Keys - Video"
@@ -2900,7 +3139,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       }
     },
     {
@@ -2911,7 +3151,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       }
     },
     {
@@ -2922,7 +3163,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       }
     },
     {
@@ -2933,7 +3175,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       }
     },
     {
@@ -2944,7 +3187,8 @@
         ],
         "lesson.key": "The Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "1dcbe760-80e7-4c5b-b9b6-6838862e6ea6"
       }
     },
     {
@@ -2955,7 +3199,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       }
     },
     {
@@ -2966,7 +3211,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       }
     },
     {
@@ -2977,7 +3223,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       }
     },
     {
@@ -2988,7 +3235,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       }
     },
     {
@@ -2999,7 +3247,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       }
     },
     {
@@ -3010,7 +3259,8 @@
         ],
         "lesson.key": "The Need for Addressing",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c94a35a7-c7cb-4756-b580-dfffa1e6fa20"
       }
     },
     {
@@ -3021,7 +3271,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       }
     },
     {
@@ -3032,7 +3283,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       }
     },
     {
@@ -3043,7 +3295,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       }
     },
     {
@@ -3054,7 +3307,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       }
     },
     {
@@ -3065,7 +3319,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       }
     },
     {
@@ -3076,7 +3331,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       }
     },
     {
@@ -3087,7 +3343,8 @@
         ],
         "lesson.key": "Invent an Addressing Protocol",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "f6bfecef-0ad6-49e2-b923-6c8e1b3a764a"
       }
     },
     {
@@ -3098,7 +3355,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       }
     },
     {
@@ -3109,7 +3367,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       }
     },
     {
@@ -3120,7 +3379,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       }
     },
     {
@@ -3131,7 +3391,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       }
     },
     {
@@ -3142,7 +3403,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       }
     },
     {
@@ -3153,7 +3415,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       }
     },
     {
@@ -3164,7 +3427,8 @@
         ],
         "lesson.key": "Routers and Redundancy",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c766dc45-2511-4d7c-9c59-9d283566f0bc"
       }
     },
     {
@@ -3175,7 +3439,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       }
     },
     {
@@ -3186,7 +3451,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       }
     },
     {
@@ -3197,7 +3463,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       }
     },
     {
@@ -3208,7 +3475,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       }
     },
     {
@@ -3219,7 +3487,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       }
     },
     {
@@ -3230,7 +3499,8 @@
         ],
         "lesson.key": "Packets and Making a Reliable Internet",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "0e7d22c2-9174-435d-af64-a0d9b28cdcf7"
       }
     },
     {
@@ -3241,7 +3511,8 @@
         ],
         "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8"
       }
     },
     {
@@ -3252,7 +3523,8 @@
         ],
         "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8"
       }
     },
     {
@@ -3263,7 +3535,8 @@
         ],
         "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8"
       }
     },
     {
@@ -3274,7 +3547,8 @@
         ],
         "lesson.key": "Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c0413af6-82b1-4cfa-8403-76d0a94bd6a8"
       }
     },
     {
@@ -3285,7 +3559,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       }
     },
     {
@@ -3296,7 +3571,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       }
     },
     {
@@ -3307,7 +3583,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       }
     },
     {
@@ -3318,7 +3595,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       }
     },
     {
@@ -3329,7 +3607,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       }
     },
     {
@@ -3340,7 +3619,8 @@
         ],
         "lesson.key": "Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "dea46b88-ed94-46ad-85bf-b710d87a4af2"
       }
     },
     {
@@ -3351,7 +3631,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       }
     },
     {
@@ -3362,7 +3643,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       }
     },
     {
@@ -3373,7 +3655,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       }
     },
     {
@@ -3384,7 +3667,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       }
     },
     {
@@ -3395,7 +3679,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       }
     },
     {
@@ -3406,7 +3691,8 @@
         ],
         "lesson.key": "Algorithms Detour - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "3016cc99-411c-40fb-b1d6-1d18f06e3ad6"
       }
     },
     {
@@ -3417,7 +3703,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       }
     },
     {
@@ -3428,7 +3715,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       }
     },
     {
@@ -3439,7 +3727,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       }
     },
     {
@@ -3450,7 +3739,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       }
     },
     {
@@ -3461,7 +3751,8 @@
         ],
         "lesson.key": "The Need for DNS",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "05f13182-ce2b-41d3-a49c-98d9f51de02d"
       }
     },
     {
@@ -3472,7 +3763,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       }
     },
     {
@@ -3483,7 +3775,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       }
     },
     {
@@ -3494,7 +3787,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       }
     },
     {
@@ -3505,7 +3799,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       }
     },
     {
@@ -3516,7 +3811,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       }
     },
     {
@@ -3527,7 +3823,8 @@
         ],
         "lesson.key": "DNS in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "2e51e81f-a24f-4cc9-a69e-a66fddb9c21c"
       }
     },
     {
@@ -3538,7 +3835,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       }
     },
     {
@@ -3549,7 +3847,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       }
     },
     {
@@ -3560,7 +3859,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       }
     },
     {
@@ -3571,7 +3871,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       }
     },
     {
@@ -3582,7 +3883,8 @@
         ],
         "lesson.key": "HTTP and Abstraction",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "105b8ac6-fd91-4277-8e8f-596356fd0058"
       }
     },
     {
@@ -3593,7 +3895,8 @@
         ],
         "lesson.key": "Practice PT - The Internet and Society",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "83dcf0e5-7d0b-4d06-a6d9-0f176eca571d"
       }
     },
     {
@@ -3604,7 +3907,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       }
     },
     {
@@ -3615,7 +3919,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       }
     },
     {
@@ -3626,7 +3931,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       }
     },
     {
@@ -3637,7 +3943,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       }
     },
     {
@@ -3648,7 +3955,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       }
     },
     {
@@ -3659,7 +3967,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       }
     },
     {
@@ -3670,7 +3979,8 @@
         ],
         "lesson.key": "Tell Me a Secret - Encrypting Text",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "5bfaa8ae-cc41-402c-ab0c-ce1501c68373"
       }
     },
     {
@@ -3681,7 +3991,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3692,7 +4003,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3703,7 +4015,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3714,7 +4027,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3725,7 +4039,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3736,7 +4051,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3747,7 +4063,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3758,7 +4075,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3769,7 +4087,8 @@
         ],
         "lesson.key": "Cracking the Code",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "25a6522b-c8d4-48e4-a64d-5a026a78238f"
       }
     },
     {
@@ -3780,7 +4099,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       }
     },
     {
@@ -3791,7 +4111,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       }
     },
     {
@@ -3802,7 +4123,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       }
     },
     {
@@ -3813,7 +4135,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       }
     },
     {
@@ -3824,7 +4147,8 @@
         ],
         "lesson.key": "Encryption Algorithms",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "ba8b4d40-2283-4dca-8c65-f9c1b1d0a68b"
       }
     },
     {
@@ -3835,7 +4159,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       }
     },
     {
@@ -3846,7 +4171,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       }
     },
     {
@@ -3857,7 +4183,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       }
     },
     {
@@ -3868,7 +4195,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       }
     },
     {
@@ -3879,7 +4207,8 @@
         ],
         "lesson.key": "Algorithms Detour - Hard Problems TSP",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "37976cd6-c264-4930-85a5-6c14c0f57103"
       }
     },
     {
@@ -3890,7 +4219,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       }
     },
     {
@@ -3901,7 +4231,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       }
     },
     {
@@ -3912,7 +4243,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       }
     },
     {
@@ -3923,7 +4255,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       }
     },
     {
@@ -3934,7 +4267,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       }
     },
     {
@@ -3945,7 +4279,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       }
     },
     {
@@ -3956,7 +4291,8 @@
         ],
         "lesson.key": "One Way Functions - Ice Cream Vans",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "877d249f-7fe7-4ec7-b8e3-9687b9fa1c41"
       }
     },
     {
@@ -3967,7 +4303,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       }
     },
     {
@@ -3978,7 +4315,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       }
     },
     {
@@ -3989,7 +4327,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       }
     },
     {
@@ -4000,7 +4339,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       }
     },
     {
@@ -4011,7 +4351,8 @@
         ],
         "lesson.key": "Alice and Bob and Asymmetric Keys",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "082d865b-a1de-4ea3-acce-e5c7d3f0aa73"
       }
     },
     {
@@ -4022,7 +4363,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       }
     },
     {
@@ -4033,7 +4375,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       }
     },
     {
@@ -4044,7 +4387,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       }
     },
     {
@@ -4055,7 +4399,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       }
     },
     {
@@ -4066,7 +4411,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       }
     },
     {
@@ -4077,7 +4423,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "538b5fdc-57c7-4d7c-9118-466b2f73749a"
       }
     },
     {
@@ -4088,7 +4435,8 @@
         ],
         "lesson.key": "Practice PT - Cybersecurity Innovations",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c3478896-43d6-4b9d-8799-cb3759592ee7"
       }
     },
     {
@@ -4099,7 +4447,8 @@
         ],
         "lesson.key": "Practice PT - Cybersecurity Innovations",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c3478896-43d6-4b9d-8799-cb3759592ee7"
       }
     },
     {
@@ -4110,7 +4459,8 @@
         ],
         "lesson.key": "Practice PT - Cybersecurity Innovations",
         "lesson_group.key": "",
-        "script.name": "cspunit2"
+        "script.name": "cspunit2",
+        "activity_section.key": "c3478896-43d6-4b9d-8799-cb3759592ee7"
       }
     }
   ],
