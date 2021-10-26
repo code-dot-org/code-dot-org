@@ -11,6 +11,7 @@ export const commands = {
   },
 
   setBackgroundImageAs(imageName) {
+    this.validationInfo.backgroundEffect = imageName;
     const backgroundImage = this.p5._predefinedSpriteAnimations?.[imageName];
     if (backgroundImage) {
       backgroundImage.name = imageName;
