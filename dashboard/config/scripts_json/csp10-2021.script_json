@@ -4,22 +4,23 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-27 20:35:09 UTC",
+    "serialized_at": "2021-10-25 22:54:33 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -3152,9 +3153,9 @@
       "url": "https://docs.google.com/document/d/1ukiDCZ1tnd0CtuPl0o2H6vOLGaYbIgjbO2xHlLTuTio/edit?usp=sharing",
       "key": "call-center-reading-passage",
       "properties": {
-        "type": "Resource",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "call-center-reading-passage"
@@ -3165,8 +3166,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -3177,8 +3178,8 @@
       "url": "https://youtu.be/QvyTEx1wyOY",
       "key": "cs-is-changing-video",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "cs-is-changing-video"
@@ -3189,9 +3190,9 @@
       "url": "https://docs.google.com/document/d/1tszGwxqqQhlCrG03rt6CwT5udU7rDdOWJtjgYN0Ad-w/edit?usp=sharing",
       "key": "csp-u10l07-optional-podcast-transcripts",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "csp-u10l07-optional-podcast-transcripts"
@@ -3202,9 +3203,9 @@
       "url": "https://docs.google.com/document/d/105rBn4_ylOlRWmgxvQdMjo8v0Iwrg3Aw-9vPIVsAYpc/edit?usp=sharing",
       "key": "csp-unit-10-project-overview",
       "properties": {
-        "type": "Resource",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp-unit-10-project-overview"
@@ -3215,8 +3216,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -3227,8 +3228,8 @@
       "url": "https://drive.google.com/file/d/1iTYcQ-Jqe-aCQ3Jcq0Td0xZEgreNdGVp/",
       "key": "csp_innovation_simulation_badges",
       "properties": {
-        "type": "Handout",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "csp_innovation_simulation_badges"
@@ -3239,8 +3240,8 @@
       "url": "https://drive.google.com/file/d/1b4hIYm6CK5BUr0rdpUBtvgR_AoZxGz8c/",
       "key": "csp_innovation_simulation_nameplates",
       "properties": {
-        "type": "Handout",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "csp_innovation_simulation_nameplates"
@@ -3251,9 +3252,9 @@
       "url": "https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/",
       "key": "csp_innovation_simulation_project_guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "csp_innovation_simulation_project_guide"
@@ -3264,8 +3265,8 @@
       "url": "https://docs.google.com/presentation/d/13hzCmcAxUal2GpjNj6yjxzAtB58TPPG8tjVZRLvcwf0/edit?usp=sharing",
       "key": "csp_unit_10_-_cybersecurity_and_global_impacts",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
@@ -3276,9 +3277,9 @@
       "url": "https://docs.google.com/document/d/1v4Q2dsV0zJCh1zgcP3mwKu-iIsn9gl7v5-ZDwYMlSMs/",
       "key": "data-policies-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "data-policies-activity-guide"
@@ -3289,8 +3290,8 @@
       "url": "https://www.carbonite.com/podcasts/breach/s02e03-Equifax-data-breach",
       "key": "equifax_data_breach_what_went_wrong_podcast_",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "equifax_data_breach_what_went_wrong_podcast_"
@@ -3301,9 +3302,9 @@
       "url": "https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/",
       "key": "innovation-simulation-bios",
       "properties": {
-        "type": "Handout",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "innovation-simulation-bios"
@@ -3314,8 +3315,8 @@
       "url": "https://www.npr.org/sections/money/2017/10/06/556212654/episode-798-bad-credit-bureau",
       "key": "planet_money_bad_credit_bureau_podcast_",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "planet_money_bad_credit_bureau_podcast_"
@@ -3326,8 +3327,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -3338,8 +3339,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -3628,63 +3629,43 @@
   ],
   "objectives": [
     {
-      "key": "bed95183-d47f-4c25-a980-501d390f4844",
+      "key": "0aaddd40-22a5-47b2-b459-3179dddbfdf0",
       "properties": {
-        "description": "Identify a computing innovation"
+        "description": "Explain how these common security risks target people"
       },
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "objective.key": "bed95183-d47f-4c25-a980-501d390f4844"
+        "lesson.key": "Security Risks Part 1",
+        "objective.key": "0aaddd40-22a5-47b2-b459-3179dddbfdf0"
       }
     },
     {
-      "key": "8df6d174-5fe9-4091-8e5a-762694b8d457",
+      "key": "0f932e55-850c-4bf7-9897-b7d40298a09a",
       "properties": {
-        "description": "Understand how to conduct research on a computing innovation"
+        "description": "Explain the difference between asymmetrical and symmetrical encryption"
       },
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "objective.key": "8df6d174-5fe9-4091-8e5a-762694b8d457"
+        "lesson.key": "Protecting Data Part 1",
+        "objective.key": "0f932e55-850c-4bf7-9897-b7d40298a09a"
       }
     },
     {
-      "key": "438d4250-c4a6-4c6e-906a-2c1f21f034d7",
+      "key": "18e101c5-6e68-4dae-94f8-768838032fe2",
       "properties": {
-        "description": "Identify benefits of a computing innovation"
+        "description": "Identify why Caesar Cipher and Random Substitution Ciphers are not adequate for most encryption needs"
       },
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 2",
-        "objective.key": "438d4250-c4a6-4c6e-906a-2c1f21f034d7"
+        "lesson.key": "Protecting Data Part 1",
+        "objective.key": "18e101c5-6e68-4dae-94f8-768838032fe2"
       }
     },
     {
-      "key": "5c578229-b060-4692-ba52-1ad9e960ab54",
+      "key": "1aa1e4c1-9cf0-433c-bf41-ea88b6be2eef",
       "properties": {
-        "description": "Research computing innovations through the lens of one beneficiary"
+        "description": "Students will have completed designing and preparing for their group presentation."
       },
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 2",
-        "objective.key": "5c578229-b060-4692-ba52-1ad9e960ab54"
-      }
-    },
-    {
-      "key": "bef7eec3-838a-4627-8ef1-e896f1d4dfb4",
-      "properties": {
-        "description": "Objective 3"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 2",
-        "objective.key": "bef7eec3-838a-4627-8ef1-e896f1d4dfb4"
-      }
-    },
-    {
-      "key": "550479fe-d718-4019-b319-f1f9c66411de",
-      "properties": {
-        "description": "Describe the different types of data that are used and collected by modern computing innovations"
-      },
-      "seeding_key": {
-        "lesson.key": "Data Policies and Privacy",
-        "objective.key": "550479fe-d718-4019-b319-f1f9c66411de"
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "objective.key": "1aa1e4c1-9cf0-433c-bf41-ea88b6be2eef"
       }
     },
     {
@@ -3708,23 +3689,113 @@
       }
     },
     {
-      "key": "f0d95d0a-03db-4fba-8277-6ec8c36d47ac",
+      "key": "40a0ee42-accd-4ff3-8032-25ed2003924d",
       "properties": {
-        "description": "Evaluate whether the benefits to society from a given computing innovation outweigh the privacy risks it poses."
+        "description": "Discuss the benefits of computer virus scanning software and the need for regular updates"
       },
       "seeding_key": {
-        "lesson.key": "The Value of Privacy",
-        "objective.key": "f0d95d0a-03db-4fba-8277-6ec8c36d47ac"
+        "lesson.key": "Protecting Data Part 2",
+        "objective.key": "40a0ee42-accd-4ff3-8032-25ed2003924d"
       }
     },
     {
-      "key": "a98e31db-f636-4af7-b6be-8a80c95f7e13",
+      "key": "438d4250-c4a6-4c6e-906a-2c1f21f034d7",
       "properties": {
-        "description": "Assess a computing innovation to identify the specific privacy risks that could arise from the data it collects and stores."
+        "description": "Identify benefits of a computing innovation"
       },
       "seeding_key": {
-        "lesson.key": "The Value of Privacy",
-        "objective.key": "a98e31db-f636-4af7-b6be-8a80c95f7e13"
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "objective.key": "438d4250-c4a6-4c6e-906a-2c1f21f034d7"
+      }
+    },
+    {
+      "key": "550479fe-d718-4019-b319-f1f9c66411de",
+      "properties": {
+        "description": "Describe the different types of data that are used and collected by modern computing innovations"
+      },
+      "seeding_key": {
+        "lesson.key": "Data Policies and Privacy",
+        "objective.key": "550479fe-d718-4019-b319-f1f9c66411de"
+      }
+    },
+    {
+      "key": "5c578229-b060-4692-ba52-1ad9e960ab54",
+      "properties": {
+        "description": "Research computing innovations through the lens of one beneficiary"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "objective.key": "5c578229-b060-4692-ba52-1ad9e960ab54"
+      }
+    },
+    {
+      "key": "65572667-1e61-4551-b7cb-355ff66ff085",
+      "properties": {
+        "description": "Explain how computing tools can be used for decryption"
+      },
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "objective.key": "65572667-1e61-4551-b7cb-355ff66ff085"
+      }
+    },
+    {
+      "key": "7c72054b-5568-421b-bd4a-707b190477ba",
+      "properties": {
+        "description": "Discuss the warning signals for these common security risks"
+      },
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "objective.key": "7c72054b-5568-421b-bd4a-707b190477ba"
+      }
+    },
+    {
+      "key": "875c36ee-2d63-47c7-b31f-59633613ab85",
+      "properties": {
+        "description": "Students will have started to design a group presentation or artifact that presents their innovations and aligns them to a single theme."
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "objective.key": "875c36ee-2d63-47c7-b31f-59633613ab85"
+      }
+    },
+    {
+      "key": "8cc60177-604f-4ede-950c-ae8bd6f9a654",
+      "properties": {
+        "description": "Confidently explain security risks and their impact on society"
+      },
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "objective.key": "8cc60177-604f-4ede-950c-ae8bd6f9a654"
+      }
+    },
+    {
+      "key": "8df6d174-5fe9-4091-8e5a-762694b8d457",
+      "properties": {
+        "description": "Understand how to conduct research on a computing innovation"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "objective.key": "8df6d174-5fe9-4091-8e5a-762694b8d457"
+      }
+    },
+    {
+      "key": "943c71d9-6004-4d12-b97c-ee7f66fc5995",
+      "properties": {
+        "description": "Evaluate the benefits and harms that could potentially be caused by a computing innovation"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "objective.key": "943c71d9-6004-4d12-b97c-ee7f66fc5995"
+      }
+    },
+    {
+      "key": "974bc08d-70d0-48ed-9e3b-5b2a4a394e23",
+      "properties": {
+        "description": "Describe the role human error played in the Equifax breach"
+      },
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "objective.key": "974bc08d-70d0-48ed-9e3b-5b2a4a394e23"
       }
     },
     {
@@ -3738,13 +3809,63 @@
       }
     },
     {
-      "key": "943c71d9-6004-4d12-b97c-ee7f66fc5995",
+      "key": "a89f82c6-f7e9-493d-8b85-5a06e5ae7029",
       "properties": {
-        "description": "Evaluate the benefits and harms that could potentially be caused by a computing innovation"
+        "description": "Evaluate innovations for its potential benefits and harms based on the perspective of a specific audience"
       },
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 3",
-        "objective.key": "943c71d9-6004-4d12-b97c-ee7f66fc5995"
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "objective.key": "a89f82c6-f7e9-493d-8b85-5a06e5ae7029"
+      }
+    },
+    {
+      "key": "a98e31db-f636-4af7-b6be-8a80c95f7e13",
+      "properties": {
+        "description": "Assess a computing innovation to identify the specific privacy risks that could arise from the data it collects and stores."
+      },
+      "seeding_key": {
+        "lesson.key": "The Value of Privacy",
+        "objective.key": "a98e31db-f636-4af7-b6be-8a80c95f7e13"
+      }
+    },
+    {
+      "key": "aceea570-cbb7-45e9-b5cf-6a203c0d264b",
+      "properties": {
+        "description": "Students will have completed the majority of the one-pager for their project."
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "objective.key": "aceea570-cbb7-45e9-b5cf-6a203c0d264b"
+      }
+    },
+    {
+      "key": "bed95183-d47f-4c25-a980-501d390f4844",
+      "properties": {
+        "description": "Identify a computing innovation"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "objective.key": "bed95183-d47f-4c25-a980-501d390f4844"
+      }
+    },
+    {
+      "key": "bef7eec3-838a-4627-8ef1-e896f1d4dfb4",
+      "properties": {
+        "description": "Objective 3"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "objective.key": "bef7eec3-838a-4627-8ef1-e896f1d4dfb4"
+      }
+    },
+    {
+      "key": "cec18953-4d33-4ae9-a63b-ff262e029d07",
+      "properties": {
+        "description": "Explain the benefits of multifactor authentication"
+      },
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "objective.key": "cec18953-4d33-4ae9-a63b-ff262e029d07"
       }
     },
     {
@@ -3768,106 +3889,6 @@
       }
     },
     {
-      "key": "0aaddd40-22a5-47b2-b459-3179dddbfdf0",
-      "properties": {
-        "description": "Explain how these common security risks target people"
-      },
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
-        "objective.key": "0aaddd40-22a5-47b2-b459-3179dddbfdf0"
-      }
-    },
-    {
-      "key": "7c72054b-5568-421b-bd4a-707b190477ba",
-      "properties": {
-        "description": "Discuss the warning signals for these common security risks"
-      },
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
-        "objective.key": "7c72054b-5568-421b-bd4a-707b190477ba"
-      }
-    },
-    {
-      "key": "8cc60177-604f-4ede-950c-ae8bd6f9a654",
-      "properties": {
-        "description": "Confidently explain security risks and their impact on society"
-      },
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "objective.key": "8cc60177-604f-4ede-950c-ae8bd6f9a654"
-      }
-    },
-    {
-      "key": "974bc08d-70d0-48ed-9e3b-5b2a4a394e23",
-      "properties": {
-        "description": "Describe the role human error played in the Equifax breach"
-      },
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "objective.key": "974bc08d-70d0-48ed-9e3b-5b2a4a394e23"
-      }
-    },
-    {
-      "key": "aceea570-cbb7-45e9-b5cf-6a203c0d264b",
-      "properties": {
-        "description": "Students will have completed the majority of the one-pager for their project."
-      },
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "objective.key": "aceea570-cbb7-45e9-b5cf-6a203c0d264b"
-      }
-    },
-    {
-      "key": "0f932e55-850c-4bf7-9897-b7d40298a09a",
-      "properties": {
-        "description": "Explain the difference between asymmetrical and symmetrical encryption"
-      },
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 1",
-        "objective.key": "0f932e55-850c-4bf7-9897-b7d40298a09a"
-      }
-    },
-    {
-      "key": "65572667-1e61-4551-b7cb-355ff66ff085",
-      "properties": {
-        "description": "Explain how computing tools can be used for decryption"
-      },
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 1",
-        "objective.key": "65572667-1e61-4551-b7cb-355ff66ff085"
-      }
-    },
-    {
-      "key": "18e101c5-6e68-4dae-94f8-768838032fe2",
-      "properties": {
-        "description": "Identify why Caesar Cipher and Random Substitution Ciphers are not adequate for most encryption needs"
-      },
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 1",
-        "objective.key": "18e101c5-6e68-4dae-94f8-768838032fe2"
-      }
-    },
-    {
-      "key": "cec18953-4d33-4ae9-a63b-ff262e029d07",
-      "properties": {
-        "description": "Explain the benefits of multifactor authentication"
-      },
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "objective.key": "cec18953-4d33-4ae9-a63b-ff262e029d07"
-      }
-    },
-    {
-      "key": "40a0ee42-accd-4ff3-8032-25ed2003924d",
-      "properties": {
-        "description": "Discuss the benefits of computer virus scanning software and the need for regular updates"
-      },
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "objective.key": "40a0ee42-accd-4ff3-8032-25ed2003924d"
-      }
-    },
-    {
       "key": "ef83a229-6140-4f34-83c1-1174fa8f9b95",
       "properties": {
         "description": "Thoughtfully answer a stimulus question"
@@ -3878,184 +3899,17 @@
       }
     },
     {
-      "key": "875c36ee-2d63-47c7-b31f-59633613ab85",
+      "key": "f0d95d0a-03db-4fba-8277-6ec8c36d47ac",
       "properties": {
-        "description": "Students will have started to design a group presentation or artifact that presents their innovations and aligns them to a single theme."
+        "description": "Evaluate whether the benefits to society from a given computing innovation outweigh the privacy risks it poses."
       },
       "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 5",
-        "objective.key": "875c36ee-2d63-47c7-b31f-59633613ab85"
-      }
-    },
-    {
-      "key": "1aa1e4c1-9cf0-433c-bf41-ea88b6be2eef",
-      "properties": {
-        "description": "Students will have completed designing and preparing for their group presentation."
-      },
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 6",
-        "objective.key": "1aa1e4c1-9cf0-433c-bf41-ea88b6be2eef"
-      }
-    },
-    {
-      "key": "a89f82c6-f7e9-493d-8b85-5a06e5ae7029",
-      "properties": {
-        "description": "Evaluate innovations for its potential benefits and harms based on the perspective of a specific audience"
-      },
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 7",
-        "objective.key": "a89f82c6-f7e9-493d-8b85-5a06e5ae7029"
+        "lesson.key": "The Value of Privacy",
+        "objective.key": "f0d95d0a-03db-4fba-8277-6ec8c36d47ac"
       }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-1.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-1.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-1.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.A.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Policies and Privacy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Policies and Privacy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-29"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Policies and Privacy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-30"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Data Policies and Privacy",
@@ -4149,30 +4003,471 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Value of Privacy",
+        "lesson.key": "Data Policies and Privacy",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-23"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Value of Privacy",
+        "lesson.key": "Data Policies and Privacy",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-29"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Value of Privacy",
+        "lesson.key": "Data Policies and Privacy",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-30"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Value of Privacy",
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-28"
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Protecting Data Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.C.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.C.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-05"
       }
     },
     {
@@ -4247,324 +4542,30 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 3",
+        "lesson.key": "The Value of Privacy",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
+        "standard.shortcode": "2-IC-23"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 3",
+        "lesson.key": "The Value of Privacy",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
+        "standard.shortcode": "3A-IC-29"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 3",
+        "lesson.key": "The Value of Privacy",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
+        "standard.shortcode": "3A-IC-30"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Innovation Simulation Part 3",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.A.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
+        "lesson.key": "The Value of Privacy",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.9"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.C.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.C.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Security Risks Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.C.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 4",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-07"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-07"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Protecting Data Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 6",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 6",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 6",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 7",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 7",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Innovation Simulation Part 7",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-25"
+        "standard.shortcode": "3B-IC-28"
       }
     }
   ],

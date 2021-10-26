@@ -4,10 +4,26 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "project_widget_visible": true,
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursef/{LESSON}",
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_stable": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab",
         "artist"
+      ],
+      "project_widget_visible": true,
+      "script_announcements": [
+        {
+          "notice": "Our 2020 CS Fundamentals Lessons are Live!",
+          "details": "Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course F!",
+          "link": "https://curriculum.code.org/csf-20/coursef",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
       ],
       "teacher_resources": [
         [
@@ -31,29 +47,14 @@
           "https://docs.google.com/document/d/1hstUHTGIdvtPP0TDdEfQeXG3zQ0q6ys237n2BY9CQmg/preview"
         ]
       ],
-      "has_lesson_plan": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursef/{LESSON}",
-      "version_year": "2020",
-      "curriculum_umbrella": "CSF",
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "Our 2020 CS Fundamentals Lessons are Live!",
-          "details": "Click \"Learn More\" to view all of the lesson plans for the 2020 version of Course F!",
-          "link": "https://curriculum.code.org/csf-20/coursef",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "is_course": true
+      "version_year": "2020"
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-08-03 22:47:55 UTC",
+    "serialized_at": "2021-10-25 22:54:09 UTC",
     "published_state": "stable",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "coursef-2020"
     }

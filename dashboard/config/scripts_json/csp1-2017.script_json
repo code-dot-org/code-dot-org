@@ -4,8 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "curriculum_umbrella": "CSP",
       "exclude_csf_column_in_legend": true,
+      "family_name": "csp1",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -28,19 +35,13 @@
           "https://studio.code.org/s/csp1-support"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp1",
-      "hideable_lessons": true
+      "version_year": "2017"
     },
     "new_name": "csp1-2017",
     "family_name": "csp1",
-    "serialized_at": "2021-08-03 22:46:56 UTC",
+    "serialized_at": "2021-10-25 22:53:14 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp1-2017"
     }
@@ -440,8 +441,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "progression": "Reflection: starting out in computer science",
         "variants": {
@@ -463,16 +464,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
         "script.name": "csp1-2017"
       },
       "level_keys": [
-        "csp_socialBelonging_intervention",
-        "csp_socialBelonging_control"
+        "csp_socialBelonging_control",
+        "csp_socialBelonging_intervention"
       ]
     },
     {
@@ -2281,8 +2282,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_affirmation_intervention",
-          "csp_affirmation_control"
+          "csp_affirmation_control",
+          "csp_affirmation_intervention"
         ],
         "progression": "Pre-test reflection",
         "variants": {
@@ -2304,16 +2305,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_affirmation_intervention",
-          "csp_affirmation_control"
+          "csp_affirmation_control",
+          "csp_affirmation_intervention"
         ],
         "lesson.key": "Unit 1 Chapter 2 Assessment",
         "lesson_group.key": "csp1_2",
         "script.name": "csp1-2017"
       },
       "level_keys": [
-        "csp_affirmation_intervention",
-        "csp_affirmation_control"
+        "csp_affirmation_control",
+        "csp_affirmation_intervention"
       ]
     },
     {
@@ -2426,8 +2427,8 @@
       "seeding_key": {
         "level.key": "csp_socialBelonging_intervention",
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
@@ -2438,8 +2439,8 @@
       "seeding_key": {
         "level.key": "csp_socialBelonging_control",
         "script_level.level_keys": [
-          "csp_socialBelonging_intervention",
-          "csp_socialBelonging_control"
+          "csp_socialBelonging_control",
+          "csp_socialBelonging_intervention"
         ],
         "lesson.key": "Personal Innovations",
         "lesson_group.key": "csp1_1",
@@ -3275,8 +3276,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_intervention",
         "script_level.level_keys": [
-          "csp_affirmation_intervention",
-          "csp_affirmation_control"
+          "csp_affirmation_control",
+          "csp_affirmation_intervention"
         ],
         "lesson.key": "Unit 1 Chapter 2 Assessment",
         "lesson_group.key": "csp1_2",
@@ -3287,8 +3288,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_control",
         "script_level.level_keys": [
-          "csp_affirmation_intervention",
-          "csp_affirmation_control"
+          "csp_affirmation_control",
+          "csp_affirmation_intervention"
         ],
         "lesson.key": "Unit 1 Chapter 2 Assessment",
         "lesson_group.key": "csp1_2",
