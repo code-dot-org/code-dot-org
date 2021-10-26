@@ -1077,6 +1077,7 @@ class Script < ApplicationRecord
   # if new_suffix is specified, copy the unit, hide it, and copy all its
   # levelbuilder-defined levels.
   def self.add_unit(options, raw_lesson_groups, new_suffix: nil, editor_experiment: nil)
+    puts options
     transaction do
       unit = fetch_unit(options)
       unit.update!(published_state: SharedCourseConstants::PUBLISHED_STATE.in_development) if new_suffix
@@ -1354,6 +1355,8 @@ class Script < ApplicationRecord
 
   # Update strings and serialize changes to .script file
   def update_text(unit_params, unit_text, metadata_i18n, general_params)
+    puts "UPDATE TEXT"
+    puts general_params
     unit_name = unit_params[:name]
     # Check if TTS has been turned on for a unit. If so we will need to generate all the TTS for that unit after updating
     need_to_update_tts = general_params[:tts] && !tts
@@ -1858,12 +1861,18 @@ class Script < ApplicationRecord
       :teacher_resources, # teacher_resources gets updated from the unit edit UI through its own code path
     ]
 
+    puts "UNIT DATA"
+    puts unit_data
+
     result = {}
     # If a non-boolean prop was missing from the input, it'll get populated in the result hash as nil.
     nonboolean_keys.each {|k| result[k] = unit_data[k]}
     # If a boolean prop was missing from the input, it'll get populated in the result hash as false.
     boolean_keys.each {|k| result[k] = !!unit_data[k]}
     not_defaulted_keys.each {|k| result[k] = unit_data[k] if unit_data.keys.include?(k)}
+
+    puts "RESULT"
+    puts result
 
     result
   end

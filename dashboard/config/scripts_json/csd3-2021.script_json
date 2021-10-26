@@ -29,15 +29,16 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:20 UTC",
+    "serialized_at": "2021-10-26 20:44:58 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd3-2021"
     }
