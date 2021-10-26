@@ -262,11 +262,13 @@ module UsersHelper
               sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
             end
 
-            begin
-              level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
-            # re-raising the error with more information to debug
-            rescue NoMethodError => error
-              raise error, "Level: #{level.id}, User: #{user.id}, Level_for_progress: #{level_for_progress.id}", error.backtrace
+            # We need to check that level_progress exists due to a race condition where the user makes sublevel
+            # progress between when user_levels_by_level is fetched and when level_for_progress is fetched. In this
+            # case, user_levels_by_level may not include the user level for the new level_for_progress, resulting in nil
+            # level_progress. This may manifest for the user as a bubble choice bubble looking as though it hasn't been tried
+            # even though there is progress on a sublevel and should be resolved by a page refresh.
+            if level_progress && sum_time_spent > 0
+              level_progress[:time_spent] = sum_time_spent
             end
           end
         end
