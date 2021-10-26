@@ -27,7 +27,7 @@ export const COLUMNS = {
   EDIT_DELETE: 6
 };
 
-// K, 1.. 12, Other, null
+// K, 1, 2... 12, Other, null
 const numberedGrades = Array.from({length: 12}, (_, i) => (i + 1).toString());
 export const GRADES = ['K', ...numberedGrades, 'Other', null];
 
