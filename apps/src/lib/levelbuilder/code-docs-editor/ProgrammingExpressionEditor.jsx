@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useReducer, useState} from 'react';
+import React, {useState} from 'react';
 import ParameterEditor from './ParameterEditor';
 import Button from '@cdo/apps/templates/Button';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
@@ -22,41 +22,6 @@ function useProgrammingExpression(initialProgrammingExpression) {
   return [programmingExpression, updateProgrammingExpression];
 }
 
-function initParameters(parameters) {
-  const newParameters = [...parameters];
-  newParameters.forEach(p => (p.key = createUuid()));
-  return {parameters: newParameters};
-}
-
-function parametersReducer(state, action) {
-  switch (action.type) {
-    case 'add':
-      return {...state, parameters: [...state.parameters, {key: createUuid()}]};
-    case 'update': {
-      const newParams = [...state.parameters];
-      const paramToUpdate = newParams[action.index];
-      paramToUpdate[action.key] = action.value;
-      return {...state, parameters: newParams};
-    }
-    case 'remove': {
-      const newParams = [...state.parameters];
-      newParams.splice(action.index, 1);
-      return {...state, parameters: newParams};
-    }
-    case 'move': {
-      const newParams = [...state.parameters];
-      const swapIdx =
-        action.direction === 'up' ? action.index - 1 : action.index + 1;
-      const temp = newParams[action.index];
-      newParams[action.index] = newParams[swapIdx];
-      newParams[swapIdx] = temp;
-      return {...state, parameters: newParams};
-    }
-    default:
-      return {...state};
-  }
-}
-
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
   environmentCategories
@@ -65,7 +30,6 @@ export default function ProgrammingExpressionEditor({
   const {
     id,
     key,
-    parameters: initialParameters,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
   const [
@@ -75,11 +39,6 @@ export default function ProgrammingExpressionEditor({
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
-  const [parameters, parametersDispatch] = useReducer(
-    parametersReducer,
-    initialParameters,
-    initParameters
-  );
 
   const save = () => {
     if (isSaving) {
@@ -93,14 +52,7 @@ export default function ProgrammingExpressionEditor({
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       },
       body: JSON.stringify({
-        ...programmingExpression,
-        paletteParams: JSON.stringify(
-          parameters.parameters.map(p => {
-            const hash = {...p};
-            delete hash.key;
-            return hash;
-          })
-        )
+        ...programmingExpression
       })
     })
       .then(response => {
@@ -115,10 +67,6 @@ export default function ProgrammingExpressionEditor({
         setIsSaving(false);
         setError(error.responseText);
       });
-  };
-
-  const addParameter = () => {
-    parametersDispatch({type: 'add'});
   };
 
   const markdownEditorFeatures = {
@@ -235,28 +183,10 @@ export default function ProgrammingExpressionEditor({
         />
       </CollapsibleEditorSection>
       <CollapsibleEditorSection title="Parameters" collapsed>
-        {parameters.parameters.map((param, idx) => (
-          <ParameterEditor
-            key={param.key}
-            parameter={param}
-            updateParameter={(key, value) =>
-              parametersDispatch({type: 'update', index: idx, key, value})
-            }
-            moveParameterUp={() =>
-              parametersDispatch({type: 'move', index: idx, direction: 'up'})
-            }
-            moveParameterDown={() =>
-              parametersDispatch({type: 'move', index: idx, direction: 'down'})
-            }
-            removeParameter={() =>
-              parametersDispatch({type: 'remove', index: idx})
-            }
-          />
-        ))}
-        <Button
-          onClick={addParameter}
-          text="Add Another Parameter"
-          color="gray"
+        <OrderableList
+          list={programmingExpression.parameters}
+          setList={list => updateProgrammingExpression('parameters', list)}
+          addButtonText="Add Another Parameter"
         />
       </CollapsibleEditorSection>
       <SaveBar
@@ -286,6 +216,53 @@ const programmingExpressionShape = PropTypes.shape({
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
   environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
+const OrderableList = function({list, setList, addButtonText}) {
+  const addItem = () => {
+    const newParams = [...list, {}];
+    setList(newParams);
+  };
+  const updateItem = (idx, key, value) => {
+    const newParams = [...list];
+    newParams[idx] = {...newParams[idx], [key]: value};
+    setList(newParams);
+  };
+  const moveItem = (idx, direction) => {
+    const newParams = [...list];
+    const swapIdx = direction === 'up' ? idx - 1 : idx + 1;
+    const temp = newParams[idx];
+    newParams[idx] = newParams[swapIdx];
+    newParams[swapIdx] = temp;
+    setList(newParams);
+  };
+  const removeItemFromList = idx => {
+    const newParams = [...list];
+    newParams.splice(idx, 1);
+    setList(newParams);
+  };
+  return (
+    <div>
+      {list.map((item, idx) => (
+        <ParameterEditor
+          key={item.name || createUuid()}
+          item={item}
+          update={(key, value) => updateItem(idx, key, value)}
+          remove={() => removeItemFromList(idx)}
+          moveUp={() => moveItem(idx, 'up')}
+          moveDown={() => moveItem(idx, 'down')}
+        />
+      ))}
+      <Button onClick={addItem} text={addButtonText} color="gray" />
+    </div>
+  );
+};
+
+OrderableList.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setList: PropTypes.func.isRequired,
+  addButtonText: PropTypes.string.isRequired
+  // editorComponent: PropTypes.elementType
 };
 
 const styles = {
