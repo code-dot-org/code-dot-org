@@ -234,7 +234,7 @@ export default class PoetryLibrary extends CoreLibrary {
         this.p5.rect(
           0,
           390,
-          (this.p5.frameCount / POEM_DURATION) * PLAYSPACE_SIZE,
+          (this.p5.frameCount / this.validationInfo.endTime) * PLAYSPACE_SIZE,
           10
         );
         this.p5.pop();
