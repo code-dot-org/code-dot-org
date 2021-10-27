@@ -20,6 +20,7 @@ import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
 import styleConstants from '../styleConstants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import experiments from '@cdo/apps/util/experiments';
 
 class JavalabView extends React.Component {
   static propTypes = {
@@ -225,7 +226,9 @@ class JavalabView extends React.Component {
                     disableTestButton={awaitingContainedResponse || !canTest}
                     onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
-                    showTestButton={true}
+                    showTestButton={experiments.isEnabled(
+                      experiments.JAVALAB_UNIT_TESTS
+                    )}
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
                   />
