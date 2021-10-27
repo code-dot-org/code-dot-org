@@ -157,19 +157,21 @@ export class LevelTokenContents extends Component {
         >
           <span style={styles.levelArea}>
             <span style={styles.titleAndBubble}>
-              <ProgressBubble
-                hideToolTips={true}
-                level={progressBubbleLevel}
-                disabled={true}
-              />
+              <span style={styles.bubble}>
+                <ProgressBubble
+                  hideToolTips={true}
+                  level={progressBubbleLevel}
+                  disabled={true}
+                />
+              </span>
               <span style={styles.levelTitle}>{scriptLevel.key}</span>
             </span>
-            <span>
-              {scriptLevel.assessment && (
-                <span style={styles.tag}>assessment</span>
-              )}
+            <span style={styles.levelDetails}>
               {scriptLevel.instructor_in_training && (
                 <span style={styles.tag}>instructor in training</span>
+              )}
+              {scriptLevel.assessment && (
+                <span style={styles.tag}>assessment</span>
               )}
               {scriptLevel.bonus && <span style={styles.tag}>bonus</span>}
               {scriptLevel.challenge && (
@@ -240,7 +242,10 @@ const styles = {
     padding: '3px 5px',
     lineHeight: '12px',
     borderRadius: 5,
-    marginLeft: 5
+    marginLeft: 5,
+    marginTop: 5,
+    display: 'flex',
+    flexWrap: 'nowrap'
   },
   remove: {
     fontSize: 14,
@@ -273,10 +278,18 @@ const styles = {
   titleAndBubble: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexGrow: 2
   },
   levelTitle: {
     marginLeft: 5
+  },
+  levelDetailsArea: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  },
+  bubble: {
+    width: 34
   }
 };
 
