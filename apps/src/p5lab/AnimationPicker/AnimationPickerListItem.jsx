@@ -91,6 +91,8 @@ class AnimationPickerListItem extends React.Component {
         onKeyDown={this.onItemKeyDown}
         className={category}
         type="button"
+        onFocus={() => this.setState({hover: true})}
+        onBlur={() => this.setState({hover: false})}
         onMouseEnter={() => this.setState({hover: true})}
         onMouseLeave={() => this.setState({hover: false})}
       >
