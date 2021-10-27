@@ -32,11 +32,12 @@ experiments.I18N_TRACKING = 'i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.POEM_BOT = 'poemBot';
 experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
 experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 experiments.MULTISELECT = 'multiselect';
 experiments.JAVALAB_UNIT_TESTS = 'javalabUnitTests';
+experiments.COSTUME_TAB_A = 'costumeTabA';
+experiments.COSTUME_TAB_B = 'costumeTabB';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
