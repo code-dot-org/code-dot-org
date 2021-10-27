@@ -3,7 +3,6 @@ import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
-import * as utils from './commands/utils';
 import {containsAtLeastOneAlphaNumberic} from '../../utils';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
@@ -15,7 +14,6 @@ const LINE_HEIGHT = 50;
 const FONT_SIZE = 25;
 const PLAYSPACE_SIZE = 400;
 const POEM_DURATION = 400;
-const OCTI_SIZE = 75;
 
 export default class PoetryLibrary extends CoreLibrary {
   constructor(p5) {
