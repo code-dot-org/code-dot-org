@@ -84,19 +84,5 @@ export const commands = {
         );
       sprite.scale *= sprite.baseScale;
     });
-  },
-
-  spriteSay(spriteArg, text) {
-    const sprites = this.getSpriteArray(spriteArg) || [];
-    sprites.forEach(sprite => {
-      this.addSpeechBubble(sprite, text, 4);
-    });
-  },
-
-  spriteSayTime(spriteArg, text, time) {
-    const sprites = this.getSpriteArray(spriteArg) || [];
-    sprites.forEach(sprite => {
-      this.addSpeechBubble(sprite, text, time);
-    });
   }
 };
