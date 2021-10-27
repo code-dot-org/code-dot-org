@@ -127,8 +127,6 @@ class TopInstructions extends Component {
 
     this.isViewingAsStudent = this.props.viewAs === ViewType.Student;
     this.isViewingAsTeacher = this.props.viewAs === ViewType.Teacher;
-    this.isViewingAsInstructorInTraining =
-      this.props.viewAs === ViewType.InstructorInTraining;
 
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&
@@ -682,7 +680,7 @@ class TopInstructions extends Component {
           levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
-          viewAs={this.props.viewAs}
+          isViewingAsTeacher={this.isViewingAsTeacher}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={() =>
@@ -756,8 +754,7 @@ class TopInstructions extends Component {
                   ))}
                 </div>
               )}
-            {(this.isViewingAsTeacher ||
-              this.isViewingAsInstructorInTraining) &&
+            {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (
                 <div>
                   {hasContainedLevels && (

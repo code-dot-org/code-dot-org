@@ -9,7 +9,6 @@ import {TabType} from './TopInstructions';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 function TopInstructionsHeader(props) {
   const {
@@ -21,7 +20,7 @@ function TopInstructionsHeader(props) {
     levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
-    viewAs,
+    isViewingAsTeacher,
     fetchingData,
     handleDocumentationClick,
     handleInstructionTabClick,
@@ -54,10 +53,6 @@ function TopInstructionsHeader(props) {
       : styles.collapserIcon.showHideButtonLtr),
     ...(teacherOnly && styles.collapserIcon.teacherOnlyColor)
   };
-
-  const isViewingAsTeacher = viewAs === ViewType.Teacher;
-  const isViewingAsInstructorInTraining =
-    viewAs === ViewType.InstructorInTraining;
 
   return (
     <PaneHeader
@@ -144,7 +139,7 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
-          {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
+          {isViewingAsTeacher &&
             (teacherMarkdown ||
               showContainedLevelAnswer ||
               exampleSolutions.length > 0) && (
@@ -251,7 +246,7 @@ TopInstructionsHeader.propTypes = {
   levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
-  viewAs: PropTypes.oneOf(Object.keys(ViewType)),
+  isViewingAsTeacher: PropTypes.bool,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,
