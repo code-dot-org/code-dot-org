@@ -81,6 +81,8 @@
   div[dir= 'rtl'] .tile-container-responsive > :first-child{margin-right: 0;}
   div[dir= 'rtl'] .tile-container-responsive > :last-child{margin-right: 20px;}
 
+  html[dir= 'rtl'] .col-rtl-right { float: right; }
+
   .mobile-show-medium { display: none }
 
   .i-agree-button { width: 9%; }
@@ -129,7 +131,6 @@
   .mobile-pad-edge { padding: 20px; }
   .avatar_container p { padding-right: 0px; }
   .avatar_container img { margin-left: 25px; }
-
 }
 
 /* 512 and down: some mobile styling collapses even more */

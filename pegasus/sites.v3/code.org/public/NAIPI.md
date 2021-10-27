@@ -52,7 +52,7 @@ Chief Programs Officer | Code.org
 
 Keynote: <b>Kimball Sekaquaptewa</b><br>
 Chief Technology Officer | Sante Fe Indian School<br>
-![Keynote](/Kimball_sm.png)<br><br>
+![Keynote](/Kimball2.png)<br><br>
 
 
 
