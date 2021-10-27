@@ -24,6 +24,12 @@ class Comment extends Component {
     hideWhileResolved: true
   };
 
+  componentDidUpdate(prevProps) {
+    if (!prevProps.comment.isResolved && this.props.comment.isResolved) {
+      this.setState({hideWhileResolved: true});
+    }
+  }
+
   onDelete = () => {
     this.props.onDelete();
   };
@@ -83,7 +89,6 @@ class Comment extends Component {
     let listItems = [];
     if (isResolved) {
       listItems.push({
-        key: 'visibility',
         onClick: this.toggleHideResolved,
         text: hideWhileResolved ? msg.show() : msg.hide(),
         iconClass: hideWhileResolved ? 'eye' : 'eye-slash'
@@ -91,7 +96,6 @@ class Comment extends Component {
     }
     if (viewAsTeacher || !viewAsCodeReviewer) {
       listItems.push({
-        key: 'resolve',
         onClick: this.onResolve,
         text: isResolved
           ? javalabMsg.markIncomplete()
@@ -101,7 +105,6 @@ class Comment extends Component {
     }
     if (viewAsTeacher) {
       listItems.push({
-        key: 'delete',
         onClick: this.onDelete,
         text: javalabMsg.delete(),
         iconClass: 'trash'

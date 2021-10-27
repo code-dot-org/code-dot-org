@@ -2,8 +2,14 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
+import onClickOutside from 'react-onclickoutside';
 
+// HTML Adapted from:
 // https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-actions.html
+// The accessibility isn't perfect yet - items within the dropdown aren't tab
+// navigable at this point - but it's a step in the right direction.
+
+// Displays a dropdown menu that displays actions that can be taken on comments
 class CommentOptions extends Component {
   static propTypes = {
     menuOptions: PropTypes.array.isRequired
@@ -11,6 +17,12 @@ class CommentOptions extends Component {
 
   state = {
     isOpen: false
+  };
+
+  handleClickOutside = () => {
+    if (this.state.isOpen) {
+      this.setState({isOpen: false});
+    }
   };
 
   selectOptionWrapper = selectAction => {
@@ -39,13 +51,16 @@ class CommentOptions extends Component {
           <i className="fa fa-ellipsis-h" />
         </button>
         {isOpen && (
-          <ul style={styles.commentOptionsContainer}>
-            {menuOptions.map(menuOption => {
+          <ul
+            style={styles.commentOptionsContainer}
+            className="ignore-react-onclickoutside"
+          >
+            {menuOptions.map((menuOption, index) => {
               return (
                 <li
                   onClick={() => this.selectOptionWrapper(menuOption.onClick)}
                   style={styles.commentOptionContainer}
-                  key={menuOption.key}
+                  key={index}
                 >
                   <span
                     style={styles.icon}
@@ -62,7 +77,7 @@ class CommentOptions extends Component {
   }
 }
 
-export default Radium(CommentOptions);
+export default onClickOutside(Radium(CommentOptions));
 
 const styles = {
   menuButton: {
