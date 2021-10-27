@@ -51,6 +51,7 @@ describe('LevelTokenDetails', () => {
       activitySectionPosition: 5,
       activityPosition: 1,
       lessonExtrasAvailableForUnit: false,
+      professionalLearningCourse: false,
       inactiveLevelNames: []
     };
   });
@@ -61,10 +62,24 @@ describe('LevelTokenDetails', () => {
     assertCheckboxVisible(wrapper, 'bonus', true);
     assertCheckboxVisible(wrapper, 'assessment', true);
     assertCheckboxVisible(wrapper, 'challenge', true);
+    assertCheckboxVisible(wrapper, 'instructor_in_training', true);
 
     assertChecked(wrapper, 'bonus', false);
     assertChecked(wrapper, 'assessment', false);
     assertChecked(wrapper, 'challenge', false);
+    assertChecked(wrapper, 'instructor_in_training', false);
+  });
+
+  it('instructor in training is disabled if not a professional learning course', () => {
+    const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
+    assertDisabled(wrapper, 'instructor_in_training', true);
+  });
+
+  it('instructor in training is enabled if a professional learning course', () => {
+    const wrapper = shallow(
+      <LevelTokenDetails {...defaultProps} professionalLearningCourse={true} />
+    );
+    assertDisabled(wrapper, 'instructor_in_training', false);
   });
 
   it('bonus is enabled if lesson extras are not available for unit but bonus was already selected', () => {
@@ -99,13 +114,15 @@ describe('LevelTokenDetails', () => {
           ...defaultScriptLevel,
           bonus: true,
           assessment: true,
-          challenge: true
+          challenge: true,
+          instructor_in_training: true
         }}
       />
     );
     assertChecked(wrapper, 'bonus', true);
     assertChecked(wrapper, 'assessment', true);
     assertChecked(wrapper, 'challenge', true);
+    assertChecked(wrapper, 'instructor_in_training', true);
   });
 
   it('does not show variants by default', () => {
