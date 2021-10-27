@@ -85,6 +85,8 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
+      // And add custom Poetry commands
+
       addFrame(frameType) {
         this.poemState.frameType = frameType;
       },
@@ -93,7 +95,6 @@ export default class PoetryLibrary extends CoreLibrary {
         spritelabCommands.destroy.call(this, {costume});
       },
 
-      // And add custom Poem Bot commands
       textConcat(text1, text2) {
         return [text1, text2].join('');
       },
