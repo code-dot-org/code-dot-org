@@ -168,6 +168,9 @@ export class LevelTokenContents extends Component {
               {scriptLevel.assessment && (
                 <span style={styles.tag}>assessment</span>
               )}
+              {scriptLevel.instructor_in_training && (
+                <span style={styles.tag}>instructor in training</span>
+              )}
               {scriptLevel.bonus && <span style={styles.tag}>bonus</span>}
               {scriptLevel.challenge && (
                 <span style={styles.tag}>challenge</span>
