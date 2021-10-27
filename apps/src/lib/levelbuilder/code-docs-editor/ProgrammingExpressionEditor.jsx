@@ -32,6 +32,9 @@ export default function ProgrammingExpressionEditor({
     key,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
+  remainingProgrammingExpression.parameters.forEach(
+    p => (p.key = createUuid())
+  );
   const [
     programmingExpression,
     updateProgrammingExpression
@@ -45,15 +48,22 @@ export default function ProgrammingExpressionEditor({
       return;
     }
     setIsSaving(true);
+    const copiedParameters = programmingExpression.parameters.map(p => {
+      const copied = {...p};
+      delete copied.key;
+      return copied;
+    });
+    const programmingExpressionToSave = {
+      ...programmingExpression,
+      parameters: JSON.stringify(copiedParameters)
+    };
     fetch(`/programming_expressions/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       },
-      body: JSON.stringify({
-        ...programmingExpression
-      })
+      body: JSON.stringify(programmingExpressionToSave)
     })
       .then(response => {
         setIsSaving(false);
@@ -220,7 +230,7 @@ ProgrammingExpressionEditor.propTypes = {
 
 const OrderableList = function({list, setList, addButtonText}) {
   const addItem = () => {
-    const newParams = [...list, {}];
+    const newParams = [...list, {key: createUuid()}];
     setList(newParams);
   };
   const updateItem = (idx, key, value) => {
@@ -245,7 +255,7 @@ const OrderableList = function({list, setList, addButtonText}) {
     <div>
       {list.map((item, idx) => (
         <ParameterEditor
-          key={item.name || createUuid()}
+          key={item.key}
           item={item}
           update={(key, value) => updateItem(idx, key, value)}
           remove={() => removeItemFromList(idx)}

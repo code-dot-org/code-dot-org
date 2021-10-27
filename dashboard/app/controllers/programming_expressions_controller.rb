@@ -43,7 +43,8 @@ class ProgrammingExpressionsController < ApplicationController
       render :not_found
       return
     end
-    programming_expression.assign_attributes(programming_expression_params)
+    programming_expression.assign_attributes(programming_expression_params.except(:parameters))
+    programming_expression.palette_params = programming_expression_params[:parameters]
     begin
       programming_expression.save! if programming_expression.changed?
       render json: programming_expression.summarize_for_edit.to_json
@@ -69,9 +70,9 @@ class ProgrammingExpressionsController < ApplicationController
       :syntax,
       :return_value,
       :tips,
-      :palette_params
+      :parameters
     )
-    transformed_params[:palette_params] = JSON.parse(transformed_params[:palette_params]) if transformed_params[:palette_params]
+    transformed_params[:parameters] = JSON.parse(transformed_params[:parameters]) if transformed_params[:parameters]
     transformed_params
   end
 end

@@ -20,7 +20,8 @@ describe('ProgrammingExpressionEditor', () => {
         content: 'This is a longer description of the code.',
         syntax: 'block()',
         returnValue: 'none',
-        tips: 'some tips on how to use this block'
+        tips: 'some tips on how to use this block',
+        parameters: []
       },
       environmentCategories: ['Circuit', 'Variables', 'Canvas']
     };
@@ -133,6 +134,7 @@ describe('ProgrammingExpressionEditor', () => {
       shortDescription: 'This is a short description.',
       content: 'This is a longer description of the code.',
       externalDocumentation: 'developer.mozilla.org',
+      parameters: [],
       returnValue: 'none',
       syntax: 'block()',
       tips: 'some tips on how to use this block'
