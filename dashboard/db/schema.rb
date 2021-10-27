@@ -532,7 +532,7 @@ ActiveRecord::Schema.define(version: 2021_10_26_211629) do
     t.index ["library_name", "library_version", "question_name"], name: "index_foorm_library_questions_on_multiple_fields", unique: true
   end
 
-  create_table "foorm_simple_survey_forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "foorm_simple_survey_forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "path", null: false
     t.string "kind"
     t.string "form_name", null: false
@@ -1813,7 +1813,7 @@ ActiveRecord::Schema.define(version: 2021_10_26_211629) do
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end
 
-  create_table "unit_groups_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "unit_groups_resources", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "unit_group_id"
     t.integer "resource_id"
     t.index ["resource_id", "unit_group_id"], name: "index_unit_groups_resources_on_resource_id_and_unit_group_id"
