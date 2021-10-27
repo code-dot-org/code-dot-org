@@ -50,7 +50,9 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
     // would be noticeable if this value were out of sync, even briefly.
     // This only matters if the block is not being deleted.
     if (!wouldDeleteBlock) {
-      this.draggingBlock_.setEnabled(!!this.draggingBlock_.parentBlock_);
+      const isTopBlock = this.draggingBlock_.previousConnection === null;
+      const hasParentBlock = !!this.draggingBlock_.parentBlock_;
+      this.draggingBlock_.setEnabled(isTopBlock || hasParentBlock);
     }
   }
 

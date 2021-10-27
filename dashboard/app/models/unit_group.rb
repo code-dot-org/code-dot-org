@@ -361,6 +361,8 @@ class UnitGroup < ApplicationRecord
       version_year: version_year,
       published_state: published_state,
       instruction_type: instruction_type,
+      instructor_audience: instructor_audience,
+      participant_audience: participant_audience,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),
