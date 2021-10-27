@@ -1053,9 +1053,8 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       tts: true
-    }
+    }, as: :json
     assert_response :success
     unit.reload
 
@@ -1076,15 +1075,12 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       tts: false
-    }
+    }, as: :json
     assert_response :success
     unit.reload
 
-    puts unit.inspect
-
-    assert_equal false, unit.tts
+    assert_equal nil, unit.tts
   end
 
   test 'published_state is set to nil for script within course' do
