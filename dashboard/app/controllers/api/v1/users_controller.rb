@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JsonApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:get_current_user]
+  skip_before_action :load_user, only: [:current]
 
   def load_user
     user_id = params[:user_id]
@@ -13,8 +13,8 @@ class Api::V1::UsersController < Api::V1::JsonApiController
     @user = current_user
   end
 
-  # GET /api/v1/users/current_user
-  def get_current_user
+  # GET /api/v1/users/current
+  def current
     if current_user
       render json: {
         id: current_user.id,
