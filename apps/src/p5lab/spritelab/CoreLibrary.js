@@ -55,6 +55,15 @@ export default class CoreLibrary {
   }
 
   drawSpeechBubbles() {
+    // Since this runs on every draw, remove any temporary speech
+    // bubbles that have expired.
+    this.removeExpiredSpeechBubbles();
+
+    // TODO: don't draw in preview?
+    if (this.speechBubbles.length <= 0) {
+      return;
+    }
+
     this.p5.push();
     this.p5.fill('black');
     this.p5.stroke('white');
@@ -66,9 +75,10 @@ export default class CoreLibrary {
     this.p5.pop();
   }
 
-  addSpeechBubble(sprite, text) {
+  addSpeechBubble(sprite, text, seconds = null) {
     const id = createUuid();
-    this.speechBubbles.push({id, sprite, text});
+    const removeAt = seconds ? this.getAdjustedWorldTime() + seconds : null;
+    this.speechBubbles.push({id, sprite, text, removeAt});
     return id;
   }
 
@@ -76,6 +86,17 @@ export default class CoreLibrary {
     this.speechBubbles = this.speechBubbles.filter(
       bubbleInfo => bubbleInfo.id !== bubbleId
     );
+  }
+
+  removeExpiredSpeechBubbles() {
+    this.speechBubbles.forEach(bubbleInfo => {
+      if (
+        bubbleInfo.removeAt &&
+        bubbleInfo.removeAt <= this.getAdjustedWorldTime()
+      ) {
+        this.removeSpeechBubble(bubbleInfo.id);
+      }
+    });
   }
 
   startPause(time) {
