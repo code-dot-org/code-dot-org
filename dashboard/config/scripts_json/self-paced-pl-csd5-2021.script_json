@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "has_verified_resources": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 17:28:10 UTC",
+    "serialized_at": "2021-10-25 22:54:51 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csd5-2021"
     }
@@ -375,6 +376,31 @@
       "chapter": 11,
       "position": 11,
       "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-AILabVocab-c4u"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -397,8 +423,33 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-DataVisualizations-c4u"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -422,8 +473,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 15,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -447,8 +498,8 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
+      "chapter": 16,
+      "position": 16,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -595,9 +646,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-AILabVocab-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SP-VPL-CSD-Mod5-ml-intro categorical-pizza-2021",
         "script_level.level_keys": [
           "SP-VPL-CSD-Mod5-ml-intro categorical-pizza-2021"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-DataVisualizations-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-8",

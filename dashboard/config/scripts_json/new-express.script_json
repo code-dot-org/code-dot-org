@@ -7,8 +7,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:17 UTC",
+    "serialized_at": "2021-10-25 22:53:34 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "new-express"
     }
@@ -2982,23 +2983,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_1",
-          "courseC_flappy_events1"
+          "courseC_flappy_events1",
+          "flappy_1"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_1",
-          "courseC_flappy_events1"
+          "courseC_flappy_events1",
+          "flappy_1"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_1",
-        "courseC_flappy_events1"
+        "courseC_flappy_events1",
+        "flappy_1"
       ]
     },
     {
@@ -3008,23 +3009,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_2",
-          "courseC_flappy_events2"
+          "courseC_flappy_events2",
+          "flappy_2"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_2",
-          "courseC_flappy_events2"
+          "courseC_flappy_events2",
+          "flappy_2"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_2",
-        "courseC_flappy_events2"
+        "courseC_flappy_events2",
+        "flappy_2"
       ]
     },
     {
@@ -3034,23 +3035,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_3",
-          "courseC_flappy_events3"
+          "courseC_flappy_events3",
+          "flappy_3"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_3",
-          "courseC_flappy_events3"
+          "courseC_flappy_events3",
+          "flappy_3"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_3",
-        "courseC_flappy_events3"
+        "courseC_flappy_events3",
+        "flappy_3"
       ]
     },
     {
@@ -3060,23 +3061,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_4",
-          "courseC_flappy_events4"
+          "courseC_flappy_events4",
+          "flappy_4"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_4",
-          "courseC_flappy_events4"
+          "courseC_flappy_events4",
+          "flappy_4"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_4",
-        "courseC_flappy_events4"
+        "courseC_flappy_events4",
+        "flappy_4"
       ]
     },
     {
@@ -3086,23 +3087,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_5",
-          "courseC_flappy_events5"
+          "courseC_flappy_events5",
+          "flappy_5"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_5",
-          "courseC_flappy_events5"
+          "courseC_flappy_events5",
+          "flappy_5"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_5",
-        "courseC_flappy_events5"
+        "courseC_flappy_events5",
+        "flappy_5"
       ]
     },
     {
@@ -3112,23 +3113,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_6",
-          "courseC_flappy_events6"
+          "courseC_flappy_events6",
+          "flappy_6"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_6",
-          "courseC_flappy_events6"
+          "courseC_flappy_events6",
+          "flappy_6"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_6",
-        "courseC_flappy_events6"
+        "courseC_flappy_events6",
+        "flappy_6"
       ]
     },
     {
@@ -3138,23 +3139,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_7",
-          "courseC_flappy_events7"
+          "courseC_flappy_events7",
+          "flappy_7"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_7",
-          "courseC_flappy_events7"
+          "courseC_flappy_events7",
+          "flappy_7"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_7",
-        "courseC_flappy_events7"
+        "courseC_flappy_events7",
+        "flappy_7"
       ]
     },
     {
@@ -3164,23 +3165,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_8",
-          "courseC_flappy_events8"
+          "courseC_flappy_events8",
+          "flappy_8"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_8",
-          "courseC_flappy_events8"
+          "courseC_flappy_events8",
+          "flappy_8"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_8",
-        "courseC_flappy_events8"
+        "courseC_flappy_events8",
+        "flappy_8"
       ]
     },
     {
@@ -3190,23 +3191,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_9",
-          "courseC_flappy_events9"
+          "courseC_flappy_events9",
+          "flappy_9"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_9",
-          "courseC_flappy_events9"
+          "courseC_flappy_events9",
+          "flappy_9"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_9",
-        "courseC_flappy_events9"
+        "courseC_flappy_events9",
+        "flappy_9"
       ]
     },
     {
@@ -3216,23 +3217,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "flappy_11",
-          "courseC_flappy_events10"
+          "courseC_flappy_events10",
+          "flappy_11"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "flappy_11",
-          "courseC_flappy_events10"
+          "courseC_flappy_events10",
+          "flappy_11"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
         "script.name": "new-express"
       },
       "level_keys": [
-        "flappy_11",
-        "courseC_flappy_events10"
+        "courseC_flappy_events10",
+        "flappy_11"
       ]
     },
     {
@@ -8670,8 +8671,8 @@
       "seeding_key": {
         "level.key": "flappy_1",
         "script_level.level_keys": [
-          "flappy_1",
-          "courseC_flappy_events1"
+          "courseC_flappy_events1",
+          "flappy_1"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8682,8 +8683,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events1",
         "script_level.level_keys": [
-          "flappy_1",
-          "courseC_flappy_events1"
+          "courseC_flappy_events1",
+          "flappy_1"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8694,8 +8695,8 @@
       "seeding_key": {
         "level.key": "flappy_2",
         "script_level.level_keys": [
-          "flappy_2",
-          "courseC_flappy_events2"
+          "courseC_flappy_events2",
+          "flappy_2"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8706,8 +8707,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events2",
         "script_level.level_keys": [
-          "flappy_2",
-          "courseC_flappy_events2"
+          "courseC_flappy_events2",
+          "flappy_2"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8718,8 +8719,8 @@
       "seeding_key": {
         "level.key": "flappy_3",
         "script_level.level_keys": [
-          "flappy_3",
-          "courseC_flappy_events3"
+          "courseC_flappy_events3",
+          "flappy_3"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8730,8 +8731,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events3",
         "script_level.level_keys": [
-          "flappy_3",
-          "courseC_flappy_events3"
+          "courseC_flappy_events3",
+          "flappy_3"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8742,8 +8743,8 @@
       "seeding_key": {
         "level.key": "flappy_4",
         "script_level.level_keys": [
-          "flappy_4",
-          "courseC_flappy_events4"
+          "courseC_flappy_events4",
+          "flappy_4"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8754,8 +8755,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events4",
         "script_level.level_keys": [
-          "flappy_4",
-          "courseC_flappy_events4"
+          "courseC_flappy_events4",
+          "flappy_4"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8766,8 +8767,8 @@
       "seeding_key": {
         "level.key": "flappy_5",
         "script_level.level_keys": [
-          "flappy_5",
-          "courseC_flappy_events5"
+          "courseC_flappy_events5",
+          "flappy_5"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8778,8 +8779,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events5",
         "script_level.level_keys": [
-          "flappy_5",
-          "courseC_flappy_events5"
+          "courseC_flappy_events5",
+          "flappy_5"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8790,8 +8791,8 @@
       "seeding_key": {
         "level.key": "flappy_6",
         "script_level.level_keys": [
-          "flappy_6",
-          "courseC_flappy_events6"
+          "courseC_flappy_events6",
+          "flappy_6"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8802,8 +8803,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events6",
         "script_level.level_keys": [
-          "flappy_6",
-          "courseC_flappy_events6"
+          "courseC_flappy_events6",
+          "flappy_6"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8814,8 +8815,8 @@
       "seeding_key": {
         "level.key": "flappy_7",
         "script_level.level_keys": [
-          "flappy_7",
-          "courseC_flappy_events7"
+          "courseC_flappy_events7",
+          "flappy_7"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8826,8 +8827,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events7",
         "script_level.level_keys": [
-          "flappy_7",
-          "courseC_flappy_events7"
+          "courseC_flappy_events7",
+          "flappy_7"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8838,8 +8839,8 @@
       "seeding_key": {
         "level.key": "flappy_8",
         "script_level.level_keys": [
-          "flappy_8",
-          "courseC_flappy_events8"
+          "courseC_flappy_events8",
+          "flappy_8"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8850,8 +8851,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events8",
         "script_level.level_keys": [
-          "flappy_8",
-          "courseC_flappy_events8"
+          "courseC_flappy_events8",
+          "flappy_8"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8862,8 +8863,8 @@
       "seeding_key": {
         "level.key": "flappy_9",
         "script_level.level_keys": [
-          "flappy_9",
-          "courseC_flappy_events9"
+          "courseC_flappy_events9",
+          "flappy_9"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8874,8 +8875,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events9",
         "script_level.level_keys": [
-          "flappy_9",
-          "courseC_flappy_events9"
+          "courseC_flappy_events9",
+          "flappy_9"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8886,8 +8887,8 @@
       "seeding_key": {
         "level.key": "flappy_11",
         "script_level.level_keys": [
-          "flappy_11",
-          "courseC_flappy_events10"
+          "courseC_flappy_events10",
+          "flappy_11"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",
@@ -8898,8 +8899,8 @@
       "seeding_key": {
         "level.key": "courseC_flappy_events10",
         "script_level.level_keys": [
-          "flappy_11",
-          "courseC_flappy_events10"
+          "courseC_flappy_events10",
+          "flappy_11"
         ],
         "lesson.key": "Events with Flappy",
         "lesson_group.key": "content",

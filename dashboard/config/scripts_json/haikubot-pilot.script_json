@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "pilot_experiment": "haikubot-pilot",
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "pilot_experiment": "haikubot-pilot"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-20 18:12:08 UTC",
+    "serialized_at": "2021-10-25 22:54:47 UTC",
     "published_state": "pilot",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "haikubot-pilot"
     }

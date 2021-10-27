@@ -5,7 +5,12 @@ import color from '@cdo/apps/util/color';
 import JavalabConsole from './JavalabConsole';
 import JavalabEditor from './JavalabEditor';
 import JavalabPanels from './JavalabPanels';
-import {appendOutputLog, setIsDarkMode, setIsRunning} from './javalabRedux';
+import {
+  appendOutputLog,
+  setIsDarkMode,
+  setIsRunning,
+  setIsTesting
+} from './javalabRedux';
 import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
 import TopInstructions, {
   TabType
@@ -15,12 +20,14 @@ import ControlButtons from './ControlButtons';
 import {CsaViewMode} from './constants';
 import styleConstants from '../styleConstants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import experiments from '@cdo/apps/util/experiments';
 
 class JavalabView extends React.Component {
   static propTypes = {
     onMount: PropTypes.func.isRequired,
     onRun: PropTypes.func.isRequired,
     onStop: PropTypes.func.isRequired,
+    onTest: PropTypes.func.isRequired,
     onContinue: PropTypes.func.isRequired,
     onCommitCode: PropTypes.func.isRequired,
     onInputMessage: PropTypes.func.isRequired,
@@ -40,15 +47,15 @@ class JavalabView extends React.Component {
     isEditingStartSources: PropTypes.bool,
     isRunning: PropTypes.bool,
     setIsRunning: PropTypes.func,
+    isTesting: PropTypes.bool,
+    setIsTesting: PropTypes.func,
+    canRun: PropTypes.bool,
+    canTest: PropTypes.bool,
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     longInstructions: PropTypes.string,
     awaitingContainedResponse: PropTypes.bool,
     isSubmittable: PropTypes.bool,
     isSubmitted: PropTypes.bool
-  };
-
-  state = {
-    isTesting: false
   };
 
   componentDidMount() {
@@ -72,24 +79,32 @@ class JavalabView extends React.Component {
 
   // This controls the 'run' button state
   toggleRun = () => {
-    const toggledIsRunning = !this.props.isRunning;
-    this.props.setIsRunning(toggledIsRunning);
+    const {canRun, isRunning, setIsRunning, onRun, onStop} = this.props;
+    if (!canRun) {
+      return;
+    }
+    const toggledIsRunning = !isRunning;
+    setIsRunning(toggledIsRunning);
     if (toggledIsRunning) {
-      this.props.onRun();
+      onRun();
     } else {
-      this.props.onStop();
+      onStop();
     }
   };
 
-  // This controls the 'test' button state, but running/stopping tests
-  // is not yet implemented and will need to be added here.
+  // This controls the 'test' button state
   toggleTest = () => {
-    this.setState(
-      state => ({isTesting: !state.isTesting}),
-      () => {
-        // TODO: Run/stop tests.
-      }
-    );
+    const {canTest, isTesting, setIsTesting, onTest, onStop} = this.props;
+    if (!canTest) {
+      return;
+    }
+    const toggledIsTesting = !isTesting;
+    setIsTesting(toggledIsTesting);
+    if (toggledIsTesting) {
+      onTest();
+    } else {
+      onStop();
+    }
   };
 
   isLeftSideVisible = () => {
@@ -136,15 +151,17 @@ class JavalabView extends React.Component {
       onContinue,
       isEditingStartSources,
       isRunning,
+      isTesting,
       showProjectTemplateWorkspaceIcon,
       disableFinishButton,
       awaitingContainedResponse,
       isSubmittable,
       isSubmitted,
       isProjectTemplateLevel,
-      handleClearPuzzle
+      handleClearPuzzle,
+      canRun,
+      canTest
     } = this.props;
-    const {isTesting} = this.state;
 
     if (isDarkMode) {
       document.body.style.backgroundColor = '#1b1c17';
@@ -205,10 +222,13 @@ class JavalabView extends React.Component {
                     toggleTest={this.toggleTest}
                     isEditingStartSources={isEditingStartSources}
                     disableFinishButton={disableFinishButton}
-                    disableRunButtons={awaitingContainedResponse}
+                    disableRunButton={awaitingContainedResponse || !canRun}
+                    disableTestButton={awaitingContainedResponse || !canTest}
                     onContinue={() => onContinue(isSubmittable)}
                     renderSettings={this.renderSettings}
-                    showTestButton={false}
+                    showTestButton={experiments.isEnabled(
+                      experiments.JAVALAB_UNIT_TESTS
+                    )}
                     isSubmittable={isSubmittable}
                     isSubmitted={isSubmitted}
                   />
@@ -276,6 +296,9 @@ export default connect(
     isDarkMode: state.javalab.isDarkMode,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
     isRunning: state.javalab.isRunning,
+    isTesting: state.javalab.isTesting,
+    canRun: !state.javalab.isTesting,
+    canTest: !state.javalab.isRunning,
     showProjectTemplateWorkspaceIcon: !!state.pageConstants
       .showProjectTemplateWorkspaceIcon,
     editorColumnHeight: state.javalab.editorColumnHeight,
@@ -288,6 +311,7 @@ export default connect(
   dispatch => ({
     appendOutputLog: log => dispatch(appendOutputLog(log)),
     setIsDarkMode: isDarkMode => dispatch(setIsDarkMode(isDarkMode)),
-    setIsRunning: isRunning => dispatch(setIsRunning(isRunning))
+    setIsRunning: isRunning => dispatch(setIsRunning(isRunning)),
+    setIsTesting: isTesting => dispatch(setIsTesting(isTesting))
   })
 )(UnconnectedJavalabView);

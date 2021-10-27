@@ -5,16 +5,16 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
-      "is_migrated": true,
       "hideable_lessons": true,
-      "weekly_instructional_minutes": 225,
-      "show_calendar": true,
       "include_student_lesson_plans": true,
-      "pilot_experiment": "csa-pilot-facilitators"
+      "is_migrated": true,
+      "pilot_experiment": "csa-pilot-facilitators",
+      "show_calendar": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 16:43:23 UTC",
+    "serialized_at": "2021-10-25 22:54:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "seeding_key": {
@@ -5396,6 +5396,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 5 Facilitator"
+        ],
         "progression": "Unit 5 Pilot Survey"
       },
       "bonus": false,
@@ -6385,8 +6388,8 @@
       "url": "https://docs.google.com/presentation/d/1-Dlmz1EOpYAt1oNEYa_8TDuwbhfCLzdgVGk3WSOTrdA/edit?usp=sharing",
       "key": "2d_array_manipulatives",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "2d_array_manipulatives"
@@ -6397,8 +6400,8 @@
       "url": "https://docs.google.com/document/d/1sxRE-jeTpq-4XiYg-nK3sxW2jD1NG8Hj8IJQ4BM1SYs/edit?usp=sharing",
       "key": "_key_creating_2d_arrays",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_creating_2d_arrays"
@@ -6409,8 +6412,8 @@
       "url": "https://docs.google.com/document/d/19cABKxpSQ2yQeCaJu_2GbRmZYUd8S7MGthEFRnmlMsU/edit?usp=sharing",
       "key": "_key_frq_writing_3",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_frq_writing_3"
@@ -6421,8 +6424,8 @@
       "url": "https://docs.google.com/document/d/1Tk3mzui8xzcmDhOgLtR1hlj2IVQiepbzodmC1-7AlGc/edit?usp=sharing",
       "key": "_key_remove_duplicates_in_2d_arrays",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_remove_duplicates_in_2d_arrays"
@@ -6433,8 +6436,8 @@
       "url": "https://docs.google.com/document/d/1Crzwn86VzKoqDgQ2x1JcZy6grGube-RVSgcXXTEIRwQ/edit",
       "key": "_key_reversing_a_2d_array",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_reversing_a_2d_array"
@@ -6445,8 +6448,8 @@
       "url": "https://docs.google.com/document/d/1X0Hjlc-2OfsU7GxQp4t-IZObSM5McJe5dyBHu_OyeMU/edit",
       "key": "_key_shifting_elements_in_a_2d_array",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_shifting_elements_in_a_2d_array"
@@ -6457,8 +6460,8 @@
       "url": "https://docs.google.com/document/d/1JFsWeN6_XwiFwBzP8beH7-yfNfuRsAWM_jxsTUUOHY0/edit?usp=sharing",
       "key": "_key_tracing_2d_array_traversal_algorithms",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_tracing_2d_array_traversal_algorithms"
@@ -6469,8 +6472,8 @@
       "url": "https://docs.google.com/document/d/1pidSrLDJAlW9D72te1PobpipyhN2cT-JbvWY-ocoqhQ/edit?usp=sharing",
       "key": "_key_tracing_enhanced_for_loops",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_tracing_enhanced_for_loops"
@@ -6481,8 +6484,8 @@
       "url": "https://docs.google.com/document/d/1zq2hyaCbrko25wYHLN0miKSGxLzIQsZnObrkGYDJQOo/edit?usp=sharing",
       "key": "_key_u5l10_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l10_extra_practice"
@@ -6493,8 +6496,8 @@
       "url": "https://docs.google.com/document/u/2/d/1wgQT6zb-L72rpzy6PltrVfEDYuMdD90LEdGObjeP9d4/edit",
       "key": "_key_u5l1_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l1_extra_practice"
@@ -6505,8 +6508,8 @@
       "url": "https://docs.google.com/document/d/1kopqWpEEDPyjSdmYufEMD5GqElzyOiUc3uJizhXfTB0/edit",
       "key": "_key_u5l2_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l2_extra_practice"
@@ -6517,8 +6520,8 @@
       "url": "https://docs.google.com/document/d/1mjPTZC6x2rQr2IcCv02qUPstiqk8mGHEwDFrkMb_Flc/edit?usp=sharing",
       "key": "_key_u5l3_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l3_extra_practice"
@@ -6529,8 +6532,8 @@
       "url": "https://docs.google.com/document/d/1O4Z-r8esMpd3vVDCI_D74qq3q2-tAHimwezVRACVfuM/edit?usp=sharing",
       "key": "_key_u5l4_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l4_extra_practice"
@@ -6541,8 +6544,8 @@
       "url": "https://docs.google.com/document/d/1ZsuRoqijYZMhcX2pTkF9KQhEVu9Npf4ura04o7eyq30/edit?usp=sharing",
       "key": "_key_u5l5_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l5_extra_practice"
@@ -6553,8 +6556,8 @@
       "url": "https://docs.google.com/document/d/1zUYa_Jm5or9LSaqaYWFZL5UDLUSisvGunC4sZFDd7wk/edit?usp=sharing",
       "key": "_key_u5l6_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l6_extra_practice"
@@ -6565,8 +6568,8 @@
       "url": "https://docs.google.com/document/d/1WtggFrQ4jir4OQZRRKWlA57SxggCv-upjEouMhEm_rI/edit?usp=sharing",
       "key": "_key_u5l7_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l7_extra_practice"
@@ -6577,8 +6580,8 @@
       "url": "https://docs.google.com/document/d/1wvKojSu3wftMbCl-7PAgxgZjorYPGXwPgCUOISOwnPk/edit?usp=sharing",
       "key": "_key_u5l8_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l8_extra_practice"
@@ -6589,8 +6592,8 @@
       "url": "https://docs.google.com/document/d/1eUZm3EwDi7URA7HAttJREKPYejYWZtp6I1pEmnXf0lY/edit#heading=h.2ugpi8pb9hv1",
       "key": "_key_u5l9_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l9_extra_practice"
@@ -6601,8 +6604,8 @@
       "url": "https://docs.google.com/document/d/1r-cD8hKUg4G59t5ev8RukVOyRRhfiGMwj1GEuM1nFpM/edit?usp=sharing",
       "key": "a_sustainable_neighborhood_project_planning_guide",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "a_sustainable_neighborhood_project_planning_guide"
@@ -6613,8 +6616,8 @@
       "url": "https://docs.google.com/document/d/17Cj50X0pwXZy_p4fp2XvuX9bO7AQqwTDkzumhTAiT-Y/edit?usp=sharing",
       "key": "a_sustainable_neighborhood_project_planning_guide_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "a_sustainable_neighborhood_project_planning_guide_1"
@@ -6625,8 +6628,8 @@
       "url": "https://docs.google.com/document/d/1uazR1PUKou39puTk5g_WqsQKjFo2hON8aYd-E5Za_EM/edit?usp=sharing",
       "key": "creating_2d_arrays",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "creating_2d_arrays"
@@ -6637,8 +6640,8 @@
       "url": "https://docs.google.com/document/d/1r1osgQMGvpnwaR1Vhg2ZcoZ0DDztHgPrqKNIy6eUzgk/edit?usp=sharing",
       "key": "frq_scoring_guide_3",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_scoring_guide_3"
@@ -6649,8 +6652,8 @@
       "url": "https://docs.google.com/document/d/198DMgO0IbJVEUs6U59i59pkPsKOzDwQbsOVhG-_mLhc/edit?usp=sharing",
       "key": "frq_writing_3",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_writing_3"
@@ -6661,8 +6664,8 @@
       "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
       "key": "java_quick_reference",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "java_quick_reference"
@@ -6673,8 +6676,8 @@
       "url": "https://docs.google.com/document/d/1GA1AtvLfJkY47IFlmDOnjF5Z6uchjNUL5kMe-yQ4DwQ/edit?usp=sharing",
       "key": "remove_duplicates_in_2d_arrays",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "remove_duplicates_in_2d_arrays"
@@ -6685,8 +6688,8 @@
       "url": "https://docs.google.com/document/d/1ZHFXGJckRzQAEp4XIQ27b1WEmJr02UZM5DSLx9tHcQg/edit?ts=60e5ada3#",
       "key": "reversing_a_2d_array",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "reversing_a_2d_array"
@@ -6697,8 +6700,8 @@
       "url": "https://docs.google.com/document/d/1okecHKh_jgKJGvUH2Y1X1nkREw208syphfPuGa2bpg0/edit#",
       "key": "shifting_elements_in_a_2d_array",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "shifting_elements_in_a_2d_array"
@@ -6709,8 +6712,8 @@
       "url": "https://docs.google.com/document/d/1OMbvX-MI2ZiYUuQRgyrSGK7e9SsPay4pXoDGN5bme18/edit?usp=sharing",
       "key": "sustainable_goals_guide",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "sustainable_goals_guide"
@@ -6721,8 +6724,8 @@
       "url": "https://docs.google.com/document/d/13LDyfG6bbaRTSjHE6Xaofs3zONFfn4PEk9psm7ojRdw/edit?usp=sharing",
       "key": "tracing_2d_array_traversal_algorithms",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "tracing_2d_array_traversal_algorithms"
@@ -6733,8 +6736,8 @@
       "url": "https://docs.google.com/document/d/1cs9G8RcRif3Y36UD05RLIVebdg4taRsE2T3xe1PIGsk/edit?usp=sharing",
       "key": "tracing_enhanced_for_loops",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "tracing_enhanced_for_loops"
@@ -6745,8 +6748,8 @@
       "url": "https://docs.google.com/document/d/1CnW_fsxlZPW8jqdcxCd827lyQPKHLWQxeqRXjedIWdw/edit?usp=sharing",
       "key": "u5l10_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l10_extra_practice"
@@ -6757,8 +6760,8 @@
       "url": "https://docs.google.com/document/d/14ig6hK_ExETmNoC2nJom8cWKkG6zydOKGyOee2rPr6Y/edit?usp=sharing",
       "key": "u5l10_quiz_quiz_trade_cards",
       "properties": {
-        "type": "Handout",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l10_quiz_quiz_trade_cards"
@@ -6769,8 +6772,8 @@
       "url": "https://docs.google.com/document/u/2/d/1I8tnsQSaCx-QA-ow0cIa3Pn13zmLHkhRtCkeDyjdvek/edit",
       "key": "u5l1_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l1_extra_practice"
@@ -6781,8 +6784,8 @@
       "url": "https://docs.google.com/document/d/18H6Cn-IQNZ4LefrqX4Ux308bM4LsfLr1qtobjws6Xus/edit",
       "key": "u5l2_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l2_extra_practice"
@@ -6793,8 +6796,8 @@
       "url": "https://docs.google.com/document/d/1cxQtE-wy_HnWR8y8pN7lzYTGdv7hbLIuM1vjIL26HYY/edit?usp=sharing",
       "key": "u5l3_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l3_extra_practice"
@@ -6805,8 +6808,8 @@
       "url": "https://docs.google.com/document/d/1I2VWTMVr2tpKxcGDkm6UoY_dr8BrVqcO2QBR0SLReEo/edit?usp=sharing",
       "key": "u5l4_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l4_extra_practice"
@@ -6817,8 +6820,8 @@
       "url": "https://docs.google.com/document/d/17o3TFDpoahrdTjJU53i6hqDXaAp1VHBvxPcGadv_3Jo/edit?usp=sharing",
       "key": "u5l5_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l5_extra_practice"
@@ -6829,8 +6832,8 @@
       "url": "https://docs.google.com/document/d/1OPTvdBqG7z1H0-7HEf0tAxbOSyprF9eltondV_aoNKs/edit?usp=sharing",
       "key": "u5l6_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l6_extra_practice"
@@ -6841,8 +6844,8 @@
       "url": "https://docs.google.com/document/d/177T_vTa_SqtFCLSzjBfdTiESCB_xIrucsllo2yOzpYc/edit?usp=sharing",
       "key": "u5l7_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l7_extra_practice"
@@ -6853,8 +6856,8 @@
       "url": "https://docs.google.com/document/d/1RqDy8dg0OArLOm7RKurNQzXap99zzNHtZBszDKDgG1o/edit?usp=sharing",
       "key": "u5l8_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l8_extra_practice"
@@ -6865,8 +6868,8 @@
       "url": "https://docs.google.com/document/d/11T8_6-RrCuR6TxRJGL05oAJtFTL3nz0aUztxZpIp8XU/edit",
       "key": "u5l9_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l9_extra_practice"
@@ -6877,8 +6880,8 @@
       "url": "https://docs.google.com/document/d/1M4OOFDcM8TunCZtnZJmaC12UiKCwnQ_VDDgpZ-vMUzM/edit?usp=sharing",
       "key": "unit_5_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_5_guide"
@@ -6889,8 +6892,8 @@
       "url": "https://docs.google.com/presentation/d/1ysiT5p0BrQe4AzjOtJmpxgp7IW8WgVn_4Q0Ntp0Jdbc/edit?usp=sharing",
       "key": "unit_5_presentation_slides_1",
       "properties": {
-        "type": "Slides",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "unit_5_presentation_slides_1"
@@ -6901,8 +6904,8 @@
       "url": "https://docs.google.com/presentation/d/1zgeUlhiDQFnRz1nTjx_Dv_U0xAecmgNcjTp7t39Z-a0/edit?usp=sharing",
       "key": "vocabulary_bingo_cards_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "vocabulary_bingo_cards_1"
@@ -6913,8 +6916,8 @@
       "url": "https://docs.google.com/document/d/1cAGO-qB1QiekD8clh_SMFepkKVI6tI-Zahrzw-0m7TQ/edit?usp=sharing",
       "key": "vocabulary_bingo_definitions_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "vocabulary_bingo_definitions_1"
@@ -7351,6 +7354,26 @@
   ],
   "vocabularies": [
     {
+      "key": "column",
+      "word": "Column",
+      "definition": "A vertical (up and down) series of data in a 2D array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column"
+      }
+    },
+    {
+      "key": "column_major_order",
+      "word": "Column-Major Order",
+      "definition": "A way of traversing a 2D array by accessing each column from left to right",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column_major_order"
+      }
+    },
+    {
       "key": "initializer_list",
       "word": "Initializer List",
       "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( `{ }` )",
@@ -7358,26 +7381,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "initializer_list"
-      }
-    },
-    {
-      "key": "two_dimensional_d_array",
-      "word": "Two-Dimensional (2D) Array",
-      "definition": "An array of arrays often represented as a table with rows and columns",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "two_dimensional_d_array"
-      }
-    },
-    {
-      "key": "outer_array",
-      "word": "Outer Array",
-      "definition": "The outermost array of a two-dimensional array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "outer_array"
       }
     },
     {
@@ -7391,23 +7394,13 @@
       }
     },
     {
-      "key": "row",
-      "word": "Row",
-      "definition": "A horizontal (left to right) series of data in a 2D array",
+      "key": "outer_array",
+      "word": "Outer Array",
+      "definition": "The outermost array of a two-dimensional array",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "row"
-      }
-    },
-    {
-      "key": "column",
-      "word": "Column",
-      "definition": "A vertical (up and down) series of data in a 2D array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "column"
+        "vocabulary.key": "outer_array"
       }
     },
     {
@@ -7418,6 +7411,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "key": "row",
+      "word": "Row",
+      "definition": "A horizontal (left to right) series of data in a 2D array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row"
       }
     },
     {
@@ -7441,13 +7444,13 @@
       }
     },
     {
-      "key": "column_major_order",
-      "word": "Column-Major Order",
-      "definition": "A way of traversing a 2D array by accessing each column from left to right",
+      "key": "two_dimensional_d_array",
+      "word": "Two-Dimensional (2D) Array",
+      "definition": "An array of arrays often represented as a table with rows and columns",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "column_major_order"
+        "vocabulary.key": "two_dimensional_d_array"
       }
     }
   ],
@@ -7455,19 +7458,13 @@
     {
       "seeding_key": {
         "lesson.key": "Creating Tables of Data",
+        "vocabulary.key": "column"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Tables of Data",
         "vocabulary.key": "initializer_list"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Tables of Data",
-        "vocabulary.key": "two_dimensional_d_array"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Tables of Data",
-        "vocabulary.key": "outer_array"
       }
     },
     {
@@ -7479,13 +7476,25 @@
     {
       "seeding_key": {
         "lesson.key": "Creating Tables of Data",
+        "vocabulary.key": "outer_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Tables of Data",
         "vocabulary.key": "row"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Creating Tables of Data",
-        "vocabulary.key": "column"
+        "vocabulary.key": "two_dimensional_d_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing a 2D Array by Columns",
+        "vocabulary.key": "column_major_order"
       }
     },
     {
@@ -7505,12 +7514,6 @@
         "lesson.key": "Traversing a 2D Array by Rows",
         "vocabulary.key": "sustainable"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing a 2D Array by Columns",
-        "vocabulary.key": "column_major_order"
-      }
     }
   ],
   "lessons_programming_expressions": [
@@ -7518,203 +7521,13 @@
   ],
   "objectives": [
     {
-      "key": "c2a28108-e4b5-4b6b-9506-9c2b3f6ec1f9",
+      "key": "0ccb2f0c-4e69-4624-a33d-cc69e6894352",
       "properties": {
-        "description": "Declare and initialize a 2D array"
+        "description": "Implement methods based on a given set of specifications"
       },
       "seeding_key": {
-        "lesson.key": "Creating Tables of Data",
-        "objective.key": "c2a28108-e4b5-4b6b-9506-9c2b3f6ec1f9"
-      }
-    },
-    {
-      "key": "313bfdd9-0c86-4c35-9184-e791adbce834",
-      "properties": {
-        "description": "Access and modify 2D array elements using row and column indexes"
-      },
-      "seeding_key": {
-        "lesson.key": "Creating Tables of Data",
-        "objective.key": "313bfdd9-0c86-4c35-9184-e791adbce834"
-      }
-    },
-    {
-      "key": "865d3046-af0d-4c35-831d-34367b157797",
-      "properties": {
-        "description": "Use nested loops to traverse a 2D array in row-major order"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing a 2D Array by Rows",
-        "objective.key": "865d3046-af0d-4c35-831d-34367b157797"
-      }
-    },
-    {
-      "key": "7a74aa8c-167a-4f4b-88ae-de1742c321df",
-      "properties": {
-        "description": "Describe the relationship between pixels in images and 2D arrays"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing a 2D Array by Rows",
-        "objective.key": "7a74aa8c-167a-4f4b-88ae-de1742c321df"
-      }
-    },
-    {
-      "key": "2865c3b4-af40-4e9e-bbe9-9b0365021d63",
-      "properties": {
-        "description": "Traverse a 2D array in column-major order"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing a 2D Array by Columns",
-        "objective.key": "2865c3b4-af40-4e9e-bbe9-9b0365021d63"
-      }
-    },
-    {
-      "key": "b20c2483-8521-49ec-961d-fca7dbe82c3e",
-      "properties": {
-        "description": "Differentiate between row-major order and column-major order traversal"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing a 2D Array by Columns",
-        "objective.key": "b20c2483-8521-49ec-961d-fca7dbe82c3e"
-      }
-    },
-    {
-      "key": "28a512c3-217c-4b5d-858c-dbfa81acba6a",
-      "properties": {
-        "description": "Write nested enhanced `for` loops to traverse 2D arrays"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Enhanced for Loops",
-        "objective.key": "28a512c3-217c-4b5d-858c-dbfa81acba6a"
-      }
-    },
-    {
-      "key": "44a5efed-83a2-4126-880a-684eb81e8181",
-      "properties": {
-        "description": "Identify the similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Enhanced for Loops",
-        "objective.key": "44a5efed-83a2-4126-880a-684eb81e8181"
-      }
-    },
-    {
-      "key": "2644c415-a533-43ef-8ec2-0a5ec9e1ba89",
-      "properties": {
-        "description": "Explain the effect of executing a `return` statement inside a loop"
-      },
-      "seeding_key": {
-        "lesson.key": "Evaluating 2D Arrays",
-        "objective.key": "2644c415-a533-43ef-8ec2-0a5ec9e1ba89"
-      }
-    },
-    {
-      "key": "9dcf708c-2aca-44ca-a950-9c83bbab1f5c",
-      "properties": {
-        "description": "Traverse a 2D array to find whether values are evenly divisible by another integer"
-      },
-      "seeding_key": {
-        "lesson.key": "Evaluating 2D Arrays",
-        "objective.key": "9dcf708c-2aca-44ca-a950-9c83bbab1f5c"
-      }
-    },
-    {
-      "key": "900a9799-bf0c-4965-b142-2d2ea72b89b3",
-      "properties": {
-        "description": "Traverse a 2D array to find the number of elements that meet specific criteria"
-      },
-      "seeding_key": {
-        "lesson.key": "Evaluating 2D Arrays",
-        "objective.key": "900a9799-bf0c-4965-b142-2d2ea72b89b3"
-      }
-    },
-    {
-      "key": "57d06114-c8e0-45ab-8fea-876ad4e518dc",
-      "properties": {
-        "description": "Apply standard algorithms to calculate the average RGB color value of each `Pixel` in an `Image`"
-      },
-      "seeding_key": {
-        "lesson.key": "Applying Standard Algorithms",
-        "objective.key": "57d06114-c8e0-45ab-8fea-876ad4e518dc"
-      }
-    },
-    {
-      "key": "31000c72-88b5-4a3b-bf7b-2b3414ab7a24",
-      "properties": {
-        "description": "Apply standard algorithms to find the maximum dessert quantity for a food truck"
-      },
-      "seeding_key": {
-        "lesson.key": "Applying Standard Algorithms",
-        "objective.key": "31000c72-88b5-4a3b-bf7b-2b3414ab7a24"
-      }
-    },
-    {
-      "key": "e4e5c26b-aec3-4810-be4e-67ceced49a12",
-      "properties": {
-        "description": "Apply standard algorithms to reverse a 2D array of `Pixel` objects in an `Image`"
-      },
-      "seeding_key": {
-        "lesson.key": "Reversing Elements",
-        "objective.key": "e4e5c26b-aec3-4810-be4e-67ceced49a12"
-      }
-    },
-    {
-      "key": "d02f1e3f-05e9-400a-858f-5ab46f419bd2",
-      "properties": {
-        "description": "Apply standard algorithms to shift a 2D array of `Pixel` objects in an `Image`"
-      },
-      "seeding_key": {
-        "lesson.key": "Shifting Elements",
-        "objective.key": "d02f1e3f-05e9-400a-858f-5ab46f419bd2"
-      }
-    },
-    {
-      "key": "c606c113-2c5d-4552-8cd6-04e03e52b7a7",
-      "properties": {
-        "description": "Apply standard algorithms to find and replace duplicate `Dessert` objects in a 2D array"
-      },
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "objective.key": "c606c113-2c5d-4552-8cd6-04e03e52b7a7"
-      }
-    },
-    {
-      "key": "4ec2e7ca-c54e-4c52-95ef-ef7f8d47f6ec",
-      "properties": {
-        "description": "Apply standard algorithms to find and modify elements in a 2D array that meet specific conditions"
-      },
-      "seeding_key": {
-        "lesson.key": "Searching for Elements",
-        "objective.key": "4ec2e7ca-c54e-4c52-95ef-ef7f8d47f6ec"
-      }
-    },
-    {
-      "key": "a95e773d-bd58-4aef-82ff-65971863ea7b",
-      "properties": {
-        "description": "Design a concert in The Theater"
-      },
-      "seeding_key": {
-        "lesson.key": "A Sustainable Neighborhood Project - Day 1",
-        "objective.key": "a95e773d-bd58-4aef-82ff-65971863ea7b"
-      }
-    },
-    {
-      "key": "f80530c1-0184-440f-a746-64e1bc1bf131",
-      "properties": {
-        "description": "Identify, modify, and develop an algorithm for array traversal"
-      },
-      "seeding_key": {
-        "lesson.key": "A Sustainable Neighborhood Project - Day 1",
-        "objective.key": "f80530c1-0184-440f-a746-64e1bc1bf131"
-      }
-    },
-    {
-      "key": "77adc030-8dc9-4f06-a208-f0d550bfd01a",
-      "properties": {
-        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
-      },
-      "seeding_key": {
-        "lesson.key": "A Sustainable Neighborhood Project - Day 1",
-        "objective.key": "77adc030-8dc9-4f06-a208-f0d550bfd01a"
+        "lesson.key": "FRQ Day",
+        "objective.key": "0ccb2f0c-4e69-4624-a33d-cc69e6894352"
       }
     },
     {
@@ -7738,63 +7551,53 @@
       }
     },
     {
-      "key": "e57d02b7-25cd-47bc-89e1-a0100e65ca8c",
+      "key": "2644c415-a533-43ef-8ec2-0a5ec9e1ba89",
       "properties": {
-        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
+        "description": "Explain the effect of executing a `return` statement inside a loop"
       },
       "seeding_key": {
-        "lesson.key": "A Sustainable Neighborhood Project - Day 2",
-        "objective.key": "e57d02b7-25cd-47bc-89e1-a0100e65ca8c"
+        "lesson.key": "Evaluating 2D Arrays",
+        "objective.key": "2644c415-a533-43ef-8ec2-0a5ec9e1ba89"
       }
     },
     {
-      "key": "5a25c285-eec5-4215-9874-0e8bfe0a6f31",
+      "key": "2865c3b4-af40-4e9e-bbe9-9b0365021d63",
       "properties": {
-        "description": "Design a concert in The Theater"
+        "description": "Traverse a 2D array in column-major order"
       },
       "seeding_key": {
-        "lesson.key": "A Sustainable Neighborhood Project - Day 3",
-        "objective.key": "5a25c285-eec5-4215-9874-0e8bfe0a6f31"
+        "lesson.key": "Traversing a 2D Array by Columns",
+        "objective.key": "2865c3b4-af40-4e9e-bbe9-9b0365021d63"
       }
     },
     {
-      "key": "c4cb3769-8062-4481-9b90-ff1012e82d4f",
+      "key": "28a512c3-217c-4b5d-858c-dbfa81acba6a",
       "properties": {
-        "description": "Identify, modify, and develop an algorithm for array traversal"
+        "description": "Write nested enhanced `for` loops to traverse 2D arrays"
       },
       "seeding_key": {
-        "lesson.key": "A Sustainable Neighborhood Project - Day 3",
-        "objective.key": "c4cb3769-8062-4481-9b90-ff1012e82d4f"
+        "lesson.key": "Using Enhanced for Loops",
+        "objective.key": "28a512c3-217c-4b5d-858c-dbfa81acba6a"
       }
     },
     {
-      "key": "9311da0c-46a5-4f78-872f-703baa1c9bfb",
+      "key": "31000c72-88b5-4a3b-bf7b-2b3414ab7a24",
       "properties": {
-        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
+        "description": "Apply standard algorithms to find the maximum dessert quantity for a food truck"
       },
       "seeding_key": {
-        "lesson.key": "A Sustainable Neighborhood Project - Day 3",
-        "objective.key": "9311da0c-46a5-4f78-872f-703baa1c9bfb"
+        "lesson.key": "Applying Standard Algorithms",
+        "objective.key": "31000c72-88b5-4a3b-bf7b-2b3414ab7a24"
       }
     },
     {
-      "key": "84b7f7b1-c1d6-4fa3-85fe-427a69d9e82a",
+      "key": "313bfdd9-0c86-4c35-9184-e791adbce834",
       "properties": {
-        "description": "Reflect on the development process"
+        "description": "Access and modify 2D array elements using row and column indexes"
       },
       "seeding_key": {
-        "lesson.key": "A Sustainable Neighborhood Project - Day 3",
-        "objective.key": "84b7f7b1-c1d6-4fa3-85fe-427a69d9e82a"
-      }
-    },
-    {
-      "key": "0ccb2f0c-4e69-4624-a33d-cc69e6894352",
-      "properties": {
-        "description": "Implement methods based on a given set of specifications"
-      },
-      "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "objective.key": "0ccb2f0c-4e69-4624-a33d-cc69e6894352"
+        "lesson.key": "Creating Tables of Data",
+        "objective.key": "313bfdd9-0c86-4c35-9184-e791adbce834"
       }
     },
     {
@@ -7808,6 +7611,166 @@
       }
     },
     {
+      "key": "44a5efed-83a2-4126-880a-684eb81e8181",
+      "properties": {
+        "description": "Identify the similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays"
+      },
+      "seeding_key": {
+        "lesson.key": "Using Enhanced for Loops",
+        "objective.key": "44a5efed-83a2-4126-880a-684eb81e8181"
+      }
+    },
+    {
+      "key": "4ec2e7ca-c54e-4c52-95ef-ef7f8d47f6ec",
+      "properties": {
+        "description": "Apply standard algorithms to find and modify elements in a 2D array that meet specific conditions"
+      },
+      "seeding_key": {
+        "lesson.key": "Searching for Elements",
+        "objective.key": "4ec2e7ca-c54e-4c52-95ef-ef7f8d47f6ec"
+      }
+    },
+    {
+      "key": "57d06114-c8e0-45ab-8fea-876ad4e518dc",
+      "properties": {
+        "description": "Apply standard algorithms to calculate the average RGB color value of each `Pixel` in an `Image`"
+      },
+      "seeding_key": {
+        "lesson.key": "Applying Standard Algorithms",
+        "objective.key": "57d06114-c8e0-45ab-8fea-876ad4e518dc"
+      }
+    },
+    {
+      "key": "5a25c285-eec5-4215-9874-0e8bfe0a6f31",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "A Sustainable Neighborhood Project - Day 3",
+        "objective.key": "5a25c285-eec5-4215-9874-0e8bfe0a6f31"
+      }
+    },
+    {
+      "key": "77adc030-8dc9-4f06-a208-f0d550bfd01a",
+      "properties": {
+        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
+      },
+      "seeding_key": {
+        "lesson.key": "A Sustainable Neighborhood Project - Day 1",
+        "objective.key": "77adc030-8dc9-4f06-a208-f0d550bfd01a"
+      }
+    },
+    {
+      "key": "7a74aa8c-167a-4f4b-88ae-de1742c321df",
+      "properties": {
+        "description": "Describe the relationship between pixels in images and 2D arrays"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversing a 2D Array by Rows",
+        "objective.key": "7a74aa8c-167a-4f4b-88ae-de1742c321df"
+      }
+    },
+    {
+      "key": "84b7f7b1-c1d6-4fa3-85fe-427a69d9e82a",
+      "properties": {
+        "description": "Reflect on the development process"
+      },
+      "seeding_key": {
+        "lesson.key": "A Sustainable Neighborhood Project - Day 3",
+        "objective.key": "84b7f7b1-c1d6-4fa3-85fe-427a69d9e82a"
+      }
+    },
+    {
+      "key": "865d3046-af0d-4c35-831d-34367b157797",
+      "properties": {
+        "description": "Use nested loops to traverse a 2D array in row-major order"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversing a 2D Array by Rows",
+        "objective.key": "865d3046-af0d-4c35-831d-34367b157797"
+      }
+    },
+    {
+      "key": "900a9799-bf0c-4965-b142-2d2ea72b89b3",
+      "properties": {
+        "description": "Traverse a 2D array to find the number of elements that meet specific criteria"
+      },
+      "seeding_key": {
+        "lesson.key": "Evaluating 2D Arrays",
+        "objective.key": "900a9799-bf0c-4965-b142-2d2ea72b89b3"
+      }
+    },
+    {
+      "key": "9311da0c-46a5-4f78-872f-703baa1c9bfb",
+      "properties": {
+        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
+      },
+      "seeding_key": {
+        "lesson.key": "A Sustainable Neighborhood Project - Day 3",
+        "objective.key": "9311da0c-46a5-4f78-872f-703baa1c9bfb"
+      }
+    },
+    {
+      "key": "9dcf708c-2aca-44ca-a950-9c83bbab1f5c",
+      "properties": {
+        "description": "Traverse a 2D array to find whether values are evenly divisible by another integer"
+      },
+      "seeding_key": {
+        "lesson.key": "Evaluating 2D Arrays",
+        "objective.key": "9dcf708c-2aca-44ca-a950-9c83bbab1f5c"
+      }
+    },
+    {
+      "key": "a95e773d-bd58-4aef-82ff-65971863ea7b",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "A Sustainable Neighborhood Project - Day 1",
+        "objective.key": "a95e773d-bd58-4aef-82ff-65971863ea7b"
+      }
+    },
+    {
+      "key": "b20c2483-8521-49ec-961d-fca7dbe82c3e",
+      "properties": {
+        "description": "Differentiate between row-major order and column-major order traversal"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversing a 2D Array by Columns",
+        "objective.key": "b20c2483-8521-49ec-961d-fca7dbe82c3e"
+      }
+    },
+    {
+      "key": "c2a28108-e4b5-4b6b-9506-9c2b3f6ec1f9",
+      "properties": {
+        "description": "Declare and initialize a 2D array"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Tables of Data",
+        "objective.key": "c2a28108-e4b5-4b6b-9506-9c2b3f6ec1f9"
+      }
+    },
+    {
+      "key": "c4cb3769-8062-4481-9b90-ff1012e82d4f",
+      "properties": {
+        "description": "Identify, modify, and develop an algorithm for array traversal"
+      },
+      "seeding_key": {
+        "lesson.key": "A Sustainable Neighborhood Project - Day 3",
+        "objective.key": "c4cb3769-8062-4481-9b90-ff1012e82d4f"
+      }
+    },
+    {
+      "key": "c606c113-2c5d-4552-8cd6-04e03e52b7a7",
+      "properties": {
+        "description": "Apply standard algorithms to find and replace duplicate `Dessert` objects in a 2D array"
+      },
+      "seeding_key": {
+        "lesson.key": "Finding Duplicates",
+        "objective.key": "c606c113-2c5d-4552-8cd6-04e03e52b7a7"
+      }
+    },
+    {
       "key": "c7e0baff-d130-4eac-a0a6-0412f6608bbc",
       "properties": {
         "description": "Translate pseudocode to Java"
@@ -7816,9 +7779,56 @@
         "lesson.key": "FRQ Day",
         "objective.key": "c7e0baff-d130-4eac-a0a6-0412f6608bbc"
       }
+    },
+    {
+      "key": "d02f1e3f-05e9-400a-858f-5ab46f419bd2",
+      "properties": {
+        "description": "Apply standard algorithms to shift a 2D array of `Pixel` objects in an `Image`"
+      },
+      "seeding_key": {
+        "lesson.key": "Shifting Elements",
+        "objective.key": "d02f1e3f-05e9-400a-858f-5ab46f419bd2"
+      }
+    },
+    {
+      "key": "e4e5c26b-aec3-4810-be4e-67ceced49a12",
+      "properties": {
+        "description": "Apply standard algorithms to reverse a 2D array of `Pixel` objects in an `Image`"
+      },
+      "seeding_key": {
+        "lesson.key": "Reversing Elements",
+        "objective.key": "e4e5c26b-aec3-4810-be4e-67ceced49a12"
+      }
+    },
+    {
+      "key": "e57d02b7-25cd-47bc-89e1-a0100e65ca8c",
+      "properties": {
+        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
+      },
+      "seeding_key": {
+        "lesson.key": "A Sustainable Neighborhood Project - Day 2",
+        "objective.key": "e57d02b7-25cd-47bc-89e1-a0100e65ca8c"
+      }
+    },
+    {
+      "key": "f80530c1-0184-440f-a746-64e1bc1bf131",
+      "properties": {
+        "description": "Identify, modify, and develop an algorithm for array traversal"
+      },
+      "seeding_key": {
+        "lesson.key": "A Sustainable Neighborhood Project - Day 1",
+        "objective.key": "f80530c1-0184-440f-a746-64e1bc1bf131"
+      }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Applying Standard Algorithms",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.D.2"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Creating Tables of Data",
@@ -7849,6 +7859,55 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Evaluating 2D Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Evaluating 2D Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Finding Duplicates",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.N.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Searching for Elements",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.N.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shifting Elements",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.N.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing a 2D Array by Columns",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.F.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing a 2D Array by Columns",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.G.2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Traversing a 2D Array by Rows",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.D.2"
@@ -7871,20 +7930,6 @@
     {
       "seeding_key": {
         "lesson.key": "Traversing a 2D Array by Rows",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.G.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing a 2D Array by Columns",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.F.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing a 2D Array by Columns",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.G.2"
       }
@@ -7901,48 +7946,6 @@
         "lesson.key": "Using Enhanced for Loops",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.G.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Evaluating 2D Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.C.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Evaluating 2D Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Applying Standard Algorithms",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shifting Elements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Finding Duplicates",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Searching for Elements",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.2"
       }
     }
   ],
