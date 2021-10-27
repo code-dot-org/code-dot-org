@@ -803,11 +803,11 @@ class ManageStudentsTable extends Component {
               }
             />
           </div>
+          {/* Passes button style to ManageCodeReviewGroups to avoid extra div,
+            but is otherwise similar to other button/modal components here */}
           {isSectionAssignedCSA &&
             experiments.isEnabled(experiments.CODE_REVIEW_GROUPS) && (
-              <div style={styles.button}>
-                <ManageCodeReviewGroups />
-              </div>
+              <ManageCodeReviewGroups buttonStyle={styles.button} />
             )}
           {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
             <div
