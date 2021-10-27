@@ -289,7 +289,7 @@ async function loadAppAsync(appOptions) {
   // that indicates that the level was cached and the channel id needs to be loaded client-side
   // through the user_progress request
   const shouldGetChannelId =
-    appOptions.levelRequiresChannel && !appOptions.channel;
+    !!appOptions.levelRequiresChannel && !appOptions.channel;
 
   if (appOptions.publicCaching) {
     // Disable social share by default on publicly-cached pages, because we don't know
