@@ -1565,6 +1565,8 @@ class Script < ApplicationRecord
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
       instructionType: get_instruction_type,
+      instructorAudience: get_instructor_audience,
+      participantAudience: get_participant_audience,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
@@ -1889,6 +1891,18 @@ class Script < ApplicationRecord
   # If both are null, the unit should be teacher led
   def get_instruction_type
     unit_group&.instruction_type || instruction_type || SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+  end
+
+  # If a script is in a unit group, use that unit group's instructor_audience. If not, use the units's instructor_audience
+  # If both are null, the unit should be instructed by teacher
+  def get_instructor_audience
+    unit_group&.instructor_audience || instructor_audience || SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+  end
+
+  # If a script is in a unit group, use that unit group's participant_audience. If not, use the units's participant_audience
+  # If both are null, the unit should be participated in by students
+  def get_participant_audience
+    unit_group&.participant_audience || participant_audience || SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   # Use the unit group's pilot_experiment if one exists
