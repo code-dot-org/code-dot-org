@@ -1,5 +1,4 @@
 import {commands as behaviorCommands} from './behaviorCommands';
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
@@ -70,6 +69,7 @@ export const commands = {
       }
     });
   },
+
   edgesDisplace(spriteArg) {
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
@@ -134,6 +134,7 @@ export const commands = {
     });
     return touching;
   },
+
   jumpTo(spriteArg, location) {
     if (!location) {
       return;
@@ -144,6 +145,7 @@ export const commands = {
       sprite.y = location.y;
     });
   },
+
   mirrorSprite(spriteArg, direction) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
@@ -154,6 +156,7 @@ export const commands = {
       }
     });
   },
+
   moveForward(spriteArg, distance) {
     move(this, spriteArg, distance);
   },
@@ -178,6 +181,7 @@ export const commands = {
       dirs[direction](sprite);
     });
   },
+
   moveToward(spriteArg, distance, target) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
@@ -241,16 +245,17 @@ export const commands = {
     });
   },
 
-  spriteSay(spriteArg, speech) {
-    let sprites = this.getSpriteArray(spriteArg);
+  spriteSay(spriteArg, text) {
+    const sprites = this.getSpriteArray(spriteArg) || [];
     sprites.forEach(sprite => {
-      const bubbleId = this.addSpeechBubble(sprite, speech);
-      audioCommands.playSpeech({
-        text: speech,
-        gender: 'female',
-        language: 'English',
-        onComplete: () => this.removeSpeechBubble(bubbleId)
-      });
+      this.addSpeechBubble(sprite, text, 4);
+    });
+  },
+
+  spriteSayTime(spriteArg, text, time) {
+    const sprites = this.getSpriteArray(spriteArg) || [];
+    sprites.forEach(sprite => {
+      this.addSpeechBubble(sprite, text, time);
     });
   },
 
