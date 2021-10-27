@@ -5,6 +5,7 @@ export const commands = {
     let sprites = this.getSpriteArray(spriteArg);
     return sprites.length;
   },
+
   destroy(spriteArg) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
@@ -82,6 +83,20 @@ export const commands = {
           sprite.animation.getWidth()
         );
       sprite.scale *= sprite.baseScale;
+    });
+  },
+
+  spriteSay(spriteArg, text) {
+    const sprites = this.getSpriteArray(spriteArg) || [];
+    sprites.forEach(sprite => {
+      this.addSpeechBubble(sprite, text, 4);
+    });
+  },
+
+  spriteSayTime(spriteArg, text, time) {
+    const sprites = this.getSpriteArray(spriteArg) || [];
+    sprites.forEach(sprite => {
+      this.addSpeechBubble(sprite, text, time);
     });
   }
 };
