@@ -8,13 +8,10 @@ class Policies::InlineAnswer
     return false unless user
     return false unless script_level
 
-    # Authorized teachers can view answers, except for those scripts that
-    # teachers are supposed to interface with as though they were students (ie,
-    # professional learning scripts)
+    # Authorized instructors who are instructing the course can view answers
     script = script_level.try(:script)
-    return true if user.authorized_teacher? &&
-      script &&
-      !script.professional_learning_course?
+    return true if user.authorized_instructor? &&
+      script && script.can_be_instructor?(user)
 
     # For CSF scripts teachers should be able to see teacher only markdown and answers
     # even if they are not authorized
