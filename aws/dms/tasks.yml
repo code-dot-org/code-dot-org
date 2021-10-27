@@ -3,6 +3,7 @@ cron-pii:
 - pegasus.contacts
 - pegasus.forms
 - pegasus.form_geos
+- pegasus.hoc_activity
 - dashboard.regional_partners
 - dashboard.regional_partners_school_districts
 - dashboard.pd_%
