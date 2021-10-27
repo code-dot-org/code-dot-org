@@ -12,6 +12,12 @@ function move(coreLibrary, spriteArg, distance) {
   });
 }
 
+function addSpriteSpeechBubble(coreLibrary, spriteArg, text, seconds) {
+  coreLibrary.getSpriteArray(spriteArg)?.forEach(sprite => {
+    this.addSpeechBubble(sprite, text, seconds);
+  });
+}
+
 export const commands = {
   addTarget(spriteArg, targetCostume, targetType) {
     if (!['follow', 'avoid'].includes(targetType)) {
@@ -246,17 +252,11 @@ export const commands = {
   },
 
   spriteSay(spriteArg, text) {
-    const sprites = this.getSpriteArray(spriteArg) || [];
-    sprites.forEach(sprite => {
-      this.addSpeechBubble(sprite, text, 4);
-    });
+    addSpriteSpeechBubble(this, spriteArg, text, 4);
   },
 
   spriteSayTime(spriteArg, text, time) {
-    const sprites = this.getSpriteArray(spriteArg) || [];
-    sprites.forEach(sprite => {
-      this.addSpeechBubble(sprite, text, time);
-    });
+    addSpriteSpeechBubble(this, spriteArg, text, time);
   },
 
   removeTint(spriteArg) {
