@@ -12,7 +12,7 @@
   "achievements": "Uğurlar",
   "activity": "Fəaliyyət",
   "activityHeaderName": "fəaliyyətin adı\n",
-  "activityHeaderTime": "({fəaliyyətin müddəti} dəqiqələr)",
+  "activityHeaderTime": "({activityDuration} dəqiqələr)",
   "actions": "Əmrlər",
   "add": "Əlavə et",
   "additionalInformationHeader": "Əlavə Məlumat",
