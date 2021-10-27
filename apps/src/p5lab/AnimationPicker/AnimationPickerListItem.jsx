@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
+import {KeyCodes} from '@cdo/apps/constants';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
@@ -26,6 +27,12 @@ class AnimationPickerListItem extends React.Component {
   state = {
     loaded: false,
     hover: false
+  };
+
+  onItemKeyDown = e => {
+    if (e.keyCode === KeyCodes.ENTER) {
+      this.props.onClick(e);
+    }
   };
 
   render() {
@@ -81,7 +88,8 @@ class AnimationPickerListItem extends React.Component {
       <button
         style={rootStyle}
         onClick={onClick}
-        className="uitest-animation-picker-item"
+        onKeyDown={this.onItemKeyDown}
+        className={category}
         type="button"
         onFocus={() => this.setState({hover: true})}
         onBlur={() => this.setState({hover: false})}
