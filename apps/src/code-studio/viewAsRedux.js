@@ -6,7 +6,7 @@
 import {makeEnum, reload} from '@cdo/apps/utils';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 
-export const ViewType = makeEnum('Student', 'Teacher');
+export const ViewType = makeEnum('Student', 'Teacher', 'InstructorInTraining');
 
 // Action types
 export const SET_VIEW_TYPE = 'viewAs/SET_VIEW_TYPE';
