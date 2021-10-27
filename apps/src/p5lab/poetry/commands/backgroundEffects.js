@@ -406,11 +406,12 @@ export const commands = {
       }
       case 'rain': {
         let drops = [];
+        const maxDropLength = 20;
         this.backgroundEffect = () => {
           drops.push({
-            x: utils.randomInt(-APP_WIDTH, APP_WIDTH - 20),
+            x: utils.randomInt(-APP_WIDTH, APP_WIDTH - maxDropLength),
             y: utils.randomInt(-50, -20),
-            length: utils.randomInt(10, 20),
+            length: utils.randomInt(10, maxDropLength),
             color: utils.randomColorFromPalette(palette)
           });
           this.p5.push();
@@ -419,14 +420,16 @@ export const commands = {
             this.p5.push();
             this.p5.stroke(drop.color);
             this.p5.strokeWeight(3);
-            this.p5.translate(drop.x - 20, drop.y - 20);
+            this.p5.translate(drop.x - maxDropLength, drop.y - maxDropLength);
             this.p5.line(0, 0, drop.length, drop.length * 2);
             drop.y = drop.y + drop.length;
             drop.x = drop.x + drop.length / 2;
             this.p5.pop();
           });
           drops = drops.filter(
-            drop => drop.y < APP_HEIGHT + 20 && drop.x < APP_WIDTH + 20
+            drop =>
+              drop.y < APP_HEIGHT + maxDropLength &&
+              drop.x < APP_WIDTH + maxDropLength
           );
           this.p5.pop();
         };
