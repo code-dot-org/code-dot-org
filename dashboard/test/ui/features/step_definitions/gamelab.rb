@@ -53,7 +53,7 @@ Then /^I open the animation picker$/ do
 end
 
 Then /^I select a blank animation$/ do
-  @browser.execute_script("$(\".uitest-animation-picker-item\")[0].click();")
+  @browser.execute_script("$(\".uitest-animation-picker-list>button\")[0].click();")
 end
 
 Then /^I select the animal category of the animation library$/ do
