@@ -354,11 +354,6 @@ export default class PoetryLibrary extends CoreLibrary {
   }
 
   getRenderInfo(poemState, frameCount) {
-    if (!poemState.isVisible) {
-      return {
-        lines: []
-      };
-    }
     let yCursor = OUTER_MARGIN;
     let renderInfo = {
       font: {
@@ -366,6 +361,11 @@ export default class PoetryLibrary extends CoreLibrary {
       },
       lines: []
     };
+
+    if (!poemState.isVisible) {
+      return renderInfo;
+    }
+
     if (poemState.title) {
       renderInfo.lines.push({
         text: poemState.title,
