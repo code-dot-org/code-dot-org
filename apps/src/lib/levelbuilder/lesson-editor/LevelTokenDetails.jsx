@@ -10,7 +10,9 @@ const tooltipText = {
   bonus: 'Include in lesson extras at the end of the lesson',
   assessment:
     'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
-  challenge: 'Show students the Challenge dialog when viewing this level.'
+  challenge: 'Show students the Challenge dialog when viewing this level.',
+  instructor_in_training:
+    'Allow participant in a professional learning course to view certain instructor features.'
 };
 
 const disabledBonusTooltipText =
@@ -51,7 +53,12 @@ class LevelTokenDetails extends Component {
     Object.keys(tooltipText).forEach(option => {
       tooltipIds[option] = _.uniqueId();
     });
-    const scriptLevelOptions = ['bonus', 'assessment', 'challenge'];
+    const scriptLevelOptions = [
+      'bonus',
+      'assessment',
+      'challenge',
+      'instructor_in_training'
+    ];
     const inactiveLevelNames = this.props.inactiveLevelNames || [];
 
     return (
