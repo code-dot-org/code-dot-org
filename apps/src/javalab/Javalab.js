@@ -15,7 +15,8 @@ import javalab, {
   setLevelName,
   appendNewlineToConsoleLog,
   setIsRunning,
-  setDisableFinishButton
+  setDisableFinishButton,
+  setIsTesting
 } from './javalabRedux';
 import playground from './playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -103,6 +104,7 @@ Javalab.prototype.init = function(config) {
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
   const onStop = this.onStop.bind(this);
+  const onTest = this.onTest.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
@@ -265,6 +267,7 @@ Javalab.prototype.init = function(config) {
         onMount={onMount}
         onRun={onRun}
         onStop={onStop}
+        onTest={onTest}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
@@ -330,10 +333,12 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     getStore().getState().pageConstants.serverLevelId,
     options,
     this.onNewlineMessage,
-    this.setIsRunning
+    this.setIsRunning,
+    this.setIsTesting,
+    executionType
   );
   project.autosave(() => {
-    this.javabuilderConnection.connectJavabuilder(executionType);
+    this.javabuilderConnection.connectJavabuilder();
   });
   postContainedLevelAttempt(this.studioApp_);
 };
@@ -423,6 +428,10 @@ Javalab.prototype.onNewlineMessage = function() {
 
 Javalab.prototype.setIsRunning = function(isRunning) {
   getStore().dispatch(setIsRunning(isRunning));
+};
+
+Javalab.prototype.setIsTesting = function(isTesting) {
+  getStore().dispatch(setIsTesting(isTesting));
 };
 
 export default Javalab;
