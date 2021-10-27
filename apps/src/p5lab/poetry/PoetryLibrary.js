@@ -100,13 +100,6 @@ export default class PoetryLibrary extends CoreLibrary {
         return [text1, text2].join('');
       },
 
-      randomWord() {
-        // TODO: get curated random word list from Curriculum
-        const words = ['cat', 'dog', 'fish'];
-        const index = utils.randomInt(0, words.length - 1);
-        return words[index];
-      },
-
       addLine(line) {
         this.poemState.lines.push(line || '');
       },
@@ -192,33 +185,6 @@ export default class PoetryLibrary extends CoreLibrary {
           // frame at which we know the student will pass the level).
           this.validationInfo.successFrame = this.p5.frameCount;
         }
-      },
-
-      drawOcti() {
-        this.p5.push();
-        this.p5.noStroke();
-        if (this.p5.World.frameCount > this.validationInfo.endTime) {
-          let octiImage = this.p5._preloadedInstructorImage;
-          this.p5.image(
-            octiImage,
-            PLAYSPACE_SIZE - OCTI_SIZE /* x */,
-            PLAYSPACE_SIZE - OCTI_SIZE /* y */,
-            OCTI_SIZE /* width */,
-            OCTI_SIZE /* height */
-          );
-        }
-        this.p5.pop();
-      },
-
-      isOctiClicked() {
-        return (
-          this.validationInfo.successFrame &&
-          this.p5.mouseDown() &&
-          this.p5.World.mouseX > PLAYSPACE_SIZE - OCTI_SIZE &&
-          this.p5.World.mouseX < PLAYSPACE_SIZE &&
-          this.p5.World.mouseY > PLAYSPACE_SIZE - OCTI_SIZE &&
-          this.p5.World.mouseY < PLAYSPACE_SIZE
-        );
       },
 
       drawProgressBar() {
