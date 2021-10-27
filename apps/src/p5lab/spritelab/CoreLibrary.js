@@ -89,14 +89,9 @@ export default class CoreLibrary {
   }
 
   removeExpiredSpeechBubbles() {
-    this.speechBubbles.forEach(bubbleInfo => {
-      if (
-        bubbleInfo.removeAt &&
-        bubbleInfo.removeAt <= this.getAdjustedWorldTime()
-      ) {
-        this.removeSpeechBubble(bubbleInfo.id);
-      }
-    });
+    this.speechBubbles = this.speechBubbles.filter(
+      ({removeAt}) => !removeAt || removeAt > this.getAdjustedWorldTime()
+    );
   }
 
   startPause(time) {
