@@ -30,6 +30,7 @@ import {
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
 import InstructionTypeDropdown from '@cdo/apps/lib/levelbuilder/course-editor/InstructionTypeDropdown';
+import Dialog from '@cdo/apps/templates/Dialog';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -113,6 +114,7 @@ class UnitEditor extends React.Component {
       isSaving: false,
       error: null,
       lastSaved: null,
+      ttsDialogOpen: false,
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
@@ -508,23 +510,39 @@ class UnitEditor extends React.Component {
               checked={this.state.tts}
               style={styles.checkbox}
               onChange={e => {
-                e.preventDefault();
-                const msg = this.state.tts
-                  ? 'Are you sure? All of the TTS files for this ' +
-                    'course have already been generated. Any new edits will not be reflected ' +
-                    'TTS files for this course.'
-                  : 'Are you sure? This will generate text to speech files for all ' +
-                    'levels in this script. We have to pay for each file generated. Please ' +
-                    'confirm that levels are in a stable state before checking.';
-                if (window.confirm(msg)) {
-                  this.setState({tts: !this.state.tts});
-                }
+                this.setState({ttsDialogOpen: true});
               }}
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this unit.</p>
             </HelpTip>
           </label>
+          {this.state.ttsDialogOpen && (
+            <Dialog
+              hideBackdrop={false}
+              isOpen={this.state.ttsDialogOpen}
+              title={this.state.tts ? 'Turn off TTS' : 'Turn on TTS'}
+              cancelText="Cancel"
+              body={
+                this.state.tts
+                  ? 'Are you sure? All of the TTS files for this ' +
+                    'course have already been generated. Any new edits will not be reflected ' +
+                    'TTS files for this course.'
+                  : 'Are you sure? This will generate text to speech files for all ' +
+                    'levels in this script. We have to pay for each file generated. Please ' +
+                    'confirm that levels are in a stable state before checking.'
+              }
+              handleClose={e => {
+                this.setState({ttsDialogOpen: false});
+              }}
+              onCancel={e => {
+                this.setState({ttsDialogOpen: false});
+              }}
+              onConfirm={e => {
+                this.setState({ttsDialogOpen: false, tts: !this.state.tts});
+              }}
+            />
+          )}
           <label>
             Is a Maker Unit
             <input
