@@ -36,13 +36,13 @@ class CommentOptions extends Component {
             })
           }
         >
-          <i className="fa fa-ellipsis-h" style={styles.ellipsisMenu} />
+          <i className="fa fa-ellipsis-h" />
         </button>
         {isOpen && (
-          <div style={styles.commentOptionsContainer}>
+          <ul style={styles.commentOptionsContainer}>
             {menuOptions.map(menuOption => {
               return (
-                <div
+                <li
                   onClick={() => this.selectOptionWrapper(menuOption.onClick)}
                   style={styles.commentOptionContainer}
                   key={menuOption.key}
@@ -52,10 +52,10 @@ class CommentOptions extends Component {
                     className={'fa fa-fw fa-' + menuOption.iconClass}
                   />
                   <span style={styles.text}>{menuOption.text}</span>
-                </div>
+                </li>
               );
             })}
-          </div>
+          </ul>
         )}
       </>
     );
@@ -102,10 +102,5 @@ const styles = {
     alignItems: 'center'
   },
   text: {padding: '0 5px'},
-  icon: {fontSize: '18px'},
-  ellipsisMenu: {
-    // fontSize: 18,
-    // lineHeight: '18px',
-    // margin: 0,
-  }
+  icon: {fontSize: '18px'}
 };
