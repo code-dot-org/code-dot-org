@@ -10,7 +10,7 @@ import {KeyCodes} from '@cdo/apps/constants';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
-const HOVER_PLUS_SIZE = 24;
+const HOVER_PLUS_SIZE = 34;
 
 class AnimationPickerListItem extends React.Component {
   static propTypes = {
