@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 
+// https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-actions.html
 class CommentOptions extends Component {
   static propTypes = {
     menuOptions: PropTypes.array.isRequired
@@ -25,15 +26,18 @@ class CommentOptions extends Component {
     }
 
     return (
-      <i
-        className="fa fa-ellipsis-h"
-        style={styles.ellipsisMenu}
-        onClick={() =>
-          this.setState({
-            isOpen: !isOpen
-          })
-        }
-      >
+      <>
+        <button
+          type="button"
+          style={styles.menuButton}
+          onClick={() =>
+            this.setState({
+              isOpen: !isOpen
+            })
+          }
+        >
+          <i className="fa fa-ellipsis-h" style={styles.ellipsisMenu} />
+        </button>
         {isOpen && (
           <div style={styles.commentOptionsContainer}>
             {menuOptions.map(menuOption => {
@@ -53,7 +57,7 @@ class CommentOptions extends Component {
             })}
           </div>
         )}
-      </i>
+      </>
     );
   }
 }
@@ -61,7 +65,21 @@ class CommentOptions extends Component {
 export default Radium(CommentOptions);
 
 const styles = {
+  menuButton: {
+    padding: '0 2px',
+    margin: 0,
+    border: '1px solid #fff',
+    background: 'none',
+    lineHeight: '18px',
+    ':hover': {
+      boxShadow: 'none'
+    },
+    ':active': {
+      boxShadow: 'none'
+    }
+  },
   commentOptionsContainer: {
+    top: 15,
     position: 'absolute',
     marginTop: '5px',
     right: '0px',
@@ -86,9 +104,8 @@ const styles = {
   text: {padding: '0 5px'},
   icon: {fontSize: '18px'},
   ellipsisMenu: {
-    fontSize: 18,
-    lineHeight: '18px',
-    margin: '0 0 0 5px',
-    cursor: 'pointer'
+    // fontSize: 18,
+    // lineHeight: '18px',
+    // margin: 0,
   }
 };
