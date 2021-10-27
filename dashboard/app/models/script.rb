@@ -945,8 +945,8 @@ class Script < ApplicationRecord
   end
 
   # Generates TTS files for each level in a unit.
-  def tts_update
-    levels.each(&:tts_update)
+  def tts_update(update_all = false)
+    levels.each {|l| l.tts_update(update_all)}
   end
 
   def hint_prompt_enabled?
@@ -1392,7 +1392,7 @@ class Script < ApplicationRecord
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
     update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
     update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
-    tts_update if need_to_update_tts
+    tts_update(true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Script.find_by_name(unit_name)
