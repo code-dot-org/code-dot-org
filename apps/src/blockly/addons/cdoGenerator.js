@@ -32,7 +32,11 @@ export default function initializeGenerator(blocklyWrapper) {
     if (block?.isUnused()) {
       return '';
     }
-    return originalBlockToCode.call(this, block, opt_thisOnly);
+    return originalBlockToCode.call(
+      this,
+      block,
+      block?.skipNextBlockGeneration || opt_thisOnly
+    );
   };
 
   blocklyWrapper.Generator.prefixLines = function(text, prefix) {
