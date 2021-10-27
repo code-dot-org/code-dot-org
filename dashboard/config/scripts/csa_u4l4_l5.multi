@@ -2,7 +2,7 @@ name 'CSA U4L4-L5'
 title 'Check for Understanding'
 description 'What is printed as a result of the execution of the code segment?'
 
-right 'x = 5 y = -1'
+right 'x = 4 y = -1'
 wrong 'x = 1 y = 1'
 wrong 'x = 3 y = 2'
 wrong 'x = -1 y = -1'
