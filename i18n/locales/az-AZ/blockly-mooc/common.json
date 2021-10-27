@@ -1636,7 +1636,7 @@
   "setUpClassPic2": "[Giriş kartlarını çap edin]({girişkartınınlinkiniçapedin}) bu hər bir şagirdin adını və şəkilli parolunu göstərir. Bunları öz şagirdlərinizlə bölüşün. ",
   "setUpClassEmailIntro": "Sinfinizin şəxsi girişlərlə quraşdırılması üçün aşağıdakıları edin:",
   "setUpClassEmail1": "Şagirdlərinizə öz e -poçt ünvanlarını[create Code.org accounts]({createAccountLink}) verin. Əgər onların artıq e-poçt ünvanları ilə əlaqəli Code.org hesabı varsa, bu addımı keçə bilərlər.",
-  "setUpClassEmail2": "Bölmənizə qoşulmaq üçün şagirdlərinizi bu linkə daxil edin: [{join Link}] ({join Link}).",
+  "setUpClassEmail2": "Bölmənizə qoşulmaq üçün şagirdlərinizi bu linkə daxil edin: [{joinLink}] ({joinLink}).",
   "setUpClass3": "3. Valideynləri Code.org ilə tanış etmək və onlara tələbə məxfiliyi ilə bağlı siyasətlərimizi nəzərdən keçirmək imkanı vermək üçün [məxfilik məktubu]({parentLetterLink}) paylaşın. ",
   "setUpClass4": "4. Şagirdlərinizin daxil olmaq üçün aşağıdakı təlimatları izləmələrini istəyin.",
   "setUpClassroom": "Sinifinizi quraşdırın",
