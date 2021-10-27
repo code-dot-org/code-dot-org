@@ -519,13 +519,15 @@ class UnitEditor extends React.Component {
               isOpen={this.state.ttsDialogOpen}
               title={this.state.tts ? 'Turn off TTS' : 'Turn on TTS'}
               cancelText="Cancel"
+              confirmText={this.state.tts ? 'Disable TTS' : 'Generate TTS'}
               body={
                 this.state.tts
                   ? 'Are you sure? All of the TTS files for this ' +
                     'course have already been generated. Any new edits will not be reflected ' +
-                    'TTS files for this course.'
+                    'in the TTS files for this course.'
                   : 'Are you sure? This will generate text to speech files for all ' +
-                    'levels in this script. We have to pay for each file generated. Please ' +
+                    'levels in this script. It will also update the TTS files each time edits are ' +
+                    'made to a level. We have to pay for each file generated. Please ' +
                     'confirm that levels are in a stable state before checking.'
               }
               handleClose={e => {
