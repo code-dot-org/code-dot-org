@@ -214,13 +214,13 @@ module TextToSpeech
     end
   end
 
-  def tts_update
+  def tts_update(update_all = false)
     context = 'update_level'
-    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?
+    tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions? || update_all
 
-    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions?
+    tts_upload_to_s3(tts_long_instructions_text, context) if tts_should_update_long_instructions? || update_all
 
-    if authored_hints && tts_should_update('authored_hints')
+    if authored_hints && (tts_should_update('authored_hints') || update_all)
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
         text = TextToSpeech.sanitize(hint["hint_markdown"])
