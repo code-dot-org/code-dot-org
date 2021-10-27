@@ -307,6 +307,10 @@ module LevelsHelper
       @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section)
     end
 
+    if @script_level && current_user
+      @app_options[:instructorInTraining] = @script_level.instructor_in_training #TODO(dmcavoy) also check participant and pl course
+    end
+
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if can_view_teacher_markdown?
 

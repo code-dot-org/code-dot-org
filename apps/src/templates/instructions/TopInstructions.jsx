@@ -68,6 +68,7 @@ class TopInstructions extends Component {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,
     exampleSolutions: PropTypes.array,
+    instructorInTraining: PropTypes.bool,
     height: PropTypes.number.isRequired,
     expandedHeight: PropTypes.number,
     maxHeight: PropTypes.number.isRequired,
@@ -561,6 +562,7 @@ class TopInstructions extends Component {
       overlayVisible,
       hasContainedLevels,
       exampleSolutions,
+      instructorInTraining,
       noInstructionsWhenCollapsed,
       noVisualization,
       isRtl,
@@ -656,6 +658,7 @@ class TopInstructions extends Component {
       ttsLongInstructionsUrl,
       hasContainedLevels,
       exampleSolutions,
+      instructorInTraining,
       isRtl,
       documentationUrl,
       teacherMarkdown,
@@ -754,7 +757,7 @@ class TopInstructions extends Component {
                   ))}
                 </div>
               )}
-            {this.isViewingAsTeacher &&
+            {(this.isViewingAsTeacher || instructorInTraining) &&
               (hasContainedLevels || teacherMarkdown) && (
                 <div>
                   {hasContainedLevels && (
@@ -883,7 +886,9 @@ export default connect(
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
     overlayVisible: state.instructions.overlayVisible,
     exampleSolutions:
-      (state.pageConstants && state.pageConstants.exampleSolutions) || []
+      (state.pageConstants && state.pageConstants.exampleSolutions) || [],
+    instructorInTraining:
+      (state.pageConstants && state.pageConstants.instructorInTraining) || false
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {
