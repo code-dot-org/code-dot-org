@@ -49,7 +49,7 @@ describe('ActivitySectionCard', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions, [], false));
+    store.dispatch(init(sampleActivities, searchOptions, [], false, false));
     store.dispatch(initResources('lessonResource', resourceTestData));
     store.dispatch(initVocabularies([]));
 

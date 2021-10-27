@@ -37,13 +37,15 @@ export const init = (
   activities,
   searchOptions,
   programmingEnvironments,
-  lessonExtrasAvailableForUnit
+  lessonExtrasAvailableForUnit,
+  professionalLearningCourse
 ) => ({
   type: INIT,
   activities,
   searchOptions,
   programmingEnvironments,
-  lessonExtrasAvailableForUnit
+  lessonExtrasAvailableForUnit,
+  professionalLearningCourse
 });
 
 export const initActivities = activities => ({
@@ -495,6 +497,14 @@ function lessonExtrasAvailableForUnit(state = {}, action) {
   return state;
 }
 
+function professionalLearningCourse(state = {}, action) {
+  switch (action.type) {
+    case INIT:
+      return action.professionalLearningCourse;
+  }
+  return state;
+}
+
 // Serialize the activities into JSON, renaming any keys which are different
 // on the backend.
 export const getSerializedActivities = rawActivities => {
@@ -624,7 +634,8 @@ export default {
   activities,
   searchOptions,
   programmingEnvironments,
-  lessonExtrasAvailableForUnit
+  lessonExtrasAvailableForUnit,
+  professionalLearningCourse
 };
 
 export const emptyActivitySection = {

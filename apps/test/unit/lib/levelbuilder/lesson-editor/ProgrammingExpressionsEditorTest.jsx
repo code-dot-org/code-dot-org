@@ -26,7 +26,7 @@ describe('ProgrammingExpressionsEditor', () => {
     });
 
     store = getStore();
-    store.dispatch(init([], {}, [], false));
+    store.dispatch(init([], {}, [], false, false));
 
     addProgrammingExpression = sinon.spy();
     removeProgrammingExpression = sinon.spy();
