@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import ParameterEditor from './ParameterEditor';
-import Button from '@cdo/apps/templates/Button';
+import OrderableList from './OrderableList';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -226,53 +225,6 @@ const programmingExpressionShape = PropTypes.shape({
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
   environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired
-};
-
-const OrderableList = function({list, setList, addButtonText}) {
-  const addItem = () => {
-    const newParams = [...list, {key: createUuid()}];
-    setList(newParams);
-  };
-  const updateItem = (idx, key, value) => {
-    const newParams = [...list];
-    newParams[idx] = {...newParams[idx], [key]: value};
-    setList(newParams);
-  };
-  const moveItem = (idx, direction) => {
-    const newParams = [...list];
-    const swapIdx = direction === 'up' ? idx - 1 : idx + 1;
-    const temp = newParams[idx];
-    newParams[idx] = newParams[swapIdx];
-    newParams[swapIdx] = temp;
-    setList(newParams);
-  };
-  const removeItemFromList = idx => {
-    const newParams = [...list];
-    newParams.splice(idx, 1);
-    setList(newParams);
-  };
-  return (
-    <div>
-      {list.map((item, idx) => (
-        <ParameterEditor
-          key={item.key}
-          item={item}
-          update={(key, value) => updateItem(idx, key, value)}
-          remove={() => removeItemFromList(idx)}
-          moveUp={() => moveItem(idx, 'up')}
-          moveDown={() => moveItem(idx, 'down')}
-        />
-      ))}
-      <Button onClick={addItem} text={addButtonText} color="gray" />
-    </div>
-  );
-};
-
-OrderableList.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.object).isRequired,
-  setList: PropTypes.func.isRequired,
-  addButtonText: PropTypes.string.isRequired
-  // editorComponent: PropTypes.elementType
 };
 
 const styles = {

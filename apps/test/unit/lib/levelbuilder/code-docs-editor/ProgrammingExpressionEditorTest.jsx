@@ -21,7 +21,7 @@ describe('ProgrammingExpressionEditor', () => {
         syntax: 'block()',
         returnValue: 'none',
         tips: 'some tips on how to use this block',
-        parameters: []
+        parameters: [{name: 'id', type: 'string'}]
       },
       environmentCategories: ['Circuit', 'Variables', 'Canvas']
     };
@@ -109,6 +109,13 @@ describe('ProgrammingExpressionEditor', () => {
         .at(0)
         .props().markdown
     ).to.equal('some tips on how to use this block');
+
+    const parametersSection = wrapper.find('CollapsibleEditorSection').at(3);
+    const orderableParameterList = parametersSection.find('OrderableList');
+    expect(orderableParameterList.props().addButtonText).to.equal(
+      'Add Another Parameter'
+    );
+    expect(orderableParameterList.props().list.length).to.equal(1);
   });
 
   it('attempts to save when save is pressed', () => {
@@ -134,7 +141,7 @@ describe('ProgrammingExpressionEditor', () => {
       shortDescription: 'This is a short description.',
       content: 'This is a longer description of the code.',
       externalDocumentation: 'developer.mozilla.org',
-      parameters: [],
+      parameters: '[{"name":"id","type":"string"}]',
       returnValue: 'none',
       syntax: 'block()',
       tips: 'some tips on how to use this block'
