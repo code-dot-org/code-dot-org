@@ -14,7 +14,7 @@ function move(coreLibrary, spriteArg, distance) {
 
 function addSpriteSpeechBubble(coreLibrary, spriteArg, text, seconds) {
   coreLibrary.getSpriteArray(spriteArg)?.forEach(sprite => {
-    this.addSpeechBubble(sprite, text, seconds);
+    coreLibrary.addSpeechBubble(sprite, text, seconds);
   });
 }
 
