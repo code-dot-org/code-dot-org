@@ -27,8 +27,9 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
    * @override
    */
   endDrag(e, currentDragDeltaXY) {
+    const wouldDeleteBlock = this.draggedConnectionManager_.wouldDeleteBlock();
     // Don't let the block end with a negative position, unless it's getting deleted.
-    if (!this.draggedConnectionManager_.wouldDeleteBlock()) {
+    if (!wouldDeleteBlock) {
       const endPosition = this.draggingBlock_.getRelativeToSurfaceXY();
       if (endPosition.x < 0) {
         currentDragDeltaXY.x -= endPosition.x;
@@ -42,6 +43,17 @@ export default class BlockDragger extends GoogleBlockly.BlockDragger {
     this.workspace_.trashcan.setDisabled(false);
     this.workspace_.trashcan.setLidOpen(false);
     this.workspace_.hideTrashcan();
+
+    // Core Blockly logic will eventually update the block's disabled state, but
+    // we want to update it immediately. We rely on this value to skip
+    // code generation for disabled blocks, and since we have live-preview, it
+    // would be noticeable if this value were out of sync, even briefly.
+    // This only matters if the block is not being deleted.
+    if (!wouldDeleteBlock) {
+      const isTopBlock = this.draggingBlock_.previousConnection === null;
+      const hasParentBlock = !!this.draggingBlock_.parentBlock_;
+      this.draggingBlock_.setEnabled(isTopBlock || hasParentBlock);
+    }
   }
 
   /** Open trashcan lid whenever the block is over the toolbox, not only if it's over the trashcan itself.

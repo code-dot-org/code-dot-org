@@ -4,18 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
-      "curriculum_umbrella": "CSD",
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true,
-      "tts": true,
       "announcements": [
         {
           "notice": "Supports to Teach CS Discoveries",
@@ -31,12 +19,25 @@
           "type": "information",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "curriculum_umbrella": "CSD",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "tts": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-18 22:12:04 UTC",
+    "serialized_at": "2021-10-26 21:01:05 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd3-2021"
     }
@@ -652,16 +653,16 @@
       }
     },
     {
-      "key": "CS Discoveries Post Course survey",
-      "name": "CS Discoveries Post Course survey",
+      "key": "lesson-1",
+      "name": "CS Discoveries Post-Course Survey",
       "absolute_position": 29,
-      "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 28,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2021"
       }
@@ -2180,14 +2181,13 @@
       }
     },
     {
-      "key": "863455be-c1bd-4c21-a0cf-9ea311ad5b0a",
+      "key": "56d6d279-110e-45f4-82dd-993e9ec86c0f",
       "position": 1,
       "properties": {
-        "name": "Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "863455be-c1bd-4c21-a0cf-9ea311ad5b0a",
-        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson_activity.key": "56d6d279-110e-45f4-82dd-993e9ec86c0f",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2021"
       }
@@ -7603,13 +7603,20 @@
       }
     },
     {
-      "key": "8f49e929-8eb9-41f5-b166-5216b97b283a",
+      "key": "b44faa8f-43ae-4899-b299-888d85f57d48",
       "position": 1,
       "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**To view results** -- the post-course survey is a little different. The survey which lives in its own unit of the course, and this page simply links to it.\n\n* To view anonymized results of the survey in your teacher dashboard, you need to (1) view survey/assessments, and then (2) select the post-course survey unit as the unit you want view.  \n\n* **More Instructions for viewing results of post-course survey**: [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\n\n\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "8f49e929-8eb9-41f5-b166-5216b97b283a",
-        "lesson_activity.key": "863455be-c1bd-4c21-a0cf-9ea311ad5b0a"
+        "activity_section.key": "b44faa8f-43ae-4899-b299-888d85f57d48",
+        "lesson_activity.key": "56d6d279-110e-45f4-82dd-993e9ec86c0f"
       }
     }
   ],
@@ -13367,24 +13374,22 @@
       "chapter": 231,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD survey_placeholder_levelgroup"
-        ]
+        "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD survey_placeholder_levelgroup"
+          "csd-post-survey-markdown-with-link-to-survey_2021"
         ],
-        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2021",
-        "activity_section.key": "8f49e929-8eb9-41f5-b166-5216b97b283a"
+        "activity_section.key": "b44faa8f-43ae-4899-b299-888d85f57d48"
       },
       "level_keys": [
-        "CSD survey_placeholder_levelgroup"
+        "csd-post-survey-markdown-with-link-to-survey_2021"
       ]
     }
   ],
@@ -16151,14 +16156,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD survey_placeholder_levelgroup",
+        "level.key": "csd-post-survey-markdown-with-link-to-survey_2021",
         "script_level.level_keys": [
-          "CSD survey_placeholder_levelgroup"
+          "csd-post-survey-markdown-with-link-to-survey_2021"
         ],
-        "lesson.key": "CS Discoveries Post Course survey",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "cspSurvey",
         "script.name": "csd3-2021",
-        "activity_section.key": "8f49e929-8eb9-41f5-b166-5216b97b283a"
+        "activity_section.key": "b44faa8f-43ae-4899-b299-888d85f57d48"
       }
     }
   ],
@@ -16212,9 +16217,9 @@
       "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit",
       "key": "animated-scene",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "animated-scene"
@@ -16225,9 +16230,9 @@
       "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit",
       "key": "animated-scene-1",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "animated-scene-1"
@@ -16238,8 +16243,8 @@
       "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing",
       "key": "animated-scene-planning-exemplar-2020",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "animated-scene-planning-exemplar-2020"
@@ -16250,9 +16255,9 @@
       "url": "https://youtu.be/G666sFzAg5g",
       "key": "animating-sprites",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "animating-sprites"
@@ -16263,8 +16268,8 @@
       "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
       "key": "animation_tab",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "animation_tab"
@@ -16275,9 +16280,9 @@
       "url": "https://youtu.be/_j9nvYKaOVE",
       "key": "boolean_expressions",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/csd_booleans_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "boolean_expressions"
@@ -16288,8 +16293,8 @@
       "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
       "key": "booleans_and_comparison_operators",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "booleans_and_comparison_operators"
@@ -16300,9 +16305,9 @@
       "url": "https://youtu.be/3ZfqwCuDZaQ",
       "key": "calling_and_defining_functions",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "calling_and_defining_functions"
@@ -16313,9 +16318,9 @@
       "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit",
       "key": "captioned-scenes",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "captioned-scenes"
@@ -16326,8 +16331,8 @@
       "url": "https://docs.google.com/document/d/1hVdhQ5Y6Xij8W3BWAKeN8710XTEslbmlO5INDg9OraA/edit",
       "key": "collision-detection-exemplar-2020",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "collision-detection-exemplar-2020"
@@ -16338,8 +16343,8 @@
       "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
       "key": "collision_detection",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "collision_detection"
@@ -16350,9 +16355,9 @@
       "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
       "key": "collision_detection_version_a_",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "collision_detection_version_a_"
@@ -16363,9 +16368,9 @@
       "url": "https://docs.google.com/document/d/1FquQ6g2xpWsJyXf1GFrBM33aL7mxn-htJpG8plRQ9MU/",
       "key": "collision_detection_version_b_",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "collision_detection_version_b_"
@@ -16376,8 +16381,8 @@
       "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
       "key": "colored-shape-drawing",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "colored-shape-drawing"
@@ -16388,9 +16393,9 @@
       "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
       "key": "computer-science-practices",
       "properties": {
-        "type": "Reflection",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Reflection"
       },
       "seeding_key": {
         "resource.key": "computer-science-practices"
@@ -16401,9 +16406,9 @@
       "url": "https://youtu.be/TuLIK7DcPWs",
       "key": "conditional_statements",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/csd_conditionals_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "conditional_statements"
@@ -16414,9 +16419,9 @@
       "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
       "key": "cs-entertainment-activity",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "cs-entertainment-activity"
@@ -16427,8 +16432,8 @@
       "url": "https://docs.google.com/document/d/1lLsZjStrnX9-U02G7AxwSPIq-BENvw942PS2JIkjZww/edit",
       "key": "cs_in_entertainment",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "cs_in_entertainment"
@@ -16439,8 +16444,8 @@
       "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -16471,8 +16476,8 @@
       "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
@@ -16483,8 +16488,8 @@
       "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
       "key": "csd_unit_3_-_interactive_animations_and_games",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csd_unit_3_-_interactive_animations_and_games"
@@ -16495,8 +16500,8 @@
       "url": "https://docs.google.com/document/d/15FeSXeuREENXZ8ghAK7c4V7VWbSLG0kBr6nmuHQv7Cc/edit",
       "key": "drawing-shapes-exemplar-2020",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "drawing-shapes-exemplar-2020"
@@ -16507,9 +16512,9 @@
       "url": "https://youtu.be/PXn9gKiKKFo",
       "key": "drawing_in_game_lab_-_part_1",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "drawing_in_game_lab_-_part_1"
@@ -16520,9 +16525,9 @@
       "url": "https://youtu.be/QLabeWhw_O0",
       "key": "drawing_in_game_lab_-_part_2",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "drawing_in_game_lab_-_part_2"
@@ -16533,8 +16538,8 @@
       "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
       "key": "drawing_shapes",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "drawing_shapes"
@@ -16545,9 +16550,9 @@
       "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
       "key": "drawing_shapes_version_a_",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "drawing_shapes_version_a_"
@@ -16558,9 +16563,9 @@
       "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
       "key": "drawing_shapes_version_b_",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "drawing_shapes_version_b_"
@@ -16571,8 +16576,8 @@
       "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
       "key": "extra_code_in_challenge_levels_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "extra_code_in_challenge_levels_1"
@@ -16583,9 +16588,9 @@
       "url": "https://docs.google.com/document/d/1AymZm1SFJYU85zhdcjtUS3BOK_CWVp7GvDvbw8BchTo/edit",
       "key": "flyer-game",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Project Guide"
       },
       "seeding_key": {
         "resource.key": "flyer-game"
@@ -16596,9 +16601,9 @@
       "url": "https://docs.google.com/document/d/1NWIeTvJCpHOauxVZGRdDCpsinbXb6Oo_erT5s-_INCY/edit",
       "key": "flyer-game-1",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "flyer-game-1"
@@ -16609,8 +16614,8 @@
       "url": "https://docs.google.com/document/d/1dQ_JBSrcrt5MN5zqkghrxWg_YtP2rpn-jGOl0-EHdao/edit?usp=sharing",
       "key": "flyer-game-project-guide-exemplar",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "flyer-game-project-guide-exemplar"
@@ -16621,8 +16626,8 @@
       "url": "https://drive.google.com/file/d/1m4GATuAOfc3cL-kgb5Bmc4yciCNyxgVH/view?usp=sharing",
       "key": "functions_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "functions_1"
@@ -16633,8 +16638,8 @@
       "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
       "key": "if-else_statements_-_map_level_pdf_",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "if-else_statements_-_map_level_pdf_"
@@ -16645,9 +16650,9 @@
       "url": "https://youtu.be/6m6FFUJsOzo",
       "key": "if_else_statements",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/csd_ifelse_sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "if_else_statements"
@@ -16658,8 +16663,8 @@
       "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
       "key": "if_statements",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "if_statements"
@@ -16670,9 +16675,9 @@
       "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
       "key": "interactive-card-1-2-3-4",
       "properties": {
-        "type": "Peer Review",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Peer Review"
       },
       "seeding_key": {
         "resource.key": "interactive-card-1-2-3-4"
@@ -16683,8 +16688,8 @@
       "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
       "key": "interactive-card-exemplar-2020",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "interactive-card-exemplar-2020"
@@ -16695,8 +16700,8 @@
       "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
       "key": "interactive-card-marked-rubrics",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "interactive-card-marked-rubrics"
@@ -16707,9 +16712,9 @@
       "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
       "key": "interactive-card-project-guide-2019",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Project Guide"
       },
       "seeding_key": {
         "resource.key": "interactive-card-project-guide-2019"
@@ -16720,9 +16725,9 @@
       "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
       "key": "interactive_card",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "interactive_card"
@@ -16745,9 +16750,9 @@
       "url": "https://youtu.be/UG7Q1Sr0_F0",
       "key": "introduction-to-variables",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/variables_1.mp4"
+        "download_url": "https://videos.code.org/2015/csp/applab/variables_1.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction-to-variables"
@@ -16758,9 +16763,9 @@
       "url": "https://youtu.be/aUHzpGt9nso",
       "key": "introduction_to_sprites",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/gamelab_sprites-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_sprites"
@@ -16771,9 +16776,9 @@
       "url": "https://youtu.be/G6QJeuHhqCM",
       "key": "introduction_to_the_draw_loop",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_the_draw_loop"
@@ -16784,9 +16789,9 @@
       "url": "https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/edit?usp=sharing",
       "key": "make-your-own-game",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Project Guide"
       },
       "seeding_key": {
         "resource.key": "make-your-own-game"
@@ -16797,9 +16802,9 @@
       "url": "https://docs.google.com/document/d/1s2Q7SMhJCogVU5mht16UIzZLT-aAVz0gw5JRTuW9Vq0/edit",
       "key": "make-your-own-game-1-2-3",
       "properties": {
-        "type": "Peer Review",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Peer Review"
       },
       "seeding_key": {
         "resource.key": "make-your-own-game-1-2-3"
@@ -16810,8 +16815,8 @@
       "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
       "key": "make-your-own-game-exemplar-2020",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "make-your-own-game-exemplar-2020"
@@ -16822,8 +16827,8 @@
       "url": "https://docs.google.com/document/d/1G3GfGkUQtzeYbawGwK5JAfj5WQD1SoqJYM5igMYmvm8/edit",
       "key": "make-your-own-game-sample-marked-rubrics",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "make-your-own-game-sample-marked-rubrics"
@@ -16834,9 +16839,9 @@
       "url": "https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit",
       "key": "make_your_own_game",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "make_your_own_game"
@@ -16859,8 +16864,8 @@
       "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit",
       "key": "mini-project-captioned-scenes-2020",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "mini-project-captioned-scenes-2020"
@@ -16871,8 +16876,8 @@
       "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
       "key": "mini-project-guide-side-scroller-exemplar-2020",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "mini-project-guide-side-scroller-exemplar-2020"
@@ -16883,8 +16888,8 @@
       "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
       "key": "naming_variables",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "naming_variables"
@@ -16895,8 +16900,8 @@
       "url": "https://docs.google.com/document/d/1W23uN91Z52DWyrxpoHmM8HBenECEwNh9rNpoqzLwVcA/edit",
       "key": "planning-your-platform-game-exemplar-2020",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "planning-your-platform-game-exemplar-2020"
@@ -16953,8 +16958,8 @@
       "url": "https://drive.google.com/file/d/1BZwjs4cvsGdhtNhY8qjUXWkCgblmZUcD/view",
       "key": "random_numbers",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "random_numbers"
@@ -16965,8 +16970,8 @@
       "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
       "key": "shapes_and_parameters",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "shapes_and_parameters"
@@ -16977,9 +16982,9 @@
       "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
       "key": "shapes_and_parameters_-_map_level",
       "properties": {
-        "type": "Resource",
         "audience": "Teacher",
-        "download_url": "https://drive.google.com/a/code.org/uc?id=1qjYMu7Kvs-sKyAVGM2c_6NK3S6_Lo7Pm&export=download"
+        "download_url": "https://drive.google.com/a/code.org/uc?id=1qjYMu7Kvs-sKyAVGM2c_6NK3S6_Lo7Pm&export=download",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "shapes_and_parameters_-_map_level"
@@ -16990,9 +16995,9 @@
       "url": "https://docs.google.com/document/d/1KyuWeeW72iSOm_NrJDvlsOKLcBqDjRXF1YfgzsF9F_8/edit",
       "key": "side-scroller",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Project Guide"
       },
       "seeding_key": {
         "resource.key": "side-scroller"
@@ -17003,9 +17008,9 @@
       "url": "https://docs.google.com/document/d/1BcPO2oaU-mX3h2YVLeZtX3gSWcqG1BwR6TLnGjQDWH4/edit",
       "key": "side-scroller-1",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "side-scroller-1"
@@ -17016,9 +17021,9 @@
       "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit",
       "key": "sprite-scene-planning",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "sprite-scene-planning"
@@ -17029,8 +17034,8 @@
       "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
       "key": "sprite_properties",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "sprite_properties"
@@ -17041,8 +17046,8 @@
       "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
       "key": "sprites_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "sprites_1"
@@ -17064,9 +17069,9 @@
       "url": "https://youtu.be/DQPruYTJ0Fk",
       "key": "the_animation_tab",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/gamelab_theanimationtab-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_animation_tab"
@@ -17077,8 +17082,8 @@
       "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
       "key": "the_counter_pattern",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "the_counter_pattern"
@@ -17089,8 +17094,8 @@
       "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
       "key": "the_draw_loop",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "the_draw_loop"
@@ -17101,8 +17106,8 @@
       "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
       "key": "variables_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "variables_1"
@@ -17113,9 +17118,9 @@
       "url": "https://youtu.be/zcP94yMYqrI",
       "key": "velocity_1",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/gamelab_velocity-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "velocity_1"
@@ -17126,8 +17131,8 @@
       "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
       "key": "velocity_2",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "velocity_2"
@@ -17138,8 +17143,8 @@
       "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
       "key": "velocity_and_the_counter_pattern_-_map_level_pdf_",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "velocity_and_the_counter_pattern_-_map_level_pdf_"
@@ -17150,8 +17155,8 @@
       "url": "https://youtu.be/hol0p29cd8o",
       "key": "youtube-flipbook",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "youtube-flipbook"
@@ -17821,6 +17826,26 @@
   ],
   "vocabularies": [
     {
+      "key": "abstraction",
+      "word": "Abstraction",
+      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "key": "boolean_expression",
+      "word": "Boolean Expression",
+      "definition": "in programming, an expression that evaluates to True or False. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
       "key": "bug",
       "word": "Bug",
       "definition": "Part of a program that does not work correctly.",
@@ -17828,86 +17853,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "parameter",
-      "word": "Parameter",
-      "definition": "An extra piece of information passed to a function to customize it for a specific need",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "property",
-      "word": "Property",
-      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A character on the screen with properties that describe its location, movement, and look.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "dot_notation",
-      "word": "Dot notation",
-      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "key": "property",
-      "word": "Property",
-      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "property"
       }
     },
     {
@@ -17931,43 +17876,23 @@
       }
     },
     {
-      "key": "boolean_expression",
-      "word": "Boolean Expression",
-      "definition": "in programming, an expression that evaluates to True or False. ",
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "boolean_expression"
+        "vocabulary.key": "debugging"
       }
     },
     {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run when certain conditions are true.",
+      "key": "dot_notation",
+      "word": "Dot notation",
+      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "abstraction",
-      "word": "Abstraction",
-      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "key": "abstraction",
-      "word": "Abstraction",
-      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "abstraction"
+        "vocabulary.key": "dot_notation"
       }
     },
     {
@@ -17979,9 +17904,89 @@
       "seeding_key": {
         "vocabulary.key": "function"
       }
+    },
+    {
+      "key": "parameter",
+      "word": "Parameter",
+      "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "property",
+      "word": "Property",
+      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "property"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A character on the screen with properties that describe its location, movement, and look.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "conditionals"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Drawing in Game Lab",
@@ -18002,14 +18007,32 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Shapes and Parameters",
         "vocabulary.key": "parameter"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "variable"
+        "lesson.key": "Sprite Properties",
+        "vocabulary.key": "property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "vocabulary.key": "dot_notation"
       }
     },
     {
@@ -18026,312 +18049,12 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprites",
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "vocabulary.key": "function"
+        "lesson.key": "Variables",
+        "vocabulary.key": "variable"
       }
     }
   ],
   "lessons_programming_expressions": [
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "rect"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "ellipse"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "fill"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "rect"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "background"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "ellipse"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "declareNoAssign_x"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "declareAssign_x"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "randomNumber"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "createSprite"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "drawSprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "rotation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "y"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "scale"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "x"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "World.frameRate"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "draw"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "equalityOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "greaterThanOrEqualOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "greaterThanOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "ifBlock"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "lessThanOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "inequalityOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "lessThanOrEqualOperator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "keyDown"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "keyWentUp"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "visible"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "keyWentDown"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseWentDown"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseDown"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "ifElseBlock"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseDidMove"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "mouseWentUp"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "velocityY"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "velocityX"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "rotationSpeed"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Collision Detection",
@@ -18350,7 +18073,7 @@
       "seeding_key": {
         "lesson.key": "Collisions",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "setCollider"
+        "programming_expression.key": "bounce"
       }
     },
     {
@@ -18364,21 +18087,7 @@
       "seeding_key": {
         "lesson.key": "Collisions",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "displace"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
         "programming_expression.key": "bounciness"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "programming_environment.name": "gamelab",
-        "programming_expression.key": "bounce"
       }
     },
     {
@@ -18390,9 +18099,86 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions",
+        "lesson.key": "Collisions",
         "programming_environment.name": "gamelab",
-        "programming_expression.key": "functionParams_none"
+        "programming_expression.key": "displace"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "setCollider"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "equalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "greaterThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "greaterThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ifBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "inequalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "lessThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "lessThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ellipse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "fill"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "rect"
       }
     },
     {
@@ -18401,289 +18187,198 @@
         "programming_environment.name": "gamelab",
         "programming_expression.key": "callMyFunction"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "functionParams_none"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "keyDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ifElseBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "keyWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "keyWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseDidMove"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "visible"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "randomNumber"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "background"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ellipse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "rect"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "rotation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "scale"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "y"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "createSprite"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "drawSprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "World.frameRate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "draw"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "declareNoAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "rotationSpeed"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "velocityX"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "velocityY"
+      }
     }
   ],
   "objectives": [
-    {
-      "key": "b2682f90-e600-48aa-aef4-def3798b261d",
-      "properties": {
-        "description": "Identify how computer science is used in a field of entertainment"
-      },
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "objective.key": "b2682f90-e600-48aa-aef4-def3798b261d"
-      }
-    },
-    {
-      "key": "27e5577c-a619-4ef6-8f34-b252c18deb58",
-      "properties": {
-        "description": "Reason about locations on the Game Lab coordinate grid"
-      },
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "objective.key": "27e5577c-a619-4ef6-8f34-b252c18deb58"
-      }
-    },
-    {
-      "key": "e5a564d4-8723-4ee1-92c5-f9262ee8722d",
-      "properties": {
-        "description": "Communicate how to draw an image in Game Lab, accounting for shape position, color, and order"
-      },
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "objective.key": "e5a564d4-8723-4ee1-92c5-f9262ee8722d"
-      }
-    },
-    {
-      "key": "92707a88-4d6e-44a5-a1ba-e888e9ea27c8",
-      "properties": {
-        "description": "Use a coordinate system to place elements on the screen."
-      },
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "objective.key": "92707a88-4d6e-44a5-a1ba-e888e9ea27c8"
-      }
-    },
-    {
-      "key": "d8f92cff-b148-455d-b1c9-690e0d8c3929",
-      "properties": {
-        "description": "Sequence code correctly to overlay shapes."
-      },
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "objective.key": "d8f92cff-b148-455d-b1c9-690e0d8c3929"
-      }
-    },
-    {
-      "key": "1fc6f9a4-a172-4504-a702-e0f6b219e62c",
-      "properties": {
-        "description": "Use and reason about drawing commands with multiple parameters"
-      },
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "objective.key": "1fc6f9a4-a172-4504-a702-e0f6b219e62c"
-      }
-    },
-    {
-      "key": "5fc17aef-b130-416f-8746-54fe3f0ed390",
-      "properties": {
-        "description": "Identify a variable as a way to label and reference a value in a program"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "objective.key": "5fc17aef-b130-416f-8746-54fe3f0ed390"
-      }
-    },
-    {
-      "key": "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca",
-      "properties": {
-        "description": "Use variables in a program to store a piece of information that is used multiple times"
-      },
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "objective.key": "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca"
-      }
-    },
-    {
-      "key": "557e9ade-ee71-4196-9dce-44f742180fa8",
-      "properties": {
-        "description": "Generate and use random numbers in a program"
-      },
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "objective.key": "557e9ade-ee71-4196-9dce-44f742180fa8"
-      }
-    },
-    {
-      "key": "71209fa9-4d56-4ced-bb42-b3cf73f523f1",
-      "properties": {
-        "description": "Update a value stored in a variable"
-      },
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "objective.key": "71209fa9-4d56-4ced-bb42-b3cf73f523f1"
-      }
-    },
-    {
-      "key": "40bde7b5-fc47-455e-9d21-5dc53330e8e8",
-      "properties": {
-        "description": "Create and use a sprite"
-      },
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "objective.key": "40bde7b5-fc47-455e-9d21-5dc53330e8e8"
-      }
-    },
-    {
-      "key": "99befbcc-2654-44cc-a2f9-fe0cde1ab146",
-      "properties": {
-        "description": "Use dot notation to update a sprite's properties"
-      },
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "objective.key": "99befbcc-2654-44cc-a2f9-fe0cde1ab146"
-      }
-    },
-    {
-      "key": "c61f1e5d-d728-499d-9729-a1ff2db8de64",
-      "properties": {
-        "description": "Place text on the screen using a coordinate plane."
-      },
-      "seeding_key": {
-        "lesson.key": "Text",
-        "objective.key": "c61f1e5d-d728-499d-9729-a1ff2db8de64"
-      }
-    },
-    {
-      "key": "b40e994c-3d1e-4ba8-9cf1-8674567bb26c",
-      "properties": {
-        "description": "Use arguments to control how text is displayed on a screen."
-      },
-      "seeding_key": {
-        "lesson.key": "Text",
-        "objective.key": "b40e994c-3d1e-4ba8-9cf1-8674567bb26c"
-      }
-    },
-    {
-      "key": "d6709c2c-76b3-495d-bb07-af8a4c772363",
-      "properties": {
-        "description": "Use a structured process to plan and develop a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "objective.key": "d6709c2c-76b3-495d-bb07-af8a4c772363"
-      }
-    },
-    {
-      "key": "6828e8c6-bde7-4e8f-842d-04bd41a46eb4",
-      "properties": {
-        "description": "Explain how the draw loop allows for the creation of animations in Game Lab"
-      },
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "objective.key": "6828e8c6-bde7-4e8f-842d-04bd41a46eb4"
-      }
-    },
-    {
-      "key": "9ed14237-271b-4890-b05c-04bde1c706fc",
-      "properties": {
-        "description": "Use the draw loop in combination with the randomNumber() command, shapes, and sprites to make simple animations"
-      },
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "objective.key": "9ed14237-271b-4890-b05c-04bde1c706fc"
-      }
-    },
-    {
-      "key": "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9",
-      "properties": {
-        "description": "Use the counter pattern to increment or decrement sprite properties"
-      },
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "objective.key": "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9"
-      }
-    },
-    {
-      "key": "32725306-4405-48d1-871c-ce44cd180b0c",
-      "properties": {
-        "description": "Identify which sprite properties need to be changed, and in what way, to achieve a specific movement"
-      },
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "objective.key": "32725306-4405-48d1-871c-ce44cd180b0c"
-      }
-    },
-    {
-      "key": "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16",
-      "properties": {
-        "description": "Use conditionals to react to changes in variables and sprite properties"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "objective.key": "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16"
-      }
-    },
-    {
-      "key": "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102",
-      "properties": {
-        "description": "Use conditionals to react to keyboard input"
-      },
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "objective.key": "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102"
-      }
-    },
-    {
-      "key": "aee02da5-9e5d-4c9b-b43d-7576a405fd5d",
-      "properties": {
-        "description": "Move sprites in response to keyboard input"
-      },
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "objective.key": "aee02da5-9e5d-4c9b-b43d-7576a405fd5d"
-      }
-    },
-    {
-      "key": "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7",
-      "properties": {
-        "description": "Use an if-else statement to control the flow of a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "objective.key": "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7"
-      }
-    },
-    {
-      "key": "317b8134-0316-46e4-b56c-4adba284eab6",
-      "properties": {
-        "description": "Respond to a variety of types of user input."
-      },
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "objective.key": "317b8134-0316-46e4-b56c-4adba284eab6"
-      }
-    },
-    {
-      "key": "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0",
-      "properties": {
-        "description": "Use conditionals to react to keyboard input or changes in variables / properties"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "objective.key": "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0"
-      }
-    },
-    {
-      "key": "286ec7b0-0776-4049-9174-3deeb1d80c14",
-      "properties": {
-        "description": "Sequence commands to draw in the proper order"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "objective.key": "286ec7b0-0776-4049-9174-3deeb1d80c14"
-      }
-    },
-    {
-      "key": "899e51b2-2cb8-4948-9987-aaada64c6a85",
-      "properties": {
-        "description": "Apply an iterator pattern to variables or properties in a loop"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "objective.key": "899e51b2-2cb8-4948-9987-aaada64c6a85"
-      }
-    },
-    {
-      "key": "ebf0954f-2190-4e20-8420-f0275aceee0a",
-      "properties": {
-        "description": "Use the velocity and rotationSpeed blocks to create and change sprite movements"
-      },
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "objective.key": "ebf0954f-2190-4e20-8420-f0275aceee0a"
-      }
-    },
     {
       "key": "01426fc9-55b3-41ec-92ec-fb871a4739b1",
       "properties": {
@@ -18692,126 +18387,6 @@
       "seeding_key": {
         "lesson.key": "Velocity",
         "objective.key": "01426fc9-55b3-41ec-92ec-fb871a4739b1"
-      }
-    },
-    {
-      "key": "bb7bce08-c20e-4a8b-8b3e-def24447e33f",
-      "properties": {
-        "description": "Detect when sprites are touching or overlapping, and change the program in response. "
-      },
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "objective.key": "bb7bce08-c20e-4a8b-8b3e-def24447e33f"
-      }
-    },
-    {
-      "key": "d3aa02b0-9340-47ab-b258-5446686c77b4",
-      "properties": {
-        "description": "Describe how abstractions help to manage the complexity of code"
-      },
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "objective.key": "d3aa02b0-9340-47ab-b258-5446686c77b4"
-      }
-    },
-    {
-      "key": "63135326-7d2f-4974-af73-f8d7a801cd04",
-      "properties": {
-        "description": "Use sprite velocity with the counter pattern to create different types of sprite movement"
-      },
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "objective.key": "63135326-7d2f-4974-af73-f8d7a801cd04"
-      }
-    },
-    {
-      "key": "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3",
-      "properties": {
-        "description": "Explain how individual programming constructs can be combined to create more complex behavior"
-      },
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "objective.key": "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3"
-      }
-    },
-    {
-      "key": "2a7e04b6-f408-4915-a8df-10a590d5b45a",
-      "properties": {
-        "description": "Model different types of interactions between sprites."
-      },
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "objective.key": "2a7e04b6-f408-4915-a8df-10a590d5b45a"
-      }
-    },
-    {
-      "key": "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86",
-      "properties": {
-        "description": "Describe how abstractions can be built upon to develop even further abstractions"
-      },
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "objective.key": "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86"
-      }
-    },
-    {
-      "key": "3572828f-fdf1-4708-bfd1-1a021799e8fd",
-      "properties": {
-        "description": "Create and use functions for blocks of code that perform a single high-level task within a program"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "objective.key": "3572828f-fdf1-4708-bfd1-1a021799e8fd"
-      }
-    },
-    {
-      "key": "9d1d61de-4fa4-458f-b11f-aee208854019",
-      "properties": {
-        "description": "Explain the advantages of using functions in a program"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "objective.key": "9d1d61de-4fa4-458f-b11f-aee208854019"
-      }
-    },
-    {
-      "key": "dd877754-8fc0-4026-9205-385c6a3a2e4e",
-      "properties": {
-        "description": "Explain how functions allow programmers to reason about a program at a higher level"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "objective.key": "dd877754-8fc0-4026-9205-385c6a3a2e4e"
-      }
-    },
-    {
-      "key": "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189",
-      "properties": {
-        "description": "Implement different features of a program by following a structured project guide"
-      },
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "objective.key": "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189"
-      }
-    },
-    {
-      "key": "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016",
-      "properties": {
-        "description": "Identify core programming constructs necessary to build different components of a game"
-      },
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "objective.key": "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016"
-      }
-    },
-    {
-      "key": "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16",
-      "properties": {
-        "description": " Implement different features of a program by following a structured project guide"
-      },
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "objective.key": "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16"
       }
     },
     {
@@ -18825,13 +18400,183 @@
       }
     },
     {
-      "key": "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3",
+      "key": "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102",
       "properties": {
-        "description": "Create a plan for building a piece of software by describing its major components"
+        "description": "Use conditionals to react to keyboard input"
       },
       "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "objective.key": "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3"
+        "lesson.key": "Keyboard Input",
+        "objective.key": "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102"
+      }
+    },
+    {
+      "key": "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189",
+      "properties": {
+        "description": "Implement different features of a program by following a structured project guide"
+      },
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "objective.key": "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189"
+      }
+    },
+    {
+      "key": "1fc6f9a4-a172-4504-a702-e0f6b219e62c",
+      "properties": {
+        "description": "Use and reason about drawing commands with multiple parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "objective.key": "1fc6f9a4-a172-4504-a702-e0f6b219e62c"
+      }
+    },
+    {
+      "key": "27e5577c-a619-4ef6-8f34-b252c18deb58",
+      "properties": {
+        "description": "Reason about locations on the Game Lab coordinate grid"
+      },
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "objective.key": "27e5577c-a619-4ef6-8f34-b252c18deb58"
+      }
+    },
+    {
+      "key": "286ec7b0-0776-4049-9174-3deeb1d80c14",
+      "properties": {
+        "description": "Sequence commands to draw in the proper order"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "objective.key": "286ec7b0-0776-4049-9174-3deeb1d80c14"
+      }
+    },
+    {
+      "key": "2a7e04b6-f408-4915-a8df-10a590d5b45a",
+      "properties": {
+        "description": "Model different types of interactions between sprites."
+      },
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "objective.key": "2a7e04b6-f408-4915-a8df-10a590d5b45a"
+      }
+    },
+    {
+      "key": "317b8134-0316-46e4-b56c-4adba284eab6",
+      "properties": {
+        "description": "Respond to a variety of types of user input."
+      },
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "objective.key": "317b8134-0316-46e4-b56c-4adba284eab6"
+      }
+    },
+    {
+      "key": "32725306-4405-48d1-871c-ce44cd180b0c",
+      "properties": {
+        "description": "Identify which sprite properties need to be changed, and in what way, to achieve a specific movement"
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "objective.key": "32725306-4405-48d1-871c-ce44cd180b0c"
+      }
+    },
+    {
+      "key": "3572828f-fdf1-4708-bfd1-1a021799e8fd",
+      "properties": {
+        "description": "Create and use functions for blocks of code that perform a single high-level task within a program"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "objective.key": "3572828f-fdf1-4708-bfd1-1a021799e8fd"
+      }
+    },
+    {
+      "key": "40bde7b5-fc47-455e-9d21-5dc53330e8e8",
+      "properties": {
+        "description": "Create and use a sprite"
+      },
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "objective.key": "40bde7b5-fc47-455e-9d21-5dc53330e8e8"
+      }
+    },
+    {
+      "key": "557e9ade-ee71-4196-9dce-44f742180fa8",
+      "properties": {
+        "description": "Generate and use random numbers in a program"
+      },
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "objective.key": "557e9ade-ee71-4196-9dce-44f742180fa8"
+      }
+    },
+    {
+      "key": "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0",
+      "properties": {
+        "description": "Use conditionals to react to keyboard input or changes in variables / properties"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "objective.key": "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0"
+      }
+    },
+    {
+      "key": "5fc17aef-b130-416f-8746-54fe3f0ed390",
+      "properties": {
+        "description": "Identify a variable as a way to label and reference a value in a program"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "objective.key": "5fc17aef-b130-416f-8746-54fe3f0ed390"
+      }
+    },
+    {
+      "key": "63135326-7d2f-4974-af73-f8d7a801cd04",
+      "properties": {
+        "description": "Use sprite velocity with the counter pattern to create different types of sprite movement"
+      },
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "objective.key": "63135326-7d2f-4974-af73-f8d7a801cd04"
+      }
+    },
+    {
+      "key": "6828e8c6-bde7-4e8f-842d-04bd41a46eb4",
+      "properties": {
+        "description": "Explain how the draw loop allows for the creation of animations in Game Lab"
+      },
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "objective.key": "6828e8c6-bde7-4e8f-842d-04bd41a46eb4"
+      }
+    },
+    {
+      "key": "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7",
+      "properties": {
+        "description": "Use an if-else statement to control the flow of a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "objective.key": "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7"
+      }
+    },
+    {
+      "key": "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3",
+      "properties": {
+        "description": "Explain how individual programming constructs can be combined to create more complex behavior"
+      },
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "objective.key": "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3"
+      }
+    },
+    {
+      "key": "71209fa9-4d56-4ced-bb42-b3cf73f523f1",
+      "properties": {
+        "description": "Update a value stored in a variable"
+      },
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "objective.key": "71209fa9-4d56-4ced-bb42-b3cf73f523f1"
       }
     },
     {
@@ -18843,35 +18588,384 @@
         "lesson.key": "Project - Design a Game",
         "objective.key": "7f488fda-a480-4f40-814d-6a2810780b38"
       }
+    },
+    {
+      "key": "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016",
+      "properties": {
+        "description": "Identify core programming constructs necessary to build different components of a game"
+      },
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "objective.key": "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016"
+      }
+    },
+    {
+      "key": "899e51b2-2cb8-4948-9987-aaada64c6a85",
+      "properties": {
+        "description": "Apply an iterator pattern to variables or properties in a loop"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "objective.key": "899e51b2-2cb8-4948-9987-aaada64c6a85"
+      }
+    },
+    {
+      "key": "92707a88-4d6e-44a5-a1ba-e888e9ea27c8",
+      "properties": {
+        "description": "Use a coordinate system to place elements on the screen."
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "objective.key": "92707a88-4d6e-44a5-a1ba-e888e9ea27c8"
+      }
+    },
+    {
+      "key": "99befbcc-2654-44cc-a2f9-fe0cde1ab146",
+      "properties": {
+        "description": "Use dot notation to update a sprite's properties"
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "objective.key": "99befbcc-2654-44cc-a2f9-fe0cde1ab146"
+      }
+    },
+    {
+      "key": "9d1d61de-4fa4-458f-b11f-aee208854019",
+      "properties": {
+        "description": "Explain the advantages of using functions in a program"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "objective.key": "9d1d61de-4fa4-458f-b11f-aee208854019"
+      }
+    },
+    {
+      "key": "9ed14237-271b-4890-b05c-04bde1c706fc",
+      "properties": {
+        "description": "Use the draw loop in combination with the randomNumber() command, shapes, and sprites to make simple animations"
+      },
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "objective.key": "9ed14237-271b-4890-b05c-04bde1c706fc"
+      }
+    },
+    {
+      "key": "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16",
+      "properties": {
+        "description": "Use conditionals to react to changes in variables and sprite properties"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "objective.key": "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16"
+      }
+    },
+    {
+      "key": "aee02da5-9e5d-4c9b-b43d-7576a405fd5d",
+      "properties": {
+        "description": "Move sprites in response to keyboard input"
+      },
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "objective.key": "aee02da5-9e5d-4c9b-b43d-7576a405fd5d"
+      }
+    },
+    {
+      "key": "b2682f90-e600-48aa-aef4-def3798b261d",
+      "properties": {
+        "description": "Identify how computer science is used in a field of entertainment"
+      },
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "objective.key": "b2682f90-e600-48aa-aef4-def3798b261d"
+      }
+    },
+    {
+      "key": "b40e994c-3d1e-4ba8-9cf1-8674567bb26c",
+      "properties": {
+        "description": "Use arguments to control how text is displayed on a screen."
+      },
+      "seeding_key": {
+        "lesson.key": "Text",
+        "objective.key": "b40e994c-3d1e-4ba8-9cf1-8674567bb26c"
+      }
+    },
+    {
+      "key": "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86",
+      "properties": {
+        "description": "Describe how abstractions can be built upon to develop even further abstractions"
+      },
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "objective.key": "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86"
+      }
+    },
+    {
+      "key": "bb7bce08-c20e-4a8b-8b3e-def24447e33f",
+      "properties": {
+        "description": "Detect when sprites are touching or overlapping, and change the program in response. "
+      },
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "objective.key": "bb7bce08-c20e-4a8b-8b3e-def24447e33f"
+      }
+    },
+    {
+      "key": "c61f1e5d-d728-499d-9729-a1ff2db8de64",
+      "properties": {
+        "description": "Place text on the screen using a coordinate plane."
+      },
+      "seeding_key": {
+        "lesson.key": "Text",
+        "objective.key": "c61f1e5d-d728-499d-9729-a1ff2db8de64"
+      }
+    },
+    {
+      "key": "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16",
+      "properties": {
+        "description": " Implement different features of a program by following a structured project guide"
+      },
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "objective.key": "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16"
+      }
+    },
+    {
+      "key": "d3aa02b0-9340-47ab-b258-5446686c77b4",
+      "properties": {
+        "description": "Describe how abstractions help to manage the complexity of code"
+      },
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
+        "objective.key": "d3aa02b0-9340-47ab-b258-5446686c77b4"
+      }
+    },
+    {
+      "key": "d6709c2c-76b3-495d-bb07-af8a4c772363",
+      "properties": {
+        "description": "Use a structured process to plan and develop a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "objective.key": "d6709c2c-76b3-495d-bb07-af8a4c772363"
+      }
+    },
+    {
+      "key": "d8f92cff-b148-455d-b1c9-690e0d8c3929",
+      "properties": {
+        "description": "Sequence code correctly to overlay shapes."
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing in Game Lab",
+        "objective.key": "d8f92cff-b148-455d-b1c9-690e0d8c3929"
+      }
+    },
+    {
+      "key": "dd877754-8fc0-4026-9205-385c6a3a2e4e",
+      "properties": {
+        "description": "Explain how functions allow programmers to reason about a program at a higher level"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "objective.key": "dd877754-8fc0-4026-9205-385c6a3a2e4e"
+      }
+    },
+    {
+      "key": "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca",
+      "properties": {
+        "description": "Use variables in a program to store a piece of information that is used multiple times"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "objective.key": "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca"
+      }
+    },
+    {
+      "key": "e5a564d4-8723-4ee1-92c5-f9262ee8722d",
+      "properties": {
+        "description": "Communicate how to draw an image in Game Lab, accounting for shape position, color, and order"
+      },
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "objective.key": "e5a564d4-8723-4ee1-92c5-f9262ee8722d"
+      }
+    },
+    {
+      "key": "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3",
+      "properties": {
+        "description": "Create a plan for building a piece of software by describing its major components"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "objective.key": "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3"
+      }
+    },
+    {
+      "key": "ebf0954f-2190-4e20-8420-f0275aceee0a",
+      "properties": {
+        "description": "Use the velocity and rotationSpeed blocks to create and change sprite movements"
+      },
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "objective.key": "ebf0954f-2190-4e20-8420-f0275aceee0a"
+      }
+    },
+    {
+      "key": "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9",
+      "properties": {
+        "description": "Use the counter pattern to increment or decrement sprite properties"
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "objective.key": "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9"
+      }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
+        "lesson.key": "Collision Detection",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
+        "standard.shortcode": "2-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Plotting Shapes",
+        "lesson.key": "Collision Detection",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-10"
+        "standard.shortcode": "2-AP-12"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Plotting Shapes",
+        "lesson.key": "Collision Detection",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-13"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Plotting Shapes",
+        "lesson.key": "Collision Detection",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collisions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
       }
     },
     {
@@ -18884,699 +18978,6 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing in Game Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Captioned Scenes",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Animation",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-18"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Side Scroller",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Flyer Game",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
       }
@@ -19632,86 +19033,226 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Game Design Process",
+        "lesson.key": "Keyboard Input",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Game Design Process",
+        "lesson.key": "Keyboard Input",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-12"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
+        "lesson.key": "Keyboard Input",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-16"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Game Design Process",
+        "lesson.key": "Keyboard Input",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-17"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Game Design Process",
+        "lesson.key": "Keyboard Input",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
+        "lesson.key": "Mini-Project: Animation",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
+        "lesson.key": "Mini-Project: Animation",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-13"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
+        "lesson.key": "Mini-Project: Animation",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-17"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
+        "lesson.key": "Mini-Project: Animation",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Captioned Scenes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Flyer Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Flyer Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Flyer Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Flyer Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Flyer Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Side Scroller",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Side Scroller",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Side Scroller",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Side Scroller",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
       }
     },
     {
@@ -19773,6 +19314,440 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Shapes and Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Text",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Text",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Text",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Text",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using the Game Design Process",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
       }
