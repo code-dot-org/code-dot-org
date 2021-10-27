@@ -126,17 +126,17 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
-      animatePoem() {
+      animateText() {
         this.poemState.animationStartFrame = this.p5.World.frameCount;
         // Reset line events since we're starting the poem animation over.
         Object.values(this.lineEvents).forEach(e => (e.fired = false));
       },
 
-      showPoem() {
+      showText() {
         this.poemState.isVisible = true;
       },
 
-      hidePoem() {
+      hideText() {
         this.poemState.isVisible = false;
       },
 
