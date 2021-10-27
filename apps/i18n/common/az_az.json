@@ -1123,7 +1123,7 @@
   "manageStudentsNotificationAddSuccess": "Bölmənizə {numStudents, plural, one {1 student} other {# students}} əlavə etdiniz.",
   "manageStudentsNotificationSuccess": "Uğurlu!",
   "manageStudentsNotificationLocked": "Siz bu bölməni kilidləmisiniz",
-  "manageStudentsNotificationLockedDetails": "Tələbələr bölmə kodu ilə bu bölməyə daxil ola bilməzlər. Siz hələ də tələbələri {loginType, select, google_classroom {Google Classroom ilə sinxronizasiya etməklə} smart {Clever ilə sinxronizasiya etməklə} e-poçt {başqa bölmədən əl ilə köçürmək və ya kopyalamaq} other {Tələbələri İdarəetmə tabında əl ilə}} əlavə edə bilərsiniz. Siz \"Epizod Təfərrüatlarını Redaktə et\" üzərinə klikləməklə bu epizodu kiliddən çıxara bilərsiniz.",
+  "manageStudentsNotificationLockedDetails": "Tələbələr bölmə kodu ilə bu bölməyə daxil ola bilməzlər. Siz hələ də tələbələri {loginType, select, google_classroom {Google Classroom ilə sinxronizasiya etməklə} clever {Clever ilə sinxronizasiya etməklə} email {başqa bölmədən əl ilə köçürmək və ya kopyalamaq} other {Tələbələri İdarəetmə tabında əl ilə}} əlavə edə bilərsiniz. Siz \"Epizod Təfərrüatlarını Redaktə et\" üzərinə klikləməklə bu epizodu kiliddən çıxara bilərsiniz.",
   "manageYourLibraries": "Kitabxanalarınızı İdarə Edin",
   "map": "Xəritə",
   "mapsToCSTAStandards": "Xəritələr [CSTA Standartları] ({cstaLink})",
