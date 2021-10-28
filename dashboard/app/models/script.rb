@@ -663,7 +663,7 @@ class Script < ApplicationRecord
 
   def can_be_instructor?(user)
     # If unit is in a unit group then decide based on unit group audience
-    return unit_group.can_be_instructor?(user) if unit_group?
+    return unit_group.can_be_instructor?(user) if unit_group
 
     return false if user.student?
     return true if user.permission?(UserPermission::CODE_INSTRUCTOR)
@@ -681,7 +681,7 @@ class Script < ApplicationRecord
 
   def can_be_participant?(user)
     # If unit is in a unit group then decide based on unit group audience
-    return unit_group.can_be_participant?(user) if unit_group?
+    return unit_group.can_be_participant?(user) if unit_group
 
     return true if user.permission?(UserPermission::CODE_INSTRUCTOR)
 
