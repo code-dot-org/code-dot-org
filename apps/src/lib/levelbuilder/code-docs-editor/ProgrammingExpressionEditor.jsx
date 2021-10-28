@@ -219,7 +219,8 @@ const programmingExpressionShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
-  tips: PropTypes.string
+  tips: PropTypes.string,
+  parameters: PropTypes.arrayOf(PropTypes.object).isRequired
 });
 
 ProgrammingExpressionEditor.propTypes = {
