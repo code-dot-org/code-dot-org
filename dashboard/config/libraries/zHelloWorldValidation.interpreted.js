@@ -93,7 +93,7 @@ function level3(){
 
   // Check sprites speaking
   for (var spriteId in spriteIds) {
-    if(getProp({ id: spriteId }, "speech")){
+    if(getSpeechForSpriteId(spriteId)){
       numSpritesWithSayBlocks = numSpritesWithSayBlocks + 1;
     }
   }
@@ -170,7 +170,6 @@ function level4(){
   }
 
   var newClickedSprite = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);
-  console.log("newClickedSprite: " + newClickedSprite);
   if (newClickedSprite >= 0){
     if (validationProps.clickedSprites.indexOf(newClickedSprite) != -1) {
       console.log("IN PUSH");
