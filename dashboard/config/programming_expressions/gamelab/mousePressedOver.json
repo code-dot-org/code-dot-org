@@ -1,7 +1,9 @@
 {
   "func": "mousePressedOver",
   "paletteParams": [
-    "sprite"
+    {
+      "name": "sprite"
+    }
   ],
   "params": [
     "sprite"

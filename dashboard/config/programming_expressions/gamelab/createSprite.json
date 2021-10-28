@@ -2,8 +2,12 @@
   "func": "var sprite = createSprite",
   "category": "Sprites",
   "paletteParams": [
-    "x",
-    "y"
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
   "params": [
     "200",
