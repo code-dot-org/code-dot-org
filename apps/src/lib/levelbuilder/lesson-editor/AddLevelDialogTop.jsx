@@ -24,7 +24,9 @@ function AddLevelDialogTop(props) {
   );
   const [numPages, setNumPages] = useState(0);
 
-  useEffect(() => handleSearch(), [currentPage]);
+  useEffect(() => {
+    handleSearch();
+  }, [currentPage]);
 
   const handleSearch = () => {
     let queryParams = {page: currentPage};
