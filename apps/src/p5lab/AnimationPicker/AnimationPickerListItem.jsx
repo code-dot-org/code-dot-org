@@ -159,6 +159,10 @@ const styles = {
     ':hover': {
       backgroundColor: color.light_purple,
       borderColor: color.light_purple
+    },
+    ':focus': {
+      backgroundColor: color.light_purple,
+      borderColor: color.light_purple
     }
   },
   label: {
