@@ -75,7 +75,7 @@
           "description": "Tworzyć program, w celu utworzenia obrazu używając czynności sekwencyjnych."
         },
         "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
-          "description": "Łamać skomplikowane kształty w proste części."
+          "description": "Rozłóż złożone kształty na prostsze części."
         },
         "4e571382-ec59-4a36-a913-d384d2ffc5f8": {
           "description": "Zdefiniuj \"kodowanie\" i \"informatykę\""
@@ -90,13 +90,13 @@
           "description": "Określ miejsca, w które można się udać, aby kontynuować naukę informatyki i kodowania."
         },
         "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
-          "description": "Opracowywać programy reagujące na określone czasowo wydarzenia"
+          "description": "Twórz programy reagujące na określone czasowo zdarzenia"
         },
         "efcad81f-908b-4e31-8602-02c5ef16ab26": {
-          "description": "Opracowywać programy reagujące na dane wejściowe użytkowników"
+          "description": "Twórz programy reagujące na dane wejściowe użytkowników"
         },
         "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
-          "description": "Tworzyć animacje tańców przy pomocy kodu"
+          "description": "Twórz animacje tańców za pomocą kodu"
         },
         "586fecaa-52c0-4889-adaf-cc11a172d4a7": {
           "description": "Zdefiniuj \"kodowanie\" i \"informatykę\""
@@ -201,13 +201,13 @@
           "description": "Określ kluczowe słownictwo informatyczne."
         },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
-          "description": "Opracowywać programy reagujące na określone czasowo wydarzenia"
+          "description": "Twórz programy reagujące na określone czasowo zdarzenia"
         },
         "251fe027-d9b3-4384-99f6-53505275e4ce": {
-          "description": "Opracowywać programy reagujące na dane wejściowe użytkowników"
+          "description": "Twórz programy reagujące na dane wejściowe użytkowników"
         },
         "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
-          "description": "Tworzyć animacje tańców przy pomocy kodu"
+          "description": "Twórz animacje tańców za pomocą kodu"
         },
         "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
           "description": "Omawiać rolę, jaką sztuczna inteligencja odgrywa w ich życiu."
@@ -217,12 +217,6 @@
         },
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "Zastanawiać się w jaki sposób ludzkie uprzedzenia odgrywają rolę w nauce maszynowej."
-        },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Twórz nowe duszki i przypisuj im kostiumy i lokalizacje"
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Stwórz interaktywną animację za pomocą duszków i zdarzeń."
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Rozpoznawać oczekiwania, gdy uczniowie przechodzą do laboratorium komputerowego."
@@ -276,7 +270,7 @@
           "description": "Zauważać duże, powtórzone wzorce wytworzone z mniejszych powtórzonych wzorców."
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
-          "description": "Identyfikować korzyści używania struktury pętli zamiast powtarzania ręcznego."
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
         },
         "059b2997-3d05-4186-8450-066fceeb8c5b": {
           "description": "Identyfikować obszary, w którym można używać zmiennych do modyfikowania ilości w trakcie czasu przebiegu."
@@ -513,7 +507,7 @@
           "description": "Tworzyć program, w celu utworzenia obrazu używając czynności sekwencyjnych."
         },
         "d47b51d2-9114-4dfd-ad21-810573d85543": {
-          "description": "Łamać skomplikowane kształty w proste części."
+          "description": "Rozłóż złożone kształty na prostsze części."
         },
         "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
           "description": "Identyfikować wzorce powtarzalne w kodzie, które można zastąpić pętlą"
@@ -630,13 +624,13 @@
           "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
         },
         "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
-          "description": "Opracowywać programy reagujące na określone czasowo wydarzenia"
+          "description": "Twórz programy reagujące na określone czasowo zdarzenia"
         },
         "18434de2-92be-4695-8dc7-4aed45243596": {
-          "description": "Opracowywać programy reagujące na dane wejściowe użytkowników"
+          "description": "Twórz programy reagujące na dane wejściowe użytkowników"
         },
         "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
-          "description": "Tworzyć animacje tańców przy pomocy kodu"
+          "description": "Twórz animacje tańców za pomocą kodu"
         },
         "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
           "description": "Konstruować program z użyciem struktur, w których powtarzają się obszary kodu"

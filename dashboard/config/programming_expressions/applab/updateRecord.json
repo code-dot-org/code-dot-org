@@ -2,9 +2,15 @@
   "func": "updateRecord",
   "category": "Data",
   "paletteParams": [
-    "table",
-    "record",
-    "callback"
+    {
+      "name": "table"
+    },
+    {
+      "name": "record"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "\"mytable\"",

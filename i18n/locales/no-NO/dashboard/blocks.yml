@@ -1375,12 +1375,23 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Iskrem
+            Stars: Stjerner
+            Fireworks: Fyrverkeri
+            '"rainbow"': Regnbue
+            '"hearts"': Hjerter
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': regn
       Poetry_playSound:
         text: spillLyd {SOUND}
+        options:
+          SOUND:
+            Light: Lys
       Poetry_setBackground:
         text: sett bakgrunnsfarge {COLOR}
       Poetry_setBackgroundEffect:
@@ -1389,6 +1400,9 @@
             '"colors"': Farger
             '"space"': Verdensrom
             '"stars"': Stjerner
+            '"rain"': Regn
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
           PALETTE:
             '"rainbow"': Regnbue
       Poetry_setForegroundEffect:

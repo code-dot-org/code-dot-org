@@ -6161,12 +6161,19 @@ tr-TR:
         display_name: Ders Projesinin Sonu
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Hareketli nesne sadece sağa dönecek.
+          feedback: Yanlış. Hareketli nesne doğuya doğru da hareket edecek.
+        - text: Hareketli nesne sadece doğuya doğru hareket edecek.
+          feedback: Yanlış. Hareketli nesnenin dönüşü durmamıştır; dolayısıyla ikisini
+            de aynı anda yapar.
+        - text: Hareketli nesne aynı anda dönecek ve hareket edecek.
+          correct: true
+          feedback: Doğru! İki davranış aynı anda olacak.
+        - text: Hareketli nesne önce dönecek, sonra hareket edecek.
+          feedback: Yanlış. Hareketli Nesne Laboratuvarında bağlı bloklar, birbiri
+            ardından gerçekleşir. Dolayısıyla iki davranış aynı anda olacak.
         questions:
-        - {}
+        - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -6211,20 +6218,36 @@ tr-TR:
         - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Her iki uçak da ızgara boyunca bir boşluk kadar hareket edecek, ardından
+            duracak.
+          feedback: Yanlış. Bu hareketli nesnelerde, durmaları söylenene kadar koşmaya
+            devam etme "davranışı" vardır.
+        - text: Her iki uçak da hareket etmeye başlayacak ve durmayacak.
+          correct: true
+          feedback: Doğru! Bu davranışlar uçaklara harekete başlamalarını ve devam
+            etmelerini söyler.
+        - text: Önce bir uçak hareket edecek ve sonra da diğer uçak hareket edecek.
+          feedback: Yanlış. Hareketli Nesne Laboratuvarındaki her kod bloğu, öncekinin
+            hemen ardından çalışır.
+        - text: Uçaklar çarpışacak.
+          feedback: Yanlış. Uçaklar, temas edecekleri şekilde konumlandırılmaz.
         questions:
-        - {}
+        - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program, "Merhaba ad!" yazacak
+          feedback: Yanlış. Ad bloğunun yerini, yazdığınız şey alacak.
+        - text: Program, seni yazdığın ad ile karşılayacak.
+          correct: true
+          feedback: Doğru! Yazdıkların, ad bloğunun yerine kullanılır.
+        - text: Hareketli nesne boyut değiştirecek.
+          feedback: Yanlış. Metin, ekrana yazılır.
+        - text: Bilgisayar, başka bir soru soracak.
+          feedback: Yanlış. Program başladığı anda sadece bir soru sorulur.
         questions:
-        - {}
+        - text: 'Bu program, bir soruyu klavyeyle yazarak yanıtlamanı sağlar. "yazdır"
+            bloğu ekranda metni gösterir. Bir tahmin yap: Soruyu cevapladıktan sonra
+            ne olacak?'
       courseF_variables_stop:
         content1: açıklama buraya
       coursee_prediction_artistfunction2_2021:
@@ -6280,3 +6303,76 @@ tr-TR:
           Hareketli Nesne Laboratuvarı ile hazırlandı. Neler mümkün olduğunu görmek
           için hemen deneyin. Bu kursu tamamladığınızda bunun gibi ve daha birçok
           proje yapabileceksiniz.
+        display_name: Hareketli Nesne Laboratuvarı Uygulamaları
+        teacher_markdown: |-
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Buradaki tercihler, öğrencileri keşfedebilecekleri uygulamaları denemeye sevk eder. Bu aktivitenin amacı, [ders planında](.././) bulunan Uygulamaları Keşfetme çalışma sayfasıyla koordinasyonu sağlamaktır.
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # Boş Alan Hikayeleri
+
+          Bu derste, boş alan hikayelerini kullanmayı ve yazmayı öğreneceksiniz. Bunun bilgisayar bilimi ile nasıl bağlantılı olduğunu öğrenmek için bu videoyu izleyin.
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # Kelimelerin Gücü
+
+          ## Birisi internette kaba veya incitici bir dil kullandığında ne yapmalısınız?
+      courseF_events_freeplay:
+        description: Artık öğrendiklerinizi projenizi daha da iyi hale getirmek için
+          kullanabilirsiniz! Programınızın üstüne eklemeye devam edin veya yeni bir
+          şeye başlayın!
+        display_name: Olaylar - Ücretsiz Oyun
+      courseF_events_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Olaylarla alıştırma yapmaya devam et!
+        display_name: Olay Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Fırlat!|Uçmayı öğrenme|Fıçı tono yap|Küçült ve Büyüt|Balığı şişir!|Penguen hareket halinde|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Debug**|**Hata Ayıklama**|**Debug**|**İsteğe Bağlı İçerik**|**İsteğe Bağlı İçerik**
+          | ***Kavram***|*events, behaviors*|*olaylar, davranışlar*|*events, behaviors*|*olaylar, davranışlar*|*when/while events*|*when/while olayları*|
+
+
+      courseF_sprites_freeplay:
+        description: İstediğin her şeyi oluşturma sırası sende! Ne tür bir proje yapacaksın?
+        display_name: Hareketli Nesneler - Ücretsiz Oyna
+      courseF_sprites_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Hareketli nesneler ve davranışlarla alıştırma
+          yapmaya devam et!
+        display_name: Hareketli Nesne Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Çöl Sahnesi|Meyvenin boyutunu değiştir.|Yüzen Gemi Animasyonu Yap|Esintili Bir Gün|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Review**|**İnceleme**|**İnceleme**|
+          | ***Kavram***|*sprites, locations*|*hareketli nesneler, özellikler*|*sprites, locations, behaviors*|*davranışlar*|
+
+
+      courseF_text_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Metin ve istemlerle alıştırma yapmaya devam et!
+        display_name: Metin ve İstem Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Metin için Konuşmayı Kullanma|İstemlerden Metin|Robotu adlandır!|Değişken Etiketleri|Büyük Metin|Renkler için istemde bulunma|Sıfırdan başlama|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Debug**|**Hata Ayıklama**|**Debug**|**İsteğe Bağlı İçerik**|**Optional Content**|**Ücretsiz Oyun**
+          | ***Kavram***|*print block, events*|*istemler, olaylar*|*adding spaces*|*eşleşen değişken etiketleri*|*title screen blocks*|*renk saklama*|*yeni içerik yok*
+
+

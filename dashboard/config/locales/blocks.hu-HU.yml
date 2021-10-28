@@ -1690,6 +1690,16 @@ hu:
         text: "{SPRITE} x koordinátája"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Fagyi
+            Stars: Csillagok
+            Fireworks: Tűzijáték
+            '"rainbow"': Szivárvány
+            '"hearts"': Szívek
+            '"flowers"': Virágok
+            '"waves"': Hullámok
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1701,6 +1711,9 @@ hu:
         text: csinálj {NUM} új {ANIMATION_NAME} szereplőt
       Poetry_playSound:
         text: játszd le a {SOUND} hangot
+        options:
+          SOUND:
+            Light: Világos
       Poetry_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Poetry_setBackgroundEffect:
@@ -1711,6 +1724,10 @@ hu:
             '"space"': Világűr
             '"stars"': Csillagok
             '"ripples"': Lüktetés
+            '"rain"': Eső
+            '"bubbles"': Buborékok
+            '"confetti"': Konfetti
+            '"hearts"': Színes szívek
           PALETTE:
             '"rainbow"': Szivárvány
       Poetry_setBackgroundImageAs:

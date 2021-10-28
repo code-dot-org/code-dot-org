@@ -1715,6 +1715,16 @@ de:
         text: Monster zufällig anordnen
       Outbreak_stopMoving:
         text: Monster bewegen sich nicht mehr
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Eiscreme
+            Stars: Sterne
+            Fireworks: Feuerwerk
+            '"rainbow"': Regenbogen
+            '"hearts"': Herzen
+            '"flowers"': Blumen
+            '"waves"': Wellen
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1726,6 +1736,10 @@ de:
         text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
       Poetry_playSound:
         text: spieleTon {SOUND}
+        options:
+          SOUND:
+            Break: Pause
+            Light: Hell
       Poetry_setBackground:
         text: setze Hintergrundfarbe {COLOR}
       Poetry_setBackgroundEffect:
@@ -1736,6 +1750,10 @@ de:
             '"space"': Leerzeichen
             '"stars"': Sterne
             '"ripples"': Welligkeit
+            '"rain"': Regen
+            '"bubbles"': Blasen
+            '"confetti"': Konfetti
+            '"hearts"': Farbenfrohe Herzen
           PALETTE:
             '"rainbow"': Regenbogen
       Poetry_setBackgroundImageAs:

@@ -16,6 +16,7 @@ az:
       Begin planning your project: Layihənizi planlaşdırmağa başlayın
       Binary Numbers: İkilik rəqəmlər
       Binary and Data: İkili və məlumat
+      Boolean Comparison: Boolean müqayisə
       Build a Screen: Ekran qur
       Building an App: Bir App qurmaq
       'Bunny ': 'dovşan'
@@ -26,12 +27,16 @@ az:
       CSS and Style Sheets: CSS və Stil səhifələri
       Challenge: meydan oxumaq
       'Challenge: Draw an Image': 'Çağırış: Bir şəkil çəkin'
+      'Challenge: Extend Your Scene': 'Çağırış: Səhnənizi genişləndirin'
       'Challenge: Updating Variables': 'Çağırış: Dəyişənləri Yeniləmə'
       Challenges: Əngəllər
       Change: Dəyişmək
       Changing Screens: Ekranların dəyişdirilməsi
       Checking for a Winner: Qazananı yoxlamaq
       Collector Game: Kolleksiyaçı oyunu
+      Collisions: Toqquşmalar
+      Collisions in Games: oyunlarda toqquşmalar
+      Combining Projects: Layihələri birləşdirmək
       'Conditionals: If Statements': 'Şərtlər: İf Operatorları'
       'Course F: Play Lab Project': 'Kurs F: Laboratoriya Layihəsin Oyna'
       Create Your Own Animation: öz animasiyanızı yaradın
@@ -52,10 +57,11 @@ az:
       Drawing: Şəkil
       Drawing Shapes: Rəsm Şekilləri
       Editing Images: Şəkilləri redaktə etmək
+      Emotion Machine Example: Emosiya qurğusu nümunəsi
       End of Course Projects: Kurs Layihələri
       Escape Room Example: Qaçış Otağı Nümunəsi
       Event Types: Hadisə növləri
-      Events: Hadisələr
+      Events: Tədbirlər
       Events and Linking Screens: Hadisələr və Əlaqələndirici  Ekranlar
       Events and Properties: Hadisələr və xüsusiyyətlər
       Example App Types: Nümunə Tətbiq Növləri
@@ -95,6 +101,7 @@ az:
       Headings: Başlıqlar
       Headings in HTML: HTML başlıqları
       How to Create a Simple Function: Sadə funksiya necə yaradılır
+      How to Make a Sprite: Pəri Necə Hazırlanır
       Hyperlinks: Köprülər
       Images and Sounds: Şəkillər və Səslər
       Images in HTML: HTML-dəki şəkillər
@@ -106,6 +113,8 @@ az:
       Intro to Design Mode: Dizayn rejiminə giriş
       Intro to Sprites: Spraytlara giriş
       Intro to Variables: Dəyişənlərə giriş
+      Introducing Sprite Lab: Sprite Laboratoriyasını təqdim edirik
+      Introduction to Arrays: Massivlərə Giriş
       Introduction to Game Lab: Oyun Laboratoriyasına giriş
       Introduction to Variables: Dəyişənlərə giriş
       Iteration and Parameters: Təkrarlanma və Parametrlər
@@ -142,10 +151,13 @@ az:
       Practice: Praktika
       Prediction: Təxmin
       Project: Layihə
+      Project Work: layihə işi
       Properties: Xüsusiyyətlər
       RGB Widget: RGB Widget'i
       Random Numbers: Təsadufi rəqəmlər
       Reflection: Əksetmə
+      Repeat Blocks: Bloklari təkrar et
+      Responding to Board Events: Lovhə hadisələrinə cavab vermək
       Responding to User Input: İstifadəçi input-una cavab
       Review: Gözdən keçirmə
       Revise Artist Project: Rəssamın layihəsini yenidən gözdən keçir
@@ -160,6 +172,7 @@ az:
       The Accelerometer: Akselerometr
       The Animation Tab: "\nAnimasiya Nişanı"
       The Body Element: Bədən elementi
+      The Harvester: "Biçinçi\n"
       Tour of Design Mode: Dizayn rejimi turu
       Using the Grid: Şəbəkədən istifadə
       Using the Repeat Block: Dövr bloklarından istifadə etmək
@@ -177,7 +190,10 @@ az:
       'Video: Intro to Web Lab - Part 1': 'Video: Veb laboratoriyasına giriş - hissə 1'
       'Video: Intro to Web Lab - Part 2': 'Video: Veb laboratoriyasına giriş - hissə 2'
       'Video: Introduction to Arrays': 'Video: Massivlərə giriş'
+      'Video: Introduction to Sprites': 'Video: Spritlərə giriş'
+      'Video: Introduction to the Draw Loop': 'Video: Draw Loop-a giriş'
       'Video: Problem Solving Process': 'Video: Problemin Həll olunması prosesi'
+      'Video: The Animation Tab': 'Video: Animasiya nişanı'
       'Video: Velocity': 'Video: Sürət'
       'Video: What Makes a Computer, a Computer?': 'Video: Kompüter, kompüter nə edir?'
       Where'd They Go?: Onlar hara getdilər?

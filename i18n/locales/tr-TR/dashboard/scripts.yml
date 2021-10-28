@@ -15818,6 +15818,8 @@ tr:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
             Virus Simulation for Code Bytes:
               name: Simülasyon Kodlama
+            Making Sprites:
+              name: Hareketli Nesne Oluşturma
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
             End of Course Project:
@@ -17211,6 +17213,7 @@ tr:
               description_student: Kendi hareketli nesne laboratuvarını programlamayı öğrenin!
               description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet:
+              key: Sanal Evcil Hayvan
               name: 'Mini Proje: Sanal Hayvan'
               description_student: Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.
               description_teacher: Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.
@@ -17225,6 +17228,8 @@ tr:
               description_teacher: Bu derste öğrenciler, varsayımsal uygulamalar üzerinden erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.
             lesson-6:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
+            lesson-7:
+              name: Hareketli Nesne Oluşturma
             lesson-8:
               name: Eylem halindeki Hareketli Nesneler
             lesson-5:
@@ -17392,6 +17397,8 @@ tr:
               name: Dans Partisi
               description_student: Kutlama zamanı! Bu derste kendi etkileşimli dans partinizi programlayacaksınız.
               description_teacher: Bu derste öğrenciler, kendi etkileşimli dans partisini programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan dolayı bu aktivite ses gerektirir.
+            lesson-2:
+              name: Hareketli Nesne Oluşturma
             lesson-3:
               name: Eylem halindeki Hareketli Nesneler
           lesson_groups:
@@ -17485,6 +17492,8 @@ tr:
               name: Simülasyon Kodlama
             Course F Introduction:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
+            Making Sprites:
+              name: Hareketli Nesne Oluşturma
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
             introducing-spritelab:
@@ -18146,10 +18155,6 @@ tr:
               name: Araçlar
             lesson-2:
               name: Araçlar
-        poetry:
-          lessons:
-            lesson-3:
-              name: Değişkenler
         spelling-bee:
           lessons:
             lesson-1:

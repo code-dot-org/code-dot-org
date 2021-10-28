@@ -86,28 +86,96 @@
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
         },
         "courseF_apps_aquarium": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "wandering2": "அலைதல்2",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east2": "கிழக்கு நோக்கி நகரும் 2",
+          "moving west": "மேற்கு நோக்கி நகரும் ",
+          "moving east": "கிழக்கு நோக்கி நகரும்",
+          "moving west2": "மேற்கு நோக்கி நகரும் 2",
+          "wobbling": "தள்ளாட்டம் ",
+          "spinning left": "இடதுபுறம் சுழல்கிறது ",
+          "spinning right": "வலதுபுறம் சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளரும்",
+          "moving south": "தெற்கு நகரும் ",
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல் ",
+          "moving north": "வடக்கு நோக்கி நகரும்",
+          "jittering": "நடுக்கம்",
+          "patrolling": "ரோந்து",
+          "driving with arrow keys": "அம்புக்குறி விசைகளை ஓட்டுதல் ",
+          "spinning left2": "இடதுபுறம் சுழல்கிறது2 ",
+          "spinning right2": "வலதுபுறம் சுழல்கிறது2 ",
+          "shrinking2": "சுருங்குகிறது2",
+          "growing2": "வளரும்2",
+          "moving south2": "தெற்கே நகர்கிறது2 ",
+          "swimming left and right2": "இடது மற்றும் வலது 2 நீச்சல் ",
+          "moving north2": "வடக்கே நகர்கிறது2",
+          "jittering2": "நடுக்கம்2",
+          "patrolling2": "ரோந்து 2",
+          "moving with arrow keys2": "அம்புக்குறி விசைகள்2 உடன் நகரும்",
+          "driving with arrow keys2": "அம்புக்குறி விசைகள்2 மூலம் ஓட்டுதல் "
         },
         "courseF_apps_card": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "blocking movement": "இயக்கத்தைத் தடுக்கிறது",
+          "driving with arrow keys": "அம்புக்குறி விசைகளை ஓட்டுதல்",
+          "wandering": "அலைந்து திரிதல்",
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "shrinking": "சுருங்குகிறது",
+          "patrolling": "ரோந்து ",
+          "growing": "வளரும் ",
+          "jittering": "நடுக்கம் ",
+          "moving east": "கிழக்கு நோக்கி நகரும் ",
+          "moving north": "வடக்கு நோக்கி நகரும் ",
+          "moving south": "தெற்கு நகரும் ",
+          "moving west": "மேற்கு நோக்கி நகரும் ",
+          "spinning right": "வலதுபுறம் சுழல்கிறது ",
+          "spinning left": "இடதுபுறம் சுழல்கிறது "
         },
         "courseF_apps_chatbot": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "blocking movement": "இயக்கத்தைத் தடுக்கிறது"
         },
         "courseF_apps_collector": {
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
         },
         "courseF_apps_madlib": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "moving west": "மேற்கு நோக்கி நகரும் ",
+          "patrolling": "ரோந்து ",
+          "fluttering": "படபடக்கும் ",
+          "wobbling": "தள்ளாட்டம் ",
+          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து வளையும்",
+          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து வளையும் "
         },
         "courseF_apps_pet": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "patrolling": "ரோந்து",
+          "wandering": "அலைந்து திரிதல்",
+          "moving east": "கிழக்கு நோக்கி நகரும்",
+          "spinning left": "இடதுபுறம் சுழல்கிறது",
+          "spinning right": "வலதுபுறம் சுழல்கிறது",
+          "shrinking": "சுருங்குகிறது",
+          "growing": "வளரும்",
+          "moving south": "தெற்கு நகரும்",
+          "swimming left and right": "இடது மற்றும் வலது நீச்சல்",
+          "moving north": "வடக்கு நோக்கி நகரும்",
+          "jittering": "நடுக்கம்",
+          "moving west": "மேற்கு நோக்கி நகரும்",
+          "driving with arrow keys": "அம்புக்குறி விசைகளை ஓட்டுதல்",
+          "fluttering": "படபடக்கும் ",
+          "wobbling": "தள்ளாட்டம் ",
+          "moving west and looping": "மேற்கு நோக்கி நகர்ந்து வளையும்",
+          "moving east and looping": "கிழக்கு நோக்கி நகர்ந்து வளையும்"
         },
         "courseF_editable_card": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "blocking movement": "இயக்கத்தைத் தடுக்கிறது"
         },
         "courseF_editable_chatbot": {
-          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்",
+          "blocking movement": "இயக்கத்தைத் தடுக்கிறது"
         },
         "courseF_editable_madlib": {
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
@@ -181,6 +249,21 @@
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
         },
         "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "poetry_hoc_addSprites": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "poetry_hoc_exemplar1": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "poetry_hoc_exemplar2": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "poetry_hoc_freeplay": {
+          "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
+        },
+        "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "அம்பு விசைகளுடன் நகரும்"
         }
       }
