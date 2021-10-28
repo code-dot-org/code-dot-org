@@ -8,7 +8,6 @@ import $ from 'jquery';
 import queryString from 'query-string';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {connect} from 'react-redux';
-//import _ from 'lodash';
 
 function AddLevelDialogTop(props) {
   const [methodOfAddingLevel, setMethodOfAddingLevel] = useState('Find Level');
@@ -25,18 +24,9 @@ function AddLevelDialogTop(props) {
   );
   const [numPages, setNumPages] = useState(0);
 
-  /*handleSearch = _.debounce(
-    () => {
-      this.props.handleSearch();
-    },
-    1000,
-    {
-      leading: true,
-      trailing: false
-    }
-  );*/
+  useEffect(() => handleSearch(), [currentPage]);
 
-  useEffect(() => {
+  const handleSearch = () => {
     let queryParams = {page: currentPage};
     if (levelName) {
       queryParams.name = levelName;
@@ -63,7 +53,7 @@ function AddLevelDialogTop(props) {
       setLevels(data.levels);
       setNumPages(data.numPages);
     });
-  }, [currentPage, levelName, levelType, unitId, ownerId]);
+  };
 
   return (
     <div>
@@ -83,6 +73,7 @@ function AddLevelDialogTop(props) {
           {methodOfAddingLevel === 'Find Level' && (
             <div style={styles.filtersAndLevels}>
               <AddLevelFilters
+                handleSearch={handleSearch}
                 handleChangeLevelName={event =>
                   setLevelName(event.target.value)
                 }
@@ -97,7 +88,7 @@ function AddLevelDialogTop(props) {
                 levelType={levelType}
               />
               <AddLevelTable
-                setCurrentPage={event => setCurrentPage(event.target.value)}
+                setCurrentPage={value => setCurrentPage(value)}
                 currentPage={currentPage}
                 addLevel={props.addLevel}
                 levels={levels}
