@@ -2,7 +2,9 @@
   "func": "stroke",
   "category": "Drawing",
   "paletteParams": [
-    "color"
+    {
+      "name": "color"
+    }
   ],
   "params": [
     "\"blue\""

@@ -2,8 +2,12 @@
   "func": "onRecordEvent",
   "category": "Data",
   "paletteParams": [
-    "table",
-    "callback"
+    {
+      "name": "table"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "\"mytable\"",
