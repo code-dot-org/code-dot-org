@@ -5,14 +5,15 @@
     "login_required": true,
     "properties": {
       "editor_experiment": "broward",
-      "pilot_experiment": "time4cs-control",
+      "hideable_lessons": true,
       "lesson_extras_available": true,
-      "hideable_lessons": true
+      "pilot_experiment": "time4cs-control"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:49 UTC",
-    "published_state": null,
+    "serialized_at": "2021-10-25 22:54:03 UTC",
+    "published_state": "pilot",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "time4cs-control-unit-1"
     }

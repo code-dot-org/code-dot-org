@@ -4,12 +4,27 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "project_widget_visible": true,
+      "announcements": [
+        {
+          "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
+          "details": "Click \"Learn More\" to read the help article on showing and hiding lessons.",
+          "link": "https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses",
+          "type": "bullhorn"
+        }
+      ],
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
+      "curriculum_umbrella": "CSF",
+      "family_name": "pre-express",
+      "has_lesson_plan": true,
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_stable": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "has_lesson_plan": true,
+      "project_widget_visible": true,
       "script_announcements": [
         {
           "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
@@ -18,32 +33,18 @@
           "type": "bullhorn"
         }
       ],
-      "version_year": "2018",
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
-      "is_stable": true,
       "supported_locales": [
         "it-IT",
         "sk-SK"
       ],
-      "curriculum_umbrella": "CSF",
-      "family_name": "pre-express",
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_course": true,
-      "announcements": [
-        {
-          "notice": "New: Choose Which Lessons to Show or Hide for Your Section",
-          "details": "Click \"Learn More\" to read the help article on showing and hiding lessons.",
-          "link": "https://support.code.org/hc/en-us/articles/115001479372-Hiding-units-and-lessons-in-Code-org-s-CS-Principles-and-CS-Discoveries-courses",
-          "type": "bullhorn"
-        }
-      ]
+      "version_year": "2018"
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-08-03 22:47:35 UTC",
+    "serialized_at": "2021-10-25 22:53:50 UTC",
     "published_state": "stable",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "pre-express-2018"
     }

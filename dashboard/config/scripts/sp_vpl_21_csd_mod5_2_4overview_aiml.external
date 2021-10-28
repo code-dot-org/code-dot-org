@@ -3,9 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Placeholder 
+# Title
 
-Text level with a high-level overview of lessons 2 - 4
+## Text level with a high-level overview of lessons 2 - 4
+
+#### When students are on the computer, activities look like a series of bubbles, called **levels**, that students complete in order. Read the information below to learn more about the different types of levels found in the CS Discoveries curriculum.
+
+
 Lessons are designed to be facilitated by teachers, not a self-paced course for students
 Include examples of what this looks like in lessons 2 - 4 
 High-level overview of each lesson (possibly dropdowns) similar to a “previously on” session
