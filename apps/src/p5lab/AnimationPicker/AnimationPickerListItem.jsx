@@ -10,7 +10,7 @@ import {KeyCodes} from '@cdo/apps/constants';
 
 const THUMBNAIL_SIZE = 105;
 const THUMBNAIL_BORDER_WIDTH = 1;
-const HOVER_PLUS_SIZE = 34;
+const HOVER_PLUS_SIZE = 24;
 
 class AnimationPickerListItem extends React.Component {
   static propTypes = {
@@ -138,7 +138,7 @@ const styles = {
     float: 'left',
     width: THUMBNAIL_SIZE,
     textAlign: 'center',
-    margin: '1px 1px 1px 1px',
+    margin: '1px 1px 10px 1px',
     position: 'relative',
     border: 0,
     paddingRight: 10,
@@ -154,7 +154,8 @@ const styles = {
     padding: '2px',
     cursor: 'pointer',
     background: 'none',
-    boxShadow: 'none'
+    boxShadow: 'none',
+    margin: '0px 0px 0px 0px'
   },
   thumbnailIcon: {
     color: color.white,
