@@ -35,6 +35,10 @@ export default class CoreLibrary {
     };
   }
 
+  isPreviewFrame() {
+    return this.p5.World.frameCount === 1;
+  }
+
   getBackground() {
     return this.background;
   }
@@ -60,8 +64,7 @@ export default class CoreLibrary {
     // bubbles that have expired.
     this.removeExpiredSpeechBubbles();
 
-    // TODO: don't draw in preview?
-    if (this.speechBubbles.length <= 0) {
+    if (this.speechBubbles.length <= 0 || this.isPreviewFrame()) {
       return;
     }
 
