@@ -80,6 +80,9 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "example_solutions should call ScriptLevel get_example_solution" do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
     teacher = create :authorized_teacher
     sign_in teacher
 
