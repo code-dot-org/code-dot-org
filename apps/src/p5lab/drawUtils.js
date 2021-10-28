@@ -61,7 +61,7 @@ export function speechBubble(
   p5.triangle(x - triangleSize, maxY, x, maxY, x, y);
   p5.stroke(stroke);
   p5.line(x, maxY, x, y);
-  p5.line(x, y, x - triangleSize, maxY);
+  p5.line(x, y, x - triangleSize - 1, maxY);
   p5.endShape(p5.CLOSE);
   p5.pop();
 
