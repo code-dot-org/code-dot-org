@@ -4,8 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "curriculum_umbrella": "CSP",
       "exclude_csf_column_in_legend": true,
+      "family_name": "csp4",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -28,19 +35,13 @@
           "https://studio.code.org/s/csp4-support"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp4",
-      "hideable_lessons": true
+      "version_year": "2017"
     },
     "new_name": "csp4-2017",
     "family_name": "csp4",
-    "serialized_at": "2021-08-03 22:46:56 UTC",
+    "serialized_at": "2021-10-25 22:53:15 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp4-2017"
     }
@@ -1536,8 +1537,8 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csp_affirmation_intervention_4",
-          "csp_affirmation_control_4"
+          "csp_affirmation_control_4",
+          "csp_affirmation_intervention_4"
         ],
         "progression": "Pre-test reflection",
         "variants": {
@@ -1559,16 +1560,16 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp_affirmation_intervention_4",
-          "csp_affirmation_control_4"
+          "csp_affirmation_control_4",
+          "csp_affirmation_intervention_4"
         ],
         "lesson.key": "Unit 4 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
         "script.name": "csp4-2017"
       },
       "level_keys": [
-        "csp_affirmation_intervention_4",
-        "csp_affirmation_control_4"
+        "csp_affirmation_control_4",
+        "csp_affirmation_intervention_4"
       ]
     },
     {
@@ -2231,8 +2232,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_intervention_4",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_4",
-          "csp_affirmation_control_4"
+          "csp_affirmation_control_4",
+          "csp_affirmation_intervention_4"
         ],
         "lesson.key": "Unit 4 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
@@ -2243,8 +2244,8 @@
       "seeding_key": {
         "level.key": "csp_affirmation_control_4",
         "script_level.level_keys": [
-          "csp_affirmation_intervention_4",
-          "csp_affirmation_control_4"
+          "csp_affirmation_control_4",
+          "csp_affirmation_intervention_4"
         ],
         "lesson.key": "Unit 4 Chapter 1 Assessment",
         "lesson_group.key": "cspAssessment",
