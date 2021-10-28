@@ -58,14 +58,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
         result.updatedDest
       ]);
 
-      // Remove any blank groups, but always keep around unassigned group.
-      setGroups(
-        updatedGroups.filter(
-          group =>
-            group.members.length ||
-            group.droppableId === DROPPABLE_ID_UNASSIGNED
-        )
-      );
+      setGroups(updatedGroups);
     }
   }
 
