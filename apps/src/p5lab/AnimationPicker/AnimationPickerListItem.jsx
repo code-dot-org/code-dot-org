@@ -89,7 +89,6 @@ class AnimationPickerListItem extends React.Component {
         <button
           style={thumbnailStyleWithHover}
           onClick={onClick}
-          onKeyDown={this.onItemKeyDown}
           className={category}
           type="button"
           onFocus={() => this.setState({hover: true})}
