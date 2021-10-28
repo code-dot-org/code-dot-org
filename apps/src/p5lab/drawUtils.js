@@ -34,8 +34,9 @@ export function getTextWidth(p5, text, size) {
  * @param {Number} width
  * @param {Number} height
  * @param {Number} config.triangleSize
- * @param {String} config.fillColor
+ * @param {String} config.fill
  * @param {Number} config.strokeWeight
+ * @param {Number} config.stroke
  */
 export function speechBubble(
   p5,
@@ -46,7 +47,7 @@ export function speechBubble(
   {triangleSize = 10, fill = 'white', strokeWeight = 2, stroke = 'black'}
 ) {
   const minX = x - width / 2;
-  const minY = y - height;
+  const minY = y - height - triangleSize;
   const maxY = y - triangleSize;
 
   p5.push();
@@ -54,7 +55,7 @@ export function speechBubble(
   p5.strokeWeight(strokeWeight);
   p5.fill(fill);
   p5.beginShape();
-  p5.rect(minX, minY, width, height - triangleSize, 8);
+  p5.rect(minX, minY, width, height, 8);
   p5.stroke(fill);
   p5.triangle(x - triangleSize, maxY, x, maxY, x, y);
   p5.stroke(stroke);
