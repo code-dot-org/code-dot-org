@@ -22,7 +22,12 @@ export function getTextWidth(p5, text, size) {
 /**
  * Draw a speech bubble - a P5 shape comprised of a rectangle
  * with a triangle at the bottom. The x/y values will be the
- * tip of the triangle.
+ * tip of the triangle, and the bubble body will be centered above
+ * the triangle.
+ *
+ * Note: A minimum bubble width should be configured based on triangleSize
+ * config to avoid overlap when bubble is very narrow.
+ *
  * @param {P5} p5
  * @param {Number} x
  * @param {Number} y
@@ -38,25 +43,23 @@ export function speechBubble(
   y,
   width,
   height,
-  {triangleSize = 10, fillColor = 'white', strokeWeight = 2}
+  {triangleSize = 10, fill = 'white', strokeWeight = 2, stroke = 'black'}
 ) {
   const minX = x - width / 2;
-  const maxX = x + width / 2;
   const minY = y - height;
   const maxY = y - triangleSize;
 
   p5.push();
+  p5.stroke(stroke);
   p5.strokeWeight(strokeWeight);
-  p5.strokeJoin(p5.ROUND);
-  p5.fill(fillColor);
+  p5.fill(fill);
   p5.beginShape();
-  p5.vertex(minX, minY);
-  p5.vertex(maxX, minY);
-  p5.vertex(maxX, maxY);
-  p5.vertex(x, y - triangleSize);
-  p5.vertex(x, y);
-  p5.vertex(x - triangleSize, y - triangleSize);
-  p5.vertex(minX, maxY);
+  p5.rect(minX, minY, width, height - triangleSize, 8);
+  p5.stroke(fill);
+  p5.triangle(x - triangleSize, maxY, x, maxY, x, y);
+  p5.stroke(stroke);
+  p5.line(x, maxY, x, y);
+  p5.line(x, y, x - triangleSize, maxY);
   p5.endShape(p5.CLOSE);
   p5.pop();
 }
