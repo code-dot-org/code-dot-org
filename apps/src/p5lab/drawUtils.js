@@ -85,7 +85,7 @@ export function multilineText(
   x,
   y,
   size,
-  {color = 'black', horizontalAlign = 'left', verticalAlign = 'top'}
+  {color = 'black', horizontalAlign = 'left', verticalAlign = 'top'} = {}
 ) {
   p5.push();
   p5.textSize(size);
