@@ -2,7 +2,9 @@
   "func": "group.bounceOff",
   "category": "Groups",
   "paletteParams": [
-    "target"
+    {
+      "name": "target"
+    }
   ],
   "params": [
     "target"

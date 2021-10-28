@@ -2,7 +2,9 @@
   "func": "setLifetimeEach",
   "category": "Groups",
   "paletteParams": [
-    "lifetime"
+    {
+      "name": "lifetime"
+    }
   ],
   "params": [
     "5"
