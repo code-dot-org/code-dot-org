@@ -155,7 +155,8 @@ const styles = {
     cursor: 'pointer',
     background: 'none',
     boxShadow: 'none',
-    margin: '0px 0px 0px 0px'
+    margin: '0px 0px 0px 0px',
+    outline: 'none'
   },
   thumbnailIcon: {
     color: color.white,
