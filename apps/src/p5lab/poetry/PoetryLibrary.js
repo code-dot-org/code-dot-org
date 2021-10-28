@@ -294,10 +294,6 @@ export default class PoetryLibrary extends CoreLibrary {
     this.p5.pop();
   }
 
-  isPreviewFrame() {
-    return this.p5.World.frameCount === 1;
-  }
-
   getScaledFontSize(text, font, desiredSize) {
     this.p5.push();
     this.p5.textFont(font);
