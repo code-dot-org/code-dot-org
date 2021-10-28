@@ -79,7 +79,6 @@ export default class CoreLibrary {
 
   drawSpeechBubble(text, x, y) {
     const padding = 8;
-    const triangleSize = 10;
     text = ellipsify(text, 150 /* maxLength */);
     let textSize = 10;
     if (text.length < 50) {
@@ -92,17 +91,16 @@ export default class CoreLibrary {
     const longestLine = [...lines].sort((a, b) =>
       a.length < b.length ? 1 : -1
     )[0];
-    const width =
+    let width =
       drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
-    const height = lines.length * textSize + triangleSize + padding * 2;
+    width = Math.max(width, 50);
+    const height = lines.length * textSize + padding * 2;
 
     // Draw bubble.
-    drawUtils.speechBubble(this.p5, x, y, width, height, {
-      triangleSize
-    });
+    const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height);
 
     // Draw text within bubble.
-    drawUtils.multilineText(this.p5, lines, x, y - height + padding, textSize, {
+    drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
       horizontalAlign: this.p5.CENTER
     });
   }
