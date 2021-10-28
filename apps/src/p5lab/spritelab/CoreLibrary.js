@@ -1,4 +1,4 @@
-import {createUuid, stringToChunks} from '@cdo/apps/utils';
+import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 
@@ -74,9 +74,17 @@ export default class CoreLibrary {
     });
   }
 
-  drawSpeechBubble(text, x, y, textSize = 25) {
+  drawSpeechBubble(text, x, y) {
     const padding = 8;
     const triangleSize = 10;
+    text = ellipsify(text, 150 /* maxLength */);
+    let textSize = 10;
+    if (text.length < 50) {
+      textSize = 20;
+    } else if (text.length < 75) {
+      textSize = 15;
+    }
+
     const lines = stringToChunks(text, 16 /* maxLength */);
     const longestLine = [...lines].sort((a, b) =>
       a.length < b.length ? 1 : -1
