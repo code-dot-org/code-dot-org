@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import {CollapsibleEditorSection} from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 
 describe('CollapsibleEditorSection', () => {
   let defaultProps;
