@@ -252,11 +252,11 @@ export const commands = {
   },
 
   spriteSay(spriteArg, text) {
-    addSpriteSpeechBubble(this, spriteArg, text, 4);
+    addSpriteSpeechBubble(this, spriteArg, text, 4 /* seconds */);
   },
 
-  spriteSayTime(spriteArg, text, time) {
-    addSpriteSpeechBubble(this, spriteArg, text, time);
+  spriteSayTime(spriteArg, text, seconds) {
+    addSpriteSpeechBubble(this, spriteArg, text, seconds);
   },
 
   removeTint(spriteArg) {
