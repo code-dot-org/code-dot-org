@@ -62,6 +62,7 @@ export function setupApp(appOptions) {
         appOptions.app === 'applab' ||
         appOptions.app === 'gamelab' ||
         appOptions.app === 'spritelab' ||
+        appOptions.app === 'poetry' ||
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();

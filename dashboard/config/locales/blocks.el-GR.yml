@@ -1618,6 +1618,16 @@ el:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Παγωτό
+            Stars: Αστέρια
+            Fireworks: Πυροτεχνήματα
+            '"rainbow"': Ουράνιο τόξο
+            '"hearts"': Καρδιές
+            '"flowers"': Λουλούδια
+            '"waves"': Κύματα
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1626,6 +1636,9 @@ el:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       Poetry_playSound:
         text: παίξεΉχο {SOUND}
+        options:
+          SOUND:
+            Light: Φωτεινό
       Poetry_setBackground:
         text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Poetry_setBackgroundEffect:
@@ -1636,6 +1649,10 @@ el:
             '"space"': Διάστημα
             '"stars"': Αστέρια
             '"ripples"': Πτυχώσεις
+            '"rain"': Βροχή
+            '"bubbles"': Μπουρμπουλήθρες
+            '"confetti"': Κομφετί
+            '"hearts"': Πολύχρωμες καρδιές
           PALETTE:
             '"rainbow"': Ουράνιο τόξο
       Poetry_setBackgroundImageAs:

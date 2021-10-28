@@ -36,7 +36,31 @@
         "helloworld_animals_sizes": "Impara a modificare la dimensione dei personaggi",
         "helloworld_emoji_sizes": "Impara a modificare la dimensione dei personaggi",
         "helloworld_food_sizes": "Impara a modificare la dimensione dei personaggi",
-        "helloworld_retro_sizes": "Impara a modificare la dimensione dei personaggi"
+        "helloworld_retro_sizes": "Impara a modificare la dimensione dei personaggi",
+        "CourseF_app_computer": "Collega tutte le parti e scopri come accendere il computer!",
+        "courseC_artist_prog7_2021": "Questa targhetta dell'animale ha una forma speciale!",
+        "courseF_apps_chatbot": "Questo robot ti porrà delle domande e ricorderà cosa hai digitato! Scrivi le risposte e inizierai a conversare con X-9!",
+        "courseF_apps_madlib": "Questo programma ti chiederà di inserire alcune parole, che riutilizzerà in seguito per raccontarti una stupida storia!",
+        "courseF_apps_pet": "Sposta gli oggetti verso il cane e osserva la sua reazione!",
+        "courseF_bee_for10_2021": "Metti insieme tutto ciò che hai imparato per risolvere questo esercizio.",
+        "courseF_bee_for5_2021": "Usa una variabile due volte nel ciclo.",
+        "courseF_bee_for9_2021": "Uniamo le variabili con un po' di matematica!",
+        "courseF_bee_variables_5b_2021": "Crea il tuo programma per risolvere questo esercizio.",
+        "courseF_bee_variables_6c_2021": "Ora prova a risolvere questo esercizio!",
+        "courseF_editable_madlib": "Questo programma ti chiederà di inserire alcune parole, che riutilizzerà in seguito per raccontarti una stupida storia!",
+        "courseF_events_choice_conflict": "Fai girare l'aereo in una direzione e nell'altra. Esercitati con il controllo dei movimenti con gli eventi.",
+        "courseF_events_choice_conflict2": "Apporta modifiche alle dimensioni del personaggio con i tasti delle frecce. Esercitati con il controllo dei movimenti con gli eventi.",
+        "courseF_events_freeplay_food": "Crea una scena stupida con due personaggi del cibo che sorridono.",
+        "courseF_events_ship": "Fai in modo che la nave si muova dopo alcuni secondi. Esercitati con l'aggiunta dei movimenti con gli eventi.",
+        "courseF_place_fruit": "Le fragole sono troppo grandi! Esercitati nel ridimensionare i personaggi.",
+        "courseF_sprites_clouds": "Esercitati nell'utilizzo dei comportamenti.",
+        "courseF_sprites_freeplay_food": "Crea una scena stupida con due personaggi del cibo che sorridono.",
+        "courseF_sprites_make": "Esercitati nella creazione di personaggi.",
+        "courseF_sprites_ship": "Esercitati nei movimenti dei personaggi e nell'utilizzo dei comportamenti.",
+        "courseF_text_choice_conversation": "Utilizza i blocchi \"stampa\" per fare in modo che due personaggi inizino a conversare.",
+        "courseF_text_choice_interview": "Un errore nel codice interferisce con quello che dice il robot. Trova e risolvi l'errore.",
+        "courseF_variables_chatbot_finish": "Dai il tocco finale al tuo progetto, poi condividilo!",
+        "ramp_artist_loops6v1_2021": "Usa un ciclo per disegnare questa scalinata."
       }
     }
   }

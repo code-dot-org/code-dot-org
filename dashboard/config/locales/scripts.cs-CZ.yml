@@ -1011,6 +1011,10 @@ cs:
           description_short: Programování
         CSF_Secret_Sample:
           description_audience: Věk 8-18
+        ECSPD1:
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         algebraFacilitator:
           lessons:
             Evaluation Blocks:
@@ -1048,6 +1052,10 @@ cs:
           lessons:
             Design Mode:
               name: Dizajnový mód
+        CSDU1-Draft:
+          lessons:
+            Exploring Apps:
+              name: Prozkoumávání aplikací
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -2679,12 +2687,19 @@ cs:
             navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli
             a rodinou.
           name: coursef-2017
+        csdnovice:
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         cspnovice:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csp1-dlp:
           lesson_groups:
             required:
@@ -4428,24 +4443,36 @@ cs:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         pre-express-2018:
           title: Rychlokurz pro předškoláky (2018)
           description: Učte se základy počítačových věd a internetové bezpečnosti.
@@ -5384,6 +5411,8 @@ cs:
             osnov pro starší ročníky základní školy.'
           description_audience: 'Věk: 9-18 let'
           lesson_groups:
+            csf_warmup:
+              display_name: Zahřátí
             csf_sequencing:
               display_name: Sekvence
             csf_loops:
@@ -6289,12 +6318,18 @@ cs:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csd-sample-online:
           title: Ukázka online aktivit pro kurz Objevujeme informatiku
         csd1-pilot:
@@ -6437,6 +6472,9 @@ cs:
               display_name: Obsah
             required:
               display_name: Přehled
+          lessons:
+            Packets:
+              name: Pakety
         peru-2019:
           lessons:
             Introduction:
@@ -7809,6 +7847,8 @@ cs:
             osnov pro starší ročníky základní školy.'
           description_audience: 'Věk: 9-18 let'
           lesson_groups:
+            csf_warmup:
+              display_name: Zahřátí
             csf_sequencing:
               display_name: Sekvence
             csf_loops:
@@ -8011,6 +8051,9 @@ cs:
           lesson_groups:
             csp_unit2_2020:
               display_name: '2.  lekce: Internet'
+          lessons:
+            Packets:
+              name: Pakety
         csp3-2020:
           lessons:
             Debugging:
@@ -8191,10 +8234,14 @@ cs:
           student_description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
         2021drafting:
           lessons:
+            lesson-2:
+              name: Text a výzvy
             Virus Simulation for Code Bytes:
               name: Naprogramování simulace
             Making Sprites:
               name: Dělání sprajtů
+            blank space stories:
+              name: Příběhy prázdného prostoru
             End of Course Project:
               name: Projekt na zakončení kurzu
             Outbreaklab:
@@ -8271,6 +8318,10 @@ cs:
             csp_unit1_2020:
               display_name: '1.  lekce: Digitální informace'
         csp2-2021:
+          lessons:
+            Packets:
+              key: Pakety
+              name: Pakety
           lesson_groups:
             csp_unit2_2020:
               display_name: '2.  lekce: Internet'
@@ -8994,6 +9045,7 @@ cs:
                 lze proměnné použít ke zjednodušení kódu, aby se snadněji psal a četl,,
                 i když se hodnoty nebudou za chodu programu měnit.
             Variables that Change in Bee:
+              name: Proměnná s včelou
               description_student: Včela miluje proměnné!
               description_teacher: Tato lekce **budování dovedností** pomůže ilustrovat,
                 jak mohou proměnné dělat programy dynamičtějšími tím, že umožňují
@@ -9046,6 +9098,10 @@ cs:
                 pro hypotetické aplikace. '
             lesson-7:
               name: Dělání sprajtů
+            lesson-9:
+              name: Příběhy prázdného prostoru
+            lesson-10:
+              name: Text a výzvy
             lesson-5:
               name: Epidemie
             lesson-2:
@@ -9200,6 +9256,7 @@ cs:
                 končit na úrovni volného hraní tak, aby ukázali, co se naučili, a
                 aby vytvářeli nové návrhy.
             Changing Variables with Bee:
+              name: Proměnná s včelou
               description_student: Včela miluje proměnné!
               description_teacher: Tato lekce **budování dovedností** pomůže ilustrovat,
                 jak mohou proměnné dělat programy dynamičtějšími tím, že umožňují
@@ -9241,6 +9298,8 @@ cs:
                 tento nástroj byl vytvořený tak, aby reagoval na hudbu.
             lesson-2:
               name: Dělání sprajtů
+            lesson-4:
+              name: Text a výzvy
           lesson_groups:
             csf_warmup:
               display_name: Zahřátí
@@ -9338,6 +9397,12 @@ cs:
               name: Naprogramování simulace
             Making Sprites:
               name: Dělání sprajtů
+            blank space stories:
+              name: Příběhy prázdného prostoru
+            texts-and-prompts:
+              name: Text a výzvy
+            blank-space-stories:
+              name: Příběhy prázdného prostoru
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -9795,14 +9860,14 @@ cs:
               display_name: Obsah
             lessonGroup-2:
               display_name: Obsah
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Taneční večírek: bez připojení'
         csa-u8-dev:
           lessons:
             lesson-1:
               name: Widgety
-        poetry:
-          lessons:
-            lesson-3:
-              name: Proměnné
         spelling-bee:
           lessons:
             lesson-1:

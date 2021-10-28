@@ -1641,6 +1641,16 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: آيس كريم
+            Stars: نجوم
+            Fireworks: مفرقعات
+            '"rainbow"': ألوان
+            '"hearts"': قلوب
+            '"flowers"': زهور
+            '"waves"': أمواج
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1650,6 +1660,9 @@ ar:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       Poetry_playSound:
         text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            Light: ضوء
       Poetry_setBackground:
         text: عيّن لون الخلفية {COLOR}
       Poetry_setBackgroundEffect:
@@ -1660,6 +1673,10 @@ ar:
             '"space"': الفضاء
             '"stars"': نجوم
             '"ripples"': تموجات
+            '"rain"': مطر
+            '"bubbles"': فقاعات
+            '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب ملونة
           PALETTE:
             '"rainbow"': ألوان
       Poetry_setBackgroundImageAs:

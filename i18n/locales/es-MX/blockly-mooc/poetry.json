@@ -28,8 +28,6 @@
   "makeBackground": "Tienes que añadir un efecto de fondo.",
   "makeForeground": "Tienes que añadir un efecto de primer plano.",
   "noBehavior": "Haz clic en la caja de herramientas **Sprites** para encontrar este bloque.\n<xml><block type=\"PoemBot_startBehavior\"><title name=\"ANIMATION_NAME\">\"tropicalfish_04_1\"</title><title name=\"BEHAVIOR\">nadar_izquierda_y_derecha</title></block></xml>",
-  "noSprites": "Tienes que crear un sprite.",
-  "noTextEffects": "Tienes que añadir un efecto de texto a tu proyecto.",
   "oneTextEffect": "¡Buen trabajo! Añadiste un efecto de texto. Prueba con otro.",
   "poLines": "Los pájaros se han desvanecido en el cielo\nY ahora la última nube desaparece\nNos sentamos juntos, la montaña y yo\nHasta que sólo la montaña permanece.",
   "poTitle": "Montaña",
