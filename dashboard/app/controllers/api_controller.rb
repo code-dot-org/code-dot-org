@@ -410,14 +410,11 @@ class ApiController < ApplicationController
     end
   end
 
-  use_database_pool user_progress_for_lesson: :persistent
+  use_database_pool user_app_options: :persistent
 
-  # Return the JSON details of the users progress on a particular script
-  # level and marks the user as having started that level. (Because of the
-  # latter side effect, this should only be called when the user sees the level,
-  # to avoid spurious activity monitor warnings about the level being started
-  # but not completed.)
-  def user_progress_for_lesson
+  # Returns app_options values that are user-specific. This is used on cached
+  # levels.
+  def user_app_options
     response = user_summary(current_user)
     response[:signedIn] = !current_user.nil?
 

@@ -158,7 +158,7 @@ describe('loadApp.js', () => {
     const ajaxStub = sinon.stub($, 'ajax');
     const responseChannel = 'fakeChannelId';
     ajaxStub
-      .withArgs(`/api/user_progress/test-script/1/2/123?get_channel_id=true`)
+      .withArgs(`/api/user_app_options/test-script/1/2/123?get_channel_id=true`)
       .callsFake(() => ({
         done: successCallback => ({
           fail: failureCallback => {
