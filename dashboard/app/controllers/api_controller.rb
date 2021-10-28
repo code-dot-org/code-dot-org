@@ -357,6 +357,8 @@ class ApiController < ApplicationController
       student_progress = section.students.order(:name).map do |student|
         script_level.summarize_for_teacher_panel(student, current_user)
       end
+
+      teacher_progress = script_level.summarize_for_teacher_panel(current_user)
     elsif params[:is_lesson_extras] && params[:lesson_id]
       lesson = script.lessons.find do |l|
         l.id == params[:lesson_id].to_i
@@ -370,11 +372,13 @@ class ApiController < ApplicationController
       student_progress = section.students.order(:name).map do |student|
         ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, student)
       end
+
+      teacher_progress = ScriptLevel.summarize_as_bonus_for_teacher_panel(lesson.script, bonus_level_ids, current_user)
     else
       return head :bad_request
     end
 
-    render json: student_progress
+    render json: student_progress.push(teacher_progress)
   end
 
   def script_structure
