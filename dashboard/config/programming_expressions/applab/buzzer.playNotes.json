@@ -2,8 +2,12 @@
   "func": "buzzer.playNotes",
   "category": "Circuit",
   "paletteParams": [
-    "notes",
-    "tempo"
+    {
+      "name": "notes"
+    },
+    {
+      "name": "tempo"
+    }
   ],
   "paramButtons": {
     "minArgs": 1,
