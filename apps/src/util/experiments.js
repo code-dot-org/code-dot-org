@@ -35,6 +35,7 @@ experiments.SPECIAL_TOPIC = 'special-topic';
 experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
 experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 experiments.MULTISELECT = 'multiselect';
+experiments.CODE_REVIEW_GROUPS = 'codeReviewGroups';
 experiments.JAVALAB_UNIT_TESTS = 'javalabUnitTests';
 experiments.COSTUME_TAB_A = 'costumeTabA';
 experiments.COSTUME_TAB_B = 'costumeTabB';
