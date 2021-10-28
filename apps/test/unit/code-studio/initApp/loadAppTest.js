@@ -69,6 +69,37 @@ describe('loadApp.js', () => {
     $.ajax.restore();
   });
 
+  const stubAppOptionsRequests = (
+    appOptions,
+    stubbedProgressResponse = {signedIn: false},
+    exampleSolutionsResponse = []
+  ) => {
+    const {
+      scriptName,
+      lessonPosition,
+      levelPosition,
+      serverLevelId,
+      serverScriptLevelId,
+      levelRequiresChannel,
+      channel
+    } = appOptions;
+
+    $.ajax.restore();
+    const ajaxStub = sinon.stub($, 'ajax');
+    ajaxStub
+      .withArgs(
+        `/api/user_progress/${scriptName}/${lessonPosition}/${levelPosition}/${serverLevelId}?get_channel_id=${!!levelRequiresChannel &&
+          !channel}`
+      )
+      .returns(stubbedProgressResponse);
+
+    ajaxStub
+      .withArgs(
+        `/api/example_solutions/${serverScriptLevelId}/${serverLevelId}?section_id=`
+      )
+      .returns(exampleSolutionsResponse);
+  };
+
   it('loads attempt stored under server level id', done => {
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
@@ -151,21 +182,15 @@ describe('loadApp.js', () => {
       lessonPosition: '1',
       levelPosition: '2',
       serverLevelId: '123',
-      levelRequiresChannel: true
+      levelRequiresChannel: true,
+      serverScriptLevelId: '5'
     };
 
-    $.ajax.restore();
-    const ajaxStub = sinon.stub($, 'ajax');
     const responseChannel = 'fakeChannelId';
-    ajaxStub
-      .withArgs(`/api/user_progress/test-script/1/2/123?get_channel_id=true`)
-      .callsFake(() => ({
-        done: successCallback => ({
-          fail: failureCallback => {
-            successCallback({signedIn: false, channel: responseChannel});
-          }
-        })
-      }));
+    stubAppOptionsRequests(appOptions, {
+      signedIn: false,
+      channel: responseChannel
+    });
 
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
@@ -173,6 +198,36 @@ describe('loadApp.js', () => {
 
     loadAppOptions().then(() => {
       expect(window.appOptions.channel).to.equal(responseChannel);
+      document.body.removeChild(appOptionsData);
+      done();
+    });
+  });
+
+  it('calls example_solutions endpoint and sets example solutions to appOptions', done => {
+    appOptions = {
+      ...appOptions,
+      scriptName: 'test-script',
+      lessonPosition: '1',
+      levelPosition: '2',
+      serverLevelId: '123',
+      serverScriptLevelId: '5'
+    };
+
+    const exampleSolutions = ['/example-solution'];
+    stubAppOptionsRequests(
+      appOptions,
+      {
+        signedIn: false
+      },
+      exampleSolutions
+    );
+
+    const appOptionsData = document.createElement('script');
+    appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
+    document.body.appendChild(appOptionsData);
+
+    loadAppOptions().then(() => {
+      expect(window.appOptions.exampleSolutions).to.equal(exampleSolutions);
       document.body.removeChild(appOptionsData);
       done();
     });
