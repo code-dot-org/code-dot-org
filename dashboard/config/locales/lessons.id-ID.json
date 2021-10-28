@@ -34,6 +34,7 @@
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.",
+          "purpose": "Variabel pada intinya adalah tempat penampung nilai yang tidak diketahui pada saat Anda menjalankan program atau nilai yang dapat berubah selama eksekusi program. Variabel ini sangat penting untuk membuat kode dinamis karena memungkinkan program untuk berubah dan berkembang berdasarkan jumlah kemungkinan modifikasi. Tahap ini memantapkan penggunaan variabel menggunakan kemampuan pengaturan yang paling sederhana berikut penggunaannya.",
           "student_overview": "Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan."
         },
         "coursef-2021/Nested Loops in the Maze": {
@@ -76,6 +77,7 @@
         },
         "courseb-2021/Sequencing in Maze": {
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
+          "purpose": "Dalam pelajaran ini, siswa akan mengembangkan kemampuan pemrograman dan debugging pada sebuah platform komputer. Format puzzles berbasis blok ini membantu siswa belajar tentang urutan dan konsep, tanpa perlu mengkhawatirkan untuk menyempurnakan sintaksis. ",
           "student_overview": "Bantu Angry Bird merah menyusuri jalur menuju babi nakal."
         },
         "courseb-2021/Programming in Maze": {
@@ -84,6 +86,7 @@
         },
         "courseb-2021/Programming in Harvester": {
           "overview": "Murid akan menerapkan konsep-konsep pemrograman yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial dan mulai menggunakan proses debugging. ",
+          "purpose": "Dalam pelajaran ini, murid akan mengembangkan kemampuan debugging dan melanjutkan pengembangan kemampuan pemrograman.",
           "student_overview": "Bantu Pemanen mengumpulkan sayuran di sepanjang jalur."
         },
         "courseb-2021/Loops: Getting Loopy": {
@@ -100,6 +103,7 @@
         },
         "courseb-2021/Loops in Artist": {
           "overview": "Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, murid menggunakan loop untuk membuat pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar sendiri menggunakan loop.",
+          "purpose": "Pelajaran ini memberikan perspektif yang berbeda tentang cara loops dapat membuat sesuatu dalam pemrograman. Murid akan menguji keterampilan berpikir kritis mereka dengan mengevaluasi kode tertentu dan menetapkan apa yang perlu ditambahkan agar dapat memecahkan puzzle. Murid juga dapat meraba betapa tidak efisiennya pemrograman tanpa loops di sini karena betapa banyak blok yang diperlukan program jika tidak dibantu dengan 'repeat' loops.",
           "student_overview": "Gunakan pola dan loop untuk menyelesaikan gambar."
         },
         "courseb-2021/The Right App": {
@@ -112,6 +116,7 @@
         },
         "courseb-2021/Events in Play Lab": {
           "overview": "Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!",
+          "purpose": "Dalam aktivitas online ini, murid akan belajar cara menggunakan event dalam Play Lab dengan melatih sang kesatria untuk bergerak saat tombol panah ditekan, lalu diakhiri dengan kesempatan untuk menunjukkan keterampilan lain yang mereka pelajari sepanjang kursus ini, termasuk urutan dan loop, sebagai bagian dari puzzle terakhir bermain bebas.",
           "student_overview": "Gunakan event untuk membuat cerita atau permainan interaktif."
         },
         "coursea-2021/Learn to Drag and Drop": {
@@ -125,10 +130,12 @@
         },
         "coursea-2021/Sequencing with Scrat": {
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
+          "purpose": "Dalam pelajaran ini, siswa akan mengembangkan kemampuan pemrograman dan debugging pada sebuah platform komputer. Format puzzles berbasis blok ini membantu siswa belajar tentang urutan dan konsep, tanpa perlu mengkhawatirkan untuk menyempurnakan sintaksis. ",
           "student_overview": "Program Scrat untuk mencapai biji akorn."
         },
         "coursea-2021/Programming in Ice Age": {
           "overview": "Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.",
+          "purpose": "Dalam pelajaran ini, siswa akan mengembangkan kemampuan pemrograman dan debugging pada sebuah platform komputer. Format puzzles berbasis blok ini membantu siswa belajar tentang urutan dan konsep, tanpa perlu mengkhawatirkan untuk menyempurnakan sintaksis. ",
           "student_overview": "Tulis program untuk membantu Scrat mencapai biji akorn."
         },
         "coursea-2021/Programming with Rey and BB-8": {
@@ -137,6 +144,7 @@
         },
         "coursea-2021/Loops: Happy Loops": {
           "overview": "Aktivitas ini mengkaji ulang Happy Maps. Kali ini, murid akan menyelesaikan puzzle yang lebih besar dan panjang dengan code mereka yang membuat mereka melihat kegunaan dalam struktur yang memudahkan mereka menulis code lebih panjang dengan cara yang lebih mudah.",
+          "purpose": "Pelajaran ini berfungsi sebagai pengenalan tentang loops. Loops memungkinkan murid untuk menyederhanakan kode dengan mengelompokkan perintah yang perlu diulang. Murid akan mengasah keterampilan berpikir kritis dengan memperhatikan perulangan gerakan teman sekelas dan menentukan berapa kali harus mengulang perintah. Dengan melihat “Happy Maps\" lagi, murid akan mendapat kesempatan untuk menghubungkan konsep lama seperti sequencing dengan konsep baru repeat loops.",
           "student_overview": "Bantu Flurb memecahkan masalah yang lebih besar menggunakan loop."
         },
         "coursea-2021/Loops in Ice Age": {
@@ -157,14 +165,17 @@
         },
         "coursea-2021/Events in Play Lab": {
           "overview": "Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!",
+          "purpose": "Hari ini murid akan mengembangkan pemahaman lebih jauh tentang events menggunakan Play Lab. Events sangat lazim di kebanyakan program komputer. Dalam aktivitas ini, murid akan menggunakan event untuk membuat karakter bergerak di layar, mengeluarkan suara, dan mengganti latar belakang berdasarkan event yang dimulai pengguna. ",
           "student_overview": "Buat permainan atau cerita Anda sendiri."
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "overview": "Dengan menggunakan sekumpulan simbol sebagai pengganti code, murid akan merancang algorithm untuk memerintahkan \"robot\" agar menumpuk cangkir dengan pola yang berbeda-beda. Murid akan bergiliran berpartisipasi sebagai robot, yang hanya menanggapi algorithm yang ditentukan oleh rekan sejawat mereka. Segmen ini mengajari murid tentang hubungan antara simbol dengan kegiatan, perbedaan antara algorithm dengan program, dan keterampilan debugging yang tak ternilai harganya.",
+          "purpose": "Unplugged lesson ini mengumpulkan murid satu kelas sebagai sebuah tim dengan tugas sederhana untuk diselesaikan: perintahkan sebuah “robot” untuk menyusun gelas dalam desain tertentu. Aktivitas ini membangun fondasi bagi pemrograman yang akan ditekuni murid sepanjang kursus sewaktu mereka belajar pentingnya pendefinisian algorithm yang terkomunikasikan dengan jelas.",
           "student_overview": "Dalam pelajaran ini, Anda menganggap seolah-olah teman kelas Anda adalah robot dan memprogram mereka untuk membuat pola-pola cangkir bertumpuk."
         },
         "coursec-2021/Programming in Maze": {
           "overview": "Dengan menggunakan karakter dari permainan Angry Birds, murid akan mengembangkan algorithm sekuensial untuk menggerakkan burung dari satu sisi labirin ke babi di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.",
+          "purpose": "Dalam pelajaran ini, siswa akan mengembangkan kemampuan pemrograman dan debugging pada sebuah platform komputer. Format puzzles berbasis blok ini membantu siswa belajar tentang urutan dan konsep, tanpa perlu mengkhawatirkan untuk menyempurnakan sintaksis. ",
           "student_overview": "Pelajari tentang urutan dan algorithm dengan Angry Birds."
         },
         "coursec-2021/Debugging in Maze": {
@@ -177,10 +188,12 @@
         },
         "coursec-2021/Programming in Artist": {
           "overview": "Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.",
+          "purpose": "Bertumpu pada pengalaman sebelumnya para murid dengan pengurutan, pelajaran ini berupaya menginspirasi lebih banyak kreativitas dengan coding. Tujuan pelajaran ini adalah untuk memantapkan pengetahuan tentang pengurutan dengan mengenalkan blok-blok dan tujuan-tujuan baru. Dalam kasus ini, murid belajar lebih banyak mengenai piksel dan sudut memakai blok-blok baru, sambil terus melatih keahlian pengurutan. Selain itu, murid akan bisa membayangkan tujuan-tujuan baru, seperti melakukan coding Artist untuk menggambar sebuah kotak. ",
           "student_overview": "Buat gambar-gambar yang indah dengan memprogram Artis."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
           "overview": "Berpijak pada aktivitas awal \"Teman-Teman Robot Saya\", murid mengatasi desain yang lebih besar dan kompleks. Agar dapat memprogram \"robot\" mereka untuk menyelesaikan desain yang lebih besar ini, murid harus mengidentifikasi pola berulang dalam instruksi mereka yang dapat digantikan dengan loop.",
+          "purpose": "Pelajaran ini berfungsi sebagai perkenalan tentang loops, menggunakan rangkaian petunjuk pemrograman “robot” yang kini sudah dikenal. Murid akan mengembangkan kemampuan berpikir kritis dengan mencari pola repetisi dari pergerakan teman kelas dan menentukan cara menyederhanakan pola berulang itu menggunakan loops. ",
           "student_overview": "Dalam pelajaran ini, Anda akan memprogram teman sekelas lagi, tetapi dengan menggunakan loop Anda akan dapat memecahkan masalah yang lebih besar dan lebih rumit."
         },
         "coursec-2021/Loops with Rey and BB-8": {
@@ -191,6 +204,7 @@
           "student_overview": "Mari gunakan loop untuk membantu pemanen memanen sayuran!"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "purpose": "Seri ini menyoroti kekuatan loops dengan desain kreatif dan personal.  \n\nKemajuan ini, yang ditawarkan sebagai urutan bertumpu proyek, akan memudahkan murid membangun di atas karya mereka sendiri dan menciptakan artefak yang menakjubkan.",
           "student_overview": "Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!"
         },
         "coursec-2021/Events: The Big Event": {
@@ -203,6 +217,7 @@
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!",
+          "purpose": "Di sini, murid akan mengembangkan pengertian mereka tentang events lebih lanjut dengan menggunakan Play Lab. Murid akan menggunakan events untuk membuat karakter bergerak di layar, membuat suara, dan mengganti latar belakang berdasarkan masukan pengguna. Pada akhir urutan puzzle, murid akan diberi kesempatan untuk membagikan proyek mereka.  ",
           "student_overview": "Saatnya menjadi kreatif dan membuat permainan di Play Lab!"
         },
         "coursec-2021/Picturing Data": {
@@ -222,10 +237,12 @@
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "overview": "Dengan \"memprogram\" satu sama lain untuk menggambar, murid berkesempatan merasakan beberapa konsep inti pemrograman secara mengasyikkan dan mudah diakses. Murid di kelas akan memulai pelajaran dengan meminta murid menggunakan simbol untuk memerintahkan satu sama lain mewarnai persegi empat di kertas grafik dalam upaya mereproduksi gambar yang sudah ada. Jika masih ada waktu, pelajaran dapat diakhiri dengan gambar yang dibuat oleh murid sendiri.  ",
+          "purpose": "Tujuan aktivitas ini adalah untuk membangun pemikiran kritis dan semangat untuk kursus ini, sambil memperkenalkan beberapa konsep pemrograman fundamental yang akan digunakan sepanjang kursus. Dengan memperkenalkan konsep dasar seperti mengurut dan algoritme kepada kelas dalam aktivitas offline, murid yang takut dengan komputer masih dapat membangun fondasi pemahaman tentang topik ini. Dalam pelajaran ini, murid akan mempelajari cara mengembangkan algorithm dan meng-encodenya ke dalam program.",
           "student_overview": "Dalam pelajaran ini, Anda akan memprogram teman sekelas Anda untuk membuat gambar!"
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "overview": "Dalam kumpulan puzzle ini, murid akan memulai pengenalan (atau tinjauan bergantung pada pengalaman kelas Anda) ruang kerja online Code.org. Akan tersedia beberapa video yang menjelaskan fungsionalitas dasar ruang kerja, meliputi tombol `Jalankan`, `Reset`, dan `Step`. Hal-hal yang juga didiskusikan dalam video ini: menyeret blok Blockly, menghapus blok Blockly, dan menghubungkan blok Blockly. Berikutnya, murid akan melatih keterampilan _sequencing_ dan _debugging_ mereka dalam labirin. Dari situ, murid akan menyaksikan jenis-jenis puzzle baru seperti Kolektor, Artis, dan Pemanen tatkala mereka mempelajari dasar-dasar _loops_ itu sendiri.",
+          "purpose": "Kami sadar bahwa setiap murid di kelas memiliki spektrum pemahaman untuk tiap mata pelajaran. Beberapa murid di kelas Anda mungkin jago komputer, sedangkan yang lain tidak memiliki pengalaman sama sekali. Dalam rangka untuk menciptakan medan bermain (dan belajar) yang setara, kami telah menciptakan “Ramp Up Stage” untuk Kursus D. Ini dapat digunakan entah sebagai pengenalan ataukah tinjauan kembali tentang cara menggunakan Code.org dan konsep ilmu komputer dasar. Tahap ini mencakup semua prasyarat yang diperlukan untuk memulai Kursus D.",
           "student_overview": "Pelajaran ini memberikan latihan keterampilan yang akan Anda butuhkan untuk kursus ini."
         },
         "coursed-2021/Relay Programming": {
@@ -237,6 +254,7 @@
         },
         "coursed-2021/Events in Bounce": {
           "overview": "Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.",
+          "purpose": "Events sangatlah umum di program komputer, terutama di video game.  \n\nDalam pelajaran ini, murid akan mengembangkan pemahaman tentang events dengan membuat sebuah permainan berbasis olahraga. Murid akan belajar membuat dayung bergerak dengan tombol panah, dan membuat suara saat benda bertabrakan. Di akhir, mereka dapat mengatur permainan agar menjadi lebih unik!",
           "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
         },
         "coursed-2021/Build a Star Wars Game": {
@@ -275,6 +293,7 @@
         },
         "coursed-2021/Until Loops in Maze": {
           "overview": "Dalam pelajaran ini, murid akan belajar tentang loop `until`. Murid akan membuat program yang memerintahkan karakter utama mengulang-ulang kegiatan `until` mereka mencapai titik berhenti yang dikehendaki.",
+          "purpose": "Rangkaian puzzle ini berfungsi untuk memantapkan dan membangun pengetahuan tentang loop lewat penambahan kondisional `until`. Dengan memasangkan dua konsep ini, murid akan mampu menguak potensi untuk menciptakan program yang inovatif dan kompleks.",
           "student_overview": "Anda dapat melakukan hal-hal menakjubkan ketika menggunakan `until` loops!"
         },
         "coursed-2021/End of Course Project": {
@@ -293,6 +312,7 @@
         },
         "express-2021/Creating Art with Code": {
           "overview": "Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.",
+          "purpose": "Bertumpu pada pengalaman sebelumnya para murid dengan pengurutan, pelajaran ini berupaya menginspirasi lebih banyak kreativitas dengan coding. Tujuan pelajaran ini adalah untuk memantapkan pengetahuan tentang pengurutan dengan mengenalkan blok-blok dan tujuan-tujuan baru. Dalam kasus ini, murid belajar lebih banyak mengenai piksel dan sudut memakai blok-blok baru, sambil terus melatih keahlian pengurutan. Selain itu, murid akan bisa membayangkan tujuan-tujuan baru, seperti melakukan coding Artist untuk menggambar sebuah kotak. ",
           "student_overview": "Buat gambar-gambar yang indah dengan memprogram Artis."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
@@ -312,6 +332,7 @@
         },
         "express-2021/Sticker Art with Loops": {
           "overview": "Saksikan wajah-wajah murid yang berubah ceria saat mereka berhasil membuat desain sendiri yang menakjubkan menggunakan segelintir blok dan stiker digital! Pelajaran ini membangun pemahaman tentang loop dari pelajaran sebelumnya dan memberi kesempatan murid untuk benar-benar menjadi kreatif. Aktivitas ini sangat bagus untuk menghasilkan artefak bagi portofolio atau rapat guru/orang tua.",
+          "purpose": "Seri ini menyoroti kekuatan loops dengan desain kreatif dan personal.  \n\nKemajuan ini, yang ditawarkan sebagai urutan bertumpu proyek, akan memudahkan murid membangun di atas karya mereka sendiri dan menciptakan artefak yang menakjubkan.",
           "student_overview": "Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!"
         },
         "express-2021/Nested Loops in Maze": {
@@ -320,6 +341,7 @@
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "overview": "Sekarang murid tahu cara melapisi loop, mereka dapat membuat begitu banyak hal yang indah.  Pelajaran ini akan membimbing murid mengerjakan serangkaian latihan untuk membantu mereka membuat gambar siap-portofolio sendiri menggunakan keterampilan berseluncur es Anna dan Elsa yang luar biasa!",
+          "purpose": "Dalam seri ini, murid akan berlatih menyarangkan (nesting) loops sambil menciptakan gambar yang dengan senang hati akan mereka bagikan. \n\nDimulai dengan beberapa instruksi, murid akan mengambil keputusan sendiri saat menciptakan desain untuk pengulangan. Mereka lalu memutar desain-desain itu dengan berbagai cara hingga membuahkan karya seni yang benar-benar unik.",
           "student_overview": "Anna dan Elsa memiliki keahlian seluncur es yang sempurna, tetapi membutuhkan bantuan Anda untuk membuat pola di es. Gunakan nested loop untuk menciptakan sesuatu yang KEREN habis. "
         },
         "express-2021/Looking Ahead with Minecraft ": {
@@ -343,6 +365,7 @@
         },
         "express-2021/Harvesting with Conditionals": {
           "overview": "Murid akan berlatih loop `while`, loop `until`, dan pernyataan `if / else`. Semua blok ini menggunakan conditional. Dengan berlatih ketiga-tiganya, murid akan belajar menulis code yang kompleks dan fleksibel.",
+          "purpose": "Latihan menggunakan kondisional dalam skenario yang berbeda membantu mengembangkan pemahaman seorang murid tentang kemampuan kondisional. Dalam pelajaran sebelumnya, murid hanya dapat menggunakan kondisional untuk bergerak mengitari labirin. Dalam pelajaran ini, murid akan menggunakan kondisional untuk membantu sang petani mengetahui kapan harus memanen. Pola baru akan muncul dan murid akan menggunakan kreativitias dan pikiran logis untuk menentukan kondisi dimana kode harus dijalani dan diulang.",
           "student_overview": "Tidak selalu jelas kapan menggunakan setiap kondisional.  Pelajaran ini akan membantu Anda berlatih memutuskan harus berbuat apa."
         },
         "express-2021/Functions in Minecraft": {
@@ -359,6 +382,7 @@
         },
         "express-2021/Variables with Artist": {
           "overview": "Dalam pelajaran ini, murid akan mengeksplorasi pembuatan desain berulang menggunakan variable di lingkungan Artis. Murid akan mempelajari cara menggunakan variable untuk membuat code lebih mudah ditulis dan lebih mudah dibaca. Setelah mengikuti puzzle terpandu, murid akan mengakhiri pelajaran dalam bentuk level bermain bebas untuk memperagakan materi yang sudah dipelajari dan membuat desain mereka sendiri.",
+          "purpose": "Variabel pada intinya adalah tempat penampung nilai yang tidak diketahui pada saat Anda menjalankan program atau nilai yang dapat berubah selama eksekusi program. Variabel ini sangat penting untuk membuat kode dinamis karena memungkinkan program untuk berubah dan berkembang berdasarkan jumlah kemungkinan modifikasi. Tahap ini memantapkan penggunaan variabel menggunakan kemampuan pengaturan yang paling sederhana berikut penggunaannya.",
           "student_overview": "Dalam pelajaran ini, Anda akan membuat gambar menggunakan variable yang berubah pada saat program berjalan."
         },
         "express-2021/Changing Variables with Bee": {
@@ -382,19 +406,24 @@
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
+          "purpose": "Dalam pelajaran ini, siswa akan mengembangkan kemampuan pemrograman dan debugging pada sebuah platform komputer. Format puzzles berbasis blok ini membantu siswa belajar tentang urutan dan konsep, tanpa perlu mengkhawatirkan untuk menyempurnakan sintaksis. ",
           "student_overview": "Program Scrat untuk mencapai biji akorn."
         },
         "pre-express-2021/Programming in with Angry Birds": {
-          "overview": "Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan."
+          "overview": "Dengan menggunakan karakter dari permainan Zaman Es, murid akan mengembangkan algorithm sekuensial untuk menggerakkan Scrat dari satu sisi labirin ke biji akorn di sisi lain labirin. Untuk melakukannya, mereka harus menumpuk blok code bersama-sama dalam urutan linear, menjadikan blok tersebut bergerak lurus, belok kiri, atau belok kanan.",
+          "purpose": "Dalam pelajaran ini, siswa akan mengembangkan kemampuan pemrograman dan debugging pada sebuah platform komputer. Format puzzles berbasis blok ini membantu siswa belajar tentang urutan dan konsep, tanpa perlu mengkhawatirkan untuk menyempurnakan sintaksis. "
         },
         "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "Dalam pelajaran ini, murid akan menggunakan keterampilan pemrograman yang baru dikuasainya dengan cara-cara yang lebih kompleks untuk menyusuri jalur yang mengecoh dengan BB-8."
+          "overview": "Dalam pelajaran ini, murid akan menggunakan keterampilan pemrograman yang baru dikuasainya dengan cara-cara yang lebih kompleks untuk menyusuri jalur yang mengecoh dengan BB-8.",
+          "purpose": "Dengan mengingat-ingat tujuan transfer pengetahuan, pelajaran ini memberi murid sebuah lingkungan untuk melatih kemampuan yang telah mereka olah. Penggemar Star Wars akan lompat berbahagia saat mereka melihat puzzle ini. Setiap puzzle dalam seri ini telah ditambahkan untuk memberikan pemahaman yang lebih dalam tentang konsep dasar yang akan digunakan sepanjang kursus ini. "
         },
         "pre-express-2021/Programming in Harvester": {
           "overview": "Murid akan menerapkan konsep-konsep pemrograman yang sudah dipelajari ke lingkungan Pemanen. Sekarang, tidak melulu membawa karakter ke tujuan, murid harus mengumpulkan jagung menggunakan blok baru. Murid akan terus mengembangkan keterampilan algorithm sekuensial dan mulai menggunakan proses debugging. ",
+          "purpose": "Dalam pelajaran ini, murid akan mengembangkan kemampuan debugging dan melanjutkan pengembangan kemampuan pemrograman.",
           "student_overview": "Bantu Pemanen mengumpulkan sayuran di sepanjang jalur."
         },
         "pre-express-2021/Loops with Scrat": {
+          "purpose": "Dalam pelajaran ini, murid akan belajar lebih lanjut tentang loops dan cara menerapkannya di kode Blockly. Penggunaan _loops_ adalah keterampilan yang penting dalam pemrograman karena mengulangi perintah secara manual sangatlah menjemukan dan tidak efisien. Dengan puzzles Code.org ini, murid akan belajar menambahkan petunjuk kepada loops yang sudah ada, mengumpulkan code berulang ke dalam loops, dan mengenali pola yang perlu diulang.",
           "student_overview": "Bantu Scrat menutupi tanah lebih banyak menggunakan loop."
         },
         "pre-express-2021/Loops with Laurel": {
@@ -402,18 +431,22 @@
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, loop menghasilkan pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan loop.",
+          "purpose": "Pelajaran ini memberikan perspektif yang berbeda tentang cara loops dapat membuat sesuatu dalam pemrograman. Murid juga dapat meraba betapa tidak efisiennya pemrograman tanpa loops di sini karena begitu banyak blok yang diperlukan program jika tidak dibantu dengan 'repeat' loops.",
           "student_overview": "Gunakan loop dan pola untuk menyelesaikan gambar."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
           "overview": "Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran online sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, murid menggunakan loop untuk membuat pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar sendiri menggunakan loop.",
+          "purpose": "Pelajaran ini memberikan perspektif yang berbeda tentang cara loops dapat membuat sesuatu dalam pemrograman. Murid akan menguji keterampilan berpikir kritis mereka dengan mengevaluasi kode tertentu dan menetapkan apa yang perlu ditambahkan agar dapat memecahkan puzzle. Murid juga dapat meraba betapa tidak efisiennya pemrograman tanpa loops di sini karena betapa banyak blok yang diperlukan program jika tidak dibantu dengan 'repeat' loops.",
           "student_overview": "Gunakan pola dan loop untuk menyelesaikan gambar."
         },
         "pre-express-2021/On the Move with Events": {
           "overview": "Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat cerita di Play Lab!",
+          "purpose": "Hari ini murid akan mengembangkan pemahaman lebih jauh tentang events menggunakan Play Lab. Events sangat lazim di kebanyakan program komputer. Dalam aktivitas ini, murid akan menggunakan event untuk membuat karakter bergerak di layar, mengeluarkan suara, dan mengganti latar belakang berdasarkan event yang dimulai pengguna. ",
           "student_overview": "Buat permainan atau cerita Anda sendiri."
         },
         "pre-express-2021/A Royal Battle with Events": {
           "overview": "Dalam aktivitas online ini, murid berkesempatan mempelajari cara menggunakan event di Play Lab dan menerapkan semua keterampilan coding yang sudah dipelajari untuk membuat sebuah permainan animasi. Inilah saatnya berkreasi dan membuat permainan di Play Lab!",
+          "purpose": "Dalam aktivitas online ini, murid akan belajar cara menggunakan event dalam Play Lab dengan melatih sang kesatria untuk bergerak saat tombol panah ditekan, lalu diakhiri dengan kesempatan untuk menunjukkan keterampilan lain yang mereka pelajari sepanjang kursus ini, termasuk urutan dan loop, sebagai bagian dari puzzle terakhir bermain bebas.",
           "student_overview": "Gunakan event untuk membuat cerita atau permainan interaktif."
         },
         "coursee-2021/Simon Says": {
@@ -442,6 +475,7 @@
           "student_overview": "Dalam pelajaran ini, loop memudahkan pembuatan gambar-gambar yang makin keren dengan Artis!"
         },
         "coursee-2021/Nested Loops in Artist": {
+          "purpose": "Dalam aktivitas online ini, murid akan menciptakan desain dalam Artis yang bisa mereka bagikan dengan bangga kepada orang tercinta.  \n\nTujuan aktivitas ini adalah untuk memanfaatkan nested loops sebagai cara menginspirasi murid yang berpikiran artistik agar melihat coding sebagai saluran kreativitas. Rangkaian puzzles ini dibuat untuk mengembangkan kemampuan berpikir kritis, pemahaman tentang geometri dasar, dan kreativitas -- semua dalam cakupan nested loops!",
           "student_overview": "Nested loop lebih banyak! Kali ini Anda harus membuat gambar MENAKJUBKAN dengan nested loop."
         },
         "coursee-2021/Nested Loops in Frozen": {
@@ -450,6 +484,7 @@
         },
         "coursee-2021/Functions: Songwriting": {
           "overview": "Salah satu struktur paling megah di dunia ilmu komputer adalah function. Function (kadang-kadang disebut prosedur) adalah program mini yang dapat Anda gunakan berulang-ulang di dalam program yang lebih besar. Pelajaran ini akan membantu murid secara intuitif memahami alasan mengapa penggabungan potongan code ke dalam function adalah sebuah praktik yang begitu berguna.",
+          "purpose": "Penggunaan function membantu menyederhanakan code dan mengembangkan kemampuan murid untuk menyusun program. Murid akan segera menyadari bahwa menulis function dapat membuat program mereka yang panjang enak dibaca dan mudah didebug jika ada yang salah. ",
           "student_overview": "Bahkan bintang musik rock sekalipun membutuhkan keterampilan pemrograman. Pelajaran ini akan mengajari Anda tentang function menggunakan lirik lagu."
         },
         "coursee-2021/Functions in Minecraft": {

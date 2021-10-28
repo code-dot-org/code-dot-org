@@ -3,7 +3,8 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Playlist Spotify (tous âges)"
+          "name": "Playlist Spotify (tous âges)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Introduction à l'Artiste",
@@ -17,7 +18,8 @@
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Playlist Spotify (tous âges)"
+          "name": "Playlist Spotify (tous âges)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "Événements dans Bounce - Comment se produisent-ils ?"
@@ -26,10 +28,12 @@
           "name": "Événements dans Bounce - Comment se produisent-ils ?"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Playlist Spotify (tous âges)"
+          "name": "Playlist Spotify (tous âges)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Playlist Spotify (tous âges)"
+          "name": "Playlist Spotify (tous âges)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
           "name": " Apprentissage Automatique",
@@ -904,13 +908,20 @@
           "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "Niveaux de programmation ouverts "
+          "name": "Niveaux de programmation ouverts ",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view"
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "Guide de projet de soirée",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Playlist Spotify (tous âges)"
+          "name": "Playlist Spotify (tous âges)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
-          "name": " Débranché"
+          "name": " Débranché",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/"
         },
         "open-ended_programming_levels_2/coursed/2021": {
           "name": "Niveaux de programmation ouverts ",
@@ -949,17 +960,20 @@
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "csta_standards_mapping/coursed/2021": {
-          "name": "Cartographie des normes du CSTA "
+          "name": "Cartographie des normes du CSTA ",
+          "url": "https://studio.code.org/s/coursed-2021/standards"
         },
         "common_core_and_ngss_guidance/coursed/2021": {
-          "name": "Guide du tronc commun et de la NGSS "
+          "name": "Guide du tronc commun et de la NGSS ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
         },
         "cross-curricular_extension_activities/coursed/2021": {
           "name": "Activités interdisciplinaires supplémentaires",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursed/2021": {
-          "name": "Vocabulaire du cours"
+          "name": "Vocabulaire du cours",
+          "url": "https://studio.code.org/s/coursed-2021/vocab"
         },
         "implementation_guide/coursed/2021": {
           "name": "Guide de mise en œuvre",
@@ -986,7 +1000,8 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
-          "name": "Modifications de cours virtuels "
+          "name": "Modifications de cours virtuels ",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "unplugged_maze_blocks/express/2021": {
           "name": "Blocs Débranchés de Labyrinthe",
@@ -1030,14 +1045,20 @@
           "name": "Faire une Pause et réfléchir en ligne",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
+        "dance-party-project-guide/express/2021": {
+          "name": "Guide de projet de soirée",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
         "dance-party-playlist/express/2021": {
-          "name": "Playlist Spotify (tous âges)"
+          "name": "Playlist Spotify (tous âges)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Niveaux de programmation ouverts ",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
+          "name": "Vidéo de programmation en binôme",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
@@ -1072,17 +1093,20 @@
           "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "csta_standards_mapping/express/2021": {
-          "name": "Cartographie des normes du CSTA "
+          "name": "Cartographie des normes du CSTA ",
+          "url": "https://studio.code.org/s/express-2021/standards"
         },
         "course_vocabulary_1/express/2021": {
-          "name": "Vocabulaire du cours"
+          "name": "Vocabulaire du cours",
+          "url": "https://studio.code.org/s/express-2021/vocab"
         },
         "teacher_forum_1/express/2021": {
           "name": "Forum des Enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/express/2021": {
-          "name": "Guide de débogage"
+          "name": "Guide de débogage",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Programmation en Binôme",
@@ -1108,17 +1132,20 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "csta_standards_mapping/pre-express/2021": {
-          "name": "Cartographie des normes du CSTA "
+          "name": "Cartographie des normes du CSTA ",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
         },
         "course_vocabulary/pre-express/2021": {
-          "name": "Vocabulaire du cours"
+          "name": "Vocabulaire du cours",
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "Forum des Enseignants",
           "url": "https://forum.code.org/c/csf/"
         },
         "debugging_guide/pre-express/2021": {
-          "name": "Guide de débogage"
+          "name": "Guide de débogage",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Suivez l'algorithme "
@@ -1127,8 +1154,12 @@
           "name": "Documentation sur le Labo des Sprites",
           "url": "https://studio.code.org/docs/spritelab/"
         },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+        },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": " Le Super Citoyen Numérique"
+          "name": " Le Super Citoyen Numérique",
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
           "name": " Informations Privées et Personnelles"
@@ -1178,17 +1209,20 @@
           "name": "72 Façons Créatives pour Vos Élèves de Montrer Ce Qu'ils Savent"
         },
         "csta_standards_mapping/coursee/2021": {
-          "name": "Cartographie des normes du CSTA "
+          "name": "Cartographie des normes du CSTA ",
+          "url": "https://studio.code.org/s/coursee-2021/standards"
         },
         "common_core_and_ngss_guidance/coursee/2021": {
-          "name": "Guide du tronc commun et de la NGSS "
+          "name": "Guide du tronc commun et de la NGSS ",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
         },
         "cross-curricular_extension_activities/coursee/2021": {
           "name": "Activités interdisciplinaires supplémentaires",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursee/2021": {
-          "name": "Vocabulaire du cours"
+          "name": "Vocabulaire du cours",
+          "url": "https://studio.code.org/s/coursee-2021/vocab"
         },
         "implementation_guide/coursee/2021": {
           "name": "Guide de mise en œuvre",
@@ -1219,7 +1253,8 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
-          "name": "Modifications de cours virtuels "
+          "name": "Modifications de cours virtuels ",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
     }

@@ -2779,10 +2779,6 @@ kk:
               display_name: Контент
             lessonGroup-2:
               display_name: Контент
-        poetry:
-          lessons:
-            lesson-3:
-              name: Айнымалылар
         spelling-bee:
           lessons:
             lesson-1:
