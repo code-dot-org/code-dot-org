@@ -6,9 +6,15 @@
     "maxArgs": 3
   },
   "paletteParams": [
-    "text",
-    "gender",
-    "language"
+    {
+      "name": "text"
+    },
+    {
+      "name": "gender"
+    },
+    {
+      "name": "language"
+    }
   ],
   "params": [
     "\"Hello World!\"",
