@@ -111,7 +111,17 @@ class Comment extends Component {
       });
     }
 
-    return listItems;
+    return listItems.map((item, index) => {
+      return (
+        <a onClick={item.onClick} key={index}>
+          <span
+            style={styles.icon}
+            className={'fa fa-fw fa-' + item.iconClass}
+          />
+          <span style={styles.text}>{item.text}</span>
+        </a>
+      );
+    });
   };
 
   render() {
@@ -142,7 +152,9 @@ class Comment extends Component {
             <span style={styles.timestamp}>
               {this.renderFormattedTimestamp(timestampString)}
             </span>
-            <CommentMenu menuOptions={this.getListItems()} />
+            <CommentMenu icon="fa fa-ellipsis-h">
+              {this.getListItems()}
+            </CommentMenu>
           </span>
         </div>
         {!(isResolved && hideWhileResolved) && (
@@ -215,5 +227,7 @@ const styles = {
     color: color.white,
     margin: '5px 0',
     padding: '10px 12px'
-  }
+  },
+  text: {padding: '0 5px'},
+  icon: {fontSize: '18px'}
 };

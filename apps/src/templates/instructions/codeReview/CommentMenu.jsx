@@ -12,7 +12,17 @@ import onClickOutside from 'react-onclickoutside';
 // Displays a dropdown menu that displays actions that can be taken on comments
 class CommentOptions extends Component {
   static propTypes = {
-    menuOptions: PropTypes.array.isRequired
+    icon: PropTypes.string.isRequired,
+    children: props => {
+      React.Children.map(props.children, child => {
+        if (child.type !== 'a') {
+          throw new Error('only accepts children of type <a/>');
+        }
+        if (!child.props.href && !child.props.onClick) {
+          throw new Error('each child must have an href or onclick');
+        }
+      });
+    }
   };
 
   state = {
@@ -30,10 +40,20 @@ class CommentOptions extends Component {
     selectAction();
   };
 
+  handleKeyDown = (event, selectAction) => {
+    switch (event.which) {
+      // 13 is "enter" and 32 is "space"
+      case 13:
+      case 32: {
+        this.selectOptionWrapper(selectAction);
+      }
+    }
+  };
+
   render() {
-    const {menuOptions} = this.props;
+    const {children, icon} = this.props;
     const {isOpen} = this.state;
-    if (menuOptions.length === 0) {
+    if (children.length === 0) {
       return;
     }
 
@@ -48,26 +68,25 @@ class CommentOptions extends Component {
             })
           }
         >
-          <i className="fa fa-ellipsis-h" />
+          <i className={icon} />
         </button>
         {isOpen && (
           <ul
             style={styles.commentOptionsContainer}
             className="ignore-react-onclickoutside"
           >
-            {menuOptions.map((menuOption, index) => {
+            {children.map((child, index) => {
               return (
-                <li
-                  onClick={() => this.selectOptionWrapper(menuOption.onClick)}
+                <a
+                  {...child.props}
+                  onClick={() => this.selectOptionWrapper(child.props.onClick)}
+                  onKeyDown={event =>
+                    this.handleKeyDown(event, child.props.onClick)
+                  }
                   style={styles.commentOptionContainer}
                   key={index}
-                >
-                  <span
-                    style={styles.icon}
-                    className={'fa fa-fw fa-' + menuOption.iconClass}
-                  />
-                  <span style={styles.text}>{menuOption.text}</span>
-                </li>
+                  tabIndex={0}
+                />
               );
             })}
           </ul>
@@ -111,11 +130,13 @@ const styles = {
     padding: '5px 12px',
     cursor: 'pointer',
     ':hover': {
-      backgroundColor: color.lightest_gray
+      backgroundColor: color.lightest_gray,
+      textDecoration: 'none'
+    },
+    ':focus': {
+      textDecoration: 'none'
     },
     display: 'flex',
     alignItems: 'center'
-  },
-  text: {padding: '0 5px'},
-  icon: {fontSize: '18px'}
+  }
 };
