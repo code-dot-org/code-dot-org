@@ -2,7 +2,7 @@
   "category": "Poetry - Effects",
   "config": {
     "func": "addFrame",
-    "blockText": "add {BRUSH} outline",
+    "blockText": "set frame to {BRUSH}",
     "color": [
       240,
       0.45,

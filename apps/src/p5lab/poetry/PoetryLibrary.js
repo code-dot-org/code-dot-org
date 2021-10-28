@@ -480,6 +480,30 @@ export default class PoetryLibrary extends CoreLibrary {
       this.p5.textSize(item.size);
       this.p5.text(item.text, item.x, item.y);
     });
+
+    if (this.isPreviewFrame()) {
+      // Draw line numbers in preview frame only
+      this.drawLineNumbers(renderInfo);
+    }
+  }
+
+  drawLineNumbers(renderInfo) {
+    this.p5.push();
+    this.p5.textAlign(this.p5.LEFT);
+    this.p5.stroke('white');
+    this.p5.strokeWeight(2);
+    this.p5.fill('black');
+    this.p5.textFont('Arial');
+    this.p5.textSize(16);
+
+    let lineNum = 1;
+    renderInfo.lines.forEach(item => {
+      if (item.isPoemBodyLine) {
+        this.p5.text(lineNum, 5, item.y);
+        lineNum++;
+      }
+    });
+    this.p5.pop();
   }
 
   // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355
