@@ -212,6 +212,7 @@
           "url": "https://studio.code.org/s/coursef-2021/vocab"
         },
         "implementation_guide/coursef/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursef/2021": {
@@ -235,6 +236,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursef/2021": {
+          "name": "ஸ்பிரைட் ஆய்வக ஆவணம்",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursef/2021": {
@@ -380,6 +382,7 @@
           "url": "https://studio.code.org/s/courseb-2021/vocab"
         },
         "implementation_guide/courseb/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/courseb/2021": {
@@ -574,6 +577,7 @@
           "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
         "implementation_guide/coursea/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursea/2021": {
@@ -735,6 +739,7 @@
           "url": "https://studio.code.org/s/coursec-2021/vocab"
         },
         "implementation_guide/coursec/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursec/2021": {
@@ -918,6 +923,7 @@
           "url": "https://studio.code.org/s/coursed-2021/vocab"
         },
         "implementation_guide/coursed/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursed/2021": {
@@ -1221,6 +1227,7 @@
           "url": "https://studio.code.org/s/coursee-2021/vocab"
         },
         "implementation_guide/coursee/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
           "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
         },
         "lesson_type_guide/coursee/2021": {
@@ -1244,6 +1251,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursee/2021": {
+          "name": "ஸ்பிரைட் ஆய்வக ஆவணம்",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {

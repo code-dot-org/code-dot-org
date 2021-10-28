@@ -1500,6 +1500,14 @@ ru:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Stars: Звезды
+            Fireworks: Фейерверк
+            '"rainbow"': Радуга
+            '"hearts"': Сердечки
+            '"flowers"': Цветы
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1511,6 +1519,9 @@ ru:
         text: создать {NUM} новый {ANIMATION_NAME} слайдов
       Poetry_playSound:
         text: playSound {SOUND}
+        options:
+          SOUND:
+            Light: Свет
       Poetry_setBackground:
         text: задать цвет фона {COLOR}
       Poetry_setBackgroundEffect:
@@ -1520,6 +1531,10 @@ ru:
             '"space"': Космос
             '"stars"': Звезды
             '"ripples"': Круги на воде
+            '"rain"': Дождь
+            '"bubbles"': Пузыри
+            '"confetti"': Конфетти
+            '"hearts"': Цветные сердечки
           PALETTE:
             '"rainbow"': Радуга
       Poetry_setBackgroundImageAs:

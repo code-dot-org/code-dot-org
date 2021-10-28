@@ -312,9 +312,6 @@
           "word": "Bucles desde",
           "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
         },
-        "models_and_simulations/coursef/2021": {
-          "word": "Modelos y Simulaciones"
-        },
         "machine_learning/coursef/2021": {
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
@@ -548,7 +545,6 @@
           "definition": "una acción que hace que algo suceda."
         },
         "code/coursed/2021": {
-          "word": "programar",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "repeat/coursed/2021": {
@@ -610,9 +606,6 @@
         "event/express/2021": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
-        },
-        "code/express/2021": {
-          "word": "programar"
         },
         "loop/express/2021": {
           "word": "Bucle",

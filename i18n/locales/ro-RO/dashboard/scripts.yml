@@ -7517,9 +7517,7 @@ ro:
               display_name: Bucle
         csp6-2021: {}
         csp7-2021: {}
-        csp8-2021:
-          lessons:
-            lesson-4: {}
+        csp8-2021: {}
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -8388,6 +8386,7 @@ ro:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8796,6 +8795,7 @@ ro:
               display_name: Conţinut
         csa5-pilot-facilitator:
           lessons:
+            lesson-1: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -8921,9 +8921,7 @@ ro:
         poem-art: {}
         poetry:
           lessons:
-            lesson-2: {}
-            lesson-3:
-              name: Variabile
+            lesson-3: {}
             lesson-4: {}
             lesson-5: {}
         spelling-bee:
@@ -8942,6 +8940,9 @@ ro:
             lesson-4: {}
             lesson-5: {}
             lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
             lesson-10: {}
             lesson-11: {}
             lesson-12: {}
@@ -8951,3 +8952,13 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa-examples-21:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}

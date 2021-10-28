@@ -1698,6 +1698,16 @@ uk:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Морозиво
+            Stars: Зірки
+            Fireworks: Феєрверк
+            '"rainbow"': Веселка
+            '"hearts"': Серця
+            '"flowers"': Квіти
+            '"waves"': Хвилі
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1710,6 +1720,9 @@ uk:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів
       Poetry_playSound:
         text: грати звук {SOUND}
+        options:
+          SOUND:
+            Light: Світлий
       Poetry_setBackground:
         text: встановити колір тла {COLOR}
       Poetry_setBackgroundEffect:
@@ -1720,6 +1733,10 @@ uk:
             '"space"': Відступ
             '"stars"': Зірки
             '"ripples"': Брижі
+            '"rain"': Дощ
+            '"bubbles"': Бульбашки
+            '"confetti"': Конфеті
+            '"hearts"': Різнокольорові серця
           PALETTE:
             '"rainbow"': Веселка
       Poetry_setBackgroundImageAs:

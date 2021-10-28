@@ -1533,12 +1533,26 @@ ga:
         text: comhordanáid x de {SPRITE}
       Mikelab_yLocationOf:
         text: comhordanáid y de {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Uachtair Reoite
+            Stars: Réaltaí
+            Fireworks: Tinte ealaíne
+            '"rainbow"': Tuar ceatha
+            '"hearts"': Croíthe
+            '"flowers"': Bláthanna
+            '"waves"': Tonnta
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': báisteach
       Poetry_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: Sorcha
       Poetry_setBackground:
         text: 'socraigh dath an chúlra: {COLOR}'
       Poetry_setBackgroundEffect:
@@ -1549,6 +1563,10 @@ ga:
             '"space"': An Spás
             '"stars"': Réaltaí
             '"ripples"': Tonnáin
+            '"rain"': Báisteach
+            '"bubbles"': Boilgeoga
+            '"confetti"': Coinfití
+            '"hearts"': Croíthe Daite
           PALETTE:
             '"rainbow"': Tuar ceatha
       Poetry_setBackgroundImageAs:

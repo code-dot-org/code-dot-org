@@ -6,10 +6,18 @@
     "maxArgs": 6
   },
   "paletteParams": [
-    "chartId",
-    "chartType",
-    "tableName",
-    "columns"
+    {
+      "name": "chartId"
+    },
+    {
+      "name": "chartType"
+    },
+    {
+      "name": "tableName"
+    },
+    {
+      "name": "columns"
+    }
   ],
   "params": [
     "\"chartId\"",
