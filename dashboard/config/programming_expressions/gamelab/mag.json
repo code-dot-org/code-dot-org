@@ -2,8 +2,12 @@
   "func": "mag",
   "category": "Math",
   "paletteParams": [
-    "a",
-    "b"
+    {
+      "name": "a"
+    },
+    {
+      "name": "b"
+    }
   ],
   "params": [
     "100",
