@@ -2,9 +2,15 @@
   "func": "onBoardEvent",
   "category": "Circuit",
   "paletteParams": [
-    "component",
-    "event",
-    "callback"
+    {
+      "name": "component"
+    },
+    {
+      "name": "event"
+    },
+    {
+      "name": "callback"
+    }
   ],
   "params": [
     "buttonA",

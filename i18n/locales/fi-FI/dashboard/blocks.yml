@@ -1586,6 +1586,16 @@ fi:
         text: x koordinaatti {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinaatti {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Jäätelö
+            Stars: Äänet
+            Fireworks: Ilotulitus
+            '"rainbow"': Sateenkaari
+            '"hearts"': Sydämet
+            '"flowers"': Kukat
+            '"waves"': Aallot
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1594,6 +1604,9 @@ fi:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Vaalea
       Poetry_setBackground:
         text: aseta taustaväri {COLOR}
       Poetry_setBackgroundEffect:
@@ -1603,6 +1616,10 @@ fi:
             '"space"': Avaruus
             '"stars"': Äänet
             '"ripples"': Aaltoilu
+            '"rain"': Sade
+            '"bubbles"': Kuplat
+            '"confetti"': Konfetti
+            '"hearts"': Värikkäät sydämet
           PALETTE:
             '"rainbow"': Sateenkaari
       Poetry_setBackgroundImageAs:

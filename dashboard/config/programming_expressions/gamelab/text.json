@@ -2,9 +2,15 @@
   "func": "text",
   "category": "Drawing",
   "paletteParams": [
-    "str",
-    "x",
-    "y"
+    {
+      "name": "str"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
   "params": [
     "\"text\"",

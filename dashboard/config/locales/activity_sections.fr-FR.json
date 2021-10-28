@@ -31,6 +31,9 @@
         "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
           "progression_name": "Accélére la, ralenti la"
         },
+        "42ec95b6-80f4-4012-8869-6850c7497008": {
+          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
+        },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
           "name": "Prochaines étapes"
         },
@@ -94,6 +97,9 @@
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Au-delà d’une Heure de Code"
         },
+        "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
+          "name": "Installer la scène"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -137,6 +143,10 @@
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Au-delà d’une Heure de Code"
         },
+        "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
+          "name": "Installer la scène",
+          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
+        },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
             null
@@ -163,6 +173,9 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Au-delà d’une Heure de Code"
+        },
+        "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
+          "name": "Installer la scène"
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
@@ -199,6 +212,9 @@
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
           "name": "Artiste"
         },
+        "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
+          "name": "Installer la scène"
+        },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
             null
@@ -219,12 +235,16 @@
           "name": "Au-delà d’une Heure de Code"
         },
         "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
         },
         "acc2ced5-83ed-4926-9830-f5bd846136a1": {
           "tips": [
             null
           ]
+        },
+        "e180cd18-ae1a-4a5f-b893-22359586ffe8": {
+          "description": "Aujourd'hui, nous allons faire quelque chose de vraiment créatif. Comment préférez-vous exprimer votre créativité ?"
         },
         "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
           "tips": [
@@ -233,8 +253,11 @@
         },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
           "tips": [
-            null
+            "À ce stade de la leçon, vous remarquerez peut-être que les instructions sont moins normatives. Encouragez les élèves à faire preuve de créativité et à explorer les nouveaux blocs qui sont introduits. À partir de ce moment, le code de l'élève n'est **pas vérifié pour l'exactitude** afin d'encourager l'expérimentation au lieu de résoudre une tâche précise."
           ]
+        },
+        "f78380b1-0666-40a6-ac50-7adf09cda880": {
+          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Prochaines étapes"
@@ -304,6 +327,9 @@
             null
           ]
         },
+        "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
+          "name": "Installer la scène"
+        },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
             null
@@ -351,6 +377,9 @@
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Au-delà d’une Heure de Code"
         },
+        "366afa8a-feff-4dd4-a415-03a04e01e897": {
+          "name": "Installer la scène"
+        },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
             null
@@ -383,6 +412,9 @@
         },
         "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
           "progression_name": "Mode création"
+        },
+        "00b66dcf-d546-4649-aa21-6d97981fa444": {
+          "name": "Installer la scène"
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -438,6 +470,9 @@
             null
           ]
         },
+        "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
+          "name": "Installer la scène"
+        },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
             null
@@ -479,9 +514,12 @@
             null
           ]
         },
+        "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
+          "name": "Installer la scène"
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
-            null
+            "À ce stade de la leçon, vous remarquerez peut-être que les instructions sont moins normatives. Encouragez les élèves à faire preuve de créativité et à explorer les nouveaux blocs qui sont introduits. À partir de ce moment, le code de l'élève n'est **pas vérifié pour l'exactitude** afin d'encourager l'expérimentation au lieu de résoudre une tâche précise."
           ]
         },
         "ef068b27-a180-4c77-8254-b150c8499acb": {
@@ -508,16 +546,26 @@
         "501df195-7991-40ad-bad9-df715484240b": {
           "progression_name": "Accélére la, ralenti la"
         },
+        "820a64ef-d544-460f-ab3f-0f19442b9129": {
+          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
+        },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Prochaines étapes"
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
         },
+        "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
+          "name": "Installer la scène",
+          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
+        },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
             null
           ]
+        },
+        "54fd242d-dc0f-4a52-b6d6-bfd8f396bc85": {
+          "description": "Aujourd'hui, nous allons faire quelque chose de vraiment créatif. Comment préférez-vous exprimer votre créativité ?"
         },
         "e1243ccf-be45-4f8e-a138-54953ea12f92": {
           "tips": [
@@ -526,8 +574,11 @@
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
-            null
+            "À ce stade de la leçon, vous remarquerez peut-être que les instructions sont moins normatives. Encouragez les élèves à faire preuve de créativité et à explorer les nouveaux blocs qui sont introduits. À partir de ce moment, le code de l'élève n'est **pas vérifié pour l'exactitude** afin d'encourager l'expérimentation au lieu de résoudre une tâche précise."
           ]
+        },
+        "8653a0a0-b67c-4237-b8c1-111e0d11b4fe": {
+          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Prochaines étapes"
@@ -557,6 +608,10 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Conclusion"
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "Installer la scène",
+          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
@@ -648,7 +703,7 @@
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
           "name": "Introduction au Labo des Sprites",
           "description": "**Faites ça :** Lancez la vidéo **\\*Introducing Sprite Lab**. ",
-          "progression_name": " Introduction au Labo des Sprites"
+          "progression_name": " Introduction au Labo des Lutins"
         },
         "24a7b06d-f1c9-47fb-b723-8e7894957e27": {
           "description": "Bientôt, nous apprendrons à écrire du code et à créer nos propres projets Sprite Lab. Nous commencerons par explorer ce qui est faisable. Aujourd'hui, c'est toi l'utilisateur ! Tu dois jouer et utiliser les exemples de programmes que tu trouveras sur le site Web Code.org. Pour chaque programme que tu testes, décris les déguisements de sprite et tous les choix que tu peux faire en tant qu'utilisateur. "
@@ -694,12 +749,10 @@
           "description": "#### Prédiction (3 minutes)\n\n**Faites ceci :** Demandez aux élèves de lire le code fourni et de faire une prédiction sur ce qu'il va se passer. Après avoir appuyé sur « Exécuter », laissez leur le temps de réfléchir à tout ce qu'ils ont trouvé d'intéressant ou qui les a surpris. ",
           "tips": [
             "Dans les énigmes de prédiction, les élèves sont invités à lire un programme fourni et à répondre à une question à ce sujet, avant qu'il puisse d'appuyer sur « Exécuter ». Bien qu'il soit possible d'utiliser ces questions comme évaluation, gardez à l'esprit qu'elles sont souvent placées au début d'un cours pour que les élèves se posent des questions, avant même qu'on leur montre officiellement comment quelque chose de nouveau fonctionne."
-          ],
-          "progression_name": "Prédiction"
+          ]
         },
         "3eb6f356-a55c-4c86-a056-e8af46058092": {
-          "description": "**Faites ceci :** Lancez la vidéo « Comment créer un sprite » ",
-          "progression_name": "Vidéo : Comment créer un sprite"
+          "description": "**Faites ceci :** Lancez la vidéo « Comment créer un sprite » "
         },
         "2a37d5b6-c075-4e1f-acc2-e0c4aa3a8192": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter.\n\nCes activités sont adaptées à l'apprentissage autonome ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
@@ -708,15 +761,11 @@
           ],
           "progression_name": "Renforcement Des Compétences"
         },
-        "c5589504-a584-4599-8ee2-22e32a2374da": {
-          "progression_name": "S'entraîner"
-        },
         "4e2fcf33-06aa-4650-913e-e2d763d86be7": {
           "description": "#### Jeu libre (10 minutes)\n\n**Transition :** Les élèves doivent maintenant passer au dernier niveau de la leçon, où ils pourront créer leur propre projet. ",
           "tips": [
             "Les niveaux de jeu libre sont faits pour que les élèves puissent appliquer ce qu'ils ont appris de manière créative. Ils peuvent tester leurs propres idées, tout en étant encouragés à les partager et à collaborer les uns avec les autres. "
-          ],
-          "progression_name": "Jeu libre : créer une scène"
+          ]
         },
         "a594c37e-142d-44f1-93c9-e49ecce1e716": {
           "name": "Réflexion",
@@ -740,26 +789,21 @@
         },
         "34bd73dd-0031-4051-86a2-8f6a86735b34": {
           "name": "Les Sprites en Action",
-          "description": "#### Prédiction (2 minutes)\n\n**Faites ceci :** Demandez aux élèves de lire le code fourni et de faire une prédiction sur ce qu'il va se passer. Après avoir appuyé sur « Exécuter », laissez leur le temps de réfléchir à tout ce qu'ils ont trouvé intéressant ou qui les a surpris. ",
-          "progression_name": "Prédiction"
+          "description": "#### Prédiction (2 minutes)\n\n**Faites ceci :** Demandez aux élèves de lire le code fourni et de faire une prédiction sur ce qu'il va se passer. Après avoir appuyé sur « Exécuter », laissez leur le temps de réfléchir à tout ce qu'ils ont trouvé intéressant ou qui les a surpris. "
         },
         "275316f1-8a17-411e-881a-0841ede9cd01": {
           "description": "#### Vidéo : les Sprites en action (3 minutes)\n\n**Faites ceci :** Lisez la vidéo « Sprites en action » ",
-          "progression_name": " Les Sprites en Action"
+          "progression_name": " Les Lutins en Action"
         },
         "e242a5f9-7c5a-4b76-b4cd-2ebfde711630": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
           "progression_name": "Renforcement Des Compétences"
         },
-        "8afac6a6-bc6b-47a8-ad11-3d42bd53b0e7": {
-          "progression_name": "S'entraîner"
-        },
         "cce54ba1-52f6-48fe-a069-63a50363ec5b": {
           "description": "#### Jeu libre (10 minutes)\n\n**Transition :** Les élèves doivent maintenant passer au dernier niveau de la leçon où ils verront les mêmes choix de jeu libre que les leçons précédentes. Encouragez les élèves à ajouter des événements à leurs projets de la dernière fois ou à commencer un nouveau projet. ",
           "tips": [
             "Les choix de jeu libre de cette leçon reflètent ceux de la leçon précédente. En fait, tout code étudiant de la dernière leçon sera conservé jusqu'à aujourd'hui. La principale différence est que maintenant les étudiants ont des blocs supplémentaires dans leur boîte à outils qu'ils doivent utiliser pour rendre leurs programmes plus intéressants ou complexes. "
-          ],
-          "progression_name": "Jeu libre : créez une scène interactive "
+          ]
         },
         "47bca048-39fb-4014-a480-e21d163469db": {
           "name": "Réflexion",
@@ -788,9 +832,6 @@
         "a13d087d-2f1e-4ac7-ae0b-2123e880e772": {
           "progression_name": "Exploration"
         },
-        "7a07175e-ed69-46f8-a2c0-3f479f3966f8": {
-          "progression_name": "Mini-projet : créer un animal de compagnie virtuel "
-        },
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "Activité libre"
         },
@@ -812,8 +853,7 @@
           "description": "**Distribuez** [Words Can Hurt Student Handout](https://drive.google.com/open?id=1G7urBAgM9G3D4zI4KVRgN-yX-Q4qAyb_HWEHsnREl3M) et lisez les instructions à voix haute. Accordez cinq minutes aux binômes pour terminer l'activité.\n\n**Invitez** les à partager leurs réponses. Reportez-vous à la  [Teacher Version](https://drive.google.com/open?id=1kAcaaYor5vegqj2cncK5FOgFOeg2PtKUXWw-muodELE) pour les réponses possibles. "
         },
         "06057973-b621-4a48-a991-4f99aafdedca": {
-          "description": "**Mettez** une ficelle sur toute la longueur de la salle de classe. Désignez la moitié de la pièce comme étant \"OK\" et l'autre moitié comme \"Pas OK\". Demandez aux élèves de se tenir tous du côté OK de la ligne.\n\n**Projet** [Slide 11](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_106) et lisez les instructions à voix haute.\n\n**Demandez** aux élèves de lire les phrases sur les [Slides 12-15](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_14). Après chaque phrase, laissez le temps aux élèves dechanger de place ou de rester là. Invitez-les à expliquer leur réflexion. Si possible, choisissez des élèves de chaque côté pour débattre des raisons pour lesquelles la phrase est correcte ou non.\n\nPour les exemples où les élèves disent que ce n'est pas OK, faites un suivi en leur demandant ce qu'ils pourraient faire s'ils recevaient ce message de quelqu'un.\n\n**Rappelez** que les enfants aiment aller en ligne pour discuter, regarder des vidéos, envoyer des messages, jouer à des jeux et faire leurs devoirs. Parfois, les gens disent des choses méchantes ou effrayantes. Les messages qui mettent les gens mal à l'aise vont trop loin.\n\n**Demandez** aux élèves de remplir le [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy).",
-          "progression_name": "Le pouvoir des mots - Activité hors ligne"
+          "description": "**Mettez** une ficelle sur toute la longueur de la salle de classe. Désignez la moitié de la pièce comme étant \"OK\" et l'autre moitié comme \"Pas OK\". Demandez aux élèves de se tenir tous du côté OK de la ligne.\n\n**Projet** [Slide 11](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_106) et lisez les instructions à voix haute.\n\n**Demandez** aux élèves de lire les phrases sur les [Slides 12-15](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_14). Après chaque phrase, laissez le temps aux élèves dechanger de place ou de rester là. Invitez-les à expliquer leur réflexion. Si possible, choisissez des élèves de chaque côté pour débattre des raisons pour lesquelles la phrase est correcte ou non.\n\nPour les exemples où les élèves disent que ce n'est pas OK, faites un suivi en leur demandant ce qu'ils pourraient faire s'ils recevaient ce message de quelqu'un.\n\n**Rappelez** que les enfants aiment aller en ligne pour discuter, regarder des vidéos, envoyer des messages, jouer à des jeux et faire leurs devoirs. Parfois, les gens disent des choses méchantes ou effrayantes. Les messages qui mettent les gens mal à l'aise vont trop loin.\n\n**Demandez** aux élèves de remplir le [Lesson Quiz](https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy)."
         },
         "58780696-9fe3-4a71-815e-a8d008e5bed6": {
           "description": "Voici des ressources supplémentaires que vous pouvez fournir aux élèves pour améliorer leur apprentissage :\n\n-   [Family Activity](https://drive.google.com/open?id=1jgFQhQawNgbG8VFWDgcu8jfYGeIvKz77VV54Revd0Gw) \n-   [Family Tips](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)\n-   **Préparez** des bouts de papier avec des commentaires qui disent des choses légèrement méchantes, comme :\n\n    -   Je ne peux pas croire que tu aimes les séries de super-héros. C'est pour les petits.\n    -   T'es bizarre toi.\n    -   C'est quoi ce T-shirt là ?\n\n     <br>\n\n     Distribuez une fiche à chaque élève et mettez-les par deux. Demandez-leur d'échanger des feuillets et de les lire en silence. Ensuite, demandez-leur d'échanger et de dire à tour de rôle le commentaire à voix haute à l'autre personne. Demandez-leur quelle était la différence entre écrire quelque chose pas très sympa et assumer ce qu'ils disent en face à quelqu'un. Soulignez que les gens se cachent parfois derrière l'anonymat de leur activité en ligne. Rappelez aux élèves que s'ils ne veulent pas dire quelque chose en face à quelqu'un, alors ils ne doivent pas non plus le lui dire en ligne. "
@@ -837,8 +877,7 @@
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
           "name": "Créez votre propre histoire (20 minutes) ",
-          "description": "Dans l'activité d'aujourd'hui, vous travaillerez avec un groupe pour créer votre propre histoire d'espace vide. ",
-          "progression_name": "Vidéo : Variables débranchées dans les enveloppes "
+          "description": "Dans l'activité d'aujourd'hui, vous travaillerez avec un groupe pour créer votre propre histoire d'espace vide. "
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "description": "**Faites ceci :** Distribuez la **\\*feuille de travail de l'élève** et parcourez les instructions.",
@@ -875,15 +914,13 @@
         },
         "05818b32-90cc-466a-b952-8fcf048e4e5c": {
           "name": "Texte et invites ",
-          "description": "#### Prédiction (5 minutes)\n\n**Faites ceci :** Demandez aux élèves de lire le code fourni et de faire une prédiction sur ce qu'il va se passer. Après avoir appuyé sur « Exécuter », laissez leur le temps de réfléchir à tout ce qu'ils ont trouvé intéressant ou qui les a surpris. ",
-          "progression_name": "Prédiction"
+          "description": "#### Prédiction (5 minutes)\n\n**Faites ceci :** Demandez aux élèves de lire le code fourni et de faire une prédiction sur ce qu'il va se passer. Après avoir appuyé sur « Exécuter », laissez leur le temps de réfléchir à tout ce qu'ils ont trouvé intéressant ou qui les a surpris. "
         },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
           "description": "#### Vidéo (5 minutes)\n\nMettez la vidéo en classe. ",
           "tips": [
             "Tout comme lorsque les élèves écrivent ou communiquent verbalement, il est important de définir des attentes sur l'utilisation appropriée des mots dans cette activité. Les élèves doivent comprendre qu'ils sont responsables du code qu'ils écrivent, y compris de tout texte qui s'affiche à l'écran. Le texte doit être respectueux et sûr. Ils peuvent s'entraîner à ne pas partager d'informations personnelles dans leurs programmes, surtout s'ils souhaitent les partager avec d'autres.\nNotez que les informations saisies dans une invite Sprite Lab ne sont pas enregistrées à long terme. Les mots et messages tapés par les utilisateurs de ces applications disparaissent une fois l'application réinitialisée. "
-          ],
-          "progression_name": "Vidéo : Texte et invites "
+          ]
         },
         "e64a2440-c243-4f49-8181-171a72e38c5c": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
@@ -891,9 +928,6 @@
             "Cette leçon a plus de niveaux de renforcement des compétences et de pratique que les leçons précédentes, car les élèves y apprennent quelques nouvelles compétences en même temps. En tant que tel, il n'y a pas de niveau spécial dit « jeu libre ». Cependant, ceux qui sont à l'aise avec leurs nouvelles compétences peuvent choisir la dernière option de pratique pour repartir de zéro avec un projet vierge. Dans la prochaine leçon, ils travailleront également exclusivement sur leur propre projet qu'ils planifient et conçoivent à l'avance. "
           ],
           "progression_name": "Renforcement Des Compétences"
-        },
-        "472a5254-b0e4-4069-a6f4-940ed9fda07a": {
-          "progression_name": "S'entraîner"
         },
         "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
           "name": "Vérifier",
@@ -911,15 +945,13 @@
           "description": "**Faites ceci :** À l'aide des diapositives de la leçon, passez en revue les concepts que les élèves ont explorés jusqu'à présent dans le cours : les sprites, les comportements, les événements et le texte. Enfin, examinez le fonctionnement des invites et des variables.\n\n#### Prédiction\n\n**Faites ceci :** Demandez aux élèves de lire le code fourni et de faire une prédiction sur ce qu'il va se passer. Après avoir appuyé sur « Exécuter », laissez aux élèves le temps de réfléchir à tout ce qu'ils ont trouvé intéressant ou qui les a surpris. ",
           "tips": [
             "L'une des parties les plus délicates de l'apprentissage des variables est de s'assurer que l'étiquette d'une variable correspond toujours. À ce niveau, assurez-vous que les élèves remarquent la différence entre la variable **repas** et la variable **nourriture**. Les élèves doivent comprendre que la meilleure façon de résoudre ce problème serait d'utiliser une seule variable, en s'assurant que l'étiquette corresponde toujours.\n\nVous pouvez également guider votre classe dans la correction des bogues de ce programme en utilisant ce niveau [Teacher Sandbox](https://studio.code.org/levels/27300) avec votre projecteur. "
-          ],
-          "progression_name": "Prédiction"
+          ]
         },
         "10bfa1b7-62ca-4bb1-93e8-05d661819ca2": {
           "description": "### Exploration\n\n**Faites ceci :** Demandez aux élèves d'explorer les exemples de programmes du niveau 1. Cela peut être fait en classe entière avec une discussion, avec des paires partageant un appareil, ou même individuellement. Pour chacun des programmes, demandez aux élèves de réfléchir à son fonctionnement, à qui l'utiliserait et aux idées qu'il leur donne sur ce qu'ils pourraient faire eux-mêmes. Une bonne stratégie ici consiste à demander aux élèves de lire le code du programme à voix haute, une ligne à la fois, puis de parler de ce à quoi il sert. ",
           "tips": [
             "Si vous manquez de temps ou si vous souhaitez minimiser les transitions, terminez cette partie de la leçon en tant que discussion de groupe. Vous pouvez rappeler aux élèves qu'ils peuvent revoir ces programmes plus tard s'ils ont une question sur le fonctionnement de quelque chose.\n\nSi vous avez déjà suivi toute la leçon vous-même, vous pouvez également leur montrer votre propre programme fini pour vous inspirer ! "
-          ],
-          "progression_name": "Exploration : Exemples de programmes "
+          ]
         },
         "fc1dcb70-576f-4a5e-8407-856ffa7d43a5": {
           "name": "Programmes de saisie utilisateur ",
@@ -933,8 +965,7 @@
           "description": "### Mini-Projet (20 min)\n\nMunis de leurs guides de planification complétés, les étudiants sont maintenant prêts à donner vie à leurs projets. Faites passer les élèves à leur ordinateur et demandez-leur de commencer la « partie 1 » du projet qu'ils ont choisi. ",
           "tips": [
             "Ce niveau présente aux élèves un menu d'options qui correspond aux principaux types de projets parmi lesquels ils ont choisi. Les principales différences entre ces sous-niveaux sont les instructions et les déguisements de sprite par défaut. Les élèves peuvent avoir besoin d'instructions très claires pour comprendre comment naviguer dans les choix ici. Pour chacun des choix de projets, il existe ici deux sous-niveaux. Pour commencer, les étudiants doivent choisir l'un des niveaux marqués \"Partie 1\". Une fois qu'ils ont terminé ce niveau, ils doivent revenir ici et sélectionner \"Partie 2\" du même projet. Le premier niveau de chaque choix leur fournira une rétroaction, au fur et à mesure qu'ils assembleront les éléments de base de leur projet. Le deuxième niveau est le « jeu libre », qui vise à leur permettre d'apporter les modifications qu'ils souhaitent à leur code. "
-          ],
-          "progression_name": "Mini-projet : programmes de saisie utilisateur "
+          ]
         },
         "d5bf3b23-128d-4078-bdb2-a806a59a2db1": {
           "name": "Exemple",
@@ -948,20 +979,11 @@
           "name": "Dessiner avec des Boucles",
           "description": "Certains élèves peuvent découvrir où ajouter des boucles de « répétition » en écrivant le programme sans boucles, puis en encerclant les sections de répétitions. Si les élèves de votre classe semblent pouvoir en bénéficier, demandez-leur de garder du papier et des crayons à côté d'eux à leurs machines. Ils aimeront peut être aussi dessiner certaines formes et figures sur papier avant de les programmer en ligne."
         },
-        "0b7773fb-83ae-4dce-abc3-5cf15ae03aeb": {
-          "progression_name": "Vidéo : Intro l'Artiste avec JR Hildebrande"
-        },
         "ef504f91-6fca-4859-a960-7e792de6223e": {
           "progression_name": "Renforcement Des Compétences"
         },
-        "4754f929-7c05-4e91-a7e8-39c23f4a7449": {
-          "progression_name": "Vidéo : Les Boucles avec l'Artiste"
-        },
         "411a2b66-714e-40fe-9636-a184b62c44bf": {
           "progression_name": "Renforcement Des Compétences"
-        },
-        "08a8ba95-17db-446d-9a47-2ed7927d1957": {
-          "progression_name": "S'entraîner"
         },
         "684dcdb5-2ce6-4481-85c2-aec19cf71f8e": {
           "name": "Réflexion",
@@ -973,8 +995,7 @@
         },
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
           "name": "Utiliser des Variables avec l'Artiste",
-          "description": "Envisagez de revoir le niveau de prédiction et la vidéo avec toute la classe avant de passer les élèves à la section Développement des compétences. ",
-          "progression_name": "Prédiction"
+          "description": "Envisagez de revoir le niveau de prédiction et la vidéo avec toute la classe avant de passer les élèves à la section Développement des compétences. "
         },
         "114f0276-db5c-466e-ad8a-a6488a93f019": {
           "progression_name": " Les Variables dans Artiste"
@@ -997,9 +1018,6 @@
           "name": "Les Boucles Imbriquées dans le Labyrinthe",
           "progression_name": "Renforcement Des Compétences"
         },
-        "05918bd9-ce3f-4b76-8ba2-0d084b7c00e6": {
-          "progression_name": "S'entraîner"
-        },
         "6cef858a-437c-47a3-9c8a-1229f634948a": {
           "tips": [
             "Cette leçon peut être difficile. Pensez à utiliser la « programmation en binôme » pour que les élèves puissent collaborer et s'entraider. "
@@ -1018,9 +1036,6 @@
           "description": "Cet ensemble d'énigmes nécessite de sérieuses compétences en matière de réflexion informatique. Si vous constatez que les élèves sont bloqués, aidez-les à décomposer les énigmes une par une :\n\n-   À quoi cela ressemblerait-il si les fleurs/le nid d'abeilles avaient tous la même quantité de nectar/miel ?\n-   Maintenant, comment pouvez-vous utiliser une variable pour obtenir les quantités telles que vous les voulez ? ",
           "progression_name": "Renforcement Des Compétences"
         },
-        "94f3b6b8-77fa-42ef-bee6-80a47bdd050e": {
-          "progression_name": "S'entraîner"
-        },
         "a3b35da9-5d20-4f58-998a-e5395fc7e23f": {
           "name": "Réflexion",
           "description": "**Invites:**\n\n-   De quoi parlait la leçon d'aujourd'hui ?\n-   Est-ce que vous avez aimé le cours d'aujourd'hui ?\n-   Comment avez-vous utilisé les variables ?\n-   Que pensez-vous pouvoir faire d'autre avec les variables ? "
@@ -1032,8 +1047,7 @@
           "description": "#### Pour tous\n\n-   Faites remarquer qu'il y a certaines boucles qui reviennent très souvent, par exemple, quand vous devez garder une trace du nombre de fois que vous avez fait un tour\n    -   Parfois, vous ne voulez pas commencer par un\n    -   Parfois, vous ne voulez pas compter par uns\n    -   Les \"boucles Pour\" sont un bon moyen d'avoir un compteur qui commence quand vous voulez, se termine quand vous voulez et augmente de n'importe quel pas de taille selon ce que vous voulez\n\nIci, vous pouvez aller directement dans un extrait du jeu.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-07-18-11.42.47.png\" style=\"max-width: 600px;\">"
         },
         "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210": {
-          "name": "Jouer avec les Boucles « Pour »",
-          "progression_name": "For Loop Fun - Activité hors ligne"
+          "name": "Jouer avec les Boucles « Pour »"
         },
         "95417529-72b3-4c15-95d1-7bd479743269": {
           "description": "S'il nous arrive de répéter les choses un certain nombre de fois, on veut cependant en garder une trace. C'est là qu'une boucle Pour est utile. Lorsque vous en utilisez-une, vous savez dès le début quelle est votre valeur de début, quelle est votre valeur de fin et de combien la valeur change à chaque fois dans la boucle."
@@ -1093,19 +1107,13 @@
           "progression_name": "Vérifier"
         },
         "aec92f2d-9b44-43b4-a418-3aebaf5af709": {
-          "progression_name": " Boucles « Pour »"
+          "progression_name": "Exploration: Boucles « Pour »"
         },
         "671c8e13-e78c-49f3-867b-45e7643d0026": {
-          "progression_name": " Boucles « Pour »"
-        },
-        "297e5651-8422-476e-b1db-3d893b7e0bc8": {
-          "progression_name": "Prédiction"
+          "progression_name": "Video: Les Boucles « Pour »"
         },
         "b500137c-9df8-40c5-8b4d-e4f364f8255e": {
           "progression_name": "Renforcement Des Compétences"
-        },
-        "729a9e74-6bd2-4833-8b46-12f83a6a83b7": {
-          "progression_name": "S'entraîner"
         },
         "7a256684-5f37-4780-b2d7-a75a079dfc95": {
           "progression_name": "Les Extras de la Leçon"
@@ -1120,7 +1128,7 @@
         },
         "b838a926-533f-414b-86f6-17f8ea078fad": {
           "name": "Les Boucles « Pour » avec l'Artiste",
-          "progression_name": " Boucles « Pour »"
+          "progression_name": "Video: Les Boucles « Pour »"
         },
         "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
           "progression_name": "Exploration"
@@ -1149,11 +1157,7 @@
         },
         "2a282546-3943-4555-adae-45fe80b8207a": {
           "name": "Simuler des Expérimentations",
-          "description": "**Distribuer** : Distribuez la **\\*feuille de travail** de la leçon avec des crayons et des instruments à colorier quels qu'il soient. Dirigez les élèves vers Code Studio ou projetez le niveau au tableau.\n\n#### Exécution de simulations\n\n**Étape 1 Rassembler des données** : La première bulle est une simple simulation d'un éléphant et d'un hippopotame ramassant des pommes. Les élèves exécuteront la simulation au moins 5 fois, en enregistrant le nombre de pommes ramassées par chaque animal et le temps total qu'il a fallu pour exécuter la simulation.\n\n**Graphique linéaire de l'étape 2** : À l'aide des données recueillies à l'étape précédente, les élèves traceront un graphique linéaire double. Encouragez les élèves à partager leurs graphiques avec leurs voisins et à discuter des questions suivantes :\n\n-   Les graphiques sont-ils pareils ou différents ? Pourquoi pensez-vous que c'est comme ça ?\n-   Voyez-vous des modèles ?\n-   Que pensez-vous que vous verriez si vous exécutiez cette simulation 5 fois de plus ?\n\n**Étape 3 Modifier et prédire** : Dans la deuxième bulle, les élèves pourront modifier certaines des variables qui contrôlent cette simulation. Chaque élève choisira une variable à modifier, prédira comment ce changement affectera la simulation. Les variables potentielles à modifier incluent :\n\n-   Nombre d'éléphants\n-   Nombre d'hippopotames\n-   Nombre de pommes\n-   Vitesse des éléphants\n-   Vitesse des hippopotames\n\n_Notez que les élèves peuvent changer les sprites dans leur simulation pour d'autres animaux et nourriture s'ils le souhaitent._\n\n**Étape 4 : Collecter plus de données** : avec les modifications décidées par les étudiants à la dernière étape, ils exécuteront la simulation cinq fois de plus et en recueilleront les données.\n\n**Étape 5 Visualisez vos données** : cette étape est volontairement laissée ouverte pour permettre aux étudiants d'explorer la représentation visuelle de leurs données qu'ils souhaitent. Le but de ce visuel est de prouver ou de réfuter leur prédiction.\n\n**Partager** : Après avoir terminé, les élèves peuvent partager leurs résultats avec un voisin. Lorsque toute la classe est prête, rassemblez tout le monde. ",
-          "progression_name": "Lancer une simulation"
-        },
-        "a9361037-3164-409e-a061-748c4929e168": {
-          "progression_name": "Modifier les variables de simulation "
+          "description": "**Distribuer** : Distribuez la **\\*feuille de travail** de la leçon avec des crayons et des instruments à colorier quels qu'il soient. Dirigez les élèves vers Code Studio ou projetez le niveau au tableau.\n\n#### Exécution de simulations\n\n**Étape 1 Rassembler des données** : La première bulle est une simple simulation d'un éléphant et d'un hippopotame ramassant des pommes. Les élèves exécuteront la simulation au moins 5 fois, en enregistrant le nombre de pommes ramassées par chaque animal et le temps total qu'il a fallu pour exécuter la simulation.\n\n**Graphique linéaire de l'étape 2** : À l'aide des données recueillies à l'étape précédente, les élèves traceront un graphique linéaire double. Encouragez les élèves à partager leurs graphiques avec leurs voisins et à discuter des questions suivantes :\n\n-   Les graphiques sont-ils pareils ou différents ? Pourquoi pensez-vous que c'est comme ça ?\n-   Voyez-vous des modèles ?\n-   Que pensez-vous que vous verriez si vous exécutiez cette simulation 5 fois de plus ?\n\n**Étape 3 Modifier et prédire** : Dans la deuxième bulle, les élèves pourront modifier certaines des variables qui contrôlent cette simulation. Chaque élève choisira une variable à modifier, prédira comment ce changement affectera la simulation. Les variables potentielles à modifier incluent :\n\n-   Nombre d'éléphants\n-   Nombre d'hippopotames\n-   Nombre de pommes\n-   Vitesse des éléphants\n-   Vitesse des hippopotames\n\n_Notez que les élèves peuvent changer les sprites dans leur simulation pour d'autres animaux et nourriture s'ils le souhaitent._\n\n**Étape 4 : Collecter plus de données** : avec les modifications décidées par les étudiants à la dernière étape, ils exécuteront la simulation cinq fois de plus et en recueilleront les données.\n\n**Étape 5 Visualisez vos données** : cette étape est volontairement laissée ouverte pour permettre aux étudiants d'explorer la représentation visuelle de leurs données qu'ils souhaitent. Le but de ce visuel est de prouver ou de réfuter leur prédiction.\n\n**Partager** : Après avoir terminé, les élèves peuvent partager leurs résultats avec un voisin. Lorsque toute la classe est prête, rassemblez tout le monde. "
         },
         "de52214d-6afd-4af7-90e5-3e85484e0877": {
           "name": "Réflexion",
@@ -1164,8 +1168,7 @@
         },
         "b69c8e63-7778-4a44-b127-e4c083af98c9": {
           "name": "Personnalisez la simulation",
-          "description": "Tout au long de l'activité principale de ce cours, les élèves exécutent et modifient une simulation qu'ils n'ont pas eux-mêmes programmée à partir de rien. Ils peuvent en fait programmer la simulation avec des blocs de code qu'ils ont vus dans les leçons précédentes.\n\nAu dernier niveau de la leçon, ils pourront explorer ce code et commencer à réfléchir à la façon de programmer eux-mêmes une simulation. ",
-          "progression_name": "Personnaliser"
+          "description": "Tout au long de l'activité principale de ce cours, les élèves exécutent et modifient une simulation qu'ils n'ont pas eux-mêmes programmée à partir de rien. Ils peuvent en fait programmer la simulation avec des blocs de code qu'ils ont vus dans les leçons précédentes.\n\nAu dernier niveau de la leçon, ils pourront explorer ce code et commencer à réfléchir à la façon de programmer eux-mêmes une simulation. "
         },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Introduction",
@@ -1190,8 +1193,7 @@
           "description": "**Faites ceci :** Montrez la vidéo « Beaucoup de sprites » et expliquez comment fonctionnent les blocs spéciaux à l'intérieur des blocs d'événement. ",
           "tips": [
             "Les blocs d'événements de cette leçon sont plus avancés que ce que les élèves ont utilisé jusqu'à présent dans le cours. Veillez à ce qu'ils puissent développer les blocs d'événements verts en appuyant sur le bouton +. Ils travaillent avec beaucoup de sprites aujourd'hui. Normalement, les commandes de Sprite Lab affectent tous les sprites avec le même déguisement. Les blocs à l'intérieur du bloc d'événement feront en sorte que chaque action attachée n'affecte que les sprites impliqués dans cet événement là. "
-          ],
-          "progression_name": "Video : Plein de Sprites"
+          ]
         },
         "1b81351d-aade-4896-8957-e06fdd93edfa": {
           "description": "**Faites ceci :** Faites passer les élèves à leur ordinateur et demandez-leur de commencer à suivre les instructions pour chaque niveau dans la section de renforcement des compétences. S'ils ont fini avant, ils pourront continuer à expérimenter leur code au niveau 6 jusqu'à ce que la classe soit prête à passer à autre chose. ",
@@ -1224,34 +1226,28 @@
           "description": "**Soutien général :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves tout au long du didacticiel. Voici quelques conseils qui devraient les aider, quel que soit le niveau sur lequel ils travaillent.\n\n-   **Collaborer avec les voisins :** Encouragez les élèves à se renseigner auprès d'un voisin pour discuter de ce qu'ils vivent. Étant donné que ce didacticiel comprend des vidéos et que les étudiants peuvent mettre des écouteurs, il risquent de « se mettre dans une bulle ». Aidez à briser ces barrières en les faisant travailler deux par deux.\n-   **Lire les instructions :** les instructions fournissent généralement des informations utiles sur ce qu'il se passe dans les coulisses.\n-   **Revenez en arrière et essayez différentes choses :** S'ils finissent vite, encouragez-les à revenir à « Plus d'entraînement ». Dans la dernière partie de l'activité, ils pourront également revenir en arrière et choisir un \"Nouveau mot\". Plus il y a de données d'entraînement, plus le modèle d'apprentissage automatique sera précis et cohérent. Ils peuvent également apprendre en entraînant délibérément leur modèle de manière incorrecte ou en ne l'entraînant pas du tout. ",
           "tips": [
             "Cette leçon ne dira pas aux étudiants s'ils ont terminé le niveau correctement. Il est possible de sauter rapidement les différentes parties de l'activité. Encouragez les élèves à regarder les vidéos, à lire les instructions et à essayer différentes choses en cours de route. À tout moment, ils pourront partager leurs découvertes avec vous ou un camarade de classe. "
-          ],
-          "progression_name": "Vidéo : IA : Qu'est-ce que l'apprentissage automatique ? "
+          ]
         },
         "fa4c81ae-8830-49d8-9de9-e5f80a38dac8": {
           "description": "### Entraînement de l'IA\n\nLes élèves peuvent parcourir les trois premiers niveaux seuls ou avec un camarade. Pour programmer l'IA, utilisez les boutons pour étiqueter une image comme « poisson » ou « pas de poisson ». Chaque image et étiquette fait partie des données utilisées pour entraîner l'IA. toute seule. Une fois formée, l'A.I. tentera d'étiqueter 100 nouvelles images toute seule, puis présentera une sélection qui, selon elle, a la plus grande probabilité d'être un \"poisson\" en fonction de sa formation. Les élèves qui étiquettent systématiquement les choses correctement devraient voir un océan plein de différents types de créatures marines, sans beaucoup (ou aucun) autre objet. ",
           "tips": [
             "Chaque image de cette partie de la leçon est introduite dans un réseau de neurones qui a été pré-entraîné sur un vaste ensemble de données appelé [ImageNet](http://www.image-net.org/). La base de données contient plus de 14 millions d'images annotées à la main. ImageNet contient plus de 20 000 catégories avec une catégorie typique, telle que \"ballon\" ou \"fraise\", composée de plusieurs centaines d'images. Quand l'IA scanne de nouvelles images et fait ses propres prédictions dans la leçon, elle compare en fait les catégories possibles pour la nouvelle image avec les modèles qu'elle a trouvés dans l'ensemble de données d'apprentissage. "
-          ],
-          "progression_name": "Former l'IA pour nettoyer l'océan "
+          ]
         },
         "d717b4b4-f900-425a-9d8d-d2d5866b3470": {
-          "description": "**Partage rapide :** _L'IA s'est-elle bien débrouillée ? Comment pensez-vous qu'elle a choisi quoi inclure dans l'océan ?_\n\n### Utilisation des données d'entraînement\n\n**Faire ceci :** Montrer la vidéo Données d'entraînement et préférence\n\n**Invite :** _Pensez-vous que vos données d'entraînement influencent beaucoup sur les résultats que l'IA. produit ?_\n\n**Discussion :** En petits groupes, les élèves partagent leurs réponses. Circulez dans la pièce et écoutez les idées des élèves. Cela peut être suivi d'une discussion en classe entière, ou les étudiants peuvent revenir directement au didacticiel.\n\n**Objectif :** Amener les élèves à réfléchir sur leur expérience. Il est important à ce stade qu'ils réalisent que l'étiquetage qu'ils font est en fait la programmation de l'ordinateur. Les exemples qu'ils montrent avec l'A.I. sont les « données d'entraînement ». ",
-          "progression_name": "Vidéo : Données de formation et préférences"
+          "description": "**Partage rapide :** _L'IA s'est-elle bien débrouillée ? Comment pensez-vous qu'elle a choisi quoi inclure dans l'océan ?_\n\n### Utilisation des données d'entraînement\n\n**Faire ceci :** Montrer la vidéo Données d'entraînement et préférence\n\n**Invite :** _Pensez-vous que vos données d'entraînement influencent beaucoup sur les résultats que l'IA. produit ?_\n\n**Discussion :** En petits groupes, les élèves partagent leurs réponses. Circulez dans la pièce et écoutez les idées des élèves. Cela peut être suivi d'une discussion en classe entière, ou les étudiants peuvent revenir directement au didacticiel.\n\n**Objectif :** Amener les élèves à réfléchir sur leur expérience. Il est important à ce stade qu'ils réalisent que l'étiquetage qu'ils font est en fait la programmation de l'ordinateur. Les exemples qu'ils montrent avec l'A.I. sont les « données d'entraînement ». "
         },
         "86495854-e877-4aea-b9d6-2669b1d2d43b": {
           "description": "Dans la seconde moitié de l'activité, les élèves formeront l'IA. sur un mot de leur choix en lui montrant des exemples de ce type de poisson. Comme auparavant, l'IA. ne commence pas par des données d'apprentissage sur ces étiquettes. Même si les mots de ce niveau sont assez objectifs, il est possible que les élèves obtiennent des résultats différents en fonction de leurs données d'entraînement. Certains pourront même former intentionnellement l'IA. à tort pour voir ce qu'il se passe. Si les élèves réfléchissent au fonctionnement de l'**apprentissage automatique**, soutenez-les dans ce sens ! ",
           "tips": [
             "Les poissons de ce didacticiel sont générés aléatoirement en fonction de certains composants prédéfinis, notamment la bouche, la queue, les yeux, les écailles et les nageoires, avec une couleur de corps, une forme et une taille choisies au hasard. Plutôt que de regarder les données d'image réelles, l'I.A. recherche maintenant des modèles récurrents dans ces composants en fonction de la façon dont l'élève classe chaque poisson. Elle sera donc plus susceptible d'étiqueter un poisson de la même manière que l'élève l'aurait fait s'il avait des caractéristiques correspondantes. "
-          ],
-          "progression_name": "Utilisation des données d'entraînement"
+          ]
         },
         "919543ed-3f8f-4a49-ba9e-c34d0d3cfaa3": {
-          "description": "### Impacts sur la société\n\n_Faites ceci :_ Montrez la vidéo Impacts sur la société.\n\n**Dites :** _Les systèmes d'intelligence artificielle apprennent des données que nous leur fournissons, mais parfois nous ne leur en donnons pas assez ou nous pouvons leur donner des données qui les font agir étrangement._\n\n**Dites :** _Repensez aux exemples d'intelligence artificielle dont nous avons parlé au début. Pensez à une époque où l'apprentissage automatique pouvait ne pas comprendre quelque chose en vrai ? (Par exemple, la reconnaissance vocale ne vous comprend pas.)_\n\n**Invite :** _Les données d'entraînement peuvent-elles réellement créer des problèmes ? Comment?_\n\n**Discussion :** En commençant par de petits groupes, puis en passant par toute la classe, les élèves partagent leurs réponses.\n\n**Objectif :** L'objectif de cette discussion est de ramener les élèves au contexte de l'intelligence artificielle dans le monde réel.\n\n**Dites :** _Certaines façons de résoudre ce problème consistent à utiliser un grand nombre de données d'entraînement et à nous assurer que nous comprenons bien le problème nous-mêmes afin de fournir les bons types de données.\nDans la dernière partie de l'activité, vous allez enseigner à l'IA. un mot qui pourrait être interprété de différentes manières._ ",
-          "progression_name": "Vidéo : Impacts sur la Société"
+          "description": "### Impacts sur la société\n\n_Faites ceci :_ Montrez la vidéo Impacts sur la société.\n\n**Dites :** _Les systèmes d'intelligence artificielle apprennent des données que nous leur fournissons, mais parfois nous ne leur en donnons pas assez ou nous pouvons leur donner des données qui les font agir étrangement._\n\n**Dites :** _Repensez aux exemples d'intelligence artificielle dont nous avons parlé au début. Pensez à une époque où l'apprentissage automatique pouvait ne pas comprendre quelque chose en vrai ? (Par exemple, la reconnaissance vocale ne vous comprend pas.)_\n\n**Invite :** _Les données d'entraînement peuvent-elles réellement créer des problèmes ? Comment?_\n\n**Discussion :** En commençant par de petits groupes, puis en passant par toute la classe, les élèves partagent leurs réponses.\n\n**Objectif :** L'objectif de cette discussion est de ramener les élèves au contexte de l'intelligence artificielle dans le monde réel.\n\n**Dites :** _Certaines façons de résoudre ce problème consistent à utiliser un grand nombre de données d'entraînement et à nous assurer que nous comprenons bien le problème nous-mêmes afin de fournir les bons types de données.\nDans la dernière partie de l'activité, vous allez enseigner à l'IA. un mot qui pourrait être interprété de différentes manières._ "
         },
         "833ae7ce-6703-495b-b010-224f0d32134f": {
-          "description": "### Enseigner à l'IA un nouveau mot\n\nIci, comme auparavant, les étudiants utiliseront les données d'entraînement pour enseigner l'IA. comment reconnaître différents types de poissons. Les mots de cette liste sont intentionnellement plus subjectifs que ce que les élèves auront vu jusqu'à présent. Encouragez les élèves à décider eux-mêmes ce qui rend un poisson « en colère » ou « amusant ». Deux élèves peuvent choisir la même étiquette et obtenir un ensemble de résultats très différent en fonction des caractéristiques des poissons sur lesquelles ils se concentrent. Encouragez les à discuter de leurs découvertes entre eux ou à revenir en arrière et à choisir de nouveaux mots. Chaque étudiant s'appuiera sur ses propres opinions pour former l'IA. ce qui signifie qu'elle apprendra avec les mêmes préjugés que les élèves. Lorsque les élèves commenceront, eux, à voir le rôle que joue leur opinion, demandez-leur de se demander si cela est bon ou mauvais et comment y remédier. ",
-          "progression_name": "Enseigner un nouveau mot à l'I.A."
+          "description": "### Enseigner à l'IA un nouveau mot\n\nIci, comme auparavant, les étudiants utiliseront les données d'entraînement pour enseigner l'IA. comment reconnaître différents types de poissons. Les mots de cette liste sont intentionnellement plus subjectifs que ce que les élèves auront vu jusqu'à présent. Encouragez les élèves à décider eux-mêmes ce qui rend un poisson « en colère » ou « amusant ». Deux élèves peuvent choisir la même étiquette et obtenir un ensemble de résultats très différent en fonction des caractéristiques des poissons sur lesquelles ils se concentrent. Encouragez les à discuter de leurs découvertes entre eux ou à revenir en arrière et à choisir de nouveaux mots. Chaque étudiant s'appuiera sur ses propres opinions pour former l'IA. ce qui signifie qu'elle apprendra avec les mêmes préjugés que les élèves. Lorsque les élèves commenceront, eux, à voir le rôle que joue leur opinion, demandez-leur de se demander si cela est bon ou mauvais et comment y remédier. "
         },
         "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
           "tips": [
@@ -1308,8 +1304,7 @@
           "description": "Donc, si vous avez l'habitude d'envoyer des informations à des URL (comme www.code.org) et que les serveurs ont en fait des adresses IP pour les noms (comme 54.243.71.82), comment Internet passe-t-il de l'un à l'autre ? C'est à cela que sert le DNS. Le DNS (Domain Name Server) possède des tables qui permettent au système d'aller et venir entre les URL et les adresses IP. Si les serveurs de noms de domaine cessaient de fonctionner, cela fermerait Internet tel que nous le connaissons !\n\nCela dit, essayons de comprendre ce que fait le DNS en créant nous-mêmes une petite table DNS.\n\nSortez un morceau de papier et dessinez une grille similaire à celle de l'activité Internet :\n\nExemple de tableau DNS :\n\n| #   | URL            | IP Address       |\n| --- | -------------- | ---------------- |\n| 1   |    code.org    |   54.243.71.82   |\n| 2   |                |                  |\n| 3   |                |                  |\n| 4   |                |                  |\n| 5   |                |                  |\n\n<br/>Tout d'abord, nous devons remplir ce tableau.\n\n-   Sondez la classe pour leurs sites Web préférés et écrivez les URL dans la colonne de gauche\n-   Utilisez un site comme **\\*get-site-ip.com** pour trouver les adresses IP de ces sites et écrivez-les dans les lignes correspondantes de la colonne de droite.\n\nPrenons maintenant cette table DNS et faisons semblant d'envoyer des messages via Internet ! "
         },
         "3c0ece8c-eca6-4340-9023-7a89cfad4090": {
-          "name": "Internet et les réseaux connectés",
-          "progression_name": "Internet - Activité hors ligne"
+          "name": "Internet et les réseaux connectés"
         },
         "f7944893-91f6-4fa0-bc46-73816c9a88c9": {
           "description": "**Instructions:**\n\n-   Créez votre propre table DNS, similaire à ce qui est montré ci-dessus.\n-   Demandez à la classe de vous aider à remplir les cases vides du tableau. Choisissez vos URL préférées et trouvez leurs adresses IP en utilisant un site comme www.get-site-ip.com.\n-   Divisez-vous en groupes de 3 à 5.\n-   Attribuez à chaque groupe une adresse IP issue de la table nouvellement créée, et attribuez à chaque personne du groupe un poste :\n    -   Rédacteur de messages\n    -   Internet\n    -   Serveur (porte l'adresse IP)\n    -   Internet de retour (facultatif)\n    -   Récepteur de messages (facultatif)\n-   Chaque groupe tirera des **\\*Cartes d'adresse IP et une carte de type de livraison** pour savoir où va son message et quelle sera sa méthode de livraison de message (Wi-Fi, câble/DSL ou câble à fibre optique) .\n-   Le rédacteur de messages rédigera une note à envoyer au serveur.\n-   Internet va séparer le message en 4 petits morceaux appelés paquets, puis livrer chaque paquet un par un au serveur avec l'adresse IP qui a été tirée de la pile de cartes d'adresse IP.\n-   Le serveur s'assurera que le message arrive dans l'ordre, puis enverra chaque paquet un à la fois avec l'Internet de retour (peut être la même personne ou une personne différente de l'Internet d'origine).\n-   L'Internet de retour remettra chaque pièce au destinataire du message (il peut s'agir de la même personne ou d'une personne différente de l'auteur du message) et la reconstituera.\n-   Le récepteur de messages attendra que toutes les pièces arrivent, puis lira le message pour s'assurer qu'il soit bien arrivé !\n\n**Règles:**\n\n-   Internet doit séparer le message en exactement quatre paquets.\n-   S'il fait tomber un paquet, il devra le récupérer et revenir au début pour le livrer à nouveau.\n-   Le serveur doit attendre que tous les éléments du message arrivent avant de pouvoir commencer à envoyer le message.\n\n**Info:**\n\n-   Wi-Fi : pratique, mais irrégulier. Le Wi-Fi ne nécessite pas de câbles, mais comme le signal rebondit partout, les paquets peuvent se perdre assez facilement.\n    -   Simulation : Internet doit porter chaque paquet sur son épaule (pas de mains).\n-   Câble/ADSL : Assez bon pour transmettre des messages, mais vous devez être connecté avec un câble.\n    -   Simulation : Internet doit porter chaque paquet sur le dos d'une main et doit garder l'autre main en contact avec un mur, un bureau, une chaise ou le sol à tout moment.\n-   Câble à fibre optique : Le meilleur pour transmettre des messages, mais vous devez être connecté à un câble.\n    -   Simulation : Internet peut transporter des paquets en main, mais doit garder l'autre main en contact avec un mur, un bureau, une chaise ou le sol à tout moment. "
@@ -1339,9 +1334,6 @@
         },
         "41c8a77e-7549-4597-94c2-b5d1916209eb": {
           "description": "Objectif : Cette partie du processus est une exploration. Les étudiants s'asseoiront avec une scène pleine d'exemples de projets à remixer et à apprendre. Non seulement cela leur donnera  une idée de ce qui est possible, mais les aidera également à voir les limites de l'outil.\n\nDonnez-leur une journée pour jouer et remixer les projets trouvés sur Code Studio. Demandez-leur d'utiliser leur journal (ou leur cahier) pour garder une trace de leurs pensées et de leurs idées au fur et à mesure.\n\nCette activité doit être réalisée dans les mêmes paires/groupes qui travailleront ensemble sur des projets au cours des prochaines leçons.\n\nAssurez-vous que votre classe comprenne bien qu'elle passera les prochaines semaines à travailler sur ses propres projets, elle doit donc porter une attention particulière à la façon dont ces programmes ont été écrits, ainsi qu'aux concepts utilisés."
-        },
-        "db7f26e9-547b-4801-8328-a93aefc4ce9e": {
-          "progression_name": "Exemples de projets"
         },
         "211604af-3347-4da2-ae2b-e5a81fd6d49d": {
           "progression_name": "Créez votre projet"
@@ -1395,8 +1387,7 @@
         },
         "4c778537-489f-4c5c-913b-38cbf385737c": {
           "name": "Vocabulaire-clé: ",
-          "description": "-   **empreinte numérique** : un enregistrement de ce que vous faites en ligne, y compris les sites que vous visitez et les choses que vous partagez\n-   **permanent** : quelque chose qui dure pour toujours\n-   **informations privées** : informations vous concernant qui peuvent être utilisées pour identifier qui vous êtes\n-   **trace** : un chemin ou une piste\n\n**Avant la leçon** : découpez les [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) à l'avance, en gardant les carrés pour chaque animal en deux piles distinctes.\n\n**Dites** : _Aujourd'hui, nous allons regarder une vidéo intitulée \"Suivez la piste numérique\". L'un d'entre vous a-t-il déjà entendu parler du mot « sentier » ?_\n\nInvitez les élèves à répondre et définissez le parcours comme _un chemin ou une piste que quelqu'un peut suivre_. ([Slide 3](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g524b55ab78_0_23))",
-          "progression_name": "Vidéo :  Suivez la piste numérique"
+          "description": "-   **empreinte numérique** : un enregistrement de ce que vous faites en ligne, y compris les sites que vous visitez et les choses que vous partagez\n-   **permanent** : quelque chose qui dure pour toujours\n-   **informations privées** : informations vous concernant qui peuvent être utilisées pour identifier qui vous êtes\n-   **trace** : un chemin ou une piste\n\n**Avant la leçon** : découpez les [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) à l'avance, en gardant les carrés pour chaque animal en deux piles distinctes.\n\n**Dites** : _Aujourd'hui, nous allons regarder une vidéo intitulée \"Suivez la piste numérique\". L'un d'entre vous a-t-il déjà entendu parler du mot « sentier » ?_\n\nInvitez les élèves à répondre et définissez le parcours comme _un chemin ou une piste que quelqu'un peut suivre_. ([Slide 3](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g524b55ab78_0_23))"
         },
         "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef": {
           "description": "**Montrez** leur la vidéo [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) sur la [Slide 4](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g56a0663814_5_26). Pendant qu'ils regardent, demandez aux élèves de prêter une attention particulière aux types d'informations qu'il est acceptable ou non de partager en ligne.\n\n**Dites** : _Dans la vidéo, Feet parlait d'une empreinte numérique. Qu'est-ce qu'une empreinte numérique ?_\n\nInvitez les élèves à répondre. Précisez qu'une **empreinte numérique** est _un enregistrement (ou une trace) de ce que vous faites en ligne, y compris les sites que vous visitez et les choses que vous partagez_. ([Slide 7](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5af742ae8d_0_0))\n\n**Demandez** : _Quelles informations Feet dit de NE PAS partager en ligne ?_\n\nUne fois que les élèves ont fini de partager, projetez [Slide 8](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_27) et revoyez: _Informations personnelles_ telles que _passes-temps, choses préférées._\n\nDéfinissez **informations privées** comme _des informations vous concernant qui peuvent être utilisées pour identifier qui vous êtes_. ([Slide 7](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5af742ae8d_0_0))\n\n**Demandez** : _Quelles informations Feet juge-t-il acceptables de partager en ligne ?_\n\nUne fois que les élèves ont eu l'occasion de partager, projetez [Slide 8](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_27) et passez en revue : _Informations personnelles_ telles que _passes-temps, préférences._ "
@@ -1431,9 +1422,6 @@
         },
         "d75d074a-5ebe-4143-bfbb-91c12750dd30": {
           "description": "**Distribuer :** pour vous assurer que les élèves comprennent l'idée de trouver et de corriger les erreurs (débogage), distribuez la **\\*Fiche de travail** et demandez-leur de le finir deux par deux.\n\n(_Facultatif :_ Si vous souhaitez faire avancer l'activité plus rapidement, n'hésitez pas à la terminer en classe à la place.)\n\n**Transition :** _Maintenant, il est temps de jouer au jeu !_ "
-        },
-        "b87acbf5-a0a2-4c86-a344-3fbf143431f6": {
-          "progression_name": "Vidéo Move it, move it - Activité hors ligne"
         },
         "0c64d280-12f6-4d9a-9329-dac1aa620ca5": {
           "name": "Bouge, Bouge",
@@ -1481,9 +1469,6 @@
         "4784895a-ea4f-4a2f-b4ef-c392b016f01c": {
           "description": "Cette leçon apprendra aux élèves à utiliser Code.org pour résoudre des puzzles en ligne.\n\nRegardez la **\\*Programmation en binôme** - vidéo des élèves avec vos élèves, puis attribuez-les à des groupes de deux. Cela devrait les aider à bien démarrer. "
         },
-        "52466cb4-0b52-4d09-aeb9-7db1a558001e": {
-          "progression_name": "Vidéo - Maze Intro : Programmation avec des blocs "
-        },
         "b9d126ca-d582-403d-a4dc-45c555d65700": {
           "description": "Les enseignants jouent un rôle essentiel dans l'enseignement de l'informatique en contribuant à une ambiance de classe basée sur la collaboration et le dynamisme. Lors des activités en ligne, le rôle de l'enseignant est avant tout celui d'encourager et de soutenir. Les cours en ligne sont censés être centrés sur l'élève, les enseignants doivent donc éviter d'intervenir lorsque les élèves sont bloqués. Voici quelques idées sur la façon de procéder :\n\n-   Utilisez la programmation en binôme si possible.\n-   Encouragez les élèves ayant des questions ou problèmes à commencer par demander à leur camarade.\n-   Les questions sans réponse peuvent être transmises à un groupe proche, qui connaît peut-être déjà la solution.\n-   Rappelez aux élèves d'utiliser le processus de débogage avant d'approcher.\n-   Demandez-leur de décrire le problème qu'ils voient. Qu'est-ce que c'est censé faire ? Qu'est ce que ça fait ? Qu'est-ce que ça veut dire ?\n-   Rappelez aux élèves qui s'énervent parce qu'ils n'y arrivent pas que c'est une étape sur la voie de l'apprentissage et que la persévérance sera payante.\n-   Si un élève est toujours bloqué après tout cela, posez des questions suggestives pour l'amener à repérer une erreur par lui-même. "
         },
@@ -1504,7 +1489,7 @@
           "name": "Revoir l'activité hors ligne",
           "description": "Cette leçon s'appuie sur de nombreuses idées hors ligne que les élèves ont apprises au cours des semaines précédant cette première activité en ligne. Il est important que vous fassiez un tour complet de ces concepts (tels que la persévérance, les algorithmes et les programmes) afin que votre classe puisse également en bénéficier dans son travail en ligne. ",
           "tips": [
-            "Si votre classe a déjà appris les points cardinaux, échanger \"haut et \"bas\" contre «Nord» et «Sud» ne devrait pas être un problème. Sinon, vous trouverez une feuille de calcul pratique avec le code.org Compass Rose que vous pouvez utiliser pour obtenir qu'ils l'es pprennent. Cette conversion sera utile pour la quasi-totalité des énigmes en ligne destinées à la maternelle et au CP.\n\n<img style = \"- WebKit-User-Select: Aucun; Marge: Auto; curseur: zoom-in; Couleur d'arrière-plan: HSL (0, 0%, 90%); Transition: Couleur de fond 300ms;\" src = \"https://curriculum.code.org/media/uploads/screenshot-2018-03-13-13.46.03.png\" largeur = \"250\" hauteur = \"300\">\n\nDites-leur qu'ils verront ces lettres dans leurs programmes en ligne à côté des flèches de direction. "
+            "Si votre classe a déjà appris les directions cardinales, changer « Haut » et « Bas » en « Nord » et « Sud » ne devrait pas être un problème. S'ils ne l'ont pas fait, nous avons fourni une feuille de travail pratique avec la rose des vents Code.org que vous pouvez utiliser pour faire participer les étudiants. Cette conversion sera utile pour presque tous les puzzles en ligne destinés à la maternelle et au CP. \n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nDites aux élèves qu'ils verront ces lettres dans leurs programmes en ligne à côté des flèches."
           ]
         },
         "85e4f61b-eaec-4bf9-b9d3-58afc91322bf": {
@@ -1536,9 +1521,6 @@
         },
         "5ca364f2-80c2-4b91-bb51-bf047aac35b5": {
           "progression_name": "Défi"
-        },
-        "02e3f29b-3c7a-4226-8503-1b2cc47a2028": {
-          "progression_name": "S'entraîner"
         },
         "59a20536-707e-4328-88ab-71b1c533cd37": {
           "progression_name": "Les Extras de la Leçon"
@@ -1583,17 +1565,11 @@
         "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
           "progression_name": "Renforcement Des Compétences"
         },
-        "d02d999e-ab11-4eab-89cc-fc1a1360c3e5": {
-          "progression_name": "Vidéo : Débogage avec le bouton Step (étape)"
-        },
         "9f24e731-b41f-4339-877d-314aa5813f01": {
           "progression_name": "Renforcement Des Compétences"
         },
         "fcc74691-719d-415b-87ae-8bc40b436318": {
           "progression_name": "Défi"
-        },
-        "270d2335-43e2-42a0-a4fe-4035d2e071b5": {
-          "progression_name": "S'entraîner"
         },
         "95894838-20b0-41ae-801a-5d3326e39e0b": {
           "name": "Réflexion",
@@ -1605,9 +1581,6 @@
         },
         "f1742404-d822-4885-a44e-f05f9bc991f3": {
           "description": "Aujourd'hui, nous allons travailler à trouver des moyens de faciliter le fait de donner beaucoup d'instructions, surtout lorsqu'elles se répètent beaucoup. Ce sera vraiment utile lorsque nous retournerons aux ordinateurs et que nous devrons écrire beaucoup d'instructions dans nos programmes. "
-        },
-        "c8fd8e69-c19d-4264-90f8-44bb6909902d": {
-          "progression_name": "Vidéo : Faire des boucles "
         },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "Tourner en Rond"
@@ -1671,9 +1644,6 @@
         "b07cbcb7-9e8e-4a05-a906-8621ce42cb95": {
           "progression_name": "Défi"
         },
-        "cb321e7e-953a-4d73-a614-39cb86ef8b15": {
-          "progression_name": "S'entraîner"
-        },
         "8342e7d2-b605-4c73-80a9-2d3d97aad783": {
           "name": "Réflexion",
           "description": "**Invites:**\n\n-   De quoi parlait la leçon d'aujourd'hui ?\n-   Dessinez un visage qui montre ce que vous avez ressenti à propos de la leçon d'aujourd'hui dans le coin de la page de votre journal.\n-   Comment les boucles ont-elles facilité l'écriture de votre programme ?\n-   Dessinez quelque chose qui utilise des boucles. "
@@ -1695,9 +1665,6 @@
           "name": "Démonstration du professeur",
           "description": "Nous avons inclus un niveau de prédiction à choix multiples qui pourrait être difficile pour les non-lecteurs. Ces niveaux sont facultatifs pour que vous puissiez les revoir avec votre classe pour vous aider à vous préparer aux énigmes à venir. Sinon, ils peuvent aussi servir de révision après avoir terminé l'étape.\n\nNiveau de prédiction : \n\n-   [Course B, Loops in Collector](https://studio.code.org/levels/8746)"
         },
-        "fe653971-9c18-44ee-adbc-727e8978b387": {
-          "progression_name": "Vidéo : Le collectionneur "
-        },
         "e4d8ad46-dc13-4627-a5e2-8c70b45c0f91": {
           "progression_name": "Renforcement Des Compétences"
         },
@@ -1709,9 +1676,6 @@
         },
         "9b293bbc-d3e3-494d-892e-f90e56347451": {
           "progression_name": "Défi"
-        },
-        "8c213233-f661-45be-9898-31c343bba987": {
-          "progression_name": "S'entraîner"
         },
         "eedc7420-83ed-420a-8bfe-db3e70719c14": {
           "progression_name": "Les Extras de la Leçon"
@@ -1739,23 +1703,14 @@
         "6e4b782c-58b7-4079-bec6-7fe157198276": {
           "description": "Nous avons inclus des niveaux de prédiction à choix multiples qui sont difficiles pour les non-lecteurs. Ces niveaux sont facultatifs pour que vous puissiez les revoir avec votre classe pour vous aider à vous préparer aux énigmes à venir. Sinon, on peut aussi les utiliser après avoir terminé l'étape comme révision pour la classe.\n\n**Niveau de prédiction :** - [Cours B, Boucles dans l'artiste](https://studio.code.org/levels/8745) "
         },
-        "6bf24dc0-0251-49fc-b9d2-04603cbb7a06": {
-          "progression_name": "Vidéo : L'artiste dans Code Studio "
-        },
         "c2a65792-3f2c-49f9-8cba-8b8f975f5f90": {
           "progression_name": "Renforcement Des Compétences"
-        },
-        "efc2a144-0a89-4201-966f-4b4287b12177": {
-          "progression_name": "Vidéo : Répéter les blocs avec l'Artiste "
         },
         "c96a7cbe-674b-41b9-b829-a62377a97e1a": {
           "progression_name": "Renforcement Des Compétences"
         },
         "000254d0-54ca-4866-b12c-f3d4c387cbbc": {
           "progression_name": "Défi"
-        },
-        "a7cf273e-6085-402a-bf47-e5985364e7a2": {
-          "progression_name": "S'entraîner"
         },
         "22891986-f61f-4e37-aae4-177019581071": {
           "progression_name": "Activité libre"
@@ -1777,9 +1732,6 @@
         "e24e2e3d-eff3-4af2-b413-a78c8840ba8e": {
           "description": "-   Les applications sont conçues pour être utilisées par les gens, tout comme la nourriture est faite pour que des gens la mange.\n-   Ainsi, tout comme la cuisine, il est important de savoir ce que les gens veulent lorsqu'ils créent une application.\n-   Une application conçue sans personne en tête va sûrement comporter beaucoup de problèmes !\n\nRemarquez qu'il y a beaucoup de questions que nous pouvons poser lorsque nous suggérons ou créons une application pour quelqu'un. Idéalement, nous souhaitons poser des questions qui peuvent nous aider à « se mettre à la place d'un utilisateur » :\n\n-   Qu'est-ce qu'il veut faire ?\n-   Qu'est-ce qu'il aime ?\n-   Quelle est sa personnalité ?\n-   Quel type d'ordinateur a-t-il ?\n\n**Transition :** Dites aux élèves qu'il y a quelques amis de code.org qui ont du mal à trouver les applications qui leur conviennent. Demandez-leur s'ils sont prêts à mettre leurs compétences d'expert à profit et à aider leurs amis. "
         },
-        "8c2a2318-b39e-4940-b04a-eb0319ed0d45": {
-          "progression_name": "La bonne application - Activité hors ligne"
-        },
         "1fc19afb-445f-4df3-90c9-379c7a7ff7b2": {
           "name": "Scénarios « La bonne application » (15 min) ",
           "description": "**Affichage** : Affichez chaque scénario du **\\*Slide Deck**. Tout en affichant une image de scénario, lisez son script d'accompagnement à la classe (voir ci-dessous, ou les notes sous chaque diapositive du jeu). Après chaque scénario, demandez aux élèves de voter sur l'application qu'ils choisiraient pour leur ami, puis discutez de leur choix.\n\n[][0]\n\n#### Les bons scénarios d'application\n\n##### Scénario 1 : Daisy le dragon\n\n**Diapositive 1 :** À l'aide ! Daisy le Dragon veut jouer avec ses camarades de classe pingouins, mais quand elle parle, son souffle chaud réchauffe toute personne à proximité, et les pingouins n'apprécient PAS DU TOUT. Daisy veut donc une application qui peut l'aider à résoudre ce problème.\n\n**Diapositive 2 :** Quelle est l'appli qu'il faut à Daisy ?\n\n-   _Dance Master_ : une application qui vous apprend des mouvements de danse sympas.\n-   _Suis-je trop près ?!_ : une appli qui crie « Trop près ! si vous êtes trop proche de quelqu'un.\n\n**Diapositive 3 :** Daisy décide d'utiliser « Suis-je trop près ? ! », ce qui lui permet de jouer plus facilement avec ses amis pingouins ! Lorsqu'ils s'approchent trop près, l'application l'avertit par un cri amical : « Trop près ! » Daisy et les pingouins sont heureux ! « Suis-je trop près ? » est l'appli qu'il faut à Daisy !\n\n* * *\n\n##### Scénario 2 : Sam la chauve-souris\n\n**Diapositive 4 :** À l'aide ! Sam la chauve-souris veut écouter sa musique préférée sur son téléphone pendant qu'il vole dans le ciel nocturne. Il envisage deux applications musicales différentes, mais il ne sait pas laquelle lui convient le mieux. En tant que chauve-souris, Sam a une mauvaise vue mais une excellente ouïe. Il chante aussi très bien !\n\n**Diapositive 5 :** Quelle est l'appli qu'il faut à Sam ?\n\n-   _Eyes 'n Ears_ : une application musicale qui a beaucoup de petits boutons.\n-   _Sing 'n Play_ : une application musicale qui vous permet d'appuyer sur un GROS bouton vert pour enregistrer votre voix. Vous chantez une partie de n'importe quelle chanson que vous voulez entendre, et elle la jouera pour vous.\n\n**Diapositive 6 :** Sam décide d'utiliser \"Sing 'n Play\". Il appuie simplement sur le GROS bouton vert, chante la première partie d'une chanson qu'il aime, puis l'application joue la chanson entière pour lui ! C'est si facile! Et c'est pourquoi \"Sing 'n Play\" est l'appli qu'il faut à Sam !\n\n* * *\n\n##### Scénario 3 : Codella la sorcière\n\n**Diapositive 7 :** À l'aide ! Codella la sorcière est une grosse joueuse qui cherche un nouveau jeu pour jouer. Codella possède de nombreux types d'ordinateurs, notamment un ordinateur de bureau, un ordinateur portable, une tablette et un smartphone. Ses jeux préférés sont ceux auxquels elle peut jouer sur tous ses ordinateurs, y compris son smartphone.\n\n**Diapositive 8 :** Quelle est l'appli qu'il faut à Codella ?\n\n-   _Sort Knight_ : un jeu où vous incarnez un chevalier qui se déplace pour tout trier, avec aussi des mouvements de danse cool. Vous pouvez y jouer sur de nombreux types d'ordinateurs différents !\n-   _Mobo-Robo_ : un jeu qui vous permet de construire des robots sympas et de leur faire faire ce que vous voulez. Cependant, vous ne pouvez y jouer que sur les smartphones et les tablettes.\n\n**Diapositive 9 :** Codella décide de jouer à « Sort Knight ». Au début, elle ne sait pas si elle l'aimera (elle n'aime pas vraiment trier les choses), mais elle aime pouvoir y jouer sur n'importe lequel de ses ordinateurs et ça compte beaucoup pour elle car c'est une grosse joueuse. Plus Codella joue à \"Sort Knight\", plus elle l'aime. « Sort Knight » c'est l'appli qu'il lui faut ! "
@@ -1800,8 +1752,7 @@
           "description": "#### Une série d'événements\n\n**Discussion** : Préparez votre classe à répondre à une question :\n\n-   _\"Je vais vous poser une question. Je veux que vous leviez la main si vous voulez que je vous  demande la réponse.\"_\n    -   Posez une question simple à laquelle la plupart de vos élèves devraient être en mesure de répondre, par exemple :\n        -   _Combien est-ce que j'ai de pouces ?_\n        -   _Lequel est plus gros, un oiseau ou un cheval ?_\n    -   Appelez un élève qui a la main levée et laissez-le donner sa réponse.\n    -   À la fin de cet affichage, demandez à la classe comment vous saviez que l'élève voulait que vous l'appeliez.\n        -   Ils diront sûrement qu'il a levé la main.\n    -   Expliquez à tout le monde que lorsque les élèves lèvent la main, c'est un \"événement\" qui vous montre qu'on veut être appelé.\n\n-   Demandez à la classe s'ils peuvent penser à d'autres événements qui donnent des signaux.\n    -   Vous devrez peut-être leur rappeler que vous ne parlez pas d'un événement comme une fête d'anniversaire ou une sortie scolaire.\n    -   S'ils ont des problèmes, vous pouvez leur rappeler qu'un événement est une action qui provoque quelque chose.\n        -   Et si un réveil sonne ? Qu'est-ce que ça fait ?\n        -   Et si on appuie sur \"Start\" sur le micro-ondes ? Qu'est-ce que ça fait ?\n        -   Et si on appuie sur le bouton d'alimentation de la télécommande de votre téléviseur ?\n\n-   _Aujourd'hui, nous allons créer des programmes avec des événements._ "
         },
         "8e55b7ee-6a8f-41e7-8d5d-9d1465d7fadb": {
-          "name": "Le Grand Événement",
-          "progression_name": "Vidéo : Le grand événement – Activité hors ligne"
+          "name": "Le Grand Événement"
         },
         "27dbb342-eff9-45e6-b918-88663a10f8a6": {
           "tips": [
@@ -1845,16 +1796,13 @@
         },
         "707682de-e28a-4f30-8033-e5568bc30572": {
           "name": "Une Bataille Royale avec des Événements",
-          "description": "C'est l'activité en ligne la plus libre du cours. Au stade final, les élèves ont la liberté de créer leur propre histoire. Il faudrait donner des directives structurées sur le type d'histoire à écrire, en particulier pour ceux qui sont perdus par trop d'options."
+          "description": "C'est l'activité en ligne la plus libre du cours. Au stade final, les élèves ont la liberté de créer leur propre histoire. Vous voudrez peut-être fournir des directives structurées sur le type d'histoire à écrire, en particulier pour les étudiants qui sont submergés par trop d'options. "
         },
         "dd9fba95-8daa-47d3-8c05-3429f3f25b77": {
           "progression_name": " Introduction au Labo de jeux"
         },
         "40e7d1f1-3b7e-4a2f-abd8-43d076a34702": {
           "progression_name": "Activité libre"
-        },
-        "31c0685f-1407-4c10-9077-b081c1843c07": {
-          "progression_name": "Mini-projet : Bataille royale"
         },
         "afc1b191-5ed3-4f1e-9457-8499c5445f54": {
           "progression_name": "Activité libre"
@@ -1897,7 +1845,7 @@
         "ec336597-2c69-4bfa-b542-abe5ccf06d5c": {
           "description": "Pendant que les élèves travaillent, soutenez-les en répondant aux questions et en donnant des idées. Encouragez-les à partager leurs idées pour rendre l'activité plus collaborative. ",
           "tips": [
-            "Tous les choix de cette leçon sont considérés comme du « jeu libre », ce qui signifie qu'il n'y a pas une seule bonne réponse. Si un élève appuie sur Terminer, il revient à la liste de choix. Vous pouvez demander aux élèves de faire un seul choix ou autant qu'ils le souhaitent, si le temps le permet."
+            "Tout ce qui est décidé pendant ce cours est considéré comme un « jeu libre », ce qui signifie qu'il n'y a pas une seule bonne réponse. Si un élève appuie sur Terminer, il revient à la liste des choix. Vous pouvez demander aux élèves de faire un seul choix ou autant qu'ils le souhaitent, si le temps le permet. "
           ]
         },
         "dd4a292b-f2c8-4918-8ad1-73c94b06c1d9": {
@@ -1983,8 +1931,7 @@
           ]
         },
         "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
-          "name": "Programmation Happy Maps ",
-          "progression_name": "Vidéo : Happy Maps - Activité hors ligne"
+          "name": "Programmation Happy Maps "
         },
         "7beae8bf-6b0e-41da-9397-06b0c9fb0b52": {
           "description": "Dans cet exercice, la classe aura des cartes avec un espace de départ (flurb) et un espace de fin (fruit) prédéfinis. Les élèves devront obtenir les flurbs aux fruits sur chaque carte, en utilisant les flèches.\n\n**Modèle :** Sélectionnez l'une des cartes intermédiaires dans la feuille de calcul Happy Maps Cards (par exemple, #3). Affichez-le pour la classe et résolvez le puzzle ensemble.\n\nDemandez aux élèves de regarder le puzzle, puis de réfléchir deux par deux et de partager leur solution sur la façon dont ils pourraient faire (vibrer) le fruit.\n\n**Réfléchissez :** Ce flurb doit suivre deux étapes pour atteindre le fruit. Travaillez avec votre voisin pour vous mettre d'accord sur ces deux étapes.\n\n**Groupes de deux :** Demandez aux élèves de discuter avec leur voisin pendant environ 90 secondes.\n\n**Partagez :** Demandez à quelques élèves de décrire leur algorithme à la classe. Déplacez votre doigt le long de la carte affichée pendant que les élèves lisent leurs étapes. Une fois que vous avez une solution, demandez si quelqu'un d'autre a une autre idée qui marcherait aussi.\n\nMaintenant, dites aux élèves que l'étape magique consistant à transformer un algorithme en programme se produit lorsque le code est écrit à l'aide de symboles. Les élèves voient-ils des symboles à l'écran ?\n\n**Réfléchissez :** Mettez les élèves au défi d'encoder l'algorithme qu'ils ont créé auparavant en symboles et d'écrire ces symboles dans leur journal (ou sur une feuille de papier).\n\n**Groupes de deux :** une fois que les élèves ont écrit leurs symboles, demandez-leur d'en discuter avec un camarade pour voir s'ils peuvent suivre leurs instructions réciproques.\n\n**Partagez :** Demandez à des volontaires de venir dessiner leurs flèches au tableau. Si le code d'origine ne fonctionne pas, passez du temps à déboguer avec toute la classe. Il faut qu'ils se familiarisent avec l'idée de \"débogage\" des leçons précédentes, alors utilisez bien le vocabulaire qu'il faut.\n\nUne fois que le code bien écrit au tableau, félicitez la classe pour avoir écrit leur premier programme ensemble ! "
@@ -2020,8 +1967,7 @@
           "description": "Projetez un puzzle de la leçon. Montrez à la classe comment cliquer sur l'image et la placer au bon endroit par un glisser-déposer. Faites délibérément des erreurs telles que cliquer sur l'arrière-plan ou déposer l'image avant qu'elle ne soit au bon endroit. Demandez de l'aide à des volontaires de la classe lorsque vous rencontrez ces problèmes et aidez-les à utiliser les compétences qu'ils ont développées lors de la dernière leçon hors ligne pour bien le faire."
         },
         "d639c3c7-2708-41eb-afae-cf5a65464fd8": {
-          "name": "Programmation avec des blocs",
-          "progression_name": "Vidéo : Programmation avec des blocs"
+          "name": "Programmation avec des blocs"
         },
         "30ab6f6d-deb2-4b1c-8974-136be2f6852e": {
           "description": "### Puzzles en ligne\n\nCela enseignera aux étudiants comment utiliser Code.org pour résoudre des puzzles en ligne.\n\nRegardez la vidéo **\\*Programmation en binôme** avec vos élèves, puis mettez-les deux par deux. Cela devrait les aider à aller dans la bonne direction.\n\nLes enseignants jouent un rôle essentiel dans l'enseignement de l'informatique en contribuant à une ambiance de classe basée sur la collaboration et le dynamisme. Lors des activités en ligne, le rôle de l'enseignant est avant tout celui d'encourager et de soutenir. Les cours en ligne sont censés être centrés sur l'élève, les enseignants doivent donc éviter d'intervenir lorsque les élèves sont bloqués. Voici quelques idées sur la façon de procéder :\n\n-   Utiliser la programmation en binôme chaque fois que possible pendant l'activité.\n-   Encouragez les élèves ayant des questions/défis en commençant par demander à leur camarade.\n-   Les questions sans réponse peuvent être transmises à un groupe proche, qui connaît peut-être déjà la solution.\n-   Rappelez aux élèves d'utiliser le processus de débogage avant d'approcher\n-   Demander aux élèves de décrire le problème qu'ils voient. Qu'est-ce que c'est censé faire ? Qu'est ce que ça fait ? Qu'est-ce que ça veut dire ?\n-   Rappelez aux élèves qui s'énervent car ils n'y arrivent pas que cela fait partie du processus d'apprentissage et que la persévérance sera payante.\n-   Si un élève est toujours bloqué après tout cela, posez des questions suggestives pour l'amener à repérer une erreur par lui-même. ",
@@ -2059,17 +2005,11 @@
         "487f446a-7245-403f-827c-e1e94663c256": {
           "progression_name": "Renforcement Des Compétences"
         },
-        "82e3c83d-e33d-4c0f-8767-ed3f153162e2": {
-          "progression_name": "Vidéo : Débogage avec le bouton Step (étape)"
-        },
         "af0d64b6-9076-490e-96b8-b4d56d3dc5c5": {
           "progression_name": "Renforcement Des Compétences"
         },
         "9bf3aa93-0d30-4dd2-a78e-926066cc64f3": {
           "progression_name": "Défi"
-        },
-        "05bbe6d1-d2c9-42a7-8489-2d545058f9c5": {
-          "progression_name": "S'entraîner"
         },
         "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
           "progression_name": "Les Extras de la Leçon"
@@ -2106,9 +2046,6 @@
         "3c2f387d-dde7-4c31-befe-3bf45387d813": {
           "progression_name": "Défi"
         },
-        "33708a97-a66a-4797-9349-7a1fc9325c26": {
-          "progression_name": "S'entraîner"
-        },
         "4aebed84-fb26-4d7b-97e8-6bcee3dbb701": {
           "description": "Comme nous l'avons mentionné dans le dernier cours, nous vous recommandons fortement de visualiser et d'utiliser la vidéo de **\\*Programmation deux par deux**, avec toute la classe. La programmation en binôme stimule une discussion qui peut répondre aux questions, revoir les concepts de base et renforcer la confiance avec le sujet."
         },
@@ -2144,7 +2081,7 @@
           "name": "La Fondation hors ligne",
           "description": "Cette leçon repose sur le concept de « répétition » des boucles que les élèves ont appris dans l'activité hors ligne précédente, des Happy Loops. Il est important d'apporter cette idée du monde réel à la forme numérique, pour qu'ils comprennent comment utiliser des Blocky blocs pour répéter une tâche plusieurs fois. ",
           "tips": [
-            "Si votre classe a déjà appris les points cardinaux, échanger \"haut et \"bas\" contre «Nord» et «Sud» ne devrait pas être un problème. Sinon, vous trouverez une feuille de calcul pratique avec le code.org Compass Rose que vous pouvez utiliser pour obtenir qu'ils l'es pprennent. Cette conversion sera utile pour la quasi-totalité des énigmes en ligne destinées à la maternelle et au CP.\n\n<img style = \"- WebKit-User-Select: Aucun; Marge: Auto; curseur: zoom-in; Couleur d'arrière-plan: HSL (0, 0%, 90%); Transition: Couleur de fond 300ms;\" src = \"https://curriculum.code.org/media/uploads/screenshot-2018-03-13-13.46.03.png\" largeur = \"250\" hauteur = \"300\">\n\nDites-leur qu'ils verront ces lettres dans leurs programmes en ligne à côté des flèches de direction. "
+            "Si votre classe a déjà appris les directions cardinales, changer « Haut » et « Bas » en « Nord » et « Sud » ne devrait pas être un problème. S'ils ne l'ont pas fait, nous avons fourni une feuille de travail pratique avec la rose des vents Code.org que vous pouvez utiliser pour faire participer les étudiants. Cette conversion sera utile pour presque tous les puzzles en ligne destinés à la maternelle et au CP. \n\n<img style=\"-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-13.46.03.png\" width=\"250\" height=\"300\">\n\nDites aux élèves qu'ils verront ces lettres dans leurs programmes en ligne à côté des flèches."
           ]
         },
         "1557cb99-47ef-444c-bf08-6aa33be91fb2": {
@@ -2173,17 +2110,11 @@
         "595fbc1f-baf6-446c-97dd-c89fa67a6baf": {
           "progression_name": "Renforcement Des Compétences"
         },
-        "c559cd76-a16e-4361-97c0-f4f4fcdb92b6": {
-          "progression_name": "Video : Boucles l'Âge de glace"
-        },
         "c654e7af-7a96-4f1a-af67-5ee47829f1de": {
           "progression_name": "Renforcement Des Compétences"
         },
         "277f1b5f-abbe-4158-9507-d91cce301994": {
           "progression_name": "Défi"
-        },
-        "483c3b98-803d-4ddf-ac49-f472bf27568b": {
-          "progression_name": "S'entraîner"
         },
         "3cd2a8cd-efcc-40cd-a541-17ae2c95b14c": {
           "tips": [
@@ -2219,9 +2150,6 @@
         "1bbb191d-3177-490d-99ad-5a0e10e21985": {
           "description": "Niveaux de prédiction :\n\n-   [Cours A, Boucles dans Collector #1](https://studio.code.org/levels/8728)\n-   [Cours A, Boucles dans Collector #2](https://studio.code.org/levels/8727) "
         },
-        "74314f07-5f4d-4cd4-8d82-8208d5ce529e": {
-          "progression_name": "Vidéo : Le collectionneur "
-        },
         "aa4a5c66-dcf9-40c9-9200-fa9cac74b945": {
           "progression_name": "Renforcement Des Compétences"
         },
@@ -2233,9 +2161,6 @@
         },
         "3c97efcf-4bdd-437a-a07d-bcd1f9faad87": {
           "progression_name": "Défi"
-        },
-        "42b250a5-b499-45c1-a0f1-154447f0f2aa": {
-          "progression_name": "S'entraîner"
         },
         "5580045e-132a-4c17-8c3f-522b7f01f442": {
           "progression_name": "Les Extras de la Leçon"
@@ -2258,9 +2183,6 @@
         "8e4ed9a9-b50b-45bf-ac33-86251c7c10a9": {
           "description": "Nous avons inclus des niveaux de prédiction à choix multiples qui sont difficiles pour les non-lecteurs. Ces niveaux sont facultatifs pour que vous puissiez les revoir avec votre classe pour vous aider à vous préparer aux énigmes à venir. Sinon, on peut aussi les utiliser après avoir terminé l'étape, comme révision pour la classe.\n\nNiveau de prédiction :\n\n-   [Course A, Loops in Artist](https://studio.code.org/levels/8726)"
         },
-        "6d5074a8-2f60-46de-b974-532be01603c4": {
-          "progression_name": "Vidéo : L'artiste dans Code Studio "
-        },
         "d060bb00-33a3-4049-925e-56db3f7508f7": {
           "progression_name": "Renforcement Des Compétences"
         },
@@ -2272,9 +2194,6 @@
         },
         "879f345b-620d-4541-8467-84f00e515229": {
           "progression_name": "Défi"
-        },
-        "ac484bf5-608f-446f-ada6-d0506b7dc9a8": {
-          "progression_name": "S'entraîner"
         },
         "1e2c8e78-0b20-48a4-aeba-08cad3060e42": {
           "tips": [
@@ -2298,9 +2217,6 @@
         },
         "43f50bd1-d9ac-4ebd-8ec4-a471d8c673c6": {
           "description": "#### Une série d'événements\n\nVoyons si nous pouvons trouver un modèle ici :\n\n-   _Quand vous appuyez sur un interrupteur, les lumières s'allument._\n-   _Lorsque vous appuyez sur un appareil, une application démarre._\n-   _Quand le réveil sonne, vous sortez du lit._\n-   _Quand (événement)_, _(action)_.\n\nEn informatique, les **événements** provoquent d'autres actions. Notre nouveau mot de vocabulaire aujourd'hui est **événement**. Normalement, lorsque nous entendons « événement », nous pensons à :\n\n-   Excursion\n-   Concurrence\n-   Fête d'anniversaire\n\nNous apprenons aujourd'hui un nouveau sens pour le mot événement. Concentrons-nous sur les événements qui provoquent d'autres actions, comme le fait d'appuyer sur un interrupteur pour allumer les lumières ou d'appuyer sur un bouton pour faire bouger un personnage dans un jeu. "
-        },
-        "14f82c4a-fa73-4426-adb6-b32b5f14f3be": {
-          "progression_name": "Le grand événement – Activité hors ligne"
         },
         "6ffda847-c078-4edf-b7ca-4499b1d9249e": {
           "name": "Le Grand Événement",
@@ -2355,12 +2271,6 @@
         },
         "4221ebcd-383b-44bf-a876-41e658bd8460": {
           "progression_name": "Activité libre"
-        },
-        "73856fdc-aee0-4543-b7ac-71a0cdc9f11c": {
-          "progression_name": "S'entraîner"
-        },
-        "575eb58c-7d93-45b9-98f1-3362834db33f": {
-          "progression_name": "Mini-projet : Jorge le chien"
         },
         "40ddc694-3a85-4874-b3ad-71810e6a0474": {
           "progression_name": "Les Extras de la Leçon"
@@ -2434,8 +2344,7 @@
           "description": "**Dites :** _Les robots ne peuvent faire que ce qu'on leur a dit de faire, mais nous ne leur disons pas qu'avec des mots. Pour faire quelque chose, un robot doit avoir une liste d'étapes qu'il peut lire. Aujourd'hui, nous allons apprendre ce qu'il faut pour y arriver._ "
         },
         "8ca4dc30-75b2-408b-a475-bb57fd296c23": {
-          "name": "Mes amis les robots",
-          "progression_name": "Mes amis robotiques - Activité hors ligne"
+          "name": "Mes amis les robots"
         },
         "f6e2fcac-b5ae-407b-8b07-029ff0bc7b8f": {
           "description": "<img alt=\"Robot Symbols\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"float: left; max-width: 200px; margin: 10px;\">"
@@ -2478,7 +2387,7 @@
         },
         "bb044fed-a18b-42b3-b8bd-fb3bfb538eb2": {
           "tips": [
-            "Certains élèves peuvent avoir du mal à tourner leur oiseau dans la bonne direction, en particulier lorsqu'il n'est pas orienté vers le haut. Rappelez-leur que lorsque nous disons tourner à gauche ou à droite, nous donnons des instructions du point de vue de l'oiseau. "
+            "Certains élèves peuvent avoir du mal à mettre leur oiseau dans la bonne direction, en particulier lorsqu'il n'est pas tourné vers le haut. Rappelez aux élèves que lorsque nous disons de tourner à gauche ou à droite, nous nous plaçons du point de vue de l'oiseau. "
           ]
         },
         "9696d27a-5462-4c01-93b9-73dc86a185ef": {
@@ -2490,23 +2399,11 @@
             "Montrez aux élèves la bonne façon d'aider leurs camarades de classe :\n\n-   Ne vous asseyez pas sur la chaise de votre camarade de classe\n-   N'utilisez pas son clavier\n-   Ne touchez pas sa souris\n-   Demandez-lui la solution à haute voix avant de vous éloigner "
           ]
         },
-        "1141cba9-b65b-47c7-ac7d-59d2f06b5318": {
-          "progression_name": "Vidéo - Intro Maze : Programmation avec des blocs "
-        },
         "1ebd42df-a302-418a-be1e-6bbca930cedf": {
           "progression_name": "Renforcement Des Compétences"
         },
         "e7df62bb-065d-4eaf-b96a-9726c8c8510a": {
           "progression_name": "Défi"
-        },
-        "b879045d-ce26-4812-a901-bba02e97e846": {
-          "progression_name": "S'entraîner"
-        },
-        "6a716058-0d11-476d-b424-ce121a6fe866": {
-          "progression_name": "Prédiction"
-        },
-        "4ace8805-4a5d-4288-830b-efba847a6be2": {
-          "progression_name": "S'entraîner"
         },
         "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
           "progression_name": "Les Extras de la Leçon"
@@ -2535,20 +2432,11 @@
           "name": "Déboguer dans le Labyrinthe",
           "description": "Avant de laisser les élèves commencer sur l'ordinateur, rappelez-leur les avantages de la programmation en binôme et de demander de l'aide à leurs camarades. Asseyez-les deux par deux et dites-leur de demander de l'aide à au moins deux camarades avant de venir voir un enseignant. "
         },
-        "572ba4a8-86d4-4aca-9398-b1d9c44ae669": {
-          "progression_name": "Vidéo : Débogage avec le bouton Step (étape)"
-        },
         "9b6832e5-f80f-4baa-9049-48d9526443ba": {
           "progression_name": "Renforcement Des Compétences"
         },
         "a7458755-70c4-4b60-b6ad-729468af507f": {
           "progression_name": "Défi"
-        },
-        "fa8dd0db-5da9-43b3-8150-d3618c14ac77": {
-          "progression_name": "Prédiction"
-        },
-        "cc8916f2-7e82-4c1b-9e24-a5ce8ed5c3af": {
-          "progression_name": "S'entraîner"
         },
         "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
           "progression_name": "Les Extras de la Leçon"
@@ -2575,23 +2463,11 @@
           "name": "Collecter le Trésor avec Laurel",
           "description": "_Laurel l'aventurière_ cherche à ramasser autant de trésors que possible. Demandez aux élèves de parcourir le puzzle pour ramasser tout ce qu'ils peuvent. Certains niveaux vous demanderont de ne ramasser qu'un seul trésor, mais d'autres vous demanderont de les ramasser tous. Faites attention aux instructions pour savoir quoi faire ! "
         },
-        "1cecd624-a69a-4e47-9a4b-066f9b8ff31d": {
-          "progression_name": "Vidéo : Le collectionneur "
-        },
         "e79bc3de-623c-4238-bdd7-6a6128f79ff8": {
           "progression_name": "Renforcement Des Compétences"
         },
         "e7869029-e0e5-4e0d-a6a8-b73fc0b01246": {
           "progression_name": "Défi"
-        },
-        "1237bc98-b3bd-45ac-8c6f-51bd8cc988e4": {
-          "progression_name": "S'entraîner"
-        },
-        "711fc36a-64ca-4fcc-b528-bbf00ed53da1": {
-          "progression_name": "Prédiction"
-        },
-        "f56c1539-ed6d-4fcc-8ed4-1da5bf04d648": {
-          "progression_name": "S'entraîner"
         },
         "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
           "progression_name": "Les Extras de la Leçon"
@@ -2608,9 +2484,6 @@
           "name": "Créer de l'Art avec du Code",
           "description": "Dans cet ensemble de puzzles, l'artiste ne sera plus contraint à des angles de 90 degrés. Disposer de rapporteurs physiques peut aider les élèves à mieux visualiser les angles dont ils ont besoin. Sinon, la scène fournit des images des angles au fur et à mesure que l'élève sélectionne l'angle à utiliser. (Veuillez noter : les choix d'angle sont limités à deux dans le menu déroulant, ce qui réduit le nombre d'options que les étudiants doivent parcourir.)\n\nAvant d'envoyer les élèves aux ordinateurs pour travailler sur les énigmes, il peut être utile de faire une brève présentation de la façon d'utiliser les outils de ce niveau. Nous recommandons le puzzle 5 comme un bon puzzle pour montrer comment utiliser le rapporteur en ligne. "
         },
-        "e054a7d9-9c28-49d4-886f-e9fd771d378e": {
-          "progression_name": "Vidéo : Intro l'Artiste avec JR Hildebrand"
-        },
         "e6f324ba-3055-45c2-ad1b-3f8a5d8a0c65": {
           "progression_name": "Renforcement Des Compétences"
         },
@@ -2619,12 +2492,6 @@
             "Le huitième casse-tête demande aux élèves de dessiner un polygone à 6 côtés, ce qui peut être difficile pour certains. Nous leur recommandons d'essayer plusieurs fois, de demander à un camarade, puis de demander de l'aide à l'enseignant. Ci-dessous, une image qui pourrait leur être utile. "
           ],
           "progression_name": "Défi"
-        },
-        "2809e1fd-ca35-479d-b5d0-a183be995d73": {
-          "progression_name": "S'entraîner"
-        },
-        "a8b57be6-571d-451e-a6d2-5733d5b67bb4": {
-          "progression_name": "Prédiction"
         },
         "8d556f84-689c-4046-bd40-a955e56ef116": {
           "progression_name": "Les Extras de la Leçon"
@@ -2644,8 +2511,7 @@
           "description": "**Objectif :** Cet examen rafraîchira l'esprit des élèves sur la rapidité avec laquelle les programmes de l'activité « Mes amis robotiques » peuvent devenir intenses.\n\n**Affichage :** Affichez la **\\*Clé de symbole** que nous avons utilisée dans « Mes amis robotiques ». Pour chacun des quatre symboles, demandez aux élèves de vous montrer à quoi ressemble un robot qui suit cette instruction.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Modèle :** Avec la classe en groupe, prenez un casse-tête facile à partir des **\\*Idées d'empilement de tasses** et programmez-vous les uns avec les autres pour vous rappeler les règles et la terminologie.\n\nEnsuite, prenez-en un légèrement plus difficile, mais qui nécessite également de nombreuses étapes comme celle ci-dessous.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Volontaire :** Demandez à un volontaire (ou à un groupe de volontaires) de se présenter pour aider à programmer celui-ci au tableau. Si vous faites en sorte qu'ils s'en tiennent strictement à la règle « pas de symboles autres que ceux sur la clé », cela prendra probablement un certain temps !\n\n**Affichage :** Maintenant, affichez cette image :\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nQuelle est la réaction de la classe ?\n\n**Invite :** Donnez aux élèves la possibilité de réfléchir à des moyens plus courts de relayer le code qu'ils sont sur le point de créer. (Ce bit peut être ignoré si vos élèves commencent à dire des choses comme : « Avancez 6 fois. » Cela ouvrira la discussion sur la façon d'afficher « six fois » avec des symboles.)\n\nUne fois que les élèves ont mis en place l'idée de « répéter » le code, donnez-leur le vocabulaire qui l'entoure. Assurez-vous de partager avec eux que les termes « répéter quelque chose » et « boucler quelque chose » sont souvent utilisés de manière interchangeable. "
         },
         "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
-          "name": "traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF\\_2018.title",
-          "progression_name": "Mes amis robotiques Loopy - Activité hors ligne"
+          "name": "traduction manquante : en-US.data.unplugged.courseB_unplugged_loopyMRF\\_2018.title"
         },
         "76533bba-6245-4429-b8ef-a406d2dd250b": {
           "description": "#### Introduction et modélisation\n\n**Configuration :** Disposez des piles de tasses ou de trapèzes en papier découpé pour les groupes.\n\n**Affichage :** Prenez le programme de l'une de vos précédentes piles de tasses et affichez-le pour la classe, ou utilisez celui ci-dessous.\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)\n\n**Réfléchissez :** Demandez aux élèves de réfléchir calmement à l'endroit où, dans ce programme, ils peuvent trouver un modèle d'instructions qui se répètent sans interruption (une répétition après l'autre).\n\n**Camarade :** Tournez-vous vers un voisin et partagez l'un des modèles répétitifs que vous avez trouvés.\n\n**Partagez :** Demandez à quelques élèves de partager les régularités qu'ils ont identifiées. Essayez de dégager différentes approches pour regrouper les modèles. Pour chaque régularité, demandez aux élèves d'identifier combien de fois la régularité se répète.\n\n**Modèle :** À l'aide de l'une des régularités répétitives identifiées par la classe, modélisez comment Encercler l'instruction ou la régularité qui se répète, écrivez le nombre de boucles près de ce cercle, puis barrez le reste des flèches.\n\n![looped code](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\n\nRépétez cette opération jusqu'à ce que tout le programme ait été raccourci, puis réécrivez le programme de manière à ce que les élèves puissent voir à quel point les instructions résultantes sont plus simples. "
@@ -2691,26 +2557,11 @@
         "aadcbed9-b15e-4fcb-b277-fd1c8156270e": {
           "progression_name": "Renforcement Des Compétences"
         },
-        "cc9ef036-2cca-4863-b922-284a995c38b7": {
-          "progression_name": "Prédiction"
-        },
-        "adc69f16-8ed9-4265-b368-4a8e99c56aa5": {
-          "progression_name": "Vidéo : Blocks \"Répéter\" avec BB-8"
-        },
         "6fed6081-6c4a-4a1a-8db9-69ab9fd41513": {
           "progression_name": "Renforcement Des Compétences"
         },
         "922cabb8-e8e7-4f94-a72a-c173f9084db9": {
           "progression_name": "Défi"
-        },
-        "069243e5-22ac-469d-afdd-0908f118d8fc": {
-          "progression_name": "S'entraîner"
-        },
-        "b47fba65-ebc7-463d-af20-207aafbaac11": {
-          "progression_name": "Prédiction"
-        },
-        "5bf6ad3e-3f64-4131-9604-04de80516931": {
-          "progression_name": "S'entraîner"
         },
         "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
           "progression_name": "Les Extras de la Leçon"
@@ -2740,12 +2591,6 @@
         "d65f83fb-25b6-45bb-8ca8-1b230b146b66": {
           "progression_name": "Défi"
         },
-        "c80e175c-a3f8-4155-9900-0c6ab5829a4e": {
-          "progression_name": "S'entraîner"
-        },
-        "d54c4a19-6f07-4206-aeee-fc496fcda2f8": {
-          "progression_name": "Prédiction"
-        },
         "f5cc9272-be27-471b-9cdd-f56920c56a34": {
           "progression_name": "Les Extras de la Leçon"
         },
@@ -2771,8 +2616,7 @@
           ]
         },
         "0e769463-817e-4432-be93-87047256d015": {
-          "description": "#### Mini-projet : Conception d'autocollants",
-          "progression_name": "Mini-projet : l'art de l'autocollant "
+          "description": "#### Mini-projet : Conception d'autocollants"
         },
         "9af30f82-82cd-4807-9609-900519e17c43": {
           "progression_name": "Activité libre"
@@ -2796,8 +2640,7 @@
           "description": "Cette leçon contient un mot de vocabulaire nouveau et important :\n\n-   **Événement** - _Dites-le avec moi : É-vé-ne-ment._\n\nUn événement est une action qui provoque quelque chose. "
         },
         "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
-          "name": "Le Grand Événement",
-          "progression_name": "Le grand événement – Activité hors ligne"
+          "name": "Le Grand Événement"
         },
         "67fb7588-f699-4cf5-9a67-065456c6baee": {
           "description": "-   *Vous souvenez-vous avoir guidé _Red_ de \"Angry Birds\" au cochon dans les puzzles du labyrinthe ?*\n    -   *Dans cet exercice, vous saviez à l'avance exactement où vous vouliez que _Red_ aille, afin que vous puissiez créer un programme qui a pris _Red_ du début à la fin sans aucune interruption.*\n    -   _Dans la plupart des programmes réels, nous ne pouvons pas faire cela car nous voulons avoir des options, en fonction des besoins de l'utilisateur._\n        -   _Dites que je veux que mon personnage bouge uniquement lorsque mon doigt est sur l'écran de mon téléphone. J'aurais besoin de programmer le personnage pour qu'il ne bouge que lorsque je pose mon doigt sur l'écran de mon téléphone._\n        -   _Placer mon doigt sur l'écran deviendrait alors un événement qui dit à mon personnage de bouger._\n\nDans les leçons précédentes, nous avons créé des algorithmes qui nous permettaient de contrôler un ami ou un autre personnage pendant plusieurs étapes à la fois. C'était amusant et utile, mais que se passe-t-il lorsque vous ne savez pas à l'avance tout ce que vous voulez que votre ami fasse ? C'est ici qu'interviennent les événements !",
@@ -2844,14 +2687,10 @@
         },
         "64988ef3-1287-4486-9d41-cd475637575b": {
           "name": "Construire un Jeu Flappy",
-          "description": "#### Puzzles en ligne et jeu libre\n\nToute cette leçon est conçue pour que les élèves créent leur propre jeu Flappy, mais la seconde moitié des niveaux sont tous liés. Cela signifie que les élèves verront leur propre code lorsqu'ils se déplaceront entre les bulles 6 à 10, permettant une personnalisation plus personnelle qui se poursuivra jusqu'au produit final.\n\nDans la dernière étape de cette leçon, les élèves seront capables de peaufiner leur jeu pour le rendre unique - encouragez-les à voir à quel point ils peuvent rendre chaque jeu différent dans les contraintes fournies. Si la classe n'utilise pas la programmation en binôme, dites aux élèves de faire le tour et de regarder les jeux des autres élèves. Sinon, demandez-leur de discuter et d'essayer différentes façons d'organiser leur jeu avec leur camarade.",
-          "progression_name": "Vidéo : Codez votre propre jeu Flappy"
+          "description": "#### Puzzles en ligne et jeu libre\n\nToute cette leçon est conçue pour que les élèves créent leur propre jeu Flappy, mais la seconde moitié des niveaux sont tous liés. Cela signifie que les élèves verront leur propre code lorsqu'ils se déplaceront entre les bulles 6 à 10, permettant une personnalisation plus personnelle qui se poursuivra jusqu'au produit final.\n\nDans la dernière étape de cette leçon, les élèves seront capables de peaufiner leur jeu pour le rendre unique - encouragez-les à voir à quel point ils peuvent rendre chaque jeu différent dans les contraintes fournies. Si la classe n'utilise pas la programmation en binôme, dites aux élèves de faire le tour et de regarder les jeux des autres élèves. Sinon, demandez-leur de discuter et d'essayer différentes façons d'organiser leur jeu avec leur camarade."
         },
         "3344bb9f-6bfa-40f1-b21a-26a077f975a5": {
           "progression_name": "Renforcement Des Compétences"
-        },
-        "b6624ca7-5ffe-462e-ad60-5580ffb87066": {
-          "progression_name": "Mini-projet : Jeu Flappy"
         },
         "f505b90a-43b4-4d71-b806-e50fdbfeca75": {
           "tips": [
@@ -2881,12 +2720,6 @@
         "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
           "description": "Il s'agit de l'activité en ligne la plus libre du cours. Au stade final, les élèves auront la liberté de créer leur propre jeu. Il faudra peut-être fournir des directives structurées sur le type de jeu à créer, en particulier pour les étudiants qui sont dépassés par trop d'options.",
           "progression_name": " Introduction au Labo de jeux"
-        },
-        "55ade85d-fedf-4c9d-9046-4d1e6d813638": {
-          "progression_name": "Renforcement Des Compétences"
-        },
-        "a0c869e7-3fa2-4bec-8fa4-56daf0261d2d": {
-          "progression_name": "Mini-projet : Jeu Chase"
         },
         "a7a8c0ca-7507-4a7a-84da-2763a0e562a7": {
           "progression_name": "Activité libre"
@@ -2945,8 +2778,7 @@
           "description": "-   Les fils transportent des informations à travers la machine sous forme d'électricité.\n    -   Les deux options qu'un ordinateur utilise en ce qui concerne ces informations électriques sont \"on\" (activé) et \"off\" (désactivé). Tout comme les lumières de cette pièce !\n        -   Lorsque les ordinateurs représentent des informations en utilisant seulement deux options, cela s'appelle \"binaire\".\n    -   Ce thème de deux options ne s'arrête pas lorsque l'information arrive à destination.\n-   Les ordinateurs _stockent_ également des informations à l'aide de binaires.\n    -   Le binaire n'est pas toujours activé et désactivé.\n        -   Les disques durs stockent des informations à l'aide d'un aimant magnétique positif et d'un magnétique négatif.\n        -   Les DVD stockent les informations sous forme réfléchissante ou non réfléchissante.\n    -   Comment pensez-vous que nous pouvons convertir en binaire des choses de la vie réelle que nous voulons stocker dans un ordinateur ?\n        -   Commençons par les lettres.\n        -   Utilisez la **\\*Feuille de travail** pour montrer comment un ordinateur peut représenter des lettres majuscules.\n            -   C'est le bon moment pour mentionner que chaque endroit où vous avez une option binaire est appelé un \"chiffre binaire\" ou \"bit\" pour faire court.\n            -   Demandez si quelqu'un sait comment s'appelle un regroupement de huit bits (c'est un octet.)\n            -   Anecdote : un regroupement de quatre bits s'appelle un quartet.\n            -   Regardez la **\\*Bits Versus Octets - Vidéo élève** (~1 minute)\n        -   Passez en revue quelques exemples de conversion de lettres en binaire, puis revenez en arrière.\n        -   Ensuite, écrivez une lettre codée et donnez quelques secondes à la classe pour comprendre de quoi il s'agit.\n        -   Lorsque la classe peut découvrir par elle-même cette lettre codée, vous pouvez passer à l'activité. "
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
-          "name": "Les bracelets binaires",
-          "progression_name": "Bracelets binaires - Activité hors ligne"
+          "name": "Les bracelets binaires"
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
           "tips": [
@@ -2997,9 +2829,6 @@
             "Les élève feront de nombreux essais et erreurs lors du codage. Leurs projets sont susceptibles de devenir des versions tronquées de leur portée d'origine. Rappelez-leur que ce type de compromis est courant dans la conception de logiciels. Ce n'est pas grave s'ils n'intègrent pas toutes les fonctionnalités qu'ils ont prévues ! "
           ]
         },
-        "1c65a4a2-b069-4b30-b733-a80c5081f8e3": {
-          "progression_name": "Exploration : Echantillon de projet "
-        },
         "8bc8bad1-8150-46ce-bf97-0d368dafd6ef": {
           "progression_name": "Projet"
         },
@@ -3034,8 +2863,7 @@
           "description": "Intégrez cela à une discussion sur la façon dont les gens doivent programmer des robots pour faire des choses précises, en utilisant certaines commandes."
         },
         "0cafd30f-53e4-45fb-96c0-767858add851": {
-          "name": "Programmation sur papier quadrillé",
-          "progression_name": "Programmation sur papier millimétré  - Activité hors ligne"
+          "name": "Programmation sur papier quadrillé"
         },
         "3b2b2cce-a3b0-4e92-8175-9d2e950c1ccd": {
           "description": "Dans cette activité, les élèves joueront à la fois le rôle de programmeurs et de robots, en coloriant des carrés selon des programmes qu'ils ont écrits les uns pour les autres.\n\n**Distribuer :** Les élèves utiliseront des grilles 4x4 (ou des feuilles de papier quadrillé avec des cases 4x4 découpées). Ils auront également besoin de la feuille de calcul de l'image.\n\n**Affichage :** Projetez ces commandes ou écrivez-les au tableau. Ils ne dureront pas longtemps, mais les aidera à faire la transition de l'algorithme au programme.\n\n    Déplacez-vous d'une case vers la droite\n    Déplacez-vous d'une case vers la gauche\n    Déplacez-vous d'une case vers le haut\n    Déplacez-vous d'une case vers le bas\n    Coloriez le carré\n\n**Dites :** Aujourd'hui, nous pouvons tous programmer des robots... et ils sont déjà là dans la pièce ! C'est vous ! Nous allons écrire des programmes utilisant des symboles avec des significations particulières pour s'entraider à recréer une image. Tout d'abord, nous allons nous entraîner ensemble comme si j'étais le robot et vous les programmeurs, puis nous pourrons nous séparer en groupes pour que chacun puisse avoir son tour.\n\n\\*\\* Affichage :\\*\\* Affichez à la fois l'image que vous allez faire parcourir aux élèves et une grille vierge que vous remplirez avec votre ARM. Assurez-vous que les instructions, la grille et l'image restent visibles en même temps."
@@ -3100,17 +2928,11 @@
         "528f5675-b238-4157-849e-e3c9882d39f5": {
           "description": "Les enseignants jouent un rôle essentiel dans l'enseignement de l'informatique, en contribuant à une ambiance de classe basée sur la collaboration et le dynamisme. Lors des activités en ligne, le rôle de l'enseignant est avant tout celui d'encourager et de soutenir. Les cours en ligne sont censés être centrés sur l'élève, les enseignants doivent donc éviter d'intervenir lorsque les élèves sont bloqués. Voici quelques idées sur la façon de procéder :\n\n-   Utilisez la **\\*Programmation en binôme** si possible.\n-   Encouragez les élèves ayant des questions ou problèmes à commencer par demander à leur camarade.\n-   Les questions sans réponse peuvent être transmises à un groupe proche, qui connaît peut-être déjà la solution.\n-   Rappelez aux élèves d'utiliser le processus de débogage avant d'approcher.\n-   Demandez-leur de décrire le problème qu'ils voient. Qu'est-ce que c'est censé faire ? Qu'est ce que ça fait ? Qu'est-ce que ça veut dire ?\n-   Rappelez aux élèves qui s'énervent parce qu'ils n'y arrivent pas que c'est une étape sur la voie de l'apprentissage et que la persévérance sera payante.\n-   Si un élève est toujours bloqué après tout cela, posez des questions suggestives pour l'amener à repérer une erreur par lui-même. "
         },
-        "c54ece34-6ca8-4a97-a431-8513386bf6a7": {
-          "progression_name": "Vidéo - Intro Maze : Programmation avec des blocs "
-        },
         "b76a05a9-cfc1-405a-a3f7-3a646200f34d": {
           "progression_name": "Renforcement Des Compétences"
         },
         "c87409e4-62dc-4155-b1ef-f6329111dd7f": {
           "progression_name": "Défi"
-        },
-        "b60e2fce-2cac-4440-8d56-d3a78c50d34d": {
-          "progression_name": "S'entraîner"
         },
         "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
           "name": "Réflexion",
@@ -3133,8 +2955,7 @@
           "description": "**Distribuer :** pour vous assurer que les élèves comprennent l'idée de trouver et de corriger les erreurs (débogage), distribuez la **\\*Fiche de travail** et demandez-leur de le finir deux par deux.\n\n(_Facultatif :_ Si vous souhaitez faire avancer l'activité plus rapidement, n'hésitez pas à la terminer en classe à la place.)\n\n**Transition :** _Maintenant, il est temps de jouer au jeu !_ "
         },
         "3b65cbfa-b176-412f-abd3-357bc1a825ab": {
-          "name": "Programmation de relais",
-          "progression_name": "Programmation de relais - Activité hors ligne"
+          "name": "Programmation de relais"
         },
         "c6c65318-513e-41d1-9250-8402d6154e40": {
           "description": "Avec la programmation sur papier millimétré en tête, il est temps de se diviser en équipes et de se préparer à animer l'activité en relais !\n\n**Configuration :** Préparez le **\\*Paquet d'activités** en imprimant une copie pour chaque équipe de 4 à 5 élèves. Coupez ou pliez chaque page le long de la ligne pointillée centrale. "
@@ -3173,17 +2994,11 @@
           "name": "Déboguer avec Laurel",
           "description": "Il faudrait que les élèves s'assoient avec leurs équipes lors des activités de transition. Chaque élève doit travailler sur ces énigmes individuellement ou en binômes, mais avoir un groupe soudé pour poser et répondre aux questions peut aider à développer la confiance et la compréhension du sujet."
         },
-        "a3c8ba66-a991-45a4-a743-59b4a41ebb24": {
-          "progression_name": "Vidéo : Débogage avec le bouton Step (étape)"
-        },
         "0fee56da-4a47-490c-b500-a54be824f01c": {
           "progression_name": "Renforcement Des Compétences"
         },
         "1921c52c-25f6-457a-8dba-57926c95bfae": {
           "progression_name": "Défi"
-        },
-        "04939762-e87a-4924-8049-62fb65e8dc0c": {
-          "progression_name": "S'entraîner"
         },
         "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9": {
           "name": "Réflexion",
@@ -3197,8 +3012,7 @@
           "description": "Cette leçon contient un mot de vocabulaire nouveau et important :\n\n-   **Événement** - _Dites-le avec moi : É-vé-ne-ment._\n\nUn événement est une action qui provoque quelque chose. "
         },
         "3fea7621-ed7a-4f12-852d-ccc7768ce6db": {
-          "name": "Les Événements dans Bounce",
-          "progression_name": "Renforcement Des Compétences"
+          "name": "Les Événements dans Bounce"
         },
         "57c05fc2-b193-48bc-ac4e-a6ad469f6abb": {
           "progression_name": "Activité libre"
@@ -3228,12 +3042,14 @@
         },
         "a13f7ef9-20f5-4865-9117-3515b8cf7414": {
           "name": "Introduction",
+          "description": "Lors d'une discussion en classe, demandez aux élèves quel est leur jeu vidéo préféré (vous devrez peut-être rappeler aux élèves de n'utiliser que des jeux adaptés à la classe). Demandez aux élèves quelle est leur partie préférée du jeu.\n\nLa plupart du temps, les étudiants répondront par une sorte d'événement. Lorsque vous reconnaissez la réponse d'un élève qui décrit un événement, demandez lui de mieux le décrire.\n\nUne fois que l'élève a fini de décrire ce qui l'amuse, prenez une minute pour le relier à la définition d'un **événement**.\n\n-   **Événement** : une action qui provoque quelque chose.\n\nDemandez aux élèves d'essayer de raconter certaines de leurs parties préférées des jeux vidéo et comment elles peuvent être décrites comme des événements. Demandez-leur de les partager et de discuter des différences entre leurs événements et ceux de leur camarade. ",
           "tips": [
-            null
+            "Si vous n'êtes pas sûr que la réponse d'un élève décrive bien un événement, essayez de décomposer la réponse. Y a-t-il une action et une réponse ?\n\nPar exemple :\n\n-   Franchir la ligne d'arrivée et avoir à l'écran des personnages vous félicitant\n-   Trouver un gros trésor (ou autre) et voir votre stock s'agrandir\n-   Acheter de nouveaux objets dans la boutique du jeu et pouvoir utiliser l'objet\n-   Appuyer sur les boutons d'une manette de jeu et demander à votre personnage de faire quelque chose de cool "
           ]
         },
         "3f3c741a-dfe0-4288-80b7-338162743216": {
           "name": "Construis un Jeu Star Wars",
+          "description": "#### Puzzles en ligne\n\nLes élèves seront probablement très enthousiastes à l'idée de créer leur propre jeu _Star Wars_ à la fin de cette série d'énigmes. S'il y a du temps, demandez-leur de planifier ce qu'ils veulent que le jeu fasse. La planification et la préparation aideront les élèves à mieux reconnaître les concepts clés que cette leçon essaie d'enseigner. Encouragez les élèves à partager et à remixer les jeux des uns et des autres à la fin de cette leçon. ",
           "progression_name": " Projet Star Wars"
         },
         "72b1888f-765e-42c0-bccc-0e32a5724f40": {
@@ -3241,56 +3057,90 @@
         },
         "2708da4e-dd8b-4b03-ad52-f16a0af26363": {
           "tips": [
-            null
+            "Rappelez aux élèves de ne partager leur travail qu'avec leurs amis proches ou leur famille. Pour plus d'informations, montrez en classe :\n\n**\\*Faites une pause et réfléchissez en ligne** - Vidéo. "
           ],
           "progression_name": "Activité libre"
         },
         "df2c1698-1e56-4e44-9a0b-9d43facaf9f2": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "**Invites :**\n\n-   De quoi parlait le cours d'aujourd'hui ?\n-   Qu'en avez-vous pensé ?\n-   Donnez un exemple d'événement que vous avez utilisé dans votre programme aujourd'hui ?\n-   Pourquoi est-il important de ne pas partager d'informations privées en ligne ? Comment savoir si les informations sont privées ? "
+        },
+        "e81e3694-cf5c-46d3-aab8-4dd74e18c4fa": {
+          "name": "Installer la scène",
+          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
         },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
           "tips": [
-            null
+            "Si vous avez le temps et que vous souhaitez préparer vos élèves avec une activité hors ligne, envisagez de proposer **\\*Dance Party : Unplugged** avant cette leçon. Cette brève leçon initie les élèves à l'idée d'événements déclenchant différents mouvements de danse. "
           ]
         },
+        "270c3845-697d-42f7-b720-f6926aceff03": {
+          "description": "Aujourd'hui, nous allons faire quelque chose de vraiment créatif. Comment préférez-vous exprimer votre créativité ?"
+        },
+        "84005af4-60c5-4ba3-a308-151c13d819ef": {
+          "description": "Encouragez les élèves à partager les façons dont ils expriment leur créativité, par exemple avec l'art, la danse, la musique, l'écriture.\n\nExpliquez qu'aujourd'hui, nous allons être créatifs avec notre code. Tout comme choisir le type de couleurs de peinture à utiliser ou les types de mots avec lesquels vous écrivez peut exprimer votre créativité, choisir le code que vous écrivez et comment les gens interagissent avec celui-ci peut également être une opportunité d'exprimer votre créativité !\n\n**Get up and dance :** Annoncez à la classe qu'aujourd'hui, nous allons voir comment combiner le codage et la danse de manière créative. Demandez à vos élèves de créer différents mouvements créatifs pendant 10 secondes pour les mettre dans l'ambiance. Vous pouvez mettre une chanson de cette **\\*Liste de lecture Spotify** pour vous aider à démarrer. Capturez les mouvements de votre classe en vidéo. "
+        },
+        "2fe76df3-dde6-43fd-a725-2a1c458996b2": {
+          "name": "Créez votre propre soirée dansante",
+          "description": "#### Filtrage de musique\n\nCe tutoriel présente des chansons d'artistes connus. Pour obtenir un aperçu de la liste des chansons de ce didacticiel, consultez cette **\\*Playlist Spotify**. Nous utilisons des versions radio-safe de toutes les chansons et pour les élèves de moins de 13 ans, nous limitons la musique à cette liste filtrée. Si vous souhaitez utiliser la liste filtrée avec des élèves plus âgés, vous pouvez partager la **\\*Spotify Playlist** avec votre classe. "
+        },
+        "07d81a89-c42f-4e92-90cf-a745cd0196d8": {
+          "name": "Assistance niveau après niveau",
+          "description": "##### Niveau 1"
+        },
+        "09a6a786-084e-4677-a2cf-3306ef1a6e83": {
+          "description": "##### Niveau 2\n\n-   Faites glisser le bloc rouge « créer un nouveau » de la boîte à outils à gauche vers l'espace de travail à droite. Connectez-le à l'intérieur du bloc `setup`.\n-   Vous venez d'écrire votre premier programme. Assurez-vous d'appuyer sur Exécuter pour voir ce qui se passe. Vous devriez entendre de la musique et voir un personnage commencer à se déplacer dans la zone d'affichage. "
+        },
         "f88c59b4-e502-4301-9ec4-221b7a85b350": {
+          "description": "##### Niveau 3",
           "progression_name": " Événements"
         },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
+          "description": "##### Niveau 4\n\n-   Les niveaux 4 à 5 consistent à rendre la danse interactive.\n-   Les blocs verts sont des blocs d'événements. Ils marquent une nouvelle séquence de code et n'ont pas besoin d'être connectés à l'intérieur du bloc `setup`.\n-   La connexion du bloc violet sous le bloc événement vert vous permet de faire danser le personnage en appuyant sur les boutons fléchés oranges ou les touches de votre clavier.\n-   Appuyez bien sur les boutons fléchés après avoir appuyé sur Run, sinon le ou les danseurs ne bougeront pas.\n\n##### Niveau 5\n\n-   Faites bien ressortir un deuxième bloc violet « à faire une fois ». Vous devriez avoir un bloc « les ours font une fois » et un bloc « les chats font une fois » dans votre espace de travail. Les deux doivent être connectés à un bloc d'événements vert « lorsque vous appuyez dessus ».\n-   Appuyez bien sur les boutons fléchés après avoir appuyé sur Run, sinon les danseurs ne bougeront pas.",
           "progression_name": "Événements"
         },
         "3dbac671-c428-479f-8a2b-301d4a5578e5": {
+          "description": "##### Niveau 6",
           "progression_name": " Mesures"
         },
         "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
+          "description": "##### Niveau 7\n\n-   Les niveaux 7-8 concernent la synchronisation de la danse avec la musique.\n-   Les blocs d'événements « après les mesures » commencent également une nouvelle séquence de code et ne doivent pas être connectés à l'intérieur du bloc « setup ».\n-   En connectant le bloc violet « toujours refaire » sous le bloc d'événement vert « après les mesures », le personnage doit effectuer un mouvement de danse après le nombre de mesures que vous indiquez.\n-   Le bloc « toujours refaire » fonctionne différemment des blocs « faire une fois » vus dans les niveaux précédents.\n\n##### Niveau 8\n\n-   Assurez-vous de faire ressortir un deuxième bloc d'événement vert. Vous devriez avoir un bloc « après 4 mesures » et un bloc « après 6 mesures » dans votre espace de travail. Les deux devraient avoir un bloc violet connecté en dessous.\n\n##### Niveau 9\n\n-   Le niveau 9 consiste à créer rapidement des groupes de danseurs.\n-   Utilisez le nouveau bloc fourni dans la boîte à outils pour créer un ensemble de petits danseurs.\n    \\*Vous devriez également utiliser le bloc normal \"faire un nouveau\" pour créer un danseur \"principal\" plus grand.\n-   De nombreux élèves sauront que l'on peut faire paraître quelque chose plus éloigné en le dessinant à plus petite échelle. Au niveau suivant, vous pourrez affiner cet effet.",
           "progression_name": "Mesures"
         },
         "1790551e-be1b-4e39-8725-ab4ed96c2743": {
+          "description": "##### Niveau 10",
           "progression_name": " Propriétés"
         },
         "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
+          "description": "##### Niveau 11\n\n-   Les niveaux 11-13 concernent l'ajustement des propriétés (par exemple, la taille, la couleur) des danseurs.\n-   Il est important de s'assurer que le bloc bleu-vert soit bien placé quelque part dans le programme _après_ que les danseurs ont été créés. Pour résoudre ce casse-tête, placez un bloc 'set size' n'importe où dans votre programme et utilisez-le pour modifier la taille de certains de vos danseurs.\n-   Les danseurs créés en groupe ont une taille par défaut de 30, les autres de 100.\n\n##### Niveau 12\n\n-   Comme pour le niveau précédent, assurez-vous de n'utiliser le bloc `mettre la teinte sur (couleur)` qu'après avoir créé les danseurs de votre programme. Par exemple, le placer comme première étape dans la zone \"configuration\" de votre programme n'aura aucun effet.\n\n##### Niveau 13\n\n-   Avec le bon code, vous devriez voir le danseur parcourir différentes couleurs, tailles ou mouvements de danse.\n-   Assurez-vous qu'il y ait bien des blocs bleu-vert « change » et « randomize » ou un bloc violet « faire pour toujours » connecté à l'intérieur du bloc « toutes les 2 mesures ».\n-   Assurez-vous que les blocs « toujours refaire » soient bien sur (Suivant), (Précédent) ou (Aléatoire). Sinon, le danseur effectuera simplement le mouvement défini à plusieurs reprises.\n-   Notez que le **code que les étudiants écrivent dans ce niveau n'est pas vérifié pour l'exactitude**. Cela signifie qu'ils passeront toujours le niveau, même s'ils ne changent pas le programme. Les élèves doivent se sentir libres d'expérimenter leur code d'une manière qui les intéresse. Cliquez sur le bouton « Terminer » pour continuer.\n-   La création de nouveaux danseurs dans le bloc « toutes les 2 mesures » entraînera la création de plusieurs danseurs identiques au même endroit dans votre programme et peut avoir des conséquences inattendues !",
           "progression_name": "Propriétés"
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
-            null
+            "À ce stade de la leçon, vous remarquerez peut-être que les instructions sont moins normatives. Encouragez les élèves à faire preuve de créativité et à explorer les nouveaux blocs qui sont introduits. À partir de ce moment, le code de l'élève n'est **pas vérifié pour l'exactitude** afin d'encourager l'expérimentation au lieu de résoudre une tâche précise."
           ]
         },
+        "19a261df-276b-4f57-98db-a694c8dc0b40": {
+          "description": "##### Niveau 14"
+        },
         "248f398f-18b7-4f09-a251-8d119f3c167d": {
+          "description": "##### Niveau 15\n\n-   Ce dernier niveau est très ouvert. Le tutoriel lui-même est conçu pour donner aux étudiants suffisamment de temps pour continuer à travailler sur leur propre danse.\n-   **Encouragez le partage :** Si les élèves ont des téléphones portables avec un forfait de données, ils peuvent rapidement envoyer par SMS un lien vers leurs projets sur leur propre téléphone ou celui d'un ami. Si la politique de votre école le permet, encouragez-les à le faire ici.\n-   **Encouragez la créativité :** La créativité est importante tout au long de cette leçon, mais c'est vrai ici plus qu'ailleurs !",
           "progression_name": "Activité libre"
         },
         "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab": {
           "progression_name": "Les Extras de la Leçon"
         },
         "a450ad93-b5c8-492e-98bc-84a719f014e2": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
         },
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
           "name": "Évaluation",
           "description": "Demandez aux élèves d’ajouter leurs notes adhésives ou cartes sans texte « Whip Around » à votre carte heuristique « Computer Science » lorsqu’ils sortent. Essayez de remplir le tableau avec beaucoup d’idées géniales sur ce qu’est l’informatique et pourquoi c’est important."
         },
         "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
-          "name": "Opportunité interdisciplinaire "
+          "name": "Opportunité interdisciplinaire ",
+          "description": "### Survie des danseurs (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/scienceSmall.png)\n**Informatique + Sciences**\n\n[Survival of the Dancers](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing) est une activité facultative alignée sur les normes scientifiques de la prochaine génération, écrites par notre communauté d'enseignants. À l'aide de Dance Party, les élèves sélectionneront au moins un organisme (danseur) bien adapté à l'environnement (monde) qu'ils créent. Ils sont aussi encouragés à utiliser les blocs de code « propriétés » pour personnaliser les caractéristiques de chaque organisme (danseur).\n\n_Normes abordées :_\n\n-   **NGSS.3-LS4-2 :** Utiliser des preuves pour construire une explication sur la façon dont les variations des caractéristiques entre les individus de la même espèce peuvent offrir des avantages pour survivre, trouver des partenaires et se reproduire.\n\n-   **NGSS.3-LS4-3 :** Construire un argument avec la preuve que dans un habitat particulier, certains organismes peuvent bien survivre, d'autres moins bien et certains ne peuvent pas survivre du tout.\n\n-   **EXTENSION FACULTATIVE : NGSS.3-LS4-4 :** Faire valoir le bien-fondé d'une solution à un problème causé lorsque l'environnement change et que les types de plantes et d'animaux qui y vivent peuvent changer."
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Introduction aux Boucles",
@@ -3315,9 +3165,6 @@
         "6ecd59e1-35e1-44aa-9a99-1190dc99abd3": {
           "progression_name": "Défi"
         },
-        "0bfe26b9-1f90-4d17-a7df-2336f31b6f90": {
-          "progression_name": "S'entraîner"
-        },
         "b2c72983-b5ad-4a39-9f80-e6701c7c6df6": {
           "tips": [
             "Montrez aux élèves la bonne_façon_d'aider leurs camarades de classe :\n\n-   Ne vous asseyez pas sur la chaise de votre camarade de classe\n-   N'utilisez pas son clavier\n-   Ne touchez pas sa souris\n-   Demandez-lui la solution à haute voix avant de vous éloigner "
@@ -3338,23 +3185,16 @@
           "description": "Les élèves devraient avoir eu une introduction aux boucles à ce stade. En fonction de ce dont vous pensez que votre classe pourrait bénéficier, nous vous recommandons :\n\n-   Réviser un puzzle de la dernière leçon\n-   Aperçu d'un puzzle de cette leçon\n\nN'importe lequel d'entre eux devrait aider à préparer votre classe à s'amuser avec les puzzles en ligne ! "
         },
         "2517dd9e-f281-4db3-9cc8-07dc533add33": {
-          "name": "Dessiner des Formes avec des Boucles",
-          "progression_name": "Vidéo : Intro l'Artiste avec JR Hildebrand"
+          "name": "Dessiner des Formes avec des Boucles"
         },
         "1aa2fcd6-f059-4ee1-9d5b-03653ad98460": {
           "progression_name": "Renforcement Des Compétences"
-        },
-        "7555f521-9ab5-4e7c-901a-4386914f5ae1": {
-          "progression_name": "Vidéo : Les Boucles avec l'Artiste"
         },
         "1d0954f1-dbad-49b1-b3f3-19b4273adeac": {
           "progression_name": "Renforcement Des Compétences"
         },
         "8ff5abc7-3c4a-42d5-88f6-51f0dd8060ab": {
           "progression_name": "Défi"
-        },
-        "ed79cfbb-8420-46b1-8cf2-ed9e0ae885f1": {
-          "progression_name": "S'entraîner"
         },
         "f3f79fbb-d2e7-410e-9258-ca61b0519fb3": {
           "description": "#### Puzzles en ligne\n\nCertains élèves peuvent découvrir où ajouter des boucles de « répétition » en écrivant le programme sans boucles, puis en encerclant les sections de répétitions. Si les élèves de votre classe semblent pouvoir en bénéficier, demandez-leur de garder du papier et des crayons à côté d'eux sur leur ordinateur. Ils peuvent aussi dessiner certaines des formes et des figures sur papier pendant qu'ils programment en ligne. "
@@ -3374,23 +3214,11 @@
         "7fe86b33-56e5-43a2-bbd8-760d477b6ee1": {
           "progression_name": "Renforcement Des Compétences"
         },
-        "77b85e56-dc72-45d6-8d17-cd2073e74560": {
-          "progression_name": "Vidéo : Boucles imbriquées avec l'abeille "
-        },
-        "8c793bd1-bbbf-415c-ab5b-12d502b5f39f": {
-          "progression_name": "Prédiction"
-        },
         "802e73fc-cff0-462f-8d3d-24c0855bce28": {
           "progression_name": "Renforcement Des Compétences"
         },
         "0f7bd996-f5bb-414f-9bd8-b569978307a5": {
           "progression_name": "Défi"
-        },
-        "be5e4d78-ed9e-4cd3-84bc-86138cab5637": {
-          "progression_name": "S'entraîner"
-        },
-        "6b86aa85-d74c-4c22-961f-0d21e6039748": {
-          "progression_name": "Prédiction"
         },
         "725a7d9a-35a3-483e-a83b-f88bf0033095": {
           "progression_name": "Les Extras de la Leçon"
@@ -3407,8 +3235,7 @@
           "description": "-   Nous pouvons commencer cette leçon tout de suite\n    -   Dites à la classe que s'ils peuvent rester complètement silencieux pendant trente secondes, vous pourrez :\n        -   Chanter une chanson d'opéra\n        -   Leur donner cinq minutes de récréation supplémentaires\n        -   Faire le poirier\n    -   Commencer à compter tout de suite.\n    -   Si les élèves réussissent, indiquez qu'ils ont réussi, ainsi ils obtiennent la récompense.\n    -   Sinon, faites remarquer qu'ils n'ont pas été complètement silencieux pendant trente secondes complètes, afin qu'ils n'obtiennent pas la récompense.\n-   Demandez à la classe _Quelle était la condition de la récompense ?_\n    -   La condition était SI vous étiez silencieux pendant 30 secondes\n        -   Si vous l'étiez, la condition serait vraie et vous obtiendriez la récompense.\n        -   Si vous ne l'étiez pas, la condition serait fausse, donc la récompense ne s'appliquerait pas.\n    -   _Peut-on trouver une autre condition ?_\n        -   Si vous devinez mon âge, la classe pourra vous applaudir.\n        -   Si je connais une réponse, je peux lever la main.\n        -   Quels exemples pouvez-vous trouver ?\n-   _Parfois, nous voulons avoir une condition supplémentaire, au cas où l'instruction \"IF\" ne se vérifie pas._\n    -   _Cette condition supplémentaire est appelée une instruction \"ELSE\"_\n    -   _Lorsque la condition \"IF\" n'est pas remplie, on peut regarder le \"ELSE\" pour savoir quoi faire_\n        -   _Exemple : SI je tire un roi de ce jeu de cartes, tout le monde applaudit. Sinon, tout le monde dit \"Awwwwwwe.\"_\n        -   _Essayons._(Dessinez une carte et voyez si votre classe réagit de manière appropriée.)\n    -   Demandez à la classe d'analyser ce qu'il vient de se passer.\n        -   _Quel était le IF ?_\n        -   _Quel était le ELSE ?_\n        -   _Quelle condition a été remplie ?_\n    -   _Croyez-le ou non, nous avons encore une option de plus._\n        -   _Et si je voulais que tu applaudisses si je dessine un 7, ou bien si je dessine moins que sept tu dis \"YAY\", ou bien tu dis \"Awwwwwwwe\" ?_\n            -   _C'est pourquoi nous avons les termes If, Else-If et Else._\n            -   _If est la première condition._\n            -   _Else-If n'est regardé que si le \"If\" n'est pas vrai._\n            -   _Else n'est regardé que si rien avant n'est vrai._\n\nJouons maintenant à un jeu. "
         },
         "721db2fe-1035-40b0-a9a6-e1fae1e2edbd": {
-          "name": "Instructions conditionnelles avec des cartes",
-          "progression_name": "Conditions avec des cartes - Activité hors ligne"
+          "name": "Instructions conditionnelles avec des cartes"
         },
         "13a60f33-de92-4780-b8a6-f7eff9d0a87c": {
           "description": "#### Exemple de programme de conditions avec cartes - Guide de préparation de l'enseignant\n\n**Instructions:**\n\n-   Créez quelques programmes avec votre classe qui dépendent de facteurs tels que la couleur,  ou la valeur d'une carte pour attribuer ou soustraire des points. Vous pouvez écrire le programme sous forme d'algorithme, de pseudocode ou de code réel.\n\nVoici un exemple d'algorithme :\n\n    if (CARD is RED)\n    \tAward YOUR team 1 point\n\n    Else\n    \tAward OTHER team 1 point\n\nVoici un exemple du même programme en pseudocode :\n\n    If (card.color == RED){\n    \tpoints.yours = points.yours + 1;\n    }\n\n    Else {\n    \tpoints.other = points.other + 1;\n    }\n\n-   Décidez comment vous souhaitez diviser votre classe en équipes.\n-   Chaque équipe doit avoir une pile de cartes (au moins autant de cartes que de membres de l'équipe) à proximité.\n-   Affichez l'un de vos « programmes » au tableau pour que tout le monde puisse le voir.\n-   Demandez aux équipes de tirer des cartes à tour de rôle et de suivre le programme pour voir combien de points elles marquent à chaque tour.\n-   Jouez plusieurs fois avec plusieurs programmes différents pour aider les élèves à vraiment comprendre les conditions.\n\nUne fois que la classe s'est entraînée, vous pouvez encourager les élèves à imbriquer les conditions les unes dans les autres. Assurez-vous qu'ils comprennent que si le carton est rouge, VOTRE équipe obtient 1 point, puis _rien d'autre ne se passe_, puisque la condition est remplie :\n\n    If (CARD is RED)\n    \tAward YOUR team 1 point\n\n    Else\n    \tIf (CARD is higher than 9)\n    \t\tAward OTHER team 1 point\n    \tElse\n    \t\tAward YOUR team the same number of points on the card\n\nVoici un exemple du même programme en pseudocode:\n\n    If (card.color == RED ){\n    \tpoints.yours = points.yours + 1;\n    }\n    Else {\n    \tif (card.value > 9){\n    \t\tpoints.other = points.other + 1;\n    \t}\n    \tElse {\n    \t\tpoints.yours = points.yours + card.value;\n    \t}\n    }"
@@ -3458,10 +3285,16 @@
           "description": "Utilisez ces activités pour améliorer l'apprentissage des élèves. Ils peuvent être utilisés en dehors des activités de classe ou autres.\n\n#### Plus de Minecraft\n\nSi vous trouvez que votre classe aime vraiment l'environnement _Minecraft_, [voici quelques liens vers d'autres jeux \\_Minecraft\\_ auxquels ils peuvent jouer en ligne](https://code.org/minecraft). Ces jeux leur enseigneront également les compétences de base en matière de codage. "
         },
         "0e7cf944-a328-4388-afa7-8712fed768e0": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Revoyez l'activité « Conditions avec cartes » avec vos élèves.\n\n-   _Qu'est-ce qu'une instruction conditionnelle ?_\n-   _Quand une condition est-il utile ?_\n-   _Quelles sont certaines des conditions que vous avez utilisées dans la dernière activité ?_\n\nNous allons maintenant utiliser des conditions avec l'abeille Code.org pour l'aider à gérer certains nuages mystérieux. Nous ne savons pas si ses fleurs ont du nectar ou non, nous devrons donc utiliser des conditions pour nous assurer que nous recueillons du nectar s'il est là, mais que nous n'essayons pas de recueillir le nectar d'une fleur qui n'en a pas tout."
+        },
+        "8cc71fbc-f53a-45d2-9b80-e102f01f25b7": {
+          "name": "Aperçu des puzzles en ligne",
+          "description": "Tirez un puzzle de cette leçon, nous recommandons le puzzle 9.\n\n-   Demandez à la classe ce que l'abeille doit faire lorsqu'elle atteint le nuage.\n    -   Doit-elle utiliser une condition pour rechercher une fleur ou une ruche.\n-   Utilisez le bloc « if at flower / else ». Demandez à la classe ce que l'abeille doit faire s'il y a une fleur. S'il n'y a pas de fleur, il y aura un rayon de miel. Que doit faire l'abeille alors ?\n    -   L'abeille doit \"prendre du nectar\" s'il y a une fleur et \"faire du miel\" s'il y a une ruche.\n\nRemplissez le reste du code et appuyez sur \"Exécuter\". Discutez avec la classe des raisons pour lesquelles cela a fonctionné."
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
-          "name": "« Si/Sinon » avec l'Abeille"
+          "name": "« Si/Sinon » avec l'Abeille",
+          "description": "Ces énigmes peuvent engendrer certaines questions, alors demandez aux élèves de travailler en binômes ou d'appliquer la règle \"Demandez à trois personnes avant de me demander à moi\" (Demandez-leur de demander de l'aide à trois autres camarades avant d'aller voir l'enseignant.) . Cela suscitera des discussions et ils comprendront mieux."
         },
         "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
           "progression_name": "  Instructions « si »"
@@ -3482,16 +3315,23 @@
           "progression_name": "Les Extras de la Leçon"
         },
         "fd68c153-b4d6-4729-a742-09f9ee9c25b1": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "**Invites:**\n\n-   De quoi parlait la leçon d'aujourd'hui ?\n-   Qu'en avez-vous pensé ?\n-   Quels conditions avez-vous utilisées dans votre code aujourd'hui ?\n-   Quels autres conditions une abeille pourrait-elle utiliser ? Les exemples comprennent:\n    -   s'il y a un arbre devant moi, bourdonner à l'écart\n    -   si mon aile est blessée, reste au sol\n    -   si je vois une autre abeille, dis \"Bonjour !\" "
         },
         "a2300321-9e3d-4d48-8fca-7caa05f7e889": {
           "description": "Utilisez ces activités pour améliorer l'apprentissage des élèves. Ils peuvent être utilisés en dehors des activités de classe ou autre.\n\n\\*\\* Tag vrai / faux \\*\\* \n\n-   Alignez les élèves comme pour jouer au [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Sélectionnez une personne pour venir devant en tant qu'appelant.\n-   L'appelant choisit une condition et demande à tous ceux qui remplissent cette condition de faire un pas en avant.\n    -   Si vous avez une ceinture rouge, avancez.\n    -   Si vous mettez des sandales, faites un pas en avant.\n-   Essayez de le changer en disant des choses comme \"Si vous n'êtes pas blonde, avancez.\"\n\n\\*\\* Imbrication \\*\\*\n\n-   Divisez les élèves en binômes ou en petits groupes.\n-   Demandez-leur d'écrire si des déclarations pour jouer aux cartes sur des bandes de papier, telles que :\n    -   Si la requête est un trèfle\n    -   Si la couleur est rouge\n-   Demandez aux élèves de faire des bandes similaires pour les résultats.\n    -   Ajouter un point\n    -   Soustrayez un point\n-   Demandez ensuite aux élèves de choisir trois de chaque type de bande et trois cartes à jouer, en faisant attention à l'ordre sélectionné.\n-   À l'aide de trois feuilles de papier, demandez aux élèves d'écrire trois programmes différents en utilisant uniquement les jeux de bandes qu'ils ont sélectionnés, dans n'importe quel ordre.\n    -   Encouragez les élèves à mettre certaines déclarations if dans d'autres déclarations if.\n-   Les élèves doivent maintenant parcourir les trois programmes en utilisant les cartes qu'ils ont tirées, dans le même ordre pour chaque programme.\n    -   Deux programmes ont-ils renvoyé la même réponse ?\n    -   Y a-t-il eu quelque chose de différent ?"
         },
         "9edcc1a3-dce9-45bc-86af-546b41287b53": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Utilisez « while » dans une phrase devant les élèves. Demandez-leur ce que signifie le mot « pendant ». Si vous deviez dire _\" tant qu'il y a un trou, remplissez-le de terre \"_ que feraient-ils ? Combien de temps le feraient-ils ?\n\nLorsque vous utilisez un mot comme « while », vous comptez sur une condition pour indiquer à l'ordinateur combien de temps la boucle doit s'exécuter. Une condition est une déclaration qui est testée et jugée vraie ou fausse. Dans le cas ci-dessus, la condition est s'il y a un trou. Il est seulement possible qu'il y ait un trou ou qu'il n'y ait pas de trou, donc l'énoncé n'est jamais vrai ou faux.\n\nDites aux élèves qu'ils vont découvrir un nouveau type de boucle. Auparavant, les élèves n'utilisaient des boucles que pour répéter une commande un certain nombre de fois. Ici, ils ne sauront pas toujours combien de fois répéter la commande, cependant, ils sauront quand s'arrêter ou quand continuer. Les boucles While permettent au programmeur de répéter une commande tant qu'une condition est toujours vraie. Dans l'exemple précédent, la condition est l'existence d'un trou.\n\nS'il y a du temps, demandez aux élèves de discuter d'autres moments en utilisant une boucle while serait utile. Les exemples comprennent :"
+        },
+        "c4193bf0-446f-4812-beb9-b3884a1385c9": {
+          "name": "Aperçu des puzzles en ligne",
+          "description": "Choisissez un casse-tête parmi les énigmes en ligne de Code Studio d'aujourd'hui. Nous vous recommandons le nº 6.\n\n-   Demandez à la classe ce que la fermière doit faire lorsqu'elle arrive au tas de terre.\n     \\-Ellel doit faire une boucle while pour commencer à enlever la saleté.\n-   Utilisez le bloc « tant qu'il y a un tas / faire ». Demandez à la classe ce qu'elle doit faire dans la boucle while.\n    -   Elle doit « remove 1 » (en enlever 1). Elle continuera à \"enlever 1 saleté\" tant qu'il y en aura. En d'autres termes, lorsqu'il n'y a pas de saleté, « remove 1 » ne s'exécutera plus !\n\nRemplissez le reste du code et appuyez sur « Exécuter ». Discutez avec la classe des raisons pour lesquelles cela a fonctionné."
         },
         "0a565c10-633a-486e-9d62-f62933373bf7": {
-          "name": "Les Boucles Tant Que dans la Fermière"
+          "name": "Les Boucles Tant Que dans la Fermière",
+          "description": "Les boucles « while » ne sont pas toujours difficiles à comprendre pour les élèves, mais si vous pensez que votre classe pourrait avoir du mal avec, nous vous recommandons la programmation en binômes. Cela leur permettra de confronter leurs idées avant d'implémenter le code. La programmation en binômes permet de mieux comprendre et maitriser les boucles « while »."
         },
         "05e52524-87c5-4ce3-92ce-5d351618bc3f": {
           "progression_name": "Renforcement Des Compétences"
@@ -3509,13 +3349,19 @@
           "progression_name": "Défi"
         },
         "6751c001-d379-4682-8c2e-3eead4acba66": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "Demander aux élèves de résumer ce qu'ils ont appris, pourquoi c’est utile et s’ils pensent que cela peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu’ils pourront examiner plus tard.\n\n**Invites :**\n\n-   Sur quoi était le cours d'aujourd'hui ?\n-   Comment l’avez-vous trouvé ?\n-   Quelle est la différence entre une boucle « while » et une boucle « repeat » normale ?\n-   Donnez un exemple de puzzle dans lequel vous utiliseriez une boucle « while », mais pas une boucle « repeat ». Pouvez-vous donner un exemple de puzzle dans lequel vous utiliseriez une boucle « repeat », mais pas une boucle « while » ?"
         },
         "6ecd9736-c038-433f-bd11-18b7ae703bcd": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Dans cette leçon, les élèves créeront des boucles qui ne s'exécutent que « tant qu\"'une condition est vraie. Aidez les élèves à comprendre comment cela fonctionne en les dirigeant dans des activités de groupe et en leur faisant faire une action « tant qu'\"une condition est vraie. Par exemple : Demandez-leur de toucher leur nez « tant que » vous ne leur dites pas d'arrêter."
+        },
+        "21ce5499-3d29-40b9-8d79-184696838f2e": {
+          "description": "#### Aperçu des puzzles en ligne\n\nChoisissez un casse-tête parmi les énigmes Code Studio d'aujourd'hui. Nous recommandons le nº 4.\n\n-   Demandez à la classe ce que l'oiseau doit répéter pour atteindre le cochon.\n    -   L'oiseau doit répéter \"avancer\", \"tourner à droite\", \"avancer\", puis \"tourner à gauche\".\n-   Demandez à la classe ce qu'elle peut utiliser pour répéter ce code.\n    -   L'oiseau doit répéter ce schéma jusqu'à ce qu'il atteigne le cochon.\n\nRemplissez le reste du code en utilisant la boucle \"répéter jusqu'à\" et appuyez sur \"Exécuter\". Discutez avec la classe des raisons pour lesquelles cela a fonctionné."
         },
         "743e2b7a-0738-44b2-afb4-44a8f1e3edab": {
           "name": "Les Boucles Jusqu'à ce que dans le Labyrinthe",
+          "description": "#### Puzzles en ligne\n\nRassembler des concepts n'est pas facile, mais cet ensemble de leçons est destiné à aider les élèves à voir les possibilités infinies de codage lors de l'utilisation de conditions. Si les élèves ont du mal à comprendre les similitudes ou les différences entre les boucles « while » et les boucles « till », demandez-leur de réfléchir à la manière dont ils utiliseraient des énoncés similaires dans leur vie réelle.",
           "progression_name": "Renforcement Des Compétences"
         },
         "35caf44d-4c1f-4dd0-942d-27132dd2c2ee": {
@@ -3561,23 +3407,13 @@
           "name": "Programmation avec Angry Birds",
           "tips": [
             "Montrez aux élèves la bonne_façon_d'aider leurs camarades de classe :\n\n-   Ne vous asseyez pas sur la chaise de votre camarade de classe\n-   N'utilisez pas son clavier\n-   Ne touchez pas sa souris\n-   Demandez-lui la solution à haute voix avant de vous éloigner "
-          ],
-          "progression_name": "Vidéo - Intro Maze : Programmation avec des blocs "
+          ]
         },
         "65c4bba2-442b-4e0d-9264-aa5cb72e80e7": {
           "progression_name": "Renforcement Des Compétences"
         },
         "955d1fd6-b45a-4f4d-8c32-e60031f41935": {
           "progression_name": "Défi"
-        },
-        "5c2218aa-1499-47a7-a606-11c067735cc6": {
-          "progression_name": "S'entraîner"
-        },
-        "6ae01f75-c26d-432f-9775-8a1743d620d7": {
-          "progression_name": "Prédiction"
-        },
-        "02d18e9f-46ac-4658-8397-3896b78baea0": {
-          "progression_name": "S'entraîner"
         },
         "19367182-a8f0-442e-9a7d-e7852546f961": {
           "progression_name": "Défi"
@@ -3616,12 +3452,6 @@
         "f6ef0cac-d698-4ba1-9e6d-d6c00538c584": {
           "progression_name": "Défi"
         },
-        "73d03eeb-a7b1-4ee8-ad5b-85638d568511": {
-          "progression_name": "Prédiction"
-        },
-        "142926ac-9a7f-484f-975c-c0eceba04aa9": {
-          "progression_name": "S'entraîner"
-        },
         "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
           "progression_name": "Les Extras de la Leçon"
         },
@@ -3644,23 +3474,11 @@
           "name": "Collecter le Trésor avec Laurel",
           "description": "_Laurel l'aventurière_ cherche à ramasser autant de trésors que possible. Demandez aux élèves de parcourir le puzzle pour ramasser tout ce qu'ils peuvent. Certains niveaux vous demanderont de ne ramasser qu'un seul trésor, mais d'autres vous demanderont de les ramasser tous. Faites attention aux instructions pour savoir quoi faire ! "
         },
-        "ea56a346-7c58-4d03-a5bc-aa4021627e22": {
-          "progression_name": "Vidéo : Le collectionneur "
-        },
         "0474e6b4-d8ed-450d-a6ac-49d35b6d8872": {
           "progression_name": "Renforcement Des Compétences"
         },
         "18bc2d27-442d-405b-aafc-c5f9e0c767ca": {
           "progression_name": "Défi"
-        },
-        "c88b15d4-5935-4d02-b036-bd3107c97185": {
-          "progression_name": "S'entraîner"
-        },
-        "a68000ad-1ef6-4ac0-844e-ad079afe39cf": {
-          "progression_name": "Prédiction"
-        },
-        "c2b48d91-12cf-4c18-a151-031c08eb35ff": {
-          "progression_name": "S'entraîner"
         },
         "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
           "progression_name": "Les Extras de la Leçon"
@@ -3677,9 +3495,6 @@
           "name": "Créer de l'Art avec du Code",
           "description": "Dans cet ensemble de puzzles, l'artiste ne sera plus contraint à des angles de 90 degrés. Disposer de rapporteurs physiques peut aider les élèves à mieux visualiser les angles dont ils ont besoin. Sinon, la scène fournit des images des angles au fur et à mesure que l'élève sélectionne l'angle à utiliser. (Veuillez noter : les choix d'angle sont limités à deux dans le menu déroulant, ce qui réduit le nombre d'options que les étudiants doivent parcourir.)\n\nAvant d'envoyer les élèves aux ordinateurs pour travailler sur les énigmes, il peut être utile de faire une brève présentation de la façon d'utiliser les outils de ce niveau. Nous recommandons le puzzle 5 comme un bon puzzle pour montrer comment utiliser le rapporteur en ligne. "
         },
-        "c01e356b-bb48-45a6-bf67-5bcb3d959cc1": {
-          "progression_name": "Vidéo : Intro l'Artiste avec JR Hildebrand"
-        },
         "d9b1cf39-8041-44b2-a8f8-a2e396647ab2": {
           "progression_name": "Renforcement Des Compétences"
         },
@@ -3688,12 +3503,6 @@
             "Le huitième casse-tête demande aux élèves de dessiner un polygone à 6 côtés, ce qui peut être difficile pour certains. Nous leur recommandons d'essayer plusieurs fois, de demander à un camarade, puis de demander de l'aide à l'enseignant. Ci-dessous, une image qui pourrait leur être utile. "
           ],
           "progression_name": "Défi"
-        },
-        "47788922-c2b4-4cc7-8d02-73cc2fef49a4": {
-          "progression_name": "S'entraîner"
-        },
-        "fb2a62da-1fec-4b1a-ba16-928a6a541f22": {
-          "progression_name": "Prédiction"
         },
         "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
           "progression_name": "Les Extras de la Leçon"
@@ -3726,19 +3535,10 @@
           ]
         },
         "af6b778e-d5bf-4e72-bc11-ac8f839bf656": {
-          "progression_name": " Introduction au Labo des Sprites"
-        },
-        "cc4cf469-32ea-4a00-9080-7726f48f08c6": {
-          "progression_name": "Prédiction"
+          "progression_name": " Introduction au Labo des Lutins"
         },
         "90de173c-642d-4906-a7fe-c3d9ad3123ec": {
           "progression_name": "Renforcement Des Compétences"
-        },
-        "d1a6e3d2-6cc4-4231-a51d-92291b64b2bb": {
-          "progression_name": "Vidéo : Comment créer un sprite"
-        },
-        "a8372901-5a6f-40c1-88ec-bf6c62c79c95": {
-          "progression_name": "S'entraîner"
         },
         "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
           "progression_name": "Activité libre"
@@ -3796,7 +3596,7 @@
         },
         "456f3d6e-f3ff-4217-9ff9-891d66f8f18f": {
           "description": "#### Vidéo : les Sprites en action (3 minutes)\n\n**Faites ceci :** Lisez la vidéo « Sprites en action » ",
-          "progression_name": "Vidéo : Les Sprites en Action"
+          "progression_name": " Les Lutins en Action"
         },
         "00b7c8be-fa03-430e-9c7c-18c4890ac747": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
@@ -3833,6 +3633,22 @@
         "8970ddea-49ba-429a-9607-6239c33e06be": {
           "name": "Réflexion"
         },
+        "9886bd75-e2c9-419e-8818-f4373a296270": {
+          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
+        },
+        "af98f91b-4ac2-4500-97b0-2437e960cb76": {
+          "description": "Aujourd'hui, nous allons faire quelque chose de vraiment créatif. Comment préférez-vous exprimer votre créativité ?"
+        },
+        "2a089231-5563-4b8e-a861-8faf4bda0cf5": {
+          "description": "Encouragez les élèves à partager les façons dont ils expriment leur créativité, par exemple avec l'art, la danse, la musique, l'écriture.\n\nExpliquez qu'aujourd'hui, nous allons être créatifs avec notre code. Tout comme choisir le type de couleurs de peinture à utiliser ou les types de mots avec lesquels vous écrivez peut exprimer votre créativité, choisir le code que vous écrivez et comment les gens interagissent avec celui-ci peut également être une opportunité d'exprimer votre créativité !\n\n**Get up and dance :** Annoncez à la classe qu'aujourd'hui, nous allons voir comment combiner le codage et la danse de manière créative. Demandez à vos élèves de créer différents mouvements créatifs pendant 10 secondes pour les mettre dans l'ambiance. Vous pouvez mettre une chanson de cette **\\*Liste de lecture Spotify** pour vous aider à démarrer. Capturez les mouvements de votre classe en vidéo. "
+        },
+        "88b00482-3c11-4079-9869-faaa51c340c2": {
+          "name": "Créez votre propre soirée dansante",
+          "description": "#### Filtrage de musique\n\nCe tutoriel présente des chansons d'artistes connus. Pour obtenir un aperçu de la liste des chansons de ce didacticiel, consultez cette **\\*Liste de lecture Spotify.** Nous utilisons des versions radio-safe de toutes les chansons. Pour les étudiants de moins de 13 ans, nous limitons la musique à cette liste filtrée. Si vous souhaitez utiliser la liste filtrée avec des élèves plus âgés, vous pouvez partager **\\*Spotify Playlist** avec votre classe."
+        },
+        "3784bbbc-0c26-4337-9d77-805b9a2bb6ae": {
+          "name": "Assistance niveau après niveau"
+        },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "Événements"
         },
@@ -3841,7 +3657,7 @@
         },
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "tips": [
-            null
+            "À ce stade de la leçon, vous remarquerez peut-être que les instructions sont moins normatives. Encouragez les élèves à faire preuve de créativité et à explorer les nouveaux blocs qui sont introduits. À partir de ce moment, le code de l'élève n'est **pas vérifié pour l'exactitude** afin d'encourager l'expérimentation au lieu de résoudre une tâche précise."
           ],
           "progression_name": "Propriétés"
         },
@@ -3852,13 +3668,16 @@
           "progression_name": "Les Extras de la Leçon"
         },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "Demander aux élèves de résumer ce qu'ils ont appris, pourquoi c'est utile et ce qu'ils en pensent, peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu'ils pourront consulter plus tard.\n\n**Invites :**\n\n-   Qu'est-ce que vous avez apprécié dans l'activité d'aujourd'hui ?\n\n-   Quel est le lien entre la créativité et l'informatique ?\n\n-   Qu'est-ce que CS et pourquoi est-ce important."
         },
         "163a2d46-638a-490a-81b4-f34a3d78a096": {
-          "name": "Opportunité interdisciplinaire "
+          "name": "Opportunité interdisciplinaire ",
+          "description": "### Survie des danseurs (45-60 minutes)\n\n![](https://images.code.org/f3f1ac23b2159ea18328486c61a7cf24-scienceSmall.png)\n**Informatique + Sciences**\n\n[Survival of the Dancers](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing) est une activité facultative alignée sur les normes scientifiques de la prochaine génération, écrites par notre communauté d'enseignants. À l'aide de Dance Party, les élèves sélectionneront au moins un organisme (danseur) bien adapté à l'environnement (monde) qu'ils créent. Les élèves sont encouragés à utiliser les blocs de code « propriétés » pour personnaliser les caractéristiques de chaque organisme (danseur).\n\n_Normes abordées :_\n\n-   **NGSS.3-LS4-2 :** Utiliser des preuves pour élaborer une explication sur la façon dont les variations des caractéristiques entre les individus de la même espèce peuvent offrir des avantages pour survivre, trouver des partenaires et se reproduire.\n\n-   **NGSS.3-LS4-3 :** Construire un argument avec la preuve que dans un habitat particulier, certains organismes peuvent bien survivre, d'autres moins bien et certains ne peuvent pas survivre du tout.\n\n-   **EXTENSION FACULTATIVE : NGSS.3-LS4-4 :** Faire valoir le bien-fondé d'une solution à un problème causé lorsque l'environnement change et que les types de plantes et d'animaux qui y vivent peuvent changer."
         },
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Si vous êtes à l'aise, présentez _BB-8_ de _Star Wars_. De nombreux enfants connaissent peut-être l'adorable robot, mais le présenter leur fera sûrement plaisir.\n\nPrenez les puzzles en ligne et choisissez-en un à faire en classe. Nous recommandons le nº 10 pour son modèle en escalier. Demandez aux élèves d'écrire un programme pour résoudre le casse-tête sur papier. Demandez.leur aussi d'encercler les morceaux répétés et de les étiqueter avec le nombre de répétitions."
         },
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
           "name": "Les Boucles avec Rey et BB-8",
@@ -3873,14 +3692,19 @@
         "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
           "progression_name": "Les Extras de la Leçon"
         },
+        "a26945ef-9b81-4b37-96f8-c18304af3332": {
+          "description": "Au fur et à mesure que les élèves résolvent les énigmes, voyez s'ils peuvent déterminer combien de blocs ils utilisent avec une boucle plutôt que de ne pas utiliser de boucle. **\\*Student Video** fonctionne très bien avec cet ensemble de puzzles car il existe plusieurs façons de remplir les boucles. Encouragez une discussion amicale entre les paires en cas de désaccord sur la façon de résoudre le casse-tête. Demandez aux élèves de se poser des questions telles que :\n\n-   _Comment avez-vous trouvé cette solution ?_\n-   _Quels sont les avantages de résoudre le puzzle de cette façon ?_\n\nNous recommandons également d'avoir du papier à portée de main pour que les élèves écrivent leur code et trouvent des répétitions à utiliser dans les boucles."
+        },
         "8953de3d-a49f-4c4f-81e4-bcfbbc0baa3e": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "Demander aux élèves de résumer ce qu'ils ont appris, pourquoi cela est utile et ce qu'ils en pensent, peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu’ils pourront examiner plus tard.\n\n**Invites :**\n\n-   Sur quoi était le cours d'aujourd'hui ?\n-   Comment vous êtes-vous senti pendant le cours d'aujourd'hui ?\n-   Comment les boucles ont-elles facilité l'écriture de votre programme ?\n-   Pensez à quelque chose qui se répète encore et encore. À quoi pourrait ressembler ce programme ?"
         },
         "0562eeb9-b4a4-457c-b549-dfc5950ba9f6": {
           "description": "Utilisez ces activités pour améliorer l'apprentissage des élèves. Ils peuvent être utilisés en dehors des activités de classe ou autre enrichissement.\n\n\\*\\* Ça bouge beaucoup \\*\\*\n\n-   Donnez aux élèves des photos d'actions ou de mouvements de danse qu'ils peuvent faire.\n    -   Demandez-leur d'organiser des mouvements et d'ajouter des boucles pour chorégraphier leur propre danse.\n-   Visionnez-les ensuite avec le reste de la classe.\n\n**Reconnection**\n\n-   Trouvez des vidéos YouTube de danses populaires qui se répètent.\n-   Votre classe peut-elle trouver les boucles ?\n-   Essayez la même chose avec des chansons !"
         },
         "63067b3c-f088-46f7-a3af-7feb4225a2ac": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Les élèves devraient bien connaittre les boucles à ce stade. En fonction de ce dont vous pensez que votre classe pourrait bénéficier, nous vous recommandons :\n\n-   Créer une danse en mettant des pas répétés en boucle.\n-   En classe, parcourir un puzzle de la dernière leçon, \"Loops with Rey and BB-8\".\n-   Revoir comment utiliser Artist en jouant à un puzzle de \"Créer de l'art avec du code\".\n-   Regarder un puzzle de cette leçon.\n\nToutes ces options passeront en revue les boucles ou l'artiste, ce qui aidera à préparer votre classe à s'amuser avec les puzzles en ligne !"
         },
         "049d42a9-4582-4ba6-8083-2605a7584613": {
           "name": "L'Art de l'Autocollant avec les Boucles",
@@ -3895,8 +3719,15 @@
         "ea33c4e3-5280-41e4-9496-1dc01d2fcbd3": {
           "progression_name": "Activité libre"
         },
+        "2ac3318e-254b-47cc-ac59-28cd8b7cc622": {
+          "description": "Certains élèves peuvent découvrir où ajouter des boucles de « répétition » en écrivant le programme sans boucles, puis en encerclant les sections de répétitions. Si vous penser que cela peut aider vos élèves, demandez-leur de garder du papier et des crayons à côté d'eux sur leur ordinateur, ou s'ils veulent de les faire dessiner certaines formes et figures sur papier avant de les programmer en ligne. (Lorsque vous dessinez des tampons, il peut être plus facile de symboliser ceux avec des formes simples comme des cercles et des carrés.)"
+        },
         "c40cef20-3f9c-4084-8440-4394cc4ea03a": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "Demander aux élèves de résumer ce qu'ils ont appris, pourquoi c'est utile et ce qu'ils en pensent, peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu'ils pourront consulter plus tard.\n\n**Invites :**\n\n-   De quoi parlait la leçon d'aujourd'hui ?\n-   Qu'avez-vous ressenti pendant la leçon d'aujourd'hui ?\n-   Quelle est la forme ou la silhouette la plus cool que vous ayez programmée aujourd'hui ? Dessinez-la !\n-   Quelle autre forme ou figure aimeriez-vous programmer ? Pouvez-vous trouver le code pour la créer?"
+        },
+        "c3334d37-d450-44ad-9d39-2e6a3880256b": {
+          "description": "### Formes en boucle et leurs fonctions (45-60 minutes)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png) **Informatique + Arts de la langue anglaise + Mathématiques + Sciences**\n\n[\\*\\*Loopy Forms & Their Functions\\*\\*](https://docs.google.com/document/d/1F2wNw1yUfaob_-PXLN_A7k0mm0uSaa7fYtMhGJOC95U/edit) est une activité facultative alignée sur Common Core ELA, Common Core Math et Next Generation Science Standards, écrite par notre communauté d'enseignants. L'artiste doit aider ses amis à concevoir leur maison en dessinant des plans. Il est important que les élèves comprennent les formes de base et comment chaque forme remplit différentes fonctions dans les plans de la maison. Ils rédigeront ensuite des articles d'opinion, fourniront des raisons et utiliseront des mots de liaison pour justifier leurs choix de conception.\n\n_Normes abordées :_\n\n-   **CCSS.ELA-LITERACY.W.2.1 :** Rédigez des articles d'opinion dans lesquels ils présentent le sujet ou le livre sur lequel ils écrivent, expriment une opinion, fournissent des raisons qui soutiennent l'opinion, utilisent des mots de liaison (par exemple, parce que, et, aussi) pour relier l'opinion et les raisons, et fournir une déclaration ou une section de conclusion.\n\n-   **CCSS.MATH.CONTENT.2.GA1 :** Reconnaître et dessiner des formes ayant des attributs spécifiés, comme un nombre donné d'angles ou un nombre donné de faces égales.1 Identifier des triangles, des quadrilatères, des pentagones, des hexagones et cubes.\n\n-   **NGSS.K-2-ETS1-2 :** Développez un croquis, un dessin ou un modèle physique simple pour illustrer comment la forme d'un objet l'aide à fonctionner selon les besoins pour résoudre un problème donné."
         },
         "05c7c3a3-3378-4904-9136-be16d24330a3": {
           "name": "Introduction",
@@ -3917,14 +3748,17 @@
           "description": "Demander aux élèves de résumer ce qu'ils ont appris, pourquoi c'est utile et ce qu'ils en pensent, peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu'ils pourront consulter plus tard.\n\n**Invites :**\n\n-   Sur quoi était le cours d'aujourd'hui ?\n-   Comment l'avez-trouvé ?\n-   Qu'est-ce qu'une boucle imbriquée ?\n-   Pouvez-vous dessiner un puzzle qui utiliserait une boucle imbriquée ? Essayez de coder la solution de votre propre puzzle. "
         },
         "219bed13-d21f-4886-ac11-47ae6eb56005": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Demandez à la classe de discuter de la dernière série de puzzles.\n\n-   Qu'est-ce qu'ils ont aimé / détesté ?\n-   Quels puzzles étaient difficiles ? Pourquoi ?\n-   Quels puzzles étaient faciles ? Pourquoi ?\n-   Si vous deviez enseigner des boucles imbriquées à un ami, que lui diriez-vous pour l'aider à comprendre ?\n\nS'il reste du temps, donnez une introduction aux personnages principaux des puzzles d'aujourd'hui, Anna et Elsa de Frozen. Racontez à la classe l'histoire de sa sœur si la classe ne le sait pas déjà. Pour susciter l'enthousiasme, dites à la classe qu'ils utiliseront des boucles imbriquées pour faire de superbes dessins avec les patins à glace d'Anna et d'Elsa !"
         },
         "89a3d9b1-6f7c-4581-8abc-9d6501a009cc": {
           "name": "Les Flocons de Neige avec Anna et Elsa",
+          "description": "Cet ensemble de puzzles est configuré comme une progression. Cela signifie que chaque puzzle sert de base au prochain. Vos élèves aimeront faire des créations de plus en plus intéressantes en apportant de petites et simples modifications au code qu'ils ont déjà écrit.",
           "progression_name": "Renforcement Des Compétences"
         },
         "d1f0e984-22d3-4086-978b-0e830c9cc6c9": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "Demandez aux élèves de résumer ce qu'ils ont appris, pourquoi c’est utile et ce qu'ils en pensent, peut les aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision pour plus tard.\n\n**Invites :**\n\n-   Sur quoi était le cours d'aujourd'hui ?\n-   Comment l’avez-trouvé ?\n-   Quand se sert-on d'une boucle ? Et une boucle imbriquée ?\n-   En quoi le code de votre flocon de neige serait-il différent si vous n'utilisiez qu'une seule boucle ? Pas de boucles ? Pouvez-vous donner un exemple? "
         },
         "a608e3c1-c749-4463-b478-51d339fab447": {
           "name": "Introduction",
@@ -3942,16 +3776,19 @@
           "progression_name": "Activité libre"
         },
         "a8610908-835c-4ecf-87b2-0f10e7381e88": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "Demander aux élèves de résumer ce qu'ils ont appris, pourquoi c’est utile et ce qu'ils en pensent, peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu’ils pourront examiner plus tard.\n\n**Invites :**\n\n-   Dessinez un visage expressif pour montrer ce que vous avez ressenti pendant la leçon d'aujourd'hui.\n-   Dessinez autre chose que vous auriez pu construire dans ce monde _minecraft_.\n-   Pouvez-vous dessiner une scène où quelqu'un utilise une condition ?"
         },
         "d1347fb6-5a79-4474-a27c-712a5e38d5a6": {
           "description": "Utilisez ces activités pour améliorer l'apprentissage des élèves. Ils peuvent être utilisés en dehors des activités de classe ou autres.\n\n#### Plus de Minecraft\n\nSi vous trouvez que votre classe aime vraiment l'environnement _Minecraft_, [voici quelques liens vers d'autres jeux \\_Minecraft\\_ auxquels ils peuvent jouer en ligne](https://code.org/minecraft). Ces jeux leur enseigneront également les compétences de base en matière de codage. "
         },
         "888667b6-71ac-4d2f-81df-ac6b8769f8b8": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Nous allons utiliser des **conditions** avec l'_abeille_ de Code.org pour l'aider à faire face à des nuages mystérieux. Nous ne savons pas si ses fleurs ont du nectar ou non, nous devrons donc utiliser des conditions pour nous assurer que nous recueillons du nectar s'il est là, mais que nous n'essayons pas de recueillir le nectar d'une fleur qui n'en a pas tout.\n\nPrenez un puzzle de cette leçon, nous recommandons le nº 9.\n\n-   Demandez à la classe ce que l'abeille doit faire lorsqu'elle arrive au nuage.\n    -   L'abeille doit utiliser une condition pour trouver une fleur ou une ruche\n-   Utilisez le bloc if at flower / else. Demandez à la classe ce que l'abeille doit faire s'il y a une fleur. S'il n'y a pas de fleur, il y aura une ruche. Que doit faire l'abeille alors ?\n    -   L'abeille doit récolter du nectar s'il y a une fleur et faire du miel s'il y a une ruche.\n\nRemplissez le reste du code et appuyez sur Exécuter. Discutez avec la classe des raisons pour lesquelles cela a fonctionné."
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
-          "name": "« Si/Sinon » avec l'Abeille"
+          "name": "« Si/Sinon » avec l'Abeille",
+          "description": "Ces énigmes peuvent engendrer certaines questions, alors demandez aux élèves de travailler en binômes ou d'appliquer la règle \"Demandez à trois personnes avant de me demander à moi\" (Demandez-leur de demander de l'aide à trois autres camarades avant d'aller voir l'enseignant.) . Cela suscitera des discussions et ils comprendront mieux."
         },
         "c622f540-96a1-4448-9a80-18850f23abdd": {
           "progression_name": "  Instructions « si »"
@@ -3972,16 +3809,19 @@
           "progression_name": "Les Extras de la Leçon"
         },
         "50020a45-10c5-4b0c-ba08-b54004bdcaa8": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "Demander aux élèves de résumer ce qu'ils ont appris, pourquoi c'est utile et ce qu'ils en pensent, peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu'ils pourront consulter plus tard.\n\n**Invites :**\n\n-   De quoi parlait la leçon d'aujourd'hui ?\n-   Qu'avez-vous ressenti lors de la leçon d'aujourd'hui ?\n-   Quelles conditionsavez-vous utilisées dans votre code aujourd'hui ?\n-   Quelles autres conditions une abeille pourrait-elle utiliser ? Les exemples comprennent:\n    -   s'il y a un arbre devant moi, bourdonner à l'écart\n    -   si mon aile est blessée, rester au sol\n    -   si je vois une autre abeille, lui dire \"Bonjour !\""
         },
         "e7f9ff18-d88c-49c8-95d3-e3a89cda7675": {
           "description": "Utilisez ces activités pour améliorer l'apprentissage des élèves. Ils peuvent être utilisés en dehors des activités de classe ou autre.\n\n\\*\\* Tag vrai / faux \\*\\* \n\n-   Alignez les élèves comme pour jouer au [Red Light / Green Light](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Sélectionnez une personne pour venir devant en tant qu'appelant.\n-   L'appelant choisit une condition et demande à tous ceux qui remplissent cette condition de faire un pas en avant.\n    -   Si vous avez une ceinture rouge, avancez.\n    -   Si vous mettez des sandales, faites un pas en avant.\n-   Essayez de le changer en disant des choses comme \"Si vous n'êtes pas blonde, avancez.\"\n\n\\*\\* Imbrication \\*\\*\n\n-   Divisez les élèves en binômes ou en petits groupes.\n-   Demandez-leur d'écrire si des déclarations pour jouer aux cartes sur des bandes de papier, telles que :\n    -   Si la requête est un trèfle\n    -   Si la couleur est rouge\n-   Demandez aux élèves de faire des bandes similaires pour les résultats.\n    -   Ajouter un point\n    -   Soustrayez un point\n-   Demandez ensuite aux élèves de choisir trois de chaque type de bande et trois cartes à jouer, en faisant attention à l'ordre sélectionné.\n-   À l'aide de trois feuilles de papier, demandez aux élèves d'écrire trois programmes différents en utilisant uniquement les jeux de bandes qu'ils ont sélectionnés, dans n'importe quel ordre.\n    -   Encouragez les élèves à mettre certaines déclarations if dans d'autres déclarations if.\n-   Les élèves doivent maintenant parcourir les trois programmes en utilisant les cartes qu'ils ont tirées, dans le même ordre pour chaque programme.\n    -   Deux programmes ont-ils renvoyé la même réponse ?\n    -   Y a-t-il eu quelque chose de différent ?"
         },
         "c75f92ab-cfc1-481f-b93a-c6496cd99709": {
-          "name": "Introduction"
+          "name": "Introduction",
+          "description": "Utilisez « while » dans une phrase devant les élèves et demandez-leur ce que cela veut dire. Si vous deviez dire _\" tant qu'il y a un trou, remplissez-le de terre \"_ que feraient-ils ? Combien de temps le feraient-ils ?\n\nLorsque vous utilisez un mot comme « while », vous comptez sur une condition pour indiquer à l'ordinateur combien de temps la boucle doit s'exécuter. Une condition est une déclaration qui est testée et jugée vraie ou fausse. Dans le cas ci-dessus, la condition est s'il y a un trou. Il est seulement possible qu'il y ait un trou ou qu'il n'y ait pas de trou, donc l'énoncé n'est jamais vrai ou faux.\n\nDites aux élèves qu'ils vont découvrir un nouveau type de boucle. Avant, ils n'utilisaient des boucles que pour répéter une commande un certain nombre de fois. Ici, ils ne sauront pas toujours combien de fois répéter la commande, cependant, ils sauront quand s'arrêter ou quand continuer. Les boucles While permettent au programmeur de répéter une commande tant qu'une condition est vraie. Dans l'exemple précédent, la condition est l'existence d'un trou.\n\nS'il y a du temps, demandez-leur de discuter d'autres moments en utilisant une boucle while serait utile. Les exemples comprennent:\n\n-   Courir vers une balle alors qu'elle est devant vous.\n-   Remplir un verre pendant qu'il a de la place pour plus de liquide.\n-   Avancer tant qu'il y a un chemin devant vous.\n\n### Aperçu des puzzles en ligne\n\nPrenez-en un parmi ceux en ligne de Code Studio d'aujourd'hui. Nous recommandons le nº 6.\n\n-   Demandez à la classe ce que la fermière doit faire lorsqu'elle atteint le tas de terre.\n    -   Elle doit utiliser une boucle while pour commencer à enlever la saleté.\n-   Utilisez la tant qu'il y a un bloc pile/do. Demandez à la classe ce qu'elle doit faire dans la boucle while.\n    -   Elle doit en retirer 1. Elle continuera à \"enlever 1 saleté\" tant qu'il y en aura. En d'autres termes, lorsqu'il n'y a pas de saleté, remove 1 ne s'exécutera plus !\n\nRemplissez le reste du code et appuyez sur Exécuter. Discutez avec la classe des raisons pour lesquelles cela a fonctionné."
         },
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
-          "name": "Les Boucles Tant Que dans la Fermière"
+          "name": "Les Boucles Tant Que dans la Fermière",
+          "description": "Les boucles « while » ne sont pas toujours difficiles à comprendre pour les élèves, mais si vous pensez que votre classe pourrait avoir du mal avec, nous vous recommandons la programmation en binômes. Cela leur permettra de confronter leurs idées avant d'implémenter le code. La programmation en binômes permet de mieux comprendre et maitriser les boucles « while »."
         },
         "23b4fc9a-484e-482b-856b-cb48acb73dcb": {
           "progression_name": "Renforcement Des Compétences"
@@ -3999,14 +3839,16 @@
           "progression_name": "Les Extras de la Leçon"
         },
         "4860c6c5-d580-4865-a582-3c33cdb8e4da": {
-          "name": "Réflexion"
+          "name": "Réflexion",
+          "description": "Demander aux élèves de résumer ce qu'ils ont appris, pourquoi c’est utile et s’ils pensent que cela peut aider à consolider les connaissances qu'ils ont acquises aujourd'hui et à créer une feuille de révision qu’ils pourront examiner plus tard.\n\n**Invites :**\n\n-   Sur quoi était le cours d'aujourd'hui ?\n-   Comment l’avez-vous trouvé ?\n-   Quelle est la différence entre une boucle « while » et une boucle « repeat » normale ?\n-   Donnez un exemple de puzzle dans lequel vous utiliseriez une boucle « while », mais pas une boucle « repeat ». Pouvez-vous donner un exemple de puzzle dans lequel vous utiliseriez une boucle « repeat », mais pas une boucle « while » ?"
         },
         "dc1332e9-8b48-4325-a310-3de22c787e7d": {
           "name": "Introduction",
           "description": "Regroupez toute la classe et demandez à deux volontaires de marcher tout droit dans une certaine direction dans la salle de classe. S'ils voient une chaise déplacée, ils doivent l'enjamber. S'ils atteignent un mur, ils doivent s'asseoir.\n\nUne fois que tous les élèves seront assis, demandez comment vous programmeriez un robot pour qu'il réponde à un mur ou à une chaise. Rappelez aux élèves que vous ne pouvez pas simplement dire « Enjambe la chaise » à moins que vous ne sachiez qu'il y a une chaise, et vous ne saurez pas toujours qu'il y a une chaise. Il peut être utile de traduire la tâche en instructions telles que :\n\n-   tant qu'il y a un chemin à parcourir\n    -   avancer\n    -   s'il y a une chaise, l'enjamber\n-   s'asseoir\n\nDites aux élèves qu'ils utiliseront des conditions pendant cette leçon. Donnez la définition de :\n\n-   **Condition** : une déclaration qu'un programme vérifie pour voir si elle est vraie ou fausse. Si vrai, une action est entreprise. Sinon, l'action est ignorée.\n-   **Conditions** : instructions qui ne s'exécutent que sous certaines conditions.\n\nOuvrez une discussion pour voir quand vous pourrez utiliser une condition dans votre code. "
         },
         "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
-          "name": "Les Conditions dans Minecraft : Voyage Aquatique"
+          "name": "Les Conditions dans Minecraft : Voyage Aquatique",
+          "description": "Les élèves vont se régaler avec cette leçon. Il est probable que la plupart de vos élèves aient entendu parler de _Minecraft_, mais faites une brève introduction pour ceux qui connaitraient pas.\n\n_Minecraft_ est un jeu de cubes. Vous pouvez incarner Alex ou Steve pendant que vous travaillez dans des labyrinthes. Vous devrez éviter la lave, ramasser des objets et explorer un monde composé de cubes de choses.\n\nMontrez l'une des énigmes à la classe. Une fois que toutes les questions ont été traitées, faites passer les élèves aux ordinateurs et laissez-les commencer la programmation en binôme. "
         },
         "0c1c356b-b51e-49e9-902a-9bb743c4acbc": {
           "progression_name": "Renforcement Des Compétences"
@@ -4197,10 +4039,10 @@
           "progression_name": "Vérifier"
         },
         "7d22dea9-9b88-47a4-a697-1c836bf6f2e5": {
-          "progression_name": " Boucles « Pour »"
+          "progression_name": "Exploration: Boucles « Pour »"
         },
         "387d8104-557d-4700-bdef-2c8ea2855b07": {
-          "progression_name": " Boucles « Pour »"
+          "progression_name": "Video: Les Boucles « Pour »"
         },
         "a6fa76d1-aeb7-4caa-ac1c-274d1b823ea2": {
           "progression_name": "Renforcement Des Compétences"
@@ -4220,7 +4062,7 @@
           "tips": [
             "Ces puzzles sont super amusants, mais ça peut être bien pour les élèves d'avoir des rapporteurs, des crayons et du papier brouillon pour voir leurs dessins représentés physiquement. Sinon, faites-les les tracer sur l'écran de l'ordinateur avec leurs doigts."
           ],
-          "progression_name": " Boucles « Pour »"
+          "progression_name": "Video: Les Boucles « Pour »"
         },
         "7d78c293-a385-49ee-a08a-1e0a02b185aa": {
           "progression_name": "Exploration"
@@ -4420,6 +4262,7 @@
           "name": "Les Boucles avec Laurel"
         },
         "b8fea05b-6234-4075-8416-bbfdef9e22f0": {
+          "name": "Puzzles en ligne ",
           "description": "Au fur et à mesure que les élèves résolvent les énigmes, voyez s'ils peuvent déterminer combien de blocs ils utilisent avec une boucle par rapport à sans boucle. "
         },
         "9aa00264-eca7-4093-92fb-60d301554a5b": {
@@ -4575,7 +4418,7 @@
           ]
         },
         "331e6451-5472-4491-bf96-d630d7f902a4": {
-          "progression_name": " Introduction au Labo des Sprites"
+          "progression_name": " Introduction au Labo des Lutins"
         },
         "56aebeea-5b5c-4acd-838c-2906fbf5700d": {
           "progression_name": "Renforcement Des Compétences"
@@ -4596,7 +4439,7 @@
           ]
         },
         "1620d22b-10cf-4c91-bb52-cda64a75b666": {
-          "progression_name": "Vidéo : Sprites en action"
+          "progression_name": " Les Lutins en Action"
         },
         "5661328f-256c-4f27-988b-ea102fde1cbd": {
           "progression_name": "Renforcement Des Compétences"

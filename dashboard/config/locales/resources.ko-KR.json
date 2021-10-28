@@ -26,8 +26,14 @@
         "text_and_prompts/coursef/2021": {
           "name": "텍스트 저장 및 검색"
         },
+        "pause_and_think_online/coursef/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "재미있는 반복"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "For 루프 펀 - 평가 답안지"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "재미있는 반복"
@@ -41,17 +47,32 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "재미있는 반복"
         },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": "언플러그드 블록 (과정 C-F)"
+        },
         "running-simulations/coursef/2021": {
           "name": "시뮬레이션 실행"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "인터넷"
         },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "IP 주소 카드 및 배송 유형 카드"
+        },
         "csf-internet-assessment/coursef/2021": {
           "name": "인터넷"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "인터넷"
+        },
+        "design-process/coursef/2021": {
+          "name": "설계 프로세스"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "최종 프로젝트 설계"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "CS 기초 최종 프로젝트"
         },
         "implementation_guide/coursef/2021": {
           "name": "수업 가이드"
@@ -77,8 +98,26 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "움직여 움직여"
         },
+        "feeling-faces-image/courseb/2021": {
+          "name": "느낌 얼굴"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "드래그 드롭 연습"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Code.org에서 학급 섹션 만드는 방법"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "언플러그드 블로클리 블록 (K-1학년)"
+        },
         "pair-programming-vid/courseb/2021": {
           "name": "페어 프로그래밍"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "해피 맵 게임 조각"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "컴퍼스 로즈"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "스티비와 큰 프로젝트"
@@ -98,6 +137,12 @@
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "반복시키기"
         },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "CS 기초 메인 활동 팁"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
         "unplugged-video-big-event/courseb/2021": {
           "name": "큰 이벤트"
         },
@@ -106,6 +151,9 @@
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "큰 이벤트"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "빅 이벤트 (과정 A, B)"
         },
         "implementation_guide/courseb/2021": {
           "name": "수업 가이드"
@@ -122,6 +170,30 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "즐거운 맵"
         },
+        "happy-map-cards/coursea/2021": {
+          "name": "해피 맵 카드"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "해피 맵 카드"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "해피 맵 게임 조각"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "언플러그드 블로클리 블록 (K-1학년)"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "해피 맵 카드 XL"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "해피 맵 게임 조각 보너스 팩"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "느낌 얼굴"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
         "unplugged-video-big-event/coursea/2021": {
           "name": "큰 이벤트"
         },
@@ -130,6 +202,12 @@
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "큰 이벤트"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "빅 이벤트 (과정 A, B)"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "CS 기초 메인 활동 팁"
         },
         "implementation_guide/coursea/2021": {
           "name": "수업 가이드"
@@ -155,8 +233,17 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "내 로봇 친구"
         },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "언플러그드 미로 블록"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "페어 프로그래밍"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "CS 기초 메인 활동 팁"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": "언플러그드 블록 (과정 C-F)"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "큰 이벤트"
@@ -166,6 +253,15 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "큰 이벤트"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "빅 이벤트 (과정 C)"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "비트 대 바이트"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "2진 팔찌"
@@ -230,11 +326,26 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "릴레이 프로그래밍"
         },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": "언플러그드 블록 (과정 C-F)"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "느낌 얼굴"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "조건선택 카드"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "조건선택 카드"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "카드 조건문 샘플 프로그램"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "조건선택 카드"
@@ -254,6 +365,9 @@
         "teacher_forum_1/coursed/2021": {
           "name": "교사용 포럼"
         },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "언플러그드 미로 블록"
+        },
         "pair_programming/express/2021": {
           "name": "페어 프로그래밍"
         },
@@ -269,11 +383,23 @@
         "sprites_in_action/express/2021": {
           "name": "스프라이트 인 액션"
         },
+        "pause_and_think_online/express/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": "언플러그드 블록 (과정 C-F)"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": "언플러그드 블록 (과정 C-F)"
+        },
         "text_and_prompts/express/2021": {
           "name": "텍스트 저장 및 검색"
         },
         "variables_video/express/2021": {
           "name": "변수"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "CS 기초 최종 프로젝트"
         },
         "teacher_forum_1/express/2021": {
           "name": "교사용 포럼"
@@ -281,14 +407,59 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "페어 프로그래밍"
         },
+        "class-section-video/pre-express/2021": {
+          "name": "Code.org에서 학급 섹션 만드는 방법"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "느낌 얼굴"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "교사용 포럼"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "스프라이트 랩 문서화"
         },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "잠시 멈추고 생각하기 온라인"
+        },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "디지털 공유 레슨 플랜"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "name": "디지털 공유 윤리 (동영상)"
+        },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "함수로 작사"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "함수 언플러그드:작사"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "함수 언플러그드:작사"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "함수 언플러그드:작사"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "함수 언플러그드:작사"
+        },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": "언플러그드 블록 (과정 C-F)"
+        },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "접근가능성을 위한 설계"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "CS 기초 최종 프로젝트"
+        },
+        "design-process/coursee/2021": {
+          "name": "설계 프로세스"
+        },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "학생들이 그들이 알고 있는 내용을 보여주는 72가지 창의적인 방법"
         },
         "implementation_guide/coursee/2021": {
           "name": "수업 가이드"

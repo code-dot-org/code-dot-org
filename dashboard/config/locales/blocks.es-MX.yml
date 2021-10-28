@@ -1777,6 +1777,16 @@ es-MX:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Helado
+            Stars: Estrellas
+            Fireworks: Fuegos artificiales
+            '"rainbow"': Arcoíris
+            '"hearts"': Corazones
+            '"flowers"': Flores
+            '"waves"': Olas
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1788,6 +1798,10 @@ es-MX:
         text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
       Poetry_playSound:
         text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            Break: Interrumpir
+            Light: Luz
       Poetry_setBackground:
         text: establecer color de fondo {COLOR}
       Poetry_setBackgroundEffect:
@@ -1798,6 +1812,10 @@ es-MX:
             '"space"': Espacio
             '"stars"': Estrellas
             '"ripples"': Ondas
+            '"rain"': Lluvia
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts"': Corazones coloridos
           PALETTE:
             '"rainbow"': Arcoíris
       Poetry_setBackgroundImageAs:

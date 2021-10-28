@@ -9,10 +9,12 @@ import {
 import i18n from '@cdo/locale';
 import {expect} from '../../../util/deprecatedChai';
 import {shallow, mount} from 'enzyme';
+import experiments from '@cdo/apps/util/experiments';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
   sortRows
 } from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import ManageCodeReviewGroups from '@cdo/apps/templates/manageStudents/ManageCodeReviewGroups';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
@@ -59,32 +61,68 @@ describe('ManageStudentsTable', () => {
     expect(sortedList[3].id).to.equal(3);
   });
 
-  it('does not render MoveStudents if loginType is google_classroom', () => {
-    const wrapper = shallow(
-      <UnconnectedManageStudentsTable
-        loginType={SectionLoginType.google_classroom}
-        studentData={[]}
-        editingData={{}}
-        addStatus={{}}
-        transferStatus={{}}
-      />
-    );
+  describe('appropriate buttons render', () => {
+    const DEFAULT_PROPS = {
+      loginType: SectionLoginType.google_classroom,
+      studentData: [],
+      editingData: {},
+      addStatus: {},
+      transferStatus: {}
+    };
 
-    expect(wrapper.find('MoveStudents').exists()).to.be.false;
-  });
+    // TO DO: remove these before and after each calls once
+    // code review groups has been fully released.
+    // Added permalink to this in https://codedotorg.atlassian.net/browse/CSA-1008
+    beforeEach(() => {
+      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, true);
+    });
 
-  it('does not render MoveStudents if loginType is clever', () => {
-    const wrapper = shallow(
-      <UnconnectedManageStudentsTable
-        loginType={SectionLoginType.clever}
-        studentData={[]}
-        editingData={{}}
-        addStatus={{}}
-        transferStatus={{}}
-      />
-    );
+    afterEach(() => {
+      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, false);
+    });
 
-    expect(wrapper.find('MoveStudents').exists()).to.be.false;
+    it('does not render MoveStudents if loginType is google_classroom', () => {
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
+      );
+      expect(wrapper.find('MoveStudents').exists()).to.be.false;
+    });
+
+    it('does not render MoveStudents if loginType is clever', () => {
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable
+          {...{...DEFAULT_PROPS, ...{loginType: SectionLoginType.clever}}}
+        />
+      );
+      expect(wrapper.find('MoveStudents').exists()).to.be.false;
+    });
+
+    it('does not render ManageCodeReviewGroups button if section is not assigned CSA', () => {
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable
+          {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: false}}}
+        />
+      );
+      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.false;
+    });
+
+    it('does not render ManageCodeReviewGroups button if code review comments experiment is not enabled', () => {
+      experiments.setEnabled(experiments.CODE_REVIEW_GROUPS, false);
+
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable {...DEFAULT_PROPS} />
+      );
+      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.false;
+    });
+
+    it('does renders ManageCodeReviewGroups button if section is assigned CSA', () => {
+      const wrapper = shallow(
+        <UnconnectedManageStudentsTable
+          {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: true}}}
+        />
+      );
+      expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.true;
+    });
   });
 
   describe('full render tests', () => {

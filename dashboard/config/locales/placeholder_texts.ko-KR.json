@@ -344,12 +344,15 @@
           "5b402e6ea05e847a076e03ad74420c45": " 새들!",
           "4b23c908b939eaf7918e07142b9e05e0": "용!",
           "7f945c111ba5ea6d7b1547601db6ba0e": " 용들!",
-          "71fc859f3abd22273bad5d0d8eda2173": "모든 동물을 세세요!"
+          "71fc859f3abd22273bad5d0d8eda2173": "모든 동물을 세세요!",
+          "f62038e77820419cd978f7b722da560a": "얼마나 많이 나옵니까?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "반려동물 수세기"
         },
         "courseE_aboutme_1_2021": {
           "b63151482630edd1589a9ac24d107c49": "그게 저예요! 리키! 저는 코드를 좋아하고 튜이와 나가 놀고 아이스크림을 먹는 걸 좋아해요!  ",
           "810896b14fc6615f0c76628b9b6a727e": "튜이는 저의 제일 친한 친구예요! 정말 스포츠를 잘 해요!",
-          "6f97975a0bda0c9219915161149cbb26": "저것은 제 컴퓨터예요! 저는 항상 저기서 코딩을 해요! "
+          "6f97975a0bda0c9219915161149cbb26": "저것은 제 컴퓨터예요! 저는 항상 저기서 코딩을 해요! ",
+          "31ba97bb501bb1f5b448221be09bad32": "그것은 내 코기, 롤리팝이예요! 코드 작성법을 가르쳐야 해요!"
         },
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "안녕하세요. 여러분!"
@@ -379,7 +382,8 @@
           "05584ab56b744b51cd8c4a6e8b3a08ee": "나이 입력:",
           "605f302ebc9f7fbacba60b15f551a633": "좋아하는 색상은 무엇입니까?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "좋아하는 색상 입력:",
-          "1f258d88a70309efc1435ef5daa277a0": "오늘 저와 채팅해 주셔서 감사합니다!"
+          "1f258d88a70309efc1435ef5daa277a0": "오늘 저와 채팅해 주셔서 감사합니다!",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "저도 ~살이예요!"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "이겼습니다!",
@@ -396,14 +400,21 @@
           "605f302ebc9f7fbacba60b15f551a633": "좋아하는 색상은 무엇입니까?",
           "91c4549fe2a5e9325c8f8d51afbb751b": "좋아하는 색상 입력:",
           "1f258d88a70309efc1435ef5daa277a0": "오늘 저와 채팅해 주셔서 감사합니다!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "저도 ~살이예요!"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "이름이 무엇인가요?"
         },
         "courseC19_playLab_sample2_2021": {
           "df8312187449c70820d7c58229a6b17e": "스페이스봇은 다른 생명체에게 겁을 줍니다. ",
-          "2a28483f9f4f9ee44cec653a445d4c82": "다른 생명체는 더 이상 두려워하지 않아요!"
+          "2a28483f9f4f9ee44cec653a445d4c82": "다른 생명체는 더 이상 두려워하지 않아요!",
+          "83db90f8846d091d3532256816f105d9": "이 사람은 네일라입니다.",
+          "0192cdc04916ec27aa11738bb6e48d6e": "네일라는 그녀의 집을 스페이스봇으로부터 보호하려 합니다.",
+          "c084e152431f9116b9fdb3f7d465f13d": "네일라는 스페이스봇이 상냥해 지는 법을 배우도록 도와 주고 싶어합니다.",
+          "b2f02bf648ce32c4362afe1578d41f70": "정말 그렇게 됐어요! 네일라는 상냥함의 힘을 스페이스봇에게 보여주었어요.",
+          "5cec903c4d41c49412a70a94d54999ee": "뭔가를 적을 수 있습니다.",
+          "3e11a2dc6edb909c47778bed75a81769": "여기에 텍스트를 보내세요"
         },
         "courseF_apps_card": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "누구 생일입니까?",
@@ -412,13 +423,14 @@
         },
         "courseF_apps_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "파티 게임",
-          "bf08dd3d1961874f13e77c936aad27e5": "블랭크 스페이스 스토리",
+          "bf08dd3d1961874f13e77c936aad27e5": "빈칸 이야기",
           "514b8d5320196898a9ced3efe0d4c802": "형용사 입력:",
           "88794317e8c695bbc7bc7d2f35792c7f": "객체 입력:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "신체부위 입력:",
           "e522ee28f39133b45497637539ff429b": "숫자 입력:",
           "7c9fbd20ed3a7bcfad08351050ffe0ff": " 게임.",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-각 경주!"
         },
         "courseF_editable_card": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "누구 생일입니까?",
@@ -427,13 +439,14 @@
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "파티 게임",
-          "bf08dd3d1961874f13e77c936aad27e5": "블랭크 스페이스 스토리",
+          "bf08dd3d1961874f13e77c936aad27e5": "빈칸 이야기",
           "514b8d5320196898a9ced3efe0d4c802": "형용사 입력:",
           "88794317e8c695bbc7bc7d2f35792c7f": "객체 입력:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "신체부위 입력:",
           "e522ee28f39133b45497637539ff429b": "숫자 입력:",
           "7c9fbd20ed3a7bcfad08351050ffe0ff": " 게임.",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-각 경주!"
         },
         "courseF_text_answer": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
@@ -445,7 +458,9 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
         },
         "courseF_text_choice_events": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문",
+          "c529a06c3f8518b63ff6dfac482b335c": "이 행성의 이름 정하기:",
+          "44506356d48394cd903b579df9de9117": ", 접지!"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
@@ -480,6 +495,43 @@
         },
         "courseF_variables_madlib_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "내 질문"
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "선택 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "선택 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "선택 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "선택 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "선택 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "선택 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "스카이 댄서",
+          "78d989e01047ba7043a38650d695abaa": "플레이어 선택",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "선택 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "선택 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "선택 3"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "뭔가를 적을 수 있습니다.",
+          "3e11a2dc6edb909c47778bed75a81769": "여기에 텍스트를 보내세요"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "뭔가를 적을 수 있습니다.",
+          "3e11a2dc6edb909c47778bed75a81769": "여기에 텍스트를 보내세요"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "뭔가를 적을 수 있습니다.",
+          "3e11a2dc6edb909c47778bed75a81769": "여기에 텍스트를 보내세요"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "무엇을 먹을거예요?",
+          "937dc37c06cc5d89a7096eb048b73590": "곧 나올거예요!"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "로봇 이름 정하기.",
+          "34088af1fb721900963462375b3bbe23": "로봇!"
         }
       }
     }
