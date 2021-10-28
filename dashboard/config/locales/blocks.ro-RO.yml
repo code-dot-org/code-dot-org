@@ -1624,6 +1624,16 @@ ro:
         text: coordonatele x ale {SPRITE}
       Mikelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Îngheţată
+            Stars: Stele
+            Fireworks: Artificii
+            '"rainbow"': Curcubeu
+            '"hearts"': Inimi
+            '"flowers"': Flori
+            '"waves"': Valuri
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1632,6 +1642,9 @@ ro:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Lumină
       Poetry_setBackground:
         text: setează culoarea de fundal la {COLOR}
       Poetry_setBackgroundEffect:
@@ -1642,6 +1655,10 @@ ro:
             '"space"': Spaţiu
             '"stars"': Stele
             '"ripples"': Ondulații
+            '"rain"': Ploaie
+            '"bubbles"': Baloane
+            '"confetti"': Confeti
+            '"hearts"': Inimi colorate
           PALETTE:
             '"rainbow"': Curcubeu
       Poetry_setBackgroundImageAs:

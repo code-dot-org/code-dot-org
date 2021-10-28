@@ -110,11 +110,17 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "2-3 Artist Functions 4": {
@@ -1120,7 +1126,7 @@
         },
         "Standalone_Artist_8": {
           "draw a shape": {
-            "name": "нарисовать фигуру"
+            "name": "нарисуй фигуру"
           }
         },
         "Standalone_Artist_9": {
@@ -1838,26 +1844,41 @@
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -2169,26 +2190,41 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -3596,6 +3632,9 @@
         "courseE_artist_functions2_dani": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions3_2021": {
@@ -3725,6 +3764,9 @@
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict2_2021": {
@@ -3862,6 +3904,26 @@
             "parameters": {
               "direction": "направление"
             }
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "нарисуй беруши"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "нарисуй беруши"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "нарисуй беруши"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         }
       }

@@ -928,6 +928,20 @@ dv:
             "{x: 300, y: 300}": ތިރިން ކަނާތް ފަރާތް
       Mikelab_whenKeyPressed:
         text: "{KEY} އަށް ފިތުމުން"
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: އައިސްކްރީމް
+            Stars: ސްޓަރ - ތަރި
+            Fireworks: ފަޔަރވޯކް (ހަވާ)
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"hearts"': ހާރޓްސް
+            '"flowers"': ފްލާވަރ - މައު
+            '"waves"': ވޭވްސް
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: ލައިޓް - އަލި
       Poetry_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       Poetry_setBackgroundEffect:
@@ -938,6 +952,10 @@ dv:
             '"space"': ސްޕޭސް
             '"stars"': ސްޓަރ - ތަރި
             '"ripples"': ރިޕްލްސް
+            '"rain"': ރެއިން - ވިއްސާރަ
+            '"bubbles"': ބަބްލްސް
+            '"confetti"': ކޮންފެޓީ
+            '"hearts"': ކުލަކުލައިގެ ހިތް
           PALETTE:
             '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
       Poetry_setForegroundEffect:

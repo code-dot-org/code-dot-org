@@ -2100,16 +2100,23 @@
             "parameters": {
               "points": "점수",
               "length": "length"
-            }
+            },
+            "description": "주어진 점과 주어진 길이의 변으로 별을 그리세요."
           },
           "draw a circle": {
-            "name": "원 그리기"
+            "name": "원 그리기",
+            "description": "주어진 반지름으로 원 그리기",
+            "parameters": {
+              "radius": "반지름"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "length",
-              "repeat": "반복"
-            }
+              "repeat": "반복",
+              "sides": "변"
+            },
+            "name": "바람개비 그리기"
           },
           "draw a triangle": {
             "name": "삼각형 그리기",
@@ -2119,8 +2126,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "length"
-            }
+              "length": "length",
+              "sides": "변"
+            },
+            "name": "도형 그리기"
           },
           "draw a house": {
             "name": "집 그리기",
@@ -2131,8 +2140,21 @@
           "draw a square": {
             "name": "사각형 그리기",
             "parameters": {
-              "length": "length"
+              "length": "length",
+              "sides": "변"
             }
+          },
+          "small flower": {
+            "name": "작은 꽃"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "로직 플라워2"
+          },
+          "LOGIC FLOWER": {
+            "name": "로직 플라워"
+          },
+          "LOGIC FLOWERS": {
+            "name": "로직 플라워"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -2141,16 +2163,23 @@
             "parameters": {
               "points": "점수",
               "length": "length"
-            }
+            },
+            "description": "주어진 점과 주어진 길이의 변으로 별을 그리세요."
           },
           "draw a circle": {
-            "name": "원 그리기"
+            "name": "원 그리기",
+            "description": "주어진 반지름으로 원 그리기",
+            "parameters": {
+              "radius": "반지름"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "length",
-              "repeat": "반복"
-            }
+              "repeat": "반복",
+              "sides": "변"
+            },
+            "name": "바람개비 그리기"
           },
           "draw a triangle": {
             "name": "삼각형 그리기",
@@ -2160,8 +2189,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "length"
-            }
+              "length": "length",
+              "sides": "변"
+            },
+            "name": "도형 그리기"
           },
           "draw a house": {
             "name": "집 그리기",
@@ -2182,16 +2213,23 @@
             "parameters": {
               "points": "점수",
               "length": "length"
-            }
+            },
+            "description": "주어진 점과 주어진 길이의 변으로 별을 그리세요."
           },
           "draw a circle": {
-            "name": "원 그리기"
+            "name": "원 그리기",
+            "description": "주어진 반지름으로 원 그리기",
+            "parameters": {
+              "radius": "반지름"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "length",
-              "repeat": "반복"
-            }
+              "repeat": "반복",
+              "sides": "변"
+            },
+            "name": "바람개비 그리기"
           },
           "draw a triangle": {
             "name": "삼각형 그리기",
@@ -2201,8 +2239,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "length"
-            }
+              "length": "length",
+              "sides": "변"
+            },
+            "name": "도형 그리기"
           },
           "draw a house": {
             "name": "집 그리기",
@@ -2223,16 +2263,23 @@
             "parameters": {
               "points": "점수",
               "length": "length"
-            }
+            },
+            "description": "주어진 점과 주어진 길이의 변으로 별을 그리세요."
           },
           "draw a circle": {
-            "name": "원 그리기"
+            "name": "원 그리기",
+            "description": "주어진 반지름으로 원 그리기",
+            "parameters": {
+              "radius": "반지름"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "length",
-              "repeat": "반복"
-            }
+              "repeat": "반복",
+              "sides": "변"
+            },
+            "name": "바람개비 그리기"
           },
           "draw a triangle": {
             "name": "삼각형 그리기",
@@ -2242,8 +2289,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "length"
-            }
+              "length": "length",
+              "sides": "변"
+            },
+            "name": "도형 그리기"
           },
           "draw a house": {
             "name": "집 그리기",
@@ -2321,6 +2370,12 @@
         "courseE_artist_functions10_2021": {
           "do something": {
             "name": "함수 이름"
+          },
+          "draw hexagon": {
+            "name": "6각형 그리기"
+          },
+          "draw line of hexagons": {
+            "name": "6각형의 선 그리기"
           }
         },
         "courseE_artist_functions1_dani": {
@@ -2370,6 +2425,12 @@
           },
           "draw square": {
             "name": "사각형 그리기"
+          },
+          "staggered squares": {
+            "name": "엇갈린 사각형"
+          },
+          "draw a line of squares": {
+            "name": "사각형의 선 그리기"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -2386,6 +2447,9 @@
           },
           "do something": {
             "name": "함수 이름"
+          },
+          "draw a line of squares": {
+            "name": "사각형의 선 그리기"
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -2394,6 +2458,12 @@
           },
           "do something": {
             "name": "함수 이름"
+          },
+          "draw a line of squares": {
+            "name": "사각형의 선 그리기"
+          },
+          "staggered squares": {
+            "name": "엇갈린 사각형"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -2402,21 +2472,42 @@
           },
           "draw triangle": {
             "name": "삼각형 그리기"
+          },
+          "draw line of triangles": {
+            "name": "삼각형의 선 그리기"
           }
         },
         "courseE_artist_functionsProj_2021": {
           "draw square": {
             "name": "사각형 그리기"
+          },
+          "draw hexagon": {
+            "name": "6각형 그리기"
+          },
+          "draw line of hexagons": {
+            "name": "6각형의 선 그리기"
+          },
+          "staggered squares": {
+            "name": "엇갈린 사각형"
+          },
+          "draw a line of squares": {
+            "name": "사각형의 선 그리기"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "함수 이름"
+          },
+          "my design": {
+            "name": "내 디자인"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "함수 이름"
+          },
+          "my design": {
+            "name": "내 디자인"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -2438,6 +2529,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "함수 이름"
+          },
+          "draw line of polygons": {
+            "name": "다각형의 선 그리기"
+          },
+          "draw polygon": {
+            "name": "다각형 그리기"
           }
         },
         "courseF_apps_collector": {
@@ -2849,6 +2946,118 @@
             "parameters": {
               "binary": "2진"
             }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "게임 재설정"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "창문 그리기"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "경로를 따라 채집합니다"
+          },
+          "check square for corn": {
+            "name": "정사각형에서 옥수수 확인"
+          },
+          "get all pumpkins": {
+            "name": "호박을 모두 모으기"
+          },
+          "pumpkin square": {
+            "name": "호박 정사각형"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "경로를 따라 선택하기"
+          },
+          "pumpkin square": {
+            "name": "호박 스퀘어"
+          },
+          "check square for corn": {
+            "name": "옥수수에 대한 사각형 확인"
+          },
+          "get produce": {
+            "name": "생산"
+          },
+          "get all pumpkins": {
+            "name": "모든 호박 갖기"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "경로를 따라 채집합니다"
+          },
+          "check for corn": {
+            "name": "옥수수 확인"
+          },
+          "corn rectangle": {
+            "name": "옥수수 직사각형"
+          },
+          "lettuce stairs": {
+            "name": "상추 계단"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "정사각형에서 옥수수 확인"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "정사각형에서 옥수수 확인"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "정사각형에서 옥수수 확인"
+          },
+          "get all pumpkins": {
+            "name": "호박을 모두 모으기"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "경로를 따라 채집합니다"
+          },
+          "check square for corn": {
+            "name": "정사각형에서 옥수수 확인"
+          },
+          "get all pumpkins": {
+            "name": "호박을 모두 모으기"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "정사각형에서 옥수수 확인"
+          },
+          "get all pumpkins": {
+            "name": "호박을 모두 모으기"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "정원 정사각형"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "정원 정사각형"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "정원 정사각형"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "카운터를 사용하여 이동하고 과즙을 얻으세요."
           }
         }
       }

@@ -3,7 +3,8 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "कलाकार का परिचय",
@@ -17,13 +18,22 @@
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "बाउंस में इवेंट्स - वे कैसे होती हैं?"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "बाउंस में इवेंट्स - वे कैसे होती हैं?"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
           "name": "AI: मशीन प्रशिक्षण",
@@ -58,7 +68,6 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "स्प्राइट लैब दस्तावेज",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
@@ -78,11 +87,11 @@
           "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "शब्दों की ताकत: पाठ प्रश्ननावली",
+          "name": "शब्दों की ताकत: पाठ प्रश्नावली",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "शब्दों की ताकत: पाठ प्रश्ननावली",
+          "name": "शब्दों की ताकत: पाठ प्रश्नावली",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -373,15 +382,29 @@
           "name": "विशाल इवेंट (कोर्स A, B)",
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
+        "play_lab_project_planning_guide/courseb/2021": {
+          "name": "प्ले लैब प्रोजेक्ट प्लानिंग गाइड",
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+        },
+        "play_lab_project_planning_guide_1/courseb/2021": {
+          "name": "प्ले लैब प्रोजेक्ट प्लानिंग गाइड",
+          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
+        },
         "csta_standards_mapping/courseb/2021": {
-          "name": "CSTA मानक मानचित्रण"
+          "name": "CSTA मानक मानचित्रण",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
         },
         "common_core_and_ngss_guidance/courseb/2021": {
-          "name": "कॉमन कोर और NGSS गाइडैंस"
+          "name": "कॉमन कोर और NGSS गाइडैंस",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
         "cross-curricular_extension_activities/courseb/2021": {
           "name": "क्रॉस-करिकलर विस्तार गतिविधियां",
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "कोर्स शब्दावली",
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
         },
         "implementation_guide/courseb/2021": {
           "name": "कार्यान्वयन गाइड",
@@ -411,6 +434,22 @@
           "name": "वर्चुअल पाठ संशोधन",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "मेरे ऑनलाइन पड़ोस में सुरक्षा: पाठ स्लाइड्स",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "मेरे ऑनलाइन पड़ोस में सुरक्षा: मेरा ऑनलाइन पड़ोस",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "मेरे ऑनलाइन पड़ोस में सुरक्षा: सेफ्टी, इट रूल्स!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "मेरे ऑनलाइन पड़ोस में सुरक्षा: रुकें और सोचें मूमेंट",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "जोड़ी प्रोग्रामिंग",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
@@ -420,23 +459,32 @@
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
         },
         "wiggles-go_noodle/coursea/2021": {
+          "name": "Wiggles-Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "शुरूआत करना - कक्षा अनुभाग बनाना",
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+        },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "हैप्पी मैप्स"
+          "name": "हैप्पी मैप्स",
+          "url": "https://youtu.be/hrnhiKAQ1_k"
         },
         "happy-map-cards/coursea/2021": {
-          "name": "हैप्पी मैप कार्ड्स"
+          "name": "हैप्पी मैप कार्ड्स",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
         },
         "activity-answer-happy-maps/coursea/2021": {
-          "name": "हैप्पी मैप कार्ड्स"
+          "name": "हैप्पी मैप कार्ड्स",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
         },
         "happy-map-game-pieces/coursea/2021": {
           "name": "हैप्पी मैप गेम पीसेज",
           "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "भावनाओं वाले चेहरे - भावना चित्र"
+          "name": "भावनाओं वाले चेहरे - भावना चित्र",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "अनप्लग्ड ब्लॉकली ब्लॉक्स (ग्रेड K-1)",
@@ -449,6 +497,10 @@
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "स्टेप बटन के साथ डीबगिंग",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "भावनाओं वाले चेहरे का चित्र",
@@ -531,9 +583,11 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "artist_project_planning_guide/coursea/2021": {
+          "name": "आर्टिस्ट प्रोजेक्ट प्लानिंग गाइड",
           "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
         },
         "artist_project_planning_guide_1/coursea/2021": {
+          "name": "आर्टिस्ट प्रोजेक्ट प्लानिंग गाइड",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
         },
         "csta_standards_mapping/coursea/2021": {
@@ -581,9 +635,11 @@
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": "ऑनलाइन घटियापन पर विराम लगाना: पाठ स्लाइड्स",
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "name": "ऑनलाइन घटियापन पर विराम लगाना: ऑनलाइन घटियापन रोकें",
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
@@ -607,9 +663,11 @@
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "c2-maze-bridge/coursec/2021": {
+          "name": "भूलभुलैया ब्रिजिंग पृष्ठ",
           "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
         },
         "unplugged-maze-blocks/coursec/2021": {
+          "name": "अनप्लग्ड भुलभुलैया ब्लॉक्स",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair-programming-vid/coursec/2021": {
@@ -701,6 +759,7 @@
           "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "name": "प्ले लैब प्रोजेक्ट प्लानिंग गाइड (नमूना)",
           "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
         },
         "play-lab-project-guide/coursec/2021": {
@@ -720,6 +779,7 @@
           "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
         },
         "course_vocabulary/coursec/2021": {
+          "name": "कोर्स शब्दावली",
           "url": "https://studio.code.org/s/coursec-2021/vocab"
         },
         "implementation_guide/coursec/2021": {
@@ -751,24 +811,31 @@
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "password_power-up_lesson_slides/coursed/2021": {
+          "name": "पासवर्ड मजबूत-बनाना: पाठ स्लाइड्स ",
           "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit"
         },
         "password_power-up_power-up_your_password/coursed/2021": {
+          "name": "पासवर्ड मजबूत-बनाना: अपना पासवर्ड मजबूत-बनाएं ",
           "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit"
         },
         "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": "पासवर्ड मजबूत-बनाना: अपना पासवर्ड मजबूत-बनाएं ",
           "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "पासवर्ड मजबूत-बनाना: पाठ प्रश्नावली ",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "पासवर्ड मजबूत-बनाना: पाठ प्रश्नावली ",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "पासवर्ड मजबूत-बनाना: यदि...तब...परिदृश्य",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "पासवर्ड मजबूत-बनाना: यदि...तब...परिदृश्य",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "graph-paper-programming/coursed/2021": {
@@ -827,24 +894,37 @@
           "name": " अनप्लग्ड ब्लॉक्स (कोर्स C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "बाउंस में इवेंट्स - वे कैसे होती हैं?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
+        },
         "pause_and_think_online/coursed/2021": {
           "name": "विराम व ऑनलाइन सोचना",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "open-ended_programming_levels/coursed/2021": {
-          "name": "विस्तृत प्रोग्रामिंग स्तर"
+          "name": "विस्तृत प्रोग्रामिंग स्तर",
+          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "विस्तृत प्रोग्रामिंग स्तर"
+          "name": "विस्तृत प्रोग्रामिंग स्तर",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view"
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "डांस पार्टी प्रोजेक्ट गाइड",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
-          "name": "डांस पार्टी: अनप्लग्ड"
+          "name": "डांस पार्टी: अनप्लग्ड",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/"
         },
         "open-ended_programming_levels_2/coursed/2021": {
-          "name": "विस्तृत प्रोग्रामिंग स्तर"
+          "name": "विस्तृत प्रोग्रामिंग स्तर",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "feeling-faces-image/coursed/2021": {
           "name": "भावनाओं वाले चेहरे",
@@ -955,7 +1035,6 @@
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "स्प्राइट लैब दस्तावेज",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
@@ -963,7 +1042,6 @@
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "स्प्राइट लैब दस्तावेज",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
@@ -974,13 +1052,20 @@
           "name": "विराम व ऑनलाइन सोचना",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
+        "dance-party-project-guide/express/2021": {
+          "name": "डांस पार्टी प्रोजेक्ट गाइड",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
         "dance-party-playlist/express/2021": {
-          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)"
+          "name": "Spotify प्लेलिस्ट (हर आयु वर्ग के लिए)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
-          "name": "विस्तृत प्रोग्रामिंग स्तर"
+          "name": "विस्तृत प्रोग्रामिंग स्तर",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
+          "name": "जोड़ी प्रोग्रामिंग वीडियो",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
@@ -1052,6 +1137,7 @@
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
+          "name": "Wiggles - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "common-sense-media-pause-think/pre-express/2021": {
@@ -1075,20 +1161,22 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
-          "name": "कलन विधि का अनुसरण करें"
+          "name": "कलन विधि का अनुसरण करें",
+          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
           "name": "स्विमिंग फिश अध्यापक सैंडबॉक्स",
           "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "स्प्राइट लैब दस्तावेज",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "सुपर डिजीटल नागरिक बनें: पाठ स्लाइड्स",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "सुपर डिजीटल नागरिक बनें: सुपर डिजीटल नागरिक",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
@@ -1096,15 +1184,19 @@
           "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "प्राइवेट और निजी जानकारी: प्राइवेट और निजी जानकारी",
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "प्राइवेट और निजी जानकारी: एग्जिट टिकट",
           "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "प्राइवेट और निजी जानकारी: पाठ प्रश्नावली",
           "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "प्राइवेट और निजी जानकारी: पाठ प्रश्नावली",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
         },
         "common-sense-media-pause-think/coursee/2021": {
@@ -1112,12 +1204,15 @@
           "url": "https://youtu.be/X_duZ-1LApg"
         },
         "about_me_planning_guide/coursee/2021": {
+          "name": "मेरे बारे में प्लानिंग गाइड",
           "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
         },
         "digital-sharing-lesson/coursee/2021": {
+          "name": "डिजीटल शेयरिंग पाठ योजना",
           "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing"
         },
         "digital-sharing-video/coursee/2021": {
+          "name": "डिजीटल शेयरिंग संबंधी नीतियां (वीडियो)",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
         },
         "csf-turns-angles-doc/coursee/2021": {
@@ -1153,7 +1248,12 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "सुलभता के लिए डिज़ाइन करना"
+          "name": "सुलभता के लिए डिजाइन करना",
+          "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
+        },
+        "types_of_disabilities/coursee/2021": {
+          "name": "विकलांगता के प्रकार",
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/"
         },
         "end-of-course-project-guide/coursee/2021": {
           "name": "समाप्ति कोर्स प्रोजेक्ट गाइड",

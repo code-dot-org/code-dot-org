@@ -4,8 +4,10 @@ import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
 import * as utils from './commands/utils';
+import {containsAtLeastOneAlphaNumberic} from '../../utils';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
+import {commands as behaviors} from './commands/behaviors';
 import spritelabCommands from '../spritelab/commands/index';
 
 const OUTER_MARGIN = 50;
@@ -20,7 +22,7 @@ export default class PoetryLibrary extends CoreLibrary {
     super(p5);
     // Extra information for validation code to be able to inspect the program state
     this.validationInfo = {
-      endTime: POEM_DURATION
+      endTime: POEM_DURATION * 1.25
     };
     this.poemState = {
       ..._.cloneDeep(getStore().getState().poetry.selectedPoem),
@@ -28,6 +30,7 @@ export default class PoetryLibrary extends CoreLibrary {
         fill: 'black',
         font: 'Arial'
       },
+      frameType: undefined,
       isVisible: true,
       textEffects: [],
       // By default, start the poem animation when the program starts (frame 1)
@@ -54,13 +57,18 @@ export default class PoetryLibrary extends CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
+        this.drawFrame();
         const renderInfo = this.getRenderInfo(
           this.poemState,
           this.p5.World.frameCount
         );
         // Don't fire line events in preview
         if (!this.isPreviewFrame()) {
-          for (let i = 0; i < renderInfo.lines.length; i++) {
+          // filter non-poem-body lines (title, author, and blank lines) for line events
+          const poemLines = renderInfo.lines.filter(
+            line => line.isPoemBodyLine
+          );
+          for (let i = 0; i < poemLines.length; i++) {
             const lineNum = i + 1; // students will 1-index the lines
             if (this.lineEvents[lineNum] && !this.lineEvents[lineNum].fired) {
               // Fire line events
@@ -77,6 +85,10 @@ export default class PoetryLibrary extends CoreLibrary {
         if (!this.isPreviewFrame()) {
           this.foregroundEffects.forEach(effect => effect.func());
         }
+      },
+
+      addFrame(frameType) {
+        this.poemState.frameType = frameType;
       },
 
       destroy(costume) {
@@ -222,15 +234,65 @@ export default class PoetryLibrary extends CoreLibrary {
         this.p5.rect(
           0,
           390,
-          (this.p5.frameCount / POEM_DURATION) * PLAYSPACE_SIZE,
+          (this.p5.frameCount / this.validationInfo.endTime) * PLAYSPACE_SIZE,
           10
         );
         this.p5.pop();
       },
 
       ...backgroundEffects,
-      ...foregroundEffects
+      ...foregroundEffects,
+      ...behaviors
     };
+  }
+
+  drawFrame() {
+    const frameImage = this.p5._preloadedFrames[this.poemState.frameType];
+    if (!frameImage) {
+      return;
+    }
+
+    const frameThickness = 15;
+    this.p5.push();
+    this.p5.noStroke();
+
+    // top
+    this.p5.image(frameImage, 0, 0, PLAYSPACE_SIZE, frameThickness);
+    // bottom
+    this.p5.image(
+      frameImage,
+      0,
+      PLAYSPACE_SIZE - frameThickness,
+      PLAYSPACE_SIZE,
+      frameThickness
+    );
+
+    // In p5, you can't rotate an image, you just rotate the p5 canvas.
+    // right
+    this.p5.translate(200, 200);
+    this.p5.rotate(90);
+    this.p5.translate(-200, -200);
+    this.p5.image(
+      frameImage,
+      frameThickness,
+      0,
+      PLAYSPACE_SIZE - 2 * frameThickness,
+      frameThickness
+    );
+
+    // left
+    this.p5.translate(200, 200);
+    this.p5.rotate(180);
+    this.p5.translate(-200, -200);
+    this.p5.image(
+      frameImage,
+      frameThickness,
+      0,
+      PLAYSPACE_SIZE - 2 * frameThickness,
+      frameThickness
+    );
+
+    this.p5.pop();
   }
 
   isPreviewFrame() {
@@ -308,17 +370,14 @@ export default class PoetryLibrary extends CoreLibrary {
       return renderInfo;
     }
 
-    // Add 2 so there's time before the first line and after the last line
-    const framesPerLine = POEM_DURATION / (renderInfo.lines.length + 2);
+    const framesPerLine = POEM_DURATION / renderInfo.lines.length;
 
     const newLines = [];
     for (let i = 0; i < renderInfo.lines.length; i++) {
-      const lineNum = i + 1; // account for time before the first line shows
       const newLine = {...renderInfo.lines[i]};
-      newLine.start =
-        this.poemState.animationStartFrame + lineNum * framesPerLine;
+      newLine.start = this.poemState.animationStartFrame + i * framesPerLine;
       newLine.end =
-        this.poemState.animationStartFrame + (lineNum + 1) * framesPerLine;
+        this.poemState.animationStartFrame + (i + 1) * framesPerLine;
       if (frameCount >= newLine.start) {
         newLines.push(newLine);
       }
@@ -344,7 +403,7 @@ export default class PoetryLibrary extends CoreLibrary {
       lines: []
     };
     if (poemState.title) {
-      renderInfo.title = {
+      renderInfo.lines.push({
         text: poemState.title,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
@@ -352,18 +411,20 @@ export default class PoetryLibrary extends CoreLibrary {
           poemState.title,
           poemState.font.font,
           FONT_SIZE * 2
-        )
-      };
+        ),
+        isPoemBodyLine: false
+      });
       yCursor += LINE_HEIGHT;
     }
     if (poemState.author) {
       yCursor -= LINE_HEIGHT / 2;
-      renderInfo.author = {
+      renderInfo.lines.push({
         text: poemState.author,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: this.getScaledFontSize(poemState.author, poemState.font.font, 16)
-      };
+        size: this.getScaledFontSize(poemState.author, poemState.font.font, 16),
+        isPoemBodyLine: false
+      });
       yCursor += LINE_HEIGHT;
     }
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
@@ -372,7 +433,7 @@ export default class PoetryLibrary extends CoreLibrary {
         accumulator.length > current.length ? accumulator : current,
       '' /* default value */
     );
-    renderInfo.lineSize = this.getScaledFontSize(
+    const lineSize = this.getScaledFontSize(
       longestLine,
       poemState.font.font,
       FONT_SIZE
@@ -381,7 +442,9 @@ export default class PoetryLibrary extends CoreLibrary {
       renderInfo.lines.push({
         text: line,
         x: PLAYSPACE_SIZE / 2,
-        y: yCursor
+        y: yCursor,
+        size: lineSize,
+        isPoemBodyLine: containsAtLeastOneAlphaNumberic(line) // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });
@@ -399,30 +462,37 @@ export default class PoetryLibrary extends CoreLibrary {
   }
 
   drawFromRenderInfo(renderInfo) {
-    this.p5.fill(renderInfo.font.fill);
     this.p5.textFont(renderInfo.font.font);
-    if (renderInfo.title) {
-      this.p5.textSize(renderInfo.title.size);
-      this.p5.text(
-        renderInfo.title.text,
-        renderInfo.title.x,
-        renderInfo.title.y
-      );
-    }
-    if (renderInfo.author) {
-      this.p5.textSize(renderInfo.author.size);
-      this.p5.text(
-        renderInfo.author.text,
-        renderInfo.author.x,
-        renderInfo.author.y
-      );
-    }
-    this.p5.textSize(renderInfo.lineSize);
     renderInfo.lines.forEach(item => {
       let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);
       this.p5.fill(fillColor);
+      this.p5.textSize(item.size);
       this.p5.text(item.text, item.x, item.y);
     });
+
+    if (this.isPreviewFrame()) {
+      // Draw line numbers in preview frame only
+      this.drawLineNumbers(renderInfo);
+    }
+  }
+
+  drawLineNumbers(renderInfo) {
+    this.p5.push();
+    this.p5.textAlign(this.p5.LEFT);
+    this.p5.stroke('white');
+    this.p5.strokeWeight(2);
+    this.p5.fill('black');
+    this.p5.textFont('Arial');
+    this.p5.textSize(16);
+
+    let lineNum = 1;
+    renderInfo.lines.forEach(item => {
+      if (item.isPoemBodyLine) {
+        this.p5.text(lineNum, 5, item.y);
+        lineNum++;
+      }
+    });
+    this.p5.pop();
   }
 
   // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355

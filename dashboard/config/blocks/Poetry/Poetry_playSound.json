@@ -13,52 +13,76 @@
         "name": "SOUND",
         "options": [
           [
-            "Bell",
-            "\"sound://category_bell/bells_win_low.mp3\""
-          ],
-          [
             "Bright",
             "\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\""
           ],
           [
-            "Fireside",
-            "\"sound://category_background/fire_burning.mp3\""
+            "Bell",
+            "\"placeholder\""
           ],
           [
-            "Forest",
-            "\"sound://category_nature/forest_woodland_ambience_2.mp3\""
+            "Break",
+            "\"placeholder\""
           ],
           [
-            "Harps",
-            "\"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3\""
+            "Boing",
+            "\"placeholder\""
           ],
           [
-            "Night",
-            "\"sound://category_nature/summer_night_loop.mp3\""
+            "Bubble",
+            "\"placeholder\""
           ],
           [
-            "Ocean",
-            "\"sound://category_background/ocean_waves.mp3\""
+            "Chatter",
+            "\"placeholder\""
           ],
           [
-            "Rainy",
-            "\"sound://category_background/rain_thunderstorm_calm.mp3\""
+            "Deflate",
+            "\"placeholder\""
           ],
           [
-            "Rainforest",
-            "\"sound://category_background/rainforest_ambient_sound.mp3\""
+            "Fail",
+            "\"placeholder\""
           ],
           [
-            "Sleepy",
-            "\"sound://category_background/wavering_wind.mp3\""
+            "Flutter",
+            "\"placeholder\""
+          ],
+          [
+            "Jump",
+            "\"placeholder\""
+          ],
+          [
+            "Light",
+            "\"placeholder\""
+          ],
+          [
+            "Poof",
+            "\"placeholder\""
+          ],
+          [
+            "Scan",
+            "\"placeholder\""
           ],
           [
             "Typewriter",
             "\"sound://category_background/typewriter.mp3\""
           ],
           [
-            "Waterfall",
-            "\"sound://category_background/waterfall.mp3\""
+            "Vibrant",
+            "\"placeholder\""
+          ],
+          [
+            "Win",
+            "\"placeholder\""
+          ],
+          [
+            "Whirl",
+            "\"placeholder\""
+          ],
+          [
+            "Wind Chimes",
+            "\"placeholder\""
           ]
         ]
       }

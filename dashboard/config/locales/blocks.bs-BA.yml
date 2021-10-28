@@ -1187,10 +1187,22 @@ bs:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Sladoled
+            Stars: Zvijezde
+            Fireworks: Vatromet
+            '"rainbow"': Duge
+            '"hearts"': Srca
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': kiša
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: Svjetlo
       Poetry_setBackground:
         text: podesi boju pozadine {COLOR}
       Poetry_setBackgroundEffect:
@@ -1198,6 +1210,9 @@ bs:
           EFFECT:
             '"colors"': Boje
             '"stars"': Zvijezde
+            '"rain"': Kiša
+            '"bubbles"': Balončići
+            '"confetti"': Konfeti
           PALETTE:
             '"rainbow"': Duge
       Poetry_setForegroundEffect:
