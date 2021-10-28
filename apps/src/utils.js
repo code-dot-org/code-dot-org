@@ -74,7 +74,7 @@ export function stringToChunks(str, maxLength, delimiter = ' ') {
       }
 
       lastVal += val;
-      acc.push(lastVal);
+      acc.push(lastVal.trim());
       return acc;
     },
     ['']
