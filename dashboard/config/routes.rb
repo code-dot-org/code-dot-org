@@ -722,8 +722,7 @@ Dashboard::Application.routes.draw do
   get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson'
-  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson_and_level'
+  get '/api/user_app_options/:script/:lesson_position/:level_position/:level', to: 'api#user_app_options', as: 'user_app_options'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
