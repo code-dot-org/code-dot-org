@@ -131,6 +131,9 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Criando caminhos"
         },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
+        },
         "feeling-faces-image/courseb/2021": {
           "name": "Rostos sentimentais"
         },
@@ -142,6 +145,9 @@
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Programação em duplas"
+        },
+        "20_20_20_rule/courseb/2021": {
+          "name": "Regra 20/20/20"
         },
         "happy-map-game-pieces/courseb/2021": {
           "name": "Peças do jogo Mapas Divertidos"
@@ -219,6 +225,9 @@
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Blocos Blocky desconectados (jardim da infância e primeiro ano)"
         },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "Regra 20/20/20"
+        },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Sentimento Rostos Emoção Imagem"
         },
@@ -228,11 +237,20 @@
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
           "name": "Pacote de bônus com peças do jogo Mapas Divertidos"
         },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
+        },
         "feeling-faces-image/coursea/2021": {
           "name": "Rostos sentimentais"
         },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
+        },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Pare e pense on-line"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "O grande evento"
@@ -294,6 +312,9 @@
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Ângulos e curvas"
         },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Sentimento Rostos Emoção Imagem"
+        },
         "unplugged-video-big-event/coursec/2021": {
           "name": "O grande evento"
         },
@@ -343,7 +364,8 @@
           "name": "Programação em papel quadriculado"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "Programação em papel quadriculado"
+          "name": "Programação em papel quadriculado",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
         },
         "activity-answer-graph-paper/coursed/2021": {
           "name": "Programação em papel quadriculado"
@@ -474,8 +496,17 @@
         "feeling-faces-image/pre-express/2021": {
           "name": "Rostos sentimentais"
         },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "Regra 20/20/20"
+        },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Pare e pense on-line"
+        },
+        "csta_standards_mapping/pre-express/2021": {
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
           "name": "Fórum do professor"
