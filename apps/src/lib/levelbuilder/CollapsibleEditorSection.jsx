@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import styleConstants from '@cdo/apps/styleConstants';
 
-export function CollapsibleEditorSection(props) {
+export default function CollapsibleEditorSection(props) {
   const [collapsed, setCollapsed] = useState(props.collapsed || false);
 
   const {title, fullWidth} = props;
