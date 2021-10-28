@@ -1,12 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import _ from 'lodash';
 import {connect} from 'react-redux';
 
 class AddLevelFilters extends Component {
   static propTypes = {
-    handleSearch: PropTypes.func.isRequired,
     handleChangeLevelName: PropTypes.func.isRequired,
     handleChangeLevelType: PropTypes.func.isRequired,
     handleChangeUnit: PropTypes.func.isRequired,
@@ -19,17 +16,6 @@ class AddLevelFilters extends Component {
     // from redux
     searchOptions: PropTypes.object.isRequired
   };
-
-  handleSearch = _.debounce(
-    () => {
-      this.props.handleSearch();
-    },
-    1000,
-    {
-      leading: true,
-      trailing: false
-    }
-  );
 
   render() {
     return (
@@ -86,9 +72,6 @@ class AddLevelFilters extends Component {
             ))}
           </select>
         </label>
-        <button type="button" onClick={this.handleSearch}>
-          <FontAwesome icon="search" />
-        </button>
       </div>
     );
   }
