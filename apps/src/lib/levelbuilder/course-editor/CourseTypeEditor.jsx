@@ -7,7 +7,7 @@ import {
   ParticipantAudience,
   InstructionType
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {CollapsibleEditorSection} from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 
 const INSTRUCTOR_AUDIENCE_DISPLAY_NAMES = {
   [InstructorAudience.teacher]: 'Teacher',
