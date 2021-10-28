@@ -36,7 +36,11 @@ export default class CoreLibrary {
   }
 
   isPreviewFrame() {
-    return this.p5.World.frameCount === 1;
+    return this.currentFrame() === 1;
+  }
+
+  currentFrame() {
+    return this.p5.World.frameCount;
   }
 
   getBackground() {
@@ -108,7 +112,14 @@ export default class CoreLibrary {
   addSpeechBubble(sprite, text, seconds = null) {
     const id = createUuid();
     const removeAt = seconds ? this.getAdjustedWorldTime() + seconds : null;
-    this.speechBubbles.push({id, sprite, text, removeAt});
+    // Note: renderFrame is used by validation code.
+    this.speechBubbles.push({
+      id,
+      sprite,
+      text,
+      removeAt,
+      renderFrame: this.currentFrame()
+    });
     return id;
   }
 
@@ -233,6 +244,13 @@ export default class CoreLibrary {
       spriteIds.push(parseInt(spriteId))
     );
     return spriteIds;
+  }
+
+  getLastSpeechBubbleForSpriteId(spriteId) {
+    const speechBubbles = this.speechBubbles.filter(
+      ({sprite}) => sprite.id !== spriteId
+    );
+    return speechBubbles[speechBubbles.length - 1];
   }
 
   /**
