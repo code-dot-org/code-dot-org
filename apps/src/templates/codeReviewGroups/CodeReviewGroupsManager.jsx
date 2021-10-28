@@ -71,6 +71,8 @@ export default function CodeReviewGroupsManager({initialGroups}) {
             members={getUnassignedGroup().members}
           />
           <div style={styles.groupsContainer}>
+            {/* TO DO: https://codedotorg.atlassian.net/browse/CSA-1033
+            use proper Button component, style, and translate string here */}
             <button
               type="button"
               onClick={() => {
