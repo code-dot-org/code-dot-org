@@ -14,7 +14,9 @@ const COURSE_NAMES = {
   [PROGRAM_CSA]: 'Computer Science A'
 };
 
-const debouncedFetch = debounce(fetch, 500, {leading: true});
+const debouncedFetch = debounce((...args) => fetch(...args), 500, {
+  leading: true
+});
 
 // constructs query params and fetches the data, returning a promise
 const fetchRegionalPartner = ({
@@ -40,7 +42,13 @@ const fetchRegionalPartner = ({
     locationParams
   )}`;
 
-  return debouncedFetch(url).then(response => response.json());
+  return debouncedFetch(url).then(response => {
+    console.log(response.ok, response.status, response.statusText);
+    if (!response.ok) {
+      throw response.statusText;
+    }
+    return response.json();
+  });
 };
 
 // takes {program, school, schoolZipCode, schoolState}
