@@ -94,8 +94,6 @@ export default class Theater {
   }
 
   onPhotoPrompterFileSelected(photo) {
-    console.log('Theater received selected photo ' + photo.name);
-    console.log(photo);
     // TODO: Send photo file information back to Javabuilder.
   }
 }
