@@ -16,7 +16,9 @@ import javalab, {
   appendNewlineToConsoleLog,
   setIsRunning,
   setDisableFinishButton,
-  setIsTesting
+  setIsTesting,
+  openPhotoPrompter,
+  closePhotoPrompter
 } from './javalabRedux';
 import playground from './playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -109,6 +111,9 @@ Javalab.prototype.init = function(config) {
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
   const onJavabuilderMessage = this.onJavabuilderMessage.bind(this);
+  const onPhotoPrompterFileSelected = this.onPhotoPrompterFileSelected.bind(
+    this
+  );
 
   switch (this.level.csaViewMode) {
     case CsaViewMode.NEIGHBORHOOD:
@@ -127,7 +132,12 @@ Javalab.prototype.init = function(config) {
       this.visualization = <NeighborhoodVisualizationColumn />;
       break;
     case CsaViewMode.THEATER:
-      this.miniApp = new Theater(this.onOutputMessage, this.onNewlineMessage);
+      this.miniApp = new Theater(
+        this.onOutputMessage,
+        this.onNewlineMessage,
+        this.openPhotoPrompter,
+        this.closePhotoPrompter
+      );
       this.visualization = <TheaterVisualizationColumn />;
       break;
     case CsaViewMode.PLAYGROUND:
@@ -277,6 +287,7 @@ Javalab.prototype.init = function(config) {
         handleClearPuzzle={() => {
           return this.studioApp_.handleClearPuzzle(config);
         }}
+        onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
       />
     </Provider>,
     document.getElementById(config.containerId)
@@ -432,6 +443,19 @@ Javalab.prototype.setIsRunning = function(isRunning) {
 
 Javalab.prototype.setIsTesting = function(isTesting) {
   getStore().dispatch(setIsTesting(isTesting));
+};
+
+Javalab.prototype.openPhotoPrompter = function(promptText) {
+  getStore().dispatch(openPhotoPrompter(promptText));
+};
+
+Javalab.prototype.closePhotoPrompter = function() {
+  getStore().dispatch(closePhotoPrompter());
+};
+
+Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
+  // Only pass the selected photo the mini-app if it supports the photo prompter
+  this.miniApp?.onPhotoPrompterFileSelected?.(photo);
 };
 
 export default Javalab;

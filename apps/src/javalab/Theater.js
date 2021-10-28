@@ -2,11 +2,18 @@ import {TheaterSignalType, STATUS_MESSAGE_PREFIX} from './constants';
 import javalabMsg from '@cdo/javalab/locale';
 
 export default class Theater {
-  constructor(onOutputMessage, onNewlineMessage) {
+  constructor(
+    onOutputMessage,
+    onNewlineMessage,
+    openPhotoPrompter,
+    closePhotoPrompter
+  ) {
     this.canvas = null;
     this.context = null;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
+    this.openPhotoPrompter = openPhotoPrompter;
+    this.closePhotoPrompter = closePhotoPrompter;
     this.loadEventsFinished = 0;
   }
 
@@ -23,6 +30,11 @@ export default class Theater {
         // Preload the image. Once it's ready, start the playback
         this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
         this.getImgElement().onload = () => this.startPlayback();
+        break;
+      }
+      case TheaterSignalType.GET_IMAGE: {
+        // Open the photo prompter
+        this.openPhotoPrompter(data.detail.prompt);
         break;
       }
       default:
@@ -48,6 +60,8 @@ export default class Theater {
 
   onStop() {
     this.resetAudioAndVideo();
+    // Close the photo prompter if it is still open
+    this.closePhotoPrompter();
   }
 
   resetAudioAndVideo() {
@@ -71,9 +85,17 @@ export default class Theater {
       `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
     );
     this.onNewlineMessage();
+    // Close the photo prompter if it is still open
+    this.closePhotoPrompter();
   }
 
   getCacheBustSuffix() {
     return '?=' + new Date().getTime();
+  }
+
+  onPhotoPrompterFileSelected(photo) {
+    console.log('Theater received selected photo ' + photo.name);
+    console.log(photo);
+    // TODO: Send photo file information back to Javabuilder.
   }
 }
