@@ -2,7 +2,9 @@
   "func": "penColor",
   "category": "Turtle",
   "paletteParams": [
-    "color"
+    {
+      "name": "color"
+    }
   ],
   "params": [
     "\"red\""

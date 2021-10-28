@@ -1723,6 +1723,16 @@ sk:
         text: y súradnica {SPRITE}
       Outbreak_beginCongregating:
         text: Príšerky sa začínajú zhromažďovať
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Zmrzlina
+            Stars: Hviezdy
+            Fireworks: Ohňostroj
+            '"rainbow"': Dúha
+            '"hearts"': Srdiečka
+            '"flowers"': Kvety
+            '"waves"': Vlny
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1734,6 +1744,9 @@ sk:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv
       Poetry_playSound:
         text: playSound {SOUND}
+        options:
+          SOUND:
+            Light: Svetlý
       Poetry_setBackground:
         text: nastav farbu pozadia {COLOR}
       Poetry_setBackgroundEffect:
@@ -1744,6 +1757,10 @@ sk:
             '"space"': Vesmír
             '"stars"': Hviezdy
             '"ripples"': Vlnky
+            '"rain"': Dážď
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts"': Farebné srdcia
           PALETTE:
             '"rainbow"': Dúha
       Poetry_setBackgroundImageAs:

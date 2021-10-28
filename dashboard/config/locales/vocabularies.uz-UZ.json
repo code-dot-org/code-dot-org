@@ -543,7 +543,6 @@
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "code/coursed/2021": {
-          "word": "Kod",
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },
         "repeat/coursed/2021": {
@@ -605,9 +604,6 @@
         "event/express/2021": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
-        },
-        "code/express/2021": {
-          "word": "Kod"
         },
         "loop/express/2021": {
           "word": "Sikl",
