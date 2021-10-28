@@ -85,37 +85,39 @@ class AnimationPickerListItem extends React.Component {
     ];
 
     return (
-      <button
-        style={rootStyle}
-        onClick={onClick}
-        onKeyDown={this.onItemKeyDown}
-        className={category}
-        type="button"
-        onFocus={() => this.setState({hover: true})}
-        onBlur={() => this.setState({hover: false})}
-        onMouseEnter={() => this.setState({hover: true})}
-        onMouseLeave={() => this.setState({hover: false})}
-      >
-        <div style={thumbnailStyleWithHover}>
-          {animationProps && (
-            <AnimationPreview
-              animationProps={animationProps}
-              sourceUrl={animationProps.sourceUrl}
-              width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
-              onPreviewLoad={() => this.setState({loaded: true})}
-            />
-          )}
-          {icon && <i className={'fa fa-' + icon} />}
-          {category && (
-            <img
-              className={category}
-              style={styles.categoryImage}
-              src={iconImageSrc}
-            />
-          )}
-        </div>
+      <div style={rootStyle}>
+        <button
+          style={thumbnailStyleWithHover}
+          onClick={onClick}
+          onKeyDown={this.onItemKeyDown}
+          className={category}
+          type="button"
+          onFocus={() => this.setState({hover: true})}
+          onBlur={() => this.setState({hover: false})}
+          onMouseEnter={() => this.setState({hover: true})}
+          onMouseLeave={() => this.setState({hover: false})}
+        >
+          <div>
+            {animationProps && (
+              <AnimationPreview
+                animationProps={animationProps}
+                sourceUrl={animationProps.sourceUrl}
+                width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
+                onPreviewLoad={() => this.setState({loaded: true})}
+              />
+            )}
+            {icon && <i className={'fa fa-' + icon} />}
+            {category && (
+              <img
+                className={category}
+                style={styles.categoryImage}
+                src={iconImageSrc}
+              />
+            )}
+          </div>
+        </button>
         {label && <div style={labelStyle}>{label}</div>}
         {animationProps &&
           loaded &&
@@ -126,7 +128,7 @@ class AnimationPickerListItem extends React.Component {
               style={multiSelectIconStyle}
             />
           )}
-      </button>
+      </div>
     );
   }
 }
@@ -136,12 +138,10 @@ const styles = {
     float: 'left',
     width: THUMBNAIL_SIZE,
     textAlign: 'center',
-    margin: '1px 10px 10px 1px',
+    margin: '1px 1px 1px 1px',
     position: 'relative',
-    background: 'none',
-    boxShadow: 'none',
     border: 0,
-    padding: 2,
+    paddingRight: 10,
     outline: 'none'
   },
   thumbnail: {
@@ -152,7 +152,9 @@ const styles = {
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
     padding: '2px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    background: 'none',
+    boxShadow: 'none'
   },
   thumbnailIcon: {
     color: color.white,
