@@ -13,13 +13,16 @@
         "name": "SOUND",
         "options": [
           [
-            "Calm"
+            "Calm",
+            "\"placeholder\""
           ],
           [
-            "Campfire"
+            "Campfire",
+            "\"placeholder\""
           ],
           [
-            "Drizzle"
+            "Drizzle",
+            "\"placeholder\""
           ],
           [
             "Fireside",
@@ -34,13 +37,16 @@
             "\"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3\""
           ],
           [
-            "Haunted"
+            "Haunted",
+            "\"placeholder\""
           ],
           [
-            "Hum"
+            "Hum",
+            "\"placeholder\""
           ],
           [
-            "Mission"
+            "Mission",
+            "\"placeholder\""
           ],
           [
             "Night",
@@ -59,14 +65,16 @@
             "\"sound://category_background/rainforest_ambient_sound.mp3\""
           ],
           [
-            "Riding"
+            "Riding",
+            "\"placeholder\""
           ],
           [
             "Sleepy",
             "\"sound://category_background/wavering_wind.mp3\""
           ],
           [
-            "Slow"
+            "Slow",
+            "\"placeholder\""
           ],
           [
             "Waterfall",
