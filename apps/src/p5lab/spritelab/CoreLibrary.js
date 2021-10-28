@@ -1,4 +1,5 @@
-import {createUuid} from '@cdo/apps/utils';
+import {createUuid, stringToChunks} from '@cdo/apps/utils';
+import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 
 export default class CoreLibrary {
@@ -64,15 +65,35 @@ export default class CoreLibrary {
       return;
     }
 
-    this.p5.push();
-    this.p5.fill('black');
-    this.p5.stroke('white');
-    this.p5.strokeWeight(2);
-    this.p5.textSize(25);
-    this.speechBubbles.forEach(bubbleInfo => {
-      this.p5.text(bubbleInfo.text, bubbleInfo.sprite.x, bubbleInfo.sprite.y);
+    this.speechBubbles.forEach(({text, sprite}) => {
+      this.drawSpeechBubble(
+        text,
+        sprite.x,
+        sprite.y - Math.round(sprite.getScaledHeight() / 2)
+      );
     });
-    this.p5.pop();
+  }
+
+  drawSpeechBubble(text, x, y, textSize = 25) {
+    const padding = 8;
+    const triangleSize = 10;
+    const lines = stringToChunks(text, 16 /* maxLength */);
+    const longestLine = [...lines].sort((a, b) =>
+      a.length < b.length ? 1 : -1
+    )[0];
+    const width =
+      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
+    const height = lines.length * textSize + triangleSize + padding * 2;
+
+    // Draw bubble.
+    drawUtils.speechBubble(this.p5, x, y, width, height, {
+      triangleSize
+    });
+
+    // Draw text within bubble.
+    drawUtils.multilineText(this.p5, lines, x, y - height + padding, textSize, {
+      horizontalAlign: this.p5.CENTER
+    });
   }
 
   addSpeechBubble(sprite, text, seconds = null) {
