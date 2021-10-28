@@ -22,7 +22,7 @@ UPDATE `mysql_servers` SET `weight` = CASE
     -- Set writer weight low for HG1, high for HG2.
     CASE WHEN (`hostgroup_id` = 1) THEN 1 ELSE 10000000 END
   WHEN ( -- If row is a reporting-reader (hostname in HG3 or named 'reporting' in case of issues populating HG3)
-    `hostname` IN (SELECT `hostname` FROM `mysql_servers` WHERE (`hostgroup_id` = 3) OR (`hostname` LIKE "reporting%"))
+    `hostname` IN (SELECT `hostname` FROM `mysql_servers` WHERE (`hostgroup_id` = 3) OR (`hostname` LIKE 'reporting%'))
   ) THEN
     1 -- Set reporting-reader weight low for all HG.
   ELSE
