@@ -2,7 +2,9 @@
   "func": "goToFrame",
   "category": "Animations",
   "paletteParams": [
-    "frame"
+    {
+      "name": "frame"
+    }
   ],
   "params": [
     "1"
