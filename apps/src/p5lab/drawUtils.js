@@ -13,10 +13,10 @@
 export function getTextWidth(p5, text, size) {
   p5.push();
   p5.textSize(size);
-  const w = p5.textWidth(text);
+  const width = p5.textWidth(text);
   p5.pop();
 
-  return w;
+  return width;
 }
 
 /**
