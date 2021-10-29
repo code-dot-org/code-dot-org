@@ -248,7 +248,7 @@ export default class CoreLibrary {
 
   getLastSpeechBubbleForSpriteId(spriteId) {
     const speechBubbles = this.speechBubbles.filter(
-      ({sprite}) => sprite.id !== spriteId
+      ({sprite}) => sprite.id === parseInt(spriteId)
     );
     return speechBubbles[speechBubbles.length - 1];
   }
