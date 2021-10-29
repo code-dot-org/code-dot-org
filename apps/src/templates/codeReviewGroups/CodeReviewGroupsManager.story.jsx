@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeReviewGroups from './CodeReviewGroups';
+import CodeReviewGroupsManager from './CodeReviewGroupsManager';
 
 const names = [
   'Sanchit',
@@ -9,7 +9,11 @@ const names = [
   'Ben',
   'Jessie',
   'Jamila',
-  'Hannah'
+  'Hannah',
+  'Harry',
+  'Hermione',
+  'Ron',
+  'Hagrid'
 ];
 
 // Fake data generator.
@@ -22,20 +26,22 @@ const getMembers = (count, offset = 0) =>
     name: names[k + offset]
   }));
 
-// Create two groups of four people.
+// Create code two groups of four students who have been assigned to a group,
+// as well as a group of students who have not been assigned to a group.
 // We'll also eventually pass in a group name as a top level property.
 const groups = [
   {id: 1, members: getMembers(4)},
-  {id: 2, members: getMembers(4, 4)}
+  {id: 2, members: getMembers(4, 4)},
+  {members: getMembers(4, 8), unassigned: true}
 ];
 
 export default storybook => {
   storybook
-    .storiesOf('CodeReviewGroups/CodeReviewGroups', module)
+    .storiesOf('CodeReviewGroups/CodeReviewGroupsManager', module)
     .addStoryTable([
       {
         name: 'Panel Showing Existing Code Review Groups',
-        story: () => <CodeReviewGroups initialGroups={groups} />
+        story: () => <CodeReviewGroupsManager initialGroups={groups} />
       }
     ]);
 };
