@@ -47,7 +47,7 @@ es:
         text: después {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': medidas
+            '"measures"': compaces
             '"seconds"': segundos
       Dancelab_changeColorBy:
         text: cambiar {COLOR} {METHOD} por {AMOUNT}
@@ -211,18 +211,18 @@ es:
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
       Dancelab_everyMeasuresRange:
-        text: 'repetir cada {N} medidas después de {START} '
+        text: 'repetir cada {N} compaces después de {START} '
       Dancelab_everySeconds:
         text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': medidas
+            '"measures"': compaces
             '"seconds"': segundos
       Dancelab_everySecondsRange:
         text: 'cada {N} {UNIT} desde {START} hasta {STOP} '
         options:
           UNIT:
-            measures: Medidas
+            measures: Compases
             seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
@@ -252,7 +252,7 @@ es:
         text: hora actual en {UNIT}
         options:
           UNIT:
-            '"measures"': medidas
+            '"measures"': compaces
             '"seconds"': segundos
       Dancelab_ifDanceIs:
         text: |-
@@ -277,8 +277,12 @@ es:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': medidas
+            '"measures"': compaces
             '"seconds"': segundos
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
         options:
@@ -339,7 +343,7 @@ es:
             '"SLOTH"': perezas
             '"UNICORN"': unicornios
           FORMAT:
-            '"border"': frontera
+            '"border"': orilla
             '"inner"': cuadrado interno
             '"diamond"': diamante
             '"circle"': círculo
@@ -448,7 +452,7 @@ es:
             '"SLOTH"': perezas
             '"UNICORN"': unicornios
           LAYOUT:
-            '"border"': frontera
+            '"border"': orilla
             '"inner"': cuadrado interno
             '"diamond"': diamante
             '"circle"': círculo
@@ -465,7 +469,7 @@ es:
       Dancelab_mixColors:
         text: mezclar {COLOR1} y {COLOR2}
       Dancelab_nMeasures:
-        text: "{N} medidas"
+        text: "{N} compaces"
       Dancelab_onPointerDown:
         text: puntero hacia abajo
       Dancelab_onPointerDrag:
@@ -949,6 +953,12 @@ es:
         text: establecer
       Dancelab_whenSetup2:
         text: establecer
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addTarget:
@@ -988,7 +998,7 @@ es:
             '"when"': cuando
             '"while"': mientras
       gamelab_clickedOn:
-        text: cuando {SPRITE} haz clic
+        text: cuando se hace clic en {SPRITE}
       gamelab_clickedSpritePointer:
         text: clic en sprite {SPRITE}
       gamelab_comment:
@@ -1695,7 +1705,7 @@ es:
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
       Mikelab_whenClickedOn:
-        text: cuando {SPRITE} haz clic
+        text: cuando se hace clic en {SPRITE}
       Mikelab_whenKeyPressed:
         text: al pulsar {KEY}
         options:
@@ -1762,6 +1772,16 @@ es:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Helado
+            Stars: Estrellas
+            Fireworks: Fuegos artificiales
+            '"rainbow"': Arcoíris
+            '"hearts"': Corazones
+            '"flowers"': Flores
+            '"waves"': Olas
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1773,6 +1793,10 @@ es:
         text: hacer {NUM} nuevos {ANIMATION_NAME} sprites
       Poetry_playSound:
         text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            Break: Interrumpir
+            Light: Luz
       Poetry_setBackground:
         text: establecer color de fondo {COLOR}
       Poetry_setBackgroundEffect:
@@ -1783,6 +1807,10 @@ es:
             '"space"': Espacio
             '"stars"': Estrellas
             '"ripples"': Ondas
+            '"rain"': Lluvia
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts"': Corazones coloridos
           PALETTE:
             '"rainbow"': Arcoíris
       Poetry_setBackgroundImageAs:
@@ -1875,7 +1903,7 @@ es:
         options:
           FORMAT:
             '"grid"': cuadrícula
-            '"border"': frontera
+            '"border"': orilla
             '"row"': renglon
             '"random"': aleatorio
       aalab_setSpeed:

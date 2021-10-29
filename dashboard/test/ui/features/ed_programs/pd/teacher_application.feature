@@ -1,5 +1,6 @@
 @dashboard_db_access
 @eyes
+@skip
 
 Feature: Teacher Application
 

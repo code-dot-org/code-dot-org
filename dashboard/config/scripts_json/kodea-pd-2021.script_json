@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "K5 Support",
-      "pilot_experiment": "csf-online-pd-kodea"
+      "pilot_experiment": "csf-online-pd-kodea",
+      "professional_learning_course": "K5 Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:05 UTC",
+    "serialized_at": "2021-10-25 22:54:50 UTC",
     "published_state": "pilot",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "kodea-pd-2021"
     }

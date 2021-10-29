@@ -1,0 +1,116 @@
+{
+  "category": "Poetry - Effects",
+  "config": {
+    "func": "addFrame",
+    "blockText": "set frame to {BRUSH}",
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "args": [
+      {
+        "name": "BRUSH",
+        "type": "String",
+        "options": [
+          [
+            "Metal Frame",
+            "\"placeholder\""
+          ],
+          [
+            "Bold",
+            "\"placeholder\""
+          ],
+          [
+            "Shadow Box",
+            "\"placeholder\""
+          ],
+          [
+            "Gilded",
+            "\"placeholder\""
+          ],
+          [
+            "Beaded",
+            "\"placeholder\""
+          ],
+          [
+            "Beveled",
+            "\"placeholder\""
+          ],
+          [
+            "Wood Frame",
+            "\"placeholder\""
+          ],
+          [
+            "Bamboo",
+            "\"placeholder\""
+          ],
+          [
+            "Decorative",
+            "\"placeholder\""
+          ],
+          [
+            "Donuts",
+            "\"placeholder\""
+          ],
+          [
+            "Ice Cream",
+            "\"placeholder\""
+          ],
+          [
+            "Fire",
+            "\"placeholder\""
+          ],
+          [
+            "Water",
+            "\"placeholder\""
+          ],
+          [
+            "Leaves",
+            "\"placeholder\""
+          ],
+          [
+            "Stars",
+            "\"placeholder\""
+          ],
+          [
+            "Fireworks",
+            "\"placeholder\""
+          ],
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Hearts",
+            "\"hearts\""
+          ],
+          [
+            "Flowers",
+            "\"flowers\""
+          ],
+          [
+            "Zig-Zag",
+            "\"zigzag\""
+          ],
+          [
+            "Swirls",
+            "\"swirls\""
+          ],
+          [
+            "Paw Prints",
+            "\"pawPrints\""
+          ],
+          [
+            "Waves",
+            "\"waves\""
+          ],
+          [
+            "Brick",
+            "\"brick\""
+          ]
+        ]
+      }
+    ]
+  }
+}

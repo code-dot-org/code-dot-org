@@ -13595,6 +13595,18 @@ es-MX:
               name: nueva etapa
             Dance Party:
               name: Fiesta de baile
+              description_student: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
+              description_teacher: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
           student_description: "¡Programa tu propia fiesta de baile para compartir
             con tus amigos!"
         frozen-2018-test-b:
@@ -13705,6 +13717,18 @@ es-MX:
           lessons:
             Dance Party - Go Further:
               name: Fiesta de baile - Ir más allá
+              description_student: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
+              description_teacher: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
           student_description: Motívate con más ideas de proyectos.
         coursef-2019:
           title: Curso F (2019)
@@ -19817,6 +19841,18 @@ es-MX:
           lessons:
             Dance Party:
               name: Fiesta de baile
+              description_student: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
+              description_teacher: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
           student_description: "¡Programa tu propia fiesta de baile para compartir
             con tus amigos!"
         k5-onlinepd-2019:
@@ -22683,7 +22719,7 @@ es-MX:
                 ¡Es tiempo de ponerse creativo y hacer una historia en Play Lab!
             Safety in My Online Neighborhood:
               name: Seguridad en mi Vecindario de Internet
-              description_student: Aprenda a ir a sitios seguros en Internet.
+              description_student: Aprenda a ir a sitios de Internet de forma segura.
               description_teacher: Esta lección fue creada originalmente por Common
                 Sense Education. El poder de Internet permite a los alumnos experimentar
                 y visitar lugares que quizá no podrían ver en persona. Pero, al igual
@@ -29041,7 +29077,7 @@ es-MX:
             Safety in My Online Neighborhood:
               key: Seguridad en mi Vecindario de Internet
               name: Seguridad en mi Vecindario de Internet
-              description_student: Aprenda a ir a sitios seguros en Internet.
+              description_student: Aprenda a ir a sitios de Internet de forma segura.
               description_teacher: |-
                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
 
@@ -35606,6 +35642,26 @@ es-MX:
           lessons:
             lesson-1:
               name: 'Fiesta de baile: sin conexión'
+              description_student: 'Haz una fiesta de baile en la clase para aprender
+                sobre los eventos. '
+              description_teacher: Los estudiantes aprenderán que los eventos son
+                una forma útil de controlar cuándo ocurre una acción e incluso que
+                se pueden usar para que varias cosas actúen de forma sincronizada.
+                En programación, puedes utilizar eventos para responder a un usuario
+                que lo controla (como presionar botones o hacer clic con el ratón).
+                Los eventos pueden hacer que tu programa sea más interesante e interactivo.
+          name: baile-desconectado
+          title: Hora del Código - Fiesta de Baile - Desconectado
+          description_audience: cursos de Kinder a 12vo
+          description: Los estudiantes aprenderán que los eventos son una forma útil
+            de controlar cuándo ocurre una acción e incluso que se pueden usar para
+            que varias cosas actúen de forma sincronizada. En programación, puedes
+            utilizar eventos para responder a un usuario que lo controla (como presionar
+            botones o hacer clic con el ratón). Los eventos pueden hacer que tu programa
+            sea más interesante e interactivo.
+          student_description: Los estudiantes aprenderán a pensar en controlar sus
+            acciones mediante eventos. Los eventos se utilizan mucho en programación
+            y deberían ser fáciles de reconocer después de esta lección.
         csa-u8-dev:
           lessons:
             lesson-1:
@@ -35616,8 +35672,6 @@ es-MX:
               name: Ejemplos
         poetry:
           lessons:
-            lesson-3:
-              name: Variables
             lesson-6:
               name: Círculo de Poesía
         spelling-bee:
@@ -35638,3 +35692,15 @@ es-MX:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Unidad 1 Proyectos
+            lesson-3:
+              name: 'Unidad 3: Proyectos '
+            lesson-4:
+              name: 'Unidad 4: Proyectos '
+            lesson-5:
+              name: 'Unidad 5: Proyectos '
+            lesson-6:
+              name: 'Unidad 6: Proyectos '

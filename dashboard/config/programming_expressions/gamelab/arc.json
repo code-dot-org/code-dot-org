@@ -2,12 +2,24 @@
   "func": "arc",
   "category": "Drawing",
   "paletteParams": [
-    "x",
-    "y",
-    "w",
-    "h",
-    "start",
-    "stop"
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "w"
+    },
+    {
+      "name": "h"
+    },
+    {
+      "name": "start"
+    },
+    {
+      "name": "stop"
+    }
   ],
   "params": [
     "0",

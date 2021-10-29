@@ -307,8 +307,7 @@ export default connect(
       isLoadingLevelsWithProgress:
         state.teacherPanel.isLoadingLevelsWithProgress,
       teacherId: state.currentUser && state.currentUser.userId,
-      exampleSolutions:
-        state.pageConstants && state.pageConstants.exampleSolutions
+      exampleSolutions: state.pageConstants?.exampleSolutions
     };
   },
   dispatch => ({

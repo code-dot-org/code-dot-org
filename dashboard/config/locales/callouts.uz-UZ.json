@@ -1595,6 +1595,36 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Yangi blok!",
           "poetry_remove_sprite": "Yangi blok!"
+        },
+        "CSD U3 Variables Predict Where X": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U3 Variables Predict Where X_2018": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U6 tugowar variables 1": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD U6 tugowar variables 1_2018": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         }
       }
     }

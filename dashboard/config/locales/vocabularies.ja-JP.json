@@ -315,14 +315,14 @@
         },
         "repeat/coursef/2021": {
           "word": "繰り返し",
-          "definition": "もう一度何かをする。"
+          "definition": "何かを再びすること。"
         },
         "for_loop/coursef/2021": {
           "word": "Forループ",
           "definition": "あらかじめ開始、終了、増分（増分間隔）のあるループ。"
         },
         "models_and_simulations/coursef/2021": {
-          "word": "モデルとシュミレーション",
+          "word": "モデルとシミュレーション",
           "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
         },
         "machine_learning/coursef/2021": {
@@ -378,7 +378,7 @@
           "definition": "将来的により良い結果を出そうと、何かを慎重に考え直すこと"
         },
         "try/coursef/2021": {
-          "word": "トライ",
+          "word": "試してみる",
           "definition": "何かをしようとすること"
         },
         "algorithm/courseb/2021": {
@@ -558,7 +558,6 @@
           "definition": "何かを引き起こすアクション。"
         },
         "code/coursed/2021": {
-          "word": "コード",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "repeat/coursed/2021": {
@@ -626,7 +625,6 @@
           "definition": "何かを引き起こすアクション。"
         },
         "code/express/2021": {
-          "word": "コード",
           "definition": "コードを記述したり、コンピューターの命令を記述したりします。"
         },
         "loop/express/2021": {

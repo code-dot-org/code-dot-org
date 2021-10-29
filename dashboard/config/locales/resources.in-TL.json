@@ -3,240 +3,240 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "crwdns2696233:0crwdne2696233:0",
-          "url": "crwdns2696235:0crwdne2696235:0"
+          "name": "crwdns2698965:0crwdne2698965:0",
+          "url": "crwdns2698967:0crwdne2698967:0"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "crwdns2696749:0crwdne2696749:0",
-          "url": "crwdns2696751:0crwdne2696751:0"
+          "name": "crwdns2699481:0crwdne2699481:0",
+          "url": "crwdns2699483:0crwdne2699483:0"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "crwdns2696753:0crwdne2696753:0",
-          "url": "crwdns2696755:0crwdne2696755:0"
+          "name": "crwdns2699485:0crwdne2699485:0",
+          "url": "crwdns2699487:0crwdne2699487:0"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "crwdns2696757:0crwdne2696757:0",
-          "url": "crwdns2696759:0crwdne2696759:0"
+          "name": "crwdns2699489:0crwdne2699489:0",
+          "url": "crwdns2699491:0crwdne2699491:0"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "crwdns2696937:0crwdne2696937:0",
-          "url": "crwdns2696939:0crwdne2696939:0"
+          "name": "crwdns2699669:0crwdne2699669:0",
+          "url": "crwdns2699671:0crwdne2699671:0"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "crwdns2697121:0crwdne2697121:0",
-          "url": "crwdns2697123:0crwdne2697123:0"
+          "name": "crwdns2699853:0crwdne2699853:0",
+          "url": "crwdns2699855:0crwdne2699855:0"
         },
         "hocencryption/hoc-encryption/unversioned": {
-          "name": "crwdns2697125:0crwdne2697125:0",
-          "url": "crwdns2697127:0crwdne2697127:0"
+          "name": "crwdns2699857:0crwdne2699857:0",
+          "url": "crwdns2699859:0crwdne2699859:0"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
-          "name": "crwdns2697549:0crwdne2697549:0",
-          "url": "crwdns2697551:0crwdne2697551:0"
+          "name": "crwdns2700281:0crwdne2700281:0",
+          "url": "crwdns2700283:0crwdne2700283:0"
         },
         "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "crwdns2697553:0crwdne2697553:0",
-          "url": "crwdns2697555:0crwdne2697555:0"
+          "name": "crwdns2700285:0crwdne2700285:0",
+          "url": "crwdns2700287:0crwdne2700287:0"
         },
         "decode-this-message/text-compression/unversioned": {
-          "name": "crwdns2697557:0crwdne2697557:0",
-          "url": "crwdns2697559:0crwdne2697559:0"
+          "name": "crwdns2700289:0crwdne2700289:0",
+          "url": "crwdns2700291:0crwdne2700291:0"
         },
         "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "crwdns2697561:0crwdne2697561:0",
-          "url": "crwdns2697563:0crwdne2697563:0"
+          "name": "crwdns2700293:0crwdne2700293:0",
+          "url": "crwdns2700295:0crwdne2700295:0"
         },
         "video-text-compression/text-compression/unversioned": {
-          "name": "crwdns2697565:0crwdne2697565:0",
-          "url": "crwdns2697567:0crwdne2697567:0"
+          "name": "crwdns2700297:0crwdne2700297:0",
+          "url": "crwdns2700299:0crwdne2700299:0"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "crwdns2697635:0crwdne2697635:0",
-          "url": "crwdns2697637:0crwdne2697637:0"
+          "name": "crwdns2700367:0crwdne2700367:0",
+          "url": "crwdns2700369:0crwdne2700369:0"
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "crwdns2697789:0crwdne2697789:0",
-          "url": "crwdns2697791:0crwdne2697791:0"
+          "name": "crwdns2700521:0crwdne2700521:0",
+          "url": "crwdns2700523:0crwdne2700523:0"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "crwdns2697891:0crwdne2697891:0",
-          "url": "crwdns2697893:0crwdne2697893:0"
+          "name": "crwdns2700623:0crwdne2700623:0",
+          "url": "crwdns2700625:0crwdne2700625:0"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "crwdns2697995:0crwdne2697995:0",
-          "url": "crwdns2697997:0crwdne2697997:0"
+          "name": "crwdns2700727:0crwdne2700727:0",
+          "url": "crwdns2700729:0crwdne2700729:0"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "crwdns2698093:0crwdne2698093:0",
-          "url": "crwdns2698095:0crwdne2698095:0"
+          "name": "crwdns2700825:0crwdne2700825:0",
+          "url": "crwdns2700827:0crwdne2700827:0"
         },
         "ai-societal/oceans/unversioned": {
-          "name": "crwdns2698097:0crwdne2698097:0",
-          "url": "crwdns2698099:0crwdne2698099:0"
+          "name": "crwdns2700829:0crwdne2700829:0",
+          "url": "crwdns2700831:0crwdne2700831:0"
         },
         "ai-training/oceans/unversioned": {
-          "name": "crwdns2698101:0crwdne2698101:0",
-          "url": "crwdns2698103:0crwdne2698103:0"
+          "name": "crwdns2700833:0crwdne2700833:0",
+          "url": "crwdns2700835:0crwdne2700835:0"
         },
         "introducing_sprite_lab/coursef/2021": {
-          "name": "crwdns2590828:0crwdne2590828:0",
-          "url": "crwdns2689345:0crwdne2689345:0"
+          "name": "crwdns2701063:0crwdne2701063:0",
+          "url": "crwdns2701065:0crwdne2701065:0"
         },
         "exploring_apps/coursef/2021": {
-          "name": "crwdns2590830:0crwdne2590830:0",
-          "url": "crwdns2689347:0crwdne2689347:0"
+          "name": "crwdns2701067:0crwdne2701067:0",
+          "url": "crwdns2701069:0crwdne2701069:0"
         },
         "introducing_sprite_lab_1/coursef/2021": {
-          "name": "crwdns2590832:0crwdne2590832:0",
-          "url": "crwdns2689349:0crwdne2689349:0"
+          "name": "crwdns2701071:0crwdne2701071:0",
+          "url": "crwdns2701073:0crwdne2701073:0"
         },
         "exploring_apps_1/coursef/2021": {
-          "name": "crwdns2590834:0crwdne2590834:0",
-          "url": "crwdns2689351:0crwdne2689351:0"
+          "name": "crwdns2701075:0crwdne2701075:0",
+          "url": "crwdns2701077:0crwdne2701077:0"
         },
         "making_sprites/coursef/2021": {
-          "name": "crwdns2590902:0crwdne2590902:0",
-          "url": "crwdns2689353:0crwdne2689353:0"
+          "name": "crwdns2701145:0crwdne2701145:0",
+          "url": "crwdns2701147:0crwdne2701147:0"
         },
         "sprite_lab_documentation/coursef/2021": {
-          "name": "crwdns2591218:0crwdne2591218:0",
-          "url": "crwdns2689377:0crwdne2689377:0"
+          "name": "crwdns2701485:0crwdne2701485:0",
+          "url": "crwdns2701487:0crwdne2701487:0"
         },
         "sprites_in_action/coursef/2021": {
-          "name": "crwdns2590980:0crwdne2590980:0",
-          "url": "crwdns2689357:0crwdne2689357:0"
+          "name": "crwdns2701227:0crwdne2701227:0",
+          "url": "crwdns2701229:0crwdne2701229:0"
         },
         "the_power_of_words_lesson_slides/coursef/2021": {
-          "name": "crwdns2591080:0crwdne2591080:0",
-          "url": "crwdns2689361:0crwdne2689361:0"
+          "name": "crwdns2701331:0crwdne2701331:0",
+          "url": "crwdns2701333:0crwdne2701333:0"
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
-          "name": "crwdns2591082:0crwdne2591082:0",
-          "url": "crwdns2689363:0crwdne2689363:0"
+          "name": "crwdns2701335:0crwdne2701335:0",
+          "url": "crwdns2701337:0crwdne2701337:0"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
-          "name": "crwdns2591084:0crwdne2591084:0",
-          "url": "crwdns2689365:0crwdne2689365:0"
+          "name": "crwdns2701339:0crwdne2701339:0",
+          "url": "crwdns2701341:0crwdne2701341:0"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "crwdns2591086:0crwdne2591086:0",
-          "url": "crwdns2689367:0crwdne2689367:0"
+          "name": "crwdns2701343:0crwdne2701343:0",
+          "url": "crwdns2701345:0crwdne2701345:0"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "crwdns2591088:0crwdne2591088:0",
-          "url": "crwdns2689369:0crwdne2689369:0"
+          "name": "crwdns2701347:0crwdne2701347:0",
+          "url": "crwdns2701349:0crwdne2701349:0"
         },
         "variables_blank_space_stories/coursef/2021": {
-          "name": "crwdns2591154:0crwdne2591154:0",
-          "url": "crwdns2689371:0crwdne2689371:0"
+          "name": "crwdns2701415:0crwdne2701415:0",
+          "url": "crwdns2701417:0crwdne2701417:0"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
-          "name": "crwdns2591156:0crwdne2591156:0",
-          "url": "crwdns2689373:0crwdne2689373:0"
+          "name": "crwdns2701419:0crwdne2701419:0",
+          "url": "crwdns2701421:0crwdne2701421:0"
         },
         "blank_space_stories/coursef/2021": {
-          "name": "crwdns2591158:0crwdne2591158:0",
-          "url": "crwdns2689375:0crwdne2689375:0"
+          "name": "crwdns2701423:0crwdne2701423:0",
+          "url": "crwdns2701425:0crwdne2701425:0"
         },
         "text_and_prompts/coursef/2021": {
-          "name": "crwdns2591220:0crwdne2591220:0",
-          "url": "crwdns2689379:0crwdne2689379:0"
+          "name": "crwdns2701489:0crwdne2701489:0",
+          "url": "crwdns2701491:0crwdne2701491:0"
         },
         "user_input_programs/coursef/2021": {
-          "name": "crwdns2591282:0crwdne2591282:0",
-          "url": "crwdns2689381:0crwdne2689381:0"
+          "name": "crwdns2701553:0crwdne2701553:0",
+          "url": "crwdns2701555:0crwdne2701555:0"
         },
         "mini_project_user_input_programs/coursef/2021": {
-          "name": "crwdns2591284:0crwdne2591284:0",
-          "url": "crwdns2689383:0crwdne2689383:0"
+          "name": "crwdns2701557:0crwdne2701557:0",
+          "url": "crwdns2701559:0crwdne2701559:0"
         },
         "teacher_sandbox_level/coursef/2021": {
-          "name": "crwdns2591286:0crwdne2591286:0",
-          "url": "crwdns2689385:0crwdne2689385:0"
+          "name": "crwdns2701561:0crwdne2701561:0",
+          "url": "crwdns2701563:0crwdne2701563:0"
         },
         "mini_project_user_input_programs_1/coursef/2021": {
-          "name": "crwdns2591288:0crwdne2591288:0",
-          "url": "crwdns2689387:0crwdne2689387:0"
+          "name": "crwdns2701565:0crwdne2701565:0",
+          "url": "crwdns2701567:0crwdne2701567:0"
         },
         "pause_and_think_online/coursef/2021": {
-          "name": "crwdns2591430:0crwdne2591430:0",
-          "url": "crwdns2689389:0crwdne2689389:0"
+          "name": "crwdns2701709:0crwdne2701709:0",
+          "url": "crwdns2701711:0crwdne2701711:0"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "crwdns2591532:0crwdne2591532:0",
-          "url": "crwdns2689391:0crwdne2689391:0"
+          "name": "crwdns2701813:0crwdne2701813:0",
+          "url": "crwdns2701815:0crwdne2701815:0"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "crwdns2591534:0crwdne2591534:0",
-          "url": "crwdns2689393:0crwdne2689393:0"
+          "name": "crwdns2701817:0crwdne2701817:0",
+          "url": "crwdns2701819:0crwdne2701819:0"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "crwdns2591536:0crwdne2591536:0",
-          "url": "crwdns2689395:0crwdne2689395:0"
+          "name": "crwdns2701821:0crwdne2701821:0",
+          "url": "crwdns2701823:0crwdne2701823:0"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "crwdns2591538:0crwdne2591538:0",
-          "url": "crwdns2689397:0crwdne2689397:0"
+          "name": "crwdns2701825:0crwdne2701825:0",
+          "url": "crwdns2701827:0crwdne2701827:0"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "crwdns2591540:0crwdne2591540:0",
-          "url": "crwdns2689399:0crwdne2689399:0"
+          "name": "crwdns2701829:0crwdne2701829:0",
+          "url": "crwdns2701831:0crwdne2701831:0"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "crwdns2591542:0crwdne2591542:0",
-          "url": "crwdns2689401:0crwdne2689401:0"
+          "name": "crwdns2701833:0crwdne2701833:0",
+          "url": "crwdns2701835:0crwdne2701835:0"
         },
         "course-cf-blockly-blocks/coursef/2021": {
-          "name": "crwdns2591604:0crwdne2591604:0",
-          "url": "crwdns2689403:0crwdne2689403:0"
+          "name": "crwdns2701897:0crwdne2701897:0",
+          "url": "crwdns2701899:0crwdne2701899:0"
         },
         "running-simulations/coursef/2021": {
-          "name": "crwdns2591700:0crwdne2591700:0",
-          "url": "crwdns2689405:0crwdne2689405:0"
+          "name": "crwdns2701995:0crwdne2701995:0",
+          "url": "crwdns2701997:0crwdne2701997:0"
         },
         "ai-ml/coursef/2021": {
-          "name": "crwdns2591848:0crwdne2591848:0",
-          "url": "crwdns2689407:0crwdne2689407:0"
+          "name": "crwdns2702145:0crwdne2702145:0",
+          "url": "crwdns2702147:0crwdne2702147:0"
         },
         "ai-training/coursef/2021": {
-          "name": "crwdns2591850:0crwdne2591850:0",
-          "url": "crwdns2689409:0crwdne2689409:0"
+          "name": "crwdns2702149:0crwdne2702149:0",
+          "url": "crwdns2702151:0crwdne2702151:0"
         },
         "ai-societal/coursef/2021": {
-          "name": "crwdns2591852:0crwdne2591852:0",
-          "url": "crwdns2689411:0crwdne2689411:0"
+          "name": "crwdns2702153:0crwdne2702153:0",
+          "url": "crwdns2702155:0crwdne2702155:0"
         },
         "unplugged-video-internet/coursef/2021": {
-          "name": "crwdns2591914:0crwdne2591914:0",
-          "url": "crwdns2689413:0crwdne2689413:0"
+          "name": "crwdns2702217:0crwdne2702217:0",
+          "url": "crwdns2702219:0crwdne2702219:0"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "crwdns2591916:0crwdne2591916:0",
-          "url": "crwdns2689415:0crwdne2689415:0"
+          "name": "crwdns2702221:0crwdne2702221:0",
+          "url": "crwdns2702223:0crwdne2702223:0"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "crwdns2591918:0crwdne2591918:0",
-          "url": "crwdns2689417:0crwdne2689417:0"
+          "name": "crwdns2702225:0crwdne2702225:0",
+          "url": "crwdns2702227:0crwdne2702227:0"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "crwdns2591920:0crwdne2591920:0",
-          "url": "crwdns2689419:0crwdne2689419:0"
+          "name": "crwdns2702229:0crwdne2702229:0",
+          "url": "crwdns2702231:0crwdne2702231:0"
         },
         "get-site-ip-com/coursef/2021": {
-          "name": "crwdns2591922:0crwdne2591922:0",
-          "url": "crwdns2689421:0crwdne2689421:0"
+          "name": "crwdns2702233:0crwdne2702233:0",
+          "url": "crwdns2702235:0crwdne2702235:0"
         },
         "design-process/coursef/2021": {
-          "name": "crwdns2592030:0crwdne2592030:0",
-          "url": "crwdns2689423:0crwdne2689423:0"
+          "name": "crwdns2702343:0crwdne2702343:0",
+          "url": "crwdns2702345:0crwdne2702345:0"
         },
         "final-project-design-worksheet/coursef/2021": {
-          "name": "crwdns2592032:0crwdne2592032:0",
-          "url": "crwdns2689425:0crwdne2689425:0"
+          "name": "crwdns2702347:0crwdne2702347:0",
+          "url": "crwdns2702349:0crwdne2702349:0"
         },
         "rubric-csf-final-projects/coursef/2021": {
-          "name": "crwdns2592034:0crwdne2592034:0",
-          "url": "crwdns2689427:0crwdne2689427:0"
+          "name": "crwdns2702351:0crwdne2702351:0",
+          "url": "crwdns2702353:0crwdne2702353:0"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "crwdns2592052:0crwdne2592052:0",
@@ -287,140 +287,140 @@
           "url": "crwdns2693199:0crwdne2693199:0"
         },
         "digital-trails-lesson-slides/courseb/2021": {
-          "name": "crwdns2592112:0crwdne2592112:0",
-          "url": "crwdns2689451:0crwdne2689451:0"
+          "name": "crwdns2702409:0crwdne2702409:0",
+          "url": "crwdns2702411:0crwdne2702411:0"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
-          "name": "crwdns2592114:0crwdne2592114:0",
-          "url": "crwdns2689453:0crwdne2689453:0"
+          "name": "crwdns2702413:0crwdne2702413:0",
+          "url": "crwdns2702415:0crwdne2702415:0"
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
-          "name": "crwdns2592116:0crwdne2592116:0",
-          "url": "crwdns2689455:0crwdne2689455:0"
+          "name": "crwdns2702417:0crwdne2702417:0",
+          "url": "crwdns2702419:0crwdne2702419:0"
         },
         "digital-trails-animal-tracks/courseb/2021": {
-          "name": "crwdns2592118:0crwdne2592118:0",
-          "url": "crwdns2689457:0crwdne2689457:0"
+          "name": "crwdns2702421:0crwdne2702421:0",
+          "url": "crwdns2702423:0crwdne2702423:0"
         },
         "mimi-activity/courseb/2021": {
-          "name": "crwdns2592356:0crwdne2592356:0",
-          "url": "crwdns2689485:0crwdne2689485:0"
+          "name": "crwdns2702687:0crwdne2702687:0",
+          "url": "crwdns2702689:0crwdne2702689:0"
         },
         "mimi-debugging/courseb/2021": {
-          "name": "crwdns2592172:0crwdne2592172:0",
-          "url": "crwdns2689461:0crwdne2689461:0"
+          "name": "crwdns2702479:0crwdne2702479:0",
+          "url": "crwdns2702481:0crwdne2702481:0"
         },
         "mimi-teacher-puzzle/courseb/2021": {
-          "name": "crwdns2592174:0crwdne2592174:0",
-          "url": "crwdns2689463:0crwdne2689463:0"
+          "name": "crwdns2702483:0crwdne2702483:0",
+          "url": "crwdns2702485:0crwdne2702485:0"
         },
         "teacher-video-move-it/courseb/2021": {
-          "name": "crwdns2592176:0crwdne2592176:0",
-          "url": "crwdns2689465:0crwdne2689465:0"
+          "name": "crwdns2702487:0crwdne2702487:0",
+          "url": "crwdns2702489:0crwdne2702489:0"
         },
         "feeling_faces_emotion_image/courseb/2021": {
-          "name": "crwdns2592728:0crwdne2592728:0",
-          "url": "crwdns2689525:0crwdne2689525:0"
+          "name": "crwdns2703099:0crwdne2703099:0",
+          "url": "crwdns2703101:0crwdne2703101:0"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "crwdns2592824:0crwdne2592824:0",
-          "url": "crwdns2689529:0crwdne2689529:0"
+          "name": "crwdns2703199:0crwdne2703199:0",
+          "url": "crwdns2703201:0crwdne2703201:0"
         },
         "jigsaw/courseb/2021": {
-          "name": "crwdns2592258:0crwdne2592258:0",
-          "url": "crwdns2689473:0crwdne2689473:0"
+          "name": "crwdns2702577:0crwdne2702577:0",
+          "url": "crwdns2702579:0crwdne2702579:0"
         },
         "class-section-video/courseb/2021": {
-          "name": "crwdns2592260:0crwdne2592260:0",
-          "url": "crwdns2689475:0crwdne2689475:0"
+          "name": "crwdns2702581:0crwdne2702581:0",
+          "url": "crwdns2702583:0crwdne2702583:0"
         },
         "course-ab-blockly-blocks/courseb/2021": {
-          "name": "crwdns2592898:0crwdne2592898:0",
-          "url": "crwdns2689539:0crwdne2689539:0"
+          "name": "crwdns2703283:0crwdne2703283:0",
+          "url": "crwdns2703285:0crwdne2703285:0"
         },
         "pair-programming-vid/courseb/2021": {
-          "name": "crwdns2592360:0crwdne2592360:0",
-          "url": "crwdns2689489:0crwdne2689489:0"
+          "name": "crwdns2702695:0crwdne2702695:0",
+          "url": "crwdns2702697:0crwdne2702697:0"
         },
         "wiggles_-_gonoodle/courseb/2021": {
-          "name": "crwdns2592266:0crwdne2592266:0",
-          "url": "crwdns2689481:0crwdne2689481:0"
+          "name": "crwdns2702593:0crwdne2702593:0",
+          "url": "crwdns2702595:0crwdne2702595:0"
         },
         "20_20_20_rule/courseb/2021": {
-          "name": "crwdns2592268:0crwdne2592268:0",
-          "url": "crwdns2689483:0crwdne2689483:0"
+          "name": "crwdns2702597:0crwdne2702597:0",
+          "url": "crwdns2702599:0crwdne2702599:0"
         },
         "happy-map-game-pieces/courseb/2021": {
-          "name": "crwdns2592362:0crwdne2592362:0",
-          "url": "crwdns2689491:0crwdne2689491:0"
+          "name": "crwdns2702699:0crwdne2702699:0",
+          "url": "crwdns2702701:0crwdne2702701:0"
         },
         "compass-rose/courseb/2021": {
-          "name": "crwdns2592364:0crwdne2592364:0",
-          "url": "crwdns2689493:0crwdne2689493:0"
+          "name": "crwdns2702703:0crwdne2702703:0",
+          "url": "crwdns2702705:0crwdne2702705:0"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
-          "name": "crwdns2592366:0crwdne2592366:0",
-          "url": "crwdns2689495:0crwdne2689495:0"
+          "name": "crwdns2702707:0crwdne2702707:0",
+          "url": "crwdns2702709:0crwdne2702709:0"
         },
         "stevie_and_the_big_project/courseb/2021": {
-          "name": "crwdns2592430:0crwdne2592430:0",
-          "url": "crwdns2689499:0crwdne2689499:0"
+          "name": "crwdns2702775:0crwdne2702775:0",
+          "url": "crwdns2702777:0crwdne2702777:0"
         },
         "unspotted_bugs/courseb/2021": {
-          "name": "crwdns2592432:0crwdne2592432:0",
-          "url": "crwdns2689501:0crwdne2689501:0"
+          "name": "crwdns2702779:0crwdne2702779:0",
+          "url": "crwdns2702781:0crwdne2702781:0"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
-          "name": "crwdns2592512:0crwdne2592512:0",
-          "url": "crwdns2689503:0crwdne2689503:0"
+          "name": "crwdns2702861:0crwdne2702861:0",
+          "url": "crwdns2702863:0crwdne2702863:0"
         },
         "csf-getting-loopy-activity-worksheet/courseb/2021": {
-          "name": "crwdns2592514:0crwdne2592514:0",
-          "url": "crwdns2689505:0crwdne2689505:0"
+          "name": "crwdns2702865:0crwdne2702865:0",
+          "url": "crwdns2702867:0crwdne2702867:0"
         },
         "csf-getting-loopy-assessment/courseb/2021": {
-          "name": "crwdns2592516:0crwdne2592516:0",
-          "url": "crwdns2689507:0crwdne2689507:0"
+          "name": "crwdns2702869:0crwdne2702869:0",
+          "url": "crwdns2702871:0crwdne2702871:0"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
-          "name": "crwdns2592518:0crwdne2592518:0",
-          "url": "crwdns2689509:0crwdne2689509:0"
+          "name": "crwdns2702873:0crwdne2702873:0",
+          "url": "crwdns2702875:0crwdne2702875:0"
         },
         "csf-lesson-recommend/courseb/2021": {
-          "name": "crwdns2592900:0crwdne2592900:0",
-          "url": "crwdns2689541:0crwdne2689541:0"
+          "name": "crwdns2703287:0crwdne2703287:0",
+          "url": "crwdns2703289:0crwdne2703289:0"
         },
         "common-sense-media-pause-think/courseb/2021": {
-          "name": "crwdns2592902:0crwdne2592902:0",
-          "url": "crwdns2689543:0crwdne2689543:0"
+          "name": "crwdns2703291:0crwdne2703291:0",
+          "url": "crwdns2703293:0crwdne2703293:0"
         },
         "the-right-app-scenarios/courseb/2021": {
-          "name": "crwdns2592774:0crwdne2592774:0",
-          "url": "crwdns2689527:0crwdne2689527:0"
+          "name": "crwdns2703147:0crwdne2703147:0",
+          "url": "crwdns2703149:0crwdne2703149:0"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "crwdns2592826:0crwdne2592826:0",
-          "url": "crwdns2689531:0crwdne2689531:0"
+          "name": "crwdns2703203:0crwdne2703203:0",
+          "url": "crwdns2703205:0crwdne2703205:0"
         },
         "csf-the-big-event-assessment/courseb/2021": {
-          "name": "crwdns2592828:0crwdne2592828:0",
-          "url": "crwdns2689533:0crwdne2689533:0"
+          "name": "crwdns2703207:0crwdne2703207:0",
+          "url": "crwdns2703209:0crwdne2703209:0"
         },
         "assessment-answer-big-event/courseb/2021": {
-          "name": "crwdns2592830:0crwdne2592830:0",
-          "url": "crwdns2689535:0crwdne2689535:0"
+          "name": "crwdns2703211:0crwdne2703211:0",
+          "url": "crwdns2703213:0crwdne2703213:0"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "crwdns2592904:0crwdne2592904:0",
-          "url": "crwdns2689545:0crwdne2689545:0"
+          "name": "crwdns2703295:0crwdne2703295:0",
+          "url": "crwdns2703297:0crwdne2703297:0"
         },
         "play_lab_project_planning_guide/courseb/2021": {
-          "name": "crwdns2592962:0crwdne2592962:0",
-          "url": "crwdns2689547:0crwdne2689547:0"
+          "name": "crwdns2703355:0crwdne2703355:0",
+          "url": "crwdns2703357:0crwdne2703357:0"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "crwdns2592964:0crwdne2592964:0",
-          "url": "crwdns2689549:0crwdne2689549:0"
+          "name": "crwdns2703359:0crwdne2703359:0",
+          "url": "crwdns2703361:0crwdne2703361:0"
         },
         "csta_standards_mapping/courseb/2021": {
           "name": "crwdns2592970:0crwdne2592970:0",
@@ -467,160 +467,160 @@
           "url": "crwdns2693203:0crwdne2693203:0"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
-          "name": "crwdns2593026:0crwdne2593026:0",
-          "url": "crwdns2689571:0crwdne2689571:0"
+          "name": "crwdns2703403:0crwdne2703403:0",
+          "url": "crwdns2703405:0crwdne2703405:0"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
-          "name": "crwdns2593028:0crwdne2593028:0",
-          "url": "crwdns2689573:0crwdne2689573:0"
+          "name": "crwdns2703407:0crwdne2703407:0",
+          "url": "crwdns2703409:0crwdne2703409:0"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
-          "name": "crwdns2593030:0crwdne2593030:0",
-          "url": "crwdns2689575:0crwdne2689575:0"
+          "name": "crwdns2703411:0crwdne2703411:0",
+          "url": "crwdns2703413:0crwdne2703413:0"
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
-          "name": "crwdns2593032:0crwdne2593032:0",
-          "url": "crwdns2689577:0crwdne2689577:0"
+          "name": "crwdns2703415:0crwdne2703415:0",
+          "url": "crwdns2703417:0crwdne2703417:0"
         },
         "pair-programming-vid/coursea/2021": {
-          "name": "crwdns2593370:0crwdne2593370:0",
-          "url": "crwdns2689611:0crwdne2689611:0"
+          "name": "crwdns2703787:0crwdne2703787:0",
+          "url": "crwdns2703789:0crwdne2703789:0"
         },
         "20_20_20_rule/coursea/2021": {
-          "name": "crwdns2593094:0crwdne2593094:0",
-          "url": "crwdns2689581:0crwdne2689581:0"
+          "name": "crwdns2703481:0crwdne2703481:0",
+          "url": "crwdns2703483:0crwdne2703483:0"
         },
         "wiggles-go_noodle/coursea/2021": {
-          "name": "crwdns2593096:0crwdne2593096:0",
-          "url": "crwdns2689583:0crwdne2689583:0"
+          "name": "crwdns2703485:0crwdne2703485:0",
+          "url": "crwdns2703487:0crwdne2703487:0"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "crwdns2593098:0crwdne2593098:0",
-          "url": "crwdns2689585:0crwdne2689585:0"
+          "name": "crwdns2703489:0crwdne2703489:0",
+          "url": "crwdns2703491:0crwdne2703491:0"
         },
         "unplugged-video-happy-maps/coursea/2021": {
-          "name": "crwdns2593142:0crwdne2593142:0",
-          "url": "crwdns2689587:0crwdne2689587:0"
+          "name": "crwdns2703535:0crwdne2703535:0",
+          "url": "crwdns2703537:0crwdne2703537:0"
         },
         "happy-map-cards/coursea/2021": {
-          "name": "crwdns2593522:0crwdne2593522:0",
-          "url": "crwdns2689625:0crwdne2689625:0"
+          "name": "crwdns2703953:0crwdne2703953:0",
+          "url": "crwdns2703955:0crwdne2703955:0"
         },
         "activity-answer-happy-maps/coursea/2021": {
-          "name": "crwdns2593146:0crwdne2593146:0",
-          "url": "crwdns2689591:0crwdne2689591:0"
+          "name": "crwdns2703543:0crwdne2703543:0",
+          "url": "crwdns2703545:0crwdne2703545:0"
         },
         "happy-map-game-pieces/coursea/2021": {
-          "name": "crwdns2593524:0crwdne2593524:0",
-          "url": "crwdns2689627:0crwdne2689627:0"
+          "name": "crwdns2703957:0crwdne2703957:0",
+          "url": "crwdns2703959:0crwdne2703959:0"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "crwdns2593150:0crwdne2593150:0",
-          "url": "crwdns2689595:0crwdne2689595:0"
+          "name": "crwdns2703551:0crwdne2703551:0",
+          "url": "crwdns2703553:0crwdne2703553:0"
         },
         "course-ab-blockly-blocks/coursea/2021": {
-          "name": "crwdns2593800:0crwdne2593800:0",
-          "url": "crwdns2689659:0crwdne2689659:0"
+          "name": "crwdns2704265:0crwdne2704265:0",
+          "url": "crwdns2704267:0crwdne2704267:0"
         },
         "20_20_20_rule_1/coursea/2021": {
-          "name": "crwdns2593224:0crwdne2593224:0",
-          "url": "crwdns2689601:0crwdne2689601:0"
+          "name": "crwdns2703631:0crwdne2703631:0",
+          "url": "crwdns2703633:0crwdne2703633:0"
         },
         "wiggles_-_gonoodle/coursea/2021": {
-          "name": "crwdns2593226:0crwdne2593226:0",
-          "url": "crwdns2689603:0crwdne2689603:0"
+          "name": "crwdns2703635:0crwdne2703635:0",
+          "url": "crwdns2703637:0crwdne2703637:0"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
-          "name": "crwdns2593308:0crwdne2593308:0",
-          "url": "crwdns2689607:0crwdne2689607:0"
+          "name": "crwdns2703721:0crwdne2703721:0",
+          "url": "crwdns2703723:0crwdne2703723:0"
         },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "crwdns2593310:0crwdne2593310:0",
-          "url": "crwdns2689609:0crwdne2689609:0"
+          "name": "crwdns2703725:0crwdne2703725:0",
+          "url": "crwdns2703727:0crwdne2703727:0"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "crwdns2593372:0crwdne2593372:0",
-          "url": "crwdns2689613:0crwdne2689613:0"
+          "name": "crwdns2703791:0crwdne2703791:0",
+          "url": "crwdns2703793:0crwdne2703793:0"
         },
         "happy-map-cards-xl/coursea/2021": {
-          "name": "crwdns2593438:0crwdne2593438:0",
-          "url": "crwdns2689619:0crwdne2689619:0"
+          "name": "crwdns2703863:0crwdne2703863:0",
+          "url": "crwdns2703865:0crwdne2703865:0"
         },
         "happy-map-game-pieces-bonus-pack/coursea/2021": {
-          "name": "crwdns2593528:0crwdne2593528:0",
-          "url": "crwdns2689631:0crwdne2689631:0"
+          "name": "crwdns2703965:0crwdne2703965:0",
+          "url": "crwdns2703967:0crwdne2703967:0"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "crwdns2593442:0crwdne2593442:0",
-          "url": "crwdns2689623:0crwdne2689623:0"
+          "name": "crwdns2703871:0crwdne2703871:0",
+          "url": "crwdns2703873:0crwdne2703873:0"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "crwdns2593530:0crwdne2593530:0",
-          "url": "crwdns2689633:0crwdne2689633:0"
+          "name": "crwdns2703969:0crwdne2703969:0",
+          "url": "crwdns2703971:0crwdne2703971:0"
         },
         "pair-programming/coursea/2021": {
-          "name": "crwdns2593532:0crwdne2593532:0",
-          "url": "crwdns2689635:0crwdne2689635:0"
+          "name": "crwdns2703973:0crwdne2703973:0",
+          "url": "crwdns2703975:0crwdne2703975:0"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "crwdns2593594:0crwdne2593594:0",
-          "url": "crwdns2689639:0crwdne2689639:0"
+          "name": "crwdns2704039:0crwdne2704039:0",
+          "url": "crwdns2704041:0crwdne2704041:0"
         },
         "csf_lesson_recommendations/coursea/2021": {
-          "name": "crwdns2593596:0crwdne2593596:0",
-          "url": "crwdns2689641:0crwdne2689641:0"
+          "name": "crwdns2704043:0crwdne2704043:0",
+          "url": "crwdns2704045:0crwdne2704045:0"
         },
         "common-sense-media-pause-think/coursea/2021": {
-          "name": "crwdns2593802:0crwdne2593802:0",
-          "url": "crwdns2689661:0crwdne2689661:0"
+          "name": "crwdns2704269:0crwdne2704269:0",
+          "url": "crwdns2704271:0crwdne2704271:0"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "crwdns2593664:0crwdne2593664:0",
-          "url": "crwdns2689645:0crwdne2689645:0"
+          "name": "crwdns2704115:0crwdne2704115:0",
+          "url": "crwdns2704117:0crwdne2704117:0"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
-          "name": "crwdns2593666:0crwdne2593666:0",
-          "url": "crwdns2689647:0crwdne2689647:0"
+          "name": "crwdns2704119:0crwdne2704119:0",
+          "url": "crwdns2704121:0crwdne2704121:0"
         },
         "unplugged-video-big-event/coursea/2021": {
-          "name": "crwdns2593726:0crwdne2593726:0",
-          "url": "crwdns2689649:0crwdne2689649:0"
+          "name": "crwdns2704181:0crwdne2704181:0",
+          "url": "crwdns2704183:0crwdne2704183:0"
         },
         "csf-the-big-event-assessment/coursea/2021": {
-          "name": "crwdns2593728:0crwdne2593728:0",
-          "url": "crwdns2689651:0crwdne2689651:0"
+          "name": "crwdns2704185:0crwdne2704185:0",
+          "url": "crwdns2704187:0crwdne2704187:0"
         },
         "assessment-answer-big-event/coursea/2021": {
-          "name": "crwdns2593730:0crwdne2593730:0",
-          "url": "crwdns2689653:0crwdne2689653:0"
+          "name": "crwdns2704189:0crwdne2704189:0",
+          "url": "crwdns2704191:0crwdne2704191:0"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "crwdns2593806:0crwdne2593806:0",
-          "url": "crwdns2689665:0crwdne2689665:0"
+          "name": "crwdns2704277:0crwdne2704277:0",
+          "url": "crwdns2704279:0crwdne2704279:0"
         },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "crwdns2593734:0crwdne2593734:0",
-          "url": "crwdns2689657:0crwdne2689657:0"
+          "name": "crwdns2704197:0crwdne2704197:0",
+          "url": "crwdns2704199:0crwdne2704199:0"
         },
         "csf-lesson-recommend/coursea/2021": {
-          "name": "crwdns2593804:0crwdne2593804:0",
-          "url": "crwdns2689663:0crwdne2689663:0"
+          "name": "crwdns2704273:0crwdne2704273:0",
+          "url": "crwdns2704275:0crwdne2704275:0"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "crwdns2593808:0crwdne2593808:0",
-          "url": "crwdns2689667:0crwdne2689667:0"
+          "name": "crwdns2704281:0crwdne2704281:0",
+          "url": "crwdns2704283:0crwdne2704283:0"
         },
         "csf_lesson_recommendations_2/coursea/2021": {
-          "name": "crwdns2593810:0crwdne2593810:0",
-          "url": "crwdns2689669:0crwdne2689669:0"
+          "name": "crwdns2704285:0crwdne2704285:0",
+          "url": "crwdns2704287:0crwdne2704287:0"
         },
         "artist_project_planning_guide/coursea/2021": {
-          "name": "crwdns2593868:0crwdne2593868:0",
-          "url": "crwdns2689671:0crwdne2689671:0"
+          "name": "crwdns2704345:0crwdne2704345:0",
+          "url": "crwdns2704347:0crwdne2704347:0"
         },
         "artist_project_planning_guide_1/coursea/2021": {
-          "name": "crwdns2593870:0crwdne2593870:0",
-          "url": "crwdns2689673:0crwdne2689673:0"
+          "name": "crwdns2704349:0crwdne2704349:0",
+          "url": "crwdns2704351:0crwdne2704351:0"
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "crwdns2593876:0crwdne2593876:0",
@@ -667,136 +667,136 @@
           "url": "crwdns2693207:0crwdne2693207:0"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
-          "name": "crwdns2593932:0crwdne2593932:0",
-          "url": "crwdns2689695:0crwdne2689695:0"
+          "name": "crwdns2704393:0crwdne2704393:0",
+          "url": "crwdns2704395:0crwdne2704395:0"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
-          "name": "crwdns2593934:0crwdne2593934:0",
-          "url": "crwdns2689697:0crwdne2689697:0"
+          "name": "crwdns2704397:0crwdne2704397:0",
+          "url": "crwdns2704399:0crwdne2704399:0"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "crwdns2594334:0crwdne2594334:0",
-          "url": "crwdns2689727:0crwdne2689727:0"
+          "name": "crwdns2704827:0crwdne2704827:0",
+          "url": "crwdns2704829:0crwdne2704829:0"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "crwdns2594336:0crwdne2594336:0",
-          "url": "crwdns2689729:0crwdne2689729:0"
+          "name": "crwdns2704831:0crwdne2704831:0",
+          "url": "crwdns2704833:0crwdne2704833:0"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "crwdns2593990:0crwdne2593990:0",
-          "url": "crwdns2689703:0crwdne2689703:0"
+          "name": "crwdns2704459:0crwdne2704459:0",
+          "url": "crwdns2704461:0crwdne2704461:0"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "crwdns2594338:0crwdne2594338:0",
-          "url": "crwdns2689731:0crwdne2689731:0"
+          "name": "crwdns2704835:0crwdne2704835:0",
+          "url": "crwdns2704837:0crwdne2704837:0"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "crwdns2594340:0crwdne2594340:0",
-          "url": "crwdns2689733:0crwdne2689733:0"
+          "name": "crwdns2704839:0crwdne2704839:0",
+          "url": "crwdns2704841:0crwdne2704841:0"
         },
         "c2-maze-bridge/coursec/2021": {
-          "name": "crwdns2594080:0crwdne2594080:0",
-          "url": "crwdns2689709:0crwdne2689709:0"
+          "name": "crwdns2704555:0crwdne2704555:0",
+          "url": "crwdns2704557:0crwdne2704557:0"
         },
         "unplugged-maze-blocks/coursec/2021": {
-          "name": "crwdns2594082:0crwdne2594082:0",
-          "url": "crwdns2689711:0crwdne2689711:0"
+          "name": "crwdns2704559:0crwdne2704559:0",
+          "url": "crwdns2704561:0crwdne2704561:0"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "crwdns2594420:0crwdne2594420:0",
-          "url": "crwdns2689737:0crwdne2689737:0"
+          "name": "crwdns2704923:0crwdne2704923:0",
+          "url": "crwdns2704925:0crwdne2704925:0"
         },
         "csf-lesson-recommend/coursec/2021": {
-          "name": "crwdns2594154:0crwdne2594154:0",
-          "url": "crwdns2689715:0crwdne2689715:0"
+          "name": "crwdns2704635:0crwdne2704635:0",
+          "url": "crwdns2704637:0crwdne2704637:0"
         },
         "debugging_guide/coursec/2021": {
-          "name": "crwdns2594156:0crwdne2594156:0",
-          "url": "crwdns2689717:0crwdne2689717:0"
+          "name": "crwdns2704639:0crwdne2704639:0",
+          "url": "crwdns2704641:0crwdne2704641:0"
         },
         "course-cf-blockly-blocks/coursec/2021": {
-          "name": "crwdns2594728:0crwdne2594728:0",
-          "url": "crwdns2689757:0crwdne2689757:0"
+          "name": "crwdns2705251:0crwdne2705251:0",
+          "url": "crwdns2705253:0crwdne2705253:0"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "crwdns2594284:0crwdne2594284:0",
-          "url": "crwdns2689721:0crwdne2689721:0"
+          "name": "crwdns2704771:0crwdne2704771:0",
+          "url": "crwdns2704773:0crwdne2704773:0"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "crwdns2594286:0crwdne2594286:0",
-          "url": "crwdns2689723:0crwdne2689723:0"
+          "name": "crwdns2704775:0crwdne2704775:0",
+          "url": "crwdns2704777:0crwdne2704777:0"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "crwdns2594288:0crwdne2594288:0",
-          "url": "crwdns2689725:0crwdne2689725:0"
+          "name": "crwdns2704779:0crwdne2704779:0",
+          "url": "crwdns2704781:0crwdne2704781:0"
         },
         "feeling_faces_emotion_image/coursec/2021": {
-          "name": "crwdns2594342:0crwdne2594342:0",
-          "url": "crwdns2689735:0crwdne2689735:0"
+          "name": "crwdns2704843:0crwdne2704843:0",
+          "url": "crwdns2704845:0crwdne2704845:0"
         },
         "unplugged-video-big-event/coursec/2021": {
-          "name": "crwdns2594596:0crwdne2594596:0",
-          "url": "crwdns2689741:0crwdne2689741:0"
+          "name": "crwdns2705103:0crwdne2705103:0",
+          "url": "crwdns2705105:0crwdne2705105:0"
         },
         "csf-the-big-event-assessment/coursec/2021": {
-          "name": "crwdns2594598:0crwdne2594598:0",
-          "url": "crwdns2689743:0crwdne2689743:0"
+          "name": "crwdns2705107:0crwdne2705107:0",
+          "url": "crwdns2705109:0crwdne2705109:0"
         },
         "assessment-answer-big-event/coursec/2021": {
-          "name": "crwdns2594600:0crwdne2594600:0",
-          "url": "crwdns2689745:0crwdne2689745:0"
+          "name": "crwdns2705111:0crwdne2705111:0",
+          "url": "crwdns2705113:0crwdne2705113:0"
         },
         "the_big_event_course_c_/coursec/2021": {
-          "name": "crwdns2594672:0crwdne2594672:0",
-          "url": "crwdns2689751:0crwdne2689751:0"
+          "name": "crwdns2705189:0crwdne2705189:0",
+          "url": "crwdns2705191:0crwdne2705191:0"
         },
         "pause_and_think_online/coursec/2021": {
-          "name": "crwdns2594730:0crwdne2594730:0",
-          "url": "crwdns2689759:0crwdne2689759:0"
+          "name": "crwdns2705255:0crwdne2705255:0",
+          "url": "crwdns2705257:0crwdne2705257:0"
         },
         "open-ended_programming_levels/coursec/2021": {
-          "name": "crwdns2594676:0crwdne2594676:0",
-          "url": "crwdns2689755:0crwdne2689755:0"
+          "name": "crwdns2705197:0crwdne2705197:0",
+          "url": "crwdns2705199:0crwdne2705199:0"
         },
         "open-ended_programming_levels_1/coursec/2021": {
-          "name": "crwdns2594732:0crwdne2594732:0",
-          "url": "crwdns2689761:0crwdne2689761:0"
+          "name": "crwdns2705259:0crwdne2705259:0",
+          "url": "crwdns2705261:0crwdne2705261:0"
         },
         "right-app-scenarios/coursec/2021": {
-          "name": "crwdns2594784:0crwdne2594784:0",
-          "url": "crwdns2689763:0crwdne2689763:0"
+          "name": "crwdns2705313:0crwdne2705313:0",
+          "url": "crwdns2705315:0crwdne2705315:0"
         },
         "csf-bit-byte-video/coursec/2021": {
-          "name": "crwdns2594840:0crwdne2594840:0",
-          "url": "crwdns2689765:0crwdne2689765:0"
+          "name": "crwdns2705371:0crwdne2705371:0",
+          "url": "crwdns2705373:0crwdne2705373:0"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
-          "name": "crwdns2594842:0crwdne2594842:0",
-          "url": "crwdns2689767:0crwdne2689767:0"
+          "name": "crwdns2705375:0crwdne2705375:0",
+          "url": "crwdns2705377:0crwdne2705377:0"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "crwdns2594844:0crwdne2594844:0",
-          "url": "crwdns2689769:0crwdne2689769:0"
+          "name": "crwdns2705379:0crwdne2705379:0",
+          "url": "crwdns2705381:0crwdne2705381:0"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
-          "name": "crwdns2594846:0crwdne2594846:0",
-          "url": "crwdns2689771:0crwdne2689771:0"
+          "name": "crwdns2705383:0crwdne2705383:0",
+          "url": "crwdns2705385:0crwdne2705385:0"
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
-          "name": "crwdns2594848:0crwdne2594848:0",
-          "url": "crwdns2689773:0crwdne2689773:0"
+          "name": "crwdns2705387:0crwdne2705387:0",
+          "url": "crwdns2705389:0crwdne2705389:0"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
-          "name": "crwdns2594850:0crwdne2594850:0",
-          "url": "crwdns2689775:0crwdne2689775:0"
+          "name": "crwdns2705391:0crwdne2705391:0",
+          "url": "crwdns2705393:0crwdne2705393:0"
         },
         "play-lab-project-planning-guide-exemplar/coursec/2021": {
-          "name": "crwdns2594898:0crwdne2594898:0",
-          "url": "crwdns2689777:0crwdne2689777:0"
+          "name": "crwdns2705441:0crwdne2705441:0",
+          "url": "crwdns2705443:0crwdne2705443:0"
         },
         "play-lab-project-guide/coursec/2021": {
-          "name": "crwdns2594900:0crwdne2594900:0",
-          "url": "crwdns2689779:0crwdne2689779:0"
+          "name": "crwdns2705445:0crwdne2705445:0",
+          "url": "crwdns2705447:0crwdne2705447:0"
         },
         "csta_standards_mapping/coursec/2021": {
           "name": "crwdns2594902:0crwdne2594902:0",
@@ -843,156 +843,156 @@
           "url": "crwdns2693211:0crwdne2693211:0"
         },
         "password_power-up_lesson_slides/coursed/2021": {
-          "name": "crwdns2594958:0crwdne2594958:0",
-          "url": "crwdns2689801:0crwdne2689801:0"
+          "name": "crwdns2705485:0crwdne2705485:0",
+          "url": "crwdns2705487:0crwdne2705487:0"
         },
         "password_power-up_power-up_your_password/coursed/2021": {
-          "name": "crwdns2594960:0crwdne2594960:0",
-          "url": "crwdns2689803:0crwdne2689803:0"
+          "name": "crwdns2705489:0crwdne2705489:0",
+          "url": "crwdns2705491:0crwdne2705491:0"
         },
         "password_power-up_power-up_your_password_answer_key/coursed/2021": {
-          "name": "crwdns2594962:0crwdne2594962:0",
-          "url": "crwdns2689805:0crwdne2689805:0"
+          "name": "crwdns2705493:0crwdne2705493:0",
+          "url": "crwdns2705495:0crwdne2705495:0"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
-          "name": "crwdns2594964:0crwdne2594964:0",
-          "url": "crwdns2689807:0crwdne2689807:0"
+          "name": "crwdns2705497:0crwdne2705497:0",
+          "url": "crwdns2705499:0crwdne2705499:0"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
-          "name": "crwdns2594966:0crwdne2594966:0",
-          "url": "crwdns2689809:0crwdne2689809:0"
+          "name": "crwdns2705501:0crwdne2705501:0",
+          "url": "crwdns2705503:0crwdne2705503:0"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
-          "name": "crwdns2594968:0crwdne2594968:0",
-          "url": "crwdns2689811:0crwdne2689811:0"
+          "name": "crwdns2705505:0crwdne2705505:0",
+          "url": "crwdns2705507:0crwdne2705507:0"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
-          "name": "crwdns2594970:0crwdne2594970:0",
-          "url": "crwdns2689813:0crwdne2689813:0"
+          "name": "crwdns2705509:0crwdne2705509:0",
+          "url": "crwdns2705511:0crwdne2705511:0"
         },
         "graph-paper-programming/coursed/2021": {
-          "name": "crwdns2595034:0crwdne2595034:0",
-          "url": "crwdns2689815:0crwdne2689815:0"
+          "name": "crwdns2705575:0crwdne2705575:0",
+          "url": "crwdns2705577:0crwdne2705577:0"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "crwdns2595036:0crwdne2595036:0",
-          "url": "crwdns2689817:0crwdne2689817:0"
+          "name": "crwdns2705579:0crwdne2705579:0",
+          "url": "crwdns2705581:0crwdne2705581:0"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "crwdns2595038:0crwdne2595038:0",
-          "url": "crwdns2689819:0crwdne2689819:0"
+          "name": "crwdns2705583:0crwdne2705583:0",
+          "url": "crwdns2705585:0crwdne2705585:0"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "crwdns2595040:0crwdne2595040:0",
-          "url": "crwdns2689821:0crwdne2689821:0"
+          "name": "crwdns2705587:0crwdne2705587:0",
+          "url": "crwdns2705589:0crwdne2705589:0"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "crwdns2595042:0crwdne2595042:0",
-          "url": "crwdns2689823:0crwdne2689823:0"
+          "name": "crwdns2705591:0crwdne2705591:0",
+          "url": "crwdns2705593:0crwdne2705593:0"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "crwdns2595044:0crwdne2595044:0",
-          "url": "crwdns2689825:0crwdne2689825:0"
+          "name": "crwdns2705595:0crwdne2705595:0",
+          "url": "crwdns2705597:0crwdne2705597:0"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "crwdns2595552:0crwdne2595552:0",
-          "url": "crwdns2689863:0crwdne2689863:0"
+          "name": "crwdns2706141:0crwdne2706141:0",
+          "url": "crwdns2706143:0crwdne2706143:0"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "crwdns2595178:0crwdne2595178:0",
-          "url": "crwdns2689829:0crwdne2689829:0"
+          "name": "crwdns2705733:0crwdne2705733:0",
+          "url": "crwdns2705735:0crwdne2705735:0"
         },
         "relay-assessment/coursed/2021": {
-          "name": "crwdns2595180:0crwdne2595180:0",
-          "url": "crwdns2689831:0crwdne2689831:0"
+          "name": "crwdns2705737:0crwdne2705737:0",
+          "url": "crwdns2705739:0crwdne2705739:0"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "crwdns2595182:0crwdne2595182:0",
-          "url": "crwdns2689833:0crwdne2689833:0"
+          "name": "crwdns2705741:0crwdne2705741:0",
+          "url": "crwdns2705743:0crwdne2705743:0"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "crwdns2595184:0crwdne2595184:0",
-          "url": "crwdns2689835:0crwdne2689835:0"
+          "name": "crwdns2705745:0crwdne2705745:0",
+          "url": "crwdns2705747:0crwdne2705747:0"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "crwdns2595186:0crwdne2595186:0",
-          "url": "crwdns2689837:0crwdne2689837:0"
+          "name": "crwdns2705749:0crwdne2705749:0",
+          "url": "crwdns2705751:0crwdne2705751:0"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "crwdns2595266:0crwdne2595266:0",
-          "url": "crwdns2689841:0crwdne2689841:0"
+          "name": "crwdns2705833:0crwdne2705833:0",
+          "url": "crwdns2705835:0crwdne2705835:0"
         },
         "course-cf-blockly-blocks/coursed/2021": {
-          "name": "crwdns2595910:0crwdne2595910:0",
-          "url": "crwdns2689883:0crwdne2689883:0"
+          "name": "crwdns2706519:0crwdne2706519:0",
+          "url": "crwdns2706521:0crwdne2706521:0"
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
-          "name": "crwdns2595332:0crwdne2595332:0",
-          "url": "crwdns2689845:0crwdne2689845:0"
+          "name": "crwdns2705903:0crwdne2705903:0",
+          "url": "crwdns2705905:0crwdne2705905:0"
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "crwdns2595382:0crwdne2595382:0",
-          "url": "crwdns2689851:0crwdne2689851:0"
+          "name": "crwdns2705959:0crwdne2705959:0",
+          "url": "crwdns2705961:0crwdne2705961:0"
         },
         "open-ended_programming_levels/coursed/2021": {
-          "name": "crwdns2595336:0crwdne2595336:0",
-          "url": "crwdns2689849:0crwdne2689849:0"
+          "name": "crwdns2705911:0crwdne2705911:0",
+          "url": "crwdns2705913:0crwdne2705913:0"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "crwdns2595384:0crwdne2595384:0",
-          "url": "crwdns2689853:0crwdne2689853:0"
+          "name": "crwdns2705963:0crwdne2705963:0",
+          "url": "crwdns2705965:0crwdne2705965:0"
         },
         "dance-party-project-guide/coursed/2021": {
-          "name": "crwdns2595482:0crwdne2595482:0",
-          "url": "crwdns2689855:0crwdne2689855:0"
+          "name": "crwdns2706063:0crwdne2706063:0",
+          "url": "crwdns2706065:0crwdne2706065:0"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "crwdns2595484:0crwdne2595484:0",
-          "url": "crwdns2689857:0crwdne2689857:0"
+          "name": "crwdns2706067:0crwdne2706067:0",
+          "url": "crwdns2706069:0crwdne2706069:0"
         },
         "dance_party_unplugged/coursed/2021": {
-          "name": "crwdns2595486:0crwdne2595486:0",
-          "url": "crwdns2689859:0crwdne2689859:0"
+          "name": "crwdns2706071:0crwdne2706071:0",
+          "url": "crwdns2706073:0crwdne2706073:0"
         },
         "open-ended_programming_levels_2/coursed/2021": {
-          "name": "crwdns2595488:0crwdne2595488:0",
-          "url": "crwdns2689861:0crwdne2689861:0"
+          "name": "crwdns2706075:0crwdne2706075:0",
+          "url": "crwdns2706077:0crwdne2706077:0"
         },
         "feeling-faces-image/coursed/2021": {
-          "name": "crwdns2595554:0crwdne2595554:0",
-          "url": "crwdns2689865:0crwdne2689865:0"
+          "name": "crwdns2706145:0crwdne2706145:0",
+          "url": "crwdns2706147:0crwdne2706147:0"
         },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "crwdns2595556:0crwdne2595556:0",
-          "url": "crwdns2689867:0crwdne2689867:0"
+          "name": "crwdns2706149:0crwdne2706149:0",
+          "url": "crwdns2706151:0crwdne2706151:0"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "crwdns2595730:0crwdne2595730:0",
-          "url": "crwdns2689869:0crwdne2689869:0"
+          "name": "crwdns2706325:0crwdne2706325:0",
+          "url": "crwdns2706327:0crwdne2706327:0"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "crwdns2595732:0crwdne2595732:0",
-          "url": "crwdns2689871:0crwdne2689871:0"
+          "name": "crwdns2706329:0crwdne2706329:0",
+          "url": "crwdns2706331:0crwdne2706331:0"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "crwdns2595912:0crwdne2595912:0",
-          "url": "crwdns2689885:0crwdne2689885:0"
+          "name": "crwdns2706523:0crwdne2706523:0",
+          "url": "crwdns2706525:0crwdne2706525:0"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "crwdns2595736:0crwdne2595736:0",
-          "url": "crwdns2689875:0crwdne2689875:0"
+          "name": "crwdns2706337:0crwdne2706337:0",
+          "url": "crwdns2706339:0crwdne2706339:0"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "crwdns2595738:0crwdne2595738:0",
-          "url": "crwdns2689877:0crwdne2689877:0"
+          "name": "crwdns2706341:0crwdne2706341:0",
+          "url": "crwdns2706343:0crwdne2706343:0"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "crwdns2595740:0crwdne2595740:0",
-          "url": "crwdns2689879:0crwdne2689879:0"
+          "name": "crwdns2706345:0crwdne2706345:0",
+          "url": "crwdns2706347:0crwdne2706347:0"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
-          "name": "crwdns2596036:0crwdne2596036:0",
-          "url": "crwdns2689887:0crwdne2689887:0"
+          "name": "crwdns2706649:0crwdne2706649:0",
+          "url": "crwdns2706651:0crwdne2706651:0"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "crwdns2596038:0crwdne2596038:0",
@@ -1039,104 +1039,104 @@
           "url": "crwdns2693215:0crwdne2693215:0"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "crwdns2596114:0crwdne2596114:0",
-          "url": "crwdns2689909:0crwdne2689909:0"
+          "name": "crwdns2706709:0crwdne2706709:0",
+          "url": "crwdns2706711:0crwdne2706711:0"
         },
         "pair_programming/express/2021": {
-          "name": "crwdns2596184:0crwdne2596184:0",
-          "url": "crwdns2689911:0crwdne2689911:0"
+          "name": "crwdns2706781:0crwdne2706781:0",
+          "url": "crwdns2706783:0crwdne2706783:0"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
-          "name": "crwdns2597608:0crwdne2597608:0",
-          "url": "crwdns2689959:0crwdne2689959:0"
+          "name": "crwdns2708253:0crwdne2708253:0",
+          "url": "crwdns2708255:0crwdne2708255:0"
         },
         "artist_introduction/express/2021": {
-          "name": "crwdns2596312:0crwdne2596312:0",
-          "url": "crwdns2689915:0crwdne2689915:0"
+          "name": "crwdns2706913:0crwdne2706913:0",
+          "url": "crwdns2706915:0crwdne2706915:0"
         },
         "turns_angles/express/2021": {
-          "name": "crwdns2596314:0crwdne2596314:0",
-          "url": "crwdns2689917:0crwdne2689917:0"
+          "name": "crwdns2706917:0crwdne2706917:0",
+          "url": "crwdns2706919:0crwdne2706919:0"
         },
         "turns_angles_1/express/2021": {
-          "name": "crwdns2596316:0crwdne2596316:0",
-          "url": "crwdns2689919:0crwdne2689919:0"
+          "name": "crwdns2706921:0crwdne2706921:0",
+          "url": "crwdns2706923:0crwdne2706923:0"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
-          "name": "crwdns2596366:0crwdne2596366:0",
-          "url": "crwdns2689921:0crwdne2689921:0"
+          "name": "crwdns2706973:0crwdne2706973:0",
+          "url": "crwdns2706975:0crwdne2706975:0"
         },
         "sprite_lab_documentation/express/2021": {
-          "name": "crwdns2597706:0crwdne2597706:0",
-          "url": "crwdns2689965:0crwdne2689965:0"
+          "name": "crwdns2708357:0crwdne2708357:0",
+          "url": "crwdns2708359:0crwdne2708359:0"
         },
         "making_sprites/express/2021": {
-          "name": "crwdns2596432:0crwdne2596432:0",
-          "url": "crwdns2689925:0crwdne2689925:0"
+          "name": "crwdns2707043:0crwdne2707043:0",
+          "url": "crwdns2707045:0crwdne2707045:0"
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "crwdns2596434:0crwdne2596434:0",
-          "url": "crwdns2689927:0crwdne2689927:0"
+          "name": "crwdns2707047:0crwdne2707047:0",
+          "url": "crwdns2707049:0crwdne2707049:0"
         },
         "sprites_in_action/express/2021": {
-          "name": "crwdns2596508:0crwdne2596508:0",
-          "url": "crwdns2689929:0crwdne2689929:0"
+          "name": "crwdns2707123:0crwdne2707123:0",
+          "url": "crwdns2707125:0crwdne2707125:0"
         },
         "pause_and_think_online/express/2021": {
-          "name": "crwdns2596566:0crwdne2596566:0",
-          "url": "crwdns2689933:0crwdne2689933:0"
+          "name": "crwdns2707185:0crwdne2707185:0",
+          "url": "crwdns2707187:0crwdne2707187:0"
         },
         "dance-party-project-guide/express/2021": {
-          "name": "crwdns2596660:0crwdne2596660:0",
-          "url": "crwdns2689935:0crwdne2689935:0"
+          "name": "crwdns2707281:0crwdne2707281:0",
+          "url": "crwdns2707283:0crwdne2707283:0"
         },
         "dance-party-playlist/express/2021": {
-          "name": "crwdns2596662:0crwdne2596662:0",
-          "url": "crwdns2689937:0crwdne2689937:0"
+          "name": "crwdns2707285:0crwdne2707285:0",
+          "url": "crwdns2707287:0crwdne2707287:0"
         },
         "open-ended_programming_levels/express/2021": {
-          "name": "crwdns2596664:0crwdne2596664:0",
-          "url": "crwdns2689939:0crwdne2689939:0"
+          "name": "crwdns2707289:0crwdne2707289:0",
+          "url": "crwdns2707291:0crwdne2707291:0"
         },
         "pair_programming_video/express/2021": {
-          "name": "crwdns2596734:0crwdne2596734:0",
-          "url": "crwdns2689941:0crwdne2689941:0"
+          "name": "crwdns2707361:0crwdne2707361:0",
+          "url": "crwdns2707363:0crwdne2707363:0"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
-          "name": "crwdns2596736:0crwdne2596736:0",
-          "url": "crwdns2689943:0crwdne2689943:0"
+          "name": "crwdns2707365:0crwdne2707365:0",
+          "url": "crwdns2707367:0crwdne2707367:0"
         },
         "unplugged_blocks_courses_c-f__2/express/2021": {
-          "name": "crwdns2597002:0crwdne2597002:0",
-          "url": "crwdns2689945:0crwdne2689945:0"
+          "name": "crwdns2707633:0crwdne2707633:0",
+          "url": "crwdns2707635:0crwdne2707635:0"
         },
         "unplugged_blocks_courses_c-f__3/express/2021": {
-          "name": "crwdns2597054:0crwdne2597054:0",
-          "url": "crwdns2689947:0crwdne2689947:0"
+          "name": "crwdns2707687:0crwdne2707687:0",
+          "url": "crwdns2707689:0crwdne2707689:0"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "crwdns2597308:0crwdne2597308:0",
-          "url": "crwdns2689949:0crwdne2689949:0"
+          "name": "crwdns2707943:0crwdne2707943:0",
+          "url": "crwdns2707945:0crwdne2707945:0"
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "crwdns2597360:0crwdne2597360:0",
-          "url": "crwdns2689951:0crwdne2689951:0"
+          "name": "crwdns2707997:0crwdne2707997:0",
+          "url": "crwdns2707999:0crwdne2707999:0"
         },
         "text_and_prompts/express/2021": {
-          "name": "crwdns2597470:0crwdne2597470:0",
-          "url": "crwdns2689955:0crwdne2689955:0"
+          "name": "crwdns2708111:0crwdne2708111:0",
+          "url": "crwdns2708113:0crwdne2708113:0"
         },
         "variables_video/express/2021": {
-          "name": "crwdns2597520:0crwdne2597520:0",
-          "url": "crwdns2689957:0crwdne2689957:0"
+          "name": "crwdns2708163:0crwdne2708163:0",
+          "url": "crwdns2708165:0crwdne2708165:0"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
-          "name": "crwdns2597702:0crwdne2597702:0",
-          "url": "crwdns2689961:0crwdne2689961:0"
+          "name": "crwdns2708349:0crwdne2708349:0",
+          "url": "crwdns2708351:0crwdne2708351:0"
         },
         "rubric-csf-final-projects/express/2021": {
-          "name": "crwdns2597704:0crwdne2597704:0",
-          "url": "crwdns2689963:0crwdne2689963:0"
+          "name": "crwdns2708353:0crwdne2708353:0",
+          "url": "crwdns2708355:0crwdne2708355:0"
         },
         "csta_standards_mapping/express/2021": {
           "name": "crwdns2597724:0crwdne2597724:0",
@@ -1155,28 +1155,28 @@
           "url": "crwdns2689973:0crwdne2689973:0"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "crwdns2597972:0crwdne2597972:0",
-          "url": "crwdns2689997:0crwdne2689997:0"
+          "name": "crwdns2708639:0crwdne2708639:0",
+          "url": "crwdns2708641:0crwdne2708641:0"
         },
         "class-section-video/pre-express/2021": {
-          "name": "crwdns2597790:0crwdne2597790:0",
-          "url": "crwdns2689977:0crwdne2689977:0"
+          "name": "crwdns2708437:0crwdne2708437:0",
+          "url": "crwdns2708439:0crwdne2708439:0"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "crwdns2598408:0crwdne2598408:0",
-          "url": "crwdns2690017:0crwdne2690017:0"
+          "name": "crwdns2709095:0crwdne2709095:0",
+          "url": "crwdns2709097:0crwdne2709097:0"
         },
         "20_20_20_rule/pre-express/2021": {
-          "name": "crwdns2597850:0crwdne2597850:0",
-          "url": "crwdns2689989:0crwdne2689989:0"
+          "name": "crwdns2708509:0crwdne2708509:0",
+          "url": "crwdns2708511:0crwdne2708511:0"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "crwdns2597852:0crwdne2597852:0",
-          "url": "crwdns2689991:0crwdne2689991:0"
+          "name": "crwdns2708513:0crwdne2708513:0",
+          "url": "crwdns2708515:0crwdne2708515:0"
         },
         "common-sense-media-pause-think/pre-express/2021": {
-          "name": "crwdns2598410:0crwdne2598410:0",
-          "url": "crwdns2690019:0crwdne2690019:0"
+          "name": "crwdns2709099:0crwdne2709099:0",
+          "url": "crwdns2709101:0crwdne2709101:0"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "crwdns2598416:0crwdne2598416:0",
@@ -1195,116 +1195,116 @@
           "url": "crwdns2690027:0crwdne2690027:0"
         },
         "follow_the_algorithm/coursee/2021": {
-          "name": "crwdns2598466:0crwdne2598466:0",
-          "url": "crwdns2690029:0crwdne2690029:0"
+          "name": "crwdns2709149:0crwdne2709149:0",
+          "url": "crwdns2709151:0crwdne2709151:0"
         },
         "swimming-fish-teacher-sandbox/coursee/2021": {
-          "name": "crwdns2598532:0crwdne2598532:0",
-          "url": "crwdns2690031:0crwdne2690031:0"
+          "name": "crwdns2709217:0crwdne2709217:0",
+          "url": "crwdns2709219:0crwdne2709219:0"
         },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "crwdns2598728:0crwdne2598728:0",
-          "url": "crwdns2690053:0crwdne2690053:0"
+          "name": "crwdns2709435:0crwdne2709435:0",
+          "url": "crwdns2709437:0crwdne2709437:0"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
-          "name": "crwdns2598626:0crwdne2598626:0",
-          "url": "crwdns2690037:0crwdne2690037:0"
+          "name": "crwdns2709317:0crwdne2709317:0",
+          "url": "crwdns2709319:0crwdne2709319:0"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
-          "name": "crwdns2598628:0crwdne2598628:0",
-          "url": "crwdns2690039:0crwdne2690039:0"
+          "name": "crwdns2709321:0crwdne2709321:0",
+          "url": "crwdns2709323:0crwdne2709323:0"
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
-          "name": "crwdns2598668:0crwdne2598668:0",
-          "url": "crwdns2690041:0crwdne2690041:0"
+          "name": "crwdns2709363:0crwdne2709363:0",
+          "url": "crwdns2709365:0crwdne2709365:0"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
-          "name": "crwdns2598670:0crwdne2598670:0",
-          "url": "crwdns2690043:0crwdne2690043:0"
+          "name": "crwdns2709367:0crwdne2709367:0",
+          "url": "crwdns2709369:0crwdne2709369:0"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "crwdns2598672:0crwdne2598672:0",
-          "url": "crwdns2690045:0crwdne2690045:0"
+          "name": "crwdns2709371:0crwdne2709371:0",
+          "url": "crwdns2709373:0crwdne2709373:0"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
-          "name": "crwdns2598674:0crwdne2598674:0",
-          "url": "crwdns2690047:0crwdne2690047:0"
+          "name": "crwdns2709375:0crwdne2709375:0",
+          "url": "crwdns2709377:0crwdne2709377:0"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
-          "name": "crwdns2598676:0crwdne2598676:0",
-          "url": "crwdns2690049:0crwdne2690049:0"
+          "name": "crwdns2709379:0crwdne2709379:0",
+          "url": "crwdns2709381:0crwdne2709381:0"
         },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "crwdns2599274:0crwdne2599274:0",
-          "url": "crwdns2690081:0crwdne2690081:0"
+          "name": "crwdns2710009:0crwdne2710009:0",
+          "url": "crwdns2710011:0crwdne2710011:0"
         },
         "about_me_planning_guide/coursee/2021": {
-          "name": "crwdns2598730:0crwdne2598730:0",
-          "url": "crwdns2690055:0crwdne2690055:0"
+          "name": "crwdns2709439:0crwdne2709439:0",
+          "url": "crwdns2709441:0crwdne2709441:0"
         },
         "digital-sharing-lesson/coursee/2021": {
-          "name": "crwdns2598784:0crwdne2598784:0",
-          "url": "crwdns2690057:0crwdne2690057:0"
+          "name": "crwdns2709495:0crwdne2709495:0",
+          "url": "crwdns2709497:0crwdne2709497:0"
         },
         "digital-sharing-video/coursee/2021": {
-          "name": "crwdns2598786:0crwdne2598786:0",
-          "url": "crwdns2690059:0crwdne2690059:0"
+          "name": "crwdns2709499:0crwdne2709499:0",
+          "url": "crwdns2709501:0crwdne2709501:0"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "crwdns2598908:0crwdne2598908:0",
-          "url": "crwdns2690063:0crwdne2690063:0"
+          "name": "crwdns2709625:0crwdne2709625:0",
+          "url": "crwdns2709627:0crwdne2709627:0"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "crwdns2598910:0crwdne2598910:0",
-          "url": "crwdns2690065:0crwdne2690065:0"
+          "name": "crwdns2709629:0crwdne2709629:0",
+          "url": "crwdns2709631:0crwdne2709631:0"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "crwdns2599032:0crwdne2599032:0",
-          "url": "crwdns2690067:0crwdne2690067:0"
+          "name": "crwdns2709753:0crwdne2709753:0",
+          "url": "crwdns2709755:0crwdne2709755:0"
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "crwdns2599034:0crwdne2599034:0",
-          "url": "crwdns2690069:0crwdne2690069:0"
+          "name": "crwdns2709757:0crwdne2709757:0",
+          "url": "crwdns2709759:0crwdne2709759:0"
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "crwdns2599036:0crwdne2599036:0",
-          "url": "crwdns2690071:0crwdne2690071:0"
+          "name": "crwdns2709761:0crwdne2709761:0",
+          "url": "crwdns2709763:0crwdne2709763:0"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "crwdns2599038:0crwdne2599038:0",
-          "url": "crwdns2690073:0crwdne2690073:0"
+          "name": "crwdns2709765:0crwdne2709765:0",
+          "url": "crwdns2709767:0crwdne2709767:0"
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "crwdns2599040:0crwdne2599040:0",
-          "url": "crwdns2690075:0crwdne2690075:0"
+          "name": "crwdns2709769:0crwdne2709769:0",
+          "url": "crwdns2709771:0crwdne2709771:0"
         },
         "course-cf-blockly-blocks/coursee/2021": {
-          "name": "crwdns2599158:0crwdne2599158:0",
-          "url": "crwdns2690079:0crwdne2690079:0"
+          "name": "crwdns2709891:0crwdne2709891:0",
+          "url": "crwdns2709893:0crwdne2709893:0"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "crwdns2599370:0crwdne2599370:0",
-          "url": "crwdns2690083:0crwdne2690083:0"
+          "name": "crwdns2710107:0crwdne2710107:0",
+          "url": "crwdns2710109:0crwdne2710109:0"
         },
         "types_of_disabilities/coursee/2021": {
-          "name": "crwdns2599372:0crwdne2599372:0",
-          "url": "crwdns2690085:0crwdne2690085:0"
+          "name": "crwdns2710111:0crwdne2710111:0",
+          "url": "crwdns2710113:0crwdne2710113:0"
         },
         "end-of-course-project-guide/coursee/2021": {
-          "name": "crwdns2599446:0crwdne2599446:0",
-          "url": "crwdns2690087:0crwdne2690087:0"
+          "name": "crwdns2710187:0crwdne2710187:0",
+          "url": "crwdns2710189:0crwdne2710189:0"
         },
         "rubric-csf-final-projects/coursee/2021": {
-          "name": "crwdns2599448:0crwdne2599448:0",
-          "url": "crwdns2690089:0crwdne2690089:0"
+          "name": "crwdns2710191:0crwdne2710191:0",
+          "url": "crwdns2710193:0crwdne2710193:0"
         },
         "design-process/coursee/2021": {
-          "name": "crwdns2599450:0crwdne2599450:0",
-          "url": "crwdns2690091:0crwdne2690091:0"
+          "name": "crwdns2710195:0crwdne2710195:0",
+          "url": "crwdns2710197:0crwdne2710197:0"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "crwdns2599452:0crwdne2599452:0",
-          "url": "crwdns2690093:0crwdne2690093:0"
+          "name": "crwdns2710199:0crwdne2710199:0",
+          "url": "crwdns2710201:0crwdne2710201:0"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "crwdns2599470:0crwdne2599470:0",
