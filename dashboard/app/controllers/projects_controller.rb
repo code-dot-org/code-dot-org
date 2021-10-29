@@ -267,7 +267,7 @@ class ProjectsController < ApplicationController
   private def initial_data
     data = {
       name: 'Untitled Project',
-      level: polymorphic_url([params[:key], 'project_projects'])
+      level: polymorphic_url([params[:key].to_sym, :project_projects])
     }
     default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
     data[:thumbnailUrl] = default_image_url if default_image_url

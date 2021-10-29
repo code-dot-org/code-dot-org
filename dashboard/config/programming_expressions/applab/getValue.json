@@ -2,8 +2,12 @@
   "func": "getValue",
   "category": "Variables",
   "paletteParams": [
-    "object",
-    "\"key\""
+    {
+      "name": "object"
+    },
+    {
+      "name": "\"key\""
+    }
   ],
   "params": [
     "{\"key\": \"value\"}",

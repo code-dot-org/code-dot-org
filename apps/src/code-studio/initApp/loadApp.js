@@ -62,6 +62,7 @@ export function setupApp(appOptions) {
         appOptions.app === 'applab' ||
         appOptions.app === 'gamelab' ||
         appOptions.app === 'spritelab' ||
+        appOptions.app === 'poetry' ||
         appOptions.app === 'weblab'
       ) {
         $('#clear-puzzle-header').hide();
@@ -257,20 +258,6 @@ function loadProjectAndCheckAbuse(appOptions) {
   });
 }
 
-async function getExampleSolutions(scriptLevelId) {
-  let exampleSolutions = [];
-  try {
-    const sectionId = clientState.queryParams('section_id');
-    exampleSolutions = await $.ajax(
-      `/api/example_solutions/${scriptLevelId}?section_id=${sectionId}`
-    );
-  } catch (err) {
-    console.log(err);
-  }
-
-  return exampleSolutions;
-}
-
 /**
  * @param {AppOptionsConfig} appOptions
  * @return {Promise.<AppOptionsConfig>}
@@ -303,30 +290,38 @@ async function loadAppAsync(appOptions) {
   // that indicates that the level was cached and the channel id needs to be loaded client-side
   // through the user_progress request
   const shouldGetChannelId =
-    appOptions.levelRequiresChannel && !appOptions.channel;
+    !!appOptions.levelRequiresChannel && !appOptions.channel;
 
-  // return new Promise((resolve, reject) => {
   if (appOptions.publicCaching) {
     // Disable social share by default on publicly-cached pages, because we don't know
     // if the user is underage until we get data back from /api/user_progress/ and we
     // should err on the side of not showing social links
     appOptions.disableSocialShare = true;
-
-    appOptions.exampleSolutions = await getExampleSolutions(
-      appOptions.serverScriptLevelId
-    );
   }
 
-  try {
-    const data = await $.ajax(
-      `/api/user_progress` +
-        `/${appOptions.scriptName}` +
-        `/${appOptions.lessonPosition}` +
-        `/${appOptions.levelPosition}` +
-        `/${appOptions.serverLevelId}` +
-        `?get_channel_id=${shouldGetChannelId}`
-    );
+  const userProgressRequest = $.ajax(
+    `/api/user_progress` +
+      `/${appOptions.scriptName}` +
+      `/${appOptions.lessonPosition}` +
+      `/${appOptions.levelPosition}` +
+      `/${appOptions.serverLevelId}` +
+      `?get_channel_id=${shouldGetChannelId}`
+  );
 
+  const sectionId = clientState.queryParams('section_id') || '';
+  const exampleSolutionsRequest = $.ajax(
+    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
+      appOptions.serverLevelId
+    }?section_id=${sectionId}`
+  );
+
+  try {
+    const [data, exampleSolutions] = await Promise.all([
+      userProgressRequest,
+      exampleSolutionsRequest
+    ]);
+
+    appOptions.exampleSolutions = exampleSolutions;
     appOptions.disableSocialShare = data.disableSocialShare;
 
     // We do not need to process data.progress here because labs do not use
@@ -358,7 +353,6 @@ async function loadAppAsync(appOptions) {
     if (data.channel) {
       appOptions.channel = data.channel;
       appOptions.reduceChannelUpdates = data.reduceChannelUpdates;
-
       return await loadProjectAndCheckAbuse(appOptions);
     } else {
       return appOptions;

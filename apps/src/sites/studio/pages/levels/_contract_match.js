@@ -3,7 +3,7 @@ import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {ContractMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyContractMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import i18n from '@cdo/locale';
 
 $(window).load(function() {
@@ -344,7 +344,7 @@ $(window).load(function() {
       const result = answerErrors.some(answerResult => answerResult === '');
       let errorDialog;
       if (!result) {
-        errorDialog = <ContractMatchErrorDialog text={answerErrors[0]} />;
+        errorDialog = <LegacyContractMatchErrorDialog text={answerErrors[0]} />;
       }
 
       return {

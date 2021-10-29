@@ -8,7 +8,7 @@
     ],
     "func": "setBackground",
     "docFunc": "gamelab_setBackground",
-    "blockText": "set background color {COLOR}",
+    "blockText": "set background to {COLOR}",
     "args": [
       {
         "name": "COLOR",

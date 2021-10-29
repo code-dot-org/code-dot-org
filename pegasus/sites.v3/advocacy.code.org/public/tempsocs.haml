@@ -114,7 +114,7 @@ layout: none
     .block.col-33{style: "padding: 25px;"}
       .downloadaction
         %select.dropdown.small-state-dropdown.top-dropdown
-          %option Pick a State Handout
+          %option Download State Handout
           -STATE_ABBR_WITH_DC_HASH.each do |abbr, state|
             %option{value: abbr}= state 
             :javascript
@@ -122,7 +122,7 @@ layout: none
         %img{src: "/tempsocs-images/state-page.png", alt: "screenshot of the Guide to State Summaries page from the report", style: "width: 75%; border-radius: 15px;"}
 
     .block.col-33{style: "padding: 25px;"}
-      %a{href: "https://staging.code.org/yourschool/accessreporttemp", target: "_blank"}
+      %a{href: "#", target: "_blank"}
         .downloadaction
           %button{style: "background-color: #2C3F1C; color: white; border-color: #2C3F1C; margin-bottom: 4%;"} Interact with the Data
           %img{src: "/tempsocs-images/tableau-long.png", alt: "screenshot of the Tableau dashboard linked below", style: "width: 75%; border-radius: 15px;"}
@@ -134,10 +134,10 @@ layout: none
 / carousel courtesy of https://gist.github.com/yorkfx/7782511
 
 .carousel.slide{:id=>"slide-images", :data => {:ride => "carousel"}}
-  %ol{style: "list-style: none;"}
-    %li.active{:data => {:target => "slide-images", :slide_to => "0"}}
-    %li{:data => {:target => "slide-images", :slide_to => "1"}}
-    %li{:data => {:target => "slide-images", :slide_to => "2"}}
+  %ol{class: "carousel-indicators"}
+    %li.active{:data => {:target => "#slide-images", :slide_to => "0"}} 
+    %li{:data => {:target => "#slide-images", :slide_to => "1"}} 
+    %li{:data => {:target => "#slide-images", :slide_to => "2"}} 
   .carousel-inner
     .item.active{:style => "padding-left: 20%; padding-right: 20%;"}
       %img.col-50{:src => "/tempsocs-images/percentage-heatmap.png", :alt => ""}
@@ -173,7 +173,7 @@ layout: none
 
 / tabs courtesy of https://codepen.io/wishabhish/pen/MWgXQed
 
-.container_responsive
+.container_responsive#tabby-tabs
   .sky-tabs.sky-tabs-pos-top-left.sky-tabs-anim-flip.sky-tabs-response-to-icons
     %input#sky-tab1.sky-tab-content-1{:checked => "checked", :name => "sky-tabs", :type => "radio"}/
     %label{:for => "sky-tab1"}
@@ -210,7 +210,7 @@ layout: none
               %a{href: "#", target: "_blank"} Download presentation 
               (includes high-quality graphics)
             %li
-              %a{href: "https://staging.code.org/yourschool/accessreporttemp", target: "_blank"} Explore data
+              %a{href: "#", target: "_blank"} Explore data
               (data dashboard) or download data (
               %a{href: "#", target: "_blank"}csv
               \ / 
@@ -272,4 +272,3 @@ layout: none
     %p
       This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Authorization to reproduce this report in whole or in part is granted.
   .clear
-

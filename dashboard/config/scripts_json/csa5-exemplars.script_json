@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-17 16:37:58 UTC",
+    "serialized_at": "2021-10-25 22:55:01 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csa5-exemplars"
     }
@@ -1866,6 +1867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1887,6 +1891,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1908,6 +1915,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1929,6 +1939,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1950,6 +1963,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L5 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1971,6 +1987,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L6 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1992,6 +2011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L1 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2013,6 +2035,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2034,6 +2059,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L3 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2055,6 +2083,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L4 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2076,6 +2107,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L5 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
