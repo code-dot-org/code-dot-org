@@ -28,6 +28,7 @@ export default function ParameterEditor({item: parameter, update}) {
           checked={!!parameter.required}
           type="checkbox"
           onChange={e => update('required', e.target.checked)}
+          style={styles.checkboxInput}
         />
       </label>
       <TextareaWithMarkdownPreview
@@ -54,5 +55,8 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     margin: 0
+  },
+  checkboxInput: {
+    margin: '0px 4px'
   }
 };

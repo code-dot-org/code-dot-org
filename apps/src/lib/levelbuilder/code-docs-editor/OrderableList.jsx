@@ -68,7 +68,6 @@ OrderableList.propTypes = {
   list: PropTypes.arrayOf(PropTypes.object).isRequired,
   setList: PropTypes.func.isRequired,
   addButtonText: PropTypes.string.isRequired
-  // editorComponent: PropTypes.elementType
 };
 
 const styles = {
