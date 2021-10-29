@@ -22,7 +22,7 @@ Dashboard::Application.configure do
   config.public_file_server.headers = {'Cache-Control' => "public, max-age=86400, s-maxage=43200"}
 
   # Set to :debug to see everything in the log.
-  config.log_level = :info
+  config.log_level = :debug
 
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
