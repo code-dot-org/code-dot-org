@@ -2,8 +2,12 @@
   "func": "setVelocity",
   "category": "Sprites",
   "paletteParams": [
-    "x",
-    "y"
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
   "params": [
     "1",

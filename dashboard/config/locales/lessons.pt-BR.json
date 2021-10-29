@@ -12,9 +12,6 @@
         "dance/Dance Party": {
           "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos)."
         },
-        "applab-intro/Intro to App Lab": {
-          "overview": "Esse tutorial é preparado para introduzir de maneira rápida o ambiente para programação de applications como sendo uma ferramenta poderosa para construir e compartilhar applicações. O tutorial ensinará estudantes como criar controles e botões, texto images, soms, e telas em JavaScript utilizando blocos ou texto. Ao final do tutorial, estudantes serão datos tempo para extender um projeto they iniciaram a contruir. Eles poderão extender o projeto.\n\nDivirta-se completando sua \"Hora de Código\" com App Lab!\n\n**Idade Apropiada** Os tutorials sao preparados para estudantes com mais de 13 anos. Estidantes devem ser supervisionados já que eles podem fazer upload de soms e images. Para proteger a privacidade dos estudantes, eles nao podem utilizar esse tutorial a nao ser que voce crie contas para eles em uma seção que você gerencie."
-        },
         "sports/Sports": {
           "overview": "Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.",
           "student_overview": "Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!"

@@ -1014,7 +1014,7 @@
           "name": "Resumo"
         },
         "4d3409a1-dc66-4033-87ad-1484af8ab342": {
-          "name": "Avaliação opcional"
+          "name": "Avaliação Opcional"
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Aprendizagem complementar"
@@ -1111,9 +1111,6 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Resumo"
-        },
-        "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": "Aquecimento"
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Atividade principal"
@@ -1744,9 +1741,6 @@
         },
         "b2227118-727d-4eff-be1c-fafe331297fd": {
           "name": "Resumo"
-        },
-        "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
-          "name": "Projeto de Fim do Curso"
         },
         "430c7fd8-dd67-4fff-924a-e6080df26e8a": {
           "name": "Dia 2 – O processo de design"

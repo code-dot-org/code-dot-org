@@ -1082,6 +1082,9 @@
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Calentamiento"
         },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Actividad Principal "
+        },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Actividad de cierre"
         },
@@ -1099,6 +1102,18 @@
         },
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Actividad de cierre"
+        },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Calentamiento: Pssst ... ¿Qué es una Contraseña?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Evaluar: ¡Uh-Oh! Si... Entonces..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Crear: Potencia tu Contraseña"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Recapitulación: Notas y Consejos sobre Contraseñas"
         },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Ampliación del aprendizaje"
@@ -1216,9 +1231,6 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Actividad de cierre"
-        },
-        "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": "Actividad Previa"
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Actividad Principal"

@@ -26592,6 +26592,10 @@ en:
               description_teacher: 
             lesson-6:
               name: Poetry Circle
+            lesson-7:
+              name: Conditionals
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: poetry
           title: Computer Science and Poetry

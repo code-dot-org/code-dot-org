@@ -2,6 +2,36 @@
   "ms-MY": {
     "data": {
       "objectives": {
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "Membangunkan atur cara yang bertindak balas terhadap acara yang ditetapkan masanya"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "Membangunkan atur cara yang bertindak balas terhadap input pengguna"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "Mencipta animasi tarian dengan kod"
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Berkongsi artifak kreatif dengan pelajar lain."
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Berkongsi artifak kreatif dengan pelajar lain."
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "Membangunkan atur cara yang bertindak balas terhadap acara yang ditetapkan masanya"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "Membangunkan atur cara yang bertindak balas terhadap input pengguna"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "Mencipta animasi tarian dengan kod"
+        },
         "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
           "description": "Bincangkan peranan yang dimainkan oleh kecerdasan buatan dalam kehidupan mereka."
         },
@@ -46,9 +76,6 @@
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
           "description": "Putuskan jenis pernyataan yang OK untuk dinyatakan dalam talian dan yang Tidak OK."
-        },
-        "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
-          "description": "Nyatakan pemboleh ubah"
         },
         "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
           "description": "Tetapkan nilai pemboleh ubah"
@@ -95,11 +122,50 @@
         "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
           "description": "Terjemahkan URL ke dalam Alamat IP."
         },
+        "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
+          "description": "Modelkan tingkah laku makmal komputer yang betul"
+        },
+        "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
+          "description": "Eksperimen dengan tindakan pengaturcaraan berasaskan blok standard seperti: mengklik, seret, lepaskan dan sebagainya."
+        },
+        "fae372cb-4b72-4b35-abd6-e2424e54d791": {
+          "description": "Terjemahkan pergerakan ke dalam siri perintah."
+        },
+        "4576e06e-56f1-4e32-a81d-7bbfea125273": {
+          "description": "Terjemahkan pergerakan ke dalam siri perintah."
+        },
+        "d5f927b9-727a-423e-90d3-80faad21aa34": {
+          "description": "Kenal pasti dan cari pepijat dalam atur cara."
+        },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
         },
+        "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
+          "description": "Pecahkan jujukan arahan yang panjang kepada jujukan boleh diulangi terkecil yang mungkin."
+        },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
+        },
+        "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
+          "description": "Pecahkan jujukan arahan yang panjang kepada jujukan boleh diulangi terkecil yang mungkin."
+        },
+        "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
+          "description": "Kira bilangan tindakan yang perlu diulangi dan mewakilinya sebagai gelung."
+        },
+        "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
+          "description": "Menguraikan bentuk kepada jujukan berulang yang terbesar."
+        },
+        "61329a99-1c0a-414f-9694-78f7f9c81372": {
+          "description": "Cipta atur cara yang menarik bentuk kompleks dengan mengulangi jujukan mudah."
+        },
+        "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
+          "description": "Mencipta cerita animasi, berinteraktif dengan menggunakan jujukan dan pengendali acara."
+        },
+        "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
+          "description": "Berkongsi artifak kreatif dengan pelajar lain."
         },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "Ketahui bahawa internet boleh digunakan untuk mengunjungi merata tempat yang jauh dan belajar perkara baharu."
@@ -125,23 +191,158 @@
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
           "description": "Kenal pasti dan atasi pepijat atau ralat dalam arahan yang berjujukan"
         },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Modelkan tingkah laku makmal komputer yang betul"
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Eksperimen dengan tindakan pengaturcaraan berasaskan blok standard seperti: mengklik, seret, lepaskan dan sebagainya."
+        },
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Bina atur cara dengan menyusun semula pergerakan berjujukan"
+        },
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Bangunkan atur cara komputer daripada set arahan bertulis"
+        },
+        "199aed02-347c-4892-9e98-d7571ae64c9d": {
+          "description": "Perintah jujukan mengikut urutan logik."
+        },
+        "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
+          "description": "Kenali masalah atau \"pepijat\" dalam atur cara dan bangunkan rancangan yang bertujuan menyelesaikan isu."
+        },
+        "cb7cab91-20ca-495a-a429-621631cb0507": {
+          "description": "Bina atur cara dengan menggunakan struktur yang mengulangi bahagian kod"
+        },
+        "381b89ab-336f-41cd-b755-78142a1f1f90": {
+          "description": "Menambah baik kod sedia ada dengan mencari bahagian pengulangan dan memindahkannya ke dalam struktur penggelungan"
+        },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
+        },
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Pecahkan jujukan arahan yang panjang kepada jujukan boleh diulangi terkecil yang mungkin."
+        },
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Kira bilangan tindakan yang perlu diulangi dan mewakilinya sebagai gelung."
+        },
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Menguraikan bentuk kepada jujukan berulang yang terbesar."
+        },
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Cipta atur cara yang menarik bentuk kompleks dengan mengulangi jujukan mudah."
+        },
+        "106c5668-bbc0-404b-8cb5-8ff2bd66eeef": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "b366b41e-9396-4c1b-9d35-164052448c1c": {
+          "description": "Mencipta cerita animasi, berinteraktif dengan menggunakan jujukan dan pengendali acara."
+        },
+        "0e6bc093-532a-4e2d-bf3a-dcd7d62a1d93": {
+          "description": "Berkongsi artifak kreatif dengan pelajar lain."
         },
         "26392005-5f64-4707-b38b-847d1f009a29": {
           "description": "Kenal pasti dan atasi pepijat atau ralat dalam arahan yang berjujukan"
         },
+        "560e14ee-7390-4244-aee5-a0c2737112e5": {
+          "description": "Terjemahkan pergerakan ke dalam siri perintah."
+        },
+        "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
+          "description": "Kenal pasti dan cari pepijat dalam atur cara."
+        },
+        "ce53a40d-db75-451a-a901-93f93226306a": {
+          "description": "Ramalkan yang atur cara itu akan gagal."
+        },
+        "3ad547f9-c577-4953-88d5-41f7ac1ab710": {
+          "description": "Ubah suai atur cara sedia ada untuk menyelesaikan ralat."
+        },
+        "367c7a8a-4dea-494f-87c7-77cba03711a1": {
+          "description": "Renungkan proses penyahpepijatan dengan cara yang sepadan dengan umur."
+        },
+        "991aa440-0e71-40b0-8354-da04e3ad125b": {
+          "description": "Susun perintah pergerakan sebagai langkah berjujukan dalam atur cara."
+        },
+        "a48e07da-5c86-4377-8738-4a6a06633e1d": {
+          "description": "Mewakili algoritma sebagai atur cara komputer."
+        },
+        "d50f34e0-2613-485c-9381-7b63832dbd0a": {
+          "description": "Membangunkan kemahiran penyelesaian masalah dan pemikiran kritikal dengan menilai latihan penyahpepijatan."
+        },
         "46288097-dbab-437f-897c-4e14352ae388": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
         },
+        "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
+          "description": "Pecahkan jujukan arahan yang panjang kepada jujukan terbesar yang boleh diulangi."
+        },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
+        },
+        "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
+          "description": "Berkongsi artifak kreatif dengan pelajar lain."
+        },
+        "c0757733-5e14-4797-9615-11b61d8d490f": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
+          "description": "Susun perintah pergerakan sebagai langkah berjujukan dalam atur cara."
+        },
+        "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a": {
+          "description": "Ubah suai atur cara sedia ada untuk menyelesaikan ralat."
+        },
+        "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
+          "description": "Pecahkan jujukan arahan yang panjang kepada jujukan terbesar yang boleh diulangi."
+        },
+        "3b4a2468-e182-4060-861f-2a922730445b": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
+          "description": "Berkongsi artifak kreatif dengan pelajar lain."
+        },
+        "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
+        "6a6abb8f-e710-4a5e-9979-38e6fef573de": {
+          "description": "Membangunkan atur cara yang bertindak balas terhadap acara yang ditetapkan masanya"
+        },
+        "18434de2-92be-4695-8dc7-4aed45243596": {
+          "description": "Membangunkan atur cara yang bertindak balas terhadap input pengguna"
+        },
+        "891d87fb-2024-4ecc-828e-fa4f12dbbb05": {
+          "description": "Mencipta animasi tarian dengan kod"
+        },
+        "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
+          "description": "Bina atur cara dengan menggunakan struktur yang mengulangi bahagian kod"
+        },
+        "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
+          "description": "Menambah baik kod sedia ada dengan mencari bahagian pengulangan dan memindahkannya ke dalam struktur penggelungan"
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
         },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
+        },
+        "8c021568-46ed-4243-a4d1-f2037138c01a": {
+          "description": "Terjemahkan pergerakan ke dalam siri perintah."
+        },
+        "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
+          "description": "Kenal pasti dan cari pepijat dalam atur cara."
+        },
+        "f0852e8e-a4ab-49a6-8fc4-0c805f14999a": {
+          "description": "Ramalkan yang atur cara itu akan gagal."
+        },
+        "857073db-dcda-4868-8be6-e0fba5f981d7": {
+          "description": "Ubah suai atur cara sedia ada untuk menyelesaikan ralat."
+        },
+        "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
+          "description": "Renungkan proses penyahpepijatan dengan cara yang sepadan dengan umur."
+        },
+        "4d4f7faa-e380-483d-b873-b04e114e077e": {
+          "description": "Susun perintah pergerakan sebagai langkah berjujukan dalam atur cara."
+        },
+        "6a4a4515-9250-4ad0-b943-afef3d26df68": {
+          "description": "Mewakili algoritma sebagai atur cara komputer."
+        },
+        "48b6e566-4a4b-424e-b104-33ce83bd2184": {
+          "description": "Membangunkan kemahiran penyelesaian masalah dan pemikiran kritikal dengan menilai latihan penyahpepijatan."
         },
         "09281dd0-4b33-4537-9543-a2377bc2f923": {
           "description": "Cipta peperi baharu dan berikannya kostum dan tingkah laku."
@@ -161,8 +362,23 @@
         "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
           "description": "Membangunkan atur cara yang bertindak balas terhadap input pengguna."
         },
+        "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
+          "description": "Cipta haiwan peliharaan maya berinteraktif dengan menggunakan acara, tingkah laku, pemboleh ubah dan seni tersuai."
+        },
+        "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
+          "description": "Membangunkan atur cara yang bertindak balas terhadap acara yang ditetapkan masanya"
+        },
+        "8ed739fb-18d9-49fa-8cf7-47c989fa6a6c": {
+          "description": "Membangunkan atur cara yang bertindak balas terhadap input pengguna"
+        },
+        "50bc6662-3d3d-4bc6-ac09-8c2d2961bed2": {
+          "description": "Mencipta animasi tarian dengan kod"
+        },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
+        },
+        "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
+          "description": "Pecahkan jujukan arahan yang panjang kepada jujukan terbesar yang boleh diulangi."
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
@@ -257,8 +473,14 @@
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Cipta peperi baharu dan berikannya kostum dan tingkah laku."
         },
+        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
+          "description": "Mengenal pasti tindakan yang berhubung kait dengan acara input."
+        },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "Mengenal pasti manfaat menggunakan struktur gelung dan bukannya pengulangan manual."
+        },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Kira bilangan tindakan yang perlu diulangi dan mewakilinya sebagai gelung."
         }
       }
     }

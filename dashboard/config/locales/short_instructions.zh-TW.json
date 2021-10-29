@@ -3084,12 +3084,12 @@
         "CourseD_EOC_dance": "創作屬於你的舞蹈！",
         "CourseD_EOC_starwars": "製作你的星球大戰遊戲！",
         "CourseF_outbreak1": "建立 10 個健康的怪獸角色和1個生病的怪獸角色。更改他們的大小，並讓他們到處散步。",
-        "CourseF_outbreak2": "當它們接觸時，將健康的怪物變成生病的怪物。",
-        "CourseF_outbreak3": "當你點擊怪物時，將它們變成戴口罩的怪物。",
+        "CourseF_outbreak2": "當它們接觸時，將健康的怪獸變成生病的怪獸。",
+        "CourseF_outbreak3": "當你點擊怪獸時，讓它們變成戴口罩的怪獸。",
         "CourseF_outbreak4": "為你的模擬更改怪物精靈圖的數量和大小。",
-        "CourseF_outbreak6": "當健康的怪物接觸生病的怪物時，使所有生病的怪物開始恢復。",
-        "CourseF_outbreak7": "添加一個當健康怪物接觸生病怪物時怪物生病的百分比幾率。對所有戴了或沒戴的怪物組合都這樣做。",
-        "CourseF_outbreak8": "為具有病毒免疫的怪物創建一個新的服裝，並在你的模擬中使用它。",
+        "CourseF_outbreak6": "當健康的怪獸接觸到生病的怪獸時，增加怪獸生病的「機率」。 對所有戴口罩和不戴口罩的怪獸組合都這樣做。",
+        "CourseF_outbreak7": "為具有病毒免疫的怪獸建立一個新的造型，並在你的模擬中使用這個新造型。",
+        "CourseF_outbreak8": "透過你建立的模擬器分享訊息。",
         "courseA_artist_loops10_2021": "幫我放些石頭，我不想掉下去！",
         "courseA_artist_loops11_2021": "幫我蓋一個階梯，讓我可以看著船航行到遠方。",
         "courseA_artist_loops12_2021": "小藝術家在遠處看到一些有趣的東西，你覺得他看到了什麼？把它畫出來。",
@@ -3734,9 +3734,7 @@
         "ramp_artist_loops7_2021": "找到規律，用迴圈讓這個程式更精簡！",
         "ramp_artist_loops9_2021": "畫一個正方形通過本關。",
         "simcustom_2021": "嘗試對精靈圖服裝或下面的代碼做一些更改。 ",
-        "international_outbreak_freeplay": "與你的模擬分享資訊。",
-        "poetry_hoc_exemplar1": "建立一個預測！",
-        "poetry_hoc_exemplar2": "建立一個預測！"
+        "international_outbreak_freeplay": "你可以根據你自己的想法來修改、或改善原本的專案。"
       }
     }
   }

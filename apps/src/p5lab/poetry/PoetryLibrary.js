@@ -5,6 +5,7 @@ import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
 import * as utils from './commands/utils';
 import {containsAtLeastOneAlphaNumberic} from '../../utils';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
 import {commands as behaviors} from './commands/behaviors';
@@ -38,7 +39,8 @@ export default class PoetryLibrary extends CoreLibrary {
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
       animationStartFrame:
-        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null
+        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null,
+      backgroundMusic: undefined
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -93,6 +95,15 @@ export default class PoetryLibrary extends CoreLibrary {
 
       destroy(costume) {
         spritelabCommands.destroy.call(this, {costume});
+      },
+
+      playMusic(url) {
+        if (this.poemState.backgroundMusic) {
+          audioCommands.stopSound({url: this.poemState.backgroundMusic});
+        }
+        this.poemState.backgroundMusic = url;
+        this.soundLog.push(url);
+        audioCommands.playSound({url, loop: true});
       },
 
       // And add custom Poem Bot commands
@@ -293,10 +304,6 @@ export default class PoetryLibrary extends CoreLibrary {
     );
 
     this.p5.pop();
-  }
-
-  isPreviewFrame() {
-    return this.p5.World.frameCount === 1;
   }
 
   getScaledFontSize(text, font, desiredSize) {
