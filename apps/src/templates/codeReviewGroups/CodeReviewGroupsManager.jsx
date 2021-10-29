@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
 import _ from 'lodash';
+import color from '@cdo/apps/util/color';
+import Button from '../Button';
 import StudentGroup from './StudentGroup';
 
 const DROPPABLE_ID_PREFIX = 'groupId';
@@ -73,28 +75,46 @@ export default function CodeReviewGroupsManager({initialGroups}) {
     <div>
       <DragDropContext onDragEnd={onDragEnd}>
         <div style={styles.dragAndDropContainer}>
-          <StudentGroup
-            droppableId={getUnassignedGroup().droppableId}
-            members={getUnassignedGroup().members}
-          />
-          <div style={styles.groupsContainer}>
-            <button
-              type="button"
-              onClick={() => {
-                setGroups([generateNewGroup(), ...groups]);
-              }}
-            >
-              Add new group
-            </button>
-            {getAssignedGroups().map(group => {
-              return (
-                <StudentGroup
-                  droppableId={group.droppableId}
-                  members={group.members}
-                  key={group.droppableId}
-                />
-              );
-            })}
+          <div style={styles.unassignedStudentsPanel}>
+            <div style={styles.header}>
+              <span>Unassigned Students</span>
+              <Button
+                onClick={() => {}}
+                icon={'times'}
+                text={'Unassign All'}
+                color={'gray'}
+              />
+            </div>
+            <div style={styles.groupsContainer}>
+              <StudentGroup
+                droppableId={getUnassignedGroup().droppableId}
+                members={getUnassignedGroup().members}
+              />
+            </div>
+          </div>
+          <div style={styles.groupsPanel}>
+            <div style={styles.header}>
+              <span>Groups</span>
+              <Button
+                onClick={() => {
+                  setGroups([generateNewGroup(), ...groups]);
+                }}
+                icon={'plus'}
+                text={'Create Group'}
+                color={'gray'}
+              />
+            </div>
+            <div style={styles.groupsContainer}>
+              {getAssignedGroups().map(group => {
+                return (
+                  <StudentGroup
+                    droppableId={group.droppableId}
+                    members={group.members}
+                    key={group.droppableId}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </DragDropContext>
@@ -173,6 +193,27 @@ const styles = {
   },
   groupsContainer: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    height: 355,
+    overflow: 'scroll',
+    border: `1px solid ${color.lightest_gray}`
+  },
+  groupsPanel: {
+    width: 500
+  },
+  unassignedStudentsPanel: {
+    width: 400
+  },
+  header: {
+    height: 54,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '0 5px',
+    border: `1px solid ${color.lightest_gray}`,
+    background: color.light_gray
+  },
+  groupsHeader: {
+    justifyContent: 'flex-end'
   }
 };
