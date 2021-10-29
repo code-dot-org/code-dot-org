@@ -817,7 +817,7 @@ class ApiControllerTest < ActionController::TestCase
       level: level, level_source: level_source
     create :activity, user: user, level: level, level_source: level_source
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -845,7 +845,7 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
-  test "user_progress_for_lesson should return channel when param get_channel_id is true" do
+  test "user_app_options should return channel when param get_channel_id is true" do
     script = create(:script, :with_levels, levels_count: 1)
     level = script.script_levels.first.level
 
@@ -855,7 +855,7 @@ class ApiControllerTest < ActionController::TestCase
     channel_token = create :channel_token, level: level, script_id: script.id, storage_id: storage_id_for_user_id(user.id)
     expected_channel = channel_token.channel
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1,
@@ -866,7 +866,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_channel, body['channel']
   end
 
-  test "user_progress_for_lesson should not return channel when param get_channel_id is false" do
+  test "user_app_options should not return channel when param get_channel_id is false" do
     script = create(:script, :with_levels, levels_count: 1)
     level = script.script_levels.first.level
 
@@ -875,7 +875,7 @@ class ApiControllerTest < ActionController::TestCase
 
     create :channel_token, level: level, script_id: script.id, storage_id: storage_id_for_user_id(user.id)
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1,
@@ -887,13 +887,13 @@ class ApiControllerTest < ActionController::TestCase
     assert_nil body['reduceChannelUpdates']
   end
 
-  test "user_progress_for_lesson should normally return reduceChannelUpdates false" do
+  test "user_app_options should normally return reduceChannelUpdates false" do
     script = create(:script, :with_levels, levels_count: 1)
 
     user = create :user
     sign_in user
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1,
@@ -904,7 +904,7 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal false, body['reduceChannelUpdates']
   end
 
-  test "user_progress_for_lesson should return reduceChannelUpdates true in emergency mode" do
+  test "user_app_options should return reduceChannelUpdates true in emergency mode" do
     script = create(:script, :with_levels, levels_count: 1)
 
     user = create :user
@@ -913,7 +913,7 @@ class ApiControllerTest < ActionController::TestCase
     # Mimic Gatekeeper setting that's set in emergency mode
     Gatekeeper.set('updateChannelOnSave', where: {script_name: script.name}, value: false)
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1,
@@ -937,7 +937,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user
     sign_in user
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -956,7 +956,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user
     sign_out user
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -984,7 +984,7 @@ class ApiControllerTest < ActionController::TestCase
     young_student = create :young_student
     sign_in young_student
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -1001,7 +1001,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user, total_lines: 2
     sign_in user
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -1021,7 +1021,7 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
     create :activity, user: @student_1, level: level1a, level_source: level_source
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1,

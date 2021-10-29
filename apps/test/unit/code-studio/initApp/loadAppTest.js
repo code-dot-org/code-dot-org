@@ -71,7 +71,7 @@ describe('loadApp.js', () => {
 
   const stubAppOptionsRequests = (
     appOptions,
-    stubbedProgressResponse = {signedIn: false},
+    userAppOptionsResponse = {signedIn: false},
     exampleSolutionsResponse = []
   ) => {
     const {
@@ -88,10 +88,10 @@ describe('loadApp.js', () => {
     const ajaxStub = sinon.stub($, 'ajax');
     ajaxStub
       .withArgs(
-        `/api/user_progress/${scriptName}/${lessonPosition}/${levelPosition}/${serverLevelId}?get_channel_id=${!!levelRequiresChannel &&
+        `/api/user_app_options/${scriptName}/${lessonPosition}/${levelPosition}/${serverLevelId}?get_channel_id=${!!levelRequiresChannel &&
           !channel}`
       )
-      .returns(stubbedProgressResponse);
+      .returns(userAppOptionsResponse);
 
     ajaxStub
       .withArgs(
