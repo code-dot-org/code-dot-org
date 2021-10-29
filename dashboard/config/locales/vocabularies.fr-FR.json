@@ -558,7 +558,6 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/coursed/2021": {
-          "word": "code",
           "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
         },
         "repeat/coursed/2021": {
@@ -622,7 +621,7 @@
           "definition": "Action qui provoque quelque chose."
         },
         "code/express/2021": {
-          "word": "code"
+          "definition": "écrire du code ou écrire des instructions pour un ordinateur."
         },
         "loop/express/2021": {
           "word": "Boucle",

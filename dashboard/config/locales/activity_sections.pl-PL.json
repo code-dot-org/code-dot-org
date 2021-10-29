@@ -3,8 +3,7 @@
     "data": {
       "activity_sections": {
         "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
-          "name": "Wstęp",
-          "description": "#### Ustawianie sceny\n\nPowitaj uczniów na zajęciach i krótko przedstaw plan dnia. Pamiętaj, aby powiedzieć uczniom, by nie spieszyli się i eksperymentowali."
+          "name": "Wstęp"
         },
         "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
@@ -34,6 +33,9 @@
         },
         "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
           "progression_name": "Przyspiesz, spowolnij"
+        },
+        "42ec95b6-80f4-4012-8869-6850c7497008": {
+          "name": "Zdać sprawozdanie"
         },
         "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
           "name": "Świętuj"
@@ -71,6 +73,9 @@
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
+        "70935a98-82e9-4553-94f7-90a4e615dd34": {
+          "name": "Zdać sprawozdanie"
+        },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Świętuj"
         },
@@ -104,6 +109,9 @@
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Podróż Bohatera"
         },
+        "ae17edd9-ad82-47dc-95f5-368b58084998": {
+          "name": "Zdać sprawozdanie"
+        },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Świętuj"
         },
@@ -128,6 +136,9 @@
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
+        },
+        "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
+          "name": "Zdać sprawozdanie"
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Świętuj"
@@ -159,6 +170,9 @@
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
+        "50db3674-3387-4932-ba7e-c9f176ebd976": {
+          "name": "Zdać sprawozdanie"
+        },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Świętuj"
         },
@@ -189,6 +203,9 @@
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
+        "38799019-2b81-4c28-a239-762b90e0f5e3": {
+          "name": "Zdać sprawozdanie"
+        },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Świętuj"
         },
@@ -216,6 +233,9 @@
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
+        },
+        "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
+          "name": "Zdać sprawozdanie"
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Świętuj"
@@ -261,6 +281,9 @@
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
+        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
+          "name": "Zdać sprawozdanie"
+        },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Świętuj"
         },
@@ -290,6 +313,9 @@
           "tips": [
             null
           ]
+        },
+        "f78380b1-0666-40a6-ac50-7adf09cda880": {
+          "name": "Zdać sprawozdanie"
         },
         "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
           "name": "Świętuj"
@@ -324,6 +350,9 @@
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
+        "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
+          "name": "Zdać sprawozdanie"
+        },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Świętuj"
         },
@@ -348,16 +377,10 @@
             null
           ]
         },
-        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
-          "name": "Część 1 - Złam szyfr Cezara"
-        },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
             null
           ]
-        },
-        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
-          "name": "Część 2 - Złam szyfr losowego podstawienia"
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
@@ -388,12 +411,6 @@
             null
           ]
         },
-        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
-          "name": "Film: Szyfrowanie i klucze publiczne"
-        },
-        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
-          "name": "Dyskusja"
-        },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
             null
@@ -411,6 +428,9 @@
           "tips": [
             null
           ]
+        },
+        "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
+          "name": "Zdać sprawozdanie"
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "Świętuj"
@@ -446,6 +466,9 @@
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
+        "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
+          "name": "Zdać sprawozdanie"
+        },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Świętuj"
         },
@@ -470,6 +493,9 @@
         },
         "e3b1f4b9-8255-4d48-a28b-f08a1ed7afde": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
+        },
+        "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
+          "name": "Zdać sprawozdanie"
         },
         "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
           "name": "Świętuj"
@@ -515,6 +541,9 @@
             null
           ]
         },
+        "afb5ecc7-af66-492d-96bb-2412754005e0": {
+          "name": "Zdać sprawozdanie"
+        },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "Świętuj"
         },
@@ -526,9 +555,6 @@
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
-        },
-        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
-          "name": "Rozgrzewka"
         },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
@@ -584,6 +610,9 @@
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
           "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
+        "a0530acf-3bce-4de9-b392-fe8725044086": {
+          "name": "Zdać sprawozdanie"
+        },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Świętuj"
         },
@@ -614,9 +643,6 @@
           "tips": [
             null
           ]
-        },
-        "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
-          "description": "Jaki jest twój ulubiony sposób na bycie kreatywnym?"
         },
         "faf90391-c01a-42d3-b79c-0becac0a50d2": {
           "name": "Ogólne wsparcie"
@@ -653,18 +679,17 @@
         "501df195-7991-40ad-bad9-df715484240b": {
           "progression_name": "Przyspiesz, spowolnij"
         },
+        "820a64ef-d544-460f-ab3f-0f19442b9129": {
+          "name": "Zdać sprawozdanie"
+        },
         "2458fd7f-011d-4251-8877-2e90d5d55684": {
           "name": "Świętuj"
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
-          "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobała im się dzisiejsza aktywność, mają wiele możliwości kontynuowania programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn](http://code.org/learn) w celu uzyskania listy opcji lub, jeśli planujesz inne dodatkowe ćwiczenia, które nastąpią, powiedz uczniom, co będzie dalej w Twojej klasie."
+          "name": "Następne Kroki"
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
-        },
-        "4587cdae-c2ce-4d5f-9540-063b6383388d": {
-          "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny Kodowania istnieje wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów:\n\n-   Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n-   Odwiedź stronę [Możesz uczyć informatyki](https://studio.code.org/courses?view=teacher), aby uzyskać więcej propozycji kursów.\n-   Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
@@ -679,13 +704,13 @@
         "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
           "name": "Ogólne wsparcie"
         },
-        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
-          "name": "Poziom po poziomie"
-        },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
             null
           ]
+        },
+        "8653a0a0-b67c-4237-b8c1-111e0d11b4fe": {
+          "name": "Zdać sprawozdanie"
         },
         "f6bcac9d-cd44-435f-8565-57a5926542f8": {
           "name": "Świętuj"
@@ -711,9 +736,6 @@
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "AI: dane treningowe i stronniczość — Film"
         },
-        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
-          "description": "#### Poziom 6 - Stosując dane treningowe"
-        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
@@ -726,30 +748,15 @@
         "a47af864-6d0d-441c-98ea-6e50d036c415": {
           "progression_name": "Naucz AI nowego słowa"
         },
-        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
-          "description": "Na ekranie wyników końcowych można wyświetlić wizualizację modelu uczenia maszynowego sztucznej inteligencji, klikając ![](https://curriculum.code.org/media/uploads/info.png)."
-        },
-        "be0995b2-b12f-45ee-9047-8261719fcd56": {
-          "name": "Przykład 1: Trening oparty na jednej cesze (kształt ciała)"
-        },
-        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
-          "name": "Przykład 2: Używanie widoku Informacji do ulepszania modelu"
-        },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Rozgrzewka"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Główna aktywność (stara)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Główna aktywność (nowa)"
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Zakończenie"
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
-            "Będziesz chciał poświęcić bardzo mało czasu na wstępne ładowanie lub wprowadzenie do swojej Godziny Kodowania. Zwłaszcza w przypadku młodych uczniów najlepiej jest zacząć tak szybko, jak to możliwe. Zbyt wiele wyjaśnień lub wykładów na początku psuje zabawę, a zabawa jest najważniejsza!"
+            null
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
@@ -757,9 +764,6 @@
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
           "name": "Witaj świecie"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](https://code.org/learn)."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Refleksja"
@@ -805,19 +809,24 @@
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Refleksja"
         },
-        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny kodowania, jest wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n\n-   Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
-        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
-          "name": "Wstęp"
+          "name": "Wstęp",
+          "description": "Na tym kursie nauczymy się kodować. Kodowanie służy do tworzenia aplikacji, gier, stron internetowych, symulacji i wszelkiego rodzaju rzeczy, których używamy na komputerze."
         },
         "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205": {
           "tips": [
-            null
+            "Ta lekcja zawiera slajdy z kilkoma fałszywymi aplikacjami do wykorzystania w dyskusji. Możesz uzupełnić lub zastąpić te przykłady innymi w oparciu o zainteresowania Twoich uczniów."
           ]
+        },
+        "75264b2e-950d-4494-9313-aa20451bfd50": {
+          "description": "Widzimy, że we wszystkich tych aplikacjach użytkownik może decydować o tym, jak z nich korzystać. Te wybory mogą zmotywować więcej osób do korzystania z aplikacji."
+        },
+        "85dd5032-f0e5-446e-a687-45d34b5229c5": {
+          "description": "**Zastanów się:** Jaka jest Twoja ulubiona gra lub aplikacja? Jakich wyborów dokonujesz podczas korzystania z niej?"
         },
         "75406aa7-bf10-4ca7-83af-6967a9f225eb": {
           "name": "Wprowadzenie Sprite Lab",
+          "description": "**Zrób to:** Odtwórz film **\\*Przedstawiamy Sprite Lab**.",
           "progression_name": "Film: Przedstawiamy Sprite Lab  "
         },
         "e9148961-d1ba-4ce8-b9f6-79d0603b3122": {
@@ -922,6 +931,9 @@
         },
         "c03754de-e580-4e9f-b58e-af136a073898": {
           "name": "Ulubiony posilek"
+        },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Zabawy na imprezy"
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
           "name": "Utwórz własną historię (20 min.)",
@@ -1612,8 +1624,7 @@
           ]
         },
         "7719a51a-42d9-41f0-bc30-c5475b18af7c": {
-          "name": "Programowanie Happy Maps",
-          "progression_name": "Film: Wesołe Mapy — Aktywność bez komputera"
+          "name": "Programowanie Happy Maps"
         },
         "c3cfdbc4-82d5-4717-bf83-22860936a687": {
           "description": "Użyj tych ćwiczeń, aby urozmaicić naukę uczniów. Można ich użyć w ramach zajęć pozalekcyjnych lub innej formy rozszerzenia. **Mapy pluszaków** - Utwórz siatkę naturalnej wielkości na chodniku wykorzystując taśmę i poleć uczniom, aby przynieśli do szkoły pluszaki. Teraz uczniowie mogą zaprogramować znajomych, aby przemieszczali swoje pluszaki zgodnie z instrukcjami  programów.\n\\*\\*Utwórz swoje własne \\*\\* -   Nich uczniowie tworzą swoje własne mapy.\n\n-   Niech inni uczniowie rozwiążą je z użyciem programów. "

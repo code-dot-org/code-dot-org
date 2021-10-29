@@ -537,7 +537,6 @@
           "definition": "إجراء يتسبب في حدوث شيء ما."
         },
         "code/coursed/2021": {
-          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "repeat/coursed/2021": {
@@ -595,9 +594,6 @@
         "event/express/2021": {
           "word": "الحدث",
           "definition": "إجراء يتسبب في حدوث شيء ما."
-        },
-        "code/express/2021": {
-          "word": "الكود"
         },
         "loop/express/2021": {
           "word": "الحلقة",

@@ -987,6 +987,16 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Stars: Estrelles
+            '"rainbow"': Arc de Sant Martí
+            '"hearts"': Cors
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: Llum
       Poetry_setBackground:
         text: definir el color de fons {COLOR}
       Poetry_setBackgroundEffect:
@@ -994,6 +1004,9 @@ ca:
           EFFECT:
             '"space"': Espai
             '"stars"': Estrelles
+            '"rain"': Pluja
+            '"bubbles"': Bombolles
+            '"confetti"': Confeti
           PALETTE:
             '"rainbow"': Arc de Sant Martí
       Poetry_setForegroundEffect:

@@ -545,10 +545,10 @@
         "courseF_apps_card": "Поздравительная открытка",
         "courseF_apps_chatbot": "Чат-бот X-9",
         "courseF_apps_collector": "Игра «Собиратель»",
-        "courseF_apps_madlib": "История с чистого листа",
+        "courseF_apps_madlib": "Рассказ, в котором нужно заполнить пропуски",
         "courseF_apps_pet": "Виртуальный питомец",
         "courseF_editable_card": "Поздравительная открытка",
-        "courseF_editable_madlib": "История с чистого листа",
+        "courseF_editable_madlib": "Рассказ, в котором нужно заполнить пропуски",
         "courseF_place_fruit": "Измени размер фрукта.",
         "courseF_sprites_behaviors": "Поведения спрайтов",
         "courseF_sprites_clouds": "Ветреный день",
@@ -596,8 +596,8 @@
         "courseF_variables_card_finish": "Поздравительная открытка, часть 2",
         "courseF_variables_chatbot": "Чат-бот, часть 1",
         "courseF_variables_chatbot_finish": "Чат-бот, часть 2",
-        "courseF_variables_madlib": "История с чистого листа, часть 1",
-        "courseF_variables_madlib_finish": "История с чистого листа, часть 2",
+        "courseF_variables_madlib": "Рассказ, в котором нужно заполнить пропуски, часть 1",
+        "courseF_variables_madlib_finish": "Рассказ, в котором нужно заполнить пропуски, часть 2",
         "helloworld_animals_costumes": "Костюмы",
         "helloworld_animals_location": "События времени",
         "helloworld_emoji_costumes": "Костюмы",
@@ -640,7 +640,11 @@
         "CourseD_EOC_starwars_2021": "Создай игру на тему Звездных войн",
         "CourseD_EOC_starwars_example_2021": "Избегай штурмовиков!",
         "courseC19_playLab_sample1_2021": "Голодная белка",
-        "courseC19_playLab_sample2_2021": "История пришельцев"
+        "courseC19_playLab_sample2_2021": "История пришельцев",
+        "courseA_EOC_artist_1": "Художник: Зоопарк",
+        "courseA_EOC_artist_2": "Художник: Сад",
+        "courseA_EOC_playlab_fantasy": "Лаборатория игр: Фантазия",
+        "courseA_EOC_playlab_people": "Лаборатория игр: Люди"
       }
     }
   }

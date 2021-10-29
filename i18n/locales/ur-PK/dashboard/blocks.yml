@@ -1469,6 +1469,16 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: آئس کریم
+            Stars: ستارہ
+            Fireworks: آتش بازی
+            '"rainbow"': قوس قزح
+            '"hearts"': دل
+            '"flowers"': پھول
+            '"waves"': لہریں
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1477,6 +1487,9 @@ ur:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       Poetry_playSound:
         text: پلے آواز {SOUND}
+        options:
+          SOUND:
+            Light: روشنی
       Poetry_setBackground:
         text: پس منظر رنگ {COLOR} سیٹ کریں
       Poetry_setBackgroundEffect:
@@ -1487,6 +1500,10 @@ ur:
             '"space"': جگہ
             '"stars"': ستارہ
             '"ripples"': ریپلز
+            '"rain"': بارش
+            '"bubbles"': بُلبُلے
+            '"confetti"': کاغذی لیریاں
+            '"hearts"': رنگین دل
           PALETTE:
             '"rainbow"': قوس قزح
       Poetry_setBackgroundImageAs:

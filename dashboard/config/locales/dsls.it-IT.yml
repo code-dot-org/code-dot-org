@@ -8959,6 +8959,7 @@ it-IT:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       courseAB_EOC_2021:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
       courseB_EOC_2021:
         display_name: Progetto di fine corso
       courseC_multi_artist_prog6_predict1_2021:
@@ -8970,7 +8971,8 @@ it-IT:
         - text: L'artista disegnerà un quadrato.
           correct: true
           feedback: Corretto!
-        - {}
+        - text: L'artista disegnerà un pentagono
+          feedback: Sbagliato. L'artista disegna un quadrato.
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
@@ -9022,7 +9024,8 @@ it-IT:
         - text: L'uccellino finirà contro la dinamite (TNT).
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
-        - feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
+        - text: L'uccellino finirà contro il muro.
+          feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
         questions:
         - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
@@ -9038,7 +9041,8 @@ it-IT:
         - text: BB-8 si sposterà 5 volte e recupererà tutti i rottami metallici.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
+        - text: BB-8 si muoverà solo di 3 caselle.
+          feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         questions:
         - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
@@ -9074,7 +9078,8 @@ it-IT:
         - text: C
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
-        - feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
+        - text: Nessuno dei precedenti
+          feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         markdown: |+
           <table>
@@ -9099,7 +9104,8 @@ it-IT:
         - text: 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare se c'è un fiore sotto alla nuvola.
-        - feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
+        - text: 'L''ape non raggiungerà la nuvola. '
+          feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare solo se c'è un fiore sotto alla nuvola.
         questions:
         - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
@@ -9157,7 +9163,8 @@ it-IT:
         - text: L'ape raccoglierà tutto il nettare.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
+        - text: L'ape girerà nella direzione sbagliata.
+          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
             e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
         questions:
         - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
@@ -9197,7 +9204,8 @@ it-IT:
         - text: La contadina raccoglierà tutte le colture, eccetto la zucca.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. Il programma fa in modo che la contadina esegua ripetutamente
+        - text: La contadina raccoglierà soltanto la zucca.
+          feedback: Sbagliato. Il programma fa in modo che la contadina esegua ripetutamente
             un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
             incontra. Ma alla fine non raccoglie la zucca.
         markdown: |
@@ -9270,7 +9278,8 @@ it-IT:
           feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
             strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
             non raggiunge il maiale!
-        - feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
+        - text: L'uccello gira dalla parte sbagliata.
+          feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
         questions:
@@ -9285,12 +9294,20 @@ it-IT:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Non succederà nulla.
-        - {}
-        - correct: true
+          feedback: Sbagliato. L'alieno inizierà a muoversi verso l'alto e verso il
+            basso sullo schermo.
+        - text: L'alieno inizierà a pattugliare da destra a sinistra.
+          feedback: Sbagliato. L'alieno inizierà a muoversi verso l'alto e verso il
+            basso sullo schermo.
+        - text: L'alieno inizierà a muoversi verso l'alto e verso il basso sullo schermo.
+          correct: true
           feedback: Corretto!
-        - {}
+        - text: L'alieno scomparirà dalla parte superiore dello schermo.
+          feedback: Sbagliato. L'alieno blu inizierà a muoversi verso l'alto e verso
+            il basso sullo schermo.
         questions:
-        - {}
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai sull'alieno?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La contadina raccoglierà due zucche.
@@ -9342,10 +9359,13 @@ it-IT:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Non succederà nulla.
-        - {}
-        - correct: true
+          feedback: Sbagliato. La balla di fieno inizierà a rotolare
+        - text: La balla di fieno inizierà a fluttuare in cima allo schermo
+          feedback: Sbagliato. La balla di fieno inizierà a rotolare
+        - text: La balla di fieno inizierà a rotolare
+          correct: true
           feedback: Corretto!
-        - {}
+        - feedback: Sbagliato. La balla di fieno inizierà a rotolare
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
@@ -9357,21 +9377,29 @@ it-IT:
         display_name: Progetto di fine corso
       courseF_EOC_samples_2021:
         display_name: Progetto di fine corso
+        description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
+          trascorri un po' tempo a osservare i progetti di esempio.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
+        - text: Il personaggiosi girerà soltanto verso destra.
+          feedback: Sbagliato. Il personaggio si muoverà anche verso est.
+        - text: Il personaggiosi muoverà semplicemente verso est.
+          feedback: Sbagliato. Il personaggio non ha smesso di girare, quindi farà
+            entrambe le cose contemporaneamente.
         - correct: true
-        - {}
+        - text: Il personaggio farà prima un giro e dopo si sposterà.
         questions:
-        - {}
+        - text: Leggi il codice, poi fai una previsione.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Una pizza arriva subito!"'
+          feedback: Sbagliato. Le etichette delle variabili non corrispondono.
+        - text: '"Un pasto arriva subito!"'
+        - text: '"Un alimento arriva subito!"'
+        - text: '"Uno arriva subito!"'
+          correct: true
+          feedback: Corretto! Le etichette delle variabili non corrispondono.
+        - text: Non verrà stampato nulla.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2021:
@@ -9417,17 +9445,29 @@ it-IT:
             cliccherai su "Esegui"?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Entrambi gli aerei si sposteranno di una casella lungo la griglia,
+            poi si fermeranno.
+          feedback: Sbagliato. Questi personaggi hanno dei "comportamenti", con cui
+            i personaggi continueranno a correre fin quando non gli diranno di fermarsi.
+        - text: Entrambi gli aerei inizieranno a muoversi e non si fermeranno.
+          correct: true
+          feedback: Giusto! Questi comportamenti diranno agli aerei di iniziare a
+            muoversi e di continuare a farlo.
+        - text: Un aereo si muoverà per primo, mentre l'altro si muoverà in un secondo
+            momento.
+          feedback: Sbagliato. Ogni blocco di codice nel Laboratorio dei personaggi
+            viene eseguito istantaneamente, uno dopo l'altro.
+        - text: Gli aerei si scontrano.
+          feedback: Sbagliato. Gli aerei non sono posizionati in modo che si entrino
+            in contatto.
         questions:
-        - {}
+        - text: Leggi il codice, poi fai una previsione.
       courseF_variables_predict_multi:
         answers:
-        - {}
+        - text: Il programma stamperà "Ciao nome!"
         - correct: true
-        - {}
+        - text: Il personaggio cambierà le sue dimensioni.
+          feedback: Sbagliato. Il testo viene stampato a video.
         - {}
         questions:
         - {}
@@ -9521,3 +9561,62 @@ it-IT:
         title: 'Design Centrato dell''Utente: Test Post-Progetto'
       CSD Web Development Post-Project Test:
         title: Testo Post-Progetto di Sviluppo Web
+      courseF_intro_apps:
+        display_name: App del Laboratorio di personaggi
+        description: Ti diamo il benvenuto nei Principi fondamentali di CS! Tutti
+          questi progetti sono stati creati con il Laboratorio dei personaggi. Provali
+          ora per capire cos'è possibile fare. Entro la fine di questo corso, potrai
+          creare dei progetti tutti tuoi che siano uguali a questi... e altro ancora!
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono compilare. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Le scelte qui contenute conducono gli studenti ai modelli di app che possono esplorare. Questa attività deve essere coordinata con il foglio di lavoro di Esplorazione delle app, che si trova nel [piano delle lezioni](.././).
+      courseF_sprites_freeplay:
+        display_name: 'Personaggi: gioco gratuito'
+        description: Tocca a te creare qualsiasi cosa tu desideri! Che tipo di progetto
+          realizzerai?
+      courseF_sprites_practice:
+        display_name: La pratica dei personaggi
+        description: Hai fatto un ottimo lavoro finora!
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono compilare. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scena del deserto|Ridimensiona la frutta.|Anima un veliero|Un giornata ventilata|
+          |-|-|-|-|-|
+          | ***Digita*** |**Recensione**|**Recensione**|**Recensione**|**Recensione**|
+          | ***Concetto***|*personaggi, posizioni*|*personaggi, proprietà*|*personaggi, posizioni, comportamenti*|*comportamenti*|
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Segui l'algoritmo
+
+          Prova a fare un gioco e pensa a quali comandi sono necessari per ottenere il giusto risultato.
+      courseD_EOC_examples_2021:
+        description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
+          trascorri un po' tempo a osservare i progetti di esempio.
+        display_name: Esempi di progetti
+      courseF_artist_practice:
+        display_name: Pratica dell'artista
+      courseF_beeFor_practice:
+        display_name: Esercitazioni con le api
+      courseF_beeVar_practice:
+        display_name: Esercitazioni con le api
+      courseF_bee_practice:
+        display_name: Esercitazioni con le api
+      courseF_events_freeplay:
+        display_name: 'Eventi: gioco gratuito'
+      courseF_events_practice:
+        display_name: Esercitazioni per gli eventi
+      courseF_text_practice:
+        display_name: Pratica con il testo e i comandi
+      courseF_variables_projects:
+        display_name: Scegli un progetto
+      courseF_variables_samples:
+        display_name: 'Esplorazione: Programmi di esempio'
+      express_EOC_examples_2021:
+        description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
+          trascorri un po' tempo a osservare i progetti di esempio.
+        display_name: Esempi di progetti

@@ -2,15 +2,33 @@
   "func": "image",
   "category": "Drawing",
   "paletteParams": [
-    "image",
-    "srcX",
-    "srcY",
-    "srcW",
-    "srcH",
-    "x",
-    "y",
-    "w",
-    "h"
+    {
+      "name": "image"
+    },
+    {
+      "name": "srcX"
+    },
+    {
+      "name": "srcY"
+    },
+    {
+      "name": "srcW"
+    },
+    {
+      "name": "srcH"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "w"
+    },
+    {
+      "name": "h"
+    }
   ],
   "params": [
     "img",

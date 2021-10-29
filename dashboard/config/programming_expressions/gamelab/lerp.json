@@ -2,9 +2,15 @@
   "func": "lerp",
   "category": "Math",
   "paletteParams": [
-    "start",
-    "stop",
-    "amt"
+    {
+      "name": "start"
+    },
+    {
+      "name": "stop"
+    },
+    {
+      "name": "amt"
+    }
   ],
   "params": [
     "0",
