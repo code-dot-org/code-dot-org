@@ -1,11 +1,13 @@
 import React from 'react';
 import {act} from 'react-dom/test-utils';
 import PropTypes from 'prop-types';
-import {expect} from 'chai';
+// import {expect} from 'chai';
+import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
 import {PROGRAM_CSA} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
+import _ from 'lodash';
 
 const RegionalPartnerUser = props => {
   const {data} = props;
@@ -38,18 +40,19 @@ const mockApiResponse = (status = 200, body = {}) => {
 };
 
 describe('useRegionalPartner tests', () => {
-  let clock, fetchStub;
+  let clock, fetchStub, debounceStub;
   beforeEach(() => {
     clock = sinon.useFakeTimers();
     fetchStub = sinon.stub(window, 'fetch');
+    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
   });
   afterEach(() => {
     clock.restore();
-    sinon.restore();
     fetchStub.restore();
+    debounceStub.restore();
   });
 
-  xit('returns null when uninitialized', async () => {
+  it('returns null when uninitialized', async () => {
     let rendered;
     rendered = await mount(<RegionalPartnerUser data={{}} />);
     const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
@@ -57,9 +60,10 @@ describe('useRegionalPartner tests', () => {
     );
     expect(regionalPartner).to.equal(null);
     expect(regionalPartnerError).to.equal(false);
+    rendered.unmount();
   });
 
-  xit('errors when parameters are bad', async () => {
+  it('errors when parameters are bad', async () => {
     let rendered;
     // do a bunch of waiting around for the hooks state to resolve itself
     await act(async () => {
@@ -70,11 +74,12 @@ describe('useRegionalPartner tests', () => {
     );
     expect(regionalPartner).to.equal(null);
     expect(regionalPartnerError).to.equal(true);
+    rendered.unmount();
   });
 
   it('errors when server errors', async () => {
     let rendered;
-    fetchStub.resolves(mockApiResponse(500, GOOD_RESPONSE));
+    fetch.resolves(mockApiResponse(500, GOOD_RESPONSE));
     await act(async () => {
       rendered = await mount(
         <RegionalPartnerUser
@@ -93,12 +98,12 @@ describe('useRegionalPartner tests', () => {
     );
     expect(regionalPartner).to.equal(null);
     expect(regionalPartnerError).to.equal(true);
+    rendered.unmount();
   });
 
   it('fetches the regional partner data', async () => {
     let rendered;
-    fetchStub.resolves(mockApiResponse(200, GOOD_RESPONSE));
-    await clock.tickAsync(1000); // flush debouncer
+    fetch.resolves(mockApiResponse(200, GOOD_RESPONSE));
     await act(async () => {
       rendered = await mount(
         <RegionalPartnerUser
@@ -115,54 +120,11 @@ describe('useRegionalPartner tests', () => {
     const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
       rendered
     );
-    expect(
-      fetchStub
-        .getCall(0)
-        .calledWith(
-          `/api/v1/pd/regional_partner_workshops/find?course=Computer+Science+A&subject=5-day+Summer&zip_code=12345&state=AK`
-        )
-    ).to.equal(true);
-    expect(regionalPartner).to.deep.equal(GOOD_RESPONSE);
-    expect(regionalPartnerError).to.equal(false);
-  });
-
-  it('refetches when parameters change', async () => {
-    let rendered;
-    fetchStub.resolves(mockApiResponse(200, GOOD_RESPONSE));
-    await clock.tickAsync(1000); // flush debouncer
-    await act(async () => {
-      rendered = await mount(
-        <RegionalPartnerUser
-          data={{
-            school: '-1',
-            schoolZipCode: '12345',
-            schoolState: 'AK',
-            program: PROGRAM_CSA
-          }}
-        />
-      );
-      await clock.tickAsync(1000);
-      rendered.setProps({
-        data: {
-          school: '-1',
-          schoolZipCode: '12346',
-          schoolState: 'AK',
-          program: PROGRAM_CSA
-        }
-      });
-    });
-    await clock.runAllAsync();
-    const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
-      rendered
+    expect(fetch).to.be.calledWith(
+      `/api/v1/pd/regional_partner_workshops/find?course=Computer+Science+A&subject=5-day+Summer&zip_code=12345&state=AK`
     );
-    expect(
-      fetchStub
-        .getCall(1)
-        .calledWith(
-          `/api/v1/pd/regional_partner_workshops/find?course=Computer+Science+A&subject=5-day+Summer&zip_code=12346&state=AK`
-        )
-    ).to.equal(true);
     expect(regionalPartner).to.deep.equal(GOOD_RESPONSE);
     expect(regionalPartnerError).to.equal(false);
+    rendered.unmount();
   });
 });

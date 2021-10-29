@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 import $ from 'jquery';
 import {
   PROGRAM_CSD,
@@ -13,10 +13,6 @@ const COURSE_NAMES = {
   [PROGRAM_CSP]: 'CS Principles',
   [PROGRAM_CSA]: 'Computer Science A'
 };
-
-const debouncedFetch = debounce((...args) => fetch(...args), 500, {
-  leading: true
-});
 
 // constructs query params and fetches the data, returning a promise
 const fetchRegionalPartner = ({
@@ -42,8 +38,7 @@ const fetchRegionalPartner = ({
     locationParams
   )}`;
 
-  return debouncedFetch(url).then(response => {
-    console.log(response.ok, response.status, response.statusText);
+  return fetch(url).then(response => {
     if (!response.ok) {
       throw response.statusText;
     }
@@ -59,11 +54,16 @@ export const useRegionalPartner = data => {
   const [loadingPartner, setLoadingPartner] = useState(true);
   const [loadError, setLoadError] = useState(false);
   const [partner, setPartner] = useState(null);
+  // cache this debounced function so that it is more easily testable
+  const debouncedFetch = useCallback(
+    debounce(fetchRegionalPartner, 500, {leading: true}),
+    []
+  );
 
   // load regional partner whenever parameters change
   useEffect(() => {
     let cancelled = false;
-    fetchRegionalPartner(data)
+    debouncedFetch(data)
       .then(partner => {
         if (!cancelled) {
           // Update state with all the partner workshop data to display
