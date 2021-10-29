@@ -71,19 +71,17 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   }
 
   return (
-    <>
-      <DragDropContext onDragEnd={onDragEnd}>
-        <div style={styles.dragAndDropContainer}>
-          <UnassignedStudentsPanel unassignedGroup={getUnassignedGroup()} />
-          <AssignedStudentsPanel
-            groups={getAssignedGroups()}
-            onCreateGroupClick={() => {
-              setGroups([generateNewGroup(), ...groups]);
-            }}
-          />
-        </div>
-      </DragDropContext>
-    </>
+    <DragDropContext onDragEnd={onDragEnd}>
+      <div style={styles.dragAndDropContainer}>
+        <UnassignedStudentsPanel unassignedGroup={getUnassignedGroup()} />
+        <AssignedStudentsPanel
+          groups={getAssignedGroups()}
+          onCreateGroupClick={() => {
+            setGroups([generateNewGroup(), ...groups]);
+          }}
+        />
+      </div>
+    </DragDropContext>
   );
 }
 
