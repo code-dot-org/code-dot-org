@@ -294,13 +294,13 @@ async function loadAppAsync(appOptions) {
 
   if (appOptions.publicCaching) {
     // Disable social share by default on publicly-cached pages, because we don't know
-    // if the user is underage until we get data back from /api/user_progress/ and we
+    // if the user is underage until we get data back from /api/user_app_options/ and we
     // should err on the side of not showing social links
     appOptions.disableSocialShare = true;
   }
 
-  const userProgressRequest = $.ajax(
-    `/api/user_progress` +
+  const userAppOptionsRequest = $.ajax(
+    `/api/user_app_options` +
       `/${appOptions.scriptName}` +
       `/${appOptions.lessonPosition}` +
       `/${appOptions.levelPosition}` +
@@ -317,7 +317,7 @@ async function loadAppAsync(appOptions) {
 
   try {
     const [data, exampleSolutions] = await Promise.all([
-      userProgressRequest,
+      userAppOptionsRequest,
       exampleSolutionsRequest
     ]);
 
