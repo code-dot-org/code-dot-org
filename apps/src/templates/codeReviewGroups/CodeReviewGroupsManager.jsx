@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
 import _ from 'lodash';
-import CodeReviewGroup from './CodeReviewGroup';
+import UnassignedStudentsPanel from './UnassignedStudentsPanel';
+import AssignedStudentsPanel from './AssignedStudentsPanel';
 
 const DROPPABLE_ID_PREFIX = 'groupId';
 const DROPPABLE_ID_UNASSIGNED = 'unassigned';
@@ -63,37 +64,17 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   }
 
   return (
-    <div>
-      <DragDropContext onDragEnd={onDragEnd}>
-        <div style={styles.dragAndDropContainer}>
-          <CodeReviewGroup
-            droppableId={getUnassignedGroup().droppableId}
-            members={getUnassignedGroup().members}
-          />
-          <div style={styles.groupsContainer}>
-            {/* TO DO: https://codedotorg.atlassian.net/browse/CSA-1033
-            use proper Button component, style, and translate string here */}
-            <button
-              type="button"
-              onClick={() => {
-                setGroups([generateNewGroup(), ...groups]);
-              }}
-            >
-              Add new group
-            </button>
-            {getAssignedGroups().map(group => {
-              return (
-                <CodeReviewGroup
-                  droppableId={group.droppableId}
-                  members={group.members}
-                  key={group.droppableId}
-                />
-              );
-            })}
-          </div>
-        </div>
-      </DragDropContext>
-    </div>
+    <DragDropContext onDragEnd={onDragEnd}>
+      <div style={styles.dragAndDropContainer}>
+        <UnassignedStudentsPanel unassignedGroup={getUnassignedGroup()} />
+        <AssignedStudentsPanel
+          groups={getAssignedGroups()}
+          onCreateGroupClick={() => {
+            setGroups([generateNewGroup(), ...groups]);
+          }}
+        />
+      </div>
+    </DragDropContext>
   );
 }
 
@@ -165,9 +146,5 @@ const generateNewGroup = () => {
 const styles = {
   dragAndDropContainer: {
     display: 'flex'
-  },
-  groupsContainer: {
-    display: 'flex',
-    flexDirection: 'column'
   }
 };
