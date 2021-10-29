@@ -2,8 +2,12 @@
   "func": "getColumn",
   "category": "Data",
   "paletteParams": [
-    "table",
-    "column"
+    {
+      "name": "table"
+    },
+    {
+      "name": "column"
+    }
   ],
   "params": [
     "\"mytable\"",

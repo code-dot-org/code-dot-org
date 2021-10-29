@@ -2,9 +2,15 @@
   "func": "norm",
   "category": "Math",
   "paletteParams": [
-    "value",
-    "start",
-    "stop"
+    {
+      "name": "value"
+    },
+    {
+      "name": "start"
+    },
+    {
+      "name": "stop"
+    }
   ],
   "params": [
     "90",

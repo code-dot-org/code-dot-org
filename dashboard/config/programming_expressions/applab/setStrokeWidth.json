@@ -2,7 +2,9 @@
   "func": "setStrokeWidth",
   "category": "Canvas",
   "paletteParams": [
-    "width"
+    {
+      "name": "width"
+    }
   ],
   "params": [
     "3"

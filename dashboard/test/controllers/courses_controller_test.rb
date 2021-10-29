@@ -421,7 +421,7 @@ class CoursesControllerTest < ActionController::TestCase
   test "update: persists changes to course_params" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    unit_group = create :unit_group, name: 'csp-2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     assert_nil unit_group.version_year
     assert_nil unit_group.family_name
@@ -429,6 +429,8 @@ class CoursesControllerTest < ActionController::TestCase
     refute unit_group.launched?
     refute unit_group.stable?
     assert_equal unit_group.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    assert_equal unit_group.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    assert_equal unit_group.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     post :update, params: {
       course_name: unit_group.name,
@@ -436,7 +438,9 @@ class CoursesControllerTest < ActionController::TestCase
       family_name: 'csp',
       has_verified_resources: true,
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable,
-      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced,
+      instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,
+      participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     }
     unit_group.reload
 
@@ -446,6 +450,8 @@ class CoursesControllerTest < ActionController::TestCase
     assert unit_group.launched?
     assert unit_group.stable?
     assert_equal unit_group.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    assert_equal unit_group.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator
+    assert_equal unit_group.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
   end
 
   test "update: persists teacher resources for migrated unit groups" do

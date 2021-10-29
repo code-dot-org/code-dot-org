@@ -945,8 +945,8 @@ class Script < ApplicationRecord
   end
 
   # Generates TTS files for each level in a unit.
-  def tts_update
-    levels.each(&:tts_update)
+  def tts_update(update_all = false)
+    levels.each {|l| l.tts_update(update_all)}
   end
 
   def hint_prompt_enabled?
@@ -1355,6 +1355,9 @@ class Script < ApplicationRecord
   # Update strings and serialize changes to .script file
   def update_text(unit_params, unit_text, metadata_i18n, general_params)
     unit_name = unit_params[:name]
+    # Check if TTS has been turned on for a unit. If so we will need to generate all the TTS for that unit after updating
+    need_to_update_tts = general_params[:tts] && !tts
+
     begin
       # avoid ScriptDSL path for migrated scripts
       unit_data, i18n =
@@ -1389,6 +1392,7 @@ class Script < ApplicationRecord
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
     update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
     update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
+    tts_update(true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Script.find_by_name(unit_name)
@@ -1565,6 +1569,8 @@ class Script < ApplicationRecord
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
       instructionType: get_instruction_type,
+      instructorAudience: get_instructor_audience,
+      participantAudience: get_participant_audience,
       loginRequired: login_required,
       plc: professional_learning_course?,
       hideable_lessons: hideable_lessons?,
@@ -1889,6 +1895,18 @@ class Script < ApplicationRecord
   # If both are null, the unit should be teacher led
   def get_instruction_type
     unit_group&.instruction_type || instruction_type || SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+  end
+
+  # If a script is in a unit group, use that unit group's instructor_audience. If not, use the units's instructor_audience
+  # If both are null, the unit should be instructed by teacher
+  def get_instructor_audience
+    unit_group&.instructor_audience || instructor_audience || SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+  end
+
+  # If a script is in a unit group, use that unit group's participant_audience. If not, use the units's participant_audience
+  # If both are null, the unit should be participated in by students
+  def get_participant_audience
+    unit_group&.participant_audience || participant_audience || SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   # Use the unit group's pilot_experiment if one exists
