@@ -201,7 +201,7 @@ function checkSpritesTouching(spriteIds){
  */
 function checkActiveSpeech(spriteIds){
   for (var spriteId in spriteIds) {
-    if(getProp({ id: spriteId }, "speech")){
+    if(getSpeechForSpriteId(spriteId)){
       return true;
     }
   }
@@ -218,7 +218,7 @@ function checkActiveSpeech(spriteIds){
 function checkAllSpritesSay(spriteIds){
   var numSpritesWithSayBlocks = 0;
   for (var spriteId in spriteIds) {
-    if(getProp({ id: spriteId }, "speech")){
+    if(getSpeechForSpriteId(spriteId)){
       numSpritesWithSayBlocks = numSpritesWithSayBlocks + 1;
     }
   }
@@ -306,7 +306,7 @@ function checkSpriteSay(eventLog, prevEventLogLength){
     var currentEvent = eventLog[eventLog.length - 1];
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       for (var spriteId in spriteIds) {
-        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite
           return true;
         }
@@ -332,7 +332,7 @@ function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       var spriteIds = getSpriteIdsInUse();
       for (var spriteId in spriteIds) {
-        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite
           return clickedSpriteId;
         }
@@ -413,7 +413,7 @@ new method - check if clicked sprite starts speaking
 new method
 
 for (var spriteId in spriteIds) {
-        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite
           return true;
         }
