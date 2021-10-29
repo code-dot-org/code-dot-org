@@ -5,19 +5,23 @@ import _ from 'lodash';
 import CodeReviewGroup from './CodeReviewGroup';
 
 const DROPPABLE_ID_PREFIX = 'groupId';
+const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 
 // Provides "drag and drop context" that allows us to drag
 // code review group members between groups as teachers arrange their students into code review groups.
 // More information on the package we're using here (React Beautiful DnD)
 // can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroups({initialGroups}) {
+export default function CodeReviewGroupsManager({initialGroups}) {
   const [groups, setGroups] = useState(
     initialGroups.map(group => addDroppableIdToGroup(group))
   );
 
   const getGroup = droppableId =>
     _.find(groups, group => group.droppableId === droppableId);
+  const getUnassignedGroup = () => getGroup(DROPPABLE_ID_UNASSIGNED);
+  const getAssignedGroups = () =>
+    groups.filter(group => group.droppableId !== DROPPABLE_ID_UNASSIGNED);
 
   function onDragEnd(result) {
     const {source, destination} = result;
@@ -54,39 +58,48 @@ export default function CodeReviewGroups({initialGroups}) {
         result.updatedDest
       ]);
 
-      // Remove any blank groups
-      setGroups(updatedGroups.filter(group => group.members.length));
+      setGroups(updatedGroups);
     }
   }
 
   return (
     <div>
-      <button
-        type="button"
-        onClick={() => {
-          setGroups([generateNewGroup(), ...groups]);
-        }}
-      >
-        Add new group
-      </button>
-      <div style={styles.groupsContainer}>
-        <DragDropContext onDragEnd={onDragEnd}>
-          {groups.map(group => {
-            return (
-              <CodeReviewGroup
-                droppableId={group.droppableId}
-                members={group.members}
-                key={group.droppableId}
-              />
-            );
-          })}
-        </DragDropContext>
-      </div>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <div style={styles.dragAndDropContainer}>
+          <CodeReviewGroup
+            droppableId={getUnassignedGroup().droppableId}
+            members={getUnassignedGroup().members}
+          />
+          <div style={styles.groupsContainer}>
+            {/* TO DO: https://codedotorg.atlassian.net/browse/CSA-1033
+            use proper Button component, style, and translate string here */}
+            <button
+              type="button"
+              onClick={() => {
+                setGroups([generateNewGroup(), ...groups]);
+              }}
+            >
+              Add new group
+            </button>
+            {getAssignedGroups().map(group => {
+              return (
+                <CodeReviewGroup
+                  droppableId={group.droppableId}
+                  members={group.members}
+                  key={group.droppableId}
+                />
+              );
+            })}
+          </div>
+        </div>
+      </DragDropContext>
     </div>
   );
 }
 
-CodeReviewGroups.propTypes = {initialGroups: PropTypes.array.isRequired};
+CodeReviewGroupsManager.propTypes = {
+  initialGroups: PropTypes.array.isRequired
+};
 
 // Reorders members in a group if member dragged elsewhere in the same group.
 // Returns a copied, updated group.
@@ -131,7 +144,11 @@ const updateGroups = (groups, changedGroups) => {
 };
 
 const addDroppableIdToGroup = group => {
-  group.droppableId = `${DROPPABLE_ID_PREFIX}${group.id}`;
+  if (group.unassigned) {
+    group.droppableId = DROPPABLE_ID_UNASSIGNED;
+  } else {
+    group.droppableId = `${DROPPABLE_ID_PREFIX}${group.id}`;
+  }
   return group;
 };
 
@@ -146,6 +163,9 @@ const generateNewGroup = () => {
 };
 
 const styles = {
+  dragAndDropContainer: {
+    display: 'flex'
+  },
   groupsContainer: {
     display: 'flex',
     flexDirection: 'column'
