@@ -42,15 +42,19 @@ function AddLevelDialogTop(props) {
     if (ownerId) {
       queryParams.owner_id = ownerId;
     }
+    console.log('hi');
 
     const url =
       '/levels/get_filtered_levels?' + queryString.stringify(queryParams);
+
+    console.log(url);
 
     $.ajax({
       url: url,
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done((data, _, request) => {
+      console.log(data);
       setLoadingLevels(false);
       setLevels(data.levels);
       setNumPages(data.numPages);

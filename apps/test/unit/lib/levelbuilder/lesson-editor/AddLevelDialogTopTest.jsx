@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
 import {searchOptions} from './activitiesTestData';
@@ -16,8 +16,6 @@ describe('AddLevelDialogTop', () => {
   });
 
   it('shows filters once finished loading', () => {
-    const wrapper = shallow(<AddLevelDialogTop {...defaultProps} />);
-
     let returnData = {
       data: {
         levels: [
@@ -46,9 +44,11 @@ describe('AddLevelDialogTop', () => {
     let server = sinon.fakeServer.create();
     server.respondWith('GET', '/levels/get_filtered_levels?page=1', [
       200,
-      {'Content-Type': 'application/json'},
+      {'Content-Type': 'application/json;charset=UTF-8'},
       JSON.stringify(returnData)
     ]);
+    const wrapper = mount(<AddLevelDialogTop {...defaultProps} />);
+    server.respond();
 
     expect(wrapper.find('Connect(ToggleGroup)').length).to.equal(1);
     expect(wrapper.find('Connect(AddLevelFilters)').length).to.equal(1);
