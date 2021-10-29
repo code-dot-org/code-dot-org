@@ -1,50 +1,50 @@
 ---
-title: CS Connections
+title: Powiązania z informatyką
 video_player: true
 theme: responsive
 style_min: true
 ---
 
-# Computer Science Connections
+# Powiązania z informatyką
 
-Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
+Nasz najnowszy program nauczania łączy naukę informatyki z innymi przedmiotami, takimi jak matematyka, językoznawstwo, nauki ścisłe i nauki społeczne. Dzięki Powiązaniom z informatyką, klasy K-12 odkrywają swoje zwykłe przedmioty na nowe, ekscytujące sposoby!
 
 {{ tutorial_promo2, heading: "New Hour of Code activities", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "Learn about computer science and poetry by creating an animated poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Start", right_heading: "Hello World", right_description: "Learn computer science fundamentals with Sprite Lab", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start" }}
 {{ clearfix }}
 
-## Modules
+## Moduły
 
-CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
+Moduły Powiązań z informatyką to uporządkowane ciągi lekcji, które integrują naukę informatyki z podstawowymi obszarami tematycznymi, takimi jak matematyka, ELA i nauki ścisłe. Moduły te są dostosowane do standardów różnych przedmiotów i kończą się projektem międzyprzedmiotowym.
 
-They’re perfect for teachers who’d like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
+Są idealne dla nauczycieli, którzy chcą włączyć informatykę do swoich planów lekcji na inne przedmioty, a także dla nauczycieli informatyki, którzy chcą wzmocnić to, czego uczniowie uczą się na innych przedmiotach.
 
-{{ csc_module, title: "Coding with Poetry", grades: "3+", subject: "ELA", duration: "5 hours", description: "Students explore the elements of poetry and the basics of coding by building a poem generator based off a poem they write.", button_text: "Learn more", url: "/about" }}
+{{ csc_module, tytuł: "Kodowanie z poezją", klasy: "3+", przedmiot: "ELA", czas trwania: "5 godzin", opis: "Uczniowie poznają elementy poezji i podstawy kodowania budując generator wierszy oparty na wierszu, który piszą.", button_text: "Dowiedz się więcej", url: "/about" }}
 {{ clearfix }}
 
-<em>We’re working on more modules to help bring computer science into even more subjects. Is there a particular subject you’d like to see next? Let us know!</em>
+<em>Pracujemy nad większą liczbą modułów, które pomogą wprowadzić informatykę do jeszcze większej liczby przedmiotów. Czy jest jakiś konkretny temat, który chciałbyś zobaczyć w następnej kolejności? Daj nam znać!</em>
 
-## Open-ended projects
+## Otwarte projekty
 
-Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
+Kontynuuj tworzenie powiązań między informatyką a tradycyjnymi przedmiotami dzięki naszym projektom międzyprzedmiotowym. Zajmują one tylko 1-2 godziny instruktażowe i są idealne dla wszystkich nauczycieli, którzy chcą opracować projekty tematyczne, które pasują do istniejącego programu nauczania.
 
-<em>Tip: These projects require some understanding of computer science basics, so we recommend completing our Hello World Hour of Code activity before getting started!</em>
+<em>Wskazówka: te projekty wymagają pewnego zrozumienia podstaw informatyki, dlatego zalecamy ukończenie naszej Hello World w ramach Godziny kodowania przed rozpoczęciem!</em>
 
-{{ csc_module, title: "Ecosystems", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. This model could also be adapted into interactions between the geosphere, biosphere, hydrosphere, and/or atmosphere.", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "Cycles", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Go from egg to tadpole to frog with this project, in which students use code to create a model of a scientific cycle — like the life cycle of a frog or the transfer of energy!", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "Character Study", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "Every action has a reaction! No, this isn’t physics — this project allows students to use code to build a scene from a story that shows how one character’s actions affects the chain of events.", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "Story Morals", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "What’s between “Once upon a time” and “The End?” Students code an interactive app that recounts a story and its morals. Students could apply this skill to any story, folktale, book, or fable.", button_text: "Learn more", url: "/" }}
+{{ csc_module, tytuł: "Ekosystemy", klasy: "3+", przedmiot: "Przyroda", czas trwania: "1-2 godziny", opis: "Dzięki podstawowym umiejętnościom kodowania uczniowie tworzą interaktywny model ekosystemu, który bada jak różne zwierzęta, rośliny i organizmy wpływają na siebie nawzajem. Ten model można również dostosować do interakcji między geosferą, biosferą, hydrosferą i/lub atmosferą.", button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, tytuł: "Cykle", klasy: "3+", przedmiot: "Przyroda", czas trwania: "1-2 godziny", opis: "Przejdź od jajka przez kijankę do żaby z tym projektem, w którym uczniowie używają kodu do stworzenia modelu cyklu naukowego — takiego jak, cykl życia żaby lub transfer energii!", button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, tytuł: "Studia charakteru", klasy: "3+", przedmiot: "ELA", czas trwania: "1-2 godzin", opis: "Każdej akcji towarzyszy reakcja! Nie, to nie jest fizyka — ten projekt pozwala uczniom wykorzystać kod do zbudowania sceny z historii, która pokazuje, jak działania jednej postaci wpływają na łańcuch zdarzeń.", button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, tytuł: "Story Morals", klasy: "3+", temat: "ELA", czas trwania: "1-2 godziny", opis: "Co jest między „Pewnego razu” a „Koniec?” Uczniowie kodują interaktywną aplikację, która opowiada historię i jej morały. Uczniowie mogą zastosować tę umiejętność do dowolnej opowieści, baśni ludowej, książki lub bajki.", button_text: "Dowiedz się więcej", url: "/" }}
 {{ clearfix }}
 
-## Bridging Lessons
+## Lekcje pomostowe
 
-Our bridging lessons provide a quick and interesting way to make a connection between computer science and other subjects. These lessons don’t require any prior knowledge of computer science, so they’re perfect for any teacher who wants to incorporate essential 20th century learning into traditional curriculum or motivate students with new exciting ways to learn older subjects.
+Nasze lekcje pomostowe zapewniają szybki i interesujący sposób na połączenie informatyki z innymi przedmiotami. Lekcje te nie wymagają wcześniejszej znajomości informatyki, więc są idealne dla każdego nauczyciela, który chce włączyć podstawową naukę XX wieku do tradycyjnego programu nauczania lub umotywować uczniów nowymi ekscytującymi sposobami uczenia się starszych przedmiotów.
 
 
-{{ csc_module, title: "Outbreak", grades: "5+", subject: "Science", duration: "2 hours", description: "There’s been an outbreak in Monster Town! By  creating a simulation to study how an outbreak behaves, students think like a scientist by developing a hypothesis, testing it, and interpreting data in order to help the citizens of Monster Town.", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "Spelling with Bee", grades: "K+", subject: "ELA", duration: "1 hour", description: "F-U-N! In this lesson, students use basic coding skills to tell Bee where to B-U-Z-Z in order to spell words on a letter-filled grid.", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "Counting with Laurel", grades: "K+", subject: "Math", duration: "1 hour", description: "It’s a treasure hunt! Students will practice counting and adding when they code with loops to help Laurel collect gems across a maze grid.", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "Exponents and Binary", grades: "6+", subject: "Math", duration: "1 hour", description: "Students practice evaluating expressions with exponents to compare and contrast the place values between the base-10 number system we use everyday and the base-2 binary system used by computers.", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "Algorithms and Math Functions", grades: "9+", subject: "Math", duration: "1 hour", description: "Students learn about Big O notation by reading graphs and extending function tables. Students describe the efficiencies of exponential algorithms versus linear and polynomial algorithms.", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "AI Code of Ethics", grades: "6+", subject: "ELA or Humanities", duration: "1 hour", description: "After researching the potential ethical pitfalls of artificial intelligence (AI), students work together to develop a class “AI Code of Ethics” resource.", button_text: "Learn more", url: "/" }}
-{{ csc_module, title: "Data Visualization", grades: "9+", subject: "Math", duration: "1 hour", description: "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types: a bar chart and a histogram. Over the course of the lesson, students will build skills in using this tool and in reading data.", button_text: "Learn more", url: "/" }}
+{{ csc_module, tytuł: "Pandemia", klasy: "5+", przedmiot: "Przyroda", czas trwania: "2 godziny", opios: „W Mieście Potworów wybuchła epidemia! Tworząc symulację, aby zbadać, jak zachowuje się epidemia, uczniowie myślą jak naukowiec, opracowując hipotezę, testując ją i interpretując dane, aby pomóc mieszkańcom Miasta potworów.", button_text: "Dowiedz się więcej", url: "/ " }}
+{{ csc_module, tytuł: "Literowanie z pszczółką", klasy: "K+", przedmiot: "ELA", czas trwania: "1 godzina", opis: "F-U-N! Na tej lekcji uczniowie używają podstawowych umiejętności kodowania, aby powiedzieć pszczółce, gdzie należy B-U-Z-Z, aby przeliterować słowa w siatce wypełnionej literami.", button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, tytuł: "Obliczenia z Laurel", klasy: "K+", przedmiot: "Matematyka", czas trwania "1 godzina", opis: "To poszukiwanie skarbów! Uczniowie będą ćwiczyć liczenie i dodawanie podczas kodowania za pomocą pętli, aby pomóc Laurel zbierać klejnoty w siatce labiryntu.", button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, tytuł: "Wykładniki i wartości binarne", klasy: "6+", przedmiot: "Matematyka", czas trwania: "1 godzina", opis: "Uczniowie ćwiczą obliczanie wyrażeń z wykładnikami w celu porównania i kontrastowania wartości miejsc między system liczbowy base-10, którego używamy na co dzień i system binarny base-2 używany przez komputery.", button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, tytuł: "Algorytmy i funkcje matematyczne", klasy: "9+", przedmiot: "Matematyka", czas trwania: "1 godzina", opis: "Uczniowie poznają notację Big O czytając wykresy i rozszerzając tabele funkcyjne. Uczniowie opisują efektywność algorytmów wykładniczych w porównaniu z algorytmami liniowymi i wielomianowymi.", button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, tytuł: "Kodeks Etyki AI", klasy: "6+", przedmiot: "ELA lub Humanistyka", czas trwania: "1 godzina", opis: "Po zbadaniu potencjalnych etycznych pułapek sztucznej inteligencji (AI) , uczniowie wspólnie tworzą zasób klasy „Kodeks etyki AI”., button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, title: "Wizualizacja danych", klasy: "9+", temat: "Matematyka", czas trwania: "1 godzina", opis: "Ta lekcja wprowadza uczniów do Wizualizera danych w App Lab oraz dwa ważne typy wykresów: wykres słupkowy i histogram. W trakcie lekcji uczniowie będą rozwijać umiejętności korzystania z tego narzędzia i czytania danych.", button_text: "Dowiedz się więcej", url: "/" }}
 {{ clearfix }}

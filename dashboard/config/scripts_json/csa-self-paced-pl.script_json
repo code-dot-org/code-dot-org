@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "is_course": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csa-self-paced-pl",
-    "serialized_at": "2021-08-13 16:08:36 UTC",
+    "serialized_at": "2021-10-25 22:54:54 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csa-self-paced-pl"
     }

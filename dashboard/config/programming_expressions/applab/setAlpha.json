@@ -2,10 +2,18 @@
   "func": "setAlpha",
   "category": "Canvas",
   "paletteParams": [
-    "imgData",
-    "x",
-    "y",
-    "a"
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "a"
+    }
   ],
   "params": [
     "imgData",

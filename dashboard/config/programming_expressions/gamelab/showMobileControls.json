@@ -1,10 +1,18 @@
 {
   "func": "showMobileControls",
   "paletteParams": [
-    "spaceButtonVisible",
-    "dpadVisible",
-    "dpadFourWay",
-    "mobileOnly"
+    {
+      "name": "spaceButtonVisible"
+    },
+    {
+      "name": "dpadVisible"
+    },
+    {
+      "name": "dpadFourWay"
+    },
+    {
+      "name": "mobileOnly"
+    }
   ],
   "params": [
     "true",
