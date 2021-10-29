@@ -5,6 +5,8 @@ import i18n from '@cdo/locale';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
+const DIALOG_WIDTH = 1000;
+
 export default function ManageCodeReviewGroups({buttonContainerStyle}) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -27,7 +29,7 @@ export default function ManageCodeReviewGroups({buttonContainerStyle}) {
         body={codeReviewGroupsManager}
         isOpen={isDialogOpen}
         handleClose={onDialogClose}
-        fixedWidth={1000}
+        fixedWidth={DIALOG_WIDTH}
       />
     </div>
   );
@@ -35,6 +37,8 @@ export default function ManageCodeReviewGroups({buttonContainerStyle}) {
 
 ManageCodeReviewGroups.propTypes = {buttonContainerStyle: PropTypes.object};
 
+// TO DO: remove this fake data and helper functions.
+// https://codedotorg.atlassian.net/browse/CSA-1010
 const names = [
   'Sanchit',
   'Mike',
