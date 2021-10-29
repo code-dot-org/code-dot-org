@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import CodeReviewGroups from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroups';
+import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
 export default function ManageCodeReviewGroups({buttonContainerStyle}) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -24,9 +24,10 @@ export default function ManageCodeReviewGroups({buttonContainerStyle}) {
       />
       <StylizedBaseDialog
         title={i18n.codeReviewGroups()}
-        body={codeReviewGroups}
+        body={codeReviewGroupsManager}
         isOpen={isDialogOpen}
         handleClose={onDialogClose}
+        fixedWidth={1000}
       />
     </div>
   );
@@ -42,7 +43,11 @@ const names = [
   'Ben',
   'Jessie',
   'Jamila',
-  'Hannah'
+  'Hannah',
+  'Harry',
+  'Hermione',
+  'Ron',
+  'Hagrid'
 ];
 
 // Fake data generator.
@@ -55,14 +60,18 @@ const getMembers = (count, offset = 0) =>
     name: names[k + offset]
   }));
 
-// Create two groups of four people.
+// Create code two groups of four students who have been assigned to a group,
+// as well as a group of students who have not been assigned to a group.
 // We'll also eventually pass in a group name as a top level property.
 const groups = [
   {id: 1, members: getMembers(4)},
-  {id: 2, members: getMembers(4, 4)}
+  {id: 2, members: getMembers(4, 4)},
+  {members: getMembers(4, 8), unassigned: true}
 ];
 
-const codeReviewGroups = <CodeReviewGroups initialGroups={groups} />;
+const codeReviewGroupsManager = (
+  <CodeReviewGroupsManager initialGroups={groups} />
+);
 
 const styles = {
   buttonContainer: {
