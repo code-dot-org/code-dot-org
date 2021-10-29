@@ -203,8 +203,7 @@ describe('OwnedSectionsTable Sorting', () => {
 
     // first click should sort sections K-12
     wrapper.find('.uitest-grade-header').simulate('click');
-    //const rows = wrapper.find('.uitest-sorted-rows');
-
+    const expectedGradeOrder = ['K', '1', '4', '10', '12', 'Other', ''];
     const tbody = wrapper.find('tbody');
     expect(tbody.length).to.equal(1);
     const rows = tbody.find('tr');
@@ -212,31 +211,38 @@ describe('OwnedSectionsTable Sorting', () => {
     // Check grades for each row match expected order
     rows.forEach((tr, rowIndex) => {
       const cells = tr.find('td');
-      // If looking at the null grade, expect empty string
-      if (rowIndex === 6) {
-        expect(cells.at(GRADE_COLUMN).text()).to.equal('');
-      } else {
-        expect(cells.at(GRADE_COLUMN).text()).to.equal(
-          sectionGradesRowData[rowIndex].grade
-        );
-      }
+      expect(cells.at(GRADE_COLUMN).text()).to.equal(
+        expectedGradeOrder[rowIndex]
+      );
     });
     expect(GRADES.length).to.equal(15);
+  });
 
+  it('can be sorted by grade in the reverse order with a second click', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <OwnedSectionsTable
+          sectionIds={[1, 2, 3, 4, 5, 6, 7]}
+          sectionRows={sectionGradesRowData}
+          onEdit={() => {}}
+        />
+      </Provider>
+    );
+
+    expect(GRADES.length).to.equal(15);
+    // first click should sort sections K-12
+    wrapper.find('.uitest-grade-header').simulate('click');
     // second click should sort sections in reverse order
     wrapper.find('.uitest-grade-header').simulate('click');
+
+    const expectedGradeOrder = ['', 'Other', '12', '10', '4', '1', 'K'];
     const body = wrapper.find('tbody');
     const trows = body.find('tr');
     trows.forEach((tr, rowIndex) => {
       const cells = tr.find('td');
-      if (rowIndex === 0) {
-        expect(cells.at(GRADE_COLUMN).text()).to.equal('');
-      } else {
-        expect(cells.at(GRADE_COLUMN).text()).to.equal(
-          // subtract index from section count to check reverse order
-          sectionGradesRowData[6 - rowIndex].grade
-        );
-      }
+      expect(cells.at(GRADE_COLUMN).text()).to.equal(
+        expectedGradeOrder[rowIndex].grade
+      );
     });
   });
 });
