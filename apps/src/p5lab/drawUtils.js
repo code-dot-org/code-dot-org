@@ -69,6 +69,7 @@ export function speechBubble(
 }
 
 /**
+ * Draw an array of text strings at a certain text size.
  *
  * @param {P5} p5
  * @param {Array<String>} lines
