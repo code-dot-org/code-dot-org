@@ -2,6 +2,15 @@
   "vi-VN": {
     "data": {
       "resources": {
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: Máy học"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: Tác động đến xã hội"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: Dữ liệu đào tạo & Định kiến"
+        },
         "exploring_apps/coursef/2021": {
           "name": "Khám phá ứng dụng"
         },
@@ -56,6 +65,9 @@
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Cho vòng lặp vui vẻ"
         },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "Trò chơi Vòng lặp for - Đáp án bài đánh giá"
+        },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Cho vòng lặp vui vẻ"
         },
@@ -68,11 +80,26 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Cho vòng lặp vui vẻ"
         },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
         "running-simulations/coursef/2021": {
           "name": "Chạy trình mô phỏng"
         },
+        "ai-ml/coursef/2021": {
+          "name": "AI: Máy học"
+        },
+        "ai-training/coursef/2021": {
+          "name": "AI: Dữ liệu đào tạo & Định kiến"
+        },
+        "ai-societal/coursef/2021": {
+          "name": "AI: Tác động đến xã hội"
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet"
+        },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "Thẻ địa chỉ IP và Thẻ gửi"
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "internet"
@@ -80,11 +107,56 @@
         "assessment-answer-internet/coursef/2021": {
           "name": "internet"
         },
+        "design-process/coursef/2021": {
+          "name": "Quy trình thiết kế"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "Thiết kế dự án cuối cùng"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT"
+        },
+        "csta_standards_mapping/coursef/2021": {
+          "name": "Cấu trúc Tiêu chuẩn CSTA"
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "Tiêu chuẩn căn bản chung và Hướng dẫn NGSS"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "Các hoạt động ngoại khóa mở rộng"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "Từ vựng khóa học"
+        },
         "implementation_guide/coursef/2021": {
           "name": "Hướng dẫn thực hiện"
         },
+        "lesson_type_guide/coursef/2021": {
+          "name": "Hướng dẫn loại bài học"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "Hướng dẫn sửa lỗi"
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "Ghi chép thay đổi năm 2021"
+        },
         "teacher_forum_1/coursef/2021": {
           "name": "Diễn đàn giáo viên"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Sửa đổi bài học trực tuyến"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "Dấu vết số – Slide bài học"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "Dấu vết số: Lần theo dấu vết số"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "Dấu vết số: Hình vuông dấu vết số"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Dấu vết số: Lần theo dấu vết động vật"
         },
         "mimi-activity/courseb/2021": {
           "name": "Di chuyển nó, di chuyển nó"
@@ -98,8 +170,38 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Di chuyển liên tục"
         },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "Khuôn mặt cảm xúc"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "Thực hành kéo và thả"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Cách tạo nhóm đòa tạo trên Code.org"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "Khối Blockly không dùng thiết bị điện tử (Lớp K-1)"
+        },
         "pair-programming-vid/courseb/2021": {
           "name": "Lập trình đôi"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "name": "Ngọ nguật - GoNoodle"
+        },
+        "20_20_20_rule/courseb/2021": {
+          "name": "Quy tắc 20/20/20"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "Mảnh ghép trò chơi Bản đồ hạnh phúc"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "Biểu tượng la bàn"
+        },
+        "feeling_faces_-_emotion_image/courseb/2021": {
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Tạo vòng lặp"
@@ -125,20 +227,80 @@
         "assessment-answer-big-event/courseb/2021": {
           "name": "Sự kiện lớn"
         },
+        "csta_standards_mapping/courseb/2021": {
+          "name": "Cấu trúc Tiêu chuẩn CSTA"
+        },
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "Tiêu chuẩn căn bản chung và Hướng dẫn NGSS"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "Các hoạt động ngoại khóa mở rộng"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "Từ vựng khóa học"
+        },
         "implementation_guide/courseb/2021": {
           "name": "Hướng dẫn thực hiện"
+        },
+        "lesson_type_guide/courseb/2021": {
+          "name": "Hướng dẫn loại bài học"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "Hướng dẫn sửa lỗi"
+        },
+        "2021_change_log/courseb/2021": {
+          "name": "Ghi chép thay đổi năm 2021"
         },
         "teacher_forum_1/courseb/2021": {
           "name": "Diễn đàn giáo viên"
         },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Sửa đổi bài học trực tuyến"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Lập trình đôi"
+        },
+        "20_20_20_rule/coursea/2021": {
+          "name": "Quy tắc 20/20/20"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Bản đồ thú vị"
         },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "Mảnh ghép trò chơi Bản đồ hạnh phúc"
+        },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Khối Blockly không dùng thiết bị điện tử (Lớp K-1)"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "Quy tắc 20/20/20"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "name": "Ngọ nguật - GoNoodle"
+        },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "Khuôn mặt cảm xúc"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+        },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Hình ảnh cảm xúc trên khuôn mặt"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Sự kiện lớn"
@@ -149,11 +311,41 @@
         "assessment-answer-big-event/coursea/2021": {
           "name": "Sự kiện lớn"
         },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "Cấu trúc Tiêu chuẩn CSTA"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "Tiêu chuẩn căn bản chung và Hướng dẫn NGSS"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "Các hoạt động ngoại khóa mở rộng"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "Từ vựng khóa học"
+        },
         "implementation_guide/coursea/2021": {
           "name": "Hướng dẫn thực hiện"
         },
+        "lesson_type_guide/coursea/2021": {
+          "name": "Hướng dẫn loại bài học"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "Hướng dẫn sửa lỗi"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "Ghi chép thay đổi năm 2021"
+        },
         "teacher_forum_1/coursea/2021": {
           "name": "Diễn đàn giáo viên"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "Sửa đổi bài học trực tuyến"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Bạn bè robot của tôi"
@@ -172,6 +364,15 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Lập trình đôi"
+        },
+        "debugging_guide/coursec/2021": {
+          "name": "Hướng dẫn sửa lỗi"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Hình ảnh cảm xúc trên khuôn mặt"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Sự kiện lớn"
@@ -200,11 +401,35 @@
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Vòng đeo tay nhị phân"
         },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "Cấu trúc Tiêu chuẩn CSTA"
+        },
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "Tiêu chuẩn căn bản chung và Hướng dẫn NGSS"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "Các hoạt động ngoại khóa mở rộng"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "Từ vựng khóa học"
+        },
         "implementation_guide/coursec/2021": {
           "name": "Hướng dẫn thực hiện"
         },
+        "lesson_type_guide/coursec/2021": {
+          "name": "Hướng dẫn loại bài học"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "Hướng dẫn sửa lỗi"
+        },
+        "2021_change_log/coursec/2021": {
+          "name": "Ghi chép thay đổi năm 2021"
+        },
         "teacher_forum_1/coursec/2021": {
           "name": "Diễn đàn giáo viên"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Sửa đổi bài học trực tuyến"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "lập trình đồ thị trên giấy"
@@ -245,17 +470,47 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Chương trình chuyển tiếp"
         },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
         "pause_and_think_online/coursed/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "Khuôn mặt cảm xúc"
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "Cấu trúc Tiêu chuẩn CSTA"
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "Tiêu chuẩn căn bản chung và Hướng dẫn NGSS"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "Các hoạt động ngoại khóa mở rộng"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "Từ vựng khóa học"
+        },
         "implementation_guide/coursed/2021": {
           "name": "Hướng dẫn thực hiện"
         },
+        "lesson_type_guide/coursed/2021": {
+          "name": "Hướng dẫn loại bài học"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "Hướng dẫn sửa lỗi"
+        },
+        "2021_change_log/coursed/2021": {
+          "name": "Ghi chép thay đổi năm 2021"
+        },
         "teacher_forum_1/coursed/2021": {
           "name": "Diễn đàn giáo viên"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Sửa đổi bài học trực tuyến"
         },
         "pair_programming/express/2021": {
           "name": "Lập trình đôi"
@@ -266,23 +521,59 @@
         "pause_and_think_online/express/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
         "text_and_prompts/express/2021": {
           "name": "Văn bản và Lời nhắc"
         },
         "variables_video/express/2021": {
           "name": "Các biến"
         },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT"
+        },
+        "csta_standards_mapping/express/2021": {
+          "name": "Cấu trúc Tiêu chuẩn CSTA"
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": "Từ vựng khóa học"
+        },
         "teacher_forum_1/express/2021": {
           "name": "Diễn đàn giáo viên"
+        },
+        "debugging_guide/express/2021": {
+          "name": "Hướng dẫn sửa lỗi"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Lập trình đôi"
         },
+        "class-section-video/pre-express/2021": {
+          "name": "Cách tạo nhóm đòa tạo trên Code.org"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "Khuôn mặt cảm xúc"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "Quy tắc 20/20/20"
+        },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "Cấu trúc Tiêu chuẩn CSTA"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "Từ vựng khóa học"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Diễn đàn giáo viên"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "Hướng dẫn sửa lỗi"
         },
         "follow_the_algorithm/coursee/2021": {
           "name": "Làm theo thuật toán"
@@ -305,14 +596,50 @@
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Thiết kế cho trợ năng"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT"
+        },
+        "design-process/coursee/2021": {
+          "name": "Quy trình thiết kế"
+        },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "72 Cách sáng tạo để học sinh thể hiện kiến thức của bản thân"
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "name": "Cấu trúc Tiêu chuẩn CSTA"
+        },
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "Tiêu chuẩn căn bản chung và Hướng dẫn NGSS"
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "Các hoạt động ngoại khóa mở rộng"
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "Từ vựng khóa học"
         },
         "implementation_guide/coursee/2021": {
           "name": "Hướng dẫn thực hiện"
         },
+        "lesson_type_guide/coursee/2021": {
+          "name": "Hướng dẫn loại bài học"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "Hướng dẫn sửa lỗi"
+        },
+        "2021_change_log/coursee/2021": {
+          "name": "Ghi chép thay đổi năm 2021"
+        },
         "teacher_forum_1/coursee/2021": {
           "name": "Diễn đàn giáo viên"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Sửa đổi bài học trực tuyến"
         }
       }
     }

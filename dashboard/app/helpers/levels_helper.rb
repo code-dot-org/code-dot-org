@@ -216,6 +216,7 @@ module LevelsHelper
     view_options(user_id: current_user.id) if current_user
 
     view_options(server_level_id: @level.id)
+
     if @script_level
       view_options(
         lesson_position: @script_level.lesson.absolute_position,
@@ -296,10 +297,11 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
+    @app_options[:serverScriptLevelId] = @script_level.id if @script_level
+    @app_options[:serverScriptId] = @script.id if @script
+    @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+
     if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
-      @app_options[:serverScriptId] = @script.id
-      @app_options[:serverScriptLevelId] = @script_level.id
-      @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
       @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
     end
 

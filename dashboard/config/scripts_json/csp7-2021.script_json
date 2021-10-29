@@ -4,22 +4,23 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:26 UTC",
+    "serialized_at": "2021-10-25 22:54:31 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp7-2021"
     }
@@ -3375,8 +3376,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -3387,8 +3388,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -3399,8 +3400,8 @@
       "url": "https://docs.google.com/presentation/d/1J5SBGz5EXZH1BQu_3FoARNNLadq9osgjr-IrgPuhEsw/edit?usp=sharing",
       "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
@@ -3411,8 +3412,8 @@
       "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
       "key": "guide_to_eipm_lessons",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons"
@@ -3423,9 +3424,9 @@
       "url": "https://docs.google.com/document/d/1SoiuvHw0tuSUZe9vL4hmRzyPrH_2IIOvD7LgkGtEph8/edit",
       "key": "parameters-and-return-make-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "parameters-and-return-make-activity-guide"
@@ -3436,9 +3437,9 @@
       "url": "https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing",
       "key": "project-make-a-library",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Project Guide"
       },
       "seeding_key": {
         "resource.key": "project-make-a-library"
@@ -3449,8 +3450,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -3461,8 +3462,8 @@
       "url": "https://studio.code.org/projects/applab/IkLKTGzikCSPtIsS2-Pee8-guSAae9DXBCGOjwCSVuA/view",
       "key": "u7_high_score_sample_app",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u7_high_score_sample_app"
@@ -3473,8 +3474,8 @@
       "url": "https://docs.google.com/document/d/1AY5cxJ02hMq0YxHdKUhyyxUCAaJl-v9ixHDLczqGJGM/edit?usp=sharing",
       "key": "u7_high_score_sample_planning_guide_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u7_high_score_sample_planning_guide_rubric"
@@ -3485,8 +3486,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -3661,16 +3662,6 @@
   ],
   "objectives": [
     {
-      "key": "bca4d010-a22a-4ad1-927d-52009c16a4e8",
-      "properties": {
-        "description": "Use appropriate vocabulary to describe parameters and return values."
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Explore",
-        "objective.key": "bca4d010-a22a-4ad1-927d-52009c16a4e8"
-      }
-    },
-    {
       "key": "03bb1955-9c17-4a4d-b557-027a8f9b3d61",
       "properties": {
         "description": "Remove specifics from a function so that it can be used in a variety of situations"
@@ -3678,56 +3669,6 @@
       "seeding_key": {
         "lesson.key": "Parameters and Return Explore",
         "objective.key": "03bb1955-9c17-4a4d-b557-027a8f9b3d61"
-      }
-    },
-    {
-      "key": "7fc65657-943a-4557-815c-5a354a2e4b15",
-      "properties": {
-        "description": "Identify situations in which a function with a parameter or return value would be necessary"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "objective.key": "7fc65657-943a-4557-815c-5a354a2e4b15"
-      }
-    },
-    {
-      "key": "1f6aaff1-137a-485d-b99d-761ed6039684",
-      "properties": {
-        "description": "Explain the benefits of using a function with a parameter or return value in the context of a specific program"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "objective.key": "1f6aaff1-137a-485d-b99d-761ed6039684"
-      }
-    },
-    {
-      "key": "1b6fbf70-fa16-48b7-8cca-0d935f92857a",
-      "properties": {
-        "description": "Modify programs that use functions with parameters and return"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "objective.key": "1b6fbf70-fa16-48b7-8cca-0d935f92857a"
-      }
-    },
-    {
-      "key": "6d1b5bae-af80-4053-9f94-8277f7c8d295",
-      "properties": {
-        "description": "Use the modulus operator in a program"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "objective.key": "6d1b5bae-af80-4053-9f94-8277f7c8d295"
-      }
-    },
-    {
-      "key": "0849c378-5984-4df9-8fe1-610e451ffa15",
-      "properties": {
-        "description": "Correctly set up a parameter in a function"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "objective.key": "0849c378-5984-4df9-8fe1-610e451ffa15"
       }
     },
     {
@@ -3741,43 +3682,13 @@
       }
     },
     {
-      "key": "7b4c0617-c004-45e7-87c2-38d94207b54d",
+      "key": "0849c378-5984-4df9-8fe1-610e451ffa15",
       "properties": {
-        "description": "Write comments to explain the function purpose, parameters, and return values"
+        "description": "Correctly set up a parameter in a function"
       },
       "seeding_key": {
         "lesson.key": "Parameters and Return Practice",
-        "objective.key": "7b4c0617-c004-45e7-87c2-38d94207b54d"
-      }
-    },
-    {
-      "key": "bb5b33d8-2db0-4eab-bd3d-5decaeb64186",
-      "properties": {
-        "description": "Write functions with parameters and return values that meet a set of specified requirements"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Make",
-        "objective.key": "bb5b33d8-2db0-4eab-bd3d-5decaeb64186"
-      }
-    },
-    {
-      "key": "4321495f-18d5-45ee-bc15-b22b292f91f9",
-      "properties": {
-        "description": "Debug programs that use functions with parameters and return"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Make",
-        "objective.key": "4321495f-18d5-45ee-bc15-b22b292f91f9"
-      }
-    },
-    {
-      "key": "32251627-50b8-4887-8e7e-4a8d96879e81",
-      "properties": {
-        "description": "Use appropriate vocabulary to describe libraries"
-      },
-      "seeding_key": {
-        "lesson.key": "Libraries Explore",
-        "objective.key": "32251627-50b8-4887-8e7e-4a8d96879e81"
+        "objective.key": "0849c378-5984-4df9-8fe1-610e451ffa15"
       }
     },
     {
@@ -3791,33 +3702,43 @@
       }
     },
     {
-      "key": "d9b7769c-d6ba-4252-a65f-4832d3bf8e1a",
+      "key": "1b6fbf70-fa16-48b7-8cca-0d935f92857a",
       "properties": {
-        "description": "Clearly write documentation for functions in a library"
+        "description": "Modify programs that use functions with parameters and return"
       },
       "seeding_key": {
-        "lesson.key": "Libraries Explore",
-        "objective.key": "d9b7769c-d6ba-4252-a65f-4832d3bf8e1a"
+        "lesson.key": "Parameters and Return Investigate",
+        "objective.key": "1b6fbf70-fa16-48b7-8cca-0d935f92857a"
       }
     },
     {
-      "key": "cc6aee0f-ba0e-4ae6-8bc7-bce6bd6914a3",
+      "key": "1f6aaff1-137a-485d-b99d-761ed6039684",
       "properties": {
-        "description": "Identify the use of a library within a program."
+        "description": "Explain the benefits of using a function with a parameter or return value in the context of a specific program"
       },
       "seeding_key": {
-        "lesson.key": "Libraries Investigate",
-        "objective.key": "cc6aee0f-ba0e-4ae6-8bc7-bce6bd6914a3"
+        "lesson.key": "Parameters and Return Investigate",
+        "objective.key": "1f6aaff1-137a-485d-b99d-761ed6039684"
       }
     },
     {
-      "key": "4508fa8b-44ac-4ca6-ac1e-c5c2384f54d1",
+      "key": "2a7cf26d-0327-4c89-92d0-389549904f10",
       "properties": {
-        "description": "Explain the purpose of libraries as a way to simplify programs, allow for code reuse, and enable collaboration."
+        "description": "Test functions designed to be used in a library using different input values"
       },
       "seeding_key": {
-        "lesson.key": "Libraries Investigate",
-        "objective.key": "4508fa8b-44ac-4ca6-ac1e-c5c2384f54d1"
+        "lesson.key": "Libraries Practice",
+        "objective.key": "2a7cf26d-0327-4c89-92d0-389549904f10"
+      }
+    },
+    {
+      "key": "2b0679fe-520e-4565-a69d-f939347b94d6",
+      "properties": {
+        "description": "Explain the purpose and functionality of a function they developed"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "objective.key": "2b0679fe-520e-4565-a69d-f939347b94d6"
       }
     },
     {
@@ -3831,13 +3752,143 @@
       }
     },
     {
-      "key": "2a7cf26d-0327-4c89-92d0-389549904f10",
+      "key": "32251627-50b8-4887-8e7e-4a8d96879e81",
       "properties": {
-        "description": "Test functions designed to be used in a library using different input values"
+        "description": "Use appropriate vocabulary to describe libraries"
       },
       "seeding_key": {
-        "lesson.key": "Libraries Practice",
-        "objective.key": "2a7cf26d-0327-4c89-92d0-389549904f10"
+        "lesson.key": "Libraries Explore",
+        "objective.key": "32251627-50b8-4887-8e7e-4a8d96879e81"
+      }
+    },
+    {
+      "key": "4321495f-18d5-45ee-bc15-b22b292f91f9",
+      "properties": {
+        "description": "Debug programs that use functions with parameters and return"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "objective.key": "4321495f-18d5-45ee-bc15-b22b292f91f9"
+      }
+    },
+    {
+      "key": "4508fa8b-44ac-4ca6-ac1e-c5c2384f54d1",
+      "properties": {
+        "description": "Explain the purpose of libraries as a way to simplify programs, allow for code reuse, and enable collaboration."
+      },
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "objective.key": "4508fa8b-44ac-4ca6-ac1e-c5c2384f54d1"
+      }
+    },
+    {
+      "key": "524eea87-1910-47e2-833b-5916b44ac479",
+      "properties": {
+        "description": "Provide feedback to their classmate about a library they designed"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "objective.key": "524eea87-1910-47e2-833b-5916b44ac479"
+      }
+    },
+    {
+      "key": "5499ef1c-e0a2-4e34-91f6-d1c51b3348ca",
+      "properties": {
+        "description": "Select a theme for a library of functions"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "objective.key": "5499ef1c-e0a2-4e34-91f6-d1c51b3348ca"
+      }
+    },
+    {
+      "key": "6d1b5bae-af80-4053-9f94-8277f7c8d295",
+      "properties": {
+        "description": "Use the modulus operator in a program"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "objective.key": "6d1b5bae-af80-4053-9f94-8277f7c8d295"
+      }
+    },
+    {
+      "key": "728a1ea9-5d9f-4a80-84ce-06d8defd9b7b",
+      "properties": {
+        "description": "Write tests for functions with a library that they designed"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 2",
+        "objective.key": "728a1ea9-5d9f-4a80-84ce-06d8defd9b7b"
+      }
+    },
+    {
+      "key": "7b4c0617-c004-45e7-87c2-38d94207b54d",
+      "properties": {
+        "description": "Write comments to explain the function purpose, parameters, and return values"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "objective.key": "7b4c0617-c004-45e7-87c2-38d94207b54d"
+      }
+    },
+    {
+      "key": "7fc65657-943a-4557-815c-5a354a2e4b15",
+      "properties": {
+        "description": "Identify situations in which a function with a parameter or return value would be necessary"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "objective.key": "7fc65657-943a-4557-815c-5a354a2e4b15"
+      }
+    },
+    {
+      "key": "93b8bcd0-d247-458d-bb02-1e64e3bebdc9",
+      "properties": {
+        "description": "Debug a library of functions based on testing and classmate feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "objective.key": "93b8bcd0-d247-458d-bb02-1e64e3bebdc9"
+      }
+    },
+    {
+      "key": "ae6a881d-a35d-40fb-a89e-5fc4a3253bc0",
+      "properties": {
+        "description": "Design the API for a library of functions, including the function names, purpose, and parameters, and types of values each function will return"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 1",
+        "objective.key": "ae6a881d-a35d-40fb-a89e-5fc4a3253bc0"
+      }
+    },
+    {
+      "key": "bb5b33d8-2db0-4eab-bd3d-5decaeb64186",
+      "properties": {
+        "description": "Write functions with parameters and return values that meet a set of specified requirements"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "objective.key": "bb5b33d8-2db0-4eab-bd3d-5decaeb64186"
+      }
+    },
+    {
+      "key": "bca4d010-a22a-4ad1-927d-52009c16a4e8",
+      "properties": {
+        "description": "Use appropriate vocabulary to describe parameters and return values."
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "objective.key": "bca4d010-a22a-4ad1-927d-52009c16a4e8"
+      }
+    },
+    {
+      "key": "cc6aee0f-ba0e-4ae6-8bc7-bce6bd6914a3",
+      "properties": {
+        "description": "Identify the use of a library within a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "objective.key": "cc6aee0f-ba0e-4ae6-8bc7-bce6bd6914a3"
       }
     },
     {
@@ -3861,63 +3912,13 @@
       }
     },
     {
-      "key": "5499ef1c-e0a2-4e34-91f6-d1c51b3348ca",
+      "key": "d9b7769c-d6ba-4252-a65f-4832d3bf8e1a",
       "properties": {
-        "description": "Select a theme for a library of functions"
+        "description": "Clearly write documentation for functions in a library"
       },
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 1",
-        "objective.key": "5499ef1c-e0a2-4e34-91f6-d1c51b3348ca"
-      }
-    },
-    {
-      "key": "ae6a881d-a35d-40fb-a89e-5fc4a3253bc0",
-      "properties": {
-        "description": "Design the API for a library of functions, including the function names, purpose, and parameters, and types of values each function will return"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 1",
-        "objective.key": "ae6a881d-a35d-40fb-a89e-5fc4a3253bc0"
-      }
-    },
-    {
-      "key": "728a1ea9-5d9f-4a80-84ce-06d8defd9b7b",
-      "properties": {
-        "description": "Write tests for functions with a library that they designed"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 2",
-        "objective.key": "728a1ea9-5d9f-4a80-84ce-06d8defd9b7b"
-      }
-    },
-    {
-      "key": "524eea87-1910-47e2-833b-5916b44ac479",
-      "properties": {
-        "description": "Provide feedback to their classmate about a library they designed"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 2",
-        "objective.key": "524eea87-1910-47e2-833b-5916b44ac479"
-      }
-    },
-    {
-      "key": "93b8bcd0-d247-458d-bb02-1e64e3bebdc9",
-      "properties": {
-        "description": "Debug a library of functions based on testing and classmate feedback"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 3",
-        "objective.key": "93b8bcd0-d247-458d-bb02-1e64e3bebdc9"
-      }
-    },
-    {
-      "key": "2b0679fe-520e-4565-a69d-f939347b94d6",
-      "properties": {
-        "description": "Explain the purpose and functionality of a function they developed"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 3",
-        "objective.key": "2b0679fe-520e-4565-a69d-f939347b94d6"
+        "lesson.key": "Libraries Explore",
+        "objective.key": "d9b7769c-d6ba-4252-a65f-4832d3bf8e1a"
       }
     },
     {
@@ -3932,174 +3933,6 @@
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Explore",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Explore",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.B.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Investigate",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.B.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.O.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.A.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.A.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.A.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-3.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Make",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Make",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.F.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Libraries Explore",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Libraries Explore",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-16"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Libraries Explore",
@@ -4137,37 +3970,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Libraries Investigate",
+        "lesson.key": "Libraries Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Libraries Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Libraries Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-18"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Libraries Investigate",
+        "lesson.key": "Libraries Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Libraries Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -4256,6 +4068,41 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Libraries Practice",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-14"
@@ -4284,30 +4131,156 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 1",
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-18"
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.3"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-14"
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 1",
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-16"
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.F.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.O.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-3.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
       }
     },
     {
@@ -4326,56 +4299,56 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 2",
+        "lesson.key": "Project - Make a Library Part 1",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 2",
+        "lesson.key": "Project - Make a Library Part 1",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-18"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 2",
+        "lesson.key": "Project - Make a Library Part 1",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 2",
+        "lesson.key": "Project - Make a Library Part 1",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-16"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 3",
+        "lesson.key": "Project - Make a Library Part 2",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 3",
+        "lesson.key": "Project - Make a Library Part 2",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-18"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 3",
+        "lesson.key": "Project - Make a Library Part 2",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Make a Library Part 3",
+        "lesson.key": "Project - Make a Library Part 2",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-16"
       }
@@ -4392,6 +4365,34 @@
         "lesson.key": "Project - Make a Library Part 3",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "CRD-2.H.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Library Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
       }
     }
   ],

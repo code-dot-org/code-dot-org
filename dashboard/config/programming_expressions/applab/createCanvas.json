@@ -6,8 +6,14 @@
     "maxArgs": 3
   },
   "paletteParams": [
-    "id",
-    "width",
-    "height"
+    {
+      "name": "id"
+    },
+    {
+      "name": "width"
+    },
+    {
+      "name": "height"
+    }
   ]
 }

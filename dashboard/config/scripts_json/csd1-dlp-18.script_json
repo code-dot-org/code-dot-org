@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "professional_learning_course": "CS Discoveries Facilitator in Training 2018-2019",
+      "deprecated": true,
       "peer_reviews_to_complete": 6,
-      "student_detail_progress_view": true,
-      "deprecated": true
+      "professional_learning_course": "CS Discoveries Facilitator in Training 2018-2019",
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 20:45:12 UTC",
+    "serialized_at": "2021-10-25 22:53:48 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd1-dlp-18"
     }

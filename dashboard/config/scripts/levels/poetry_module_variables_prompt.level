@@ -47,7 +47,7 @@
   "created_at": "2021-10-19T16:01:04.000Z",
   "level_num": "custom",
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2021-10-19T16:01:04.722+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_freeplay\\\"\"],\"cloned_from\":\"poetry_module_generator_freeplay\"},{\"changed_at\":\"2021-10-19 16:06:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"project_template_level_name\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:07:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:10:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:18:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:18:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:20:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:23:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:29:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:58 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:59 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:39:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:47:34 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:50:05 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-21 14:09:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-19T16:01:04.722+00:00\",\"changed\":[\"cloned from \\\"poetry_module_generator_freeplay\\\"\"],\"cloned_from\":\"poetry_module_generator_freeplay\"},{\"changed_at\":\"2021-10-19 16:06:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"project_template_level_name\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:07:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:10:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:18:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:18:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:20:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-19 16:23:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:29:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:58 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:38:59 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:39:49 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:47:34 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-20 19:50:05 +0000\",\"changed\":[\"toolbox_blocks\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-21 14:09:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-27 21:43:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -72,64 +72,46 @@
                 <block type="Poetry_addLine" deletable="false">
                   <value name="LINE">
                     <block type="Poetry_stringValue" deletable="false">
-                      <title name="TEXT">First I saw the white bear, </title>
+                      <title name="TEXT">Five little speckled frogs</title>
                     </block>
                   </value>
                   <next>
                     <block type="Poetry_addLine" deletable="false">
                       <value name="LINE">
                         <block type="Poetry_stringValue" deletable="false">
-                          <title name="TEXT">then I saw the black;</title>
+                          <title name="TEXT">Sat on a speckled log</title>
                         </block>
                       </value>
                       <next>
                         <block type="Poetry_addLine" deletable="false">
                           <value name="LINE">
                             <block type="Poetry_stringValue" deletable="false">
-                              <title name="TEXT">Then I saw the camel </title>
+                              <title name="TEXT">Eating the most delicious bugs</title>
                             </block>
                           </value>
                           <next>
                             <block type="Poetry_addLine" deletable="false">
                               <value name="LINE">
                                 <block type="Poetry_stringValue" deletable="false">
-                                  <title name="TEXT">with a hump upon his back;</title>
+                                  <title name="TEXT">One jumped into the pool</title>
                                 </block>
                               </value>
                               <next>
                                 <block type="Poetry_addLine" deletable="false">
                                   <value name="LINE">
                                     <block type="Poetry_stringValue" deletable="false">
-                                      <title name="TEXT">Then I saw the elephant </title>
+                                      <title name="TEXT">Where it was nice and cool</title>
                                     </block>
                                   </value>
                                   <next>
                                     <block type="Poetry_addLine" deletable="false">
                                       <value name="LINE">
                                         <block type="Poetry_stringValue" deletable="false">
-                                          <title name="TEXT">a-waving of his trunk;</title>
+                                          <title name="TEXT">Then there were four green speckled frogs</title>
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="Poetry_addLine" deletable="false">
-                                          <value name="LINE">
-                                            <block type="Poetry_stringValue" deletable="false">
-                                              <title name="TEXT">Then I saw the monkeys&#x2014;</title>
-                                            </block>
-                                          </value>
-                                          <next>
-                                            <block type="Poetry_addLine" deletable="false">
-                                              <value name="LINE">
-                                                <block type="Poetry_stringValue" deletable="false">
-                                                  <title name="TEXT">mercy, how unpleasantly they smelt!</title>
-                                                </block>
-                                              </value>
-                                              <next>
-                                                <block type="Poetry_animateText" deletable="false"/>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
+                                        <block type="Poetry_animateText" deletable="false"/>
                                       </next>
                                     </block>
                                   </next>
