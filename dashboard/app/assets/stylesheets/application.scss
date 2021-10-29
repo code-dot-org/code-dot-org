@@ -2951,6 +2951,11 @@ $modal-no-icon-gap: 22px;
     float: left;
     padding-right: 10px;
   }
+
+  .instructor-image-end {
+    float: right;
+    padding-left: 10px;
+  }
 }
 
 .dynamic-instructions-markdown {
@@ -2965,6 +2970,12 @@ html[dir="rtl"] .instructions-markdown {
     float: right;
     padding-left: 10px;
     padding-right: 0;
+  }
+
+  .instructor-image-end {
+    float: left;
+    padding-right: 10px;
+    padding-left: 0;
   }
 }
 
