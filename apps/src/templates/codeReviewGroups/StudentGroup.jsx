@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Droppable} from 'react-beautiful-dnd';
+import color from '@cdo/apps/util/color';
 import Student from './Student';
 
 // A CodeReviewGroup is a component that
@@ -41,11 +42,9 @@ StudentGroup.propTypes = {
 };
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? 'lightblue' : 'lightgrey',
-  padding: grid,
+  background: isDraggingOver ? 'lightblue' : 'white',
   margin: grid,
-  width: 400,
-  border: '1px solid'
+  border: `1px solid ${color.lightest_gray}`
 });
 
 export const grid = 8;

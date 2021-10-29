@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Draggable} from 'react-beautiful-dnd';
+import color from '@cdo/apps/util/color';
 import {grid} from './StudentGroup';
 
 // A CodeReviewGroupMember is a component that
@@ -22,15 +23,14 @@ export default function Student({followerId, name, index}) {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          style={getMemberStyle(
+          style={getStudentStyle(
             snapshot.isDragging,
             provided.draggableProps.style
           )}
         >
           <div
             style={{
-              display: 'flex',
-              justifyContent: 'space-around'
+              display: 'flex'
             }}
           >
             {name}
@@ -47,18 +47,16 @@ Student.propTypes = {
   index: PropTypes.number.isRequired
 };
 
-const getMemberStyle = (isDragging, draggableStyle) => ({
-  // some basic styles to make the group members look a bit nicer
+const getStudentStyle = (isDragging, draggableStyle) => ({
   userSelect: 'none',
   padding: grid * 2,
-  margin: grid,
-  borderRadius: '30px',
-  color: 'white',
+  color: color.dark_charcoal,
   width: 'auto',
   height: '20px',
+  border: '1px solid #C4C4C4',
 
   // change background colour if dragging
-  background: isDragging ? 'navy' : '#0094CA',
+  background: isDragging ? 'navy' : 'white',
 
   // styles we need to apply on draggables
   ...draggableStyle
