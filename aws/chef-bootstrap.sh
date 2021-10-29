@@ -126,7 +126,14 @@ if [ "${LOCAL_MODE}" = "1" ]; then
   mkdir -p ${CHEF_REPO_PATH}/{cookbooks,environments}
   # Install branch-specific Chef cookbooks from s3.
   REPO_COOKBOOK_URL=s3://${S3_BUCKET}/${CHEF_KEY}/${BRANCH}.tar.gz
-  aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C ${CHEF_REPO_PATH}
+  # With Chef 17, `berks package` produces a tarball containing a `tmp`
+  # directory which contains a directory with an arbitrary name which contains
+  # the cookbooks directory. We want to extract specifically the cookbooks
+  # directory, so we do a little tar magic. If we can figure out how to get
+  # `berks package` to produce a simpler package or how to tell Chef to install
+  # the package directly (rather than doing all this manual work), then this
+  # could be simplified.
+  aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C ${CHEF_REPO_PATH} --wildcards "/tmp/*/cookbooks" --strip-components 2
 
   # Boilerplate `adhoc` environment for local Chef.
 cat <<JSON > ${CHEF_REPO_PATH}/environments/adhoc.json
