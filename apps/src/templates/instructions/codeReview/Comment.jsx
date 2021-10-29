@@ -6,7 +6,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
-import CommentMenu from './CommentMenu';
+import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
 import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -29,14 +29,6 @@ class Comment extends Component {
       this.setState({hideWhileResolved: true});
     }
   }
-
-  onDelete = () => {
-    this.props.onDelete();
-  };
-
-  onResolve = () => {
-    this.props.onResolveStateToggle();
-  };
 
   renderName = () => {
     const {
@@ -83,7 +75,12 @@ class Comment extends Component {
   };
 
   getListItems = () => {
-    const {viewAsCodeReviewer, viewAsTeacher} = this.props;
+    const {
+      viewAsCodeReviewer,
+      viewAsTeacher,
+      onDelete,
+      onResolveStateToggle
+    } = this.props;
     const {isResolved} = this.props.comment;
     const {hideWhileResolved} = this.state;
     let listItems = [];
@@ -96,7 +93,7 @@ class Comment extends Component {
     }
     if (viewAsTeacher || !viewAsCodeReviewer) {
       listItems.push({
-        onClick: this.onResolve,
+        onClick: onResolveStateToggle,
         text: isResolved
           ? javalabMsg.markIncomplete()
           : javalabMsg.markComplete(),
@@ -105,7 +102,7 @@ class Comment extends Component {
     }
     if (viewAsTeacher) {
       listItems.push({
-        onClick: this.onDelete,
+        onClick: onDelete,
         text: javalabMsg.delete(),
         iconClass: 'trash'
       });
@@ -152,9 +149,9 @@ class Comment extends Component {
             <span style={styles.timestamp}>
               {this.renderFormattedTimestamp(timestampString)}
             </span>
-            <CommentMenu icon="fa fa-ellipsis-h">
+            <InlineDropdownMenu icon="fa fa-ellipsis-h">
               {this.getListItems()}
-            </CommentMenu>
+            </InlineDropdownMenu>
           </span>
         </div>
         {!(isResolved && hideWhileResolved) && (
