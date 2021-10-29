@@ -114,7 +114,7 @@ function StandardsEditor(props) {
     setConfirmRemovalDialogOpen(false);
   };
 
-  const removeStandard = () => {
+  const handleConfirmRemoveStandard = () => {
     props.removeStandard(props.standardType, standardToRemove);
     handleRemoveStandardDialogClose();
   };
@@ -196,7 +196,7 @@ function StandardsEditor(props) {
           isOpen={confirmRemovalDialogOpen}
           handleClose={handleRemoveStandardDialogClose}
           onCancel={handleRemoveStandardDialogClose}
-          onConfirm={removeStandard}
+          onConfirm={handleConfirmRemoveStandard}
         />
       )}
     </div>
