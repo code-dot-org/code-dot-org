@@ -4,6 +4,8 @@ import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
 import * as utils from './commands/utils';
+import {containsAtLeastOneAlphaNumberic} from '../../utils';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
 import {commands as behaviors} from './commands/behaviors';
@@ -37,7 +39,8 @@ export default class PoetryLibrary extends CoreLibrary {
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
       animationStartFrame:
-        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null
+        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null,
+      backgroundMusic: undefined
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -63,7 +66,7 @@ export default class PoetryLibrary extends CoreLibrary {
         );
         // Don't fire line events in preview
         if (!this.isPreviewFrame()) {
-          // filter non-poem-body lines (title and author) for line events
+          // filter non-poem-body lines (title, author, and blank lines) for line events
           const poemLines = renderInfo.lines.filter(
             line => line.isPoemBodyLine
           );
@@ -92,6 +95,15 @@ export default class PoetryLibrary extends CoreLibrary {
 
       destroy(costume) {
         spritelabCommands.destroy.call(this, {costume});
+      },
+
+      playMusic(url) {
+        if (this.poemState.backgroundMusic) {
+          audioCommands.stopSound({url: this.poemState.backgroundMusic});
+        }
+        this.poemState.backgroundMusic = url;
+        this.soundLog.push(url);
+        audioCommands.playSound({url, loop: true});
       },
 
       // And add custom Poem Bot commands
@@ -233,7 +245,7 @@ export default class PoetryLibrary extends CoreLibrary {
         this.p5.rect(
           0,
           390,
-          (this.p5.frameCount / POEM_DURATION) * PLAYSPACE_SIZE,
+          (this.p5.frameCount / this.validationInfo.endTime) * PLAYSPACE_SIZE,
           10
         );
         this.p5.pop();
@@ -439,7 +451,7 @@ export default class PoetryLibrary extends CoreLibrary {
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: lineSize,
-        isPoemBodyLine: true
+        isPoemBodyLine: containsAtLeastOneAlphaNumberic(line) // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });
@@ -464,6 +476,30 @@ export default class PoetryLibrary extends CoreLibrary {
       this.p5.textSize(item.size);
       this.p5.text(item.text, item.x, item.y);
     });
+
+    if (this.isPreviewFrame()) {
+      // Draw line numbers in preview frame only
+      this.drawLineNumbers(renderInfo);
+    }
+  }
+
+  drawLineNumbers(renderInfo) {
+    this.p5.push();
+    this.p5.textAlign(this.p5.LEFT);
+    this.p5.stroke('white');
+    this.p5.strokeWeight(2);
+    this.p5.fill('black');
+    this.p5.textFont('Arial');
+    this.p5.textSize(16);
+
+    let lineNum = 1;
+    renderInfo.lines.forEach(item => {
+      if (item.isPoemBodyLine) {
+        this.p5.text(lineNum, 5, item.y);
+        lineNum++;
+      }
+    });
+    this.p5.pop();
   }
 
   // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355

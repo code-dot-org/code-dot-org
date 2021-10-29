@@ -25152,6 +25152,11 @@ fr:
               description_student: 'Les boucles sont si utiles dans le codage. Cette
                 leçon t''apprendra un nouveau type de boucle : les boucles tant que
                 !'
+              description_teacher: Dans cette leçon de **renforcement des compétences**,
+                les élèves travailleront à combler des trous et à creuser de la terre
+                dans Farmer, mais ils ne connaîtront pas la taille des trous ou la
+                hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves
+                utiliseront un nouveau type de boucle.
             Until Loops in Maze:
               key: Les Boucles Jusqu'à ce que dans le Labyrinthe
               name: Les Boucles Jusqu'à ce que dans le Labyrinthe
@@ -25862,6 +25867,11 @@ fr:
               description_student: 'Les boucles sont si utiles dans le codage. Cette
                 leçon t''apprendra un nouveau type de boucle : les boucles tant que
                 !'
+              description_teacher: Dans cette leçon de **renforcement des compétences**,
+                les élèves travailleront à combler des trous et à creuser de la terre
+                dans Farmer, mais ils ne connaîtront pas la taille des trous ou la
+                hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves
+                utiliseront un nouveau type de boucle.
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Les Conditions dans Minecraft : Voyage Aquatique'
               name: 'Les Conditions dans Minecraft : Voyage Aquatique'
@@ -27346,10 +27356,6 @@ fr:
               name: Widgets
             lesson-2:
               name: Outils
-        poetry:
-          lessons:
-            lesson-3:
-              name: variables
         spelling-bee:
           lessons:
             lesson-1:

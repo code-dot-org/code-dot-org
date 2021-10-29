@@ -4142,6 +4142,8 @@ uz:
               name: Getters
             Getting Properties:
               name: Getting Properties
+            Arrays:
+              name: Massivlar
             Arrays and For Loops:
               name: Arrays and For Loops
             Circuits and Physical Prototypes:
@@ -4357,6 +4359,7 @@ uz:
             'Project: Make a Game':
               name: 'Project: Make a Game'
             Arrays:
+              name: Massivlar
               description_student: Learn how lists can be used to store multiple values in a single variable name.
               description_teacher: Massiv - bu odatda bir xil turdagi buyumlarning buyurtma qilingan to'plamidir. Ushbu darsda talabalar ro'yxatdan ma'lum yoki tasodifiy qiymatga uning indeksidan foydalanib kirish usullarini o'rganadilar. Keyin ular O'chirish maydonchasidagi rangli LEDlarning ishini boshqaradigan colorLEDs qatoriga qanday kirishni o'rganadilar. Talabalar har bir LEDning rangi va intensivligini nazorat qiladi, so'ngra o'zlarining O'yin maydonchasida yorug'lik shousini yaratish uchun yorug'lik naqshlarini dasturlash uchun o'rgangan narsalarini ishlatadi.\*
             Making Music:
@@ -17228,10 +17231,6 @@ uz:
               name: Vidjetlar
             lesson-2:
               name: Asboblar
-        poetry:
-          lessons:
-            lesson-3:
-              name: O‘zgaruvchilar
         spelling-bee:
           lessons:
             lesson-1:

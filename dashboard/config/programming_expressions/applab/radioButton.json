@@ -6,8 +6,12 @@
     "maxArgs": 3
   },
   "paletteParams": [
-    "id",
-    "checked"
+    {
+      "name": "id"
+    },
+    {
+      "name": "checked"
+    }
   ],
   "params": [
     "\"id\"",

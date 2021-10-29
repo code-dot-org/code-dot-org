@@ -69,7 +69,7 @@
           "student_overview": "En esta lección, los estudiantes crearán una Mascota Virtual interactiva que luce y se comporta como ellos desean. Los estudiantes usarán la herramienta \"Disfraces\" del Laboratorio de sprites para personalizar la apariencia de sus mascotas. Luego usarán eventos, comportamientos y otros conceptos que han aprendido para darle vida a sus mascotas."
         },
         "coursef-2021/lesson-2": {
-          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.][2]\n\nA medida que los niños crecen, naturalmente comenzarán a comunicarse más en línea. Pero algo de lo que ven podría hacerlos sentir heridos, tristes, enojados o incluso atemorizados. Ayuda a tus estudiantes a desarrollar empatía por los demás y aprender estrategias que pueden usar cuando se enfrenten al ciberacoso.",
+          "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.][2]\n\nA medida que los niños crecen, naturalmente comenzarán a comunicarse más en línea. Pero algo de lo que ven podría hacerlos sentir heridos, tristes, enojados o incluso atemorizados. Ayuda a tus estudiantes a desarrollar empatía por los demás y aprender estrategias que pueden usar cuando se enfrenten al ciberacoso.",
           "preparation": "-   Revisa el material didáctico.\n-   Prepara folletos para cada estudiante.\n-   Prepara una cuerda larga y papel para la clase.",
           "purpose": "Common Sense Education creó esta lección para enseñar a los estudiantes lo que deben hacer cuando alguien usa un lenguaje cruel o hiriente en Internet.",
           "student_overview": "El acoso nunca está bien. Esta lección te enseñará qué puedes decir y qué no cuando estás conectado."
@@ -143,7 +143,7 @@
           "student_overview": "Los proyectos así de grandes toman tiempo y mucha planificación. ¡Encuentra tu inspiración, desarrolla un plan y libera tu creatividad!"
         },
         "courseb-2021/Digital Trails": {
-          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información].[2]\n\n¿Lo que se hace en línea se queda siempre en línea? Los alumnos aprenden que la información que comparten en línea deja una huella digital o \"rastro\". Dependiendo de cómo la gestionen, este rastro puede ser grande o pequeño, y perjudicial o útil. Los alumnos comparan diferentes rastros y piensan de forma crítica sobre el tipo de información que quieren dejar.",
+          "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información].[2]\n\n¿Lo que se hace en línea se queda siempre en línea? Los alumnos aprenden que la información que comparten en línea deja una huella digital o \"rastro\". Dependiendo de cómo la gestionen, este rastro puede ser grande o pequeño, y perjudicial o útil. Los alumnos comparan diferentes rastros y piensan de forma crítica sobre el tipo de información que quieren dejar.",
           "preparation": "-   Revisa el material didáctico.\n-   Imprime los folletos para cada alumno.",
           "purpose": "Common Sense Education creó esta lección para educar a los estudiantes sobre las \"huellas digitales\", y qué información está bien tener en las suyas.",
           "student_overview": "Aprende sobre tu huella digital y cómo visitar sitios web de forma segura. "
@@ -221,7 +221,7 @@
           "student_overview": "Crea tu propia historia o juego."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[\\[common sense education](https://creativecommons.org/)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.][2]\n\nEl poder de Internet permite a los estudiantes experimentar y visitar lugares que quizá no podrían ver en persona. Pero, al igual que ocurre con los viajes en el mundo real, es importante estar seguro cuando se viaja por Internet. En esta excursión virtual, los niños pueden practicar la seguridad en las aventuras online.",
+          "overview": "[\\[common sense education](https://www.commonsense.org)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.][2]\n\nEl poder de Internet permite a los estudiantes experimentar y visitar lugares que quizá no podrían ver en persona. Pero, al igual que ocurre con los viajes en el mundo real, es importante estar seguro cuando se viaja por Internet. En esta excursión virtual, los niños pueden practicar la seguridad en las aventuras online.",
           "preparation": "-   Revisa el material didáctico.\n-   Imprime los folletos para cada alumno.\n-   (Opcional) Imprime el póster del poema para exponerlo en el aula.",
           "purpose": "Common Sense Education creó esta lección para enseñar a los estudiantes cómo pueden visitar sitios de forma segura en Internet.",
           "student_overview": "Aprenda a ir a sitios seguros en Internet."
@@ -299,7 +299,7 @@
           "student_overview": "¡Cuenta una historia con el Artista!"
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.][2]\n\nInternet está lleno de todo tipo de personas interesantes, pero a veces, algunas de ellas pueden ser malintencionadas. Con este juego de rol, ayuda a tus alumnos a entender por qué a menudo es más fácil ser mezquino en línea que en persona, y cómo lidiar con la mezquindad en línea cuando la ven.",
+          "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nEsta lección fue creada originalmente por Common Sense Education. [Más información.][2]\n\nInternet está lleno de todo tipo de personas interesantes, pero a veces, algunas de ellas pueden ser malintencionadas. Con este juego de rol, ayuda a tus alumnos a entender por qué a menudo es más fácil ser mezquino en línea que en persona, y cómo lidiar con la mezquindad en línea cuando la ven.",
           "preparation": "-   Revisa el material didáctico.\n-   Imprime los folletos para cada alumno.\n-   Lleva un animal de peluche o un juguete a la clase.",
           "purpose": "Common Sense Education creó esta lección para enseñar a los estudiantes sobre la maldad y lo que deben hacer si la encuentran en línea.",
           "student_overview": "En esta lección, aprenderás sobre la delincuencia y qué hacer si te encuentras con ella en Internet."
@@ -378,21 +378,31 @@
         },
         "coursec-2021/Picturing Data": {
           "overview": "Los datos se pueden usar para ayudar a los estudiantes a entender su mundo y responder preguntas interesantes. En esta lección, los estudiantes recopilarán datos de un proyecto del Laboratorio de juegos y los visualizarán en diferentes tipos de gráficos.",
+          "preparation": "-   Imprime una **\\*hoja de trabajo** para cada alumno.\n-   Prueba la lección de hoy en Code Studio. Se trata de una herramienta para la actividad de hoy. Prepárate para proyectarla a la clase o, de lo contrario, permite que los alumnos la visiten en sus propios ordenadores.\n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
+          "purpose": "Los ordenadores se crearon para ayudar a procesar datos. Cada vez hay más datos en el mundo, por lo que es importante saber leerlos y analizarlos.  Esta lección sirve para que los alumnos tengan la experiencia básica de recopilar, visualizar y analizar un conjunto sencillo de datos.",
           "student_overview": "Los datos se pueden usar para ayudar a los estudiantes a entender su mundo y responder preguntas interesantes. En esta lección, los estudiantes recopilarán datos de un proyecto del Laboratorio de juegos y los visualizarán en diferentes tipos de gráficos."
         },
         "coursec-2021/Binary Bracelets": {
           "overview": "El sistema binario es muy importante en el mundo de las computadoras. La mayoría de ellas hoy almacena toda clase de información de forma binaria. Esta lección ayuda a demostrar cómo es posible tomar algo de la vida real y convertirlo en una serie de funciones de encendido y apagado.",
+          "preparation": "-   (Opcional) Mira el vídeo **\\*Lección en Movimiento**.\n-   Reúne marcadores para las pulseras. Otros adornos, como las cuentas y los limpiapipas, son opcionales.\n-   Imprime una **\\*hoja de trabajo** y una **evaluación** por alumno.\n-   Asegúrate de que cada alumno tenga un diario de reflexión.\n-   (Opcional) Escribe en la pizarra un breve mensaje  en binario.",
+          "purpose": "En esta lección los alumnos aprenderán cómo se representa la información de forma que un ordenador pueda interpretarla y almacenarla. Al aprender binario, los alumnos tendrán la oportunidad de escribir códigos y compartirlos con sus compañeros como mensajes secretos. Esto puede relacionarse con la forma en que los ordenadores leen un programa, lo traducen a binario, utilizan la información de alguna manera y luego responden de una forma que los humanos puedan entender. Por ejemplo, cuando escribimos una frase en un documento y pulsamos \"guardar\", un ordenador traduce la frase a binario, almacena la información y envía un mensaje indicando que el documento se ha guardado.",
           "student_overview": "¡Crea tu propia pulsera binaria y aprende cómo las computadoras recuerdan la información!"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
           "overview": "¡Esta lección final guía a los estudiantes a través del proceso de diseño, desarrollo y presentación de sus propios proyectos del Laboratorio de juegos! Para garantizar que este proceso no tenga problemas, hemos creado una estructura paso a paso, desde la planificación en papel hasta la programación en nuestro sitio web, que los estudiantes pueden seguir. ¡Además ofrecemos ideas para ayudar a los docentes a promover una exhibición final! ",
+          "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Imprime una **\\*Guía de Planificación de Proyectos** para cada alumno (o pareja).\n-   Revisa el documento **\\*Guía de Planificación de Proyectos (Ejemplo)**.\n-   (Opcional) ¡Completa tu propia guía de planificación y codifica tu propio proyecto para mostrárselo a los alumnos!",
+          "purpose": "Esta lección proporciona a los alumnos un espacio para crear un proyecto de su propio diseño, utilizando un proceso paso a paso que requiere planificación pero también permite una amplia creatividad.",
           "student_overview": "¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto."
         },
         "coursed-2021/lesson-5": {
+          "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nEsta lección fue creada originalmente por [Common Sense Education][2].\n\nLas contraseñas en línea más seguras y sólidas son una buena idea para todos. Pero, ¿Cómo podemos ayudar a los niños a crear mejores contraseñas y a recordarlas realmente? Utiliza los consejos de esta lección para ayudar a los niños a crear contraseñas que sean seguras y memorizables.",
+          "preparation": "-   Revisa el material didáctico.\n-   Imprime los folletos para cada alumno.\n-   Prepara papel o cuadernos de escritura para los alumnos.",
+          "purpose": "Common Sense Education creó esta lección para enseñar a los estudiantes de qué manera las contraseñas fuertes pueden ayudar a proteger su privacidad.",
           "student_overview": "En esta lección, aprenderás de qué manera las contraseñas protegen tu información y cómo crear una buena contraseña."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "overview": "Al \"programarse\" entre sí para dibujar imágenes, los estudiantes obtienen una oportunidad de experimentar algunos de los conceptos centrales de programar de una manera divertida y accesible. La clase comenzará haciendo que los estudiantes usen símbolos para instruirse entre ellos para colorear cuadrados en papel cuadriculado en un intento por producir una imagen existente. Si queda tiempo, la lección puede concluir con imágenes que los mismos estudiantes crean. ",
+          "preparation": "-   (Opcional) Ver el vídeo de la **\\*Lección en Movimiento**.\n-   Imprime una **\\*hoja de trabajo** y una \\***\\*evaluación** para cada alumno.\n-   Asegúrate de que cada alumno tenga un diario de reflexión.",
           "purpose": "El objetivo de esta actividad es desarrollar las habilidades de pensamiento crítico y entusiasmo por el curso.\nPresentando conceptos básicos como programar y algoritmos a la clase en una actividad sin conexión, los/as estudiantes que se sienten intimidados por los computadores pueden aún construir una base de comprensión de estos temas. Programar y algoritmos son esenciales en la ciencia de la computación. En esta lección, los/as estudiantes aprenderán cómo transformar las instrucciones en un programa y a reconocer un algoritmo. ",
           "student_overview": "En esta lección, programarás a tu compañero de clase para que dibujar imágenes."
         },
@@ -464,6 +474,7 @@
         },
         "coursed-2021/End of Course Project": {
           "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
+          "purpose": "Esta lección proporciona a los alumnos un espacio para crear un proyecto de su propio diseño, utilizando un proceso paso a paso que requiere planificación pero también permite una amplia creatividad.",
           "student_overview": "¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto."
         },
         "express-2021/Programming with Angry Birds": {
@@ -549,6 +560,7 @@
         },
         "express-2021/Harvesting with Conditionals": {
           "overview": "Los/as estudiantes practicarán loops `while`, loops `hasta`, y las declaraciones `if / else`. Todos estos bloques usarán condicionales. Al practicar los tres, los/as estudiantes aprenderán a escribir código complejo y flexible.",
+          "preparation": "-   Repasa la lección para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que todos los alumnos tengan un Diario de Reflexión.",
           "purpose": "Practicar el uso de condicionales en diferentes escenarios ayuda a desarrollar la comprensión de un/a estudiante de lo que puede hacer. En la lección anterior, los/as estudiantes sólo usaron condicionales para moverse alrededor de un laberinto. En esta lección, los/as estudiantes usarán condicionales para ayudar al agricultor a saber cuándo cosechar cultivos. Los nuevos patrones surgirán y los estudiantes usarán creatividad y pensamiento lógico para determinar las condiciones en las que el código debe ejecutarse y repetirse.",
           "student_overview": "No siempre está claro cuándo usar cada condicional. Esta lección te ayudará a tener práctica en decidir qué hacer."
         },
@@ -587,6 +599,7 @@
         },
         "express-2021/End of Course Project": {
           "overview": "Esta lección de culminación lleva a los alumnos a través del proceso de diseño, desarrollo y exhibición de sus propios proyectos. ",
+          "purpose": "Esta lección proporciona a los alumnos un espacio para crear un proyecto de su propio diseño, utilizando un proceso paso a paso que requiere planificación pero también permite una amplia creatividad.",
           "student_overview": "¡Prepara las manos para mucha programación! Llegó el momento de comenzar a crear tu proyecto."
         },
         "pre-express-2021/Learn to Drag and Drop": {
@@ -631,7 +644,7 @@
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.",
           "preparation": "-   Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-   Asegúrate de que cada alumno tenga un Diario de Reflexión.",
-          "purpose": "Esta lección ofrece una perspectiva diferente de cómo los bucles pueden crear cosas en la programación. Los alumnos también pueden reflexionar aquí sobre la ineficacia de la programación sin bucles debido a la cantidad de bloques que requeriría el programa sin la ayuda de los bucles de `repetición`.",
+          "purpose": "Esta lección entrega una perspectiva diferente sobre cómo los loops pueden crear cosas en la programación. Los/as estudiantes también pueden reflexionar aquí sobre la ineficiencia de la programación sin loops, debido a la cantidad de bloques que el programa requeriría, sin la ayuda de loops \"repetir\".",
           "student_overview": "Usa bucles y patrones para finalizar las imágenes."
         },
         "pre-express-2021/Drawing Gardens with Loops": {

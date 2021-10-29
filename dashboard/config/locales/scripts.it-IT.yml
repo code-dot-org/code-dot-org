@@ -10007,6 +10007,8 @@ it:
               name: Introduzione al Laboratorio dei Personaggi
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
+            Making Sprites:
+              name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
             End of Course Project:
@@ -10847,6 +10849,8 @@ it:
                 Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             lesson-6:
               name: Introduzione al Laboratorio dei Personaggi
+            lesson-7:
+              name: Creazione di personaggi
             lesson-8:
               name: Personaggi in azione
             lesson-5:
@@ -11030,6 +11034,8 @@ it:
                 È ora di iniziare a realizzare il tuo progetto.
             lesson-1:
               name: Ballando col codice
+            lesson-2:
+              name: Creazione di personaggi
             lesson-3:
               name: Personaggi in azione
           lesson_groups:
@@ -11140,6 +11146,8 @@ it:
               name: Codifica di una simulazione
             Course F Introduction:
               name: Introduzione al Laboratorio dei Personaggi
+            Making Sprites:
+              name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
             introducing-spritelab:
@@ -11478,10 +11486,6 @@ it:
               name: Componenti
             lesson-2:
               name: Strumenti
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabili
         spelling-bee:
           lessons:
             lesson-1:

@@ -328,6 +328,37 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "புதிய தொகுதி!",
           "poetry_remove_sprite": "புதிய தொகுதி!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_collector": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_pet": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
         }
       }
     }

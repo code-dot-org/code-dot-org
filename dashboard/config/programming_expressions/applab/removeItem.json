@@ -2,8 +2,12 @@
   "func": "removeItem",
   "category": "Variables",
   "paletteParams": [
-    "list",
-    "index"
+    {
+      "name": "list"
+    },
+    {
+      "name": "index"
+    }
   ],
   "params": [
     "list",

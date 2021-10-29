@@ -1561,6 +1561,16 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Glass
+            Stars: Stjärnor
+            Fireworks: Fyrverkerier
+            '"rainbow"': Regnbåge
+            '"hearts"': Hjärtan
+            '"flowers"': Blommor
+            '"waves"': Vågor
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1569,6 +1579,9 @@ sv:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Ljus
       Poetry_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Poetry_setBackgroundEffect:
@@ -1579,6 +1592,10 @@ sv:
             '"space"': Mellanslag
             '"stars"': Stjärnor
             '"ripples"': Krusningar
+            '"rain"': Regn
+            '"bubbles"': Bubblor
+            '"confetti"': Konfetti
+            '"hearts"': Färgglada hjärtan
           PALETTE:
             '"rainbow"': Regnbåge
       Poetry_setBackgroundImageAs:

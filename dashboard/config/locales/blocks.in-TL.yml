@@ -1857,8 +1857,38 @@ in:
         text: crwdns2546978:0[COUNT]crwdnd2546978:0[0]crwdne2546978:0
       Outbreak_stopMoving:
         text: crwdns2546980:0crwdne2546980:0
+      Poetry_addFrame:
+        text: crwdns2710229:0[BRUSH]crwdnd2710229:0[0]crwdne2710229:0
+        options:
+          BRUSH:
+            Metal Frame: crwdns2710231:0crwdne2710231:0
+            Bold: crwdns2710233:0crwdne2710233:0
+            Shadow Box: crwdns2710235:0crwdne2710235:0
+            Gilded: crwdns2710237:0crwdne2710237:0
+            Beaded: crwdns2710239:0crwdne2710239:0
+            Beveled: crwdns2710241:0crwdne2710241:0
+            Wood Frame: crwdns2710243:0crwdne2710243:0
+            Bamboo: crwdns2710245:0crwdne2710245:0
+            Decorative: crwdns2710247:0crwdne2710247:0
+            Donuts: crwdns2710249:0crwdne2710249:0
+            Ice Cream: crwdns2710251:0crwdne2710251:0
+            Fire: crwdns2710253:0crwdne2710253:0
+            Water: crwdns2710255:0crwdne2710255:0
+            Leaves: crwdns2710257:0crwdne2710257:0
+            Stars: crwdns2710259:0crwdne2710259:0
+            Fireworks: crwdns2710261:0crwdne2710261:0
+            '"rainbow"': crwdns2710263:0crwdne2710263:0
+            '"hearts"': crwdns2710265:0crwdne2710265:0
+            '"flowers"': crwdns2710267:0crwdne2710267:0
+            '"zigzag"': crwdns2710269:0crwdne2710269:0
+            '"swirls"': crwdns2710271:0crwdne2710271:0
+            '"pawPrints"': crwdns2710273:0crwdne2710273:0
+            '"waves"': crwdns2710275:0crwdne2710275:0
+            '"brick"': crwdns2710277:0crwdne2710277:0
       Poetry_addLine:
         text: crwdns2694079:0[LINE]crwdnd2694079:0[0]crwdne2694079:0
+      Poetry_addTextHighlight:
+        text: crwdns2710279:0crwdne2710279:0
       Poetry_animateText:
         text: crwdns2696059:0crwdne2696059:0
       Poetry_destroy:
@@ -1877,22 +1907,49 @@ in:
         text: crwdns2695453:0[ANIMATION_NAME]crwdnd2695453:0[0]crwdnd2695453:0[LOCATION]crwdnd2695453:0[1]crwdne2695453:0
       Poetry_makeNumSprites:
         text: crwdns2694095:0[NUM]crwdnd2694095:0[0]crwdnd2694095:0[ANIMATION_NAME]crwdnd2694095:0[1]crwdne2694095:0
+      Poetry_playMusic:
+        text: crwdns2710281:0[SOUND]crwdnd2710281:0[0]crwdne2710281:0
+        options:
+          SOUND:
+            Calm: crwdns2710283:0crwdne2710283:0
+            Campfire: crwdns2710285:0crwdne2710285:0
+            Drizzle: crwdns2710287:0crwdne2710287:0
+            '"sound://category_background/fire_burning.mp3"': crwdns2710289:0crwdne2710289:0
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': crwdns2710291:0crwdne2710291:0
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': crwdns2710293:0crwdne2710293:0
+            Haunted: crwdns2710295:0crwdne2710295:0
+            Hum: crwdns2710297:0crwdne2710297:0
+            Mission: crwdns2710299:0crwdne2710299:0
+            '"sound://category_nature/summer_night_loop.mp3"': crwdns2710301:0crwdne2710301:0
+            '"sound://category_background/ocean_waves.mp3"': crwdns2710303:0crwdne2710303:0
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': crwdns2710305:0crwdne2710305:0
+            '"sound://category_background/rainforest_ambient_sound.mp3"': crwdns2710307:0crwdne2710307:0
+            Riding: crwdns2710309:0crwdne2710309:0
+            '"sound://category_background/wavering_wind.mp3"': crwdns2710311:0crwdne2710311:0
+            Slow: crwdns2710313:0crwdne2710313:0
+            '"sound://category_background/waterfall.mp3"': crwdns2710315:0crwdne2710315:0
       Poetry_playSound:
         text: crwdns2694097:0[SOUND]crwdnd2694097:0[0]crwdne2694097:0
         options:
           SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': crwdns2694099:0crwdne2694099:0
             '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': crwdns2694101:0crwdne2694101:0
-            '"sound://category_background/fire_burning.mp3"': crwdns2694103:0crwdne2694103:0
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': crwdns2694105:0crwdne2694105:0
-            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': crwdns2694107:0crwdne2694107:0
-            '"sound://category_nature/summer_night_loop.mp3"': crwdns2694109:0crwdne2694109:0
-            '"sound://category_background/ocean_waves.mp3"': crwdns2694111:0crwdne2694111:0
-            '"sound://category_background/rain_thunderstorm_calm.mp3"': crwdns2694113:0crwdne2694113:0
-            '"sound://category_background/rainforest_ambient_sound.mp3"': crwdns2694115:0crwdne2694115:0
-            '"sound://category_background/wavering_wind.mp3"': crwdns2694117:0crwdne2694117:0
+            Bell: crwdns2710317:0crwdne2710317:0
+            Break: crwdns2710319:0crwdne2710319:0
+            Boing: crwdns2710321:0crwdne2710321:0
+            Bubble: crwdns2710323:0crwdne2710323:0
+            Chatter: crwdns2710325:0crwdne2710325:0
+            Deflate: crwdns2710327:0crwdne2710327:0
+            Fail: crwdns2710329:0crwdne2710329:0
+            Flutter: crwdns2710331:0crwdne2710331:0
+            Jump: crwdns2710333:0crwdne2710333:0
+            Light: crwdns2710335:0crwdne2710335:0
+            Poof: crwdns2710337:0crwdne2710337:0
+            Scan: crwdns2710339:0crwdne2710339:0
             '"sound://category_background/typewriter.mp3"': crwdns2694119:0crwdne2694119:0
-            '"sound://category_background/waterfall.mp3"': crwdns2694121:0crwdne2694121:0
+            Vibrant: crwdns2710341:0crwdne2710341:0
+            Win: crwdns2710343:0crwdne2710343:0
+            Whirl: crwdns2710345:0crwdne2710345:0
+            Wind Chimes: crwdns2710347:0crwdne2710347:0
       Poetry_randomWord:
         text: crwdns2694123:0crwdne2694123:0
       Poetry_setAuthor:
@@ -1912,6 +1969,10 @@ in:
             '"blooming"': crwdns2694141:0crwdne2694141:0
             '"ripples"': crwdns2694143:0crwdne2694143:0
             '"clouds"': crwdns2694145:0crwdne2694145:0
+            '"rain"': crwdns2710349:0crwdne2710349:0
+            '"bubbles"': crwdns2710351:0crwdne2710351:0
+            '"confetti"': crwdns2710353:0crwdne2710353:0
+            '"hearts"': crwdns2710355:0crwdne2710355:0
           PALETTE:
             '"rainbow"': crwdns2694165:0crwdne2694165:0
             '"grayscale"': crwdns2694163:0crwdne2694163:0
@@ -1936,6 +1997,7 @@ in:
             '"Courier"': crwdns2694181:0crwdne2694181:0
             '"Arial Black"': crwdns2694183:0crwdne2694183:0
             '"Impact"': crwdns2694185:0crwdne2694185:0
+            '"Cursive"': crwdns2710357:0crwdne2710357:0
       Poetry_setFontColor:
         text: crwdns2694191:0[FILL]crwdnd2694191:0[0]crwdne2694191:0
       Poetry_setForegroundEffect:
@@ -1950,26 +2012,6 @@ in:
             '"starburst"': crwdns2694205:0crwdne2694205:0
             '"glass"': crwdns2694207:0crwdne2694207:0
             '"twinkling"': crwdns2694209:0crwdne2694209:0
-      Poetry_setPoem:
-        text: crwdns2694211:0[POEM]crwdnd2694211:0[0]crwdne2694211:0
-        options:
-          POEM:
-            '"---"': crwdns2694213:0crwdne2694213:0
-            '"hafez"': crwdns2694215:0crwdne2694215:0
-            '"carroll_1"': crwdns2694217:0crwdne2694217:0
-            '"rumi_1"': crwdns2694219:0crwdne2694219:0
-            '"field"': crwdns2694221:0crwdne2694221:0
-            '"carroll_2"': crwdns2694223:0crwdne2694223:0
-            '"twain"': crwdns2694225:0crwdne2694225:0
-            '"wordsworth"': crwdns2694227:0crwdne2694227:0
-            '"carroll_3"': crwdns2694229:0crwdne2694229:0
-            '"rios"': crwdns2694231:0crwdne2694231:0
-            '"rumi_2"': crwdns2694233:0crwdne2694233:0
-            '"hughes_1"': crwdns2694235:0crwdne2694235:0
-            '"hughes"': crwdns2694237:0crwdne2694237:0
-            '"hopler"': crwdns2694239:0crwdne2694239:0
-            '"lomeli"': crwdns2694241:0crwdne2694241:0
-            '"singer"': crwdns2694243:0crwdne2694243:0
       Poetry_setPrompt:
         text: crwdns2694245:0[LEFT_QUOTE]crwdnd2694245:0[0]crwdnd2694245:0[NAME]crwdnd2694245:0[1]crwdnd2694245:0[RIGHT_QUOTE]crwdnd2694245:0[2]crwdnd2694245:0[VAR]crwdnd2694245:0[3]crwdne2694245:0
       Poetry_setPromptWithChoices:
