@@ -68,7 +68,7 @@ export default class CoreLibrary {
     // bubbles that have expired.
     this.removeExpiredSpeechBubbles();
 
-    if (this.speechBubbles.length <= 0 || this.isPreviewFrame()) {
+    if (this.speechBubbles.length === 0 || this.isPreviewFrame()) {
       return;
     }
 
