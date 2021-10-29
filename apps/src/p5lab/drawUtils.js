@@ -25,8 +25,10 @@ export function getTextWidth(p5, text, size) {
  * tip of the triangle, and the bubble body will be centered above
  * the triangle.
  *
- * Note: A minimum bubble width should be configured based on triangleSize
- * config to avoid overlap when bubble is very narrow.
+ * Note: The bubble body and triangle stroke outlines will overlap if the width:triangleSize
+ * ratio is too low (e.g., the width is too narrow and triangle is too large). Consider
+ * setting a minimum width or calculating a ratio greater than 5:1 (not exact; just a starting
+ * point).
  *
  * @param {P5} p5
  * @param {Number} x
