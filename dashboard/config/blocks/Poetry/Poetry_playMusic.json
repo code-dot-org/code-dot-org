@@ -14,15 +14,15 @@
         "options": [
           [
             "Calm",
-            "\"placeholder\""
+            "\"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3\""
           ],
           [
             "Campfire",
-            "\"placeholder\""
+            "\"sound://category_nature/steady_campfire_loop.mp3\""
           ],
           [
             "Drizzle",
-            "\"placeholder\""
+            "\"sound://category_nature/rain_loop.mp3\""
           ],
           [
             "Fireside",
@@ -38,15 +38,15 @@
           ],
           [
             "Haunted",
-            "\"placeholder\""
+            "\"sound://category_loops/faultering_desicion_loop1.mp3\""
           ],
           [
             "Hum",
-            "\"placeholder\""
+            "\"sound://category_background/inside_plane.mp3\""
           ],
           [
             "Mission",
-            "\"placeholder\""
+            "\"sound://category_loops/red_flag_loop1.mp3\""
           ],
           [
             "Night",
@@ -66,7 +66,7 @@
           ],
           [
             "Riding",
-            "\"placeholder\""
+            "\"sound://category_background/repitition.mp3\""
           ],
           [
             "Sleepy",
@@ -74,7 +74,7 @@
           ],
           [
             "Slow",
-            "\"placeholder\""
+            "\"sound://category_loops/stabilizing_breath_loop1.mp3\""
           ],
           [
             "Waterfall",
