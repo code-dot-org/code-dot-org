@@ -164,12 +164,7 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <strong>Olawale Oladehin</strong> is the Head of Worldwide Solutions Architects – IoT (Internet of Things) at <a href="https://www.amazon.com/" target="_blank">Amazon</a>. He has 15 years of experience working across ecommerce, video, and embedded systems. He has a passion for helping customers innovate through technology to achieve their business outcomes. He holds a Bachelor’s degree in Computer Science from Princeton University.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/OyiE4iEmxoSRj2X6dY_zqXsHerdNMeJShzIsxBUtlGm9EQiYWp2pR5k7jcWkI04LR1W7QHhhw-f19DYi.hLv-PlDHZoKcMgzY" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 

@@ -17,8 +17,72 @@
             "\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\""
           ],
           [
+            "Bell",
+            "\"placeholder\""
+          ],
+          [
+            "Break",
+            "\"placeholder\""
+          ],
+          [
+            "Boing",
+            "\"placeholder\""
+          ],
+          [
+            "Bubble",
+            "\"placeholder\""
+          ],
+          [
+            "Chatter",
+            "\"placeholder\""
+          ],
+          [
+            "Deflate",
+            "\"placeholder\""
+          ],
+          [
+            "Fail",
+            "\"placeholder\""
+          ],
+          [
+            "Flutter",
+            "\"placeholder\""
+          ],
+          [
+            "Jump",
+            "\"placeholder\""
+          ],
+          [
+            "Light",
+            "\"placeholder\""
+          ],
+          [
+            "Poof",
+            "\"placeholder\""
+          ],
+          [
+            "Scan",
+            "\"placeholder\""
+          ],
+          [
             "Typewriter",
             "\"sound://category_background/typewriter.mp3\""
+          ],
+          [
+            "Vibrant",
+            "\"placeholder\""
+          ],
+          [
+            "Win",
+            "\"placeholder\""
+          ],
+          [
+            "Whirl",
+            "\"placeholder\""
+          ],
+          [
+            "Wind Chimes",
+            "\"placeholder\""
           ]
         ]
       }

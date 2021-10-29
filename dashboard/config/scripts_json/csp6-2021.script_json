@@ -4,22 +4,23 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:25 UTC",
+    "serialized_at": "2021-10-25 22:54:30 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -2240,8 +2241,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -2252,8 +2253,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -2264,8 +2265,8 @@
       "url": "https://docs.google.com/presentation/d/1gL5WpBPqyrQqATGO8IIP5DsI3T0xLfCZE-jG5mBxS1o/edit?usp=sharing",
       "key": "csp_unit_6_-_algorithms",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_6_-_algorithms"
@@ -2276,8 +2277,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -2288,8 +2289,8 @@
       "url": "https://youtu.be/VyHbd6sx5Po",
       "key": "the_halting_problem_the_unsolvable_problem",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_halting_problem_the_unsolvable_problem"
@@ -2300,9 +2301,9 @@
       "url": "https://docs.google.com/document/d/13VSFGtFwbJT73aYr4VnNJrsbnbyZBTDiSImVkqJGc5w/edit?usp=sharing",
       "key": "unreasonable-time-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "unreasonable-time-activity-guide"
@@ -2313,8 +2314,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -2417,16 +2418,6 @@
   ],
   "objectives": [
     {
-      "key": "e46f9a38-a79b-4a32-88ad-ad65132850e5",
-      "properties": {
-        "description": "Explain the formal definitions of a problem, an algorithm, sequencing, selection, and iteration."
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "objective.key": "e46f9a38-a79b-4a32-88ad-ad65132850e5"
-      }
-    },
-    {
       "key": "18da1a07-ba79-4b00-94b4-0d13c68dc1b7",
       "properties": {
         "description": "Explain that some problems may look different but be similar or look similar but be different."
@@ -2434,36 +2425,6 @@
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
         "objective.key": "18da1a07-ba79-4b00-94b4-0d13c68dc1b7"
-      }
-    },
-    {
-      "key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7",
-      "properties": {
-        "description": "Explain that some algorithms may look or operate differently but still solve the same problem."
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "objective.key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7"
-      }
-    },
-    {
-      "key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d",
-      "properties": {
-        "description": "Use Linear Search to determine if a number is in a list"
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithm Efficiency",
-        "objective.key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d"
-      }
-    },
-    {
-      "key": "b8f2d496-5779-4895-8d40-ed1eb3e392de",
-      "properties": {
-        "description": "Use Binary Search to determine if a number is in a list"
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithm Efficiency",
-        "objective.key": "b8f2d496-5779-4895-8d40-ed1eb3e392de"
       }
     },
     {
@@ -2477,33 +2438,13 @@
       }
     },
     {
-      "key": "956905f6-487b-45b3-a1a2-bef4c1df1d26",
+      "key": "330796cd-ace1-42dc-9608-f68f25fa852f",
       "properties": {
-        "description": "Explain the difference between problems that run in a reasonable time and those that do not"
+        "description": "Calculate the speedup of a parallel solution to a problem"
       },
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
-        "objective.key": "956905f6-487b-45b3-a1a2-bef4c1df1d26"
-      }
-    },
-    {
-      "key": "5c4e571e-d6bb-4deb-a331-6558750b7561",
-      "properties": {
-        "description": "Explain how both formal mathematical reasoning and informal measurement can be used to determine an algorithms efficiency"
-      },
-      "seeding_key": {
-        "lesson.key": "Unreasonable Time",
-        "objective.key": "5c4e571e-d6bb-4deb-a331-6558750b7561"
-      }
-    },
-    {
-      "key": "536a7303-8822-4131-a076-6a62d1ed2a4d",
-      "properties": {
-        "description": "Determine if an algorithm runs in unreasonable time."
-      },
-      "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
-        "objective.key": "536a7303-8822-4131-a076-6a62d1ed2a4d"
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "objective.key": "330796cd-ace1-42dc-9608-f68f25fa852f"
       }
     },
     {
@@ -2517,13 +2458,13 @@
       }
     },
     {
-      "key": "67627eba-d070-423a-bd7b-774fad35a986",
+      "key": "536a7303-8822-4131-a076-6a62d1ed2a4d",
       "properties": {
-        "description": "Distinguish between decision problems and optimization problems. "
+        "description": "Determine if an algorithm runs in unreasonable time."
       },
       "seeding_key": {
         "lesson.key": "The Limits of Algorithms",
-        "objective.key": "67627eba-d070-423a-bd7b-774fad35a986"
+        "objective.key": "536a7303-8822-4131-a076-6a62d1ed2a4d"
       }
     },
     {
@@ -2537,6 +2478,16 @@
       }
     },
     {
+      "key": "5c4e571e-d6bb-4deb-a331-6558750b7561",
+      "properties": {
+        "description": "Explain how both formal mathematical reasoning and informal measurement can be used to determine an algorithms efficiency"
+      },
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "objective.key": "5c4e571e-d6bb-4deb-a331-6558750b7561"
+      }
+    },
+    {
       "key": "5d5a9cd3-2c10-4f3d-a8c5-c04ed262c634",
       "properties": {
         "description": "Explain the difference between sequential, parallel, and distributed computing."
@@ -2547,13 +2498,63 @@
       }
     },
     {
-      "key": "330796cd-ace1-42dc-9608-f68f25fa852f",
+      "key": "67627eba-d070-423a-bd7b-774fad35a986",
       "properties": {
-        "description": "Calculate the speedup of a parallel solution to a problem"
+        "description": "Distinguish between decision problems and optimization problems. "
       },
       "seeding_key": {
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "objective.key": "330796cd-ace1-42dc-9608-f68f25fa852f"
+        "lesson.key": "The Limits of Algorithms",
+        "objective.key": "67627eba-d070-423a-bd7b-774fad35a986"
+      }
+    },
+    {
+      "key": "956905f6-487b-45b3-a1a2-bef4c1df1d26",
+      "properties": {
+        "description": "Explain the difference between problems that run in a reasonable time and those that do not"
+      },
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "objective.key": "956905f6-487b-45b3-a1a2-bef4c1df1d26"
+      }
+    },
+    {
+      "key": "b8f2d496-5779-4895-8d40-ed1eb3e392de",
+      "properties": {
+        "description": "Use Binary Search to determine if a number is in a list"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "objective.key": "b8f2d496-5779-4895-8d40-ed1eb3e392de"
+      }
+    },
+    {
+      "key": "e46f9a38-a79b-4a32-88ad-ad65132850e5",
+      "properties": {
+        "description": "Explain the formal definitions of a problem, an algorithm, sequencing, selection, and iteration."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "e46f9a38-a79b-4a32-88ad-ad65132850e5"
+      }
+    },
+    {
+      "key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d",
+      "properties": {
+        "description": "Use Linear Search to determine if a number is in a list"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "objective.key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d"
+      }
+    },
+    {
+      "key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7",
+      "properties": {
+        "description": "Explain that some algorithms may look or operate differently but still solve the same problem."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7"
       }
     },
     {
@@ -2568,90 +2569,6 @@
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.J.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithm Efficiency",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithm Efficiency",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-11"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
@@ -2724,79 +2641,86 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.4"
+        "standard.shortcode": "AAP-2.A.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.7"
+        "standard.shortcode": "AAP-2.A.2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.2"
+        "standard.shortcode": "AAP-2.A.3"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.8"
+        "standard.shortcode": "AAP-2.A.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.9"
+        "standard.shortcode": "AAP-2.B.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.B.1"
+        "standard.shortcode": "AAP-2.G.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.B.2"
+        "standard.shortcode": "AAP-2.J.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.B.3"
+        "standard.shortcode": "AAP-2.L.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-11"
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.5"
       }
     },
     {
@@ -2881,6 +2805,83 @@
         "lesson.key": "Parallel and Distributed Algorithms",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "CSN-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
       }
     }
   ],

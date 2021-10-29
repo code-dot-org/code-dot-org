@@ -2,7 +2,9 @@
   "func": "turnTo",
   "category": "Turtle",
   "paletteParams": [
-    "angle"
+    {
+      "name": "angle"
+    }
   ],
   "params": [
     "0"
