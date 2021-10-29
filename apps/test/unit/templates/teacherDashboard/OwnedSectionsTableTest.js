@@ -241,7 +241,7 @@ describe('OwnedSectionsTable Sorting', () => {
     trows.forEach((tr, rowIndex) => {
       const cells = tr.find('td');
       expect(cells.at(GRADE_COLUMN).text()).to.equal(
-        expectedGradeOrder[rowIndex].grade
+        expectedGradeOrder[rowIndex]
       );
     });
   });
