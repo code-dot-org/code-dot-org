@@ -47,7 +47,7 @@
   "created_at": "2021-10-13T19:53:43.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-13T19:53:43.738+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choices_practice\\\"\"],\"cloned_from\":\"poetry_module_choices_practice\"},{\"changed_at\":\"2021-10-13 19:54:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:04:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:06:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-22 14:45:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-25 12:49:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 00:20:12 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-13T19:53:43.738+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choices_practice\\\"\"],\"cloned_from\":\"poetry_module_choices_practice\"},{\"changed_at\":\"2021-10-13 19:54:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"include_shared_functions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:04:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 20:06:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-22 14:45:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-25 12:49:08 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 00:20:12 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-29 15:39:32 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 15:39:32 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 15:39:54 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 15:40:33 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 15:41:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -58,27 +58,27 @@
           <next>
             <block type="gamelab_setPromptWithChoices">
               <value name="QUESTION">
-                <block type="text">
+                <block type="text" can_disconnect_from_parent="false">
                   <title name="TEXT">Enter a food:</title>
                 </block>
               </value>
               <value name="VAR">
-                <block type="variables_get" can_disconnect_from_parent="false">
+                <block type="variables_get">
                   <title name="VAR">food</title>
                 </block>
               </value>
               <value name="A">
-                <block type="Poetry_stringValue">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
                   <title name="TEXT">sandwich</title>
                 </block>
               </value>
               <value name="B">
-                <block type="Poetry_stringValue">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
                   <title name="TEXT">salad</title>
                 </block>
               </value>
               <value name="C">
-                <block type="Poetry_stringValue">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
                   <title name="TEXT">cupcake</title>
                 </block>
               </value>
@@ -89,15 +89,15 @@
           <next>
             <block type="Poetry_setTitle">
               <value name="TITLE">
-                <block type="Poetry_stringValue">
-                  <title name="TEXT">An Ode to Food</title>
+                <block type="gamelab_textJoin">
+                  <title name="TEXT1">An Ode to Food</title>
                 </block>
               </value>
               <next>
                 <block type="Poetry_addLine">
                   <value name="LINE">
-                    <block type="Poetry_stringValue">
-                      <title name="TEXT">Life is too short</title>
+                    <block type="gamelab_textJoin">
+                      <title name="TEXT1">Life is too short</title>
                     </block>
                   </value>
                   <next>
@@ -106,7 +106,7 @@
                         <block type="gamelab_textJoin">
                           <title name="TEXT1">to eat a bad </title>
                           <value name="TEXT2">
-                            <block type="variables_get">
+                            <block type="gamelab_textVariableJoin">
                               <title name="VAR">food</title>
                             </block>
                           </value>
@@ -115,21 +115,9 @@
                       <next>
                         <block type="Poetry_animateText">
                           <next>
-                            <block type="Poetry_setFontColor">
-                              <value name="FILL">
-                                <block type="colour_picker">
-                                  <title name="COLOUR">#ffff99</title>
-                                </block>
-                              </value>
-                              <next>
-                                <block type="Poetry_setBackground">
-                                  <value name="COLOR">
-                                    <block type="colour_picker">
-                                      <title name="COLOUR">#660000</title>
-                                    </block>
-                                  </value>
-                                </block>
-                              </next>
+                            <block type="Poetry_setBackgroundEffect">
+                              <title name="EFFECT">"squiggles"</title>
+                              <title name="PALETTE">"summer"</title>
                             </block>
                           </next>
                         </block>
@@ -138,24 +126,6 @@
                   </next>
                 </block>
               </next>
-            </block>
-          </next>
-        </block>
-        <block type="Poetry_whenLineShows">
-          <title name="N">1</title>
-          <next>
-            <block type="Poetry_setBackgroundEffect">
-              <title name="EFFECT">"squiggles"</title>
-              <title name="PALETTE">"summer"</title>
-            </block>
-          </next>
-        </block>
-        <block type="Poetry_whenLineShows">
-          <title name="N">2</title>
-          <next>
-            <block type="Poetry_setBackgroundEffect">
-              <title name="EFFECT">"blooming"</title>
-              <title name="PALETTE">"sunrise"</title>
             </block>
           </next>
         </block>
