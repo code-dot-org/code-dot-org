@@ -1,20 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import JavalabButton from '@cdo/apps/javalab/JavalabButton';
 import StudentGroup from './StudentGroup';
 import color from '@cdo/apps/util/color';
-import {HEADER_STYLE} from './UnassignedStudentsPanel';
+import {HEADER_STYLE, BUTTON_STYLE} from './UnassignedStudentsPanel';
 
 export default function AssignedStudentsPanel({groups, onCreateGroupClick}) {
+  // TO DO: style and add small pop-up to get group name from teacher when creating a group.
+  // https://codedotorg.atlassian.net/browse/CSA-1033
   return (
     <div style={styles.groupsPanel}>
       <div style={styles.header}>
-        <span>Groups</span>
-        <Button
+        <span>{i18n.groups()}</span>
+        <JavalabButton
           onClick={onCreateGroupClick}
-          icon={'plus'}
-          text={'Create Group'}
-          color={'gray'}
+          icon={<FontAwesome icon="plus" className="fa" />}
+          text={i18n.createGroup()}
+          style={styles.button}
+          isHorizontal
         />
       </div>
       <div style={styles.groupsContainer}>
@@ -42,6 +47,7 @@ const styles = {
     width: 500
   },
   header: HEADER_STYLE,
+  button: BUTTON_STYLE,
   groupsContainer: {
     display: 'flex',
     flexDirection: 'column',

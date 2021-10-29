@@ -4,13 +4,17 @@ import {Droppable} from 'react-beautiful-dnd';
 import color from '@cdo/apps/util/color';
 import Student from './Student';
 
-// A CodeReviewGroup is a component that
-// CodeReviewGroupMembers can be dragged between as teachers are arranging students
-// in their sections into groups.
+// A StudentGroup is a component that
+// Students can be dragged between as teachers are arranging students
+// in their sections into code review groups.
 // These are called "Droppables" in the package we're using (React Beautiful DnD).
 // More information on React Beautiful DnD can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
 export default function StudentGroup({droppableId, members}) {
+  // TO DO: add header with group name and trash icon to remove a group.
+  // https://codedotorg.atlassian.net/browse/CSA-1027
+  // This component is also used to render unassigned students (which don't need a header),
+  // so header should be added conditionally or another component added to wrap this one.
   return (
     <Droppable key={droppableId} droppableId={droppableId}>
       {(provided, snapshot) => (

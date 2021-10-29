@@ -1,19 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
-import StudentGroup from './StudentGroup';
+import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import JavalabButton from '@cdo/apps/javalab/JavalabButton';
+import StudentGroup from './StudentGroup';
 
 export default function UnassignedStudentsPanel({unassignedGroup}) {
+  // TO DO: implement unassigning students and style
+  // https://codedotorg.atlassian.net/browse/CSA-1028
   return (
     <div style={styles.unassignedStudentsPanel}>
       <div style={styles.header}>
-        <span>Unassigned Students</span>
-        <Button
+        <span>{i18n.unassignedStudents()}</span>
+        <JavalabButton
           onClick={() => {}}
-          icon={'times'}
-          text={'Unassign All'}
-          color={'gray'}
+          icon={<FontAwesome icon="times" className="fa" />}
+          text={i18n.unassignAll()}
+          style={styles.button}
+          isHorizontal
         />
       </div>
       <div style={styles.groupsContainer}>
@@ -36,13 +41,21 @@ export const HEADER_STYLE = {
   alignItems: 'center',
   justifyContent: 'space-between',
   padding: '0 5px',
-  border: `1px solid ${color.lightest_gray}`,
-  background: color.light_gray
+  border: `1px solid ${color.lighter_gray}`,
+  background: color.lightest_gray
+};
+
+export const BUTTON_STYLE = {
+  backgroundColor: color.lightest_gray,
+  color: color.dark_charcoal,
+  borderRadius: 4,
+  border: `1px solid ${color.dark_charcoal}`
 };
 
 const styles = {
   unassignedStudentsPanel: {
     width: 400
   },
-  header: HEADER_STYLE
+  header: HEADER_STYLE,
+  button: BUTTON_STYLE
 };
