@@ -454,7 +454,7 @@ Javalab.prototype.closePhotoPrompter = function() {
 };
 
 Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
-  // Only pass the selected photo the mini-app if it supports the photo prompter
+  // Only pass the selected photo to the mini-app if it supports the photo prompter
   this.miniApp?.onPhotoPrompterFileSelected?.(photo);
 };
 

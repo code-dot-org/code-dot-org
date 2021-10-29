@@ -129,6 +129,35 @@ class JavalabConsole extends React.Component {
     });
   }
 
+  renderConsoleBody() {
+    const {
+      isPhotoPrompterOpen,
+      photoPrompterPromptText,
+      onPhotoPrompterFileSelected,
+      closePhotoPrompter,
+      isDarkMode
+    } = this.props;
+
+    if (isPhotoPrompterOpen) {
+      return (
+        <PhotoSelectionView
+          promptText={photoPrompterPromptText}
+          style={styles.photoPrompter}
+          onPhotoSelected={file => {
+            onPhotoPrompterFileSelected(file);
+            closePhotoPrompter();
+          }}
+        />
+      );
+    } else {
+      return (
+        <div onClick={this.onLogsClick} style={styles.logs}>
+          {this.renderConsoleLogs(isDarkMode)}
+        </div>
+      );
+    }
+  }
+
   onInputKeyDown = e => {
     const {appendInputLog, onInputMessage} = this.props;
     const input = e.target.value;
@@ -155,16 +184,7 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {
-      isDarkMode,
-      style,
-      bottomRow,
-      clearConsoleLogs,
-      isPhotoPrompterOpen,
-      closePhotoPrompter,
-      onPhotoPrompterFileSelected,
-      photoPrompterPromptText
-    } = this.props;
+    const {isDarkMode, style, bottomRow, clearConsoleLogs} = this.props;
 
     return (
       <div style={style}>
@@ -190,20 +210,7 @@ class JavalabConsole extends React.Component {
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
           >
-            {isPhotoPrompterOpen ? (
-              <PhotoSelectionView
-                promptText={photoPrompterPromptText}
-                style={styles.photoPrompter}
-                onPhotoSelected={file => {
-                  onPhotoPrompterFileSelected(file);
-                  closePhotoPrompter();
-                }}
-              />
-            ) : (
-              <div onClick={this.onLogsClick} style={styles.logs}>
-                {this.renderConsoleLogs(isDarkMode)}
-              </div>
-            )}
+            {this.renderConsoleBody()}
           </div>
           {bottomRow && [
             {...bottomRow, key: 'bottom-row'},
