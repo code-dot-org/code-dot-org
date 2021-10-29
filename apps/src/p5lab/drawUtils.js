@@ -47,7 +47,7 @@ export function speechBubble(
   y,
   width,
   height,
-  {triangleSize = 10, fill = 'white', strokeWeight = 2, stroke = 'black'} = {}
+  {triangleSize = 10, fill = 'white', strokeWeight = 2, stroke = 'gray'} = {}
 ) {
   const minX = x - width / 2;
   const minY = y - height - triangleSize;
