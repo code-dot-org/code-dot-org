@@ -9,11 +9,12 @@ import {getPoem} from './poem';
 
 export default class Poetry extends SpriteLab {
   init(config) {
-    super.init(config);
+    const loader = super.init(config);
     const poem = config.level.selectedPoem || getPoem(this.level.defaultPoem);
     if (poem) {
       getStore().dispatch(setPoem(poem));
     }
+    return loader;
   }
 
   getAvatarUrl(levelInstructor) {
