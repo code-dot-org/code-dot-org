@@ -146,8 +146,5 @@ const generateNewGroup = () => {
 const styles = {
   dragAndDropContainer: {
     display: 'flex'
-  },
-  groupsHeader: {
-    justifyContent: 'flex-end'
   }
 };
