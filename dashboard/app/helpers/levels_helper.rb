@@ -306,7 +306,7 @@ module LevelsHelper
     end
 
     if @level && @script_level
-      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section.id)
+      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id)
     end
 
     # Blockly caches level properties, whereas this field depends on the user
