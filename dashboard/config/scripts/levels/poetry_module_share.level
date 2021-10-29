@@ -17,7 +17,7 @@
     "embed": "false",
     "callout_json": "[]",
     "instructions_important": "false",
-    "long_instructions": "<em>Animate your silly poem with <strong>effects</strong> and <strong>sprites</strong>.</em>",
+    "long_instructions": "*You're finished, and it's time to share your poem! Great work!*\r\n\r\n* Make sure all of your code works like you'd expect.\r\n* Add any finishing touches.",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -32,22 +32,22 @@
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "instructions_icon": "octi",
+    "instructions_icon": "octiHappy",
     "show_poem_dropdown": "false",
     "blockly_variables": "word1, word2, word3",
     "min_workspace_height": "0",
+    "project_template_level_name": "poetry_module_template",
     "skip_autosave": true,
     "standalone_app_name": "poetry",
-    "project_template_level_name": "poetry_module_variables_template",
     "preload_asset_list": null,
     "default_poem": null
   },
   "game_id": 69,
   "published": true,
-  "created_at": "2021-10-21T18:27:54.000Z",
+  "created_at": "2021-10-29T16:32:57.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-21T18:27:54.972+00:00\",\"changed\":[\"cloned from \\\"poetry_module_variables_template\\\"\"],\"cloned_from\":\"poetry_module_variables_template\"},{\"changed_at\":\"2021-10-21 18:28:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-21 18:39:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 13:34:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 13:37:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 15:50:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-29T16:32:57.428+00:00\",\"changed\":[\"cloned from \\\"poetry_module_conditionals_freeplay\\\"\"],\"cloned_from\":\"poetry_module_conditionals_freeplay\"},{\"changed_at\":\"2021-10-29 16:33:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"free_play\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -55,74 +55,7 @@
     <start_blocks>
       <xml>
         <block type="when_run">
-          <next>
-            <block type="gamelab_setPrompt">
-              <value name="QUESTION">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
-                  <title name="TEXT">Name an animal:</title>
-                </block>
-              </value>
-              <value name="VAR">
-                <block type="variables_get">
-                  <title name="VAR">animal1</title>
-                </block>
-              </value>
-              <next>
-                <block type="gamelab_setPrompt">
-                  <value name="QUESTION">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false">
-                      <title name="TEXT">Name another animal:</title>
-                    </block>
-                  </value>
-                  <value name="VAR">
-                    <block type="variables_get">
-                      <title name="VAR">animal2</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_whenAllPromptsAnswered" deletable="false">
-          <next>
-            <block type="Poetry_setTitle">
-              <value name="TITLE">
-                <block type="gamelab_textJoin">
-                  <title name="TEXT1">The </title>
-                  <value name="TEXT2">
-                    <block type="Poetry_textVariableJoin">
-                      <title name="VAR">animal1</title>
-                      <value name="TEXT2">
-                        <block type="gamelab_textJoin">
-                          <title name="TEXT1"> and the </title>
-                          <value name="TEXT2">
-                            <block type="variables_get">
-                              <title name="VAR">animal2</title>
-                            </block>
-                          </value>
-                        </block>
-                      </value>
-                    </block>
-                  </value>
-                </block>
-              </value>
-              <next>
-                <block type="Poetry_setAuthor">
-                  <value name="AUTHOR">
-                    <block type="Poetry_stringValue">
-                      <title name="TEXT">--Your Name--</title>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="Poetry_addLine"/>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
-        <block type="Poetry_animateText" deletable="false"/>
+  </block>
       </xml>
     </start_blocks>
     <toolbox_blocks>
@@ -173,8 +106,43 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_setPromptWithChoices">
+            <value name="QUESTION">
+              <block type="text" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="VAR">
+              <block type="variables_get" can_disconnect_from_parent="false">
+                <title name="VAR">???</title>
+              </block>
+            </value>
+            <value name="A">
+              <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="B">
+              <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="C">
+              <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
           <block type="gamelab_textVariableJoin">
             <title name="VAR">???</title>
+          </block>
+          <block type="gamelab_ifVarEquals">
+            <title name="NUM">???</title>
+            <value name="VAL">
+              <block type="Poetry_stringValue">
+                <title name="TEXT"/>
+              </block>
+            </value>
           </block>
         </category>
         <category name="Effects">
