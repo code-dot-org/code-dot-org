@@ -4,13 +4,15 @@ import {Draggable} from 'react-beautiful-dnd';
 import color from '@cdo/apps/util/color';
 import {grid} from './StudentGroup';
 
-// A CodeReviewGroupMember is a component that
-// can be dragged between CodeReviewGroups
-// as teachers arrange students in their section into groups.
+// A Student is a component that
+// can be dragged between StudentGroups
+// as teachers arrange students in their section into code review groups.
 // These are called "Draggables" in the package we're using (React Beautiful DnD).
 // More information on React Beautiful DnD can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
 export default function Student({followerId, name, index}) {
+  // TO DO: style and add drag handle.
+  // https://codedotorg.atlassian.net/browse/CSA-1029
   return (
     <Draggable
       key={followerId}
