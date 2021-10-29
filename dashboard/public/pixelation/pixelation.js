@@ -130,6 +130,10 @@ function initProjects() {
       getSelectedSong: function() {
         return false;
       },
+      setSelectedPoem: function() {},
+      getSelectedPoem: function() {
+        return false;
+      },
       setInitialLevelHtml: function(levelHtml) {},
       getLevelHtml: function() {
         return "";

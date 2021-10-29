@@ -2208,6 +2208,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "¡Bloque nuevo!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "¡Bloque nuevo!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "¡Bloque nuevo!",
+          "poetry_foreground": "¡Bloque nuevo!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "¡Bloque nuevo!",
+          "poetry_multiple_sprites": "¡Bloque nuevo!",
+          "poetry_new_block": "¡Bloque nuevo!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "¡Bloque nuevo!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "¡Bloque nuevo!",
+          "poetry_sprite_stops": "¡Bloque nuevo!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "¡Bloque nuevo!",
+          "poetry_remove_sprite": "¡Bloque nuevo!"
         }
       }
     }

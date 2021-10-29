@@ -1680,6 +1680,72 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "새 블록!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "새 블록!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "새 블록!",
+          "poetry_foreground": "새 블록!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "새 블록!",
+          "poetry_multiple_sprites": "새 블록!",
+          "poetry_new_block": "새 블록!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "새 블록!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "새 블록!",
+          "poetry_sprite_stops": "새 블록!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "새 블록!",
+          "poetry_remove_sprite": "새 블록!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_collector": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_pet": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "여기를 클릭하여 행동 카테고리를 여세요."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "여기를 클릭하여 스프라이트 카테고리를 여세요."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "여기를 클릭하여 위치 카테고리를 여세요."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "여기서 새 블록을 찾으세요."
         }
       }
     }

@@ -164,6 +164,24 @@
         },
         "helloworld_retro_behaviors": {
           "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "mutare cu tastele săgeată"
         }
       }
     }

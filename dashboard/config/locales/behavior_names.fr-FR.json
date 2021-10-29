@@ -1619,6 +1619,24 @@
         },
         "helloworld_retro_events": {
           "moving forward": "avancer"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "se déplacer avec les touches de direction"
         }
       }
     }

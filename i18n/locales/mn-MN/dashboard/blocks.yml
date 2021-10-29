@@ -1149,6 +1149,13 @@ mn:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": хямрах
+            "'sound://category_animals/bear.mp3'": баавгай
+            "'sound://category_animals/cat.mp3'": муур
+            "'sound://category_animals/cow.mp3'": үхэр
+            "'sound://category_animals/sheep.mp3'": хонь
+            "'sound://category_animals/chicken.mp3'": тахиа
+            "'sound://category_animals/dolphin.mp3'": далайн гахай
+            "'sound://category_animals/dog.mp3'": нохой
             "'sound://category_digital/jump_7.mp3'": үсрэх
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION}-г заах"
@@ -1601,8 +1608,12 @@ mn:
         options:
           EFFECT:
             '"rain"': бороотой
+      Poetry_makeNewSpriteAnon:
+        text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       Poetry_playSound:
         text: хөгжимтоглох {SOUND}
+      Poetry_setBackground:
+        text: суурь өнгийг тохируулах {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

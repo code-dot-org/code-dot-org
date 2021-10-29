@@ -1137,6 +1137,13 @@ fil:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_animals/bear.mp3'": oso
+            "'sound://category_animals/cat.mp3'": pusa
+            "'sound://category_animals/cow.mp3'": baka
+            "'sound://category_animals/sheep.mp3'": tupa
+            "'sound://category_animals/chicken.mp3'": manok
+            "'sound://category_animals/dolphin.mp3'": dolphin
+            "'sound://category_animals/dog.mp3'": aso
             "'sound://category_digital/jump_7.mp3'": talon
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
@@ -1565,8 +1572,12 @@ fil:
         options:
           EFFECT:
             '"rain"': ulan
+      Poetry_makeNewSpriteAnon:
+        text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       Poetry_playSound:
         text: Ang ... {SOUND}
+      Poetry_setBackground:
+        text: set background color {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

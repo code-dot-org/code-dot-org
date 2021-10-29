@@ -163,6 +163,15 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 
+  test "summarize_for_edit returns level_num for name on blockly level" do
+    game = Game.find_by_name("CustomMaze")
+    blockly_level = create(:level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze")
+
+    summary = blockly_level.summarize_for_edit
+
+    assert_equal(summary[:name], 'blockly:CustomMaze:special_blockly_level')
+  end
+
   test "get_question_text returns question text for free response level" do
     free_response_level = create :level, name: 'A question', long_instructions: 'Answer this question.',
       type: 'FreeResponse'
@@ -1092,7 +1101,7 @@ class LevelTest < ActiveSupport::TestCase
   test "get search options" do
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
-      "All types", "Ailab", "Applab", "Artist", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "All types", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "NetSim",

@@ -36,11 +36,14 @@ pt:
       level: nível
       name: nome
       nectar: néctar
+      planet: planeta
       points: pontos
       random: aleatório
       repeat: repita
       right: para direita
       score: pontuação
+      shout: grito
+      sides: lados
       size: tamanho
       speed: velocidade
       startX: startX

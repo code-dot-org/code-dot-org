@@ -34,7 +34,6 @@ import JsInterpreterLogger from '../JsInterpreterLogger';
 import * as elementUtils from './designElements/elementUtils';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
 import logToCloud from '../logToCloud';
-import DialogButtons from '../templates/DialogButtons';
 import executionLog from '../executionLog';
 import annotationList from '../acemode/annotationList';
 import Exporter from './Exporter';
@@ -88,6 +87,14 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
 import autogenerateML from '@cdo/apps/applab/ai';
+
+/**
+ * Constants for Spotify dataset alert
+ */
+const TOP_200_USA = 'Top 200 USA';
+const TOP_200_Worldwide = 'Top 200 Worldwide';
+const TOP_50_USA = 'Top 200 USA';
+const TOP_50_Worldwide = 'Top 200 Worldwide';
 
 /**
  * Create a namespace for the application.
@@ -947,6 +954,7 @@ function setupReduxSubscribers(store) {
       let tableName =
         typeof snapshot.key === 'function' ? snapshot.key() : snapshot.key;
       tableName = unescapeFirebaseKey(tableName);
+      checkDataSetForWarning(tableName);
       store.dispatch(addTableName(tableName, tableType.SHARED));
     });
     currentTableRef.on('child_removed', snapshot => {
@@ -956,6 +964,28 @@ function setupReduxSubscribers(store) {
       store.dispatch(deleteTableName(tableName));
     });
   }
+}
+
+/**
+ * Show warning if project is using spotify datasets that will be deprecated.
+ * To be removed once old datasets are removed (https://codedotorg.atlassian.net/browse/STAR-1797)
+ */
+function checkDataSetForWarning(tableName) {
+  // Only two datasets will need to be handled: TOP_200_USA and TOP_200_WORLDWIDE
+  if (tableName !== TOP_200_USA && tableName !== TOP_200_Worldwide) {
+    return;
+  }
+
+  const msg = applabMsg.deprecatedDataset({
+    name: tableName === TOP_200_USA ? TOP_200_USA : TOP_200_Worldwide,
+    alternative: tableName === TOP_200_USA ? TOP_50_USA : TOP_50_Worldwide
+  });
+
+  studioApp().displayWorkspaceAlert(
+    'warning',
+    <div>{msg}</div>,
+    true /* bottom */
+  );
 }
 
 Applab.onIsRunningChange = function() {
@@ -1481,62 +1511,6 @@ function onDataViewChange(view, oldTableName, newTableName) {
       return;
   }
 }
-
-/**
- * Show a modal dialog with a title, text, and OK and Cancel buttons
- * @param {title}
- * @param {text}
- * @param {callback} [onConfirm] what to do when the user clicks OK
- * @param {string} [filterSelector] Optional selector to filter for.
- */
-
-Applab.showConfirmationDialog = function(config) {
-  config.text = config.text || '';
-  config.title = config.title || '';
-
-  var contentDiv = document.createElement('div');
-  contentDiv.innerHTML =
-    '<p class="dialog-title">' +
-    config.title +
-    '</p>' +
-    '<p>' +
-    config.text +
-    '</p>';
-
-  var buttons = document.createElement('div');
-  ReactDOM.render(
-    <DialogButtons
-      confirmText={commonMsg.dialogOK()}
-      cancelText={commonMsg.dialogCancel()}
-    />,
-    buttons
-  );
-  contentDiv.appendChild(buttons);
-
-  var dialog = studioApp().createModalDialog({
-    contentDiv: contentDiv,
-    defaultBtnSelector: '#confirm-button'
-  });
-
-  var cancelButton = buttons.querySelector('#again-button');
-  if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function() {
-      dialog.hide();
-    });
-  }
-
-  var confirmButton = buttons.querySelector('#confirm-button');
-  if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function() {
-      if (config.onConfirm) {
-        config.onConfirm();
-      }
-      dialog.hide();
-    });
-  }
-
-  dialog.show();
-};
 
 Applab.onPuzzleFinish = function() {
   Applab.onPuzzleComplete(false); // complete without submitting

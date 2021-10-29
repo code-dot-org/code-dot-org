@@ -3218,7 +3218,7 @@
         "courseB_Scrat_ramp3a_2021": "Dodaj blok \"Północ\" do dolnej części innych bloków, aby ukończyć ten kod, a następnie kliknij \"▶ Uruchom\".",
         "courseB_Scrat_ramp3b_2021": "Przeciągnij dodatkowy blok z powrotem do przybornika, aby je odrzucić.",
         "courseB_Scrat_ramp4a_2021": "Czy jesteś w stanie wymyślić, który blok musisz dodać do dolnej części innych bloków, aby ukończyć ten kod?",
-        "courseB_Scrat_ramp5a_2021": "Wypróbuj tego wszystkiego sam!",
+        "courseB_Scrat_ramp5a_2021": "Wypróbuj to wszystko sam!",
         "courseB_artist_loops10_2021": "Wykorzystaj to, czego się nauczyłeś, aby narysować obrazek tego, co, jak Ci się wydaje, zobaczył artysta, gdy wrócił do domu.",
         "courseB_artist_loops1_2021": "To jest nowy typ łamigłówki o nazwie: \"Artysta\". Graj na tym poziomie i narysuj coś zabawnego.",
         "courseB_artist_loops2_2021": "Artysta próbuje narysować linię **6** razy, ale to mu się nie udaje. Możesz pomóc?",
@@ -3674,7 +3674,17 @@
         "helloworld_retro_multi": "Niech każdy z twoich dwóch duszków coś powie.",
         "helloworld_retro_say": "Użyj bloku „powiedz”, abym powiedział, co chcesz!",
         "helloworld_retro_sizes": "Nauczmy się zmieniać rozmiar duszków.",
-        "helloworld_retro_sounds": "Nauczmy się, jak odtwarzać dźwięki."
+        "helloworld_retro_sounds": "Nauczmy się, jak odtwarzać dźwięki.",
+        "poetry_hoc_events1": "Wykorzystajmy zdarzenia, aby zmienić animację, gdy wiersz wspomina o czymś nowym.",
+        "poetry_hoc_exemplar1": "Czy mógłbyś przewidzieć!",
+        "poetry_hoc_exemplar2": "Czy mógłbyś przewidzieć!",
+        "poetry_hoc_sounds": "Dodaj muzykę w tle do swojego programu, aby zmienić nastrój wiersza podczas jego czytania.",
+        "poetry_hoc_addSprites": "Autorzy używają obrazów, aby namalować obraz w umyśle czytelnika. Możesz dodać duszki, aby zilustrować swój wiersz.",
+        "poetry_hoc_backgroundEffects": "Kiedy czytasz ten wiersz, jaki kolor przychodzi Ci na myśl? Znajdź efekt tła, który pasuje do nastroju tego wiersza.",
+        "poetry_hoc_spriteBehaviors": "W trakcie działania programu duszki mogą w kółko wykonywać określone czynności lub zachowania.",
+        "poetry_hoc_spriteSizes": "Możesz zmienić rozmiar już utworzonego duszka.",
+        "courseF_sprites_make": "Utwórz duszka.",
+        "courseF_sprites_moreSprites": "Utwórz 4 duszki."
       }
     }
   }

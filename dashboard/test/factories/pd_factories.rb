@@ -411,7 +411,7 @@ FactoryGirl.define do
     association :user, factory: :teacher
 
     course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
-    application_year Pd::Application::ApplicationConstants::YEAR_19_20
+    application_year Pd::SharedApplicationConstants::YEAR_19_20
     scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
   end
 
@@ -773,6 +773,9 @@ FactoryGirl.define do
     phone '5558675309'
     gender_identity 'Male'
     race ['Other']
+    street_address '333 Hogwarts Place'
+    city 'Magic City'
+    state 'Washington'
     add_attribute :zip_code, '98101'
     association :school
     principal_first_name 'Albus'
@@ -782,6 +785,7 @@ FactoryGirl.define do
     principal_confirm_email 'socks@hogwarts.edu'
     principal_phone_number '5555882300'
     current_role 'Teacher'
+    previous_used_curriculum ['Neither']
     previous_yearlong_cdo_pd ['CS in Science']
     committed 'Yes'
     willing_to_travel 'Up to 50 miles'

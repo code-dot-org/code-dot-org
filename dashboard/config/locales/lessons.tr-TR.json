@@ -2,6 +2,28 @@
   "tr-TR": {
     "data": {
       "lessons": {
+        "artist/Artist": {
+          "overview": "Bu derste öğrenciler, ekrandaki çizimleri tamamlaması için Sanatçının kontrolünü ele alacaktır. Bu Sanatçı aşaması, öğrencilerin, '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak sağlayacaktır.",
+          "student_overview": "Sanatçıyı programlayarak güzel resimler oluşturun."
+        },
+        "sports/Sports": {
+          "overview": "Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.",
+          "student_overview": "Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!"
+        },
+        "basketball/Bounce": {
+          "overview": "Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.",
+          "student_overview": "Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!"
+        },
+        "oceans/Oceans": {
+          "student_overview": "Ders Özeti: Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır."
+        },
+        "outbreak/Outbreak": {
+          "purpose": "Bir önceki derste öğrenciler basit bir simülasyondan veri toplayıp yorumladılar. Bu derste öğrenciler kendi simülasyon modellerini kodlamak için yönergeleri takip edecekler. Öğrencilerin gerçek dünyadaki virüs salgınları hakkındaki ön bilgileri hayali bir senaryoya uygulanacaktır."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.",
+          "student_overview": "Bulmacaları tamamlamak için tıklayıp sürükleyin."
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının \"Müşteriler\" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.",
           "student_overview": "Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının \"Müşteriler\" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır."

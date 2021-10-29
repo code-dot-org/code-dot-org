@@ -10,11 +10,12 @@
     "csd7-2021"
   ],
   "published_state": "stable",
+  "instruction_type": "teacher_led",
   "properties": {
-    "has_numbered_units": true,
-    "version_year": "2021",
     "family_name": "csd",
-    "has_verified_resources": true
+    "has_numbered_units": true,
+    "has_verified_resources": true,
+    "version_year": "2021"
   },
   "resources": [
     {
@@ -62,16 +63,6 @@
       }
     },
     {
-      "name": "Getting Started with CSD",
-      "url": "https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview",
-      "key": "getting_started_with_csd",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "getting_started_with_csd"
-      }
-    },
-    {
       "name": "CSD Curriculum Guide",
       "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
       "key": "csd_curriculum_guide",
@@ -84,18 +75,6 @@
       }
     },
     {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
-      "key": "csd_implementation_guide",
-      "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
       "name": "CSD Guide to Assessment",
       "url": "https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview",
       "key": "csd_guide_to_assessment",
@@ -103,6 +82,16 @@
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_assessment"
+      }
+    },
+    {
+      "name": "CSD Guide to Debugging",
+      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+      "key": "csd_guide_to_debugging",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_debugging"
       }
     },
     {
@@ -126,13 +115,25 @@
       }
     },
     {
-      "name": "CSD Guide to Debugging",
-      "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
-      "key": "csd_guide_to_debugging",
+      "name": "CSD Implementation Guide",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "key": "csd_implementation_guide",
+      "properties": {
+        "type": "Resource",
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "Getting Started with CSD",
+      "url": "https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview",
+      "key": "getting_started_with_csd",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "csd_guide_to_debugging"
+        "resource.key": "getting_started_with_csd"
       }
     }
   ],

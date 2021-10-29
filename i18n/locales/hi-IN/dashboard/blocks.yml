@@ -1130,6 +1130,15 @@ hi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": चरमराना
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": बुदबुदा रहा है
+            "'sound://category_animals/bear.mp3'": भालू
+            "'sound://category_animals/cat.mp3'": बिल्ली
+            "'sound://category_animals/cow.mp3'": गाय
+            "'sound://category_animals/sheep.mp3'": भेड़
+            "'sound://category_animals/chicken.mp3'": murghi
+            "'sound://category_animals/dolphin.mp3'": डॉल्फिन
+            "'sound://category_animals/chick.mp3'": मुर्गी का बच्चा
+            "'sound://category_animals/dog.mp3'": कुत्ता
             "'sound://category_digital/jump_7.mp3'": कूदें
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION} की ओर संकेत दें"
@@ -1575,8 +1584,12 @@ hi:
         options:
           EFFECT:
             '"rain"': बारिश
+      Poetry_makeNewSpriteAnon:
+        text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       Poetry_playSound:
         text: प्लेसाउंड {SOUND}
+      Poetry_setBackground:
+        text: पृष्ठभूमि का रंग {COLOR} सेट करें
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

@@ -2,6 +2,78 @@
   "pl-PL": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Przedstawienie artysty",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Obroty i kąty"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Obroty i kąty",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Szyfrowanie i klucze publiczne",
+          "url": "https://youtu.be/ZghMPWGXexs"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Widgety szyfrowania w Studiu kodowania",
+          "url": "https://studio.code.org/s/hoc-encryption"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "Podsumowanie zajęć - Dekoduj tę wiadomość",
+          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Dekoduj tę wiadomość",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Widgety kompresji tekstu w Studio kodowania",
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "Film: Kompresja tekstu z Aloe Blacc",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: Nauka maszynowa",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: Oddziaływanie na społeczeństwo",
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: Dane treningowe i skłonność",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Wprowadzenie Sprite Lab",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"

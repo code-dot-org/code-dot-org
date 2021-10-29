@@ -2,18 +2,1397 @@
   "fa-IR": {
     "data": {
       "activity_sections": {
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
+          "name": "مقدمه",
+          "description": ""
+        },
+        "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
+          "tips": [
+            ""
+          ]
+        },
+        "73775ce2-2f05-4848-9b8c-9be7b6818903": {
+          "description": ""
+        },
+        "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
+          "name": "",
+          "description": ""
+        },
+        "69481dbf-6e15-4769-8840-992f641a75b1": {
+          "description": ""
+        },
+        "473c0737-e82d-49ec-bffa-5b738ba06438": {
           "progression_name": ""
         },
-        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+        "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
           "progression_name": ""
         },
-        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+        "d6973268-2630-4056-8169-81c3d5a34041": {
           "progression_name": ""
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "بازی رایگان",
+        "67bbe0f1-5e68-4669-a12b-d1ab6f3a527c": {
+          "progression_name": ""
+        },
+        "4ff44f8e-3e97-47b2-9a6e-25e7e5836896": {
+          "progression_name": ""
+        },
+        "2ab803d8-6973-49d0-b987-e023b6780b6b": {
+          "progression_name": ""
+        },
+        "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
+          "progression_name": ""
+        },
+        "42ec95b6-80f4-4012-8869-6850c7497008": {
+          "name": "",
+          "description": ""
+        },
+        "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
+          "name": "",
+          "description": ""
+        },
+        "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
+          "name": "",
+          "description": ""
+        },
+        "499c1123-e663-43e7-b573-a59ffd946fc4": {
+          "description": ""
+        },
+        "2c451b2f-6820-47bb-94e0-966633757f93": {
+          "description": ""
+        },
+        "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "563d9088-3ce6-48c1-aa79-6f673e089247": {
+          "name": "مقدمه",
+          "description": ""
+        },
+        "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
+          "tips": [
+            ""
+          ]
+        },
+        "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
+          "description": ""
+        },
+        "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
+          "tips": [
+            ""
+          ]
+        },
+        "75d779c4-24f7-40be-bf92-b0c094c16d11": {
+          "name": "",
+          "description": ""
+        },
+        "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
+          "tips": [
+            ""
+          ]
+        },
+        "307ffdf6-e274-484b-a10f-329ddfe568dc": {
+          "description": ""
+        },
+        "70935a98-82e9-4553-94f7-90a4e615dd34": {
+          "name": "",
+          "description": ""
+        },
+        "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
+          "name": "",
+          "description": ""
+        },
+        "20b7009c-3a45-4211-a9ad-c65f56099200": {
+          "name": "",
+          "description": ""
+        },
+        "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
+          "description": ""
+        },
+        "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "79f9bd46-60a5-4891-ad3b-8369879847fc": {
+          "description": ""
+        },
+        "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
+          "tips": [
+            ""
+          ]
+        },
+        "850945f6-6352-403b-a73f-3fb613f4728a": {
+          "description": ""
+        },
+        "4fd098be-b798-4e23-b091-e90c95344d97": {
+          "tips": [
+            ""
+          ]
+        },
+        "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
+          "name": "ماینکرافت: سفر قهرمانان",
+          "description": ""
+        },
+        "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
+          "tips": [
+            ""
+          ]
+        },
+        "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
+          "description": ""
+        },
+        "34238f3b-6699-4e27-b77a-54bcd8d57459": {
+          "progression_name": "ماینکرافت: سفر قهرمانان"
+        },
+        "ae17edd9-ad82-47dc-95f5-368b58084998": {
+          "name": "",
+          "description": ""
+        },
+        "145782a9-a436-4615-9827-0f75d7e4b3a0": {
+          "name": "",
+          "description": ""
+        },
+        "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
+          "name": "",
+          "description": ""
+        },
+        "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
+          "description": ""
+        },
+        "147a2b22-0cba-4505-81ef-770b81eee73e": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "6109d6c2-4d7c-479f-a269-ef2f0a046141": {
+          "name": "",
+          "description": ""
+        },
+        "aced2726-6ed1-4645-9fd2-eccfe982584f": {
+          "tips": [
+            ""
+          ]
+        },
+        "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
+          "description": ""
+        },
+        "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
+          "name": "کدنویسی Flappy",
+          "description": ""
+        },
+        "47fe47af-9de3-4ba5-8193-1f489bef9544": {
+          "tips": [
+            ""
+          ]
+        },
+        "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
+          "description": ""
+        },
+        "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
+          "name": "",
+          "description": ""
+        },
+        "ca7d5e61-0396-4885-934c-0d70ab63b072": {
+          "name": "",
+          "description": ""
+        },
+        "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
+          "name": "",
+          "description": ""
+        },
+        "5d6f31b4-6919-4b24-b4c3-2c93d827aa52": {
+          "name": "",
+          "description": ""
+        },
+        "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "68ce52c3-89f5-48a9-965f-f4dea8d5f530": {
+          "description": ""
+        },
+        "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
+          "tips": [
+            ""
+          ]
+        },
+        "e841a687-1da5-46c7-b31e-42629fe0377c": {
+          "description": ""
+        },
+        "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
+          "tips": [
+            ""
+          ]
+        },
+        "9aba0e85-a709-43f5-8cfb-251671159b3a": {
+          "name": "پیچ و خم",
+          "description": ""
+        },
+        "524f2e35-6286-4585-879e-96e7286e8a6d": {
+          "tips": [
+            ""
+          ]
+        },
+        "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
+          "description": ""
+        },
+        "50db3674-3387-4932-ba7e-c9f176ebd976": {
+          "name": "",
+          "description": ""
+        },
+        "46f387e2-c275-4c57-acec-c9709e7f44fc": {
+          "name": "",
+          "description": ""
+        },
+        "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
+          "name": "",
+          "description": ""
+        },
+        "c00f4730-69b0-4533-bf47-253647c6715f": {
+          "description": ""
+        },
+        "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
+          "name": "",
+          "description": ""
+        },
+        "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
+          "name": "",
+          "description": ""
+        },
+        "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
+          "tips": [
+            ""
+          ]
+        },
+        "46e7088b-b207-46ae-be95-3ceacecc3f35": {
+          "description": ""
+        },
+        "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
+          "tips": [
+            ""
+          ]
+        },
+        "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
+          "description": ""
+        },
+        "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
+          "name": "کدنویسی با آنا و السا",
+          "description": ""
+        },
+        "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
+          "tips": [
+            ""
+          ]
+        },
+        "da8b52b2-8db6-440d-add3-8578161f59e2": {
+          "description": ""
+        },
+        "38799019-2b81-4c28-a239-762b90e0f5e3": {
+          "name": "",
+          "description": ""
+        },
+        "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
+          "name": "",
+          "description": ""
+        },
+        "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
+          "name": "",
+          "description": ""
+        },
+        "144b447f-1c5d-413b-a08c-65dda905a706": {
+          "description": ""
+        },
+        "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
+          "name": "",
+          "description": ""
+        },
+        "fc04ef5f-0d78-418b-9311-e12201106453": {
+          "tips": [
+            ""
+          ]
+        },
+        "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
+          "description": ""
+        },
+        "c628ba28-35c2-4ded-a19d-74079377b309": {
+          "name": "آزمایشگاه بازی عصر یخبندان",
+          "description": ""
+        },
+        "548dc37b-f338-4a52-a77e-7380794c64f2": {
+          "tips": [
+            ""
+          ]
+        },
+        "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
+          "description": ""
+        },
+        "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
+          "name": "",
+          "description": ""
+        },
+        "3d63393a-9146-4027-8783-247e19637d25": {
+          "name": "",
+          "description": ""
+        },
+        "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
+          "name": "",
+          "description": ""
+        },
+        "6d1e12d2-9d95-4b3d-b7cc-3fee11148439": {
+          "name": "",
+          "description": ""
+        },
+        "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "dd7bde99-d360-4587-8d30-75383b930808": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "88489303-1952-49c3-914a-2cfa7a138778": {
+          "name": "مقدمه",
+          "description": ""
+        },
+        "75db60fb-671b-4740-80ae-0b13f4c09897": {
+          "name": "هنرمند",
+          "description": ""
+        },
+        "8aeabd7e-dab0-4f23-827b-58d98a04085f": {
+          "description": ""
+        },
+        "cce13cd7-04e3-4d93-9b74-9c3df8a7691a": {
+          "description": ""
+        },
+        "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
+          "description": ""
+        },
+        "532c3e19-487f-44e0-97ff-a71886e169f2": {
+          "description": ""
+        },
+        "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
+          "name": "",
+          "description": ""
+        },
+        "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
+          "tips": [
+            ""
+          ]
+        },
+        "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
+          "description": ""
+        },
+        "0e395269-9740-4229-a7ac-b18b9f4eced9": {
+          "name": "آزمایشگاه بازی Gumball",
+          "description": ""
+        },
+        "eea63453-59c2-4c48-8d04-d6612d379584": {
+          "tips": [
+            ""
+          ]
+        },
+        "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
+          "description": ""
+        },
+        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
+          "name": "",
+          "description": ""
+        },
+        "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
+          "name": "",
+          "description": ""
+        },
+        "59cd05df-cb4d-4280-8700-840826c01845": {
+          "name": "",
+          "description": ""
+        },
+        "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
+          "name": "",
+          "description": ""
+        },
+        "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
+          "name": "مقدمه",
+          "description": ""
+        },
+        "acc2ced5-83ed-4926-9830-f5bd846136a1": {
+          "tips": [
+            ""
+          ]
+        },
+        "e180cd18-ae1a-4a5f-b893-22359586ffe8": {
+          "description": ""
+        },
+        "ce2578c2-46c6-40c2-8ceb-d05fe1737802": {
+          "description": ""
+        },
+        "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
+          "tips": [
+            ""
+          ]
+        },
+        "e51e34df-5370-43a4-bae5-14d2ba49a932": {
+          "description": ""
+        },
+        "3d2ec9d2-ed62-4db0-99ca-ddf8e012d75a": {
+          "name": "",
+          "description": ""
+        },
+        "ddf59331-16dc-488f-8170-6d12869fbb9f": {
+          "name": "",
+          "description": ""
+        },
+        "4dee8e28-b791-4791-ae95-8276c0da6331": {
+          "description": ""
+        },
+        "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "07b80de8-0e4b-442f-925b-28fcf2ad8760": {
+          "description": ""
+        },
+        "81305b4b-d9a7-4ba2-b809-3ce383c146ab": {
+          "description": ""
+        },
+        "d4133014-cbc7-4f93-aa86-7d54ab8652fe": {
+          "description": ""
+        },
+        "d164ed5b-5d98-4dd5-a9bf-e53c8c6ac675": {
+          "description": ""
+        },
+        "200f7860-0f52-4bb6-b546-e4fa9701dad4": {
+          "description": ""
+        },
+        "0311d3fc-6b80-4bb1-ab32-34a35ec4f4ba": {
+          "description": ""
+        },
+        "cc4443ec-6def-485c-8824-393650850b8f": {
+          "description": ""
+        },
+        "27cd3252-fb06-4b7b-9633-751d95810c95": {
+          "description": ""
+        },
+        "767f8d69-82af-43d0-a4d7-7f3bd7438424": {
+          "description": ""
+        },
+        "7dcf383e-a583-4aa0-99f2-102652fbbb67": {
+          "description": ""
+        },
+        "f78380b1-0666-40a6-ac50-7adf09cda880": {
+          "name": "",
+          "description": ""
+        },
+        "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
+          "name": "",
+          "description": ""
+        },
+        "456b1d51-129d-43ff-aab9-727995464e36": {
+          "name": "",
+          "description": ""
+        },
+        "0600e9df-03bd-4d61-9876-7516a87c2d30": {
+          "description": ""
+        },
+        "ddc23577-3255-4a14-a11e-77259abc2810": {
+          "description": ""
+        },
+        "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
+          "name": "مقدمه",
+          "description": ""
+        },
+        "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
+          "tips": [
+            ""
+          ]
+        },
+        "f96053ea-387e-47d5-a018-65619ec093b0": {
+          "description": ""
+        },
+        "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
+          "tips": [
+            ""
+          ]
+        },
+        "91cc858b-9f90-4134-b890-237f457e8423": {
+          "name": "",
+          "description": ""
+        },
+        "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
+          "tips": [
+            ""
+          ]
+        },
+        "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
+          "description": ""
+        },
+        "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
+          "name": "",
+          "description": ""
+        },
+        "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
+          "name": "",
+          "description": ""
+        },
+        "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
+          "name": "",
+          "description": ""
+        },
+        "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
+          "description": ""
+        },
+        "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
+          "tips": [
+            ""
+          ]
+        },
+        "75673a5f-7781-4876-8d91-9157f53161c2": {
+          "description": ""
+        },
+        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
+          "name": "",
+          "description": ""
+        },
+        "b4a270c7-538c-4278-a88e-d074a04fafb4": {
+          "tips": [
+            ""
+          ]
+        },
+        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
+          "description": ""
+        },
+        "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
+          "tips": [
+            ""
+          ]
+        },
+        "529245c0-b1fc-416b-aee4-77f322d85c58": {
+          "description": ""
+        },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "",
+          "description": ""
+        },
+        "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
+          "tips": [
+            ""
+          ]
+        },
+        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
+          "description": ""
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "",
+          "description": ""
+        },
+        "7219d891-31ac-454e-8060-eb84a3a0d1df": {
+          "tips": [
+            ""
+          ]
+        },
+        "66d1a328-68c1-4006-b013-4d42e91c7360": {
+          "description": ""
+        },
+        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
+          "progression_name": ""
+        },
+        "eaccf571-0358-4756-b0c7-2349901065d4": {
+          "progression_name": ""
+        },
+        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
+          "progression_name": ""
+        },
+        "9ad445d9-3385-460d-97f8-396f069b456d": {
+          "progression_name": ""
+        },
+        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
+          "progression_name": ""
+        },
+        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
+          "name": "",
+          "progression_name": ""
+        },
+        "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
+          "tips": [
+            ""
+          ]
+        },
+        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
+          "name": "",
+          "description": ""
+        },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "",
+          "description": ""
+        },
+        "c694a6e6-b265-4802-bfca-bbc9180c8407": {
+          "tips": [
+            ""
+          ]
+        },
+        "cec5b790-610d-4bb9-8868-a71c39f63329": {
+          "description": ""
+        },
+        "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
+          "name": "",
+          "description": ""
+        },
+        "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
+          "tips": [
+            ""
+          ]
+        },
+        "7f1244d9-811b-410c-96b2-9f7086959c6b": {
+          "description": ""
+        },
+        "a69a3310-4b81-4e04-8313-51044489351a": {
+          "name": "جنگ ستارگان: ساختمان کهکشان با کد",
+          "description": ""
+        },
+        "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
+          "tips": [
+            ""
+          ]
+        },
+        "eb72d828-788d-4090-9e4f-71423c081948": {
+          "description": ""
+        },
+        "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
+          "name": "",
+          "description": ""
+        },
+        "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
+          "name": "",
+          "description": ""
+        },
+        "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
+          "name": "",
+          "description": ""
+        },
+        "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
+          "description": ""
+        },
+        "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
+          "name": "مقدمه",
+          "description": ""
+        },
+        "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
+          "tips": [
+            ""
+          ]
+        },
+        "3fee530c-6d5f-44da-89f7-cfae73040787": {
+          "description": ""
+        },
+        "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
+          "tips": [
+            ""
+          ]
+        },
+        "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
+          "name": "",
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "1766511d-3639-46a3-911f-acc7f8c4b922": {
+          "description": ""
+        },
+        "8c990fee-4a0f-4d70-a635-ab66a8195193": {
+          "description": ""
+        },
+        "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
+          "name": "",
+          "description": ""
+        },
+        "6b574c8b-2319-4244-acc8-fb8405fa5737": {
+          "name": "",
+          "description": ""
+        },
+        "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
+          "name": "",
+          "description": ""
+        },
+        "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "366afa8a-feff-4dd4-a415-03a04e01e897": {
+          "name": "",
+          "description": ""
+        },
+        "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
+          "tips": [
+            ""
+          ]
+        },
+        "2d643de7-7994-4220-8bd4-095aab85e9ec": {
+          "description": ""
+        },
+        "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
+          "name": "آزمایشگاه بازی",
+          "description": ""
+        },
+        "d430e170-dccc-4c02-bcfe-5084169a154b": {
+          "tips": [
+            ""
+          ]
+        },
+        "e3b1f4b9-8255-4d48-a28b-f08a1ed7afde": {
+          "description": ""
+        },
+        "1b1218b0-776f-47eb-8a9d-f4c48a41ed5e": {
+          "name": "",
+          "description": ""
+        },
+        "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
+          "name": "",
+          "description": ""
+        },
+        "e4662587-95dc-4eae-b19f-dfee2139a34d": {
+          "name": "",
+          "description": ""
+        },
+        "513a07e1-551a-45d3-bd35-7e1de49293a2": {
+          "name": "",
+          "description": ""
+        },
+        "8531cf05-6363-4654-b20a-455e85fa16a0": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
+          "name": "مقدمه",
+          "description": "",
+          "progression_name": ""
+        },
+        "430134f0-2f85-4888-abd3-f55fbf0753da": {
+          "name": "",
+          "description": ""
+        },
+        "11f7be58-02e1-4667-84e4-6310924c189d": {
+          "description": "",
+          "progression_name": ""
+        },
+        "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "description": "",
+          "tips": [
+            ""
+          ],
+          "progression_name": ""
+        },
+        "56a31e52-412b-45c1-a8d4-dec1754ba819": {
+          "description": "",
+          "progression_name": ""
+        },
+        "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
+          "description": "",
+          "progression_name": "حالت طراحی"
+        },
+        "2113da19-595f-418e-be70-5219f0b47aa8": {
+          "description": "",
+          "progression_name": ""
+        },
+        "1fd99689-e90c-478b-8ae2-ce8b5d489906": {
+          "name": "",
+          "description": ""
+        },
+        "00b66dcf-d546-4649-aa21-6d97981fa444": {
+          "name": "",
+          "description": ""
+        },
+        "88f6ccc1-0efa-4c60-985c-971a235d5645": {
+          "tips": [
+            ""
+          ]
+        },
+        "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
+          "description": ""
+        },
+        "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
+          "description": ""
+        },
+        "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
+          "tips": [
+            ""
+          ]
+        },
+        "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
+          "description": ""
+        },
+        "afb5ecc7-af66-492d-96bb-2412754005e0": {
+          "name": "",
+          "description": ""
+        },
+        "16a6a4db-d853-478e-9945-3f0d17865e80": {
+          "name": "",
+          "description": ""
+        },
+        "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
+          "name": "",
+          "description": ""
+        },
+        "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "b0fff664-80cc-4318-b031-edf88ad1aebc": {
+          "description": ""
+        },
+        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
+          "name": "",
+          "description": ""
+        },
+        "e7bb5d35-bec3-45f9-9022-f718aedb634c": {
+          "description": ""
+        },
+        "8464f3ff-176d-4c69-bd66-1089fef7d689": {
+          "description": ""
+        },
+        "9157e4da-0260-4b90-a36a-7b6b36f25666": {
+          "description": ""
+        },
+        "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
+          "description": ""
+        },
+        "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
+          "description": ""
+        },
+        "f5f6ef34-367d-424d-af63-a8a04c146c34": {
+          "tips": [
+            ""
+          ]
+        },
+        "540e3c12-987d-44de-8efc-5e6e12fed295": {
+          "tips": [
+            ""
+          ]
+        },
+        "b784f10e-0727-464d-856e-33c76e2e0077": {
+          "description": ""
+        },
+        "b6de46c4-4cbc-4214-9cf2-e0851583fe92": {
+          "description": ""
+        },
+        "9e4304e5-944c-4b21-88eb-708558b2b82f": {
+          "progression_name": ""
+        },
+        "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
+          "progression_name": ""
+        },
+        "4bfe229f-419d-409f-9ecc-ca2a03311d80": {
+          "description": ""
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": ""
+        },
+        "21f43e64-dea3-4abc-8284-e055480370ce": {
+          "name": "مقدمه",
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "821aeaeb-2dd7-4e84-a7e0-0cdfdaeaff28": {
+          "description": ""
+        },
+        "2123b1ad-42d8-4c2f-87f6-4300fe7dd741": {
+          "name": "",
+          "description": ""
+        },
+        "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "name": "",
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "95cc8163-fcee-44bd-95c8-606999d2c378": {
+          "description": ""
+        },
+        "11b82689-57e5-404f-8846-51e10f2642d0": {
+          "description": ""
+        },
+        "e9c48a39-952e-44be-8955-9d012bfa89c1": {
+          "description": ""
+        },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": ""
+        },
+        "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
+          "name": "",
+          "description": ""
+        },
+        "6874de98-8778-447b-8453-0138809b2c7e": {
+          "tips": [
+            ""
+          ]
+        },
+        "82e4a494-65fb-40ac-b2c2-323044e15b77": {
+          "description": ""
+        },
+        "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
+          "name": "آزمایشگاه بازی بی نهایت دیزنی",
+          "description": ""
+        },
+        "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
+          "tips": [
+            ""
+          ]
+        },
+        "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
+          "description": ""
+        },
+        "a0530acf-3bce-4de9-b392-fe8725044086": {
+          "name": "",
+          "description": ""
+        },
+        "ceaf9d96-e806-48e1-9a95-30566999264e": {
+          "name": "",
+          "description": ""
+        },
+        "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
+          "name": "",
+          "description": ""
+        },
+        "2742e426-46e4-46d9-8e04-314c3469f15e": {
+          "name": "",
+          "description": ""
+        },
+        "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
+          "name": "فراتر از یک ساعت کد نویسی",
+          "description": ""
+        },
+        "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
+          "name": "مقدمه",
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "94273f25-07f7-401b-85f9-13bc82c64695": {
+          "description": ""
+        },
+        "41a58fa3-ee0d-46ca-be76-89def06d2062": {
+          "name": "",
+          "description": ""
+        },
+        "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "name": "",
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "2754bec9-70a7-46db-8991-16bbf01adbe7": {
+          "description": ""
+        },
+        "efd26bf1-c977-4fc3-883d-a37bb3e68a75": {
+          "description": ""
+        },
+        "0eade685-f4a5-4d81-bc38-4371a06fbb06": {
+          "description": ""
+        },
+        "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
+          "name": "",
+          "description": ""
+        },
+        "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
+          "description": ""
+        },
+        "25621525-b6e8-47f3-bd9b-e574fc307993": {
+          "description": ""
+        },
+        "2b020959-fedc-4265-832e-d663520a5427": {
+          "description": ""
+        },
+        "8c86b05c-3d26-4b91-b5a1-dca6c7fd5800": {
+          "name": "",
+          "description": ""
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "",
+          "description": ""
+        },
+        "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
+          "tips": [
+            ""
+          ]
+        },
+        "ef4b8eed-a408-4dfa-919f-b5575e3cdea5": {
+          "progression_name": ""
+        },
+        "ef068b27-a180-4c77-8254-b150c8499acb": {
+          "progression_name": ""
+        },
+        "efd37169-ddb7-4ef6-8049-36da981ea0f6": {
+          "progression_name": ""
+        },
+        "72e0b520-4c05-4c32-84c3-1a51fd86daad": {
+          "progression_name": ""
+        },
+        "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
+          "progression_name": ""
+        },
+        "221fbe2a-57a8-43d4-9674-5815273512dc": {
+          "progression_name": ""
+        },
+        "7c943749-994a-44b2-a116-f33f70d2df95": {
+          "progression_name": ""
+        },
+        "d4e671fd-e312-4461-b97b-50e6e05c9cf1": {
+          "progression_name": ""
+        },
+        "501df195-7991-40ad-bad9-df715484240b": {
+          "progression_name": ""
+        },
+        "820a64ef-d544-460f-ab3f-0f19442b9129": {
+          "name": "",
+          "description": ""
+        },
+        "2458fd7f-011d-4251-8877-2e90d5d55684": {
+          "name": "",
+          "description": ""
+        },
+        "3558b17c-e6ce-4bc8-bb5c-35eed135b8fb": {
+          "description": ""
+        },
+        "0dffb367-12f3-485a-bcde-cf4e789baed9": {
+          "name": "",
+          "description": ""
+        },
+        "7905508e-c354-4909-93eb-38e2e9ef5661": {
+          "description": ""
+        },
+        "4587cdae-c2ce-4d5f-9540-063b6383388d": {
+          "description": ""
+        },
+        "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
+          "name": "",
+          "description": ""
+        },
+        "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
+          "tips": [
+            ""
+          ]
+        },
+        "54fd242d-dc0f-4a52-b6d6-bfd8f396bc85": {
+          "description": ""
+        },
+        "a88ec05c-98e3-425a-a066-4cbbf37e4af6": {
+          "description": ""
+        },
+        "e1243ccf-be45-4f8e-a138-54953ea12f92": {
+          "tips": [
+            ""
+          ]
+        },
+        "468ba876-6a73-42cb-94c6-a8dfa5bff320": {
+          "description": ""
+        },
+        "5442c2d2-c29f-4455-a3aa-bb02b59f0bbe": {
+          "name": "",
+          "description": ""
+        },
+        "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
+          "name": "",
+          "description": ""
+        },
+        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
+          "name": "",
+          "description": ""
+        },
+        "02028482-b4db-44c7-a8ab-9576f6c34b29": {
+          "description": ""
+        },
+        "ec0922cd-fda5-4e54-a44f-bb63f86b9eda": {
+          "description": ""
+        },
+        "e07e7231-6932-46d6-9f35-7c8ec34fb25d": {
+          "description": ""
+        },
+        "42f6ef23-a698-4d94-a9d6-917a7dda0fa6": {
+          "description": ""
+        },
+        "760263d5-a994-4722-af9a-758d7f028a8d": {
+          "description": ""
+        },
+        "d29c2e16-c0a1-4a6b-a1bd-86962b471ea9": {
+          "description": ""
+        },
+        "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
+          "tips": [
+            ""
+          ]
+        },
+        "165b8450-bd88-42b3-b955-2e8ecd1dc93f": {
+          "description": ""
+        },
+        "e04d58b1-6687-4e9b-ae31-1796d5232ce2": {
+          "description": ""
+        },
+        "8ab0ecdc-93e2-4959-a1d8-2aaad168be42": {
+          "description": ""
+        },
+        "8653a0a0-b67c-4237-b8c1-111e0d11b4fe": {
+          "name": "",
+          "description": ""
+        },
+        "f6bcac9d-cd44-435f-8565-57a5926542f8": {
+          "name": "",
+          "description": ""
+        },
+        "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
+          "name": "",
+          "description": ""
+        },
+        "5a2bbf38-69c3-49c0-88ff-4f220565fb53": {
+          "description": ""
+        },
+        "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
+          "description": ""
+        },
+        "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "name": "",
+          "description": "",
+          "tips": [
+            ""
+          ],
+          "progression_name": ""
+        },
+        "a000c7ca-046c-47c5-b2c9-5a3043c747d9": {
+          "description": ""
+        },
+        "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "name": "",
+          "tips": [
+            ""
+          ]
+        },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "description": ""
+        },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "description": "",
+          "progression_name": ""
+        },
+        "2dd01487-fb16-4666-bd3c-56ae2ce5a364": {
+          "description": ""
+        },
+        "5ccd5b0c-d53b-4931-9405-218822bb91c6": {
+          "description": ""
+        },
+        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
+          "description": ""
+        },
+        "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "description": "",
+          "tips": [
+            ""
+          ],
+          "progression_name": ""
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "description": "",
+          "progression_name": ""
+        },
+        "10c97a69-e8a4-4eb0-8a7d-86e143c3c4ac": {
+          "description": ""
+        },
+        "fa3c9144-cc51-42f5-8069-6f50da5b465d": {
+          "description": ""
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "description": "",
+          "progression_name": ""
+        },
+        "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
+          "description": ""
+        },
+        "be0db11e-cb8e-4658-844c-73a9faafa36d": {
+          "description": ""
+        },
+        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
+          "description": ""
+        },
+        "be0995b2-b12f-45ee-9047-8261719fcd56": {
+          "name": "",
+          "description": ""
+        },
+        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
+          "name": "",
+          "description": ""
+        },
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": ""
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": ""
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": ""
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": ""
+        },
+        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
+          "name": "",
+          "description": ""
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "",
+          "description": ""
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": ""
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": ""
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "",
+          "description": ""
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "مقدمه",
+          "description": ""
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "",
+          "description": "",
+          "progression_name": ""
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "description": "",
+          "progression_name": ""
+        },
+        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
+          "description": ""
+        },
+        "13a06294-2f2a-4661-9947-46ed5843913f": {
+          "description": ""
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "description": "",
+          "progression_name": ""
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "description": "",
+          "progression_name": ""
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "بازی رایگان"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": ""
+        },
+        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
+          "description": ""
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "",
+          "description": ""
+        },
+        "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
+          "description": ""
+        },
+        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
+          "tips": [
+            ""
+          ]
+        },
+        "aa328958-bd87-4dbb-8585-cb33f905051f": {
+          "description": ""
+        },
+        "95529f90-229b-4ce3-8f92-40528f8a7830": {
+          "description": ""
+        },
+        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
+          "name": "جورچین",
+          "description": ""
+        },
+        "3e0ffbe7-276b-4951-8d84-fb5ee9c8092c": {
+          "description": ""
+        },
+        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "66f2f042-aa67-41db-a756-4ab6e5623f77": {
+          "description": ""
+        },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": ""
+        },
+        "319eb690-ba34-4d34-9158-d30d777c4b05": {
+          "name": "",
+          "description": ""
+        },
+        "8f47b370-5569-4a34-b105-c765a39c8460": {
+          "description": ""
+        },
+        "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
+          "description": ""
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "مقدمه",

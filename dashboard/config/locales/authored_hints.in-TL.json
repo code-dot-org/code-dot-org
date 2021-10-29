@@ -10631,6 +10631,140 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "crwdns2572786:0crwdne2572786:0",
           "iceage_warn_ice_age_b": "crwdns2572788:0crwdne2572788:0"
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "crwdns2694979:0[0]crwdne2694979:0"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "crwdns2695063:0[0]crwdne2695063:0"
+        },
+        "helloworld_animals_click": {
+          "hw_no_changes": "crwdns2694933:0crwdne2694933:0"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "crwdns2695013:0[0]crwdne2695013:0"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "crwdns2694941:0[0]crwdne2694941:0"
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "crwdns2695683:0[0]crwdne2695683:0"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "crwdns2694925:0[0]crwdne2694925:0"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "crwdns2694901:0[0]crwdne2694901:0"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "crwdns2695051:0[0]crwdne2695051:0",
+          "storyboard_changePropBy": "crwdns2695053:0[0]crwdne2695053:0"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "crwdns2695229:0[0]crwdne2695229:0"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "crwdns2695313:0[0]crwdne2695313:0"
+        },
+        "helloworld_emoji_click": {
+          "hw_no_changes": "crwdns2695183:0crwdne2695183:0"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "crwdns2695263:0[0]crwdne2695263:0"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "crwdns2695191:0[0]crwdne2695191:0"
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "crwdns2695703:0[0]crwdne2695703:0"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "crwdns2695175:0[0]crwdne2695175:0"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "crwdns2695151:0[0]crwdne2695151:0"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "crwdns2695301:0[0]crwdne2695301:0",
+          "storyboard_changePropBy": "crwdns2695303:0[0]crwdne2695303:0"
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "crwdns2694769:0[0]crwdne2694769:0"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "crwdns2694853:0[0]crwdne2694853:0"
+        },
+        "helloworld_food_click": {
+          "hw_no_changes": "crwdns2694723:0crwdne2694723:0"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "crwdns2694803:0[0]crwdne2694803:0"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "crwdns2694731:0[0]crwdne2694731:0"
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "crwdns2695663:0[0]crwdne2695663:0"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "crwdns2694715:0[0]crwdne2694715:0"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "crwdns2694691:0[0]crwdne2694691:0"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "crwdns2694841:0[0]crwdne2694841:0",
+          "storyboard_changePropBy": "crwdns2694843:0[0]crwdne2694843:0"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "crwdns2694519:0[0]crwdne2694519:0"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "crwdns2694603:0[0]crwdne2694603:0"
+        },
+        "helloworld_retro_click": {
+          "hw_no_changes": "crwdns2694473:0crwdne2694473:0"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "crwdns2694553:0[0]crwdne2694553:0"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "crwdns2694481:0[0]crwdne2694481:0"
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "crwdns2695641:0[0]crwdne2695641:0"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "crwdns2694465:0[0]crwdne2694465:0"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "crwdns2694441:0[0]crwdne2694441:0"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "crwdns2694591:0[0]crwdne2694591:0",
+          "hw_retro_changePropBy": "crwdns2694593:0[0]crwdne2694593:0"
+        },
+        "poetry_hoc_addSprites": {
+          "location_hint": "crwdns2695545:0[0]crwdnd2695545:0[1]crwdne2695545:0"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "add_background_effect": "crwdns2695503:0[0]crwdne2695503:0",
+          "add_more_effects": "crwdns2695505:0[0]crwdne2695505:0"
+        },
+        "poetry_hoc_events1": {
+          "foreground_effect_hint": "crwdns2695527:0[0]crwdne2695527:0",
+          "background_effect_hint": "crwdns2695529:0[0]crwdne2695529:0",
+          "more_events_hint": "crwdns2695531:0[0]crwdnd2695531:0[1]crwdne2695531:0"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound_hint": "crwdns2695517:0[0]crwdne2695517:0",
+          "more_code": "crwdns2695519:0[0]crwdne2695519:0"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "add_behavior": "crwdns2695661:0[0]crwdne2695661:0"
+        },
+        "poetry_hoc_spriteSizes": {
+          "size hint": "crwdns2695561:0[0]crwdnd2695561:0[1]crwdnd2695561:0[2]crwdne2695561:0"
         }
       }
     }

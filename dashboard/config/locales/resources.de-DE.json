@@ -2,6 +2,27 @@
   "de-DE": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-societal/oceans/unversioned": {
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
+        "ai-training/oceans/unversioned": {
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Einführung Sprite Lab",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"

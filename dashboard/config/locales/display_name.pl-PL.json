@@ -558,7 +558,9 @@
         "helloworld_food_sounds": "Dźwięki",
         "helloworld_retro_costumes": "Kostiumy",
         "helloworld_retro_sizes": "Rozmiar",
-        "helloworld_retro_sounds": "Dźwięki"
+        "helloworld_retro_sounds": "Dźwięki",
+        "courseF_sprites_moreSprites": "Pozycjonowanie duszka",
+        "courseF_sprites_positioning": "Pozycjonowanie duszka"
       }
     }
   }

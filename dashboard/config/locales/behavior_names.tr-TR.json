@@ -2863,7 +2863,14 @@
           "moving north": "kuzeye ilerleme",
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
-          "spinning right": "sağa dönme"
+          "spinning right": "sağa dönme",
+          "spinning left": "sola dönme",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "sola ve sağa yüzme",
@@ -2940,7 +2947,14 @@
           "moving north": "kuzeye ilerleme",
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
-          "spinning right": "sağa dönme"
+          "spinning right": "sağa dönme",
+          "spinning left": "sola dönme",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "sola ve sağa yüzme",
@@ -2997,7 +3011,14 @@
           "moving north": "kuzeye ilerleme",
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
-          "spinning right": "sağa dönme"
+          "spinning right": "sağa dönme",
+          "spinning left": "sola dönme",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "sola ve sağa yüzme",
@@ -3074,7 +3095,54 @@
           "moving north": "kuzeye ilerleme",
           "moving south": "güneye ilerleme",
           "moving west": "batıya ilerleme",
-          "spinning right": "sağa dönme"
+          "spinning right": "sağa dönme",
+          "spinning left": "sola dönme",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "swimming left and right": "sola ve sağa yüzme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "gezinme",
+          "moving east": "doğuya ilerleme",
+          "spinning left": "sola dönme",
+          "spinning right": "sağa dönme",
+          "shrinking": "küçülme",
+          "growing": "büyüme",
+          "moving south": "güneye ilerleme",
+          "swimming left and right": "sola ve sağa yüzme",
+          "moving north": "kuzeye ilerleme",
+          "jittering": "kararsızlık",
+          "moving west": "batıya ilerleme",
+          "patrolling": "kontrol sağlama",
+          "moving with arrow keys": "ok tuşları ile hareket",
+          "driving with arrow keys": "ok tuşları ile hareket",
+          "fluttering": "fluttering",
+          "wobbling": "sallanma",
+          "moving west and looping": "batıya doğru hareket ve döngü",
+          "moving east and looping": "doğuya doğru hareket ve döngü"
         }
       }
     }

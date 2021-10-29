@@ -206,7 +206,7 @@ se:
             ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
           lessons:
             Artist:
-              name: Dáiddár
+              name: Kode Annain ja Elsain
           student_description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid
             ja čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid
             luistiiguin ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit
@@ -357,6 +357,9 @@ se:
             Infinitiija figurat leat mielde.
           description_short: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas
             Disney Infinitiija figurat leat mielde.
+          lessons:
+            Infinity:
+              name: Disney Infinitiija Speallan-lab
           student_description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu
             mas Disney Infinitiija figurat leat mielde.
         algebrademo:
@@ -1553,9 +1556,6 @@ se:
             galaksii mii lea guhkkin, guhkkin eret.
           description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
             spealu galaksii mii lea guhkkin, guhkkin eret.
-          lessons:
-            Hour of Code 2015:
-              name: KodenDiibmu 2015
           student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi
             spealu galaksii mii lea guhkkin, guhkkin eret.
         mc:
@@ -9404,5 +9404,18 @@ se:
               display_name: Sisdoallu
             lesson_group:
               display_name: Sisdoallu
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Modulat
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stávengilvu
+          title: Stávengilvu
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu

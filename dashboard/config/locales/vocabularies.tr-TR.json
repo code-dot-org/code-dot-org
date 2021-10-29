@@ -2,6 +2,78 @@
   "tr-TR": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "function/hero/unversioned": {
+          "word": "Fonksiyon"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Koşullar"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Döngüler"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Şifreleme"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Kayıpsız Sıkıştırma"
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Makine Öğrenimi"
+        },
         "behavior/coursef/2021": {
           "word": "Davranış"
         },

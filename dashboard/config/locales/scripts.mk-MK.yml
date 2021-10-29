@@ -9,10 +9,6 @@ mk:
           lessons:
             Variables:
               name: Променливи
-        infinity:
-          lessons:
-            Infinity:
-              name: Бесконечно
         allthehiddenthings:
           lessons:
             Game Lab:
@@ -333,3 +329,7 @@ mk:
           lesson_groups:
             lessonGroup-2:
               description: тест
+        poetry:
+          lessons:
+            lesson-3:
+              name: Променливи

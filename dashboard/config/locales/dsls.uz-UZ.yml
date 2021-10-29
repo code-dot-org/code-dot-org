@@ -408,22 +408,37 @@ uz-UZ:
         - {}
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Qisqacha maʼlumot
@@ -454,50 +469,71 @@ uz-UZ:
         - {}
       CSD U2 lists match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         questions:
-        - {}
-        - {}
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching:
         answers:
         - {}
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
         - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.x == cat.x
         questions:
         - {}
         - {}
@@ -507,10 +543,10 @@ uz-UZ:
       CSD U3 - conditionals - Matching_2018:
         answers:
         - {}
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
         - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.x == cat.x
         questions:
         - {}
         - {}
@@ -520,10 +556,10 @@ uz-UZ:
       CSD U3 - conditionals - Matching_2018_2019:
         answers:
         - {}
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
         - {}
-        - {}
-        - {}
-        - {}
+        - text: dog.x == cat.x
         questions:
         - {}
         - {}
@@ -577,27 +613,27 @@ uz-UZ:
         - {}
       CSD U3 Keypress Matching:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: keyWentDown()
+        - text: keyWentUp()
+        - text: keyDown()
         questions:
         - {}
         - {}
@@ -606,24 +642,27 @@ uz-UZ:
         answers:
         - {}
         - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         answers:
         - {}
         - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         answers:
         - {}
         - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi:
@@ -636,10 +675,11 @@ uz-UZ:
         - {}
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+          correct: true
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -652,72 +692,112 @@ uz-UZ:
         - {}
       CSD U3 drawSprites placement match:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
       CSD U3 drawSprites placement match_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
       CSD U6 array multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
+          correct: true
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 array multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
+          correct: true
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 array multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
+          correct: true
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 setProperty predict multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       K-1 Artist 1 Multi 1:
@@ -6949,3 +7029,9 @@ uz-UZ:
           hozirroq ularni sinab ko'ring. Ushbu kurs oxirida siz o'zingizning shu kabi
           va ulardan ham a'lo loyihalaringizni amalga oshira olasiz!
         display_name: Sprite Lab ilovalari
+      csd-pre-survey-2017-levelgroup:
+        title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma
+      csd-pre-survey-levelgroup_2019:
+        title: Talabalar uchun CS Discoveries kursidan oldingi so'rovnoma

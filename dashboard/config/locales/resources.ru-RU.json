@@ -2,6 +2,9 @@
   "ru-RU": {
     "data": {
       "resources": {
+        "ai-ml/oceans/unversioned": {
+          "name": " Машинное обучение"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Представляем Лабораторию спрайтов"
         },

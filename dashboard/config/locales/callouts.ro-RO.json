@@ -403,6 +403,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Bloc nou!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Bloc nou!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Bloc nou!",
+          "poetry_foreground": "Bloc nou!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Bloc nou!",
+          "poetry_multiple_sprites": "Bloc nou!",
+          "poetry_new_block": "Bloc nou!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Bloc nou!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Bloc nou!",
+          "poetry_sprite_stops": "Bloc nou!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Bloc nou!",
+          "poetry_remove_sprite": "Bloc nou!"
         }
       }
     }

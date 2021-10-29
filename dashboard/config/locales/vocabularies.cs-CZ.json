@@ -2,6 +2,72 @@
   "cs-CZ": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Ladění"
+        },
+        "function/hero/unversioned": {
+          "word": "Funkce"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Ladění"
+        },
+        "code/artist/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Ladění"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Podmínky"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Cykly"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Ladění"
+        },
+        "code/sports/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Ladění"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Ladění"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Strojové učení"
+        },
         "variable/coursef/2021": {
           "word": "Proměnná"
         },
@@ -11,11 +77,20 @@
         "machine_learning/coursef/2021": {
           "word": "Strojové učení"
         },
+        "dns/coursef/2021": {
+          "word": "DNS"
+        },
         "internet/coursef/2021": {
           "word": "Internet"
         },
+        "url/coursef/2021": {
+          "word": "URL"
+        },
         "define/coursef/2021": {
           "word": "Definuj"
+        },
+        "try/coursef/2021": {
+          "word": "Zkusit"
         },
         "debugging/courseb/2021": {
           "word": "Ladění"
@@ -77,6 +152,9 @@
         "define/express/2021": {
           "word": "Definuj"
         },
+        "try/express/2021": {
+          "word": "Zkusit"
+        },
         "drop/pre-express/2021": {
           "word": "Roznožka"
         },
@@ -97,6 +175,9 @@
         },
         "define/coursee/2021": {
           "word": "Definuj"
+        },
+        "try/coursee/2021": {
+          "word": "Zkusit"
         }
       }
     }

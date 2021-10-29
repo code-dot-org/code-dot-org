@@ -4,18 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "pilot_experiment": "contagion-pilot",
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
         ]
-      ],
-      "pilot_experiment": "contagion-pilot"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:48:03 UTC",
+    "serialized_at": "2021-10-25 22:54:41 UTC",
     "published_state": "pilot",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "contagion-pilot"
     }

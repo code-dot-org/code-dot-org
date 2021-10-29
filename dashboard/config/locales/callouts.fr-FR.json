@@ -1807,6 +1807,27 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nouveau bloc !"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nouveau bloc !"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nouveau bloc !",
+          "poetry_foreground": "Nouveau bloc !"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "Nouveau bloc !"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nouveau bloc !"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nouveau bloc !",
+          "poetry_sprite_stops": "Nouveau bloc !"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nouveau bloc !",
+          "poetry_remove_sprite": "Nouveau bloc !"
         }
       }
     }

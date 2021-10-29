@@ -70,6 +70,13 @@
   english: "German"
   native: "Deutsch"
 
+"dv": "dv-MV"
+"dv-MV":
+  english: "Dhivehi"
+  native: "ދިވެހި"
+  debug: true
+  webfonts: false
+
 "el": "el-GR"
 "el-GR":
   english: "Greek"

@@ -2,6 +2,9 @@
   "bs-BA": {
     "data": {
       "lessons": {
+        "jigsaw/Jigsaw": {
+          "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
+        },
         "courseb-2021/Sequencing in Maze": {
           "overview": "Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke."
         },

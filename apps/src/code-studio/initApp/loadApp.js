@@ -14,7 +14,6 @@ var clientState = require('../clientState');
 import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
 var timing = require('@cdo/apps/code-studio/initApp/timing');
-var chrome34Fix = require('@cdo/apps/code-studio/initApp/chrome34Fix');
 var project = require('@cdo/apps/code-studio/initApp/project');
 var createCallouts = require('@cdo/apps/code-studio/callouts').default;
 var reporting = require('@cdo/apps/code-studio/reporting');
@@ -58,9 +57,6 @@ export function setupApp(appOptions) {
     position: {blockYCoordinateInterval: 25},
     onInitialize: function() {
       createCallouts(this.level.callouts || this.callouts);
-      if (userAgentParser.isChrome34()) {
-        chrome34Fix.fixup();
-      }
       if (
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
@@ -289,6 +285,12 @@ function loadAppAsync(appOptions) {
     return loadProjectAndCheckAbuse(appOptions);
   }
 
+  // If the level requires a channel but no channel was passed from the server through app_options,
+  // that indicates that the level was cached and the channel id needs to be loaded client-side
+  // through the user_progress request
+  const shouldGetChannelId =
+    appOptions.levelRequiresChannel && !appOptions.channel;
+
   return new Promise((resolve, reject) => {
     if (appOptions.publicCaching) {
       // Disable social share by default on publicly-cached pages, because we don't know
@@ -302,7 +304,8 @@ function loadAppAsync(appOptions) {
         `/${appOptions.scriptName}` +
         `/${appOptions.lessonPosition}` +
         `/${appOptions.levelPosition}` +
-        `/${appOptions.serverLevelId}`
+        `/${appOptions.serverLevelId}` +
+        `?get_channel_id=${shouldGetChannelId}`
     )
       .done(data => {
         appOptions.disableSocialShare = data.disableSocialShare;
@@ -328,7 +331,15 @@ function loadAppAsync(appOptions) {
           appOptions.level.pairingChannelId = data.pairingChannelId;
         }
 
-        resolve(appOptions);
+        if (data.channel) {
+          appOptions.channel = data.channel;
+          appOptions.reduceChannelUpdates = data.reduceChannelUpdates;
+          loadProjectAndCheckAbuse(appOptions).then(appOptions => {
+            resolve(appOptions);
+          });
+        } else {
+          resolve(appOptions);
+        }
       })
       .fail(() => {
         // TODO: Show an error to the user here? (LP-1815)
@@ -360,6 +371,12 @@ const sourceHandler = {
   },
   getSelectedSong() {
     return getAppOptions().level.selectedSong;
+  },
+  setSelectedPoem(poem) {
+    getAppOptions().level.selectedPoem = poem;
+  },
+  getSelectedPoem() {
+    return getAppOptions().level.selectedPoem;
   },
   setInitialLevelHtml(levelHtml) {
     getAppOptions().level.levelHtml = levelHtml;

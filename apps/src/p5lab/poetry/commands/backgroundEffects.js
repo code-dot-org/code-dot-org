@@ -11,6 +11,7 @@ export const commands = {
   },
 
   setBackgroundImageAs(imageName) {
+    this.validationInfo.backgroundEffect = imageName;
     const backgroundImage = this.p5._predefinedSpriteAnimations?.[imageName];
     if (backgroundImage) {
       backgroundImage.name = imageName;
@@ -58,7 +59,7 @@ export const commands = {
         this.backgroundEffect = () => {
           this.p5.push();
           this.p5.noStroke();
-          this.p5.background('black');
+          this.p5.background('white');
           for (let i = 0; i < numSquiggles; i++) {
             points.forEach(point => {
               point.x =

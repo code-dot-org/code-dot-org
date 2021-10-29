@@ -1210,6 +1210,7 @@ tr:
       email: e-posta
       email_alternate: Alternatif e-posta
       gender: Cinsiyet Kimliği
+      school: Okul
       school_name: Okulun Adı
       school_city: Okulun bulunduğu şehir
       school_country: Okulun bulunduğu ülke

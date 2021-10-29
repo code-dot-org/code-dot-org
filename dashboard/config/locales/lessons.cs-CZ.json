@@ -2,6 +2,28 @@
   "cs-CZ": {
     "data": {
       "lessons": {
+        "artist/Artist": {
+          "overview": "V této lekci studenti převezmou nadvládu nad Umělcem a budou dokončovat výkresy na obrazovce. Tato fáze Umělce umožní studentům vytvářet pomocí nových bloků jako například `posuv dopředu o 100 pixelů` a `zabočení doprava o 90 stupňů` čím dál tím složitější obrázky.",
+          "student_overview": "Vytvářejte krásné obrazy programováním Umělce."
+        },
+        "sports/Sports": {
+          "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
+          "student_overview": "Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!"
+        },
+        "basketball/Bounce": {
+          "overview": "V této online aktivitě se studenti naučí, co jsou události a jak je počítače využívají v programech jako jsou video hry. Studenti budou pracovat na úlohách, které přimějí program reagovat na události (jako například zmáčknutí tlačítek šipek). Na konci úlohy dostanou studenti příležitost přizpůsobit si svou hru různými stupni rychlosti a zvuky. ",
+          "student_overview": "Přáli jste si někdy hrát ve škole videohry? V této lekci se dostanete k tomu, že si vytvoříte vlastní videohru!"
+        },
+        "oceans/Oceans": {
+          "student_overview": "Shrnutí výukového kurzu: Nejprve studenti zařadí předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový soubor tak, aby zahrnoval i jiné mořské tvory patřící do vody. V druhé části aktivity budou studenti vybírat své vlastní značky, které aplikují na obrázky náhodně vytvořených ryb. Tato cvičná data se používají pro model strojového učení, který by měl být schopen označovat nové obrázky sám od sebe."
+        },
+        "outbreak/Outbreak": {
+          "purpose": "V předchozí lekci studenti shromažďovali a interpretovali data z jedné jednoduché simulace. V této lekci budou studenti postupovat podle návodu k naprogramování svého vlastního simulačního modelu. Předchozí znalosti studentů o virových epidemiích v reálném světě budou aplikovány na fiktivní scénář. "
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.",
+          "student_overview": " Hlavolamy dokončete kliknutím a potažením."
+        },
         "coursef-2021/lesson-2": {
           "student_overview": "Šikana není nikdy v pořádku. Tato lekce Vás poučí o tom, co je a co není správné říkat online."
         },

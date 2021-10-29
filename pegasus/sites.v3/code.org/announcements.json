@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nasa-myjourney"
+    "/home": "nextsteps-alternatives"
   },
 
   "banners": {
-    "nasa-myjourney": {
-      "image": "/images/csjourneys/nasa-banner.png",
-      "title": "Building models of the universe with NASA",
-      "body": "Hear from two NASA scientists about their career journeys and how they use data science to build 3D models of the universe. Recommended for grades K-5. Recording will be available the day after the live session.",
+    "nextsteps-alternatives": {
+      "image": "/images/csjourneys/nextsteps-alternatives.png",
+      "title": "Learn about key alternatives to the 4-year college degree",
+      "body": "Give high school students the opportunity to learn about key alternatives to the four-year college degree, including community college and apprenticeships. Recommended for grades 9-12.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129",
-      "buttonId": "myjourney-nasa-details"
+      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-3",
+      "buttonId": "nextsteps-alternatives-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

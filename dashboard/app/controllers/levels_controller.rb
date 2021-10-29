@@ -98,6 +98,10 @@ class LevelsController < ApplicationController
   # GET /levels/get_filtered_levels/
   # Get all the information for levels after filtering
   def get_filtered_levels
+    if params[:name]&.start_with?('blockly:')
+      @levels = [Level.find_by_key(params[:name]).summarize_for_edit]
+      return render json: {numPages: 1, levels: @levels}
+    end
     filter_levels(params)
 
     @levels = @levels.limit(150)
@@ -112,7 +116,7 @@ class LevelsController < ApplicationController
   def filter_levels(params)
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
-    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%").or(@levels.where('levels.level_num LIKE ?', "%#{params[:name]}%")) if params[:name]
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
     @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?

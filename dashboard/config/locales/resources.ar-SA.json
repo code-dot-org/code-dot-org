@@ -2,6 +2,36 @@
   "ar-SA": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify Playlist (كل الأعمار)"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "تقديم الفنان"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "لفات وزوايا"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "لفات وزوايا"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify Playlist (كل الأعمار)"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify Playlist (كل الأعمار)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify Playlist (كل الأعمار)"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "الذكاء الاصطناعي: التعلم الآلي"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "الذكاء الاصطناعي: التأثير على المجتمع"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "الذكاء الاصطناعي: بيانات التدريب والتحيز"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "التعريف بمشروع Sprite Lab (مختبر سبرايت)"
         },

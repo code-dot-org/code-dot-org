@@ -224,7 +224,7 @@ cs:
             kouzlo a krásu ledu.
           lessons:
             Artist:
-              name: Umělec
+              name: Kóduj s Annou a Elsou
           student_description: Pojďme spojit Anna a Elsu, jak ony prozkoumávají pomocí
             kódu kouzlo a krásu ledu. Sněhové vločky a vzory se vytváří při bruslení
             a udělají zimní říši divů, kterou pak můžete sdílet se svými přáteli!
@@ -349,7 +349,7 @@ cs:
             Infinity postavami.
           lessons:
             Infinity:
-              name: Nekonečno
+              name: Disney Infinity Play Lab
           student_description: Použij Play Lab k vytvoření příběhu nebo hry s Disney
             Infinity postavami.
         algebrademo:
@@ -479,6 +479,11 @@ cs:
           lessons:
             Jigsaw:
               name: Skládačka
+              description_student: " Hlavolamy dokončete kliknutím a potažením."
+              description_teacher: Tato lekce dá studentům představu o tom, co mohou
+                očekávat, když se vydají do počítačové laboratoře. Začne to krátkou
+                diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové
+                laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.
           student_description: Vyzkoušej náš kurz na skládačky
         step:
           title: Krok
@@ -859,9 +864,6 @@ cs:
             ve vzdálené galaxii.
           description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star
             Wars ve vzdálené galaxii.
-          lessons:
-            Hour of Code 2015:
-              name: Hodina kódu 2013
           student_description: Nauč se programovat droidy a vytvoř si vlastní hru
             Star Wars ve vzdálené galaxii.
         mc:
@@ -1299,7 +1301,6 @@ cs:
           description: Vyberte si svůj tým a vytvořte basketbalovou hru
           lessons:
             Bounce:
-              name: Bounce
               description_student: Přáli jste si někdy hrát ve škole videohry? V této
                 lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
               description_teacher: V této online aktivitě se studenti naučí, co jsou
@@ -1606,7 +1607,6 @@ cs:
           title: Naprogramuj svoji vlastní sportovní hru
           lessons:
             Sports:
-              name: Sporty
               description_student: Přáli jste si někdy hrát ve škole videohry? V této
                 lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
               description_teacher: V této online aktivitě se studenti naučí, co jsou
@@ -3250,9 +3250,6 @@ cs:
             kódu!
           description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj
             Minecraft s kódem.
-          lessons:
-            Minecraft Hour of Code:
-              name: Hodina kódu s Minecraftem
           student_description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou!
             Procestuj Minecraft s kódem.
         applab-intro-staging:
@@ -4534,9 +4531,6 @@ cs:
               name: Umělec
         aquatic:
           description_short: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
-          lessons:
-            Aquatic:
-              name: Vodní
         dance--draft:
           lessons:
             Dance Party:
@@ -8185,6 +8179,8 @@ cs:
           lessons:
             Virus Simulation for Code Bytes:
               name: Naprogramování simulace
+            Outbreak:
+              name: Naprogramování simulace
           lesson_groups:
             outbreak:
               display_name: Simulace epidemie
@@ -9797,5 +9793,24 @@ cs:
               display_name: Obsah
             lesson_group:
               display_name: Obsah
+            lessonGroup-2:
+              display_name: Obsah
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgety
+        poetry:
+          lessons:
+            lesson-3:
+              name: Proměnné
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Hláskovací včelka
+          title: Hláskovací včelka
+        outbreak-csc:
+          title: Epidemie
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Obsah

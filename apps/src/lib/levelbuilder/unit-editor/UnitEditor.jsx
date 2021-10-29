@@ -24,12 +24,18 @@ import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder
 import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {
+  InstructionType,
+  PublishedState,
+  InstructorAudience,
+  ParticipantAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
+import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', 'CSC', ''];
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -41,6 +47,14 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
+    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
+      .isRequired,
+    initialInstructorAudience: PropTypes.oneOf(
+      Object.values(InstructorAudience)
+    ).isRequired,
+    initialParticipantAudience: PropTypes.oneOf(
+      Object.values(ParticipantAudience)
+    ).isRequired,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
@@ -151,7 +165,10 @@ class UnitEditor extends React.Component {
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
-      publishedState: this.props.initialPublishedState
+      publishedState: this.props.initialPublishedState,
+      instructionType: this.props.initialInstructionType,
+      instructorAudience: this.props.initialInstructorAudience,
+      participantAudience: this.props.initialParticipantAudience
     };
   }
 
@@ -265,6 +282,9 @@ class UnitEditor extends React.Component {
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
       published_state: this.state.publishedState,
+      instruction_type: this.state.instructionType,
+      instructor_audience: this.state.instructorAudience,
+      participant_audience: this.state.participantAudience,
       deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
@@ -568,6 +588,31 @@ class UnitEditor extends React.Component {
           </label>
         </CollapsibleEditorSection>
 
+        {this.props.hasCourse && (
+          <CollapsibleEditorSection title="Course Type Settings">
+            <p>
+              This unit is part of a course. Go to the course edit page to set
+              the course type settings for the course and its units.
+            </p>
+          </CollapsibleEditorSection>
+        )}
+        {!this.props.hasCourse && (
+          <CourseTypeEditor
+            instructorAudience={this.state.instructorAudience}
+            participantAudience={this.state.participantAudience}
+            instructionType={this.state.instructionType}
+            handleInstructionTypeChange={e =>
+              this.setState({instructionType: e.target.value})
+            }
+            handleInstructorAudienceChange={e =>
+              this.setState({instructorAudience: e.target.value})
+            }
+            handleParticipantAudienceChange={e =>
+              this.setState({participantAudience: e.target.value})
+            }
+          />
+        )}
+
         <CollapsibleEditorSection title="Announcements">
           <AnnouncementsEditor
             announcements={this.state.announcements}
@@ -684,8 +729,6 @@ class UnitEditor extends React.Component {
         <CollapsibleEditorSection title="Lesson Settings">
           {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
             <label>
-              {/* TODO(dave): enable or remove this button, once we figure out
-              what controls we want to make available to curriculum writers. */}
               <Button
                 text={'Use Code Studio Lesson Plans'}
                 size={Button.ButtonSize.narrow}
@@ -693,12 +736,14 @@ class UnitEditor extends React.Component {
                 style={{margin: 0, height: 30, lineHeight: '8px'}}
                 onClick={e => {
                   e.preventDefault();
-                  const msg = 'Are you sure? This action cannot be undone.';
+                  const msg =
+                    'Are you sure? This action cannot be undone. Please ' +
+                    'confirm that translations are complete before proceeding.';
                   if (window.confirm(msg)) {
                     this.setState({useLegacyLessonPlans: false});
                   }
                 }}
-                disabled
+                disabled={!this.state.useLegacyLessonPlans}
               />
               <HelpTip>
                 <p>

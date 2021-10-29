@@ -271,7 +271,6 @@
         "courseF_sprites_properties": "Thuộc tính của nhân vật",
         "international_outbreak_freeplay": "Chia sẻ thông điệp",
         "Course E: Artist Project_2021": "Tạo dự án Họa sĩ",
-        "Course F: Artist Project_2021": "Tạo dự án Họa sĩ",
         "CourseE_Project_SpriteLab_2021": "Tạo dự án Sprite Lab",
         "CourseF_Project_SpriteLab_2021": "Tạo dự án Sprite Lab",
         "courseF_artist_for1_2021": "Chơi tự do với vòng lặp for (Sơ cấp)",
@@ -284,7 +283,11 @@
         "helloworld_food_location": "Sự kiện theo thời gian",
         "helloworld_retro_costumes": "Trang phục",
         "helloworld_retro_location": "Sự kiện theo thời gian",
-        "scrat_loops_C-F_video_2021": "Vòng lặp trong video Kỷ băng hà"
+        "scrat_loops_C-F_video_2021": "Vòng lặp trong video Kỷ băng hà",
+        "CourseD_EOC_dance_2021": "Hãy biên đạo một điệu nhảy",
+        "MC_HOC_2017_FP20x20_2021": "Chơi·tự·do",
+        "CourseD_EOC_artist_2021": "Hãy vẽ một bức tranh",
+        "CourseD_EOC_bounce1_2021": "Hãy làm game bóng rổ"
       }
     }
   }

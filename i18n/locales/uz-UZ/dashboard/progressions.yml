@@ -23,6 +23,7 @@ uz:
       'Bunny ': 'Bunny quyon'
       CS Discoveries Post-Course Survey: CS Discoveries Post-Course Survey
       CS Discoveries Post-course Survey: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+      CSS Classes: CSS sinflari
       CSS Text Properties: CSS matn xususiyatlari
       CSS and Style Sheets: CSS va stillar
       Cake Defender: Tort himoyachisi
@@ -67,6 +68,7 @@ uz:
       Experiment with Web Lab: Web Lab bilan tajribalar
       Exploration: O‘rganish
       Exploring more CSS: CSS-ni ko'proq o'rganish
+      Final Personal Website: Yakuniy shaxsiy veb-sayt
       Finish a Screen: Ekranni yakunlash
       Finish the Prototype: Prototipni yakunlash
       Finishing Functions: Funksiyalarni yakunlash
@@ -98,6 +100,7 @@ uz:
       Intro to Variables: O'zgaruvchilarda kirish
       Introducing Sprite Lab: Sprite laboratoriyasi bilan tanishish
       Introduction to Arrays: Massivlar bilan tanishish
+      Introduction to Variables: Oʻzgaruvchilar mavzusiga kirish
       Iteration and Parameters: Iteratsiya va Parametrlar
       Keeping Data Secret: Keeping Data Secret
       Keyboard Input: Keyboard Input
@@ -105,6 +108,7 @@ uz:
       Layout with CSS: CSS bilan ko'rinishlar (layout)
       Learning from Simulations: Simulyatsiya yordamida o'rganish
       Lesson Extras: Dars qo‘shimchalari
+      Levels: Darajalar
       Light Show: Chiroqlar shousi
       Linking Screens: Linking Screens
       Lists: Ro‘yxatlar
@@ -115,6 +119,7 @@ uz:
       Making Sounds: Tovush yaratish
       'Maze Intro: Programming with Blocks': 'Labirintga kirish: Blocklar bilan dasturlash'
       Measures: O'lchovlar
+      'Minecraft: Hero''s Journey': 'Minecraft: Hero''s Journey'
       'Mini-Project: About Me': 'Men haqimda Sprite Lab bilan'
       'Mini-Project: Alien Dance Moves': 'Mini-loyiha: Alien Dance Moves'
       'Mini-Project: Alien Dance Party': 'Mini-loyiha: Alien Dance Party'
@@ -164,6 +169,8 @@ uz:
       Properties: Xususiyatlar
       Quarter Notes: Chorak notalar
       RGB Exploration: RGB bilan tanishish
+      RGB Widget: RGB vidjet
+      Random Numbers: Tasodifiy sonlar
       Reading Sensors: Sensorlarni o'qish
       Reflection: Reflection
       Repeat Blocks: Repeat bloklari
@@ -193,6 +200,7 @@ uz:
       Sprite Lab Example Project: Sprite Lab namuna uchun loyiha
       Sprite Lab Project: Sprite Lab loyihasi
       Sprite Properties: Sprait hususiyatlari
+      Sprite Velocity: Sprayt tezligi
       Sprites and the Draw Loop: Spraytlar va Draw sikli
       Star Chaser: Yulduzli poyga
       Styling Text: Matn stilini sozlash
@@ -216,6 +224,7 @@ uz:
       Velocity: Tezlik
       Video: Video
       'Video: CS Matters': 'Video: Kompyuter fanlari muhim'
+      'Video: Velocity': 'Video: Tezlik'
       'Video: What Makes a Computer, a Computer?': 'Video: Kompyuter kompyuter boʻlishi uchun nima kerak?'
       Warm Up: Qizdirish
       Website Project: Veb-sayt loyihasi

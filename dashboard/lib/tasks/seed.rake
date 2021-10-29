@@ -444,6 +444,7 @@ namespace :seed do
       'config/**/*',
       'db/**/*',
       'lib/tasks/**/*',
+      'test/ui/config/**/*',
     ].exclude('db/ui_test_data.*')
     current_hash = HashUtils.file_contents_hash(watched_files)
 

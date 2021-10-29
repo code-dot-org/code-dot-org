@@ -16,7 +16,9 @@ module Pd::Application
       return render :not_teacher unless current_user.teacher?
       return render :no_teacher_email unless current_user.email.present?
 
-      @application = TEACHER_APPLICATION_CLASS.find_by(user: current_user)
+      @application = TEACHER_APPLICATION_CLASS.
+        where(application_year: APPLICATION_CURRENT_YEAR).
+        find_by(user: current_user)
       return render :submitted if @application
 
       @year = APPLICATION_CURRENT_YEAR

@@ -1178,6 +1178,13 @@ is:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kremja
+            "'sound://category_animals/bear.mp3'": Björn
+            "'sound://category_animals/cat.mp3'": köttur
+            "'sound://category_animals/cow.mp3'": kýr
+            "'sound://category_animals/sheep.mp3'": kind
+            "'sound://category_animals/chicken.mp3'": hænsn
+            "'sound://category_animals/dolphin.mp3'": höfrungur
+            "'sound://category_animals/dog.mp3'": hundur
             "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_pointInDirection:
         text: beina {SPRITE} {DIRECTION}
@@ -1281,8 +1288,6 @@ is:
             '"when"': þegar
             '"while"': meðan
       gamelab_spriteSay:
-        text: "{SPRITE} segir {SPEECH}"
-      gamelab_spriteSayChoices:
         text: "{SPRITE} segir {SPEECH}"
       gamelab_subjectSpritePointer:
         text: ásmellt vera
@@ -1659,10 +1664,14 @@ is:
         options:
           EFFECT:
             '"rain"': regn
+      Poetry_makeNewSpriteAnon:
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       Poetry_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
       Poetry_playSound:
         text: spilaHljóð {SOUND}
+      Poetry_setBackground:
+        text: stilla bakgrunnslitinn {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

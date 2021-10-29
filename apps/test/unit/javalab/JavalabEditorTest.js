@@ -11,6 +11,7 @@ import {
   restoreRedux
 } from '@cdo/apps/redux';
 import {EditorView} from '@codemirror/view';
+import {EditorState} from '@codemirror/state';
 import {oneDark} from '@codemirror/theme-one-dark';
 import {lightMode} from '@cdo/apps/javalab/editorSetup';
 import javalab, {
@@ -691,6 +692,7 @@ describe('Java Lab Editor Test', () => {
       const firstEditor = Object.values(javalabCodeMirrors)[0];
 
       expect(firstEditor.state.facet(EditorView.editable)).to.be.false;
+      expect(firstEditor.state.facet(EditorState.readOnly)).to.be.true;
     });
 
     it('header buttons are disabled', () => {

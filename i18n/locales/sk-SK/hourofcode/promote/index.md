@@ -14,7 +14,7 @@ Povedzte svojim priateľom o **#HourOfCode**!
 
 ## 2. Požiadajte Vašu školu, aby usporiadala Hodinu Kódu
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Pošlite tento e-mail]({{ promote/sample_emails }}) svojmu šéfovi a vyzvite všetky triedy vo svojej škole, aby sa zapojili.
 
 ## 3. Požiadajte Vášho zamestnávateľa, aby sa zapojil
 

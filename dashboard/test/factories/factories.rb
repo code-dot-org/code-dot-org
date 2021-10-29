@@ -163,6 +163,7 @@ FactoryGirl.define do
           end
         end
       end
+
       factory :program_manager do
         transient do
           regional_partner {build :regional_partner}
@@ -171,6 +172,7 @@ FactoryGirl.define do
           create :regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner
         end
       end
+
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}
         sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
@@ -178,6 +180,15 @@ FactoryGirl.define do
           plc_reviewer.permission = UserPermission::PLC_REVIEWER
         end
       end
+
+      factory :code_instructor do
+        sequence(:name) {|n| "Code Instructor #{n}"}
+        sequence(:email) {|n| "test_code_instructor_#{n}@example.com.xx"}
+        after(:create) do |code_instructor|
+          code_instructor.permission = UserPermission::CODE_INSTRUCTOR
+        end
+      end
+
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
@@ -516,6 +527,13 @@ FactoryGirl.define do
       end
     end
 
+    trait :with_example_solutions do
+      after(:create) do |level|
+        level.examples = ['example-1', 'example-2']
+        level.save!
+      end
+    end
+
     trait :spelling_bee do
       game {create(:game, app: "maze", name: "Maze")}
       skin 'letters'
@@ -566,6 +584,11 @@ FactoryGirl.define do
     game {Game.bounce}
   end
 
+  factory :odometer, parent: :level, class: Odometer do
+    game {Game.odometer}
+    level_num 'custom'
+  end
+
   factory :artist, parent: :level, class: Artist do
     game {Game.custom_artist}
   end
@@ -576,6 +599,7 @@ FactoryGirl.define do
 
   factory :applab, parent: :level, class: Applab do
     game {Game.applab}
+    level_num 'custom'
 
     trait :with_autoplay_video do
       video_key {create(:video).key}
@@ -592,18 +616,22 @@ FactoryGirl.define do
 
   factory :free_response, parent: :level, class: FreeResponse do
     game {Game.free_response}
+    level_num 'custom'
   end
 
   factory :playlab, parent: :level, class: Studio do
     game {create(:game, app: Game::PLAYLAB)}
+    level_num 'custom'
   end
 
   factory :gamelab, parent: :level, class: Gamelab do
     game {Game.gamelab}
+    level_num 'custom'
   end
 
   factory :weblab, parent: :level, class: Weblab do
     game {Game.weblab}
+    level_num 'custom'
   end
 
   factory :multi, parent: :level, class: Multi do
@@ -650,6 +678,24 @@ FactoryGirl.define do
 
   factory :javalab, parent: :level, class: Javalab do
     game {Game.javalab}
+    level_num 'custom'
+
+    trait :with_example_solutions do
+      after(:create) do |level|
+        level.examples = ['https://studio.code.org/s/csa-examples/lessons/1/levels/1/']
+        level.save!
+      end
+    end
+  end
+
+  factory :spritelab, parent: :level, class: GamelabJr do
+    game {Game.spritelab}
+    level_num 'custom'
+  end
+
+  factory :dance, parent: :level, class: Dancelab do
+    game {Game.dance}
+    level_num 'custom'
   end
 
   factory :block do
@@ -746,6 +792,13 @@ FactoryGirl.define do
       after(:create) do |csa_script|
         csa_script.curriculum_umbrella = 'CSA'
         csa_script.save
+      end
+    end
+
+    factory :csc_script do
+      after(:create) do |csc_script|
+        csc_script.curriculum_umbrella = 'CSC'
+        csc_script.save
       end
     end
   end
@@ -960,7 +1013,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script, published_state: SharedConstants::PUBLISHED_STATE.stable}
+    script {create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do

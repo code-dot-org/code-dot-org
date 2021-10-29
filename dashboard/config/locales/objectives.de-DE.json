@@ -2,6 +2,12 @@
   "de-DE": {
     "data": {
       "objectives": {
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Erkenne, was erwartet wird, wenn SchülerInnen den Computerraum betreten."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Eine Variable deklarieren"
         },

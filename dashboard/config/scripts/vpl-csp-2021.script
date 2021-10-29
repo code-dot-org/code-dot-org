@@ -58,3 +58,26 @@ level 'CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify', progression:
 level 'CSP AYW4 - Reflection on datasets', progression: 'Traversals and datasets (~15 minutes)'
 level 'CSP - Module 4 Wrap Up', progression: 'Module 4 Asynchronous Wrap-Up (~10 minutes)'
 
+lesson 'Module 5', display_name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return', has_lesson_plan: false
+level 'CSP-PL Module 5 - Workshop Overview', progression: 'Module 5 Overview (~5 minutes)'
+level 'CSP-PL M5 - Intro to Unit 7', progression: 'Understanding Unit 7 (~5 minutes)'
+level 'CSP-PL M5 - Param Explore', progression: 'Digging into the "Parameters and Return Explore" lesson (~25 minutes)'
+level 'CSP-PL M5 - Param Prac 1', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 1', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 2', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 4', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 3', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Return Practice Part 5', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Investigate Calculator App', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'PL U7 Param Practice App 2', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'CSP-PL M5 - Param Prac 10', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
+level 'CSP-PL M5 - Inclusive Classrooms', progression: 'Creating inclusive classrooms (~15 minutes)'
+level 'CSP - Module 5 Wrap Up', progression: 'Module 5 Asynchronous wrap-up (~10 minutes)'
+
+lesson 'Module 6', display_name: 'Module 6: Introduction to the Create Performance Task', has_lesson_plan: false
+level 'CSP-PL Module 6 - Workshop Overview', progression: 'Module 6 overview (~5 minutes)'
+level 'CSP-PL M6 - Create PT Reqs', progression: 'Requirements of the Create Performance Task (~20 minutes)'
+level 'CSP-PL M6 - Survival Guide', progression: 'Digging into the Create Performance Task Survival Guide (~40 minutes)'
+level 'CSP-PL M6 - Role of teacher', progression: 'Role of the teacher during the Create Performance Task (~15 minutes)'
+level 'CSP - Module 6 Wrap Up', progression: 'Module 6 Asynchronous Wrap-Up (~10 minutes)'
+

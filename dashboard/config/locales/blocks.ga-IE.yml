@@ -1127,6 +1127,13 @@ ga:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": cnagadh
+            "'sound://category_animals/bear.mp3'": béar
+            "'sound://category_animals/cat.mp3'": cat
+            "'sound://category_animals/cow.mp3'": bó
+            "'sound://category_animals/sheep.mp3'": caora
+            "'sound://category_animals/chicken.mp3'": sicín
+            "'sound://category_animals/dolphin.mp3'": deilf
+            "'sound://category_animals/dog.mp3'": madra
             "'sound://category_digital/jump_7.mp3'": léim
       gamelab_printText:
         text: priontáil {TEXT}
@@ -1534,6 +1541,10 @@ ga:
         options:
           EFFECT:
             '"rain"': báisteach
+      Poetry_makeNewSpriteAnon:
+        text: déan sprid nua {ANIMATION_NAME} {LOCATION}
+      Poetry_setBackground:
+        text: 'socraigh dath an chúlra: {COLOR}'
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

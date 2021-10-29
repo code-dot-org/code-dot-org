@@ -2162,6 +2162,170 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "crwdns2580768:0crwdne2580768:0"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "crwdns2694981:0crwdne2694981:0"
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "crwdns2695065:0crwdne2695065:0"
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "crwdns2694935:0crwdne2694935:0"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "crwdns2695015:0crwdne2695015:0"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "crwdns2694943:0crwdne2694943:0"
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "crwdns2695143:0crwdne2695143:0"
+        },
+        "helloworld_animals_location": {
+          "pin": "crwdns2694919:0crwdne2694919:0"
+        },
+        "helloworld_animals_multi": {
+          "pin": "crwdns2694927:0crwdne2694927:0"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "crwdns2694903:0crwdne2694903:0",
+          "hello_world_make_sprite": "crwdns2694905:0crwdne2694905:0"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "crwdns2695055:0crwdne2695055:0",
+          "hello_world_new_block": "crwdns2695057:0crwdne2695057:0"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "crwdns2695115:0crwdne2695115:0"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "crwdns2695231:0crwdne2695231:0"
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "crwdns2695315:0crwdne2695315:0"
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "crwdns2695185:0crwdne2695185:0"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "crwdns2695265:0crwdne2695265:0"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "crwdns2695193:0crwdne2695193:0"
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "crwdns2695393:0crwdne2695393:0"
+        },
+        "helloworld_emoji_location": {
+          "pin": "crwdns2695169:0crwdne2695169:0"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "crwdns2695177:0crwdne2695177:0"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "crwdns2695153:0crwdne2695153:0",
+          "hello_world_make_sprite": "crwdns2695155:0crwdne2695155:0"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "crwdns2695305:0crwdne2695305:0",
+          "hello_world_new_block": "crwdns2695307:0crwdne2695307:0"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "crwdns2695365:0crwdne2695365:0"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "crwdns2694771:0crwdne2694771:0"
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "crwdns2694855:0crwdne2694855:0"
+        },
+        "helloworld_food_click": {
+          "hw_Run": "crwdns2694725:0crwdne2694725:0"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "crwdns2694805:0crwdne2694805:0"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "crwdns2694733:0crwdne2694733:0"
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "crwdns2694893:0crwdne2694893:0"
+        },
+        "helloworld_food_location": {
+          "pin": "crwdns2694709:0crwdne2694709:0"
+        },
+        "helloworld_food_multi": {
+          "pin": "crwdns2694717:0crwdne2694717:0"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "crwdns2694693:0crwdne2694693:0",
+          "hello_world_make_sprite": "crwdns2694695:0crwdne2694695:0"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "crwdns2694845:0crwdne2694845:0",
+          "hello_world_new_block": "crwdns2694847:0crwdne2694847:0"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "crwdns2694865:0crwdne2694865:0"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "crwdns2694521:0crwdne2694521:0"
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "crwdns2694605:0crwdne2694605:0"
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "crwdns2694475:0crwdne2694475:0"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "crwdns2694555:0crwdne2694555:0"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "crwdns2694483:0crwdne2694483:0"
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "crwdns2694683:0crwdne2694683:0"
+        },
+        "helloworld_retro_location": {
+          "pin": "crwdns2694459:0crwdne2694459:0"
+        },
+        "helloworld_retro_multi": {
+          "pin": "crwdns2694467:0crwdne2694467:0"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "crwdns2694443:0crwdne2694443:0",
+          "hello_world_make_sprite": "crwdns2694445:0crwdne2694445:0"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "crwdns2694595:0crwdne2694595:0",
+          "hello_world_new_block": "crwdns2694597:0crwdne2694597:0"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "crwdns2694655:0crwdne2694655:0"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "crwdns2695547:0crwdne2695547:0"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "crwdns2695507:0crwdne2695507:0"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "crwdns2695533:0crwdne2695533:0",
+          "poetry_foreground": "crwdns2695535:0crwdne2695535:0"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_new_block": "crwdns2696117:0crwdne2696117:0"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "crwdns2695521:0crwdne2695521:0"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "crwdns2695553:0crwdne2695553:0",
+          "poetry_sprite_stops": "crwdns2695555:0crwdne2695555:0"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "crwdns2695563:0crwdne2695563:0",
+          "poetry_remove_sprite": "crwdns2695565:0crwdne2695565:0"
         }
       }
     }

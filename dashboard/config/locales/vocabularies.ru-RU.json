@@ -2,6 +2,102 @@
   "ru-RU": {
     "data": {
       "vocabularies": {
+        "event/dance-extras/unversioned": {
+          "word": "Событие"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Отладка"
+        },
+        "event/minecraft/unversioned": {
+          "word": "Событие"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Отладка"
+        },
+        "function/hero/unversioned": {
+          "word": "Функция"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Отладка"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Отладка"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Отладка"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Отладка"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Отладка"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Отладка"
+        },
+        "event/dance/unversioned": {
+          "word": "Событие"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отладка"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Условные команды"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Циклы"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Шифрование"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Отладка"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Отладка"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Отладка"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Отладка"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Сжатие без потерь"
+        },
+        "event/sports/unversioned": {
+          "word": "Событие"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Отладка"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Отладка"
+        },
+        "event/basketball/unversioned": {
+          "word": "Событие"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Отладка"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Событие"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Событие"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Машинное обучение"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Событие"
+        },
         "behavior/coursef/2021": {
           "word": "Поведение"
         },

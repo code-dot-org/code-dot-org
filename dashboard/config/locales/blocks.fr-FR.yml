@@ -1156,7 +1156,19 @@ fr:
         text: jouer le son {SOUND}
         options:
           SOUND:
+            "'sound://category_app/app_button_1.mp3'": bouton
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bulle
+            "'sound://category_animals/bear.mp3'": Ours
+            "'sound://category_animals/cat.mp3'": chat
+            "'sound://category_animals/cow.mp3'": vache
+            "'sound://category_animals/pig.mp3'": cochon
+            "'sound://category_animals/sheep.mp3'": mouton
+            "'sound://category_animals/chicken.mp3'": poulet
+            "'sound://category_animals/elephant.mp3'": éléphant
+            "'sound://category_animals/dolphin.mp3'": dauphin
+            "'sound://category_animals/chick.mp3'": poulet
+            "'sound://category_animals/dog.mp3'": chien
             "'sound://category_digital/jump_7.mp3'": sauter
       gamelab_pointInDirection:
         text: diriger {SPRITE} vers {DIRECTION}
@@ -1626,10 +1638,14 @@ fr:
         options:
           EFFECT:
             '"rain"': pluie
+      Poetry_makeNewSpriteAnon:
+        text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       Poetry_makeNumSprites:
         text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
       Poetry_playSound:
         text: jouer le son {SOUND}
+      Poetry_setBackground:
+        text: définir la couleur de fond {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

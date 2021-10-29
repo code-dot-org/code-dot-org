@@ -2,6 +2,18 @@
   "en-GB": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Function"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Loops"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
         "variable/coursef/2021": {
           "word": "Variable"
         },

@@ -6275,3 +6275,8 @@ tr-TR:
             ve bu hataya neden oluyor.
         questions:
         - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
+      courseF_intro_apps:
+        description: Bilgisayar Bilimi Temelleri'ne hoş geldiniz! Bu projelerin tamamı
+          Hareketli Nesne Laboratuvarı ile hazırlandı. Neler mümkün olduğunu görmek
+          için hemen deneyin. Bu kursu tamamladığınızda bunun gibi ve daha birçok
+          proje yapabileceksiniz.

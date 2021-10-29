@@ -7,10 +7,10 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
-    YEAR = '2021-2022'
+    YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
     SECTION_HEADERS = {
-      about_you: 'About You',
+      about_you: 'About You and Your School',
       teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
@@ -24,18 +24,19 @@ module Pd
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
-        alternate_email: 'If you use another email (especially during summer months), enter it here:',
+        alternate_email: 'If you used your school email and can be reached at a better email address in the summer months, please enter it here:',
         phone: 'Home or cell phone',
-        gender_identity: 'Gender identity',
-        race: 'Race or ethnicity',
+        street_address: 'Home street address',
+        city: 'Home city',
+        state: 'Home state',
         zip_code: 'Home zip code',
         school: 'School',
         school_name: 'School name',
         school_district_name: 'School district',
         school_address: 'School address',
-        school_city: 'City',
-        school_state: 'State',
-        school_zip_code: 'Zip code',
+        school_city: 'School city',
+        school_state: 'School state',
+        school_zip_code: 'School zip code',
         school_type: 'My school is a',
         principal_title: "Principal's title",
         principal_first_name: "Principal's first name",
@@ -46,13 +47,14 @@ module Pd
         current_role: 'What is your current role at your school?',
         completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
         completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
-        how_heard: 'How did you hear about this program?'
-      },
-      teaching_background: {
+        how_heard: 'How did you hear about this program?',
+        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
         )
+      },
+      teaching_background: {
       },
       choose_your_program: {
         program: clean_multiline(
@@ -163,12 +165,16 @@ module Pd
         cs_how_many_minutes: "How many minutes will your CS Program class last?",
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
+        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
-        principal_approval_url: "Principal Approval Form URL"
+        principal_approval_url: "Principal Approval Form URL",
+        street_address: 'Home street address',
+        city: 'Home city',
+        state: 'Home state',
       },
       principal: {
         title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
@@ -347,7 +353,11 @@ module Pd
         :gender_identity,
         :race,
         :how_heard,
-        :principal_approval_url
+        :principal_approval_url,
+        :previous_used_curriculum,
+        :street_address,
+        :city,
+        :state
       ],
       principal: [
         :title,

@@ -2,6 +2,69 @@
   "he-IL": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/hero/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "function/hero/unversioned": {
+          "word": "פונקציה"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "code/artist/unversioned": {
+          "word": "קוד"
+        },
+        "debugging/artist/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "תנאים"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "חזרות"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/mc/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "code/sports/unversioned": {
+          "word": "קוד"
+        },
+        "debugging/sports/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "מציאת טעויות"
+        },
         "behavior/coursef/2021": {
           "word": "התנהגות"
         },

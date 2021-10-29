@@ -1,8 +1,10 @@
 {
+  "bricks": "izitini",
   "clay": "udongo",
   "dirt": "ukuncola",
   "do": "yenza",
   "empty": "akukho lutho",
+  "farmland": "indawo yepulazi",
   "glass": "ingilazi",
   "grass": "utshani",
   "gravel": "uhlwayi",

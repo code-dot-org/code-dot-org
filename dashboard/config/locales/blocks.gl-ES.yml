@@ -200,6 +200,8 @@ gl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": triture
+            "'sound://category_animals/cat.mp3'": gato
+            "'sound://category_animals/dog.mp3'": can
             "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_randColor:
         text: cor aleatoria

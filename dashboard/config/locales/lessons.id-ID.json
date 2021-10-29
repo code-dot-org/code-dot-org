@@ -2,6 +2,25 @@
   "id-ID": {
     "data": {
       "lessons": {
+        "artist/Artist": {
+          "overview": "Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.",
+          "student_overview": "Buat gambar-gambar yang indah dengan memprogram Artis."
+        },
+        "sports/Sports": {
+          "overview": "Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.",
+          "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
+        },
+        "basketball/Bounce": {
+          "overview": "Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.",
+          "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
+        },
+        "oceans/Oceans": {
+          "student_overview": "Ringkasan Tutorial: Pertama murid menggolongkan objek sebagai “ikan” atau “bukan ikan” sebagai upaya untuk membuang sampah dari lautan. Lalu, murid perlu memperluas himpunan data latihan agar mencakup makhluk laut lainnya yang tergolong hewan air. Di bagian kedua aktivitas, murid akan memilih label sendiri untuk diterapkan pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri gambar baru."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
+          "student_overview": "Klik dan drag untuk menyelesaikan puzzle."
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool \"Costumes\" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!",
           "student_overview": "Dalam pelajaran ini, murid akan membuat Virtual Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka. Murid akan menggunakan tool \"Costumes\" di Sprite Lab untuk menyesuaikan penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku, dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan tersebut hidup sendiri!"

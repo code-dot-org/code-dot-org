@@ -154,6 +154,9 @@ my:
       gamelab_playSoundOptions:
         options:
           SOUND:
+            "'sound://category_animals/cow.mp3'": နွား
+            "'sound://category_animals/sheep.mp3'": သိုး
+            "'sound://category_animals/chicken.mp3'": ကြက်ကလေး
             "'sound://category_digital/jump_7.mp3'": ခုန်ပါ
       gamelab_randColor:
         text: ကျဘန်းအရောင်

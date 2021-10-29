@@ -494,6 +494,7 @@ sr:
   pd:
     form_labels:
       email: Електронска пошта
+      school: Школа
       school_name: Име школе
       colombian_chilean_school_name: Име школе
     form_entries:

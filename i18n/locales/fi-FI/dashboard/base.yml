@@ -841,6 +841,7 @@ fi:
   pd:
     form_labels:
       email: 'Sähköposti'
+      school: 'Koulu'
       school_name: 'Koulun nimi'
       school_country: 'Koulun maa'
       colombian_chilean_school_name: 'Koulun nimi'
