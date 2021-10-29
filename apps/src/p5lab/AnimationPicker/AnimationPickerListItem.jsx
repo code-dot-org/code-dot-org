@@ -78,16 +78,18 @@ class AnimationPickerListItem extends React.Component {
     ];
 
     return (
-      <div style={rootStyle}>
+      <div
+        style={rootStyle}
+        onFocus={() => this.setState({hover: true})}
+        onBlur={() => this.setState({hover: false})}
+        onMouseEnter={() => this.setState({hover: true})}
+        onMouseLeave={() => this.setState({hover: false})}
+      >
         <button
           style={thumbnailStyleWithHover}
           onClick={onClick}
           className={category}
           type="button"
-          onFocus={() => this.setState({hover: true})}
-          onBlur={() => this.setState({hover: false})}
-          onMouseEnter={() => this.setState({hover: true})}
-          onMouseLeave={() => this.setState({hover: false})}
         >
           <div>
             {animationProps && (
