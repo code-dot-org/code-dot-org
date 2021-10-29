@@ -29,7 +29,8 @@ const DEFAULT_PROPS = {
   unlockedLessonNames: [],
   students: null,
   levelsWithProgress: [],
-  loadLevelsWithProgress: () => {}
+  loadLevelsWithProgress: () => {},
+  teacherId: 5
 };
 
 const sectionScriptLevelData = [
@@ -165,25 +166,24 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
-        getSelectedUserId: () => 0
+        pageType: pageTypes.scriptOverview
       });
 
       expect(wrapper.find(SelectedStudentInfo)).to.have.length(0);
     });
 
-    it('on level displays SelectedStudentInfo when student selected', () => {
+    it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
         getSelectedUserId: () => 1,
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        teacherId: 5
       });
 
-      expect(wrapper.find(SelectedStudentInfo)).to.have.length(1);
+      const selectedStudentComponent = wrapper.find(SelectedStudentInfo);
+      expect(selectedStudentComponent).to.have.length(1);
+      expect(selectedStudentComponent.props().teacherId).to.equal(5);
+      expect(selectedStudentComponent.props().selectedUserId).to.equal(1);
     });
   });
 
@@ -205,10 +205,7 @@ describe('TeacherPanel', () => {
           sectionData: {
             level_examples: [
               'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
-            ],
-            section: {
-              students: students
-            }
+            ]
           }
         });
 
@@ -220,10 +217,7 @@ describe('TeacherPanel', () => {
           viewAs: ViewType.Teacher,
           students: students,
           sectionData: {
-            level_examples: null,
-            section: {
-              students: students
-            }
+            level_examples: null
           }
         });
 
