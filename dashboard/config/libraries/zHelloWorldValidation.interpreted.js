@@ -171,8 +171,7 @@ function level4(){
 
   var newClickedSprite = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);
   if (newClickedSprite >= 0){
-    if (validationProps.clickedSprites.indexOf(newClickedSprite) != -1) {
-      console.log("IN PUSH");
+    if (validationProps.clickedSprites.indexOf(newClickedSprite) == -1) {
       validationProps.clickedSprites.push(newClickedSprite);
       validationProps.vars.delay = World.frameCount;
     }
