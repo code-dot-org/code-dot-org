@@ -333,7 +333,6 @@ function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
       var spriteIds = getSpriteIdsInUse();
       for (var spriteId in spriteIds) {
         if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
-          console.log(spriteId + " sprite passed");
           // clicked sprite caused speech in some sprite
           return clickedSpriteId;
         }
