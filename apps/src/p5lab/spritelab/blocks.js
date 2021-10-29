@@ -53,6 +53,18 @@ function backgroundList() {
   return animations(true);
 }
 
+function googleBlocklyMenuGenerator() {
+  return sprites().map(menuItem => {
+    let url = menuItem[0];
+    let code_id = menuItem[1];
+    // TODO: add better alt text. For now, it's just using the code name for the
+    // image, but that's not necessarily a student-friendly string. (for example,
+    // in Basketball, the hand dropdown has hand_1, hand_2, and hand_3, which might
+    // benefit from more descriptive alt text.)
+    return [{src: url, width: 32, height: 32, alt: code_id}, code_id];
+  });
+}
+
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
 // ['#ff0000', '#cc0000', '#880000'].
@@ -213,12 +225,17 @@ const customInputTypes = {
           }
         ];
       }
-      currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(
-          new Blockly.FieldImageDropdown(sprites, 32, 32, buttons),
-          inputConfig.name
-        );
+      currentInputRow.appendTitle(inputConfig.label).appendTitle(
+        new Blockly.FieldGridDropdown(
+          googleBlocklyMenuGenerator,
+          undefined,
+          {
+            columns: 8
+          },
+          buttons
+        ),
+        inputConfig.name
+      );
     },
     generateCode(block, arg) {
       return block.getTitleValue(arg.name);

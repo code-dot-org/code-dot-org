@@ -94,13 +94,13 @@ export class FieldGridDropdown extends Blockly.FieldDropdown {
     super.showEditor_(e);
 
     // Grid dropdown is always colored.
-    const primaryColour = this.sourceBlock_.isShadow()
-      ? this.sourceBlock_.getParent().getColour()
-      : this.sourceBlock_.getColour();
+    // const primaryColour = this.sourceBlock_.isShadow()
+    //   ? this.sourceBlock_.getParent().getColour()
+    //   : this.sourceBlock_.getColour();
     const borderColour = this.sourceBlock_.isShadow()
       ? this.sourceBlock_.getParent().style.colourTertiary
       : this.sourceBlock_.style.colourTertiary;
-    Blockly.DropDownDiv.setColour(primaryColour, borderColour);
+    Blockly.DropDownDiv.setColour('#fff', borderColour);
 
     Blockly.utils.dom.addClass(
       this.menu_.getElement(),
@@ -140,13 +140,20 @@ Blockly.Css.register([
       display: grid;
       grid-gap: 7px;
     }
+  .blocklyMenuItemContent > img {
+    max-width: 32px;
+    max-height: 32px;
+    object-fit: contain;
+  }
   /* Change look of cells (add border, sizing, padding, and text color) */
   .fieldGridDropDownContainer.blocklyMenu .blocklyMenuItem {
-    border: 1px solid rgba(1, 1, 1, 0.5);
+    border: none;
     border-radius: 4px;
     color: white;
     min-width: auto;
-    padding-left: 15px; /* override padding-left now that checkmark is hidden */
+    padding: 0px; /* override padding-left now that checkmark is hidden */
+    width: 32px;
+    height: 32px;
   }
   /* Change look of selected cell */
   .fieldGridDropDownContainer .blocklyMenuItem .blocklyMenuItemCheckbox {
