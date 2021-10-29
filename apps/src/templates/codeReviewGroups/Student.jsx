@@ -55,7 +55,7 @@ const getStudentStyle = (isDragging, draggableStyle) => ({
   color: color.dark_charcoal,
   width: 'auto',
   height: '20px',
-  border: '1px solid #C4C4C4',
+  border: `1px solid ${color.lighter_gray}`,
 
   // change background colour if dragging
   background: isDragging ? 'navy' : 'white',
