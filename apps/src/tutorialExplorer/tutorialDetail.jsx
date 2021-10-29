@@ -58,6 +58,16 @@ export default class TutorialDetail extends React.Component {
     // Disable body scrolling.
     $('body').css('overflow', 'hidden');
 
+    const languageComponent = (
+      <div style={styles.tutorialDetailLanguages}>
+        {this.props.item.language
+          .sort((a, b) => (a > b ? 1 : -1))
+          .map(language => (
+            <div>{language}</div>
+          ))}
+      </div>
+    );
+
     const tableEntries = [
       // Reserve key 0 for the optional teachers notes.
       // Reserve key 1 for the optional short link.
@@ -92,7 +102,7 @@ export default class TutorialDetail extends React.Component {
       {
         key: 7,
         title: i18n.tutorialDetailInternationalLanguages(),
-        body: this.props.item.language
+        body: languageComponent
       }
       // Reserve key 8 for the optional standards.
     ];
@@ -354,6 +364,10 @@ const styles = {
   },
   tutorialDetailDisabledIcon: {
     color: '#d9534f'
+  },
+  tutorialDetailLanguages: {
+    overflowY: 'scroll',
+    maxHeight: '110px'
   },
   tutorialDetailsTable: {
     marginTop: 20,

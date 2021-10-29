@@ -127,11 +127,7 @@ def hoc_language(lang_codes_str)
   language_codes = lang_codes_str.split(',')
   language_codes.map! {|code| hoc_s(code.downcase)}
 
-  # Account for list of more than 26
-  languages = language_codes.select {|code| code}.first(26).join(', ')
-  languages += ', and more!' if language_codes.length > 26
-
-  languages
+  language_codes.select {|code| code}
 end
 
 def hoc_uri(uri)
