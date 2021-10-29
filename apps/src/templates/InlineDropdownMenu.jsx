@@ -6,11 +6,12 @@ import onClickOutside from 'react-onclickoutside';
 
 // HTML Adapted from:
 // https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-actions.html
-// The accessibility isn't perfect yet - items within the dropdown aren't tab
-// navigable at this point - but it's a step in the right direction.
 
-// Displays a dropdown menu that displays actions that can be taken on comments
-class CommentOptions extends Component {
+// Displays an accessible dropdown menu with actions or links
+// TODO: Convert to a functional component once Radium is upgraded past 0.26.0
+// Our version of Radium doesn't support useState, but it has been patched in
+// later versions
+export const InlineDropdownMenu = class InlineDropdownMenuComponent extends Component {
   static propTypes = {
     icon: PropTypes.string.isRequired,
     children: props => {
@@ -53,7 +54,7 @@ class CommentOptions extends Component {
   render() {
     const {children, icon} = this.props;
     const {isOpen} = this.state;
-    if (children.length === 0) {
+    if (children === undefined || children.length === 0) {
       return;
     }
 
@@ -72,7 +73,7 @@ class CommentOptions extends Component {
         </button>
         {isOpen && (
           <ul
-            style={styles.commentOptionsContainer}
+            style={styles.dropdownContainer}
             className="ignore-react-onclickoutside"
           >
             {children.map((child, index) => {
@@ -83,7 +84,7 @@ class CommentOptions extends Component {
                   onKeyDown={event =>
                     this.handleKeyDown(event, child.props.onClick)
                   }
-                  style={styles.commentOptionContainer}
+                  style={styles.dropdownOptionContainer}
                   key={index}
                   tabIndex={0}
                 />
@@ -94,9 +95,9 @@ class CommentOptions extends Component {
       </>
     );
   }
-}
+};
 
-export default onClickOutside(Radium(CommentOptions));
+export default onClickOutside(Radium(InlineDropdownMenu));
 
 const styles = {
   menuButton: {
@@ -112,7 +113,7 @@ const styles = {
       boxShadow: 'none'
     }
   },
-  commentOptionsContainer: {
+  dropdownContainer: {
     top: 15,
     position: 'absolute',
     marginTop: '5px',
@@ -122,7 +123,7 @@ const styles = {
     borderRadius: '4px',
     backgroundColor: color.white
   },
-  commentOptionContainer: {
+  dropdownOptionContainer: {
     height: '22px',
     fontSize: '14px',
     fontFamily: '"Gotham 5r"',
