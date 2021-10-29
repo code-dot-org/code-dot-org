@@ -366,7 +366,7 @@ const styles = {
     color: '#d9534f'
   },
   tutorialDetailLanguages: {
-    overflowY: 'scroll',
+    overflowY: 'auto',
     maxHeight: '110px'
   },
   tutorialDetailsTable: {

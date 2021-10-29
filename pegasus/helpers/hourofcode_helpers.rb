@@ -125,9 +125,7 @@ def hoc_language(lang_codes_str)
 
   # Convert language codes to array and get the translated string
   language_codes = lang_codes_str.split(',')
-  language_codes.map! {|code| hoc_s(code.downcase)}
-
-  language_codes.select {|code| code}
+  language_codes.map {|code| hoc_s(code.downcase)}.select {|code| code}
 end
 
 def hoc_uri(uri)
