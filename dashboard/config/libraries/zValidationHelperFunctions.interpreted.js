@@ -306,7 +306,7 @@ function checkSpriteSay(eventLog, prevEventLogLength){
     var currentEvent = eventLog[eventLog.length - 1];
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       for (var spriteId in spriteIds) {
-        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame()) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite
           return true;
         }
@@ -332,7 +332,8 @@ function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       var spriteIds = getSpriteIdsInUse();
       for (var spriteId in spriteIds) {
-        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame()) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
+          console.log(spriteId + " sprite passed");
           // clicked sprite caused speech in some sprite
           return clickedSpriteId;
         }
@@ -413,7 +414,7 @@ new method - check if clicked sprite starts speaking
 new method
 
 for (var spriteId in spriteIds) {
-        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame()) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite
           return true;
         }
