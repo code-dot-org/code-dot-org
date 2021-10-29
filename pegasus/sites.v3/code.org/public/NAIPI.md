@@ -56,8 +56,6 @@ Chief Technology Officer | Sante Fe Indian School<br>
 
 
 
-<br>
-
 ![Keynote](/NAIPIpanel.png) 
 <br><br>
 
