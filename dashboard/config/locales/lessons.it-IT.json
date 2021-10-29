@@ -2,6 +2,36 @@
   "it-IT": {
     "data": {
       "lessons": {
+        "dance-extras/Dance Party - Go Further": {
+          "purpose": "Questa lezione introduce i concetti fondamentali CS di codifica e programmazione di eventi (usando i blocchi)."
+        },
+        "artist/Artist": {
+          "overview": "In questa lezione gli alunni prenderanno il controllo di un'artista per fargli completare dei disegni sullo schermo. Attraverso i vari esercizi della lezione gli alunni creeranno immagini di complessità crescente utilizzando nuovi blocchi come `vai avanti di 100 pixel` e `gira a destra di 90 gradi`.",
+          "student_overview": "Crea splendide immagini programmando l'artista."
+        },
+        "dance/Dance Party": {
+          "purpose": "Questa lezione introduce i concetti fondamentali CS di codifica e programmazione di eventi (usando i blocchi)."
+        },
+        "sports/Sports": {
+          "overview": "In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.",
+          "student_overview": "Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!"
+        },
+        "basketball/Bounce": {
+          "overview": "In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.",
+          "student_overview": "Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!"
+        },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Questa lezione introduce i concetti fondamentali CS di codifica e programmazione di eventi (usando i blocchi)."
+        },
+        "dance-2019/Dance Party": {
+          "purpose": "Questa lezione introduce i concetti fondamentali CS di codifica e programmazione di eventi (usando i blocchi)."
+        },
+        "oceans/Oceans": {
+          "student_overview": "Riepilogo del tutorial: i primi studenti classificano gli oggetti come \"pesce\" o \"non pesce\" per tentare di rimuovere la spazzatura dall'oceano. Quindi, gli studenti dovranno espandere il loro set di dati di addestramento per includere altre creature marine che appartengono all'acqua. Nella seconda parte dell'attività, gli studenti sceglieranno le proprie etichette da applicare alle immagini di pesci generati casualmente. Questi dati di addestramento vengono utilizzati per un modello di apprendimento automatico che dovrebbe quindi essere in grado di etichettare le nuove immagini da soli."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online."
+        },
         "coursef-2021/lesson-2": {
           "student_overview": "Il bullismo non va mai bene. In questa lezione imparerai cosa si può dire online e cosa deve essere evitato."
         },

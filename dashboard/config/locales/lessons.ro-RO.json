@@ -2,6 +2,25 @@
   "ro-RO": {
     "data": {
       "lessons": {
+        "artist/Artist": {
+          "overview": "În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.",
+          "student_overview": "Creați imagini extraordinare programând Artistul."
+        },
+        "sports/Sports": {
+          "overview": "În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.",
+          "student_overview": "Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!"
+        },
+        "basketball/Bounce": {
+          "overview": "În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.",
+          "student_overview": "Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!"
+        },
+        "oceans/Oceans": {
+          "student_overview": "Rezumatul tutorialului: Mai întâi elevii vor clasifica obiectele în două categorii - „pești” și „obiecte care nu sunt pești”, încercând să îndepărteze gunoaiele din ocean. Apoi elevii vor extinde setul de date de învățare, incluzând alte creaturi marine care trăiesc în apă. În a doua parte a activității, elevii vor alege propriile etichete care vor fi aplicate unor imagini cu pești generați aleatoriu. Aceste date de învățare sunt apoi utilizate pentru un model de învățare automatizată care trebuie să poată asocia singur noile etichete cu imaginile corespunzătoare."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.",
+          "student_overview": "Fă clic și glisează obiecte pentru a rezolva puzzle-urile."
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!"
         },
@@ -108,6 +127,7 @@
         },
         "coursea-2021/Loops: Happy Loops": {
           "overview": "În cadrul acestei activități, elevii vor lucra din nou cu Hărțile vesele. De această dată, elevii vor rezolva puzzle-uri mai complexe și cu durată mai lungă cu ajutorul codului, constatând astfel cât de utile sunt structurile care le permit să scrie coduri mai lungi într-un mod mai ușor.",
+          "purpose": "Această lecție servește ca introducere în conceptul de bucle. Buclele permit elevilor să- și simplifice codul grupând comenzi care necesită a fi repetate. Elevii vor dezvolta abilități de gândire critică prin observarea mișcărilor repetitive pe care le fac colegii lor și determinarea numărului de repetiție a comenzilor. Urmărind ”Hărți fericite” din nou, elevii vor avea șansa să facă legătura între concepte vechi ca secvențierea cu conceptul nou de bucle repetitive.",
           "student_overview": "Ajută Pufoșenia să rezolve probleme mai complicate cu ajutorul buclelor"
         },
         "coursea-2021/Loops in Ice Age": {
@@ -128,6 +148,7 @@
         },
         "coursea-2021/Events in Play Lab": {
           "overview": "În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați o poveste în Laboratorul de Joacă!",
+          "purpose": "Astăzi, elevii îşi vor dezvolta mai mult înţelegerea despre evenimente utilizând Play Lab. Evenimentele sunt foarte întâlnite în majoritatea programelor de calculator. În această activitate, elevii vor utiliza evenimente pentru a face un caracter să se mişte în jurul ecranului, să scoată sunete şi să schimbe fundalul ca urmare a evenimentelor iniţiate de utilizator.",
           "student_overview": "Creează-ți propriul joc sau propria poveste."
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
@@ -336,6 +357,7 @@
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.",
+          "purpose": "Această lecţie dă o perspectivă diferită despre cum buclele pot creea lucruri în programare. Aici elevii pot să reflecteze asupra ineficienţei programării fără bucle din cauza numărului mare de blocuri de care are nevoie programul fără ajutorul buclelor `repetă` (repeat).",
           "student_overview": "Folosește bucle și modele pentru a finaliza imaginile."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
@@ -344,6 +366,7 @@
         },
         "pre-express-2021/On the Move with Events": {
           "overview": "În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați o poveste în Laboratorul de Joacă!",
+          "purpose": "Astăzi, elevii îşi vor dezvolta mai mult înţelegerea despre evenimente utilizând Play Lab. Evenimentele sunt foarte întâlnite în majoritatea programelor de calculator. În această activitate, elevii vor utiliza evenimente pentru a face un caracter să se mişte în jurul ecranului, să scoată sunete şi să schimbe fundalul ca urmare a evenimentelor iniţiate de utilizator.",
           "student_overview": "Creează-ți propriul joc sau propria poveste."
         },
         "pre-express-2021/A Royal Battle with Events": {

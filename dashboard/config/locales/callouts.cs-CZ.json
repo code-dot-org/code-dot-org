@@ -829,6 +829,38 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nový blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nový blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nový blok!",
+          "poetry_foreground": "Nový blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nový blok!",
+          "poetry_multiple_sprites": "Nový blok!",
+          "poetry_new_block": "Nový blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nový blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nový blok!",
+          "poetry_sprite_stops": "Nový blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nový blok!",
+          "poetry_remove_sprite": "Nový blok!"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Toto číslo Vám říká, kolik těchto bloků můžete v tomto hlavolamu použít."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
         }
       }
     }

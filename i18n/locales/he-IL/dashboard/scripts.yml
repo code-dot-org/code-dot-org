@@ -161,7 +161,7 @@ he:
           description_short: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם והיופי של קרח.
           lessons:
             Artist:
-              name: אמן
+              name: תכנתו עם אנה ואלזה
           student_description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
         course4:
           title: מסלול 4
@@ -255,7 +255,7 @@ he:
           description_short: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
           lessons:
             Infinity:
-              name: אינסוף
+              name: מעבדת הצעצועים עם דיסני אינסוף
           student_description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
         algebrademo:
           lessons:
@@ -637,9 +637,6 @@ he:
         starwarsblocks:
           description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
           description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-          lessons:
-            Hour of Code 2015:
-              name: שעת קוד 2015
           student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
         mc:
           title: 'שעת הקוד: גרסת מיינקראפט'
@@ -953,10 +950,7 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        basketball:
-          lessons:
-            Bounce:
-              name: להקפיץ
+        basketball: {}
         hoc-encryption: {}
         csd2-2017:
           lesson_groups:
@@ -1618,7 +1612,7 @@ he:
           title: 'מיינקראפט: המסע של הירו'
           lessons:
             Minecraft Hour of Code:
-              name: 'שעת הקוד: גרסת מיינקראפט'
+              name: 'מיינקראפט: המסע של הירו'
         applab-intro-staging: {}
         csp-explore-2017:
           lesson_groups:
@@ -2343,6 +2337,9 @@ he:
         aquatic:
           title: 'מיינקראפט: מסע ימי'
           description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות עולמות תת-ימיים עם קוד!
+          lessons:
+            Aquatic:
+              name: 'מיינקראפט: מסע ימי'
         sconyers: {}
         dance--draft:
           lessons:
@@ -3875,6 +3872,8 @@ he:
           lessons:
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
+            Outbreak:
+              name: קידוד של סימולציה
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
@@ -4023,9 +4022,7 @@ he:
               display_name: פּרוֹיֶקט
         csp6-2021: {}
         csp7-2021: {}
-        csp8-2021:
-          lessons:
-            lesson-4: {}
+        csp8-2021: {}
         csp9-2021: {}
         csp10-2021: {}
         coursea-2021:
@@ -4294,7 +4291,14 @@ he:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
-        csa5-pilot: {}
+            lesson-20: {}
+        csa5-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
         csa6-pilot: {}
         csa7-pilot: {}
         csa8-pilot: {}
@@ -4645,6 +4649,7 @@ he:
             lesson-1: {}
             lesson-3: {}
             lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -4652,15 +4657,7 @@ he:
             lesson-2: {}
         csa5-pilot-facilitator:
           lessons:
-            Reversing Elements: {}
-            Shifting Elements: {}
-            Finding Duplicates: {}
-            Searching for Elements: {}
-            A Sustainable Neighborhood Project - Day 1: {}
-            A Sustainable Neighborhood Project - Day 2: {}
-            A Sustainable Neighborhood Project - Day 3: {}
-            FRQ Day: {}
-            Assessment Day: {}
+            lesson-1: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -4670,6 +4667,10 @@ he:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
         poetry-hoc:
           lessons:
             lesson-1: {}
@@ -4696,9 +4697,7 @@ he:
             lesson-19:
               name: פּרוֹיֶקט
             lesson-20: {}
-        hello-world-food:
-          lessons:
-            lesson-1: {}
+        hello-world-food: {}
         csa-u7-dev:
           lessons:
             lesson-1: {}
@@ -4762,3 +4761,54 @@ he:
         poetry-hoc3:
           lessons:
             lesson-1: {}
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1: {}
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: ווידג'טים
+            lesson-2:
+              name: כלים
+            lesson-3: {}
+        poem-art: {}
+        poetry:
+          lessons:
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: תחרות איות
+          title: תחרות איות
+        outbreak-csc: {}
+        explore-data-1: {}
+        counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        csa-examples-21:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}

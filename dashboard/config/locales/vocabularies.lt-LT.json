@@ -2,6 +2,21 @@
   "lt-LT": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Komanda"
+        },
+        "code/artist/unversioned": {
+          "word": "Kodavimas"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Kartojimas"
+        },
+        "code/sports/unversioned": {
+          "word": "Kodavimas"
+        },
         "variable/coursef/2021": {
           "word": "Kintamasis"
         },

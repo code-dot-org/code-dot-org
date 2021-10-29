@@ -1170,7 +1170,11 @@
           "wandering": "daydish",
           "shrinking": "kichrayish",
           "spinning left": "chap tarafga aylanish",
-          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "fluttering": "qaltirash",
+          "wobbling": "gandiraklash",
+          "moving west and looping": "g'arbga yurish va aylanish",
+          "moving east and looping": "sharqqa yurish va aylanish"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving west": "g'arbga yurish",
@@ -2541,7 +2545,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "chapga va o'ngga suzish",
@@ -2606,7 +2612,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "chapga va o'ngga suzish",
@@ -2656,7 +2664,9 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "chapga va o'ngga suzish",
@@ -2721,7 +2731,118 @@
           "moving north": "shimolga yurish",
           "moving south": "janubga yurish",
           "moving west": "g'arbga yurish",
-          "spinning right": "o'ng tarafga aylanish"
+          "spinning right": "o'ng tarafga aylanish",
+          "spinning left": "chap tarafga aylanish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "courseF_extras_sim": {
+          "wandering 2": "wandering 2",
+          "wandering 1": "wandering 1"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "daydish",
+          "moving east": "sharqqa yurish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "shrinking": "kichrayish",
+          "growing": "o'sish",
+          "moving south": "janubga yurish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "moving north": "shimolga yurish",
+          "jittering": "titrash",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring"
         }
       }
     }

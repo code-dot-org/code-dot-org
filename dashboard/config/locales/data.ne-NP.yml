@@ -654,9 +654,14 @@ ne:
         mc_2016_congrats: Minecraft Hour of Code - Congratulations
         mc_2017_congratulations: Minecraft Hour of Code - Congratulations
         CSF_loops_AB: Loops
+        hoc_dance_warmup: डान्स पार्टी - वार्म अप
+        hoc_dance_congrats: डान्स पार्टी - पार्टी अन!
         csd_pair_programming: Pair Programming
         csd_applab_parameters: Functions with Parameters
         csd_debugging: Debugging
+        hoc_dance_congrats_2019: डान्स पार्टी - पार्टी अन!
+        hoc_dance_warmup_2019: डान्स पार्टी - वार्म अप
+        hoc_dance_measures_2019: डान्स पार्टी - मापन
         playlab_2021: Introduction to Play Lab
         playlab_2021_reader: Introduction to Play Lab
     callout:

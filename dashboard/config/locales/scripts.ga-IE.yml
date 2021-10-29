@@ -224,7 +224,7 @@ ga:
             agus áilleacht an oighir.
           lessons:
             Artist:
-              name: Ealaíontóir
+              name: Códáil in éindí le hAnna agus Elsa
           student_description: Gabh le hAnna agus Elsa mar a thaiscéalann siad draíocht
             agus áilleacht an oighir. Cruthóidh tú calóga sneachta agus patrúin le
             do scátaí oighir agus déanfaidh tú tírdhreach álainn geimhridh is féidir
@@ -355,7 +355,7 @@ ga:
             ina bhfuil carachtair Disney Infinity.
           lessons:
             Infinity:
-              name: Éigríoch
+              name: Spraotharlann Disney Infinity
           student_description: Úsáid an Spraotharlann chun scéal nó cluiche a chruthú
             ina bhfuil carachtair Disney Infinity.
         algebrademo:
@@ -781,9 +781,6 @@ ga:
             Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
           description_short: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
             Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
-          lessons:
-            Hour of Code 2015:
-              name: An Uair Chódála 2015
           student_description: Foghlaim le dróidigh a chódáil, agus cruthaigh do chluiche
             Star Wars féin i réaltra i bhfad i bhfad ó bhaile.
         mc:
@@ -1198,9 +1195,6 @@ ga:
           title: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
           description_short: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
           description: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
-          lessons:
-            Bounce:
-              name: Preabadh
           student_description: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
         hoc-encryption:
           title: 'An Uair Chódála: Criptiú Simplí'
@@ -1346,9 +1340,6 @@ ga:
           title: Códáil do chluiche spóirt féin
           description_short: Cumaisc na rialacha ó spóirt éagsúla
           description: Cumaisc na rialacha ó spóirt éagsúla
-          lessons:
-            Sports:
-              name: Spórt
           student_description: Cumaisc na rialacha ó spóirt éagsúla
         2016_sciencePD-phase2b:
           lessons:
@@ -1917,9 +1908,6 @@ ga:
             Chódála!
           description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair Chódála!
             Téigh ar aistear trí Minecraft le cód.
-          lessons:
-            Minecraft Hour of Code:
-              name: An Uair Chódála Minecraft
           student_description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair
             Chódála! Téigh ar aistear trí Minecraft le cód.
         applab-intro-staging:
@@ -4626,5 +4614,18 @@ ga:
               display_name: Ábhar
             lesson_group:
               display_name: Ábhar
+            lessonGroup-2:
+              display_name: Ábhar
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Giuirléidí
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Comórtas Litrithe
+          title: Comórtas Litrithe
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Ábhar

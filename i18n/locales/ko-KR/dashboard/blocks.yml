@@ -1133,6 +1133,7 @@ ko:
         options:
           EFFECT:
             '"rain"': 비
+            '"spiral"': 나선
       gamelab_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNumSprites:
@@ -1174,6 +1175,20 @@ ko:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": 버튼
             "'sound://category_collect/clicky_crunch.mp3'": 부서짐 소리
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": 거품
+            "'sound://category_animals/bear.mp3'": 곰
+            "'sound://category_animals/cat.mp3'": 고양이
+            "'sound://category_animals/cow.mp3'": 소
+            "'sound://category_animals/pig.mp3'": 돼지
+            "'sound://category_animals/sheep.mp3'": 양
+            "'sound://category_animals/goat.mp3'": 염소
+            "'sound://category_animals/chicken.mp3'": 닭
+            "'sound://category_animals/rooster.mp3'": 늙은
+            "'sound://category_animals/elephant.mp3'": 코끼리
+            "'sound://category_animals/dolphin.mp3'": 돌고래
+            "'sound://category_animals/chick.mp3'": 병아리
+            "'sound://category_animals/dog.mp3'": 강아지
+            "'sound://category_animals/tiger.mp3'": 호랑이
             "'sound://category_instrumental/harpe_pluck_1.mp3'": 하프
             "'sound://category_digital/jump_7.mp3'": 점프
       gamelab_pointInDirection:
@@ -1634,14 +1649,31 @@ ko:
         text: x 좌표 {SPRITE}
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: 아이스크림
+            Stars: 별
+            Fireworks: 불꽃놀이
+            '"rainbow"': 무지개
+            '"hearts"': 하트
+            '"flowers"': 꽃
+            '"waves"': 파도
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': 비
+      Poetry_makeNewSpriteAnon:
+        text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       Poetry_makeNumSprites:
         text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
       Poetry_playSound:
         text: Playsound {SOUND}
+        options:
+          SOUND:
+            Light: 빛
+      Poetry_setBackground:
+        text: 배경색 {COLOR} 설정
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1650,6 +1682,10 @@ ko:
             '"space"': 우주
             '"stars"': 별
             '"ripples"': 물결
+            '"rain"': 비
+            '"bubbles"': 거품
+            '"confetti"': 색종이
+            '"hearts"': 형형색색 하트
           PALETTE:
             '"rainbow"': 무지개
       Poetry_setBackgroundImageAs:
@@ -1667,7 +1703,6 @@ ko:
           BEHAVIOR:
             growing: 성장
             jittering: 지터링
-            shrinking: 감소
             spinning_left: 왼쪽으로 회전
             spinning_right: 오른쪽으로 회전
             wandering: 배회
@@ -1676,7 +1711,6 @@ ko:
           BEHAVIOR:
             growing: 성장
             jittering: 지터링
-            shrinking: 감소
             spinning_left: 왼쪽으로 회전
             spinning_right: 오른쪽으로 회전
             wandering: 배회

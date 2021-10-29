@@ -1096,6 +1096,10 @@ ms:
         text: PlaySound {SOUND}
         options:
           SOUND:
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": buih
+            "'sound://category_animals/bear.mp3'": beruang
+            "'sound://category_animals/dolphin.mp3'": lumba-lumba
+            "'sound://category_animals/dog.mp3'": anjing
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
@@ -1465,8 +1469,25 @@ ms:
         text: raksasa mula memakai pelitup muka
       Outbreak_stopMoving:
         text: raksasa berhenti bergerak
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Aiskrim
+            Stars: Bintang
+            Fireworks: Bunga Api
+            '"rainbow"': Pelangi
+            '"hearts"': Hati
+            '"flowers"': Bunga
+            '"waves"': Gelombang
+      Poetry_makeNewSpriteAnon:
+        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Lampu
+      Poetry_setBackground:
+        text: tetapkan warna {COLOR} latar belakang
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1475,6 +1496,10 @@ ms:
             '"space"': Ruang
             '"stars"': Bintang
             '"ripples"': Riak
+            '"rain"': Hujan
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': Hati Berwarna-warni
           PALETTE:
             '"rainbow"': Pelangi
       Poetry_setBackgroundImageAs:

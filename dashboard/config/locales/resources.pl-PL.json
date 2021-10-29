@@ -2,6 +2,51 @@
   "pl-PL": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Przedstawienie artysty",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Skręty i kąty"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Skręty i kąty",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: Nauka maszynowa",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: Oddziaływanie na społeczeństwo",
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: Dane treningowe i skłonność",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Wprowadzenie Sprite Lab",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
@@ -43,11 +88,11 @@
           "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "Potęga słów: lekcja quizu",
+          "name": "Potęga słów: quiz",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "Potęga słów: lekcja quizu",
+          "name": "Potęga słów: quiz",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -591,11 +636,11 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "feeling_faces_emotion_image/coursec/2021": {
@@ -1074,11 +1119,11 @@
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {

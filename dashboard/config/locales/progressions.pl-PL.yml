@@ -3,11 +3,15 @@ pl:
   data:
     progressions:
       '"If/Else" with the Bee': '"jeśli/w przeciwnym razie" z Pszczółką'
+      AI Machine Learning - Video: AI Uczenie maszynowe — Film
+      'AI: Impact on Society - Video': 'AI: wpływ na społeczeństwo — Film'
+      'AI: Training Data & Bias - Video': 'AI: dane treningowe i stronniczość — Film'
       Accelerometer Events: Akcelerometr Zdarzeń
       Adding Images: Dodawanie obrazów
       Adding Screens: Dodawanie Ekranów
       Alien Defender: Obrońca ufoludków
       Animate Your Scene: Animuj swoją scenę
+      App Lab Intro - Video: App Lab wprowadzenie - Film
       'App Project: Screen Design': 'Projekt aplikacji: Projekt ekranu '
       Arrays: Tablice
       Artist Intro with JR Hildebrand: Wprowadzenie artysty z JR Hildebrandem
@@ -127,6 +131,8 @@ pl:
       Get In Formation: Twórzmy formację
       Getters and Setters: Gettery I settery
       Getting Properties: Właściwości getterów
+      Graph Paper Programming - Unplugged Activity: Programowanie na papierze milimetrowym
+        — Aktywność bez komputera
       Guess The Number: Zgadnij liczbę
       HTML Tags: Tagi HTML
       Headings: Nagłówki
@@ -157,6 +163,7 @@ pl:
       Lesson Extras: Dodatki do Lekcji
       Lesson Overview: Przegląd lekcji
       Level Overview: Przegląd poziomów
+      Levels: Poziomy
       Light Show: Pokaz świateł
       Linking Pages: Łączenie stron
       Linking Screens: Łączenie ekranów
@@ -173,16 +180,19 @@ pl:
       'Maze Intro: Programming with Blocks': 'Labirynt, wprowadzenie: Programowanie
         z blokami'
       Measures: Takty
+      'Minecraft: Hero''s Journey': 'Minecraft: Podróż Bohatera'
       'Mini-Project: About Me': O mnie ze Sprite Lab
       'Mini-Project: Alien Dance Moves': 'Mini-projekt: Taneczne ruchy kosmitów'
       'Mini-Project: Alien Dance Party': 'Mini-projekt: Potańcówka Kosmitów'
+      'Mini-Project: Create a Virtual Pet': 'Mini-projekt: Stwórz wirtualnego zwierzaka'
+      'Mini-Project: Outbreak Simulator': 'Mini-projekt: Symulator pandemii '
       'Mini-Project: Royal Battle': 'Mini-projekt: Królewski pojedynek'
       'Mini-Project: Snowflake #1': 'Mini-projekt: Płatek śniegu #1'
       'Mini-Project: Snowflake #2': 'Mini-projekt: Płatek śniegu #2'
       'Mini-Project: Swimming Fish': 'Mini-projekt: Pływająca ryba'
       'Mini-Project: Swimming Fish (continued)': 'Mini-projekt: Pływająca ryba (ciąg
         dalszy)'
-      'Mini-Project: User Input Programs': Utwórz Chat-Bot
+      'Mini-Project: User Input Programs': 'Mini-projekt: Programy z danymi użytkownika'
       'Mini-Project: Virtual Pet': 'Mini-projekt: Wirtualny zwierzak'
       'Mini-project: Chase Game': 'Mini-projekt: Wyścig'
       'Mini-project: Flappy Game': 'Mini-projekt: Gra z Flappym'
@@ -194,10 +204,16 @@ pl:
       More Input: Więcej danych
       More Parameters: Więcej Parametrów
       Motorcycle: Motocykl
+      Move It Move it Video  - Unplugged Activity: Film o przesuwaniu — Aktywność
+        bez komputera
       Movement with the Counter Pattern: Poruszanie się ze Wzorcem Licznika
       Multiframe Animations: Animacje wieloramkowe
       Musical Arrays: Muzyczne tablice
+      My Loopy Robotic Friends - Unplugged Activity: Moi robotycznie zapętleni przyjaciele
+        - Aktywność bez komputera
       My Online Neighborhood: Moje internetowe sąsiedztwo
+      My Robotic Friends - Unplugged Activity: Moi robotyczni przyjaciele — Aktywność
+        bez komputera
       Nested Loops with the Bee: Zagnieżdżone pętle z Pszczółką
       New Challenge Introduction: Nowe wyzwanie Wprowadzenie
       New Shapes: Nowe kształty
@@ -223,6 +239,7 @@ pl:
       Prediction: Przewidywanie
       Prepare for your presentation: Przygotuj się do prezentacji
       Prepare for your presentation_2018: Przygotuj się do prezentacji_2018
+      Problem Solving: Rozwiązywanie problemów
       Problem Solving Process for Programming: Proces rozwiązywania problemów w programowaniu
       Programming with Rey and BB-8: Programowanie z Reyem i BB-8
       Programs that Repeat: Programy, które Powtarzają
@@ -273,6 +290,7 @@ pl:
       Styling with Classes: Stylizacja z klasami
       Styling your Website: Stylizacja Twojej strony internetowej
       Teach A.I. a new word: Ucz A.I. nowego słowa
+      Teach AI a New Word: Naucz AI nowego słowa
       'Technique: Frequency Analysis': 'Technika: Analiza częstości'
       Terminology Recap: Podsumowanie terminologii
       Text Compression: Kompresja tekstu
@@ -330,6 +348,7 @@ pl:
         Krok '
       'Video: Events': 'Film: Zdarzenia'
       'Video: Functions': 'Film: Funkcje'
+      'Video: How to Make a Sprite': 'Film: jak utworzyć duszka'
       'Video: Impacts on Society': 'Film: Wpływy na społeczeństwo'
       'Video: Intro to CSS': 'Wideo: Wstęp do CSS'
       'Video: Intro to Web Lab - Part 1': 'Wideo: Wprowadzenie do Web Lab - Część
@@ -341,11 +360,19 @@ pl:
       'Video: Loops in Artist': 'Film: Pętle z Artystą'
       'Video: Loops with the Artist': 'Film: Pętle z Artystą'
       'Video: Lots of Sprites': 'Film: Wiele Duszków'
+      'Video: Maze Intro - Programming with Blocks': 'Film: Wprowadzenie do labiryntu:
+        Programowanie za pomocą bloków'
+      'Video: Maze Intro - Programming with Blocks ': 'Film: Wprowadzenie do labiryntu:
+        Programowanie za pomocą bloków'
+      'Video: Maze Intro: Programming with Blocks': 'Film: Wprowadzenie do labiryntu:
+        Programowanie za pomocą bloków'
       'Video: Measures': 'Film: Takty'
       'Video: Minecraft - Congratulations': 'Film: Minecraft - Gratulacje'
       'Video: Minecraft - Functions': 'Film: Minecraft - Funkcja'
       'Video: Minecraft - Repeat Loops': 'Film: Minecraft - Pętle powtarzania'
       'Video: Minecraft - The Agent': 'Film: Minecraft - Agent'
+      'Video: Nested Loops': 'Film: zagnieżdżone pętle'
+      'Video: Nested Loops with the Bee': 'Film: zagnieżdżone pętle z pszczółką '
       'Video: Pair Programming': 'Film: Programowanie parami'
       'Video: Pair Programming ': 'Film: Programowanie parami '
       'Video: Problem Solving Process': 'Nagranie: Proces Rozwiązywania Problemów'
@@ -361,7 +388,7 @@ pl:
       Website Project: Projekt Strony internetowej
       Welcome to Monster Town: Witamy w mieście potworów
       Where'd They Go?: Gdzie oni poszli?
-      While Loops with the Farmer: Pętle "dopóki" przy pomocy interfejsu Farmer
+      While Loops with the Farmer: Pętle "dopóki" z Farmerem
       'Widget: Text Compression': 'Widget: Kompresja tekstu'
       Wrap-up: Podsumowanie
       Your Personal Website: Twoja Osobista Strona Internetowa

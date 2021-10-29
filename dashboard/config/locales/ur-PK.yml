@@ -154,6 +154,9 @@ ur:
       minecraft_aquatic: Minecraft تعلیم کے لئے جانا
       minecraft_hero: Minecraft ہیرو
       playlab_k1: لیب کھیلیں (پری ریڈر)
+      starwars: اسٹار وارز
+      starwarsblocks: اسٹار وارز (بلاکس)
+      starwarsblocks_hour: اسٹار وارز (بلاکس)
       weblab: ویب لیب
     popup:
       prizes_link: مزید معلومات
@@ -208,6 +211,8 @@ ur:
       try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
     frozen:
       title: فروزن
+    starwars:
+      title: اسٹار وارز
     unplugged:
       title: ان پلگڈ اسباق
       body_short: اگر آپ کے پاس کمپیوٹر نہیں ہے، تو اپنے کلاس روم میں پلگ نکالا اسباق
@@ -249,6 +254,8 @@ ur:
           other: دیگر
   hoc_download:
     minecraft_name: Minecraft کوڈ کی گھڑی
+    starwars_blocks_name: 'اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (بلاکس)'
+    starwars_javascript_name: 'اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (جاوا اسکرپٹ)'
   pd:
     form_labels:
       email: Email

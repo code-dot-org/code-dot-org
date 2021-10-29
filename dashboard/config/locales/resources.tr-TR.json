@@ -14,14 +14,23 @@
         "exploring_apps_1/coursef/2021": {
           "name": "Uygulamaları Keşfetme"
         },
+        "making_sprites/coursef/2021": {
+          "name": "Hareketli Nesne Oluşturma"
+        },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Peri Laboratuvar Belgelendirmesi"
         },
         "sprites_in_action/coursef/2021": {
           "name": "Eylem halindeki Hareketli Nesneler"
         },
+        "pause_and_think_online/coursef/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Şununla Say Döngüsü Eğlencesi"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "İçin Döngüsü Eğlencesi - Değerlendirme Anahtarı"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Şununla Say Döngüsü Eğlencesi"
@@ -35,17 +44,32 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Şununla Say Döngüsü Eğlencesi"
         },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": " Bağlantısız Bloklar (Kurslar C-F)"
+        },
         "running-simulations/coursef/2021": {
           "name": "Simülasyonların Çalıştırılması"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "İnternet"
         },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "IP Adresi Kartları ve İletim Tipi Kartları"
+        },
         "csf-internet-assessment/coursef/2021": {
           "name": "İnternet"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "İnternet"
+        },
+        "design-process/coursef/2021": {
+          "name": "Tasarım İşlemi"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "Final Proje Tasarımı"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "CS Fundamentals Final Projesi"
         },
         "implementation_guide/coursef/2021": {
           "name": "Uygulama Kılavuzu"
@@ -71,8 +95,26 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Oynat, Oynat"
         },
+        "feeling-faces-image/courseb/2021": {
+          "name": "His Yüzleri"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "Sürükle ve Bırak Pratiği"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Code.org'da bir Sınıf Bölümü Nasıl Yapılır"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "Bağlantısız Blockly Blokları (Sınıflar K-1)"
+        },
         "pair-programming-vid/courseb/2021": {
           "name": "Eşli Programlama"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "Mutlu Harita Oyun Parçaları"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "Pusula Gülü"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie ve büyük proje"
@@ -92,6 +134,12 @@
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Döngüselleşme"
         },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "CS Fundamentals Ana Aktivite İpuçları"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Büyük Olay"
         },
@@ -100,6 +148,9 @@
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Büyük Olay"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Büyük Olay (Kurslar A, B)"
         },
         "implementation_guide/courseb/2021": {
           "name": "Uygulama Kılavuzu"
@@ -116,6 +167,30 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Mutlu Haritalar"
         },
+        "happy-map-cards/coursea/2021": {
+          "name": "Mutlu Harita Kartları"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "Mutlu Harita Kartları"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "Mutlu Harita Oyun Parçaları"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Bağlantısız Blockly Blokları (Sınıflar K-1)"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "Mutlu Harita Kartları XL"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "Mutlu Harita Oyun Parçaları Bonus Paketi"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "His Yüzleri"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Büyük Olay"
         },
@@ -124,6 +199,12 @@
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Büyük Olay"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Büyük Olay (Kurslar A, B)"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "CS Fundamentals Ana Aktivite İpuçları"
         },
         "implementation_guide/coursea/2021": {
           "name": "Uygulama Kılavuzu"
@@ -149,8 +230,17 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Robot dostlarım"
         },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "Bağlantısız Labirent Blokları"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Eşli Programlama"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "CS Fundamentals Ana Aktivite İpuçları"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": " Bağlantısız Bloklar (Kurslar C-F)"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Büyük Olay"
@@ -160,6 +250,15 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Büyük Olay"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Büyük Olay (Kurs C)"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "Bitlere karşı Baytlar"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "İkilik Bileklikler"
@@ -224,11 +323,26 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Röle Programlama"
         },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": " Bağlantısız Bloklar (Kurslar C-F)"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "His Yüzleri"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Kartlarla Koşullu Önermeler"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Kartlarla Koşullu Önermeler"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "Kartlarla Koşullar Örnek Programı"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Kartlarla Koşullu Önermeler"
@@ -248,11 +362,17 @@
         "teacher_forum_1/coursed/2021": {
           "name": "Öğretmen forumu"
         },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "Bağlantısız Labirent Blokları"
+        },
         "pair_programming/express/2021": {
           "name": "Eşli Programlama"
         },
         "sprite_lab_documentation/express/2021": {
           "name": "Peri Laboratuvar Belgelendirmesi"
+        },
+        "making_sprites/express/2021": {
+          "name": "Hareketli Nesne Oluşturma"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Peri Laboratuvar Belgelendirmesi"
@@ -260,8 +380,20 @@
         "sprites_in_action/express/2021": {
           "name": "Eylem halindeki Hareketli Nesneler"
         },
+        "pause_and_think_online/express/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": " Bağlantısız Bloklar (Kurslar C-F)"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": " Bağlantısız Bloklar (Kurslar C-F)"
+        },
         "variables_video/express/2021": {
           "name": "Değişkenler"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "CS Fundamentals Final Projesi"
         },
         "teacher_forum_1/express/2021": {
           "name": "Öğretmen forumu"
@@ -269,14 +401,59 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Eşli Programlama"
         },
+        "class-section-video/pre-express/2021": {
+          "name": "Code.org'da bir Sınıf Bölümü Nasıl Yapılır"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "His Yüzleri"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Öğretmen forumu"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Peri Laboratuvar Belgelendirmesi"
         },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "Dur ve Çevrimiçi Düşün"
+        },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "Dijital Paylaşım Ders Planı"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "name": "Dijital Paylaşım Etik (Video)"
+        },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "Fonksiyonlarla Şarkı Yazma"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "Bağlantısız Fonksiyonlar: Şarkı Yazma"
+        },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": " Bağlantısız Bloklar (Kurslar C-F)"
+        },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Erişilebilirlik için Tasarlama"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "CS Fundamentals Final Projesi"
+        },
+        "design-process/coursee/2021": {
+          "name": "Tasarım İşlemi"
+        },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "Öğrencilerinize Neleri Bildiklerini Göstermenin 72 Yaratıcı Yolu"
         },
         "implementation_guide/coursee/2021": {
           "name": "Uygulama Kılavuzu"

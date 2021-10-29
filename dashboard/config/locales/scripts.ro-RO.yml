@@ -228,7 +228,7 @@ ro:
             şi Elsa în explorarea magiei şi frumuseţii de gheaţă.
           lessons:
             Artist:
-              name: Artist
+              name: Programati cu Anna și Elsa
           student_description: Hai să folosim programarea pentru a ne alătura Annei
             şi Elsei în timp ce explorează magia şi frumuseţea gheței. Veţi crea fulgi
             de zăpadă şi modele ca la patinaj şi veți face un paradis de iarnă, pe
@@ -390,7 +390,7 @@ ro:
             sau un joc cu personaje Disney Infinity.
           lessons:
             Infinity:
-              name: Infinit
+              name: Laborator de joacă Disney Infinity
           student_description: Folosește Laboratorul de Joacă pentru a crea o poveste
             sau un joc cu personaje Disney Infinity.
         algebrademo:
@@ -570,6 +570,13 @@ ro:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_student: Fă clic și glisează obiecte pentru a rezolva puzzle-urile.
+              description_teacher: În această lecție, elevii își vor face o idee cu
+                privire la ce se poate întâmpla în timpul activităților desfășurate
+                în laboratorul de informatică. Această lecție începe cu o scurtă discuție
+                în care se prezintă regulile de conduită în laboratorul de informatică,
+                apoi elevii vor trece la utilizarea unui computer pentru a rezolva
+                puzzle-uri online.
         step:
           title: Pas
           lessons:
@@ -1227,7 +1234,7 @@ ro:
             Star Wars într-o galaxie foarte îndepărtată.
           lessons:
             Hour of Code 2015:
-              name: Ora de cod 2015
+              name: 'Star Wars: Programarea unei galaxii'
           student_description: Învață să programezi droizi si creează-ți propriul
             joc Star Wars într-o galaxie foarte îndepărtată.
         mc:
@@ -1899,7 +1906,6 @@ ro:
           description: Realizeaza un joc de baschet
           lessons:
             Bounce:
-              name: Săritură
               description_student: Ți-ai dorit vreodată să poți juca jocuri video
                 la școală? În această lecție vei putea să-ți creezi propriul joc!
               description_teacher: În această activitate online, elevii vor învăța
@@ -2224,7 +2230,6 @@ ro:
           description: Amesteca si potriveste sporturile
           lessons:
             Sports:
-              name: Sporturi (Sports)
               description_student: Ți-ai dorit vreodată să poți juca jocuri video
                 la școală? În această lecție vei putea să-ți creezi propriul joc!
               description_teacher: În această activitate online, elevii vor învăța
@@ -4006,10 +4011,6 @@ ro:
               name: Ce Este un Computer?
             Simple Encryption:
               name: Criptare simplă
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Ora de Programare Minecraft
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -9474,6 +9475,8 @@ ro:
           lessons:
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
+            Outbreak:
+              name: Cum se Codifică o Simulare
           lesson_groups:
             outbreak:
               display_name: Simulare Epidemie
@@ -11270,5 +11273,20 @@ ro:
               display_name: Conţinut
             lesson_group:
               display_name: Conţinut
+            lessonGroup-2:
+              display_name: Conţinut
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widget-uri
+            lesson-2:
+              name: Instrumente
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Albina de Ortografie
+          title: Albina de Ortografie
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Conţinut

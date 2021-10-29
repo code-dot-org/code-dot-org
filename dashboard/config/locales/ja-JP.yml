@@ -351,7 +351,9 @@ ja:
 '
       basketball: バスケットボール
       bounce: バウンド
+      calc: 計算
       dance: ダンスパーティー
+      eval: 評価
       flappy: フラッピー
       frozen: アナと雪の女王
       gamelab: ゲーム ラボ
@@ -954,6 +956,7 @@ ja:
   pd:
     form_labels:
       email: Eメール
+      school: 学校
       school_name: 学校名
       school_city: 学校の市町村名
       school_country: 学校のある国

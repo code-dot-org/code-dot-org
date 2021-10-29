@@ -12,7 +12,7 @@ import {
   fakeTeacherAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 describe('LessonOverview', () => {
   let defaultProps;

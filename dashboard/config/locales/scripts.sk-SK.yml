@@ -209,6 +209,7 @@ sk:
           lessons:
             Artist:
               name: Umelec
+              description_student: Programuj Umelca a vytváraj nádherné obrázky.
           student_description: Nakresli skvelé obrázky a vzory s Umelcom!
         hourofcode:
           title: Klasické bludisko
@@ -230,7 +231,7 @@ sk:
             spoločne kúzlo a krásu ľadu.
           lessons:
             Artist:
-              name: Umelec
+              name: Programuj s Annou a Elsou
           student_description: Pomocou programovania sa pripojme k Anne a Else a preskúmajme
             spoločne kúzlo a krásu ľadu. Korčuľovaním v ľade vykreslíš snehové vločky
             a krásne vzory a vytvoríš tak zázračnú zimnú krajinu, ktorú môžeš zdieľať
@@ -385,7 +386,7 @@ sk:
           description_short: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
           lessons:
             Infinity:
-              name: nekonečne
+              name: Disney Infinity Play Lab
           student_description: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
         algebrademo:
           lessons:
@@ -559,6 +560,11 @@ sk:
           lessons:
             Jigsaw:
               name: Skladačka
+              description_student: Dokonči úlohy presúvaním objektov.
+              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
+                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
+                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
+                a potom pokročia k používaniu počítača na dokončenie online úloh.
           student_description: Vyskúšaj si Skladačku.
         step:
           title: Krok
@@ -1251,9 +1257,6 @@ sk:
             v ďalekej galaxii.
           description_short: Nauč sa programovať droidy a vytvor si vlastnú hru Star
             Wars v ďalekej galaxii.
-          lessons:
-            Hour of Code 2015:
-              name: Hodina kódu 2015
           student_description: Nauč sa programovať droidy a vytvor si vlastnú hru
             Star Wars v ďalekej galaxii.
         mc:
@@ -1458,6 +1461,7 @@ sk:
             Post-Course Survey:
               name: Hodnotenie kurzu
         CSDU3-Draft:
+          description_short: Programovanie
           lessons:
             Collision Detection:
               name: Detekcia kolízie
@@ -1508,6 +1512,7 @@ sk:
             What to Expect:
               name: Čo očakávať
         TEMP CSD Unit 3:
+          description_short: Programovanie
           lessons:
             Drawing in Game Lab:
               name: Kreslenie v Game Labe
@@ -1592,6 +1597,9 @@ sk:
               name: Prezentovanie vášho dizajnu
         CSDU1-Draft:
           description_short: Riešenie problémov
+          lessons:
+            Exploring Apps:
+              name: Preskúmanie aplikácií
         CSDU2-Draft:
           lessons:
             Digital Footprint:
@@ -1642,6 +1650,8 @@ sk:
               name: Cykly
             Loops Unplugged:
               name: Cykly bez počítača
+            Programming:
+              name: Programovanie
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             'Programming Unplugged: Happy Maps':
@@ -1680,6 +1690,8 @@ sk:
               name: Cykly
             Loops Unplugged:
               name: Cykly bez počítača
+            Programming:
+              name: Programovanie
             Unspotted Bugs:
               name: Príbeh o hľadaní chrobákov a chýb
             'Debugging: Unspotted Bugs':
@@ -2349,9 +2361,6 @@ sk:
           title: Vytvor basketbalový zápas
           description_short: Vytvor basketbalový zápas
           description: Vytvor basketbalový zápas
-          lessons:
-            Bounce:
-              name: Bounce
           student_description: Vytvor basketbalový zápas
         sample-csp5:
           lessons:
@@ -2442,7 +2451,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
             'Programming: Happy Maps':
               name: 'Programovanie: Veselé mapy'
             Programming in Maze:
@@ -2464,7 +2473,7 @@ sk:
             Sequence & Algorithms:
               name: Postupnosť & Algoritmy
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
             'Programming: My Robotic Friends':
               name: 'Programovanie: Moji robotickí kamaráti'
             Programming in Maze:
@@ -2683,9 +2692,6 @@ sk:
           title: Naprogramuj si vlastný zápas
           description_short: Pomiešaj športy
           description: Pomiešaj športy
-          lessons:
-            Sports:
-              name: Športy
           student_description: Pomiešaj športy
         2016_sciencePD-phase2b:
           lessons:
@@ -3285,6 +3291,8 @@ sk:
               name: Odstraňovanie chýb s včelou
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
+              description_student: Cykly sú pri programovaní veľmi užitočné. V tejto
+                lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!
             Conditionals with Cards:
               name: 'Ak/Inak: Podmienky s kartami'
               description_student: Je čas na hru, v ktorej budeš zbierať body len
@@ -3299,10 +3307,15 @@ sk:
                 informácie pravdivej v momente spustenia kódu.
             Conditionals in Bee:
               name: Podmienky s včelou
+              description_student: Teraz, keď už rozumieš podmieneným príkazom, nadišiel
+                čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla
+                vyrábať med a zbierať nektár.
             Conditionals & Loops in Maze:
               name: Podmienky & cykly v bludisku
             Conditionals & Loops in Farmer:
               name: Podmienky a cykly so Záhradníčkou
+              description_student: Niekedy nie je jasné, kedy treba podmienený príkaz
+                použiť. V tejto lekcii sa naučíš lepšie rozhodnúť, čo robiť.
             Digital Citizenship:
               name: 'Digitálne občianstvo: Praktizovanie digitálneho občianstva'
               description_student: Niektoré informácie nie je vhodné zdieľať online.
@@ -3477,8 +3490,8 @@ sk:
               name: Funkcie s včelou
             Functions in Farmer:
               name: Funkcie s farmárkou
-              description_student: Funkcie vám ušetria veľa práce počas pomáhania
-                farmárke s jej úrodou!
+              description_student: Funkcie ti ušetria veľa práce, keď budeš farmárke
+                pomáhať so zberom úrody!
             Determine the Concept:
               name: Urči správny koncept
               description_student: |-
@@ -3567,6 +3580,8 @@ sk:
                 vašej triede. '
             The Power of Words:
               name: 'Digitálne občianstvo: Objav silu slov'
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
             Ice Age Play Lab:
               name: Doba ľadová - Udalosti
               description_teacher: V tejto lekcii žiaci prejdú príbehom s postavami
@@ -3883,7 +3898,7 @@ sk:
             Conditionals & Loops in Harvester:
               name: Podmienky a cykly so Záhradníčkou
             Until Loops in Maze:
-              name: Cykly "dovtedy kým" v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
           student_description: Nauč sa základy informatiky a bezpečnosti na internete.
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
@@ -4321,7 +4336,7 @@ sk:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Cesta Hrdinu v Hodine Kódu'
             Minecraft Hour of Code:
-              name: Minecraft Hodina Kódu
+              name: 'Minecraft: Cesta Hrdinu'
           student_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou!
             Prejdi sa po Minecrafte s kódom.
         applab-intro-staging:
@@ -4857,7 +4872,7 @@ sk:
                 aktivity je budovať zručnosti na preklápanie situácií zo skutočného
                 sveta do online scenárov a naopak.\\\r"
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
@@ -4998,9 +5013,9 @@ sk:
             Present Your Project:
               name: Prezentuj svoj projekt
             Conditionals in Bee:
-              name: Podmienky "ak/inak" s včelou
+              name: Podmienky „ak/inak“ s včelou
             Until Loops in Maze:
-              name: Cykly "dovtedy kým" v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
             Programming in Maze:
               name: Programovanie s Angry Birds
             Debugging in Maze:
@@ -5089,7 +5104,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
             Your Digital Footprint:
               name: Tvoja digitálna stopa
             'Programming: My Robotic Friends':
@@ -5152,7 +5167,7 @@ sk:
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Bee:
-              name: Podmienky "ak/inak" s včelou
+              name: Podmienky „ak/inak“ s včelou
             Conditionals & Loops in Maze:
               name: Podmienky & cykly v bludisku
             Digital Citizenship:
@@ -5168,7 +5183,7 @@ sk:
             Nested Loops in Frozen:
               name: Snehové vločky s Annou a Elsou
             Until Loops in Maze:
-              name: Cykly "dovtedy kým" v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
             Conditionals in Maze:
               name: Podmienky v bludisku
             Conditionals & Loops in Harvester:
@@ -5487,6 +5502,8 @@ sk:
                 vašej triede. '
             The Power of Words:
               name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
             Ice Age Play Lab:
               name: Play Lab Doba ľadová
               description_teacher: V tejto lekcii žiaci prejdú príbehom s postavami
@@ -6080,7 +6097,7 @@ sk:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmy z reálneho života: Zasaď semienko'
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
             'Online Safety: Your Digital Footprint':
               name: 'Online bezpečnosť: Tvoja digitálna stopa'
             'Programming: My Robotic Friends':
@@ -6167,6 +6184,9 @@ sk:
           description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu,
             schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval podvodný
             svet.
+          lessons:
+            Aquatic:
+              name: Minecraft Vodné Dobrodužstvo
           student_description: Minecraft je späť s úplne novou aktivitou! Použi tvoju
             kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval
             podvodný svet.
@@ -6245,8 +6265,12 @@ sk:
               name: Podmienky s farmárkou
             Functions in Minecraft:
               name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
             The Power of Words:
               name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
             Envelope Variables:
               name: Premenné v obálkach
             Variables as Constant in Artist:
@@ -6255,8 +6279,11 @@ sk:
                 týchto úlohách pomocou premenných vytvoríš fantastické kresby.
             Variables that Change in Bee:
               name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
             Variables that Change in Artist:
               name: Meniace sa premenné s Umelcom
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
               description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich
                 sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa
                 naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal
@@ -6272,7 +6299,7 @@ sk:
                 používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
-              description_student: Nauč sa ako tvoriť  a upravovať postavy.
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
               description_teacher: 'V tejto lekcii sa študenti oboznámia s dvomi konceptami
                 ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekt "Sprite"
                 predstavuje postavy alebo predmety zobrazené na obrazovke. Tieto postavy
@@ -6351,6 +6378,8 @@ sk:
                 ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
             Loops with the Artist:
               name: Kreslenie s cyklami
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
                 si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
@@ -6363,6 +6392,9 @@ sk:
               name: Virtuálne zvieratko so Sprite Labom
             End of Course Project:
               name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
             Copyright and Creativity:
               name: Autorské práva a Kreativita
             Internet:
@@ -6390,6 +6422,8 @@ sk:
                 prostredie. Študenti by mali byť vedení k dodržiavaniu autorských
                 práv umelcov, čo je dôležitá súčasť ich existencie ako etického digitálneho
                 občana.
+            Running Simulations:
+              name: Vytváranie simulácií
             Simulating Experiments:
               name: Simulácia experimentov
               description_student: Spusti simulácie na počítači a experimentuj zmenou
@@ -6469,22 +6503,32 @@ sk:
               name: Kreslenie tvarov pomocou cyklov
             Nested Loops in Bee:
               name: Vnorené cykly v bludisku
+              description_student: Cykly v cykloch, ktoré sú v ďalších cykloch. Čo
+                to znamená? Táto lekcia ti vysvetlí, čo sa stane, keď vytvoríš vnorený
+                cyklus.
             Nested Loops in Artist:
               name: Vnorené cykly s Umelcom
             Nested Loops in Frozen:
               name: Vnorené slučky vo Frozen
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
+              description_student: Cykly sú pri programovaní veľmi užitočné. V tejto
+                lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!
             Until Loops in Maze:
-              name: Cykly "dovtedy kým" v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
             Conditionals with Cards:
               name: Podmienky s kartami
               description_student: Je čas na hru, v ktorej budeš zbierať body len
                 za určitých podmienok!
             Conditionals in Bee:
-              name: Podmienky "ak/inak" s včelou
+              name: Podmienky „ak/inak“ s včelou
+              description_student: Teraz, keď už rozumieš podmieneným príkazom, nadišiel
+                čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla
+                vyrábať med a zbierať nektár.
             Conditionals & Loops in Harvester:
               name: Zber úrody s podmienkami
+              description_student: Niekedy nie je jasné, kedy treba podmienený príkaz
+                použiť. V tejto lekcii sa naučíš lepšie rozhodnúť, čo robiť.
             Digital Citizenship:
               name: Digitálne občianstvo
               description_student: Niektoré informácie nie je vhodné zdieľať online.
@@ -6509,6 +6553,8 @@ sk:
                 a potom im ponechajú priestor na vytvorenie vlastnej hry.
             Dance Party:
               name: Tanečná Párty
+              description_student: Je čas na oslavu! V tejto lekcii si naprogramuješ
+                vlastnú interaktívnu tanečnú párty.
           student_description: Študenti si rozvíjajú chápanie vnorených cyklov, cyklov
             s podmienkou "pokiaľ", podmienok a udalostí (tzv. events). Okrem programovania
             sa oboznámia aj s významom pojmu "digitálne občianstvo".
@@ -6589,10 +6635,12 @@ sk:
                 funkcií tak užitočné.
             Functions in Minecraft:
               name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
             Functions in Harvester:
               name: Funkcie so Záhradníčkou
-              description_student: Funkcie vám ušetria veľa práce počas pomáhania
-                farmárke s jej úrodou!
+              description_student: Funkcie ti ušetria veľa práce, keď budeš farmárke
+                pomáhať so zberom úrody!
             Copyright and Creativity:
               name: Autorské práva a Kreativita
             Functions in Artist:
@@ -6610,7 +6658,7 @@ sk:
                 cykly, podmienky, cykly "pokiaľ" a funkcie.
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
-              description_student: Nauč sa ako tvoriť  a upravovať postavy.
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
               description_teacher: 'V tejto lekcii sa študenti oboznámia s dvomi konceptami
                 ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekt "Sprite"
                 predstavuje postavy alebo predmety zobrazené na obrazovke. Tieto postavy
@@ -6711,6 +6759,8 @@ sk:
                 blokov, blokov navyše, či v blokov umiestnených na nesprávnom mieste. "
             Programming and Loops with the Artist:
               name: Kreslenie s cyklami
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
                 si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
@@ -6719,6 +6769,9 @@ sk:
                 pre portfólio, či ako ukážku pre rodičov.
             End of Course Project:
               name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
             Conditionals in Minecraft:
               name: Podmienky v Minecrafte
             About Me:
@@ -6804,11 +6857,11 @@ sk:
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
             Until Loops in Maze:
-              name: Cykly "dovtedy kým" v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
             Conditionals with Cards:
               name: Podmienky s kartami
             Conditionals in Bee:
-              name: Podmienky "ak/inak" s včelou
+              name: Podmienky „ak/inak“ s včelou
             Conditionals & Loops in Harvester:
               name: Zber úrody s podmienkami
             'Functions: Songwriting':
@@ -7111,12 +7164,15 @@ sk:
                 doľava alebo otočiť doprava.
             Debugging in Maze:
               name: Odstraňovanie chýb v bludisku
+              description_student: Nájdi v úlohách chyby a precvič si svoju schopnosť
+                ladiť program (hľadať chyby).
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy z reálneho života: Papierové lietadielká'
             Programming in Collector:
               name: Zbieranie pokladov s Laurel
             Programming in Artist:
               name: Umenie s pomocou kódu
+              description_student: Programuj Umelca a vytváraj nádherné obrázky.
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
             Loops with Rey and BB-8:
@@ -7160,6 +7216,8 @@ sk:
               name: Silné heslá
             Sticker Art with Loops:
               name: Pečiatkovanie v cykloch
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
                 si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
@@ -7241,12 +7299,14 @@ sk:
                 momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Udalosti v pohybe
+              description_student: Vytvor si vlastnú hru alebo príbeh.
               description_teacher: V tejto online aktivite sa študenti naučia, ako
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
                 na kreativitu! Vytvorme v Play Labe celý príbeh!
             Ocean Scene with Loops:
               name: Na mori s cyklami
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
                 začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
                 V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
@@ -7254,19 +7314,22 @@ sk:
                 lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
                 obrazy.
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
+              description_student: Dokonči úlohy presúvaním objektov.
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
                 a potom pokročia k používaniu počítača na dokončenie online úloh.
             Loops in Ice Age:
               name: Cykly so Scratom
+              description_student: Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov.
             Programming in Ice Age:
               name: Programovanie so Scratom
             Programming with Rey and BB-8:
               name: Programovanie s Rey a BB-8
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
+              description_student: Naprogramuj Scrata tak, aby sa dostal k žaluďu.
           student_description: Nauč sa základy informatiky a bezpečnosti na internete.
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
@@ -7322,6 +7385,7 @@ sk:
                 ceste pomôže.
             Loops in Artist:
               name: Kreslenie v záhrade pomocou cyklov
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
             'Events: The Big Event':
               name: Veľká udalosť Jr.
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu
@@ -7330,6 +7394,8 @@ sk:
                 momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
+              description_student: Vytvor pomocou udalostí príbeh alebo interaktívnu
+                hru.
             'Loops: Getting Loopy':
               name: Cykly sa zacykľujú
               description_teacher: Ked začneme písať dlhšie a zaujímavejšie programy,
@@ -7347,6 +7413,8 @@ sk:
               name: Programovanie s Angry Birds
             Programming in Harvester:
               name: Programovanie so Záhradníčkou
+              description_student: Pomôž Záhradníčke pozbierať zeleninu, ktorú má
+                po ceste.
               description_teacher: Študenti aplikujú naučené koncepty programovania
                 v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali
                 charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového
@@ -7403,7 +7471,7 @@ sk:
             Spelling Bee:
               name: Včela Hláskovanie
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
             Programming in Maze:
               name: Programovanie s Angry Birds
             Programming in Harvester:
@@ -9546,7 +9614,8 @@ sk:
             Going Places Safely:
               name: Bezpečný pohyb na internete
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
+              description_student: Dokonči úlohy presúvaním objektov.
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
@@ -9555,6 +9624,7 @@ sk:
               name: Veselé mapy
             Sequencing with Scrat:
               name: Postupnosť krokov so Scratom
+              description_student: Naprogramuj Scrata tak, aby sa dostal k žaluďu.
             Programming in Ice Age:
               name: Programovanie so Scratom
             Programming with Rey and BB-8:
@@ -9563,6 +9633,7 @@ sk:
               name: Veselé cykly
             Loops in Ice Age:
               name: Cykly so Scratom
+              description_student: Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov.
             Loops in Collector:
               name: Cykly s Laurel
               description_teacher: V tejto lekcii študenti pokračujú v učení sa konceptu
@@ -9571,6 +9642,7 @@ sk:
                 na zhromažďovanie pokladu v otvorených jaskynných priestoroch.
             Ocean Scene with Loops:
               name: Na mori s cyklami
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
                 začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
                 V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
@@ -9585,6 +9657,7 @@ sk:
                 momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Udalosti v pohybe
+              description_student: Vytvor si vlastnú hru alebo príbeh.
               description_teacher: V tejto online aktivite sa študenti naučia, ako
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
@@ -9642,6 +9715,8 @@ sk:
               name: Programovanie s Angry Birds
             Programming in Harvester:
               name: Programovanie so Záhradníčkou
+              description_student: Pomôž Záhradníčke pozbierať zeleninu, ktorú má
+                po ceste.
               description_teacher: Študenti aplikujú naučené koncepty programovania
                 v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali
                 charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového
@@ -9667,6 +9742,7 @@ sk:
                 ceste pomôže.
             Loops in Artist:
               name: Kreslenie v záhrade pomocou cyklov
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
             The Right App:
               name: Správna aplikácia
             'Events: The Big Event':
@@ -9677,6 +9753,8 @@ sk:
                 momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               name: Kráľovská bitka s udalosťami
+              description_student: Vytvor pomocou udalostí príbeh alebo interaktívnu
+                hru.
           student_description: Nauč sa základy informatiky a bezpečnosti na internete.
             Na konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
             s priateľmi.
@@ -9720,10 +9798,13 @@ sk:
                 doľava alebo otočiť doprava.
             Debugging in Maze:
               name: Odstraňovanie chýb v bludisku
+              description_student: Nájdi v úlohách chyby a precvič si svoju schopnosť
+                ladiť program (hľadať chyby).
             Programming in Collector:
               name: Zbieranie pokladov s Laurel
             Programming in Artist:
               name: Umenie s pomocou kódu
+              description_student: Programuj Umelca a vytváraj nádherné obrázky.
             Binary Bracelets:
               name: Binárne náramky
             'Loops: My Loopy Robotic Friends':
@@ -9739,6 +9820,8 @@ sk:
                 sa naučili doteraz a vyskúšať si využitie podmienok!
             Sticker Art with Loops:
               name: Pečiatkovanie v cykloch
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
                 si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
@@ -9836,18 +9919,28 @@ sk:
               name: Kreslenie tvarov pomocou cyklov
             Nested Loops in Bee:
               name: Vnorené cykly v bludisku
+              description_student: Cykly v cykloch, ktoré sú v ďalších cykloch. Čo
+                to znamená? Táto lekcia ti vysvetlí, čo sa stane, keď vytvoríš vnorený
+                cyklus.
             Conditionals with Cards:
               name: Podmienky s kartami
               description_student: Je čas na hru, v ktorej budeš zbierať body len
                 za určitých podmienok!
             Conditionals in Bee:
-              name: Podmienky "ak/inak" s včelou
+              name: Podmienky „ak/inak“ s včelou
+              description_student: Teraz, keď už rozumieš podmieneným príkazom, nadišiel
+                čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla
+                vyrábať med a zbierať nektár.
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
+              description_student: Cykly sú pri programovaní veľmi užitočné. V tejto
+                lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!
             Until Loops in Maze:
-              name: Cykly "dovtedy kým" v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
             Conditionals & Loops in Harvester:
               name: Zber úrody s podmienkami
+              description_student: Niekedy nie je jasné, kedy treba podmienený príkaz
+                použiť. V tejto lekcii sa naučíš lepšie rozhodnúť, čo robiť.
             'Unplugged: Binary':
               name: Binárne obrázky
             Artist Binary:
@@ -9862,6 +9955,8 @@ sk:
                 V rámci hodiny tiež prediskutujeme, ako sa správať zodpovedne a rešpektujúco v rámci offline aj online komunít - dôležitá vlastnosť dobrého digitálneho občana.
             Dance Party:
               name: Tanečná Párty
+              description_student: Je čas na oslavu! V tejto lekcii si naprogramuješ
+                vlastnú interaktívnu tanečnú párty.
             End of Course Project:
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
@@ -9910,6 +10005,8 @@ sk:
                 blokov, blokov navyše, či v blokov umiestnených na nesprávnom mieste. "
             Programming and Loops with the Artist:
               name: Kreslenie s cyklami
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
                 si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
@@ -9941,7 +10038,7 @@ sk:
                 Labu v nasledujúcej lekcii.
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
-              description_student: Nauč sa ako tvoriť  a upravovať postavy.
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
               description_teacher: 'V tejto lekcii sa študenti oboznámia s dvomi konceptami
                 ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekt "Sprite"
                 predstavuje postavy alebo predmety zobrazené na obrazovke. Tieto postavy
@@ -9993,15 +10090,20 @@ sk:
                 funkcií tak užitočné.
             Functions in Minecraft:
               name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
             Functions in Harvester:
               name: Funkcie so Záhradníčkou
-              description_student: Funkcie vám ušetria veľa práce počas pomáhania
-                farmárke s jej úrodou!
+              description_student: Funkcie ti ušetria veľa práce, keď budeš farmárke
+                pomáhať so zberom úrody!
             Functions in Artist:
               name: Funkcie s Umelcom
               description_student: Vytvor zložitejšie kresby s funkciami!
             End of Course Project:
               name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
             Digital Sharing:
               name: Digitálne zdieľanie
               description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch
@@ -10039,9 +10141,11 @@ sk:
           lessons:
             Functions in Minecraft:
               name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
-              description_student: Nauč sa ako tvoriť  a upravovať postavy.
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
               description_teacher: 'V tejto lekcii sa študenti oboznámia s dvomi konceptami
                 ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekt "Sprite"
                 predstavuje postavy alebo predmety zobrazené na obrazovke. Tieto postavy
@@ -10057,6 +10161,8 @@ sk:
                 ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party. '
             Loops with the Artist:
               name: Kreslenie s cyklami
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
                 si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
@@ -10073,8 +10179,11 @@ sk:
                 týchto úlohách pomocou premenných vytvoríš fantastické kresby.
             Variables that Change in Bee:
               name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
             Variables that Change in Artist:
               name: Meniace sa premenné s Umelcom
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
               description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich
                 sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa
                 naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal
@@ -10109,6 +10218,8 @@ sk:
               name: Virtuálne zvieratko so Sprite Labom
             The Power of Words:
               name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
             Crowdsourcing:
               name: Crowdsourcing
               description_student: Táto lekcia ťa naučí viac o crowdsourcingu - procese,
@@ -10130,6 +10241,9 @@ sk:
                 občana.
             End of Course Project:
               name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
             AI for Oceans:
               name: AI pomáha oceánom
         express-2020:
@@ -10180,7 +10294,7 @@ sk:
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
             Until Loops in Maze:
-              name: Cykly "dovtedy kým" v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
             Conditionals & Loops in Harvester:
               name: Podmienky a cykly so Záhradníčkou
             Functions in Minecraft:
@@ -10216,7 +10330,7 @@ sk:
             Snowflakes with Anna and Elsa:
               name: Snehové vločky s Annou a Elsou
             If/Else with Bee:
-              name: Podmienky "ak/inak" s včelou
+              name: Podmienky „ak/inak“ s včelou
             While Loops with the Farmer:
               name: Cykly "pokiaľ" s Farmárkou
             Harvesting with Conditionals:
@@ -10253,7 +10367,7 @@ sk:
               display_name: Udalosti
           lessons:
             Learn to Drag and Drop:
-              name: Nauč sa presunúť a pustiť
+              name: Učíme sa presúvať objekty
               description_teacher: Táto lekcia poskytne študentom predstavu o tom,
                 čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
                 diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
@@ -10787,6 +10901,8 @@ sk:
           lessons:
             Virus Simulation for Code Bytes:
               name: Kódovanie nákazy
+            Outbreak:
+              name: Kódovanie nákazy
           lesson_groups:
             outbreak:
               display_name: Simulácia napadnutia
@@ -10802,10 +10918,16 @@ sk:
           lessons:
             Course F Introduction:
               name: Predstavenie Sprite Labu
+            lesson-2:
+              name: Text a výzvy
             Virus Simulation for Code Bytes:
               name: Kódovanie nákazy
+            Making Sprites:
+              name: Vytváranie postáv
             Sprites in Action:
               name: Postavy v akcii
+            blank space stories:
+              name: Príbehy na doplnenie
             End of Course Project:
               name: Záverečný projekt
           lesson_groups:
@@ -11121,12 +11243,14 @@ sk:
               name: Bezpečný pohyb na internete.
               description_student: Naučte sa bezpečne pohybovať po online svete.
             Learn to Drag and Drop:
-              key: Nauč sa presunúť a pustiť
-              name: Nauč sa presunúť a pustiť
-              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
-                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
-                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
-                a potom pokročia k používaniu počítača na dokončenie online úloh.
+              key: Učíme sa presúvať objekty
+              name: Učíme sa presúvať objekty
+              description_student: Dokonči úlohy presúvaním objektov.
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                poskytne študentom predstavu o tom, čo očakávať, keď prvýkrát prídu
+                do počítačovej učebne. Začína krátkou diskusiou, ktorá im predstaví
+                základy správania v počítačovej učebni, a potom budú obiť on‑line
+                úlohy pomocou počítača.
             'Programming: Happy Maps':
               key: 'Programovanie: Veselé mapy'
               name: Veselé mapy
@@ -11137,13 +11261,16 @@ sk:
             Sequencing with Scrat:
               key: Postupnosť krokov so Scratom
               name: Postupnosť krokov so Scratom
-              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
-                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
-                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
-                a potom pokročia k používaniu počítača na dokončenie online úloh.
+              description_student: Naprogramuj Scrata tak, aby sa dostal k žaluďu.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci vytvárať sekvenčné algoritmy na presúvanie veveričky z jednej
+                strany bludiska k žaluďu na druhej strane bludiska. Na splnenie tejto
+                úlohy budú v lineárnej postupnosti spájať programovacie bloky.
             Programming in Ice Age:
               key: Programovanie v Dobe ľadovej
               name: Programovanie so Scratom
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
             Programming with Rey and BB-8:
               key: Programovanie s Rey a BB-8
               name: Programovanie s Rey a BB-8
@@ -11156,11 +11283,13 @@ sk:
             Loops in Ice Age:
               key: Cykly v Dobe ľadovej
               name: Cykly so Scratom
+              description_student: Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov.
             Loops in Collector:
               name: Cykly s Laurel
             Ocean Scene with Loops:
               key: Na mori s cyklami
               name: Na mori s cyklami
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
                 začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
                 V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
@@ -11176,6 +11305,7 @@ sk:
                 momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               key: Udalosti v Play Labe
+              description_student: Vytvor si vlastnú hru alebo príbeh.
               description_teacher: V tejto online aktivite sa študenti naučia, ako
                 v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
                 všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
@@ -11219,9 +11349,13 @@ sk:
             Programming in Maze:
               key: Programovanie v bludisku
               name: Programovanie s Angry Birds
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
             Programming in Harvester:
               key: Programovanie so Záhradníčkou
               name: Programovanie so Záhradníčkou
+              description_student: Pomôž Záhradníčke pozbierať zeleninu, ktorú má
+                po ceste.
               description_teacher: Študenti aplikujú naučené koncepty programovania
                 v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali
                 charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového
@@ -11245,6 +11379,7 @@ sk:
             Loops in Artist:
               key: Cykly s Umelcom
               name: Kreslenie v záhrade pomocou cyklov
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
             The Right App:
               key: Správna aplikácia
               name: Správna aplikácia
@@ -11257,6 +11392,11 @@ sk:
                 momente, keď to používateľ chce. Práve na toto používame udalosti.
             Events in Play Lab:
               key: Udalosti v Play Labe
+              description_student: Vytvor pomocou udalostí príbeh alebo interaktívnu
+                hru.
+              description_teacher: 'V tomto **miniprojekte** dostanú žiaci príležitosť
+                naučiť sa, ako používať udalosti v Play Labe, a budú môcť využiť všetky
+                doteraz získané programovacie zručnosti na vytvorenie animovanej hry. '
             lesson-1:
               name: Záverečný projekt
           lesson_groups:
@@ -11286,6 +11426,8 @@ sk:
             Programming in Maze:
               key: Programovanie v bludisku
               name: Programovanie s Angry Birds
+              description_student: Nauč sa viac o postupnostiach a algoritmoch s _Angry
+                Birds_.
               description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
                 sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu
                 na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti
@@ -11294,12 +11436,25 @@ sk:
             Debugging in Maze:
               key: Odstraňovanie chýb v bludisku
               name: Odstraňovanie chýb v bludisku
+              description_student: Nájdi v úlohách chyby a precvič si svoju schopnosť
+                ladiť program (hľadať chyby).
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci stretnú s vopred napísaným kódom, ktorý obsahuje chyby. Krok
+                po kroku si ho budú musieť prejsť, aby chyby našli.
             Programming in Collector:
               key: Programovanie so zberateľkou
               name: Zbieranie pokladov s Laurel
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci naďalej rozvíjať svoje poznatky o algoritmoch a ladení.
+                Spoznajú sa s novou postavou, ktorou je _dobrodružka Laurel_, a pomocou
+                sekvenčných algoritmov _Laurel_ pomôžu pohybovať sa po trase a zbierať
+                poklady.
             Programming in Artist:
               key: Programovanie s Umelcom
               name: Umenie s pomocou kódu
+              description_student: Programuj Umelca a vytváraj nádherné obrázky.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke.
             Binary Bracelets:
               key: Binárne náramky
               name: Binárne náramky
@@ -11309,6 +11464,7 @@ sk:
             Loops with Rey and BB-8:
               key: Cykly s Rey a BB-8
               name: Cykly s Rey a BB-8
+              description_student: 'Pomáhaj _BB-8_ prechádzať bludiskami pomocou cyklov! '
             Loops in Harvester:
               key: Cykly so Záhradníčkou
               name: Zber úrody s cyklami
@@ -11319,6 +11475,8 @@ sk:
                 sa naučili doteraz a vyskúšať si využitie podmienok!
             Sticker Art with Loops:
               key: Pečiatkovanie v cykloch
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
             'Events: The Big Event':
               key: 'Udalosti: Veľká udalosť'
               name: Veľká udalosť
@@ -11402,6 +11560,10 @@ sk:
             Dance Party:
               key: Tanečná Párty
               name: Tanečná Párty
+              description_student: Je čas na oslavu! V tejto lekcii si naprogramuješ
+                vlastnú interaktívnu tanečnú párty.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci programovať interaktívnu tanečnú párty.
             Loops in Ice Age:
               key: Cykly v Dobe ľadovej
               name: Cykly v Dobe ľadovej
@@ -11411,6 +11573,8 @@ sk:
             Nested Loops in Bee:
               key: Vnorené cykly s včelou
               name: Vnorené cykly v bludisku
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa budú žiaci učiť, ako naprogramovať cyklus vnorený v ďalšom cykle.
             Conditionals with Cards:
               key: Podmienky s kartami
               name: Podmienky s kartami
@@ -11418,15 +11582,31 @@ sk:
                 za určitých podmienok!
             Conditionals in Bee:
               key: Podmienky s včelou
-              name: Podmienky "ak/inak" s včelou
+              name: Podmienky „ak/inak“ s včelou
+              description_student: Teraz, keď už rozumieš podmieneným príkazom, nadišiel
+                čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla
+                vyrábať med a zbierať nektár.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať v programovaní s podmienkami, vďaka ktorým budú
+                môcť vytvárať kód fungujúci rôzne v závislosti od konkrétnych situácií,
+                s ktorými sa program stretne.
             While Loops in Farmer:
               key: Cykly "pokiaľ" s Farmárkou
               name: Cykly "pokiaľ" s Farmárkou
+              description_student: Cykly sú pri programovaní veľmi užitočné. V tejto
+                lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci v rozhraní Farmárky zapĺňať jamy a odstraňovať kopy hliny.
+                Nebudú však vedieť, aké veľké sú jamy ani aké vysoké sú kopy hliny,
+                ktoré treba zarovnať. Na riešenie týchto úloh budú žiaci využívať
+                nový druh cyklu.
             Until Loops in Maze:
-              key: Cykly "dovtedy kým" v bludisku
-              name: Cykly "dovtedy kým" v bludisku
+              key: Cykly „opakuj pokiaľ neplatí“ v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
             Conditionals & Loops in Harvester:
               key: Podmienky a cykly so Záhradníčkou
+              description_student: Niekedy nie je jasné, kedy treba podmienený príkaz
+                použiť. V tejto lekcii sa naučíš lepšie rozhodnúť, čo robiť.
             'Unplugged: Binary':
               key: 'Bez počítača: binárna forma'
               name: Binárne obrázky
@@ -11440,13 +11620,19 @@ sk:
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
                 tvoj projekt.
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
             lesson-6:
               name: Pohľad do budúcnosti s Minecraftom
-              description_teacher: Túto lekciu pôvodne Minecraft tím vytvoril pre
-                Hodinu kódu. Študenti dostanú príležitosť precvičiť si koncepty, ktoré
-                sa naučili doteraz a vyskúšať si využitie podmienok!
+              description_student: Nespadni do lávy! V tejto lekcii sa oboznámiš s podmienenými
+                príkazmi vo svete _Minecraftu_.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci dostanú príležitosť precvičiť si koncepty, ktoré sa naučili
+                doteraz, a vyskúšať si využitie podmienených príkazov!
             lesson-1:
               name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -11483,21 +11669,24 @@ sk:
                 blokov, blokov navyše, či v blokov umiestnených na nesprávnom mieste. "
             Programming and Loops with the Artist:
               name: Kreslenie s cyklami
-              description_teacher: 'Sledujte nadšenie na tvárach vašich študentov
-                ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
-                pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
-                lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
-                Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
-                pre portfólio, či ako ukážku pre rodičov. '
+              description_student: "**Cykly** v tejto lekcii nám uľahčujú vytváranie
+                skutočne úžasných obrázkov v Umelcovi!"
+              description_teacher: 'Táto lekcia zameraná na **vytvorenie kontextu**
+                presúva pozornosť zo Sprite Labu na nový nástroj Umelec, ktorý budú
+                žiaci používať počas zvyšnej časti kurzu.  '
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
-              description_teacher: Túto lekciu pôvodne Minecraft tím vytvoril pre
-                Hodinu kódu. Študenti dostanú príležitosť precvičiť si koncepty, ktoré
-                sa naučili doteraz a vyskúšať si využitie podmienok!
+              description_student: V tejto lekcii sa oboznámiš s podmienenými príkazmi
+                vo svete _Minecraftu_.
+              description_teacher: V tejto lekcii zameranej na **vytvorenie kontextu**
+                žiaci dostanú príležitosť precvičiť si, čo sa doteraz naučili, a dokonca
+                nahliadnuť do podmienených príkazov!
             Conditionals:
               key: Podmienky
               name: Podmienky s Farmárkou
+              description_student: Pomôž farmárovi pripraviť polia na výsadbu a spoznaj
+                pri tom podmienené výrazy!
               description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ`
                 a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú,
                 kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor
@@ -11508,29 +11697,29 @@ sk:
                 sa spustí niečo iné.
             Simon Says:
               key: Simon vraví
+              name: Sleduj algoritmus
               description_student: Zahrajte si hru a zamyslite sa nad tým, ktoré príkazy
                 sú potrebné na dosiahnutie správneho výsledku.
-              description_teacher: V tejto lekcii si študenti zahrajú hru, ktorá im
-                pomôže premýšľať nad spôsobmi prideľovania príkazov tak, aby dosiahnuť
-                želaný výsledok. Pomôže im to ľahšie premostiť do prostredia Sprite
-                Labu v nasledujúcej lekcii.
+              description_teacher: Na tejto lekcii zameranej na **vytvorenie kontextu**
+                si žiaci zahrajú hru, ktorá ich má primať k zamysleniu nad sekvenčnými
+                inštrukciami.
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
-              description_student: Nauč sa ako tvoriť  a upravovať postavy.
-              description_teacher: 'V tejto lekcii sa študenti oboznámia s dvomi konceptami
-                ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekt "Sprite"
-                predstavuje postavy alebo predmety zobrazené na obrazovke. Tieto postavy
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
+              description_teacher: 'V tejto lekcii sa žiaci oboznámia s dvomi konceptami
+                ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekty „Sprite“
+                predstavujú postavy alebo predmety zobrazené na obrazovke. Tieto postavy
                 či predmety môžu študenti meniť, či nimi pohybovať. Správanie je akcia,
-                ktorú "Sprite" vykonáva až do momentu,  kedy ju zastavíme. '
+                ktorú „Sprite“ vykonáva až do momentu,  kedy ju zastavíme. '
             Alien Dance Party with Sprite Lab:
               key: Mimozemská tanečná párty so Sprite Labom
               name: Mimozemská tanečná párty so Sprite Labom
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: V tejto lekcii študenti pracujú v Sprite Labe,
-                v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
-                svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party.
+              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
+                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
+                „Spritov“ žiaci pridajú vstup od používateľa ako udalosť, ktorá im
+                pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Private and Personal Information:
               key: Súkromné a osobné údaje
               name: Súkromné a osobné údaje
@@ -11541,14 +11730,14 @@ sk:
             About Me:
               name: '"O mne" so Sprite Labom'
               description_student: Prostredníctvom tvorby interaktívneho plagátu v
-                SpriteLabe si študenti overia, čo sa naučili o zdieľaní súkromných
-                a osobných údajov na internete
+                SpriteLabe si žiaci overia, čo sa naučili o zdieľaní súkromných a
+                osobných údajov na internete
             Digital Sharing:
               key: Digitálne zdieľanie
               name: Digitálne zdieľanie
               description_student: 'V rámci tejto lekcie sa dozviete o výzvach a prínosoch
                 vlastníctva a autorských práv. '
-              description_teacher: 'Táto **prieskumná** lekcia pomôže študentom pochopiť
+              description_teacher: 'Táto **prieskumná** lekcia pomôže žiakom pochopiť
                 výzvy a prínosy rešpektovania vlastníctva a autorských práv, obzvlášť
                 v digitálnom prostredí. '
             Nested Loops in Bee:
@@ -11559,39 +11748,59 @@ sk:
               name: Ornamenty pomocou vnorených cyklov
               description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami
                 vytvoríš ÚŽASNÉ kresby.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci vytvoria návrhy v nástroji Umelec. Na konci lekcie budú môcť
+                žiaci vytvoriť svoje vlastné návrhy.
             Nested Loops in Frozen:
               key: Vnorené slučky vo Frozen
+              description_student: '_Anna_ a _Elsa_ sú výborné v ľadovom korčuľovaní.
+                Potrebujú však tvoju pomoc s vytváraním vzorov na ľade. Pomôž im vytvoriť
+                čo najkrajšie obrazce pomocou vnorených cyklov. '
             'Functions: Songwriting':
               key: 'Funkcie: Písanie pesničiek'
               name: Písanie pesničiek
               description_student: Aj rokové hviezdy potrebujú programovanie. V tejto
                 lekcii sa naučíme viac o funkciách pomocou slov z pesničiek.
-              description_teacher: Jedným z najkrajších elementov vo svete informatiky
-                je funkcia. Funkcie (niekedy ich voláme procedúry) sú malé programy,
-                ktoré môžeme opakovane používať vo väčšom programe. Táto lekcia pomôže
-                študentom intuitívne pochopiť, prečo je kombinovanie kúskov kódu do
-                funkcií tak užitočné.
+              description_teacher: Táto lekcia na **vytvorenie kontextu** pomôže žiakom
+                pochopiť, prečo je kombinovanie kúskov kódu do funkcií tak užitočné.
             Functions in Minecraft:
               key: Funkcie v Minecrafte
               name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci začnú zisťovať, načo môžu byť užitočné funkcie.
             Functions in Harvester:
               key: Funkcie so Záhradníčkou
               name: Funkcie so Záhradníčkou
-              description_student: Funkcie vám ušetria veľa práce počas pomáhania
-                farmárke s jej úrodou!
+              description_student: Funkcie ti ušetria veľa práce, keď budeš farmárke
+                pomáhať so zberom úrody!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**  budú
+                žiaci pomocou podmienených príkazov s funkciami zbierať plodiny v _Záhradníčke_.
             Functions in Artist:
               key: Funkcie s Umelcom
               name: Funkcie s Umelcom
               description_student: Vytvor zložitejšie kresby s funkciami!
-              description_teacher: Študenti sa oboznámia s používaním funkcií na stránke
-                Code.org. S Umelcom vytvoríme a upravíme veľkolepé obrázky. Študenti
-                sa tiež naučia o vnorených funkciach používaných na tvorbu komplexnejších
-                vzorov, v ktorých vlastne voláme jednu funkciu z vnútra inej funkcie.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať funkcie v Umelcovi.
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov!
             lesson-4:
               description_student: Nauč sa zakročiť, keď sa stretneš s kyberšikanovaním.
+            lesson-1:
+              description_student: 'Naučíte sa o zjednodušení ovládania a význame
+                empatie prostredníctvom brainstormingu a návrhu dostupných riešení
+                zjednodušenia ovládania pre hypotetické aplikácie. '
+              description_teacher: 'V rámci tejto **vysvetľujúcej** lekcie sa žiaci
+                naučia o zjednodušení ovládania a význame empatie prostredníctvom
+                brainstormingu a návrhu riešení zjednodušenia ovládania pre hypotetické
+                aplikácie. '
           lesson_groups:
             ramp_up:
               display_name: Vnorené cykly
@@ -11617,9 +11826,11 @@ sk:
             Functions in Minecraft:
               key: Funkcie v Minecrafte
               name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
             Learning Sprites with Sprite Lab:
               name: Plávajúca ryba so Sprite Labom
-              description_student: Nauč sa ako tvoriť  a upravovať postavy.
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
               description_teacher: 'V tejto lekcii sa študenti oboznámia s dvomi konceptami
                 ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekt "Sprite"
                 predstavuje postavy alebo predmety zobrazené na obrazovke. Tieto postavy
@@ -11636,6 +11847,8 @@ sk:
             Loops with the Artist:
               key: Cykly s umelcom
               name: Kreslenie s cyklami
+              description_student: "**Cykly** v tejto lekcii nám uľahčujú vytváranie
+                skutočne úžasných obrázkov v Umelcovi!"
               description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
                 si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
                 pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
@@ -11648,6 +11861,8 @@ sk:
             The Power of Words:
               key: Objav silu slov
               name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
             Envelope Variables:
               key: Premenné v obálkach
               name: Premenné v obálkach
@@ -11657,12 +11872,19 @@ sk:
                 týchto úlohách pomocou premenných vytvoríš fantastické kresby.
             Variables that Change in Bee:
               name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
+              description_teacher: Táto lekcia na **budovanie zručností** žiakom pomôže
+                pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy,
+                keďže umožňujú menenie hodnôt aj po spustení programu.
             Variables that Change in Artist:
-              description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich
-                sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa
-                naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal
-                aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných
-                hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci vyskúšajú tvorbu opakujúcich sa vzorov s použitím premenných
+                v prostredí Umelca. Žiaci sa naučia, ako premenné zjednodušujú písanie
+                aj čítanie kódu. Po vyriešení úloh s pokynmi žiakov na záver čaká
+                voľná hra, kde budú môcť ukázať, čo všetko sa naučili, a vytvoriť
+                si vlastné obrázky.
             Simulating Experiments:
               key: Simulácia experimentov
               name: Simulácia experimentov
@@ -11689,28 +11911,84 @@ sk:
             For Loops in Bee:
               key: Cykly "for" s včelou
               name: Cykly "for" s včelou
+              description_student: V týchto úlohách pomôžeš včele zbierať nektár a vyrábať
+                med pomocou cyklov „for“!
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                sa zameriava na cykly a používanie riadiacej premennej na riešenie
+                zložitejších úloh.
             For Loops in Artist:
               key: Cykly "for" s Umelcom
               name: Cykly "for" s Umelcom
-              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš
-                používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
-              description_teacher: V tejto lekcii, s pomocou Umelca, študenti pokračujú
-                v precvičovaní cyklov. V úlohách skombinujú premenné, cykly a cykly
-                "for" na to, aby vytvorili komplexné kresby. Lekcia končí voľným cvičením
-                na vytvorenie vlastnej kresby.
+              description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš
+                používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia cykly „for“ s Umelcom. V úlohách budú vytvárať
+                komplexné návrhy a jedinečné umenie.
             Editing Behaviors:
               name: Správania v Sprite Labe
             Virtual Pet:
               name: 'Mini-Projekt: Virtuálny maznáčik'
+              description_student: Vytvor si interaktívne virtuálne zvieratko, ktoré
+                vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku
+                život!
+              description_teacher: V tomto **miniprojekte** si žiaci vytvoria interaktívne
+                virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chcú.
+                Žiaci budú vzhľad zvieratka upravovať pomocou funkcie „kostýmy“, ktorá
+                je k dispozícii v Sprite Labe. Potom svojmu projektu vdýchnu život
+                pomocou udalostí, správania a ďalších konceptov, s ktorými sa už oboznámili.
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania.
+                Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť
+                naplno!
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
+            lesson-1:
+              description_teacher: 'V rámci tejto **vysvetľujúcej** lekcie sa žiaci
+                naučia o zjednodušení ovládania a význame empatie prostredníctvom
+                brainstormingu a návrhu riešení zjednodušenia ovládania pre hypotetické
+                aplikácie. '
             lesson-6:
               name: Predstavenie Sprite Labu
+              description_student: Budete diskutovať o role počítačov a technológií
+                vo vašich životoch, pričom sa zameriate na to, ako aplikácie a nástroje
+                poskytujú používateľom nové možnosti a ako ich môžu používať.
+            lesson-7:
+              name: Vytváranie postáv
+              description_teacher: 'V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy a učiť sa o konceptoch, ktoré sú stredobodom Sprite Labu:
+                o sprajtoch (postavách) a správaní.'
             lesson-8:
               name: Postavy v akcii
+              description_student: Prejdeš si programovacie úrovne, ktoré sa končia
+                voľnou úlohou, kde môžeš vytvoriť čokoľvek, čo sa ti páči.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+            lesson-9:
+              name: Príbehy na doplnenie
+              description_student: V rámci tejto aktivity budete používať dopĺňacie
+                príbehy príbehy (podobné ako Mad Libs®) na uľahčenie pochopenia toho,
+                ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich
+                neskôr používajú počas vykonávania programu.
+              description_teacher: 'Na tejto lekcii zameranej na **vytvorenie kontextu**
+                budú žiakom ako kontext na pochopenie toho, ako počítače prijímajú
+                a ukladajú vstupy od používateľov a potom ich neskôr používajú počas
+                vykonávania programu, slúžiť dopĺňacie príbehy (podobné ako Mad Libs®). '
+            lesson-10:
+              name: Text a výzvy
+              description_student: V tejto lekcii si precvičíš používanie premenných
+                v Sprite Labe.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia použitie premenných v Sprite Labe.
             lesson-2:
               name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie
+                sa naučíte, čo je OK povedať na internete a čo nie.
           lesson_groups:
             ramp_up:
               display_name: Objekt "sprite"
@@ -11739,132 +12017,233 @@ sk:
             Programming with Angry Birds:
               key: Programovanie s Angry Birds
               name: Programovanie s Angry Birds
-              description_teacher: S postavami z hry Angry Birds, študenti budú vyvíjať
-                sekvenčné algoritmy na presun vtáka z jednej strany bludiska ku prasaťu
-                na druhej strane. Aby to spravili, tak budú v lineárnej postupnosti
-                spájať programovacie bloky, ktoré ich vedia pohnúť dopredu, otočiť
-                doľava alebo otočiť doprava.
+              description_student: Nauč sa viac o postupnostiach a algoritmoch s _Angry
+                Birds_.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci vytvárať sekvenčné algoritmy na presúvanie vtáčika z jednej
+                strany bludiska k prasaťu na druhej strane bludiska. Na splnenie tejto
+                úlohy budú v lineárnej postupnosti spájať programovacie bloky, a pohybovať
+                tak postavou rovno, doľava a doprava.
             Debugging with Scrat:
               key: Odstraňovanie chýb so Scratom
               name: Odstraňovanie chýb v bludisku
+              description_student: Nájdi v úlohách chyby a precvič si svoju schopnosť
+                ladiť program (hľadať chyby).
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci stretnú s vopred napísaným kódom, ktorý obsahuje chyby. Krok
+                po kroku si ho budú musieť prejsť, aby chyby našli.
             Collecting Treasure with Laurel:
               key: Zbieranie pokladov s Laurel
               name: Zbieranie pokladov s Laurel
             Creating Art with Code:
               key: Umenie s pomocou kódu
               name: Umenie s pomocou kódu
+              description_student: Programuj Umelca a vytváraj nádherné obrázky.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke.
             Loops with Rey and BB-8:
               key: Cykly s Rey a BB-8
               name: Cykly s Rey a BB-8
+              description_student: 'Pomáhaj _BB-8_ prechádzať bludiskami pomocou cyklov! '
             Sticker Art with Loops:
               key: Pečiatkovanie v cykloch
-              description_teacher: Sledujte nadšenie na tvárach vašich študentov ako
-                si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych
-                pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej
-                lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu.
-                Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel
-                pre portfólio, či ako ukážku pre rodičov.
+              description_student: V tejto lekcii budeš v Umelcovi pomocou cyklov
+                vytvárať ešte zaujímavejšie obrázky!
+              description_teacher: Táto lekcia s **miniprojektom** stavia na poznatkoch
+                o cykloch, ktoré už žiaci majú. Žiaci budú pomocou Umelca vytvárať
+                jedinečné umelecké diela.
             Nested Loops in Maze:
               key: Vnorené cykly v bludisku
               name: Vnorené cykly v bludisku
+              description_student: Cykly v cykloch, ktoré sú v ďalších cykloch. Čo
+                to znamená? Táto lekcia ti vysvetlí, čo sa stane, keď vytvoríš vnorený
+                cyklus.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa budú žiaci učiť, ako naprogramovať cyklus vnorený v ďalšom cykle.
             Snowflakes with Anna and Elsa:
               key: Snehové vločky s Annou a Elsou
               name: Snehové vločky s Annou a Elsou
+              description_student: '_Anna_ a _Elsa_ sú výborné v ľadovom korčuľovaní.
+                Potrebujú však tvoju pomoc s vytváraním vzorov na ľade. Pomôž im vytvoriť
+                čo najkrajšie obrazce pomocou vnorených cyklov. '
+              description_teacher: Táto lekcia s **miniprojektom** žiakov prevedie
+                sériou cvičení, v ktorých budú vytvárať obrázky vločiek pomocou postáv
+                z filmovej série _Ľadové kráľovstvo_.
             'Looking Ahead with Minecraft ':
               name: Pohľad do budúcnosti s Minecraftom
-              description_teacher: Túto lekciu pôvodne Minecraft tím vytvoril pre
-                Hodinu kódu. Študenti dostanú príležitosť precvičiť si koncepty, ktoré
-                sa naučili doteraz a vyskúšať si využitie podmienok!
+              description_student: Nespadni do lávy! V tejto lekcii sa oboznámiš s podmienenými
+                príkazmi vo svete _Minecraftu_.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci dostanú príležitosť precvičiť si koncepty, ktoré sa naučili
+                doteraz, a vyskúšať si využitie podmienených príkazov!
             If/Else with Bee:
-              key: Podmienky "ak/inak" s včelou
-              name: Podmienky "ak/inak" s včelou
+              key: Podmienky „ak/inak“ s včelou
+              name: Podmienky „ak/inak“ s včelou
+              description_student: Teraz, keď už rozumieš podmieneným príkazom, nadišiel
+                čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla
+                vyrábať med a zbierať nektár.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať v programovaní s podmienkami, vďaka ktorým budú
+                môcť vytvárať kód fungujúci rôzne v závislosti od konkrétnych situácií,
+                s ktorými sa program stretne.
             While Loops with the Farmer:
               key: Cykly "pokiaľ" s Farmárkou
               name: Cykly "pokiaľ" s Farmárkou
+              description_student: Cykly sú pri programovaní veľmi užitočné. V tejto
+                lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci v rozhraní Farmárky zapĺňať jamy a odstraňovať kopy hliny.
+                Nebudú však vedieť, aké veľké sú jamy ani aké vysoké sú kopy hliny,
+                ktoré treba zarovnať. Na riešenie týchto úloh budú žiaci využívať
+                nový druh cyklu.
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
-              description_teacher: Túto lekciu pôvodne Minecraft tím vytvoril pre
-                Hodinu kódu. Študenti dostanú príležitosť precvičiť si koncepty, ktoré
-                sa naučili doteraz a vyskúšať si využitie podmienok!
+              description_student: V tejto lekcii budeš používať podmienené príkazy
+                vo svete Minecraftu.
+              description_teacher: V tejto lekcii zameranej na **vytvorenie kontextu**
+                žiaci dostanú príležitosť precvičiť si, čo sa doteraz naučili, a dokonca
+                nahliadnuť do podmienených príkazov!
             Until Loops in Maze:
-              key: Cykly "dovtedy kým" v bludisku
-              name: Cykly "dovtedy kým" v bludisku
+              key: Cykly „opakuj pokiaľ neplatí“ v bludisku
+              name: Cykly „opakuj pokiaľ neplatí“ v bludisku
+              description_student: Pomocou týchto cyklov „opakuj až kým“ môžeš vytvárať
+                úžasné veci!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci budú učiť o cykloch „opakuj až kým“. Budú vytvárať programy,
+                v ktorých hlavná postava opakuje nejaké činnosti, až kým nedosiahne
+                požadovanú podmienku na zastavenie.
             Harvesting with Conditionals:
               key: Zber úrody s podmienkami
               name: Zber úrody s podmienkami
+              description_student: Niekedy nie je jasné, kedy treba podmienený príkaz
+                použiť. V tejto lekcii sa naučíš lepšie rozhodnúť, čo robiť.
+              description_teacher: Žiaci si precvičia cykly „pokiaľ“, cykly „až kým“
+                a podmienky „ak/inak“. Všetky tieto bloky využívajú podmienené príkazy.
+                Keď si žiaci precvičia všetky tri, naučia sa vytvárať komplexné a flexibilné
+                programy.
             Functions in Minecraft:
               key: Funkcie v Minecrafte
               name: Funkcie v Minecrafte
+              description_student: Prídeš na to, ako pomocou funkcií vytvárať čo najúspornejší
+                kód?
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci začnú zisťovať, načo môžu byť užitočné funkcie.
             Functions with Harvester:
               key: Funkcie so Záhradníčkou
               name: Funkcie so Záhradníčkou
-              description_student: Funkcie vám ušetria veľa práce počas pomáhania
-                farmárke s jej úrodou!
+              description_student: Funkcie ti ušetria veľa práce, keď budeš farmárke
+                pomáhať so zberom úrody!
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**  budú
+                žiaci pomocou podmienených príkazov s funkciami zbierať plodiny v Záhradníčke.
             Functions with Artist:
               key: Funkcie s Umelcom
               name: Funkcie s Umelcom
               description_student: Vytvor zložitejšie kresby s funkciami!
-              description_teacher: Študenti sa oboznámia s používaním funkcií na stránke
-                Code.org. S Umelcom vytvoríme a upravíme veľkolepé obrázky. Študenti
-                sa tiež naučia o vnorených funkciach používaných na tvorbu komplexnejších
-                vzorov, v ktorých vlastne voláme jednu funkciu z vnútra inej funkcie.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci používať funkcie v Umelcovi.
             Variables with Artist:
               key: Premenné s Umelcom
-              description_teacher: V tejto lekcii študenti objavia tvorbu opakujúcich
-                sa dizajnov s použitím premenných v prostredí Umelca. Študenti sa
-                naučia používať premenné na tvorbu kódu tak aby sa jednoduchšie písal
-                aj chápal. Prejdením riadených úloh, študenti kočia úrovňou volných
-                hier a uvidia čo sa naučili a ako tvoria svoje vlastné dizajny.
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci vyskúšajú tvorbu opakujúcich sa vzorov s použitím premenných
+                v prostredí Umelca. Žiaci sa naučia, ako premenné zjednodušujú písanie
+                aj čítanie kódu. Po vyriešení úloh s pokynmi žiakov na záver čaká
+                voľná hra, kde budú môcť ukázať, čo všetko sa naučili, a vytvoriť
+                si vlastné obrázky.
             Changing Variables with Bee:
               key: Meniace sa premenné s včelou
               name: Meniace sa premenné s včelou
+              description_student: Táto včela miluje premenné!
+              description_teacher: Táto lekcia na **budovanie zručností** žiakom pomôže
+                pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy,
+                keďže umožňujú menenie hodnôt aj po spustení programu.
             Changing Variables with Artist:
               key: Meniace sa premenné s Umelcom
               name: Meniace sa premenné s Umelcom
+              description_student: V tejto lekcii budeš vytvárať obrázky pomocou premenných,
+                ktoré sa po spustení programu menia.
             For Loops with Bee:
               key: Cykly "for" s včelou
               name: Cykly "for" s včelou
+              description_student: Bzz bzz! V týchto úlohách pomôžeš včele zbierať
+                nektár a vyrábať med pomocou cyklov „for“!
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                sa zameriava na cykly a používanie riadiacej premennej na riešenie
+                zložitejších úloh.
             For Loops with Artist:
               key: Cykly "for" s Umelcom
               name: Cykly "for" s Umelcom
-              description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš
-                používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
-              description_teacher: V tejto lekcii, s pomocou Umelca, študenti pokračujú
-                v precvičovaní cyklov. V úlohách skombinujú premenné, cykly a cykly
-                "for" na to, aby vytvorili komplexné kresby. Lekcia končí voľným cvičením
-                na vytvorenie vlastnej kresby.
+              description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš
+                používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia cykly „for“ s Umelcom. V úlohách budú vytvárať
+                komplexné návrhy a jedinečné umenie.
             Swimming Fish in Sprite Lab:
-              description_student: Nauč sa ako tvoriť  a upravovať postavy.
-              description_teacher: 'V tejto lekcii sa študenti oboznámia s dvomi konceptami
-                ležiacimi v srdci Sprite Labu: Sprite a jeho správanie. Objekt "Sprite"
-                predstavuje postavy alebo predmety zobrazené na obrazovke. Tieto postavy
-                či predmety môžu študenti meniť, či nimi pohybovať. Správanie je akcia,
-                ktorú "Sprite" vykonáva až do momentu,  kedy ju zastavíme. '
+              description_student: Nauč sa ako tvoriť a upravovať postavy.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci naprogramujú jednoduchú animovanú scénu, ktorá sa odohráva pod
+                vodou.
             Alien Dance Party:
               key: Mimozemská tanečná párty
               name: Mimozemská tanečná párty
               description_student: Vytvorte interaktívny projekt, ktorý môžete zdieľať
                 so svojimi spolužiakmi.
-              description_teacher: V tejto lekcii študenti pracujú v Sprite Labe,
-                v ktorom si vytvoria vlastné interaktívne animácie a hry. Okrem správania
-                svojich "Spritov" študenti pridajú vstup od užívateľa ako udalosť,
-                ktorá im pomôže vytvoriť skvelú mimozemskú tanečnú party.
+              description_teacher: V tejto lekcii žiaci pracujú v Sprite Labe, v ktorom
+                si vytvoria vlastné interaktívne animácie a hry. Okrem správania svojich
+                „Spritov“ žiaci pridajú vstup od používateľa ako udalosť, ktorá im
+                pomôže vytvoriť skvelú mimozemskú tanečnú party.
             Behaviors in Sprite Lab:
               key: Správania v Sprite Labe
               name: Správania v Sprite Labe
             Virtual Pet with Sprite Lab:
               key: Virtuálne zvieratko so Sprite Labom
               name: Virtuálne zvieratko so Sprite Labom
+              description_student: Vytvor si interaktívne virtuálne zvieratko, ktoré
+                vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku
+                život!
+              description_teacher: V tomto **miniprojekte** si žiaci vytvoria interaktívne
+                virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chcú.
+                Žiaci budú vzhľad zvieratka upravovať pomocou funkcie „kostýmy“, ktorá
+                je k dispozícii v Sprite Labe. Potom svojmu projektu vdýchnu život
+                pomocou udalostí, správania a ďalších konceptov, s ktorými sa už oboznámili.
             End of Course Project:
               key: Záverečný projekt
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť
                 tvoj projekt.
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom
+                navrhovania, vytvárania a prezentácie nových projektov.
             lesson-1:
               name: Tanečná Párty
+              description_student: Je čas na oslavu! V tejto lekcii si naprogramuješ
+                vlastnú interaktívnu tanečnú párty.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci programovať interaktívnu tanečnú párty.
+            lesson-2:
+              name: Vytváranie postáv
+              description_student: V tejto lekcii budeš písať programy a učiť sa o sprajtoch
+                (postavách) a správaní.
+              description_teacher: 'V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy a učiť sa o konceptoch, ktoré sú stredobodom Sprite Labu:
+                o sprajtoch (postavách) a správaní.'
             lesson-3:
               name: Postavy v akcii
+              description_student: Prejdeš si programovacie úrovne, ktoré sa končia
+                voľnou úlohou, kde môžeš vytvoriť čokoľvek, čo sa ti páči.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa
+                končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať
+                programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+            lesson-4:
+              name: Text a výzvy
+              description_student: V tejto lekcii si precvičíš používanie premenných
+                v Sprite Labe.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia použitie premenných v Sprite Labe.
           lesson_groups:
             csf_warmup:
               display_name: Úvodná aktivita
@@ -11892,41 +12271,48 @@ sk:
           description_audience: 'Vek: 4-8'
           lessons:
             Learn to Drag and Drop:
-              key: Nauč sa presunúť a pustiť
-              name: Nauč sa presunúť a pustiť
-              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
-                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
-                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
-                a potom pokročia k používaniu počítača na dokončenie online úloh.
+              key: Učíme sa presúvať objekty
+              name: Učíme sa presúvať objekty
+              description_student: Dokonči úlohy presúvaním objektov.
+              description_teacher: Táto lekcia zameraná na **budovanie zručností**
+                poskytne študentom predstavu o tom, čo očakávať, keď prvýkrát prídu
+                do počítačovej učebne. Začína krátkou diskusiou, ktorá im predstaví
+                základy správania v počítačovej učebni, a potom budú obiť on‑line
+                úlohy pomocou počítača.
             Sequencing with Scrat:
               key: Postupnosť krokov so Scratom
               name: Postupnosť krokov so Scratom
-              description_teacher: Táto lekcia poskytne študentom predstavu o tom,
-                čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou
-                diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách,
-                a potom pokročia k používaniu počítača na dokončenie online úloh.
+              description_student: Naprogramuj Scrata tak, aby sa dostal k žaluďu.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci vytvárať sekvenčné algoritmy na presúvanie veveričky z jednej
+                strany bludiska k žaluďu na druhej strane bludiska. Na splnenie tejto
+                úlohy budú v lineárnej postupnosti spájať programovacie bloky.
             Programming in with Angry Birds:
               name: Programovanie s Angry Birds
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                budú žiaci pokračovať vo vytváraní sekvenčných algoritmov.
             Programming with Rey and BB-8:
               key: Programovanie s Rey a BB-8
               name: Programovanie s Rey a BB-8
-              description_teacher: Táto lekcia **na rozvíjanie zručností** žiaci využijú
-                svoje novozískané programovacie zručnosti zložitejšími spôsobmi, aby
-                robota BB‑8 znavigovali náročnou dráhou.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci využijú svoje novozískané programovacie zručnosti zložitejšími
+                spôsobmi, aby robota BB‑8 znavigovali náročnou dráhou.
             Programming in Harvester:
               key: Programovanie so Záhradníčkou
               name: Programovanie so Záhradníčkou
-              description_teacher: Študenti aplikujú naučené koncepty programovania
-                v prostredí Záhradníčky. Tentokrát namiesto toho, aby len dostali
-                charakter do cieľa, budú študenti zbierať kukuricu s pomocou nového
-                bloku. Študenti budú pokračovať v rozvíjaní zručností sekvenčných
-                algoritmov a začnú používať debugovací proces.
+              description_student: Pomôž Záhradníčke pozbierať zeleninu, ktorú má
+                po ceste.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                žiaci aplikujú programovacie koncepty, ktoré sa naučili v prostredí
+                Záhradníčky. Budú sa naďalej zlepšovať vo vytváraní sekvenčných algoritmov
+                a oboznámia sa s procesom ladenia.
             Loops with Scrat:
               key: Cykly so Scratom
               name: Cykly so Scratom
-              description_teacher: V tejto lekcii **na rozvíjanie zručností** si žiaci
-                precvičia koncept cyklov pri programovaní úloh, ktorých cieľom je
-                pomôcť veveričke dostať sa k žaluďu.
+              description_student: Pomôž Scratovi  prejsť väčšiu dráhu pomocou cyklov.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                si žiaci precvičia koncept cyklov pri programovaní úloh, ktorých cieľom
+                je pomôcť veveričke dostať sa k žaluďu.
             Loops with Laurel:
               key: Cykly s Laurel
               name: Cykly s Laurel
@@ -11938,29 +12324,36 @@ sk:
             Ocean Scene with Loops:
               key: Na mori s cyklami
               name: Na mori s cyklami
-              description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci
-                začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov.
-                V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom
-                a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci
-                lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné
-                obrazy.
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností
+                inštrukcií. Žiaci sa naučia vytvárať vzory pomocou cyklov. Na konci
+                lekcie budú mať príležitosť vytvoriť si vlastné obrázky.
             Drawing Gardens with Loops:
               key: Kreslenie v záhrade pomocou cyklov
               name: Kreslenie v záhrade pomocou cyklov
-              description_teacher: V tejto lekcii **na rozvíjanie zručností** sa žiaci
-                budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností
+              description_student: Dokonči obrázky pomocou cyklov a vzorov.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností**
+                sa žiaci budú učiť, ako kresliť obrázky cyklovaním jednoduchých postupností
                 inštrukcií. Žiaci sa naučia vytvárať vzory pomocou cyklov. Na konci
                 lekcie budú mať príležitosť vytvoriť si vlastné obrázky.
             On the Move with Events:
               key: Udalosti v pohybe
               name: Udalosti v pohybe
-              description_teacher: V tejto online aktivite sa študenti naučia, ako
-                v PlayLabe využívať Udalosti. Následne dostanú príležitosť aplikovať
-                všetky doteraz naučené zručnosti a vytvoriť animovanú hru. Je čas
-                na kreativitu! Vytvorme v Play Labe celý príbeh!
+              description_student: Vytvor si vlastnú hru alebo príbeh.
+              description_teacher: V tomto **miniprojekte** dostanú žiaci príležitosť
+                naučiť sa, ako používať udalosti v Play Labe, a budú môcť využiť všetky
+                doteraz získané programovacie zručnosti na vytvorenie animovanej hry.
+                Nastal čas popustiť uzdu svojej kreativite a vytvoriť v Play Labe
+                príbeh!
             A Royal Battle with Events:
               key: Kráľovská bitka s udalosťami
               name: Kráľovská bitka s udalosťami
+              description_student: Vytvor pomocou udalostí príbeh alebo interaktívnu
+                hru.
+              description_teacher: 'V tomto **miniprojekte** dostanú žiaci príležitosť
+                naučiť sa, ako používať udalosti v Play Labe, a budú môcť využiť všetky
+                doteraz získané programovacie zručnosti na vytvorenie animovanej hry. '
           lesson_groups:
             csf_sequencing:
               display_name: Postupnosť
@@ -11976,10 +12369,18 @@ sk:
               name: Kódovanie nákazy
             Course F Introduction:
               name: Predstavenie Sprite Labu
+            Making Sprites:
+              name: Vytváranie postáv
             Sprites in Action:
               name: Postavy v akcii
+            blank space stories:
+              name: Príbehy na doplnenie
+            texts-and-prompts:
+              name: Text a výzvy
             introducing-spritelab:
               name: Predstavenie Sprite Labu
+            blank-space-stories:
+              name: Príbehy na doplnenie
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -12256,5 +12657,20 @@ sk:
               display_name: Obsah
             lesson_group:
               display_name: Obsah
+            lessonGroup-2:
+              display_name: Obsah
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgety
+            lesson-2:
+              name: Nástroje
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Včela Hláskovanie
+          title: Včela Hláskovanie
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Obsah

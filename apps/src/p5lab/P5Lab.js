@@ -58,6 +58,7 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
+import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -78,7 +79,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -186,32 +186,6 @@ export default class P5Lab {
     }
   }
 
-  loadAndSetInitialAnimationList(config, defaultSprites) {
-    // Push project-sourced animation metadata into store. Always use the
-    // animations specified by the level definition for embed and contained
-    // levels.
-    const useConfig =
-      config.initialAnimationList &&
-      !config.embed &&
-      !config.hasContainedLevels;
-    let initialAnimationList = useConfig
-      ? config.initialAnimationList
-      : this.startAnimations;
-    initialAnimationList = this.loadAnyMissingDefaultAnimations(
-      initialAnimationList,
-      defaultSprites
-    );
-
-    getStore().dispatch(
-      setInitialAnimationList(
-        initialAnimationList,
-        this.isBlockly /* shouldRunV3Migration */,
-        this.isBlockly,
-        defaultSprites
-      )
-    );
-  }
-
   /**
    * Inject the studioApp singleton.
    */
@@ -259,24 +233,18 @@ export default class P5Lab {
     this.level.helperLibraries = this.level.helperLibraries || [];
 
     this.level.softButtons = this.level.softButtons || [];
-
-    this.startAnimations = null;
-
-    getDefaultListMetadata().then(defaultSprites => {
-      if (this.level.useDefaultSprites) {
-        this.startAnimations = defaultSprites;
-      } else if (
-        this.level.startAnimations &&
-        this.level.startAnimations.length > 0
-      ) {
-        try {
-          this.startAnimations = JSON.parse(this.level.startAnimations);
-        } catch (err) {
-          console.error('Unable to parse default animation list', err);
-        }
+    if (this.level.useDefaultSprites) {
+      this.startAnimations = defaultSprites;
+    } else if (
+      this.level.startAnimations &&
+      this.level.startAnimations.length > 0
+    ) {
+      try {
+        this.startAnimations = JSON.parse(this.level.startAnimations);
+      } catch (err) {
+        console.error('Unable to parse default animation list', err);
       }
-      this.loadAndSetInitialAnimationList(config, defaultSprites);
-    });
+    }
 
     config.usesAssets = true;
 
@@ -500,6 +468,28 @@ export default class P5Lab {
       validationEnabled: !!config.level.validationEnabled
     });
 
+    // Push project-sourced animation metadata into store. Always use the
+    // animations specified by the level definition for embed and contained
+    // levels.
+    const useConfig =
+      config.initialAnimationList &&
+      !config.embed &&
+      !config.hasContainedLevels;
+    let initialAnimationList = useConfig
+      ? config.initialAnimationList
+      : this.startAnimations;
+    initialAnimationList = this.loadAnyMissingDefaultAnimations(
+      initialAnimationList
+    );
+
+    getStore().dispatch(
+      setInitialAnimationList(
+        initialAnimationList,
+        this.isBlockly /* shouldRunV3Migration */,
+        this.isBlockly
+      )
+    );
+
     this.generatedProperties = {
       ...config.initialGeneratedProperties
     };
@@ -545,12 +535,8 @@ export default class P5Lab {
    * the "set background to" block, which needs to have backgrounds in the
    * animation list at the start in order to look not broken.
    * @param {Object} initialAnimationList
-   * @param {Object} defaultSprites
    */
-  loadAnyMissingDefaultAnimations(
-    initialAnimationList,
-    defaultSprites = {orderedKeys: [], propsByKey: {}}
-  ) {
+  loadAnyMissingDefaultAnimations(initialAnimationList) {
     if (!this.isBlockly) {
       return initialAnimationList;
     }
@@ -559,7 +545,7 @@ export default class P5Lab {
       const name = initialAnimationList.propsByKey[key].name;
       configDictionary[name] = key;
     });
-    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.
+    // Check if initialAnimationList has backgrounds. If the list doesn't have backgrounds, add some from defaultSprites.json.
     // This is primarily to handle pre existing levels that don't have animations in their list yet
     const categoryCheck = initialAnimationList.orderedKeys.filter(key => {
       const {categories} = initialAnimationList.propsByKey[key];
@@ -1243,15 +1229,9 @@ export default class P5Lab {
    *         loading the game.
    */
   onP5Preload() {
-    Promise.all([
-      this.isBlockly
-        ? this.preloadSpriteImages_()
-        : this.preloadAnimations_(this.level.pauseAnimationsByDefault),
-      this.maybePreloadBackgrounds_(),
-      this.runPreloadEventHandler_()
-    ]).then(() => {
-      this.p5Wrapper.notifyPreloadPhaseComplete();
-    });
+    this.preloadLabAssets()
+      .then(this.runPreloadEventHandler_())
+      .then(() => this.p5Wrapper.notifyPreloadPhaseComplete());
     return false;
   }
 
@@ -1264,39 +1244,6 @@ export default class P5Lab {
     }
   }
 
-  // Preloads background images if this is Sprite Lab
-  maybePreloadBackgrounds_() {
-    if (!this.isBlockly) {
-      return Promise.resolve();
-    }
-    return this.p5Wrapper.preloadBackgrounds();
-  }
-
-  /**
-   * Wait for animations to be loaded into memory and ready to use, then pass
-   * those animations to P5 to be loaded into the engine as animations.
-   * @param {Boolean} pauseAnimationsByDefault whether animations should be paused
-   * @returns {Promise} which resolves once animations are in memory in the redux
-   *          store and we've started loading them into P5.
-   *          Loading to P5 is also an async process but it has its own internal
-   *          effect on the P5 preloadCount, so we don't need to track it here.
-   * @private
-   */
-  async preloadAnimations_(pauseAnimationsByDefault) {
-    await this.whenAnimationsAreReady();
-    // Animations are ready - send them to p5 to be loaded into the engine.
-    return this.p5Wrapper.preloadAnimations(
-      getStore().getState().animationList,
-      pauseAnimationsByDefault
-    );
-  }
-
-  async preloadSpriteImages_() {
-    await this.whenAnimationsAreReady();
-    return this.p5Wrapper.preloadSpriteImages(
-      getStore().getState().animationList
-    );
-  }
   /**
    * Check whether all animations in the project animation list have been loaded
    * into memory and are ready to use.

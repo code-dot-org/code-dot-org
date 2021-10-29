@@ -221,7 +221,7 @@ uk:
             у подорожі чарівною зимовою казкою.
           lessons:
             Artist:
-              name: Художник
+              name: Програмуємо з Анною та Ельзою
           student_description: Скористаємось вмінням програмувати, щоб допомогти Анні
             та Ельзі познайомитись із красою чарівних крижинок. Ви складете сніжинки
             та узори, покатаєтесь на ковзанах та створите зимову казку, якою зможете
@@ -367,7 +367,7 @@ uk:
             за участі персонажів Діснея Infiinty.
           lessons:
             Infinity:
-              name: Infinity
+              name: Ігрова лабораторія Діснея Infinity
           student_description: За допомогою Ігрової лабораторії створіть гру або історію
             за участі персонажів Діснея Infiinty.
         algebrademo:
@@ -977,7 +977,7 @@ uk:
             воєн у далекій-далекій галактиці.
           lessons:
             Hour of Code 2015:
-              name: Година коду 2015
+              name: 'Зоряні війни: Закодуємо далеку Галактику'
           student_description: Навчись програмувати дроїдів, створи власну гру Зоряних
             воєн у далекій-далекій галактиці.
         mc:
@@ -1538,9 +1538,6 @@ uk:
           title: Обери команду та створи гру в баскетбол
           description_short: Обери команду та створи гру в баскетбол
           description: Обери команду та створи гру в баскетбол
-          lessons:
-            Bounce:
-              name: Арканоід
           student_description: Обери команду та створи гру в баскетбол
         hoc-encryption:
           lessons:
@@ -1744,9 +1741,6 @@ uk:
           title: Закодуй власну спортивну гру
           description_short: Закодуй власний спорт
           description: Закодуй власний спорт
-          lessons:
-            Sports:
-              name: Спорт
           student_description: Закодуй власний спорт
         2016_sciencePD-phase2b:
           lessons:
@@ -2506,9 +2500,6 @@ uk:
         hero:
           description: Майнкрафт повернувся до Години коду з новеньким підручником!
             Подорожуйте Майнкрафтом з кодом.
-          lessons:
-            Minecraft Hour of Code:
-              name: Година коду від Майнкрафт
           student_description: Майнкрафт повернувся до Години коду з новеньким підручником!
             Подорожуйте Майнкрафтом з кодом.
         csp-explore-2017:
@@ -3323,7 +3314,7 @@ uk:
             та збудувати підводні світи за допомогою коду.
           lessons:
             Aquatic:
-              name: Водні
+              name: 'Minecraft: Водна подорож'
           student_description: Майнкрафт повертається в Годину коду з новим підручником!
             Скористайтесь своєю креативністю та вміннями розв'язання проблем для того,
             щоб дослідити та збудувати підводні світи за допомогою коду.
@@ -5213,6 +5204,8 @@ uk:
           lessons:
             Virus Simulation for Code Bytes:
               name: Моделювання симуляції
+            Outbreak:
+              name: Моделювання симуляції
           lesson_groups:
             outbreak:
               display_name: Симуляція спалаху
@@ -6036,5 +6029,22 @@ uk:
               display_name: Зміст
             lesson_group:
               display_name: Зміст
+            lessonGroup-2:
+              display_name: Зміст
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Віджети
+            lesson-2:
+              name: Інструменти
+            lesson-3:
+              name: Приклади
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Грамотна Бджілка
+          title: Грамотна Бджілка
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Зміст

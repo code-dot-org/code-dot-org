@@ -1748,6 +1748,114 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nuovo blocco!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nuovo blocco!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nuovo blocco!",
+          "poetry_foreground": "Nuovo blocco!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nuovo blocco!",
+          "poetry_multiple_sprites": "Nuovo blocco!",
+          "poetry_new_block": "Nuovo blocco!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nuovo blocco!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nuovo blocco!",
+          "poetry_sprite_stops": "Nuovo blocco!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nuovo blocco!",
+          "poetry_remove_sprite": "Nuovo blocco!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseF_apps_aquarium": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
+          "run_button": "Clicca prima sul pulsante della corsa"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_chatbot": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
+          "run_button": "Clicca prima sul pulsante della corsa"
+        },
+        "courseF_apps_collector": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
+          "run_button": "Clicca prima sul pulsante della corsa"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_pet": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
+          "run_button": "Clicca prima sul pulsante della corsa"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Cerca un nuovo blocco qui."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Qui puoi rallentare il tuo programma."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Nuovi blocchi qui!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Usa il nuovo blocco di eventi trovato qui."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Questo blocco è posizionato nell'ordine sbagliato."
+        },
+        "courseF_events_time": {
+          "events_category": "Clicca qui per aprire la categoria Eventi."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Clicca qui per aprire la categoria Comportamenti."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Clicca qui per aprire la categoria Personaggi."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Clicca qui per aprire la categoria Posizioni."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Cerca un nuovo blocco qui!"
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Cerca due nuovi blocchi qui!"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Cerca nuovi blocchi qui!"
+        },
+        "courseF_text_events": {
+          "events_category": "Clicca qui per aprire la categoria Eventi."
+        },
+        "courseF_text_print": {
+          "print_block": "Il blocco stampa lo trovi qui!"
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Il blocco comando lo trovi qui!"
         }
       }
     }

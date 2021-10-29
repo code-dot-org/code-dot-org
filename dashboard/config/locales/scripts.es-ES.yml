@@ -247,7 +247,7 @@ es:
             exploran la magia y la belleza del hielo.
           lessons:
             Artist:
-              name: Artista
+              name: Programa con Ana y Elsa
           student_description: Vamos a usar código para unirnos a Ana y Elsa mientras
             exploran la magia y la belleza del hielo. Crearás copos de nieve y patrones
             a medida que patinas sobre hielo y harás un paisaje invernal que luego
@@ -412,7 +412,7 @@ es:
             o un juego protagonizado por personajes de Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratorio de Juego Disney Infinity
           student_description: Utiliza el laboratorio de juegos para crear una historia
             o un juego protagonizado por personajes de Disney Infinity.
         algebrademo:
@@ -603,6 +603,12 @@ es:
           lessons:
             Jigsaw:
               name: Rompecabezas
+              description_student: Haz clic y arrastra para terminar los desafíos.
+              description_teacher: Esta lección dará a los estudiantes una idea de
+                qué esperar cuando se dirigen al laboratorio de computación. Comienza
+                con un breve debate sobre los modales en un laboratorio de computación
+                y continúa con el uso de una computadora para completar desafíos en
+                línea.
           student_description: Prueba nuestro tutorial de Jigsaw
         step:
           title: Paso
@@ -680,6 +686,8 @@ es:
               name: Compresión de texto
         algebraPD:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -693,6 +701,7 @@ es:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         algPDmiami:
           title: Ciencias de la computación en álgebra PD
           description: Enseñar álgebra a través de programación funcional
@@ -756,6 +765,8 @@ es:
             Lesson 15:
               name: Lección 15
         ECSPD:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -769,7 +780,10 @@ es:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         sciencePD:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -796,6 +810,7 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         rbo-reference:
           lessons:
             reference:
@@ -885,6 +900,8 @@ es:
             The Design Recipe:
               name: La receta de diseño
         ECSPD-NexTech:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -898,7 +915,10 @@ es:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         ECSPD-iZone:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -912,8 +932,11 @@ es:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
+          student_description: 'Fase 1: introducción online'
         algebraPD-NexTech:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -927,8 +950,11 @@ es:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         algebraPD-iZone:
           title: Ciencias de la computación en álgebra PD
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -942,7 +968,10 @@ es:
               name: Panel del docente
             Why Computer Science belongs in Algebra:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
+          student_description: 'Fase 1: introducción online'
         sciencePD-NexTech:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -969,7 +998,10 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         sciencePD-iZone:
+          description: 'Fase 1: introducción online'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -996,7 +1028,9 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
+          student_description: 'Fase 1: introducción online'
         sciencePD2:
+          title: 'CS en ciencias: parte 2'
           lessons:
             Creating Breeds in Starlogo Nova:
               name: Creación de especies en StarLogo Nova
@@ -1013,6 +1047,7 @@ es:
             Wrap-Up:
               name: Cierre
         sciencePD3:
+          title: 'CS en ciencias: parte 3'
           lessons:
             Decode and Share:
               name: Decodificar y compartir
@@ -1715,6 +1750,7 @@ es:
             Halloween 2015:
               name: Halloween 2015
         SpecialSeries:
+          title: Niveles especiales
           description_audience: Edades de 10 a 18 años
           lessons:
             Spring 2016:
@@ -1818,9 +1854,6 @@ es:
             de las galaxias en una galaxia muy, muy lejana.
           description_short: Aprende a programar droides y crea tu propio juego de
             La guerra de las galaxias en una galaxia muy, muy lejana.
-          lessons:
-            Hour of Code 2015:
-              name: Hora de Code 2015
           student_description: Aprende a programar droides y crea tu propio juego
             de La guerra de las galaxias en una galaxia muy, muy lejana.
         mc:
@@ -1930,6 +1963,7 @@ es:
             Unit 4 Overview:
               name: Resumen de la Unidad 4
         cspunit6draft:
+          description_short: Apps de datos
           lessons:
             Creating Javascript Objects:
               name: Creación de objetos de JavaScript
@@ -2047,6 +2081,7 @@ es:
         algebraPD1:
           title: CS en Algebra Parte 1
           description: Enseñar álgebra a través de programación funcional
+          description_short: 'Fase 1: introducción online'
           lessons:
             Course Overview:
               name: Resumen del curso
@@ -2521,6 +2556,7 @@ es:
             Using the Game Design Process:
               name: Uso del proceso de diseño de juegos
         2016_sciencePD_phase1:
+          title: 'CS en ciencias: parte 1'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -2558,6 +2594,7 @@ es:
             Sample Stage:
               name: Etapa de muestra
         ECSPD1:
+          description_short: 'Fase 1: introducción online'
           lessons:
             Background and Context:
               name: Experiencia y contexto
@@ -2587,6 +2624,8 @@ es:
               name: Por qué las Ciencias de la Computación pertenecen al Álgebra
           student_description: Enseñar álgebra a través de programación funcional
         sciencePD1:
+          title: 'CS en ciencias: parte 1'
+          description_short: 'Fase 1: introducción online'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -4081,7 +4120,6 @@ es:
           description: Elije un equipo y crea un juego de basquetbol
           lessons:
             Bounce:
-              name: Rebotar
               description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
                 en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
               description_teacher: En esta actividad online, los/as estudiantes aprenderán
@@ -5145,7 +5183,6 @@ es:
           description: Multideporte
           lessons:
             Sports:
-              name: Deportes
               description_student: "¿Has pensado que alguna vez puedes jugar videojuegos
                 en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
               description_teacher: En esta actividad online, los/as estudiantes aprenderán
@@ -5279,6 +5316,7 @@ es:
             en un Curso de Aprendizaje Profesional para los profesores de CSP que
             se preparan para enseñar la Unidad 4.
         sciencepd4:
+          title: 'CS en ciencias: parte 4'
           lessons:
             Welcome!:
               name: "¡Bienvenido!"
@@ -5328,6 +5366,7 @@ es:
             Snowflakes:
               name: Copos de nieve
         sciencepd5:
+          title: 'CS en ciencias: parte 5'
           lessons:
             Welcome!:
               name: "¡Bienvenido!"
@@ -9368,7 +9407,7 @@ es:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Hora del Código para el Viaje del Héroe'
             Minecraft Hour of Code:
-              name: Hora de Code de Minecraft
+              name: 'Minecraft: Viaje del héroe'
           student_description: "¡Minecraft está de vuelta para la Hora del Código
             con una actividad nueva! Viaja a través de Minecraft con códigos."
         applab-intro-staging:
@@ -13582,6 +13621,18 @@ es:
               name: nueva etapa
             Dance Party:
               name: Fiesta de baile
+              description_student: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
+              description_teacher: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
           student_description: "¡Programa tu propio baile para compartirlo con tus
             amigos!"
         frozen-2018-test-b:
@@ -13598,7 +13649,7 @@ es:
             mundos acuáticos a través del código."
           lessons:
             Aquatic:
-              name: Aquatic
+              name: 'Minecraft: Voyage Aquatic'
           student_description: "¡Minecraft está de vuelta con una nueva actividad!
             Usa tu creatividad y tu capacidad de resolver problemas para explorar
             y construir mundos acuáticos a través del código."
@@ -13692,6 +13743,18 @@ es:
           lessons:
             Dance Party - Go Further:
               name: Fiesta de baile - Ir más allá
+              description_student: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
+              description_teacher: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
           student_description: Motívate con más ideas de proyectos.
         coursef-2019:
           title: Curso F (2019)
@@ -19808,6 +19871,18 @@ es:
           lessons:
             Dance Party:
               name: Fiesta de baile
+              description_student: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
+              description_teacher: En esta lección, los estudiantes de todas las edades
+                obtienen una experiencia introductoria con la programación y las ciencias
+                de la computación en un entorno seguro y que les brinda apoyo. Esta
+                lección ha sido diseñada para estudiantes de todas las edades, pero
+                requiere lectura. Esta actividad requiere de sonido ya que la herramienta
+                fue creada para responder a la música.
           student_description: "¡Programa tu propio baile para compartirlo con tus
             amigos!"
         k5-onlinepd-2019:
@@ -25648,6 +25723,15 @@ es:
           lessons:
             Virus Simulation for Code Bytes:
               name: Codificación de una simulación
+            Outbreak:
+              name: Codificación de una simulación
+              description_student: "¡Un virus ha llegado a Monster Town! Aprende a
+                crear un simulador de virus y ayuda a los monstruos a volver a estar
+                sanos."
+              description_teacher: 'En esta lección, los alumnos crearán un simulador
+                de brote epidémico utilizando sucesos. Los alumnos estudiarán la simulación
+                para comprender la rapidez con la que puede propagarse un virus y
+                lo que se puede hacer para frenar el contagio. '
           lesson_groups:
             outbreak:
               display_name: Simulación de un Brote Epidémico
@@ -32458,6 +32542,8 @@ es:
               name: Utilización de comandos
             lesson-19:
               name: Tratando los Datos como Tipos Diferentes
+            lesson-20:
+              name: Comparando Valores para Tomar Decisiones
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -32470,6 +32556,14 @@ es:
               name: Día FRQ
             lesson-15:
               name: Día de evaluación
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -35437,14 +35531,6 @@ es:
               name: Tratando los Datos como Tipos Diferentes
             lesson-5:
               name: Comparando Valores para Tomar Decisiones
-              description_student: 'Hoy, se trata de utilizar el código para tomar
-                decisiones. Se comparan las relaciones entre los valores mientras
-                se utilizan sentencias condicionales para ayudar al `Pintor` a tomar
-                decisiones. '
-              description_teacher: 'Los alumnos utilizan operadores relacionales para
-                escribir y evaluar expresiones. Los alumnos amplían el uso de las
-                sentencias `if` para comparar valores almacenados en variables y elementos
-                de matrices (arrays). '
             lesson-6:
               name: Añadiendo Aleatoriedad a un Programa
               description_student: Uno de los casos de uso más comunes para generar
@@ -35484,6 +35570,8 @@ es:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-5:
+              display_name: Comparando Valores para Tomar Decisiones
         csa5-pilot-facilitator:
           lessons:
             FRQ Day:
@@ -35494,6 +35582,14 @@ es:
               name: Día FRQ
             lesson-15:
               name: Día de evaluación
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -35573,3 +35669,65 @@ es:
           lessons:
             lesson-1:
               name: 'Fiesta de baile: sin conexión'
+              description_student: 'Haz una fiesta de baile en la clase para aprender
+                sobre los eventos. '
+              description_teacher: Los estudiantes aprenderán que los eventos son
+                una forma útil de controlar cuándo ocurre una acción e incluso que
+                se pueden usar para que varias cosas actúen de forma sincronizada.
+                En programación, puedes utilizar eventos para responder a un usuario
+                que lo controla (como presionar botones o hacer clic con el ratón).
+                Los eventos pueden hacer que tu programa sea más interesante e interactivo.
+          name: baile-desconectado
+          title: Hora del Código - Fiesta de Baile - Desconectado
+          description_audience: cursos de Kinder a 12vo
+          description: Los estudiantes aprenderán que los eventos son una forma útil
+            de controlar cuándo ocurre una acción e incluso que se pueden usar para
+            que varias cosas actúen de forma sincronizada. En programación, puedes
+            utilizar eventos para responder a un usuario que lo controla (como presionar
+            botones o hacer clic con el ratón). Los eventos pueden hacer que tu programa
+            sea más interesante e interactivo.
+          student_description: Los estudiantes aprenderán a pensar en controlar sus
+            acciones mediante eventos. Los eventos se utilizan mucho en programación
+            y deberían ser fáciles de reconocer después de esta lección.
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Herramientas
+            lesson-3:
+              name: Ejemplos
+        poetry:
+          lessons:
+            lesson-6:
+              name: Círculo de Poesía
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Concurso de Ortografía
+          title: Concurso de Ortografía
+        outbreak-csc:
+          title: Brote
+        csa5-exemplars:
+          lessons:
+            lesson-13:
+              name: Día FRQ
+            lesson-14:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Unidad 1 Proyectos
+            lesson-3:
+              name: 'Unidad 3: Proyectos '
+            lesson-4:
+              name: 'Unidad 4: Proyectos '
+            lesson-5:
+              name: 'Unidad 5: Proyectos '
+            lesson-6:
+              name: 'Unidad 6: Proyectos '

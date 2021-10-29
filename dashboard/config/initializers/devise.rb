@@ -367,6 +367,13 @@ Devise.setup do |config|
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
+
+    # These marketing cookies are set in the home_controller in init_homepage. When the user logs out, we
+    # remove these cookies because they are user-specific. The cookies are set in init_homepage instead of after_set_user
+    # to minimize the number of times we perfom the queries for the cookie values.
+    User.marketing_segment_data_keys.each do |key|
+      auth.cookies[environment_specific_cookie_name("_teacher_#{key}")] = {value: "", expires: Time.at(0), domain: :all}
+    end
   end
 
   # ==> Mountable engine configurations

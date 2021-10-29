@@ -1104,6 +1104,12 @@ ur:
         text: پلے آواز {SOUND}
         options:
           SOUND:
+            "'sound://category_animals/bear.mp3'": ریچھ
+            "'sound://category_animals/cat.mp3'": بلی
+            "'sound://category_animals/cow.mp3'": گائے
+            "'sound://category_animals/sheep.mp3'": بھیڑ
+            "'sound://category_animals/chicken.mp3'": چکن
+            "'sound://category_animals/dolphin.mp3'": ڈالفن
             "'sound://category_digital/jump_7.mp3'": چھلانگ لگایں
       gamelab_pointInDirection:
         text: نقطہ {SPRITE} {DIRECTION}
@@ -1465,12 +1471,29 @@ ur:
         text: ایکس {SPRITE} کے مربوط
       Mikelab_yLocationOf:
         text: Y کے ہم آہنگ {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: آئس کریم
+            Stars: ستارہ
+            Fireworks: آتش بازی
+            '"rainbow"': قوس قزح
+            '"hearts"': دل
+            '"flowers"': پھول
+            '"waves"': لہریں
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': بارش
+      Poetry_makeNewSpriteAnon:
+        text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       Poetry_playSound:
         text: پلے آواز {SOUND}
+        options:
+          SOUND:
+            Light: روشنی
+      Poetry_setBackground:
+        text: پس منظر رنگ {COLOR} سیٹ کریں
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1479,6 +1502,10 @@ ur:
             '"space"': جگہ
             '"stars"': ستارہ
             '"ripples"': ریپلز
+            '"rain"': بارش
+            '"bubbles"': بُلبُلے
+            '"confetti"': کاغذی لیریاں
+            '"hearts"': رنگین دل
           PALETTE:
             '"rainbow"': قوس قزح
       Poetry_setBackgroundImageAs:
@@ -1627,6 +1654,10 @@ ur:
         text: جگہ بنیادی
       craft_placeTorch:
         text: مشعل یہاں رکہیں
+      craft_repeatUntilConduit:
+        text: |-
+          کنڈیوٹ/آبی گزرگاہ مکمل ہونے تک دہرائیں
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           مقصد

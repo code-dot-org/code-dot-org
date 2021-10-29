@@ -817,6 +817,7 @@ hu:
   pd:
     form_labels:
       email: 'Email'
+      school: 'Iskola'
       school_name: 'Iskola neve'
       school_city: 'Iskola városa'
       school_country: 'Iskola országa'

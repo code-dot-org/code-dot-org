@@ -1154,6 +1154,13 @@ da:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kravle
+            "'sound://category_animals/bear.mp3'": bjørne
+            "'sound://category_animals/cat.mp3'": kat
+            "'sound://category_animals/cow.mp3'": ko
+            "'sound://category_animals/sheep.mp3'": får
+            "'sound://category_animals/chicken.mp3'": kylling
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": hop
       gamelab_pointInDirection:
         text: peg {SPRITE} {DIRECTION}
@@ -1506,12 +1513,29 @@ da:
             '"down"': pil ned
             '"left"': venstre pil
             '"right"': højre pil
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Soft Ice
+            Stars: Stjerner
+            Fireworks: Fyrværkeri
+            '"rainbow"': Regnbue
+            '"hearts"': Hjerter
+            '"flowers"': Blomster
+            '"waves"': Bølger
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': regn
+      Poetry_makeNewSpriteAnon:
+        text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       Poetry_playSound:
         text: afspil lyd {SOUND}
+        options:
+          SOUND:
+            Light: Lys
+      Poetry_setBackground:
+        text: indstil baggrundsfarve {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1520,6 +1544,10 @@ da:
             '"space"': Ydre rum
             '"stars"': Stjerner
             '"ripples"': Krusninger
+            '"rain"': Regn
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+            '"hearts"': Farvede hjerter
           PALETTE:
             '"rainbow"': Regnbue
       Poetry_setBackgroundImageAs:

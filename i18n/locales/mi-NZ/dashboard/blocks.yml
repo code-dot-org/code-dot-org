@@ -1084,6 +1084,13 @@ mi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": karihi
+            "'sound://category_animals/bear.mp3'": pea
+            "'sound://category_animals/cat.mp3'": ngeru
+            "'sound://category_animals/cow.mp3'": kau
+            "'sound://category_animals/sheep.mp3'": hipi
+            "'sound://category_animals/chicken.mp3'": heihei
+            "'sound://category_animals/dolphin.mp3'": aihe
+            "'sound://category_animals/dog.mp3'": kurī
             "'sound://category_digital/jump_7.mp3'": peke
       gamelab_randColor:
         text: tae matapōkere
@@ -1344,10 +1351,26 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Aihikirīmi
+            Stars: Ngā Whetū
+            Fireworks: Pahū ahi
+            '"rainbow"': Āniwaniwa
+            '"hearts"': Ngā Manawa
+            '"flowers"': Putiputi
+            '"waves"': Ngaru
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': ua
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: Rama
+      Poetry_setBackground:
+        text: kowhiri te tae papamuri {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1356,6 +1379,10 @@ mi:
             '"space"': Tuarangi
             '"stars"': Ngā Whetū
             '"ripples"': Ngā Pungarungaru
+            '"rain"': Ua
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': Manawa Tae
           PALETTE:
             '"rainbow"': Āniwaniwa
       Poetry_setForegroundEffect:

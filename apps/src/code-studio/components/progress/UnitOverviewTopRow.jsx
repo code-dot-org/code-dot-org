@@ -205,6 +205,7 @@ class UnitOverviewTopRow extends React.Component {
             courseId={currentCourseId}
             scriptId={scriptId}
             forceReload={true}
+            buttonLocationAnalytics={'unit-overview-top'}
           />
         )}
         <div style={isRtl ? styles.left : styles.right}>

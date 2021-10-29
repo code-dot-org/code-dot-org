@@ -1136,6 +1136,14 @@ th:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ครัชช์
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": ฟองสบู่
+            "'sound://category_animals/bear.mp3'": หมี
+            "'sound://category_animals/cat.mp3'": แมว
+            "'sound://category_animals/cow.mp3'": วัว
+            "'sound://category_animals/sheep.mp3'": แกะ
+            "'sound://category_animals/chicken.mp3'": ไก่
+            "'sound://category_animals/dolphin.mp3'": โลมา
+            "'sound://category_animals/dog.mp3'": สุนัข
             "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
       gamelab_pointInDirection:
         text: จุด {SPRITE} {DIRECTION}
@@ -1574,12 +1582,29 @@ th:
         text: สัตว์ประหลาดเริ่มสวมหน้ากาก
       Outbreak_stopMoving:
         text: สัตว์ประหลาดหยุดเคลื่อนไหว
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: ไอศกรีม
+            Stars: ดาว
+            Fireworks: พลุ
+            '"rainbow"': สายรุ้ง
+            '"hearts"': หัวใจ
+            '"flowers"': ดอกไม้
+            '"waves"': คลื่น
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': มีฝน
+      Poetry_makeNewSpriteAnon:
+        text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       Poetry_playSound:
         text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            Light: อ่อน
+      Poetry_setBackground:
+        text: กำหนดสีแบ็กกราวนด์ {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1588,6 +1613,10 @@ th:
             '"space"': พื้นที่
             '"stars"': ดาว
             '"ripples"': ระลอกคลื่น
+            '"rain"': ฝน
+            '"bubbles"': ฟองสบู่
+            '"confetti"': กระดาษสี
+            '"hearts"': หัวใจหลากสี
           PALETTE:
             '"rainbow"': สายรุ้ง
       Poetry_setBackgroundImageAs:

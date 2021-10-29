@@ -946,6 +946,10 @@ ku:
         text: دەنگ هەڵکەر {SOUND}
       gamelab_playSoundOptions:
         text: دەنگ هەڵکەر {SOUND}
+        options:
+          SOUND:
+            "'sound://category_animals/bear.mp3'": وورچ
+            "'sound://category_animals/dolphin.mp3'": دۆلفین
       gamelab_pointInDirection:
         text: ئاماژە {SPRITE} {DIRECTION}
         options:
@@ -1245,14 +1249,32 @@ ku:
         text: پۆتانی xی {SPRITE}
       Mikelab_yLocationOf:
         text: پۆتانی yی {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: دۆندرمە
+            Stars: ئەستێرە
+            Fireworks: یاری ئاگرین
+            '"rainbow"': پەلكەزێرینە
+            '"hearts"': دڵ
+      Poetry_makeNewSpriteAnon:
+        text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       Poetry_playSound:
         text: دەنگ هەڵکەر {SOUND}
+        options:
+          SOUND:
+            Light: ڕووناکی
+      Poetry_setBackground:
+        text: ڕەنگی پاشبنەما دیاریبکە {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': ڕەنگ
             '"space"': بۆشایی ئاسمان
             '"stars"': ئەستێرە
+            '"rain"': باران
+            '"bubbles"': بڵق
+            '"confetti"': بڕشتی کاغەز
           PALETTE:
             '"rainbow"': پەلكەزێرینە
       Poetry_setBackgroundImageAs:

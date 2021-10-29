@@ -87,6 +87,17 @@ class InternationalOptInComponent extends FormComponent {
   }
 
   /**
+   * We also have some special logic in place for Uzbekistan, so define a
+   * helper here to let us easily detect if we're in a state where that logic
+   * should be applied.
+   *
+   * @returns {boolean}
+   */
+  isUzbekistanSelected() {
+    return this.props.data?.schoolCountry?.toLowerCase() === 'uzbekistan';
+  }
+
+  /**
    * If Colombia or Chile is selected as the school's country, we use a hierarchy of
    * select elements to carefully control the school selection (rather than the
    * freeform text inputs we use for other countries). In this scenario, we
@@ -98,7 +109,11 @@ class InternationalOptInComponent extends FormComponent {
    * @returns {Object} - modified state
    */
   handleSchoolDataChange(newState) {
-    if (!this.isColombiaSelected() && !this.isChileSelected()) {
+    if (
+      !this.isColombiaSelected() &&
+      !this.isChileSelected() &&
+      !this.isUzbekistanSelected()
+    ) {
       return newState;
     }
 
@@ -114,8 +129,9 @@ class InternationalOptInComponent extends FormComponent {
       newState.schoolCommune = undefined;
     }
     if ('schoolMunicipality' in newState) {
-      // school municipality changed, clearing city
+      // school municipality changed, clearing city and school name
       newState.schoolCity = undefined;
+      newState.schoolName = undefined;
     }
     if ('schoolCity' in newState || 'schoolCommune' in newState) {
       // school city/commune changed, clearing name
@@ -283,6 +299,62 @@ class InternationalOptInComponent extends FormComponent {
     );
   }
 
+  /**
+   * Similarly, if they have selected Uzebkistan as their country, we want to display dropdowns
+   * for city/district and school.
+   *
+   * @returns {Component}
+   */
+  renderUzebekistanSchoolDataFieldGroup() {
+    const selectedDepartment =
+      this.props.data && this.props.data.schoolDepartment;
+    const selectedDistrict =
+      selectedDepartment &&
+      this.props.data &&
+      this.props.data.schoolMunicipality;
+
+    const departments = this.props.options.uzbekistanSchoolData || {};
+    const selectDepartment = this.buildSelectFieldGroup({
+      name: 'schoolDepartment',
+      label: this.props.labels.schoolDepartmentRegion,
+      options: Object.keys(departments),
+      placeholder: i18n.selectAnOption(),
+      required: true
+    });
+
+    const districts = departments[selectedDepartment] || {};
+    const selectDistrict = this.buildSelectFieldGroup({
+      name: 'schoolMunicipality',
+      label: this.props.labels.schoolCityDistrict,
+      options: Object.keys(districts),
+      disabled: !selectedDepartment,
+      placeholder: selectedDepartment
+        ? i18n.selectAnOption()
+        : i18n.selectDepartmentFirst(),
+      required: true
+    });
+
+    const schools = districts[selectedDistrict] || [];
+    const selectSchool = this.buildSelectFieldGroup({
+      name: 'schoolName',
+      label: this.props.labels.school,
+      options: schools,
+      disabled: !selectedDistrict,
+      placeholder: selectedDistrict
+        ? i18n.selectAnOption()
+        : i18n.selectDistrictFirst(),
+      required: true
+    });
+
+    return (
+      <FormGroup>
+        {selectDepartment}
+        {selectDistrict}
+        {selectSchool}
+      </FormGroup>
+    );
+  }
+
   renderSchoolFieldGroups() {
     let schoolDataFieldGroup;
     if (this.isColombiaSelected()) {
@@ -292,6 +364,8 @@ class InternationalOptInComponent extends FormComponent {
       this.props.data.workshopFacilitator !== 'Centro de Innovación - Mineduc' //we want the free text fields in this case
     ) {
       schoolDataFieldGroup = this.renderChileanSchoolDataFieldGroup();
+    } else if (this.isUzbekistanSelected()) {
+      schoolDataFieldGroup = this.renderUzebekistanSchoolDataFieldGroup();
     } else {
       // If no country has been selected, display the inputs disabled with a
       // placeholder text asking the user to select their country first.

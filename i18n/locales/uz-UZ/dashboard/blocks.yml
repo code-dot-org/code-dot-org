@@ -1181,6 +1181,16 @@ uz:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": siqilish
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": pufakchalar
+            "'sound://category_animals/bear.mp3'": ayiq
+            "'sound://category_animals/cat.mp3'": mushuk
+            "'sound://category_animals/cow.mp3'": sigir
+            "'sound://category_animals/pig.mp3'": cho‘chqa
+            "'sound://category_animals/sheep.mp3'": qo‘ylar
+            "'sound://category_animals/chicken.mp3'": tovuq
+            "'sound://category_animals/elephant.mp3'": fil
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": it
             "'sound://category_digital/jump_7.mp3'": sakramoq
       gamelab_pointInDirection:
         text: " {SPRITE} ga {DIRECTION} berish"
@@ -1631,14 +1641,31 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Muzqaymoq
+            Stars: Yulduzlar
+            Fireworks: Feyerverklar
+            '"rainbow"': Kamalak
+            '"hearts"': Yuraklar
+            '"flowers"': Gullar
+            '"waves"': Toʻlqinlar
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': yomg‘ir
+      Poetry_makeNewSpriteAnon:
+        text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       Poetry_makeNumSprites:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
       Poetry_playSound:
         text: " {SOUND} ijro etish"
+        options:
+          SOUND:
+            Light: Chiroq
+      Poetry_setBackground:
+        text: orqa fonni {COLOR} ga o'rnatish
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1647,6 +1674,10 @@ uz:
             '"space"': Qoinot
             '"stars"': Yulduzlar
             '"ripples"': To‘lqinlar
+            '"rain"': Yomg'ir
+            '"bubbles"': Pufakchalar
+            '"confetti"': Konfetti
+            '"hearts"': Rangli yuraklar
           PALETTE:
             '"rainbow"': Kamalak
       Poetry_setBackgroundImageAs:

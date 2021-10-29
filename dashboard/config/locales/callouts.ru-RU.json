@@ -1477,10 +1477,10 @@
           "pointerlocation": "Перетащите блок субъекта сюда."
         },
         "CourseD_Dance_2020_01_2021": {
-          "dance_callout_01": "Добавьте этот блок в вашу программу!"
+          "dance_callout_01": "Добавь здесь тип танцора."
         },
         "CourseD_Dance_2020_02_2021": {
-          "dance_callout_11_a": "Добавьте этот блок в свою программу.",
+          "dance_callout_11_a": "Добавь этот блок в свою программу.",
           "arrow_buttons": "Нажимайте на кнопки со стрелками для управления танцором."
         },
         "CourseD_Dance_2020_04_2021": {
@@ -1875,6 +1875,41 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Новый блок!"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Попробуй проходить по своему коду по одному блоку за раз."
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Новый блок!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Новый блок!",
+          "poetry_foreground": "Новый блок!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Новый блок!",
+          "poetry_multiple_sprites": "Новый блок!",
+          "poetry_new_block": "Новый блок!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Новый блок!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Новый блок!",
+          "poetry_sprite_stops": "Новый блок!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Новый блок!",
+          "poetry_remove_sprite": "Новый блок!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
         }
       }
     }

@@ -173,7 +173,7 @@ fa:
           description_short: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو و زیبایی یخ را کشف می کنند استفاده کنیم.
           lessons:
             Artist:
-              name: هنرمند
+              name: کدنویسی با آنا و السا
           student_description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود به اشتراک بگذاری!
         course4:
           title: دوره 4
@@ -285,7 +285,7 @@ fa:
           description_short: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
           lessons:
             Infinity:
-              name: بی نهایت
+              name: آزمایشگاه بازی بی نهایت دیزنی
           student_description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
         algebrademo:
           title: نسخه ی نمایشی جبر
@@ -690,17 +690,13 @@ fa:
         starwars:
           lessons:
             Hour of Code 2015:
-              name: ساعت کدنویسی 2015
-        starwarsblocks:
-          lessons:
-            Hour of Code 2015:
-              name: ساعت کدنویسی 2015
+              name: 'ساعت کدنویسی 2015'
         mc:
           description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
           description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
           lessons:
             Hour of Code 2015:
-              name: ساعت کدنویسی 2015
+              name: 'ساعت کدنویسی 2015'
           student_description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
         ScienceP3OLPT3:
           lessons:
@@ -996,10 +992,6 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
-        basketball:
-          lessons:
-            Bounce:
-              name: پریدن
         csd2-2017:
           lessons:
             Lists:
@@ -1397,6 +1389,8 @@ fa:
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'ماینکرافت\: سفر قهرمانان ساعتی با کد'
+            Minecraft Hour of Code:
+              name: 'ماینکرافت: سفر قهرمانان'
           student_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
         course-e-2018:
           lessons:
@@ -2643,3 +2637,8 @@ fa:
           lessons:
             lesson-1:
               name: بررسی اجمالی
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: زنبور عسل هجی کن
+          title: زنبور عسل هجی کن

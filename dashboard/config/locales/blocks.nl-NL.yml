@@ -1131,6 +1131,16 @@ nl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kraak
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bubbel
+            "'sound://category_animals/bear.mp3'": Beer
+            "'sound://category_animals/cat.mp3'": kat
+            "'sound://category_animals/cow.mp3'": koe
+            "'sound://category_animals/pig.mp3'": varken
+            "'sound://category_animals/sheep.mp3'": schaap
+            "'sound://category_animals/chicken.mp3'": kip
+            "'sound://category_animals/elephant.mp3'": oliefant
+            "'sound://category_animals/dolphin.mp3'": dolfijn
+            "'sound://category_animals/dog.mp3'": hond
             "'sound://category_digital/jump_7.mp3'": spring
       gamelab_pointInDirection:
         text: punt {SPRITE} {DIRECTION}
@@ -1564,12 +1574,29 @@ nl:
         text: x coördinaat van {SPRITE}
       Mikelab_yLocationOf:
         text: y coordinaat van {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Ijsco
+            Stars: Sterren
+            Fireworks: Vuurwerk
+            '"rainbow"': Regenboog
+            '"hearts"': Hartjes
+            '"flowers"': Bloemen
+            '"waves"': Golven
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': regen
+      Poetry_makeNewSpriteAnon:
+        text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Licht
+      Poetry_setBackground:
+        text: stel {COLOR} in als achtergrondkleur
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1578,6 +1605,10 @@ nl:
             '"space"': Ruimte
             '"stars"': Sterren
             '"ripples"': Rimpelingen
+            '"rain"': Regen
+            '"bubbles"': Bubbels
+            '"confetti"': Confetti
+            '"hearts"': Kleurrijke Harten
           PALETTE:
             '"rainbow"': Regenboog
       Poetry_setBackgroundImageAs:

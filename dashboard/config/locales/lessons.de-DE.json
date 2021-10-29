@@ -2,6 +2,25 @@
   "de-DE": {
     "data": {
       "lessons": {
+        "artist/Artist": {
+          "overview": "In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie \"100 Pixel vorwärts\" und \"90 Grad nach rechts drehen\" verwenden.",
+          "student_overview": "Erstelle schöne Bilder durch die Programmierung des Zeichners."
+        },
+        "sports/Sports": {
+          "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
+          "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
+        },
+        "basketball/Bounce": {
+          "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
+          "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
+        },
+        "outbreak/Outbreak": {
+          "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "student_overview": "Klicken und ziehen Sie, um die Aufgaben fertigzustellen."
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das \"Costume\"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!",
           "student_overview": "In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das \"Costume\"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!"
@@ -60,6 +79,7 @@
         },
         "courseb-2021/Sequencing in Maze": {
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Hilf Red, dem Angry Bird, den Weg zu dem bösen Schwein zu folgen."
         },
         "courseb-2021/Programming in Maze": {
@@ -84,6 +104,7 @@
         },
         "courseb-2021/Loops in Artist": {
           "overview": "Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion am Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier verwenden die SchülerInnen Schleifen, um Muster zu erzeugen. Am Ende dieses Levels haben Sie die Möglichkeit, eigene Bilder mit Hilfe von Schleifen zu erstellen.",
+          "purpose": "Diese Lektion gibt dir eine andere Perspektive, über wie Schleifen Dinge in der Programmierung erstellen können. Studenten können ihre Fähigkeit zu kritischem Denken überprüfen, indem sie den vorliegenden Code bewerten, um festzustellen was noch für die Lösung des Rätsels benötigt wird.  Außerdem können die Studenten über die Ineffizienz von Programmierung ohne Schleifen nachdenken; wie viele Blocks würde ein Programm z. B. erfordern, wenn es nicht 'repeat'-Schleifen benutzen könnte.",
           "student_overview": "Verwenden Sie Muster und Schleifen, um die Bilder fertigzustellen."
         },
         "courseb-2021/The Right App": {
@@ -92,14 +113,19 @@
         },
         "courseb-2021/Events: The Big Event": {
           "overview": "Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse.",
+          "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Aktionen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Wenn sie dieses Ereignis sehen, wird die Klasse mit einer einzigartigen Aktion reagieren. Ereignisse sind in der Programmierung weit verbreitet und sollten nach dieser Lektion leicht zu erkennen sein.",
           "student_overview": "Bewegen Sie sich oder schreien Sie, wenn Ihr Lehrer Tasten auf einer riesigen Fernbedienung drückt."
         },
         "courseb-2021/Events in Play Lab": {
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab ein Spiel zu erstellen!",
+          "purpose": "In dieser Online-Aktivität lernen Studenten wie sie Events in Play Lab benutzen können. Sie fangen damit an, indem sie den Ritter beibringen sich zu bewegen wenn eine Pfeil-Schaltfläche gedrückt wird. Und dies endet mit der Möglichkeit ihre anderen Fähigkeiten, welche sie in diesem Kurs gelernt haben, zu demonstrieren. Dies beinhaltet Sequenzierung und die Erstellung von Schleifen, als Teil des endgültigen Freeplay-Rätsels.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
         },
+        "courseb-2021/lesson-1": {
+          "purpose": "Diese Lektion gibt den SchülerInnen eine letzte Gelegenheit, ihre neuen Informatikkenntnisse kreativ einzusetzen."
+        },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[\\[Common Sense Education](https://creativecommons.org/)][1] Diese Lektion wurde ursprünglich von Common Sense Education erstellt. [Learn more.][2] Die Macht des Internets ermöglicht es Schülern, Orte zu erleben und zu besuchen, die sie vielleicht nicht persönlich sehen können. Aber genau wie beim Reisen in der realen Welt ist es wichtig, auch online sicher zu sein. Auf dieser virtuellen Exkursion können Kinder üben, wie man auf Online-Abenteuern sicher bleibt.",
+          "overview": "[\\[Common Sense Education](https://www.commonsense.org)][1] Diese Lektion wurde ursprünglich von Common Sense Education erstellt. [Learn more.][2] Die Macht des Internets ermöglicht es Schülern, Orte zu erleben und zu besuchen, die sie vielleicht nicht persönlich sehen können. Aber genau wie beim Reisen in der realen Welt ist es wichtig, auch online sicher zu sein. Auf dieser virtuellen Exkursion können Kinder üben, wie man auf Online-Abenteuern sicher bleibt.",
           "preparation": "-   Gehe die Unterrichtsmaterialien durch. - Handout(s) für jeden SchülerInnen ausdrucken. - (Optional) Gedichtposter für das Klassenzimmer ausdrucken.",
           "purpose": "Common Sense Education hat diese Lektion erstellt, um SchülerInnen beizubringen, wie sie sich sicher im Internet bewegen können.",
           "student_overview": "Lerne, wie du sicher online gehen kannst."
@@ -125,7 +151,7 @@
         "coursea-2021/Programming in Ice Age": {
           "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
           "preparation": "-   Spiele die Rätsel durch, um mögliche Problembereiche für deine Klasse zu finden. - (Optional) Wähle ein paar Rätsel aus, die SIe als Gruppe mit deiner Klasse lösen kannst. - Stelle sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
-          "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den Schülern, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Schreiben Sie Programme, die Scrat helfen, die Eichel zu erreichen."
         },
         "coursea-2021/Programming with Rey and BB-8": {
@@ -178,10 +204,12 @@
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "overview": "Unter Verwendung eines Instrumentariums von Symbolen anstelle von Code entwerfen die SchülerInnen Algorithmen, mit denen sie einen \"Roboter\" anweisen, Becher in verschiedenen Mustern zu stapeln. Die SchülerInnen übernehmen abwechselnd die Rolle des Roboters und reagieren nur auf den von ihren KlassenkameradInnen definierten Algorithmus. In diesem Segment lernen die SchülerInnen die Verbindung zwischen Symbolen und Aktionen, den Unterschied zwischen einem Algorithmus und einem Programm sowie die wichtige Fähigkeit , Fehler zu entdecken und zu beheben (Debuggen).",
+          "purpose": "Diese Lektion, die nicht mit dem Internet verbunden ist, bringt die Klasse zusammen als ein Team, mit der einfachen Aufgabe: lasse einen \"Roboter\" Tassen in einem bestimmten Muster aufstapeln. Diese Aktivität ist die Grundlage für für die Programmierung, welche die Studenten während des Kurses ausführen, während sie die Wichtigkeit von deutlich definierten Algorithmen kennen lernen.",
           "student_overview": "In dieser Lektion tun Sie so, als seien Ihre Klassenkameraden Roboter und programmieren sie, dass sie Muster aus gestapelten Bechern erstellen."
         },
         "coursec-2021/Programming in Maze": {
           "overview": "Unter Verwendung von Figuren aus Angry Birds entwickeln die SchülerInnen sequentielle Algorithmen, um einen Vogel von einer Seite eines Labyrinths zu einem Schwein auf der anderen Seite zu bringen. Dazu ordnen sie Codebausteine in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Erfahren Sie mit Angry Birds mehr über Sequenzen und Algorithmen."
         },
         "coursec-2021/Debugging in Maze": {
@@ -194,10 +222,12 @@
         },
         "coursec-2021/Programming in Artist": {
           "overview": "In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie \"100 Pixel vorwärts\" und \"90 Grad nach rechts drehen\" verwenden.",
+          "purpose": "Diese Lektion wird mehr Kreativität bei der Kodierung inspirieren, aufbauend auf der vorherigen Erfahrung der Studenten mit Sequenzierung. Der Zweck dieser Lektion ist die Festigung des Wissens über Sequenzierung, durch die Einführung von neuen Blocks und Zielen. Hier werden Studenten, durch den Einsatz von neuen Blocks, mehr über Pixels und Winkel lernen, während sie weiterhin ihre Sequenzierungsfähigkeiten üben. Also werden Studenten auch die Möglichkeit haben neue Ziele zu visualisieren, wie zum Beispiel die Kodierung des Artist zum Zeichnen eines Quadrats. ",
           "student_overview": "Erstelle schöne Bilder durch die Programmierung des Zeichners."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
           "overview": "Auf der Grundlage der anfänglichen Aktivität \"Meine Roboterfreunde\" beschäftigen sich die SchülerInnen mit umfassenderen und komplizierteren Entwürfen. Um ihre \"Roboter\" so zu programmieren, dass sie diese größeren Entwürfe fertigstellen, müssen die SchülerInnen sich wiederholende Muster in ihren Anweisungen identifizieren, die durch eine Schleife ersetzt werden könnten.",
+          "purpose": "Unter Einsatz von den bereits bekannten \"robot\" Programmierungsanweisungen, bringt diese Lektion eine Wiedereinführung in die Nutzung von Schleifen. Studenten entwickeln ihre kritischen Denkfähigkeiten hier, indem sie nach Wiederholungsmustern in den Bewegungen ihrer Klassenkameraden suchen, um dann zu ermitteln, wie sie diese Wiederholungsmuster durch die Nutzung von Schleifen vereinfachen können.",
           "student_overview": "In dieser Lektion werden Sie Ihre Klassenkameraden erneut programmieren, können aber mit Hilfe von Schleifen umfassendere und kompliziertere Probleme lösen."
         },
         "coursec-2021/Loops with Rey and BB-8": {
@@ -208,6 +238,7 @@
           "student_overview": "Lasst uns Schleifen verwenden, um der Erntearbeiterin beim Einsammeln des Gemüses zu helfen!"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "purpose": "Diese Serie betont die Kraft von Schleifen, bei der Entwicklung von kreativen und persönlichen Designs. \n\nDiese Progression wird Studenten angeboten als eine projektbezogene Sequenz und wird es  ihnen möglich machen, auf ihren eigenen Arbeiten aufzubauen und erstaunliche Artefakten zu schöpfen.",
           "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
         },
         "coursec-2021/Events: The Big Event": {
@@ -220,6 +251,7 @@
         },
         "coursec-2021/Events in Play Lab": {
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle gelernten Codierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist an der Zeit, kreativ zu werden und im Play Lab ein Spiel zu erstellen!",
+          "purpose": "Hier werden Studenten, unter Einsatz von Play Lab, ihr Verständnis von Events weiterentwickeln. Die Studenten werden Events benutzen, um Figuren auf dem Bildschirm zu bewegen, Geräusche zu erzeugen und den Hintergrund abzuändern, auf der Basis von Anwendereingaben. Am Ende der Reihe von Rätseln werden die Studenten die Möglichkeit haben, ihre Projekte mit anderen zu teilen.  ",
           "student_overview": "Es ist an der Zeit, kreativ zu werden und ein Spiel in Play Lab zu entwickeln!"
         },
         "coursec-2021/Picturing Data": {
@@ -239,10 +271,12 @@
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "overview": "Indem sich die SchülerInnen gegenseitig \"programmieren\", um Bilder zu zeichnen, haben die SchülerInnen die Möglichkeit, einige der Kernkonzepte des Programmierens auf unterhaltsame und zugängliche Weise zu erleben. Die Klasse beginnt damit, dass sich die SchülerInnen gegenseitig anweisen, Quadrate auf Millimeterpapier auszumalen, um ein bereits vorhandenes Bild zu reproduzieren. Wenn es zeitlich möglich ist, kann die Lektion mit Bildern abschließen, die die SchülerInnen selbst erstellen.",
+          "purpose": "Das Ziel dieser Aktivität ist kritisches Denkvermögen und Aufregung für den Kurs aufzubauen, während fundamentale Programmierungskonzepte erläutert werden, die während des gesamten Kurses eingesetzt werden. Durch die Einführung von fundamentalen Konzepten in Klassen ohne Verbindung zum Internet, wie Sequenzierung und Algorythmen, können Studenten die Angst vor Computern haben dennoch ein Verständnis dieser Themen aufbauen. In dieser Lektion werden Studenten lernen, wie ein Algorithmus entwickelt und dann im Programm kodiert wird. ",
           "student_overview": "In dieser Lektion wirst du deinen Freund programmieren, Bilder zu zeichnen!"
         },
         "coursed-2021/Introduction to Online Puzzles": {
           "overview": "Bei dieser Aufgabengruppe beginnen die SchülerInnen mit einer Einführung (oder einem Überblick, je nach dem Erfahrungsstand Ihrer Klasse) in den Online-Arbeitsbereich von Code.org. Es gibt dort Videos, welche die grundlegende Funktionalität des Arbeitsbereichs erklären, einschließlich der Schaltflächen `Ausführen`, `Zurücksetzen` und `Schritt`. In diesen Videos wird auch das Ziehen von Blockly-Bausteinen, das Löschen von Blockly-Bausteinen und das Verbinden von Blockly-Bausteinen besprochen. Als nächstes üben die SchülerInnen ihre _Sequenzierungs-_ und \\_Debugging-Kenntnisse im Labyrinth. Dort begegnen die SchülerInnen neuen Arten von Aufgaben wie Collector, Artist und Harvester, wenn sie die elementaren Grundlagen von Schleifen kennenlernen.",
+          "purpose": "Wir wissen, dass jede Klasse ein bestimmtes Verständnisspektrum für jedes Thema hat. Einige der Studenten in deiner Klasse sind vielleicht Computerexperten, während andere nur wenig Erfahrung haben. Wir haben diese Aufbauphase für Kurs D mit dem Ziel entwickelt, ein äquivalentes Spiel- (und Lernfeld) zu erstellen. Dies kann entweder als eine Einführung oder ein Rückblick dienen, auf wie man Code.org und grundlegende Informatikkonzepte benutzen kann. Diese Phase deckt alle Voraussetzungen ab, die zum Start mit Kurs D erforderlich sind.",
           "student_overview": "In dieser Lektion üben Sie die Kenntnisse, e Sie für diesen Kurs benötigen."
         },
         "coursed-2021/Relay Programming": {
@@ -254,6 +288,7 @@
         },
         "coursed-2021/Events in Bounce": {
           "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
+          "purpose": "Events sind äußerst üblich in Computerprogrammen und insbesondere in Videospielen. \n\nIn dieser Lektion werden Studenten ein Verständnis von Events entwickeln, durch die Programmierung eines auf Sport basierten Spiels. Studenten werden lernen wie sie ihren Schläger gemäß Pfeiltasten bewegen können, und wie Geräusche beim Aufprall zwischen Objekten programmiert werden können. Ganz am Schluss wird ihnen beigebracht, wie sie ihr Spiel durch Individualisierung einzigartiger machen können!",
           "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
         },
         "coursed-2021/Build a Star Wars Game": {
@@ -311,6 +346,7 @@
         },
         "express-2021/Creating Art with Code": {
           "overview": "In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie \"100 Pixel vorwärts\" und \"90 Grad nach rechts drehen\" verwenden.",
+          "purpose": "Diese Lektion wird mehr Kreativität bei der Kodierung inspirieren, aufbauend auf der vorherigen Erfahrung der Studenten mit Sequenzierung. Der Zweck dieser Lektion ist die Festigung des Wissens über Sequenzierung, durch die Einführung von neuen Blocks und Zielen. Hier werden Studenten, durch den Einsatz von neuen Blocks, mehr über Pixels und Winkel lernen, während sie weiterhin ihre Sequenzierungsfähigkeiten üben. Also werden Studenten auch die Möglichkeit haben neue Ziele zu visualisieren, wie zum Beispiel die Kodierung des Artist zum Zeichnen eines Quadrats. ",
           "student_overview": "Erstelle schöne Bilder durch die Programmierung des Zeichners."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
@@ -330,6 +366,7 @@
         },
         "express-2021/Sticker Art with Loops": {
           "overview": "Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.",
+          "purpose": "Diese Serie betont die Kraft von Schleifen, bei der Entwicklung von kreativen und persönlichen Designs. \n\nDiese Progression wird Studenten angeboten als eine projektbezogene Sequenz und wird es  ihnen möglich machen, auf ihren eigenen Arbeiten aufzubauen und erstaunliche Artefakten zu schöpfen.",
           "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
         },
         "express-2021/Nested Loops in Maze": {
@@ -338,6 +375,7 @@
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "overview": "Mit dem Wissen, wie man Schleifen aufschichten kann, können die SchülerInnen so viele schöne Dinge kreieren. Diese Lektion führt sie durch eine Reihe von Übungen, um ihnen zu helfen, ihre eigenen professionelle Bilder mit Annas und Elsas ausgezeichneten Eislaufkünsten zu erstellen!",
+          "purpose": "Während sie Bilder erstellen, die sie mit Begeisterung mit anderen teilen werden, können Studenten das Verschachteln von Schleifen in dieser Serie üben. \n\nWenn es dazu kommt, mit nur einigen Anweisungen Muster für Wiederholungen zu kreieren, dann werden Studenten ihre eigenen Entscheidungen machen. Diese werden sie dann um eine Vielzahl von möglichen Wegen spinnen, und am Ende ein einzigartiges Kunstwerk erstellen.",
           "student_overview": "Anna und Elsa sind ausgezeichnete Eisläuferinnen, brauchen aber Ihre Hilfe, um Muster auf das Eis zu zeichnen. Verwenden Sie geschachtelte Schlaufen, um etwas super COOLes zu schaffen."
         },
         "express-2021/Looking Ahead with Minecraft ": {
@@ -361,6 +399,7 @@
         },
         "express-2021/Harvesting with Conditionals": {
           "overview": "Die SchülerInnen üben `während`-Schleifen, `bis`-Schleifen und `wenn/sonst`-Aussagen. Alle diese Bausteine verwenden Bedingungen. Durch das Üben der drei Bausteine lernen die SchülerInnen, komplexen und flexiblen Code zu schreiben.",
+          "purpose": "Übung in dem Einsatz von bedingten Befehlen, in unterschiedlichen Szenarios, hilft dem Studenten zu verstehen, was bedingte Befehle bewirken können. In der vorherigen Lektion benutzten Studenten bedingte Befehle lediglich, um sich in einem Labyrinth fortzubewegen. In dieser Lektion werden Studenten bedingte Befehle benutzen, um den Landwirt wissen zu lassen, wann er sein Erntegut ernten kann. Neue Muster werden dabei auftreten, und die Studenten werden ihre Kreativität und logisches Denken dazu benutzen, um die Konditionen zu bestimmen, bei denen das Programm laufen und wiederholt werden sollte.",
           "student_overview": "Es ist nicht immer klar, wann jede einzelne Bedingung anzuwenden ist.  Diese Lektion wird Dir helfen, die Entscheidung zu üben, was zu tun ist."
         },
         "express-2021/Functions in Minecraft": {
@@ -401,19 +440,23 @@
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen.",
           "student_overview": "Programmieren Sie Scrat, dass er die Eichel erreicht."
         },
         "pre-express-2021/Programming in with Angry Birds": {
-          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen."
+          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "purpose": "In dieser Lektion werden die SchülerInnen Programmier- und Debugging-Fähigkeiten auf einer Computerplattform entwickeln. Das blockbasierte Format dieser Puzzles hilft den SchülerInnen dabei, die Reihenfolge und Konzepte zu lernen, ohne sich dabei um die Perfektionierung der Syntax kümmern zu müssen."
         },
         "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren."
+          "overview": "In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren.",
+          "purpose": "Mit der Wissensvermittlung in Gedanken, gibt diese Lektion den Studenten eine neue Umgebung, zur Übung der Fähigkeiten die sie bisher kultiviert haben. Wenn die Fans von Star Wars diese Rätsel sehen, werden sie vor Freude in die Luft springen. Jedes Rätsel in dieser Serie wurde mit dem Gedanken hinzugefügt, ein tieferes Verständnis der Grundkonzepte zu fördern, welche sie während des Rests dieses Kurses benutzen werden."
         },
         "pre-express-2021/Programming in Harvester": {
           "overview": "Die SchülerInnen wenden die erlernten Programmierkonzepte auf die Harvester-Umgebung an. Anstatt die Figur nur an ein Ziel zu bringen, sollen die SchülerInnen nun mit einem neuen Baustein Mais sammeln. Die SchülerInnen werden weiterhin Kenntnisse für die Verwendung mit sequentiellen Algorithmen entwickeln und mit dem Debugging-Verfahren beginnen.",
           "student_overview": "Hilf der Erntearbeiterin, Gemüse entlang eines Weges zu ernten."
         },
         "pre-express-2021/Loops with Scrat": {
+          "purpose": "In dieser Lektion werden Studenten mehr über Schleifen lernen, und wie sie diese in Blockly code implementieren können. Die Anwendung von _Schleifen_ ist eine wichtige Fertigkeit in der Programmierung, weil die manuelle Wiederholung von Befehlen äußerst langweilig und ineffizient ist. Mit den Code.org Rätseln können Studenten lernen, wie man weitere Anweisungen an bestehende Schleifen hinzufügt, oder wie wiederholter Code in Schleifen gefasst werden kann, und wie sie Muster erkennen können die wiederholt werden müssen.",
           "student_overview": "Helfen Sie Scrat, mehr Boden mit Hilfe von Schleifen abzuarbeiten."
         },
         "pre-express-2021/Loops with Laurel": {
@@ -421,10 +464,12 @@
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.",
+          "purpose": "Diese Lektion gibt dir eine andere Perspektive, über wie Schleifen Dinge in der Programmierung erstellen können. Studenten können außerdem über die Ineffizienz von Programmierung ohne Schleifen nachdenken; wie viele Blocks würde ein Programm z. B. erfordern, wenn es nicht 'repeat'-Schleifen benutzen könnte..",
           "student_overview": "Verwenden Sie Schleifen und Muster, um die Bilder fertigzustellen."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
           "overview": "Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion am Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier verwenden die SchülerInnen Schleifen, um Muster zu erzeugen. Am Ende dieses Levels haben Sie die Möglichkeit, eigene Bilder mit Hilfe von Schleifen zu erstellen.",
+          "purpose": "Diese Lektion gibt dir eine andere Perspektive, über wie Schleifen Dinge in der Programmierung erstellen können. Studenten können ihre Fähigkeit zu kritischem Denken überprüfen, indem sie den vorliegenden Code bewerten, um festzustellen was noch für die Lösung des Rätsels benötigt wird.  Außerdem können die Studenten über die Ineffizienz von Programmierung ohne Schleifen nachdenken; wie viele Blocks würde ein Programm z. B. erfordern, wenn es nicht 'repeat'-Schleifen benutzen könnte.",
           "student_overview": "Verwenden Sie Muster und Schleifen, um die Bilder fertigzustellen."
         },
         "pre-express-2021/On the Move with Events": {
@@ -434,6 +479,7 @@
         },
         "pre-express-2021/A Royal Battle with Events": {
           "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab ein Spiel zu erstellen!",
+          "purpose": "In dieser Online-Aktivität lernen Studenten wie sie Events in Play Lab benutzen können. Sie fangen damit an, indem sie den Ritter beibringen sich zu bewegen wenn eine Pfeil-Schaltfläche gedrückt wird. Und dies endet mit der Möglichkeit ihre anderen Fähigkeiten, welche sie in diesem Kurs gelernt haben, zu demonstrieren. Dies beinhaltet Sequenzierung und die Erstellung von Schleifen, als Teil des endgültigen Freeplay-Rätsels.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
         },
         "coursee-2021/Simon Says": {
@@ -462,6 +508,7 @@
           "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
         },
         "coursee-2021/Nested Loops in Artist": {
+          "purpose": "In dieser Online-Aktivität werden Studenten Designs mit Artist erstellen, welche sie voll Stolz mit ihren Geliebten teilen können.\n\nDer Zweck dieser Aktivität ist die Anwendung von verschachtelten Schleifen, als ein Weg um Studenten, mit künstlerischen Ideen, die Kodierung als eine andere kreative Aktivität zu sehen. Dieser Satz von Rätseln ist erstellt, mit dem Ziel kritische Denkfähigkeiten zu entwickeln, sowie ein Verständnis von Elementargeometrie und Kreativität  -- dies alles im Bereich von verschachtelten Schleifen!",
           "student_overview": "Mehr geschachtelte Schleifen! Dieses Mal können Sie mit geschachtelten Schleifen eine atemberaubende Zeichnung erstellen."
         },
         "coursee-2021/Nested Loops in Frozen": {
@@ -470,6 +517,7 @@
         },
         "coursee-2021/Functions: Songwriting": {
           "overview": "Eine der großartigsten Strukturen in der Welt der Informatik ist die Funktion. Funktionen (die manchmal auch als Prozesse bezeichnet werden) sind Miniprogramme, die Sie immer und immer wieder innerhalb Ihres größeren Programms verwenden können. Diese Lektion hilft den SchülerInnen dabei, intuitiv zu verstehen, warum das Kombinieren von Code-Bausteinen mit Funktionen besonders nützlich sein kann.",
+          "purpose": "Die Nutzung von Funktionen hilft bei der Vereinfachung des Code, und es entwickelt die Fähigkeiten des Studenten sein Programm zu organisieren. Studenten werden sehr schnell erkennen, dass das ausschreiben von Funktionen das Lesen ihrer Programme leichter macht und, wenn etwas schief läuft, dessen Debugging vereinfacht. ",
           "student_overview": "Auch Rockstars brauchen Programmierkenntnisse. In dieser Lektion lernen Sie Funktionen mithilfe von Songtexten kennen."
         },
         "coursee-2021/Functions in Minecraft": {

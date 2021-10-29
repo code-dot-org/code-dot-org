@@ -1139,6 +1139,13 @@ fil:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_animals/bear.mp3'": oso
+            "'sound://category_animals/cat.mp3'": pusa
+            "'sound://category_animals/cow.mp3'": baka
+            "'sound://category_animals/sheep.mp3'": tupa
+            "'sound://category_animals/chicken.mp3'": manok
+            "'sound://category_animals/dolphin.mp3'": dolphin
+            "'sound://category_animals/dog.mp3'": aso
             "'sound://category_digital/jump_7.mp3'": talon
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
@@ -1566,12 +1573,29 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Sorbetes
+            Stars: Mga Bituin
+            Fireworks: Fireworks
+            '"rainbow"': Bahaghari
+            '"hearts"': Mga Puso
+            '"flowers"': Mga Bulaklak
+            '"waves"': Mga Alon
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': ulan
+      Poetry_makeNewSpriteAnon:
+        text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       Poetry_playSound:
         text: Ang ... {SOUND}
+        options:
+          SOUND:
+            Light: Ilaw
+      Poetry_setBackground:
+        text: set background color {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1579,6 +1603,10 @@ fil:
             '"squiggles"': Squiggles
             '"stars"': Mga Bituin
             '"ripples"': Ripples
+            '"rain"': Ulan
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts"': Makulay na mga Puso
           PALETTE:
             '"rainbow"': Bahaghari
       Poetry_setBackgroundImageAs:

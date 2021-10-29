@@ -1,6 +1,6 @@
 name 'CSA U5L4-L1'
 display_name 'Remove Color'
-description 'level description here'
+description 'Remove either red, green, or blue color values from an image.'
 
 sublevels
 level 'CSA U5L4-L1a'

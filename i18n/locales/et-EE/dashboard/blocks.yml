@@ -877,6 +877,13 @@ et:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": purustama
+            "'sound://category_animals/bear.mp3'": Karu
+            "'sound://category_animals/cat.mp3'": kass
+            "'sound://category_animals/cow.mp3'": lehm
+            "'sound://category_animals/sheep.mp3'": lammas
+            "'sound://category_animals/chicken.mp3'": kana
+            "'sound://category_animals/dolphin.mp3'": delfiin
+            "'sound://category_animals/dog.mp3'": koer
             "'sound://category_digital/jump_7.mp3'": hüppa
       gamelab_randColor:
         text: juhuslik värv
@@ -1147,14 +1154,22 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"rainbow"': Vikerkaar
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': vihm
+      Poetry_setBackground:
+        text: määra taustavärv {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Värvid
+            '"rain"': Vihm
+            '"bubbles"': Mullid
           PALETTE:
             '"rainbow"': Vikerkaar
       Poetry_setForegroundEffect:

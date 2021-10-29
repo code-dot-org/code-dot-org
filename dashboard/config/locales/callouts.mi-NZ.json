@@ -300,6 +300,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "He paraka/wahanga hou!",
+          "poetry_foreground": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "He paraka/wahanga hou!",
+          "poetry_multiple_sprites": "He paraka/wahanga hou!",
+          "poetry_new_block": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "He paraka/wahanga hou!",
+          "poetry_sprite_stops": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "He paraka/wahanga hou!",
+          "poetry_remove_sprite": "He paraka/wahanga hou!"
         }
       }
     }

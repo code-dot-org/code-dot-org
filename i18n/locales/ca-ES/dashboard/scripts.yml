@@ -172,7 +172,7 @@ ca:
           description_short: Fes servir codi per unir-te a l'Anna i l'Elsa mentre exploren la màgia i la bellesa del gel.
           lessons:
             Artist:
-              name: Artista
+              name: Codi amb Anna i Elsa
           student_description: Programeu per unir-vos amb l' Anna i l' Elsa mentre exploren la màgia i la bellesa del gel. Creareu flocs de neu i patrons com patinatge sobre gel i la creació d'un món fantàstic d'hivern que podeu compartir amb els amics!
         course4:
           title: Curs 4
@@ -272,7 +272,7 @@ ca:
           description_short: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
           lessons:
             Infinity:
-              name: Infinit
+              name: Disney infinit Play Lab
           student_description: Utilitza Play Lab per crear una història o un joc protagonitzada pels personatges de Disney infinity.
         algebrademo:
           lessons:
@@ -529,9 +529,6 @@ ca:
         starwarsblocks:
           description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
           description_short: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
-          lessons:
-            Hour of Code 2015:
-              name: Hora del codi 2015
           student_description: Aprèn a programar droides i a crear el teu propi joc d'Star Wars en una galàxia molt, molt llunyana.
         mc:
           title: Hora del Codi de Minecraft
@@ -750,10 +747,6 @@ ca:
           lesson_groups:
             required:
               display_name: Vista general
-        basketball:
-          lessons:
-            Bounce:
-              name: Rebota
         csd2-2017:
           lessons:
             Lists:
@@ -1150,9 +1143,6 @@ ca:
               name: Creant Funcions
         hero:
           description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
-          lessons:
-            Minecraft Hour of Code:
-              name: Hora del Codi de Minecraft
           student_description: Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi.
         course-e-2018:
           lessons:
@@ -1454,7 +1444,7 @@ ca:
           description_short: Minecraft torna amb una activitat del tot nova de l'Hora del Codi!
           lessons:
             Aquatic:
-              name: Aquàtiques
+              name: 'Minecraft: Viatge aquàtic'
         dance--draft:
           lessons:
             Dance Party:
@@ -2461,3 +2451,12 @@ ca:
           lessons:
             lesson-2:
               name: Ginys
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Ginys
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Abella ortogràfica
+          title: Abella ortogràfica

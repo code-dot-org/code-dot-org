@@ -968,6 +968,12 @@ bs:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": zvuk krckanja
+            "'sound://category_animals/bear.mp3'": Medvjed
+            "'sound://category_animals/cat.mp3'": mačka
+            "'sound://category_animals/cow.mp3'": krava
+            "'sound://category_animals/sheep.mp3'": ovca
+            "'sound://category_animals/chicken.mp3'": pile
+            "'sound://category_animals/dog.mp3'": pas
             "'sound://category_digital/jump_7.mp3'": skoči
       gamelab_randColor:
         text: nasumična boja
@@ -1181,15 +1187,32 @@ bs:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Sladoled
+            Stars: Zvijezde
+            Fireworks: Vatromet
+            '"rainbow"': Duge
+            '"hearts"': Srca
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': kiša
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: Svjetlo
+      Poetry_setBackground:
+        text: podesi boju pozadine {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Boje
             '"stars"': Zvijezde
+            '"rain"': Kiša
+            '"bubbles"': Balončići
+            '"confetti"': Konfeti
           PALETTE:
             '"rainbow"': Duge
       Poetry_setForegroundEffect:

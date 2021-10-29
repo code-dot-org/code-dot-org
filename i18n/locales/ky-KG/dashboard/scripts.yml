@@ -95,7 +95,7 @@ ky:
           description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага кошулуу үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
           lessons:
             Artist:
-              name: Сүрөтчү
+              name: Анна жана Элза менен код жазгыла
           student_description: Муз сыйкырын жана кооздугун изилдеген Анна менен Элзага кошулуу үчүн кодду колдонобуз. Коньки тээп, карчалардан жана аяз саймаларынан кереметтүү кыш өлкөсүн жаратып, досторуңар менен бөлүшкүлө!
         course4:
           title: Курс 4
@@ -139,7 +139,7 @@ ky:
           description_short: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө.
           lessons:
             Infinity:
-              name: Чексиздик
+              name: Disney Infinity оюн лабораториясы
           student_description: Play Lab колдонуп, Disney Infinity каармандары катышкан окуя же оюн түзгүлө.
         K5PD:
           lessons:
@@ -316,10 +316,6 @@ ky:
           lessons:
             Hour of Code 2015:
               name: Код сааты 2015
-        starwarsblocks:
-          lessons:
-            Hour of Code 2015:
-              name: Код сааты 2015
         mc:
           title: Minecraft код сааты
           lessons:
@@ -424,10 +420,6 @@ ky:
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
-        basketball:
-          lessons:
-            Bounce:
-              name: Bounce
         hoc-encryption:
           title: 'Код сааты: кадимки шифрлөө'
         csd2-2017:
@@ -804,8 +796,6 @@ ky:
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Код саатында баатырдын сапары'
-            Minecraft Hour of Code:
-              name: Minecraft код сааты
           student_description: Minecraft Код саатына жаңы тапшырма менен кайтып келди! Код жазып Minecraft өткүлө.
         halloween:
           lessons:
@@ -1824,3 +1814,8 @@ ky:
           lesson_groups:
             lessonGroup-2:
               description: текшерүү
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+          title: Spelling Bee

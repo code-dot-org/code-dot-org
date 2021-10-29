@@ -2,6 +2,37 @@
   "uz-UZ": {
     "data": {
       "lessons": {
+        "dance-extras/Dance Party - Go Further": {
+          "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
+        },
+        "artist/Artist": {
+          "overview": "Bu darsda talabalar ekrandagi chizmalarni tugatish uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar yaratish imkonini beradi.",
+          "student_overview": "Rassomni dasturlash orqali chiroyli rasmlar yarating."
+        },
+        "dance/Dance Party": {
+          "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
+        },
+        "sports/Sports": {
+          "overview": "Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.",
+          "student_overview": "Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!"
+        },
+        "basketball/Bounce": {
+          "overview": "Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.",
+          "student_overview": "Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!"
+        },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
+        },
+        "dance-2019/Dance Party": {
+          "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi."
+        },
+        "oceans/Oceans": {
+          "student_overview": "O'quv qo'llanmasining qisqacha mazmuni: Dastlab talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni 'baliqlar' yoki 'baliqlar emas' deb tasniflashadi. Keyin talabalar o'zlarining ma'lumot to'plamlarini boshqa dengizni o'z ichiga olgan holda kengaytirishlari kerak bo'ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Ushbu ma'lumotlar yangi tasvirlarni belgilashga qodir bo'lgan mashina o'rganish modeli uchun ishlatiladi. "
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi, shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda o‘sish kuzatiladi.",
+          "student_overview": "Click and drag to finish the puzzles."
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "Bu darsda talabalar ular xohlagandek ko‘rinadigan va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning \"Costumes\" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan foydalanishadi!",
           "student_overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!"
@@ -108,7 +139,7 @@
           "student_overview": "Use events to create a story or make an interactive game."
         },
         "coursea-2021/Safety in My Online Neighborhood": {
-          "overview": "[\\[common sense education](https://creativecommons.org/)][1]\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nInternetning kuchi o‘quvchilarga shaxsan ko‘rishlari mumkin bo‘lmagan joylarni ko‘rish va aylanish imkoniyatini beradi. Ammo, xuddi real dunyoda sayohat qilish kabi, Internetda sayohat qilishda ham xavfsiz bo‘lish muhim hisoblanadi. Ushbu virtual ekskursiyada bolalar onlayn sarguzashtlarda xavfsizlikni ta'minlash bilan shug‘ullanishlari mumkin.",
+          "overview": "[\\[common sense education](https://www.commonsense.org)][1]\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nInternetning kuchi o‘quvchilarga shaxsan ko‘rishlari mumkin bo‘lmagan joylarni ko‘rish va aylanish imkoniyatini beradi. Ammo, xuddi real dunyoda sayohat qilish kabi, Internetda sayohat qilishda ham xavfsiz bo‘lish muhim hisoblanadi. Ushbu virtual ekskursiyada bolalar onlayn sarguzashtlarda xavfsizlikni ta'minlash bilan shug‘ullanishlari mumkin.",
           "preparation": "-   Ko'rsatma materiallarni ko'rish.\n-   Har bir o'quvchi uchun tarqatma materiallarni chop etish.\n-   (Ixtiyoriy) Sinfda taqdim etish uchun poster chop etish."
         },
         "coursea-2021/Learn to Drag and Drop": {

@@ -2,10 +2,18 @@
   "func": "regularPolygon",
   "category": "Drawing",
   "paletteParams": [
-    "x",
-    "y",
-    "sides",
-    "size"
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "sides"
+    },
+    {
+      "name": "size"
+    }
   ],
   "params": [
     "200",

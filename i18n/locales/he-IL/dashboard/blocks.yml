@@ -1150,6 +1150,14 @@ he:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": כפתור
             "'sound://category_collect/clicky_crunch.mp3'": מעיכה
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": בועה
+            "'sound://category_animals/bear.mp3'": דוב
+            "'sound://category_animals/cat.mp3'": חתול
+            "'sound://category_animals/cow.mp3'": פרה
+            "'sound://category_animals/sheep.mp3'": כבשה
+            "'sound://category_animals/chicken.mp3'": תרנגולת
+            "'sound://category_animals/dolphin.mp3'": דולפין
+            "'sound://category_animals/dog.mp3'": כלב
             "'sound://category_digital/jump_7.mp3'": קפוץ
       gamelab_pointInDirection:
         text: נקודה {SPRITE} {DIRECTION}
@@ -1584,14 +1592,31 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: גלידה
+            Stars: כוכבים
+            Fireworks: זיקוקים
+            '"rainbow"': קשת
+            '"hearts"': לבבות
+            '"flowers"': פרחים
+            '"waves"': גלים
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': גשום
+      Poetry_makeNewSpriteAnon:
+        text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       Poetry_makeNumSprites:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
       Poetry_playSound:
         text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            Light: אוֹר
+      Poetry_setBackground:
+        text: קבע צבע רקע {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1600,6 +1625,10 @@ he:
             '"space"': חלל
             '"stars"': כוכבים
             '"ripples"': אדוות
+            '"rain"': גשם
+            '"bubbles"': בועות
+            '"confetti"': קונפטי
+            '"hearts"': לבבות צבעוניים
           PALETTE:
             '"rainbow"': קשת
       Poetry_setBackgroundImageAs:

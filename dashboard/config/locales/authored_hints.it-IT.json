@@ -8842,7 +8842,7 @@
         },
         "CourseF_outbreak7": {
           "whenclicked": "## Vaccini\n\nPuoi simulare di somministrare un vaccino ai mostri quando clicchi su di essi. Per farlo, usa il blocco `usa il costume` con questo evento:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
-          "verionhistory": "Ti senti bloccato? Puoi sempre reimpostare il codice cliccando su `Cronologia delle versioni` in basso, quindi scegliendo \"Ripristina\"."
+          "verionhistory": "Ti senti bloccato? Puoi sempre reimpostare il codice cliccando su \"Cronologia delle versioni\" e poi su \"Ripristina\"."
         },
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_b": "Se usi le funzioni in modo corretto, questo è il percorso che seguirai...",
@@ -10618,6 +10618,12 @@
         "iceage_warn_ice_age_dani": {
           "iceage_warn_ice_age_a": "Devi semplicemente aggiungere due blocchi per risolvere questo esercizio.",
           "iceage_warn_ice_age_b": "Aggiungi entrambi i nuovi blocchi sotto all'evento `quando si clicca su \"Esegui\"` per farli eseguire immediatamente all'avvio del programma."
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "Prova ad utilizare i comportamenti tra cui \"spostamento verso est e ciclo\", \"rotazione oraria\" e \"movimento casuale\"."
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea2": "Puoi fare un cambio da un comportamento a un altro, utilizzando un blocco \"il personaggio si ferma\" con un blocco \"il personaggio inizia\" in un evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">gira a sinistra</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">gira a destra</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         }
       }
     }

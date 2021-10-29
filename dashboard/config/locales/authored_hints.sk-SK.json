@@ -8183,7 +8183,11 @@
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "Kód by mal mať štyri bloky udalostí `keď šípka` s označeným smerom pohybu pod nimi.",
-          "courseE_playLab_scaffold1_c": "Po dokončení úlohy by sa mal tvoj hrdina pohybovať pomocou klávesov so šípkami!"
+          "courseE_playLab_scaffold1_c": "Po dokončení úlohy by sa mal tvoj hrdina pohybovať pomocou klávesov so šípkami!",
+          "playlab_up": "Ak chceš postavu posunúť smerom nahor, skús spojiť tieto bloky:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "Ak chceš postavu posunúť smerom nadol, skús spojiť tieto bloky:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Ak chceš postavu posunúť smerom doľava, skús spojiť tieto bloky:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Ak chceš postavu posunúť smerom doprava, skús spojiť tieto bloky:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "Pomocou bloku `pridaj bod` pridaj bod a pomocou `odober bod` jeden odčítaj."
@@ -9379,14 +9383,32 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "Namiesto toho, aby sme k premennej pripočítavali hodnotu 1, zakaždým pripočítame hodnotu 2."
         },
-        "courseF_events_choice_pufferfish": {
-          "changeProp": "Budeš musieť použiť aj tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
-        },
         "courseF_events_key": {
           "changePropBlock": "Budeš musieť použiť aj tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
         "courseF_sprites_clouds": {
           "behavior_list": "Skús použiť správania ako „posun na východ a cyklenie“, „točenie vpravo“ a „túlať sa“."
+        },
+        "courseA_maze_seq2": {
+          "courseA_maze_seq2_a": "V tomto programe chýba jeden blok. Skúsiš zistiť, ktorý to je?",
+          "courseA_maze_seq2_b": "Spustením kódu zistíš, kde vtáčik skončí. Kam má odtiaľ pokračovať?"
+        },
+        "courseA_maze_seq3": {
+          "courseA_maze_seq3_a": "Jeden z blokov vedie vtáčika nesprávnym smerom. Dokážeš zistiť, ktorý to je, a nahradiť ho správnym?",
+          "courseA_maze_seq3_b": "Skús pomocou tlačidla Krok zistiť, kde je v programe chyba. Je to prvý krok? Alebo druhý?",
+          "courseA_maze_seq3_c": "Tento blok <xml><block type=\"maze_moveNorth\"/></xml> zrejme neposúva vtáčika správnym smerom. Dokážeš ho nahradiť iným blokom?"
+        },
+        "courseA_maze_seq4": {
+          "courseA_maze_seq4_a": "Ak máš ťažkosti, skús zistiť, ktorá cesta je správna. Potom odstráň blok, ktorý sa tam nehodí.",
+          "courseA_maze_seq4_b": "Skús spustiť kód tak, ako je. Nastanú niekde problémy? Ktorý blok môžeš odstrániť? Ako to môžeš opraviť?"
+        },
+        "courseA_maze_seq9": {
+          "courseA_maze_seq9_a": "Nevieš si rady? Skús po vtáčikovej ceste prejsť prstom.",
+          "courseA_maze_seq9_b": "Ak nevieš, čo robiť, skús stlačiť tlačidlo Začať znova a spustiť kód. Tak zistíš, kde došlo k chybe.",
+          "courseA_maze_seq9_c": "Na vyriešenie tejto úlohy budeš musieť ísť 3 rôznymi smermi."
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "Budeš musieť použiť aj tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_choice_multiprompt": {
           "when_answered_var": "Skús zmeniť názov premennej v bloku `keď zodpovedaná`. Keďže sa v programe nachádza viacero výziev, použi názov premennej z _poslednej_ výzvy, na ktorú bude používateľ odpovedať.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"

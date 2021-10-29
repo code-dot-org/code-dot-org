@@ -174,7 +174,7 @@ sv:
           description_short: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet.
           lessons:
             Artist:
-              name: Konstnären
+              name: Koda med Anna och Elsa
           student_description: Vi kan använda kod för att följa Anna och Elsa när de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och mönster genom skridskoåkning och skapa ett underbart vinterland som du kan dela med dina vänner!
         course4:
           title: Kurs 4
@@ -318,7 +318,7 @@ sv:
           description_short: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
           lessons:
             Infinity:
-              name: Oändligt
+              name: Disney Infinity Play Lab
           student_description: Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen .
         algebrademo:
           title: Algebra Demo
@@ -827,9 +827,6 @@ sv:
         starwarsblocks:
           description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
         mc:
           title: Minecraft Hour of Code
@@ -1185,9 +1182,6 @@ sv:
           title: Göra en basketmatch
           description_short: Göra en basketmatch
           description: Göra en basketmatch
-          lessons:
-            Bounce:
-              name: Studsa
           student_description: Göra en basketmatch
         csd2-2017:
           lessons:
@@ -1301,9 +1295,6 @@ sv:
           title: Sport
           description_short: Koda din egen sport
           description: Koda din egen sport
-          lessons:
-            Sports:
-              name: Sport
           student_description: Koda din egen sport
         2016_sciencePD-phase2b:
           lessons:
@@ -1751,9 +1742,6 @@ sv:
               name: ny etapp
         hero:
           description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden.
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           student_description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden.
         csp-explore-2017:
           lessons:
@@ -2146,7 +2134,7 @@ sv:
           description_short: Minecraft är tillbaka med en helt ny aktivitet för “Hour of Code”!
           lessons:
             Aquatic:
-              name: Vatten
+              name: 'Minecraft: Resande vattenlevande'
         dance--draft:
           lessons:
             Dance Party:
@@ -3157,6 +3145,8 @@ sv:
           lessons:
             Virus Simulation for Code Bytes:
               name: Koda en simulering
+            Outbreak:
+              name: Koda en simulering
           lesson_groups:
             outbreak:
               display_name: Utbrottssimulering
@@ -3574,5 +3564,14 @@ sv:
               display_name: Innehåll
             lesson_group:
               display_name: Innehåll
+            lessonGroup-2:
+              display_name: Innehåll
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stavnings-bi
+          title: Stavnings-bi
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Innehåll

@@ -177,7 +177,7 @@ pt:
           description_short: Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa.
           lessons:
             Artist:
-              name: Artista
+              name: Programa com a Anna e com a Elsa
           student_description: Vamos usar programação para explorar a magia e a beleza do gelo com a Anna e com a Elsa. Vais criar flocos de neve e padrões enquanto patinas no gelo, e ainda conseguirás construir a ilha encantada do inverno que poderás partilhar com os teus amigos!
         course4:
           title: Curso 4
@@ -293,7 +293,7 @@ pt:
           description_short: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratório Infinito Disney
           student_description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
         algebrademo:
           lessons:
@@ -759,9 +759,6 @@ pt:
         starwarsblocks:
           description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
           description_short: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
-          lessons:
-            Hour of Code 2015:
-              name: Hora de Código 2015
           student_description: Aprenda a programar dróides, e crie o seu jogo Star Wars numa galáxia muito, muito distante.
         mc:
           title: Hora do Código de Minecraft
@@ -1143,10 +1140,6 @@ pt:
               display_name: Conteúdo
             practice:
               display_name: Práticas de Ensino
-        basketball:
-          lessons:
-            Bounce:
-              name: Bounce
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1729,10 +1722,6 @@ pt:
               name: Inovação Pessoal
             Simple Encryption:
               name: Encriptação Simples
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Hora do Código de Minecraft
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -3951,5 +3940,20 @@ pt:
               display_name: Conteúdo
             lesson_group:
               display_name: Conteúdo
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Ferramentas
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Escrever com a abelha
+          title: Escrever com a abelha
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo

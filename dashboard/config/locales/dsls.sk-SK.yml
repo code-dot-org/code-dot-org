@@ -5052,6 +5052,30 @@ sk-SK:
           is <strong>called by the system</strong> at the time the specified event
           occurs. Callback functions are a common pattern in a lot of event-driven
           programming.</p>\n</div>\n\n\n### You'll try this next!"
+        teacher_markdown: "#### Iba fakty\n\nJe tu toho veľa na konzumáciu, a mnohé
+          z podrobností o tom, ako udalosti v App Labe fungujú, nie sú úplne nevyhnutné
+          na pochopenie pre naše potreby v tomto celku. Ak študenti zápasia s tým,
+          ako programovanie v App Labe funguje, zamerajte sa na tieto podstatné veci:\n\n*
+          Neexistuje cyklus `draw`, ktorý trvá večne\n* Blok `onEvent()` špecifikuje:\n\t*
+          ID prvku\n    * udalosť (ako napríklad kliknutie mšou \"click\" alebo kurzor
+          myši nad prvkom \"mouseover\")\n    * kód, ktorý by sa mal spustiť, keď
+          nastane nejaká udalosť (tento kód je technicky anonymnou funkciou spätného
+          volania, ktorú reprezentuje zelený blok)\n* Kód vo vnútri `onEvent()` bloku
+          sa spustí vždy, ak nastane špecifikovaná udalosť\n\n#### Porovnanie s Game
+          Lab\n\nV Game Labe, môžeme použiť nasledovný kód, aby sme overili, či objekt
+          sprite menom \"button\" bol kliknutý a niečo s tým urobiť:\n\n    function
+          draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t// Urob niečo\n
+          \      \t}\n    }\n\n\nV App Labe, ak dáme tlačidlu identifikátor (ID) \"button\",
+          môžeme napísať nasledovný kód, aby sme dosiahli rovnaký výsledok:\n\n\n
+          \   onEvent(\"button\", \"click\", funkcia () {\n    \t// Urob niečo\n    });\n\nV
+          príklade pre App Lab je \"funkcia\" len iným argumentom odovzdávaným funkcii
+          \"onEvent\", čiže v tomto prípade to tak vyšlo, že argumentom je fukcia
+          sama. Takisto môžeme definovať funkciu osobitne a napísať rovnaký program
+          nasledovne:\n\n    function urobNieco() {\n    \t// Urob niečo\n    }\n
+          \   \n    onEvent(\"button\", \"click\", urobNieco);\n\n\nV druhom prípade
+          si všimni, že ak odovzdávame funkciu `urobNieco` funkcii `onEvent`, _neuvádzame_
+          na konci zátvorky. Je to preto, že v skutočnosti odovzdávame celú funkciu
+          ako objekt.\n"
       Social Sleuth_2018_2019:
         markdown: "# Sociálny detektív\n\nNa ukončenie tejto aktivity je potrebný
           \ <a href=\"https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#\">
@@ -5556,7 +5580,8 @@ sk-SK:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Nestane sa nič.
-        - {}
+          feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
+        - feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
         - correct: true
           feedback: Správne!
         - {}
@@ -5666,13 +5691,19 @@ sk-SK:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu. '
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+            nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         - text: Včela pôjde dopredu a pozbiera všetok nektár z každého kvetu okrem
             jedného.
           correct: true
           feedback: Správne!
         - text: 'Včela pôjde dopredu a pozbiera jeden nektár z každého kvetu. '
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+            nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         - text: 'Včela sa posunie dopredu a pozbiera jeden nektár z kvetov číslo 1 až
             4. '
+          feedback: Nesprávne. Cyklus `pre` umožní včele pozbierať správne množstvo
+            nektáru, ale je nastavený tak, že sa dostane iba po štvrtý kvet.
         markdown: Aha! S použitím `for` cyklu je táto úloha omnoho jednoduchšia!
         questions:
         - text: Pozri si kód nižšie. Čo sa stane, keď stlačíš "Spustiť"?
@@ -5728,6 +5759,7 @@ sk-SK:
           #  Skvelý digitálny občan
 
           ## Ako sa vieme postaviť proti kyberšikane, keď ju vidíme?
+        content1: Sem pridať popis
       csf_digital_trails_2021:
         markdown: |-
           # Nasleduj digitálnu stopu
@@ -5818,3 +5850,10 @@ sk-SK:
         display_name: Ukážky projektov
       express_EOC_examples_2021:
         display_name: Ukážky projektov
+        description: O chvíľu začneš pracovať na záverečnom projekte. Skôr, než začneš,
+          venuj chvíľu pozornosti ukážkovým projektom.
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Sleduj algoritmus
+
+          Zahraj si hru a porozmýšľaj, aké príkazu sú potrebné na dosiahnutie správnych výsledkov.

@@ -475,6 +475,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "בלוק חדש!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "בלוק חדש!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "בלוק חדש!",
+          "poetry_foreground": "בלוק חדש!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "בלוק חדש!",
+          "poetry_multiple_sprites": "בלוק חדש!",
+          "poetry_new_block": "בלוק חדש!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "בלוק חדש!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "בלוק חדש!",
+          "poetry_sprite_stops": "בלוק חדש!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "בלוק חדש!",
+          "poetry_remove_sprite": "בלוק חדש!"
         }
       }
     }

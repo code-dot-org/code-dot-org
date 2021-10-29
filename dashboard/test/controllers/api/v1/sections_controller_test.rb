@@ -15,17 +15,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @unit_group = create(:unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta)
+    @unit_group = create(:unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
-    @script = create(:script, published_state: SharedConstants::PUBLISHED_STATE.preview)
-    @script_in_preview_state = create(:script, published_state: SharedConstants::PUBLISHED_STATE.preview)
+    @script = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @script_in_preview_state = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     @section_with_script = create(:section, user: @teacher, script: @script_in_preview_state)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedConstants::PUBLISHED_STATE.stable)
-    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedConstants::PUBLISHED_STATE.preview)
-    @csp_script = create(:script, name: 'csp1', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @csp_script = create(:script, name: 'csp1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
     @csp_script.reload
 
@@ -484,7 +484,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'pilot teacher can assign the pilot course id' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
@@ -497,7 +497,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign the pilot course id' do
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
@@ -512,7 +512,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'pilot teacher can assign pilot script' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
@@ -525,7 +525,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign a pilot script' do
-    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,

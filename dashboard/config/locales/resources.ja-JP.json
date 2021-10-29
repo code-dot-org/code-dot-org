@@ -2,6 +2,51 @@
   "ja-JP": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotifyプレイリスト（全年齢）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "アーティスト紹介",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "回転と角度"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "回転と角度",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotifyプレイリスト（全年齢）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "バウンスのイベント - 起こり方"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "バウンスのイベント - 起こり方"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotifyプレイリスト（全年齢）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotifyプレイリスト（全年齢）",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": " 機械学習",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk><https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "人工知能（AI）：社会への影響",
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "人工知能（AI）：トレーニングデータとバイアス",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "スプライトラボの紹介",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
@@ -267,7 +312,7 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_gonoodle/courseb/2021": {
-          "name": "Wiggles - GoNoodle",
+          "name": "体を動かす - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "20_20_20_rule/courseb/2021": {
@@ -599,23 +644,23 @@
           "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
         },
         "csf-mrf-symbol-key/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
         },
         "unplugged-video-robotic-friends/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://youtu.be/xaW3PAzHxCU"
         },
         "csf-mrf-cup-stacking-ideas/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
         },
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
-          "name": "ロボットのお友だち",
+          "name": "私のロボットの友だち",
           "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
         },
         "c2-maze-bridge/coursec/2021": {
@@ -1131,19 +1176,31 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "スーパーデジタルシティズンになる：レッスンスライド",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
           "name": " スーパー デジタル市民",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスライド",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "プライベート情報および個人情報：プライベート情報および個人情報",
           "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
         },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "プライベート情報および個人情報：退室チケット",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスクイズ",
           "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
         },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "プライベート情報および個人情報：レッスンスクイズ",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
         },
         "common-sense-media-pause-think/coursee/2021": {
@@ -1151,9 +1208,15 @@
           "url": "https://youtu.be/X_duZ-1LApg"
         },
         "about_me_planning_guide/coursee/2021": {
+          "name": "「私について」計画ガイド",
           "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
         },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "「デジタルシェアリング」レッスンプラン",
+          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing"
+        },
         "digital-sharing-video/coursee/2021": {
+          "name": "デジタルシェアリングの倫理（ビデオ）",
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
         },
         "csf-turns-angles-doc/coursee/2021": {
@@ -1209,8 +1272,8 @@
           "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "生徒が知っていることを示すための72の創造的な方法",
-          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/><http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
+          "name": "生徒の知識を確認する72の創造的な方法",
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "CSTA標準マッピング",

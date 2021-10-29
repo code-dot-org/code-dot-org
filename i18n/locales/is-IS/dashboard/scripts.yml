@@ -191,7 +191,7 @@ is:
           description_short: Notum kóða til að fylgja Önnu og Elsu er þær kanna töfra og fegurð íss.
           lessons:
             Artist:
-              name: Listamaður
+              name: Kóðaðu með Önnu og Elsu
           student_description: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna töfra og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að láta þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til að deila með vinum!
         course4:
           title: Námskeið 4
@@ -335,7 +335,7 @@ is:
           description_short: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
           lessons:
             Infinity:
-              name: Óendanleiki
+              name: Disney Infinity leikjasmiðja
           student_description: Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum.
         algebrademo:
           title: Dæmi með Algebru
@@ -1571,9 +1571,6 @@ is:
         starwarsblocks:
           description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
           description_short: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
-          lessons:
-            Hour of Code 2015:
-              name: Klukkustund kóðunar 2015
           student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star Wars leik í órafjarlægri vetrarbraut.
         mc:
           title: Klukkustund kóðunar með Minecraft
@@ -2645,9 +2642,6 @@ is:
           title: Velja lið og búa til körfuboltaleik
           description_short: Velja lið og búa til körfuboltaleik
           description: Velja lið og búa til körfuboltaleik
-          lessons:
-            Bounce:
-              name: Skopp
           student_description: Velja lið og búa til körfuboltaleik
         sample-csp5:
           lessons:
@@ -2863,9 +2857,6 @@ is:
           title: Kóðaðu þinn eigin íþróttaleik
           description_short: Blandaðu saman íþróttum
           description: Blandaðu saman íþróttum
-          lessons:
-            Sports:
-              name: Íþróttir
           student_description: Blandaðu saman íþróttum
         2016_sciencePD-phase2b:
           lessons:
@@ -3794,9 +3785,6 @@ is:
           description: |-
             Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
             Ferðist um Minecraft með kóða.
-          lessons:
-            Minecraft Hour of Code:
-              name: Klukkustund kóðunar með Minecraft
           student_description: |-
             Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
             Ferðist um Minecraft með kóða.
@@ -7205,5 +7193,18 @@ is:
               display_name: Innihald
             lesson_group:
               display_name: Innihald
+            lessonGroup-2:
+              display_name: Innihald
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Græjur
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stafsetning
+          title: Stafsetning
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Innihald

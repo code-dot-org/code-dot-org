@@ -15,7 +15,8 @@ import javalab, {
   setLevelName,
   appendNewlineToConsoleLog,
   setIsRunning,
-  setDisableFinishButton
+  setDisableFinishButton,
+  setIsTesting
 } from './javalabRedux';
 import playground from './playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -26,7 +27,7 @@ import Neighborhood from './Neighborhood';
 import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './TheaterVisualizationColumn';
 import Theater from './Theater';
-import {CsaViewMode, InputMessageType} from './constants';
+import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
 import {
@@ -103,6 +104,7 @@ Javalab.prototype.init = function(config) {
   config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
   const onRun = this.onRun.bind(this);
   const onStop = this.onStop.bind(this);
+  const onTest = this.onTest.bind(this);
   const onContinue = this.onContinue.bind(this);
   const onCommitCode = this.onCommitCode.bind(this);
   const onInputMessage = this.onInputMessage.bind(this);
@@ -246,7 +248,12 @@ Javalab.prototype.init = function(config) {
 
   getStore().dispatch(
     setDisableFinishButton(
-      !!config.readonlyWorkspace && !config.level.submittable
+      // The "submit" button overrides the finish button on a submittable level. A submittable level
+      // that has been submitted will be considered "readonly" but a student must still be able to
+      // unsubmit it. That is generally the only exception to a readonly workspace. However if a
+      // student is reviewing another student's code, we'd always want to disable the finish button.
+      (!!config.readonlyWorkspace && !config.level.submittable) ||
+        !!config.isCodeReviewing
     )
   );
 
@@ -260,6 +267,7 @@ Javalab.prototype.init = function(config) {
         onMount={onMount}
         onRun={onRun}
         onStop={onStop}
+        onTest={onTest}
         onContinue={onContinue}
         onCommitCode={onCommitCode}
         onInputMessage={onInputMessage}
@@ -292,6 +300,20 @@ Javalab.prototype.beforeUnload = function(event) {
 
 // Called by the Javalab app when it wants execute student code.
 Javalab.prototype.onRun = function() {
+  if (this.studioApp_.hasContainedLevels) {
+    lockContainedLevelAnswers();
+    getStore().dispatch(setDisableFinishButton(false));
+  }
+
+  this.miniApp?.reset?.();
+  this.executeJavabuilder(ExecutionType.RUN);
+};
+
+Javalab.prototype.onTest = function() {
+  this.executeJavabuilder(ExecutionType.TEST);
+};
+
+Javalab.prototype.executeJavabuilder = function(executionType) {
   if (this.studioApp_.attempts === 0) {
     // ensure we save to S3 on the first run.
     // Javabuilder requires code to be saved to S3.
@@ -299,12 +321,7 @@ Javalab.prototype.onRun = function() {
   }
 
   this.studioApp_.attempts++;
-  if (this.studioApp_.hasContainedLevels) {
-    lockContainedLevelAnswers();
-    getStore().dispatch(setDisableFinishButton(false));
-  }
 
-  this.miniApp?.reset?.();
   const options = {};
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     options.useNeighborhood = true;
@@ -316,7 +333,9 @@ Javalab.prototype.onRun = function() {
     getStore().getState().pageConstants.serverLevelId,
     options,
     this.onNewlineMessage,
-    this.setIsRunning
+    this.setIsRunning,
+    this.setIsTesting,
+    executionType
   );
   project.autosave(() => {
     this.javabuilderConnection.connectJavabuilder();
@@ -409,6 +428,10 @@ Javalab.prototype.onNewlineMessage = function() {
 
 Javalab.prototype.setIsRunning = function(isRunning) {
   getStore().dispatch(setIsRunning(isRunning));
+};
+
+Javalab.prototype.setIsTesting = function(isTesting) {
+  getStore().dispatch(setIsTesting(isTesting));
 };
 
 export default Javalab;
