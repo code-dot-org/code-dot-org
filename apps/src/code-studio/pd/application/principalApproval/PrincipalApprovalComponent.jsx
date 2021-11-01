@@ -27,6 +27,7 @@ import {
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabeledCheckBoxesWithAdditionalTextFields} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
@@ -69,10 +70,16 @@ const REPLACE_COURSE_FIELDS = [
   'replaceWhichCourseCsd'
 ];
 const YES = 'Yes';
+const COURSE_SUFFIXES = {
+  'Computer Science Discoveries': 'csd',
+  'Computer Science Principles': 'csp',
+  'Computer Science A': 'csa'
+};
 
 const PrincipalApprovalComponent = props => {
   const {teacherApplication, onChange, data} = props;
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
+  const [regionalPartner] = useRegionalPartner(data);
 
   const handleSchoolChange = selectedSchool => {
     onChange({school: selectedSchool && selectedSchool.value});
@@ -91,7 +98,13 @@ const PrincipalApprovalComponent = props => {
 
   const renderSchoolSection = () => {
     return (
-      <div>
+      <>
+        <p>
+          To help us measure our progress towards expanding access and providing
+          resources where they’re needed most, we ask that you confirm
+          demographic information about your school as well as how the course
+          will be implemented during the upcoming school Year.
+        </p>
         <FormGroup
           id="school"
           controlId="school"
@@ -124,7 +137,7 @@ const PrincipalApprovalComponent = props => {
             <LabeledRadioButtons name="schoolType" />
           </div>
         )}
-      </div>
+      </>
     );
   };
 
@@ -147,6 +160,13 @@ const PrincipalApprovalComponent = props => {
           }}
         />
       );
+    } else if (teacherApplication.course === 'Computer Science A') {
+      <LabeledCheckBoxesWithAdditionalTextFields
+        name="replaceWhichCourseCsa"
+        textFieldMap={{
+          [TextFields.otherPleaseExplain]: 'other'
+        }}
+      />;
     }
   };
 
@@ -197,18 +217,6 @@ const PrincipalApprovalComponent = props => {
           } is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
         />
         <LabeledRadioButtonsWithAdditionalTextFields
-          name="committedToMasterSchedule"
-          textFieldMap={{
-            [TextFields.otherWithText]: 'other'
-          }}
-          label={`Are you committed to including ${teacherApplication.course}
-                  on the master schedule in ${Year} if ${
-            teacherApplication.name
-          }
-                  is accepted into the program? Note: the program may be listed under a different
-                  course name as determined by your district.`}
-        />
-        <LabeledRadioButtonsWithAdditionalTextFields
           name="replaceCourse"
           textFieldMap={{
             [TextFields.dontKnowExplain]: 'other'
@@ -223,14 +231,14 @@ const PrincipalApprovalComponent = props => {
           }}
           label={`A key part of Code.org's mission is to increase and diversify participation
           in computer science, especially among female students and underrepresented
-          racial and ethnic groups. To that end, do you commit to recruiting and 
+          groups. To that end, do you commit to recruiting and 
           enrolling a diverse group of students in this course, representative of 
           the overall demographics of your school?`}
         />
 
         <p style={styles.questionText}>
-          There may be scholarships available in your region to cover the cost
-          of the program.{' '}
+          {regionalPartner ? regionalPartner.name : 'Your regional partner'} may
+          have scholarships available to cover the cost of the program.{' '}
           <a
             href={
               'https://code.org/educate/professional-learning/program-information' +
@@ -295,10 +303,7 @@ const PrincipalApprovalComponent = props => {
     );
   };
 
-  const courseSuffix =
-    teacherApplication.course === 'Computer Science Discoveries'
-      ? 'csd'
-      : 'csp';
+  const courseSuffix = COURSE_SUFFIXES[teacherApplication.course] || 'csp';
   return (
     <FormContext.Provider value={props}>
       <LabelsContext.Provider value={PageLabels}>
@@ -321,17 +326,19 @@ const PrincipalApprovalComponent = props => {
             >
               {teacherApplication.course} curriculum
             </a>{' '}
-            during the {Year} school Year. We know that administrative support
-            is essential to a teacher’s ability to fully commit to a)
-            participating in a Yearlong Professional Learning program and b)
-            teaching a new course. That’s why your approval is required for the
-            teacher's application to be considered.
+            during the {Year} school Year. This program is delivered by our
+            local Code.org Regional Partner
+            {regionalPartner ? `, ${regionalPartner.name}` : ''}. Participating
+            teachers are asked to commit to Code.org’s Professional Learning
+            Program starting in the summer and concluding in the spring.
+            Workshops can either be held in-person, virtually, or as a
+            combination of both throughout the Year.
           </p>
           <p>
-            To help us measure our progress towards expanding access and
-            providing resources where they’re needed most, we ask that you
-            confirm demographic information about your school as well as how the
-            course will be implemented during the upcoming school Year.
+            We know that administrative support is essential to a teacher’s
+            ability to fully commit to participating in a Yearlong professional
+            learning program and teaching a new course. That’s why your approval
+            is required for the teacher's application to be considered.
           </p>
           <LabeledSelect
             name="title"
@@ -341,19 +348,15 @@ const PrincipalApprovalComponent = props => {
           <LabeledInput name="firstName" />
           <LabeledInput name="lastName" />
           <LabeledInput name="email" />
-          <p>
-            Participating teachers are asked to commit to Code.org’s Yearlong
-            Professional Learning Program starting in the summer and concluding
-            in the spring. Workshops can either be held in-person, virtually, or
-            as a combination of both throughout the Year.
-          </p>
           <LabeledRadioButtonsWithAdditionalTextFields
             name="doYouApprove"
             textFieldMap={{
               [TextFields.otherWithText]: 'other'
             }}
             label={`Do you approve of ${teacherApplication.name} participating
-                  in Code.org's ${Year} Professional Learning Program?`}
+                  in Code.org's ${Year} Professional Learning Program${
+              regionalPartner ? ` with ${regionalPartner.name}` : ''
+            }?`}
           />
 
           {data.doYouApprove !== 'No' && renderSchoolInfoSection()}
@@ -363,7 +366,10 @@ const PrincipalApprovalComponent = props => {
             name="confirmPrincipal"
             label={
               <span>
-                {PageLabels.confirmPrincipal}{' '}
+                {PageLabels.confirmPrincipal.replace(
+                  '[regional partner]',
+                  regionalPartner.name || 'my local Code.org Regional Partner'
+                )}{' '}
                 <a onClick={openPrivacyDialog}>Learn more.</a>
               </span>
             }
