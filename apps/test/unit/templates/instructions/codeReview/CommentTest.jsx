@@ -82,11 +82,6 @@ describe('Code Review Comment', () => {
     expect(wrapper.find('.fa-eye-slash')).to.have.lengthOf(1);
   });
 
-  it('displays resolve option for teachers', () => {
-    const wrapper = renderWrapper({}, {viewAsTeacher: true});
-    expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);
-  });
-
   it('displays resolve option for code owner', () => {
     const wrapper = renderWrapper({}, {viewAsCodeReviewer: false});
     expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);

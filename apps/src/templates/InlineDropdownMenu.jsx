@@ -11,7 +11,7 @@ import onClickOutside from 'react-onclickoutside';
 // TODO: Convert to a functional component once Radium is upgraded past 0.26.0
 // Our version of Radium doesn't support useState, but it has been patched in
 // later versions
-export const InlineDropdownMenu = class InlineDropdownMenuComponent extends Component {
+export class InlineDropdownMenu extends Component {
   static propTypes = {
     icon: PropTypes.string.isRequired,
     children: props => {
@@ -41,12 +41,14 @@ export const InlineDropdownMenu = class InlineDropdownMenuComponent extends Comp
     selectAction();
   };
 
+  // Adding a handleKeyDown allows the menu items to be keyboard accessible
   handleKeyDown = (event, selectAction) => {
     switch (event.which) {
       // 13 is "enter" and 32 is "space"
       case 13:
       case 32: {
         this.selectOptionWrapper(selectAction);
+        break;
       }
     }
   };
@@ -64,8 +66,8 @@ export const InlineDropdownMenu = class InlineDropdownMenuComponent extends Comp
           type="button"
           style={styles.menuButton}
           onClick={() =>
-            this.setState({
-              isOpen: !isOpen
+            this.setState(state => {
+              return {isOpen: !state.isOpen};
             })
           }
         >
@@ -95,7 +97,7 @@ export const InlineDropdownMenu = class InlineDropdownMenuComponent extends Comp
       </>
     );
   }
-};
+}
 
 export default onClickOutside(Radium(InlineDropdownMenu));
 

@@ -21,12 +21,15 @@ class Comment extends Component {
   };
 
   state = {
-    hideWhileResolved: true
+    hideResolved: true
   };
 
   componentDidUpdate(prevProps) {
+    // We always hide the comment when it changes to resolved.
+    // We never hide a comment that is unresolved.
+    // A user can choose to show/hide a comment that is resolved.
     if (!prevProps.comment.isResolved && this.props.comment.isResolved) {
-      this.setState({hideWhileResolved: true});
+      this.setState({hideResolved: true});
     }
   }
 
@@ -71,7 +74,9 @@ class Comment extends Component {
   };
 
   toggleHideResolved = () => {
-    this.setState({hideWhileResolved: !this.state.hideWhileResolved});
+    this.setState(state => {
+      return {hideResolved: !state.hideResolved};
+    });
   };
 
   getListItems = () => {
@@ -82,16 +87,19 @@ class Comment extends Component {
       onResolveStateToggle
     } = this.props;
     const {isResolved} = this.props.comment;
-    const {hideWhileResolved} = this.state;
+    const {hideResolved} = this.state;
     let listItems = [];
     if (isResolved) {
+      // resolved comments can be collapsed/expanded
       listItems.push({
         onClick: this.toggleHideResolved,
-        text: hideWhileResolved ? msg.show() : msg.hide(),
-        iconClass: hideWhileResolved ? 'eye' : 'eye-slash'
+        text: hideResolved ? msg.show() : msg.hide(),
+        iconClass: hideResolved ? 'eye' : 'eye-slash'
       });
     }
-    if (viewAsTeacher || !viewAsCodeReviewer) {
+    if (!viewAsCodeReviewer) {
+      // Code owners can resolve/unresolve comment
+      // TODO: Allow teachers to resolve/unresolve comments too
       listItems.push({
         onClick: onResolveStateToggle,
         text: isResolved
@@ -101,6 +109,7 @@ class Comment extends Component {
       });
     }
     if (viewAsTeacher) {
+      // Teachers can delete comments
       listItems.push({
         onClick: onDelete,
         text: javalabMsg.delete(),
@@ -131,7 +140,7 @@ class Comment extends Component {
       hasError
     } = this.props.comment;
 
-    const {hideWhileResolved} = this.state;
+    const {hideResolved} = this.state;
 
     return (
       <div
@@ -154,9 +163,9 @@ class Comment extends Component {
             </InlineDropdownMenu>
           </span>
         </div>
-        {!(isResolved && hideWhileResolved) && (
+        {!(isResolved && hideResolved) && (
           <div
-            className={'code-review-comment-body'}
+            className="code-review-comment-body"
             style={{
               ...styles.comment,
               ...(isFromTeacher && styles.commentFromTeacher),

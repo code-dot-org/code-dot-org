@@ -199,7 +199,7 @@ class ReviewTab extends Component {
         const toggledComment = {...comments[toggledCommentIndex]};
         toggledComment.isResolved = !toggledComment.isResolved;
         comments[toggledCommentIndex] = toggledComment;
-        this.setState({comments: comments});
+        this.setState({comments});
       })
       .fail(() => this.flashErrorOnComment(resolvedCommentId));
   };
