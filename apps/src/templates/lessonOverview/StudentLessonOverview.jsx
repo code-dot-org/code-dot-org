@@ -12,6 +12,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
+import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
@@ -24,6 +25,17 @@ class StudentLessonOverview extends Component {
     // from redux
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired
+  };
+
+  determineLevelDisplay = () => {
+    const lesson = this.props.lesson;
+    const levels = lesson.levels;
+    const groupedLesson = {lesson, levels};
+    return levels ? (
+      <SummaryProgressTable groupedLesson={groupedLesson} />
+    ) : (
+      i18n.lessonContainsNoLevels()
+    );
   };
 
   render() {
@@ -114,6 +126,10 @@ class StudentLessonOverview extends Component {
             />
           </div>
         )}
+        <div id="level-section">
+          <h2>{i18n.levels()}</h2>
+          {this.determineLevelDisplay()}
+        </div>
       </div>
     );
   }
