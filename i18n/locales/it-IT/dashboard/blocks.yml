@@ -1143,6 +1143,7 @@ it:
           EFFECT:
             '"burst"': scoppio
             '"rain"': pioggia
+            '"spiral"': spirale
       gamelab_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       gamelab_makeNumSprites:
@@ -1190,7 +1191,22 @@ it:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": pulsante
             "'sound://category_collect/clicky_crunch.mp3'": sgranocchiamento
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bolla
+            "'sound://category_animals/bear.mp3'": Orso
+            "'sound://category_animals/cat.mp3'": gatto
+            "'sound://category_animals/cow.mp3'": mucca
+            "'sound://category_animals/pig.mp3'": maiale
+            "'sound://category_animals/sheep.mp3'": pecora
+            "'sound://category_animals/goat.mp3'": capra
+            "'sound://category_animals/chicken.mp3'": pollo
+            "'sound://category_animals/rooster.mp3'": gallo
+            "'sound://category_animals/elephant.mp3'": elefante
+            "'sound://category_animals/dolphin.mp3'": delfino
+            "'sound://category_animals/chick.mp3'": pulcino
+            "'sound://category_animals/dog.mp3'": cane
+            "'sound://category_animals/tiger.mp3'": tigre
             "'sound://category_instrumental/harpe_pluck_1.mp3'": arpa
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": seleziona
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_pointInDirection:
         text: orienta {SPRITE} in direzione {DIRECTION}
@@ -1683,15 +1699,33 @@ it:
         text: coordinata x di {SPRITE}
       Mikelab_yLocationOf:
         text: coordinata y di {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Gelato
+            Stars: Stelle
+            Fireworks: Fuochi d'artificio
+            '"rainbow"': Arcobaleno
+            '"hearts"': Cuori
+            '"flowers"': Fiori
+            '"waves"': Onde sonore
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': scoppio
             '"rain"': pioggia
+      Poetry_makeNewSpriteAnon:
+        text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
       Poetry_makeNumSprites:
         text: crea {NUM} nuovi sprite {ANIMATION_NAME}
       Poetry_playSound:
         text: riproduci il suono {SOUND}
+        options:
+          SOUND:
+            Break: Interrompi
+            Light: Chiaro
+      Poetry_setBackground:
+        text: imposta il colore dello sfondo {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1700,6 +1734,10 @@ it:
             '"space"': Spazio
             '"stars"': Stelle
             '"ripples"': Increspature
+            '"rain"': Pioggia
+            '"bubbles"': Bolle
+            '"confetti"': Coriandoli
+            '"hearts"': Cuori colorati
           PALETTE:
             '"rainbow"': Arcobaleno
       Poetry_setBackgroundImageAs:

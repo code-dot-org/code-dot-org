@@ -574,6 +574,8 @@ en:
           lessons:
             Jigsaw:
               name: Jigsaw
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
           student_description: Try our Jigsaw tutorial.
         step:
           title: Step
@@ -18980,6 +18982,10 @@ en:
           lessons:
             Virus Simulation for Code Bytes:
               name: Coding a Simulation
+            Outbreak:
+              name: Coding a Simulation
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation
@@ -19375,6 +19381,10 @@ en:
               name: CS Discoveries Post Course survey
               description_student: 
               description_teacher: 
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd2_1v2:
               display_name: 'Chapter 1: Creating Webpages'
@@ -19587,6 +19597,10 @@ en:
               name: CS Discoveries Post Course survey
               description_student: 
               description_teacher: 
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
@@ -19764,6 +19778,10 @@ en:
               description_teacher: "**Question of the Day: How can I track my work while we make updates to our app?**\n \nTeams make a decision about how they will incorporate updates to their app, then they begin updating their app based on their post-its from yesterday’s lesson. They use a “To Do / Doing / Done” chart to organize their work and track their progress. Teams spend the majority of the class working on updating their app, with time at the end to re-combine into a single app if necessary.\n"
             Build a Paper Prototype:
               name: Build a Paper Prototype
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -19919,6 +19937,10 @@ en:
               name: Data and Machine Learning
               description_student: "**Question of the Day: How can machines \"learn\"?**\n\nIn this lesson, you get to work with Artificial Intelligence and learn about Machine Learning. "
               description_teacher: "**Question of the Day: How can machines \"learn\"?**\r\n\r\nIn this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
@@ -20056,6 +20078,10 @@ en:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
+              description_student: 
+              description_teacher: 
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -20747,8 +20773,8 @@ en:
             Create PT - Make a Plan:
               key: Create PT - Make a Plan
               name: Create PT   Make a Plan
-              description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.
-              description_teacher: "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.\r\n\r\nThe lesson concludes by providing students with resources to make a plan to complete the task staring in the next lesson."
+              description_student: This lesson uses the Create PT Survival Guide to help narrow down and brainstorm ideas for the actual project.
+              description_teacher: This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.
             Create PT - Complete the Task:
               key: Create PT - Complete the Task
               name: Create PT - Complete the Task (12 hrs)
@@ -20756,8 +20782,8 @@ en:
               description_teacher: "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio."
             lesson-4:
               name: Create PT Deep Dive
-              description_student: 
-              description_teacher: This lesson will be updated in Fall 2021 to reflect updates to the Create PT.
+              description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT.
+              description_teacher: 'This lesson is designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they''re scored. '
           lesson_groups: {}
           name: csp8-2021
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
@@ -20919,7 +20945,7 @@ en:
               name: Safety in My Online Neighborhood
               description_student: Learn how to go places safely online.
               description_teacher: |-
-                [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21007,7 +21033,7 @@ en:
               name: Digital Trails
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21101,7 +21127,7 @@ en:
               name: Putting a STOP to Online Meanness
               description_student: In this lesson, you'll learn about meanness and what to do if you encounter it online.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21322,7 +21348,7 @@ en:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -21401,7 +21427,7 @@ en:
               name: Private and Personal Information
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21467,7 +21493,7 @@ en:
               name: Be A Super Digital Citizen
               description_student: Learn how you can be an upstander when you see cyberbullying.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21639,7 +21665,7 @@ en:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -22776,6 +22802,10 @@ en:
               name: The Playground
               description_student: 
               description_teacher: 
+            lesson-20:
+              name: Unit 4 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22783,6 +22813,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           name: csa4-pilot
           title: Expanding Program Logic
           description_audience: ''
@@ -22867,6 +22899,10 @@ en:
               name: The Playground
               description_student: 
               description_teacher: 
+            lesson-16:
+              name: Unit 5 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22874,6 +22910,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           name: csa5-pilot
           title: Giving Objects Organization
           description_audience: ''
@@ -23560,6 +23598,10 @@ en:
               name: Post-Unit Survey
               description_student: 
               description_teacher: 
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1 - Understanding Machine Learning
@@ -23759,12 +23801,12 @@ en:
               description_teacher: ''
             Module 7:
               key: Module 7
-              name: 'Module 7: Tools and structure in Unit 9 - Data'
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
               description_student: ''
               description_teacher: ''
             Module 8:
               key: Module 8
-              name: 'Module 8: Building community and preparing students for the AP Exam'
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
               description_student: ''
               description_teacher: ''
             new lesson:
@@ -24032,10 +24074,11 @@ en:
             lessonGroup-9:
               display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: 'Module 5: Preparing to Teach CS Discoveries'
+          title: 'Module 5: Preparing to Teach Unit 7- AI and Machine Learning'
           description_audience: ''
           description_short: ''
           description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
+          student_description: ''
         self-paced-pl-csd6-2021:
           lessons:
             lesson-1:
@@ -24836,7 +24879,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod1:
           lessons:
             lesson-1:
@@ -24918,7 +24962,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by October 15, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csd-mod4:
           lessons:
             lesson-1:
@@ -24934,7 +24979,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod2:
           lessons:
             lesson-1:
@@ -24967,7 +25013,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by October 18, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-overview:
           lessons: {}
           lesson_groups: {}
@@ -25795,9 +25842,9 @@ en:
               description_teacher: 
             lesson-5:
               key: lesson-5
-              name: Comparing Values to Make Decisions
-              description_student: 'Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. '
-              description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
+              name: Unit 4 Pilot Survey
+              description_student: 
+              description_teacher: 
             lesson-6:
               key: lesson-6
               name: Adding Randomness to a Program
@@ -25860,6 +25907,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Unit 4 Pilot Survey
           title: Expanding Program Logic
           description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
@@ -25930,9 +25979,9 @@ en:
               description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-1:
               key: lesson-1
-              name: Creating Tables of Data
-              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
-              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+              name: Unit 5 Pilot Survey
+              description_student: 
+              description_teacher: 
             lesson-2:
               key: lesson-2
               name: Traversing a 2D Array by Rows
@@ -26026,6 +26075,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           title: Giving Objects Organization
           description: In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
           student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
@@ -26408,7 +26459,7 @@ en:
             lesson-1:
               name: Our AI Code of Ethics
               description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
-              description_teacher: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
           lesson_groups: {}
           name: ai-ethics
           title: Our AI Code of Ethics
@@ -26481,3 +26532,289 @@ en:
           description_short: Take the challenge to create your own sprite effect using Sprite Lab!
           description: ''
           student_description: ''
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Tools
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Examples
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demos and Resources
+          name: csa-u8-dev
+          title: CSA Unit 8 Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
+          lesson_groups: {}
+          name: poem-art
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poetry:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            lesson-2:
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            lesson-3:
+              name: User Input
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Build a Poem Generator
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
+            lesson-6:
+              name: Poetry Circle
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Conditionals
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: poetry
+          title: Computer Science and Poetry
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: |
+                This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:
+
+                - recognize uppercase letters of the alphabet.
+                - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
+                - recognize that words are made up of a sequence of letters.
+          lesson_groups: {}
+          name: spelling-bee
+          title: Spelling Bee
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Outbreak Day 1
+            lesson-2:
+              name: Outbreak Day 2
+          lesson_groups: {}
+          name: outbreak-csc
+          title: Outbreak
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: |
+                This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
+
+
+
+                The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.
+
+                ####Prerequisite Skills and Vocabulary
+
+                This lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:
+
+
+                - Know how to read a bar chart, understanding what the values on the x and y axes represent
+                - Know how to read a histogram, understanding what the range of values represent
+          lesson_groups: {}
+          name: explore-data-1
+          title: Exploring Box Plots and Histograms
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: |
+                This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:
+
+                - recognize and count numbers up to 10 using images, fingers, or manipulatives.
+                - add objects, images, fingers, or  manipulatives up to a sum of 10.
+          lesson_groups: {}
+          name: counting-csc
+          title: Counting with Laurel
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-exemplars:
+          lessons:
+            lesson-1:
+              name: Creating Tables of Data
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Traversing a 2D Array by Rows
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Traversing a 2D Array by Columns
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Using Enhanced for Loops
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Evaluating 2D Arrays
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Applying Standard Algorithms
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Shifting Elements
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Finding Duplicates
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Searching for Elements
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: A Sustainable Neighborhood Project - Day 1
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: A Sustainable Neighborhood Project - Day 2
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: A Sustainable Neighborhood Project - Day 3
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Reversing Elements
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa5-exemplars
+          title: Unit 5 - Giving Objects Organization [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Unit 2 Projects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Unit 3 Projects
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Unit 4 Projects
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Unit 5 Projects
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Unit 6 Projects
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Unit 7 Projects
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Unit 8 Projects
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-examples-21
+          title: CSA Unit Project Examples [2021-2022]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Post-Course Survey
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csd-post-survey-2021
+          title: CS Discoveries Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the CS Discoveries Post-Course Survey. This unit can be assigned after students complete their final unit in CS Discoveries.
+          student_description: This unit contains a survey for when your class is finished with the units in CS Discoveries. Your teacher will tell you when it's time to take this survey.

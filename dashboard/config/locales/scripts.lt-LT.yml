@@ -198,7 +198,7 @@ lt:
             grožį ir magiją.
           lessons:
             Artist:
-              name: Menininkas
+              name: Programuokite kartu su Ana ir Elze
           student_description: Naudokime komandas, kad Ana ir Elzė kartu išbandytų
             ledo grožį ir magiją. Čiuožinėdami pačiūžomis, piešime snaigių raštus.
             Savo kūriniais galėsite pasidalinti su draugais!
@@ -332,7 +332,7 @@ lt:
             bus Disnėjaus Infinity personažai.
           lessons:
             Infinity:
-              name: Begalybė
+              name: Disnėjaus Infinity laboratorija
           student_description: Sukurk istoriją ar žaidimą su Žaidimų laboratorija,
             kurioje bus Disnėjaus Infinity personažai.
         algebrademo:
@@ -743,9 +743,6 @@ lt:
             tolimoje galaktikoje.
           description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų
             žaidimą tolimoje galaktikoje.
-          lessons:
-            Hour of Code 2015:
-              name: Programavimo valanda 2015
           student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių
             Karų žaidimą tolimoje galaktikoje.
         mc:
@@ -1048,9 +1045,6 @@ lt:
           title: Sukurk kreipšinio žaidimą
           description_short: Sukurk kreipšinio žaidimą
           description: Sukurk kreipšinio žaidimą
-          lessons:
-            Bounce:
-              name: Bounce
           student_description: Sukurk kreipšinio žaidimą
         csd2-2017:
           lessons:
@@ -1163,9 +1157,6 @@ lt:
           title: Sportas
           description_short: Sukurk savo sportą
           description: Sukurk savo sportą
-          lessons:
-            Sports:
-              name: Sportas
           student_description: Sukurk savo sportą
         2016_sciencePD-phase2b:
           lessons:
@@ -1548,10 +1539,6 @@ lt:
           lessons:
             new stage:
               name: naujas lygis
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft programavimo valanda
         csp-explore-2017:
           lessons:
             new stage:
@@ -1890,6 +1877,9 @@ lt:
               name: Menininkas
         aquatic:
           title: 'Minecraft: Kelionės vandeniu'
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Kelionės vandeniu'
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -3031,5 +3021,14 @@ lt:
               display_name: Turinys
             lesson_group:
               display_name: Turinys
+            lessonGroup-2:
+              display_name: Turinys
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Rašanti bitė
+          title: Rašanti bitė
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Turinys

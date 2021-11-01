@@ -30,6 +30,20 @@ export default class SpriteLab extends P5Lab {
     return new CoreLibrary(args.p5);
   }
 
+  async preloadSpriteImages_() {
+    await this.whenAnimationsAreReady();
+    return this.p5Wrapper.preloadSpriteImages(
+      getStore().getState().animationList
+    );
+  }
+
+  preloadLabAssets() {
+    return Promise.all([
+      this.preloadSpriteImages_(),
+      this.p5Wrapper.preloadBackgrounds()
+    ]);
+  }
+
   preview() {
     if (getStore().getState().runState.isRunning) {
       return;

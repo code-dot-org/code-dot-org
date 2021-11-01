@@ -192,7 +192,7 @@ ro:
           description_short: Hai să ne folosim de cod pentru a le alătura pe Anna şi Elsa în explorarea magiei şi frumuseţii de gheaţă.
           lessons:
             Artist:
-              name: Artist
+              name: Programati cu Anna și Elsa
           student_description: Hai să folosim programarea pentru a ne alătura Annei şi Elsei în timp ce explorează magia şi frumuseţea gheței. Veţi crea fulgi de zăpadă şi modele ca la patinaj şi veți face un paradis de iarnă, pe care apoi veți putea să-l distribuiți prietenilor!
         course4:
           title: Curs 4
@@ -334,7 +334,7 @@ ro:
           description_short: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity.
           lessons:
             Infinity:
-              name: Infinit
+              name: Laborator de joacă Disney Infinity
           student_description: Folosește Laboratorul de Joacă pentru a crea o poveste sau un joc cu personaje Disney Infinity.
         algebrademo:
           title: Demo Algebră
@@ -503,6 +503,8 @@ ro:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_student: Fă clic și glisează obiecte pentru a rezolva puzzle-urile.
+              description_teacher: În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.
         step:
           title: Pas
           lessons:
@@ -1151,7 +1153,7 @@ ro:
           description_short: Învață să programezi droizi si creează-ți propriul joc Star Wars într-o galaxie foarte îndepărtată.
           lessons:
             Hour of Code 2015:
-              name: Ora de cod 2015
+              name: 'Star Wars: Programarea unei galaxii'
           student_description: Învață să programezi droizi si creează-ți propriul joc Star Wars într-o galaxie foarte îndepărtată.
         mc:
           title: Ora de Programare Minecraft
@@ -1808,7 +1810,6 @@ ro:
           description: Realizeaza un joc de baschet
           lessons:
             Bounce:
-              name: Săritură
               description_student: Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!
               description_teacher: În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.
           student_description: Realizeaza un joc de baschet
@@ -2116,7 +2117,6 @@ ro:
           description: Amesteca si potriveste sporturile
           lessons:
             Sports:
-              name: Sporturi (Sports)
               description_student: Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!
               description_teacher: În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.
           student_description: Amesteca si potriveste sporturile
@@ -3408,10 +3408,7 @@ ro:
               name: Criptare simplă
         allthesurveys: {}
         k1hoc2017: {}
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Ora de Programare Minecraft
+        hero: {}
         applab-intro-staging: {}
         csp-explore-2017:
           lesson_groups:
@@ -7350,6 +7347,8 @@ ro:
           lessons:
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
+            Outbreak:
+              name: Cum se Codifică o Simulare
           lesson_groups:
             outbreak:
               display_name: Simulare Epidemie
@@ -7518,9 +7517,7 @@ ro:
               display_name: Bucle
         csp6-2021: {}
         csp7-2021: {}
-        csp8-2021:
-          lessons:
-            lesson-4: {}
+        csp8-2021: {}
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -8379,10 +8376,17 @@ ro:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
+            lesson-20: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         csa5-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8780,6 +8784,7 @@ ro:
             lesson-1: {}
             lesson-3: {}
             lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -8790,15 +8795,7 @@ ro:
               display_name: Conţinut
         csa5-pilot-facilitator:
           lessons:
-            Reversing Elements: {}
-            Shifting Elements: {}
-            Finding Duplicates: {}
-            Searching for Elements: {}
-            A Sustainable Neighborhood Project - Day 1: {}
-            A Sustainable Neighborhood Project - Day 2: {}
-            A Sustainable Neighborhood Project - Day 3: {}
-            FRQ Day: {}
-            Assessment Day: {}
+            lesson-1: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -8808,6 +8805,10 @@ ro:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8836,9 +8837,7 @@ ro:
             lesson-18: {}
             lesson-19: {}
             lesson-20: {}
-        hello-world-food:
-          lessons:
-            lesson-1: {}
+        hello-world-food: {}
         csa-u7-dev:
           lessons:
             lesson-1: {}
@@ -8909,3 +8908,57 @@ ro:
         poetry-hoc3:
           lessons:
             lesson-1: {}
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1: {}
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widget-uri
+            lesson-2:
+              name: Instrumente
+            lesson-3: {}
+        poem-art: {}
+        poetry:
+          lessons:
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Albina de Ortografie
+          title: Albina de Ortografie
+        outbreak-csc: {}
+        explore-data-1: {}
+        counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa-examples-21:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}

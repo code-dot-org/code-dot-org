@@ -1233,7 +1233,7 @@
           "moving west2": "движение на запад2",
           "spinning right2": "вращение вправо2",
           "growing2": "увеличение2",
-          "swimming left and right2": "плавание влево и вправо",
+          "swimming left and right2": "плавание влево и вправо2",
           "moving east2": "движение на восток2",
           "moving north2": "движение на север2",
           "patrolling2": "патрулирование2",
@@ -1265,7 +1265,7 @@
           "moving west2": "движение на запад2",
           "spinning right2": "вращение вправо2",
           "growing2": "увеличение2",
-          "swimming left and right2": "плавание влево и вправо",
+          "swimming left and right2": "плавание влево и вправо2",
           "moving east2": "движение на восток2",
           "moving north2": "движение на север2",
           "patrolling2": "патрулирование2",
@@ -1566,7 +1566,7 @@
           "swimming left and right": "плавание налево и направо",
           "growing2": "увеличение2",
           "moving south2": "движение на юг2",
-          "swimming left and right2": "плавание влево и вправо",
+          "swimming left and right2": "плавание влево и вправо2",
           "moving north": "движение на север",
           "jittering": "дрожание",
           "moving west": "движение на запад",
@@ -1670,7 +1670,7 @@
           "shrinking2": "уменьшение2",
           "growing2": "увеличение2",
           "moving south2": "движение на юг2",
-          "swimming left and right2": "плавание влево и вправо",
+          "swimming left and right2": "плавание влево и вправо2",
           "moving north2": "движение на север2",
           "jittering2": "пульсация2",
           "patrolling2": "патрулирование2",
@@ -1717,7 +1717,7 @@
           "shrinking2": "уменьшение2",
           "growing2": "увеличение2",
           "moving south2": "движение на юг2",
-          "swimming left and right2": "плавание влево и вправо",
+          "swimming left and right2": "плавание влево и вправо2",
           "moving north2": "движение на север2",
           "jittering2": "пульсация2",
           "moving west2": "движение на запад2",
@@ -1748,7 +1748,7 @@
           "shrinking2": "уменьшение2",
           "growing2": "увеличение2",
           "moving south2": "движение на юг2",
-          "swimming left and right2": "плавание влево и вправо",
+          "swimming left and right2": "плавание влево и вправо2",
           "moving north2": "движение на север2",
           "jittering2": "пульсация2",
           "patrolling2": "патрулирование2",
@@ -2844,7 +2844,12 @@
           "jittering": "дрожание",
           "moving west": "движение на запад",
           "patrolling": "патрулирование",
-          "moving with arrow keys": "передвижение клавишами со стрелками"
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_animals_costumes": {
           "moving east": "движение на восток",
@@ -2855,7 +2860,11 @@
           "moving south": "движущийся на юг",
           "moving north": "движение на север",
           "jittering": "дрожание",
-          "moving west": "движение на запад"
+          "moving west": "движение на запад",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_animals_events": {
           "patrolling": "патрулирование",
@@ -2869,7 +2878,10 @@
           "jittering": "дрожание",
           "wandering": "блуждание",
           "shrinking": "уменьшение",
-          "spinning left": "левостороннее вращение"
+          "spinning left": "левостороннее вращение",
+          "fluttering": "дрожание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_animals_sounds": {
           "swimming left and right": "плавание налево и направо",
@@ -2882,7 +2894,14 @@
           "moving north": "движение на север",
           "moving south": "движущийся на юг",
           "moving west": "движение на запад",
-          "spinning right": "правостороннее вращение"
+          "spinning right": "правостороннее вращение",
+          "spinning left": "левостороннее вращение",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "плавание налево и направо",
@@ -2910,7 +2929,12 @@
           "jittering": "дрожание",
           "moving west": "движение на запад",
           "patrolling": "патрулирование",
-          "moving with arrow keys": "передвижение клавишами со стрелками"
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_emoji_costumes": {
           "moving east": "движение на восток",
@@ -2921,7 +2945,11 @@
           "moving south": "движущийся на юг",
           "moving north": "движение на север",
           "jittering": "дрожание",
-          "moving west": "движение на запад"
+          "moving west": "движение на запад",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_emoji_events": {
           "patrolling": "патрулирование",
@@ -2935,7 +2963,10 @@
           "jittering": "дрожание",
           "wandering": "блуждание",
           "shrinking": "уменьшение",
-          "spinning left": "левостороннее вращение"
+          "spinning left": "левостороннее вращение",
+          "fluttering": "дрожание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_emoji_sounds": {
           "swimming left and right": "плавание налево и направо",
@@ -2948,7 +2979,14 @@
           "moving north": "движение на север",
           "moving south": "движущийся на юг",
           "moving west": "движение на запад",
-          "spinning right": "правостороннее вращение"
+          "spinning right": "правостороннее вращение",
+          "spinning left": "левостороннее вращение",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "плавание налево и направо",
@@ -2972,7 +3010,11 @@
           "moving south": "движущийся на юг",
           "moving north": "движение на север",
           "jittering": "дрожание",
-          "moving west": "движение на запад"
+          "moving west": "движение на запад",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_food_events": {
           "patrolling": "патрулирование",
@@ -2986,7 +3028,10 @@
           "jittering": "дрожание",
           "wandering": "блуждание",
           "shrinking": "уменьшение",
-          "spinning left": "левостороннее вращение"
+          "spinning left": "левостороннее вращение",
+          "fluttering": "дрожание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_food_sounds": {
           "swimming left and right": "плавание налево и направо",
@@ -2999,7 +3044,14 @@
           "moving north": "движение на север",
           "moving south": "движущийся на юг",
           "moving west": "движение на запад",
-          "spinning right": "правостороннее вращение"
+          "spinning right": "правостороннее вращение",
+          "spinning left": "левостороннее вращение",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "плавание налево и направо",
@@ -3027,7 +3079,12 @@
           "jittering": "дрожание",
           "moving west": "движение на запад",
           "patrolling": "патрулирование",
-          "moving with arrow keys": "передвижение клавишами со стрелками"
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_retro_costumes": {
           "moving east": "движение на восток",
@@ -3038,7 +3095,11 @@
           "moving south": "движущийся на юг",
           "moving north": "движение на север",
           "jittering": "дрожание",
-          "moving west": "движение на запад"
+          "moving west": "движение на запад",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_retro_events": {
           "patrolling": "патрулирование",
@@ -3052,7 +3113,10 @@
           "jittering": "дрожание",
           "wandering": "блуждание",
           "shrinking": "уменьшение",
-          "spinning left": "левостороннее вращение"
+          "spinning left": "левостороннее вращение",
+          "fluttering": "дрожание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         },
         "helloworld_retro_sounds": {
           "swimming left and right": "плавание налево и направо",
@@ -3065,7 +3129,154 @@
           "moving north": "движение на север",
           "moving south": "движущийся на юг",
           "moving west": "движение на запад",
-          "spinning right": "правостороннее вращение"
+          "spinning right": "правостороннее вращение",
+          "spinning left": "левостороннее вращение",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "блуждание",
+          "moving east": "движение на восток",
+          "spinning left": "левостороннее вращение",
+          "spinning right": "правостороннее вращение",
+          "shrinking": "уменьшение",
+          "growing": "увеличение",
+          "moving south": "движущийся на юг",
+          "swimming left and right": "плавание налево и направо",
+          "moving north": "движение на север",
+          "jittering": "дрожание",
+          "moving west": "движение на запад",
+          "patrolling": "патрулирование",
+          "moving with arrow keys": "передвижение клавишами со стрелками",
+          "driving with arrow keys": "передвижение с помощью клавиш со стрелками",
+          "fluttering": "дрожание",
+          "wobbling": "колебание",
+          "moving west and looping": "движение на запад и зацикливание",
+          "moving east and looping": "движение на восток и зацикливание"
         }
       }
     }

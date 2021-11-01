@@ -1159,6 +1159,14 @@ ro:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": buton
             "'sound://category_collect/clicky_crunch.mp3'": criză
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": balon
+            "'sound://category_animals/bear.mp3'": ursi
+            "'sound://category_animals/cat.mp3'": pisică
+            "'sound://category_animals/cow.mp3'": vacă
+            "'sound://category_animals/sheep.mp3'": oaie
+            "'sound://category_animals/chicken.mp3'": gaina
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": câine
             "'sound://category_digital/jump_7.mp3'": sari
       gamelab_pointInDirection:
         text: îndreaptă {SPRITE} {DIRECTION}
@@ -1616,12 +1624,29 @@ ro:
         text: coordonatele x ale {SPRITE}
       Mikelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Îngheţată
+            Stars: Stele
+            Fireworks: Artificii
+            '"rainbow"': Curcubeu
+            '"hearts"': Inimi
+            '"flowers"': Flori
+            '"waves"': Valuri
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': ploaie
+      Poetry_makeNewSpriteAnon:
+        text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Lumină
+      Poetry_setBackground:
+        text: setează culoarea de fundal la {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1630,6 +1655,10 @@ ro:
             '"space"': Spaţiu
             '"stars"': Stele
             '"ripples"': Ondulații
+            '"rain"': Ploaie
+            '"bubbles"': Baloane
+            '"confetti"': Confeti
+            '"hearts"': Inimi colorate
           PALETTE:
             '"rainbow"': Curcubeu
       Poetry_setBackgroundImageAs:

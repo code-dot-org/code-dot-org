@@ -193,7 +193,7 @@ id:
           description_short: Mari kita gunakan kode untuk bergabung bersama Anna dan Elsa saat mereka menjelajahi keajaiban dan keindahan es.
           lessons:
             Artist:
-              name: Artis
+              name: Koding dengan Anna dan Elsa
           student_description: Mari gunakan kode untuk bergabung dengan Anna dan Elsa seperti mereka menjelajahi keajaiban dan keindahan es. Anda akan membuat kepingan salju dan pola seperti kamu berselancar ski dan membuat musim dingin dunia impian yang yang kemudian dapat kamu bagi dengan teman-teman mu!
         course4:
           title: Kursus 4
@@ -337,7 +337,7 @@ id:
           description_short: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas.
           lessons:
             Infinity:
-              name: "∞"
+              name: Disney Infinity Play Lab
           student_description: Gunakan Play Lab untuk membuat sebuah cerita atau permainan yang dibintangi karakter Disney tak terbatas.
         algebrademo:
           title: Demo Aljabar
@@ -511,6 +511,8 @@ id:
           lessons:
             Jigsaw:
               name: Teka-teki
+              description_student: Klik dan drag untuk menyelesaikan puzzle.
+              description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
           student_description: Coba tutorial Jigsaw kami.
         step:
           title: Langkah
@@ -1649,9 +1651,6 @@ id:
         starwarsblocks:
           description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
         mc:
           title: Minecraft Hour of Code
@@ -3401,7 +3400,6 @@ id:
           description: Pilih tim Anda dan buat permainan basket
           lessons:
             Bounce:
-              name: Terpental
               description_student: Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!
               description_teacher: Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.
           student_description: Pilih tim Anda dan buat permainan basket
@@ -3703,7 +3701,7 @@ id:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
             'Programming: Happy Maps':
               name: 'Pemrograman: peta bahagia'
             Programming in Maze:
@@ -3736,7 +3734,7 @@ id:
             Sequence & Algorithms:
               name: Urutan & Algorithm
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
             Being Safe Online:
               name: Aman Online
             'Programming: My Robotic Friends':
@@ -3975,7 +3973,6 @@ id:
           description: Padu dan padankan lintas olahraga
           lessons:
             Sports:
-              name: Olahraga
               description_student: Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!
               description_teacher: Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.
           student_description: Padu dan padankan lintas olahraga
@@ -6721,7 +6718,7 @@ id:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Perjalanan Pahlawan Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: Perjalanan Pahlawan'
           student_description: Minecraft hadir kembali dengan aktivitas baru untuk Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
         applab-intro-staging:
           title: Pengenalan Penyiapan App Lab
@@ -7284,7 +7281,7 @@ id:
               name: Menanam Benih
               description_teacher: Dalam pelajaran ini, murid akan mengaitkan kembali konsep algorithm dengan aktivitas kehidupan nyata sehari-hari dengan menanam benih aktual. Di sini tujuannya adalah memulai pembangunan keterampilan dalam menerjemahkan situasi dunia nyata ke dalam skenario online dan begitu sebaliknya.\\r
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             'Programming: Happy Maps':
               name: Pemetaan bahagia
@@ -7487,7 +7484,7 @@ id:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
             Your Digital Footprint:
               name: Digital Footprint Anda
             'Programming: My Robotic Friends':
@@ -8996,7 +8993,7 @@ id:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
             'Online Safety: Your Digital Footprint':
               name: 'Keselamatan Online: Jejak Digital Anda'
             'Programming: My Robotic Friends':
@@ -9127,7 +9124,7 @@ id:
           description: Minecraft hadir kembali dengan aktivitas yang serba baru! Gunakan kreativitas dan keterampilan pemecahan masalah untuk mengeksplorasi dan membangun dunia bawah air dengan code.
           lessons:
             Aquatic:
-              name: Air
+              name: 'Minecraft: Perjalanan Air'
           student_description: Minecraft hadir kembali dengan aktivitas yang serba baru! Gunakan kreativitas dan keterampilan pemecahan masalah untuk mengeksplorasi dan membangun dunia bawah air dengan code.
         sconyers:
           title: Tempat Bermain Tracey
@@ -10086,7 +10083,7 @@ id:
               description_student: Gunakan loop dan pola untuk menyelesaikan gambar.
               description_teacher: Kembali ke loop, murid belajar menggambar dengan mengulang-ulang urutan instruksi sederhana. Dalam pelajaran berkomputer sebeIumnya, loop digunakan untuk melintasi labirin dan mengumpulkan harta karun. Di sini, loop menghasilkan pola. Pada akhir tahap ini, murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan loop.
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
               description_student: Klik dan drag untuk menyelesaikan puzzle.
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             Loops in Ice Age:
@@ -10229,7 +10226,7 @@ id:
             Spelling Bee:
               name: Spelling Bee
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
             Programming in Maze:
               name: Pemrograman dengan Angry Birds
             Programming in Harvester:
@@ -14240,7 +14237,7 @@ id:
               description_student: Pelajari aturan agar dapat mengunjungi tempat online secara aman.
               description_teacher: Bekerja sama dengan Common Sense Media, pelajaran ini membantu murid belajar bahwa banyak situs web meminta informasi yang bersifat pribadi dan mendiskusikan cara menghadapi permintaan semacam itu dengan penuh tanggung jawab. Murid juga menyadari bahwa mereka boleh mengunjungi tempat-tempat yang menyenangkan secara online, tetapi mereka harus mengikuti aturan tertentu agar tetap aman.
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
               description_student: Klik dan drag untuk menyelesaikan puzzle.
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             'Programming: Happy Maps':
@@ -14915,7 +14912,7 @@ id:
               display_name: kegiatan
           lessons:
             Learn to Drag and Drop:
-              name: Belajar Menarik dan Melepaskan
+              name: Belajar Cara Drag and Drop
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             Sequencing with Scrat:
               name: Pengurutan dengan Scrat
@@ -15986,6 +15983,8 @@ id:
           lessons:
             Virus Simulation for Code Bytes:
               name: Membuat Kode Simulasi
+            Outbreak:
+              name: Membuat Kode Simulasi
           lesson_groups:
             outbreak:
               display_name: Simulasi Wabah
@@ -16817,8 +16816,8 @@ id:
               key: Keamanan di Lingkungan Sekitar Online Saya
               name: Keamanan di Lingkungan Sekitar Online Saya
             Learn to Drag and Drop:
-              key: Belajar Menarik dan Melepaskan
-              name: Belajar Menarik dan Melepaskan
+              key: Belajar Cara Drag and Drop
+              name: Belajar Cara Drag and Drop
               description_student: Klik dan drag untuk menyelesaikan puzzle.
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             'Programming: Happy Maps':
@@ -17591,8 +17590,8 @@ id:
           description_audience: 'Usia: 4-8'
           lessons:
             Learn to Drag and Drop:
-              key: Belajar Menarik dan Melepaskan
-              name: Belajar Menarik dan Melepaskan
+              key: Belajar Cara Drag and Drop
+              name: Belajar Cara Drag and Drop
               description_student: Klik dan drag untuk menyelesaikan puzzle.
               description_teacher: Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.
             Sequencing with Scrat:
@@ -18275,5 +18274,23 @@ id:
               display_name: Konten
             lesson_group:
               display_name: Konten
+            lessonGroup-2:
+              display_name: Konten
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widget
+            lesson-2:
+              name: Tool
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+          title: Spelling Bee
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Hari Penilaian
+          lesson_groups:
             lessonGroup-2:
               display_name: Konten

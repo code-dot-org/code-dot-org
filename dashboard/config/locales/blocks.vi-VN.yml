@@ -1132,6 +1132,13 @@ vi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": khủng hoảng
+            "'sound://category_animals/bear.mp3'": Gấu
+            "'sound://category_animals/cat.mp3'": con mèo
+            "'sound://category_animals/cow.mp3'": con bò
+            "'sound://category_animals/sheep.mp3'": con cừu
+            "'sound://category_animals/chicken.mp3'": con gà
+            "'sound://category_animals/dolphin.mp3'": cá heo
+            "'sound://category_animals/dog.mp3'": con chó
             "'sound://category_digital/jump_7.mp3'": nhảy
       gamelab_pointInDirection:
         text: điểm {SPRITE} {DIRECTION}
@@ -1599,12 +1606,28 @@ vi:
         text: bố trí quái vật ngẫu nhiên
       Outbreak_stopMoving:
         text: quái vật ngừng di chuyển
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: ไอศกรีม
+            Stars: Sao
+            Fireworks: พลุ
+            '"rainbow"': Cầu vồng
+            '"hearts"': Trái tim
+            '"flowers"': ดอกไม้
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': mưa
+      Poetry_makeNewSpriteAnon:
+        text: làm mới {ANIMATION_NAME} sprite tại {LOCATION}
       Poetry_playSound:
         text: Âm thanh chơi {SOUND}
+        options:
+          SOUND:
+            Light: Sáng
+      Poetry_setBackground:
+        text: thiết lập màu nền {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1613,6 +1636,10 @@ vi:
             '"space"': Không gian
             '"stars"': Sao
             '"ripples"': Gợn sóng
+            '"rain"': Mưa
+            '"bubbles"': Bong bóng
+            '"confetti"': Hoa giấy
+            '"hearts"': Trái tim sặc sỡ
           PALETTE:
             '"rainbow"': Cầu vồng
       Poetry_setBackgroundImageAs:

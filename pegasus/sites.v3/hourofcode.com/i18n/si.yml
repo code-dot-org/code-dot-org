@@ -11,29 +11,28 @@ si:
   campaign_date_full: දෙසැම්බර් 5-11
   campaign_date_year: '2016'
   campaign_date_full_year: දෙසැම්බර් 7-13, 2020
-  latam_campaign_date_start_short: Oct. 1
-  latam_campaign_date_start_long: October 1
-  latam_campaign_date_short: Oct. 1 - Dec. 12
-  latam_campaign_date_full: October 1 - December 12
+  latam_campaign_date_start_short: ඔක්තෝම්බර් 1
+  latam_campaign_date_start_long: ඔක්තෝම්බර් 1
+  latam_campaign_date_short: ඔක්තෝම්බර් 1 - දෙසැම්බර් 12
+  latam_campaign_date_full: ඔක්තෝම්බර් 1 - දෙසැම්බර් 12
   latam_campaign_date_year: '2016'
-  latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Oct. 9
-  europe_campaign_date_start_long: October 9
-  europe_campaign_date_short: Oct. 9-24
-  europe_campaign_date_full: October 9-24
+  latam_campaign_date_full_year: 2021 ඔක්තෝම්බර් 1 - 2021 දෙසැම්බර් 12
+  europe_campaign_date_start_short: ඔක්තෝම්බර් 9
+  europe_campaign_date_start_long: ඔක්තෝම්බර් 9
+  europe_campaign_date_short: ඔක්තෝම්බර් 9 - 24
+  europe_campaign_date_full: ඔක්තෝම්බර් 9 - 24
   europe_campaign_date_year: '2016'
-  europe_campaign_date_full_year: October 9-24, 2021
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
+  europe_campaign_date_full_year: 2021 ඔක්තෝම්බර් 9 - 24
+  africa_campaign_date_start_short: ඔක්තෝම්බර් 1
+  africa_campaign_date_start_long: ඔක්තෝම්බර් 1
+  africa_campaign_date_short: ඔක්තෝම්බර් 1 - 31
+  africa_campaign_date_full: ඔක්තෝම්බර් 1 - 31
   africa_campaign_date_year: '2016'
-  africa_campaign_date_full_year: October 1-31, 2021
-  hoc2020_header: Learn today, build a brighter tomorrow.
-  hoc2020_header_with_line_break_markdown: |-
-    Learn today,
-
-    build a brighter tomorrow.
+  africa_campaign_date_full_year: 2021 ඔක්තෝම්බර් 1 - 31
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
+  hoc2020_header: අද ඉගෙන ගන්න, හෙට දවස දීප්තිමත් කරන්න.
+  hoc2020_header_with_line_break_markdown: අද ඉගෙන ගන්න, හෙට දවස දීප්තිමත් කරන්න.
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
     we want. #CSforGood'
   social_hoc2020_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
@@ -48,20 +47,21 @@ si:
   hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
     Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
     discuss ethics and AI, and more...
-  hoc2019_header: Learn computer science. Change the world.
-  hoc2019_header_line1_mobile: Learn computer science.
-  hoc2019_header_line2_mobile: Change the world.
+  hoc2019_header: පරිගණක විද්‍යාව ඉගෙන ගන්න. ලෝකය වෙනස් කරන්න.
+  hoc2019_header_line1_mobile: පරිගණක විද්‍යාව ඉගෙන ගන්න.
+  hoc2019_header_line2_mobile: ලෝකය වෙනස් කරන්න.
   social_hoc2019_every_sudent: 'Every student has the potential to change the world.
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: Hour of Code ළඟදීම!
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
     science is foundational for every student to learn.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
@@ -132,8 +132,8 @@ si:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
-  hoc_live: Hour of Code Live
-  hoc_live_sign_up_title: Sign up for Hour of Code Live
+  hoc_live: සජීවී Hour of Code වැඩසටහන
+  hoc_live_sign_up_title: සජීවී Hour of Code වැඩසටහන සඳහා ලියාපදිංචි වෙන්න
   hoc_live_learn_title: Learn with Hour of Code Live
   hoc_live_sign_up_message: Learn in real time alongside special guests! Students
     of all ages and abilities, including those without computers, are welcome. Join
@@ -149,20 +149,26 @@ si:
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
-  ai_video_title_what_is_ai: What is AI?
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
+  ai_video_title_what_is_ai: AI යනු කුමක්ද?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
-  ai_video_title_what_is_ml: What is Machine Learning?
+  ai_video_title_what_is_ml: Machine Learning යනු කුමක්ද?
   ai_video_title_ml_big_small_prickly: 'Machine Learning: Solving Problems Big, Small
     and Prickly'
-  ai_video_title_ethics_of_ai: Ethics of AI
-  ai_video_title_ml_human_bias: Machine Learning and Human Bias
+  ai_video_title_ethics_of_ai: AI හි ආචාර ධර්ම
+  ai_video_title_ml_human_bias: Machine Learning සහ මානව නැඹුරුව
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
-  activity: Activity
-  name: Name
-  description: Description
-  audience: Audience
-  ai_resource_header: Teach and Learn about AI
+  activity: ක්‍රියාකාරකම
+  name: නම
+  description: විස්තරය
+  audience: ප්‍රේක්ෂකයින්
+  ai_resource_header: AI ගැන උගන්වන්න සහ ඉගෙන ගන්න
   ai_resource_minecraft: Minecraft AI for Good
   ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
     computer science curriculum, and teacher trainings. (Requires Minecraft: Education
@@ -183,8 +189,8 @@ si:
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
   ai_audience_k12: K-12 (Reading required)
-  ai_audience_hs: High school
-  ai_activity_header: Activities Powered by AI and ML
+  ai_audience_hs: උසස් පාසල
+  ai_activity_header: AI සහ ML විසින් බල ගැන්වුනු ක්‍රියාකාරකම්
   ai_activity_seeing_ai: Seeing AI
   ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
     of languages.
@@ -202,7 +208,7 @@ si:
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
-  codeorg_homepage_hoc2018_header_line1: The Hour of Code is coming...
+  codeorg_homepage_hoc2018_header_line1: Hour of Code ළඟදීම...
   codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: ඔබ නිර්මාණය කරන්නේ කුමක්ද?
   codeorg_homepage_hoc2018_header_line3: පරිකල්පනයන්ට පියාසර කිරීමට සහ නව්‍යකරණයට
@@ -214,6 +220,10 @@ si:
   hourofcode_homepage_hoc2018_header_line1: ඕනෑම කෙනෙකුට, ඕනෑම තැනක Hour of Code උත්සවයක්
     සංවිධානය කළ හැකිය. භාෂා 45 කට වැඩි ගණනක පැයක නිබන්ධන. අත්දැකීම් අවශ්‍ය නොවේ.
   hourofcode_homepage_hoc2018_header_line2: වයස අවුරුදු 4 සිට 104 දක්වා.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
@@ -225,7 +235,7 @@ si:
     resources for learning at home.
   codeorg_homepage_remote2020_body: Are you teaching in a remote or socially-distanced
     classroom this semester? View our resources.
-  codeorg_homepage_special2020_link_text: Get started
+  codeorg_homepage_special2020_link_text: ආරම්භ කරන්න
   codeorg_homepage_code_break_body: Take a Code Break! Your weekly dose of inspiration,
     community, and computer science.
   codeorg_homepage_code_break_link_text: Learn more
@@ -269,7 +279,7 @@ si:
   company_tntp: TNTP
   company_abss: Alamance-Burlington School System
   company_aldineisd: Aldine Independent School District
-  company_afterschool: after school
+  company_afterschool: පාසලෙන් පසුව
   company_laalliance: Alliance College Ready Public Schools
   company_asd: Arlington Public Schools
   company_arlingtonpublicschools: Arlington Public Schools
@@ -503,7 +513,7 @@ si:
     local opportunities, or other computer science news?
   signup_email_preference_privacy: "(See our privacy policy)"
   signup_email_preference_yes: ඔව්
-  signup_email_preference_no: 'No'
+  signup_email_preference_no: නැහැ
   signup_email_preference_error: Email preference is required
   signup_multiple_event_warning: ඔබ විසින් වැඩසටහන් කීපයක් සංවිධානය කරන්නේ නම් සෑම
     වැඩසටහණක් සඳහාම වෙනස් නාමයක් භාවිත කරන්න. අප විසින් සලකා බලන්නේ සෑම වැඩසටහණකටම
@@ -514,7 +524,7 @@ si:
   signup_email_placeholder: you@example.com
   signup_organization_name_placeholder: උදාහරණයක් ලෙස, මධ්‍ය මහා විද්‍යාලය පොළොන්නරුව
   signup_event_country_label: Event country
-  signup_event_country_error: Country is required.
+  signup_event_country_error: රට අවශ්‍යයි
   signup_event_location_placeholder: තැපැල් අංකය සහ රට හෝ සම්පූර්ණ ලිපිනය.
   signup_special_event_details_placeholder: මෙය විශේෂ වැඩසටහණක් වීමට හේතුව පහදන්න
   signup_send_posters_address_placeholder: මෙම ලිපිනය අපගේ සිතියමේ share නොවේ
@@ -526,8 +536,8 @@ si:
     the form again.
   signup_submit_label: ලියාපදිංචි වන්න
   signup_submit_error_message: සියලු දත්ත සම්පූර්ණකර ඇත්දැයි නැවත පරීක්ෂාකර බලන්න.
-  signup_submit_and_continue_label: Submit and Continue
-  signup_continue_label: Continue
+  signup_submit_and_continue_label: ඉදිරිපත් කර ඉදිරියට යන්න
+  signup_continue_label: ඉදිරියට
   signup_thank_you_header: Hour of Code වැඩසටහනක් සංවිධානය කිරීම සඳහා ලියාපදිංචී වීම
     පිලිබඳ ඔබට ස්තුතියි.
   signup_thank_you_message: ආරම්භකිරීමසඳහා අවශ්‍ය උපකාරක සමඟ තහවුරු කිරිමේ පණිවිඩයක්
@@ -1532,7 +1542,7 @@ si:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -5219,8 +5229,9 @@ si:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -6287,8 +6298,7 @@ si:
   tutorial_codespeakhappy_language: English
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: English
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: English
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -7813,7 +7823,7 @@ si:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_icomputelearn_string_platforms: All modern browsers
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,

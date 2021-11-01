@@ -765,7 +765,7 @@
           "courseA_artist_loops8_1": "Bạn có biết rằng bạn có thể vẽ lại đè lên một đường bất cứ khi nào bạn cần không?"
         },
         "courseA_collector_loops1_2021": {
-          "courseA_collector_loops1_1": "Hãy dùng khối này để thu thập báu vật."
+          "courseA_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
         },
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Hãy nhấp chuột vào bóng đèn khi bạn cần gợi ý nhé!"
@@ -780,7 +780,7 @@
           "courseB_artist_loops3_1": "Trong hộp công cụ chỉ có một khối như vậy. Bạn sẽ dùng khối đó như thế nào?"
         },
         "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Hãy dùng khối này để thu thập báu vật."
+          "courseB_collector_loops1_1": "Hãy dùng khối này để lấy báu vật."
         },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Hãy dùng mũi tên thả xuống màu xanh lá để đổi hướng."
@@ -907,6 +907,61 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Khối mới!"
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Hãy dùng khối này để ghi lại lưu ý cho chính bạn hoặc cho giáo viên của bạn về cách hoạt động của mã lệnh."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "Bạn không cần dùng màu sắc để làm đúng bài tập này. Nếu muốn, khối `random color` (màu ngẫu nhiên) này sẽ dễ hơn nhiều đấy!"
+        },
+        "courseE_aboutme_2_2021": {
+          "": "Nhấp chuột vào đây!"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Khi khối màu xanh lục này chạy, tất cả mã lệnh trong hàm sẽ chạy. Họa sĩ phải làm gì sau khi vẽ hình vuông đầu tiên?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Các khối để tạo hàm đã được chuyển vào nhãn này trong hộp công cụ."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
+          "courseE_artist_functions_challenge1_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Hãy cho chương trình này tiếp tục chạy bằng cách thêm nhiều mã lệnh vào phía dưới.",
+          "courseE_artist_functions_challenge2_callout2": "Nếu bạn không thích thiết kế này, hãy thay đổi thành bất cứ hình gì bạn muốn!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Không ai biết loại rau ở đây là gì. Loại rau sẽ thay đổi mỗi khi bạn chạy chương trình."
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Khối mới!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Khối mới!",
+          "poetry_foreground": "Khối mới!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Khối mới!",
+          "poetry_multiple_sprites": "Khối mới!",
+          "poetry_new_block": "Khối mới!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Khối mới!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Khối mới!",
+          "poetry_sprite_stops": "Khối mới!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Khối mới!",
+          "poetry_remove_sprite": "Khối mới!"
         }
       }
     }

@@ -2,6 +2,69 @@
   "sv-SE": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Felsökning"
+        },
+        "function/hero/unversioned": {
+          "word": "Funktion"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Felsökning"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Felsökning"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Villkor"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "loopar"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Felsökning"
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Felsökning"
+        },
         "behavior/coursef/2021": {
           "word": "Beteende"
         },
@@ -10,6 +73,9 @@
         },
         "internet/coursef/2021": {
           "word": "Internet"
+        },
+        "url/coursef/2021": {
+          "word": "URL"
         },
         "define/coursef/2021": {
           "word": "Definiera"

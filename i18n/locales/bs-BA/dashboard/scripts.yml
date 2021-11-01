@@ -173,7 +173,7 @@ bs:
           description_short: Hajde da se kodiranjem pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
           lessons:
             Artist:
-              name: Umjetnik
+              name: Programiraj sa Anna i Elsa
           student_description: Hajde da programiramo sa Anna-om i Elsom pri njihovom istraživanju magičnog i predivnog leda. Napraviti ćeš pahulje snijega dok se kližeš i praviš zimsku idilu koju možeš onda podijeliti sa svojim prijateljima!
         course4:
           title: Kurs 4
@@ -315,7 +315,7 @@ bs:
           description_short: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
           lessons:
             Infinity:
-              name: Beskonačnost
+              name: Disney Beskonačni Laboratorij Igranja
           student_description: Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost.
         algebrademo:
           title: Algebra Demo
@@ -443,6 +443,7 @@ bs:
           lessons:
             Jigsaw:
               name: Slagalica
+              description_teacher: Ova lekcija će studentima dati ideju o tome šta da očekuju kada se upute prema kompjuterskom laboratoriju. Sve počinje sa kratkom raspravom koji ih upoznaje sa manirima kompjutorskog laboratorija, onda će nastaviti korištenjem računala da završe online zagonetke.
           student_description: Probaj naše Jigsaw upute.
         step:
           title: Korak
@@ -839,9 +840,6 @@ bs:
         starwarsblocks:
           description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
           description_short: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
-          lessons:
-            Hour of Code 2015:
-              name: Sat Kodiranja 2015
           student_description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
         mc:
           title: Sata Kodiranja Minecraft-a
@@ -1240,9 +1238,6 @@ bs:
           title: Napravi igru košarke
           description_short: Napravi igru košarke
           description: Napravi igru košarke
-          lessons:
-            Bounce:
-              name: Odskok
           student_description: Napravi igru košarke
         csd2-2017:
           lessons:
@@ -1757,10 +1752,6 @@ bs:
               name: Kreativnost u algoritmima
             Creating Functions:
               name: Kreiranje Funkcija
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Sata Kodiranja Minecraft-a
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -3257,3 +3248,8 @@ bs:
           lessons:
             lesson-1:
               name: Pregled
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelovanje
+          title: Spelovanje

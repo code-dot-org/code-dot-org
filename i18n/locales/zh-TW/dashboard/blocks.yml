@@ -1190,6 +1190,17 @@ zh-TW:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": 緊縮
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": 泡泡
+            "'sound://category_animals/bear.mp3'": 熊仔
+            "'sound://category_animals/cat.mp3'": 貓
+            "'sound://category_animals/cow.mp3'": 乳牛
+            "'sound://category_animals/pig.mp3'": 豬
+            "'sound://category_animals/sheep.mp3'": 綿羊
+            "'sound://category_animals/chicken.mp3'": 雞
+            "'sound://category_animals/elephant.mp3'": 大象
+            "'sound://category_animals/dolphin.mp3'": 海豚
+            "'sound://category_animals/chick.mp3'": 小雞
+            "'sound://category_animals/dog.mp3'": 狗
             "'sound://category_instrumental/harpe_pluck_1.mp3'": 豎琴
             "'sound://category_digital/jump_7.mp3'": 定位到
       gamelab_pointInDirection:
@@ -1743,14 +1754,32 @@ zh-TW:
         text: 隨機佈局怪物
       Outbreak_stopMoving:
         text: 怪物停止移動
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: 冰淇淋
+            Stars: 星星
+            Fireworks: 煙火
+            '"rainbow"': 彩虹
+            '"hearts"': 心形
+            '"flowers"': 花朵
+            '"waves"': 音浪
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': 下雨
+      Poetry_makeNewSpriteAnon:
+        text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       Poetry_makeNumSprites:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       Poetry_playSound:
         text: 播放音效 {SOUND}
+        options:
+          SOUND:
+            Break: 中斷
+            Light: 光亮
+      Poetry_setBackground:
+        text: 背景顏色設為 {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1759,6 +1788,10 @@ zh-TW:
             '"space"': 太空
             '"stars"': 星星
             '"ripples"': 漣漪
+            '"rain"': 雨滴
+            '"bubbles"': 氣泡
+            '"confetti"': 紙屑
+            '"hearts"': 繽紛愛心
           PALETTE:
             '"rainbow"': 彩虹
       Poetry_setBackgroundImageAs:

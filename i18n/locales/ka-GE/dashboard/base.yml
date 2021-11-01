@@ -269,7 +269,7 @@ ka:
         personal_login_created_username: 'თქვენ წარმატებით შექმენით პერსონალური ანგარიში. ახლა თქვენ შეგიძლიათ ანგარიშში შესვლა სახელით (%{username}) და პაროლით'
   nav:
     header:
-      finished_hoc: "დავასრულე \"კოდის წერის 1 საათი\""
+      finished_hoc: "დავასრულე!"
       sign_in_to_save: 'დარეგისტრირება და პროგრესის შენახვა'
       my_dashboard: "ჩემი მთავარი პანელი"
       course_catalog: "კურსების კატალოგი"
@@ -313,6 +313,7 @@ ka:
       district_dashboard: 'განყოფილების მართვის პანელი'
       label: 'გამარჯობა %{username}'
       stats: 'კოდის სტუდია'
+      my_projects: 'ჩემი პროექტები'
       settings: 'ანგარიშის პარამეტრები'
       logout: 'გასვლა'
       signin: 'შესვლა'
@@ -880,6 +881,7 @@ ka:
       email: 'ელექტრონული ფოსტა'
       email_alternate: 'ალტერნატიული ელფოსტა'
       gender: 'გენდერული იდენტობა'
+      school: 'სკოლა'
       school_name: 'სკოლის სახელი'
       school_city: 'სკოლის ქალაქი'
       school_country: 'სკოლის ქვეყანა'

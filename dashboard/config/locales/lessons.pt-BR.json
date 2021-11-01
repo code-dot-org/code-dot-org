@@ -2,6 +2,37 @@
   "pt-BR": {
     "data": {
       "lessons": {
+        "dance-extras/Dance Party - Go Further": {
+          "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos)."
+        },
+        "artist/Artist": {
+          "overview": "Nesta lição, os alunos assumirão o controle do Artista para concluir os desenhos na tela. Esta etapa do Artista permitirá que os alunos criem imagens de complexidade crescente usando novos blocos como \"avançar em 100 pixels\" e \"virar à direita em 90 graus\".",
+          "student_overview": "Crie belas imagens programando o Artista."
+        },
+        "dance/Dance Party": {
+          "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos)."
+        },
+        "sports/Sports": {
+          "overview": "Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.",
+          "student_overview": "Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!"
+        },
+        "basketball/Bounce": {
+          "overview": "Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.",
+          "student_overview": "Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!"
+        },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos)."
+        },
+        "dance-2019/Dance Party": {
+          "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos)."
+        },
+        "oceans/Oceans": {
+          "student_overview": "Resumo do Tutorial: primeiro os estudantes classificam objetos como \"peixe\" ou \"não peixe\" para tentar remover o lixo do oceano. Em seguida, eles precisarão expandir seu conjunto de dados para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, irão escolher suas próprias marcações para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que depois deve ser capaz de marcar novas imagens sozinho."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta \"Trajes\" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!",
           "student_overview": "Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta \"Trajes\" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!"
@@ -97,6 +128,10 @@
           "overview": "Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!",
           "purpose": "Nesta atividade on-line, os estudantes irão aprender a usar eventos no Play Lab. Eles começarão treinando o cavaleiro para se mover quando uma tecla de direção for pressionada, depois concluir com a oportunidade de demonstrar as outras habilidades aprendidas durante este curso, inclusive sequências e laços, como parte de seu quebra-cabeça livre.",
           "student_overview": "Use eventos para criar uma história ou criar um jogo interativo."
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "preparation": "-   Revise os materiais de instrução.\n-   Imprima apostila(s) para cada aluno(a).\n-   (Opcional) Imprima o poster com o poema para mostrar em sala de aula.",
+          "student_overview": "Saiba como ter segurança ao visitar lugares online."
         },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",

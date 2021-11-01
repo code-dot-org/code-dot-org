@@ -948,6 +948,7 @@ nn:
       email: 'E-post'
       email_alternate: 'Alternativ e-post'
       gender: 'Kjønnsidentitet'
+      school: 'Skule'
       school_name: 'Namn på skule'
       school_city: 'Skulen sin poststad'
       school_country: 'Landet til skulen'

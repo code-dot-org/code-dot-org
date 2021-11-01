@@ -230,7 +230,7 @@ el:
             Άννα και την Έλσα, καθώς εξερευνούν τη μαγεία και την ομορφιά του πάγου.
           lessons:
             Artist:
-              name: Καλλιτέχνης
+              name: Γράψτε Κώδικα με την Άννα και την Έλσα
           student_description: Ας χρησιμοποιήσουμε τον κώδικα για να βρεθούμε μαζί
             με την Άννα και την Έλσα καθώς εξερευνούν τη μαγεία και την ομορφιά του
             πάγου. Θα δημιουργήσετε νιφάδες χιονιού και σχέδια όπως αυτά του πατινάζ
@@ -379,7 +379,7 @@ el:
             ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
           lessons:
             Infinity:
-              name: Άπειρο
+              name: Disney Εργαστήριο Άπειρου Παιχνιδιού
           student_description: Χρησιμοποιήστε το Lab, για να δημιουργήσετε μια ιστορία
             ή ένα παιχνίδι με πρωταγωνιστή τους άπειρους Disney χαρακτήρες.
         algebrademo:
@@ -785,9 +785,6 @@ el:
             Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
             δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
-          lessons:
-            Hour of Code 2015:
-              name: Ώρα του Κώδικα 2015
           student_description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το
             δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
         mc:
@@ -1104,9 +1101,6 @@ el:
           title: Φτιάξτε ένα παιχνίδι μπάσκετ
           description_short: Φτιάξτε ένα παιχνίδι μπάσκετ
           description: Φτιάξτε ένα παιχνίδι μπάσκετ
-          lessons:
-            Bounce:
-              name: Αναπήδηση
           student_description: Φτιάξτε ένα παιχνίδι μπάσκετ
         hoc-encryption:
           lessons:
@@ -1207,10 +1201,6 @@ el:
           lessons:
             Hour of Code 2013:
               name: Ώρα του Κώδικα 2013
-        sports:
-          lessons:
-            Sports:
-              name: Αθλητισμός
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1561,9 +1551,6 @@ el:
         hero:
           description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια ολοκαίνουργια
             δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
-          lessons:
-            Minecraft Hour of Code:
-              name: Η Ώρα του Κώδικα με το Minecraft
           student_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
             μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
         csp-explore-2017:
@@ -1956,7 +1943,7 @@ el:
             για την Ώρα του Κώδικα!
           lessons:
             Aquatic:
-              name: Υδάτινο
+              name: 'Minecraft: Υδάτινο Ταξίδι'
         dance--draft:
           lessons:
             Dance Party:
@@ -2926,6 +2913,8 @@ el:
           lessons:
             Virus Simulation for Code Bytes:
               name: Κωδικοποίηση μίας προσομοίωσης
+            Outbreak:
+              name: Κωδικοποίηση μίας προσομοίωσης
           lesson_groups:
             outbreak:
               display_name: Προσομοίωση Επιδημικής Έξαρσης
@@ -3317,3 +3306,8 @@ el:
           lesson_groups:
             lessonGroup-3:
               display_name: Έργο
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Η μέλισσα της ορθογραφίας
+          title: Η μέλισσα της ορθογραφίας

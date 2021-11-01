@@ -174,7 +174,7 @@ hr:
           description_short: Hajdemo koristiti kodiranje da se pridružimo Anni i Elsi dok istražuju čaroliju i ljepotu leda.
           lessons:
             Artist:
-              name: Umjetnik
+              name: Kodiraj s Annom i Elsom
           student_description: Iskoristimo programiranje da bi se pridružili Anni i Elsi dok istražuju čarobnu ljepotu leda. Kližući po ledu napravit ćeš pahuljice i druge uzorke i tako stvoriti zimsku čaroliju koju možeš podijeliti sa svojim prijateljima!
         course4:
           title: Tečaj 4
@@ -298,7 +298,7 @@ hr:
           description_short: Koristi Laboratorij igara za stvaranje priče ili igre s likovima iz Disney Infinity.
           lessons:
             Infinity:
-              name: Beskonačnost
+              name: Disney Infinity Laboratorij igara
           student_description: Koristi Laboratorij igara za stvaranje priče ili igre s likovima iz Disney Infinity.
         algebrademo:
           lessons:
@@ -631,9 +631,6 @@ hr:
         starwarsblocks:
           description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
           description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
-          lessons:
-            Hour of Code 2015:
-              name: Sat kodiranja 2015
           student_description: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani ratovi u galaksiji daleko, daleko odavde.
         mc:
           title: Minecraft Sat Kodiranja
@@ -888,10 +885,6 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
-        basketball:
-          lessons:
-            Bounce:
-              name: Odskok
         csd2-2017:
           lessons:
             Lists:
@@ -1292,10 +1285,6 @@ hr:
           lessons:
             What is a Computer?:
               name: Što je računalo?
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Sat Kodiranja
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2545,3 +2534,8 @@ hr:
           lessons:
             lesson-1:
               name: Pregled
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Slovkanje
+          title: Slovkanje

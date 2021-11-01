@@ -20,8 +20,14 @@
         "sprites_in_action/coursef/2021": {
           "name": "Sprite tengah Beraksi"
         },
+        "pause_and_think_online/coursef/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Untuk Loop Fun"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "Asyiknya For Loop - Kunci Penilaian"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
           "name": "Untuk Loop Fun"
@@ -35,17 +41,32 @@
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Untuk Loop Fun"
         },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": " Blok Unplugged (Kursus C-F)"
+        },
         "running-simulations/coursef/2021": {
           "name": "Menjalankan Simulasi"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet"
         },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "Kartu Alamat IP dan Kartu Jenis Pengiriman"
+        },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet"
+        },
+        "design-process/coursef/2021": {
+          "name": "Proses Desain"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "Desain Tugas Akhir"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "Tugas Akhir CS Fundamentals"
         },
         "implementation_guide/coursef/2021": {
           "name": "Panduan pelaksanaan"
@@ -71,8 +92,20 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Pindahkan, pindahkan"
         },
+        "feeling-faces-image/courseb/2021": {
+          "name": "Wajah Perasaan"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "Blok Blockly Unplugged (Kelas K-1)"
+        },
         "pair-programming-vid/courseb/2021": {
           "name": "Pair Programming"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "Potongan Permainan Happy Map"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "Mawar Kompas"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie dan Proyek Besar"
@@ -92,6 +125,12 @@
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Dapat berulang-ulang"
         },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "Kiat Aktivitas Utama CS Fundamentals"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Acara besar"
         },
@@ -100,6 +139,9 @@
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Acara besar"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Peristiwa Besar (Kursus A, B)"
         },
         "implementation_guide/courseb/2021": {
           "name": "Panduan pelaksanaan"
@@ -116,6 +158,30 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Pemetaan bahagia"
         },
+        "happy-map-cards/coursea/2021": {
+          "name": "Kartu Peta Bahagia"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "Kartu Peta Bahagia"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "Potongan Permainan Happy Map"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Blok Blockly Unplugged (Kelas K-1)"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "Kartu Happy Map XL"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "Paket Bonus Potongan Permainan Happy Map"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "Wajah Perasaan"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Acara besar"
         },
@@ -124,6 +190,12 @@
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Acara besar"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Peristiwa Besar (Kursus A, B)"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "Kiat Aktivitas Utama CS Fundamentals"
         },
         "implementation_guide/coursea/2021": {
           "name": "Panduan pelaksanaan"
@@ -149,8 +221,17 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Teman-teman robot saya"
         },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "Blok Labirin Unplugged"
+        },
         "pair-programming-vid/coursec/2021": {
           "name": "Pair Programming"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "Kiat Aktivitas Utama CS Fundamentals"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": " Blok Unplugged (Kursus C-F)"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Acara besar"
@@ -160,6 +241,15 @@
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Acara besar"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Peristiwa Besar (Kursus C)"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "Bits Versus Bytes"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Gelang biner"
@@ -224,11 +314,26 @@
         "csf-relay-programming-activity-packet/coursed/2021": {
           "name": "Pemrograman bergiliran"
         },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": " Blok Unplugged (Kursus C-F)"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "Wajah Perasaan"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Bersyarat dengan kartu"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
           "name": "Bersyarat dengan kartu"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "Persyaratan dengan Program Contoh Kartu"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Bersyarat dengan kartu"
@@ -248,6 +353,9 @@
         "teacher_forum_1/coursed/2021": {
           "name": "Forum guru"
         },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "Blok Labirin Unplugged"
+        },
         "pair_programming/express/2021": {
           "name": "Pair Programming"
         },
@@ -260,8 +368,20 @@
         "sprites_in_action/express/2021": {
           "name": "Sprite tengah Beraksi"
         },
+        "pause_and_think_online/express/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": " Blok Unplugged (Kursus C-F)"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": " Blok Unplugged (Kursus C-F)"
+        },
         "variables_video/express/2021": {
           "name": "variabel"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "Tugas Akhir CS Fundamentals"
         },
         "teacher_forum_1/express/2021": {
           "name": "Forum guru"
@@ -269,14 +389,50 @@
         "pair-programming-vid/pre-express/2021": {
           "name": "Pair Programming"
         },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "Wajah Perasaan"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
         "teacher_forum_1/pre-express/2021": {
           "name": "Forum guru"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Dokumentasi Lab Sprite"
         },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "Jeda dan Berpikir Online"
+        },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "Menulis Lagu dengan Fungsi"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "Functions Unplugged: Menulis Lagu"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "Functions Unplugged: Menulis Lagu"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "Functions Unplugged: Menulis Lagu"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "Functions Unplugged: Menulis Lagu"
+        },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": " Blok Unplugged (Kursus C-F)"
+        },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Mendesain untuk Aksesibilitas"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "Tugas Akhir CS Fundamentals"
+        },
+        "design-process/coursee/2021": {
+          "name": "Proses Desain"
+        },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "72 Cara Kreatif Siswa Anda untuk Memperlihatkan Apa yang Mereka Ketahui"
         },
         "implementation_guide/coursee/2021": {
           "name": "Panduan pelaksanaan"

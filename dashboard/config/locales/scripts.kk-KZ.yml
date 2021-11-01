@@ -202,7 +202,7 @@ kk:
             көрсететін кодты пайдаланайық.
           lessons:
             Artist:
-              name: Кейіпкер
+              name: Анна және Эльзамен код жазыңыз
           student_description: Анна мен Эльзаның мұздың әдемілігі мен сиқырын зерттеулері
             үшін кодты қолданып көріңіз. Сіз конькимен мұз бетіне сурет салғандай,
             қысты көркін келтіретін ақша қар мен өрнектер саласыз және онымен достарыңызбен
@@ -325,7 +325,7 @@ kk:
             Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
           lessons:
             Infinity:
-              name: Шексіздік
+              name: Диснейдің Шексіз Ойындар Лабораториясы
           student_description: Ойындар Лабораториясын пайдаланып оқиға немесе Шексіз
             Диснейдің танымал кейіпкерлерімен ойын жасаңыз.
         algebrademo:
@@ -695,9 +695,6 @@ kk:
             ойыныңды алыстағы галактикада жаса.
           description_short: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
             ойыныңды алыстағы галактикада жаса.
-          lessons:
-            Hour of Code 2015:
-              name: Кодтау Сағаты 2015
           student_description: Дроидты бағдарламалауды үйреніп, өзіңнің Жұлдызды Соғыстар
             ойыныңды алыстағы галактикада жаса.
         mc:
@@ -972,9 +969,6 @@ kk:
           title: Баскетбол ойынды жасау
           description_short: Баскетбол ойынды жасау
           description: Баскетбол ойынды жасау
-          lessons:
-            Bounce:
-              name: Секіру
           student_description: Баскетбол ойынды жасау
         csd2-2017:
           lessons:
@@ -1089,9 +1083,6 @@ kk:
           title: Спорттар
           description_short: Өзіңнің жеке спорт ойынын жаз
           description: Өзіңнің жеке спорт ойынын жаз
-          lessons:
-            Sports:
-              name: Спорттар
           student_description: Өзіңнің жеке спорт ойынын жаз
         2016_sciencePD-phase2b:
           lessons:
@@ -1446,10 +1437,6 @@ kk:
           lessons:
             Creating Functions:
               name: Функцияларды Құру
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Кодтау Сағаты
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2790,5 +2777,14 @@ kk:
               display_name: Контент
             lesson_group:
               display_name: Контент
+            lessonGroup-2:
+              display_name: Контент
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Сөз жазушы Ара
+          title: Сөз жазушы Ара
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Контент

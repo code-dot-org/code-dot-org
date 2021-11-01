@@ -198,7 +198,7 @@ ja:
           description_short: コードを使って、アナとエルサと一緒に魔法と氷の美しさを探検しましょう
           lessons:
             Artist:
-              name: アーティスト
+              name: アナとエルザとコーディング
           student_description: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
         course4:
           title: コース4
@@ -339,7 +339,7 @@ ja:
           description_short: プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。
           lessons:
             Infinity:
-              name: インフィニティ
+              name: ディズニー インフィニティ プレイラボ
           student_description: プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。
         algebrademo:
           lessons:
@@ -484,6 +484,10 @@ ja:
           lessons:
             Bounce:
               name: バウンド
+            Calc:
+              name: 計算
+            Eval:
+              name: 評価
             Studio:
               name: スタジオ
           student_description: イベント
@@ -502,6 +506,8 @@ ja:
           lessons:
             Jigsaw:
               name: ジグソーパズル
+              description_student: クリックしてドラッグし、パズルを完成させましょう。
+              description_teacher: このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。
           student_description: ジグソーチュートリアルをお試しください。
         step:
           title: ステップ
@@ -946,6 +952,8 @@ ja:
               name: 変数の定義
             Evaluation Blocks:
               name: 評価ブロック
+            Free Play:
+              name: じゆうあそび
             Luigi's Pizza:
               name: ルイージのピザ
             Rocket-Height:
@@ -1042,6 +1050,8 @@ ja:
               name: 含まれるレベル
             ML Fish:
               name: MLフィッシュ
+            Java Lab:
+              name: Javaラボ
         algebraPD2b:
           lessons:
             Best Practices for Teaching Computer Science:
@@ -1604,9 +1614,6 @@ ja:
         starwarsblocks:
           description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
           description_short: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015　（コードの時間　２０１５）
           student_description: ドロイドをプログラムで動かす方法を学んで、あなただけのスターウォーズのゲームを開発しよう！
         mc:
           title: Minecraft Hour of Code プログラミング入門
@@ -2497,6 +2504,7 @@ ja:
             App Presentation:
               name: アプリのプレゼンテーション
         CSDU1-Draft:
+          description_short: 問題解決
           lessons:
             Exploring Apps:
               name: アプリを探索
@@ -3331,7 +3339,6 @@ ja:
           description: チームをえらんで、バスケットボールのゲームを作る
           lessons:
             Bounce:
-              name: バウンド
               description_student: 学校でビデオゲームをプレイできたらと夢見たことはありませんか？このレッスンでは、ゲームを自作できます！
               description_teacher: このオンラインアクティビティでは、生徒はイベントとは何か、コンピューターがビデオゲームなどのプログラムでイベントをどのように使用するかを学びます。生徒はパズルに取り組み、プログラムがイベント (矢印ボタンが押されるなど) に反応するようにします。パズルの最後に、生徒はさまざまな速度と音でゲームをカスタマイズする機会があります。
           student_description: チームをえらんで、バスケットボールのゲームを作る
@@ -3888,7 +3895,6 @@ ja:
           description: スポーツ全体を混ぜて一致させましょう
           lessons:
             Sports:
-              name: スポーツ
               description_student: 学校でビデオゲームをプレイできたらと夢見たことはありませんか？このレッスンでは、ゲームを自作できます！
               description_teacher: このオンラインアクティビティでは、生徒はイベントとは何か、コンピューターがビデオゲームなどのプログラムでイベントをどのように使用するかを学びます。生徒はパズルに取り組み、プログラムがイベント (矢印ボタンが押されるなど) に反応するようにします。パズルの最後に、生徒はさまざまな速度と音でゲームをカスタマイズする機会があります。
           student_description: スポーツ全体を混ぜて一致させましょう
@@ -4180,6 +4186,8 @@ ja:
               name: センサーアプリケーション
             'Project: Prototype an Innovation':
               name: 'プロジェクト: イノベーションのプロトタイプ'
+            Map:
+              name: マップ
             Board Events:
               name: ボードイベント
             'Project: Make a Game':
@@ -6569,7 +6577,7 @@ ja:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'マインクラフト: 英雄の旅 Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code プログラミング入門
+              name: 'マインクラフト: ヒーローの旅'
           student_description: Hour of Code向けに、マインクラフトの最新アクティビティができ上がりました。プログラミングを使ってマインクラフトの旅へ
         applab-intro-staging:
           title: アプリラボ ステージングの紹介
@@ -7134,7 +7142,7 @@ ja:
             Programming in Bee:
               name: みつばちと学ぶプログラミング
             Programming in Harvester:
-              name: ファーマーと学ぶプログラミング
+              name: ハーベスターと学ぶプログラミング
             Loops in Harvester:
               name: ハーベスターと学ぶループ
             Sequencing in Maze:
@@ -7244,7 +7252,7 @@ ja:
             Conditionals with Cards:
               name: カードと条件
             Conditionals & Loops in Harvester:
-              name: ファーマーと学ぶ条件文
+              name: 条件文を用いる収獲
             'Functions: Songwriting':
               name: 作詞作曲
             Functions in Minecraft:
@@ -7382,7 +7390,7 @@ ja:
             Conditionals in Maze:
               name: 迷路で学ぶ条件文
             Conditionals & Loops in Harvester:
-              name: ファーマーと学ぶ条件文
+              name: 条件文を用いる収獲
             Graph Paper Programming:
               name: グラフ用紙のプログラミング
             Relay Programming:
@@ -8928,7 +8936,7 @@ ja:
           description: Minecraftに新しいアクティビティができました！創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
           lessons:
             Aquatic:
-              name: アクアティック
+              name: 'マインクラフト: ボヤージュ アクアティック'
           student_description: Minecraftに新しいアクティビティができました！創造性と問題解決スキルを発揮して、プログラムで水中世界を探検し構築しましょう。
         sconyers:
           title: トレーシーのプレイグラウンド
@@ -9145,7 +9153,7 @@ ja:
               description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
             Loops with the Artist:
               name: ループを使った描画
-              description_student: このレッスンでは、ループを使用すると、アーティストでさらにクールな画像を簡単に作成できます。
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
             Sprite Lab Behaviors:
               name: スプライトラボのビヘイビア
@@ -9264,7 +9272,7 @@ ja:
               description_student: 条件文を理解したところで、ハチミツとミツを収集するときに条件文を使うようにみつばちをプログラムしましょう。
               description_teacher: ここまで、生徒は実行するたびにまったく同じ操作を実行するプログラムを作成してきました。これは信頼性は高くても、柔軟性があまりありません。このレッスンでは、クラスで条件文を使ったプログラミングを開始し、プログラムが遭遇した特定の条件に応じて対応を異にするプログラムを作成します。
             Conditionals & Loops in Harvester:
-              name: ファーマーと学ぶ条件文
+              name: 条件文を用いる収獲
               description_student: 各条件文をいつ使用するかが常に明確であるとは限りません。このレッスンは、何をすべきかを決める練習をするのに役立ちます。
               description_teacher: 生徒は「while」ループ、「until」ループ、および「if/else」文を練習します。これらのブロックはすべて条件文を使用します。 3つすべてを練習することで、生徒は複雑で柔軟なプログラムを書く方法を学びます。
             Digital Citizenship:
@@ -9415,7 +9423,7 @@ ja:
               description_teacher: このパズルのセットでは、生徒はCode.orgのオンラインワークスペースの紹介 (またはクラスの経験に応じて復習) から始めます。 「実行」、「リセット」、「手順」ボタンなど、ワークスペースの基本的な機能を紹介するビデオがあります。ビデオでは、Blocklyブロックのドラッグ、Blocklyブロックの削除、Blocklyブロックの接続についても説明しています。次に、生徒は迷路で_シーケンス_と_デバッグ_スキルを練習します。そこから、_ループ_の基本を学んだら、コレクター、アーティスト、農夫などの新しいタイプのパズルに進みます。\\rデバッグはプログラミングの学習に不可欠な要素です。生徒は誤って解かれたパズルに取り組みます。ループが不正確だったり、ブロックが欠落していたり、ブロックが余分だったり、ブロックが機能しないなどのエラーを特定するには、既存のプログラムを順に検証する必要があります。
             Programming and Loops with the Artist:
               name: ループを使った描画
-              description_student: このレッスンでは、ループを使用すると、アーティストでさらにクールな画像を簡単に作成できます。
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
             End of Course Project:
               name: コース最後のプロジェクト
@@ -9508,7 +9516,7 @@ ja:
             Conditionals in Bee:
               name: みつばちと学ぶIf/Else
             Conditionals & Loops in Harvester:
-              name: ファーマーと学ぶ条件文
+              name: 条件文を用いる収獲
             'Functions: Songwriting':
               name: '関数: 作曲'
             Functions in Minecraft:
@@ -9757,7 +9765,7 @@ ja:
               description_student: このレッスンでは、パスワードがどのように情報を保護するか、また適切なパスワードはどのように作成したらよいかについて学習します。
             Sticker Art with Loops:
               name: アーティストくりかえし
-              description_student: このレッスンでは、ループを使用すると、アーティストでさらにクールな画像を簡単に作成できます。
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
             Picturing Data:
               name: データで予測
@@ -9928,7 +9936,7 @@ ja:
               name: めいろ のプログラミング
               description_student: アングリーバードが迷路を移動するのを助けるためにプログラムを作成しましょう。
             Programming in Harvester:
-              name: ファーマーと学ぶプログラミング
+              name: ハーベスターと学ぶプログラミング
               description_student: ファーマーが道に沿って野菜を収穫するのを手伝ってあげましょう。
               description_teacher: 生徒は、学習したプログラミングの概念を農夫の収穫に適用します。ここでは、キャラクターをゴールに到達させるだけでなく、新しいブロックを使ってトウモロコシを収穫する必要があります。生徒は引き続き順序アルゴリズムスキルを開発し、デバッグプロセスを使い始めます。
             Sequencing in Maze:
@@ -9985,7 +9993,7 @@ ja:
             Programming in Maze:
               name: めいろ のプログラミング
             Programming in Harvester:
-              name: ファーマーと学ぶプログラミング
+              name: ハーベスターと学ぶプログラミング
             Tell a Story in Play Lab:
               name: プレイ ラボのイベント
             Make a Game in Play Lab:
@@ -13812,7 +13820,7 @@ ja:
               name: めいろ のプログラミング
               description_student: アングリーバードが迷路を移動するのを助けるためにプログラムを作成しましょう。
             Programming in Harvester:
-              name: ファーマーと学ぶプログラミング
+              name: ハーベスターと学ぶプログラミング
               description_student: ファーマーが道に沿って野菜を収穫するのを手伝ってあげましょう。
               description_teacher: 生徒は、学習したプログラミングの概念を農夫の収穫に適用します。ここでは、キャラクターをゴールに到達させるだけでなく、新しいブロックを使ってトウモロコシを収穫する必要があります。生徒は引き続き順序アルゴリズムスキルを開発し、デバッグプロセスを使い始めます。
             'Loops: Getting Loopy':
@@ -13917,7 +13925,7 @@ ja:
               description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
             Sticker Art with Loops:
               name: アーティストくりかえし
-              description_student: このレッスンでは、ループを使用すると、アーティストでさらにクールな画像を簡単に作成できます。
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
             'Events: The Big Event':
               name: ビッグイベント
@@ -14020,7 +14028,7 @@ ja:
               description_student: "「until」ループを使用すると、驚くべきことができます！"
               description_teacher: このレッスンでは、「until」ループについて学習します。生徒は、主人公が停止する目的の地点に「到達する」までアクションを繰り返すプログラムを作成します。
             Conditionals & Loops in Harvester:
-              name: ファーマーと学ぶ条件文
+              name: 条件文を用いる収獲
               description_student: 各条件文をいつ使用するかが常に明確であるとは限りません。このレッスンは、何をすべきかを決める練習をするのに役立ちます。
               description_teacher: 生徒は「while」ループ、「until」ループ、および「if/else」文を練習します。これらのブロックはすべて条件文を使用します。 3つすべてを練習することで、生徒は複雑で柔軟なプログラムを書く方法を学びます。
             'Unplugged: Binary':
@@ -14074,7 +14082,7 @@ ja:
               description_teacher: このパズルのセットでは、生徒はCode.orgのオンラインワークスペースの紹介 (またはクラスの経験に応じて復習) から始めます。 「実行」、「リセット」、「手順」ボタンなど、ワークスペースの基本的な機能を紹介するビデオがあります。ビデオでは、Blocklyブロックのドラッグ、Blocklyブロックの削除、Blocklyブロックの接続についても説明しています。次に、生徒は迷路で_シーケンス_と_デバッグ_スキルを練習します。そこから、_ループ_の基本を学んだら、コレクター、アーティスト、農夫などの新しいタイプのパズルに進みます。\\rデバッグはプログラミングの学習に不可欠な要素です。生徒は誤って解かれたパズルに取り組みます。ループが不正確だったり、ブロックが欠落していたり、ブロックが余分だったり、ブロックが機能しないなどのエラーを特定するには、既存のプログラムを順に検証する必要があります。
             Programming and Loops with the Artist:
               name: ループを使った描画
-              description_student: このレッスンでは、ループを使用すると、アーティストでさらにクールな画像を簡単に作成できます。
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'マインクラフトの条件文: ボヤージュ アクアティック'
@@ -14182,7 +14190,7 @@ ja:
               description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
             Loops with the Artist:
               name: ループを使った描画
-              description_student: このレッスンでは、ループを使用すると、アーティストでさらにクールな画像を簡単に作成できます。
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
             Nested Loops in the Maze:
               name: 迷路で学ぶ入れ子のループ
@@ -14357,7 +14365,7 @@ ja:
             While Loops with the Farmer:
               name: 農夫と学ぶWhileループ
             Harvesting with Conditionals:
-              name: ファーマーと学ぶ条件文
+              name: 条件文を用いる収獲
             Functions with Harvester:
               name: ファーマーと学ぶ関数
             Functions with Artist:
@@ -15367,12 +15375,19 @@ ja:
               name: 最終プロジェクト
             Project:
               name: 最終プロジェクト
+        outbreak:
+          lessons:
+            Outbreak:
+              description_student: モンスタータウンにウイルスが広がっています！ ウイルスシミュレーターを作成し、モンスターが健康を取り戻す手助けをする方法を学びます。
+              description_teacher: このレッスンでは、イベントに関する**スキル構築**と**ミニプロジェクト**を組み合わせて、スプライトラボで独自のコンピュータシミュレーションを作成します。生徒にシミュレーションをじっくり調べてもらい、ウイルスがどれだけ早く広がるか、スピードを弱めるには何ができるかを理解してもらいます。
         2021drafting:
           lessons:
             Course F Introduction:
               name: スプライトラボの紹介
             lesson-2:
               name: テキストとプロンプト
+            lesson-3:
+              name: ミニプロジェクト：ユーザーインプットプログラム
             Making Sprites:
               name: スプライトを作る
             Sprites in Action:
@@ -16197,7 +16212,7 @@ ja:
               key: ドラッグ＆ドロップ
               name: ドラッグ＆ドロップ
               description_student: クリックしてドラッグし、パズルを完成させましょう。
-              description_teacher: このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。
+              description_teacher: この**スキル構築**レッスンでは、生徒がコンピュータラボに向かうときに、何を期待できるのかを伝えます。コンピュータラボのマナーを紹介する簡単な説明から始め、次に、コンピュータを使ってオンライン パズルを完成させてもらいます。
             'Programming: Happy Maps':
               key: プログラミング：ハッピー マップ
               name: ハッピーマップ
@@ -16289,7 +16304,7 @@ ja:
               description_teacher: この**スキル構築**レッスンでは、生徒は引き続きシーケンスアルゴリズムを開発します。
             Programming in Harvester:
               key: 農夫と学ぶプログラミング
-              name: ファーマーと学ぶプログラミング
+              name: ハーベスターと学ぶプログラミング
               description_student: ファーマーが道に沿って野菜を収穫するのを手伝ってあげましょう。
               description_teacher: 生徒は、学習したプログラミングの概念をファーマーの収穫に適用します。ここでは、キャラクターをゴールに到達させるだけでなく、新しいブロックを使ってトウモロコシを収穫する必要があります。生徒は引き続き順序アルゴリズムスキルを開発し、デバッグプロセスを使い始めます。
             'Loops: Getting Loopy':
@@ -16405,7 +16420,7 @@ ja:
               description_teacher: このレッスンは、マインクラフトチームの協力の下、Hour of Codeのために作成されたものです。生徒は、これまでに学習したアイデアを実践する機会を得て、条件文に触れることができます。
             Sticker Art with Loops:
               key: アーティストくりかえし
-              description_student: このレッスンでは、ループを使用すると、アーティストでさらにクールな画像を簡単に作成できます。
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
             'Events: The Big Event':
               key: 'イベント: おおきなイベント'
               name: ビッグイベント
@@ -16706,6 +16721,7 @@ ja:
               description_student: クラスメートと共有できるインタラクティブなプロジェクトを作成しましょう。
               description_teacher: このレッスンでは、生徒がインタラクティブなアニメーションやゲームを作成できるプラットフォームであるスプライトラボを取り上げます。ビヘイビアに加えて、今日はユーザー入力をイベントとして組み込んで、「エイリアンダンスパーティー」を作成します。
             Loops with the Artist:
+              key: アーティストで学ぶループ
               name: ループを使った描画
               description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: この**スキル構築**レッスンは、焦点をブライトラボからアーティストに移します。これは、生徒がコースの残りの部分で探索する新しいツールとなります。
@@ -16812,6 +16828,7 @@ ja:
               name: 言葉の力
               description_student: いじめは決して許されません。このレッスンでは、オンラインで何を言ってよいか、何を言ってはいけないかについて説明します。
             lesson-11:
+              name: ミニプロジェクト：ユーザーインプットプログラム
               description_student: 変数を使用した新しいスキルを、3つのオープンエンドプロジェクトの1つに適用します。
               description_teacher: 生徒は、変数を使用して新しいスキルを3つのオープンエンドの**ミニプロジェクト**の1つに適用します。サンプルプログラムを探索して、自分のプロジェクトの計画を作成し、それをゼロからプログラムします。
           lesson_groups:
@@ -16868,7 +16885,7 @@ ja:
               description_student: ループを使ってBB-8が迷路を通り抜けるのを助けてあげましょう！
             Sticker Art with Loops:
               key: アーティストくりかえし
-              description_student: このレッスンでは、ループを使用すると、アーティストでさらにクールな画像を簡単に作成できます。
+              description_student: このレッスンでは、ループを使用して、アーティストでさらにクールな画像を簡単に作成します。
               description_teacher: 生徒がいくつかのブロックとデジタルステッカーを使って独自の素晴らしいデザインを作成すると、表情がパッと明るくなるのが見て取れます！このレッスンは、以前のレッスンのループの理解に基づいて構築されており、生徒に真にクリエイティブになる機会を提供します。このアクティビティは、ポートフォリオやPTA会議向け作品を作成するのに最適です。
             Nested Loops in Maze:
               key: 迷路で学ぶ入れ子のループ
@@ -16906,8 +16923,8 @@ ja:
               description_student: "「until」ループを使用すると、驚くべきことができます！"
               description_teacher: このレッスンでは、「until」ループについて学習します。生徒は、主人公が停止する目的の地点に「到達する」までアクションを繰り返すプログラムを作成します。
             Harvesting with Conditionals:
-              key: ファーマーと学ぶ条件文
-              name: ファーマーと学ぶ条件文
+              key: 条件文を用いる収獲
+              name: 条件文を用いる収獲
               description_student: 各条件文をいつ使用するかが常に明確であるとは限りません。このレッスンは、何をすべきかを決める練習をするのに役立ちます。
               description_teacher: 生徒は「while」ループ、「until」ループ、および「if/else」文を練習します。これらのブロックはすべて条件文を使用します。 3つすべてを練習することで、生徒は複雑で柔軟なプログラムを書く方法を学びます。
             Functions in Minecraft:
@@ -17020,7 +17037,7 @@ ja:
               key: ドラッグ＆ドロップ
               name: ドラッグ＆ドロップ
               description_student: クリックしてドラッグし、パズルを完成させましょう。
-              description_teacher: このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。
+              description_teacher: この**スキル構築**レッスンでは、生徒がコンピュータラボに向かうときに、何を期待できるのかを伝えます。コンピュータラボのマナーを紹介する簡単な説明から始め、次に、コンピュータを使ってオンライン パズルを完成させてもらいます。
             Sequencing with Scrat:
               key: スクラッチと学ぶシーケンス
               name: スクラッチと学ぶシーケンス
@@ -17035,7 +17052,7 @@ ja:
               description_teacher: このレッスンでは、新しく学んだプログラミングスキルをより複雑な方法で使って、BB-8がトリッキーなコースをナビゲートできるようにします。
             Programming in Harvester:
               key: 農夫と学ぶプログラミング
-              name: ファーマーと学ぶプログラミング
+              name: ハーベスターと学ぶプログラミング
               description_student: ファーマーが道に沿って野菜を収穫するのを手伝ってあげましょう。
               description_teacher: この**スキル構築**レッスンでは、生徒は、学習したプログラミングの概念をハーベスターの環境に適用します。生徒は引き続きシーケンスアルゴリズムスキルを展開し、デバッグプロセスを使い始めます。
             Loops with Scrat:
@@ -17093,6 +17110,8 @@ ja:
               name: スプライトラボの紹介
             blank-space-stories:
               name: ブランクスペースストーリー
+            user-input-programs:
+              name: ミニプロジェクト：ユーザーインプットプログラム
           lesson_groups:
             ramp_up:
               display_name: はじめに
@@ -17301,6 +17320,8 @@ ja:
           lessons:
             lesson-20:
               name: 評価日
+            lesson-24:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17308,6 +17329,8 @@ ja:
           lessons:
             lesson-15:
               name: 評価日
+            lesson-16:
+              name: Javaラボ
           lesson_groups:
             lesson group:
               display_name: 内容
@@ -17315,6 +17338,8 @@ ja:
           lessons:
             lesson-15:
               name: 評価日
+            lesson-17:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17322,6 +17347,8 @@ ja:
           lessons:
             lesson-15:
               name: 評価日
+            lesson-16:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17329,6 +17356,8 @@ ja:
           lessons:
             lesson-15:
               name: 評価日
+            Java Lab:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17612,6 +17641,8 @@ ja:
           lessons:
             lesson-12:
               name: ツール
+            lesson-17:
+              name: コンソール
             lesson-18:
               name: ウィジェット
           lesson_groups:
@@ -17623,6 +17654,8 @@ ja:
           lessons:
             Assessment Day:
               name: 評価日
+            lesson-1:
+              name: Javaラボ
             lesson-20:
               name: 評価日
           lesson_groups:
@@ -17634,6 +17667,8 @@ ja:
               name: 評価日
             lesson-15:
               name: 評価日
+            lesson-1:
+              name: Javaラボ
           lesson_groups:
             lesson group:
               display_name: 内容
@@ -17641,6 +17676,8 @@ ja:
           lessons:
             Assessment Day:
               name: 評価日
+            lesson-1:
+              name: Javaラボ
             lesson-15:
               name: 評価日
           lesson_groups:
@@ -17650,6 +17687,8 @@ ja:
           lessons:
             Assessment Day:
               name: 評価日
+            lesson-1:
+              name: Javaラボ
             lesson-15:
               name: 評価日
           lesson_groups:
@@ -17661,6 +17700,8 @@ ja:
               name: 評価日
             lesson-15:
               name: 評価日
+            Java Lab:
+              name: Javaラボ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17668,6 +17709,8 @@ ja:
           lessons:
             lesson-2:
               name: コンピューティングにおける革新
+            lesson-9:
+              name: カラーLED
             lesson-13:
               name: 加速度計
             lesson-19:
@@ -17700,3 +17743,23 @@ ja:
           lessons:
             lesson-1:
               name: ダンスパーティー：アンプラグド
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: ウィジェット
+            lesson-2:
+              name: ツール
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: つづりみつばち
+          title: つづりみつばち
+        outbreak-csc:
+          title: 大流行
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 評価日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容

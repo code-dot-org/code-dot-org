@@ -176,7 +176,7 @@ hu:
           description_short: Használj kódot, és csatlakozz Annához és Elsához, akik felfedezik a jég varázslatos és szépséges világát.
           lessons:
             Artist:
-              name: Művész
+              name: Kódolás Annával és Elsával
           student_description: Használjuk a programozást, hogy csatlakozzunk Annához és Elsához, ahogy felfedezik a jég varázsát és szépségét. Hópihéket fogsz készíteni és mintákat ahogy jégkorcsolyázol, és így egy téli csodaországot készítesz, amelyet majd megoszthatsz a barátaiddal!
         course4:
           title: 4.  tanfolyam
@@ -287,7 +287,7 @@ hu:
           description_short: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
           lessons:
             Infinity:
-              name: Végtelen
+              name: Disney Infinity játéklabor
           student_description: Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel.
         algebrademo:
           lessons:
@@ -782,9 +782,6 @@ hu:
         starwarsblocks:
           description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
-          lessons:
-            Hour of Code 2015:
-              name: A kódolás órája 2015
           student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
         mc:
           title: Minecraft Kódolás Órája
@@ -1246,9 +1243,6 @@ hu:
           title: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
           description_short: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
           description: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
-          lessons:
-            Bounce:
-              name: Ugrál
           student_description: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
         csd2-2017:
           lessons:
@@ -1837,9 +1831,6 @@ hu:
               name: Mi az a számítógép?
         hero:
           description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Kódolás Órája
           student_description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
         csp-explore-2017:
           lesson_groups:
@@ -2318,7 +2309,7 @@ hu:
           description_short: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára!
           lessons:
             Aquatic:
-              name: Tengeri
+              name: 'Minecraft: Tengeri utazás'
         dance--draft:
           lessons:
             Dance Party:
@@ -4030,5 +4021,18 @@ hu:
               display_name: Tartalom
             lesson_group:
               display_name: Tartalom
+            lessonGroup-2:
+              display_name: Tartalom
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: Eszközök
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Betüző méh
+          title: Betüző méh
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Tartalom

@@ -983,6 +983,7 @@ fr:
       email: 'E-mail'
       email_alternate: 'Autre email'
       gender: 'Sexe'
+      school: 'École'
       school_name: 'Nom de l''école'
       school_city: 'Ville de l’École'
       school_country: 'Pays de l’École'

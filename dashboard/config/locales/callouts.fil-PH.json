@@ -1140,6 +1140,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Bagong block!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Bagong block!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Bagong block!",
+          "poetry_foreground": "Bagong block!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Bagong block!",
+          "poetry_multiple_sprites": "Bagong block!",
+          "poetry_new_block": "Bagong block!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Bagong block!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Bagong block!",
+          "poetry_sprite_stops": "Bagong block!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Bagong block!",
+          "poetry_remove_sprite": "Bagong block!"
         }
       }
     }

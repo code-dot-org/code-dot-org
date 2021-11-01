@@ -5,9 +5,8 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "pilot_experiment": "20-21-virtual-AYW-CSD",
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "curriculum",
@@ -21,12 +20,14 @@
           "curriculumGuide",
           "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview"
         ]
-      ]
+      ],
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-30 14:25:26 UTC",
+    "serialized_at": "2021-10-25 22:54:50 UTC",
     "published_state": "pilot",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "vpl-csd-2021"
     }
@@ -2022,21 +2023,21 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL - CSD - Module 5_Wrap Up"
+          "VPL - CSD - Module 5 Wrap Up"
         ],
         "progression": "Wrap Up (~10 mins)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "VPL - CSD - Module 5_Wrap Up"
+          "VPL - CSD - Module 5 Wrap Up"
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2021"
       },
       "level_keys": [
-        "VPL - CSD - Module 5_Wrap Up"
+        "VPL - CSD - Module 5 Wrap Up"
       ]
     },
     {
@@ -3285,9 +3286,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - Module 5_Wrap Up",
+        "level.key": "VPL - CSD - Module 5 Wrap Up",
         "script_level.level_keys": [
-          "VPL - CSD - Module 5_Wrap Up"
+          "VPL - CSD - Module 5 Wrap Up"
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",

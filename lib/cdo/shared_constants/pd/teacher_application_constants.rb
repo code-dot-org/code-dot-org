@@ -7,10 +7,10 @@ module Pd
       string.gsub(/\n\s*/, ' ')
     end
 
-    YEAR = '2021-2022'
+    YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
     SECTION_HEADERS = {
-      about_you: 'About You',
+      about_you: 'About You and Your School',
       teaching_background: 'Teaching Background',
       choose_your_program: 'Choose Your Program',
       professional_learning_program_requirements: 'Professional Learning Program Requirements',
@@ -24,18 +24,19 @@ module Pd
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
-        alternate_email: 'If you use another email (especially during summer months), enter it here:',
+        alternate_email: 'If you used your school email and can be reached at a better email address in the summer months, please enter it here:',
         phone: 'Home or cell phone',
-        gender_identity: 'Gender identity',
-        race: 'Race or ethnicity',
+        street_address: 'Home street address',
+        city: 'Home city',
+        state: 'Home state',
         zip_code: 'Home zip code',
         school: 'School',
         school_name: 'School name',
         school_district_name: 'School district',
         school_address: 'School address',
-        school_city: 'City',
-        school_state: 'State',
-        school_zip_code: 'Zip code',
+        school_city: 'School city',
+        school_state: 'School state',
+        school_zip_code: 'School zip code',
         school_type: 'My school is a',
         principal_title: "Principal's title",
         principal_first_name: "Principal's first name",
@@ -46,21 +47,19 @@ module Pd
         current_role: 'What is your current role at your school?',
         completing_on_behalf_of_someone_else: 'Are you completing this application on behalf of someone else?',
         completing_on_behalf_of_name: 'If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.',
-        how_heard: 'How did you hear about this program?'
-      },
-      teaching_background: {
+        how_heard: 'How did you hear about this program?',
+        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
            If so, mark the programs you've participated in."
         )
       },
+      teaching_background: {
+      },
       choose_your_program: {
         program: clean_multiline(
           "Which professional learning program would you like to participate in for the #{YEAR}
-          school year? Note: this application is only for Computer Science Discoveries and
-          Computer Science Principles. If you are interested in teaching Advanced
-          Placement CSA (in Java), visit this
-          [AP CSA overview](https://code.org/educate/curriculum/apcsa)."
+          school year?"
         ),
         csd_which_grades: clean_multiline(
           "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?
@@ -73,22 +72,29 @@ module Pd
           is not available for grades K-8. (select all that apply)"
         ),
         csp_how_offer: 'How will you offer CS Principles?',
+        csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
+        csa_phone_screen: clean_multiline(
+          'Are you able to independently write a function (or procedure) with one or more
+          parameters and that uses conditional logic, loops, and an array (or list)?'
+        ),
+        csa_which_grades: clean_multiline(
+          "To which grades does your school plan to offer CSA in the #{YEAR} school year?
+          Please note that the CSA Professional Learning Program is not available for grades
+          K-8 nor recommended for grade 9. (select all that apply)"
+        ),
+        csa_how_offer: 'How will you offer CSA?',
         cs_how_many_minutes: clean_multiline(
-          'How many minutes per day is one CS program class section? (Include the
+          'How many minutes per day is one {{CS program}} class section? (Include the
           number of minutes from start to finish that you see your students per class
           period. If it varies from day to day, estimate the average number of minutes
           you meet per class period.)'
         ),
-        cs_how_many_days_per_week: 'How many days per week will your CS program class be offered to one section of students?',
+        cs_how_many_days_per_week: 'How many days per week will your {{CS program}} class be offered to one section of students?',
         cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
         cs_total_course_hours: 'Computed total course hours',
-        csd_which_units: "Which CS Discoveries units do you intend to teach in the #{YEAR} school year?",
-        csp_which_units: "Which CS Principles units do you intend to teach in the #{YEAR} school year?",
-        plan_to_teach: clean_multiline(
-          "Do you plan to personally teach this course in the #{YEAR} school year?"
-        ),
-        replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
-        replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
+        plan_to_teach: "Do you plan to personally teach this course in the #{YEAR} school year?",
+        replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
+        replace_which_course: 'Which existing course or curriculum will {{CS program}} replace? Mark all that apply.'
       },
       professional_learning_program_requirements:
         {
@@ -160,15 +166,21 @@ module Pd
         program: LABEL_OVERRIDES[:program],
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
-        cs_how_many_minutes: "How many minutes will your CS Program class last?",
+        cs_how_many_minutes: "How many minutes will your CS program class last?",
+        cs_how_many_days_per_week: "How many days per week will your CS program class be offered to one section of students?",
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
+        replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
+        previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         how_heard: PAGE_LABELS[:additional_demographic_information][:how_heard] + " (Teacher's response)",
         gender_identity: "Teacher's gender identity",
         race: "Teacher's race",
-        principal_approval_url: "Principal Approval Form URL"
+        principal_approval_url: "Principal Approval Form URL",
+        street_address: 'Home street address',
+        city: 'Home city',
+        state: 'Home state',
       },
       principal: {
         title: PAGE_LABELS[:about_you][:principal_title] + " (provided by principal)",
@@ -347,7 +359,15 @@ module Pd
         :gender_identity,
         :race,
         :how_heard,
-        :principal_approval_url
+        :principal_approval_url,
+        :previous_used_curriculum,
+        :street_address,
+        :city,
+        :state,
+        :csa_already_know,
+        :csa_phone_screen,
+        :csa_which_grades,
+        :csa_how_offer,
       ],
       principal: [
         :title,

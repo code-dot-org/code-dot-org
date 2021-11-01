@@ -197,7 +197,7 @@ tr:
           description_short: Buzun büyüsü ve güzelliğini keşfetmek için Anna ve Elsa'ya katılıp kodlama yapalım.
           lessons:
             Artist:
-              name: Sanatçı
+              name: Anna ve Elsa ile kodlama yap
           student_description: Anna ve Elsa sihri ve buzun güzelliğini keşfederken sen de onlara kod yazarak katıl. Buz-kayağı ile kar kristalleri ve desenler oluşturarak yarattığın kış harikalar diyarını arkadaşlarınla da paylaşabilirsin!
         course4:
           title: Kurs 4
@@ -341,7 +341,7 @@ tr:
           description_short: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
           lessons:
             Infinity:
-              name: Sonsuz
+              name: Disney Infinity Play Lab
           student_description: Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın.
         algebrademo:
           title: Cebir Demo
@@ -518,6 +518,8 @@ tr:
           lessons:
             Jigsaw:
               name: Yapboz
+              description_student: Bulmacaları tamamlamak için tıklayıp sürükleyin.
+              description_teacher: Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.
           student_description: Yapboz eğitimini dene.
         step:
           title: Adım
@@ -1668,9 +1670,6 @@ tr:
         starwarsblocks:
           description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
           description_short: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
-          lessons:
-            Hour of Code 2015:
-              name: Kodlama saati 2015
           student_description: Droidleri programlamayı ve çok çok uzaklardaki bir galakside kendi Yıldız Savaşları oyununu yaratmayı öğren.
         mc:
           title: Minecraft Kod Saati
@@ -3419,7 +3418,6 @@ tr:
           description: Takımınızı seçin ve bir basketbol oyunu oynayın
           lessons:
             Bounce:
-              name: Sıçrama
               description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!
               description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.
           student_description: Takımınızı seçin ve bir basketbol oyunu oynayın
@@ -3985,7 +3983,6 @@ tr:
           description: Kendi sporunu kodla
           lessons:
             Sports:
-              name: Spor
               description_student: Hiç okulda bilgisayar oyunları oynamayı dilediniz mi? Bu derste kendi oyununuzu oluşturacaksınız!
               description_teacher: Bu çevrim içi etkinlikte, öğrenciler, olayların ne olduğunu, bilgisayarın video oyunlar gibi programlarda olayları nasıl kullandığını öğrenirler. Öğrenciler, olaylara (yön düğmelerine basmak gibi) tepki veren program yapmak için bulmacalar üzerinde çalışırlar. Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri kullanabilecekleri fırsatları olacak.
           student_description: Kendi sporunu kodla
@@ -6713,7 +6710,7 @@ tr:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Kahramanın Yolculuğu Kod Saati'
             Minecraft Hour of Code:
-              name: Minecraft Kod Saati
+              name: 'Minecraft: Kahramanın Yolculuğu'
           student_description: Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
         applab-intro-staging:
           title: Uygulama Laboratuarı Hazırlama'ya Giriş
@@ -9084,7 +9081,7 @@ tr:
           description: Minecraft yeni bir etkinlik ile için geri döndü. Yaratıcılığını ve problem çözme becerilerini kullanarak su altı dünyalarını bu kod ile keşfet ve inşa et.
           lessons:
             Aquatic:
-              name: Su
+              name: 'Minecraft: Su Yolculuğu'
           student_description: Minecraft yeni bir etkinlik ile için geri döndü. Yaratıcılığını ve problem çözme becerilerini kullanarak su altı dünyalarını bu kod ile keşfet ve inşa et.
         sconyers:
           title: Tracey'nin Oyun Alanı
@@ -15805,6 +15802,8 @@ tr:
           lessons:
             Virus Simulation for Code Bytes:
               name: Simülasyon Kodlama
+            Outbreak:
+              name: Simülasyon Kodlama
           lesson_groups:
             outbreak:
               display_name: Salgın Simülasyonu
@@ -15819,6 +15818,8 @@ tr:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
             Virus Simulation for Code Bytes:
               name: Simülasyon Kodlama
+            Making Sprites:
+              name: Hareketli Nesne Oluşturma
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
             End of Course Project:
@@ -17212,6 +17213,7 @@ tr:
               description_student: Kendi hareketli nesne laboratuvarını programlamayı öğrenin!
               description_teacher: Burada öğrenciler, kendi özel davranışlarını oluşturmak için Hareketli Nesne Laboratuvarını kullanacaktır.
             Virtual Pet:
+              key: Sanal Evcil Hayvan
               name: 'Mini Proje: Sanal Hayvan'
               description_student: Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.
               description_teacher: Bu derste öğrenciler, istedikleri gibi görünen ve davranan etkileşimli bir Sanal Evcil Hayvan oluşturacaktır. Öğrenciler, kendi evcil hayvanının görünümünü istediği gibi yapmak için Hareketli Nesne Laboratuvarının "Müşteriler" aracını kullanacaktır. Sonrasında, evcil hayvanlarına istedikleri yaşamı vermek için öğrendikleri olayları, davranışları ve diğer kavramları kullanacaktır.
@@ -17226,6 +17228,8 @@ tr:
               description_teacher: Bu derste öğrenciler, varsayımsal uygulamalar üzerinden erişilebilir çözümler hakkında beyin fırtınası yaparak ve bunları tasarlayarak erişilebilirliği ve empatinin değerini öğrenecek.
             lesson-6:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
+            lesson-7:
+              name: Hareketli Nesne Oluşturma
             lesson-8:
               name: Eylem halindeki Hareketli Nesneler
             lesson-5:
@@ -17393,6 +17397,8 @@ tr:
               name: Dans Partisi
               description_student: Kutlama zamanı! Bu derste kendi etkileşimli dans partinizi programlayacaksınız.
               description_teacher: Bu derste öğrenciler, kendi etkileşimli dans partisini programlayacak. Araç müziğe yanıt verecek şekilde oluşturulduğundan dolayı bu aktivite ses gerektirir.
+            lesson-2:
+              name: Hareketli Nesne Oluşturma
             lesson-3:
               name: Eylem halindeki Hareketli Nesneler
           lesson_groups:
@@ -17486,6 +17492,8 @@ tr:
               name: Simülasyon Kodlama
             Course F Introduction:
               name: Hareketli Nesne Laboratuvarı Tanıtımı
+            Making Sprites:
+              name: Hareketli Nesne Oluşturma
             Sprites in Action:
               name: Eylem halindeki Hareketli Nesneler
             introducing-spritelab:
@@ -18139,5 +18147,25 @@ tr:
               display_name: İçerik
             lesson_group:
               display_name: İçerik
+            lessonGroup-2:
+              display_name: İçerik
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Araçlar
+            lesson-2:
+              name: Araçlar
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Heceleme Yarışması
+          title: Heceleme Yarışması
+        outbreak-csc:
+          title: Salgın
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Değerlendirme Günü
+          lesson_groups:
             lessonGroup-2:
               display_name: İçerik

@@ -29,6 +29,8 @@ it:
   africa_campaign_date_full: 1-31 ottobre
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 ottobre, 2020
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: Impara oggi, costruisci un domani più luminoso.
   hoc2020_header_with_line_break_markdown: |-
     Impara oggi,
@@ -65,6 +67,7 @@ it:
     2019. È fondamentale che ogni studente apprenda l’informatica.
   social_hoc2019_dance: Con Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas
     X, Jonas Brothers, Nicki Minaj e altri 34!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: L'Intelligenza Artificiale per il mare
   oceans_landing_description: Informazioni sull'apprendimento automatico e sull'uso
     etico dell'intelligenza artificiale.
@@ -164,6 +167,12 @@ it:
     automatico, i dati di addestramento e i pregiudizi, mentre esplori le questioni
     etiche e in che modo l'Intelligenza Artificiale può essere utilizzata per affrontare
     i problemi del mondo.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: Che cosa è l'Intelligenza Artificiale?
   ai_video_title_algorithm_bias: Combattere i pregiudizi negli algoritmi
   ai_video_title_phone_knows_dog: In che modo il tuo telefono capisce che si tratta
@@ -233,6 +242,10 @@ it:
     dell'Ora del Codice. Esercitazioni di un'ora disponibili in oltre 45 lingue. Non
     è necessaria alcuna esperienza.
   hourofcode_homepage_hoc2018_header_line2: Da 4 a 104 anni.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Utilizza blocchi di codice per portare Alex
     o Steve in un'avventura nel mondo di Minecraft.
   codeorg_homepage_hoc2019_dance_heading: Prova il nuovo <span class="highlight-word">Dance&nbsp;Party!</span>
@@ -1659,7 +1672,7 @@ it:
   tutorial_codespeakhappy_name: Programma una App di meditazione in un luogo felice
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Impara a programmare con iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Supporta il mio progetto
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -6786,8 +6799,7 @@ it:
   tutorial_codespeakhappy_language: Italiano
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: Italiano
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: Italiano
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -8309,7 +8321,7 @@ it:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_icomputelearn_string_platforms: Tutti i browser moderni
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_vidcodeanimojies_string_platforms: Tutti i browser moderni, Android, iOS

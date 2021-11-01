@@ -2,8 +2,131 @@
   "nl-NL": {
     "data": {
       "lesson_activities": {
-        "06dfaf3b-e495-4577-baa6-883a782e198f": {
+        "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
+          "name": "Afronden"
+        },
+        "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
+          "name": "Afronden"
+        },
+        "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
+          "name": "Afronden"
+        },
+        "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
+          "name": "Afronden"
+        },
+        "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
+          "name": "Beoordeling"
+        },
+        "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
+          "name": "Afronden"
+        },
+        "5408728c-7b75-4da5-b4bb-b42cb3c2984b": {
+          "name": "Beoordeling"
+        },
+        "633ec4e2-ea0b-496f-8878-d4178882a69e": {
+          "name": "Afronden"
+        },
+        "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
+          "name": "Afronden"
+        },
+        "a1d9b125-849a-4eb9-bd45-7b387ec2cc44": {
+          "name": "Beoordeling"
+        },
+        "c53a1348-2816-4c38-9417-92561d0bca19": {
+          "name": "Opwarmen"
+        },
+        "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d": {
+          "name": "Afronden"
+        },
+        "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
+          "name": "Afronden"
+        },
+        "0e9caf95-fa34-4ffc-b218-0859134ee293": {
+          "name": "Beoordeling"
+        },
+        "0f404bbf-d9f1-45c9-a496-271179254aed": {
           "name": "Niveaus"
+        },
+        "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
+          "name": "Afronden"
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Activiteit"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Einde"
+        },
+        "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
+          "name": "Afronden"
+        },
+        "308d7e22-610e-46cb-be15-54fab1e436bb": {
+          "name": "Afronden"
+        },
+        "408e3cc9-9733-4518-93f3-0a3bb6b6f62d": {
+          "name": "Beoordeling"
+        },
+        "f4670c8c-98ec-47d0-b458-02a96f130b76": {
+          "name": "Opwarmen"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Activiteit"
+        },
+        "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Afronden"
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Activiteit"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Einde"
+        },
+        "05180d31-d1ff-422e-8227-69f7d07884a6": {
+          "name": "Opwarmen"
+        },
+        "4abbf2ec-b39e-4740-a51a-635072063171": {
+          "name": "Afronden"
+        },
+        "d81d8eed-09d3-4cf4-8860-c555f8c9bd8e": {
+          "name": "Opwarmen"
+        },
+        "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b": {
+          "name": "Afronden"
+        },
+        "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
+          "name": "Niveaus"
+        },
+        "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
+          "name": "Niveaus"
+        },
+        "239ba7ce-544c-4508-9e5c-e956de964002": {
+          "name": "Afronden"
+        },
+        "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
+          "name": "Opwarmen"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Activiteit"
+        },
+        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": "Opwarmen"
+        },
+        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Afronden"
+        },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Opwarmen"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Afronden"
+        },
+        "f652e4d2-c712-4cff-a011-f1dcea192263": {
+          "name": "Opwarmen"
+        },
+        "4286b9b3-8562-4acf-8967-f6b6b1b18f9e": {
+          "name": "Afronden"
+        },
+        "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
+          "name": "Beoordeling"
         },
         "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
           "name": "Opwarmen"

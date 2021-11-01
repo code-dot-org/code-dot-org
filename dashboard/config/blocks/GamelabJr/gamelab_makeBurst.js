@@ -88,8 +88,8 @@ function rainEffectBehavior(this_sprite) {
 function spiralEffectBehavior(this_sprite) {
   if (getProp(this_sprite, "delay") <= 0) {
     changePropBy(this_sprite, "scale", 1);
-    setProp(this_sprite, "x", 200 + cos((World.frameCount-getProp(this_sprite, "start")) *5 - (getProp(this_sprite, "initialAngle"))) * (World.frameCount-getProp(this_sprite, "start"))*5);
-    setProp(this_sprite, "y", 200 + sin((World.frameCount-getProp(this_sprite, "start")) *5 - (getProp(this_sprite, "initialAngle"))) * (World.frameCount-getProp(this_sprite, "start"))*5);
+    setProp(this_sprite, "x", 200 + cos((-getProp(this_sprite, "delay")) *5 - (getProp(this_sprite, "initialAngle"))) * (-getProp(this_sprite, "delay"))*5);
+    setProp(this_sprite, "y", 200 + sin((-getProp(this_sprite, "delay")) *5 - (getProp(this_sprite, "initialAngle"))) * (-getProp(this_sprite, "delay"))*5);
     changePropBy(this_sprite, "rotation",-12);
     if (getProp(this_sprite, "delay") < -60) {
       destroy(this_sprite);

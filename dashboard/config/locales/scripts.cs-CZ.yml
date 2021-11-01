@@ -224,7 +224,7 @@ cs:
             kouzlo a krásu ledu.
           lessons:
             Artist:
-              name: Umělec
+              name: Kóduj s Annou a Elsou
           student_description: Pojďme spojit Anna a Elsu, jak ony prozkoumávají pomocí
             kódu kouzlo a krásu ledu. Sněhové vločky a vzory se vytváří při bruslení
             a udělají zimní říši divů, kterou pak můžete sdílet se svými přáteli!
@@ -349,7 +349,7 @@ cs:
             Infinity postavami.
           lessons:
             Infinity:
-              name: Nekonečno
+              name: Disney Infinity Play Lab
           student_description: Použij Play Lab k vytvoření příběhu nebo hry s Disney
             Infinity postavami.
         algebrademo:
@@ -479,6 +479,11 @@ cs:
           lessons:
             Jigsaw:
               name: Skládačka
+              description_student: " Hlavolamy dokončete kliknutím a potažením."
+              description_teacher: Tato lekce dá studentům představu o tom, co mohou
+                očekávat, když se vydají do počítačové laboratoře. Začne to krátkou
+                diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové
+                laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.
           student_description: Vyzkoušej náš kurz na skládačky
         step:
           title: Krok
@@ -859,9 +864,6 @@ cs:
             ve vzdálené galaxii.
           description_short: Nauč se programovat droidy a vytvoř si vlastní hru Star
             Wars ve vzdálené galaxii.
-          lessons:
-            Hour of Code 2015:
-              name: Hodina kódu 2013
           student_description: Nauč se programovat droidy a vytvoř si vlastní hru
             Star Wars ve vzdálené galaxii.
         mc:
@@ -1009,6 +1011,10 @@ cs:
           description_short: Programování
         CSF_Secret_Sample:
           description_audience: Věk 8-18
+        ECSPD1:
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         algebraFacilitator:
           lessons:
             Evaluation Blocks:
@@ -1046,6 +1052,10 @@ cs:
           lessons:
             Design Mode:
               name: Dizajnový mód
+        CSDU1-Draft:
+          lessons:
+            Exploring Apps:
+              name: Prozkoumávání aplikací
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -1299,7 +1309,6 @@ cs:
           description: Vyberte si svůj tým a vytvořte basketbalovou hru
           lessons:
             Bounce:
-              name: Bounce
               description_student: Přáli jste si někdy hrát ve škole videohry? V této
                 lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
               description_teacher: V této online aktivitě se studenti naučí, co jsou
@@ -1606,7 +1615,6 @@ cs:
           title: Naprogramuj svoji vlastní sportovní hru
           lessons:
             Sports:
-              name: Sporty
               description_student: Přáli jste si někdy hrát ve škole videohry? V této
                 lekci se dostanete k tomu, že si vytvoříte vlastní videohru!
               description_teacher: V této online aktivitě se studenti naučí, co jsou
@@ -2679,12 +2687,19 @@ cs:
             navrhněte a vytvořte završující projekt, který budete moci sdílet s přáteli
             a rodinou.
           name: coursef-2017
+        csdnovice:
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         cspnovice:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csp1-dlp:
           lesson_groups:
             required:
@@ -3250,9 +3265,6 @@ cs:
             kódu!
           description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj
             Minecraft s kódem.
-          lessons:
-            Minecraft Hour of Code:
-              name: Hodina kódu s Minecraftem
           student_description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou!
             Procestuj Minecraft s kódem.
         applab-intro-staging:
@@ -4431,24 +4443,36 @@ cs:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csd-apprentice-18:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csp-novice-18:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csp-apprentice-18:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         pre-express-2018:
           title: Rychlokurz pro předškoláky (2018)
           description: Učte se základy počítačových věd a internetové bezpečnosti.
@@ -4534,9 +4558,6 @@ cs:
               name: Umělec
         aquatic:
           description_short: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
-          lessons:
-            Aquatic:
-              name: Vodní
         dance--draft:
           lessons:
             Dance Party:
@@ -5390,6 +5411,8 @@ cs:
             osnov pro starší ročníky základní školy.'
           description_audience: 'Věk: 9-18 let'
           lesson_groups:
+            csf_warmup:
+              display_name: Zahřátí
             csf_sequencing:
               display_name: Sekvence
             csf_loops:
@@ -6295,12 +6318,18 @@ cs:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         fit2019-apprentice:
           lesson_groups:
             required:
               display_name: Přehled
             content:
               display_name: Obsah
+          lessons:
+            Wrap Up:
+              name: Rekapitulace
         csd-sample-online:
           title: Ukázka online aktivit pro kurz Objevujeme informatiku
         csd1-pilot:
@@ -6443,6 +6472,9 @@ cs:
               display_name: Obsah
             required:
               display_name: Přehled
+          lessons:
+            Packets:
+              name: Pakety
         peru-2019:
           lessons:
             Introduction:
@@ -7815,6 +7847,8 @@ cs:
             osnov pro starší ročníky základní školy.'
           description_audience: 'Věk: 9-18 let'
           lesson_groups:
+            csf_warmup:
+              display_name: Zahřátí
             csf_sequencing:
               display_name: Sekvence
             csf_loops:
@@ -8017,6 +8051,9 @@ cs:
           lesson_groups:
             csp_unit2_2020:
               display_name: '2.  lekce: Internet'
+          lessons:
+            Packets:
+              name: Pakety
         csp3-2020:
           lessons:
             Debugging:
@@ -8185,6 +8222,8 @@ cs:
           lessons:
             Virus Simulation for Code Bytes:
               name: Naprogramování simulace
+            Outbreak:
+              name: Naprogramování simulace
           lesson_groups:
             outbreak:
               display_name: Simulace epidemie
@@ -8195,10 +8234,14 @@ cs:
           student_description: Naprogramujte ve Sprite Lab simulaci epidemie viru.
         2021drafting:
           lessons:
+            lesson-2:
+              name: Text a výzvy
             Virus Simulation for Code Bytes:
               name: Naprogramování simulace
             Making Sprites:
               name: Dělání sprajtů
+            blank space stories:
+              name: Příběhy prázdného prostoru
             End of Course Project:
               name: Projekt na zakončení kurzu
             Outbreaklab:
@@ -8275,6 +8318,10 @@ cs:
             csp_unit1_2020:
               display_name: '1.  lekce: Digitální informace'
         csp2-2021:
+          lessons:
+            Packets:
+              key: Pakety
+              name: Pakety
           lesson_groups:
             csp_unit2_2020:
               display_name: '2.  lekce: Internet'
@@ -8998,6 +9045,7 @@ cs:
                 lze proměnné použít ke zjednodušení kódu, aby se snadněji psal a četl,,
                 i když se hodnoty nebudou za chodu programu měnit.
             Variables that Change in Bee:
+              name: Proměnná s včelou
               description_student: Včela miluje proměnné!
               description_teacher: Tato lekce **budování dovedností** pomůže ilustrovat,
                 jak mohou proměnné dělat programy dynamičtějšími tím, že umožňují
@@ -9050,6 +9098,10 @@ cs:
                 pro hypotetické aplikace. '
             lesson-7:
               name: Dělání sprajtů
+            lesson-9:
+              name: Příběhy prázdného prostoru
+            lesson-10:
+              name: Text a výzvy
             lesson-5:
               name: Epidemie
             lesson-2:
@@ -9204,6 +9256,7 @@ cs:
                 končit na úrovni volného hraní tak, aby ukázali, co se naučili, a
                 aby vytvářeli nové návrhy.
             Changing Variables with Bee:
+              name: Proměnná s včelou
               description_student: Včela miluje proměnné!
               description_teacher: Tato lekce **budování dovedností** pomůže ilustrovat,
                 jak mohou proměnné dělat programy dynamičtějšími tím, že umožňují
@@ -9245,6 +9298,8 @@ cs:
                 tento nástroj byl vytvořený tak, aby reagoval na hudbu.
             lesson-2:
               name: Dělání sprajtů
+            lesson-4:
+              name: Text a výzvy
           lesson_groups:
             csf_warmup:
               display_name: Zahřátí
@@ -9342,6 +9397,12 @@ cs:
               name: Naprogramování simulace
             Making Sprites:
               name: Dělání sprajtů
+            blank space stories:
+              name: Příběhy prázdného prostoru
+            texts-and-prompts:
+              name: Text a výzvy
+            blank-space-stories:
+              name: Příběhy prázdného prostoru
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -9797,5 +9858,24 @@ cs:
               display_name: Obsah
             lesson_group:
               display_name: Obsah
+            lessonGroup-2:
+              display_name: Obsah
+        dance-unplugged:
+          lessons:
+            lesson-1:
+              name: 'Taneční večírek: bez připojení'
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgety
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Hláskovací včelka
+          title: Hláskovací včelka
+        outbreak-csc:
+          title: Epidemie
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Obsah

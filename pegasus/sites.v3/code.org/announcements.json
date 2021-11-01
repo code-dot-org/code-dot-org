@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-showcase"
+    "/home": "myjourney-ilm"
   },
 
   "banners": {
-    "nextsteps-showcase": {
-      "image": "/images/csjourneys/showcase-banner.png",
-      "title": "Learn how computer science is used in college",
-      "body": "Give high school students the opportunity to learn how CS is used at the college level to help with research and projects in different fields of study they may want to pursue. Recording will be available the day after the live session.",
+    "myjourney-ilm": {
+      "image": "/images/csjourneys/myjourney-ilm.png",
+      "title": "My Journey: Making Star Wars",
+      "body": "Hear how two computer science graduates use technology to help make movies and TV shows, including the many worlds of Star Wars. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-2",
-      "buttonId": "nextsteps-showcase-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat7",
+      "buttonId": "myjourney-ilm-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

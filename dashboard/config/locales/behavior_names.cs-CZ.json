@@ -253,6 +253,39 @@
         },
         "helloworld_retro_events": {
           "moving forward": "posuv vpřed"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "poetry_hoc_addSprites": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "poetry_hoc_exemplar1": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "poetry_hoc_exemplar2": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "poetry_hoc_freeplay": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "moving with arrow keys": "pohyb pomocí kláves se šipkami"
         }
       }
     }

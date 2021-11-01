@@ -37,10 +37,6 @@ km:
           lessons:
             'Eval: Conditionals':
               name: លក្ខខណ្ឌ
-        infinity:
-          lessons:
-            Infinity:
-              name: អនន្ត
         K5PD:
           lessons:
             Teacher Dashboard:
@@ -82,6 +78,10 @@ km:
               name: Flappy កូដ
           student_description: តើ​អ្នក​ចង់​សរសេរ​ហ្គេម​របស់​អ្នក​ដោយ​ប្រើ​ពេល​តិច​ជាង
             10 នាទី​ដែរ​ឬ​ទេ? សូម​សាកល្បង​មេរៀន Flappy កូដ របស់​យើង!
+        jigsaw:
+          lessons:
+            Jigsaw:
+              description_teacher: មេរៀននេះនឹងផ្តល់ឱ្យសិស្សនូវគំនិតនៃអ្វីដែលត្រូវរំពឹងនៅពេលពួកគេធ្វើដំណើរទៅបន្ទប់កុំព្យូទ័រ។  វាចាប់ផ្តើមដោយការពិភាក្សាខ្លីណែនាំពួកគេពីសុជីវធម៌នៅបន្ទប់កុំព្យូទ័របន្ទាប់មកពួកគេនឹងរីកចម្រើនទៅក្នុងការប្រើប្រាស់កុំព្យូទ័រដើម្បីបញ្ចប់ល្បែងផ្គុំរូបលើអ៊ីនធឺណិត។
         step:
           title: ជំហាន
           lessons:
@@ -247,7 +247,6 @@ km:
           description: បង្កើតហ្គេមបោះបាល់
           lessons:
             Bounce:
-              name: បាល់​លោត
               description_student: ធ្លាប់សង្ឃឹមថាអ្នកអាចលេងហ្គេមវីដេអូនៅសាលាបានទេ?
                 នៅក្នុងមេរៀននេះអ្នកនឹងត្រូវបង្កើតដោយខ្លួនឯង!
               description_teacher: នៅក្នុងសកម្មភាពតាមអ៊ីនធឺណិតនេះសិស្សនឹងដឹងថាតើព្រឹត្តិការណ៍មានអ្វីខ្លះ
@@ -1123,7 +1122,7 @@ km:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
           student_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
             ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
         course-e-2018:

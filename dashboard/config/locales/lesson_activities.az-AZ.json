@@ -2,11 +2,284 @@
   "az-AZ": {
     "data": {
       "lesson_activities": {
+        "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
+          "name": "Yekun"
+        },
+        "7e5f5376-de4c-478e-a70d-d4ddb97b0564": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "ab15beb1-d005-41c6-a156-e4c110c423b8": {
+          "name": "Əlavə təlim"
+        },
+        "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
+          "name": "Başlanqıc"
+        },
+        "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
+          "name": "Yekun"
+        },
+        "2ccc0a90-872b-424b-ae39-d7f92ceb8c06": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "e4041676-353d-409e-a7aa-bcfcc62bab09": {
+          "name": "Əlavə təlim"
+        },
+        "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
+          "name": "Yekun"
+        },
+        "2caf682d-0389-4b9f-830a-60d398a8260d": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "ce329650-3549-4f96-8da9-8bc77c162411": {
+          "name": "Əlavə təlim"
+        },
+        "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
+          "name": "Başlanqıc"
+        },
+        "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
+          "name": "Yekun"
+        },
+        "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
+          "name": "Yoxlama"
+        },
+        "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
+          "name": "Əlavə təlim"
+        },
+        "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
+          "name": "Başlanqıc"
+        },
+        "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
+          "name": "Yekun"
+        },
+        "5408728c-7b75-4da5-b4bb-b42cb3c2984b": {
+          "name": "Yoxlama"
+        },
+        "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
+          "name": "Əlavə təlim"
+        },
+        "633ec4e2-ea0b-496f-8878-d4178882a69e": {
+          "name": "Yekun"
+        },
+        "838f000b-c756-4d71-abfc-877a61b59a91": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "f49ce667-e4b7-4a66-88a4-16848365e63a": {
+          "name": "Əlavə təlim"
+        },
+        "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
+          "name": "Başlanqıc"
+        },
+        "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
+          "name": "Yekun"
+        },
+        "a1d9b125-849a-4eb9-bd45-7b387ec2cc44": {
+          "name": "Yoxlama"
+        },
+        "d091559f-3ec9-46c5-9e79-a245aadfb146": {
+          "name": "Əlavə təlim"
+        },
+        "12a90414-dae4-4f2b-8598-0b3b9fd6a767": {
+          "name": "Əsas Aktivlik"
+        },
+        "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d": {
+          "name": "Yekun"
+        },
+        "777be184-c917-4732-ad47-bb1fad0a30e4": {
+          "name": "Əlavə təlim"
+        },
+        "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
+          "name": "Başlanqıc"
+        },
+        "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
+          "name": "Yekun"
+        },
+        "0e9caf95-fa34-4ffc-b218-0859134ee293": {
+          "name": "Yoxlama"
+        },
+        "6e0020c2-9d9e-488e-bb8d-126ac1760e8b": {
+          "name": "Əlavə təlim"
+        },
+        "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f": {
+          "name": "Başlanqıc"
+        },
+        "0f404bbf-d9f1-45c9-a496-271179254aed": {
+          "name": "Səviyyələr"
+        },
+        "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
+          "name": "Yekun"
+        },
+        "2d33d18f-944d-4408-992a-31d1311733fc": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
+          "name": "Başlanqıc"
+        },
+        "09d516b6-38b7-42e0-900c-5d427b051b65": {
+          "name": "Yekunlaşdır (5 dəqiqə)"
+        },
+        "3b10ea82-0421-4583-a1cf-561c09edc727": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
+          "name": "Əlavə təlim"
+        },
+        "d42497ec-48f5-404c-90b9-2133dd4759cc": {
+          "name": "Başlanqıc"
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Fəaliyyət"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Yekun"
+        },
+        "10b66543-86a4-459e-bc67-a31d688547ce": {
+          "name": "Əlavə təlim"
+        },
+        "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
+          "name": "Yekun"
+        },
+        "262ad475-1b09-4834-8401-0cf39d3955c5": {
+          "name": "Əlavə təlim"
+        },
+        "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "37f266a7-4b80-449e-805a-4a06aad37292": {
+          "name": "Başlanqıc"
+        },
+        "3664c675-1dd2-468f-b854-a7daa9b0dc38": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "efd4f483-32c2-4810-96fd-186649c2efe2": {
+          "name": "Yekunlaşdır (5 dəqiqə)"
+        },
+        "4e2ce993-660e-4574-9264-448e234c4bac": {
+          "name": "Əlavə təlim"
+        },
+        "f266050e-62e6-415d-8735-b80cb922587d": {
+          "name": "Başlanqıc"
+        },
+        "308d7e22-610e-46cb-be15-54fab1e436bb": {
+          "name": "Yekun"
+        },
+        "408e3cc9-9733-4518-93f3-0a3bb6b6f62d": {
+          "name": "Yoxlama"
+        },
+        "aad5bc18-7988-4acf-be28-9e125e9d930e": {
+          "name": "Əlavə təlim"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Fəaliyyət"
+        },
+        "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Yekun"
+        },
+        "d77010f1-4c38-4b28-8b5f-ef931622b016": {
+          "name": "Yekunlaşdır (5 dəqiqə)"
+        },
+        "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
+          "name": "Əlavə təlim"
+        },
+        "894da896-c653-4f74-a0f9-b02dca7ebcad": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
+          "name": "Başlanqıc"
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Fəaliyyət"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Yekun"
+        },
+        "ddc8f987-c000-409d-aaf7-8546464a70d9": {
+          "name": "Əlavə təlim"
+        },
+        "6a240b51-f019-4729-a5df-cbe901844a7e": {
+          "name": "Əsas Aktivlik"
+        },
+        "4abbf2ec-b39e-4740-a51a-635072063171": {
+          "name": "Yekun"
+        },
+        "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
+          "name": "Əlavə təlim"
+        },
+        "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
+          "name": "Yekunlaşdır (5 dəqiqə)"
+        },
+        "2cf39290-cd45-4bb4-8ef6-f1dc74e50890": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
+          "name": "Əlavə təlim"
+        },
+        "dca1904a-ae71-49d2-b77f-708aa02d2707": {
+          "name": "Əsas Aktivlik"
+        },
+        "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b": {
+          "name": "Yekun"
+        },
+        "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
+          "name": "Əlavə təlim"
+        },
+        "ad2299c9-28bf-4e9f-b320-cb44ff94bdba": {
+          "name": "Başlamaq"
+        },
+        "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
+          "name": "Səviyyələr"
+        },
+        "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
+          "name": "Yekunlaşdır (5 dəqiqə)"
+        },
+        "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "42552407-b313-4fc4-9163-e6a8e4a6029d": {
+          "name": "Əlavə təlim"
+        },
+        "0f7585ce-d117-4b61-aee9-d54444cd83b0": {
+          "name": "Başlamaq"
+        },
+        "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
+          "name": "Səviyyələr"
+        },
+        "239ba7ce-544c-4508-9e5c-e956de964002": {
+          "name": "Yekun"
+        },
+        "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
+          "name": "Qiymətləndirmə (2 dəqiqə)"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Fəaliyyət"
+        },
+        "b304de28-91d8-4215-a853-27f5a3f8a157": {
+          "name": "Qeyd et və sükanı belə saxla"
+        },
+        "04400eef-5989-4325-a801-ab4ad451f130": {
+          "name": "Əlavə təlim"
+        },
         "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
           "name": "Əsas Aktivlik"
         },
-        "06dfaf3b-e495-4577-baa6-883a782e198f": {
-          "name": "Səviyyələr"
+        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Yekun"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Əsas Aktivlik"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Yekun"
+        },
+        "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2": {
+          "name": "Əsas Aktivlik"
+        },
+        "4286b9b3-8562-4acf-8967-f6b6b1b18f9e": {
+          "name": "Yekun"
+        },
+        "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
+          "name": "Yoxlama"
+        },
+        "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
+          "name": "Əlavə təlim"
         },
         "d242b6cc-881c-4f49-acb9-e03383340b0c": {
           "name": "Əsas Aktivlik"
@@ -89,6 +362,9 @@
         "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
           "name": "Əlavə təlim"
         },
+        "5b774bd6-b243-4d1d-9145-20747f320129": {
+          "name": "Körpü fəaliyyət - Birini seç"
+        },
         "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
           "name": "Əsas Aktivlik"
         },
@@ -140,6 +416,9 @@
         "de382430-d529-490d-b4fd-a7f020c4802b": {
           "name": "Baxış: Paylaşmaq üçün OK-dir?"
         },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Sonluq:Pauza və Düşünmək zamanı"
+        },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Əlavə təlim"
         },
@@ -152,6 +431,9 @@
         "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
           "name": "Əlavə təlim"
         },
+        "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
+          "name": "Körpü fəaliyyət - Birini seç"
+        },
         "248075ed-be23-4145-bbe5-f629eb3df448": {
           "name": "Əsas Aktivlik"
         },
@@ -160,6 +442,9 @@
         },
         "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
           "name": "Əlavə təlim"
+        },
+        "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
+          "name": "Körpü fəaliyyət - Birini seç"
         },
         "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
           "name": "Əsas Aktivlik"
@@ -188,6 +473,9 @@
         "4a617b6e-9d56-472c-8a50-31052d127232": {
           "name": "Əlavə təlim"
         },
+        "06b2458e-a834-46c5-842e-385c1fc97bc8": {
+          "name": "Körpü fəaliyyət - Birini seç"
+        },
         "287b6295-2274-4349-a7c3-fab998a09e1c": {
           "name": "Əsas Aktivlik"
         },
@@ -199,6 +487,9 @@
         },
         "3a35e6b5-a46a-47b7-b0b8-99ddadcc8fad": {
           "name": "Əsas Aktivlik"
+        },
+        "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
+          "name": "yekunlaşdırmaq"
         },
         "8227e109-9b6a-448c-a107-e70498299438": {
           "name": "Əsas Aktivlik"
@@ -223,6 +514,9 @@
         },
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
           "name": "Əlavə təlim"
+        },
+        "8e77b151-07f6-4404-98ec-473f310fc8b1": {
+          "name": "Körpü fəaliyyət - Birini seç"
         },
         "b170b2ef-82f1-4067-aadc-add8074acb80": {
           "name": "Əsas Aktivlik"
@@ -272,6 +566,9 @@
         "0915a618-f1c1-47be-b8fb-80664fa62e50": {
           "name": "Əlavə təlim"
         },
+        "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
+          "name": "Körpü fəaliyyət - Birini seç"
+        },
         "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
           "name": "Əsas Aktivlik"
         },
@@ -307,6 +604,9 @@
         },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Əsas Aktivlik"
+        },
+        "647827d3-b6a3-4697-9cb8-fec35c819d12": {
+          "name": "yekunlaşdırmaq"
         },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
           "name": "Əlavə təlim"
@@ -346,6 +646,12 @@
         },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Yekun"
+        },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "Öyrən:Alçaqlıq nə deməkdir?"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Sonluq:Pauza və Düşünmək zamanı"
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Əlavə təlim"
@@ -401,6 +707,9 @@
         "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
           "name": "Əlavə təlim"
         },
+        "8df58520-6127-4563-b145-8d7d81635bde": {
+          "name": "Körpü fəaliyyət - Birini seç"
+        },
         "e36b6776-3c22-498e-94ef-44fae2c28065": {
           "name": "Əsas Aktivlik"
         },
@@ -433,6 +742,9 @@
         },
         "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
           "name": "Əlavə təlim"
+        },
+        "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
+          "name": "Körpü fəaliyyət - Birini seç"
         },
         "7ec11452-1367-44ef-afe4-c8cf354bb183": {
           "name": "Əsas Aktivlik"
@@ -485,6 +797,9 @@
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Yekun"
         },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Könüllü qiymətləndirmə"
+        },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Əlavə təlim"
         },
@@ -529,6 +844,9 @@
         },
         "6260dc9f-f1ec-41fb-bb11-c03bbe503e26": {
           "name": "Əsas Aktivlik"
+        },
+        "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
+          "name": "yekunlaşdırmaq"
         },
         "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
           "name": "Əlavə təlim"
@@ -610,6 +928,9 @@
         },
         "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
           "name": "Əlavə təlim"
+        },
+        "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
+          "name": "Körpü fəaliyyəti"
         },
         "813fd866-1517-4302-b080-b035a842ae06": {
           "name": "Əsas Aktivlik"
@@ -824,11 +1145,17 @@
         "0a77a438-3684-4874-b963-e5a75723888a": {
           "name": "Əsas Aktivlik"
         },
+        "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
+          "name": "yekunlaşdırmaq"
+        },
         "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
           "name": "Əlavə təlim"
         },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Əsas Aktivlik"
+        },
+        "e6a1f5df-d8d4-41a1-8649-d518965997af": {
+          "name": "yekunlaşdırmaq"
         },
         "089afb18-d132-46ab-88ca-2af47333e237": {
           "name": "Əsas Aktivlik"
@@ -866,6 +1193,9 @@
         "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780": {
           "name": "Yekun"
         },
+        "23175482-f558-4d04-aec7-69a02820317e": {
+          "name": "Körpü fəaliyyəti"
+        },
         "7007138d-bc16-4bc0-8d30-252440672814": {
           "name": "Əsas Aktivlik"
         },
@@ -880,6 +1210,12 @@
         },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Əlavə təlim"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "İsin:Ayağa dur,Otur"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analiz et: İnsanlar niyə paylaşır?"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Əlavə təlim"
@@ -935,6 +1271,9 @@
         "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
           "name": "Əlavə təlim"
         },
+        "a80b5d47-5fb8-4557-9fb2-233074caad47": {
+          "name": "Körpü fəaliyyət - Birini seç"
+        },
         "0da29d00-d95a-4538-ac89-116513fba104": {
           "name": "Əsas Aktivlik"
         },
@@ -979,6 +1318,9 @@
         },
         "b2227118-727d-4eff-be1c-fafe331297fd": {
           "name": "Yekun"
+        },
+        "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
+          "name": "Kurs layihələrinin sonu!"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Əlavə təlim"

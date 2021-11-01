@@ -945,6 +945,7 @@ mn:
       email: 'Цахим шуудан'
       email_alternate: 'Өөр цахим шуудан'
       gender: 'Хүйсийн тодорхойлолт'
+      school: 'Сургууль'
       school_name: 'Сургуулийн нэр'
       school_city: 'Сургууль байрлах хот'
       school_country: 'Сургууль байрлах улс'

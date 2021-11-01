@@ -2,6 +2,72 @@
   "nl-NL": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "function/hero/unversioned": {
+          "word": "Functie"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Voorwaardelijke instructies"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Lussen"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Lossless Compressie"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Foutopsporing"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Foutopsporing"
+        },
         "behavior/coursef/2021": {
           "word": "Gedrag"
         },

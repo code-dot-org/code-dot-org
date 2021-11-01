@@ -193,7 +193,7 @@ zh-TW:
           description_short: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。
           lessons:
             Artist:
-              name: 藝術家
+              name: 與安娜與艾莎一同玩程式
           student_description: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。你可以利用在雪上溜冰製造出雪花等圖案，然後打造一個冬季仙境並分享給你的朋友！
         course4:
           title: 課程 4
@@ -337,7 +337,7 @@ zh-TW:
           description_short: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
           lessons:
             Infinity:
-              name: 無限
+              name: 迪士尼無限 Play Lab
           student_description: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
         algebrademo:
           title: 代數演示
@@ -516,6 +516,8 @@ zh-TW:
           lessons:
             Jigsaw:
               name: 拼圖
+              description_student: 以點擊與拖放的方式完成謎題。
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
           student_description: 試試我們的拼圖教程。
         step:
           title: 步進
@@ -1767,9 +1769,6 @@ zh-TW:
         starwarsblocks:
           description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
           description_short: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
-          lessons:
-            Hour of Code 2015:
-              name: 一小時玩程式 2015
           student_description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
         mc:
           title: 一小時玩 Minecraft
@@ -3577,7 +3576,6 @@ zh-TW:
           description: 選擇你的球隊，來場籃球比賽
           lessons:
             Bounce:
-              name: 彈跳
               description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
               description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 選擇你的球隊，來場籃球比賽
@@ -4155,7 +4153,6 @@ zh-TW:
           description: 搞個混搭的運動遊戲
           lessons:
             Sports:
-              name: 運動
               description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
               description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 搞個混搭的運動遊戲
@@ -6917,7 +6914,7 @@ zh-TW:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: Minecraft 英雄之旅 一小時玩程式
             Minecraft Hour of Code:
-              name: 一小時玩 Minecraft
+              name: Minecraft：英雄之旅
           student_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
         applab-intro-staging:
           title: App Lab 入門集結
@@ -9324,7 +9321,7 @@ zh-TW:
           description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
           lessons:
             Aquatic:
-              name: 水上巡航
+              name: 'Minecraft: 水上巡航'
           student_description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
         sconyers:
           title: 翠絲的遊樂場
@@ -15602,6 +15599,8 @@ zh-TW:
           lessons:
             Virus Simulation for Code Bytes:
               name: 編碼一個模擬
+            Outbreak:
+              name: 編碼一個模擬
           lesson_groups:
             outbreak:
               display_name: 疫情爆發模擬
@@ -17479,6 +17478,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            Java Lab:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17843,6 +17844,8 @@ zh-TW:
               name: 評估日
             lesson-15:
               name: 評估日
+            Java Lab:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17878,5 +17881,25 @@ zh-TW:
               display_name: 內容
             lesson_group:
               display_name: 內容
+            lessonGroup-2:
+              display_name: 內容
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: 視窗元件
+            lesson-2:
+              name: 工具
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: 拼字蜜蜂
+          title: 拼字蜜蜂
+        outbreak-csc:
+          title: 疫情爆發
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 評估日
+          lesson_groups:
             lessonGroup-2:
               display_name: 內容

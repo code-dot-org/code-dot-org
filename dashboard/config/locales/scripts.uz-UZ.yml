@@ -23,6 +23,7 @@ uz:
         csp_2021_category_name: Kompyuter fanlari tamoyillari ('21-'22)
         cspexams_category_name: Kompyuter fanlari tamoyillari Amaliy test
         csp17_category_name: Kompyuter fanlari tamoyillari ('17-'18)
+        aiml_2021_category_name: AI / ML
         full_course_category_name: To'liq kurslar
         hoc_category_name: Dasturlash soati
         math_category_name: Matematik
@@ -61,6 +62,8 @@ uz:
               name: Joylarga xavfsiz borish
             Happy Maps:
               name: Xursand Xaritalar
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: Sudrab qo‘yishni o‘rgan'
             'Maze: Debugging':
               name: 'Labirint: Debugging'
             'Maze: Loops':
@@ -233,7 +236,7 @@ uz:
             ularga koddan foydalanib qo‘shilaylik.
           lessons:
             Artist:
-              name: Rassom
+              name: Anna va Elza bilan kod yozing
           student_description: Anna va Elza muzning sehrlari va go‘zalligini o‘rganayotganda
             ularga qo‘shilish uchun koddan foydalanamiz. Siz muzda uchish paytida
             qor parchalari va naqshlarini yaratasiz va qishning ajoyib joyini yaratasiz,
@@ -387,7 +390,7 @@ uz:
             o‘yin yaratish uchun Play Lab-dan foydalaning.
           lessons:
             Infinity:
-              name: Cheksizlik
+              name: Disney Cheksiz O‘yin laboratoriyasi
           student_description: Disney Infinity qahramonlari ishtirokidagi hikoya yoki
             o‘yin yaratish uchun Play Lab-dan foydalaning.
         algebrademo:
@@ -558,6 +561,12 @@ uz:
           lessons:
             Jigsaw:
               name: Topishmoq
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga
+                kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya
+                qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi,
+                shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda
+                o‘sish kuzatiladi.
           student_description: Puzl qo‘llanmasini sinab ko‘ring.
         step:
           title: qadam
@@ -1659,7 +1668,7 @@ uz:
             o‘z Star Wars o‘yiningizni yarating.
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Star Wars: Building a Galaxy With Code (Blockly)'
           student_description: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada
             o‘z Star Wars o‘yiningizni yarating.
         mc:
@@ -2693,6 +2702,8 @@ uz:
               name: Events Unplugged
             Fuzz Fiesta:
               name: Fuzz Fiesta
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: Sudrab qo‘yishni o‘rgan'
             Loops:
               name: Sikllar
             Loops Intro:
@@ -2753,6 +2764,8 @@ uz:
               name: Hodisalar
             Events Unplugged:
               name: Events Unplugged
+            'Jigsaw: Learn to drag and drop':
+              name: 'Pazl: Sudrab qo‘yishni o‘rgan'
             Loops:
               name: Sikllar
             Loops Intro:
@@ -3807,7 +3820,6 @@ uz:
           description: Choose your team and make a basketball game
           lessons:
             Bounce:
-              name: Sakrash
               description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz?
                 Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
               description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima
@@ -4852,7 +4864,6 @@ uz:
           description: Mix and match across sports
           lessons:
             Sports:
-              name: Sport
               description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz?
                 Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
               description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima
@@ -5164,6 +5175,8 @@ uz:
               name: Getters
             Getting Properties:
               name: Getting Properties
+            Arrays:
+              name: Massivlar
             Arrays and For Loops:
               name: Arrays and For Loops
             Circuits and Physical Prototypes:
@@ -5578,6 +5591,7 @@ uz:
             'Project: Make a Game':
               name: 'Project: Make a Game'
             Arrays:
+              name: Massivlar
               description_student: Learn how lists can be used to store multiple values
                 in a single variable name.
               description_teacher: Massiv - bu odatda bir xil turdagi buyumlarning
@@ -8954,7 +8968,7 @@ uz:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
-              name: Maynkraft Dasturlash soati
+              name: 'Minecraft: Hero''s Journey'
           student_description: Minecraft Dasturlash soatiga yangi mashg‘ulotlar bilan
             qaytdi! Minecraft bo‘yicha kod bilan sayohat.
         applab-intro-staging:
@@ -13062,7 +13076,7 @@ uz:
             code.
           lessons:
             Aquatic:
-              name: Aquatic
+              name: 'Minecraft: Suvga sayohat'
           student_description: Minecraft is back with a brand new activity! Use your
             creativity and problem solving skills to explore and build underwater
             worlds with code.
@@ -18104,6 +18118,8 @@ uz:
               name: Intellectual Property
             Images:
               name: Rasmlar
+            CSS Classes:
+              name: CSS sinflari
             Team Problem Solving:
               name: Jamoada muammoni hal qilish
           student_description: Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
@@ -18478,6 +18494,8 @@ uz:
               name: Loyiha yakuniy testi
             CS Discoveries Post Course survey:
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            Random Numbers:
+              name: Tasodifiy sonlar
             Sprites and Animations:
               name: Spraytlar va animatsiyalar
             Create a Scene:
@@ -19497,6 +19515,7 @@ uz:
                 uchun tahlil qilib, o‘z veb-saytlaridan qaysi biriga mos kelishini
                 hal qilishadi."
             CSS Classes:
+              name: CSS sinflari
               description_student: "**Kun savoli: Bir xil turdagi elementlar uchun
                 qanday qilib har xil uslublarni yaratishimiz mumkin?**\\\r \n\\\r
                 \nUshbu dars veb-dasturchilarga o‘zlari xohlagan elementlar guruhlarini
@@ -20730,6 +20749,7 @@ uz:
 
                 Ushbu darsda o‘quvchilar sonni belgilash uchun o‘zgaruvchidan qanday foydalanishni o‘rganadilar. O‘quvchilar darsni kiritish-chiqarish-saqlash-qayta ishlash modelining saqlash komponenti tarkibidagi o‘zgaruvchining maqsadini juda oddiy tavsiflash bilan boshlashadi. So‘ngra o‘quvchilar o‘zgaruvchining modelini raqamni nomlash usuli sifatida mustahkamlaydigan progressiya darajasini yakunlaydilar.
             Random Numbers:
+              name: Tasodifiy sonlar
               description_student: "**Question of the Day: How can we make our programs
                 behave differently each time they are run?** \\\r\n\\\r\nO‘quvchilar
                 `randomNumber()` bloki va undan qanday qilib o‘zlarining dasturlarida
@@ -22921,6 +22941,8 @@ uz:
                 xususiyatlari haqidagi bilimlarini qo‘llaydilar.
             Team Problem Solving:
               name: Jamoada muammoni hal qilish
+            CSS Classes:
+              name: CSS sinflari
             Post-Project Test:
               name: Loyiha yakuniy testi
             CS Discoveries Post Course survey:
@@ -23398,6 +23420,7 @@ uz:
 
                 Ushbu darsda o‘quvchilar sonni belgilash uchun o‘zgaruvchidan qanday foydalanishni o‘rganadilar. O‘quvchilar darsni kiritish-chiqarish-saqlash-qayta ishlash modelining saqlash komponenti tarkibidagi o‘zgaruvchining maqsadini juda oddiy tavsiflash bilan boshlashadi. So‘ngra o‘quvchilar o‘zgaruvchining modelini raqamni nomlash usuli sifatida mustahkamlaydigan progressiya darajasini yakunlaydilar.
             Random Numbers:
+              name: Tasodifiy sonlar
               description_student: "**Question of the Day: How can we make our programs
                 behave differently each time they are run?** \\\r\n\\\r\nO‘quvchilar
                 `randomNumber()` bloki va undan qanday qilib o‘zlarining dasturlarida
@@ -23933,6 +23956,8 @@ uz:
           lessons:
             Virus Simulation for Code Bytes:
               name: Simulyatsiyani kodlash
+            Outbreak:
+              name: Simulyatsiyani kodlash
         apps-for-good:
           title: Foydali ilovalar
         2021drafting:
@@ -24241,6 +24266,8 @@ uz:
                 uchun tahlil qilib, o‘z veb-saytlaridan qaysi biriga mos kelishini
                 hal qilishadi."
             CSS Classes:
+              key: CSS sinflari
+              name: CSS sinflari
               description_teacher: "**Kun savoli: Bir xil turdagi elementlar uchun
                 qanday qilib har xil uslublarni yaratishimiz mumkin?**\\\r \n\\\r
                 \nUshbu dars veb-dasturchilarga o‘zlari xohlagan elementlar guruhlarini
@@ -24311,6 +24338,9 @@ uz:
             Variables:
               key: O‘zgaruvchilar
               name: O‘zgaruvchilar
+            Random Numbers:
+              key: Tasodifiy sonlar
+              name: Tasodifiy sonlar
             Sprites:
               key: Spraytlar
               name: Spraytlar
@@ -27393,6 +27423,10 @@ uz:
                 (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
             lesson-22:
               name: Designing Data Collection
+              description_teacher: |-
+                Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.
+
+                \*\* Kun savoli: \*\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?
           lesson_groups:
             lessonGroup-4:
               display_name: Survey
@@ -27419,6 +27453,10 @@ uz:
                 (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
             Survey Planning:
               name: Designing Data Collection
+              description_teacher: |-
+                Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.
+
+                \*\* Kun savoli: \*\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?
           lesson_groups:
             lessonGroup-4:
               display_name: Survey
@@ -27711,3 +27749,21 @@ uz:
           lessons:
             lesson-1:
               name: 'Raqs Bazmi: Tarmoqsiz'
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Vidjetlar
+            lesson-2:
+              name: Asboblar
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Bilimdon Asalari
+          title: Bilimdon Asalari
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent

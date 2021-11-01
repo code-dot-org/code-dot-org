@@ -164,6 +164,39 @@
         },
         "helloworld_retro_behaviors": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_addSprites": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_exemplar1": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_exemplar2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_freeplay": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
         }
       }
     }

@@ -3396,7 +3396,8 @@
           "verionhistory": "Zasekli jste se? Svůj kód můžete kdykoli resetovat – klikněte na \"Historie verzí\" a zvolte \"Začít znovu\"."
         },
         "courseA_harvester_loops6_2021": {
-          "courseA_harvester_loops6_a": "Pokud se zasekneš, napiš si všechny kroky na papír a potom uvidíš, které se opakují."
+          "courseA_harvester_loops6_a": "Pokud se zasekneš, napiš si všechny kroky na papír a potom uvidíš, které se opakují.",
+          "courseA_harvester_loops6_b": "Toto je cesta, po které byste se měli vydat, abyste posbírali všechnu kukuřici."
         },
         "courseA_harvester_seq2_2021": {
           "courseA_harvester_seq2_b": "Zkus sepsat kroky na papír, aby jsi našel řešení!"
@@ -3792,7 +3793,8 @@
           "courseF_bee_for5_c": "Neboj se dělat chyby! Zkus používat bloky a spouštět kód a sleduj, co se stane. Nevadí, když úlohu ještě úplně nerozluštíš."
         },
         "coursea_maze_ramp1_2021": {
-          "courseC_maze_programming1_b": "Neboj se dělat chyby! Něco zkus, a když to nebude fungovat, vyzkoušej něco jiného."
+          "courseC_maze_programming1_b": "Neboj se dělat chyby! Něco zkus, a když to nebude fungovat, vyzkoušej něco jiného.",
+          "courseC_maze_programming1_a": "Jestliže se pták k praseti nedostává, zajistěte, aby byly oba bloky plně sklapnuty dohromady a poté znovu klikněte na „Spustit“."
         },
         "CourseD_Dance_2020_01_2021": {
           "validation": "**Jak splním tuto úroveň?**\n\n-   Zajisti, aby se tanečník zobrazil na obrazovce.\n\n_Tato úroveň končí po 4 taktech._",
@@ -3956,10 +3958,12 @@
           "mc_9_c": "K umístění pochodně na políčko pod sebou použij `umísti pochodeň` blok."
         },
         "courseA_collector_loops3_2021": {
-          "courseA_collector_loops3_a": "Zkus použít  \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\ncyklus!"
+          "courseA_collector_loops3_a": "Zkus použít  \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\ncyklus!",
+          "courseA_collector_loops3_b": "Pamatujte, do cyklu <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> můžete dát více než jen jeden blok."
         },
         "courseA_collector_loops6_2021": {
-          "courseA_collector_loops6_a": "Nemůžeš přijít na to, co je špatně? Zkus kód spustit několikrát a uvidíš, co se stane."
+          "courseA_collector_loops6_a": "Nemůžeš přijít na to, co je špatně? Zkus kód spustit několikrát a uvidíš, co se stane.",
+          "courseA_collector_loops6_b": "Nejkratší řešení má 2 cykly <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, jeden po druhém."
         },
         "courseB_maze_seq6_2021": {
           "courseB_maze_seq5_c": "Tuto hádanku lze vyřešit dvěma způsoby.",
@@ -3969,7 +3973,9 @@
         },
         "courseB_maze_seq9_2021": {
           "courseB_maze_seq9_c": "Tuto hádanku lze vyřešit dvěma způsoby.",
-          "courseB_maze_seq9_d": "Nedaří se Vám to? Zkuste tento způsob!"
+          "courseB_maze_seq9_d": "Nedaří se Vám to? Zkuste tento způsob!",
+          "courseB_maze_seq9_a": "Zkuste si nejprve napsat všechny kroky na kousek papíru.",
+          "courseB_maze_seq9_b": "Zkompilujte svůj program postupně po jednotlivých blocích a otestujte svou kompilaci."
         },
         "courseB_starWars_prog1": {
           "courseB_starWars_prog1_a": "Zkuste přidávat bloky po jednom a poté klikněte na „Spustit“, abyste viděli, co se stane.",
@@ -4455,6 +4461,112 @@
           "courseB_maze_seq7_a": "Přidejte 1 blok, aby se Scrat pohnul směrem k žaludu.",
           "courseB_maze_seq7_b": "Zkuste spustit ten kód, který Vám byl dán a uvidíte, kde skončíte.",
           "courseB_maze_seq7_c": "Nemůžete se dostat k žaludu? Zkuste tento způsob!"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "Až se přesunete do čtverce s pokladem, použijte tento blok k jeho sebrání.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "Jednoduchým řešením by bylo posunout se dvakrát na východ a pak vzít poklad."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "Než seberete nějaký poklad, budete se muset pohnout.",
+          "courseA_collector_loops2_b": "Až se přesunete do čtverce s pokladem, použijte tento blok k jeho sebrání.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "Chcete-li změnit, jak daleko Laurel půjde, změňte počet spuštění cyklu.",
+          "courseA_collector_loops4_b": "Nezapomínejte, že po dokončení cyklu <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> se Laurel musí projít a posbírat poklady!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "Jestliže se Vám nedaří přijít na správnou odpověď ihned, zkuste použít kus papíru a zjistit si jaké šipky budete potřebovat a poohlédnout se po pravidelnostech.",
+          "courseA_collector_loops5_b": "Zkuste problém rozdělit na dvě části, přičemž se přesuňte do boku a poté dolů.",
+          "courseA_collector_loops5_c": "Budete muset začít cyklem <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, který Laurel přesouvá na západ a sbírá poklad."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "Jestliže se Vám nedaří přijít na to, co přijde dále, zkuste kód spustit a uvidíte, kde Laurel skončí."
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "Jestliže máte s vyřešením tohoto hlavolamu nějaký problém, zkuste si pohyby napsat na kus papíru a najít v nich nějakou pravidelnost.",
+          "courseA_collector_loops8_b": "Snažte se rozložit tento hlavolam na 3 samostatné problémy a napsat pro každý z nich cykly.",
+          "courseA_collector_loops8_c": "Pamatujte, že v daném okamžiku můžete napsat jeden kus kódu a poté stisknout „Spustit“, abyste zjistili, kam odtamtud musíte jít."
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "Jestli se Vám nepodaří najít všechna místa k použití cyklů, zkuste programovat to postupně po krocích a najít pravidelnost. ",
+          "courseA_collector_loops9_b": "Pokuste se dát 2 své cykly <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> do jiného cyklu, aby byl Váš kód kratší!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "Jestliže bude něco špatně, zkuste změnit počty v jednotlivých cyklech.",
+          "courseA_collector_loops_challenge1_b": "Jestliže něco děláte jen jednou, nemusíte používat cyklus.",
+          "courseA_collector_loops_challenge1_c": "Když začínáte, na pravé straně jeskyně je 6 drahokamů. Ale Vám stačí jen získat poklady pěti pohyby směrem na jih. Víte proč?",
+          "courseA_collector_loops_challenge1_d": "Počáteční program nemusí posbírat poslední dva drahokamy. Zkuste přidat tento kód až na konec:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_b": "Zkuste tuto cestu k řešení.",
+          "courseA_collector_loops_challenge2kp_a": "Podaří se Vám použít cykly k vyřešení tohoto hlavolamu?"
+        },
+        "courseA_harvester_loops1_2021": {
+          "courseA_harvester_loops1_a": "Když už se přesunete k nějaké kukuřici, použijte tento blok k jejímu sklizení!\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_loops2_2021": {
+          "courseA_harvester_loops2_a": "Váš kód bude mít **čtyři** bloky `pohyb na západ`\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\na **čtyři** bloky <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
+          "courseA_harvester_loops2_b": "Jestliže i tak máte potíže, zkuste si kroky nahlas odříkat."
+        },
+        "courseA_harvester_loops3_2021": {
+          "courseA_harvester_loops3_a": "Pomozte si použitím bloku `opakování` jako je tento!\n\n<xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml>",
+          "courseA_harvester_loops3_b": "Chcete-li zopakovat kód, vytáhněte cyklus `opakovat` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">4</title>\n  </block></xml> a pak do něj vložte blok, který uvnitř něj chcete mít."
+        },
+        "courseA_harvester_loops4_2021": {
+          "courseA_harvester_loops4_a": "Nebojte se stisknout `Spustit`, abyste viděli, co se stane!",
+          "courseA_harvester_loops4_b": "Kolik kusů kukuřice tam je? Kolikrát se Váš kód opakuje?"
+        },
+        "courseA_harvester_loops5_2021": {
+          "courseA_harvester_loops5_a": "Jestliže Vám to nepůjde, zkuste tento hlavolam řešit po dvou částech: jednu část před rohem a jednu část za rohem.",
+          "courseA_harvester_loops5_b": "Váš výsledný kód bude mít **jeden** cyklus `opakování`  <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n    </block></xml>, **jeden** blok `pohyb na jih`   <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> a **jeden** blok `pohyb na Východ` <xml><block type=\"maze_moveEast\" limit=\"1\"/> </xml>.",
+          "courseA_harvester_loops5_c": "Postupujte touto cestou, abyste sebrali všechnu kukuřici!"
+        },
+        "courseA_harvester_loops5a_2021": {
+          "courseA_harvester_loops5a_a": "Budete potřebovat jeden cyklus `opakování` <xml> <block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">6</title>\n  </block></xml> po druhém.",
+          "courseA_harvester_loops5a_b": "Jeden cyklus bude opakovat `posuv na jih` <xml><block type=\"maze_moveSouth\" limit=\"1\"/></xml> a druhý bude opakovat `posuv na východ` <xml><block type=\"maze_moveEast\" limit=\"1\"/></xml>",
+          "courseA_harvester_loops5a_c": "Tuto cestu použijte k posuvu na jednu stranu a poté na jinou."
+        },
+        "courseA_harvester_loops5b_2021": {
+          "courseA_harvester_loops5b_a": "Stiskněte `Spustit` a uvidíte, co se stane!",
+          "courseA_harvester_loops5b_b": "Mají Vaše cykly správný počet opakování?",
+          "courseA_harvester_loops5b_c": "Přesuňte se na jednu stranu a poté na druhou s touto cestou."
+        },
+        "courseA_harvester_loops7_2021": {
+          "courseA_harvester_loops7_a": "Budete potřebovat dva cykly `opakování` <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml> následující těsně po sobě!",
+          "courseA_harvester_loops7_b": "Použijte dvou cyklů ke sledování této cesty."
+        },
+        "courseA_harvester_loops9_2021": {
+          "courseA_harvester_loops9_a": "Rozdělte tento hlavolam na tři různé části. Jednu část do prvního rohu, druhou část do druhého rohu a jednu část na konec.",
+          "courseA_harvester_loops9_b": "Nebojte se svůj kód po dokončení každé části spustit a podívat se, co se stane!",
+          "courseA_harvester_loops9_c": "Postupujte touto cestou, abyste sebrali všechnu kukuřici."
+        },
+        "courseA_maze_ramp2_2021": {
+          "1": "Váš kód by potom měl vypadat takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2021": {
+          "1": "Váš kód by měl vypadat takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2021": {
+          "1": "Váš kód by měl vypadat takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2021": {
+          "1": "Váš kód by měl vypadat takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2021": {
+          "1": "Váš kód by měl vypadat takto:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Zkuste přidávat bloky po jednom, dokud hlavolam nevyřešíte.",
+          "courseB_maze_seq8_b": "Je více než jen jeden způsob, jak vyřešit tento hlavolam!",
+          "courseB_maze_seq8_c": "Nevíte, jak na to? Zkuste tuto cestu!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Nejkratší cesta by tentokrát nemusela fungovat.",
+          "courseB_maze_seq_challenge1_b": "Zkuste začít použitím bloku <xml><block type=\"maze_moveWest\"/></xml>."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Chcete-li vyřešit tento hlavolam, nemusíte přidávat ani odstraňovat bloky.",
+          "courseB_maze_seq_challenge2_b": "Přeskupte bloky a vezměte cestu tvaru schodiště."
         }
       }
     }

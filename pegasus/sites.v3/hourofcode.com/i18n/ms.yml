@@ -29,6 +29,8 @@ ms:
   africa_campaign_date_full: 1-31 Oktober
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 Oktober 2020
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: 'Belajar hari ini, untuk membina masa depan lebih cerah.  '
   hoc2020_header_with_line_break_markdown: |-
     Belajar hari ini,
@@ -63,6 +65,7 @@ ms:
     komputer ialah asas untuk setiap pelajar mempelajarinya.
   social_hoc2019_dance: Menampilkan Katy Perry, Shawn Mendes, Panic! At The Disco,
     Lil Nas X, Jonas Brothers, Nicki Minaj dan 34 lagi!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: AI untuk Lautan
   oceans_landing_description: 'Belajar tentang pembelajaran mesin dan penggunaan AI
     secara beretika.  '
@@ -159,6 +162,12 @@ ms:
   hoc_overview_oceans_tutorial_desc: 'Pelajari tentang kecerdasan buatan (AI), pembelajaran
     mesin, data latihan dan kepincangan, sambil meneroka isu etika dan cara AI boleh
     digunakan untuk mengatasi masalah dunia.  '
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: Apakah AI?
   ai_video_title_algorithm_bias: Memerangi kepincangan di dalam algoritma
   ai_video_title_phone_knows_dog: Bagaimanakah telefon anda tahu ini ialah anjing?
@@ -225,6 +234,10 @@ ms:
     acara Jam Kod. Tutorial satu jam dalam lebih daripada 45 bahasa. Pengalaman tidak
     diperlukan.
   hourofcode_homepage_hoc2018_header_line2: Umur 4 hingga 104.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Minecraft kini kembali untuk Hour of Code dengan
     aktiviti yang baru! Mengembara dalam Minecraft dengan kod.
   codeorg_homepage_hoc2019_dance_heading: Cuba <span class="highlight-word">Majlis&nbsp;Tari-Menari</span>
@@ -8520,7 +8533,7 @@ ms:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: Semua pelayar moden, tablet Android, iPad
   tutorial_icomputelearn_string_platforms: Semua pelayar moden
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: Semua pelayar moden, tablet Android, iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Semua pelayar moden, tablet Android, iPad
   tutorial_vidcodeanimojies_string_platforms: Semua pelayar moden, tablet Android,

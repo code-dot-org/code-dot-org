@@ -14,6 +14,13 @@ hi:
         प्रोग्रामिंग रोकें और पुन: प्रयास करें ।'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: अमान्य है। ध्यान दें कि आपके पासवर्ड को रीसेट करने के लिए प्रत्येक
+                लिंक का उपयोग केवल एक बार किया जा सकता है, और केवल सबसे हाल ही में
+                भेजा गया लिंक काम करेगा।
       messages:
         blank: की आवश्यकता है
         blank_plural: की आवश्यकता है
@@ -46,6 +53,7 @@ hi:
           समाप्त करने के लिए निम्न जानकारी भरें <strong>%{provider}</strong>के लिये<strong>%{email}</strong>"
         finish_sign_up_subheader_provider_markdown: "&lt; div वर्ग के लिए एक Code.org
           खाता बनाना समाप्त करने के लिए निम्न जानकारी भरें **%{provider}**के लिये**%{email}**"
+        reset_password_token: आपके द्वारा अनुसरण किया गया रीसेट पासवर्ड लिंक
         error:
           future: भविष्य में नहीं किया जा सकता
   beta: बीटा
@@ -65,7 +73,10 @@ hi:
   join_section:
     code:
       placeholder: अनुभाग कोड (ABCDEF)
+      instructions: 'कृपया 6 अक्षरों का कोड दर्ज करें जिसे आपके शिक्षक ने आपके साथ
+        साझा किया था (उदाहरण: "ABCDEF") उनके अनुभाग में शामिल होने के लिए।'
       instructions_short: अपने 6 पत्र अनुभाग कोड दर्ज करें
+      submit: सम्मिलित हों
   add_hint_form:
     placeholder: कृपया अपने सुझाव यहाँ दर्ज करें
     submit: जोड़ने के संकेत
@@ -1175,6 +1186,7 @@ hi:
       email: ईमेल
       email_alternate: वैकल्पिक ईमेल
       gender: लैंगिक पहचान
+      school: स्कूल
       school_name: स्कूल का नाम
       school_city: स्कूल का शहर
       school_country: स्कूल देश

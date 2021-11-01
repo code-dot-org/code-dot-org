@@ -1,3 +1,7 @@
 {
-  "makeBackground": "Tu dois ajouter un effet d'arrière plan."
+  "genericBonusSuccess": "Bon travail! Vous avez terminé le niveau, y compris le défi supplémentaire!",
+  "makeBackground": "Tu dois ajouter un effet d'arrière plan.",
+  "reinfFeedbackMsg": "Vous avez fini! Cliquez sur \"Continuer\" pour passer au niveau suivant.",
+  "save": "Sauvegarder",
+  "shareGame": "Partager ton jeu :"
 }

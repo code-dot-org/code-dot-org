@@ -1110,6 +1110,15 @@ nn:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": knas
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Bobble
+            "'sound://category_animals/bear.mp3'": bjørn
+            "'sound://category_animals/cat.mp3'": katt
+            "'sound://category_animals/cow.mp3'": ku
+            "'sound://category_animals/sheep.mp3'": sau
+            "'sound://category_animals/chicken.mp3'": kylling
+            "'sound://category_animals/elephant.mp3'": elefant
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": hopp
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
@@ -1488,18 +1497,34 @@ nn:
         text: x-koordinator til {SPRITE}
       Mikelab_yLocationOf:
         text: y-koordinator til {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Iskrem
+            Stars: Stjerner
+            Fireworks: Fyrverkeri
+            '"rainbow"': Regnboge
+            '"hearts"': Hjerter
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': regn
       Poetry_playSound:
         text: spillLyd {SOUND}
+        options:
+          SOUND:
+            Light: Lys
+      Poetry_setBackground:
+        text: vel bakgrunnsfarge {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Fargar
             '"space"': Verdensrom
             '"stars"': Stjerner
+            '"rain"': Regn
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
           PALETTE:
             '"rainbow"': Regnboge
       Poetry_setForegroundEffect:

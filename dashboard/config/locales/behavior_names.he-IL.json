@@ -2464,7 +2464,9 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
-          "spinning right": "להסתובב ימינה"
+          "spinning right": "להסתובב ימינה",
+          "spinning left": "להסתובב שמאלה",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
@@ -2529,7 +2531,9 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
-          "spinning right": "להסתובב ימינה"
+          "spinning right": "להסתובב ימינה",
+          "spinning left": "להסתובב שמאלה",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
@@ -2579,7 +2583,9 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
-          "spinning right": "להסתובב ימינה"
+          "spinning right": "להסתובב ימינה",
+          "spinning left": "להסתובב שמאלה",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "לשחות שמאלה וימינה",
@@ -2644,7 +2650,114 @@
           "moving north": "לנוע צפונה",
           "moving south": "לנוע דרומה",
           "moving west": "לנוע מערבה",
-          "spinning right": "להסתובב ימינה"
+          "spinning right": "להסתובב ימינה",
+          "spinning left": "להסתובב שמאלה",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "לשוטט",
+          "moving east": "לנוע מזרחה",
+          "spinning left": "להסתובב שמאלה",
+          "spinning right": "להסתובב ימינה",
+          "shrinking": "להתכווץ",
+          "growing": "לגדול",
+          "moving south": "לנוע דרומה",
+          "swimming left and right": "לשחות שמאלה וימינה",
+          "moving north": "לנוע צפונה",
+          "jittering": "לרעוד",
+          "moving west": "לנוע מערבה",
+          "patrolling": "לסייר",
+          "moving with arrow keys": "לנוע באמצעות מקשי החצים"
         }
       }
     }

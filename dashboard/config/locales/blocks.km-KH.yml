@@ -307,6 +307,11 @@ km:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ខាំ
+            "'sound://category_animals/cat.mp3'": ឆ្មា
+            "'sound://category_animals/cow.mp3'": មេគោ
+            "'sound://category_animals/sheep.mp3'": ចៀម
+            "'sound://category_animals/chicken.mp3'": មេមាន់
+            "'sound://category_animals/dog.mp3'": ឆ្កែ
             "'sound://category_digital/jump_7.mp3'": លោត
       gamelab_randColor:
         text: ពណ៌​ព្រាវ

@@ -207,6 +207,13 @@ de:
           lessons:
             Artist:
               name: Künstler
+              description_student: Erstelle schöne Bilder durch die Programmierung
+                des Zeichners.
+              description_teacher: In dieser Lektion übernehmen die SchülerInnen die
+                Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen.
+                In dieser Phase mit dem Künstler können die SchülerInnen Bilder von
+                zunehmender Komplexität erstellen, indem sie neue Bausteine wie "100
+                Pixel vorwärts" und "90 Grad nach rechts drehen" verwenden.
           student_description: Zeichne coole Bilder und Designs mit dem Künstler!
         hourofcode:
           title: Klassisches Labyrinth
@@ -229,7 +236,7 @@ de:
             der Magie und Schönheit von Eis zu begleiten.
           lessons:
             Artist:
-              name: Künstler
+              name: Programmiere mit Anna und Elsa
           student_description: Wir wollen mit unseren Programmen gemeinsam mit Anna
             und Elsa den Zauber und die Schönheit des Eises erkunden. Beim Eislaufen
             wirst Du Schneeflocken und Muster erschaffen - ein Winter- Wunderland,
@@ -388,7 +395,7 @@ de:
             Spiel mit den Disney Infinity Figuren zu erstellen.
           lessons:
             Infinity:
-              name: Unendlichkeit
+              name: Disney Infinity Spielelabor
           student_description: Verwende das Spielelabor, um eine Geschichte oder ein
             Spiel mit den Disney Infinity Figuren zu erstellen.
         algebrademo:
@@ -574,6 +581,12 @@ de:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_student: Klicken und ziehen Sie, um die Aufgaben fertigzustellen.
+              description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung
+                davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt
+                mit einer kurzen Diskussion, in der sie in das richtige Verhalten
+                im Computer-Labors eingeführt werden, dann werden sie einen Computer
+                benutzen, um Aufgaben im Internet zu lösen.
           student_description: Testen Sie unser Puzzle-Tutorial.
         step:
           title: Schritt
@@ -1171,6 +1184,8 @@ de:
               name: Enthaltene Level
             ML Fish:
               name: ML Fisch
+            Java Lab:
+              name: Java Lab
         algebraPD2b:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -1771,7 +1786,7 @@ de:
             Star Wars Spiel in einer weit, weit entfernten Galaxie.
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Star Wars: Erschaffe eine Galaxie mit Code (Blocky)'
           student_description: Lerne, Droiden zu programmieren und erschaffe dein
             eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
         mc:
@@ -4064,7 +4079,14 @@ de:
           description: Wähle Dein Team und spiele eine Runde Basketball
           lessons:
             Bounce:
-              name: Bounce
+              description_student: Hast du dir jemals gewünscht, in der Schule Videospiele
+                zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!
+              description_teacher: In dieser Online-Aktivität lernen die SchülerInnen,
+                was Ereignisse sind und wie Computer sie in Programmen wie Videospielen
+                verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das
+                Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten).
+                Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel
+                mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.
           student_description: Wähle Dein Team und spiele eine Runde Basketball
         sample-csp5:
           lessons:
@@ -5147,7 +5169,14 @@ de:
           description: Kombiniere Elemente unterschiedlicher Sportarten
           lessons:
             Sports:
-              name: Sport
+              description_student: Hast du dir jemals gewünscht, in der Schule Videospiele
+                zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!
+              description_teacher: In dieser Online-Aktivität lernen die SchülerInnen,
+                was Ereignisse sind und wie Computer sie in Programmen wie Videospielen
+                verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das
+                Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten).
+                Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel
+                mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.
           student_description: Kombiniere Elemente unterschiedlicher Sportarten
         2016_sciencePD-phase2b:
           lessons:
@@ -9487,7 +9516,7 @@ de:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: Hero’s Journey'
           student_description: Minecraft präsentiert eine brandneue Aktivität zur
             Hour of Code! Entdecke die Welt von Minecraft mit Code.
         applab-intro-staging:
@@ -13841,7 +13870,7 @@ de:
             mit Code zu erforschen und zu bauen.
           lessons:
             Aquatic:
-              name: Wassersport
+              name: 'Minecraft: Voyage Aquatic'
           student_description: Minecraft ist zurück - mit einer brandneuen Aktivität!
             Setzen Sie Ihre Kreativität und Problemlösungsfähigkeiten ein, um Unterwasserwelten
             mit Code zu erforschen und zu bauen.
@@ -18630,7 +18659,8 @@ de:
               display_name: Umfrage
           lessons:
             CSD post-course survey:
-              name: Erkenntnisse aus der Informatik Befragung nach dem Kurs
+              name: Erkenntnisse aus der Informatik Befragung der SchülerInnen nach
+                dem Kurs ('18-'19)
         csp-post-survey-2018:
           title: Grundsätze der Informatik Schülerbefragungen nach dem Kurs ('18-'19)
           description_audience: Grundsätze der Informatik- SchülerInnen
@@ -18647,7 +18677,7 @@ de:
               display_name: Umfrage
           lessons:
             CSP post-course survey:
-              name: Grundsätze der Informatik Befragung nach dem Kurs
+              name: Grundsätze der Informatik Schülerbefragungen nach dem Kurs ('18-'19)
           student_description: Willkommen bei der Befragung nach dem Kurs zu Grundsätzen
             der Informatik von Code.org. Diese Befragung dauert ca. 15 Minuten. Ihre
             Antworten sind privat und anonym- Ihr Lehrer kann anonyme Gesamtergebnisse
@@ -25685,6 +25715,8 @@ de:
           lessons:
             Virus Simulation for Code Bytes:
               name: Programmierung einer Simulation
+            Outbreak:
+              name: Programmierung einer Simulation
           lesson_groups:
             outbreak:
               display_name: Ausbruchssimulation
@@ -28993,6 +29025,8 @@ de:
           lessons:
             lesson-20:
               name: Prüfungstag
+            lesson-24:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29000,6 +29034,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -29007,6 +29043,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-17:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29014,6 +29052,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29021,6 +29061,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29383,6 +29425,8 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
+            lesson-1:
+              name: Java Lab
             lesson-20:
               name: Prüfungstag
           lesson_groups:
@@ -29394,6 +29438,8 @@ de:
               name: Prüfungstag
             lesson-15:
               name: Prüfungstag
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -29401,6 +29447,8 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
+            lesson-1:
+              name: Java Lab
             lesson-15:
               name: Prüfungstag
           lesson_groups:
@@ -29410,6 +29458,8 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
+            lesson-1:
+              name: Java Lab
             lesson-15:
               name: Prüfungstag
           lesson_groups:
@@ -29421,6 +29471,8 @@ de:
               name: Prüfungstag
             lesson-15:
               name: Prüfungstag
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29454,5 +29506,25 @@ de:
               display_name: Inhalt
             lesson_group:
               display_name: Inhalt
+            lessonGroup-2:
+              display_name: Inhalt
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Werkzeuge
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Buchstabierwettbewerb
+          title: Buchstabierwettbewerb
+        outbreak-csc:
+          title: Ausbruch
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Prüfungstag
+          lesson_groups:
             lessonGroup-2:
               display_name: Inhalt

@@ -505,6 +505,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nytt Block!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nytt Block!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nytt Block!",
+          "poetry_foreground": "Nytt Block!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nytt Block!",
+          "poetry_multiple_sprites": "Nytt Block!",
+          "poetry_new_block": "Nytt Block!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nytt Block!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nytt Block!",
+          "poetry_sprite_stops": "Nytt Block!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nytt Block!",
+          "poetry_remove_sprite": "Nytt Block!"
         }
       }
     }

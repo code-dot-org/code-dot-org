@@ -305,6 +305,60 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "புதிய தொகுதி!",
+          "poetry_foreground": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "புதிய தொகுதி!",
+          "poetry_multiple_sprites": "புதிய தொகுதி!",
+          "poetry_new_block": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "புதிய தொகுதி!",
+          "poetry_sprite_stops": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "புதிய தொகுதி!",
+          "poetry_remove_sprite": "புதிய தொகுதி!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_collector": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_pet": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
         }
       }
     }

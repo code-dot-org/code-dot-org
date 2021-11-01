@@ -29,6 +29,8 @@ tr:
   africa_campaign_date_full: 1-31 Ekim
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 Ekim 2020
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: Bugün öğrenin, daha parlak bir gelecek inşa edin
   hoc2020_header_with_line_break_markdown: |-
     Bugün öğrenin,
@@ -63,6 +65,7 @@ tr:
     bilimi temeldir ve her öğrencinin öğrenmesi gerekir.'
   social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X,
     Jonas Brothers, Nicki Minaj ve 34 ünlü daha!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: Okyanuslar için Yapay Zeka
   oceans_landing_description: Makine öğrenimi ve yapay zekanın etik kullanımı ile
     ilgili bilgi edinin.
@@ -158,6 +161,12 @@ tr:
   hoc_overview_oceans_tutorial_desc: Etik meseleleri ve dünya problemlerini ele almada
     yapay zekanın nasıl kullanılabildiğini keşfederken, yapay zeka, makine öğrenimi,
     eğitim verileri ve yanlılık hakkında bilgi sahibi olun.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: Yapay zeka nedir?
   ai_video_title_algorithm_bias: Algoritmalarda yanlılık ile mücadele
   ai_video_title_phone_knows_dog: Telefonunuz bunun köpek olduğunu nasıl anladı?
@@ -224,6 +233,10 @@ tr:
   hourofcode_homepage_hoc2018_header_line1: Herkes, her yerde bir Hour of Code etkinliği
     düzenleyebilir. 45’ten fazla dilde bir saatlik eğitimler Deneyim gerektirmez.
   hourofcode_homepage_hoc2018_header_line2: Yediden yetmişe.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Minecraft Hour of Code için yepyeni bir faaliyetle
     geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
   codeorg_homepage_hoc2019_dance_heading: Yeni <span class="highlight-word">Dance&nbsp;Party!</span>
@@ -8112,7 +8125,7 @@ tr:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: Bütün modern tarayıcılar, Android tablet, Ipad
   tutorial_icomputelearn_string_platforms: Bütün modern tarayıcılar
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: Bütün modern tarayıcılar, Android tablet, Ipad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Bütün modern tarayıcılar, Android tablet,
     Ipad

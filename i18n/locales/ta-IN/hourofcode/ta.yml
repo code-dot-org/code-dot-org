@@ -30,6 +30,8 @@ ta:
   africa_campaign_date_full: அக்டோபர் 1-31
   africa_campaign_date_year: '2017'
   africa_campaign_date_full_year: அக்டோபர் 1-31, 2020
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: இன்று கற்றுக் கொள்ளுங்கள், நாளை பிரகாசமாக உருவாக்குங்கள்.
   hoc2020_header_with_line_break_markdown: |-
     இன்று கற்றுக்கொள்ளுங்கள்,
@@ -64,6 +66,7 @@ ta:
     கம்ப்யூட்டர் சயின்ஸ் ஒவ்வொரு மாணவரும் கற்றுக் கொள்வதற்கான அடிப்படை கல்வியாகும்.
   social_hoc2019_dance: கேட்டி பெர்ரி, ஜோனாஸ் பிரதர்ஸ், லில் நாஸ் எக்ஸ், பேனிக் அட்
     டிஸ்கோ, இன்னும் பலர் தோன்றுகிறார்கள்!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: பெருங்கடல்களுக்கான AI
   oceans_landing_description: இயந்திர கற்றல் மற்றும் AI இன் நெறிமுறை பயன்பாடு பற்றி
     அறிக.
@@ -159,6 +162,12 @@ ta:
   hoc_overview_oceans_tutorial_desc: செயற்கை நுண்ணறிவு (AI), இயந்திர கற்றல், பயிற்சி
     தரவு மற்றும் சார்பு பற்றி அறிந்து கொள்ளுங்கள், அதே நேரத்தில் நெறிமுறை சிக்கல்களை
     ஆராய்ந்து, உலக பிரச்சினைகளை தீர்க்க AI எவ்வாறு பயன்படுத்தப்படலாம்.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: AI என்றால் என்ன?
   ai_video_title_algorithm_bias: "வழிமுறைகளில் சார்புடன் போராடுவது \n"
   ai_video_title_phone_knows_dog: இது ஒரு நாய் என்று உங்கள் தொலைபேசியில் எப்படி தெரியும்?
@@ -228,6 +237,10 @@ ta:
     எங்கு வேண்டுமானாலும் ஏற்பாடு செய்யலாம். 45க்கும் அதிகமான மொழிகளில் ஒரு-மணிநேர
     டுடோரியல்கள். அனுபவம் தேவையில்லை.
   hourofcode_homepage_hoc2018_header_line2: 4 முதல் 104 வயது வரை.
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Hour of Code க்காக Minecraft மீண்டும் புத்தம்
     புதிய நடவடிக்கையுடன் வருகிறது! குறியீட்டைக் கொண்டு Minecraft ஊடான பயணம்.
   codeorg_homepage_hoc2019_dance_heading: புதிய <<span class="highlight-word"> நடனம்
@@ -8498,7 +8511,8 @@ ta:
   tutorial_grokimage_string_platforms: 'அனைத்து நவீன உலாவிகளும்,ஆண்ட்ராய்டு டேப்லெட்
     ,ஐபாட் '
   tutorial_icomputelearn_string_platforms: அனைத்து நவீன உலாவிகளும்
-  tutorial_rpstress_string_platforms: 'க்ரோம், பையர்பாக்ஸ் '
+  tutorial_rpstress_string_platforms: 'அனைத்து நவீன உலாவிகளும்,ஆண்ட்ராய்டு டேப்லெட்
+    ,ஐபாட் '
   tutorial_bsdcause_string_platforms: குரோம்
   tutorial_vidcodeanimoji_string_platforms: 'அனைத்து நவீன உலாவிகளும்,ஆண்ட்ராய்டு டேப்லெட்
     ,ஐபாட் '

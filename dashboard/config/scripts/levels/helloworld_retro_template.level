@@ -67,18 +67,15 @@
     "hint_prompt_attempts_threshold": "1",
     "authored_hints": "[]",
     "instructions_icon": "retro",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
+  "user_id": 9,
   "game_id": 64,
-  "published": true,
   "created_at": "2021-10-04T15:09:37.000Z",
   "level_num": "custom",
-  "user_id": 9,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-10-04T15:09:37.098+00:00\",\"changed\":[\"cloned from \\\"helloworld_retro_location\\\"\"],\"cloned_from\":\"helloworld_retro_location\"},{\"changed_at\":\"2021-10-04 15:10:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-04T15:09:37.098+00:00\",\"changed\":[\"cloned from \\\"helloworld_retro_location\\\"\"],\"cloned_from\":\"helloworld_retro_location\"},{\"changed_at\":\"2021-10-04 15:10:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-06 15:48:34 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -88,17 +85,17 @@
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="gamelab_makeNewSpriteAnon">
-              <title name="ANIMATION_NAME">"retrocreature_02"</title>
+              <title name="ANIMATION_NAME">"retrocreature_03"</title>
               <value name="LOCATION">
-                <block type="gamelab_location_picker">
+                <block type="gamelab_location_picker" can_disconnect_from_parent="false">
                   <title name="LOCATION">{"x":200,"y":200}</title>
                 </block>
               </value>
               <next>
                 <block type="gamelab_makeNewSpriteAnon">
-                  <title name="ANIMATION_NAME">"retrocreature_16"</title>
+                  <title name="ANIMATION_NAME">"retroship_10"</title>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker">
+                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
                       <title name="LOCATION">{"x":200,"y":200}</title>
                     </block>
                   </value>
