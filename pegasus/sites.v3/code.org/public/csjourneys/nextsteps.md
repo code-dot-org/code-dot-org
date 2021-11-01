@@ -174,10 +174,7 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 27th at 11 am EDT / 8 am PDT</strong></h3>
   <p>Students will learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college, apprenticeships, and Google Career Certificates. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
-  <a href="https://www.eventbrite.com/e/alternatives-to-the-4-year-cs-degree-registration-167770737793" target="_blank"><button style="margin-bottom:20px">Register on Eventbrite</button></a>
-  <br>
-<p><i>By clicking above, you will be taken to www.eventbrite.com.</i></p>
-<br>
+  <a href="https://code.zoom.us/rec/play/3LinsRk-G4SzCc9upMTn3LwxAMs3qnJfwmovSA1VP9I91pS6sV5YfzDsbMtKEuCVg9YHLfecyISw4sNq.sqU0J6LHIM3GBPXR" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
     <img src="/images/csjourneys/robert-campbell.jpg" style="border-radius:50%; width:55%" alt="Robert Campbell">
