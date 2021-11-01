@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-10-29 21:08:14 UTC",
+    "serialized_at": "2021-10-29 22:47:39 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -884,7 +884,7 @@
       "key": "57b4a404-7f04-4c35-ac3a-a82037ca64fb",
       "position": 2,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Your Turn slide.\n\n**Do This:** Pass out the worksheet for this lesson. Show the “Plan Your Program” slide on the board."
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Your Turn slide.\n\n**Do This:** Pass out the handout for this lesson. Show the “Plan Your Program” slide on the board."
       },
       "seeding_key": {
         "activity_section.key": "57b4a404-7f04-4c35-ac3a-a82037ca64fb",
@@ -1761,6 +1761,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1782,6 +1785,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_practice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1803,6 +1809,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_variables"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1824,6 +1833,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choice_prompts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1845,6 +1857,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1938,6 +1953,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_share"
+        ]
       },
       "bonus": false,
       "seeding_key": {
