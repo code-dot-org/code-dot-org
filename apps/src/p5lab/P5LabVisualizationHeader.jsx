@@ -47,6 +47,7 @@ class P5LabVisualizationHeader extends React.Component {
     } else if (mode === P5LabInterfaceMode.ANIMATION) {
       if (this.props.isBlockly) {
         Blockly.WidgetDiv.hide();
+        Blockly.DropDownDiv?.hide();
       }
 
       firehoseClient.putRecord({
