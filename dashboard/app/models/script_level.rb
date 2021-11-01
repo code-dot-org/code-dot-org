@@ -717,7 +717,7 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def get_example_solutions(level, current_user, section=nil)
+  def get_example_solutions(level, current_user, section_id=nil)
     level_example_links = []
 
     return [] if !current_user&.teacher? || CDO.properties_encryption_key.blank?
@@ -748,7 +748,7 @@ class ScriptLevel < ApplicationRecord
         end
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
-      level_example_links.push(build_script_level_url(self, {solution: true}.merge(section ? {section_id: section.id} : {})))
+      level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
     end
 
     level_example_links
