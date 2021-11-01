@@ -479,7 +479,7 @@ class ApiController < ApplicationController
   def example_solutions
     script_level = Script.cache_find_script_level params[:script_level_id].to_i
     level = Script.cache_find_level params[:level_id].to_i
-    section_id = params[:section_id] ? params[:section_id].to_i : nil
+    section_id = params[:section_id].present? ? params[:section_id].to_i : nil
     render json: script_level.get_example_solutions(level, current_user, section_id)
   end
 
