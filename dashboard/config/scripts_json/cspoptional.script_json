@@ -4,12 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_lesson_plan": true
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:58 UTC",
+    "serialized_at": "2021-10-26 22:14:44 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "cspoptional"
     }
@@ -135,21 +139,177 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a653acb3-ee1b-40b3-b926-aa2a90f8f26e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a653acb3-ee1b-40b3-b926-aa2a90f8f26e",
+        "lesson.key": "Unit 1 - Sending Bits in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "7a9707cd-90f7-4805-b149-64f3345e12ed",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a9707cd-90f7-4805-b149-64f3345e12ed",
+        "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "13429970-d684-44cd-9ce0-811b46629026",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "13429970-d684-44cd-9ce0-811b46629026",
+        "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "2cf92cc5-0c4e-483d-b806-6fbb7087c0b7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2cf92cc5-0c4e-483d-b806-6fbb7087c0b7",
+        "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "582e0954-25f5-4bd0-bce0-0a78a7eb4fe8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "582e0954-25f5-4bd0-bce0-0a78a7eb4fe8",
+        "lesson.key": "Unit 1 - How Routers Learn",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "14d60b5d-e978-4a96-bd8f-de359ea013d5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14d60b5d-e978-4a96-bd8f-de359ea013d5",
+        "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    },
+    {
+      "key": "f06475d5-ab96-4920-9a97-adb501f11313",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f06475d5-ab96-4920-9a97-adb501f11313",
+        "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
+        "lesson_group.key": "",
+        "script.name": "cspoptional"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "16d198f3-d1f8-4221-b64c-d4bba63b304f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "16d198f3-d1f8-4221-b64c-d4bba63b304f",
+        "lesson_activity.key": "a653acb3-ee1b-40b3-b926-aa2a90f8f26e"
+      }
+    },
+    {
+      "key": "3ef336be-297d-4554-8d01-d42865b5c02f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3ef336be-297d-4554-8d01-d42865b5c02f",
+        "lesson_activity.key": "7a9707cd-90f7-4805-b149-64f3345e12ed"
+      }
+    },
+    {
+      "key": "7c3ca5de-9394-4a35-a9b6-87401ade201a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a",
+        "lesson_activity.key": "13429970-d684-44cd-9ce0-811b46629026"
+      }
+    },
+    {
+      "key": "42adfa0f-6602-453c-a324-faf3f15c3eb0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0",
+        "lesson_activity.key": "2cf92cc5-0c4e-483d-b806-6fbb7087c0b7"
+      }
+    },
+    {
+      "key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76",
+        "lesson_activity.key": "582e0954-25f5-4bd0-bce0-0a78a7eb4fe8"
+      }
+    },
+    {
+      "key": "412baa88-1659-4c58-84d3-03f1f439e23b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b",
+        "lesson_activity.key": "14d60b5d-e978-4a96-bd8f-de359ea013d5"
+      }
+    },
+    {
+      "key": "79e24b96-b328-4417-bd79-203880c3d3b7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7",
+        "lesson_activity.key": "f06475d5-ab96-4920-9a97-adb501f11313"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sending Bits Real World Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -158,7 +318,8 @@
         ],
         "lesson.key": "Unit 1 - Sending Bits in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "16d198f3-d1f8-4221-b64c-d4bba63b304f"
       },
       "level_keys": [
         "Sending Bits Real World Student Lesson Introduction"
@@ -167,12 +328,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L5 How the Internet Works - Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -181,7 +339,8 @@
         ],
         "lesson.key": "Unit 1 - Sending Bits in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "16d198f3-d1f8-4221-b64c-d4bba63b304f"
       },
       "level_keys": [
         "U1L5 How the Internet Works - Video"
@@ -190,12 +349,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L5 Matching Assessment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -204,7 +360,8 @@
         ],
         "lesson.key": "Unit 1 - Sending Bits in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "16d198f3-d1f8-4221-b64c-d4bba63b304f"
       },
       "level_keys": [
         "U1L5 Matching Assessment"
@@ -213,12 +370,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Encoding Numbers Real World Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -227,7 +381,8 @@
         ],
         "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "3ef336be-297d-4554-8d01-d42865b5c02f"
       },
       "level_keys": [
         "Encoding Numbers Real World Student Lesson Introduction"
@@ -236,12 +391,9 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 Free Response Assessment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -250,7 +402,8 @@
         ],
         "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "3ef336be-297d-4554-8d01-d42865b5c02f"
       },
       "level_keys": [
         "U1L9 Free Response Assessment"
@@ -259,12 +412,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Algo MST Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -273,7 +423,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a"
       },
       "level_keys": [
         "Algo MST Student Lesson Introduction"
@@ -282,12 +433,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L06 - Matching: Label the Diagram"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -296,7 +444,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a"
       },
       "level_keys": [
         "U2L06 - Matching: Label the Diagram"
@@ -305,12 +454,9 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L06- MC: what is an MST?"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -319,7 +465,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a"
       },
       "level_keys": [
         "U2L06- MC: what is an MST?"
@@ -328,12 +475,9 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L06 - MC: Which is an MST?"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -342,7 +486,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a"
       },
       "level_keys": [
         "U2L06 - MC: Which is an MST?"
@@ -351,12 +496,9 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Algo Shortest Path Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -365,7 +507,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       },
       "level_keys": [
         "Algo Shortest Path Student Lesson Introduction"
@@ -374,12 +517,9 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L07 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -388,7 +528,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       },
       "level_keys": [
         "U1L07 Assessment 1"
@@ -397,12 +538,9 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L07 Assessment2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -411,7 +549,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       },
       "level_keys": [
         "U2L07 Assessment2"
@@ -420,12 +559,9 @@
     {
       "chapter": 13,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L07 Assessment3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -434,7 +570,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       },
       "level_keys": [
         "U2L07 Assessment3"
@@ -443,12 +580,9 @@
     {
       "chapter": 14,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L07 Assessment4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,7 +591,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       },
       "level_keys": [
         "U2L07 Assessment4"
@@ -466,12 +601,9 @@
     {
       "chapter": 15,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L07 Assessment5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -480,7 +612,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       },
       "level_keys": [
         "U2L07 Assessment5"
@@ -489,12 +622,9 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Algo How Routers Learn Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -503,7 +633,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       },
       "level_keys": [
         "Algo How Routers Learn Student Lesson Introduction"
@@ -512,12 +643,9 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Free Response 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -526,7 +654,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       },
       "level_keys": [
         "U2L08 Free Response 3"
@@ -535,12 +664,9 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Free Response 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -549,7 +675,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       },
       "level_keys": [
         "U2L08 Free Response 1"
@@ -558,12 +685,9 @@
     {
       "chapter": 19,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Free Response 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -572,7 +696,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       },
       "level_keys": [
         "U2L08 Free Response 2"
@@ -581,12 +706,9 @@
     {
       "chapter": 20,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Assessment 0"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -595,7 +717,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       },
       "level_keys": [
         "U2L08 Assessment 0"
@@ -604,12 +727,9 @@
     {
       "chapter": 21,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L08 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -618,7 +738,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       },
       "level_keys": [
         "U2L08 Assessment 1"
@@ -627,12 +748,9 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L17 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -641,7 +759,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       },
       "level_keys": [
         "U2L17 Student Lesson Introduction"
@@ -650,12 +769,9 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -664,7 +780,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       },
       "level_keys": [
         "U2L17 Assessment 1"
@@ -673,12 +790,9 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Assessment 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -687,7 +801,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       },
       "level_keys": [
         "U2L17 Assessment 2"
@@ -696,12 +811,9 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L16 Free Response Assessment 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -710,7 +822,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       },
       "level_keys": [
         "U2L16 Free Response Assessment 3"
@@ -719,12 +832,9 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -733,7 +843,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       },
       "level_keys": [
         "U2L17 Free Response Wrap Up"
@@ -742,12 +853,9 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U2L18 Student Lesson Introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -756,7 +864,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       },
       "level_keys": [
         "U2L18 Student Lesson Introduction"
@@ -765,12 +874,9 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -779,7 +885,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       },
       "level_keys": [
         "U2L17 Free Response Getting Started"
@@ -788,12 +895,9 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 Free Responses Assessment 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -802,7 +906,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       },
       "level_keys": [
         "U2L17 Free Responses Assessment 1"
@@ -811,12 +916,9 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L17 - Vocabulary matching"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -825,7 +927,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       },
       "level_keys": [
         "U2L17 - Vocabulary matching"
@@ -834,12 +937,9 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Free Response Getting Started"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -848,7 +948,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       },
       "level_keys": [
         "U2L18 Free Response Getting Started"
@@ -857,12 +958,9 @@
     {
       "chapter": 32,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Assessment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -871,7 +969,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       },
       "level_keys": [
         "U2L18 Assessment"
@@ -880,12 +979,9 @@
     {
       "chapter": 33,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L18 Free Response Wrap Up"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -894,7 +990,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       },
       "level_keys": [
         "U2L18 Free Response Wrap Up"
@@ -910,7 +1007,8 @@
         ],
         "lesson.key": "Unit 1 - Sending Bits in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "16d198f3-d1f8-4221-b64c-d4bba63b304f"
       }
     },
     {
@@ -921,7 +1019,8 @@
         ],
         "lesson.key": "Unit 1 - Sending Bits in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "16d198f3-d1f8-4221-b64c-d4bba63b304f"
       }
     },
     {
@@ -932,7 +1031,8 @@
         ],
         "lesson.key": "Unit 1 - Sending Bits in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "16d198f3-d1f8-4221-b64c-d4bba63b304f"
       }
     },
     {
@@ -943,7 +1043,8 @@
         ],
         "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "3ef336be-297d-4554-8d01-d42865b5c02f"
       }
     },
     {
@@ -954,7 +1055,8 @@
         ],
         "lesson.key": "Unit 1 - Encoding Numbers in the Real World",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "3ef336be-297d-4554-8d01-d42865b5c02f"
       }
     },
     {
@@ -965,7 +1067,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a"
       }
     },
     {
@@ -976,7 +1079,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a"
       }
     },
     {
@@ -987,7 +1091,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a"
       }
     },
     {
@@ -998,7 +1103,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Minimum Spanning Tree",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "7c3ca5de-9394-4a35-a9b6-87401ade201a"
       }
     },
     {
@@ -1009,7 +1115,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       }
     },
     {
@@ -1020,7 +1127,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       }
     },
     {
@@ -1031,7 +1139,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       }
     },
     {
@@ -1042,7 +1151,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       }
     },
     {
@@ -1053,7 +1163,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       }
     },
     {
@@ -1064,7 +1175,8 @@
         ],
         "lesson.key": "Unit 1 - Algorithms Detour - Shortest Path",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "42adfa0f-6602-453c-a324-faf3f15c3eb0"
       }
     },
     {
@@ -1075,7 +1187,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       }
     },
     {
@@ -1086,7 +1199,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       }
     },
     {
@@ -1097,7 +1211,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       }
     },
     {
@@ -1108,7 +1223,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       }
     },
     {
@@ -1119,7 +1235,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       }
     },
     {
@@ -1130,7 +1247,8 @@
         ],
         "lesson.key": "Unit 1 - How Routers Learn",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "1a7c717d-3980-4fb3-98e1-329f9a8dff76"
       }
     },
     {
@@ -1141,7 +1259,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       }
     },
     {
@@ -1152,7 +1271,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       }
     },
     {
@@ -1163,7 +1283,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       }
     },
     {
@@ -1174,7 +1295,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       }
     },
     {
@@ -1185,7 +1307,8 @@
         ],
         "lesson.key": "Unit 4 - Hard Problems - The Traveling Salesperson Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "412baa88-1659-4c58-84d3-03f1f439e23b"
       }
     },
     {
@@ -1196,7 +1319,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       }
     },
     {
@@ -1207,7 +1331,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       }
     },
     {
@@ -1218,7 +1343,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       }
     },
     {
@@ -1229,7 +1355,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       }
     },
     {
@@ -1240,7 +1367,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       }
     },
     {
@@ -1251,7 +1379,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       }
     },
     {
@@ -1262,7 +1391,8 @@
         ],
         "lesson.key": "Unit 4 - One-Way Functions - The WiFi Hotspot Problem",
         "lesson_group.key": "",
-        "script.name": "cspoptional"
+        "script.name": "cspoptional",
+        "activity_section.key": "79e24b96-b328-4417-bd79-203880c3d3b7"
       }
     }
   ],

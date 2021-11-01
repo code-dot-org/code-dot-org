@@ -1,3 +1,8 @@
+export const PoetryStandaloneApp = {
+  Poetry: 'poetry',
+  PoetryHoc: 'poetry_hoc'
+};
+
 export const PALETTES = {
   grayscale: [
     '#000000',
@@ -30,7 +35,7 @@ export const POEMS = {
   hughes: {author: 'Langston Hughes'},
   rios: {author: 'Alberto Rios'},
   hopler: {author: 'Jay Hopler'},
-  singer: {author: 'Marilyn Singer\nfrom CENTRAL HEARTING (Knopf, 2005)'},
+  singer: {author: 'Marilyn Singer\nfrom CENTRAL HEATING (Knopf, 2005)'},
   ewing: {author: 'Eve L. Ewing'},
   alexander: {author: 'Kwame Alexander'},
   harjo: {author: 'Joy Harjo'},
@@ -43,5 +48,6 @@ export const POEMS = {
   rumi2: {author: 'Rumi'},
   hughes1: {author: 'Langston Hughes'},
   lomeli1: {author: 'Caia Lomeli'},
-  lomeli2: {author: 'Caia Lomeli'}
+  lomeli2: {author: 'Caia Lomeli'},
+  frost: {author: 'Robert Frost'}
 };

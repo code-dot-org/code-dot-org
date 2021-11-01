@@ -19,7 +19,8 @@ const fakeSectionData = {
   },
   lesson_extras: false,
   tts_autoplay_enabled: false,
-  code_review_enabled: true
+  code_review_enabled: true,
+  is_assigned_csa: false
 };
 
 const sortedFakeSectionData = {
@@ -39,6 +40,7 @@ const sortedFakeSectionData = {
     name: 'csp2'
   },
   codeReviewEnabled: true,
+  isAssignedCSA: false,
   lessonExtras: false,
   ttsAutoplayEnabled: false
 };

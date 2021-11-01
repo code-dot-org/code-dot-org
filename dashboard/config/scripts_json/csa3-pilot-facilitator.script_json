@@ -5,18 +5,19 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
-      "is_migrated": true,
-      "hideable_lessons": true,
-      "weekly_instructional_minutes": 225,
-      "show_calendar": true,
-      "include_student_lesson_plans": true,
       "has_verified_resources": true,
-      "pilot_experiment": "csa-pilot-facilitators"
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "pilot_experiment": "csa-pilot-facilitators",
+      "show_calendar": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-05 20:57:09 UTC",
+    "serialized_at": "2021-10-25 22:54:56 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csa3-pilot-facilitator"
     }
@@ -6344,8 +6345,8 @@
       "url": "https://docs.google.com/document/d/1_icFQH-KZy7G_sG4-8uXESX6cTJPTNCjDaLXiIBhO2w/edit?usp=sharing",
       "key": "_key_creating_arrays",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_creating_arrays"
@@ -6356,8 +6357,8 @@
       "url": "https://docs.google.com/document/d/1k5yAaT2IG61g8eotEQVXqqMUsRzBjtp9eM02pzltUbc/edit?usp=sharing",
       "key": "_key_for_loops_trace_tables",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_for_loops_trace_tables"
@@ -6368,8 +6369,8 @@
       "url": "https://docs.google.com/document/d/1JLFK5fWr3-ng5VJayYqmb5gig1bAjOCkV5pXOcQG6u8/edit?usp=sharing",
       "key": "_key_frq_graphic_organizer_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_frq_graphic_organizer_1"
@@ -6380,8 +6381,8 @@
       "url": "https://docs.google.com/document/d/1GM8qAK55bzt7e5CEwSI6UAwnkvZ-DAx0DuMjvQUqL9A/edit?usp=sharing",
       "key": "_key_frq_writing_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_frq_writing_1"
@@ -6392,8 +6393,8 @@
       "url": "https://docs.google.com/document/u/0/d/16eDAaJDkUhlYixPOD3C4dJGyQVOM8Y7gfTKCSkS9Ljo/edit",
       "key": "_key_investigating_arrays",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_investigating_arrays"
@@ -6404,8 +6405,8 @@
       "url": "https://docs.google.com/document/d/1gnxgtXzU_zKbhH0C7ZtUh8h5ZD6ncGQI8NADMgddJNY/edit#",
       "key": "_key_planning_array_algorithms",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_planning_array_algorithms"
@@ -6416,8 +6417,8 @@
       "url": "https://docs.google.com/document/d/1EsQtZSM-qYlUTuJAT1gUlEgspYw1xS6IKOZ64pGvgZ0/edit?usp=sharing",
       "key": "_key_planning_array_algorithms_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_planning_array_algorithms_1"
@@ -6428,8 +6429,8 @@
       "url": "https://docs.google.com/document/d/1yzmGTtJR5VAW_eSaxKF8m3CGt_7wllV0jUn5kuBhctE/edit?usp=sharing",
       "key": "_key_planning_array_algorithms_2",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_planning_array_algorithms_2"
@@ -6440,8 +6441,8 @@
       "url": "https://docs.google.com/document/d/1yqaWn3qOsI2EL2BKG117Gsvs7lwYLTWcOcu2gv59tRs",
       "key": "_key_tracing_loops",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_tracing_loops"
@@ -6452,8 +6453,8 @@
       "url": "https://docs.google.com/document/d/1-AKwZI_21cRKGc5WCSg6N-eqqLGqIAgB1lJDYVHn5Sk/edit?usp=sharing",
       "key": "_key_u3l10_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l10_extra_practice"
@@ -6464,8 +6465,8 @@
       "url": "https://docs.google.com/document/d/1GvSdrFnG-A41Huljco76LSDBC-RBYobOfUiOpY3QJ94/edit?usp=sharing",
       "key": "_key_u3l1_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l1_extra_practice"
@@ -6476,8 +6477,8 @@
       "url": "https://docs.google.com/document/d/1Ex5qOzydDc3u2EUaaEYvFxmAv_KpDvB0-TV46cYrQ_c/edit?usp=sharing",
       "key": "_key_u3l2_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l2_extra_practice"
@@ -6488,8 +6489,8 @@
       "url": "https://docs.google.com/document/d/1TDDFkNt-EbzvTQUj6kPFg6WaxOKqCzbFmAR4yGyYMjI/edit?usp=sharing",
       "key": "_key_u3l3_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l3_extra_practice"
@@ -6500,8 +6501,8 @@
       "url": "https://docs.google.com/document/d/1-cjeGHukPP_GvnVSPUqwUNwlHWapiXubpUS9b6SlOKg/edit",
       "key": "_key_u3l4_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l4_extra_practice"
@@ -6512,8 +6513,8 @@
       "url": "https://docs.google.com/document/d/1Zsxgs_3eUupbL7AwsDDFLoW76Mo0KWolt3QKGN-K9mY/edit?usp=sharing",
       "key": "_key_u3l5_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l5_extra_practice"
@@ -6524,8 +6525,8 @@
       "url": "https://docs.google.com/document/u/1/d/1w33_bS2cR-_DZ8YS0KZuZBOn1meeI2ZbmJLg4jsd08c/edit",
       "key": "_key_u3l6_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l6_extra_practice"
@@ -6536,8 +6537,8 @@
       "url": "https://docs.google.com/document/d/1fHfpb44AJ2vE6R2iA3OFAW7O1veBN2YKbzJyy_co94U/edit?usp=sharing",
       "key": "_key_u3l7_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l7_extra_practice"
@@ -6548,8 +6549,8 @@
       "url": "https://docs.google.com/document/d/190XBkLnhf9HKPY8L_yvA-j5GLGgCUpq7MrCrYNwF1a0/edit#",
       "key": "_key_u3l8_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l8_extra_practice"
@@ -6560,8 +6561,8 @@
       "url": "https://docs.google.com/document/d/1NSICJ9lkZyV6Xv9zYYqQHnELGv2qe0GQUNNxAIdHCdY/edit?usp=sharing",
       "key": "_key_u3l9_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u3l9_extra_practice"
@@ -6605,8 +6606,8 @@
       "url": "https://docs.google.com/presentation/d/1JULRjmbXUkjrnkC9Q42spIk3J6V-No6AUjvKBeqiDAo/edit?usp=sharing",
       "key": "array_algorithms_manipulatives",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "array_algorithms_manipulatives"
@@ -6617,8 +6618,8 @@
       "url": "https://docs.google.com/presentation/d/1rYOgAAhDzl7nI6Od73dmxaDdvWWYUFVBjpDwpo8Wh0U/edit?usp=sharing",
       "key": "array_manipulatives",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "array_manipulatives"
@@ -6629,8 +6630,8 @@
       "url": "https://docs.google.com/presentation/d/1JDlyogJhjRYX4CgRynvgxamFcWfiLpNN4xTPoTuxM4o/edit?usp=sharing",
       "key": "array_manipulatives_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "array_manipulatives_1"
@@ -6641,8 +6642,8 @@
       "url": "https://youtu.be/5erOXbbmZK4",
       "key": "arrays",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "arrays"
@@ -6653,8 +6654,8 @@
       "url": "https://docs.google.com/document/d/1AJiEb-Bz6zBMWhzSjv7DNc3Y3RZLeyYUAxZtbhSDW_A/edit#",
       "key": "concert_in_the_theater_project_peer_interview_cards",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "concert_in_the_theater_project_peer_interview_cards"
@@ -6665,8 +6666,8 @@
       "url": "https://docs.google.com/document/d/1WPZDZ4MqcYbuw2nfl0HSROQ8nVt1XQElSLENmEBUZ34/edit#",
       "key": "concert_in_the_theater_project_planning_guide",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "concert_in_the_theater_project_planning_guide"
@@ -6677,8 +6678,8 @@
       "url": "https://docs.google.com/document/d/11OiADxcZtRIPp9FB5HD-EcKvgCe3kKet9b7XnKJe9LY/edit#",
       "key": "concert_in_the_theater_project_planning_guide_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "concert_in_the_theater_project_planning_guide_1"
@@ -6689,8 +6690,8 @@
       "url": "https://youtu.be/iXpPXRnaQag",
       "key": "constants",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "constants"
@@ -6701,8 +6702,8 @@
       "url": "https://docs.google.com/document/d/1iizfp7lBTE9AR5joYnilOkcjFAMo4AFL83dDuJmSXv0/edit?usp=sharing",
       "key": "creating_arrays",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "creating_arrays"
@@ -6713,8 +6714,8 @@
       "url": "https://youtu.be/6BLXdwSyTUQ",
       "key": "enhanced_for_loops",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "enhanced_for_loops"
@@ -6725,8 +6726,8 @@
       "url": "https://docs.google.com/document/d/1susnb7O50kLjEXrucdqqACc5ZHiaoKSMpFM5_UGoQxU/edit?usp=sharing",
       "key": "for_loops_trace_tables",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "for_loops_trace_tables"
@@ -6737,8 +6738,8 @@
       "url": "https://docs.google.com/document/d/1_-RGlLcK15B4vyl0p96FLbB8POyzlr0-KYN81zGxD8U/edit?usp=sharing",
       "key": "frq_graphic_organizer_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_graphic_organizer_1"
@@ -6749,8 +6750,8 @@
       "url": "https://docs.google.com/document/d/17Jro74APbsrVcdw-eL3WxhBFGICfCjbYJgJjtMWQhEM/edit?usp=sharing",
       "key": "frq_scoring_guide_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_scoring_guide_1"
@@ -6761,8 +6762,8 @@
       "url": "https://docs.google.com/document/d/1HxwYD42JqvIr7WG-fHmg_gKdO2WYmWjiPnt8KrdPnr0/edit?usp=sharing",
       "key": "frq_writing_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_writing_1"
@@ -6773,8 +6774,8 @@
       "url": "https://youtu.be/3oH0fyB3xx0",
       "key": "how_do_software_engineers_write_algorithms_",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "how_do_software_engineers_write_algorithms_"
@@ -6785,8 +6786,8 @@
       "url": "https://youtu.be/R0uGBEjb6tM",
       "key": "introducing_for_loops",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introducing_for_loops"
@@ -6797,8 +6798,8 @@
       "url": "https://docs.google.com/document/u/0/d/1_CR2CMcBWjVLt8UipUguTdB-0E5W_xSJhHps_jfkS7g/edit",
       "key": "investigating_arrays",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "investigating_arrays"
@@ -6809,8 +6810,8 @@
       "url": "https://docs.google.com/presentation/d/1pc1T8Kn2Bd4o0kM_m8KUz0ED56mKYGtxoENqLy0eyms/edit?usp=sharing",
       "key": "musical_objects_role_cards",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "musical_objects_role_cards"
@@ -6821,8 +6822,8 @@
       "url": "https://youtu.be/2qWWE8RVOvs",
       "key": "nested_loops",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "nested_loops"
@@ -6833,8 +6834,8 @@
       "url": "https://docs.google.com/document/d/1ze4jegr1hP13e6BhwWCS-tsIum0wi8FKjq96UkAyJ_0/edit#",
       "key": "planning_array_algorithms",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "planning_array_algorithms"
@@ -6845,8 +6846,8 @@
       "url": "https://docs.google.com/document/d/1W4D09mwNt_9ZNjwrLQsKkg8wAJr4uvzZb6TtwzGtudw/edit?usp=sharing",
       "key": "planning_array_algorithms_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "planning_array_algorithms_1"
@@ -6857,8 +6858,8 @@
       "url": "https://docs.google.com/document/d/1AFeIF3LORowBEEZxe-LjxMzVx2mUsIvu7BxVwpgXAM0/edit?usp=sharing",
       "key": "planning_array_algorithms_2",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "planning_array_algorithms_2"
@@ -6869,8 +6870,8 @@
       "url": "https://youtu.be/4xXGio3VDZo",
       "key": "polymorphism",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "polymorphism"
@@ -6881,8 +6882,8 @@
       "url": "https://youtu.be/ldMzR8nWwJA",
       "key": "static_variables",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "static_variables"
@@ -6893,8 +6894,8 @@
       "url": "https://docs.google.com/document/d/1xKfu66SLjG4l-lIUPOjEcAbaXvCjz8DLt2cMTPE7ANo/edit?usp=sharing",
       "key": "tracing_loops",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "tracing_loops"
@@ -6905,8 +6906,8 @@
       "url": "https://docs.google.com/document/d/1vS3KvhbtvL8TqaQEocnSPXoRiLKTuvg7XwGOSr8LiTo/edit?usp=sharing",
       "key": "u3l10_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l10_extra_practice"
@@ -6917,8 +6918,8 @@
       "url": "https://docs.google.com/document/d/1bO4r4KRJZbIL9GVGuAzsnUShRPzfcXI82MrCWe5FHC8/edit?usp=sharing",
       "key": "u3l1_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l1_extra_practice"
@@ -6929,8 +6930,8 @@
       "url": "https://docs.google.com/document/u/0/d/161vgw2E5Khi22fnhJLR4G2tPDdX4JJgLY7HMgmoCvv4/edit",
       "key": "u3l2_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l2_extra_practice"
@@ -6941,8 +6942,8 @@
       "url": "https://docs.google.com/document/d/1SToWoXECWApyLIVeDGmjjmiEz-hG0i2UvErj6RQrJcA/edit?usp=sharing",
       "key": "u3l3_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l3_extra_practice"
@@ -6953,8 +6954,8 @@
       "url": "https://docs.google.com/document/d/1SFrrUjRbEDZ6KKylnKZa_FA25WCJ34AMZGfrVn7xBDc/edit",
       "key": "u3l4_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l4_extra_practice"
@@ -6965,8 +6966,8 @@
       "url": "https://docs.google.com/document/d/1AIbNbVDkRO26DcqOwrOdRs6PnAmoo7XR86vs5HABH18/edit?usp=sharing",
       "key": "u3l5_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l5_extra_practice"
@@ -6977,8 +6978,8 @@
       "url": "https://docs.google.com/document/u/1/d/1AeqKEyNKJmBPKlq6QZPS24lAB6hyQn2d4jFvRmTtYaY/edit",
       "key": "u3l6_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l6_extra_practice"
@@ -6989,8 +6990,8 @@
       "url": "https://docs.google.com/document/d/1SgTy3e85y0kaTvXuLN_UVkChUsu78hW8hmbVJHO4-CU/edit?usp=sharing",
       "key": "u3l7_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l7_extra_practice"
@@ -7001,8 +7002,8 @@
       "url": "https://docs.google.com/document/d/1lNcC17yYJRZ3Z3SAubXmgpvbsKCWUykLsATytPX9RWI/edit?usp=sharing",
       "key": "u3l8_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l8_extra_practice"
@@ -7013,8 +7014,8 @@
       "url": "https://docs.google.com/document/d/1S1BxImy1sBKccID4_M1fyrz7WahG9kYYguDWiDcHA6E/edit?usp=sharing",
       "key": "u3l9_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u3l9_extra_practice"
@@ -7025,8 +7026,8 @@
       "url": "https://docs.google.com/document/d/1enm_dTvSFD4UDFg1bY-mKynuBVi9_nUKKlQYv2U7ch8/edit?usp=sharing",
       "key": "unit_3_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_3_guide"
@@ -7037,8 +7038,8 @@
       "url": "https://docs.google.com/presentation/d/1NRROUww6flqxv0sMrJFva8rTILBBEWzfSQmBl_28EDw/edit?usp=sharing",
       "key": "unit_3_presentation_slides",
       "properties": {
-        "type": "Slides",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "unit_3_presentation_slides"
@@ -7049,8 +7050,8 @@
       "url": "https://docs.google.com/presentation/d/1cNU81gFUheH2QkSwXO_MJKU2fGrDD2XkkZh-_WYf_2c/edit?usp=sharing",
       "key": "vocabulary_bingo_cards",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "vocabulary_bingo_cards"
@@ -7061,8 +7062,8 @@
       "url": "https://docs.google.com/document/d/15uT5yg1pUS1NyCv3i6ozDf0ZCP5CgKuCGaGkCpn72VY/edit?usp=sharing",
       "key": "vocabulary_bingo_definitions",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "vocabulary_bingo_definitions"
@@ -7073,8 +7074,8 @@
       "url": "https://docs.google.com/document/d/1QCJ0XPOREoyflbYuxAjRT4wIsoHuzech35J5HmmaC5I/edit?usp=sharing",
       "key": "vocabulary_draw_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "vocabulary_draw_1"
@@ -7570,53 +7571,13 @@
   ],
   "vocabularies": [
     {
-      "key": "element",
-      "word": "Element",
-      "definition": "An item in an array",
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A set of instructions to solve a problem or accomplish a task",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "element"
-      }
-    },
-    {
-      "key": "index",
-      "word": "Index",
-      "definition": "The numerical position of an item in an array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "index"
-      }
-    },
-    {
-      "key": "length",
-      "word": "Length",
-      "definition": "The size of the array that is set when it is created",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "length"
-      }
-    },
-    {
-      "key": "immutable",
-      "word": "Immutable",
-      "definition": "The content cannot be changed once it is created",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "immutable"
-      }
-    },
-    {
-      "key": "initializer_list",
-      "word": "Initializer List",
-      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( `{ }` )",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "initializer_list"
+        "vocabulary.key": "algorithm"
       }
     },
     {
@@ -7630,13 +7591,13 @@
       }
     },
     {
-      "key": "one_dimensional_d_array",
-      "word": "One-Dimensional (1D) Array",
-      "definition": "A linear structure that stores one or more values of the same data type",
+      "key": "constant",
+      "word": "Constant",
+      "definition": "A variable containing a value that cannot be changed",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "one_dimensional_d_array"
+        "vocabulary.key": "constant"
       }
     },
     {
@@ -7650,36 +7611,6 @@
       }
     },
     {
-      "key": "for_loop",
-      "word": "for Loop",
-      "definition": "A loop that has a predetermined beginning, end, and increment or decrement",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "for_loop"
-      }
-    },
-    {
-      "key": "traverse",
-      "word": "Traverse",
-      "definition": "To move through an array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "traverse"
-      }
-    },
-    {
-      "key": "increment",
-      "word": "Increment",
-      "definition": "To increase a value by another value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "increment"
-      }
-    },
-    {
       "key": "decrement",
       "word": "Decrement",
       "definition": "To decrease a value by another value",
@@ -7690,53 +7621,23 @@
       }
     },
     {
-      "key": "loop_control_variable",
-      "word": "Loop Control Variable",
-      "definition": "A variable declared and used within a loop to count iterations through the loop",
+      "key": "efficiency",
+      "word": "Efficiency",
+      "definition": "Getting the best outcome with the least amount of waste",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "loop_control_variable"
+        "vocabulary.key": "efficiency"
       }
     },
     {
-      "key": "while_loop",
-      "word": "while Loop",
-      "definition": "Executes a block of code repeatedly as long as a condition is true",
+      "key": "element",
+      "word": "Element",
+      "definition": "An item in an array",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "while_loop"
-      }
-    },
-    {
-      "key": "infinite_loop",
-      "word": "Infinite Loop",
-      "definition": "A loop that never stops running",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "infinite_loop"
-      }
-    },
-    {
-      "key": "sentinel_value",
-      "word": "Sentinel Value",
-      "definition": "Determines when to end a loop",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sentinel_value"
-      }
-    },
-    {
-      "key": "polymorphism",
-      "word": "Polymorphism",
-      "definition": "The ability to perform an action in different ways",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "polymorphism"
+        "vocabulary.key": "element"
       }
     },
     {
@@ -7760,36 +7661,6 @@
       }
     },
     {
-      "key": "static_variable",
-      "word": "Static Variable",
-      "definition": "A variable defined in a class that stores a shared value for all instances of the class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "static_variable"
-      }
-    },
-    {
-      "key": "static_keyword",
-      "word": "static Keyword",
-      "definition": "The keyword used to specify that a variable or method belongs to a class instead of an instance of a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "static_keyword"
-      }
-    },
-    {
-      "key": "constant",
-      "word": "Constant",
-      "definition": "A variable containing a value that cannot be changed",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "constant"
-      }
-    },
-    {
       "key": "final_keyword",
       "word": "final Keyword",
       "definition": "The keyword used to specify that a value cannot be changed",
@@ -7800,23 +7671,93 @@
       }
     },
     {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A set of instructions to solve a problem or accomplish a task",
+      "key": "for_loop",
+      "word": "for Loop",
+      "definition": "A loop that has a predetermined beginning, end, and increment or decrement",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "algorithm"
+        "vocabulary.key": "for_loop"
       }
     },
     {
-      "key": "efficiency",
-      "word": "Efficiency",
-      "definition": "Getting the best outcome with the least amount of waste",
+      "key": "immutable",
+      "word": "Immutable",
+      "definition": "The content cannot be changed once it is created",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "efficiency"
+        "vocabulary.key": "immutable"
+      }
+    },
+    {
+      "key": "increment",
+      "word": "Increment",
+      "definition": "To increase a value by another value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "increment"
+      }
+    },
+    {
+      "key": "index",
+      "word": "Index",
+      "definition": "The numerical position of an item in an array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "index"
+      }
+    },
+    {
+      "key": "infinite_loop",
+      "word": "Infinite Loop",
+      "definition": "A loop that never stops running",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "infinite_loop"
+      }
+    },
+    {
+      "key": "initializer_list",
+      "word": "Initializer List",
+      "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( `{ }` )",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initializer_list"
+      }
+    },
+    {
+      "key": "length",
+      "word": "Length",
+      "definition": "The size of the array that is set when it is created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "length"
+      }
+    },
+    {
+      "key": "loop_control_variable",
+      "word": "Loop Control Variable",
+      "definition": "A variable declared and used within a loop to count iterations through the loop",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop_control_variable"
+      }
+    },
+    {
+      "key": "nested_loop",
+      "word": "Nested Loop",
+      "definition": "A loop that exists in the body of another loop",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "nested_loop"
       }
     },
     {
@@ -7830,45 +7771,93 @@
       }
     },
     {
-      "key": "nested_loop",
-      "word": "Nested Loop",
-      "definition": "A loop that exists in the body of another loop",
+      "key": "one_dimensional_d_array",
+      "word": "One-Dimensional (1D) Array",
+      "definition": "A linear structure that stores one or more values of the same data type",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "nested_loop"
+        "vocabulary.key": "one_dimensional_d_array"
+      }
+    },
+    {
+      "key": "polymorphism",
+      "word": "Polymorphism",
+      "definition": "The ability to perform an action in different ways",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "polymorphism"
+      }
+    },
+    {
+      "key": "sentinel_value",
+      "word": "Sentinel Value",
+      "definition": "Determines when to end a loop",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sentinel_value"
+      }
+    },
+    {
+      "key": "static_keyword",
+      "word": "static Keyword",
+      "definition": "The keyword used to specify that a variable or method belongs to a class instead of an instance of a class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_keyword"
+      }
+    },
+    {
+      "key": "static_variable",
+      "word": "Static Variable",
+      "definition": "A variable defined in a class that stores a shared value for all instances of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_variable"
+      }
+    },
+    {
+      "key": "traverse",
+      "word": "Traverse",
+      "definition": "To move through an array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "traverse"
+      }
+    },
+    {
+      "key": "while_loop",
+      "word": "while Loop",
+      "definition": "Executes a block of code repeatedly as long as a condition is true",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "while_loop"
       }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "vocabulary.key": "element"
+        "lesson.key": "Answering Questions with Arrays",
+        "vocabulary.key": "algorithm"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "vocabulary.key": "index"
+        "lesson.key": "Answering Questions with Arrays",
+        "vocabulary.key": "efficiency"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "vocabulary.key": "length"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "vocabulary.key": "immutable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "vocabulary.key": "initializer_list"
+        "lesson.key": "Answering Questions with Arrays",
+        "vocabulary.key": "off_by_one_error"
       }
     },
     {
@@ -7880,61 +7869,49 @@
     {
       "seeding_key": {
         "lesson.key": "Creating Arrays",
-        "vocabulary.key": "one_dimensional_d_array"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating Arrays",
         "vocabulary.key": "data_structure"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "vocabulary.key": "for_loop"
+        "lesson.key": "Creating Arrays",
+        "vocabulary.key": "element"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "vocabulary.key": "traverse"
+        "lesson.key": "Creating Arrays",
+        "vocabulary.key": "immutable"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "vocabulary.key": "increment"
+        "lesson.key": "Creating Arrays",
+        "vocabulary.key": "index"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "vocabulary.key": "decrement"
+        "lesson.key": "Creating Arrays",
+        "vocabulary.key": "initializer_list"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "vocabulary.key": "loop_control_variable"
+        "lesson.key": "Creating Arrays",
+        "vocabulary.key": "length"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversing Arrays with while Loops",
-        "vocabulary.key": "while_loop"
+        "lesson.key": "Creating Arrays",
+        "vocabulary.key": "one_dimensional_d_array"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversing Arrays with while Loops",
-        "vocabulary.key": "infinite_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with while Loops",
-        "vocabulary.key": "sentinel_value"
+        "lesson.key": "Manipulating Elements in an Array",
+        "vocabulary.key": "nested_loop"
       }
     },
     {
@@ -7957,14 +7934,50 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Static Variables and Constants",
-        "vocabulary.key": "static_variable"
+        "lesson.key": "Traversing Arrays with for Loops",
+        "vocabulary.key": "decrement"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Static Variables and Constants",
-        "vocabulary.key": "static_keyword"
+        "lesson.key": "Traversing Arrays with for Loops",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with for Loops",
+        "vocabulary.key": "increment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with for Loops",
+        "vocabulary.key": "loop_control_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with for Loops",
+        "vocabulary.key": "traverse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with while Loops",
+        "vocabulary.key": "infinite_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with while Loops",
+        "vocabulary.key": "sentinel_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with while Loops",
+        "vocabulary.key": "while_loop"
       }
     },
     {
@@ -7981,26 +7994,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "vocabulary.key": "algorithm"
+        "lesson.key": "Using Static Variables and Constants",
+        "vocabulary.key": "static_keyword"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "vocabulary.key": "efficiency"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "vocabulary.key": "off_by_one_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements in an Array",
-        "vocabulary.key": "nested_loop"
+        "lesson.key": "Using Static Variables and Constants",
+        "vocabulary.key": "static_variable"
       }
     }
   ],
@@ -8009,113 +8010,43 @@
   ],
   "objectives": [
     {
-      "key": "de2d6b7f-a49f-4cd0-9ca1-fb6798c44286",
+      "key": "00fe7215-b169-4364-922c-53cbb08ac7c0",
       "properties": {
-        "description": "Create one-dimensional (1D) arrays to store values using initializer lists"
+        "description": "Explain the purpose and benefits of polymorphism"
       },
       "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "objective.key": "de2d6b7f-a49f-4cd0-9ca1-fb6798c44286"
+        "lesson.key": "Storing Objects into Arrays",
+        "objective.key": "00fe7215-b169-4364-922c-53cbb08ac7c0"
       }
     },
     {
-      "key": "823c2149-5157-4910-9dc7-d884149488b3",
+      "key": "08e3beee-0b2e-4b9b-ae23-e0c7650655dc",
       "properties": {
-        "description": "Determine the length of a one-dimensional array"
+        "description": "Write and validate code of peers"
       },
       "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "objective.key": "823c2149-5157-4910-9dc7-d884149488b3"
+        "lesson.key": "FRQ Day",
+        "objective.key": "08e3beee-0b2e-4b9b-ae23-e0c7650655dc"
       }
     },
     {
-      "key": "e03546a0-8dd7-4205-9e9c-46feb68ecdf8",
+      "key": "0b5ffd24-8cea-407d-9120-8edf3676ca89",
       "properties": {
-        "description": "Use index values to access individual elements"
+        "description": "Obtain elements from an array that meet specific criteria to create a new array"
       },
       "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "objective.key": "e03546a0-8dd7-4205-9e9c-46feb68ecdf8"
+        "lesson.key": "Solving Problems with Arrays",
+        "objective.key": "0b5ffd24-8cea-407d-9120-8edf3676ca89"
       }
     },
     {
-      "key": "581a5478-751c-4a58-8e63-75c52dfba88a",
+      "key": "0cfa798a-2a0d-4629-9a23-f85092363a02",
       "properties": {
-        "description": "Explain the cause of an `ArrayIndexOutOfBoundsException`"
+        "description": "Shift elements in an array"
       },
       "seeding_key": {
-        "lesson.key": "Creating Arrays",
-        "objective.key": "581a5478-751c-4a58-8e63-75c52dfba88a"
-      }
-    },
-    {
-      "key": "cff13ff8-a30f-414d-8954-e37cbfe38d0e",
-      "properties": {
-        "description": "Create arrays to store values "
-      },
-      "seeding_key": {
-        "lesson.key": "Accessing and Modifying Elements",
-        "objective.key": "cff13ff8-a30f-414d-8954-e37cbfe38d0e"
-      }
-    },
-    {
-      "key": "30d053de-79dd-4d7a-8bb5-2e6ec3769ffd",
-      "properties": {
-        "description": "Access and modify elements in an array by referring to an index location"
-      },
-      "seeding_key": {
-        "lesson.key": "Accessing and Modifying Elements",
-        "objective.key": "30d053de-79dd-4d7a-8bb5-2e6ec3769ffd"
-      }
-    },
-    {
-      "key": "4b5d4d49-9347-41c5-b032-e22e094e8ddc",
-      "properties": {
-        "description": "Traverse one-dimensional arrays using for loops"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "objective.key": "4b5d4d49-9347-41c5-b032-e22e094e8ddc"
-      }
-    },
-    {
-      "key": "28d52ea1-12ac-4157-b204-454fefede547",
-      "properties": {
-        "description": "Describe how a for loop works"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "objective.key": "28d52ea1-12ac-4157-b204-454fefede547"
-      }
-    },
-    {
-      "key": "cca384ad-f955-44db-b7a8-4c08cca17308",
-      "properties": {
-        "description": "Determine the number of times a loop will execute"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "objective.key": "cca384ad-f955-44db-b7a8-4c08cca17308"
-      }
-    },
-    {
-      "key": "2d3e1c65-08cd-459a-9299-98a894b4fdae",
-      "properties": {
-        "description": "Write trace tables to document iteration"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with for Loops",
-        "objective.key": "2d3e1c65-08cd-459a-9299-98a894b4fdae"
-      }
-    },
-    {
-      "key": "f9caa92b-11dc-4ac6-bd0f-fe7fbbdc13b7",
-      "properties": {
-        "description": "Compare and contrast while and for loops"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with while Loops",
-        "objective.key": "f9caa92b-11dc-4ac6-bd0f-fe7fbbdc13b7"
+        "lesson.key": "Manipulating Elements in an Array",
+        "objective.key": "0cfa798a-2a0d-4629-9a23-f85092363a02"
       }
     },
     {
@@ -8139,133 +8070,23 @@
       }
     },
     {
-      "key": "7f5cddaf-e2c2-4517-a5c1-0de754051ae4",
+      "key": "28d52ea1-12ac-4157-b204-454fefede547",
       "properties": {
-        "description": "Traverse an array of `Animal`s to call each object's `show()` method"
+        "description": "Describe how a for loop works"
       },
       "seeding_key": {
-        "lesson.key": "Storing Objects into Arrays",
-        "objective.key": "7f5cddaf-e2c2-4517-a5c1-0de754051ae4"
+        "lesson.key": "Traversing Arrays with for Loops",
+        "objective.key": "28d52ea1-12ac-4157-b204-454fefede547"
       }
     },
     {
-      "key": "00fe7215-b169-4364-922c-53cbb08ac7c0",
+      "key": "2d3e1c65-08cd-459a-9299-98a894b4fdae",
       "properties": {
-        "description": "Explain the purpose and benefits of polymorphism"
+        "description": "Write trace tables to document iteration"
       },
       "seeding_key": {
-        "lesson.key": "Storing Objects into Arrays",
-        "objective.key": "00fe7215-b169-4364-922c-53cbb08ac7c0"
-      }
-    },
-    {
-      "key": "f7da2374-9c8b-4f13-b24e-6843c31692f1",
-      "properties": {
-        "description": "Write enhanced `for` loops to traverse an array"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with Enhanced for Loops",
-        "objective.key": "f7da2374-9c8b-4f13-b24e-6843c31692f1"
-      }
-    },
-    {
-      "key": "599e079a-b478-45a3-8737-27f53aecf5ac",
-      "properties": {
-        "description": "Differentiate between when to use a `while`, `for`, and enhanced `for` loop"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with Enhanced for Loops",
-        "objective.key": "599e079a-b478-45a3-8737-27f53aecf5ac"
-      }
-    },
-    {
-      "key": "d9bff02d-6f78-46be-aaf8-eab07b82ef04",
-      "properties": {
-        "description": "Define and use static variables"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Static Variables and Constants",
-        "objective.key": "d9bff02d-6f78-46be-aaf8-eab07b82ef04"
-      }
-    },
-    {
-      "key": "52f08f9e-e232-46dc-a9bb-99e89fea59a0",
-      "properties": {
-        "description": "Define and use constants"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Static Variables and Constants",
-        "objective.key": "52f08f9e-e232-46dc-a9bb-99e89fea59a0"
-      }
-    },
-    {
-      "key": "517aa280-cc30-4d25-a1be-a3a6dac47657",
-      "properties": {
-        "description": "Write algorithms using array traversals to find specific data"
-      },
-      "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "objective.key": "517aa280-cc30-4d25-a1be-a3a6dac47657"
-      }
-    },
-    {
-      "key": "d450273e-03e9-4bbb-b033-ee6ced96d47f",
-      "properties": {
-        "description": "Write code to implement traversal algorithms"
-      },
-      "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "objective.key": "d450273e-03e9-4bbb-b033-ee6ced96d47f"
-      }
-    },
-    {
-      "key": "d778204c-96cb-4388-bafc-f26bb9bfa69b",
-      "properties": {
-        "description": "Discuss debugging strategies to address off-by-one errors"
-      },
-      "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "objective.key": "d778204c-96cb-4388-bafc-f26bb9bfa69b"
-      }
-    },
-    {
-      "key": "f62d14b6-0ab6-48e7-b474-7ebdecbaa1cf",
-      "properties": {
-        "description": "Swap consecutive pairs of elements in an array"
-      },
-      "seeding_key": {
-        "lesson.key": "Solving Problems with Arrays",
-        "objective.key": "f62d14b6-0ab6-48e7-b474-7ebdecbaa1cf"
-      }
-    },
-    {
-      "key": "0b5ffd24-8cea-407d-9120-8edf3676ca89",
-      "properties": {
-        "description": "Obtain elements from an array that meet specific criteria to create a new array"
-      },
-      "seeding_key": {
-        "lesson.key": "Solving Problems with Arrays",
-        "objective.key": "0b5ffd24-8cea-407d-9120-8edf3676ca89"
-      }
-    },
-    {
-      "key": "d5d23689-cdb7-4bae-930b-8cf4494d7007",
-      "properties": {
-        "description": "Use a nested loop to traverse a 1D array"
-      },
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements in an Array",
-        "objective.key": "d5d23689-cdb7-4bae-930b-8cf4494d7007"
-      }
-    },
-    {
-      "key": "0cfa798a-2a0d-4629-9a23-f85092363a02",
-      "properties": {
-        "description": "Shift elements in an array"
-      },
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements in an Array",
-        "objective.key": "0cfa798a-2a0d-4629-9a23-f85092363a02"
+        "lesson.key": "Traversing Arrays with for Loops",
+        "objective.key": "2d3e1c65-08cd-459a-9299-98a894b4fdae"
       }
     },
     {
@@ -8279,33 +8100,53 @@
       }
     },
     {
-      "key": "d9e63c2f-945b-474b-96d6-e0a1712774e5",
+      "key": "30d053de-79dd-4d7a-8bb5-2e6ec3769ffd",
       "properties": {
-        "description": "Design a concert in The Theater"
+        "description": "Access and modify elements in an array by referring to an index location"
       },
       "seeding_key": {
-        "lesson.key": "Concert in The Theater Project - Day 1",
-        "objective.key": "d9e63c2f-945b-474b-96d6-e0a1712774e5"
+        "lesson.key": "Accessing and Modifying Elements",
+        "objective.key": "30d053de-79dd-4d7a-8bb5-2e6ec3769ffd"
       }
     },
     {
-      "key": "74718e6c-10e5-43ce-b2ee-9964a3d83e52",
+      "key": "4b5d4d49-9347-41c5-b032-e22e094e8ddc",
       "properties": {
-        "description": "Implement a new remix algorithm"
+        "description": "Traverse one-dimensional arrays using for loops"
       },
       "seeding_key": {
-        "lesson.key": "Concert in The Theater Project - Day 1",
-        "objective.key": "74718e6c-10e5-43ce-b2ee-9964a3d83e52"
+        "lesson.key": "Traversing Arrays with for Loops",
+        "objective.key": "4b5d4d49-9347-41c5-b032-e22e094e8ddc"
       }
     },
     {
-      "key": "c630ac43-f47b-4d63-a0f0-2468a3f6d565",
+      "key": "517aa280-cc30-4d25-a1be-a3a6dac47657",
       "properties": {
-        "description": "Design a concert in The Theater"
+        "description": "Write algorithms using array traversals to find specific data"
       },
       "seeding_key": {
-        "lesson.key": "Concert in The Theater Project - Day 2",
-        "objective.key": "c630ac43-f47b-4d63-a0f0-2468a3f6d565"
+        "lesson.key": "Answering Questions with Arrays",
+        "objective.key": "517aa280-cc30-4d25-a1be-a3a6dac47657"
+      }
+    },
+    {
+      "key": "52f08f9e-e232-46dc-a9bb-99e89fea59a0",
+      "properties": {
+        "description": "Define and use constants"
+      },
+      "seeding_key": {
+        "lesson.key": "Using Static Variables and Constants",
+        "objective.key": "52f08f9e-e232-46dc-a9bb-99e89fea59a0"
+      }
+    },
+    {
+      "key": "581a5478-751c-4a58-8e63-75c52dfba88a",
+      "properties": {
+        "description": "Explain the cause of an `ArrayIndexOutOfBoundsException`"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Arrays",
+        "objective.key": "581a5478-751c-4a58-8e63-75c52dfba88a"
       }
     },
     {
@@ -8319,23 +8160,13 @@
       }
     },
     {
-      "key": "cbc02a67-da82-4dff-83b6-d7cff2e4c921",
+      "key": "599e079a-b478-45a3-8737-27f53aecf5ac",
       "properties": {
-        "description": "Conduct a code review to give and receive feedback on program code"
+        "description": "Differentiate between when to use a `while`, `for`, and enhanced `for` loop"
       },
       "seeding_key": {
-        "lesson.key": "Concert in The Theater Project - Day 2",
-        "objective.key": "cbc02a67-da82-4dff-83b6-d7cff2e4c921"
-      }
-    },
-    {
-      "key": "d9a69588-db44-4f35-bea4-dadb9616563a",
-      "properties": {
-        "description": "Design a concert in The Theater"
-      },
-      "seeding_key": {
-        "lesson.key": "Concert in The Theater Project - Day 3",
-        "objective.key": "d9a69588-db44-4f35-bea4-dadb9616563a"
+        "lesson.key": "Traversing Arrays with Enhanced for Loops",
+        "objective.key": "599e079a-b478-45a3-8737-27f53aecf5ac"
       }
     },
     {
@@ -8349,13 +8180,153 @@
       }
     },
     {
-      "key": "fe08f76d-1eec-4d0f-a392-015f3e23a306",
+      "key": "74718e6c-10e5-43ce-b2ee-9964a3d83e52",
       "properties": {
-        "description": "Traverse elements in a 1D array"
+        "description": "Implement a new remix algorithm"
       },
       "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "objective.key": "fe08f76d-1eec-4d0f-a392-015f3e23a306"
+        "lesson.key": "Concert in The Theater Project - Day 1",
+        "objective.key": "74718e6c-10e5-43ce-b2ee-9964a3d83e52"
+      }
+    },
+    {
+      "key": "7f5cddaf-e2c2-4517-a5c1-0de754051ae4",
+      "properties": {
+        "description": "Traverse an array of `Animal`s to call each object's `show()` method"
+      },
+      "seeding_key": {
+        "lesson.key": "Storing Objects into Arrays",
+        "objective.key": "7f5cddaf-e2c2-4517-a5c1-0de754051ae4"
+      }
+    },
+    {
+      "key": "823c2149-5157-4910-9dc7-d884149488b3",
+      "properties": {
+        "description": "Determine the length of a one-dimensional array"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Arrays",
+        "objective.key": "823c2149-5157-4910-9dc7-d884149488b3"
+      }
+    },
+    {
+      "key": "c630ac43-f47b-4d63-a0f0-2468a3f6d565",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "Concert in The Theater Project - Day 2",
+        "objective.key": "c630ac43-f47b-4d63-a0f0-2468a3f6d565"
+      }
+    },
+    {
+      "key": "cbc02a67-da82-4dff-83b6-d7cff2e4c921",
+      "properties": {
+        "description": "Conduct a code review to give and receive feedback on program code"
+      },
+      "seeding_key": {
+        "lesson.key": "Concert in The Theater Project - Day 2",
+        "objective.key": "cbc02a67-da82-4dff-83b6-d7cff2e4c921"
+      }
+    },
+    {
+      "key": "cca384ad-f955-44db-b7a8-4c08cca17308",
+      "properties": {
+        "description": "Determine the number of times a loop will execute"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with for Loops",
+        "objective.key": "cca384ad-f955-44db-b7a8-4c08cca17308"
+      }
+    },
+    {
+      "key": "cff13ff8-a30f-414d-8954-e37cbfe38d0e",
+      "properties": {
+        "description": "Create arrays to store values "
+      },
+      "seeding_key": {
+        "lesson.key": "Accessing and Modifying Elements",
+        "objective.key": "cff13ff8-a30f-414d-8954-e37cbfe38d0e"
+      }
+    },
+    {
+      "key": "d450273e-03e9-4bbb-b033-ee6ced96d47f",
+      "properties": {
+        "description": "Write code to implement traversal algorithms"
+      },
+      "seeding_key": {
+        "lesson.key": "Answering Questions with Arrays",
+        "objective.key": "d450273e-03e9-4bbb-b033-ee6ced96d47f"
+      }
+    },
+    {
+      "key": "d5d23689-cdb7-4bae-930b-8cf4494d7007",
+      "properties": {
+        "description": "Use a nested loop to traverse a 1D array"
+      },
+      "seeding_key": {
+        "lesson.key": "Manipulating Elements in an Array",
+        "objective.key": "d5d23689-cdb7-4bae-930b-8cf4494d7007"
+      }
+    },
+    {
+      "key": "d778204c-96cb-4388-bafc-f26bb9bfa69b",
+      "properties": {
+        "description": "Discuss debugging strategies to address off-by-one errors"
+      },
+      "seeding_key": {
+        "lesson.key": "Answering Questions with Arrays",
+        "objective.key": "d778204c-96cb-4388-bafc-f26bb9bfa69b"
+      }
+    },
+    {
+      "key": "d9a69588-db44-4f35-bea4-dadb9616563a",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "Concert in The Theater Project - Day 3",
+        "objective.key": "d9a69588-db44-4f35-bea4-dadb9616563a"
+      }
+    },
+    {
+      "key": "d9bff02d-6f78-46be-aaf8-eab07b82ef04",
+      "properties": {
+        "description": "Define and use static variables"
+      },
+      "seeding_key": {
+        "lesson.key": "Using Static Variables and Constants",
+        "objective.key": "d9bff02d-6f78-46be-aaf8-eab07b82ef04"
+      }
+    },
+    {
+      "key": "d9e63c2f-945b-474b-96d6-e0a1712774e5",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "Concert in The Theater Project - Day 1",
+        "objective.key": "d9e63c2f-945b-474b-96d6-e0a1712774e5"
+      }
+    },
+    {
+      "key": "de2d6b7f-a49f-4cd0-9ca1-fb6798c44286",
+      "properties": {
+        "description": "Create one-dimensional (1D) arrays to store values using initializer lists"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Arrays",
+        "objective.key": "de2d6b7f-a49f-4cd0-9ca1-fb6798c44286"
+      }
+    },
+    {
+      "key": "e03546a0-8dd7-4205-9e9c-46feb68ecdf8",
+      "properties": {
+        "description": "Use index values to access individual elements"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Arrays",
+        "objective.key": "e03546a0-8dd7-4205-9e9c-46feb68ecdf8"
       }
     },
     {
@@ -8369,17 +8340,82 @@
       }
     },
     {
-      "key": "08e3beee-0b2e-4b9b-ae23-e0c7650655dc",
+      "key": "f62d14b6-0ab6-48e7-b474-7ebdecbaa1cf",
       "properties": {
-        "description": "Write and validate code of peers"
+        "description": "Swap consecutive pairs of elements in an array"
+      },
+      "seeding_key": {
+        "lesson.key": "Solving Problems with Arrays",
+        "objective.key": "f62d14b6-0ab6-48e7-b474-7ebdecbaa1cf"
+      }
+    },
+    {
+      "key": "f7da2374-9c8b-4f13-b24e-6843c31692f1",
+      "properties": {
+        "description": "Write enhanced `for` loops to traverse an array"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with Enhanced for Loops",
+        "objective.key": "f7da2374-9c8b-4f13-b24e-6843c31692f1"
+      }
+    },
+    {
+      "key": "f9caa92b-11dc-4ac6-bd0f-fe7fbbdc13b7",
+      "properties": {
+        "description": "Compare and contrast while and for loops"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with while Loops",
+        "objective.key": "f9caa92b-11dc-4ac6-bd0f-fe7fbbdc13b7"
+      }
+    },
+    {
+      "key": "fe08f76d-1eec-4d0f-a392-015f3e23a306",
+      "properties": {
+        "description": "Traverse elements in a 1D array"
       },
       "seeding_key": {
         "lesson.key": "FRQ Day",
-        "objective.key": "08e3beee-0b2e-4b9b-ae23-e0c7650655dc"
+        "objective.key": "fe08f76d-1eec-4d0f-a392-015f3e23a306"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing and Modifying Elements",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing and Modifying Elements",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Answering Questions with Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.E.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Answering Questions with Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Answering Questions with Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.B.3"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Creating Arrays",
@@ -8410,16 +8446,93 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing and Modifying Elements",
+        "lesson.key": "Manipulating Elements in an Array",
         "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.4"
+        "standard.shortcode": "CON-2.G.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing and Modifying Elements",
+        "lesson.key": "Manipulating Elements in an Array",
         "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.6"
+        "standard.shortcode": "CON-2.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Solving Problems with Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storing Objects into Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storing Objects into Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storing Objects into Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storing Objects into Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storing Objects into Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Storing Objects into Arrays",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with Enhanced for Loops",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with Enhanced for Loops",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with Enhanced for Loops",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing Arrays with Enhanced for Loops",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-2.C.4"
       }
     },
     {
@@ -8501,76 +8614,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Storing Objects into Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storing Objects into Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storing Objects into Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storing Objects into Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storing Objects into Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storing Objects into Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with Enhanced for Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with Enhanced for Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with Enhanced for Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversing Arrays with Enhanced for Loops",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.C.4"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Using Static Variables and Constants",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.H.1"
@@ -8595,48 +8638,6 @@
         "lesson.key": "Using Static Variables and Constants",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.E.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Answering Questions with Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-2.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Solving Problems with Arrays",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.I.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements in an Array",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Elements in an Array",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.G.2"
       }
     }
   ],

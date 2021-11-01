@@ -44,7 +44,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       level: level,
       level_source: create(:level_source, level: level)
 
-    user_progress_path = user_progress_for_lesson_and_level_path(
+    user_app_options_path = user_app_options_path(
       script: script.name,
       lesson_position: 1,
       level_position: 1,
@@ -52,7 +52,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     )
 
     assert_cached_queries(11) do
-      get user_progress_path,
+      get user_app_options_path,
         headers: {'HTTP_USER_AGENT': 'test'}
       assert_response :success
     end
@@ -98,7 +98,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       is_course: true,
       family_name: 'hoc-family',
       version_year: 'unversioned',
-      published_state: SharedConstants::PUBLISHED_STATE.stable
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(script)
 
@@ -136,7 +136,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
       is_course: true,
       family_name: 'hoc-family',
       version_year: 'unversioned',
-      published_state: SharedConstants::PUBLISHED_STATE.stable
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     )
     CourseOffering.add_course_offering(unit)
     level = unit.levels.first
@@ -157,7 +157,7 @@ class DBQueryTest < ActionDispatch::IntegrationTest
     # server on page load.
 
     assert_cached_queries(10) do
-      get "/api/user_progress/#{unit.name}/1/1/#{level.id}"
+      get "/api/user_app_options/#{unit.name}/1/1/#{level.id}"
       assert_response :success
     end
 

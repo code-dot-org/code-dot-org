@@ -134,10 +134,10 @@ layout: none
 / carousel courtesy of https://gist.github.com/yorkfx/7782511
 
 .carousel.slide{:id=>"slide-images", :data => {:ride => "carousel"}}
-  %ol{style: "list-style: none;"}
-    %li.active{:data => {:target => "slide-images", :slide_to => "0"}}
-    %li{:data => {:target => "slide-images", :slide_to => "1"}}
-    %li{:data => {:target => "slide-images", :slide_to => "2"}}
+  %ol{class: "carousel-indicators"}
+    %li.active{:data => {:target => "#slide-images", :slide_to => "0"}} 
+    %li{:data => {:target => "#slide-images", :slide_to => "1"}} 
+    %li{:data => {:target => "#slide-images", :slide_to => "2"}} 
   .carousel-inner
     .item.active{:style => "padding-left: 20%; padding-right: 20%;"}
       %img.col-50{:src => "/tempsocs-images/percentage-heatmap.png", :alt => ""}
@@ -173,7 +173,7 @@ layout: none
 
 / tabs courtesy of https://codepen.io/wishabhish/pen/MWgXQed
 
-.container_responsive
+.container_responsive#tabby-tabs
   .sky-tabs.sky-tabs-pos-top-left.sky-tabs-anim-flip.sky-tabs-response-to-icons
     %input#sky-tab1.sky-tab-content-1{:checked => "checked", :name => "sky-tabs", :type => "radio"}/
     %label{:for => "sky-tab1"}

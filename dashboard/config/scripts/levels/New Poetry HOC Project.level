@@ -31,16 +31,16 @@
     "all_animations_single_frame": "false",
     "hide_pause_button": "false",
     "is_project_level": true,
-    "preload_asset_list": null,
     "default_poem": "hafez",
-    "standalone_app_name": "poetry_hoc"
+    "standalone_app_name": "poetry_hoc",
+    "preload_asset_list": null
   },
   "game_id": 69,
   "published": true,
-  "created_at": "2021-10-07T01:07:43.000Z",
+  "created_at": "2021-10-11T22:28:52.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "audit_log": "[{\"changed_at\":\"2021-10-06T11:07:43.207-07:00\",\"changed\":[\"cloned from \\\"New Poetry Project\\\"\"],\"cloned_from\":\"New Poetry Project\"},{\"changed_at\":\"2021-10-06 11:15:40 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-06 11:29:48 -0700\",\"changed\":[\"show_poem_dropdown\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"anjali+labs@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-06T11:07:43.207-07:00\",\"changed\":[\"cloned from \\\"New Poetry Project\\\"\"],\"cloned_from\":\"New Poetry Project\"},{\"changed_at\":\"2021-10-06 11:15:40 -0700\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-06 11:29:48 -0700\",\"changed\":[\"show_poem_dropdown\",\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-26 18:54:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -52,25 +52,72 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="Poetry_setBackgroundEffect">
-          <title name="EFFECT">"colors"</title>
-          <title name="PALETTE">"sky"</title>
+        <block type="Poetry_whenLineShows">
+          <title name="N">0</title>
         </block>
-        <block type="Poetry_setForegroundEffect">
-          <title name="EFFECT">"rain"</title>
+        <block type="Poetry_makeNewSpriteAnon">
+          <title name="ANIMATION_NAME">"tree_tall"</title>
+          <title name="LOCATION">{"x":200,"y":225}</title>
+        </block>
+        <block type="Poetry_setSize">
+          <title name="SPRITE">"tree_tall"</title>
+          <title name="VAL">50</title>
+        </block>
+        <block type="Poetry_startBehavior">
+          <title name="ANIMATION_NAME">"tree_tall"</title>
+          <title name="BEHAVIOR">growing</title>
+        </block>
+        <block type="Poetry_stopBehavior">
+          <title name="ANIMATION_NAME">"tree_tall"</title>
+          <title name="BEHAVIOR">fluttering</title>
+        </block>
+        <block type="Poetry_destroy">
+          <title name="ANIMATION_NAME">"tree_tall"</title>
+        </block>
+        <block type="Poetry_makeBurst">
+          <title name="EFFECT">"burst"</title>
+          <title name="NUM">10</title>
+          <title name="ANIMATION_NAME">"emoji_18_1"</title>
+        </block>
+        <block type="Poetry_makeNumSprites">
+          <title name="NUM">3</title>
+          <title name="ANIMATION_NAME">"night_cloud"</title>
         </block>
         <block type="Poetry_setFont">
-          <title name="FONT">"Arial"</title>
+          <title name="FONT">"Courier"</title>
         </block>
         <block type="Poetry_setFontColor">
           <value name="FILL">
-            <block type="colour_picker" can_disconnect_from_parent="false">
-              <title name="COLOUR">#ffcc99</title>
+            <block type="colour_picker">
+              <title name="COLOUR">#ffcc00</title>
             </block>
           </value>
         </block>
         <block type="Poetry_setTextEffect">
           <title name="EFFECT">"fade"</title>
+        </block>
+        <block type="Poetry_playMusic">
+          <title name="SOUND">"sound://category_background/fire_burning.mp3"</title>
+        </block>
+        <block type="Poetry_playSound">
+          <title name="SOUND">"sound://category_background/typewriter.mp3"</title>
+        </block>
+        <block type="Poetry_setForegroundEffect">
+          <title name="EFFECT">"rain"</title>
+        </block>
+        <block type="Poetry_setBackground">
+          <value name="COLOR">
+            <block type="colour_picker">
+              <title name="COLOUR">#cc0000</title>
+            </block>
+          </value>
+        </block>
+        <block type="Poetry_setBackgroundEffect">
+          <title name="EFFECT">"clouds"</title>
+          <title name="PALETTE">"spring"</title>
+        </block>
+        <block type="gamelab_setBackgroundImageAs">
+          <title name="IMG">"blue_watercolor"</title>
         </block>
       </xml>
     </toolbox_blocks>

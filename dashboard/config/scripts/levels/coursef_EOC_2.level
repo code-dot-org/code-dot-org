@@ -202,7 +202,7 @@
                                               </value>
                                               <value name="BEHAVIOR">
                                                 <block type="gamelab_behavior_get">
-                                                  <title name="VAR">moving</title>
+                                                  <title name="VAR" id="moving">moving</title>
                                                 </block>
                                               </value>
                                             </block>

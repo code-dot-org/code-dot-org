@@ -6,13 +6,14 @@
     "properties": {
       "exclude_csf_column_in_legend": true,
       "has_verified_resources": true,
-      "version_year": "unversioned",
-      "is_course": true
+      "is_course": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csd-post-survey",
-    "serialized_at": "2021-08-03 22:47:35 UTC",
+    "serialized_at": "2021-10-25 22:53:49 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd-post-survey"
     }

@@ -163,6 +163,7 @@ FactoryGirl.define do
           end
         end
       end
+
       factory :program_manager do
         transient do
           regional_partner {build :regional_partner}
@@ -171,6 +172,7 @@ FactoryGirl.define do
           create :regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner
         end
       end
+
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}
         sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
@@ -178,6 +180,15 @@ FactoryGirl.define do
           plc_reviewer.permission = UserPermission::PLC_REVIEWER
         end
       end
+
+      factory :code_instructor do
+        sequence(:name) {|n| "Code Instructor #{n}"}
+        sequence(:email) {|n| "test_code_instructor_#{n}@example.com.xx"}
+        after(:create) do |code_instructor|
+          code_instructor.permission = UserPermission::CODE_INSTRUCTOR
+        end
+      end
+
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
@@ -1002,7 +1013,7 @@ FactoryGirl.define do
 
   factory :user_script do
     user {create :student}
-    script {create :script, published_state: SharedConstants::PUBLISHED_STATE.stable}
+    script {create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable}
   end
 
   factory :user_school_info do
@@ -1322,6 +1333,7 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
+    pl_programs_offered ['CSD', 'CSP']
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do

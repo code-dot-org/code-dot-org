@@ -4,12 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "curriculum_path": "https://studio.code.org/s/hello-world-food/lessons/1",
+      "curriculum_umbrella": "CSC",
+      "is_course": true,
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true,
+      "version_year": "2021"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-09-13 21:08:20 UTC",
+    "family_name": "hello-world-emoji",
+    "serialized_at": "2021-10-25 22:54:58 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "hello-world-emoji"
     }
@@ -77,6 +83,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_say"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -98,6 +107,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_location"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -119,6 +131,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_multi"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +155,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_click"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +179,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_events"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +203,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_backgrounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +227,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_costumes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +251,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_sizes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +275,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_behaviors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +299,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_sounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,6 +323,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_emoji_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
