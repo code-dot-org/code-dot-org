@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect} from 'react';
 import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
@@ -35,6 +35,7 @@ import {
   FormContext,
   getValidationState
 } from '../../form_components_func/FormComponent';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 
 const CSD_URL = 'https://code.org/educate/csd';
 const CSP_URL = 'https://code.org/educate/csp';
@@ -46,7 +47,18 @@ const US = 'United States';
 
 const AboutYou = props => {
   const {accountEmail, onChange, errors, data} = props;
+  const [regionalPartner] = useRegionalPartner(data);
   const nominated = queryString.parse(window.location.search).nominated;
+
+  useEffect(() => {
+    onChange({
+      regionalPartnerId: regionalPartner?.id,
+      regionalPartnerGroup: regionalPartner?.group,
+      regionalPartnerWorkshopIds: (regionalPartner?.workshops || []).map(
+        workshop => workshop.id
+      )
+    });
+  }, [regionalPartner]);
 
   const resetCountry = () => onChange({country: US});
   const exitApplication = () => (window.location = PD_RESOURCES_URL);
@@ -87,6 +99,46 @@ const AboutYou = props => {
       school: selectedSchool?.value,
       schoolZipCode: selectedSchool?.school?.zip
     });
+  };
+
+  const renderRegionalPartnerName = () => {
+    const content = regionalPartner?.name ? (
+      <>
+        <p>
+          Your Regional Partner will host the full professional learning program
+          and provide ongoing support as you implement what you’ve learned in
+          the classroom!
+        </p>
+        <p>
+          <strong>Your Regional Partner is: {regionalPartner.name}</strong>
+        </p>
+      </>
+    ) : (
+      <>
+        <p>
+          <strong>
+            There is no Regional Partner in your region at this time
+          </strong>
+        </p>
+        <p>
+          Code.org will review your application and contact you with options for
+          joining the program hosted by a Regional Partner from a different
+          region. Please note that we are not able to guarantee a space for you
+          with another Regional Partner, and you will be responsible for the
+          costs associated with traveling to that location if a virtual option
+          is not available.
+        </p>
+      </>
+    );
+    return (
+      <>
+        <p>
+          Participants are assigned to a program hosted by one of our Regional
+          Partners based on their school's geographic location.
+        </p>
+        {content}
+      </>
+    );
   };
 
   return (
@@ -230,6 +282,8 @@ const AboutYou = props => {
             name="principalPhoneNumber"
             autoComplete="never"
           />
+
+          {renderRegionalPartnerName()}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>
