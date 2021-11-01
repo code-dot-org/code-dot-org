@@ -265,6 +265,10 @@
           "word": "Máquina de aprendizado",
           "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
         },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
         "sprite/coursef/2021": {
           "word": "Sprite"
         },
@@ -534,7 +538,6 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/coursed/2021": {
-          "word": "codificar",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "repeat/coursed/2021": {
@@ -590,9 +593,6 @@
         "event/express/2021": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
-        },
-        "code/express/2021": {
-          "word": "codificar"
         },
         "loop/express/2021": {
           "word": "Laço",

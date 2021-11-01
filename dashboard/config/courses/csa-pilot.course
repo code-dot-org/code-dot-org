@@ -12,6 +12,7 @@
     "csa9-pilot"
   ],
   "published_state": "pilot",
+  "instruction_type": "teacher_led",
   "properties": {
     "family_name": "csa",
     "has_numbered_units": true,

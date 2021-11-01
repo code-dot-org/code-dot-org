@@ -3399,11 +3399,8 @@ bs:
           lessons:
             lesson-1:
               name: Pregled
-        poetry:
-          lessons:
-            lesson-3:
-              name: Varijable
         spelling-bee:
           lessons:
             lesson-1:
               name: Spelovanje
+          title: Spelovanje

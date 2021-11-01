@@ -3790,11 +3790,12 @@
           lessons:
             lesson-1:
               name: Moduler
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabler
         spelling-bee:
           lessons:
             lesson-1:
               name: Stavekonkurranse
+          title: Stavekonkurranse
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold

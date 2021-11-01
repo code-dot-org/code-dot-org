@@ -9383,17 +9383,11 @@
         "courseF_bee_variables_4a_2021": {
           "courseF_bee_variables_4_2021_1": "Namiesto toho, aby sme k premennej pripočítavali hodnotu 1, zakaždým pripočítame hodnotu 2."
         },
-        "courseF_events_choice_pufferfish": {
-          "changeProp": "Budeš musieť použiť aj tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
-        },
         "courseF_events_key": {
           "changePropBlock": "Budeš musieť použiť aj tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
         "courseF_sprites_clouds": {
           "behavior_list": "Skús použiť správania ako „posun na východ a cyklenie“, „točenie vpravo“ a „túlať sa“."
-        },
-        "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Skús zmeniť názov premennej v bloku `keď zodpovedaná`. Keďže sa v programe nachádza viacero výziev, použi názov premennej z _poslednej_ výzvy, na ktorú bude používateľ odpovedať.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseA_maze_seq2": {
           "courseA_maze_seq2_a": "V tomto programe chýba jeden blok. Skúsiš zistiť, ktorý to je?",
@@ -9412,6 +9406,12 @@
           "courseA_maze_seq9_a": "Nevieš si rady? Skús po vtáčikovej ceste prejsť prstom.",
           "courseA_maze_seq9_b": "Ak nevieš, čo robiť, skús stlačiť tlačidlo Začať znova a spustiť kód. Tak zistíš, kde došlo k chybe.",
           "courseA_maze_seq9_c": "Na vyriešenie tejto úlohy budeš musieť ísť 3 rôznymi smermi."
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "Budeš musieť použiť aj tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "Skús zmeniť názov premennej v bloku `keď zodpovedaná`. Keďže sa v programe nachádza viacero výziev, použi názov premennej z _poslednej_ výzvy, na ktorú bude používateľ odpovedať.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         }
       }
     }

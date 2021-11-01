@@ -9475,6 +9475,8 @@ ro:
           lessons:
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
+            Outbreak:
+              name: Cum se Codifică o Simulare
           lesson_groups:
             outbreak:
               display_name: Simulare Epidemie
@@ -11279,11 +11281,12 @@ ro:
               name: Widget-uri
             lesson-2:
               name: Instrumente
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabile
         spelling-bee:
           lessons:
             lesson-1:
               name: Albina de Ortografie
+          title: Albina de Ortografie
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut

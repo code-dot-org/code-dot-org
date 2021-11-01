@@ -16612,11 +16612,8 @@ mn:
           lessons:
             lesson-1:
               name: Виджетүүд
-        poetry:
-          lessons:
-            lesson-3:
-              name: Хувьсагчууд
         spelling-bee:
           lessons:
             lesson-1:
               name: Зөв бичих дүрэм заах зөгий
+          title: Зөв бичих дүрэм заах зөгий

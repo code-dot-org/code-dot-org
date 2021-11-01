@@ -1909,6 +1909,95 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Yeni blok!",
           "poetry_remove_sprite": "Yeni blok!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "When'i while olarak değiştirmeyi deneyin."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Yeni bloklar buraya!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Burada bulunan yeni olay bloğunu kullan."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Bu bloğun sırası yanlış."
+        },
+        "courseF_events_time": {
+          "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Davranışlar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Hareketli Nesneler kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Konumlar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Burada yeni blok ara."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Burada yeni blok ara!"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Bitirdin mi? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Burada yeni bloklar ara!"
+        },
+        "courseF_text_events": {
+          "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_text_print": {
+          "print_block": "Yazdır bloğunu burada bul!",
+          "text_print_finish": "Mesajın yukarıda yazdırıldı mı? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "İstem bloğunu burada bul!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
         }
       }
     }

@@ -10075,6 +10075,8 @@ vi:
               name: giai đoạn mới
             Routers and Redundancy:
               name: Bộ định tuyến và dự phòng
+            Packets:
+              name: Gói
             The Need for Addressing:
               name: Sự cần thiết cho các địa chỉ
         peru-2019:
@@ -11807,6 +11809,8 @@ vi:
               name: Sự cần thiết cho các địa chỉ
             Routers and Redundancy:
               name: Bộ định tuyến và dự phòng
+            Packets:
+              name: Gói
         csp3-2020:
           lesson_groups:
             cspSurvey2020:
@@ -12134,6 +12138,16 @@ vi:
           lessons:
             Virus Simulation for Code Bytes:
               name: Lập trình mô phỏng
+            Outbreak:
+              name: Lập trình mô phỏng
+              description_student: Một loại vi rút đã lây lan tới Thị Trấn Quái Vật
+                rồi! Hãy học cách tạo trình mô phỏng vi rút và giúp những con quái
+                vật khỏe mạnh trở lại.
+              description_teacher: Bài học này kết hợp **phát triển kỹ năng** liên
+                quan đến sự kiện với một **dự án nhỏ**, trong đó học sinh có thể xây
+                dựng bản mô phỏng máy tính của riêng mình trong Sprite Lab. Học sinh
+                sẽ nghiên cứu bản mô phỏng để hiểu tốc độ lây lan nhanh chóng của
+                vi rút và phương pháp làm chậm tốc độ đó.
           lesson_groups:
             outbreak:
               display_name: Mô phỏng dịch bệnh bùng phát
@@ -12147,10 +12161,14 @@ vi:
             bùng phát do vi rút.
         2021drafting:
           lessons:
+            lesson-2:
+              name: Văn bản và Lời nhắc
             Virus Simulation for Code Bytes:
               name: Lập trình mô phỏng
             Making Sprites:
               name: Tạo nhân vật
+            blank space stories:
+              name: Câu chuyện khoảng trống
             End of Course Project:
               name: Dự án tổng kết khóa học
             Outbreaklab:
@@ -12311,6 +12329,9 @@ vi:
             Routers and Redundancy:
               key: Bộ định tuyến và dự phòng
               name: Bộ định tuyến và dự phòng
+            Packets:
+              key: Gói
+              name: Gói
           lesson_groups:
             lessonGroup-2:
               display_name: Khảo sát
@@ -12375,6 +12396,8 @@ vi:
               key: Lập trình trong Kỷ băng hà
               name: Lập trình với Scrat
               description_student: Viết chương trình để giúp Scrat tới chỗ hạt sồi.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ tiếp tục phát triển các thuật toán trình tự.
             Programming with Rey and BB-8:
               key: Lập trình cùng Rey và robot BB-8
               name: Lập trình cùng Rey và robot BB-8
@@ -12446,23 +12469,42 @@ vi:
               name: Di chuyển nó, di chuyển nó
               description_student: Lập trình cho các bạn cùng lớp bước đi cẩn thận
                 từ vị trí này sang vị trí khác.
+              description_teacher: Học sinh sẽ lập trình cho các bạn cùng lớp bước
+                đi cẩn thận quanh sàn nhà kẻ ô trong bài học **thiết lập ngữ cảnh**
+                này.
             Sequencing in Maze:
               key: Chuỗi tuần tự trong mê cung
               name: Chuỗi tuần tự cùng Angry Birds
               description_student: Giúp chú chim Red đi theo con đường dẫn đến con
                 heo hư đốn.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ phát triển các thuật toán trình tự để di chuyển một chú chim từ
+                một bên của mê cung sang chỗ con heo ở phía bên kia. Để làm điều này,
+                họ sẽ xếp chồng các khối mã lệnh lên nhau theo một trình tự tuyến
+                tính.
             Programming in Maze:
               key: Lập trình trong mê cung
               name: Lập trình với Angry Birds
+              description_student: Tạo các chương trình để giúp _Chú chim giận dữ_
+                di chuyển qua mê cung.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ tiếp tục phát triển các thuật toán trình tự.
             Programming in Harvester:
               name: Lập trình với game Người thu hoạch
               description_student: Giúp Người thu hoạch thu thập các loại rau trên
                 đường đi.
+              description_teacher: Học sinh sẽ áp dụng các khái niệm lập trình đã
+                học vào môi trường Người thu hoạch trong bài học **phát triển kỹ năng**
+                này. Học sinh sẽ tiếp tục phát triển các kỹ năng giải thuật trình
+                tự và bắt đầu áp dụng quy trình sửa lỗi.
             'Loops: Getting Loopy':
               key: 'Vòng lặp: Bắt lấy Loopy'
               name: Tạo vòng lặp
               description_student: Trong bài học này, chúng ta sẽ tổ chức một bữa
                 tiệc khiêu vũ bằng cách sử dụng vòng lặp!
+              description_teacher: Trong bài học **thiết lập ngữ cảnh** này, học sinh
+                sẽ học cách sử dụng các vòng lặp để truyền đạt các chỉ dẫn dễ dàng
+                hơn bằng cách xem các mẫu lặp đi lặp lại của một điệu nhảy.
             Loops in Harvester:
               name: Vòng lặp với game Người thu hoạch
               description_student: Giúp Người thu hoạch thu hoạch thật nhiều mùa màng
@@ -12738,6 +12780,8 @@ vi:
               name: Dự án tổng kết khóa học
               description_student: Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu
                 xây dựng dự án của bạn.
+              description_teacher: Bài học **dự án** này dẫn dắt học sinh qua quá
+                trình thiết kế, phát triển và giới thiệu các dự án mới!
             lesson-6:
               name: Nhìn về phía trước
             lesson-5:
@@ -12800,6 +12844,8 @@ vi:
                 khối bổ sung và khối không đúng thứ tự."
             Programming and Loops with the Artist:
               name: Vẽ bằng vòng lặp
+              description_student: Trong bài học này, **vòng lặp** giúp bạn dễ dàng
+                tạo những hình ảnh thú vị với Họa sĩ!
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước'
               name: 'Lệnh điều kiện trong Minecraft: Chuyến du hành dưới nước'
@@ -12888,6 +12934,8 @@ vi:
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian
                 và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa
                 sức sáng tạo!
+              description_teacher: Bài học **dự án** này dẫn dắt học sinh qua quá
+                trình thiết kế, phát triển và giới thiệu các dự án mới!
             lesson-4:
               name: Hãy trở thành một công dân kỹ thuật số tuyệt vời
               description_student: Tìm hiểu cách trở thành người đứng lên chống lại
@@ -12952,10 +13000,13 @@ vi:
                 ngoài hành tinh”.
             Loops with the Artist:
               name: Vẽ bằng vòng lặp
+              description_student: Trong bài học này, **vòng lặp** giúp bạn dễ dàng
+                tạo những hình ảnh thú vị với Họa sĩ!
               description_teacher: Bài học **xây dựng kỹ năng** này chuyển trọng tâm
                 từ Sprite Lab sang Artist, công cụ mới mà học sinh sẽ khám phá trong
                 suốt phần còn lại của khóa học.
             Nested Loops in the Maze:
+              name: Lập trình với Chú ong
               description_student: Bài học này sẽ hướng dẫn bạn về hiện tượng xảy
                 ra khi đặt một vòng lặp bên trong một vòng lặp khác.
               description_teacher: Trong bài học **xây dựng kỹ năng** này, học sinh
@@ -12996,6 +13047,7 @@ vi:
                 Học sinh sẽ học cách sử dụng biến để khiến mã lệnh dễ viết và dễ đọc
                 hơn, ngay cả khi các giá trị không thay đổi trong quá trình chạy.
             Variables that Change in Bee:
+              name: Biến với Chú ong
               description_student: Chú ong này rất thích các biến!
               description_teacher: Bài học **xây dựng kỹ năng** này sẽ giúp minh họa
                 cách gia tăng tính linh hoạt cho chương trình với các biến bằng cách
@@ -13014,25 +13066,56 @@ vi:
               name: Thử nghiệm mô phỏng
               description_student: Chạy trình mô phỏng trên máy tính và thử nghiệm
                 bằng cách thay đổi biến.
+              description_teacher: Trong bài học **thiết lập ngữ cảnh** này, học sinh
+                sẽ chạy và thu thập dữ liệu từ một bản mô phỏng đơn giản trong Sprite
+                Lab. Sau khi chạy mô phỏng nhiều lần, học sinh sẽ có cơ hội dự đoán
+                tác động của sự thay đổi biến trong bản mô phỏng đến kết quả và kiểm
+                tra giả thuyết đó.
             AI for Oceans:
               key: Trí Tuệ Nhân Tạo cho Đại Dương
               name: Trí Tuệ Nhân Tạo cho Đại Dương
+              description_student: Hãy phân loại các đối tượng là “cá” hoặc “không
+                phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, hãy mở rộng
+                tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống
+                trong nước. Trong phần thứ hai của hoạt động, hãy chọn nhãn của riêng
+                bạn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào
+                tạo này được sử dụng cho mô hình máy học mà sau đó có thể tự gắn nhãn
+                các hình ảnh mới.
+              description_teacher: Trong bài học **khám phá** này, học sinh sẽ đào
+                tạo một mô hình máy học bằng cách phân loại cá và các đối tượng khác.
             Internet:
               key: internet
               name: Internet
+              description_student: Bạn đã bao giờ tự hỏi thông tin di chuyển trên
+                Internet như thế nào chưa? Không phải nhờ phép thuật đâu nhé! Bài
+                học này sẽ dạy bạn những kiến thức cơ bản về cách thức hoạt động của
+                Internet.
+              description_teacher: Học sinh sẽ giả vờ lướt mạng và tìm hiểu về các
+                kết nối, URL, Địa chỉ IP và DNS trong bài học **khám phá** này.
             For Loop Fun:
               key: Cho vòng lặp vui vẻ
               name: Cho vòng lặp vui vẻ
               description_student: Bạn sẽ có vô số điều thú vị khi học về vòng lặp
                 `for`!
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ sử dụng các vòng lặp có cấu trúc mới hiệu quả.
             For Loops in Bee:
               key: Dành cho vòng lặp trong game Chú ong
+              description_student: Trong những bài tập này, bạn sẽ hướng dẫn một chú
+                ong lấy mật hoa và mật ong bằng cách sử dụng các vòng lặp!
+              description_teacher: Bài học **phát triển kỹ năng** này tập trung vào
+                vòng lặp for và sử dụng một biến tăng dần để giải các bài tập phức
+                tạp hơn.
             For Loops in Artist:
               key: Dành cho Vòng lặp trong Artist
               name: Dành cho Vòng lặp trong Artist
               description_student: Hãy sẵn sàng để tạo ra kiệt tác tiếp theo của bạn.
                 Ở đây, bạn sẽ sử dụng vòng lặp `for` để tạo ra một số hình ảnh vô
                 cùng ấn tượng.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ thực hành các vòng lặp “for” với Họa sĩ. Học sinh sẽ hoàn thành
+                các bài tập để tạo ra các thiết kế phức tạp và tác phẩm nghệ thuật
+                độc đáo.
             Editing Behaviors:
               name: Hành vi trong Sprite Lab
               description_student: Học cách lập trình hành vi cho nhân vật của riêng
@@ -13041,21 +13124,74 @@ vi:
                 ra các hành vi tùy chỉnh của riêng mình.
             Virtual Pet:
               key: Thú cưng ảo
+              description_student: Hãy tạo Thú cưng ảo tương tác có vẻ ngoài và hành
+                động theo ý muốn! Hãy mang lại sức sống riêng cho thú cưng của bạn
+                nhé!
+              description_teacher: Học sinh sẽ tạo Thú cưng ảo tương tác có vẻ ngoài
+                và hành động theo ý muốn của mình trong bài học **dự án nhỏ** này.
+                Học sinh sẽ sử dụng công cụ “Trang phục” của Sprite Lab để tùy chỉnh
+                vẻ ngoài cho thú cưng. Sau đó, họ sẽ sử dụng các sự kiện, hành vi
+                và các khái niệm khác đã học để mang lại sức sống cho thú cưng của
+                riêng mình!
             End of Course Project:
               key: Dự án tổng kết khóa học
               name: Dự án tổng kết khóa học
               description_student: Những dự án lớn tầm cỡ này cần nhiều thời gian
                 và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa
                 sức sáng tạo!
+              description_teacher: Bài học **dự án** này dẫn dắt học sinh qua quá
+                trình thiết kế, phát triển và giới thiệu các dự án mới!
             lesson-1:
               name: Thiết kế cho trợ năng
               description_student: Trong bài học này, học sinh sẽ tìm hiểu về trợ
                 năng và giá trị đồng cảm bằng cách brainstorm (động não) và thiết
                 kế các giải pháp trợ năng cho các ứng dụng giả định.
+            lesson-6:
+              description_student: Bạn sẽ thảo luận về vai trò của máy tính và công
+                nghệ trong cuộc sống, tập trung vào cách thức các ứng dụng và công
+                cụ cho người dùng lựa chọn cách sử dụng.
             lesson-7:
               name: Tạo nhân vật
+              description_teacher: 'Trong bài học **phát triển kỹ năng** này, học
+                sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng
+                nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng
+                nào họ thích. Học sinh sẽ viết chương trình và tìm hiểu về hai khái
+                niệm trọng tâm của Sprite Lab: Nhân vật và hành vi.'
+            lesson-8:
+              description_student: Bạn sẽ hoàn thành từng cấp độ lập trình và kết
+                thúc với một nhiệm vụ “chơi tự do” có kết thúc mở để có thể phát triển
+                bất cứ chương trình nào bạn thích.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm
+                vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ
+                thích. Học sinh sẽ viết chương trình phản hồi lại các sự kiện theo
+                thời gian và dữ liệu đầu vào của người dùng.
+            lesson-9:
+              name: Câu chuyện khoảng trống
+              description_student: Trong hoạt động này, học sinh sẽ sử dụng các câu
+                chuyện dạng điền vào chỗ trống (tương tự như Mad Libs®) làm ngữ cảnh
+                để sẵn sàng hiểu cách máy tính lấy và lưu trữ dữ liệu đầu vào từ người
+                dùng, sau đó sử dụng dữ liệu này khi chương trình chạy.
+              description_teacher: Trong bài học **thiết lập ngữ cảnh** này, học sinh
+                sẽ sử dụng các câu chuyện dạng điền vào chỗ trống (tương tự như Mad
+                Libs®) làm ngữ cảnh để hiểu cách máy tính lấy và lưu trữ dữ liệu đầu
+                vào từ người dùng, sau đó sử dụng dữ liệu này khi chương trình chạy.
+            lesson-10:
+              name: Văn bản và Lời nhắc
+              description_student: Trong bài học này, bạn sẽ thực hành với các biến
+                trong Sprite Lab.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ thực hành với biến trong Sprite Lab.
             lesson-5:
               name: Dịch bệnh bùng phát
+              description_student: Một loại vi rút đã lây lan tới Thị Trấn Quái Vật
+                rồi! Hãy học cách tạo trình mô phỏng vi rút và giúp những con quái
+                vật khỏe mạnh trở lại.
+              description_teacher: Bài học này kết hợp **phát triển kỹ năng** liên
+                quan đến sự kiện với một **dự án nhỏ**, trong đó học sinh có thể xây
+                dựng bản mô phỏng máy tính của riêng mình trong Sprite Lab. Học sinh
+                sẽ nghiên cứu bản mô phỏng để hiểu tốc độ lây lan nhanh chóng của
+                vi rút và phương pháp làm chậm tốc độ đó.
             lesson-2:
               name: Sức mạnh của ngôn từ
               description_student: Bắt nạt chưa bao giờ là đúng. Bài học này sẽ dạy
@@ -13066,6 +13202,13 @@ vi:
                 Bài học này ban đầu được tạo bởi Common Sense Education. [Tìm hiểu thêm.] \(<https://www.commonsense.org/education/digital-citizenship/curriculum>)
 
                 Khi trẻ lớn lên, tự nhiên chúng sẽ bắt đầu giao tiếp trực tuyến nhiều hơn. Nhưng một số những gì họ nhìn thấy có thể khiến họ cảm thấy bị tổn thương, buồn bã, tức giận hoặc thậm chí là sợ hãi. Giúp học sinh của bạn xây dựng sự đồng cảm với người khác và học các chiến lược để sử dụng khi đối mặt với bắt nạt trên mạng.
+            lesson-11:
+              description_student: Hãy áp dụng các kỹ năng mới với biến trong một
+                trong ba dự án mở.
+              description_teacher: Học sinh sẽ áp dụng các kỹ năng mới với biến vào
+                một trong ba **dự án nhỏ** có kết thúc mở. Học sinh sẽ khám phá các
+                chương trình mẫu, lập kế hoạch cho dự án của riêng mình và lập trình
+                từ đầu.
           lesson_groups:
             csf_digcit:
               display_name: Công dân số
@@ -13183,6 +13326,7 @@ vi:
                 thúc với cấp độ khám phá tự do để thể hiện những kiến thức đã học
                 và tạo ra thiết kế mới.
             Changing Variables with Bee:
+              name: Biến với Chú ong
               description_student: Chú ong này rất thích các biến!
               description_teacher: Bài học **xây dựng kỹ năng** này sẽ giúp minh họa
                 cách gia tăng tính linh hoạt cho chương trình với các biến bằng cách
@@ -13195,12 +13339,19 @@ vi:
             For Loops with Bee:
               description_student: Vo ve. Trong những bài tập này, bạn sẽ hướng dẫn
                 một chú ong lấy mật hoa và mật ong bằng cách sử dụng vòng lặp `for`!
+              description_teacher: Bài học **phát triển kỹ năng** này tập trung vào
+                vòng lặp for và sử dụng một biến tăng dần để giải các bài tập phức
+                tạp hơn.
             For Loops with Artist:
               key: Dành cho Vòng lặp trong Artist
               name: Dành cho Vòng lặp trong Artist
               description_student: Hãy sẵn sàng để tạo ra kiệt tác tiếp theo của bạn.
                 Ở đây, bạn sẽ sử dụng vòng lặp `for` để tạo ra một số hình ảnh vô
                 cùng ấn tượng.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ thực hành các vòng lặp “for” với Họa sĩ. Học sinh sẽ hoàn thành
+                các bài tập để tạo ra các thiết kế phức tạp và tác phẩm nghệ thuật
+                độc đáo.
             Swimming Fish in Sprite Lab:
               description_student: Tìm hiểu cách tạo và chỉnh sửa nhân vật.
             Alien Dance Party:
@@ -13216,17 +13367,50 @@ vi:
             Virtual Pet with Sprite Lab:
               key: Thú cưng ảo với Sprite Lab
               name: Thú cưng ảo với Sprite Lab
+              description_student: Hãy tạo Thú cưng ảo tương tác có vẻ ngoài và hành
+                động theo ý muốn! Hãy mang lại sức sống riêng cho thú cưng của bạn
+                nhé!
+              description_teacher: Học sinh sẽ tạo Thú cưng ảo tương tác có vẻ ngoài
+                và hành động theo ý muốn của mình trong bài học **dự án nhỏ** này.
+                Học sinh sẽ sử dụng công cụ “Trang phục” của Sprite Lab để tùy chỉnh
+                vẻ ngoài cho thú cưng. Sau đó, họ sẽ sử dụng các sự kiện, hành vi
+                và các khái niệm khác đã học để mang lại sức sống cho thú cưng của
+                riêng mình!
             End of Course Project:
               key: Dự án tổng kết khóa học
               name: Dự án tổng kết khóa học
               description_student: Hãy sẵn sàng lập trình nào! Đã đến lúc bắt đầu
                 xây dựng dự án của bạn.
+              description_teacher: Bài học **dự án** này dẫn dắt học sinh qua quá
+                trình thiết kế, phát triển và giới thiệu các dự án mới!
             lesson-1:
               name: Bữa Tiệc Khiêu Vũ
               description_student: Đã đến lúc ăn mừng rồi! Trong bài học này, bạn
                 sẽ tự lập trình một bữa tiệc khiêu vũ tương tác của riêng mình.
             lesson-2:
               name: Tạo nhân vật
+              description_student: Trong bài học này, bạn sẽ viết chương trình và
+                tìm hiểu về nhân vật và hành vi.
+              description_teacher: 'Trong bài học **phát triển kỹ năng** này, học
+                sinh sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng
+                nhiệm vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng
+                nào họ thích. Học sinh sẽ viết chương trình và tìm hiểu về hai khái
+                niệm trọng tâm của Sprite Lab: Nhân vật và hành vi.'
+            lesson-3:
+              description_student: Bạn sẽ hoàn thành từng cấp độ lập trình và kết
+                thúc với một nhiệm vụ “chơi tự do” có kết thúc mở để có thể phát triển
+                bất cứ chương trình nào bạn thích.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ thực hiện nhiều cấp độ lập trình trên máy tính, kết thúc bằng nhiệm
+                vụ “chơi tự do” có kết thúc mở để phát triển bất cứ ứng dụng nào họ
+                thích. Học sinh sẽ viết chương trình phản hồi lại các sự kiện theo
+                thời gian và dữ liệu đầu vào của người dùng.
+            lesson-4:
+              name: Văn bản và Lời nhắc
+              description_student: Trong bài học này, bạn sẽ thực hành với các biến
+                trong Sprite Lab.
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ thực hành với biến trong Sprite Lab.
           lesson_groups:
             csf_sequencing:
               display_name: Chuỗi tuần tự
@@ -13270,6 +13454,8 @@ vi:
               description_student: Viết chương trình để Scrat tìm đến hạt sồi.
             Programming in with Angry Birds:
               name: Lập trình với Angry Birds
+              description_teacher: Trong bài học **phát triển kỹ năng** này, học sinh
+                sẽ tiếp tục phát triển các thuật toán trình tự.
             Programming with Rey and BB-8:
               key: Lập trình cùng Rey và robot BB-8
               name: Lập trình cùng Rey và robot BB-8
@@ -13328,6 +13514,12 @@ vi:
               name: Lập trình mô phỏng
             Making Sprites:
               name: Tạo nhân vật
+            blank space stories:
+              name: Câu chuyện khoảng trống
+            texts-and-prompts:
+              name: Văn bản và Lời nhắc
+            blank-space-stories:
+              name: Câu chuyện khoảng trống
           lesson_groups:
             ramp_up:
               display_name: Giới thiệu
@@ -13837,13 +14029,14 @@ vi:
           lessons:
             lesson-1:
               name: Vật dụng
-        poetry:
-          lessons:
-            lesson-3:
-              name: Các biến
         spelling-bee:
           lessons:
             lesson-1:
               name: Ong tìm chữ
+          title: Ong tìm chữ
         outbreak-csc:
           title: Dịch bệnh bùng phát
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung

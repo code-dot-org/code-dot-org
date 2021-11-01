@@ -567,28 +567,35 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Conclusione"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Riflessione"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introduzione"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Epidemia",
+          "progression_name": "Epidemia"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Benvenuto nella Città dei Mostri"
         },
-        "469f328e-f384-4319-9bd0-e0b4e603d3a6": {
+        "df13fa93-37df-4188-837d-462c48179625": {
           "progression_name": "Esercizi per lo sviluppo delle competenze"
         },
-        "7ae620e6-5b98-405a-86a0-ac4fa8f13dce": {
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "progression_name": "Mini progetto - Simulatore di pandemia"
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Tempo di giocare",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Tempo di giocare"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Riflessione"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -637,6 +644,7 @@
           "name": "Introduzione"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Creazione di personaggi",
           "tips": [
             null
           ],
@@ -701,6 +709,9 @@
         },
         "c2ac88a2-6e26-49e5-a893-c3915816141a": {
           "name": "Riflessione"
+        },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Giochi da festa"
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
@@ -2347,6 +2358,7 @@
           "name": "Introduzione"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Creazione di personaggi",
           "tips": [
             null
           ],

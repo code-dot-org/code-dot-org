@@ -179,6 +179,24 @@
         },
         "helloworld_food_behaviors": {
           "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "poetry_hoc_addSprites": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "poetry_hoc_exemplar1": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "poetry_hoc_exemplar2": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "poetry_hoc_freeplay": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key"
         }
       }
     }

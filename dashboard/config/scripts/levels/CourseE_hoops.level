@@ -96,7 +96,7 @@
                           <value name="BEHAVIOR">
                             <block type="gamelab_behavior_get">
                               <mutation/>
-                              <title name="VAR">patrolling</title>
+                              <title name="VAR" id="patrolling">patrolling</title>
                             </block>
                           </value>
                           <next>

@@ -283,6 +283,10 @@
           "word": "機器學習",
           "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
         },
+        "event/outbreak/unversioned": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
         "behavior/coursef/2021": {
           "word": "行為"
         },

@@ -2802,6 +2802,8 @@ el:
           lessons:
             Virus Simulation for Code Bytes:
               name: Κωδικοποίηση μίας προσομοίωσης
+            Outbreak:
+              name: Κωδικοποίηση μίας προσομοίωσης
           lesson_groups:
             outbreak:
               display_name: Προσομοίωση Επιδημικής Έξαρσης
@@ -3187,11 +3189,8 @@ el:
           lesson_groups:
             lessonGroup-3:
               display_name: Έργο
-        poetry:
-          lessons:
-            lesson-3:
-              name: Μεταβλητές
         spelling-bee:
           lessons:
             lesson-1:
               name: Η μέλισσα της ορθογραφίας
+          title: Η μέλισσα της ορθογραφίας

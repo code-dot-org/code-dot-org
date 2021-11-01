@@ -1703,6 +1703,120 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "새 블록!",
           "poetry_remove_sprite": "새 블록!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_collector": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_pet": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "여기를 클릭하여 행동 카테고리를 여세요."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "여기를 클릭하여 스프라이트 카테고리를 여세요."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "여기를 클릭하여 위치 카테고리를 여세요."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "여기서 새 블록을 찾으세요."
+        },
+        "CourseF_outbreak7": {
+          "costumes_callout": "클릭하여 새 의상을 만드세요"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "여기를 클릭하여 새 의상을 프로젝트에 추가하세요!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "여기를 클릭하여 새 의상을 프로젝트에 추가하세요!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "여기서 프로그램을 느리게 할 수 있습니다."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "코드를 한 번에 한 블록씩 진행해 보도록 하세요."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "때(when)를 동안(while)으로 변경해 보세요."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "새 블록이 여기에 있습니다!"
+        },
+        "courseF_events_key": {
+          "whenKey": "여기서 찾은 새 이벤트 블록을 사용하세요."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "이 블록은 잘못된 순서로 되어 있습니다."
+        },
+        "courseF_events_time": {
+          "events_category": "여기를 클릭하여 이벤트 카테고리를 여세요."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
+        },
+        "courseF_text_answer": {
+          "answered_block": "여기서 새 블록을 찾으세요!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "질문에 답변했을 때 배경색상이 변경되었습니까? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "끝났어요? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "여기서 두 개의 새 블록을 찾으세요!",
+          "text_answer_finish": "제목 화면이 3초 동안 나왔습니까? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "여기서 새 블록을 찾으세요!"
+        },
+        "courseF_text_events": {
+          "events_category": "여기를 클릭하여 이벤트 카테고리를 여세요."
+        },
+        "courseF_text_print": {
+          "print_block": "여기서 인쇄 블록을 찾으세요!",
+          "text_print_finish": "메시지가 위에 인쇄되었어요? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "여기서 프롬프트 블록을 찾으세요!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
         }
       }
     }

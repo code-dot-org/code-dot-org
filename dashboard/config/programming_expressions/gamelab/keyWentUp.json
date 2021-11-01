@@ -1,7 +1,9 @@
 {
   "func": "keyWentUp",
   "paletteParams": [
-    "code"
+    {
+      "name": "code"
+    }
   ],
   "params": [
     "\"up\""

@@ -100,7 +100,7 @@
           <title name="VAR">turning</title>
         </block>
         <block type="gamelab_behavior_get">
-          <title name="VAR">swimming</title>
+          <title name="VAR" id="swimming">swimming</title>
         </block>
         <block type="gamelab_comment">
           <title name="COMMENT"/>

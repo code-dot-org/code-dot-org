@@ -5706,14 +5706,31 @@ pl-PL:
         display_name: Koniec projektu kursu
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Duszek będzie się właśnie obracać w prawo. '
+          feedback: Błąd. Duszek będzie się również przemieszczać na wschód.
+        - text: Duszek będzie się właśnie przemieszczać na wschód.
+          feedback: Błąd. Duszek nie przestał obracać się wokół własnej osi, zatem
+            zrobi obie rzeczy jednocześnie.
+        - text: Duszek będzie się jednocześnie obracać wokół własnej osi i przemieszczać.
+          correct: true
+          feedback: Poprawnie! Oba zachowania będą zachodzić jednocześnie.
+        - text: Duszek najpierw będzie się obracać wokół własnej osi, a potem będzie
+            się przemieszczać.
+          feedback: Błąd. W Sprite Lab, połączone bloki będą się pojawiać jednocześnie,
+            po każdym ostatni, zatem do obu zachowań dojdzie jednocześnie.
         questions:
-        - {}
+        - text: Przeczytaj kod, a potem zgadnij.
       courseF_intro_apps:
         display_name: 'Aplikacje Sprite Lab '
+        description: Witamy w "Podstawach Informatyki"! Wszystkie te projekty utworzono
+          przy pomocy Sprite Lab. Sugerujemy, aby je teraz wypróbować, aby przekonać
+          się, jakie oferują możliwości. Po przejściu tego kursu będziesz w stanie
+          tworzyć własne projekty takie, jak te... i nie tylko!
+        teacher_markdown: |
+          Omówienie poziomu wyboru #
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
+
+          Dokonując wyboru uczniowie przechodzą do przykładowych aplikacji, które mogą zgłębiać. To ćwiczenie służy do koordynacji  kraty pracy "Zgłębiania aplikacji", którą można znaleźć w [plan lekcji](.././).
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -5758,12 +5775,22 @@ pl-PL:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Oba samoloty będą się przemieszczać o jedno pole w siatce, a potem
+            się zatrzymają.
+          feedback: Błąd. Te duszki są wyposażone w takie "zachowania", że biegają,
+            aż otrzymają polecenie, by się zatrzymać.
+        - text: Oba samoloty będą się poruszać i nie zatrzymają się.
+          correct: true
+          feedback: Dobrze! Przy pomocy tych "zachowań" nakazuje się samolotom rozpoczęcie
+            i kontynuację przemieszczania się.
+        - text: Jeden samolot rozpocznie się poruszać, jako pierwszy, a drugi, jako
+            drugi.
+          feedback: Błąd. Każdy blok kodu w Sprite Lab uruchamia się natychmiast p
+            kolejnym.
+        - text: Samoloty się zderzą.
+          feedback: Błąd. Samoloty nie są umiejscowione tak, aby mogły się zetknąć.
         questions:
-        - {}
+        - text: Przeczytaj kod, a potem zgadnij.
       courseF_variables_predict_multi:
         answers:
         - {}
@@ -5909,3 +5936,45 @@ pl-PL:
           * W haśle użyj liter, liczb i **symboli**.
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      courseF_events_freeplay:
+        description: Teraz można wykorzystać to, czego się nauczyliśmy, aby jeszcze
+          ulepszyć projekt! Ciągle dodawaj coś do swojego programu albo zacznij coś
+          nowego!
+        display_name: Zdarzenia - czas na zabawę
+      courseF_events_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia ze zdarzeniami!
+        display_name: Ćwiczenia w zakresie zdarzeń
+        teacher_markdown: |+
+          # Omówienie poziomu wyboru
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
+
+          Można skorzystać z poniższych opisów, aby pomóc uczniom w dokonywaniu własnych wyborów lub aby ustanowić oczekiwania dotyczące tego, ile podpoziomów powinni przejść.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Wystrzelenie!|Nauka latania|Wykonaj "beczkę"|Kurcz się i rośnij|Nadmij rybę!|Pingwin w ruchu|
+          |-|-|-|-|-|-|-|
+          | ***Wpisz*** |**Powtórz**|**Debuguj**|**Debuguj**|**Debuguj**|**Treść alternatywna**|**Treść alternatywna**
+          | ***Koncepcja***|*zdarzenia, zachowania*|*zdarzenia, zachowania*|*zdarzenia, zachowania*|*zdarzenia, zachowania*|*zdarzenia kiedy/ podczas, gdy*|*zdarzenia kiedy/ podczas, gdy*|
+
+
+      courseF_sprites_freeplay:
+        description: Teraz twoja kolej na tworzenie tego, co tylko zechcesz! Jaki
+          rodzaj projektu stworzysz?
+        display_name: Duszki - czas na zabawę
+      courseF_sprites_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z duszkami i
+          zachowaniami!
+        display_name: Ćwiczenia z duszkami
+        teacher_markdown: |+
+          # Omówienie poziomu wyboru
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
+
+          Można skorzystać z poniższych opisów, aby pomóc uczniom w dokonywaniu własnych wyborów lub aby ustanowić oczekiwania dotyczące tego, ile podpoziomów powinni przejść.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scena na pustyni|Zmień wielkość owocu.|Ożyw płynący statek|Wietrzny dzień|
+          |-|-|-|-|-|
+          | ***Type*** |**Powtórka**|**Powtórka**|**Powtórka**|**Powtórka**|
+          | ***Koncepcja***|*duszki, lokalizacje*|*duszki, właściwości*|*duszki, lokalizacje, zachowania*|*zachowania*|
+
+

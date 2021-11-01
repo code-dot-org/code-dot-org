@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "is_course": true,
       "is_migrated": true,
-      "version_year": "unversioned",
-      "is_course": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "poem-art",
-    "serialized_at": "2021-10-15 18:43:18 UTC",
+    "serialized_at": "2021-10-25 22:55:00 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "poem-art"
     }
@@ -233,6 +235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -254,6 +259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,6 +283,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -296,6 +307,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -317,6 +331,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -338,6 +355,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -359,6 +379,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -380,6 +403,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -401,6 +427,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -533,8 +562,8 @@
       "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
       "key": "list_of_poems_1",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "list_of_poems_1"
@@ -577,13 +606,13 @@
       }
     },
     {
-      "key": "program",
-      "word": "Program",
-      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "key": "line",
+      "word": "Line",
+      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "program"
+        "vocabulary.key": "line"
       }
     },
     {
@@ -597,13 +626,13 @@
       }
     },
     {
-      "key": "line",
-      "word": "Line",
-      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin. ",
+      "key": "program",
+      "word": "Program",
+      "definition": "A series of steps that have been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "line"
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -623,7 +652,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "program"
+        "vocabulary.key": "line"
       }
     },
     {
@@ -635,7 +664,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "line"
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -644,13 +673,13 @@
   ],
   "objectives": [
     {
-      "key": "ba0eef71-97bc-4525-824e-3abc2087dbaf",
+      "key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f",
       "properties": {
-        "description": "Develop programs that respond to timed events."
+        "description": "Represent figurative and literal language in a text."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "objective.key": "ba0eef71-97bc-4525-824e-3abc2087dbaf"
+        "objective.key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f"
       }
     },
     {
@@ -664,38 +693,17 @@
       }
     },
     {
-      "key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f",
+      "key": "ba0eef71-97bc-4525-824e-3abc2087dbaf",
       "properties": {
-        "description": "Represent figurative and literal language in a text."
+        "description": "Develop programs that respond to timed events."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "objective.key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f"
+        "objective.key": "ba0eef71-97bc-4525-824e-3abc2087dbaf"
       }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -722,6 +730,27 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "ccela",
         "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     }
   ],

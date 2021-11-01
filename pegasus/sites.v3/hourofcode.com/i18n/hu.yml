@@ -67,7 +67,7 @@ hu:
     hogy minden tanuló tanuljon informatikát.
   social_hoc2019_dance: Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X,
     Jonas Brothers, Nicki Minaj, és még sokan mások!
-  social_hoc_anybody: 'Hour of Code: Anyone can Learn'
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: MI az Óceánokért
   oceans_landing_description: Fedezd fel a gépi tanulást, tanítsd meg az "M.I"-t,
     hogyan ismerjen fel halakat.
@@ -162,6 +162,12 @@ hu:
   hoc_overview_oceans_tutorial_desc: Tanulj többet a mesterséges intelligenciáról,
     a gépi tanulásról, más ehhez kapcsolódó foglamakról, az ezzel járó etikai problémákról
     és arról, hogyan oldja meg az MI a világ problémáit.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: Mi a Mesterséges Intelligencia (MI)?
   ai_video_title_algorithm_bias: Harc az algoritmusok elfogultságával szemben
   ai_video_title_phone_knows_dog: Honnan tudja a telefonod, hogy ez egy kutya?
@@ -228,6 +234,8 @@ hu:
   hourofcode_homepage_hoc2018_header_line2: "-től 104 éves korig."
   codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
   codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: A Minecraft egy vadonatúj programmal tér vissza
     a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével.
   codeorg_homepage_hoc2019_dance_heading: Próbáld ki az új <span class="highlight-word">Táncos&nbsp;bulit!</span>
@@ -5290,8 +5298,9 @@ hu:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -7870,7 +7879,7 @@ hu:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_icomputelearn_string_platforms: Minden modern böngésző
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,

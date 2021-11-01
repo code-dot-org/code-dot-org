@@ -1660,6 +1660,16 @@ is:
         text: x hnit {SPRITE}
       Mikelab_yLocationOf:
         text: y hnit {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Rjómaís
+            Stars: Stjörnur
+            Fireworks: Flugeldar
+            '"rainbow"': Regnbogi
+            '"hearts"': Hjörtu
+            '"flowers"': Blóm
+            '"waves"': Bylgjur
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1670,6 +1680,10 @@ is:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
       Poetry_playSound:
         text: spilaHljóð {SOUND}
+        options:
+          SOUND:
+            Break: Rjúfa
+            Light: Ljós
       Poetry_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
       Poetry_setBackgroundEffect:
@@ -1680,6 +1694,10 @@ is:
             '"space"': Geimur
             '"stars"': Stjörnur
             '"ripples"': Gárur
+            '"rain"': Rigning
+            '"bubbles"': Sápukúlur
+            '"confetti"': Skraut
+            '"hearts"': Litrík hjörtu
           PALETTE:
             '"rainbow"': Regnbogi
       Poetry_setBackgroundImageAs:

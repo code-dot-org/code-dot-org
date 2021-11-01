@@ -14,7 +14,7 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
 
     @unit_group = create(:unit_group)
-    @unit_in_unit_group = create(:script, published_state: SharedConstants::PUBLISHED_STATE.beta)
+    @unit_in_unit_group = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
 
     @unit_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
@@ -117,7 +117,7 @@ class ScriptTest < ActiveSupport::TestCase
     # Set different level name in tested unit
     parsed_unit[0][:lessons][1][:script_levels][1][:levels][0][:name] = "Level 1"
 
-    options = {name: File.basename(@unit_file, ".script"), published_state: SharedConstants::PUBLISHED_STATE.preview}
+    options = {name: File.basename(@unit_file, ".script"), published_state: SharedCourseConstants::PUBLISHED_STATE.preview}
     unit = Script.add_unit(options, parsed_unit)
     assert_equal unit_id, unit.script_levels[4].script_id
     assert_not_equal script_level_id, unit.script_levels[4].id
@@ -125,14 +125,14 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'can create course version when seeding a unit' do
     unit = Script.add_unit(
-      {name: 'unit-name', family_name: 'family', version_year: 'unversioned', published_state: SharedConstants::PUBLISHED_STATE.preview, is_course: true},
+      {name: 'unit-name', family_name: 'family', version_year: 'unversioned', published_state: SharedCourseConstants::PUBLISHED_STATE.preview, is_course: true},
       {}
     )
     course_version = unit.course_version
     assert_not_nil course_version
     assert_equal 'unversioned', course_version.key
     assert_equal 'family', course_version.course_offering&.key
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, course_version.published_state
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, course_version.published_state
   end
 
   test 'cannot rename a unit without a new_name' do
@@ -245,7 +245,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit = Script.find_by!(name: unit_names.first)
 
     # Not testing new_name since it causes a new unit to be created.
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.get_published_state
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.get_published_state
     assert unit.login_required?
     assert_equal 'csd1', unit.family_name
 
@@ -254,7 +254,7 @@ class ScriptTest < ActiveSupport::TestCase
     Script.setup([unit_file_no_fields])
     unit.reload
 
-    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit.get_published_state
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit.get_published_state
     assert_equal false, unit.login_required?
     assert_nil unit.family_name
   end
@@ -434,7 +434,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'allow applab and gamelab levels in unlaunched units' do
     Script.add_unit(
-      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
+      {name: 'test script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         user_facing: true,
@@ -443,7 +443,7 @@ class ScriptTest < ActiveSupport::TestCase
       }]
     )
     Script.add_unit(
-      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.beta},
+      {name: 'test script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta},
       [{
         key: "my_key",
         user_facing: true,
@@ -455,7 +455,7 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'allow applab and gamelab levels in login_required units' do
     Script.add_unit(
-      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
+      {name: 'test script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         user_facing: true,
@@ -464,7 +464,7 @@ class ScriptTest < ActiveSupport::TestCase
       }]
     )
     Script.add_unit(
-      {name: 'test script', published_state: SharedConstants::PUBLISHED_STATE.preview, login_required: true},
+      {name: 'test script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview, login_required: true},
       [{
         key: "my_key",
         user_facing: true,
@@ -614,8 +614,8 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'get_unit_family_redirect_for_user returns latest stable unit in family if teacher' do
     teacher = create :teacher
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:script, name: 'csp1-2019', family_name: 'csp', version_year: '2019')
     create :section, user: teacher, script: csp1_2017
 
@@ -624,29 +624,29 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_unit_family_redirect_for_user returns nil if no units in family are stable' do
-    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     assert_nil Script.get_unit_family_redirect_for_user('csp')
   end
 
   test 'get_unit_family_redirect_for_user returns latest version supported in locale if available' do
-    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
-    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
+    create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
 
     redirect_unit = Script.get_unit_family_redirect_for_user('csp', locale: 'es-MX')
     assert_equal csp1_2017.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable version if no user or locale' do
-    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable)
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
 
     redirect_unit = Script.get_unit_family_redirect_for_user('csp')
     assert_equal csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable version if no versions supported in locale' do
-    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
-    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['es-MX'])
+    csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
 
     redirect_unit = Script.get_unit_family_redirect_for_user('csp', locale: 'it-IT')
     assert_equal csp1_2018.name, redirect_unit.redirect_to
@@ -728,8 +728,8 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can_view_version? is true if unit is latest stable version in student locale or in English' do
-    latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: []
-    latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ['it-it']
+    latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: []
+    latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['it-it']
     student = create :student
 
     assert latest_in_english.can_view_version?(student, locale: 'it-it')
@@ -754,7 +754,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'can_view_version? is true if student has progress in unit' do
-    unit = create :script, name: 'my-script', family_name: 'script-fam', published_state: SharedConstants::PUBLISHED_STATE.stable
+    unit = create :script, name: 'my-script', family_name: 'script-fam', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     student = create :student
     student.scripts << unit
 
@@ -777,30 +777,30 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
-    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
-    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
 
     assert_nil Script.latest_stable_version('fake-family', locale: 'es-mx')
   end
 
   test 'self.latest_stable_version returns latest stable version for user locale' do
-    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
-    unit_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
+    unit_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ["it-it"]
 
     assert_equal unit_2018, Script.latest_stable_version('fake-family', locale: 'it-it')
   end
 
   test 'self.latest_stable_version returns latest stable version for English locales' do
-    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
-    unit_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    unit_2018 = create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
 
     assert_equal unit_2018, Script.latest_stable_version('fake-family')
     assert_equal unit_2018, Script.latest_stable_version('fake-family', locale: 'en-ca')
   end
 
   test 'self.latest_stable_version returns correct unit version in family if version_year is supplied' do
-    unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedConstants::PUBLISHED_STATE.stable
-    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedConstants::PUBLISHED_STATE.stable
+    unit_2017 = create :script, name: 's-2017', family_name: 'fake-family', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 's-2018', family_name: 'fake-family', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
 
     assert_equal unit_2017, Script.latest_stable_version('fake-family', version_year: '2017')
   end
@@ -911,7 +911,7 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'should summarize migrated unit' do
-    unit = create(:script, name: 'single-lesson-script')
+    unit = create(:script, name: 'single-lesson-script', instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
@@ -923,9 +923,25 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, summary[:lessons].count
     assert_nil summary[:peerReviewLessonInfo]
     assert_equal 0, summary[:peerReviewsRequired]
+    assert_equal 'teacher_led', summary[:instructionType]
+    assert_equal 'teacher', summary[:instructorAudience]
+    assert_equal 'student', summary[:participantAudience]
     assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
     assert_equal '/overview-pdf-url', summary[:scriptOverviewPdfUrl]
     assert_equal '/resources-pdf-url', summary[:scriptResourcesPdfUrl]
+  end
+
+  test 'should summarize migrated unit in unit group' do
+    unit_group = create(:unit_group, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    unit = create(:script, name: 'single-lesson-script', is_migrated: true)
+    create(:unit_group_unit, position: 1, unit_group: unit_group, script: unit)
+
+    unit.reload
+    summary = unit.summarize
+
+    assert_equal 'self_paced', summary[:instructionType]
+    assert_equal 'facilitator', summary[:instructorAudience]
+    assert_equal 'teacher', summary[:participantAudience]
   end
 
   test 'should summarize migrated unit with legacy lesson plans' do
@@ -1295,12 +1311,12 @@ class ScriptTest < ActiveSupport::TestCase
   test 'summarize includes versions' do
     foo17 = create(
       :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
-      published_state: SharedConstants::PUBLISHED_STATE.preview
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     )
     CourseOffering.add_course_offering(foo17)
     foo18 = create(
       :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
-      published_state: SharedConstants::PUBLISHED_STATE.preview
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     )
     CourseOffering.add_course_offering(foo18)
 
@@ -1317,17 +1333,17 @@ class ScriptTest < ActiveSupport::TestCase
   test 'summarize excludes unlaunched versions' do
     foo17 = create(
       :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
-      published_state: SharedConstants::PUBLISHED_STATE.preview
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     )
     CourseOffering.add_course_offering(foo17)
     foo18 = create(
       :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
-      published_state: SharedConstants::PUBLISHED_STATE.preview
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     )
     CourseOffering.add_course_offering(foo18)
     foo19 = create(
       :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
-      published_state: SharedConstants::PUBLISHED_STATE.beta
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     )
     CourseOffering.add_course_offering(foo19)
 
@@ -1351,23 +1367,23 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    unit = create(:script, name: 'script', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    unit = create(:script, name: 'script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
 
     # No user, show_assign_button set to nil
     assert_nil unit.summarize[:show_assign_button]
 
     # Teacher should be able to assign a launched unit.
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
     assert_equal true, unit.summarize(true, create(:teacher))[:show_assign_button]
 
     # Teacher should not be able to assign a unlaunched script.
-    hidden_unit = create(:script, name: 'unassignable-hidden', published_state: SharedConstants::PUBLISHED_STATE.beta)
-    assert_equal SharedConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
+    hidden_unit = create(:script, name: 'unassignable-hidden', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
     assert_equal false, hidden_unit.summarize(true, create(:teacher))[:show_assign_button]
 
     # Student should not be able to assign a unit,
     # regardless of visibility.
-    assert_equal SharedConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
     assert_nil unit.summarize(true, create(:student))[:show_assign_button]
   end
 
@@ -1965,7 +1981,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     assert unit.tts
-    assert_equal SharedConstants::PUBLISHED_STATE.pilot, unit.get_published_state
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.pilot, unit.get_published_state
     assert unit.announcements
     assert unit.is_course
 
@@ -1978,7 +1994,7 @@ class ScriptTest < ActiveSupport::TestCase
 
     # all properties that should change
     refute unit_copy.tts
-    assert_equal SharedConstants::PUBLISHED_STATE.in_development, unit_copy.get_published_state
+    assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit_copy.get_published_state
     refute unit_copy.announcements
     refute unit_copy.is_course
 
@@ -2082,7 +2098,7 @@ class ScriptTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations test_locale, custom_i18n
 
-    unit = build(:script, name: 'csp1-2017', published_state: SharedConstants::PUBLISHED_STATE.preview)
+    unit = build(:script, name: 'csp1-2017', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     assignable_info = unit.assignable_info
 
     assert_equal('CSP Unit 1 Test', assignable_info[:name])
@@ -2189,8 +2205,8 @@ class ScriptTest < ActiveSupport::TestCase
   test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
     Script.destroy_all
     user = create(:user)
-    create(:script, published_state: SharedConstants::PUBLISHED_STATE.stable, name: 'original-unit')
-    alternate_unit = build(:script, published_state: SharedConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
+    create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-unit')
+    alternate_unit = build(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
 
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
     Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
@@ -2202,7 +2218,7 @@ class ScriptTest < ActiveSupport::TestCase
   test "self.valid_scripts: returns original unit if user has a course experiment with no alternate unit" do
     Script.destroy_all
     user = create(:user)
-    unit = create(:script, published_state: SharedConstants::PUBLISHED_STATE.stable)
+    unit = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
 
     UnitGroup.stubs(:has_any_course_experiments?).returns(true)
     Script.any_instance.stubs(:alternate_script).returns(nil)
@@ -2215,7 +2231,7 @@ class ScriptTest < ActiveSupport::TestCase
     student = create :student
     teacher = create :teacher
     levelbuilder = create :levelbuilder
-    create :script, published_state: SharedConstants::PUBLISHED_STATE.in_development
+    create :script, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     assert Script.any?(&:in_development?)
 
     refute Script.valid_scripts(student).any?(&:in_development?)
@@ -2228,7 +2244,7 @@ class ScriptTest < ActiveSupport::TestCase
     teacher = create :teacher
     levelbuilder = create :levelbuilder
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     assert Script.any?(&:pilot?)
 
     refute Script.valid_scripts(student).any?(&:pilot?)

@@ -313,6 +313,7 @@ bg:
       algebra_game: 'Алгебра'
       applab: 'Лаборатория за приложения'
       artist: 'Художник'
+      basketball: 'Баскетбол'
       bounce: 'Bounce'
       calc: 'Calc'
       eval: 'Оценяване'
@@ -396,6 +397,7 @@ bg:
     update_email: "Актуализиране"
     remove_parent_email_label: "Премахване"
     none: "Без"
+    encrypted: "Шифровано"
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'
@@ -829,7 +831,9 @@ bg:
       email: 'Имейл'
       school: 'Училище'
       school_name: 'Име на училището'
+      school_city: 'Града на Училището '
       school_country: 'Училищен район'
+      colombian_school_city: 'Града на Училището '
       colombian_chilean_school_name: 'Име на училището'
     form_entries:
       gender:

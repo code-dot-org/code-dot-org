@@ -3268,11 +3268,8 @@ fi:
           lessons:
             lesson-1:
               name: Pienoisohjelmat
-        poetry:
-          lessons:
-            lesson-3:
-              name: Muuttujat
         spelling-bee:
           lessons:
             lesson-1:
               name: Kirjurimehiläinen
+          title: Kirjurimehiläinen

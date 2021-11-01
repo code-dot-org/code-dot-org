@@ -47,4 +47,4 @@ HOME=/home/ubuntu
 0 */1 * * * cd /home/ubuntu/code-dot-org && git fetch && (bundle exec ./bin/i18n/sync-all.rb -y -c return-to-staging | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error
 
 # Update string translation status to Redshift
-0 0 * * * cd /home/ubuntu/code-dot-org && bundle exec .bin/i18n/translation_status/update_translation_status.rb
+0 0 * * * cd /home/ubuntu/code-dot-org && (bundle exec ./bin/i18n/translation_status/update_translation_status.rb | ./bin/i18n/slack_log) 2>&1 | ./bin/i18n/slack_error

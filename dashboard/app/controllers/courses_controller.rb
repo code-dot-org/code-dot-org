@@ -194,9 +194,9 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
-    cp[:published_state] = SharedConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
+    cp[:published_state] = SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 
     cp
   end

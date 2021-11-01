@@ -1,5 +1,6 @@
 :ruby
   hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+  hoc_cse_enable_svg = DCDO.get("hoc_cse_enable_svg", false)
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
@@ -15,9 +16,19 @@
     }
   }
 
+  #cse-main-actions {
+    box-shadow: 0px 0px 20px 20px rgb(255 255 255), 0px 0px 20px 20px rgb(255 255 255);
+  }
+
+  @media screen and (max-width: 970px) {
+    #cse-main-actions {
+      box-shadow: 0px 0px 20px 10px rgb(255 255 255), 0px 0px 20px 10px rgb(255 255 255);
+    }
+  }
+
 - main_actions = capture_haml do
   - if show_single_hero == "cse"
-    .hero-message-line1{style: "color: black; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
+    .hero-message-line1{style: "color: black; font-size: 28px; line-height: 28px; padding-bottom: 20px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
       = hoc_s(:codeorg_homepage_hoc_is_coming)
     %div{style: "padding-bottom: 20px; text-align: center"}
       %span.hero-message-line2.cse-hero-message-line2{style: "color: black; line-height: 1.2em; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
@@ -79,11 +90,13 @@
 
   - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
     #actions
-      %div{style: "display: flex"}
-        .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 50%; background-size: contain; background-repeat: no-repeat"}
-        .col-33
+      #bars{style: "display: flex"}
+        #left-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 50%; background-size: contain; background-repeat: no-repeat"}
+        #cse-main-actions.col-33{style: "z-index: 1; background-color: white"}
           = main_actions
-        .col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 0% 50%; background-size: contain; background-repeat: no-repeat"}
+        #right-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 0% 50%; background-size: contain; background-repeat: no-repeat"}
+      %svg#left-bars-svg.tablet-feature{viewBox: "0 0 235 250", style: "opacity: 0; position: absolute; width: 0; height: 0"}
+      %svg#right-bars-svg.tablet-feature{viewBox: "0 0 235 250", style: "opacity: 0; position: absolute; width: 0; height: 0"}
 
   - else
     - if show_single_hero
@@ -204,3 +217,6 @@
 
     showQuote(lastImage, currentImage);
   }
+
+- if ["soon-hoc", "actual-hoc"].include?(hoc_mode) && hoc_cse_enable_svg
+  %script{src: "/js/cse-bars.js"}

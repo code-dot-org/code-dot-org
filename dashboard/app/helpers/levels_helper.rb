@@ -190,6 +190,9 @@ module LevelsHelper
     if level_requires_channel && !is_cached_level
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
+        reduce_channel_updates: @script ?
+          !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
+          false
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
@@ -213,6 +216,7 @@ module LevelsHelper
     view_options(user_id: current_user.id) if current_user
 
     view_options(server_level_id: @level.id)
+
     if @script_level
       view_options(
         lesson_position: @script_level.lesson.absolute_position,
@@ -293,15 +297,16 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
+    @app_options[:serverScriptLevelId] = @script_level.id if @script_level
+    @app_options[:serverScriptId] = @script.id if @script
+    @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+
     if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
-      @app_options[:serverScriptId] = @script.id
-      @app_options[:serverScriptLevelId] = @script_level.id
-      @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
       @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
     end
 
     if @level && @script_level
-      @app_options[:exampleSolutions] = @script_level.get_example_solutions(current_user, @section)
+      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id)
     end
 
     # Blockly caches level properties, whereas this field depends on the user

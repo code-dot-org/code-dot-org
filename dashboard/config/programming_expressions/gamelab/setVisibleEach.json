@@ -2,7 +2,9 @@
   "func": "setVisibleEach",
   "category": "Groups",
   "paletteParams": [
-    "bool"
+    {
+      "name": "bool"
+    }
   ],
   "params": [
     "false"

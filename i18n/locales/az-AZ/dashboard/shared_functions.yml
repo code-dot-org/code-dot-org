@@ -1,15 +1,23 @@
 az:
   data:
     shared_functions:
+      driving with arrow keys: işarə düymələri ilə hərəkət
+      fluttering: çırpınan
+      growing: böyüyən
       jittering: "titrəmək\n(hər hansı cihazın titrəməsi)"
       moving east: şərqə doğru hərəkət
       moving east and looping: şərqə doğru döngə hərəkəti
       moving north: şimala hərəkət
+      moving north and looping: şimala doğru hərəkət və döngə
       moving south: cənuba hərəkət
+      moving south and looping: cənuba doğru hərəkət və döngü
       moving west: qərbə doğru hərəkət
       moving west and looping: qərbə doğru hərəkət edin və dönün
       moving with arrow keys: işarə düymələri ilə hərəkət edin
       patrolling: patrul
       shrinking: "kiçilmək\n(ölçüdə və ya miqdarda kiçik olmaq)"
+      spinning left: sola fırlanır
+      spinning right: sağa fırlanır
+      swimming left and right: sola və sağa üzmək
       wandering: gəzən
       wobbling: titrəmə(titrəmək)

@@ -1513,6 +1513,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_getNext:
         text: 次のオブジェクトを取得する
       Mikelab_getProp:
@@ -1554,6 +1555,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_groupDestroy:
         text: 削除 {SELECT} {COSTUME}
         options:
@@ -1770,6 +1772,7 @@ ja:
             "{x: 300, y: 100}": 右上
             "{x: 100, y: 300}": 左下
             "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ランダム
       Mikelab_whenClickedOn:
         text: いつ {SPRITE} クリック
       Mikelab_whenKeyPressed:
@@ -1841,10 +1844,24 @@ ja:
         text: モンスタータウンに{COUNT}人のモンスターをセットアップ
       Outbreak_stopMoving:
         text: モンスターが動くのをやめる
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: アイスクリーム
+            Stars: 星
+            Fireworks: 花火
+            '"rainbow"': 虹
+            '"hearts"': ハート
+            '"flowers"': フラワー
+            '"waves"': 波
       Poetry_addLine:
         text: 線 {LINE} を追加する
+      Poetry_animateText:
+        text: テキストアニメーションにする
       Poetry_destroy:
         text: "{ANIMATION_NAME} を削除する"
+      Poetry_hideText:
+        text: テキストを非表示にする
       Poetry_makeBurst:
         text: "{NUM} 個の {ANIMATION_NAME} スプライトで {EFFECT} エフェクトを作成する"
         options:
@@ -1857,22 +1874,17 @@ ja:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       Poetry_makeNumSprites:
         text: "{NUM} 個の新しい {ANIMATION_NAME} スプライトを作る"
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_background/ocean_waves.mp3"': 海
       Poetry_playSound:
         text: Playsound {SOUND}
         options:
           SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': ベル
             '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': 明るい
-            '"sound://category_background/fire_burning.mp3"': 炉辺
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': 森
-            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': ハープ
-            '"sound://category_nature/summer_night_loop.mp3"': 夜
-            '"sound://category_background/ocean_waves.mp3"': 海
-            '"sound://category_background/rain_thunderstorm_calm.mp3"': 雨
-            '"sound://category_background/rainforest_ambient_sound.mp3"': 熱帯雨林
-            '"sound://category_background/wavering_wind.mp3"': 眠い
+            Light: 光
             '"sound://category_background/typewriter.mp3"': タイプライター
-            '"sound://category_background/waterfall.mp3"': 滝
       Poetry_randomWord:
         text: 無作為の言葉
       Poetry_setAuthor:
@@ -1892,6 +1904,10 @@ ja:
             '"blooming"': 咲いている
             '"ripples"': さざ波
             '"clouds"': 雲
+            '"rain"': 雨
+            '"bubbles"': 泡
+            '"confetti"': 紙吹雪
+            '"hearts"': カラフルなハート
           PALETTE:
             '"rainbow"': 虹
             '"grayscale"': 白黒
@@ -1930,26 +1946,6 @@ ja:
             '"starburst"': スターバースト
             '"glass"': ガラス割れ
             '"twinkling"': キラキラ
-      Poetry_setPoem:
-        text: 詩を{POEM}にセット
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': 私の光り輝くイメージ
-            '"carroll_1"': "「キラキラ光る、お空の星よ」"
-            '"rumi_1"': 歌う
-            '"field"': "「ウィンケン、ブリンケン、そしてノッド」"
-            '"carroll_2"': "「クロコダイル」"
-            '"twain"': 暖かい夏の太陽
-            '"wordsworth"': "「私は雲のように孤独をさまよった（I Wandered Lonely as a Cloud）」"
-            '"carroll_3"': "「ジャバウォックの詩（Jabberwocky）」"
-            '"rios"': "「図書館に入らないで（Don't Go Into the Library）」"
-            '"rumi_2"': 海
-            '"hughes_1"': "「夢のバリエーション（Dream Variations）」"
-            '"hughes"': "「ハーレム（Harlem）」"
-            '"hopler"': "「庭にて（In the Garden）」"
-            '"lomeli"': "「帰還（Return）」"
-            '"singer"': "「マシュマロのトースト（Toasting Marshmallows）」"
       Poetry_setPrompt:
         text: ユーザーに変数 {VAR} について {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} をプロンプト表示する
       Poetry_setPromptWithChoices:
@@ -1970,6 +1966,8 @@ ja:
             '"flyBottom"': 下から飛ぶ
       Poetry_setTitle:
         text: 詩のタイトルを {TITLE} にセット
+      Poetry_showText:
+        text: テキストを表示
       Poetry_startBehavior:
         text: スプライト {ANIMATION_NAME} が {BEHAVIOR} を始めます
         options:

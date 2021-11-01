@@ -1531,6 +1531,78 @@
           "wobbling": "хитання",
           "moving west and looping": "рух на захід і циклічно",
           "moving east and looping": "рух на схід і циклічно"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "бродіння",
+          "shrinking": "стиснення",
+          "growing": "ріст",
+          "patrolling": "патрулювання",
+          "moving with arrow keys": "рух за стрілками",
+          "driving with arrow keys": "рух за стрілками",
+          "fluttering": "пурхання",
+          "wobbling": "хитання",
+          "moving west and looping": "рух на захід і циклічно",
+          "moving east and looping": "рух на схід і циклічно"
         }
       }
     }

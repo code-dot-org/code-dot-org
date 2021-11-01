@@ -519,30 +519,30 @@
           "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "CourseD_Dance_2020_02": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes presionar una tecla de flecha.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes pulsar una tecla de flecha.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafío opcional**\n\nUsa más de un bloque <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "CourseD_Dance_2020_03": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Ambos bailarines deben realizar un movimiento.\n-   Debes presionar las teclas de flecha.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Ambos bailarines deben realizar un movimiento.\n-   Debes pulsar las teclas de flecha.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafío opcional**\n\n-   Haz que un bailarín responda a las teclas de flecha izquierda y derecha."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_2020_05": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 medidas._",
           "challenges": "**Desafío opcional**\n\n-   Cambia el fondo cada vez que los bailarines cambien de movimiento."
         },
         "CourseD_Dance_2020_06": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de las primeras 4 medidas de la canción.\n\n_Este nivel termina después de 7 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de los primeros 4 compases de la canción.\n\n_Este nivel termina después de 7 compases._",
           "challenges": "**Desafío opcional**\n\n-   Crea múltiples grupos de bailarines de respaldo."
         },
         "CourseD_Dance_2020_07": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tamaño de al menos un bailarín después de que comience la música.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tamaño de al menos un bailarín después de que comience la música.\n\n_Este nivel termina después de 6 compases._",
           "challenges": "**Desafío opcional**\n\n-   Experimenta cambiando otras propiedades, como el ancho o la rotación."
         },
         "CourseD_Dance_2020_08": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tinte de al menos un bailarín.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tinte de al menos un bailarín.\n\n_Este nivel termina después de 6 compases._",
           "tint_hint": "¿Notaste que tus bailarines no cambian al color exacto que eliges? Esto se debe a que los **tintes** mezclan el color que eliges con los colores de la bailarina."
         },
         "CourseD_Dance_2020_09": {
@@ -558,37 +558,37 @@
           "challenges": "**Retos Opcionales**\n\n-   Elige una canción diferente para jugar.\n-   ¡Elige uno distinto que parezca un alce!\n-   Cambia el nombre de tu bailarín."
         },
         "CourseD_Dance_Party_02": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_03": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 medidas._"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.\n\n_Este nivel termina después de 10 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitas cambiar el efecto de fondo en algún momento antes del séptimo compás de la canción.\n\n_Este nivel termina después de 9 compases._",
           "challenges": "**Desafío opcional**\n\nCambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>."
         },
         "CourseD_Dance_Party_06": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitarás tener al menos dos bailarines.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitarás tener al menos dos bailarines.\n\n_Este nivel termina después de 5 compases._",
           "challenges": "**Reto Opcional**\n\n-   Añadir un tercer bailarín (o tantos como quieras)\n-   Haz que todos tus bailarines realicen diferentes movimientos en diferentes puntos de la canción."
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Dos bailarines deben tener un tamaño diferente a 100.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Dos bailarines deben tener un tamaño diferente a 100.\n\n_Este nivel termina después de 5 compases._",
           "challenges": "**Reto Opcional**\n\n-   Experimenta cambiando otras propiedades (ancho, altura, rotación, etcétera.)"
         },
         "CourseD_Dance_Party_09": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambiar el color de al menos un bailarín\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambiar el tinte de al menos un bailarín.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_10": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Las propiedades de dos o más bailarines deben cambiar.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Tienes que cambiar las propiedades de dos o más bailarines.\n\n_Este nivel termina después de 7 medidas._"
         },
         "CourseD_Dance_Party_11": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_11_5": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_11b": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Utiliza el bloque «cuando flecha izquierda pulsada» para indicar al Robot que haga un movimiento de baile cuando la pulses.\n\n_Este nivel termina después de 8 compases._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Utiliza el bloque `cuando flecha izquierda pulsada` para indicar al Robot que haga un movimiento de baile cuando la pulses.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseE_HOC 2018 Level_10": {
           "voyage_aquatic_10a": "¿Ves las **linternas marinas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Cómo podrías utilizar un condicional con ellas para atravesar el Monumento Oceánico?"
@@ -613,30 +613,30 @@
           "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "Dance_2019_02": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes presionar una tecla de flecha.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes pulsar una tecla de flecha.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafío opcional**\n\nUsa más de un bloque <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "Dance_2019_03": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Ambos bailarines deben realizar un movimiento.\n-   Debes presionar las teclas de flecha.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Ambos bailarines deben realizar un movimiento.\n-   Debes pulsar las teclas de flecha.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafío opcional**\n\n-   Haz que un bailarín responda a las teclas de flecha izquierda y derecha."
         },
         "Dance_2019_04": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_2019_05": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 medidas._",
           "challenges": "**Desafío opcional**\n\n-   Cambia el fondo cada vez que los bailarines cambien de movimiento."
         },
         "Dance_2019_06": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de las primeras 4 medidas de la canción.\n\n_Este nivel termina después de 7 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de los primeros 4 compases de la canción.\n\n_Este nivel termina después de 7 compases._",
           "challenges": "**Desafío opcional**\n\n-   Crea múltiples grupos de bailarines de respaldo."
         },
         "Dance_2019_07": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tamaño de al menos un bailarín después de que comience la música.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tamaño de al menos un bailarín después de que comience la música.\n\n_Este nivel termina después de 6 compases._",
           "challenges": "**Desafío opcional**\n\n-   Experimenta cambiando otras propiedades, como el ancho o la rotación."
         },
         "Dance_2019_08": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tinte de al menos un bailarín.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tinte de al menos un bailarín.\n\n_Este nivel termina después de 6 compases._",
           "tint_hint": "¿Notaste que tus bailarines no cambian al color exacto que eliges? Esto se debe a que los **tintes** mezclan el color que eliges con los colores de la bailarina."
         },
         "Dance_2019_09": {
@@ -649,40 +649,40 @@
           "challenges": "**Retos Opcionales**\n\n-   Elige una canción diferente para jugar.\n-   ¡Elige uno distinto que parezca un alce!\n-   Cambia el nombre de tu bailarín."
         },
         "Dance_Party_02": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_03": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 medidas._"
         },
         "Dance_Party_04": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.\n\n_Este nivel termina después de 10 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitas cambiar el efecto de fondo en algún momento antes del séptimo compás de la canción.\n\n_Este nivel termina después de 9 compases._",
           "challenges": "**Desafío opcional**\n\nCambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>."
         },
         "Dance_Party_05": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Tu bailarín necesita recorrer al menos 4 movimientos de baile diferentes antes de que termine el nivel.\n\n_Este nivel termina después de 12 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Tu bailarín tiene que realizar al menos 4 movimientos diferentes antes de que termine el nivel.\n\n_Este nivel termina después de 12 compases._"
         },
         "Dance_Party_06": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitarás tener al menos dos bailarines.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitarás tener al menos dos bailarines.\n\n_Este nivel termina después de 5 compases._",
           "challenges": "**Reto Opcional**\n\n-   Añadir un tercer bailarín (o tantos como quieras)\n-   Haz que todos tus bailarines realicen diferentes movimientos en diferentes puntos de la canción."
         },
         "Dance_Party_08": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Dos bailarines deben tener un tamaño diferente a 100.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Dos bailarines deben tener un tamaño diferente a 100.\n\n_Este nivel termina después de 5 compases._",
           "challenges": "**Reto Opcional**\n\n-   Experimenta cambiando otras propiedades (ancho, altura, rotación, etcétera.)"
         },
         "Dance_Party_09": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambiar el color de al menos un bailarín\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambiar el tinte de al menos un bailarín.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_10": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Las propiedades de dos o más bailarines deben cambiar.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Tienes que cambiar las propiedades de dos o más bailarines.\n\n_Este nivel termina después de 7 medidas._"
         },
         "Dance_Party_11": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_11_5": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_11b": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Utiliza el bloque 'cuando presiona la flecha izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Utiliza el bloque \\`al pulsar izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_extras_alternate_2019": {
           "alternate": "El bloque alternativo está en la categoría \"Bailarines\"."
@@ -8786,30 +8786,30 @@
           "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes presionar una tecla de flecha.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín debe realizar un movimiento.\n-   Debes pulsar una tecla de flecha.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafío opcional**\n\nUsa más de un bloque <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "CourseD_Dance_2020_03_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Ambos bailarines deben realizar un movimiento.\n-   Debes presionar las teclas de flecha.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Ambos bailarines deben realizar un movimiento.\n-   Debes pulsar las teclas de flecha.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafío opcional**\n\n-   Haz que un bailarín responda a las teclas de flecha izquierda y derecha."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 medidas._",
           "challenges": "**Desafío opcional**\n\n-   Cambia el fondo cada vez que los bailarines cambien de movimiento."
         },
         "CourseD_Dance_2020_06_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de las primeras 4 medidas de la canción.\n\n_Este nivel termina después de 7 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Crea un bailarín principal y un grupo de bailarines de respaldo dentro de los primeros 4 compases de la canción.\n\n_Este nivel termina después de 7 compases._",
           "challenges": "**Desafío opcional**\n\n-   Crea múltiples grupos de bailarines de respaldo."
         },
         "CourseD_Dance_2020_07_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tamaño de al menos un bailarín después de que comience la música.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tamaño de al menos un bailarín después de que comience la música.\n\n_Este nivel termina después de 6 compases._",
           "challenges": "**Desafío opcional**\n\n-   Experimenta cambiando otras propiedades, como el ancho o la rotación."
         },
         "CourseD_Dance_2020_08_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tinte de al menos un bailarín.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambia el tinte de al menos un bailarín.\n\n_Este nivel termina después de 6 compases._",
           "tint_hint": "¿Notaste que tus bailarines no cambian al color exacto que eliges? Esto se debe a que los **tintes** mezclan el color que eliges con los colores de la bailarina."
         },
         "CourseD_Dance_2020_09_2021": {

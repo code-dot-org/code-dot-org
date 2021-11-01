@@ -7347,6 +7347,8 @@ ro:
           lessons:
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
+            Outbreak:
+              name: Cum se Codifică o Simulare
           lesson_groups:
             outbreak:
               display_name: Simulare Epidemie
@@ -7515,9 +7517,7 @@ ro:
               display_name: Bucle
         csp6-2021: {}
         csp7-2021: {}
-        csp8-2021:
-          lessons:
-            lesson-4: {}
+        csp8-2021: {}
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -8376,6 +8376,7 @@ ro:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
+            lesson-20: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8385,6 +8386,7 @@ ro:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -8782,6 +8784,7 @@ ro:
             lesson-1: {}
             lesson-3: {}
             lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -8792,6 +8795,7 @@ ro:
               display_name: Conţinut
         csa5-pilot-facilitator:
           lessons:
+            lesson-1: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -8914,21 +8918,47 @@ ro:
             lesson-2:
               name: Instrumente
             lesson-3: {}
-        poem-art:
-          lessons:
-            lesson-1: {}
+        poem-art: {}
         poetry:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-            lesson-3:
-              name: Variabile
+            lesson-3: {}
             lesson-4: {}
             lesson-5: {}
         spelling-bee:
           lessons:
             lesson-1:
               name: Albina de Ortografie
+          title: Albina de Ortografie
         outbreak-csc: {}
         explore-data-1: {}
         counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa-examples-21:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
