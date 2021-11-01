@@ -1074,4 +1074,27 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :require_captcha
     assert_equal(json_response["key"], GOOGLE_PROVIDED_TEST_KEY)
   end
+
+  test 'can get all code review groups for a section' do
+    # Create 5 students
+    followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      followers << create(:follower, section: @section, student_user: student)
+    end
+
+    # Create 2 code review groups
+    group1 = CodeReviewGroup.create(section_id: @section.id, name: "group1")
+    group2 = CodeReviewGroup.create(section_id: @section.id, name: "group1")
+    # put student 0 and 1 in group 1, and student 2 in group 2
+    CodeReviewGroupMember.create(follower_id: followers[0].id, code_review_group_id: group1.id)
+    CodeReviewGroupMember.create(follower_id: followers[1].id, code_review_group_id: group1.id)
+    CodeReviewGroupMember.create(follower_id: followers[2].id, code_review_group_id: group2.id)
+
+    get :code_review_groups, params: {id: @section.id}
+    group1_members = [{follower_id: followers[0].id, name: "student_0"}, {follower_id: followers[1].id, name: "student_1"}]
+    group2_members = [{follower_id: followers[2].id, name: "student_2"}]
+    expected_response = {groups: [{id: group1.id, name: "group1", members: group1_members}, {id: group2.id, name: "group2", members: group2_members}]}
+    assert_equal(json_response, expected_response.as_json)
+  end
 end
