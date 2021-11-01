@@ -9,7 +9,6 @@ import plcHeaderReducer, {
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {renderCourseProgress} from '@cdo/apps/code-studio/progress';
-import {setCurrentUserId} from '@cdo/apps/templates/currentUserRedux';
 import {
   setVerified,
   setVerifiedResources
@@ -36,10 +35,6 @@ function initPage() {
     store.dispatch(
       setPlcHeader(plcBreadcrumb.unit_name, plcBreadcrumb.course_view_path)
     );
-  }
-
-  if (scriptData.user_id) {
-    store.dispatch(setCurrentUserId(scriptData.user_id));
   }
 
   if (scriptData.has_verified_resources) {
