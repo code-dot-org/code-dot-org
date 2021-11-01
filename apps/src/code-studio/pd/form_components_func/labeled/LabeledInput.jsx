@@ -13,7 +13,7 @@ export const LabeledInput = props => {
 };
 LabeledInput.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
 export const LabeledNumberInput = props => {
@@ -26,7 +26,7 @@ export const LabeledNumberInput = props => {
 };
 LabeledNumberInput.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
 
 export const LabeledLargeInput = props => {
