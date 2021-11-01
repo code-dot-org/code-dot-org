@@ -59,13 +59,13 @@ export default class TutorialDetail extends React.Component {
     $('body').css('overflow', 'hidden');
 
     const languageComponent = (
-      <div style={styles.tutorialDetailLanguages}>
+      <ul style={styles.tutorialDetailLanguages}>
         {this.props.item.language
           .sort((a, b) => (a > b ? 1 : -1))
           .map(language => (
-            <div>{language}</div>
+            <li>{language}</li>
           ))}
-      </div>
+      </ul>
     );
 
     const tableEntries = [
