@@ -1649,6 +1649,16 @@ ko:
         text: x 좌표 {SPRITE}
       Mikelab_yLocationOf:
         text: y 좌표 {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: 아이스크림
+            Stars: 별
+            Fireworks: 불꽃놀이
+            '"rainbow"': 무지개
+            '"hearts"': 하트
+            '"flowers"': 꽃
+            '"waves"': 파도
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1659,6 +1669,9 @@ ko:
         text: "{NUM}개의 새 {ANIMATION_NAME} 스프라이트를 만드세요"
       Poetry_playSound:
         text: Playsound {SOUND}
+        options:
+          SOUND:
+            Light: 빛
       Poetry_setBackground:
         text: 배경색 {COLOR} 설정
       Poetry_setBackgroundEffect:
@@ -1669,6 +1682,10 @@ ko:
             '"space"': 우주
             '"stars"': 별
             '"ripples"': 물결
+            '"rain"': 비
+            '"bubbles"': 거품
+            '"confetti"': 색종이
+            '"hearts"': 형형색색 하트
           PALETTE:
             '"rainbow"': 무지개
       Poetry_setBackgroundImageAs:
@@ -1686,7 +1703,6 @@ ko:
           BEHAVIOR:
             growing: 성장
             jittering: 지터링
-            shrinking: 감소
             spinning_left: 왼쪽으로 회전
             spinning_right: 오른쪽으로 회전
             wandering: 배회
@@ -1695,7 +1711,6 @@ ko:
           BEHAVIOR:
             growing: 성장
             jittering: 지터링
-            shrinking: 감소
             spinning_left: 왼쪽으로 회전
             spinning_right: 오른쪽으로 회전
             wandering: 배회

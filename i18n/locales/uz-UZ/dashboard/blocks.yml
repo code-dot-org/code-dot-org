@@ -1641,6 +1641,16 @@ uz:
         text: "{SPRITE} x koordinatasi"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Muzqaymoq
+            Stars: Yulduzlar
+            Fireworks: Feyerverklar
+            '"rainbow"': Kamalak
+            '"hearts"': Yuraklar
+            '"flowers"': Gullar
+            '"waves"': Toʻlqinlar
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1651,6 +1661,9 @@ uz:
         text: "{NUM} ta yangi {ANIMATION_NAME} sprayt yaratish"
       Poetry_playSound:
         text: " {SOUND} ijro etish"
+        options:
+          SOUND:
+            Light: Chiroq
       Poetry_setBackground:
         text: orqa fonni {COLOR} ga o'rnatish
       Poetry_setBackgroundEffect:
@@ -1661,6 +1674,10 @@ uz:
             '"space"': Qoinot
             '"stars"': Yulduzlar
             '"ripples"': To‘lqinlar
+            '"rain"': Yomg'ir
+            '"bubbles"': Pufakchalar
+            '"confetti"': Konfetti
+            '"hearts"': Rangli yuraklar
           PALETTE:
             '"rainbow"': Kamalak
       Poetry_setBackgroundImageAs:

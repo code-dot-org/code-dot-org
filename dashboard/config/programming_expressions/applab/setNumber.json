@@ -2,8 +2,12 @@
   "func": "setNumber",
   "category": "UI controls",
   "paletteParams": [
-    "id",
-    "number"
+    {
+      "name": "id"
+    },
+    {
+      "name": "number"
+    }
   ],
   "params": [
     "\"id\"",

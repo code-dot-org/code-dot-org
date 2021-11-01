@@ -100,7 +100,8 @@ class Poetry < GamelabJr
       ['Mountain', 'po'],
       ['Rejoice', 'tzu'],
       ['An Afternoon Nap', 'lomeli1'],
-      ['An Ode to Imagery', 'lomeli2']
+      ['An Ode to Imagery', 'lomeli2'],
+      ['Nothing Gold Can Stay', 'frost']
     ]
   end
 end

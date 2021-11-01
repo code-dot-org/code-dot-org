@@ -12,8 +12,6 @@ import {
   Modal,
   Button,
   ControlLabel,
-  FormControl,
-  HelpBlock,
   Row,
   Col
 } from 'react-bootstrap';
@@ -21,10 +19,7 @@ import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regi
 import queryString from 'query-string';
 import {styles} from './TeacherApplicationConstants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import {
-  LabelsContext,
-  labelFor
-} from '../../form_components_func/LabeledFormComponent';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {
   LabeledRadioButtons,
   LabeledRadioButtonsWithAdditionalTextFields
@@ -50,7 +45,7 @@ const INTERNATIONAL = 'Other country';
 const US = 'United States';
 
 const AboutYou = props => {
-  const {accountEmail, onChange, errors, errorMessages, data} = props;
+  const {accountEmail, onChange, errors, data} = props;
   const nominated = queryString.parse(window.location.search).nominated;
 
   const resetCountry = () => onChange({country: US});
@@ -85,56 +80,6 @@ const AboutYou = props => {
         </Modal.Footer>
       </Modal>
     );
-  };
-
-  const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
-
-  const NameInput = ({
-    id,
-    validationState,
-    label,
-    value,
-    handleChange,
-    errorMessage
-  }) => (
-    <FormGroup controlId={id} validationState={validationState}>
-      <ControlLabel>
-        {label}
-        {REQUIRED}
-      </ControlLabel>
-      <FormControl
-        type="text"
-        componentClass="input"
-        bsClass="form-control"
-        value={value}
-        onChange={e => handleChange({[id]: e.target.value})}
-      />
-      <HelpBlock>{errorMessage}</HelpBlock>
-    </FormGroup>
-  );
-  NameInput.propTypes = {
-    id: PropTypes.string,
-    label: PropTypes.node,
-    value: PropTypes.any,
-    validationState: PropTypes.any,
-    errorMessage: PropTypes.node,
-    handleChange: PropTypes.func
-  };
-
-  const LabeledNameInput = ({name}) => {
-    return (
-      <NameInput
-        id={name}
-        label={labelFor(name)}
-        validationState={getValidationState(name, errors)}
-        errorMessage={errorMessages[name]}
-        value={data[name] || ''}
-        handleChange={onChange}
-      />
-    );
-  };
-  LabeledNameInput.propTypes = {
-    name: PropTypes.string.isRequired
   };
 
   const handleSchoolChange = selectedSchool => {
@@ -200,10 +145,10 @@ const AboutYou = props => {
 
           <Row>
             <Col md={3}>
-              <LabeledNameInput name="firstName" />
+              <LabeledInput name="firstName" controlWidth={{md: 12}} />
             </Col>
             <Col md={3}>
-              <LabeledNameInput name="lastName" />
+              <LabeledInput name="lastName" controlWidth={{md: 12}} />
             </Col>
           </Row>
 

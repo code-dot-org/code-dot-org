@@ -4022,9 +4022,7 @@ he:
               display_name: פּרוֹיֶקט
         csp6-2021: {}
         csp7-2021: {}
-        csp8-2021:
-          lessons:
-            lesson-4: {}
+        csp8-2021: {}
         csp9-2021: {}
         csp10-2021: {}
         coursea-2021:
@@ -4300,6 +4298,7 @@ he:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-16: {}
         csa6-pilot: {}
         csa7-pilot: {}
         csa8-pilot: {}
@@ -4658,6 +4657,7 @@ he:
             lesson-2: {}
         csa5-pilot-facilitator:
           lessons:
+            lesson-1: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -4774,9 +4774,7 @@ he:
         poem-art: {}
         poetry:
           lessons:
-            lesson-2: {}
-            lesson-3:
-              name: משתנים
+            lesson-3: {}
             lesson-4: {}
             lesson-5: {}
         spelling-bee:
@@ -4795,9 +4793,22 @@ he:
             lesson-4: {}
             lesson-5: {}
             lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
             lesson-10: {}
             lesson-11: {}
             lesson-12: {}
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+        csa-examples-21:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}

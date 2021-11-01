@@ -24,6 +24,21 @@ export default function initializeGenerator(blocklyWrapper) {
     return code;
   };
 
+  const originalBlockToCode = blocklyWrapper.Generator.prototype.blockToCode;
+  blocklyWrapper.Generator.prototype.blockToCode = function(
+    block,
+    opt_thisOnly
+  ) {
+    if (block?.isUnused()) {
+      return '';
+    }
+    return originalBlockToCode.call(
+      this,
+      block,
+      block?.skipNextBlockGeneration || opt_thisOnly
+    );
+  };
+
   blocklyWrapper.Generator.prefixLines = function(text, prefix) {
     return blocklyWrapper.JavaScript.prefixLines(text, prefix);
   };

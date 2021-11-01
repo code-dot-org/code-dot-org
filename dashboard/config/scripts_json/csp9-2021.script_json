@@ -4,22 +4,23 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "version_year": "2021",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-07 21:58:54 UTC",
+    "serialized_at": "2021-10-25 22:54:32 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp9-2021"
     }
@@ -3145,9 +3146,9 @@
       "url": "https://docs.google.com/document/d/11MgQaSrHA9FgQuXpasyEuO5zSDVLxiCZFU6uoz5Hy6A/edit",
       "key": "big-data-citizen-science-machine-learning-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "big-data-citizen-science-machine-learning-activity-guide"
@@ -3158,8 +3159,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -3170,8 +3171,8 @@
       "url": "https://docs.google.com/presentation/d/1z00nnZbPBrVkJ_iFoGYx722LbYhBD1qmap2dNt7HuCE/edit?usp=sharing",
       "key": "csp-u9-presentation",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp-u9-presentation"
@@ -3182,9 +3183,9 @@
       "url": "https://docs.google.com/document/d/1my-xp5mA5le05dcPp7kVawrK0-68flRifUZcqCRjltA/edit?usp=sharing",
       "key": "csp-u9-project-guide-tell-a-data-story",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "csp-u9-project-guide-tell-a-data-story"
@@ -3195,8 +3196,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -3207,8 +3208,8 @@
       "url": "https://www.youtube.com/watch?v=OjUEFHo3Yw0",
       "key": "data_visualizer_in_app_lab_-_part_1",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "data_visualizer_in_app_lab_-_part_1"
@@ -3219,8 +3220,8 @@
       "url": "https://youtu.be/OjUEFHo3Yw0",
       "key": "data_visualizer_in_app_lab_-_part_2",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "data_visualizer_in_app_lab_-_part_2"
@@ -3231,9 +3232,9 @@
       "url": "https://docs.google.com/document/d/11X6ythWM_CSVlE0XrqrMAfHK63QMS8VCysCUiuIfQjw/edit?usp=sharing",
       "key": "exploring-one-column-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "exploring-one-column-activity-guide"
@@ -3244,9 +3245,9 @@
       "url": "https://docs.google.com/document/d/12GkfXmELZiGPppfigSKRlgbPuizaYpXniW0lAFu8A08/edit",
       "key": "exploring-two-columns-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "exploring-two-columns-activity-guide"
@@ -3257,9 +3258,9 @@
       "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
       "key": "filtering_data_unit_9_lesson_3",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "filtering_data_unit_9_lesson_3"
@@ -3270,8 +3271,8 @@
       "url": "https://www.google.com/trends/",
       "key": "google-trends",
       "properties": {
-        "type": "Link",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Link"
       },
       "seeding_key": {
         "resource.key": "google-trends"
@@ -3282,8 +3283,8 @@
       "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
       "key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "sharing_learnings_about_our_image_cropping_algorithm_twitter_"
@@ -3294,8 +3295,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -3306,9 +3307,9 @@
       "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
       "key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_",
       "properties": {
-        "type": "Resource",
         "audience": "Student",
-        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing"
+        "download_url": "https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_"
@@ -3319,8 +3320,8 @@
       "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
       "key": "u9_sample_project_1",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u9_sample_project_1"
@@ -3331,8 +3332,8 @@
       "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
       "key": "u9_sample_project_2",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u9_sample_project_2"
@@ -3343,8 +3344,8 @@
       "url": "https://docs.google.com/document/d/1_oqPyq9STepDcw3qpnPWIUB8yyJj-BExpcDc_SASTIw/edit?usp=sharing",
       "key": "u9_sample_project_3",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u9_sample_project_3"
@@ -3355,8 +3356,8 @@
       "url": "https://docs.google.com/document/d/1G2o02v6KN17mvjf_vNu1vbF__N07gAtYcv0aQoLtPug/edit?usp=sharing",
       "key": "u9_sample_project_4",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u9_sample_project_4"
@@ -3367,8 +3368,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -3579,26 +3580,6 @@
   ],
   "objectives": [
     {
-      "key": "591575bd-dc52-4991-a92d-de309d6e3597",
-      "properties": {
-        "description": "Differentiate between what data shows and why that might be the case"
-      },
-      "seeding_key": {
-        "lesson.key": "Learning From Data",
-        "objective.key": "591575bd-dc52-4991-a92d-de309d6e3597"
-      }
-    },
-    {
-      "key": "b5c2baeb-5316-4615-ae53-ca10c7a0d567",
-      "properties": {
-        "description": "Use Google Trends to tell a data story"
-      },
-      "seeding_key": {
-        "lesson.key": "Learning From Data",
-        "objective.key": "b5c2baeb-5316-4615-ae53-ca10c7a0d567"
-      }
-    },
-    {
       "key": "08503fab-cb14-433f-bbb4-9be1665fd768",
       "properties": {
         "description": "Explain the usefulness of metadata"
@@ -3606,56 +3587,6 @@
       "seeding_key": {
         "lesson.key": "Learning From Data",
         "objective.key": "08503fab-cb14-433f-bbb4-9be1665fd768"
-      }
-    },
-    {
-      "key": "8a6bcc4c-3b92-4ce9-b9c2-eb4010ae3692",
-      "properties": {
-        "description": "Create a bar chart and a histogram in App Lab's data visualizer"
-      },
-      "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "objective.key": "8a6bcc4c-3b92-4ce9-b9c2-eb4010ae3692"
-      }
-    },
-    {
-      "key": "81c4572f-605f-40b4-bc44-858d55e26589",
-      "properties": {
-        "description": "Draw conclusions by reading bar charts and histograms"
-      },
-      "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "objective.key": "81c4572f-605f-40b4-bc44-858d55e26589"
-      }
-    },
-    {
-      "key": "6cafed59-c5ab-4a5f-9eac-883396fe6e66",
-      "properties": {
-        "description": "Explain the reasons that someone would create either a bar chart or a histogram in order to explore a single column of data"
-      },
-      "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "objective.key": "6cafed59-c5ab-4a5f-9eac-883396fe6e66"
-      }
-    },
-    {
-      "key": "4fbd7fc6-d0ba-4428-bdb3-d2511343e277",
-      "properties": {
-        "description": "Explain why data needs to be cleaned"
-      },
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "objective.key": "4fbd7fc6-d0ba-4428-bdb3-d2511343e277"
-      }
-    },
-    {
-      "key": "f9f04b4c-b2a9-4f6d-8afb-3437a7bb08c0",
-      "properties": {
-        "description": "Use the Data Visualizer to filter data"
-      },
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "objective.key": "f9f04b4c-b2a9-4f6d-8afb-3437a7bb08c0"
       }
     },
     {
@@ -3669,66 +3600,6 @@
       }
     },
     {
-      "key": "7710ae6a-27d7-4eff-a00e-2f8caca2126c",
-      "properties": {
-        "description": "Create a crosstab and scatter charts in App Lab's Data Visualizer"
-      },
-      "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "objective.key": "7710ae6a-27d7-4eff-a00e-2f8caca2126c"
-      }
-    },
-    {
-      "key": "cfd5654c-488d-4b10-a833-b2dc8fefea2e",
-      "properties": {
-        "description": "Draw conclusions by reading crosstab and scatter charts"
-      },
-      "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "objective.key": "cfd5654c-488d-4b10-a833-b2dc8fefea2e"
-      }
-    },
-    {
-      "key": "d88d1b63-8e45-47a0-b986-8ed791dedd2c",
-      "properties": {
-        "description": "Explain the reasons that someone would create either a crosstab and scatter chart in order to explore two columns of data"
-      },
-      "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "objective.key": "d88d1b63-8e45-47a0-b986-8ed791dedd2c"
-      }
-    },
-    {
-      "key": "d7484ccc-e7fd-493e-801c-db56ca861be2",
-      "properties": {
-        "description": "Define and explain the impacts of crowdsourcing, crowdfunding, and citizen science"
-      },
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "objective.key": "d7484ccc-e7fd-493e-801c-db56ca861be2"
-      }
-    },
-    {
-      "key": "facc176c-aef5-4ed1-bfcc-f9914e6524fe",
-      "properties": {
-        "description": "Explain why in some contexts large amounts of data need to be analyzed in parallel and scalable systems"
-      },
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "objective.key": "facc176c-aef5-4ed1-bfcc-f9914e6524fe"
-      }
-    },
-    {
-      "key": "690ef802-ec8a-4034-bb0c-a0df78291789",
-      "properties": {
-        "description": "Explain the impact of open data on scientific research and discovery"
-      },
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "objective.key": "690ef802-ec8a-4034-bb0c-a0df78291789"
-      }
-    },
-    {
       "key": "2fd17c05-a211-4dc4-af2b-6f615c74e59b",
       "properties": {
         "description": "Explain ways that designers and developers can consider the potential effects of their programs"
@@ -3736,76 +3607,6 @@
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
         "objective.key": "2fd17c05-a211-4dc4-af2b-6f615c74e59b"
-      }
-    },
-    {
-      "key": "c4a5c79f-cfb6-4824-98f9-7f88df009c68",
-      "properties": {
-        "description": "Reason about how human bias plays a role in machine learning."
-      },
-      "seeding_key": {
-        "lesson.key": "Machine Learning and Bias",
-        "objective.key": "c4a5c79f-cfb6-4824-98f9-7f88df009c68"
-      }
-    },
-    {
-      "key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a",
-      "properties": {
-        "description": "Reason about which types of tasks are should not be completed by an algorithm"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a"
-      }
-    },
-    {
-      "key": "630c1830-3458-450b-bdcf-005133c21688",
-      "properties": {
-        "description": "Follow the Data Analysis Process to tell a data story"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 1",
-        "objective.key": "630c1830-3458-450b-bdcf-005133c21688"
-      }
-    },
-    {
-      "key": "ecf67d2c-b58e-499a-a105-dc3cac7f2a3c",
-      "properties": {
-        "description": "Write a short explanation of a data set referencing the metadata"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 1",
-        "objective.key": "ecf67d2c-b58e-499a-a105-dc3cac7f2a3c"
-      }
-    },
-    {
-      "key": "8baa2d49-a34e-440d-95f3-ded140ea69ba",
-      "properties": {
-        "description": "Create an effective visualization"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 1",
-        "objective.key": "8baa2d49-a34e-440d-95f3-ded140ea69ba"
-      }
-    },
-    {
-      "key": "dd8a1099-cf7b-450e-a2d3-d1cceffe62c7",
-      "properties": {
-        "description": "Follow the Data Analysis Process to tell a data story"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 2",
-        "objective.key": "dd8a1099-cf7b-450e-a2d3-d1cceffe62c7"
-      }
-    },
-    {
-      "key": "85500d28-f2d9-402b-8de3-cfaa89040d68",
-      "properties": {
-        "description": "Explain information in a visualization"
-      },
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 2",
-        "objective.key": "85500d28-f2d9-402b-8de3-cfaa89040d68"
       }
     },
     {
@@ -3819,6 +3620,116 @@
       }
     },
     {
+      "key": "4fbd7fc6-d0ba-4428-bdb3-d2511343e277",
+      "properties": {
+        "description": "Explain why data needs to be cleaned"
+      },
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "objective.key": "4fbd7fc6-d0ba-4428-bdb3-d2511343e277"
+      }
+    },
+    {
+      "key": "591575bd-dc52-4991-a92d-de309d6e3597",
+      "properties": {
+        "description": "Differentiate between what data shows and why that might be the case"
+      },
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "objective.key": "591575bd-dc52-4991-a92d-de309d6e3597"
+      }
+    },
+    {
+      "key": "630c1830-3458-450b-bdcf-005133c21688",
+      "properties": {
+        "description": "Follow the Data Analysis Process to tell a data story"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "objective.key": "630c1830-3458-450b-bdcf-005133c21688"
+      }
+    },
+    {
+      "key": "690ef802-ec8a-4034-bb0c-a0df78291789",
+      "properties": {
+        "description": "Explain the impact of open data on scientific research and discovery"
+      },
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "objective.key": "690ef802-ec8a-4034-bb0c-a0df78291789"
+      }
+    },
+    {
+      "key": "6cafed59-c5ab-4a5f-9eac-883396fe6e66",
+      "properties": {
+        "description": "Explain the reasons that someone would create either a bar chart or a histogram in order to explore a single column of data"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "objective.key": "6cafed59-c5ab-4a5f-9eac-883396fe6e66"
+      }
+    },
+    {
+      "key": "7710ae6a-27d7-4eff-a00e-2f8caca2126c",
+      "properties": {
+        "description": "Create a crosstab and scatter charts in App Lab's Data Visualizer"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "objective.key": "7710ae6a-27d7-4eff-a00e-2f8caca2126c"
+      }
+    },
+    {
+      "key": "81c4572f-605f-40b4-bc44-858d55e26589",
+      "properties": {
+        "description": "Draw conclusions by reading bar charts and histograms"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "objective.key": "81c4572f-605f-40b4-bc44-858d55e26589"
+      }
+    },
+    {
+      "key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a",
+      "properties": {
+        "description": "Reason about which types of tasks are should not be completed by an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "8531ab58-eb6e-4041-923c-8fa9eddcb13a"
+      }
+    },
+    {
+      "key": "85500d28-f2d9-402b-8de3-cfaa89040d68",
+      "properties": {
+        "description": "Explain information in a visualization"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "objective.key": "85500d28-f2d9-402b-8de3-cfaa89040d68"
+      }
+    },
+    {
+      "key": "8a6bcc4c-3b92-4ce9-b9c2-eb4010ae3692",
+      "properties": {
+        "description": "Create a bar chart and a histogram in App Lab's data visualizer"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "objective.key": "8a6bcc4c-3b92-4ce9-b9c2-eb4010ae3692"
+      }
+    },
+    {
+      "key": "8baa2d49-a34e-440d-95f3-ded140ea69ba",
+      "properties": {
+        "description": "Create an effective visualization"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "objective.key": "8baa2d49-a34e-440d-95f3-ded140ea69ba"
+      }
+    },
+    {
       "key": "923cb922-4718-43ed-a135-f3bd078fd3db",
       "properties": {
         "description": "Recognize and explain potential bias in a dataset or interpretation"
@@ -3827,21 +3738,321 @@
         "lesson.key": "Project - Tell a Data Story - Part 2",
         "objective.key": "923cb922-4718-43ed-a135-f3bd078fd3db"
       }
+    },
+    {
+      "key": "b5c2baeb-5316-4615-ae53-ca10c7a0d567",
+      "properties": {
+        "description": "Use Google Trends to tell a data story"
+      },
+      "seeding_key": {
+        "lesson.key": "Learning From Data",
+        "objective.key": "b5c2baeb-5316-4615-ae53-ca10c7a0d567"
+      }
+    },
+    {
+      "key": "c4a5c79f-cfb6-4824-98f9-7f88df009c68",
+      "properties": {
+        "description": "Reason about how human bias plays a role in machine learning."
+      },
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "objective.key": "c4a5c79f-cfb6-4824-98f9-7f88df009c68"
+      }
+    },
+    {
+      "key": "cfd5654c-488d-4b10-a833-b2dc8fefea2e",
+      "properties": {
+        "description": "Draw conclusions by reading crosstab and scatter charts"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "objective.key": "cfd5654c-488d-4b10-a833-b2dc8fefea2e"
+      }
+    },
+    {
+      "key": "d7484ccc-e7fd-493e-801c-db56ca861be2",
+      "properties": {
+        "description": "Define and explain the impacts of crowdsourcing, crowdfunding, and citizen science"
+      },
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "objective.key": "d7484ccc-e7fd-493e-801c-db56ca861be2"
+      }
+    },
+    {
+      "key": "d88d1b63-8e45-47a0-b986-8ed791dedd2c",
+      "properties": {
+        "description": "Explain the reasons that someone would create either a crosstab and scatter chart in order to explore two columns of data"
+      },
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "objective.key": "d88d1b63-8e45-47a0-b986-8ed791dedd2c"
+      }
+    },
+    {
+      "key": "dd8a1099-cf7b-450e-a2d3-d1cceffe62c7",
+      "properties": {
+        "description": "Follow the Data Analysis Process to tell a data story"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "objective.key": "dd8a1099-cf7b-450e-a2d3-d1cceffe62c7"
+      }
+    },
+    {
+      "key": "ecf67d2c-b58e-499a-a105-dc3cac7f2a3c",
+      "properties": {
+        "description": "Write a short explanation of a data set referencing the metadata"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "objective.key": "ecf67d2c-b58e-499a-a105-dc3cac7f2a3c"
+      }
+    },
+    {
+      "key": "f9f04b4c-b2a9-4f6d-8afb-3437a7bb08c0",
+      "properties": {
+        "description": "Use the Data Visualizer to filter data"
+      },
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "objective.key": "f9f04b4c-b2a9-4f6d-8afb-3437a7bb08c0"
+      }
+    },
+    {
+      "key": "facc176c-aef5-4ed1-bfcc-f9914e6524fe",
+      "properties": {
+        "description": "Explain why in some contexts large amounts of data need to be analyzed in parallel and scalable systems"
+      },
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "objective.key": "facc176c-aef5-4ed1-bfcc-f9914e6524fe"
+      }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Learning From Data",
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.E.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Learning From Data",
+        "lesson.key": "Exploring One Column",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring Two Columns",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-2.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
       }
     },
     {
@@ -3923,233 +4134,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring One Column",
+        "lesson.key": "Learning From Data",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring One Column",
+        "lesson.key": "Learning From Data",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.D.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring One Column",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.D.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.D.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Filtering and Cleaning Data",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Two Columns",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.E.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.C.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.C.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-2.C.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.E.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Big Data, Crowdsourcing, and Machine Learning",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.E.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Machine Learning and Bias",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-08"
       }
     },
     {
@@ -4164,6 +4158,13 @@
         "lesson.key": "Machine Learning and Bias",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "IOC-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Machine Learning and Bias",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.B.3"
       }
     },
     {
@@ -4190,8 +4191,50 @@
     {
       "seeding_key": {
         "lesson.key": "Machine Learning and Bias",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.B.3"
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Tell a Data Story - Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
       }
     },
     {
@@ -4234,48 +4277,6 @@
         "lesson.key": "lesson-10",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "IOC-1.F.11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Tell a Data Story - Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-06"
       }
     }
   ],

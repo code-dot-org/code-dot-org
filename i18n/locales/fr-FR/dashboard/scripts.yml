@@ -377,7 +377,7 @@ fr:
             Teacher Dashboard:
               name: Tableau de bord enseignant
             Unplugged lessons:
-              name: Leçons débranchées
+              name: Leçons en mode "déconnecté"
             Writing computer programs:
               name: Écrire des logiciels informatiques
             new stage:
@@ -5090,12 +5090,12 @@ fr:
             'Persistence & Frustration: Stevie and the Marbles':
               name: 'Persistance: Stevie et le Grand Projet'
               description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r
+                Lorsque les élèves se heurtent à une barrière en répondant à une question ou en travaillant sur un projet, il est si facile pour eux de se sentir frustrés et d'abandonner. Cette leçon amènera les élèves à l'idée que la frustration peut être un élément important de l'apprentissage. Ici, la frustration est présentée comme une étape, dans le processus créatif, plutôt que comme un signe d'échec.\\r
                 \\r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+                Cette leçon peut être enseignée sur une ou deux sessions de classe. Si vous avez plus de temps, n'hésitez pas à dessiner la phase de construction et de révision de l'activité Marble Run.
             'Real-life Algorithms: Plant a Seed':
               name: 'Algorithmes du Monde Réel : Planter une Graine'
-              description_teacher: In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r
+              description_teacher: Dans cette leçon, les élèves relieront le concept d'algorithmes aux activités quotidiennes de la vie réelle en plantant une véritable graine. L'objectif, ici, est de commencer à développer les compétences nécessaires pour traduire des situations du monde réel en scénarios en ligne et vice versa.\\ r
             Learn to Drag and Drop:
               name: Séquençage avec Glisser et Déposer
               description_teacher: Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.
@@ -7272,12 +7272,12 @@ fr:
             'Persistence & Frustration: Stevie and the Marbles':
               name: Stevie et le Grand Projet
               description_teacher: |-
-                When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up.  This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.\\r
+                Lorsque les élèves se heurtent à une barrière en répondant à une question ou en travaillant sur un projet, il est si facile pour eux de se sentir frustrés et d'abandonner. Cette leçon amènera les élèves à l'idée que la frustration peut être un élément important de l'apprentissage. Ici, la frustration est présentée comme une étape, dans le processus créatif, plutôt que comme un signe d'échec.\\r
                 \\r
-                This lession can be done over one or two class sessions.  If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.
+                Cette leçon peut être enseignée sur une ou deux sessions de classe. Si vous avez plus de temps, n'hésitez pas à dessiner la phase de construction et de révision de l'activité Marble Run.
             'Real-life Algorithms: Plant a Seed':
               name: Plante une graine
-              description_teacher: In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.\\r
+              description_teacher: Dans cette leçon, les élèves relieront le concept d'algorithmes aux activités quotidiennes de la vie réelle en plantant une véritable graine. L'objectif, ici, est de commencer à développer les compétences nécessaires pour traduire des situations du monde réel en scénarios en ligne et vice versa.\\ r
             Learn to Drag and Drop:
               name: Apprends à Faire Glisser et Déposer
               description_teacher: Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.
@@ -16169,6 +16169,7 @@ fr:
               key: Les Boucles Tant Que dans la Fermière
               name: Les Boucles Tant Que dans la Fermière
               description_student: 'Les boucles sont si utiles dans le codage. Cette leçon t''apprendra un nouveau type de boucle : les boucles tant que !'
+              description_teacher: Dans cette leçon de **renforcement des compétences**, les élèves travailleront à combler des trous et à creuser de la terre dans Farmer, mais ils ne connaîtront pas la taille des trous ou la hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves utiliseront un nouveau type de boucle.
             Until Loops in Maze:
               key: Les Boucles Jusqu'à ce que dans le Labyrinthe
               name: Les Boucles Jusqu'à ce que dans le Labyrinthe
@@ -16531,6 +16532,7 @@ fr:
               key: Les Boucles Tant Que avec la Fermière
               name: Les Boucles Tant Que dans la Fermière
               description_student: 'Les boucles sont si utiles dans le codage. Cette leçon t''apprendra un nouveau type de boucle : les boucles tant que !'
+              description_teacher: Dans cette leçon de **renforcement des compétences**, les élèves travailleront à combler des trous et à creuser de la terre dans Farmer, mais ils ne connaîtront pas la taille des trous ou la hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves utiliseront un nouveau type de boucle.
             'Conditionals in Minecraft: Voyage Aquatic':
               key: 'Les Conditions dans Minecraft : Voyage Aquatique'
               name: 'Les Conditions dans Minecraft : Voyage Aquatique'
@@ -17371,10 +17373,6 @@ fr:
               name: Widgets
             lesson-2:
               name: Outils
-        poetry:
-          lessons:
-            lesson-3:
-              name: variables
         spelling-bee:
           lessons:
             lesson-1:

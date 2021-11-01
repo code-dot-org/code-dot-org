@@ -2,8 +2,12 @@
   "func": "buzzer.note",
   "category": "Circuit",
   "paletteParams": [
-    "note",
-    "duration"
+    {
+      "name": "note"
+    },
+    {
+      "name": "duration"
+    }
   ],
   "params": [
     "\"A4\"",

@@ -89,17 +89,18 @@ class Comment extends Component {
       <div
         style={{
           ...styles.commentContainer,
-          ...(isFromOlderVersionOfProject &&
-            styles.olderVersionCommentTextColor)
+          ...((isFromOlderVersionOfProject || isResolved) && styles.lessVisible)
         }}
       >
         <div style={styles.commentHeaderContainer}>
+          {isResolved && (
+            <i className="fa fa-check-circle" style={styles.check} />
+          )}
           {this.renderName()}
           <span style={styles.rightAlignedCommentHeaderSection}>
             <span style={styles.timestamp}>
               {this.renderFormattedTimestamp(timestampString)}
             </span>
-            {isResolved && <i className="fa fa-check" style={styles.check} />}
             {(viewAsTeacher || !viewAsCodeReviewer) && (
               <i
                 className="fa fa-ellipsis-h"
@@ -122,12 +123,12 @@ class Comment extends Component {
           </span>
         </div>
         <div
-          id={'code-review-comment-body'}
+          className={'code-review-comment-body'}
           style={{
             ...styles.comment,
             ...(isFromTeacher && styles.commentFromTeacher),
-            ...(isFromOlderVersionOfProject &&
-              styles.olderVersionCommentBackgroundColor)
+            ...((isFromOlderVersionOfProject || isResolved) &&
+              styles.lessVisibleBackgroundColor)
           }}
         >
           {commentText}
@@ -143,12 +144,6 @@ export default connect(state => ({
   viewAsTeacher: state.viewAs === ViewType.Teacher
 }))(Comment);
 
-const sharedIconStyles = {
-  fontSize: 18,
-  lineHeight: '18px',
-  margin: '0 0 0 5px'
-};
-
 const styles = {
   name: {
     fontFamily: '"Gotham 5r"'
@@ -160,12 +155,16 @@ const styles = {
     fontStyle: 'italic'
   },
   ellipsisMenu: {
-    ...sharedIconStyles,
+    fontSize: 18,
+    lineHeight: '18px',
+    margin: '0 0 0 5px',
     cursor: 'pointer'
   },
   check: {
-    ...sharedIconStyles,
-    color: color.green
+    position: 'absolute',
+    left: '-18px',
+    lineHeight: '18px',
+    fontSize: '15px'
   },
   comment: {
     clear: 'both',
@@ -179,8 +178,8 @@ const styles = {
   commentFromTeacher: {
     backgroundColor: color.lightest_cyan
   },
-  olderVersionCommentTextColor: {color: color.light_gray},
-  olderVersionCommentBackgroundColor: {backgroundColor: color.background_gray},
+  lessVisible: {color: color.light_gray},
+  lessVisibleBackgroundColor: {backgroundColor: color.background_gray},
   timestamp: {
     fontStyle: 'italic',
     margin: '0 5px'

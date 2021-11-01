@@ -1,30 +1,30 @@
 ---
-title: Poetry
+title: Poezja
 video_player: true
 theme: responsive
 style_min: true
 ---
 
-# Coding with Poetry
+# Kodowanie z Poezją
 
 {{ tutorial_promo2, heading: "Coding with Poetry", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "The first lesson of the Coding with Poetry Module, and a great one hour activity that explores the mood of a poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Learn more", right_heading: "Coding with Poetry module", right_description: "Go beyond the first hour with extended poetry content full five lessons.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Learn more" }}
 
-## Learn more about Coding with Poetry
+## Dowiedz się więcej o kodowaniu z poezją
 
-In the Coding with Poetry module in CS Connections, students will be able to see two subjects—computer science and poetry—in a new way. Over the course of five lessons, 4-8th-grade students build a poem-generating program to recite different versions of a haiku they wrote. Then, students test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle.
+W module Kodowanie z Poezją w Powiązaniach z informatyką, uczniowie będą mogli zobaczyć dwa przedmioty — informatykę i poezję — w nowy sposób. W ciągu pięciu lekcji, uczniowie z klas 4-8 budują program do generowania wierszy, aby recytować różne wersje napisanego przez siebie haiku. Następnie uczniowie testują swoje programy z kolegami z klasy i kończą projekt, dzieląc się swoimi wygenerowanymi wierszami w kręgach poezji.
 
-By building a poem generator, students learn about how computers take in user input, store it in memory, and output a desired product. By writing their own haikus, students explore elements of poetry like grammar, mood, and word choice.
+Budując generator wierszy, uczniowie poznają, w jaki sposób komputery pobierają dane wejściowe użytkownika, przechowują je w pamięci i wytwarzają pożądany produkt. Pisząc własne haiku, uczniowie odkrywają elementy poezji, takie jak gramatyka, nastrój i dobór słów.
 
-Our Poem Art Hour of Code activity is also the first lesson in the Coding with Poetry module of our Computer Science Connections curriculum.
+Nasze ćwiczenie, poświęcone Sztuce Poezji w ramach Godziny Kodowania, to także pierwsza lekcja w module Kodowanie z poezją naszego programu nauczania Powiązań z informatyką.
 
-## Featured Student Creations
+## Wyróżnione utwory uczniów
 
-{{ featured_project, title: "Coin color", author: "M", age: "13+", image: "images/csc/poetry/creation0.png", url: "/about" }}
-{{ featured_project, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "ROBOT", author: "B", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "EVADE", author: "W", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Protect the castle", author: "S", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
-{{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "Kolor monety", autor: "M", wiek: "13+", obraz: "images/csc/poetry/creation0.png", url: "/about" }}
+{{ featured_project, tytuł: "Symulacja w rzeczywistym świecie", autor: "D", wiek: "8+", obraz: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "ROBOT", autor: "B", wiek: "18+", obraz: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "EVADE", autor: "W", wiek: "13+", obraz: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "Chroń zamek", autor: "S", wiek: "8+", obraz: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "Remix: mój projekt", autor: "K", wiek: "8+", obraz: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "ping pong", autor: "V", wiek: "18+", obraz: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, tytuł: "Pierwsza gra", autor: "C", wiek: "13+", obraz "images/csc/poetry/creation0.png", url: "/" }}
 {{ clearfix }}
